@@ -44,4 +44,5 @@
     <command name="status"            options="off" />
     <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MinGWTAO/* -f" />
     <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MinGWTAO" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/willemsenj/MinGWTAO/*" />
 </autobuild>
