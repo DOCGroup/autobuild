@@ -51,6 +51,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/POArefactor/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/POArefactor" />
+    <command name="shell"             options="rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/POArefactor" />
 </autobuild>
