@@ -169,16 +169,16 @@ all the OS/platform combinations TAO is tested everyday.
          <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
       </build>
       <build>
-	 <name>RHEL_Static_GCC-3.4</name>
+	 <name>RHEL_Static_GCC-3.4.1</name>
 	 <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
 	 <build_sponsor>ISIS</build_sponsor>
-	 <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+	 <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
       </build>
      <build>
        <name>SuSE_91_GCC3.3.3_Debug_Valgrind</name>
        <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Valgrind</url>
        <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+       <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
      </build>
 </group>
 <group>
