@@ -232,6 +232,7 @@ require command::print_perl_version;
 require command::print_valgrind_version;
 require command::print_make_version;
 require command::print_cidlc_version;
+require command::process_listener;
 require command::configure;
 require command::create_ace_build;
 require command::create_ace_build_legacy;

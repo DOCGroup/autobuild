@@ -1,3 +1,9 @@
+Tue Feb  8 06:23:51 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * autobuild.pl:
+
+          Added the require for command::process_listener.
+
 Mon Feb  7 13:18:36 2005  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/process_listener.pm:
