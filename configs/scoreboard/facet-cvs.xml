@@ -1,0 +1,42 @@
+<scoreboard>
+<preamble>
+<center><h1>Facet and ACE+TAO Adapter Scoreboard</h1></center>
+<hr>
+This is the Facet and ACE+TAO Adapter (based on HEAD from ACE+TAO cvs)
+virtual scoreboard, it shows all the OS/platform combinations facet
+is tested everyday. Currently this is only linux.
+<hr>
+</preamble>
+
+<group>
+<name>Linux</name>
+   <build>
+   <name>Facet (ttl and correlation_filter)</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-cvs</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>jACE</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet_jACE-cvs</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>ACE+TAO</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>ACE+TAO Adapter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter-cvs</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+</group>
+
+</scoreboard>
