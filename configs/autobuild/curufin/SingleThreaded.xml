@@ -15,9 +15,10 @@
 
     </configuration>
 
-    <command name="log"               options="ON" />
+    <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
 <!--    <command name="sam" options="clean" /> -->
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 <!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
@@ -28,15 +29,16 @@
 <!--    <command name="sam"               options="create" /> -->
 <!--    <command name="sam"               options="sam" /> -->
 
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers realclean'" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/TAO realclean'" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers'" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/TAO'" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers realclean" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers/TAO realclean" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers/TAO" />
 
     <command name="auto_run_tests"    options="" />
 
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="process_logs"      options="clean" />
-    <command name="log"               options="OFF" />
+    <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
 </autobuild>

@@ -51,8 +51,6 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $configs = main::GetVariable ('configs');
-    my $sandbox = main::GetVariable ('sandbox');
-    my $test_ace_only = main::GetVariable ('test_ace_only');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
@@ -71,9 +69,6 @@ sub Run ($)
 
     if (defined $sandbox) {
         $options .= " -s $sandbox";
-    }
-    if (defined $test_ace_only) {
-        $options .= " -a";
     }
 
     if (defined $configs) {
