@@ -7,20 +7,6 @@ from TestDBConfig import *
 from Platform import *
 
 
-def WriteDBLogFiles(builds):
-    for m in range(0, len(builds)):
-       builds[m].writeDBLog()						  
-
-def ReadDBLogFiles(lsfile):
-    fh = open(lsfile, "r")
-    builds = []
-    for dbfile in fh.readlines():
-       dbfile = removeNewLine(dbfile)
-       if dbfile != "":
-           builds.append (Platform("", "", dbfile))
-    fh.close()
-    return builds
-
 def SaveBuildResults2DB (builds):
     builds_no_dup = []
     db = TestDB()

@@ -10,7 +10,9 @@
 from HTMLScoreboard import *
 from Platform import *
 from utils import *
-from  TestDB import *
+from DBLogHandle import *
+
+
 import string
 
 
@@ -132,8 +134,11 @@ SaveBuildResults2HTML(directory,outfile)
 
 if option == 1:
    WriteDBLogFiles(builds)
-if option == 2:
-   SaveBuildResults2DB(builds)
+
+# Comment out to avoid the requirement of MySQLdb
+
+#if option == 2:
+#   SaveBuildResults2DB(builds)
 if option > 2:
    print "ERROR: invalid option", option
 # there is no standardization of how the test names are created for ACE, TAO, until there is,

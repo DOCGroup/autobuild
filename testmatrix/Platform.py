@@ -10,7 +10,6 @@
 import os, sys, string, fileinput, re, math, time
 from utils import *
 from TestDBConfig import *
-from TestDB import *
 
 #patterns for log file
 error = re.compile(r'error',re.IGNORECASE)
