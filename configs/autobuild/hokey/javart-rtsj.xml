@@ -7,7 +7,7 @@
         <environment name="LD_LIBRARY_PATH" value="/docpkg/rtsj/lib:/export/home/bugzilla/javart/brutil/timing" />
         <environment name="JAVART_HOME"     value="/export/home/bugzilla/javart" />
         <environment name="JAVART_ROOT"     value="/export/home/bugzilla/javart" />
-        <environment name="PATH"            value="/docpkg/rtsj/bin:/docpkg/jikes/bin:/docpkg/java/bin" />
+        <environment name="PATH"            value="/docpkg/rtsj/bin:/docpkg/jikes/bin:/docpkg/java/bin:/usr/bin/:/bin" />
         <environment name="CLASSPATH"       value="/docpkg/JLex:/docpkg/java/jre/lib/rt.jar:.:/docpkg/java_cup:/docpkg/java/jre/lib/rt.jar:/docpkg/JLex/:/export/home/bugzilla/javart/classes:../..:../../..:." />
 
         <variable name="root"               value="/export/home/bugzilla/" />
