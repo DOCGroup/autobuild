@@ -32,7 +32,7 @@
     <command name="file_manipulation" options="type=create file=build/va6-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler"    options="xlC_r" />
+    <command name="check_compiler"    options="vacpp" />
     <command name="print_ace_config" />
 
     <!-- make -j 2 sometimes messes up the xlC version check -->
