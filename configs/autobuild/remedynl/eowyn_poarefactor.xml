@@ -19,8 +19,8 @@
     <command name="log"               options="on" />
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 9 -q checkout -r POArefactor2 -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -r POArefactor2 -P ACE_MPC"/>
+    <command name="cvs"               options="-z 9 -q checkout -r POArefactor3 -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -r POArefactor3 -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
