@@ -1,3 +1,14 @@
+Fri Jun 25 21:04:47 UTC 2004  Don Hinton  <don.hinton@vanderbilt.edu>
+
+        * autobuild.pl:
+        * command/anonymous_shell.pm:
+        * command/print_status.pm:
+          Added two new modules that make it easier to add ad-hoc
+          functionality to any section via a shell command, e.g., you can
+          invoke something directly from the shell in the compile section
+          which would normally go in the setup section because "shell" is
+          hard coded to go there.
+
 Fri Jun 25 14:56:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:

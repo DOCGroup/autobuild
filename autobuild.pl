@@ -213,6 +213,7 @@ sub PrintStatus ($$)
 # Load the commands here
 #
 require common::mail;
+require command::anonymous_shell;
 require command::auto_run_tests;
 require command::check_compiler;
 require command::check_linker;
@@ -235,6 +236,7 @@ else {
   require command::make;
 }
 require command::printaceconfig;
+require command::print_status;
 require command::process_logs;
 require command::sam;
 require command::shell;
