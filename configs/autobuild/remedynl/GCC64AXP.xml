@@ -24,7 +24,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 1\n#define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 1\n#define TAO_HAS_CORBA_MESSAGING 1\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 1\n#define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 1\n#define TAO_HAS_CORBA_MESSAGING 1\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='probe=1\nOCFLAGS=-O2\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=1\ntk_reactor=1\n'" />
 
@@ -47,12 +47,12 @@
     <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests" options="" /> 
+    <command name="auto_run_tests" options="" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/SuSE_AXP_GCC/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/SuSE_AXP_GCC" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_AXP_GCC/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_AXP_GCC" />
 </autobuild>

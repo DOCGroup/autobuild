@@ -7,7 +7,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCCautoconf/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-        <environment name="PATH"            value="/usr/local/bin:" type="prefix" /> 
+        <environment name="PATH"            value="/usr/local/bin:" type="prefix" />
 
         <variable name="root"     value="/home/build/ACE/GCCautoconf/" />
         <variable name="log_file" value="build.txt" />
@@ -20,7 +20,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    
+
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
@@ -46,6 +46,6 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/SuSE_GCC_autoconf/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/SuSE_GCC_autoconf" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_GCC_autoconf/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_GCC_autoconf" />
 </autobuild>

@@ -122,19 +122,19 @@ all the OS/platform combinations TAO is tested everyday.
      </build>
      <build>
       <name>SuSE_90_GCC3.3.1</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_GCC</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
       <name>SuSE_91_GCC3.3.3_NoInline</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_NoInline</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_NoInline</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
       <name>SuSE_81_AXP_64Bit_GCC3.2.2</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_AXP_GCC</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_AXP_GCC</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -176,7 +176,7 @@ all the OS/platform combinations TAO is tested everyday.
       </build>
      <build>
        <name>SuSE_91_GCC3.3.3_Debug_Valgrind</name>
-       <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Valgrind</url>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_Valgrind</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
      </build>
@@ -225,79 +225,79 @@ all the OS/platform combinations TAO is tested everyday.
         </build>
         <build>
             <name>WinXP_MSVC6_SP6_LIB_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6sd</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6sd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_MSVC6_SP6_LIB_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6sr</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6sr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_MSVC6_SP6_DLL_Debug_Unicode</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6ddu</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6ddu</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_MSVC6_SP6_DLL_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6dd</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6dd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_MSVC6_SP6_DLL_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6dr</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_CBuilderX_Static_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXsr</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/CBXsr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>Win2K_BCB6_Pro_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dr</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>Win2K_BCB6_Pro_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dd</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6dd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_CBuilderX_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXdd</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/CBXdd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_VC71_NET_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_VC71_NET_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71dr</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_VC71_NET_Static_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71sd</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71sd</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_MinGW_GCC_3_2_3</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGWTAO/</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWTAO/</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -307,7 +307,7 @@ all the OS/platform combinations TAO is tested everyday.
    <name>Solaris</name>
    <build>
       <name>SunOS_8_Forte8_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/Solaris</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
@@ -341,19 +341,19 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
    <build>
       <name>HPUX11i_aCC355</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/hpux</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/hpux</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
       <name>HPUX11i_aCC356_64bit</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/hpux64</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/hpux64</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
       <name>HPUX11i_GCC_3_4_1</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/hpuxtaogcc</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/hpuxtaogcc</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
@@ -363,7 +363,7 @@ all the OS/platform combinations TAO is tested everyday.
    <name>Tru64</name>
    <build>
       <name>Tru64_Compaq_C++</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/Tru64</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/Tru64</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>

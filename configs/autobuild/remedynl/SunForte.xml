@@ -28,7 +28,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ninline=0\nexceptions=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\nssl=1\nopenssl=1\n'" /> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\nssl=1\nopenssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="sun_cc" />
@@ -49,14 +49,14 @@
     <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests"    options="" /> 
+    <command name="auto_run_tests"    options="" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=4 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/Solaris/* -f" />
-    <command name="shell"             options="scp *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/Solaris" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/Solaris/* -f" />
+    <command name="shell"             options="scp *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/Solaris" />
 </autobuild>
 
 

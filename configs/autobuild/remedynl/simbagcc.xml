@@ -1,62 +1,115 @@
 <!-- $Id$ -->
+
 <autobuild>
+
     <configuration>
+
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers" />
+
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
+
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/lib:/usr/local/lib:/usr/lib:" />
+
         <environment name="SHLIB_PATH"      value="/home/build/ACE/GCC/ACE_wrappers/lib:/usr/local/lib:/usr/lib:" />
+
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+
         <environment name="PATH"            value="/usr/local/bin:/opt/perl/bin:/opt/aCC/bin:" type="prefix" />
+
         <environment name="CVS_RSH"         value="ssh" />
+
+
 
         <variable name="make_program"       value="gmake" />
         <variable name="root"               value="/home/build/ACE/GCC" />
+
         <variable name="log_file"           value="log.txt" />
+
         <variable name="log_root"           value="/home/build/ACE/GCC" />
+
         <variable name="configs"            value="Exceptions STATIC" />
+
         <variable name="name"               value="HPUX" />
+
     </configuration>
 
+
+
     <command name="status"            options="on" />
+
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+
 
     <command name="log"               options="ON" />
 
+
+
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
+
+
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
+
+
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
+
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_gcc.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\n'" /> 
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\n'" />
+
+
 
     <command name="print_os_version" />
+
     <command name="check_compiler" options="g++" />
+
     <command name="print_ace_config" />
+
     <command name="print_make_version" />
+
     <command name="print_perl_version" />
+
+
 
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
+
     <command name="make"              options="-k realclean" />
+
     <command name="make"              options="-k -C TAO realclean" />
 
+
     <command name="make"              options="-k" />
+
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests"    options="" /> 
+    <command name="auto_run_tests"    options="" />
+
 
     <command name="log"               options="OFF" />
+
     <command name="process_logs"      options="move prettify clean index" />
+
     <command name="file_manipulation" options="type=delete file=.disable" />
+
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/hpuxtaogcc/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/hpuxtaogcc" />
+
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/hpuxtaogcc/* -f" />
+
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/hpuxtaogcc" />
+
 </autobuild>
+
+
 

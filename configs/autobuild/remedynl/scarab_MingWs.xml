@@ -49,8 +49,8 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MinGWStatic/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MinGWStatic" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/willemsenj/MinGWTAOStatic/*" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/MinGWStatic/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/MinGWStatic" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/MinGWTAOStatic/*" />
 </autobuild>
 

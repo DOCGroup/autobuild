@@ -3,16 +3,16 @@
     <configuration>
         <environment name="ACE_ROOT"         value="C:\ACE\MSVC6sr\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="C:\ACE\MSVC6sr\ACE_wrappers\TAO"/>
-        <environment name="Path"             value="C:\ACE\MSVC6sr\ACE_wrappers\bin;C:\ACE\MSVC6sr\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" /> 
+        <environment name="Path"             value="C:\ACE\MSVC6sr\ACE_wrappers\bin;C:\ACE\MSVC6sr\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" />
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
-        
+
         <variable name="root"     value="C:/ACE/MSVC6sr/" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:/ACE/MSVC6sr/" />
         <variable name="project_root" value="C:/ACE/MSVC6sr/ACE_wrappers" />
         <variable name="name"     value="WinXP LIB Release" />
-        <variable name="configs"   value="Win32 SANDBOX Exceptions" /> 
+        <variable name="configs"   value="Win32 SANDBOX Exceptions" />
     </configuration>
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
@@ -22,7 +22,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" />
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
@@ -35,7 +35,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -make_coexistence -type vc6 -static -recurse -name_modifier *_Static -apply_project" /> 
+    <command name="generate_workspace" options="-exclude TAO/CIAO -make_coexistence -type vc6 -static -recurse -name_modifier *_Static -apply_project" />
 
     <command name="win32make"         options="msvc_static_compile -Release -CORE -u -k -name_modifier *_Static" />
     <command name="win32make"         options="msvc_static_compile -Release -ACE -u -k -name_modifier *_Static" />
@@ -45,6 +45,6 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MSVC6sr/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MSVC6sr" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/MSVC6sr/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/MSVC6sr" />
 </autobuild>

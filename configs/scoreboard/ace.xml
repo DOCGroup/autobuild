@@ -65,7 +65,7 @@ all the OS/platform combinations ACE is tested everyday.
      </build>
      <build>
        <name>SuSE_90_GCC3.3.1_Debug</name>
-       <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCCACE</url>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_GCCACE</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -105,7 +105,7 @@ all the OS/platform combinations ACE is tested everyday.
      </build>
      <build>
         <name>HP-UX_11i_GCC3_3_3_Static</name>
-        <url>http://www.dre.vanderbilt.edu/~willemsenj/hpuxgcc</url>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/hpuxgcc</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -186,19 +186,19 @@ all the OS/platform combinations ACE is tested everyday.
      </build>
       <build>
          <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode</name>
-         <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6ddu</url>
+         <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6ddu</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
          <name>WinXP_CBuilderX_Dynamic_Debug_Unicode</name>
-         <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXddu</url>
+         <url>http://www.dre.vanderbilt.edu/~remedynl/CBXddu</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
          <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode</name>
-         <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dru</url>
+         <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6dru</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
@@ -216,25 +216,25 @@ all the OS/platform combinations ACE is tested everyday.
       </build>
       <build>
           <name>WinXP_Cygwin_GCC_3_3_3_ACE</name>
-           <url>http://www.dre.vanderbilt.edu/~willemsenj/CygwinACE</url>
+           <url>http://www.dre.vanderbilt.edu/~remedynl/CygwinACE</url>
           <build_sponsor>Remedy IT</build_sponsor>
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
         <build>
             <name>WinXP_MingW_GCC_3_2_3_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGW</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MinGW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_MingW_GCC_3_2_3_Static</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGWStatic</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWStatic</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
      <build>
          <name>WinXP_VisualStudio8_Beta_1</name>
-         <url>http://www.dre.vanderbilt.edu/~willemsenj/VC8</url>
+         <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
          <build_sponsor>Remedy IT</build_sponsor>
          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>

@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="C:\ACE\MSVC6sd\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="C:\ACE\MSVC6sd\ACE_wrappers\TAO"/>
-        <environment name="Path"             value="C:\ACE\MSVC6sd\ACE_wrappers\bin;C:\ACE\MSVC6sd\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" /> 
+        <environment name="Path"             value="C:\ACE\MSVC6sd\ACE_wrappers\bin;C:\ACE\MSVC6sd\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" />
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
 
@@ -11,7 +11,7 @@
 	<variable name="log_file"  value="log.txt" />
         <variable name="log_root"  value="C:/ACE/MSVC6sd/" />
         <variable name="name"      value="WinXP LIB Debug" />
-        <variable name="configs"   value="Win32 SANDBOX Exceptions" /> 
+        <variable name="configs"   value="Win32 SANDBOX Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -22,7 +22,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
@@ -34,7 +34,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -make_coexistence -type vc6 -static -name_modifier *_Static -apply_project" /> 
+    <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -make_coexistence -type vc6 -static -name_modifier *_Static -apply_project" />
 
     <command name="win32make"         options="msvc_static_compile -Debug -CORE -u -k -name_modifier *_Static" />
     <command name="win32make"         options="msvc_static_compile -Debug -ACE -u -k -name_modifier *_Static" />
@@ -44,6 +44,6 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MSVC6sd/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MSVC6sd" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/MSVC6sd/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/MSVC6sd" />
 </autobuild>

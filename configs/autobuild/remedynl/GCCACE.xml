@@ -24,7 +24,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#define ACE_HAS_SIGNAL_SAFE_OS_CALLS\n#define ACE_NLOGGING\n#define ACE_HAS_WCHAR\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-linux.h\x22\n'"/> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#define ACE_HAS_SIGNAL_SAFE_OS_CALLS\n#define ACE_NLOGGING\n#define ACE_HAS_WCHAR\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OCFLAGS=-O2\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
@@ -40,12 +40,12 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests" options="-a" /> 
+    <command name="auto_run_tests" options="-a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/SuSE_GCCACE/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/SuSE_GCCACE" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_GCCACE/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_GCCACE" />
 </autobuild>

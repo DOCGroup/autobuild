@@ -28,7 +28,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
@@ -43,7 +43,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/examples,TAO/CIAO/tests,TAO/CIAO/performance-tests,TAO/CIAO/DAnCE,TAO/CIAO/docs -type borland" /> 
+    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/examples,TAO/CIAO/tests,TAO/CIAO/performance-tests,TAO/CIAO/DAnCE,TAO/CIAO/docs -type borland" />
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
@@ -53,8 +53,8 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/CBXdd/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/CBXdd" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/willemsenj/CBXdd/*" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/CBXdd/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/CBXdd" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/CBXdd/*" />
 </autobuild>
 
