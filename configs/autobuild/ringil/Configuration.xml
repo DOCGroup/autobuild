@@ -1,0 +1,9 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+	<environment name="HOME"    value="C:\Users\bugzilla" />
+        <environment name="LIB"     value="C:\PROGRA~1\MICROS~4\VC98\LIB;C:\PROGRA~1\MICROS~4\VC98\MFC\LIB;C:\Users\bugzilla\builds\openssl-0.9.6\out32dll" />
+        <environment name="INCLUDE" value="INCLUDE=C:\PROGRA~1\MICROS~4\VC98\ATL\INCLUDE;C:\PROGRA~1\MICROS~4\VC98\INCLUDE;C:\PROGRA~1\MICROS~4\VC98\MFC\INCLUDE;C:\Users\bugzilla\builds\openssl-0.9.6\inc32" />
+	<environment name="Path"    value="C:\PROGRA~1\MICROS~4\Common\msdev98\BIN;C:\PROGRA~1\MICROS~4\VC98\BIN;C:\PROGRA~1\MICROS~4\Common\TOOLS\WINNT;C:\PROGRA~1\MICROS~4\Common\TOOLS;C:\Users\bugzilla\builds\LIB_Debug\bin;C:\Perl\bin\;C:\WINNT\system32;C:\WINNT;C:\WINNT\System32\Wbem;C:\Users\bugzilla\bin;" />
+    </configuration>
+</autobuild>
