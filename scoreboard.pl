@@ -115,14 +115,15 @@ sub query_latest ()
 
     foreach my $buildname (keys %builds) {
         my $latest = load_web_latest (%builds->{$buildname}->{URL});
-        
-        if ($latest =~ m/(...._.._.._.._..) /) {
-            %builds->{$buildname}->{BASENAME} = $1;
-        }
-        else {
-            print STDERR "    Error: Could not find latest.txt for $buildname\n";
-            next;
-        }
+
+	if (defined $latest && $latest =~ m/(...._.._.._.._..) /)
+	{
+       	    %builds->{$buildname}->{BASENAME} = $1;
+	}
+	else {
+		print STDERR "    Error: Could not find latest.txt for $buildname\n";
+        	next;
+	}
         
         if ($latest =~ m/Config: (\d+)/) {
             %builds->{$buildname}->{CONFIG_SECTION} = $1;
