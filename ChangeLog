@@ -1,3 +1,16 @@
+Thu Aug 26 08:34:35 2004  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/scoreboard/tao_future.xml:
+
+	  Added my NetBSD/amd64 GNUACE builds.
+
+	* configs/autobuild/acorn/netbsd_amd64.xml:
+	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+	* configs/autobuild/acorn/netbsd_i386.xml:
+	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+
+	  Rsync results to my webserver.
+
 Wed Aug 25 22:22:46 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
 	* configs/autobuild/acorn/netbsd_amd64.xml:
