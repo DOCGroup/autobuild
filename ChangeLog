@@ -1,3 +1,8 @@
+Mon Sep 29 07:37:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          The Cygwin build is upgraded to GCC 3.3.1
+
 Sun Sep 28 22:00:41 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
@@ -6,7 +11,7 @@ Sun Sep 28 22:00:41 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/tango_isis/SingleThreaded.xml:
 	  Disabled MPC makefile generation. Since the upcoming beta is
 	  close and is not dependant on MPC, we have a moral obligation to
-	  check our Makefiles. 
+	  check our Makefiles.
 
 Fri Sep 26 15:17:19 2003  Irfan Pyarali  <irfan@oomworks.com>
 
@@ -37,7 +42,7 @@ Fri Sep 26 15:17:19 2003  Irfan Pyarali  <irfan@oomworks.com>
 	  - skukuza/skoll_3.xml
 	  - tango_isis/Debian_Core.xml
 	  - tango_isis/Debian_ORB_Core.xml
-	  - toutatis/IA64_GCC3.1.xml	
+	  - toutatis/IA64_GCC3.1.xml
 
 Thu Sep 25 17:24:43 2003  Irfan Pyarali  <irfan@oomworks.com>
 
