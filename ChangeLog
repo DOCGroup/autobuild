@@ -1,3 +1,10 @@
+Mon Aug 11 17:15:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved VC71 build from future to main page. This is almost free of
+          errors so removed it from the future page.
+
 Mon Aug 11 16:38:36 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/create_ace_build.pm:
@@ -96,7 +103,7 @@ Fri Aug  8 12:24:03 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 	* configs/autobuild/maedhros/Core.xml:
 	* configs/autobuild/pokey/GCC32_Core.xml:
 	* configs/autobuild/hokey/facet-cvs/ACE_TAO.xml:
-		
+
 	  Modified these builds to build Kokyu before TAO/orbsvcs.
 
 Fri Aug  8 12:30:50 UTC 2003  Don Hinton  <dhinton@dresystems.com>
@@ -151,7 +158,7 @@ Thu Aug  7 13:59:29 2003  Justin Michel  <michel_j@ociweb.com>
 	* command/win32make.pm:
 	* command/wincemake.pm:
 
-	  Removed project_root from most check_requirements() and 
+	  Removed project_root from most check_requirements() and
 	default it to ACE_wrappers when not defined.
 
 Thu Aug  7 18:32:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
