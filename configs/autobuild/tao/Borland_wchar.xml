@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_Borland_wchar\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="F:\bugzilla\new_Borland_wchar\ACE_wrappers\TAO"/>
-        <environment name="Path"         value="E:\borland\bcc55\bin;F:\bugzilla\new_Borland_wchar\ACE_wrappers\bin\Dynamic\Debug\Unicode;F:\bugzilla\new_Borland_wchar\ACE_wrappers\bin\Dynamic\Release;" type="prefix" />
+        <environment name="Path"         value="E:\borland\bcc55\bin;F:\bugzilla\new_Borland_wchar\ACE_wrappers\bin;F:\bugzilla\new_Borland_wchar\ACE_wrappers\lib;E:\Perl\bin" type="prefix" />
 
 	<environment name="BUILD"  value="all" />
 
@@ -18,7 +18,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 realclean" />
+
 
     <command name="log"               options="ON" />
 
@@ -30,7 +30,12 @@
     <command name="check_compiler" options="borland" />
     <command name="print_ace_config" />
 
-    <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 all" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO  -make_coexistence -type borland" />
+
+    <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 realclean" />
+
+
+    <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1" />
 
     <command name="auto_run_tests"    options="-a -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug\Unicode" />
 <!--    <command name="auto_run_tests"    options="-o -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Dynamic\Debug\Unicode" />  -->

@@ -1,3 +1,10 @@
+Mon Apr  5 20:50:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tao/Borland.xml:
+	* configs/autobuild/tao/Borland_wchar.xml:
+
+	  Converted the builds to use MPC.
+
 Mon Apr  5 19:16:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/msvcunicodedebug.xml:
