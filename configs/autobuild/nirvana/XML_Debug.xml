@@ -26,6 +26,7 @@
     <command name="print_ace_config" />
 
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k" />
+    <!-- Only compile ace for now -->
 <!--     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -CORE -u -k" /> -->
 <!--     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -TAO -u -k" /> -->
 
