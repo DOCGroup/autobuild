@@ -72,7 +72,7 @@ require command::cvs;
 require command::sam;
 require command::make;
 require command::shell;
-require command::create_config;
+require command::file_manipulation;
 
 #
 # Parse, CheckReqs, and Run

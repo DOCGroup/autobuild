@@ -4,8 +4,8 @@
         <variable name="ace_root" value="/project/sirion/coryan/samwise/ACE_wrappers" />
         <variable name="sam_root" value="/project/sirion/coryan/samwise/ACE_wrappers/samwise" />
     </configuration>
-    <command name="create_file" options="file=ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="create_file" options="file=include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=1\nexceptions=1\nTAO_IDLFLAGS += $(ACE_ROOT)/apps/gperf/src/gperf\n'" />
+    <command name="file_manipulation" options="type=create file=ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=1\nexceptions=1\nTAO_IDLFLAGS += $(ACE_ROOT)/apps/gperf/src/gperf\n'" />
     <command name="sam" options="clean" />
     <command name="cvs" options="update" />
     <command name="printaceconfig" />
