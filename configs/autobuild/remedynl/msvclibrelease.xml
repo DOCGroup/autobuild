@@ -28,6 +28,13 @@
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="shell"             options="find ACE_wrappers -name '*.dsp *.dsw' -exec rm '{}' ';'" /> 
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+
+    <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -make_coexistence -type vc6 -static" /> 
 
     <command name="win32make"         options="msvc_auto_compile -LIB -Release -ACE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -LIB -Release -CORE -u -k" />
