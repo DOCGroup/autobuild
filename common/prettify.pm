@@ -1032,8 +1032,6 @@ sub SendEmailNotification($)
        $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`;
        $errors_string .= "\n\n";
        chdir("$root");
-    }else{
-       $errors_string .= "\nCouldn't find ".$root."/ACE_wrappers/ChangeLogg???\n\n"
     }
 
     if ( -r $root."/ACE_wrappers/TAO/ChangeLog")

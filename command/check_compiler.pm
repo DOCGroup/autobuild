@@ -53,32 +53,24 @@ sub Run ($)
 
     print "================ Compiler version ================\n";
 
-    if(lc $compiler eq "gcc"){
-        system("gcc -v 2>&1");
+    if($compiler =~ m/^(gcc|g\+\+)/){
+        system($compiler." -v 2>&1");
     }
-
-    if(lc $compiler eq "gcc-3.0"){
-        system("gcc-3.0 -v 2>&1");
-    }
-
-    if(lc $compiler eq "gcc-3.1"){
-        system("gcc-3.1 -v 2>&1");
-    }
-   
-    if(lc $compiler eq "sun_cc"){
+    elsif(lc $compiler eq "sun_cc"){
         system("CC -V");
     }
-
-    if(lc $compiler eq "borland"){
+    elsif(lc $compiler eq "borland"){
 	system("bcc32 -V"); 
     }
-
-    if(lc $compiler eq "msvc"){
+    elsif(lc $compiler eq "msvc"){
         system("cl /V");
     }
-
-    if(lc $compiler eq "cxx"){
+    elsif(lc $compiler eq "cxx"){
         system("cxx -V"); 
+    }
+    else{
+        print "ERROR: I cannot figure out what compiler you are ";
+        print "using!!\nSee check_compiler.pm for more details.\n"; 
     }
     return 1;
 }
