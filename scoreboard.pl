@@ -589,7 +589,7 @@ sub update_html_table ($$@)
     else {
         print "    Building table for group $name\n" if ($verbose);
         @builds = sort @{%groups->{$name}};
-        print $indexhtml "<a name=\"$name\"><h2>$name</h2></a>\n";
+        print $indexhtml "<h2><a name=\"$name\">$name</a></h2>\n";
     }
 
     foreach my $buildname (@builds) {
@@ -613,16 +613,19 @@ sub update_html_table ($$@)
 	}
     }
 
-    print $indexhtml "<table border=1><th>Build Name<th>Last Finished";
-    print $indexhtml "<th>Config<th>Setup<th>Compile<th>Tests";
-    print $indexhtml "<th>Manual" if ($havemanual);
-    print $indexhtml "<th>Status" if ($havestatus);
-    print $indexhtml "<th>Build <br>Sponsor";
+    print $indexhtml "<table border=1>\n";
+    print $indexhtml "<tr>\n";
+    print $indexhtml "<th>Build Name</th><th>Last Finished</th>";
+    print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th>";
+    print $indexhtml "<th>Manual</th>" if ($havemanual);
+    print $indexhtml "<th>Status</th>" if ($havestatus);
+    print $indexhtml "<th>Build <br>Sponsor</th>";
     # New entries
-    print $indexhtml "<th>PDF" if ($havepdf);
-    print $indexhtml "<th>PS" if ($haveps);
-    print $indexhtml "<th>HTML" if ($havehtml);
-    print $indexhtml "<th>SNAPSHOT" if ($havesnapshot);
+    print $indexhtml "<th>PDF</th>" if ($havepdf);
+    print $indexhtml "<th>PS</th>" if ($haveps);
+    print $indexhtml "<th>HTML</th>" if ($havehtml);
+    print $indexhtml "<th>SNAPSHOT</th>" if ($havesnapshot);
+    print $indexhtml "\n</tr>\n";
     print $indexhtml "\n";
 
     foreach my $buildname (@builds) {

@@ -1,26 +1,22 @@
 <scoreboard>
     <preamble>
+<p>
 This is the ACE/TAO virtual scoreboard.  It shows all
-the OS/platform combinations ACE/TAO are tested against everyday, all
-over the world.  We have builds running continuously at
-<a href="http://deuce.doc.wustl.edu/">Washington University, St. Louis</a>,
-<a href="http://doc.ece.uci.edu/">University of California,
-Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt University</a>,
-<a href="http://www.ociweb.com">OCI </a>,
-<a href="http://www.dist-systems.bbn.com/projects/">BBN Technologies</a>,
-<a href="http://www.theaceorb.nl">Remedy IT</a>,
-<a href="http://www.objectsciences.com/">ObjectSciences</a>,
-<a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>,
-<a href="http://www.rtlogic.com/">RT Logic!</a>, and
-<a href="http://www.riverace.com/">Riverace Corporation</a>.
+the OS/platform combinations on which ACE/TAO are continuously tested.
+<br>The builds are maintained by many organizations and individuals,
+from around the world.
 <p>
 If you'd like to contribute builds to our virtual
 scoreboard <a href="mailto:devo_group@cs.wustl.edu">please contact us</a>
 and let us know which platform combinations you can contribute.
 <br>
-<p>Instructions for setting up your own daily build and scoreboard are
+<p>Read the 
 <a href="http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/README?cvsroot=autobuild">
-here</a>
+instructions for setting up your own daily build and scoreboard</a>
+and contribute a build! 
+<p>
+<a href="http://doc.ece.uci.edu/Stats/">ACE+TAO Performance and Footprint Metrics</a>
+are also collected every day.  
     </preamble>
     <group>
         <name>Doxygen</name>
@@ -435,7 +431,7 @@ here</a>
     <group>
          <name>VxWorks</name>
          <build>
-             <name>SunOS_5.8_GCC_2.96_(rtlogic.com)</name>
+             <name>SunOS_5.8_GCC_2.96</name>
              <url>http://www.rtlogic.com/acetao</url>
              <build_sponsor>RTLogic!</build_sponsor>
              <build_sponsor_url>http://www.rtlogic.com</build_sponsor_url>

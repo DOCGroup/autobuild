@@ -258,7 +258,8 @@ sub parse_preamble($\@)
      if($i > 9) {
         my $tag="";
         $tag = join('', @c);
-        if($tag eq "</preamble>") { 
+        if($tag eq "</preamble>") {
+          splice(@buf, -11 ); # remove "</preamble>" from @buf
           last;  # break out of the while loop
         }
 
