@@ -44,7 +44,7 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude apps/drwho,apps/FaCE,apps/Gateway,apps/JAWS,apps/JAWS2,apps/JAWS3,Kokyu,netsvcs,websvcs,tests,examples,performance-tests,TAO/tao,TAO/tests,TAO/CIAO -type vc71 -recurse"/>
+    <command name="generate_workspace" options="-exclude protocols,ACEXML,apps/drwho,apps/FaCE,apps/Gateway,apps/JAWS,apps/JAWS2,apps/JAWS3,Kokyu,netsvcs,websvcs,tests,examples,performance-tests,TAO/tao,TAO/tests,TAO/CIAO -type vc71 -recurse"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ACE -Release -k" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -TAO -Release -k" />
