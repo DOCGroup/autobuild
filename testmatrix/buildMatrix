@@ -2,12 +2,17 @@
 
 # this is a script to build a simple html matrix of test failures.
 
-buildlist=$1
+# The first parameter implies the additional operation when creating test matrix# and write to html.
+# 0 -- no additional operation
+# 1 -- create the *.db files
+# 2 -- save tests to database
+operation=$1
+buildlist=$2
 if [ -z "$buildlist" ]; then
   buildlist=test-list
 fi
 
-othtml=$2
+othtml=$3
 if [ -z "$othtml" ]; then
   othtml=test_complex
 fi
@@ -29,7 +34,7 @@ do
   fi
 done
 
-python GenerateTestMatrix.py $otraw $logdir $othtml
+python GenerateTestMatrix.py $operation $otraw $logdir $othtml
 
 exit 0
 

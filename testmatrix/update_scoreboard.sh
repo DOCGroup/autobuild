@@ -29,6 +29,10 @@ function update_local_scoreboard()
   # change directory to the testmatrix directory
   cd $TEST_MATRIX_DIR
 
+  # create the db log file directory if it does not exist
+  if [ ! -d DBLogFiles ]; then 
+     mkdir DBLogFiles
+  fi
 
   # file with the list of builds
   BUILD_LIST=$TEST_MATRIX_DIR/ace-list
@@ -41,7 +45,7 @@ function update_local_scoreboard()
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ace.xml > $BUILD_LIST
 
   # generate the matrix
-  ./buildMatrix $BUILD_LIST $TEST_MATRIX
+  ./buildMatrix 1 $BUILD_LIST $TEST_MATRIX
 
 
   BUILD_LIST=$TEST_MATRIX_DIR/ace_future-list
@@ -53,7 +57,7 @@ function update_local_scoreboard()
   BUILD_LIST=$TEST_MATRIX_DIR/tao-list
   TEST_MATRIX=tao_detailed
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao.xml > $BUILD_LIST
-  ./buildMatrix $BUILD_LIST $TEST_MATRIX
+  ./buildMatrix 1 $BUILD_LIST $TEST_MATRIX
 
 
   BUILD_LIST=$TEST_MATRIX_DIR/tao_future-list

@@ -1,4 +1,4 @@
-#!/usr/bin/python2.1
+#!/usr/bin/python
 
 # ******************************************************************
 #      Author: Heather Drury
@@ -10,6 +10,9 @@
 from HTMLScoreboard import *
 from Platform import *
 from utils import *
+from  TestDB import *
+import string
+
 
 def ReadLogFiles ():
 	fh=open(infile,"r")
@@ -117,14 +120,24 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
 	fname = outfile + ".TestMatrix"
 	HTMLtestMatrix.writeSummary (ACEpass, ACEtotal, ACEperc, TAOpass, TAOtotal, TAOperc)
 
-infile=sys.argv[1]
-directory=sys.argv[2]
-outfile=sys.argv[3]
+option=string.atoi(sys.argv[1])
+infile=sys.argv[2]
+directory=sys.argv[3]
+outfile=sys.argv[4]
+fname=outfile + ".matrix"
+
 builds = ReadLogFiles ()
-fname = outfile + ".matrix"
 testMatrix = BuildTestMatrix (builds, directory, fname, outfile)
-SaveBuildResults2HTML(directory,outfile) 
-# there is no standardization of how the test names are created for ACE, TAO, until there is, 
+SaveBuildResults2HTML(directory,outfile)
+
+if option == 1:
+   WriteDBLogFiles(builds)
+if option == 2:
+   SaveBuildResults2DB(builds)
+if option > 2:
+   print "ERROR: invalid option", option
+# there is no standardization of how the test names are created for ACE, TAO, until there is,
 # we shouldn't do this HAD 2.11.04
 #WriteTestHTML (testMatrix, builds)
 print "Normal execution!"
+

@@ -1,4 +1,4 @@
-#!/usr/bin/python2.1
+#!/usr/bin/python
 
 # ******************************************************************
 #      Author: Heather Drury
@@ -30,4 +30,15 @@ def ComputePercentage (numerator, denominator):
 	except ZeroDivisionError:
 		pass
 	return perc
+
+def removeNewLine (line):
+        splits = line.split("\n")
+        return splits[0]
+  
+def txt2DbFname (txtFname):
+        splits = txtFname.split("/")
+        length = len(splits)
+        dbFname = splits[length - 2] + "_" + splits[length - 1]
+        dbFname = dbFname.replace(".txt", ".db")
+        return dbFname 
 

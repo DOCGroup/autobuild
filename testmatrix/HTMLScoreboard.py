@@ -1,4 +1,4 @@
-#!/usr/bin/python2.1
+#!/usr/bin/python
 
 # ******************************************************************
 #      Author: Heather Drury
