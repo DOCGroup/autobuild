@@ -287,6 +287,16 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
+   <name>Tru64</name>
+   <build>
+      <name>Tru64_Compaq_C++</name>
+      <url>http://www.dre.vanderbilt.edu/~willemsenj/Tru64</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+</group>
+
+<group>
    <name>LynxOS</name>
    <build>
       <name>LYNXOS4_GCC295_Cross_Compile_Solaris8_Build</name>
