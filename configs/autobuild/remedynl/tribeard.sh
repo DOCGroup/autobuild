@@ -3,7 +3,7 @@
 # $Id$
 #
 
-cd /build/ACE
+cd /build/ACE/autobuild
 PATH=/usr/local/bin:$PATH
 CVSROOT=:ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository
 CVS_RSH=ssh
@@ -13,8 +13,5 @@ export PATH
 
 cvs -z9 up -P -d
 
-exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
-                             /build/ACE/autobuild/configs/autobuild/remedynl/tribeardacc.xml
-
-exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
-                             /build/ACE/autobuild/configs/autobuild/remedynl/tribeardgcc.xml
+/build/ACE/autobuild/configs/autobuild/remedynl/tribeardacc.sh
+/build/ACE/autobuild/configs/autobuild/remedynl/tribeardgcc.sh
