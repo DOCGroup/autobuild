@@ -1,3 +1,9 @@
+Sun Apr 25 14:24:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC32.xml:
+          Added DISABLE_INTERCEPTORS to the Configs list because this test
+          has interceptors disabled and so we can't run interceptor tests
+
 Fri Apr 23 17:56:22 2004  Steve Huston  <shuston@riverace.com>
 
 	* command/shell.pm: Added \n to line that logs the shell command.
@@ -20,9 +26,9 @@ Thu Apr 22 16:11:08 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 Thu Apr 22 12:59:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/msvcdebug.xml:
-        * configs/autobuild/remedynl/msvclibdebug.xml: 
+        * configs/autobuild/remedynl/msvclibdebug.xml:
         * configs/autobuild/remedynl/msvclibrelease.xml:
-        * configs/autobuild/remedynl/msvcrelease.xml: 
+        * configs/autobuild/remedynl/msvcrelease.xml:
         * configs/autobuild/remedynl/msvcunicodedebug.xml:
           Print the config page after a cvs update is done, else the
           ChangeLog lines in the build doesn't match with the things
