@@ -1,3 +1,10 @@
+Thu Jul 29 18:54:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml
+          Added new HPUX GCC 3.3.3 build, will convert probably soon to 64bit
+          build. The build is now in the test phase, so when it is ready it will
+          upload the results.
+
 Thu Jul 29 08:38:09 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
   	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
