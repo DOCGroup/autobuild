@@ -1,3 +1,8 @@
+Tue Sep 28 14:32:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Added Digital Mars build results
+
 Tue Sep 28 08:13:24 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:

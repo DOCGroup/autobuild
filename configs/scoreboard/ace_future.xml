@@ -62,6 +62,12 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
+    <build>
+       <name>WinXP_Digital_Mars_Compiler</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/dm</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
 </group>
 
 <group>
