@@ -1,3 +1,12 @@
+Wed Jun 25 19:45:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
+
+        * configs/autobuild/atl:
+        * configs/autobuild/atl/RH9_2.4.20-18.9-SCTP.xml:
+        * configs/scoreboard/tao.xml:
+
+          Added atl subdir, and RedHat 9.0 with SCTP support turned on.
+	  Also added to Linux section of tao.xml for scoreboard.
+
 Wed Jun 25 11:56:47 2003  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/nirvana/VC7_Core.xml:
