@@ -1,3 +1,8 @@
+Mon Aug 16 09:21:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * command/win32make.pm:
+          Cleaned up (removed option for 'msvc_auto_compile.pl').
+
 Mon Aug 16 06:27:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
