@@ -1,3 +1,8 @@
+Wed Jun  9 09:55:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/hpux.xml:
+          Added running of the tests
+
 Tue Jun  8 10:39:31 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
