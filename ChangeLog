@@ -1,7 +1,14 @@
+Wed Jun 25 11:56:47 2003  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/nirvana/VC7_Core.xml:
+
+          Added $ACE_ROOT/lib to the Path environment variable.  The new MPC
+          changes force all libraries to go to this new directory.
+
 Wed Jun 25 09:59:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added the flamenco.dre builds to the
-	  scoreboard. 
+        * configs/scoreboard/tao.xml: Added the flamenco.dre builds to the
+          scoreboard.
 
 Wed Jun 25 11:14:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -12,26 +19,26 @@ Wed Jun 25 11:14:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Jun 23 22:02:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* command/file_manipulation.pm: Added an extra option that does
-	  append to existing files. Thanks to Michael Rice
-	  <MichaelARice@knology.net> for providing the patch.
+        * command/file_manipulation.pm: Added an extra option that does
+          append to existing files. Thanks to Michael Rice
+          <MichaelARice@knology.net> for providing the patch.
 
 Sat Jun 21 14:33:11 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/*.xml: Cosmetic fixes.
+        * configs/autobuild/tango_isis/*.xml: Cosmetic fixes.
 
 Sat Jun 21 14:17:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* common/simpleparser.pm: Fixed cases where hash was used as a
-	  reference.
+        * common/simpleparser.pm: Fixed cases where hash was used as a
+          reference.
 
 Sat Jun 21 09:21:07 2003  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/equus/RH9_wchar.xml:
+        * configs/autobuild/equus/RH9_wchar.xml:
 
-	  Declare configuration variables prior to including
-	  `platform_linux.GNU' so that the latter will detect the
-	  configuration variables rather than ignore them.
+          Declare configuration variables prior to including
+          `platform_linux.GNU' so that the latter will detect the
+          configuration variables rather than ignore them.
 
 Sat Jun 21 12:39:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -41,30 +48,30 @@ Sat Jun 21 12:39:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Jun 18 15:51:25 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl: Add "use FindBin" to locate the directory
-	  of the perl script.  Similar trick used in autobuild.pl, so
-	  now scoreboard.pl can be invoked without changing directories
-	  to the autobuild root directory.
+        * scoreboard.pl: Add "use FindBin" to locate the directory
+          of the perl script.  Similar trick used in autobuild.pl, so
+          now scoreboard.pl can be invoked without changing directories
+          to the autobuild root directory.
 
 Tue Jun 17 16:07:31 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Changed the RH8_WChar build to be a
-	  RH9_WChar build
+        * configs/scoreboard/tao.xml: Changed the RH8_WChar build to be a
+          RH9_WChar build
 
 Tue Jun 17 09:15:01 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/equus/*: Moved the WChar build from doc_isis
-	  to this box. This is RH9 box.
+        * configs/autobuild/equus/*: Moved the WChar build from doc_isis
+          to this box. This is RH9 box.
 
 Mon Jun  9 15:51:12 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/flamenco/Static.xml: Fixed a typo.
+        * configs/autobuild/flamenco/Static.xml: Fixed a typo.
 
 Sun Jun  8 19:10:38 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/flamenco/Static.xml:
-	* configs/autobuild/flamenco/driver_static.sh: New builds on
-	  flamenco that would run performance tests.
+        * configs/autobuild/flamenco/Static.xml:
+        * configs/autobuild/flamenco/driver_static.sh: New builds on
+          flamenco that would run performance tests.
 
 Sun Jun  8 14:28:52 UTC 2003 Don Hinton  <dhinton@dresystems.com>
 
@@ -83,25 +90,25 @@ Sun Jun  8 14:12:24 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
 Tue Jun  3 15:40:16 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC53.xml: Do not run SSL tests
-	  on this platform.
+        * configs/autobuild/danzon/SunOS_SunCC53.xml: Do not run SSL tests
+          on this platform.
 
 Sat May 31 14:37:39 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/benjamin_dev_debug.xml:
-	* configs/autobuild/riverace/benjamin_dev_optimize.xml:
-	* configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml:
-	  New Redhat Linux 7.1 ACE builds.
+        * configs/autobuild/riverace/benjamin_dev_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_optimize.xml:
+        * configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml:
+          New Redhat Linux 7.1 ACE builds.
 
-	* configs/scoreboard/ace.xml: Added the above three builds.
+        * configs/scoreboard/ace.xml: Added the above three builds.
 
 Thu May 29 19:22:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml: Reverted the change
-	  "Sat Apr 26 08:13:26 2003  Balachandran Natarajan
-	  <bala@dre.vanderbilt.edu>" so that SunCC builds use explicit
-	  templates.
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml: Reverted the change
+          "Sat Apr 26 08:13:26 2003  Balachandran Natarajan
+          <bala@dre.vanderbilt.edu>" so that SunCC builds use explicit
+          templates.
 
 
 Thu May 29 08:45:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
@@ -113,8 +120,8 @@ Thu May 29 08:45:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed May 28 13:14:35 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/VC7_Core.xml: Changed the target sln
-	  filenames.  MPC now generates workspace names using different rules.
+        * configs/autobuild/nirvana/VC7_Core.xml: Changed the target sln
+          filenames.  MPC now generates workspace names using different rules.
 
 Wed May 28 08:35:05 2003  Simon McQueen  <sm@prismtechnologies.com>
 
@@ -131,19 +138,19 @@ Mon May 26 19:34:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon May 26 10:15:36 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/jane_dev_static_release.xml: Added
-	  -Config STATIC to the test invocation.
+        * configs/autobuild/riverace/jane_dev_static_release.xml: Added
+          -Config STATIC to the test invocation.
 
 Sun May 25 11:06:39 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/jane_dev_static_release.xml: Added
-	  missing \n in platform_macros.GNU. Thanks to Don Hinton for
-	  noticing this.
+        * configs/autobuild/riverace/jane_dev_static_release.xml: Added
+          missing \n in platform_macros.GNU. Thanks to Don Hinton for
+          noticing this.
 
 Sat May 24 10:19:07 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* common/prettify.pm (Compile_Handler): Make "File <xxx> exists
-	  but should be cleaned up" a warning.
+        * common/prettify.pm (Compile_Handler): Make "File <xxx> exists
+          but should be cleaned up" a warning.
 
 Sat May 24 09:18:03 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
