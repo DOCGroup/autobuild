@@ -1,3 +1,8 @@
+Fri Aug  2 20:28:44 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Change scoreboard name to RedHat_GCC_3.1.1
+	  to reflect use of new compiler version.
+
 Thu Aug  1 09:03:21 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/ringil/Legacy.xml:
