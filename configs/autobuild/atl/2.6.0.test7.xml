@@ -3,7 +3,7 @@
 
         <environment name="ACE_ROOT"        value="/home/jcohen/ACE_2.6.0-test7/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/jcohen/ACE_2.6.0-test7/ACE_wrappers/TAO" />
-        <environment name="LD_LIBRARY_PATH" value="/proj/pces/gcc-3_2-release/lib/:/home/jcohen/ACE_wrappers/ace:/proj/pces/gcc-3_2-release/lib/:/home/jcohen/ACE_2.6.0-test7/ACE_wrappers/ace" />
+        <environment name="LD_LIBRARY_PATH" value="/proj/pces/gcc-3_2-release/lib/:/home/jcohen/ACE_2.6.0-test7/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:gthaker@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/home/jcohen/sshwrapper" />
         <environment name="PATH"            value="/proj/pces/gcc-3_2-release/bin:/proj/pces/scripts:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/jcohen/ACE_2.6.0-test7/ACE_wrappers/bin:/proj/pces/scripts:/home/jcohen/bin" />
@@ -24,7 +24,6 @@
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
