@@ -1,3 +1,10 @@
+Tue Jun 15 08:50:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Removed CBXpreview, this environment is to unstable, the xml
+          files will not be removed for this build, but we wait until
+          Borland ships a decent compiler
+
 Tue Jun 15 08:16:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/configs/remedynl/*:
