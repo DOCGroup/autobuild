@@ -1,3 +1,20 @@
+Tue Mar  8 17:09:38 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml: Added
+	  qos=1, ssl=1 and SSL_ROOT=/usr/include to the platform_macros.GNU
+	  file so the SSL stuff can build correctly.
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	  Change --with-ssl=no to --enable-ssl=-no. --with... was changed
+	  to --enable... in ACE a while back - I'm just catching up.
+
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Corrected
+	  "instances=explicit" to "templates=explicit".
+
+	* configs/autobuild/riverace/hope_dev_vc7_debug.xml: Use the top-level
+	  ACE.sln file to rebuild everything rather than use separate commands
+	  for each directory.
+
 Tue Mar  8 13:25:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
