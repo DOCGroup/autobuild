@@ -3,7 +3,7 @@
 # $Id$
 #
 
-cd /build/ACE
+cd /home/build/ACE
 PATH=/usr/local/bin:$PATH
 CVSROOT=jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository
 CVS_RSH=ssh
@@ -13,5 +13,5 @@ export PATH
 
 cvs -z9 up -P -d
 
-exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
-                             /build/ACE/autobuild/configs/autobuild/remedynl/hpux.xml
+exec /opt/perl/bin/perl /home/build/ACE/autobuild/autobuild.pl \
+                             /home/build/ACE/autobuild/configs/autobuild/remedynl/tribeardacc.xml
