@@ -6,6 +6,7 @@ over the world.  We have builds running continuously at
 <a href="http://deuce.doc.wustl.edu/">Washington University, St. Louis</a>,
 <a href="http://doc.ece.uci.edu/">University of California,
 Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt University</a>,
+<a href="http://nenya.ms.mff.cuni.cz">Charles University</a>,
 <a href="http://www.ociweb.com">OCI </a>,
 <a href="http://www.dist-systems.bbn.com/projects/">BBN Technologies</a>,
 <a href="http://www.theaceorb.nl">Remedy IT</a>,
@@ -256,6 +257,30 @@ here</a>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/pokey_Core</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>RH72_IA64_GCC296</name>
+            <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/gcc296_full</url>
+            <build_sponsor>Charles University</build_sponsor>
+            <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
+        </build>
+        <build>
+            <name>RH72_IA64_ICC70</name>
+            <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/icc70_full</url>
+            <build_sponsor>Charles University</build_sponsor>
+            <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
+        </build>
+        <build>
+            <name>RHRH_IA64_GCC296</name>
+            <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/mitsu/gcc296_full</url>
+            <build_sponsor>Charles University</build_sponsor>
+            <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
+        </build>
+        <build>
+            <name>RHRH_IA64_GCC32</name>
+            <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/mitsu/gcc32_full</url>
+            <build_sponsor>Charles University</build_sponsor>
+            <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
         </build>
     </group>
     <group>
