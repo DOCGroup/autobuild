@@ -2,7 +2,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/Users/jmzorko/ace_daily_build/ACE_wrappers-repository" />
-        <environment name="DYLD_LIBRARY_PATH" value="/Users/jmzorko/ace_daily_build/ACE_wrappers-repository/ace" />
+        <environment name="DYLD_LIBRARY_PATH" value="/Users/jmzorko/ace_daily_build/ACE_wrappers-repository/lib" />
         <environment name="CVSROOT"         value=":pserver:anonymous@anoncvs.ociweb.com:/cvs" />
         <environment name="CVS_RSH"         value="/usr/bin/ssh" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.3" />
@@ -21,7 +21,7 @@
     <command name="log"               options="on" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
     <!-- Now, delete them again to insure a clean slate. -->
@@ -35,7 +35,7 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-j 2 -k" />
