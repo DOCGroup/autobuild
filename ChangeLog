@@ -1,3 +1,8 @@
+2004-08-08  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/autobuild/remedynl/GCCautoconfig.xml:
+	  Changed to dump libtool version.
+
 2004-08-07  J.T. Conklin  <jtc@acorntoolworks.com>
 
 	* configs/autobuild/remedynl/GCCautoconfig.xml:
