@@ -1,3 +1,8 @@
+Fri Jan 10 16:37:13 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Add MacOS X build maintained by John
+	  Zorko.
+
 Thu Jan  9 15:51:39 2003  Steve Huston  <shuston@riverace.com>
 
         * command/check_compiler.pm: Teach it how to get HP aC++ version.
