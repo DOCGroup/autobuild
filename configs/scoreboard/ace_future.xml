@@ -10,18 +10,18 @@ all the OS/platform combinations ACE is tested everyday.
 
 <group>
   <name>Test Builds for ACE</name>
-    <build> 
+    <build>
       <name>FreeBSD_5</name>
       <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_5</url>
       <build_sponsor>WAEI</build_sponsor>
-      <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url> 
+      <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url>
     </build>
     <build>
       <name>FreeBSD_RELENG_4</name>
       <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_RELENG_4</url>
       <build_sponsor>WAEI</build_sponsor>
       <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url>
-    </build> 
+    </build>
     <build>
       <name>MACOS_X_Jaguar</name>
       <url>http://www.makexs.com/~zorko/Jaguar</url>
@@ -77,12 +77,6 @@ all the OS/platform combinations ACE is tested everyday.
     <build>
         <name>SuSE_90_Kylix_3_ACE</name>
         <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Kylix3ACE</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-        <name>WinXP_CBuilderX_Preview</name>
-         <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXpreview</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
