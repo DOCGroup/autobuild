@@ -1,3 +1,8 @@
+Fri Oct  4 05:50:08 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Build pc1 is online again, so readded the 3 bcb6 builds.
+
 Thu Oct  3 14:56:08 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/process_logs.pm: Reduce amount of kept logs from 20 to 10
