@@ -2,18 +2,19 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/export/home/bugzilla/FACET/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/export/home/bugzilla/FACET/ACE_wrappers/TAO"/>
-        <environment name="FACET_ROOT"      value="/export/home/bugzilla/FACET/RTEvent/facet" />
-        <environment name="LD_LIBRARY_PATH" value="/usr/lib:/export/home/bugzilla/FACET/ACE_wrappers/ace" />
-        <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers/TAO"/>
+        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-cvs-head/RTEvent/facet" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/lib:/export/home/bugzilla/facet-cvs-head/ACE_wrappers/ace" />
+        <environment name="OEP_ROOT"        value="/export/home/bugzilla/facet-boeing-OEP/OEP_Facet/OEP_B2_4/OFP" />
+        <!-- <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" /> -->
         <environment name="CVS_RSH"         value="ssh" />
-	<environment name="PATH"            value="/export/home/bugzilla/FACET/ACE_wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
+	<environment name="PATH"            value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
 
-        <variable name="root"     value="/export/home/bugzilla/FACET/" />
-        <variable name="sam_root" value="/export/home/bugzilla/FACET/ACE_wrappers/samwise" />
+        <variable name="root"     value="/export/home/bugzilla/facet-cvs-head/" />
+        <variable name="sam_root" value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_Redhat_8.0" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_Redhat_8.0-oep" />
         <variable name="configs"  value="Linux" />
 
     </configuration>
@@ -24,10 +25,11 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
+    <!-- running setup.sh in the tao-facet-adapter dir takes care of the file_manipulation stuff -->
     <!-- <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" /> -->
     <!-- <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\nexceptions=0\ninterceptors=0\n\nACE_COMPONENTS=FOR_TAO\n\nTAO_ORBSVCS=Notify Naming AV Log RTEvent CosEvent RTSchedEvent RTCORBAEvent \n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" /> -->
 
-    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/FACET/RTEvent/tao-facet-adapter && ./setup.sh'" />
+    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-boeing-OEP/RTEvent/tao-facet-adapter && ./setup.sh'" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
