@@ -563,7 +563,6 @@ sub found_section ($$)
 # Runs make_pretty on a bunch of files and creates an html file.
 #
 # Arguments:  $ - directory
-#             $ - input xml file name
 #             $ - outside html file name
 # Returns:    Nothing
 #
@@ -1057,7 +1056,9 @@ exit (1);
 
 $inp_file = $opt_f;
 
-$out_file = $opt_o;
+if (defined $opt_o) {
+    $out_file = $opt_o;
+}
 
 load_build_list ($inp_file);
 build_group_hash ();
