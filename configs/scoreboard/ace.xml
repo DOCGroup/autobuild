@@ -245,14 +245,4 @@ all the OS/platform combinations ACE is tested everyday.
          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
 </group>
-
-<group>
-   <name>VxWorks</name>
-   <build>
-      <name>VxWorks5.5.1_x86_GCC2.96_pthread</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_Pentium_Pthread_GNU</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-</group>
 </scoreboard>
