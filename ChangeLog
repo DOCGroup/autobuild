@@ -1,3 +1,8 @@
+Sun Nov  3 10:39:25 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Mesaging.xml: Added
+	  RH_7.1 as the config option. 
+
 Thu Oct 31 20:31:19 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/beguine/driver.sh:

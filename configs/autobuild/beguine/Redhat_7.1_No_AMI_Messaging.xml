@@ -11,7 +11,7 @@
         <variable name="sam_root" value="/project/beguinetmp/bugzilla/NO_AMI_MESSAGING_newbuild/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/beguine_Redhat_7.1_No_AMI" />
-        <variable name="configs"  value="Linux MINIMUM" />
+        <variable name="configs"  value="Linux MINIMUM RH_7.1" />
 
     </configuration>
 
