@@ -26,12 +26,12 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="generate_makefile" options="-type nmake -value_template platforms=Win64 ace/ace.mpc" />
+    <command name="generate_workspace" options="-type nmake -value_template platforms=Win64 ace/ace.mwc" />
     <command name="generate_workspace" options="-type nmake -value_template platforms=Win64 tests/tests.mwc" />
-    <command name="make"           options="dir=ace ace.mak CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=tests tests.mak CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=ace ace.mak CFG='Win64 Debug'" />
-    <command name="make"           options="dir=tests tests.mak CFG='Win64 Debug'" />
+    <command name="make"           options="dir=ace ace.nmake CFG='Win64 Debug' REALCLEAN" />
+    <command name="make"           options="dir=tests tests.nmake CFG='Win64 Debug' REALCLEAN" />
+    <command name="make"           options="dir=ace ace.nmake CFG='Win64 Debug'" />
+    <command name="make"           options="dir=tests tests.nmake CFG='Win64 Debug'" />
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
