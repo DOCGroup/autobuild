@@ -101,12 +101,6 @@ decide the migration paths and strategies.
             <orange>30</orange>
             <red>36</red>
         </build>
-        <build>
-            <name>SuSE_90_GCC3.3.1(MPC)</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-    	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
    <name>VxWorks</name>
    <build>
    <name>SunOS_5.8_GCC_2.96_(rtlogic.com)</name>

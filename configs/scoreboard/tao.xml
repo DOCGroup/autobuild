@@ -118,6 +118,12 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
+     <name>SuSE_90_GCC3.3.1(MPC)</name>
+     <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
       <name>RH71_Static</name>
       <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maglor_Static</url>
       <build_sponsor>UC Irvine</build_sponsor>
@@ -179,15 +185,6 @@ all the OS/platform combinations TAO is tested everyday.
          <orange>30</orange>
          <red>36</red>
       </build>
-</group>
-<group>
-   <name>Lynx</name>
-   <build>
-      <name>Lynx_PPC</name>
-      <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_LYNX_PPC_newbuild</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
 </group>
 <group>
    <name>Windows</name>

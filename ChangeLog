@@ -1,3 +1,11 @@
+Sat Nov 22 20:53:58 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+	* configs/scoreboard/tao_future.xml:
+
+	  Removed LynxOS builds since it was not running and moved a SuSE9
+	  from the future page to the main page.
+
 Thu Nov 20 20:15:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
         Please direct all question regarding this commit to:
