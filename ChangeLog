@@ -1,3 +1,7 @@
+Fri Jan 24 19:59:34 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml: Added new MinGW build.
+
 Fri Jan 24 13:56:41 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml: New build
