@@ -1,3 +1,8 @@
+Thu May 13 07:48:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/VxWorks.xml:
+          Removed this file, we don't have a vxworks build anymore
+
 Wed May 12 16:50:33 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml: Removed
