@@ -1,4 +1,10 @@
-Wd May 19 06:40:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+Thu May 20 17:44:39 2004  Steve Huston  <shuston@riverace.com>
+
+	* command/auto_run_tests.pm: Add the ability to specify "dir=..."
+	  in the options to change directory from $project_root to the
+	  specified directory before running the tests.
+
+Wed May 19 06:40:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/hpux.xml:
           Added setting of SHLIB_PATH

@@ -84,12 +84,30 @@ sub Run ($)
         return 0;
     }
 
+    my $dir;
+ 
+    if ($options =~ m/dir='([^']*)'/) {
+        $dir = $1;
+        $options =~ s/dir='$dir'//;
+    }
+    elsif ($options =~ m/dir=([^\s]*)/) {
+        $dir = $1;
+        $options =~ s/dir=$dir//;
+    }
+
     if (defined $sandbox) {
         $options .= " -s $sandbox";
     }
 
     if (defined $configs) {
         $options .= " -Config " . join (" -Config ", split (' ', $configs));
+    }
+
+    if (defined $dir) {
+        if (!chdir $dir) {
+          print STDERR __FILE__, ": Cannot change to $dir\n";
+          return 0; 
+        }
     }
 
     my $command = "perl bin/auto_run_tests.pl $options";
