@@ -25,8 +25,8 @@
     <command name="generate_workspace" options="-type em3 ace/ace.mwc" />
     <command name="generate_workspace" options="-type em3 tests/tests.mwc" />
     <!-- RMCast is defined as depending on ace, so clean ace, then rebuild RMCast to get both -->
-    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ace DLL - Win32 (WCE emulator) Debug' /CLEAN /USEENV" />
-    <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast DLL - Win32 (WCE emulator) Debug' /REBUILD /CECONFIG 'STANDARDSDK' /USEENV" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ACE - Win32 (WCE emulator) Debug' /CLEAN /USEENV" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast - Win32 (WCE emulator) Debug' /REBUILD /CECONFIG 'STANDARDSDK' /USEENV" />
     <command name="win32make"         options="-evc3 -recurse tests" />
 
     <command name="log"               options="OFF" />
