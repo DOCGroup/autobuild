@@ -33,11 +33,9 @@ Wed Aug 27 21:33:52 UTC 2003  Don Hinton  <dhinton@dresystems.com>
         * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
         * configs/autobuild/tango_isis/Full.xml:
         * configs/autobuild/tango_isis/SingleThreaded.xml:
-          Modified these builds to use the new "-exclude" and "-hierarcy"
+          Modified these builds to use the new "-exclude" and "-hierarchy"
           options instead of "-recurse=" to exclude directories and mwc
           files.
-
-
 
 Tue Aug 26 16:58:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
