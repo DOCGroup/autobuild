@@ -37,7 +37,7 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO,TAO/performance-tests/Sequence_Latency/Thread_Per_Connection,TAO/performance-tests/Sequence_Latency/Thread_Pool -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
