@@ -833,6 +833,10 @@ sub Compile_Handler ($)
         # for the timebeing
         $self->Output_Normal ($s);
     }
+    elsif ($s =~ m/possibly used unsafely; consider using/) {
+        # Similar warnings on OpenBSD
+        $self->Output_Normal ($s);
+    }
     elsif ($s =~ m/(BUILD ERROR detected in [\w\/]+)/ ) {
         # If we see "BUILD ERROR detected in" then increment the build counter
         # but don't print it in the report.

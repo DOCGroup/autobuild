@@ -1,3 +1,8 @@
+Sat Jan 11 11:00:00 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* common/prettify.pm: Just omit the warnings that is emitted by
+	  the compiler on seeing mktemp () on OpenBSD.
+
 Sat Jan 11 10:46:53 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* common/prettify.pm: Had to revert this change "Fri Jan 10
