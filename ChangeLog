@@ -1,3 +1,9 @@
+Wed Jul 28 17:39:29 BST 2004  Paul Morrison <epm@prismtechnologies.com>
+
+	* configs/scoreboard/tao.xml
+
+	  Changed PrismTech scoreboard url.
+
 Wed Jul 28 00:26:28 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
@@ -71,13 +77,6 @@ Sat Jul 24 15:53:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
  	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
 
 	  Fixed the LD_LIBRARY_PATH to point to $ACE_ROOT/lib.
-
-Fri Jul 23 16:32:47 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
-
-	* configs/autobuild/lindy_isis/Static.xml:
-
-	  Added location of g++ 3.4.1 libraries to linker path
-	  "$LD_LIBRARY_PATH".  Address build link-time errors.
 
 Fri Jul 23 15:54:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
