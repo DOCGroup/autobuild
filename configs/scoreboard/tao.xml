@@ -149,12 +149,14 @@ all the OS/platform combinations TAO is tested everyday.
          <orange>30</orange>
          <red>36</red>
       </build>
+<!--
       <build>
          <name>RH8_GCC_3.2_Debug</name>
          <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_spider_rh80_gcc3.2_d1o0/</url>
          <build_sponsor>Object Computing, Inc.</build_sponsor>
          <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
       </build>
+-->
 </group>
 <group>
    <name>Lynx</name>
@@ -191,12 +193,14 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
+<!--
         <build>
             <name>WinXP_MSVC6_DLL_Debug</name>
             <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_justwork_winxp_vc6_d1o0/</url>
            <build_sponsor>Object Computing, Inc.</build_sponsor>
            <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
         </build>
+-->
         <build>
             <name>Win2K_BCB6_Pro_Static_Release</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Static_Release</url>
@@ -227,12 +231,14 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
+<!--
         <build>
             <name>Win2003_VC71_NET_DLL_Debug</name>
             <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_wasp_win2003_vc71_d1o0/</url>
             <build_sponsor>Object Computing, Inc.</build_sponsor>
             <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
         </build>
+-->
     </group>
 
 <group>

@@ -160,4 +160,26 @@ decide the migration paths and strategies.
       <red>192</red>
     </build>
 </group>
+
+<group>
+   <name>Example MPC Usage Builds</name>
+      <build>
+         <name>RH8_GCC_3.2_Debug</name>
+         <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_spider_rh80_gcc3.2_d1o0/</url>
+         <build_sponsor>Object Computing, Inc.</build_sponsor>
+         <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
+      </build>
+        <build>
+            <name>WinXP_MSVC6_DLL_Debug</name>
+            <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_justwork_winxp_vc6_d1o0/</url>
+           <build_sponsor>Object Computing, Inc.</build_sponsor>
+           <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
+        </build>
+        <build>
+            <name>Win2003_VC71_NET_DLL_Debug</name>
+            <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_wasp_win2003_vc71_d1o0/</url>
+            <build_sponsor>Object Computing, Inc.</build_sponsor>
+            <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
+        </build>
+</group>
 </scoreboard>

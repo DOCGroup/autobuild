@@ -1,3 +1,11 @@
+Tue Sep 16 16:23:39 2003  Chris Cleeland  <cleeland_c@ociweb.com>
+
+	* configs/scoreboard/tao.xml:
+	* configs/scoreboard/tao_future.xml:
+
+	  Moved OCI's example MPC builds to the tao_future scoreboard
+	  until "Example MPC Usage" builds.
+
 Fri Sep 12 14:10:41 MST 2003 Trevor Fields <fields_t@ociweb.com>
 
         * configs/autobuild/ace_isis/RH8_Minimum.xml:
