@@ -1,0 +1,77 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="C:/ACE/VxWorks/PPC85XXDIAB/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="C:/ACE/VxWorks/PPC85XXDIAB/ACE_wrappers/TAO"/>
+        <environment name="HOST_ROOT"       value="C:/ACE/VxWorks/Host/ACE_wrappers"/>
+        <!-- environment name="LD_LIBRARY_PATH" value="C:/ACE/VxWorks/PPC85XXGNU/ACE_wrappers/lib" / -->
+        <environment name="PATH"            value="C:\T221-PPC_E500\host\diab\5.1.2\WIN32\bin;C:\T221-PPC_E500\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\Host\ACE_wrappers\lib;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE" type="prefix" />
+        <environment name="WIND_BASE"       value="C:/T221-PPC_E500"/>
+        <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
+        <!-- environment name="DIABLIB"         value="C:\T221-PPC_E500\host\diab\5.1.2"/ -->
+        <!-- environment name="DIAB_HOST_TYPE"  value="WIN32"/ -->
+        <!-- environment name="DTARGET"         value="PPCE500"/ -->
+        <!-- environment name="DOBJECT"         value="F"/ -->
+        <!-- environment name="DFP"             value="S"/ -->
+        <environment name="CVSROOT"         value=":ext:mcorino@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="C:\cygwin\bin\ssh" />
+        <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
+
+        <variable name="root"     value="C:\ACE\VxWorks\PPC85XXDIAB\" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="C:\ACE\VxWorks\PPC85XXDIAB\" />
+        <variable name="configs"  value="VxWorks" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <!-- command name="file_manipulation" options="type=mustnotexist file=.disable" / -->
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name GNUmakefile* -exec \x22rm {}\x22 \x22;\x22" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-vxworks5.x.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\nprobe=1\nfl_reactor=0\nTOOL = diab\nCPU = PPC85XX\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="diab" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+
+    <command name="make"              options="-k -C ace" />
+    <!-- command name="make"              options="-k -C Kokyu" / -->
+    <command name="make"              options="-k -C ACEXML" />
+    <command name="make"              options="-k -C protocols" />
+    <!-- command name="make"              options="-k -C examples" / -->
+    <!-- command name="make"              options="-k -C netsvcs" / -->
+    <!-- command name="make"              options="-k -C performance-tests" / -->
+    <command name="make"              options="-k -C tests" />
+    <!-- command name="make"              options="-k -C websvcs" / -->
+    <!-- command name="make"              options="-k -C TAO/TAO_IDL" / -->
+    <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO/tao" />
+    <command name="make"              options="-k -C TAO/tests" />
+
+    <!-- command name="auto_run_tests" options="" / -->
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/SuSE_GCC/* -f" / -->
+    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/SuSE_GCC" / -->
+</autobuild>
