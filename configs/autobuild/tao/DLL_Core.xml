@@ -13,7 +13,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -CORE -u -k -clean" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -CORE -u -v -k -clean" />
 
     <command name="log"               options="ON" />
 
