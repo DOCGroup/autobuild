@@ -282,6 +282,12 @@ here</a>
             <build_sponsor>Charles University</build_sponsor>
             <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
         </build>
+        <build>
+            <name>SuSE_81_GCC32</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
     </group>
     <group>
         <name>Lynx</name>

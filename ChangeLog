@@ -1,3 +1,8 @@
+Tue Mar  4 10:16:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Added SuSE 8.1 GCC 3.2 build
+
 Mon Mar  3 18:00:41 2003  Steve Huston  <shuston@riverace.com>
 
         * scoreboard.pl: Fix clean_cache() to dive into the individual build
