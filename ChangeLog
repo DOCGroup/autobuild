@@ -1,3 +1,9 @@
+Mon Apr 14 09:33:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Mark the word Assertion in the test output as error. The Kylix
+          tests show this word a lot.
+
 Thu Apr 10 15:14:34 2003  Simon McQueen  <sm@prismtechnologies.com>
 
 	* configs/autobuild/valinor/Full.xml:
@@ -83,43 +89,43 @@ Thu Apr 10 15:14:34 2003  Simon McQueen  <sm@prismtechnologies.com>
 	* configs/autobuild/amrod/ImplicitTemplates.xml:
 	* configs/autobuild/ace/LYNX_PPC.xml:
 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	
+
 	  Added TAO_ROOT environment variable.
 
 Tue Apr  8 11:47:44 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
-         
+
 	* configs/autobuild/danzon/SunOS_Sun53.xml:
 	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Changed the
 	  path to location of the builds.
-         
+
 Wed Apr  2 10:15:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
-         
+
 	* configs/scoreboard/tao_future.xml:
 	* configs/scoreboard/tao.xml: Removed the three builds from ISIS,
 	  since we have some rearrangement going on here.
-         
+
 Sun Mar 30 22:00:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
-         
+
 	* configs/autobuild/maglor/Static.xml: Added optimized and
 	  non-optimized data collection points for IOR sizes.
-         
+
 Sun Mar 30 11:44:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
-         
+
         * common/prettify.pm:
           BCB6 can give "Assertion failed" during compilation and this is
           than an error in the compiler. Mark this line as error so that it
           appears also in the brief build output as error.
-         
+
 Sat Mar 29 19:08:33 2003  Steve Huston  <shuston@riverace.com>
-         
+
 	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: New
 	  autoconf build for AIX 5.1, Visual Age C++ 6.
-         
+
 	* configs/scoreboard/ace_future.xml: Added AIX 5.1, Visual Age 6
 	  autoconf build.
-         
+
 Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
-         
+
 	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
 	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
 	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
@@ -127,45 +133,45 @@ Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
 	  Changed from make realclean to make reverseclean to insure
 	  that everything gets cleaned out so Visual Age can deal with
 	  template properly.
-         
+
 Mon Mar 24 07:04:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
-         
+
 	* configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
 	  scoreboard.
-         
+
 Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
-         
+
         * configs/scoreboard/tao.xml: Replaced the BCB5 Static build with a
           BCB6 Static build
-         
+
         * configs/autobuild/remedynl/BCB6StaticRelease.xml: Added this file.
           Also removed obsolete config files in this directory.
-         
+
 Sat Mar 22 08:02:39 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
-         
+
 	* configs/autobuild/nirvana/VC7_Core.xml: Removed obsolete mwc
 	  option -dynamic_only.
-         
+
 Fri Mar 21 11:28:28 2003  Ossama Othman  <ossama@uci.edu>
-         
+
 	* make_pretty.pl (tests_output):
 	* common/prettify.pm (Test_Handler):
-         
+
 	  Reverted previous change.  Some tests print expected exception
 	  output.
-         
+
 Thu Mar 20 14:21:33 2003  Ossama Othman  <ossama@uci.edu>
-         
+
 	* make_pretty.pl (tests_output):
 	* common/prettify.pm (Test_Handler):
-         
+
 	  Prettify the actual CORBA exception output.
-         
+
 Wed Mar 19 06:59:18 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
-         
+
 	* configs/scoreboard/ace_future.xml: Fixed a cut and past error in
 	  the URL for WAEI.
-         
+
 Wed Mar 19 06:00:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Changed the URL for MACOS

@@ -992,6 +992,7 @@ sub Test_Handler ($)
         || $s =~ m/FAILED/
         || $s =~ m/EXCEPTION/
 	|| $s =~ m/ACE_ASSERT/
+	|| $s =~ m/Assertion/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
