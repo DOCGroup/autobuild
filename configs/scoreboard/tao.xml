@@ -204,12 +204,6 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP6_LIB_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6sr</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_MSVC6_SP6_DLL_Debug_Unicode</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6ddu</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -218,12 +212,6 @@ all the OS/platform combinations TAO is tested everyday.
         <build>
             <name>WinXP_MSVC6_SP6_DLL_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6dd</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_MSVC6_SP6_DLL_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -392,12 +380,6 @@ all the OS/platform combinations TAO is tested everyday.
    <build>
       <name>Windows_XP_VC71_Host</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_Host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-      <name>VxWorks5.5.1_PPC85XX_DIAB</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PPC85XX_DIAB</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
