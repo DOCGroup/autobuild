@@ -1,3 +1,8 @@
+Wed Jan  1 14:28:03 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/maglor/Static.xml: Added the user name when
+	  kick starting the memory usage collection scripts.
+
 Wed Jan 01 12:48:07 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/pokey: New Core build.

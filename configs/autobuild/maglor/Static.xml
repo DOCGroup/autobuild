@@ -41,7 +41,7 @@
     <command name="shell"             options="/bin/sync" /> 
     <command name="shell"              options="/project/maglor/bugzilla/Static/ACE_wrappers/bin/footprint_stats.sh /project/maglor/bugzilla/Static/ACE_wrappers /project/doctmp/Stats" />
     <command name="shell"              options="/project/maglor/bugzilla/Static/ACE_wrappers/bin/performance_stats.sh /project/maglor/bugzilla/Static/ACE_wrappers /project/doctmp/Stats" />
-    <command name="shell"              options="/project/maglor/bugzilla/Static/ACE_wrappers/bin/topinfo_stats.sh /project/maglor/bugzilla/Static/ACE_wrappers /project/doctmp/Stats" />
+    <command name="shell"              options="/project/maglor/bugzilla/Static/ACE_wrappers/bin/topinfo_stats.sh /project/maglor/bugzilla/Static/ACE_wrappers /project/doctmp/Stats bugzilla" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
