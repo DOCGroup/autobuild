@@ -262,7 +262,7 @@ and let us know which platform combinations you can contribute.
          </build>
          <build>
              <name>RedHat_GCC_3.3(pre-release)</name>
-<            <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
+             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
          </build>
     </group>
     <group>
