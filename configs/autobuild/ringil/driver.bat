@@ -1,6 +1,6 @@
 @echo off
 setlocal
-set "HOME=C:\Users\bugzilla"
+call "C:\Program Files\Microsoft Visual Studio\VC98\Bin\vcvars32.bat"
 cd ..\..\..\
 cvs up -P -d
 cd configs\autobuild\ringil

@@ -76,6 +76,12 @@ sub Run ($)
 
     my $command = "perl bin/pippen.pl $options";
 
+    if ($options =~ m/msvc_auto_compile(.*)$/) {
+        # override with the old file
+
+        $command = "perl bin/msvc_auto_compile.pl $1";
+    }
+
     print "Running: $command\n";
     system ($command);
 

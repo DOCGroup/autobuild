@@ -24,5 +24,13 @@
             <name>Win2000_Unicode</name>
             <url>http://ringil.ece.uci.edu/bugzilla/unicode</url>
         </build>
+        <build>
+            <name>Win2000_Lib_Debug</name>
+            <url>http://ringil.ece.uci.edu/bugzilla/lib_debug</url>
+        </build>
+        <build>
+            <name>Win2000_Lib_Release</name>
+            <url>http://ringil.ece.uci.edu/bugzilla/lib_release</url>
+        </build>
     </group>        
 </scoreboard>
