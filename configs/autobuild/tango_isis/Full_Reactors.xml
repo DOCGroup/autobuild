@@ -16,9 +16,9 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="log"               options="ON" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
 
     <command name="shell"              options="find ./ -name 'GNUMake*' | xargs rm"  />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
