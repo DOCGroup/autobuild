@@ -13,6 +13,7 @@ sys.path.append("../matrix_database")
 from HTMLScoreboard import *
 from TestPlatform import *
 from utils import *
+from TestDBFileHandle import *
 import string
 
 #Uncomment when you need save the test results to database
