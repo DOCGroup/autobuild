@@ -1,3 +1,10 @@
+Thu May 27 22:01:46 UTC 2004  Don Hinton  <dhinton@dre.vanderbilt.edu>
+
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+          Added -exclude TAO/CIAO to match the MPC setting for
+          compile times, that seems to work.  MPC seems to crash
+          and not complete.
+
 Wed May 26 23:24:17 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml (CCFLAGS):
