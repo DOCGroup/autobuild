@@ -1,3 +1,9 @@
+Thu Mar  6 18:43:26 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/charlie_dev_va5_debug.xml: AIX 4.3 build.
+
+	* configs/scoreboard/acetao.xml: Add new build to scoreboard.
+
 Tue Mar  4 10:47:23 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:

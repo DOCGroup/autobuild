@@ -1,0 +1,48 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"  value="/home/shuston/ace/builds/ACE_wrappers/build/va5_debug" />
+        <environment name="LIBPATH"   value="/home/shuston/ace/builds/ACE_wrappers/build/va5_debug/ace:.:/usr/lib" />
+        <environment name="CVSROOT"   value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"   value="ssh" />
+
+        <variable name="root"         value="/home/shuston/ace/builds/ACE_wrappers" />
+        <variable name="build_name"   value="va5_debug" />
+        <variable name="project_root" value="build/va5_debug" />
+        <variable name="log_file"     value="va5_debug.txt" />
+        <variable name="log_root"     value="/jane/acebuilds/logs/charlie/dev/va5_debug" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="cvs"               options="-z 3 -q update -P -d ." />
+
+    <command name="file_manipulation" options="type=delete file=.disable" />
+
+    <command name="file_manipulation" options="type=mustnotexist file=build/va5_debug/.disable" />
+    <command name="create_ace_build"  options="-a -v" />
+    <command name="file_manipulation" options="type=create file=build/va5_debug/.disable output='RUNNING'" />
+
+    <command name="file_manipulation" options="type=create file=build/va5_debug/ace/config.h output='#include \x22ace/config-aix4.x.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/va5_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler"    options="vacpp" />
+    <command name="print_ace_config" />
+
+    <!-- make -j 2 sometimes messes up the xlC version check -->
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k" />
+
+    <command name="auto_run_tests"    options="-a" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=build/va5_debug/.disable" />
+    <command name="status"            options="off" />
+</autobuild>
