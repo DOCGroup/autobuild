@@ -1,3 +1,13 @@
+Thu Dec 12 17:12:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/ace/LYNX_PPC.xml:
+	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml: Removed -j 2 from
+	  reverseclean's.
+
 Thu Dec 12 11:03:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* command/rem_sems.pm: Get the symbol root before changing

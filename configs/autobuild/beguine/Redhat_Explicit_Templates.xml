@@ -30,8 +30,8 @@
 <!--    <command name="sam"               options="create" /> -->
 <!--    <command name="sam"               options="sam" /> -->
 
-    <command name="make"              options="-j 2 -k reverseclean" />
-    <command name="make"              options="-j 2 -k -C TAO reverseclean" />
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
 
