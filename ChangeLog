@@ -1,3 +1,12 @@
+2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/tao/Unicode.xml: Explicitly specify build order 
+	  for some ACEXML projects.
+
+	* configs/autobuild/tao/DLL_Debug.xml: 
+	* configs/autobuild/nirvana/DLL_Release.xml: Changed the set of tests
+	  getting invoked.
+
 2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* README: Add documentation for shell command.
