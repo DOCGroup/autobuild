@@ -1,4 +1,4 @@
-< !-- $Id$ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="G:/bugzilla/new_VC7_Core/ACE_wrappers" />
