@@ -1,40 +1,48 @@
+Mon Jan  5 10:58:44 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/doc_spider_rh80_gcc3.2_d1o0.xml:
+
+          Put the depend target on a separate make invocation than the all
+          target.  This will ensure that the dependencies are up-to-date
+          before the all target is run.
+
 Mon Jan  5 10:34:51 2004  Steve Huston  <shuston@riverace.com>
 
-	* command/process_logs.pm: If copying the log file fails, include
-	  the reason when reporting it. Also, don't delete the file if it
-	  doesn't get copied.
+        * command/process_logs.pm: If copying the log file fails, include
+          the reason when reporting it. Also, don't delete the file if it
+          doesn't get copied.
 
-	* configs/autobuild/riverace/hope_dev_vc7_debug.xml: Change from
-	  VC7 (Visual Studio .NET 2002) to VC71 (Visusl Studio .NET 2003).
-	  Add ACE_HAS_IPV6 to the config.
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Change from
+          VC7 (Visual Studio .NET 2002) to VC71 (Visusl Studio .NET 2003).
+          Add ACE_HAS_IPV6 to the config.
 
 Sun Jan  4 17:30:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Pulled out a DRE systems build off the scoreboard. 
+          Pulled out a DRE systems build off the scoreboard.
 
 Sun Jan  4 17:29:09 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Pulled out exlicit templates form the scoreboard.
+          Pulled out exlicit templates form the scoreboard.
 
 Sat Jan  3 12:04:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/cbxdd.xml:
-	* configs/autobuild/remedynl/cbxpreview.xml:
-	  On the reinstalled build box I installed CBuilderX Enterprise Edition.
-	  Just found out that our nice Borland people have renamed the Borland
-	  make to bmake in that version, make is the GNU make. The personal
-	  edition has not had this change. Add make_program variable so that
-	  the autobuild environment uses bmake.
+        * configs/autobuild/remedynl/cbxdd.xml:
+        * configs/autobuild/remedynl/cbxpreview.xml:
+          On the reinstalled build box I installed CBuilderX Enterprise Edition.
+          Just found out that our nice Borland people have renamed the Borland
+          make to bmake in that version, make is the GNU make. The personal
+          edition has not had this change. Add make_program variable so that
+          the autobuild environment uses bmake.
 
 Fri Jan  2 15:29:40 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Removed the whole build of ace.
+          Removed the whole build of ace.
 
 Fri Jan  2 12:02:35 2004  Chad Elliott  <elliott_c@ociweb.com>
 

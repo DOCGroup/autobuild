@@ -31,16 +31,26 @@
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc3.2_d1o0/setupenv.sh output='umask 002\nACE_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0; export ACE_ROOT\nTAO_ROOT=$ACE_ROOT/TAO; export TAO_ROOT\nLD_LIBRARY_PATH=$ACE_ROOT/lib:/opt/gcc/3.2/lib:/usr/lib; export LD_LIBRARY_PATH\nPATH=/opt/gcc/3.2/bin:/usr/bin:/bin:$ACE_ROOT/bin; export PATH\nLM_LICENSE_FILE=; export LM_LICENSE_FILE\n'"/>
 	<command name="generate_workspace" options="-type gnuace -recurse"/>
 	<command name="print_ace_config"/>
-	<command name="make" options="-k -C TAO -f Makefile.TAOACE depend all"/>
-	<command name="make" options="-k -C tests depend all"/>
-	<command name="make" options="-k -C examples depend all"/>
-	<command name="make" options="-k -C performance-tests depend all"/>
-	<command name="make" options="-k -C TAO/tests depend all"/>
-	<command name="make" options="-k -C TAO/examples depend all"/>
-	<command name="make" options="-k -C TAO/performance-tests depend all"/>
-	<command name="make" options="-k -C TAO/orbsvcs/tests depend all"/>
-	<command name="make" options="-k -C TAO/orbsvcs/examples depend all"/>
-	<command name="make" options="-k -C TAO/orbsvcs/performance-tests depend all"/>
+	<command name="make" options="-k -C TAO -f Makefile.TAOACE depend"/>
+	<command name="make" options="-k -C tests depend"/>
+	<command name="make" options="-k -C examples depend"/>
+	<command name="make" options="-k -C performance-tests depend"/>
+	<command name="make" options="-k -C TAO/tests depend"/>
+	<command name="make" options="-k -C TAO/examples depend"/>
+	<command name="make" options="-k -C TAO/performance-tests depend"/>
+	<command name="make" options="-k -C TAO/orbsvcs/tests depend"/>
+	<command name="make" options="-k -C TAO/orbsvcs/examples depend"/>
+	<command name="make" options="-k -C TAO/orbsvcs/performance-tests depend"/>
+	<command name="make" options="-k -C TAO -f Makefile.TAOACE all"/>
+	<command name="make" options="-k -C tests all"/>
+	<command name="make" options="-k -C examples all"/>
+	<command name="make" options="-k -C performance-tests all"/>
+	<command name="make" options="-k -C TAO/tests all"/>
+	<command name="make" options="-k -C TAO/examples all"/>
+	<command name="make" options="-k -C TAO/performance-tests all"/>
+	<command name="make" options="-k -C TAO/orbsvcs/tests all"/>
+	<command name="make" options="-k -C TAO/orbsvcs/examples all"/>
+	<command name="make" options="-k -C TAO/orbsvcs/performance-tests all"/>
 	<command name="auto_run_tests" options="-Config SSL"/>
 	<command name="log" options="off"/>
 	<command name="process_logs" options="clean move prettify index"/>
