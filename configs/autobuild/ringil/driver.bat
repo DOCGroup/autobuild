@@ -1,5 +1,7 @@
 @echo off
 setlocal
+set "LIB=%LIB%;C:\openssl-0.9.6c\out32dll"
+set "INCLUDE=%INCLUDE%;C:\openssl-0.9.6c\inc32"
 call "C:\Program Files\Microsoft Visual Studio\VC98\Bin\vcvars32.bat"
 cd ..\..\..\
 cvs up -P -d
