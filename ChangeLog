@@ -1,3 +1,10 @@
+Mon May 10 08:55:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+          Removed not needed options with MPC generation. Just build
+          TAO/tao directory with one command, this is much easier and
+          the way used doesn't work anymore with the new makefiles.
+
 Sun May  9 13:45:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango/SunOS_GCC_2_95.xml:
