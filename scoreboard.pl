@@ -805,11 +805,18 @@ sub update_html_table ($$@)
             else {
                 print $indexhtml "&nbsp;";
             }
-            print $indexhtml "<TD bgcolor=$color>";
             if (defined $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS}) {
+                if ($builds{$buildname}->{SECTION_ERROR_SUBSECTIONS} > 0) {
+                    $color = 'red';
+                }
+                else {
+                    $color = 'lime';
+                }
+                print $indexhtml "<TD bgcolor=$color>";
                 print $indexhtml $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS};
             }
             else {
+                print $indexhtml "<TD>";
                 print $indexhtml "&nbsp;";
             }
         }
