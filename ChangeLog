@@ -1,3 +1,8 @@
+Mon Mar 17 06:10:15 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/index.xml: Missed a few build sponsors in the
+	  index page. Thanks to Don Hinton for pointing this out!
+
 Sun Mar 16 21:22:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* common/integratedparser.pm (Parse): Cosmetic fixes that never
