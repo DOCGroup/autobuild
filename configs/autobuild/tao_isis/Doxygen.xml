@@ -9,7 +9,7 @@
 
         <variable name="root"     value="/project/taotmp/Doxygen/staging_area/Current" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/doc_TAO_doxygen" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/tao_TAO_doxygen" />
 
     </configuration>
 
@@ -22,7 +22,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-doxygen.h\x22\n'" />
     <command name="print_ace_config" />
 
-    <command name="shell" options="/home/isisbuilds/autobuild/configs/autobuild/doc/auto_doxygen.pl" />
+    <command name="shell" options="/home/isisbuilds/autobuild/configs/autobuild/tao_isis/auto_doxygen.pl" />
 
 
     <command name="log"               options="off" />

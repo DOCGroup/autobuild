@@ -49,6 +49,7 @@ sub parse_args {
 }
 
 sub generate_doxygen_files {
+  print "\n The staging is $STAGING";
   chdir $STAGING
     || die "Cannot chdir do staging area\n";
   chdir $MODULE
