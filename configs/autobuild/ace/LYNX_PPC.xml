@@ -21,7 +21,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='LYNXTARGET=ppc\nVERSION=3.1.0\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\ndebug=0\nstatic_libs_only=1\noptimize=1\nTAO_IDL:=/project/acetmp/bugzilla/cross_compile_dir/bin/tao_idl\nTAO_IDLFLAGS+=-g /project/acetmp/bugzilla/cross_compile_dir/bin/gperf'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='LYNXTARGET=ppc\nVERSION=3.1.0\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\ndebug=0\nstatic_libs_only=1\noptimize=1\nTAO_IDL:=/project/acetmp/bugzilla/cross_compile_dir/bin/tao_idl\nTAO_IDLFLAGS+=-g /project/acetmp/bugzilla/cross_compile_dir/bin/gperf\n\nPSDL_TAO:=/project/acetmp/bugzilla/cross_compile_dir/bin/psdl_tao\n\n '" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 
@@ -29,8 +29,6 @@
     <command name="make"              options="-j 2 -k -C TAO realclean" />
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
-
-    <!-- <command name="auto_run_tests"    options="" /> -->
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

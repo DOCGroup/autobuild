@@ -13,7 +13,7 @@ perl $HOME/autobuild/autobuild.pl \
 SRCDIR=/export1/project/danzontmp1/bugzilla/CROSS_COMPILE_TAO_IDL/ACE_wrappers
 DESTDIR=/project/acetmp/bugzilla/cross_compile_dir
 
-BINARIES="bin/gperf TAO/TAO_IDL/tao_idl"
+BINARIES="bin/gperf TAO/TAO_IDL/tao_idl TAO/orbsvcs/PSS/psdl_tao"
 
 for i in $BINARIES; do
   if [ ! -x $SRCDIR/$i ]; then
