@@ -11,7 +11,7 @@
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root"        value="g:\build_logs\dev\vc7_debug" />
         <variable name="name"            value="WinXP VC.NET Debug" />
-        <variable name="make_program"    value="nmake /F" />
+        <variable name="make_program"    value="nmake /K /F" />
         <variable name="configs"         value="Win32 Exceptions" />
     </configuration>
 
@@ -19,14 +19,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/.disable" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
 
-    <command name="make"           options="dir=ace ace.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=ACEXML ACEXML.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=protocols protocols.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=ASNMP ASNMP.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=apps apps.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=examples examples.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=performance-tests perf.nmake CFG='Win64 Debug' REALCLEAN" />
-    <command name="make"           options="dir=tests tests.nmake CFG='Win64 Debug' REALCLEAN" />
+    <command name="make"              options="ACE.nmake CFG='Win64 Debug' REALCLEAN" />
 
     <command name="log"               options="ON" />
 
@@ -40,16 +33,10 @@
     <command name="print_ace_config" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho=0\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file c:\ace\ACE_wrappers-repository\local.features -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -recurse -make_coexistence -type nmake -value_template platforms=Win64" />
+    <command name="generate_workspace" options="-feature_file c:\ace\ACE_wrappers-repository\local.features -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -recurse -make_coexistence -exclude Kokyu -type nmake -value_template platforms=Win64" />
 
-    <command name="make"           options="dir=ace ace.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=ACEXML ACEXML.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=protocols protocols.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=ASNMP ASNMP.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=apps apps.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=examples examples.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=performance-tests perf.nmake CFG='Win64 Debug'" />
-    <command name="make"           options="dir=tests tests.nmake CFG='Win64 Debug'" />
+    <command name="make"           options="ACE.nmake CFG='Win64 Debug' DEPEND" />
+    <command name="make"           options="ACE.nmake CFG='Win64 Debug' ALL" />
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />

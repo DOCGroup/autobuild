@@ -1,3 +1,9 @@
+Fri Nov 19 18:23:14 2004  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml: Use the
+	  MPC-generated top-level nmake file to direct what directories
+	  to build rather than list them all out.
+
 Thu Nov 18 13:29:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
