@@ -281,31 +281,31 @@ here</a>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_DLL_Core</name>
+            <name>Win2K_MSVC6_DLL_Core</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_core</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_DLL_Debug</name>
+            <name>Win2K_MSVC6_DLL_Debug</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_debug</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_WChar</name>
+            <name>Win2K_MSVC6_WChar</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_wchar</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_WChar_Unicode</name>
+            <name>Win2K_MSVC6_WChar_Unicode</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_unicode</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_DLL_Release</name>
+            <name>WinXP_MSVC6_DLL_Release</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_release</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -347,25 +347,25 @@ here</a>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_Legacy</name>
+            <name>WinXP_MSVC6_Legacy</name>
             <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
             <build_sponsor>UC Irvine</build_sponsor>
             <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_Unicode</name>
+            <name>WinXP_MSVC6_Unicode</name>
             <url>http://ringil.ece.uci.edu/bugzilla/unicode</url>
             <build_sponsor>UC Irvine</build_sponsor>
             <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_Lib_Debug</name>
+            <name>WinXP_MSVC6_Lib_Debug</name>
             <url>http://ringil.ece.uci.edu/bugzilla/lib_debug</url>
             <build_sponsor>UC Irvine</build_sponsor>
             <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_Lib_Release</name>
+            <name>WinXP_MSVC6_Lib_Release</name>
             <url>http://ringil.ece.uci.edu/bugzilla/lib_release</url>
             <build_sponsor>UC Irvine</build_sponsor>
             <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
@@ -421,13 +421,13 @@ here</a>
     <group>
          <name>XTest_sanity_check_not_for_release</name>
          <build>
-             <name>WinXP_XML_Debug</name>
+             <name>WinXP_MSVC6_XML_Debug</name>
              <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
              <build_sponsor>Washington University</build_sponsor>
              <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
          </build>
          <build>
-             <name>WinXP_Warning_Level_4_Debug</name>
+             <name>WinXP_MSVC6_Warning_Level_4_Debug</name>
              <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
              <build_sponsor>Washington University</build_sponsor>
              <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>

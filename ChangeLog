@@ -1,3 +1,8 @@
+Mon Feb 10 07:47:24 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/scoreboard/acetao.xml: Added MSVC6 compiler version to
+	  the build names that use the compiler.
+
 Fri Feb  7 17:11:39 2003  Steve Huston  <shuston@riverace.com>
 
         * scoreboard.pl:
@@ -53,7 +58,7 @@ Tue Feb  4 12:22:49 2003  Steve Huston  <shuston@riverace.com>
 Sun Feb  2 21:04:01 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Added the sponsors name back to
-	  scoreboard. 
+	  scoreboard.
 
 Thu Jan 30 19:16:42 2003  Steve Huston  <shuston@riverace.com>
 
@@ -70,7 +75,7 @@ Thu Jan 30 19:16:42 2003  Steve Huston  <shuston@riverace.com>
 Thu Jan 30 18:28:33 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* scoreboard.pl:
-	* common/scoreparser.pm: More HTML fixes, 
+	* common/scoreparser.pm: More HTML fixes,
 	  motivated by http://validator.w3.org
 	* configs/scoreboard/acetao.xml: Minor text changes.
 
