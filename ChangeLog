@@ -1,3 +1,8 @@
+Mon Apr 26 11:14:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/cbxdd.xml:
+          Don't build CIAO tests, examples and performance-tests
+
 Sun Apr 25 16:46:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/cbxdd.xml:
