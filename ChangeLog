@@ -1,3 +1,9 @@
+Mon Jul 21 19:01:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB6StaticRelease.xml:
+          Do a clean checkout and run MPC before start building. Let us see
+          what happens
+
 Fri Jul 18 12:35:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
