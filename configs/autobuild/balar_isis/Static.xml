@@ -4,6 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Static/ACE_wrappers/ace:." />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="LD_ASSUME_KERNEL"         value="2.4.19" />
@@ -38,6 +39,13 @@
     <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
     <!-- Every thing inside of TAO including CIAO -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
+
+    <!--Get the cidlc compiler Note this is only for linux with bunzip2 installed-->
+    <command name="shell"             options="rm -rf cidlc" />
+    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/latest.txt" />
+    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/`cat cidlc/latest.txt`" />
+    <command name="shell"             options="bunzip2 cidlc/`cat cidlc/latest.txt`" />
+    <command name="shell"             options="mv `cat cidlc/latest.txt | sed -e 's/\(.*\)\.bz2$/cidlc\/\1/g'` $CIAO_ROOT/bin/cidlc" />
 
     <command name="make"              options="reverseclean" />
     <command name="make"              options="-C TAO reverseclean" />

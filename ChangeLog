@@ -1,3 +1,21 @@
+Tue May  4 15:08:29 2004  Tao Lu  <lu@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+          Build CCF and CIDLC first before build CIAO.
+	  To build CIDL
+	  1. we also need to set cidl=1 in default.features.
+          2. CIAO_ROOT needs to be set.
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/lindy_isis/Static.xml:
+	* configs/autobuild/balar_isis/wchar.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	  These autobuilds get CIDL compiler(binary) from CVS.
+	  Note: This is only a temporary solution for linux machines.
+	  The extra requriement for this to work is: bunzip2.
+
 Tue May  4 16:53:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/GCCACE.xml:
@@ -36,7 +54,7 @@ Fri Apr 30 08:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 	* configs/scoreboard/ace_future.xml:
         Added OpenVMS ACE build. This will be updated manually so
         sometimes it can be old.
-	
+
 Thu Apr 29 19:35:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
