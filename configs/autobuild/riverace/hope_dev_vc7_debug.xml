@@ -2,14 +2,14 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers" />
-        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET\Common7\IDE;C:\ace\ACE_wrappers\lib" type="prefix" />
+        <environment name="PATH"         value="C:\ace\ACE_wrappers\lib" type="prefix" />
 
         <variable name="root"            value="C:\ace\ACE_wrappers" />
         <variable name="project_root"    value="." />
         <variable name="configs"         value="Win32 Exceptions" />
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root"        value="g:\build_logs\dev\vc7_debug" />
-        <variable name="name"            value="WinXP VC.NET Debug" />
+        <variable name="name"            value="WinXP VC.NET 2003 Debug" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -19,14 +19,14 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
-    <command name="file_manipulation" options="type=create file=ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_IPV6\n#include \x22ace/config-win32.h\x22\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type vc7 ace/ace.mwc" />
-    <command name="generate_workspace" options="-type vc7 tests/tests.mwc" />
+    <command name="generate_workspace" options="-type vc71 ace/ace.mwc" />
+    <command name="generate_workspace" options="-type vc71 tests/tests.mwc" />
     <command name="vc7make"           options="/rebuild debug ace/ace.sln" />
     <command name="vc7make"           options="/rebuild debug tests/tests.sln" />
     <command name="auto_run_tests"    options="-a" />

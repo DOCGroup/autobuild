@@ -1,3 +1,13 @@
+Mon Jan  5 10:34:51 2004  Steve Huston  <shuston@riverace.com>
+
+	* command/process_logs.pm: If copying the log file fails, include
+	  the reason when reporting it. Also, don't delete the file if it
+	  doesn't get copied.
+
+	* configs/autobuild/riverace/hope_dev_vc7_debug.xml: Change from
+	  VC7 (Visual Studio .NET 2002) to VC71 (Visusl Studio .NET 2003).
+	  Add ACE_HAS_IPV6 to the config.
+
 Sun Jan  4 17:30:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:

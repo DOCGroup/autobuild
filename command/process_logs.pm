@@ -218,14 +218,15 @@ sub move_log ()
     ## copy returns the number of successfully copied files
     $ret = copy ($log_file, $newlogfile);
     if ( $ret < 1 ) {
-        print STDERR __FILE__, "Problem copying $log_file to $newlogfile\n";
+        print STDERR __FILE__, "Problem copying $log_file to $newlogfile: $!\n";
     } 
-
-    ## unlink returns the number of successfully copied files
-    $ret = unlink ($log_file);
-    if ( $ret < 1 ) {
-        print STDERR __FILE__, "Problem deleting $log_file\n";
-    } 
+    else {
+        ## unlink returns the number of successfully copied files
+        $ret = unlink ($log_file);
+        if ( $ret < 1 ) {
+            print STDERR __FILE__, "Problem deleting $log_file\n";
+        }
+    }
 
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);
