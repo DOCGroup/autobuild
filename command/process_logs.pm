@@ -44,8 +44,8 @@ sub CheckRequirements ()
 {
     my $self = shift;
 
-    my $log_root = main::GetVariable ('root');
-    if (!defined $log_root) {
+    my $root = main::GetVariable ('root');
+    if (!defined $root) {
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
