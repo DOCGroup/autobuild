@@ -1,3 +1,8 @@
+Thu Feb 10 12:45:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Updated RHEL_Static_GCC-3.4.1 to RHEL_Static_GCC-3.4.2
+
 Wed Feb  9 08:47:22 2005  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/file_manipulation.pm:
