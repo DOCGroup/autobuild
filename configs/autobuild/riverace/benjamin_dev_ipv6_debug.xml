@@ -40,7 +40,7 @@
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=7 move prettify index" />
     <command name="file_manipulation" options="type=delete file=build/ipv6_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>
