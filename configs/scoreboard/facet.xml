@@ -1,35 +1,53 @@
 <scoreboard>
 <preamble>
-<center><h1>Facet Scoreboard</h1></center>
+<center><h1>FACET Scoreboard</h1></center>
 <hr>
-This is the Facet virtual scoreboard, it shows
-all the OS/platform combinations Facet is tested everyday. Currently
-this is only linux.
-<p>
-The core of Facet is first built (as shown below in the table Facet-core) 
-and then we enable several different features and rebuild accordingly.
+This is the FACET Virtual Scoreboard - it shows all the OS/platform
+combinations that we test it on everyday. Currently this is only
+Linux. 
+
+<p> For each configuration (with and without CORBA enabled), we first
+build the core of FACET (shown under FACET-libs) and then we enable
+several different features and rebuild accordingly. In addition to
+FACET, we also build the TAO-FACET Adapter layer which enables FACET
+to run on top of <a
+href="http://www.cs.wustl.edu/~schmidt/TAO.html">TAO</a> (a C++
+ORB). This forms the basis for our work in integrating FACET into
+Boeing's OEP.
+
+<br>
+<p> This scoreboard was setup by Dante Cannarozzi and is currently
+being maintained by Ravi Pratap, Pavan Mandalkar and Roopa
+Pundaleeka. 
 <hr>
 </preamble>
 
 <group>
-<name>Facet-features</name>
+<name>FACET (with CORBA disabled)</name>
 
    <build>
-   <name>Facet-correlation_filter</name>
+   <name>FACET-libs</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/libs</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-correlation_filter</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/correlation_filter</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-rtec_correlation_filter</name>
+   <name>FACET-rtec_correlation_filter</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/rtec_correlation_filter</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-consumer_dispatch</name>
+   <name>FACET-consumer_dispatch</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/consumer_dispatch</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -37,7 +55,7 @@ and then we enable several different features and rebuild accordingly.
 
    <!-- this build isn't setup right, it needs another feature enabled
    <build>
-   <name>Facet-eventtype</name>
+   <name>FACET-eventtype</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventtype/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -46,7 +64,7 @@ and then we enable several different features and rebuild accordingly.
 
    <!-- This build requires another dependent feature
    <build>
-   <name>Facet-eventvector</name>
+   <name>FACET-eventvector</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventvector</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -54,7 +72,7 @@ and then we enable several different features and rebuild accordingly.
    -->
 
    <build>
-   <name>Facet-event_pull</name>
+   <name>FACET-event_pull</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/event_pull</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -62,7 +80,7 @@ and then we enable several different features and rebuild accordingly.
 
    <!-- This build requires another dependent feature
    <build>
-   <name>Facet-realtime_dispatcher</name>
+   <name>FACET-realtime_dispatcher</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/realtime_dispatcher/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -70,49 +88,49 @@ and then we enable several different features and rebuild accordingly.
    -->
 
    <build>
-   <name>Facet-source_filter</name>
+   <name>FACET-source_filter</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/source_filter</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-supplier_dispatcher</name>
+   <name>FACET-supplier_dispatcher</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/supplier_dispatch/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-throughput_test</name>
+   <name>FACET-throughput_test</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/throughput_test</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-timestamp</name>
+   <name>FACET-timestamp</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/timestamp/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-tracing</name>
+   <name>FACET-tracing</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/tracing/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-ttl</name>
+   <name>FACET-ttl</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/ttl</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>Facet-correlation_filter-ttl</name>
+   <name>FACET-correlation_filter-ttl</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/correlation_filter-ttl</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -120,22 +138,22 @@ and then we enable several different features and rebuild accordingly.
 
 </group>
 
+
 <group>
-<name>Facet-core</name>
+<name>FACET (with CORBA enabled)</name>
+
    <build>
-   <name>Facet-libs</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/libs</url>
+   <name>FACET-corba-ttl</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/ttl/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
-   <build>
-   <name>TAO-facet-adapter</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter</url>
-   <build_sponsor>Washington University</build_sponsor>
-   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
+</group>
 
+<group>
+<name>TAO-FACET Adapter</name>
+   
    <build>
    <name>ACE_TAO</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0</url>
@@ -150,6 +168,15 @@ and then we enable several different features and rebuild accordingly.
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
+   <build>
+   <name>TAO-facet-adapter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
 </group>
+
+
 
 </scoreboard>
