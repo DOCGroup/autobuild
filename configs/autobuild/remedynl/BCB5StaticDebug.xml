@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="D:\ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;c:\progra~\borland\cbuild~1\projects\bpl;D:\ACE_wrappers\bin\Static\Debug;D:\ACE_wrappers\bin\Static\Release;d:\putty" type="prefix" />
+        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;c:\progra~\borland\cbuild~1\projects\bpl;D:\ACE_wrappers\bin\Static\Debug;d:\putty" type="prefix" />
 
 	<environment name="BUILD"  value="all" />
 	<environment name="DEBUG"  value="1" />
@@ -32,6 +32,8 @@
     <command name="print_ace_config" />
 
     <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
+
+    <command name="auto_run_tests"    options="-a -s \x22D:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Static\Debug" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
