@@ -1,3 +1,9 @@
+Wed Nov  5 16:57:47 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Added the IPV6 build to the scoreboard.
+
 Wed Nov  5 12:20:18 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/balar_isis/IPV6.xml: 

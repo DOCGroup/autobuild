@@ -142,6 +142,12 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
+      <name>SuSE_IPV6</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_IPV6</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
         <name>RH71_Explicit_Templates</name>
         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_Explicit_Templates</url>
         <build_sponsor>Washington University</build_sponsor>
