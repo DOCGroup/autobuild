@@ -63,8 +63,8 @@
     <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO/tao" />
     <command name="make"              options="-k -C TAO/tests" />
-    <command name="make"              options="-k -C TAO/examples" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -C TAO/examples" />
 
     <!-- command name="auto_run_tests" options="" / -->
 
