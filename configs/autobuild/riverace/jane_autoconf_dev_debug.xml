@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
 
-        <!--environment name="ACE_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/debug" -->
+        <environment name="ACE_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/debug" />
         <environment name="LD_LIBRARY_PATH" value="/acebuilds/autoconf/ACE_wrappers/build/debug/ace:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
