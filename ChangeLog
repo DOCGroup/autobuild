@@ -1,3 +1,10 @@
+Thu Apr 22 16:11:08 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Changed argument to "check_compiler" command to match the
+	  compiler used in this build (currently "g++-3.4").
+
 Thu Apr 22 12:59:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/msvcdebug.xml:
