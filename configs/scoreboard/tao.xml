@@ -106,6 +106,12 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
+        <name>Dynamic_Hash_Op_Lookup</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Dynamic_Hash</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
      <name>SuSE_90_GCC3.3.1(MPC)</name>
      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
      <build_sponsor>Remedy IT</build_sponsor>
