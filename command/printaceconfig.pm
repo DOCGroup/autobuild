@@ -93,7 +93,7 @@ sub Run ($)
     #
 
     if (-r "ChangeLog") {
-        print "================ ACE ChangeLog ================\n";
+        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/ChangeLog\">ACE ChangeLog</a> ================\n";
         print_file ("ChangeLog", 0);
     }
 
@@ -102,7 +102,7 @@ sub Run ($)
     #
 
     if (-r "TAO/ChangeLog") {
-        print "================ TAO ChangeLog ================\n";
+        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/TAO/ChangeLog\">TAO ChangeLog</a> ================\n";
         print_file ("TAO/ChangeLog", 0);
     }
 

@@ -1,3 +1,12 @@
+Fri Aug 15 18:11:15 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/printaceconfig.pm:
+          Added links to the ACE and TAO ChangeLogs to make it easier to
+          determine what changed.
+
+        * configs/autobuild/dresystems/mpc_test.xml:
+          Added tests.
+
 Thu Aug 14 14:58:43 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCC32.xml:
