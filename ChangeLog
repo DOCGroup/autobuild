@@ -1,3 +1,8 @@
+Tue Mar 11 07:32:40 UTC 2003  Don Hinton  <dhinton@ieee.org>
+
+	* configs/autobuild/dresystems/skoll_2.xml: Fixed cut-n-paste
+	  error, turned on TAO_HAS_NAMED_RT_MUTEXES.
+
 Mon Mar 10 21:57:45 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
 	* configs/scoreboard/acetao.xml: Added red and orange timeouts
