@@ -27,6 +27,8 @@
     <!-- available from deuce.doc.wustl.edu, so we don't checkout from cvs -->
 
     <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet/RTEvent/tao-facet-adapter && ./setup.sh'" />
+
+    <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
