@@ -23,7 +23,7 @@
     <command name="log"               options="ON" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -iname 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="anonymous_shell"   options="find ACE_wrappers -iname 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
