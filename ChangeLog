@@ -1,3 +1,11 @@
+Tue Mar 15 15:08:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed Tru64 build from the scoreboard. The IDL generation
+          is broken for the Compaq C++ compiler, this needs heavily work
+          and we don't have time and as a result all tests fail. We remove
+          the build until a sponsor arrives.
+
 Mon Mar 14 14:13:49 2005  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/autobuild/tao/*: Removed all files in this directory
@@ -5,13 +13,13 @@ Mon Mar 14 14:13:49 2005  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 Mon Mar 14 13:55:28 2005  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/scoreboard/tao.xml: 
+	* configs/scoreboard/tao.xml:
 	  Removed Win2K_MSVC6_DLL_Core and Win2K_MSVC6_DLL_Debug builds.
-	
-	* configs/scoreboard/ace.xml: 
+
+	* configs/scoreboard/ace.xml:
 	  Removed Win2K_MSVC6_WChar and Win2K_MSVC6_WChar_Unicode builds.
 
-	* configs/scoreboard/misc.xml: 
+	* configs/scoreboard/misc.xml:
 	  Removed Win2K Fuzz build.
 
 	  The above builds were removed because tao.doc.wustl.edu, where
