@@ -134,31 +134,6 @@ class TestPlatform:
                 fh.close()
                 os.rename(tmpfname, fname)
 
-        def __init__(self, name, raw_file, db_file=""):
-                self.valid_db_file = 1
-                self.db_file = db_file
-                self.name = name
-                self.raw_file = raw_file
-                self.compile = PASS
-                self.npass = 0
-                self.nfail = 0
-                self.nskip = 0
-                self.ACEtotal = 0
-                self.ACEfail = 0
-                self.TAOtotal = 0
-                self.TAOfail = 0
-                self.testMin = 4000.0
-                self.testMax = 0.0
-                self.timeTotal = 0.0
-                self.test_results = []
-                self.start_time = ""
-                self.end_time = ""
-                if self.db_file != "":
-                   self.processDBLog()
-                else:
-                   self.processLog()
-                #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
-
         def writeDBLog(self):
                 fname = DBFileConfig.dbdir_w + "/" + txt2DbFname(self.raw_file)
                 tmpfname = fname + ".tmp"
