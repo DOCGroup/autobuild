@@ -1,3 +1,9 @@
+Sat Jun 21 12:39:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Added SuSE 81 Debug build because we had some cpu cycles left
+          on the build box
+
 Wed Jun 18 15:51:25 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* scoreboard.pl: Add "use FindBin" to locate the directory
@@ -60,8 +66,8 @@ Thu May 29 19:22:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/danzon/SunOS_SunCC53.xml: Reverted the change
 	  "Sat Apr 26 08:13:26 2003  Balachandran Natarajan
 	  <bala@dre.vanderbilt.edu>" so that SunCC builds use explicit
-	  templates. 
-	 
+	  templates.
+
 
 Thu May 29 08:45:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
