@@ -40,7 +40,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/va6_debug -type gnuace -hierarchy -make_coexistence -exclude Kokyu" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix5.1.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix-5.x.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nSSL_ROOT=/opt/freeware\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
