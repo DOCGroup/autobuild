@@ -71,6 +71,7 @@ require command::printaceconfig;
 require command::cvs;
 require command::sam;
 require command::make;
+require command::shell;
 require command::create_config;
 
 #
@@ -82,6 +83,13 @@ my $parser = new SimpleParser;
 foreach my $file (@files) {
     print "Parsing file: $file\n" if ($verbose);
     $parser->Parse ($file, \%data);
+
+    print "\nSetting Enviroment variables\n" if ($verbose);
+    
+    foreach my $variable (@{%data->{ENVIRONMENT}}) {
+        print "Variable: ", $variable->{NAME}, "=", $variable->{VALUE}, "\n" if ($verbose);
+        $ENV{$variable->{NAME}} = $variable->{VALUE};
+    }
 
     print "\nChecking Requirements\n" if ($verbose);
 
