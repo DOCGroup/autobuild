@@ -54,12 +54,13 @@ my $red_default = 48;
 my $preamble = "This is the ACE/TAO virtual scoreboard.  It shows all
 the OS/platform combinations ACE/TAO are tested against everyday, all
 over the world.  We have builds running continuously at <A
-HREF=\"http://tao.doc.wustl.edu/\">Washington University, St. Louis</A>,
+HREF=\"http://deuce.doc.wustl.edu/\">Washington University, St. Louis</A>,
 <A HREF=\"http://doc.ece.uci.edu/\">University of California,
 Irvine</A>, <A HREF=\"http://www.isis.vanderbilt.edu\">Vanderbilt
 University</a>, <A
 HREF=\"http://www.dist-systems.bbn.com/projects/\">BBN Technologies</A>,
-<A HREF=\"http://www.theaceorb.nl\">Remedy IT</A>, ObjectSciences, and
+<A HREF=\"http://www.theaceorb.nl\">Remedy IT</A>,
+<a href=\"http://www.objectsciences.com/\">ObjectSciences</a>, and
 hunleth.com. <P> If you'd like to contribute builds to our virtual
 scoreboard please contact <A
 HREF=\"mailto:devo_group\@cs.wustl.edu\">us</A> and let us know which
@@ -67,7 +68,7 @@ platform combinations you can contribute.";
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are <A HREF=\"http://cvs.doc.wustl.edu/ace-latest/autobuild/README\">
-here</A>\n";
+here</A>.\n";
 
 ###############################################################################
 #
@@ -538,7 +539,7 @@ sub update_html ($)
 
     print $indexhtml "<body bgcolor=white>\n<h1>Build Scoreboard</h1>\n<hr>\n";
     print $indexhtml "$preamble\n";
-    print $indexhtml "$build_instructions\n<hr>\n"; 
+    print $indexhtml "$build_instructions\n<hr>\n";
     ### Print tables (first the empty one)
 
     update_html_table ($dir, $indexhtml, undef) if ($#nogroup >= 0);
