@@ -1,3 +1,9 @@
+Fri Mar 19 07:33:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Added BCB6 Codeguard build. This build will be setup in a way that
+          codeguard results are added to the test section
+
 Wed Mar 17 18:28:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6CodeGuard.xml:
