@@ -138,7 +138,7 @@ and let us know which platform combinations you can contribute.
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
         </build>
         <build>
-            <name>WinNT4_BCB5_Ent_Static_Debug_(remedy.nl)</name>
+            <name>WinNT4_BCB5_Ent_Static_Debug_Core_(remedy.nl)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
         </build>
         <build>

@@ -1,3 +1,8 @@
+Thu Dec 19 20:41:12 UTC 2002  Johnny Willemsen <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+          Showed in name of build that it only builds the core
+
 Thu Dec 19 06:54:36 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs//autobuild/sirion/Full_new.xml:
@@ -36,7 +41,7 @@ Wed Dec 18 15:54:05 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 	* configs/autobuild/sirion/Full_new.xml: Added -config SSL to run
 	  the SSLIOP tests. We have been long kidding ourselves that the
 	  SSL tests have been run daily! What a joke! They havent been run
-	  from the point they moved to the new scoreboard. 
+	  from the point they moved to the new scoreboard.
 
 Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
 
