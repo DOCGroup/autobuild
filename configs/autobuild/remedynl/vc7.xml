@@ -31,6 +31,7 @@
     <command name="generate_workspace" options="-type vc71 ace/ace.mwc" />
     <command name="generate_workspace" options="-type vc71 tests/tests.mwc" />
     <command name="vc7make"           options="/rebuild debug ace/ace.sln" />
+    <command name="vc7make"           options="/rebuild debug tests/tests.sln" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
