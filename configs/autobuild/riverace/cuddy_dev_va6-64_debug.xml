@@ -41,7 +41,7 @@
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/va6-64_debug -type gnuace -hierarchy -make_coexistence" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6-64_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix5.1.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nbuildbits=64\nSSL_ROOT=/opt/freeware\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="vacpp" />

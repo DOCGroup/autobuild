@@ -1,3 +1,10 @@
+Wed May  5 11:41:39 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml: Fixed the
+	  SSL_ROOT stuff, something that changed when switching to MPC.
+
 Tue May  4 15:08:29 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full_Reactors.xml:
