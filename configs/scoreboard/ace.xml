@@ -8,58 +8,6 @@ all the OS/platform combinations ACE is tested everyday.
 </preamble>
 
 <group>
-  <name>BSD</name>
-     <build>
-        <name>FreeBSD_5.0</name>
-        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace</url>
-        <build_sponsor>DRE Systems</build_sponsor>
-        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-        <orange>30</orange>
-        <red>36</red>
-     </build>
-     <build>
-        <name>FreeBSD_5.0_Explicit_Templates</name>
-        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_explicit_template</url>
-        <build_sponsor>DRE Systems</build_sponsor>
-        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-        <orange>30</orange>
-        <red>36</red>
-     </build>
-     <build>
-        <name>FreeBSD_5.0_No_Inline</name>
-        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_no_inline</url>
-        <build_sponsor>DRE Systems</build_sponsor>
-        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-        <orange>30</orange>
-        <red>36</red>
-     </build>
-     <build>
-        <name>FreeBSD_5.0_Single_Threaded</name>
-        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_single</url>
-        <build_sponsor>DRE Systems</build_sponsor>
-        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-        <orange>30</orange>
-        <red>36</red>
-     </build>
-     <build>
-        <name>FreeBSD_5.0_Dump</name>
-        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_dump</url>
-        <build_sponsor>DRE Systems</build_sponsor>
-        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-        <orange>30</orange>
-        <red>36</red>
-     </build>
-     <build>
-        <name>FreeBSD_5.0_WCHAR</name>
-        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_wchar</url>
-        <build_sponsor>DRE Systems</build_sponsor>
-        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-        <orange>30</orange>
-        <red>36</red>
-     </build>
-</group>
-
-<group>
   <name>AIX </name>
      <build>
      <name>AIX_4.3_VA5_Debug</name>
