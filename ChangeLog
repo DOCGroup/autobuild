@@ -1,3 +1,16 @@
+Sat May 24 09:18:03 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+          Added printing of make and perl version. This info wasn't added
+          to the config part. This makes it easier for me to compare what the
+          Sun systems run, because I am currently setting up a new Sun
+          machine at our office.
+
+        * configs/autobuild/danzon/*.xml:
+          Reordered printing of config part, so that all is consistent
+
 Mon May 19 13:47:01 2003  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/check_compiler.pm:

@@ -29,10 +29,10 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='threads=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
 
     <command name="print_os_version" options="useuname" />
-    <command name="print_make_version" />
-    <command name="print_perl_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
 
     <command name="make"              options="-k reverseclean" />
 
