@@ -27,7 +27,7 @@
     <command name="print_perl_version" />
 
 
-    <command name="win32make"         options="msvc_cidlc" />
+    <command name="win32make"         options="msvc_cidlc -vc7 -s -clean" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />

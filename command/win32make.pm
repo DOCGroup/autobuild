@@ -89,7 +89,11 @@ sub Run ($)
     } elsif ($options =~ m/msvc_static_compile(.*)$/) {
         # override with the old file
         $command = "perl bin/msvc_static_compile.pl $1";
-    } else {
+    } elsif ($options =~ m/msvc_cidlc (.*)$/) {
+        # override with the old file
+        $command = "perl bin/msvc_cidlc.pl $1";
+    }
+    else {
         # allow an arbitrary command
         $command = "$options";
     }
