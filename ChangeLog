@@ -1,3 +1,10 @@
+Fri Jul 23 16:32:47 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Added location of g++ 3.4.1 libraries to linker path
+	  "$LD_LIBRARY_PATH".  Address build link-time errors.
+
 Fri Jul 23 15:54:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/nirvana/New_DLL_Release.xml:
