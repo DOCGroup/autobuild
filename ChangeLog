@@ -1,3 +1,8 @@
+Wed Apr 21 13:11:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/ace_future.xml:
+          Added VC8 preview
+
 Wed Apr 21 06:34:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/tao/Borland.xml:
