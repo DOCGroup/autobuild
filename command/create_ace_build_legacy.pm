@@ -2,14 +2,13 @@
 # $Id$
 #
 
-package Create_ACE_Build;
+package Create_ACE_Build_Legacy;
 
 use strict;
 use warnings;
 
 use Cwd;
 use FileHandle;
-use File::Path;
 
 ###############################################################################
 # Constructor
@@ -29,17 +28,28 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('project_root');
+    my $root = main::GetVariable ('root');
 
     if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"project_root\" variable\n";
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
     
+    if (!-r $root || !-d $root) {
+        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
+        return 0;
+    }
+
     my $build_name = main::GetVariable ('build_name');
 
     if (!defined $build_name) {
         print STDERR __FILE__, ": Requires \"build_name\" variable\n";
+        return 0;
+    }
+
+    my $build_path = "$root" . "/build/" . "$build_name";
+    if (!-r $build_path || !-d $build_path) {
+        print STDERR __FILE__, ": Cannot access \"build_path\" directory: $build_path\n";
         return 0;
     }
 
@@ -53,41 +63,23 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $root = main::GetVariable ('root');
-    my $wrappers = main::GetVariable ('project_root');
     my $build = main::GetVariable ('build_name');
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     # chop off trailing slash
-    if ($wrappers =~ m/^(.*)\/$/) {
-        $wrappers = $1;
+    if ($root =~ m/^(.*)\/$/) {
+        $root = $1;
     }
+
+    main::PrintStatus ('Setup', 'Create ACE Build');
 
     my $current_dir = getcwd ();
 
-    my $dir = $root;
-    # strip off ACE_wrappers if it's there (sometimes it is, sometimes it isn't) and then readd it.
-    if ($dir =~ m/^(.*)\/ACE_wrappers/) {
-        $dir = $1;
-    }
-    $dir = $dir."/ACE_wrappers";
-
-    chdir $dir;
-
-    if (!-r $wrappers || !-d $wrappers) {
-        mkpath($wrappers);
-    }
-
-    main::PrintStatus ('Setup', 'Create MPC Specific ACE Build, if this is not what you wanted, use create_ace_build_legacy.pm instead');
-
-    # I don't think this is needed, but it's probably okay to leave it.  dhinton
-    if (!chdir "$wrappers/../..") {
-        print STDERR __FILE__, ": Cannot change to $wrappers../..\n";
+    if (!chdir $root) {
+        print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
 
-    my $command = "perl bin/create_ace_build.pl $options $build";
+    my $command = "perl bin/create_ace_build $options $build";
 
     print "Running: $command\n";
     system ($command);
@@ -99,4 +91,5 @@ sub Run ($)
 
 ##############################################################################
 
-main::RegisterCommand ("create_ace_build", new Create_ACE_Build ());
+main::RegisterCommand ("create_ace_build_legacy", new Create_ACE_Build_Legacy());
+

@@ -1,3 +1,35 @@
+Sat Aug 30 19:43:30 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * autobuild.pl:
+        * command/create_ace_build.pm:
+        * command/create_ace_build_legacy.pm:
+          Added a new module that exihits the original behavior required
+          by legacy, i.e., non-MPC builds.  The old builds were broken
+          when create_ace_build.pm was changed to call the new
+          non-backwardly compatible ace/create_ace_build.pl script, and
+          added a not to the MPC specific version (see Fri Aug  1 15:00:00
+          2003  Dan Troesser  <troesser_d@ociweb.com>).
+
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/riverace/benjamin_dev_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_optimize.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+          Changed these builds to call the new module with the old
+          behavior--these builds have been effectively broken since August
+          1st.
+
 Sat Aug 30 00:17:47 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:

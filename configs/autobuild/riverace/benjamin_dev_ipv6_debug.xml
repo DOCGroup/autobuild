@@ -24,7 +24,7 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=build/ipv6_debug/.disable" />
-    <command name="create_ace_build"  options="-a -v" />
+    <command name="create_ace_build_legacy"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/ipv6_debug/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/ipv6_debug/ace/config.h output='#define ACE_HAS_IPV6\n#define ACE_USES_IPV4_IPV6_MIGRATION\n#include \x22ace/config-linux.h\x22\n'" />

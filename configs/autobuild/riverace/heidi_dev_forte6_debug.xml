@@ -25,7 +25,7 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=build/forte6_debug/.disable" />
-    <command name="create_ace_build"  options="-a -v" />
+    <command name="create_ace_build_legacy"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/forte6_debug/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/forte6_debug/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n'" />

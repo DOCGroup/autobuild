@@ -24,7 +24,7 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=build/gcc32_full/.disable" />
-    <command name="create_ace_build"  options="-a -v" />
+    <command name="create_ace_build_legacy"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/gcc32_full/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/gcc32_full/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />

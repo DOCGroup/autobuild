@@ -127,6 +127,7 @@ require command::print_perl_version;
 require command::print_make_version;
 require command::configure;
 require command::create_ace_build;
+require command::create_ace_build_legacy;
 require command::cvs;
 require command::file_manipulation;
 require command::fuzz;
