@@ -1,3 +1,11 @@
+Tue Feb 10 07:41:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/remedynl/GCCACE.xml:
+
+	  Added the options ACE_HAS_REACTOR_NOTIFICATION_QUEUE,
+	  ACE_HAS_SIGNALS_SAFE_OS_CALLS, ACE_NLOGGING and ACE_HAS_WCHAR
+	  to the xml file.
+
 Sat Feb  7 15:00:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
@@ -7,7 +15,7 @@ Sat Feb  7 15:00:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 Sat Jan 30 13:11:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/GCC32.xml:
-	  Cleanded this file and build with fl_reactor enabled.
+	  Cleaned this file and build with fl_reactor enabled.
 
 Sat Jan 24 16:19:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
