@@ -128,7 +128,7 @@ require command::sam;
 require command::shell;
 require command::status;
 require command::win32make;
-
+require command::check_compiler;
 
 #
 # Parse, CheckReqs, and Run
