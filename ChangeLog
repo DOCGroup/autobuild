@@ -1,3 +1,9 @@
+Sat Aug  9 13:35:30 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+        * configs/scoreboard/ace.xml:
+          Added new MPC based Solaris 9 build.
+
 Fri Aug  8 14:39:29 2003  Justin Michel  <michel_j@ociweb.com>
 
 	* command/vc6make.pm:
