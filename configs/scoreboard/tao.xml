@@ -24,7 +24,7 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
    <build>
    <name>Debian_Full_Reactor</name>
-      
+
 <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Full_Reactors/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
@@ -221,8 +221,8 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_BCB6_Pro_Static_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6sr</url>
+            <name>WinXP_CBuilderX_Static_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXsr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
