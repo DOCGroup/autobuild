@@ -4,8 +4,6 @@
 
     <configuration>
 
-
-
         <environment name="ACE_ROOT"        value="/space/ACE_wrappers" />
 
         <environment name="TAO_ROOT"        value="/space/ACE_wrappers/TAO"/>

@@ -9,4 +9,4 @@ ATCROOT=/space
 
 
 exec $ATCROOT/autobuild/autobuild.pl \
-     $ATCROOT/autobuild/configs/autobuild/atc-ppc/vxworks5-5_x86_gcc2-95.xml 2>&1 
+     $ATCROOT/autobuild/configs/autobuild/atc/VxWorks.xml 2>&1 
