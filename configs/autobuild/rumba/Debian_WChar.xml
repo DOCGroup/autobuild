@@ -7,7 +7,7 @@
         <environment name="CVSROOT"         value=":ext:ucibuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/export/project/rumbatmp/bugzilla/ Debian_WChar" />
+        <variable name="root"     value="/export/project/rumbatmp/bugzilla/Debian_WChar" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/rumba_Debian_WChar" />
         <variable name="configs"  value="Linux" />
