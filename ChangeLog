@@ -1,3 +1,9 @@
+Sat Feb  7 15:00:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed the Tru64 build again. Most things work now and the lease
+          period on the HP system has ended.
+
 Sat Jan 30 13:11:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/GCC32.xml:
