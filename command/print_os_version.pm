@@ -72,7 +72,7 @@ sub Run ($)
     }
 
     if(-r "/etc/debian_version"){
-        print "===== Debian Linux Version (/etc/debian_version) =====\n";
+        print "<h3>Debian Linux Version (/etc/debian_version)</h3>\n";
 	system("cat /etc/debian_version"); 
     }
 
