@@ -37,7 +37,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="g++ppc" />
+    <command name="check_compiler" options="ccpentium" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
