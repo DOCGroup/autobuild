@@ -151,12 +151,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.atdesk.com</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_Stats_Static</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/flamenco_Static</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
       <name>RHAS_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
       <build_sponsor>ISIS</build_sponsor>
@@ -186,6 +180,28 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
      </build>
+</group>
+
+<group>
+<name>Stats Builds</name>
+   <build>
+   <name>SuSE_Stats_Static</name>
+   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/flamenco_Static</url>
+   <build_sponsor>ISIS</build_sponsor>
+   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+   <name>SuSE_FP_Stats</name>
+   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/FP_Metrics</url>
+   <build_sponsor>ISIS</build_sponsor>
+   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+   <name>SuSE_Stats_Static</name>
+   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CP_Metrics</url>
+   <build_sponsor>ISIS</build_sponsor>
+   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
 </group>
 <group>
    <name>Windows</name>

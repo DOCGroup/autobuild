@@ -1,3 +1,10 @@
+Fri Aug 27 13:26:35 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Added compilation and footprint metrics builds to the
+	  scorboard. 
+
 Thu Aug 26 15:37:12 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/HTMLScoreboard.py:
