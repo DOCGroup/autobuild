@@ -1,8 +1,15 @@
+Sun Dec  7 18:02:56 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace_isis/RH8_Minimum.xml:
+
+	  Do not make rt_corb=0 in the default.features. minimum_corba
+	  doesn't mean rt_corba=0.
+
 Sun Nov 30 07:24:57 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml:
 	  
-	  Added John Zorko's <jmzorko@mac.com> panther andJagura builds.
+	  Added John Zorko's <jmzorko@mac.com> panther and Jaguar builds.
 
 Wed Nov 26 12:17:29 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
