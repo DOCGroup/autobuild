@@ -22,7 +22,7 @@ This is a miscellaneous scoreboard for ACE+TAO.
     </build>
     <build>
        <name>Linux_Fuzz</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/tao_Fuzz</url>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_Fuzz</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
