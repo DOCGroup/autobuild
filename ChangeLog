@@ -1,3 +1,9 @@
+Tue Nov 26 01:44:44 UTC 2002  Don Hinton  <dhinton@ieee.org>
+
+	* configs/scoreboard/acetao.xml:  Same thing, only this
+	  time I deleted the entry.  The parser we are using doesn't
+	  seem to handle <!--  --> multi-line comments very well.
+
 Tue Nov 26 01:32:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
 	* configs/scoreboard/acetao.xml:  Commented out the fi2010.org
