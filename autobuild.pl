@@ -23,6 +23,7 @@ while ($#ARGV >= 0)
 {
     if ($ARGV[0] =~ m/^-v/i) {
         $verbose = 1;
+	shift;
     }
     elsif ($ARGV[0] =~ m/^-/) {
         print "Error: Unknown option $ARGV[0]\n";
@@ -31,7 +32,6 @@ while ($#ARGV >= 0)
     else {
         push @files, shift;
     }
-    shift;
 }
 
 if (scalar @files == 0) {
