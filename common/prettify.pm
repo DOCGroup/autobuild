@@ -55,12 +55,12 @@ sub Section ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     my $counter = ++$self->{SECTION_COUNTER};
-    
+
     print {$self->{FH}} "<a name=\"section_$counter\"></a>\n";
     print {$self->{FH}} "<hr><h2>$s</h2>\n";
 }
@@ -70,10 +70,10 @@ sub Description ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     print {$self->{FH}} "<h3>$s</h3>\n";
 }
 
@@ -82,10 +82,10 @@ sub Timestamp ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     print {$self->{FH}} "<b>$s</b><br><br>\n";
 }
 
@@ -94,12 +94,12 @@ sub Subsection ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     my $counter = ++$self->{SUBSECTION_COUNTER};
-    
+
     print {$self->{FH}} "<a name=\"subsection_$counter\"></a>\n";
 
     print {$self->{FH}} "<br><b>$s</b><br><br><br>\n";
@@ -109,14 +109,14 @@ sub Error ($)
 {
     my $self = shift;
     my $s = shift;
- 
-    # Escape any '<' or '>' signs 
+
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     my $counter = ++$self->{ERROR_COUNTER};
     push( @{$self->{ERROR_TEXT}}, $s );
-    
+
     print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
     print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
 }
@@ -126,12 +126,12 @@ sub Warning ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
 
     my $counter = ++$self->{WARNING_COUNTER};
-    
+
     print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
     print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
 }
@@ -141,7 +141,7 @@ sub Normal ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
 
@@ -168,9 +168,9 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . "_Brief.html";
-    
+
     $basename =~ s/^.*\///;
-    
+
     $self->{FULLHTML} = $basename . "_Full.html";
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
@@ -209,21 +209,21 @@ sub Section ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     my $counter = ++$self->{SECTION_COUNTER};
-    
+
     # Save for later use
-    
+
     $self->{LAST_SECTION} = $s;
 }
 
 sub Description ($)
 {
     my $self = shift;
-    
+
     # Ignore
 }
 
@@ -238,21 +238,21 @@ sub Subsection ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     my $counter = ++$self->{SUBSECTION_COUNTER};
 
-    # Save for later use    
-    
+    # Save for later use
+
     $self->{LAST_SUBSECTION} = $s;
 }
 
 sub Print_Sections ()
 {
     my $self = shift;
-   
+
     if (defined $self->{LAST_SECTION}) {
         print {$self->{FH}} "<a name=\"section_$self->{SECTION_COUNTER}\"></a>";
         print {$self->{FH}} "<hr><h2>$self->{LAST_SECTION}</h2>\n";
@@ -269,13 +269,13 @@ sub Error ($)
 {
     my $self = shift;
     my $s = shift;
- 
-    # Escape any '<' or '>' signs 
+
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     my $counter = ++$self->{ERROR_COUNTER};
-    
+
     $self->Print_Sections ();
 
     print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
@@ -289,12 +289,12 @@ sub Warning ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
 
     my $counter = ++$self->{WARNING_COUNTER};
-    
+
     $self->Print_Sections ();
 
     print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
@@ -306,7 +306,7 @@ sub Warning ($)
 sub Normal ($)
 {
     my $self = shift;
-    
+
     # Ignore
 }
 
@@ -331,14 +331,14 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . '_Totals.html';
-    
+
     if ($basename =~ s/^(.*)\///) {
         $self->{LATEST_FILENAME} = $1 . '/latest.txt';
     }
     else {
         $self->{LATEST_FILENAME} = 'latest.txt';
     }
-    
+
     $self->{BASENAME} = $basename;
     $self->{FULLHTML} = $basename . "_Full.html";
     $self->{BRIEFHTML} = $basename . "_Brief.html";
@@ -395,11 +395,11 @@ sub Header ()
 sub Section_Totals ()
 {
     my $self = shift;
-    
+
     # Bail out if there is no totals
     if ($self->{SECTION_COUNTER} == 0) {
         return;
-    } 
+    }
 
     my $percentage;
     my $color;
@@ -407,7 +407,7 @@ sub Section_Totals ()
 
     print {$self->{FH}} "  <tr>\n";
     print {$self->{FH}} "    <td>$self->{LAST_SECTION}</td>";
-    
+
     print {$self->{FH}} "    <td>[<a href=\"$self->{FULLHTML}#section_$counter\">Full</a>] ";
     if ($self->{SECTION_ERRORS} > 0 || $self->{SECTION_WARNINGS} > 0) {
         print {$self->{FH}} "[<a href=\"$self->{BRIEFHTML}#section_$counter\">Brief</a>] ";
@@ -420,17 +420,17 @@ sub Section_Totals ()
     $color = 'red' if ($self->{SECTION_ERRORS} > 0);
 
     print {$self->{FH}} "    <td bgcolor=\"$color\">$self->{SECTION_ERRORS}</td>";
-    
+
     $color = 'white';
     $color = 'orange' if ($self->{SECTION_WARNINGS} > 0);
-    
+
     print {$self->{FH}} "    <td bgcolor=\"$color\">$self->{SECTION_WARNINGS}</td>";
-    
+
     $percentage = "--";
     if ($self->{SECTION_SUBSECTIONS} > 0) {
         $percentage = $self->{SECTION_ERROR_SUBSECTIONS} * 100 / $self->{SECTION_SUBSECTIONS};
     }
-    
+
     $color = 'white';
     $color = 'red' if ($self->{SECTION_ERROR_SUBSECTIONS} > 0);
 
@@ -450,13 +450,13 @@ sub Section_Totals ()
     if ($self->{LAST_SECTION} eq 'Config') {
         $self->{CONFIG_SECTION} = $self->{SECTION_COUNTER};
     }
-    
+
     if ($self->{LAST_SECTION} eq 'Setup') {
         $self->{SETUP_SECTION} = $self->{SECTION_COUNTER} if (!defined $self->{SETUP_SECTION});
         $self->{SETUP_ERRORS} += $self->{SECTION_ERRORS};
         $self->{SETUP_WARNINGS} += $self->{SECTION_WARNINGS};
     }
-    
+
     if ($self->{LAST_SECTION} eq 'Compile') {
         $self->{COMPILE_SECTION} = $self->{SECTION_COUNTER} if (!defined $self->{COMPILE_SECTION});
         $self->{COMPILE_ERRORS} += $self->{SECTION_ERRORS};
@@ -485,7 +485,7 @@ sub Footer ()
     print {$self->{FH}} "</table>\n";
 
     my $totals = '';
-    
+
     if (defined $self->{CONFIG_SECTION}) {
         $totals .= " Config: $self->{CONFIG_SECTION}";
     }
@@ -494,7 +494,7 @@ sub Footer ()
         $totals .= " Setup: $self->{SETUP_SECTION}-$self->{SETUP_ERRORS}-$self->{SETUP_WARNINGS}";
     }
 
-    
+
     if (defined $self->{COMPILE_SECTION}) {
         $totals .= " Compile: $self->{COMPILE_SECTION}-$self->{COMPILE_ERRORS}-$self->{COMPILE_WARNINGS}";
     }
@@ -504,44 +504,44 @@ sub Footer ()
     }
 
     $totals .= "\n";
-    
+
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
-    
+
     print {$self->{FH}} "</body>\n";
     print {$self->{FH}} "</html>\n";
 
     my $fh = new FileHandle ($self->{LATEST_FILENAME}, 'w');
-    
+
     if (!defined $fh) {
         print STDERR __FILE__, ": Could not create file: $self->{LATEST_FILENAME}: $!\n";
         return;
     }
-    
+
     print $fh $self->{BASENAME}, $totals;
 }
-    
+
 sub Section ($)
 {
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
 
     $self->Section_Totals ();
-    
+
     ++$self->{SECTION_COUNTER};
-    
+
     # Save for later use
-    
+
     $self->{LAST_SECTION} = $s;
 }
 
 sub Description ($)
 {
     my $self = shift;
-    
+
     # Ignore
 }
 
@@ -556,10 +556,10 @@ sub Subsection ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-    
+
     ++$self->{SUBSECTION_COUNTER};
     ++$self->{SECTION_SUBSECTIONS};
 
@@ -571,7 +571,7 @@ sub Error ($)
 {
     my $self = shift;
     my $s = shift;
- 
+
     ++$self->{ERROR_COUNTER};
     ++$self->{SECTION_ERRORS};
 
@@ -586,7 +586,7 @@ sub Warning ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs 
+    # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
 
@@ -603,7 +603,7 @@ sub Warning ($)
 sub Normal ($)
 {
     my $self = shift;
-    
+
     # Ignore
 }
 
@@ -628,50 +628,50 @@ sub new ($)
     my $class = ref ($proto) || $proto;
     my $self = {};
     my $basename = shift;
-    
+
     # Initialize some variables
-    
+
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
-    
+
     # Initialize the hash table of handlers for each section
-    
-    %{$self->{HANDLERS}} = 
-        ( 
+
+    %{$self->{HANDLERS}} =
+        (
             'begin'   => \&Normal_Handler,
             'setup'   => \&Setup_Handler,
             'config'  => \&Normal_Handler,
             'compile' => \&Compile_Handler,
             'test'    => \&Test_Handler,
             'end'     => \&Normal_Handler
-        );    
+        );
 
     # Initialize the list of output classes
-    
-    @{$self->{OUTPUT}} = 
-        ( 
+
+    @{$self->{OUTPUT}} =
+        (
             new Prettify::Full_HTML ($basename),
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename),
         );
-    
+
     # Output the header for the files
 
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Header ();
     }
-    
+
     bless ($self, $class);
     return $self;
 }
 
-sub DESTROY 
+sub DESTROY
 {
     my $self = shift;
-    
+
     # Output the footer for the files
-    
+
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Footer ();
     }
@@ -695,15 +695,15 @@ sub Process_Line ($)
             $section = $1;
             $description = $2;
         }
-        
+
         $self->{LAST_DESCRIPTION} = $description;
-        
+
         if ($self->{LAST_SECTION} eq $section) {
             foreach my $output (@{$self->{OUTPUT}}) {
                 $output->Description ($description);
                 $output->Timestamp ($timestamp);
             }
-            
+
             return;
         }
         else {
@@ -723,21 +723,21 @@ sub Process_Line ($)
         $self->{STATE} = 'compile' if (lc $section eq 'compile');
         $self->{STATE} = 'test'    if (lc $section eq 'test');
         $self->{STATE} = 'end'     if (lc $section eq 'end');
-        
+
         return;
     }
-    
+
     if (defined $self->{HANDLERS}->{$self->{STATE}}) {
         $self->{HANDLERS}->{$self->{STATE}} ($self, $s);
     }
-    
+
 }
 
 sub Output_Subsection ($)
 {
     my $self = shift;
     my $s = shift;
-    
+
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Subsection ($s);
     }
@@ -756,7 +756,7 @@ sub Output_Warning ($)
 {
     my $self = shift;
     my $s = shift;
-    
+
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Warning ($s);
     }
@@ -766,7 +766,7 @@ sub Output_Normal ($)
 {
     my $self = shift;
     my $s = shift;
-    
+
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Normal ($s);
     }
@@ -776,7 +776,7 @@ sub Normal_Handler ($)
 {
     my $self = shift;
     my $s = shift;
-    
+
     $self->Output_Normal ($s);
 }
 
@@ -785,9 +785,9 @@ sub Setup_Handler ($)
     my $self = shift;
     my $s = shift;
 
-    if ($s =~ m/aborted/i || 
-        $s =~ m/cannot access/i || 
-        $s =~ m/no such file/i) 
+    if ($s =~ m/aborted/i ||
+        $s =~ m/cannot access/i ||
+        $s =~ m/no such file/i)
     {
         $self->Output_Error ($s);
     }
@@ -859,12 +859,12 @@ sub Compile_Handler ($)
         # We only want to flag as errors
         # make messages which are of the form:
         # make: ........Error 1
-        # If we have Error 2 or higher, it is a recursive error, and has already 
+        # If we have Error 2 or higher, it is a recursive error, and has already
         # been flagged earlier at the occurrence of "Error 1".
         $self->Output_Normal ($s);
-    } 
-    elsif (($s =~ m/\berror\b/i 
-            && $s !~ m/ error\(s\), / 
+    }
+    elsif (($s =~ m/\berror\b/i
+            && $s !~ m/ error\(s\), /
             && $s !~ m/error \(future\)/i)
            || $s =~ m/^Fatal\:/
            || $s =~ m/: fatal:/)
@@ -880,7 +880,7 @@ sub Compile_Handler ($)
         }
         else {
             $self->Output_Error ($s);
-        }    
+        }
     }
     elsif ($s =~ m/^LINK : warning LNK4089:/) {
         # Ignore this warning from MSVC
@@ -904,11 +904,11 @@ sub Compile_Handler ($)
     elsif ( $s =~ m/^make.*\*\*\*/ ) {
         $self->Output_Error ($s);
     }
-    elsif (($s =~ m/warning/i 
+    elsif (($s =~ m/warning/i
             && $s !~ m/ warning\(s\)/)
            || $s =~ m/info: /i
            || $s =~ m/^error \(future\)/i
-           || $s =~ m/^.*\.(h|i|inl|cpp|java): /) 
+           || $s =~ m/^.*\.(h|i|inl|cpp|java): /)
     {
         # Catch any other warnings
         $self->Output_Warning ($s);
@@ -929,7 +929,7 @@ sub Test_Handler ($)
     my $s = shift;
 
     # Check for the subsection indicator
-    
+
     if ($s =~ m/auto_run_tests: (.*)/) {
         $self->Output_Subsection ($1);
         return;
@@ -939,6 +939,7 @@ sub Test_Handler ($)
         || $s =~ m/ERROR/
         || $s =~ m/FAILED/
         || $s =~ m/EXCEPTION/
+	|| $s =~ m/ACE_ASSERT/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
@@ -957,7 +958,7 @@ sub BuildErrors ($)
 ###############################################################################
 # Exposed subroutines
 #
-# In this function we process the log file line by line, 
+# In this function we process the log file line by line,
 # looking for errors.
 
 sub Process ($)
@@ -965,11 +966,11 @@ sub Process ($)
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
-    
+
     my $processor = new Prettify ($basename);
-    
+
     my $input = new FileHandle ($filename, 'r');
-    
+
     while (<$input>) {
         chomp;
         $processor->Process_Line ($_);
@@ -977,15 +978,15 @@ sub Process ($)
 
     # When we finish processing each line of the log file,
     # if we detect any BUILD ERROR messages, send an e-mail
-    # notification if MAIL_ADMIN was specified in the XML config 
+    # notification if MAIL_ADMIN was specified in the XML config
     # file.
 
     my @errors = $processor->BuildErrors();
     my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
     if ( (scalar( @errors ) > 0) && (defined $mail_admin) )
-    { 
+    {
         $processor->SendEmailNotification();
-    } 
+    }
 }
 
 sub WriteLatest($)
@@ -993,9 +994,9 @@ sub WriteLatest($)
     my $latest = shift;
     my $filename = basename ($latest, '.txt') . '.txt';
     my $directory = dirname ($latest);
-    
+
     my $output = new FileHandle ($directory . '/latest.txt', 'w');
-    
+
     print $output "Latest logfile = $filename\n";
 }
 
@@ -1016,10 +1017,10 @@ sub SendEmailNotification($)
     ## Combine the array of errors into one string which we can put in an e-mail
     my $errors_string = join("\n", @errors );
     $errors_string .= "\n\nDisplaying first 100 lines from error log: \n";
-    $errors_string .= 
+    $errors_string .=
     "\n================================================================\n\n";
 
-    $errors_string .= join("\n", @error_text); 
+    $errors_string .= join("\n", @error_text);
     $errors_string .=
     "\n================================================================\n\n";
 
@@ -1028,7 +1029,7 @@ sub SendEmailNotification($)
     {
        $errors_string .= "ACE changes in last 24 hours:\n\n";
        chdir("$root/ACE_wrappers");
-       $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`; 
+       $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`;
        $errors_string .= "\n\n";
        chdir("$root");
     }else{
@@ -1041,22 +1042,22 @@ sub SendEmailNotification($)
        "================================================================\n\n";
        $errors_string .= "TAO changes in last 24 hours:\n\n";
        chdir("$root/ACE_wrappers/TAO");
-       $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`; 
+       $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`;
        $errors_string .= "\n\n";
        chdir("$root");
 
     }
- 
+
     if ( ! defined $scoreboard_url ) {
        $scoreboard_url = "";
     }
- 
-    Mail::send_message($mail_admin, 
+
+    Mail::send_message($mail_admin,
                        "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
                        "Errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
                        "Please check the scoreboard for details.\n$scoreboard_url\n\n".
-                        $errors_string 
-                      ); 
+                        $errors_string
+                      );
 
 }
 

@@ -1,3 +1,9 @@
+Thu Nov 21 10:03:08 2002  Ossama Othman  <ossama@uci.edu>
+
+	* common/prettify.pm (Test_Handler):
+
+	  Flag failed run-time assertions.
+
 Tue Nov 19 20:15:31 2002  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/jane_dev_debug.xml: Move logs down one
