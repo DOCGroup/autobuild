@@ -1,3 +1,7 @@
+Mon Mar 17 13:06:57 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/tao.bat: Removed the output file's path!
+
 Mon Mar 17 13:03:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* README: Fixed the documentation for scoreboard scripts usage. 
