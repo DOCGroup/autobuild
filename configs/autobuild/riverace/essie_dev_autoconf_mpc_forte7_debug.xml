@@ -36,7 +36,7 @@
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/autoconf_mpc_forte7_debug/.disable" />
-    <command name="file_manipulation" options="type=create file=build/autoconf_mpc_forte7_debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/autoconf_mpc_forte7_debug/.disable output='RUNNING'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="sun_cc" />
