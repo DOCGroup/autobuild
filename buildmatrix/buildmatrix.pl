@@ -150,7 +150,13 @@ sub add_results($$) {
      qr{^-+Configuration:\s(\S+)}x,
 
      # This one matches VC71 builds
-     qr{^-+\sBuild\sstarted:\sProject:\s(\S+),\s}x
+     qr{^-+\sBuild\sstarted:\sProject:\s(\S+),\s}x,
+
+     # This one matches VC.NET builds
+     qr{^-+\sRebuild\s.*\sstarted:\sProject:\s(\S+),\s}x,
+
+     # This one matches BCB6 and CBuilderX builds
+     qr{make\s-i\s-l\s-o\s.*\s-f\s(\S+).bor\s}x,
     );
 
   my $state = 'NOT IN COMPILE';
