@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/ace" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
@@ -19,7 +19,11 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 1\n#define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 1\n#define TAO_HAS_CORBA_MESSAGING 1\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/> 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -30,10 +34,17 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
+    <!-- Uses ACE.mwc -->
+    <command name="shell"             options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="shell"             options="cd ACE_wrappers/TAO; ../bin/mwc.pl -recurse=TAOACE.mwc -make_coexistence" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
     <command name="auto_run_tests" options="" /> 

@@ -4,8 +4,8 @@
 
         <environment name="ACE_ROOT"        value="/home/build/ACE/KylixACE/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/KylixACE/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/usr/local/kylix3/bin:/home/build/ACE/KylixACE/ACE_wrappers/ace" />
-        <environment name="PATH"            value="/home/build/ACE/KylixACE/ACE_wrappers/ace:/bin:/usr/local/kylix3/bin:/usr/local/kylix3/lib:/usr/local/bin:/usr/bin" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/kylix3/bin:/home/build/ACE/KylixACE/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/home/build/ACE/KylixACE/ACE_wrappers/bin:/bin:/usr/local/kylix3/bin:/usr/local/kylix3/lib:/usr/local/bin:/usr/bin" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
@@ -20,7 +20,11 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux_borland.GNU\n'" />
@@ -32,7 +36,10 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k reverseclean" />
+    <!-- Uses ACE.mwc -->
+    <command name="shell"             options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+
+    <command name="make"              options="-k realclean" />
 
     <command name="make"              options="-k" />
 

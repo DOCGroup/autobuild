@@ -7,7 +7,7 @@
         <environment name="TAO_ROOT"     value="D:/ACE/MingW/ACE_wrappers/TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\MSYS\BIN;D:\MingW\bin;D:\MingW\mingw32\bin;D:\ACE\MingW\ACE_wrappers\bin;D:\ACE\MingW\ACE_wrappers\ace;D:\;d:\putty;d:\msys\opt\perl\5.8.0\bin;D:\msys\opt\perl\5.8.0\bin\MSWin32-x86-multi-thread" type="prefix" />
+        <environment name="Path"         value="D:\MSYS\BIN;D:\MingW\bin;D:\MingW\mingw32\bin;D:\ACE\MingW\ACE_wrappers\bin;D:\ACE\MingW\ACE_wrappers\lib;D:\;d:\putty;d:\msys\opt\perl\5.8.0\bin;D:\msys\opt\perl\5.8.0\bin\MSWin32-x86-multi-thread" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
@@ -25,7 +25,11 @@
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
@@ -36,10 +40,17 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
+    <!-- Uses ACE.mwc -->
+    <command name="shell"             options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="shell"             options="cd ACE_wrappers/TAO; ../bin/mwc.pl -recurse=TAOACE.mwc -make_coexistence" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
     <command name="auto_run_tests" options="-a -s \x22D:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22" />
