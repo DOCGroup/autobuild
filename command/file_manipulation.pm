@@ -60,7 +60,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Setup (File_Manipulation) [" . (scalar gmtime(time())) . " UTC\n";
+    print "\n#################### Setup (File_Manipulation) [" . (scalar gmtime(time())) . " UTC]\n";
 
     my $current_dir = getcwd ();
 

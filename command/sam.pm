@@ -76,7 +76,7 @@ sub Run ($)
         $sam_root = $1;
     }
 
-    print "\n#################### Compile (SAM) [" . (scalar gmtime(time())) . " UTC\n";
+    print "\n#################### Compile (SAM) [" . (scalar gmtime(time())) . " UTC]\n";
 
     my $current_dir = getcwd ();
 

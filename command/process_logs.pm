@@ -73,7 +73,7 @@ sub Run ($)
     my $keep = 20;
     my $moved = 0;
 
-    print "\n#################### Processing Logs [" . (scalar gmtime(time())) . " UTC\n";
+    print "\n#################### Processing Logs [" . (scalar gmtime(time())) . " UTC]\n";
 
     # Move the logs
     
@@ -182,8 +182,11 @@ sub move_log ()
     my $timestamp = POSIX::strftime("%Y_%m_%d_%H_%M", gmtime);
     $newlogfile = $logroot . "/" . $timestamp . ".txt";
 
+    # Use copy/unlink instead of move so on Win32 it inherits
+    # the destination dir's permissions
     print "Moving $logfile to $newlogfile\n";
-    move ($logfile, $newlogfile);
+    copy ($logfile, $newlogfile);
+    unlink ($logfile);
     
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);

@@ -55,7 +55,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Compile (make) [" . (scalar gmtime(time())) . " UTC\n";
+    print "\n#################### Compile (make) [" . (scalar gmtime(time())) . " UTC]\n";
 
     my $current_dir = getcwd ();
 

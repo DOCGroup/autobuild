@@ -55,7 +55,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Config (PrintACEConfig) [" . (scalar gmtime(time())) . " UTC\n";
+    print "\n#################### Config (PrintACEConfig) [" . (scalar gmtime(time())) . " UTC]\n";
     
     #
     # last ACE Changelog Entry

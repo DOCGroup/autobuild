@@ -56,7 +56,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Setup (CVS) [" . (scalar gmtime(time())) . " UTC\n";
+    print "\n#################### Setup (CVS) [" . (scalar gmtime(time())) . " UTC]\n";
 
     my $current_dir = getcwd ();
 
