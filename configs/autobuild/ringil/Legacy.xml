@@ -2,7 +2,6 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="C:\builds\legacy\ACE_wrappers" />
-        <environment name="PATH"             value="C:\builds\legacy\ACE_wrappers\bin" type="prefix" />
         <environment name="WINMAKE_COMPILER" value="msvc6" />
         <environment name="WINMAKE_CONFIGS"  value="Win32 Debug" />
 
@@ -16,25 +15,25 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="-recurse -clean ACE tests" />
+    <command name="win32make"         options="-recurse -clean" />
 
     <command name="log"               options="ON" /> 
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USE_SELECT_REACTOR_FOR_REACTOR_IMPL\n#define ACE_USES_OBSOLETE_GUARD_CLASSES\n#define ACE_HAS_LAZY_MAP_MANAGER  1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_DEFAULT_MESSAGE_BLOCK_PRIORITY 1024\n#define ACE_USE_RCSID 0\n#define ACE_LEGACY_MODE\n#define ACE_HAS_NONSTATIC_OBJECT_MANAGER 0\n#define ACE_HAS_MFC 1\n#define ACE_DEFINES_DEFAULT_WIN32_SECURITY_ATTRIBUTES 1\n#include \x22ace/config-win32.h\x22\n'" />
-
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USE_SELECT_REACTOR_FOR_REACTOR_IMPL\n#define ACE_USES_OBSOLETE_GUARD_CLASSES\n#define ACE_HAS_LAZY_MAP_MANAGER  1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_DEFAULT_MESSAGE_BLOCK_PRIORITY 1024\n#define ACE_USE_RCSID 0\n#define ACE_LEGACY_MODE\n#define ACE_HAS_NONSTATIC_OBJECT_MANAGER 0\n#define ACE_HAS_MFC 1\n#define ACE_DEFINES_DEFAULT_WIN32_SECURITY_ATTRIBUTES 1\n#include \x22ace/config-win32.h\x22\n'" />
 
     <command name="print_ace_config" /> 
 
-    <command name="win32make"         options="-recurse -auto_compile ACE tests" />
-
-    <command name="auto_run_tests"    options="-a" />
+    <command name="win32make"         options="-recurse -auto_compile" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
+
+
 
 
 
