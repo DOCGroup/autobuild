@@ -1,3 +1,8 @@
+Sat Dec 20 14:27:42 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/tao.xml:
+	  Added msvc6 lib release build
+
 Sat Dec 20 14:09:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/scoreboard/tao.xml:
