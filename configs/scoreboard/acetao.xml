@@ -189,7 +189,7 @@
          <name>BSD</name>
          <build>
              <name>OpenBSD_Full</name>
-             <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Fule</url>
+             <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Full</url>
              <orange>96</orange>
              <red>192</red>
          </build>
