@@ -1,0 +1,38 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="LD_LIBRARY_PATH" value="/project/swing/corsaro/Software/jRate-gcc/lib:/project/swing/corsaro/Software/jTools/lib:/project/swing/corsaro/Software/jRate/lib:./lib" />
+        <environment name="SOFTWARE_HOME"   value="/project/swing/corsaro/Software" />
+        <environment name="JRATE_HOME"      value="/project/swing/corsaro/Software/jRate" />
+        <environment name="JRATE_GCC_HOME"  value="/project/swing/corsaro/Software/jRate-gcc" />
+        <environment name="JRATE_GCC_SRC_HOME"  value="/project/swing/corsaro/Software/GNU/jRateGCC" />
+        <environment name="RTSJ_BENCH_HOME" value="/project/swing/corsaro/Software/RTSJBench" />
+        <environment name="PYTHONPATH"      value="/project/swing/corsaro/Software/RTSJBench/script:" />
+        <environment name="JAVART_HOME"     value="/export/home/bugzilla/javart" />
+        <environment name="PATH"            value="project/swing/corsaro/Software/jRate-gcc/bin:/project/swing/corsaro/Software/RTSJBench/bin:/usr/local/bin:/bin:/usr/bin" />
+
+        <variable name="root"               value="/export/home/bugzilla/" />
+        <variable name="project_root"       value="javart" />
+        <variable name="log_file"           value="build.txt" />
+        <variable name="log_root"           value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_javart" />
+        <variable name="configs"            value="Linux" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+    <command name="cvs"               options="-z 3 -q checkout -P javart" />
+
+    <command name="make"              options="realclean" />
+    <command name="make"              options="" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
