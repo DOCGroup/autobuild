@@ -55,9 +55,7 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="ssh willemsenj@tango.dre.vanderbilt.edu rm /web/users/willemsenj/Solaris/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tango.dre.vanderbilt.edu:/web/users/willemsenj/Solaris" />
+    <command name="shell"             options="scp *.txt *.html willemsenj@tango.dre.vanderbilt.edu:/web/users/willemsenj/Solaris" />
 </autobuild>
-
-
 
 
