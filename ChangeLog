@@ -1,3 +1,10 @@
+Fri Jul  9 23:23:35 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Added missing carriage return to generated `config.h' file.
+	  Addresses build errors.
+
 Thu Jul  8 11:32:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full_Reactors.xml:
