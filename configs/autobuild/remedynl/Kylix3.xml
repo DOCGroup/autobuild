@@ -53,7 +53,7 @@
     <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tango.dre.vanderbilt.edu rm /web/users/willemsenj/SuSE_Kylix3/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tango.dre.vanderbilt.edu:/web/users/willemsenj/SuSE_Kylix3" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/SuSE_Kylix3/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/SuSE_Kylix3" />
 
 </autobuild>
