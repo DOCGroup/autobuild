@@ -1,3 +1,11 @@
+Fri Aug 16 13:51:14 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/scoreboard/acetao.xml:
+	* configs/autobuild/nirvana/XML_Debug.xml: Added a new build to
+	  test out ACE_HAS_XML_SVC_CONF.  The XML parser was broken a
+	  while back and we didn't even notice that.  Hopefully, this
+	  build will help catch the problem.
+
 Fri Aug 16 12:16:14 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Change RedHat_GCC_3.1.1 build
@@ -11,7 +19,7 @@ Sun Aug 11 21:52:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 Sun Aug 11 17:08:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Fix wording in e-mail notification. 
+	* common/prettify.pm: Fix wording in e-mail notification.
 
 Fri Aug  9 18:21:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
@@ -43,14 +51,14 @@ Thu Aug  8 15:01:40 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	* command/make.pm:
 	   - Check the return status after invoking make.  A return status
 	     of 0 indicates success.  A non-zero return status indicates failure.
-	   - Upon make failure, print an easily parseable message: 
+	   - Upon make failure, print an easily parseable message:
 	     [BUILD ERROR detected in {directory}].  This is makes it easier
 	     to determine the occurrence of a build failure when parsing
 	     the build logs.
 
 	* command/printaceconfig.pm:
 	   - Try looking in the ACE_ROOT environment variable for the
-	     ACE root directory before looking in the project_root Perl 
+	     ACE root directory before looking in the project_root Perl
 	     variable.  This makes it easier to use the autobuild scripts
 	     to build projects which *use* ACE, but are not *building* ACE.
 
@@ -63,7 +71,7 @@ Thu Aug  8 15:01:40 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	     defined, and if we have more than 0 items in the BUILD_ERROR_COUNTER
 	     array, then send an e-mail notification to the MAIL_ADMIN
 	     address with a list of directories where build errors were detected.
-	
+
 	* common/mail.pm:
 	   - Preliminary e-mail notification support.  Look for a mail program
 	     that supports the "-s Subject" flag, either mail or mailx.
