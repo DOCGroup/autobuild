@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"     value="C:\ACE\BCB6dd\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="C:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dd\ACE_wrappers\bin;C:\ACE\BCB6dd\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin" type="prefix" />
+        <environment name="Path"         value="C:\VC71_dlls;C:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dd\ACE_wrappers\bin;C:\ACE\BCB6dd\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin" type="prefix" />
 
 	<environment name="DEBUG"    value="1" />
 	<environment name="DYNAMIC"  value="1" />
@@ -44,6 +44,7 @@
     <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC -type borland" />
 
     <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
