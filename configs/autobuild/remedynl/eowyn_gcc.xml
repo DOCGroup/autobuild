@@ -23,7 +23,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_NO_COPY_OCTET_SEQUENCES 0\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\nssl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nssl=1\n'" />
 
@@ -38,16 +38,13 @@
 
     <command name="generate_workspace" options="-exclude TAO" />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO" />
-    <command name="make"              options="-k -C TAO/CIAO" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
