@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="C:\ACE\MSVC6sr\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="C:\ACE\MSVC6sr\ACE_wrappers\TAO"/>
-        <environment name="Path"             value="C:\ACE\MSVC6sr\ACE_wrappers\bin;C:\ACE\MSVC6sr\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="Path"             value="C:\ACE\MSVC6sr\ACE_wrappers\bin;C:\ACE\MSVC6sr\ACE_wrappers\lib;C:\Perl\bin;C:\Program Files\Microsoft Visual Studio\VC98\Bin;C:\cygwin\bin;" type="prefix" />
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="c:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"        value="C:\cygwin\bin\ssh" />
