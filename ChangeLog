@@ -1,3 +1,9 @@
+Mon Mar  7 18:29:06 UTC 2005  Don Hinton  <don.hinton@vanderbilt.edu>
+
+        * configs/autobuild/tango_isis/driver_cvs_report.xml:
+        * configs/autobuild/tango_isis/CVS_Report.xml:
+          Added new cvs reports for both ACE_wrappers and ACE_MPC.
+
 Fri Mar  4 18:17:22 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Commented out Riverace's Solaris 8
