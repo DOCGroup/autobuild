@@ -36,7 +36,7 @@
     <command name="make"              options="-k" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=6 move prettify index" />
+    <command name="process_logs"      options="clean=10 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="ssh bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_SuSE81_Kylix3ACE/* -f" />
