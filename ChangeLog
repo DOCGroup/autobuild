@@ -1,3 +1,13 @@
+Wed Jan 14 12:58:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao.xml:
+          Added MPC to all Remedy builds
+
+        * configs/autobuild/remedynl/*.xml:
+          All our builds now run using MPC
+
 Wed Jan 14 09:28:53 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
