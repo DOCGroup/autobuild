@@ -173,18 +173,6 @@ all the OS/platform combinations ACE is tested everyday.
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
-          <name>Win2K_MSVC6_WChar</name>
-          <url>http://tao.doc.wustl.edu/bugzilla/new_wchar</url>
-          <build_sponsor>Washington University</build_sponsor>
-          <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
-      <build>
-          <name>Win2K_MSVC6_WChar_Unicode</name>
-          <url>http://tao.doc.wustl.edu/bugzilla/new_unicode</url>
-          <build_sponsor>Washington University</build_sponsor>
-          <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
-      <build>
           <name>WinXP_MSVC6_WChar</name>
            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6wchar</url>
           <build_sponsor>Remedy IT</build_sponsor>

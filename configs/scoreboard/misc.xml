@@ -16,12 +16,6 @@ This is a miscellaneous scoreboard for ACE+TAO.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-       <name>Win2K_Fuzz</name>
-       <url>http://tao.doc.wustl.edu/bugzilla/new_fuzz</url>
-       <build_sponsor>Washington University</build_sponsor>
-       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-    </build>
-    <build>
        <name>Linux_Fuzz</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_Fuzz</url>
        <build_sponsor>ISIS</build_sponsor>
