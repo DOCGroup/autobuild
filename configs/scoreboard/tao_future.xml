@@ -78,4 +78,13 @@ decide the migration paths and strategies.
             <red>36</red>
         </build>
     </group>
+<group>
+   <name>VxWorks</name>
+   <build>
+   <name>SunOS_5.8_GCC_2.96_(rtlogic.com)</name>
+   <url>http://www.rtlogic.com/acetao</url>
+   <build_sponsor>RTLogic!</build_sponsor>
+   <build_sponsor_url>http://www.rtlogic.com</build_sponsor_url>
+   </build>
+   </group>
 </scoreboard>
