@@ -25,10 +25,10 @@
     <command name="print_ace_config" />
     <command name="sam"               options="create" />
     <command name="sam"               options="sam" />
-    <command name="make"              options="-j 2 -k -C ACE_wrappers/tests realclean" />
-    <command name="make"              options="-j 2 -k -C ACE_wrappers/ace realclean" />
-    <command name="make"              options="-j 2 -k -C ACE_wrappers/ace" />
-    <command name="make"              options="-j 2 -k -C ACE_wrappers/tests" />
+    <command name="make"              options="-j 2 -k -C tests realclean" />
+    <command name="make"              options="-j 2 -k -C ace realclean" />
+    <command name="make"              options="-j 2 -k -C ace" />
+    <command name="make"              options="-j 2 -k -C tests" />
     <command name="auto_run_tests"    options="" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />

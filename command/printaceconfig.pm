@@ -7,8 +7,8 @@ package PrintACEConfig;
 use strict;
 use warnings;
 
+use Cwd;
 use FileHandle;
-use Time::Local;
 
 ###############################################################################
 # Constructor
@@ -50,51 +50,68 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
     }
 
-    $root .= '/ACE_wrappers';
-
     main::PrintStatus ('Config', 'PrintACEConfig');
+
+    my $current_dir = getcwd ();
+
+    if (!chdir $root) {
+        print STDERR __FILE__, ": Cannot change to $root\n";
+        return 0;
+    }
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+    
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
+        return 0;
+    }
 
     #
     # last ACE Changelog Entry
     #
 
-    if (-r "$root/ChangeLog") {
+    if (-r "ChangeLog") {
         print "================ ACE ChangeLog ================\n";
-        print_file ("$root/ChangeLog", 0);
+        print_file ("ChangeLog", 0);
     }
 
     #
     # last TAO Changelog Entry
     #
 
-    if (-r "$root/TAO/ChangeLog") {
+    if (-r "TAO/ChangeLog") {
         print "================ TAO ChangeLog ================\n";
-        print_file ("$root/TAO/ChangeLog", 0);
+        print_file ("TAO/ChangeLog", 0);
     }
 
     #
     # config.h, if it exists
     #
 
-    if (-r "$root/ace/config.h") {
+    if (-r "ace/config.h") {
         print "================ config.h ================\n";
-        print_file ("$root/ace/config.h", 1);
+        print_file ("ace/config.h", 1);
     }
 
     #
     # platform_macros.GNU, if it exists
     #
 
-    if (-r "$root/include/makeinclude/platform_macros.GNU") {
+    if (-r "include/makeinclude/platform_macros.GNU") {
         print "================ platform_macros.GNU ================\n";
-        print_file ("$root/include/makeinclude/platform_macros.GNU", 1);
+        print_file ("include/makeinclude/platform_macros.GNU", 1);
     }
+
+    chdir $current_dir;
 
     return 1;
 }

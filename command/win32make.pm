@@ -49,6 +49,7 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
@@ -64,7 +65,21 @@ sub Run ($)
         return 0;
     }
 
-    system ("perl ACE_wrappers/bin/pippen.pl $options");
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+    
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
+        return 0;
+    }
+
+    my $command = "perl bin/pippen.pl $options";
+
+    print "Running: $command\n";
+    system ($command);
+
+    chdir $current_dir;
 
     return 1;
 }

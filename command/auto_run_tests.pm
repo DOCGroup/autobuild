@@ -51,12 +51,13 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $configs = main::GetVariable ('configs');
+    my $sandbox = main::GetVariable ('sandbox');
+    my $project_root = main::GetVariable ('project_root');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
     }
-    $root .= '/ACE_wrappers';
 
     main::PrintStatus ('Test', 'auto_run_tests');
 
@@ -64,6 +65,15 @@ sub Run ($)
 
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
+        return 0;
+    }
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+    
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
     }
 
@@ -75,10 +85,10 @@ sub Run ($)
         $options .= " -Config " . join (" -Config", split (' ', $configs));
     }
 
-    my $command = "perl $root/bin/auto_run_tests.pl $options";
+    my $command = "perl bin/auto_run_tests.pl $options";
 
     print "Running: $command\n";
-    system ("perl $root/bin/auto_run_tests.pl $options");
+    system ($command);
 
     chdir $current_dir;
 

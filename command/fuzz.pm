@@ -49,13 +49,14 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
     }
 
-    main::PrintStatus ('Compile', 'win32make');
+    main::PrintStatus ('Compile', 'fuzz');
 
     my $current_dir = getcwd ();
 
@@ -64,8 +65,22 @@ sub Run ($)
         return 0;
     }
 
-    system ("perl ACE_wrappers/bin/fuzz.pl $options");
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+    
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
+        return 0;
+    }
 
+    my $command = "perl bin/fuzz.pl $options";
+
+    print "Running: $command\n";
+    system ($command);
+
+    chdir $current_dir;
+    
     return 1;
 }
 
