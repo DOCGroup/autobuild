@@ -1,3 +1,8 @@
+Tue Aug 24 11:28:16 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/test-list-extract:
+          Changed the method of finding the build name.
+
 Tue Aug 24 10:46:47 MST 2004  Trevor Fields <fields_t@ociweb.com>
 
         * configs/autobuild/balar_isis/DynamicHash.xml:

@@ -11,7 +11,7 @@
 
 CONFIG_FILE=$1
 
-grep -B 5 "</build>"  $CONFIG_FILE | \
+grep -A 4 "<build>"  $CONFIG_FILE | \
     grep "<name>" | \
     sed 's/name>//g' | \
     sed 's/^[[:blank:]]*<//g' | \
