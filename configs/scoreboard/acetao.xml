@@ -9,6 +9,10 @@
     <group>
         <name>Linux</name>
         <build>
+            <name>Debian_Core</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/balar_Core/</url>
+        </build>
+        <build>
             <name>Debian_Full</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
         </build>
