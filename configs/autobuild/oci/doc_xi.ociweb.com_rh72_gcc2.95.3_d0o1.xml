@@ -31,6 +31,7 @@
     </configuration>
     
     <command name="cvs"               options="-z 3 -q update -P -d ." />
+    <command name="cvs"               options="-z 3 -q checkout -P MPC"/>
 
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=/build/doc_xi.ociweb.com_rh72_gcc2.95.3_d0o1/.disable" />

@@ -21,6 +21,7 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USE_SELECT_REACTOR_FOR_REACTOR_IMPL\n#define ACE_USES_OBSOLETE_GUARD_CLASSES\n#define ACE_HAS_LAZY_MAP_MANAGER  1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_DEFAULT_MESSAGE_BLOCK_PRIORITY 1024\n#define ACE_USE_RCSID 0\n#define ACE_LEGACY_MODE\n#define ACE_HAS_NONSTATIC_OBJECT_MANAGER 0\n#define ACE_HAS_MFC 1\n#define ACE_DEFINES_DEFAULT_WIN32_SECURITY_ATTRIBUTES 1\n#include \x22ace/config-win32.h\x22\n'" />
 

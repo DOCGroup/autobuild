@@ -22,6 +22,7 @@
     <command name="log"               options="on" />
 <!--    <command name="sam" options="clean" /> -->
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 <!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_LAZY_MAP_MANAGER 1\n#define ACE_HAS_TIMED_MESSAGE_BLOCKS 1\n#define ACE_HAS_MALLOC_STATS 1\n#include \x22ace/config-linux.h\x22\n'" />

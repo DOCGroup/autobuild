@@ -33,6 +33,7 @@
     <command name="log"               options="on" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
     <command name="create_ace_build" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/doc_snake_aix51_VisualAge_d1o0/.disable output='RUNNING'" />

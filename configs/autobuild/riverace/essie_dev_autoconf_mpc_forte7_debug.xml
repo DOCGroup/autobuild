@@ -25,6 +25,7 @@
     <!-- Delete all the Makefile.am files so cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'Makefile.am' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q update -P -d ." />
+    <command name="cvs"               options="-z 3 -q checkout -P MPC"/>
     <!-- Now, delete them again to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'Makefile.am' -exec rm '{}' ';'" />
 

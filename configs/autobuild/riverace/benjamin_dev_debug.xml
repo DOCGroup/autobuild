@@ -21,6 +21,7 @@
     <command name="log"               options="on" />
 
     <command name="cvs"               options="-q update -P -d ." />
+    <command name="cvs"               options="-q checkout -P MPC"/>
 
     <command name="file_manipulation" options="type=delete file=.disable" />
 

@@ -21,6 +21,7 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
+    <command name="cvs"               options="checkout -P MPC"/>
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="borland" />

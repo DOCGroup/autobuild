@@ -21,6 +21,7 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define UNICODE\n#define _UNICODE\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n// Required for examples from NPV1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
 

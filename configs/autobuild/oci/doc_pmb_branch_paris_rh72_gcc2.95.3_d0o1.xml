@@ -35,6 +35,7 @@
     <command name="log"               options="on" />
 
     <command name="cvs"               options="-z 3 -q update -P -d ." />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
     <command name="create_ace_build"  options="-a -v" />
 
     <command name="file_manipulation" options="type=create file=/build/doc_pmb_branch_paris_rh72_gcc2.95.3_d0o1/ace/config.h output='\n#define TAO_HAS_DIOP 0\n#include \x22ace/config-linux.h\x22\n\n'" /> 

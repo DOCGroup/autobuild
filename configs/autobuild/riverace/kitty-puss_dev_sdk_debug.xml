@@ -20,6 +20,7 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
+    <command name="cvs"               options="checkout -P MPC"/>
     <command name="file_manipulation" options="type=create file=ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
 
     <command name="print_os_version" />

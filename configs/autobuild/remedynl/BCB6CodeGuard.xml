@@ -29,6 +29,7 @@
 
     <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
 

@@ -24,6 +24,7 @@
     <command name="log"               options="on" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
 
     <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-cvs/RTEvent/tao-facet-adapter && ./setup.sh'" />

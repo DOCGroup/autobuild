@@ -30,6 +30,7 @@
     <!--  Delete all the bor files so the cvs checkout won't complain. --> 
     <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <!--  Now, delete them again to insure a clean slate.   --> 
     <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 

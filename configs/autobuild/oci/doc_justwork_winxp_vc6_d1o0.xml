@@ -15,6 +15,7 @@
 	<command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers/build/vc6_d1o0/.disable"/>
 	<command name="log" options="ON"/>
 	<command name="cvs" options="-z 9 -q checkout -P ACE_wrappers"/>
+	<command name="cvs" options="-z 9 -q checkout -P ACE_MPC"/>
 	<command name="create_ace_build"/>
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/vc6_d1o0/.disable output='RUNNING'"/>
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/vc6_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace\config-win32.h\x22\n'"/>
