@@ -1,3 +1,8 @@
+Tue Aug 10 09:50:00 UTC  Simon Massey  <simon.massey@prismtechnologies.com>
+
+        * configs/scoreboard/tao.xml
+          Changed the Prism Tech HPUX build id.
+
 Tue Aug 10 09:40:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
