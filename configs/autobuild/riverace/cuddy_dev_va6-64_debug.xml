@@ -29,7 +29,7 @@
     <command name="create_ace_build_legacy"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/va6-64_debug/.disable output='RUNNING'" />
 
-    <command name="file_manipulation" options="type=create file=build/va6-64_debug/ace/config.h output='#include \x22ace/config-aix5.1.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/va6-64_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix5.1.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=build/va6-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
