@@ -327,12 +327,6 @@ here</a>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_MingW_GCC_3_2</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_MingW</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_Legacy</name>
             <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
             <build_sponsor>UC Irvine</build_sponsor>
