@@ -35,7 +35,7 @@
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
 
-    <command name="auto_run_tests"    options="" />
+    <command name="auto_run_tests"    options="STATIC" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

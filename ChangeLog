@@ -1,3 +1,9 @@
+Thu May 16 21:35:35 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Add STATIC
+	  to "auto_run_tests" command.  Thanks to 
+	  Don Hinton <dhinton@ieee.org>.
+
 Thu May 16 18:10:51 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/ace/driver_lynx_ppc.sh: Put Lynx compiler in PATH.
