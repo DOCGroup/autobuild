@@ -1,4 +1,4 @@
-2002-07-23    <bugzilla@TAO>
+2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/Borland.xml: Changed to use the new dir option 
 	  Craig added.
