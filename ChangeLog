@@ -1,3 +1,9 @@
+Fri Jan  2 15:29:40 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+
+	  Removed the whole build of ace. 
+
 Fri Jan  2 12:02:35 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/doc_snake_aix51_VisualAge_d1o0.xml:
