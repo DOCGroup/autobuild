@@ -1,3 +1,9 @@
+Thu Jan 15 16:18:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+	  All our builds now use MPC.
+
 Wed Jan 14 18:36:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/Cygwin.xml:
