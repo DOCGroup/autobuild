@@ -1,3 +1,14 @@
+Tue Mar 11 13:20:37 2003  Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/danzon/driver.sh:
+
+	  Run the "EGD" Entropy Gathering Daemon perl script so that SSL
+	  may be re-enabled in this configuration/build.
+
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+
+	  Re-enable SSL support in this build.
+
 Tue Mar 11 09:47:09 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
@@ -31,7 +42,7 @@ Mon Mar 10 19:41:10 UTC 2003  Don Hinton  <dhinton@ieee.org>
 	* configs/autobuild/dresystems/driver_skoll_2.sh:
 	* configs/autobuild/dresystems/skoll_1.xml:
 	* configs/autobuild/dresystems/skoll_2.xml:
-	* configs/scoreboard/acetao.xml: Added new new builds.	
+	* configs/scoreboard/acetao.xml: Added new new builds.
 
 Mon Mar 10 11:31:45 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
@@ -602,7 +613,7 @@ Thu Dec 19 06:54:36 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
         * configs//autobuild/sirion/Full_new.xml:
         * configs//autobuild/tango/Debian_NoInline.xml:
         * configs//autobuild/valinor/Full.xml: Added SSL to all the
-          above. Doesnt seem to run the tests yet. Need to check after yet
+          above. Doesn't seem to run the tests yet. Need to check after yet
           another build.
 
 Wed Dec 18 18:00:31 2002  Steve Huston  <shuston@riverace.com>
@@ -634,8 +645,8 @@ Wed Dec 18 15:54:05 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 
         * configs/autobuild/sirion/Full_new.xml: Added -config SSL to run
           the SSLIOP tests. We have been long kidding ourselves that the
-          SSL tests have been run daily! What a joke! They havent been run
-          from the point they moved to the new scoreboard.
+          SSL tests have been run daily! What a joke! They haven't been
+	  run from the point they moved to the new scoreboard.
 
 Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
 
