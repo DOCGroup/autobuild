@@ -1043,6 +1043,8 @@ sub Test_Handler ($)
 	|| $s =~ m/Assertion/
         || $s =~ m/Mismatched free/
         || $s =~ m/are definitely lost in loss record/
+        || $s =~ m/Invalid write of size/
+        || $s =~ m/Invalid read of size/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
