@@ -16,7 +16,8 @@ use File::Basename;
 
 my $status_file = '';
 my $build_start_time = scalar gmtime(time());
-my $verbose = 0;
+## Use 'our' to make $verbose visible outside this file
+our $verbose = 0;
 my @files;
 my %data = ();
 my %command_table = ();

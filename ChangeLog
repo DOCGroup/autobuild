@@ -1,3 +1,15 @@
+Wed Oct  2 00:49:10 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* autobuild.pl: Make $verbose a global variable with 'our' keyword.
+	* command/file_manipulation.pm:
+	* command/log.pm:
+	* command/process_logs.pm:
+	* command/status.pm:
+	  Remove extraneous print statements.
+	  Check $main::verbose before printing a few other 
+	  messages.  This should prevent unnecessary messages
+	  from being emitted when autobuild is run as a cron job.
+
 Tue Sep 24 03:27:13 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
 	* configs/autobuild/rumba/Debian_WChar.xml: Added ST to

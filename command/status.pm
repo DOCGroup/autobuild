@@ -58,7 +58,9 @@ sub Run ($)
         $log_root = $1;
     }
 
-    main::PrintStatus ('Setup', 'Status');
+    if ( $main::verbose == 1 ) {
+        main::PrintStatus ('Setup', 'Status');
+    }
 
     if (uc $options eq "ON") {
         main::SetStatusFile ($log_root . "/status.txt");

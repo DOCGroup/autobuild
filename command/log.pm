@@ -73,7 +73,9 @@ sub Run ($)
         open (OLDOUT, ">&STDOUT");
         open (OLDERR, ">&STDERR");
 
-        main::PrintStatus ('Setup', 'Logging: stdout/stderr redirected');
+        if($main::verbose == 1) { 
+          main::PrintStatus ('Setup', 'Logging: stdout/stderr redirected');
+        }
 
         # Redirect to the logfile
 
@@ -125,7 +127,9 @@ sub Run ($)
             return 0;
         }
 
-        main::PrintStatus ('Setup', 'Logging: stdout/stderr restored');
+        if( $main::verbose == 1) {
+            main::PrintStatus ('Setup', 'Logging: stdout/stderr restored');
+        }
     }
 
     return 1;

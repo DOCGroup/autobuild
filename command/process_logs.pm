@@ -77,7 +77,9 @@ sub Run ($)
     my $keep = 20;
     my $moved = 0;
 
-    main::PrintStatus ('Processing Logs', '');
+    if ($main::verbose == 1 ) {
+        main::PrintStatus ('Processing Logs', '');
+    }
 
     # Move the logs
 
@@ -198,9 +200,22 @@ sub move_log ()
 
     # Use copy/unlink instead of move so on Win32 it inherits
     # the destination dir's permissions
-    print "Moving $logfile to $newlogfile\n";
-    copy ($logfile, $newlogfile);
-    unlink ($logfile);
+    if ($main::verbose == 1) {
+        print "Moving $logfile to $newlogfile\n";
+    }
+
+    my $ret;
+    ## copy returns the number of successfully copied files
+    $ret = copy ($logfile, $newlogfile);
+    if ( $ret < 1 ) {
+        print STDERR __FILE__, "Problem copying $logfile to $newlogfile\n";
+    } 
+
+    ## unlink returns the number of successfully copied files
+    $ret = unlink ($logfile);
+    if ( $ret < 1 ) {
+        print STDERR __FILE__, "Problem deleting $logfile\n";
+    } 
 
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);

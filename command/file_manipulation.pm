@@ -60,7 +60,9 @@ sub Run ($)
         $root = $1;
     }
 
-    main::PrintStatus ('Setup', 'File_Manipulation');
+    if ($main::verbose == 1) {
+        main::PrintStatus ('Setup', 'File_Manipulation');
+    }
 
     my $current_dir = getcwd ();
 
@@ -104,7 +106,6 @@ sub Run ($)
     # Act on the type
 
     if ($type eq "create") {
-        print "Creating file \"$filename\"\n";
         if (!defined $output) {
             print STDERR __FILE__, ": No output specified for \"create\" type\n";
             return 0;
@@ -126,12 +127,10 @@ sub Run ($)
         print $file_handle $output;
     }
     elsif ($type eq "delete") {
-        print "Deleting file \"$filename\"\n";
         
         unlink $filename;
     }
     elsif ($type eq "mustnotexist") {
-        print "Making sure file \"$filename\" does not exist\n";
         
         if (-e $filename) {
             print STDERR "\"$filename\" exists!\n";
