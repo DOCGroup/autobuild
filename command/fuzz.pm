@@ -35,13 +35,6 @@ sub CheckRequirements ()
         return 0;
     }
     
-    my $project_root = main::GetVariable ('project_root');
-
-    if (!defined $project_root) {
-        print STDERR __FILE__, ": Requires \"project_root\" variable\n";
-        return 0;
-    }
-
     return 1;
 }
 
@@ -56,10 +49,6 @@ sub Run ($)
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
-
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
-    }
 
     if (!-r $root || !-d $root) {
         mkpath($root);
@@ -83,6 +72,10 @@ sub Run ($)
         $project_root = 'ACE_wrappers';
     }
     
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
+    }
+
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;

@@ -1,3 +1,20 @@
+Thu Aug  7 13:59:29 2003  Justin Michel  <michel_j@ociweb.com>
+
+	* command/auto_run_tests.pm:
+	* command/file_manipulation.pm:
+	* command/fuzz.pm:
+	* command/generate_makefile.pm:
+	* command/generate_workspace.pm:
+	* command/make.pm:
+	* command/printaceconfig.pm:
+	* command/vc6make.pm:
+	* command/vc7make.pm:
+	* command/win32make.pm:
+	* command/wincemake.pm:
+
+	  Removed project_root from most check_requirements() and 
+	default it to ACE_wrappers when not defined.
+
 Thu Aug  7 18:32:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/scoreboard/ace.xml:

@@ -77,7 +77,7 @@ sub Run ($)
     my $filename;
     my $output;
     
-    if ($options =~ m/type='([^"]*)'/) {
+    if ($options =~ m/type='([^']*)'/) {
         $type = $1;
     }
     elsif ($options =~ m/type=([^\s]*)/) {
@@ -88,7 +88,7 @@ sub Run ($)
         return 0;
     }
     
-    if ($options =~ m/file='([^"]*)'/) {
+    if ($options =~ m/file='([^']*)'/) {
         $filename = $1;
     }
     elsif ($options =~ m/file=([^\s]*)/) {
@@ -99,7 +99,7 @@ sub Run ($)
         return 0;
     }
 
-    if ($options =~ m/output='([^"]*)'/) {
+    if ($options =~ m/output='([^']*)'/) {
         $output = $1;
     }
 
@@ -113,7 +113,6 @@ sub Run ($)
         if (-e $filename) {
             # Expand some codes
             $output =~ s/\\n/\n/g;
-            $output =~ s/\\x22/"/g;
             $output =~ s/\\x27/'/g;
 
             my $file_handle = new FileHandle ($root . '/' . $filename, 'a');
@@ -139,7 +138,6 @@ sub Run ($)
         # Expand some codes
         
         $output =~ s/\\n/\n/g;
-        $output =~ s/\\x22/"/g;
         $output =~ s/\\x27/'/g;
         
         my $file_handle = new FileHandle ($root . '/' . $filename, 'w');
