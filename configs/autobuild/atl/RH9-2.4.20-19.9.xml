@@ -9,7 +9,6 @@
         <environment name="PATH"            value="/usr/local/gcc/3.3.1/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/jcohen/bin" />
 
         <variable name="root"     value="/home/jcohen" />
-	 <environment name="LD_ASSUME_KERNEL"         value="2.4.19" />
         <variable name="sam_root" value="/home/jcohen/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/jcohen/buildlog" />
@@ -44,7 +43,7 @@
     <command name="make"              options="-k -j 2 debug=0" />
     <command name="make"              options="-k -j 2 debug=0 -C TAO" />
 
-    <command name="auto_run_tests"    options="" />
+    <command name="auto_run_tests"    options="-envmod LD_ASSUME_KERNEL=2.4.19" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />

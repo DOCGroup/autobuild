@@ -1,3 +1,17 @@
+Wed Nov  3 13:32:11 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+
+          Changed all LD_ASSUME_KERNEL environment settings into -envmod
+          options to auto_run_tests.  This should fix the problem where
+          cidlc seg faults before it gets to main.
+
 Wed Nov  3 13:24:23 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/auto_run_tests.pm:
