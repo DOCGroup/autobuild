@@ -24,7 +24,7 @@
 
  <command name="create_ace_build"      options="" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/ace/config.h output='#define ACE_HAS_DUMP\n #include \x22ace/config-freebsd.h\x22\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/ace/config.h output='#define ACE_HAS_DUMP\n#include \x22ace/config-freebsd.h\x22\n'" />
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\ndebug=0\nexceptions=1\noptimize=0\n'" />
 

@@ -1,3 +1,8 @@
+Thu Aug  7 18:32:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/scoreboard/ace.xml:
+          Fixed formatting problem from last checkin.
+
 Thu Aug  7 18:05:50 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/driver_freebsd.sh:

@@ -10,7 +10,7 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
   <name>BSD</name>
      <build>
-        <name>FreeBSD 5.0 (MPC)</name>
+        <name>FreeBSD_5.0_(MPC)</name>
         <url>http://www2.dresystems.com:8001/autobuild_output/freebsd_ace</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -18,7 +18,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD 5.0 Explicit Templates (MPC)</name>
+        <name>FreeBSD_5.0_Explicit Templates (MPC)</name>
         <url>http://www2.dresystems.com:8001/autobuild_output/freebsd_ace_explicit_template</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -26,7 +26,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD 5.0 No Inline (MPC)</name>
+        <name>FreeBSD_5.0_No_Inline_(MPC)</name>
         <url>http://www2.dresystems.com:8001/autobuild_output/freebsd_ace_no_inline</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -34,7 +34,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD 5.0 Single Threaded (MPC)</name>
+        <name>FreeBSD_5.0_Single_Threaded (MPC)</name>
         <url>http://www2.dresystems.com:8001/autobuild_output/freebsd_ace_single</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -42,7 +42,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD 5.0 Dump (MPC)</name>
+        <name>FreeBSD_ 5.0_Dump_(MPC)</name>
         <url>http://www2.dresystems.com:8001/autobuild_output/freebsd_ace_dump</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
