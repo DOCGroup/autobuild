@@ -203,8 +203,10 @@ class TestPlatform:
 				ttime = tokens[3]
 				tresult = tokens[4]
 			else:
+				ttime = tokens[len(tokens) - 2]
+				tresult = tokens[len(tokens) - 1]
 				print "ERROR: What is happening here?"
-				sys.exit(-1)
+#				sys.exit(-1)
 			if ttime != "":
 				e,f=ttime.split(":")
 				time=int(f.replace('s',''))
