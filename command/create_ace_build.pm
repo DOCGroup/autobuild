@@ -47,12 +47,6 @@ sub CheckRequirements ()
         return 0;
     }
 
-    my $build_path = "$root" . "/build/" . "$build_name";
-    if (!-r $build_path || !-d $build_path) {
-        print STDERR __FILE__, ": Cannot access \"build_path\" directory: $build_path\n";
-        return 0;
-    }
-
     return 1;
 }
 

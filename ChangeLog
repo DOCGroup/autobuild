@@ -1,3 +1,10 @@
+Mon Aug  4 09:40:00 2003  Justin Michel  <michel_j@ociweb.com>
+
+	* command/create_ace_build.pm:
+
+          Removed requirement that build_path must exist. It will be
+        created or updated by this command.
+
 Fri Aug  1 17:15:00 2003  Justin Michel  <michel_j@ociweb.com>
 
         * command/vc6make.pm:
