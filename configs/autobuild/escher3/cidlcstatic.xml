@@ -33,7 +33,7 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="pscp  ACE_wrappers\TAO\CIAO\bin\cidlc.exe bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32" />
-    <command name="shell"             options="pscp  *.txt bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/Win32_CIDLC" />
-    <command name="shell"             options="pscp  *.html bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/Win32_CIDLC" />
+    <command name="shell"             options="pscp -i c:\putty\isisbuilds.ppk ACE_wrappers\TAO\CIAO\bin\cidlc.exe bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32" />
+    <command name="shell"             options="pscp -i c:\putty\isisbuilds.ppk *.txt bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/Win32_CIDLC" />
+    <command name="shell"             options="pscp -i c:\putty\isisbuilds.ppk *.html bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/Win32_CIDLC" />
 </autobuild>
