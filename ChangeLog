@@ -1,3 +1,10 @@
+Sat Oct 19 13:38:42 2002  Frank Hunleth <frank@hunleth.com>
+
+	* configs/scoreboard/acetao.xml: 
+	  Shuffled the TRU 64 build down to the bottom to see whether
+          that causes the OpenBSD and XML builds to show up.  The "-"
+          change below didn't change anything (not too surprising).
+
 Sat Oct 19 12:32:09 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/scoreboard/acetao.xml: 

@@ -185,13 +185,6 @@
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_CROSS_COMPILE_TAO_IDL</url>
          </build>
     </group>
-<!--    <group>
-         <name>TRU64_Unix</name>
-         <build>
-             <name>TRU64_CXX</name>
-             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/guajira.cs.wustl.edu_TRU64_CXX_newbuild</url>
-         </build>
-    </group> -->
     <group>
          <name>BSD</name>
          <build>
@@ -206,4 +199,11 @@
              <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
          </build>
     </group>
+<!--    <group>
+         <name>TRU64_Unix</name>
+         <build>
+             <name>TRU64_CXX</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/guajira.cs.wustl.edu_TRU64_CXX_newbuild</url>
+         </build>
+    </group> -->
 </scoreboard>
