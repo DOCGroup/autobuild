@@ -1,3 +1,9 @@
+Mon Jun  4 08:23:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+          Removed -v this only gives a lot unneeded info,
+          added --show-leakable=yes
+
 Fri Jun  2 09:46:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
