@@ -17,6 +17,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VxWorks\PPC85XXGNU\" />
         <variable name="configs"  value="VxWorks" />
+        <variable name="name"     value="VxWorks5.5.1 PPC85XX GCC 3.3" />
 
         <variable name="cvs_program"  value="c:/cygwin/bin/cvs" />
 
