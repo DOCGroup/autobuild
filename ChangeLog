@@ -1,3 +1,10 @@
+Tue Jan 20 15:22:14 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/remedynl/msvcdebug.xml: 
+
+	  Turned off ssl=1 for this builds. Need to keep things simpler to 
+	  debug in case of problems.
+
 Tue Jan 20 15:14:23 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/msvcdebug.xml: 
