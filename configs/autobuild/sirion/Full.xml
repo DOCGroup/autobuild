@@ -7,7 +7,7 @@
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/project/sirion/bugzilla/Full/ACE_wrappers/ace" />
 
-        <variable name="root"     value="/project/sirion/bugzilla/Full/ACE_wrappers" />
+        <variable name="root"     value="/project/sirion/bugzilla/Full" />
         <variable name="log_file" value="build.txt" />
         <variable name="sam_root" value="/project/sirion/bugzilla/Full/ACE_wrappers/ACE_wrappers/samwise" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/sirion_Full" />
