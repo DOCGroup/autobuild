@@ -1,3 +1,9 @@
+Wed Oct 27 12:51:57 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/print_os_version.pm:
+
+          Fixed my bogomips function to return approximate bogomips.
+
 Wed Oct 27 06:25:47 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/lindy_isis/Static.xml:

@@ -92,7 +92,7 @@ sub Run ($)
 	system("VER");
     }
 
-    print "<h3>Approximate BogoMIPS (smaller means faster)</h3>\n",
+    print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
           $self->delay_factor(), "\n";
 
     return 1;
@@ -103,6 +103,14 @@ sub Run ($)
 sub delay_factor {
   my($lps)    = 128;
   my($factor) = 1;
+  my($fudge)  = 80;
+
+  if ($^O eq 'solaris') {
+    $fudge = 45;
+  }
+  elsif ($^O eq 'MSWin32' || $^O eq 'cygwin') {
+    $fudge = 63;
+  }
 
   ## Keep increasing the loops per second until the amount of time
   ## exceeds the number of clocks per second.  The original code
@@ -115,7 +123,7 @@ sub delay_factor {
     }
     $ticks = clock() - $ticks;
     if ($ticks * 8 >= CLOCKS_PER_SEC) {
-      $factor = 500000 / (($lps / $ticks) * CLOCKS_PER_SEC);
+      $factor = ((($lps / $ticks) * (CLOCKS_PER_SEC * 8)) * $fudge) / 500000;
       last;
     }
   }
