@@ -49,10 +49,6 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maedhros_Core/</url>
         </build>
         <build>
-            <name>RedHat_7.1_Full</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_Full/</url>
-        </build>
-        <build>
             <name>RedHat_7.1_No_AMI_Messaging</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_No_AMI</url>
         </build>
