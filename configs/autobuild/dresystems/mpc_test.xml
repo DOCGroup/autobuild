@@ -28,10 +28,12 @@
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
 
  <command name="print_os_version" />
- <command name="check_compiler"        options="gcc" />
+ <command name="check_compiler"        options="g++" />
  <command name="print_ace_config" />
 
  <!-- ACE -->
+ <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+
  <command name="make"                  options="-k realclean" />
  <command name="make"                  options="-k" />
 

@@ -31,6 +31,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
+    <!-- ACE -->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <!-- TAO -->
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
+
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
     <command name="make"              options="-j 2 -k" />

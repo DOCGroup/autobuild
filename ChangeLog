@@ -1,3 +1,22 @@
+Wed May  5 23:09:45 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+	* configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+
+	  Moved "make reverseclean" command after the "generate_workspace"
+	  command.  Fixes a "no rule tomake target `reverseclean'" build
+	  error.
+
+	* configs/autobuild/dresystems/mpc_test.xml:
+	* configs/autobuild/dresystems/mpc_test_tao.xml:
+	* configs/autobuild/flamenco/Static.xml:
+	* configs/autobuild/maglor/Static.xml:
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+
+	  Added missing MPC workspace generation command.  Addresses "no
+	  rule to make ..." build errors.
+
 Wed May  5 15:26:43 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full_Reactors.xml:

@@ -25,8 +25,13 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\noptimize=1\ndebug=0\nexceptions=0\n#ssl=1\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="gcc" />
+    <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
+
+    <!-- ACE -->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <!-- TAO -->
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
 
     <command name="make"              options="reverseclean" />
     <command name="make"              options="-C TAO reverseclean" />
