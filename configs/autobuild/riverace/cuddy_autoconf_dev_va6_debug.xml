@@ -21,12 +21,8 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <!-- Since MPC generates the Makefile.am files, delete them now and -->
-    <!-- again after checking out ACE. -->
-    <command name="shell"             options="find ACE_wrappers-repository -name 'Makefile*.am' -exec rm '{}' ';'" />
     <command name="cvs"               options="checkout -P MPC" />
     <command name="cvs"               options="checkout -P ACE" />
-    <command name="shell"             options="find ACE_wrappers-repository -name 'Makefile*.am' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
@@ -36,8 +32,8 @@
     <command name="check_compiler"    options="vacpp" />
     <command name="print_ace_config" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -exclude build,Kokyu" />
+    <!-- command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" -->
+    <!-- command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -exclude build,Kokyu" -->
 
     <command name="shell"             options="(cd ACE_wrappers-repository; ./bin/bootstrap)" />
 
