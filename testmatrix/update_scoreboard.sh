@@ -70,6 +70,9 @@ function update_local_scoreboard()
 
 
   cp -f matrix.css $LOG_DIR/matrix.css
+
+  # update the list of db files
+  ./RemoveAndListDbFiles.sh
 }
 
 
