@@ -1,3 +1,21 @@
+Fri Apr  9 10:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB6CodeGuard.xml:
+        * configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
+        * configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
+        * configs/autobuild/remedynl/BCB6DynamicRelease.xml:
+        * configs/autobuild/remedynl/BCB6DynamicReleaseUnicodeMbg.xml:
+        * configs/autobuild/remedynl/BCB6StaticRelease.xml:
+        * configs/autobuild/remedynl/cbxdd.xml:
+        * configs/autobuild/remedynl/cbxpreview.xml:
+          Now the Borland makefiles are removed from the repo I have cleaned
+          up the files above. When the build starts we do a realclean, then we
+          remote all .bor files (this is because when we for example change the
+          name of a project, or remove a mpc file, cvs will not remove the
+          generated files, so we don't want to risk the change that later we
+          build an old file). Then we checkout all files and do a MPC generation
+          and then the build again.
+
 Fri Apr  9 09:52:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
