@@ -7,6 +7,7 @@
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
         <environment name="SSL_ROOT"         value="C:\openssl-0.9.7d" />
+        <environment name="XERCESCROOT"      value="C:\xerces-c-src_2_5_0" />
 
         <variable name="root"     value="C:/ACE/MSVC6dd/" />
 	<variable name="log_file" value="log.txt" />
