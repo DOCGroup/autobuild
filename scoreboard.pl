@@ -51,6 +51,13 @@ my @nogroup;
 my $orange_default = 24;
 my $red_default = 48;
 
+my $preamble = "
+This is the ACE/TAO scoreboard.<p>
+
+It shows all the OS/platform combinations ACE/TAO are tested against
+everyday, all over the world.<p>
+";
+
 ###############################################################################
 #
 # load_build_list
@@ -124,17 +131,17 @@ sub query_latest ()
 		print STDERR "    Error: Could not find latest.txt for $buildname\n";
         	next;
 	}
-        
+
         if ($latest =~ m/Config: (\d+)/) {
             %builds->{$buildname}->{CONFIG_SECTION} = $1;
         }
-        
+
         if ($latest =~ m/Setup: (\d+)-(\d+)-(\d+)/) {
             %builds->{$buildname}->{SETUP_SECTION} = $1;
             %builds->{$buildname}->{SETUP_ERRORS} = $2;
             %builds->{$buildname}->{SETUP_WARNINGS} = $3;
         }
-        
+
         if ($latest =~ m/Compile: (\d+)-(\d+)-(\d+)/) {
             %builds->{$buildname}->{COMPILE_SECTION} = $1;
             %builds->{$buildname}->{COMPILE_ERRORS} = $2;
@@ -226,7 +233,7 @@ sub load_web_latest ($)
         warn "load_web_dir (): Badly formed http address";
         return '';
     }
-    
+
 
     ### Request the web dir page
 
@@ -331,7 +338,7 @@ sub update_cache ($)
                 print "WARNING: Unable to download $address\n";
                 return;
             }
-            
+
             print "        Prettifying\n";
             Prettify::Process ("$directory/$buildname/$filename");
         }
@@ -364,7 +371,7 @@ sub clean_cache ($)
 
     foreach my $buildname (keys %builds) {
         my @existing;
-        
+
         print "    Looking at $buildname\n";
 
         my $dh = new DirHandle ($directory);
@@ -399,7 +406,7 @@ sub clean_cache ($)
             unlink $file . "_Full.html";
             unlink $file . "_Brief.html";
             unlink $file . "_Totals.html";
-        }    
+        }
     }
 }
 
@@ -519,7 +526,7 @@ sub update_html ($)
     ### Start body
 
     print $indexhtml "<body bgcolor=white>\n<h1>Build Scoreboard</h1>\n<hr>\n";
-
+    print $indexhtml "$preamble\n<hr>\n";
     ### Print tables (first the empty one)
 
     update_html_table ($dir, $indexhtml, undef) if ($#nogroup >= 0);
@@ -655,7 +662,7 @@ sub update_html_table ($$@)
 
             if (!defined %builds->{$buildname}->{SETUP_SECTION}) {
                 $color = 'white';
-            } 
+            }
             elsif (%builds->{$buildname}->{SETUP_ERRORS} > 0) {
                 $color = 'red';
             }
@@ -679,7 +686,7 @@ sub update_html_table ($$@)
 
             if (!defined %builds->{$buildname}->{COMPILE_SECTION}) {
                 $color = 'white';
-            } 
+            }
             elsif (%builds->{$buildname}->{COMPILE_ERRORS} > 0) {
                 $color = 'red';
             }
@@ -703,7 +710,7 @@ sub update_html_table ($$@)
 
             if (!defined %builds->{$buildname}->{TEST_SECTION}) {
                 $color = 'white';
-            } 
+            }
             elsif (%builds->{$buildname}->{TEST_ERRORS} > 0) {
                 $color = 'red';
             }
@@ -757,7 +764,7 @@ sub update_html_table ($$@)
                 print $indexhtml "&nbsp;";
             }
         }
-	
+
 	if ($havepdf) {
 		print $indexhtml "<td>";
 		if (defined %builds->{$buildname}->{PDF}) {
@@ -808,7 +815,7 @@ sub update_html_table ($$@)
 }
 
 ## Eventually this should probably be shared code with autobuild.pl, but
-## for now, implement it as a no-op which returns something which is undefined. 
+## for now, implement it as a no-op which returns something which is undefined.
 sub GetVariable ($)
 {
    my %a=();
