@@ -8,6 +8,18 @@ all the OS/platform combinations TAO is tested everyday.
 </preamble>
 
 <group>
+  <name>BSD</name>
+   <build>
+      <name>FreeBSD_5.0_GCC_3.3</name>
+      <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_gcc33_tao_legacy</url>
+      <build_sponsor>DRE Systems</build_sponsor>
+      <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+      <orange>30</orange>
+      <red>36</red>
+   </build>
+</group>
+
+<group>
 <name>Linux</name>
    <build>
    <name>Debian_Core</name>

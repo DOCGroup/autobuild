@@ -1,3 +1,15 @@
+Thu Aug 14 02:59:18 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/freebsd_ace.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_exception.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_inline.xml:
+        * configs/autobuild/dresystems/freebsd_ace_single.xml:
+          Cosmetic changes.
+
+        * configs/autobuild/dresystems/freebsd_gcc33_tao_legacy.xml:
+        * configs/scoreboard/tao.xml:
+          Added new build.
+
 Thu Aug 14 02:10:21 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/sol9_gcc33.xml:
