@@ -1,3 +1,14 @@
+Sat Apr 27 13:46:12 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/driver.sh:
+	* configs/autobuild/danzon/SunOS_SunCC51.xml:
+	* configs/autobuild/tango/driver.sh:
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+	  Added.
+
+	* command/check_compiler.pm: Put status messages in Config
+	  section.
+
 Fri Apr 26 17:50:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Add SunOS_SunCC51 build.

@@ -49,7 +49,7 @@ sub Run ($)
     my $self = shift;
     my $compiler = shift;
 
-    main::PrintStatus ('Setup', "check compiler $compiler" );
+    main::PrintStatus ('Config', "check compiler $compiler" );
 
     print "================ Compiler version ================\n";
 
