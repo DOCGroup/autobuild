@@ -1,3 +1,7 @@
+Sun Mar 16 20:02:38 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/tao.bat: Bat file for the Win32 webserver.
+
 Sun Mar 16 19:11:23 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	The following changes are for reorganizing the scoreboard
