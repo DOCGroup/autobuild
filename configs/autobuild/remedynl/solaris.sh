@@ -4,7 +4,7 @@
 #
 
 cd $HOME/ACE/autobuild
-PATH=/usr/local/bin:/etc:/usr/ucb:/opt/SUNWspro/bin:/usr/ccs/bin:$PATH
+PATH=/usr/local/bin:/etc:/opt/SUNWspro/bin:/usr/ccs/bin:/usr/ucb:$PATH
 CVSROOT=:ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository
 CVS_RSH=ssh
 export CVSROOT
