@@ -11,7 +11,7 @@ is tested everyday. Currently this is only linux.
 <group>
 <name>Linux</name>
    <build>
-   <name>Facet (ttl and correlation_filter)</name>
+   <name>Facet</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-cvs</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
@@ -19,20 +19,20 @@ is tested everyday. Currently this is only linux.
 
    <build>
    <name>jACE</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet_jACE-cvs</url>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet_jACE_cvs</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>ACE+TAO</name>
+   <name>ACE_TAO</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
-   <name>ACE+TAO Adapter</name>
+   <name>ACE_TAO Adapter</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter-cvs</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
