@@ -26,9 +26,7 @@
     <command name="print_ace_config" />
 
     <command name="make"              options="-j 2 -k realclean" />
-    <command name="make"              options="-j 2 -k -C TAO realclean" />
     <command name="make"              options="-j 2 -k" />
-    <command name="make"              options="-j 2 -k -C TAO" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
