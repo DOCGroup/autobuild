@@ -2,15 +2,15 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/Studio/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/Studio/ACE_wrappers/TAO" />
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:" />
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/GCC34/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/GCC34/ACE_wrappers/TAO" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/GCC34/ACE_wrappers/lib:/opt/csw/gcc3/lib:" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="root"     value="/build/isisbuilds/Studio/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/carona_SUNOS_STUDIO9" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/corona_Solaris10_X86_GCC34" />
         <variable name="configs"  value="SSL Exceptions" />
 
     </configuration>
@@ -25,8 +25,8 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef TAO_IDL_PREPROCESSOR \n#define TAO_IDL_PREPROCESSOR \x22cc\x22\n#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_DEV_POLL 1\n#include \x22ace/config-sunos5.8.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef TAO_IDL_PREPROCESSOR \n#define TAO_IDL_PREPROCESSOR \x22cc\x22\n#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_DEV_POLL 1\n#include \x22ace/config-sunos5.9.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\nssl=1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='ssl=1\n'" />
 
     <command name="print_os_version" />

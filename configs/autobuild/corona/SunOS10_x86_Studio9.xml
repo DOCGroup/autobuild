@@ -1,0 +1,54 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/Studio/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/Studio/ACE_wrappers/TAO" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:" />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+
+        <variable name="root"     value="/build/isisbuilds/Studio/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9" />
+        <variable name="configs"  value="SSL Exceptions" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef TAO_IDL_PREPROCESSOR \n#define TAO_IDL_PREPROCESSOR \x22cc\x22\n#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_DEV_POLL 1\n#include \x22ace/config-sunos5.9.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='ssl=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler"    options="sun_cc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO " />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -feature_file ../local.features" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
+
+    <command name="auto_run_tests"    options="" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
