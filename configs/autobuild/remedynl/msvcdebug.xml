@@ -6,6 +6,7 @@
         <environment name="Path"             value="C:\ACE\MSVC6dd\ACE_wrappers\bin;C:\ACE\MSVC6dd\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" /> 
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
+        <environment name="SSL_ROOT"         value="C:\OpenSSL" />
 
         <variable name="root"     value="C:/ACE/MSVC6dd/" />
 	<variable name="log_file" value="log.txt" />
@@ -23,7 +24,7 @@
     <command name="log"               options="ON" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
