@@ -29,9 +29,9 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="shell"             options="mingw32-make -k realclean" />
+    <command name="shell"             options="mingw32-make -k -C D:\ACE\MingW\ACE_wrappers\ace realclean" />
 
-    <command name="shell"              options="mingw32-make -k" />
+    <command name="shell"              options="mingw32-make -k -C D:\ACE\MingW\ACE_wrappers\ace" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
