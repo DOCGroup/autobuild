@@ -35,5 +35,6 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="rem_sems"            options="" />
     <command name="status"            options="off" />
 </autobuild>

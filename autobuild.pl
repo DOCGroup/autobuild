@@ -133,6 +133,7 @@ require command::sam;
 require command::shell;
 require command::status;
 require command::win32make;
+require command::rem_sems;
 
 #
 # Parse, CheckReqs, and Run
