@@ -10,6 +10,7 @@
         <variable name="project_root" value="build/gcc296_full" />
         <variable name="log_file"     value="gcc296_full.log" />
         <variable name="log_root"     value="/home/autobuild/log/mitsu/gcc296_full" />
+	<variable name="configs"  value="Linux" />
 
     </configuration>
 

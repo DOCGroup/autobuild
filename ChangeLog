@@ -1,3 +1,11 @@
+Tue Mar 11 09:47:09 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
+	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
+	* configs/autobuild/cuni/hitotsu_icc70_full.xml: Added "configs"
+	  option to the build.
+
 Tue Mar 11 13:28:50 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
 	* configs/scoreboard/acetao.xml: Move following builds to the

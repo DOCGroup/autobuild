@@ -9,6 +9,7 @@
         <variable name="project_root" value="build/gcc32_full" />
         <variable name="log_file"     value="gcc32_full.log" />
         <variable name="log_root"     value="/home/autobuild/log/mitsu/gcc32_full" />
+	<variable name="configs"  value="Linux" />
 
     </configuration>
 
