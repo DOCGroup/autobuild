@@ -18,6 +18,8 @@
         <variable name="log_root" value="C:\ACE\VxWorks\PPC604GNU\" />
         <variable name="configs"  value="VxWorks" />
 
+        <variable name="cvs_program"  value="c:/cygwin/bin/cvs" />
+
     </configuration>
 
     <command name="status"            options="on" />
