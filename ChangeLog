@@ -1,3 +1,12 @@
+Thu May 20 17:50:21 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	  Fixed project_root to be the ACE_wrappers-repository directory,
+	  and added "dir=build/<build name>" to both make and auto_run_tests
+	  to get into the configured location.
+
 Thu May 20 17:44:39 2004  Steve Huston  <shuston@riverace.com>
 
 	* command/auto_run_tests.pm: Add the ability to specify "dir=..."

@@ -10,7 +10,7 @@
 
         <variable name="root"         value="/acebuilds" />
         <variable name="build_name"   value="autoconf_gcc_debug" />
-        <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/autoconf_gcc_debug" />
+        <variable name="project_root" value="/acebuilds/ACE_wrappers-repository" />
         <variable name="log_file"     value="ACE_wrappers-repository/autoconf_gcc_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/bumbles/dev/autoconf_gcc_debug" />
         <variable name="configs"      value="Exceptions" />
@@ -35,9 +35,9 @@
     <command name="print_ace_config" />
     <command name="configure"         options="--preclean" />
 
-    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="dir=build/autoconf_gcc_debug -j 2 -k" />
 
-    <command name="auto_run_tests"    options="-a" />
+    <command name="auto_run_tests"    options="dir=build/autoconf_gcc_debug -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
