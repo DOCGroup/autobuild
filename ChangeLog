@@ -1,3 +1,12 @@
+Tue Jul 27 17:41:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/vc71.xml:
+          Removed running of the tests, they have managed again to let the
+          complete system freeze, we really should have a look why running
+          all TAO tests with vc71 and mingw can have a system to hang
+          completely, now I have to drive tomorrow to the office to restart
+          the system :-(
+
 Tue Jul 27 15:39:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
