@@ -1,3 +1,9 @@
+Thu Apr 17 10:46:35 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace_isis/RH8_Minimum.xml:
+	* configs/autobuild/ace_isis/driver_minimum.sh: New minimum build
+	  at ISIS. 
+
 Thu Apr 17 10:05:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Added Full and singleThreaded builds
