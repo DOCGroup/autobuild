@@ -1,4 +1,12 @@
-Mon May 10 08:55:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+Mon May 10 08:46:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/MinGW*.xml:
+          The MinGW builds from devsrv2 are moved to devsrv5. Devsrv5 will do
+          all MinGW and VC8 builds. Devsrv2 will be replaced by a new system
+          soon and will then run SuSE 91 after that. We want to reduce the
+          number of environments on devsrv2 to make system maintenance easier.
+
+Mon May 10 06:55:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
           Removed not needed options with MPC generation. Just build
