@@ -1,3 +1,11 @@
+Sat Apr 10 23:13:03 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/nirvana/DLL_Release.xml:
+	* configs/autobuild/nirvana/driver.bat:
+
+	  Removed these builds since they don't and have been replaced
+	  with the one below.
+
 Sat Apr 10 23:11:11 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/nirvana/New_DLL_Release.xml:
