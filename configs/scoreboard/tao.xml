@@ -181,7 +181,7 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP5_DLL_Debug_Unicode</name>
+            <name>WinXP_MSVC6_SP5_DLL_Debug_Unicode(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6ddu</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
