@@ -40,7 +40,6 @@ Sat May 24 09:18:03 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
         * configs/autobuild/remedy/*.xml:
           Reordered printing of config part, so that all is consistent
 
->>>>>>> 1.419
 Mon May 19 13:47:01 2003  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/check_compiler.pm:
