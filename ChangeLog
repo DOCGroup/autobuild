@@ -1,3 +1,11 @@
+Fri Sep  3 16:22:19 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml: Changed
+	  the win32make command invocations to include "perl bin/pippen.pl"
+	  in the options. Restores build behavior from before:
+	  Wed Jun 23 21:42:21 UTC 2004  Don Hinton  <d.hinton@vanderbilt.edu>
+
 Fri Sep  3 06:38:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
@@ -249,7 +257,7 @@ Mon Aug 16 09:48:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
           Changed to use new vc71 compatibility in (previously) vc6
           build scripts (win32make.pm, msvc_mpc_auto_compile.pl and
-          msvc_sttaic_compile.pl).
+          msvc_static_compile.pl).
 
 Mon Aug 16 09:21:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
