@@ -1,3 +1,8 @@
+Mon Mar 17 11:55:22 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/doc.sh (CVS_RSH): Added comments to a couple
+	  of lines in the file to show what they are actually doing!
+
 Mon Mar 17 09:08:14 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/index.xml: Fixed a missing link.
@@ -6,7 +11,8 @@ Mon Mar 17 09:02:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 
 	* configs/scoreboard/tao_future.xml: 
 	* configs/scoreboard/ace_future.xml:
-	* configs/scoreboard/tao.xml: Added missing builds. Thanks to Don for pointing this out.
+	* configs/scoreboard/tao.xml: Added missing builds. Thanks to Don
+	  for pointing this out. 
 
 Mon Mar 17 06:40:33 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
