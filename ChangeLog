@@ -1,3 +1,9 @@
+Sat Jan  1 17:15:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          We don't have Win2K systems anymore, everything is running XP
+
 Sat Jan  1 14:45:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/*.xml:
