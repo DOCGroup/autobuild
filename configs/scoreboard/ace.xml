@@ -231,13 +231,13 @@ all the OS/platform combinations ACE is tested everyday.
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
         <build>
-            <name>WinXP_MingW_GCC_3_2_3(MPC)</name>
+            <name>WinXP_MingW_GCC_3_2_3_Release(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MingW_GCC_3_2_3(MPC)_Debug</name>
+            <name>WinXP_MingW_GCC_3_2_3_Debug(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGWACE</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
