@@ -1033,6 +1033,7 @@ sub Test_Handler ($)
         || $s =~ m/EXCEPTION/
 	|| $s =~ m/ACE_ASSERT/
 	|| $s =~ m/Assertion/
+        || $s =~ m/Mismatched free/
         || $s =~ m/are definitely lost in loss record/
         || $s =~ m/pure virtual /i)
     {
