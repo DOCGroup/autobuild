@@ -1,3 +1,13 @@
+Wed Jul  7 05:56:59 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/Cygwin.xml:
+          Enabled ssl
+
+        * configs/autobuild/remedynl/gandalfvc71sd.xml:
+        * configs/autobuild/remedynl/gandalfvc71dr.xml:
+          A new vc71 static debug and dynamic release build. When they have
+          run for the first time they get added to the scoreboard
+
 Tue Jul  6 14:29:59 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/cbxdd.xml:
@@ -6,7 +16,7 @@ Tue Jul  6 14:29:59 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 Tue Jul  6 13:51:44 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml: 
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
 
 	  Tried to print the configuraion.
 
@@ -14,13 +24,13 @@ Mon Jul  5 09:00:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:
 
-	  Include the orbsvcs in the build. 
-	
+	  Include the orbsvcs in the build.
+
 	* configs/autobuild/balar_isis/IPV6.xml:
 	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
 	* configs/autobuild/balar_isis/Static.xml:
 
-	  Removed deprecated .mwc files from the list. 
+	  Removed deprecated .mwc files from the list.
 
 Mon Jun  4 08:23:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
