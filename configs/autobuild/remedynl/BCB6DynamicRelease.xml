@@ -1,19 +1,19 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="D:\BCB6dd\ACE_wrappers" />
+        <environment name="ACE_ROOT"     value="D:\BCB6dr\ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\BCB6dd\ACE_wrappers\bin\Dynamic\Debug;c:\putty" type="prefix" />
+        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\BCB6dr\ACE_wrappers\bin\Dynamic\Release;c:\putty" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
-	<environment name="DEBUG"    value="1" />
+	<environment name="DEBUG"    value="0" />
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
 
-        <variable name="root"     value="D:\BCB6dd\" />
+        <variable name="root"     value="D:\BCB6dr\" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="D:\BCB6dd\" />
+        <variable name="log_root" value="D:\BCB6dr\" />
         <variable name="name"     value="WinXP BCB6 Debug" />
     </configuration>
 
@@ -37,7 +37,6 @@
     <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="pscp *.txt *.html charanga:.www-docs/auto_compile_logs/remedy.nl_WinXP_BCB6_Dynamic_Debug" />
 </autobuild>
 
 
