@@ -25,10 +25,10 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_LAZY_MAP_MANAGER 1\n#define ACE_HAS_TIMED_MESSAGE_BLOCKS 1\n#define ACE_HAS_MALLOC_STATS 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nexceptions=0\ntemplates=explicit\ndebug=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+
+    <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
-<!--    <command name="sam"               options="create" /> -->
-<!--    <command name="sam"               options="sam" /> -->
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />

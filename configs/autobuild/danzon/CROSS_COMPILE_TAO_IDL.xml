@@ -27,6 +27,8 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_ONLY_LATEST_AND_GREATEST\n#include \x22ace/config-sunos5.8.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\n'" />
+
+    <command name="print_os_version" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 

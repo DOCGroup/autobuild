@@ -1,3 +1,14 @@
+Fri Dec 13 17:31:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/ace/LYNX_PPC.xml:
+	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+	  Add print_os_version.
+
 Fri Dec 13 09:11:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Borland.xml:
