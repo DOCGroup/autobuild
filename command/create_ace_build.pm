@@ -28,18 +28,13 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('root');
+    my $root = main::GetVariable ('project_root');
 
     if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
+        print STDERR __FILE__, ": Requires \"project_root\" variable\n";
         return 0;
     }
     
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
-
     my $build_name = main::GetVariable ('build_name');
 
     if (!defined $build_name) {
@@ -56,7 +51,7 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $root = main::GetVariable ('root');
+    my $root = main::GetVariable ('project_root');
     my $build = main::GetVariable ('build_name');
 
     # chop off trailing slash
@@ -68,7 +63,7 @@ sub Run ($)
 
     my $current_dir = getcwd ();
 
-    if (!chdir $root) {
+    if (!chdir "$root/../..") {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }

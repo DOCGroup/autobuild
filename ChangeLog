@@ -1,3 +1,12 @@
+Mon Aug  4 13:30:00 2003  Justin Michel  <michel_j@ociweb.com>
+
+	* command/create_ace_build.pm:
+ 	* command/process_logs.pm:
+	* command/status.pm:
+
+	  Changes to allow use of autobuild without first having to set 
+        up any directories. 
+
 Mon Aug  4 09:40:00 2003  Justin Michel  <michel_j@ociweb.com>
 
 	* command/create_ace_build.pm:

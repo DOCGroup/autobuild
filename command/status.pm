@@ -9,6 +9,7 @@ use warnings;
 
 use Cwd;
 use FileHandle;
+use File::Path;
 
 ###############################################################################
 # Constructor
@@ -37,11 +38,6 @@ sub CheckRequirements ()
         return 0;
     }
 
-    if (!-r $log_root || !-d $log_root) {
-        print STDERR __FILE__, ": Cannot access \"log_root\" directory: $log_root\n";
-        return 0;
-    }
-
     return 1;
 }
 
@@ -56,6 +52,10 @@ sub Run ($)
     # chop off trailing slash
     if ($log_root =~ m/^(.*)\/$/) {
         $log_root = $1;
+    }
+
+    if (!-r $log_root || !-d $log_root) {
+        mkpath($log_root);
     }
 
     if ( $main::verbose == 1 ) {

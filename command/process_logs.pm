@@ -60,11 +60,6 @@ sub CheckRequirements ()
         return 0;
     }
 
-    if (!-r $logroot || !-d $logroot) {
-        print STDERR __FILE__, ": Cannot access \"logroot\" directory: $logroot\n";
-        return 0;
-    }
-    
     return 1;
 }
 
