@@ -35,31 +35,18 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
-    <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
-
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,DAnCE/RepositoryManager -hierarchy -make_coexistence" />
-
-    <!--CIDLC requires exception so we will get it from the web-->
-    <!--command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC -hierarchy -make_coexistence" /-->
-
-    <!--Get the cidlc compiler Note this is only for linux with bunzip2 installed-->
-    <command name="shell"             options="rm -rf cidlc" />
-    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/latest.txt" />
-    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/`cat cidlc/latest.txt`" />
-    <command name="shell"             options="bunzip2 cidlc/`cat cidlc/latest.txt`" />
-    <command name="shell"             options="mv `cat cidlc/latest.txt | sed -e 's/\(.*\)\.bz2$/cidlc\/\1/g'` $CIAO_ROOT/bin/cidlc" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <!--command name="make"              options="-k -C TAO/CIAO/CIDLC realclean" /-->
     <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+    <command name="shell"             options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
-    <!--command name="make"              options="-j 2 -k -C TAO/CIAO/CIDLC" /-->
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="auto_run_tests"    options="" />

@@ -1,3 +1,20 @@
+Wed Aug 11 21:38:33 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+        * configs/autobuild/tango_isis/CIDLC.xml:
+	* configs/autobuild/tango_isis/cidlc.sh:
+
+	  A seperate build for CIDL on Linux. We will use this to build
+	  all our linux builds. 
+	
+ 	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+
+	  Use the CIDLC from the above build. Do cidl=1 in all the
+	  builds. 
+
 Wed Aug 11 14:45:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml
           Correct platform_macros.GNU generation (extra CR)
