@@ -5,4 +5,5 @@ cd configs\autobuild\remedynl
 perl D:\ACE\autobuild\autobuild.pl Cygwin.xml
 perl D:\ACE\autobuild\autobuild.pl MingW.xml
 perl D:\ACE\autobuild\autobuild.pl VC7.xml
-
+perl D:\ACE\autobuild\autobuild.pl BCB6StaticRelease.xml
+	
