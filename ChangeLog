@@ -1,3 +1,9 @@
+Fri May 17 13:29:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/ace/LYNX_PPC.xml: Comment out 
+	  auto_run_tests.  They are built with a LYNX cross compiler
+	  on Solaris, so cannot actually run under Solaris.
+
 Thu May 16 21:35:35 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Add STATIC
