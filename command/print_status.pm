@@ -38,7 +38,7 @@ sub CheckRequirements ()
 sub Run ($)
 {
     my $self = shift;
-    my $options = shift;
+    my $var = shift;
 
     my $section = $var;
     $section =~ s/:.*$//;
