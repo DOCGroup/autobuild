@@ -1,3 +1,14 @@
+Tue Jun 15 08:16:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/configs/remedynl/*:
+          Several updates, installed a new build system (gandalf) that will
+          replace devsrv3. The new system is much faster and devsrv3 has had
+          stability problems for a long time. Updated xml files, changed
+          batch files and cleaned old stuff.
+
+        * configs/scoreboard/tao.xml:
+          The BCB6sr build is now a CBXsr build
+
 Fri Jun 11 10:55:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
