@@ -1,3 +1,10 @@
+Fri Aug  6 09:55:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB*.xml:
+        * configs/autobuild/remedynl/cbx*.xml:
+          Removed -make_coexistence from the borland makefile generation.
+          We now always add the .bor extension to the workspace names
+
 Thu Aug  5 12:11:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
