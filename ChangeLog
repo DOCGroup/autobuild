@@ -1,3 +1,12 @@
+Thu Jul 22 13:46:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tao/DLL_Debug.xml:
+
+	  Add OpenSSL include and library directories to the "INCLUDE" and
+	  "LIB" environment variables, respectively.  Addresses build
+	  errors caused by the inability of the compiler to find the
+	  OpenSSL headers and libraries.
+
 Thu Jul 22 13:00:32 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
