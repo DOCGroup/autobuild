@@ -1,3 +1,9 @@
+Sun Apr 18 22:08:21 2004  Tao Lu  <lu@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Update the scoreboard xml for lindy.
+
 Sun Apr 18 21:02:38 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
