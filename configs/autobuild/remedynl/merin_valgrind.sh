@@ -6,5 +6,5 @@
 cd $HOME/ACE/autobuild
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/GCCNoInline.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/merin_valgrind.xml
 
