@@ -313,7 +313,7 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
    <build>
       <name>Solaris10-x86</name>
-      <url>http://www.atl.external.lmco.com/projects/QoS/buildlogs/Solaris10-x86</url>
+      <url>http://www.atl.external.lmco.com/projects/QoS/buildlogs/Solaris10-x86/buildlog</url>
       <build_sponsor>Lockheed Martin Adv. Tech. Labs</build_sponsor>
       <build_sponsor_url>http://www.atl.external.lmco.com/projects/QoS</build_sponsor_url>
    </build>
