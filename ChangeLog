@@ -1,3 +1,9 @@
+2002-07-24  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+        * configs/autobuild/remedynl/BCB6DynamicDebug.xml:
+          Added new config files that I use to do the BCB builds.
+
 2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Add WinNT4_BCB5_Static_Debug build.
@@ -5,10 +11,10 @@
 
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Unicode.xml: Explicitly specify build order 
+	* configs/autobuild/tao/Unicode.xml: Explicitly specify build order
 	  for some ACEXML projects.
 
-	* configs/autobuild/tao/DLL_Debug.xml: 
+	* configs/autobuild/tao/DLL_Debug.xml:
 	* configs/autobuild/nirvana/DLL_Release.xml: Changed the set of tests
 	  getting invoked.
 
@@ -18,13 +24,13 @@
 
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Borland.xml: Changed to use the new dir option 
+	* configs/autobuild/tao/Borland.xml: Changed to use the new dir option
 	  Craig added.
 
 2002-07-22      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Borland_wchar.xml: 
-	* configs/autobuild/tao/Borland.xml: Added the missing statement 
+	* configs/autobuild/tao/Borland_wchar.xml:
+	* configs/autobuild/tao/Borland.xml: Added the missing statement
 	  to invoke the second test suite.
 
 Mon Jul 22 15:12:25 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
