@@ -59,6 +59,7 @@ sub Run ($)
     }
 
     print "\n#################### Setup (File_Manipulation) \n\n";
+    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
 
     my $current_dir = getcwd ();
 

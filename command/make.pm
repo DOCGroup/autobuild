@@ -54,6 +54,7 @@ sub Run ($)
     }
 
     print "\n#################### Compile (make) \n\n";
+    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
 
     my $current_dir = getcwd ();
 
@@ -68,15 +69,7 @@ sub Run ($)
         $make_options = $1;
     }
 
-    if (!open (MAKE, "make $make_options 2>&1 |")) {
-      print STDERR __FILE__, ": Cannot run make subprocess\n";
-      return 0;
-    }
-    while (<MAKE>) {
-      chomp;
-      print $_, "\n";
-    }
-    close (MAKE);
+    system ("make $make_options");
 
     return 1;
 }

@@ -53,7 +53,8 @@ sub Run ($)
     }
 
     print "\n#################### Config (PrintACEConfig)\n\n";
-
+    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    
     #
     # last ACE Changelog Entry
     #

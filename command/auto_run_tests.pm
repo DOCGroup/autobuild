@@ -56,6 +56,7 @@ sub Run ($)
     }
 
     print "\n#################### Tests (auto_run_tests) \n\n";
+    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
 
     my $current_dir = getcwd ();
 

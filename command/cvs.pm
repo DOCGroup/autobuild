@@ -54,6 +54,7 @@ sub Run ($)
     }
 
     print "\n#################### Setup (CVS)\n\n";
+    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
 
     my $current_dir = getcwd ();
 
@@ -62,9 +63,9 @@ sub Run ($)
         return 0;
     }
 
-    my $output = `cvs up 2>&1`;
+    system ("cvs up");
+
     chdir $current_dir;
-    print $output;
 
     return 1;
 }

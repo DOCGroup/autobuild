@@ -70,6 +70,7 @@ sub RegisterCommand ($$)
 require command::auto_run_tests;
 require command::cvs;
 require command::file_manipulation;
+require command::log;
 require command::make;
 require command::printaceconfig;
 require command::shell;

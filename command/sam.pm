@@ -74,6 +74,7 @@ sub Run ($)
     }
 
     print "\n#################### Compile (SAM) \n\n";
+    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
 
     my $current_dir = getcwd ();
 
@@ -82,28 +83,24 @@ sub Run ($)
         return 0;
     }
 
-    my $output;
-
     if ($options =~ m/clean/) {
-        $output .= $self->clean ($sam_root);
+        $self->clean ($sam_root);
     }
 
     if ($options =~ m/create/) {
-        $output .= $self->create ($sam_root);
+        $self->create ($sam_root);
     }
 
     if ($options =~ m/sam/) {
-        $output .= $self->sam ($sam_root);
+        $self->sam ($sam_root);
     }
 
     chdir $current_dir;
-    print $output;
 
     return 1;
 }
 
 ##############################################################################
-my $output;
 my $sam_root;
 
 sub create_wanted
@@ -115,8 +112,8 @@ sub create_wanted
             $name =~ s/\\/\//g;
             $name =~ s/\/CVS//;
             $name =~ s/\/\//\//;
-            $output .= "Running Create_Sam in $name\n";
-            $output .= `perl -w $sam_root/create_sam.pl 2>&1`;
+            print "Running Create_Sam in $name\n";
+            system ("perl -w $sam_root/create_sam.pl");
         }
     }
 }
@@ -126,11 +123,7 @@ sub create ($)
     my $self = shift;
     $sam_root = shift;
 
-    $output = "";
-
     find(\&create_wanted, '.');
-
-    return $output;
 }
 
 sub sam_wanted
@@ -142,8 +135,8 @@ sub sam_wanted
             $name =~ s/\\/\//g;
             $name =~ s/\/CVS//;
             $name =~ s/\/\//\//;
-            $output .= "Running Sam in $name\n";
-            $output .= `perl -w $sam_root/sam.pl 2>&1`;
+            print "Running Sam in $name\n";
+            system ("perl -w $sam_root/sam.pl");
         }
     }
 }
@@ -153,11 +146,7 @@ sub sam ($)
     my $self = shift;
     $sam_root = shift;
 
-    $output = "";
-
     find(\&sam_wanted, '.');
-
-    return $output;
 }
 
 sub clean_wanted
@@ -169,7 +158,7 @@ sub clean_wanted
             $name =~ s/\\/\//g;
             $name =~ s/\/CVS//;
             $name =~ s/\/\//\//;
-            $output .= "Cleaning Sam generated files in $name\n";
+            print "Cleaning Sam generated files in $name\n";
             unlink <*.dsp>, <*.dsw>, <*.bor>, <*.gnu>, <*.am>, <.*.gnu.depend>, 'GNUMakefile';
         }
     }
@@ -180,11 +169,7 @@ sub clean ($)
     my $self = shift;
     $sam_root = shift;
 
-    $output = "";
-
     find(\&clean_wanted, '.');
-
-    return $output;
 }
 
 ##############################################################################
