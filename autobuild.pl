@@ -71,6 +71,7 @@ require command::printaceconfig;
 require command::cvs;
 require command::sam;
 require command::make;
+require command::create_config;
 
 #
 # Parse, CheckReqs, and Run

@@ -1,16 +1,16 @@
-<verifybuild>
+<autobuild>
     <configuration>
         <variable name="root" value="/project/sirion/coryan/samwise/ACE_wrappers" />
         <variable name="ace_root" value="/project/sirion/coryan/samwise/ACE_wrappers" />
         <variable name="sam_root" value="/project/sirion/coryan/samwise/ACE_wrappers/samwise" />
     </configuration>
+    <command name="create_config" options="output(ace/config.h) include(ace/config-linux.h)" />
+    <command name="create_config"  options="output(include/makeinclude/platform_macros.GNU)  makeinclude(platform_linux.GNU) makemacro(debug=1) makemacro(exceptions=1) makemacro(TAO_IDLFLAGS += ${ACE_ROOT}/apps/gperf/src/gperf)" />
     <command name="sam" options="clean" />
     <command name="cvs" options="update" />
     <command name="printaceconfig" />
     <command name="sam" options="create" />
     <command name="sam" options="sam" />
     <command name="make" options="makeopts='-k -C .'" />
-<!--    <command name="make" options="makeopts='-k -C TAO'" /> -->
-<!-- <command name="create_config" option="undefine:=BAZ include:=ace/config-linux.h define:=FOO=1 define:=BAR=2"> -->
-<!-- <command name="create_platform_macros" option="include:=platform-linux.GNU define:=FOO=1 define:=BAR=2"> -->
-</verifybuild>
+    <command name="make" options="makeopts='-k -C TAO'" />
+</autobuild>
