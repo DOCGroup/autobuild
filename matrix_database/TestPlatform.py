@@ -1,4 +1,11 @@
-#!/usr/bin/python2.1
+#!/usr/bin/python
+
+# ******************************************************************
+#      Author: Heather Drury
+#              Justin Michel
+#        Date: 3/25/2004
+#         $Id$
+# ******************************************************************
 
 import os, sys, string, fileinput, re, math, time
 from utils import *
@@ -28,7 +35,6 @@ class TestMatrix:
 		self.name = "Test Matrix for ACE/TAO"
 		# max number of tests = 500, just for initialization of array
 		self.max_tests = 1000
-#		print "Initializing test matrix", num_platforms, max_tests
 		self.testResults =[[0]*num_platforms for row in range(self.max_tests)]
 		for n in range (0, self.max_tests): 
 			for m in range (0, num_platforms): 
@@ -64,21 +70,13 @@ class TestMatrix:
 	def addTestResult (self, build_num, name, result):
 		if len(self.testNames) >= self.max_tests:
 			print "Error: exceeded maximum number of tests"
-		# Kludge because of a bug in a run_test.pl; we should remove this soon
-#		splits = name.split("/")
-#		if splits[0] == "test":
-#			print "KLUDGE: Change to tests:", len(splits), name, splits
-#			name = "tests/" + splits[1]
 		if name not in self.testNames:
-#			print "ADDING NEW TEST: ", name, result
 			# test is not yet added, so add it
 			self.testNames.append(name)
 		else:
 			pass
-#			print "DUPLICATE TEST: ", name, result
 		# idx is index corresponding to this test 
 		idx = self.testNames.index(name)
-#		print "\ttest idx is: ", build_num, idx 
 		self.testResults[idx][build_num] = result
 
 		# get filename for later HTML writing
@@ -92,87 +90,123 @@ class TestMatrix:
 		self.fileNames.append(fname)
 
 class TestPlatform:
-	def __init__(self, name, raw_file, db_file=""):
-		self.valid_db_file = 1
-		self.db_file = db_file
-		self.name = name
-		self.raw_file = raw_file
-		self.compile = PASS
-		self.npass = 0
-		self.nfail = 0
-		self.nskip = 0
-		self.ACEtotal = 0
-		self.ACEfail = 0
-		self.TAOtotal = 0
-		self.TAOfail = 0
-		self.testMin = 4000.0
-		self.testMax = 0.0
-		self.timeTotal = 0.0
-		self.test_results = []
+        def __init__(self, name, raw_file, db_file=""):
+                self.valid_db_file = 1
+                self.db_file = db_file
+                self.name = name
+                self.raw_file = raw_file
+                self.compile = PASS
+                self.npass = 0
+                self.nfail = 0
+                self.nskip = 0
+                self.ACEtotal = 0
+                self.ACEfail = 0
+                self.TAOtotal = 0
+                self.TAOfail = 0
+                self.testMin = 4000.0
+                self.testMax = 0.0
+                self.timeTotal = 0.0
+                self.test_results = []
                 self.start_time = ""
-		self.end_time = ""
+                self.end_time = ""
                 if self.db_file != "":
                    self.processDBLog()
-		else:
-	           self.processLog()
-	        #print "platform ", self.name, self.raw_file, self.start_time, self.end_time 	
-	
-	def writeDBLog(self):
-	        fname = TestDBFileConfig.dbdir_w + "/" + txt2DbFname(self.raw_file)
-	        tmpfname = fname + ".tmp"
-	        fh = open(tmpfname, "w")
-	        fh.write(self.name + "\n")
-	        fh.write(self.raw_file + "\n")
-	        fh.write(self.start_time + "\n")
-	        fh.write(self.end_time + "\n")
-	        fh.write(str(self.compile) + "\n")
-	        for n in range(0, len(self.test_results)):
-	           test_str = self.test_results[n].name + ";" + str(self.test_results[n].passFlag) + ";" + str(self.test_results[n].time)
+                else:
+                   self.processLog()
+                #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
+
+        def writeDBLog(self):
+                fname = TestDBFileConfig.dbdir_w + "/" + txt2DbFname(self.raw_file)
+                tmpfname = fname + ".tmp"
+                fh = open(tmpfname, "w")
+                fh.write(self.name + "\n")
+                fh.write(self.raw_file + "\n")
+                fh.write(self.start_time + "\n")
+                fh.write(self.end_time + "\n")
+                fh.write(str(self.compile) + "\n")
+                for n in range(0, len(self.test_results)):
+                   test_str = self.test_results[n].name + ";" + str(self.test_results[n].passFlag) + ";" + str(self.test_results[n].time)
                    fh.write (test_str + "\n")
                 fh.close()
                 os.rename(tmpfname, fname)
-		
-	def processDBLog(self):
-		fh=open(self.db_file, "r")
-	        self.name = trim(fh.readline())
-		self.raw_file = trim(fh.readline())
-		self.start_time = trim(fh.readline())
-		self.end_time = trim(fh.readline())
-		self.compile = string.atoi(trim(fh.readline()))
+
+        def __init__(self, name, raw_file, db_file=""):
+                self.valid_db_file = 1
+                self.db_file = db_file
+                self.name = name
+                self.raw_file = raw_file
+                self.compile = PASS
+                self.npass = 0
+                self.nfail = 0
+                self.nskip = 0
+                self.ACEtotal = 0
+                self.ACEfail = 0
+                self.TAOtotal = 0
+                self.TAOfail = 0
+                self.testMin = 4000.0
+                self.testMax = 0.0
+                self.timeTotal = 0.0
+                self.test_results = []
+                self.start_time = ""
+                self.end_time = ""
+                if self.db_file != "":
+                   self.processDBLog()
+                else:
+                   self.processLog()
+                #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
+
+        def writeDBLog(self):
+                fname = DBFileConfig.dbdir_w + "/" + txt2DbFname(self.raw_file)
+                tmpfname = fname + ".tmp"
+                fh = open(tmpfname, "w")
+                fh.write(self.name + "\n")
+                fh.write(self.raw_file + "\n")
+                fh.write(self.start_time + "\n")
+                fh.write(self.end_time + "\n")
+                fh.write(str(self.compile) + "\n")
+                for n in range(0, len(self.test_results)):
+                   test_str = self.test_results[n].name + ";" + str(self.test_results[n].passFlag) + ";" + str(self.test_results[n].time)
+                   fh.write (test_str + "\n")
+                fh.close()
+                os.rename(tmpfname, fname)
+
+        def processDBLog(self):
+                fh=open(self.db_file, "r")
+                self.name = trim(fh.readline())
+                self.raw_file = trim(fh.readline())
+                self.start_time = trim(fh.readline())
+                self.end_time = trim(fh.readline())
+                self.compile = string.atoi(trim(fh.readline()))
                 #print "processDBLog ", self.db_file, self.name, self.raw_file, self.start_time, self.end_time, self.compile
-	        line = trim(fh.readline())
-		parse_error = 0
-		while line != "":
-		   splits = line.split(";")
+                line = trim(fh.readline())
+                parse_error = 0
+                while line != "":
+                   splits = line.split(";")
                    if len(splits) != 3 or splits[0] == "":
-			parse_error = 1
-			break		
-	           name = splits[0]
-		   passflag = string.atoi(splits[1])
-		   time = string.atof(trim(splits[2]))
-		   #print "test_result: ", line 
-		   self.test_results.append(ACE_TAO_Test (name, 0, time, passflag))
-		   line = trim(fh.readline())
-		if parse_error == 1:
-		   print "ERROR: db file parse failed. Check log file", self.raw_file
-                   self.valid_db_file = 0 
-		if len(self.test_results) == 0:
-		   print "ERROR: no test in db file. Check log file", self.raw_file
-		   self.valid_db_file = 0
-		fh.close()
-                
+                        parse_error = 1
+                        break
+                   name = splits[0]
+                   passflag = string.atoi(splits[1])
+                   time = string.atof(trim(splits[2]))
+                   #print "test_result: ", line
+                   self.test_results.append(ACE_TAO_Test (name, 0, time, passflag))
+                   line = trim(fh.readline())
+                if parse_error == 1:
+                   print "ERROR: db file parse failed. Check log file", self.raw_file
+                   self.valid_db_file = 0
+                if len(self.test_results) == 0:
+                   print "ERROR: no test in db file. Check log file", self.raw_file
+                   self.valid_db_file = 0
+                fh.close()
+
 	def addtest (self, name, result, time, flag):
-#		print "Add Test %d = %d %d %.1f %s" % (len(self.test_results), result, flag, time, name)
 		self.test_results.append(ACE_TAO_Test (name, result, time, flag))
 
 	def testTime (self, name, time):
-#		print "Test Time", time
 		if time > self.testMax:
 			# Don't count the ACE test as the maximum time test
 			if name != "tests/run_test.pl":
 				self.testMax = time
-#				time = time/60.0
-#				print "New Max Time for test %s %.1f" % (name, time)
 		if time < self.testMin:
 			self.testMin = time
 		self.timeTotal = self.timeTotal + time
@@ -182,23 +216,20 @@ class TestPlatform:
 		result = 0
 		time = 0.0
 
-		# HAD 3.8.04 Get test name + any arguments
-#		testname = tokens[1]
 		# this strips off the "auto_run_tests:, and the time and status
 		# leaves the test name plus any arguments
 		splits = line.split()
-#		print "test end: ", splits[1:l-2]
 		testname = ""
 		for n in range (1, len(splits)-2):
 			testname = testname + " " + splits[n]
 		if len(tokens) > 2:
 			ttime=tokens[2]
-			if len(tokens) == 3:
+			if len(tokens) < 3:
 				ttime = "" 
 				tresult = "" 
 			else:
-				ttime = tokens[len(tokens) - 2]
-				tresult = tokens[len(tokens) - 1]
+				ttime = tokens[len(tokens)-2]
+				tresult = tokens[len(tokens)-1]
 			if ttime != "":
 				e,f=ttime.split(":")
 				time=int(f.replace('s',''))
@@ -207,15 +238,12 @@ class TestPlatform:
 			if tresult != "":
 				f,h=tresult.split(":")
 				result=int(h)
-#		print "test time: ", testname, result, time
 		return testname, result, time
 
 	def sortByTime (self):
 		# Sort test result by test time
 		self.test_results.sort (lambda x, y: cmp (x.time, y.time))
 		self.test_results.reverse()
-#		for n in range (0, len(self.test_results)):
-#			print "Test %70s %.1f" % (self.test_results[n].name, self.test_results[n].time)
 
 	def printResults (self):
 		print "\n********************"
@@ -245,7 +273,6 @@ class TestPlatform:
 
 	def ACEorTAOTest (self, testname):
 		splits = testname.split("/")
-#		print splits[0], testname
 		if splits[0] == "TAO":
 			testType = TAO_TEST
 		else:
@@ -258,28 +285,26 @@ class TestPlatform:
 		time = 0.0
 		testname = ""
 		stop = findString (line, stop_strings)
-                while line != "" and stop == 1:
+		while line != "" and stop == 1:
 			if error.match(line):
 				fail = 1
 			if test_finished.match(line):
 				testname, resultCode, time = self.checkTestTime(line)
-#				print "Test name is: %s" % (testname)
 			line = fh.readline()
 			stop = findString (line, stop_strings)
-                        if build_end.match(line):
+      		        if build_end.match(line):
                            m = line.find('[')
                            n = line.find('UTC')
                            self.end_time = line[m+1:n]
-                          # print "end_time ", self.end_time
-                           break                 
-   		return line, fail, time, testname
-        
-        def processLog (self):
+                           break
+                return line, fail, time, testname
+
+	def processLog (self):
 		try:
-		       file = open(self.raw_file, "r")
+			file = open(self.raw_file, "r")
 		except IOError:
-		       print "ERROR: Cannot open file", self.raw_file
-		       return
+			print "ERROR: Cannot open file", self.raw_file
+			return
 		state = 0
 		line = file.readline()
 		time = 0.0
@@ -291,29 +316,22 @@ class TestPlatform:
                            n = line.find('UTC')
                            self.start_time = line[m+1:n]
                            line = file.readline()
-                          # print "start_time", self.start_time
                            continue
-			if build_end.match(line):
-			   m = line.find('[')
-			   n = line.find('UTC')
-			   self.end_time = line[m+1:n]
-			   # print "end_time ", self.end_time
-			   break
+                        if build_end.match(line):
+                           m = line.find('[')
+                           n = line.find('UTC')
+                           self.end_time = line[m+1:n]
+                           break
 			if test_start.match(line): 
 				if (state < 1):
 					# we found where tests are starting
 					state=state+1
-#					print "INCREASE STATE: line is: ", len(line), line 
-#					line = file.readline()
-#					readline = 1
 			if state==0:
 				# this matches only lines that begin with "Error" or "ERROR" 
 				if error.match(line) and self.compile == PASS:
-#					print "1: Error in pre-test stuff: ", line
 					self.compile = FAIL
 			if state==1 and test_start.match(line):
 		   		testname = (line.split())[1] 
-#				print "Found test: ", testname
 				stop_strings = ["auto_run_tests:"]
 				test_type = self.ACEorTAOTest (testname)
 				line, fail, time, testname = self.scanForTestFailure (file, stop_strings)
@@ -326,9 +344,7 @@ class TestPlatform:
 					self.ACEtotal = self.ACEtotal + 1
 					if fail==1:
 						self.ACEfail = self.ACEfail + 1
-                                readline = 1
+				readline = 1
 			if readline == 0:
 				line = file.readline()
 		file.close()
-
-
