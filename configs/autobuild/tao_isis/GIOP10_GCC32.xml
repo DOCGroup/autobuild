@@ -1,0 +1,41 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/project/taotmp/isisbuilds/GIOP10/ACE_wrappers" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc32/lib:/project/taotmp/isisbuilds/GIOP10/ACE_wrappers/ace:/usr/lib:/lib" />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+	<environment name="PATH"            value="/usr/local/gcc32/bin:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
+
+        <variable name="root"     value="/project/taotmp/isisbuilds/GIOP10" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/isisbuilds/.www-docs/auto_compile_logs/tao_GIOP10" />
+        <variable name="configs"  value="Linux" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_USES_CLASSIC_SVC_CONF 1\n#define ACE_HAS_LAZY_MAP_MANAGER 1\n#define TAO_DEF_GIOP_MINOR 0\n#define TAO_HAS_VALUETYPE 0\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\nssl=0\n\n# Override -Wno-uninitiialized to verify that uninitialized variable\n# warnings actually work properly when exception handling is\n# enabled in gcc 3.0.\n\nCCFLAGS += -Wuninitialized\n\n# Perform some stricter C/C++ checking using the -pedantic flag, but\n# disable the long long warnings since we need to support that type\n# in ACE/TAO.\nCCFLAGS += -pedantic -Wno-long-long -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="check_compiler" options="gcc-3.2" />
+    <command name="print_ace_config" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
+
+    <command name="auto_run_tests"    options="" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
