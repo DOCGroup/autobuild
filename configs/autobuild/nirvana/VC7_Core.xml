@@ -1,4 +1,4 @@
-<!-- $Id$ -->
+< !-- $Id$ -->
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="G:/bugzilla/new_VC7_Core/ACE_wrappers" />
@@ -7,7 +7,6 @@
         <environment name="Path"         value="G:/bugzilla/new_VC7_Core/ACE_wrappers\bin;G:/bugzilla/VC7.NET/ACE_wrappers\lib;D:\ssl\openssl-0.9.6\out32dll" type="prefix" />
 
         <variable name="root"            value="G:/bugzilla/new_VC7_Core/" />
-        <variable name="project_root"            value="ACE_wrappers" />
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root" value="Z:/new_VC7_Core_Debug" />
 
