@@ -410,7 +410,7 @@ sub Section_Totals ()
 
     if($self->{LAST_SECTION} eq "Config") {
       print {$self->{FH}} "    <td>[<a href=\"$self->{BASENAME}_Config.html\">Full</a>] ";
-    } 
+    }
     else {
       print {$self->{FH}} "    <td>[<a href=\"$self->{FULLHTML}#section_$counter\">Full</a>] ";
     }
@@ -853,6 +853,10 @@ sub Compile_Handler ($)
         # Definitely an error
         $self->Output_Error ($s);
     }
+    elsif ($s =~ m/Assertion failed/) {
+        # Definitely an error, can be given by the BCB6 compiler
+        $self->Output_Error ($s);
+    }
     elsif ($s =~ m/^ld: \d+\-\d+/) {
         # AIX linking errors from ld
         if ($s =~ m/^ld: 0711\-345/) {
@@ -1162,7 +1166,7 @@ sub Normal ($)
     my $state = shift;
     $state = lc $state;
 
-    if( defined $state && $state eq 'config' ) { 
+    if( defined $state && $state eq 'config' ) {
       print {$self->{FH}} "$s\n";
     }
 }
@@ -1204,7 +1208,7 @@ sub Description ($)
     # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
-   
+
     if(defined $state && $state eq "config") {
       print {$self->{FH}} "<h3>$s</h3>\n";
     }

@@ -1,3 +1,10 @@
+Sun Mar 30 11:44:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          BCB6 can give "Assertion failed" during compilation and this is
+          than an error in the compiler. Mark this line as error so that it
+          appears also in the brief build output as error.
+
 Sat Mar 29 19:08:33 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: New
@@ -19,7 +26,7 @@ Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
 Mon Mar 24 07:04:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
-	  scoreboard. 
+	  scoreboard.
 
 Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
