@@ -1,3 +1,10 @@
+Thu Jul 31 09:05:31 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+	* configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
+	  Changed PATH to reference ACE_wrappers\lib, not ACE_wrappers\bin.
+	  Necessary from recent MPC changes that moved the DLLs.
+
 Tue Jul 29 07:15:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_linker.pm:

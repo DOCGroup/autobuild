@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers" />
-        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET\Common7\IDE;C:\ace\ACE_wrappers\bin" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET\Common7\IDE;C:\ace\ACE_wrappers\lib" type="prefix" />
 
         <variable name="root"            value="C:\ace\ACE_wrappers" />
         <variable name="project_root"    value="." />
