@@ -24,11 +24,11 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"              options=" -i -f Makefile.bor realclean" />
+    <command name="make"              options=" -i -f ACE_wrappers.bmake realclean" />
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -iname '*.bmak*' -exec rm '{}' ';'" /> 
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
