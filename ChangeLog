@@ -1,3 +1,9 @@
+Fri Jul 26 14:10:54 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Changed
+	  some options in the build setup since they dont make much sense
+	  for the linux environment in which this build runs.
+
 Fri Jul 26 13:24:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/*.XML:
