@@ -29,16 +29,16 @@
 
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/va6-64_debug/.disable" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/va6_debug/.disable" />
     <command name="create_ace_build"  options="-a -v" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6-64_debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/.disable output='RUNNING'" />
 
     <!-- Delete the build's Makefiles before regenerating them. -->
-    <command name="shell"             options="find ACE_wrappers-repository/build/va6-64_debug -name 'Makefile*' -exec rm '{}' ';'" />
-    <command name="shell"             options="find ACE_wrappers-repository/build/va6-64_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers-repository/build/va6_debug -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers-repository/build/va6_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/va6-64_debug -type gnuace -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/va6_debug -type gnuace -hierarchy -make_coexistence" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix5.1.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nPLATFORM_SSL_CPPFLAGS=-I/opt/freeware/include\nPLATFORM_SSL_LDFLAGS=-L/opt/freeware/lib\nPLATFORM_SSL_LIBS=-lssl -lcrypto\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
