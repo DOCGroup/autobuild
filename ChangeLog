@@ -1,3 +1,12 @@
+Fri May 14 23:52:10 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Added "-Wno-variadic-macros" and "-Wformat=2" compiler flags to
+	  disable warnings about variadic macros being introduced in C99
+	  and enable some format specifier (e.g. for printf()) checks,
+	  respectively.
+
 Fri May 14 22:18:43 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
