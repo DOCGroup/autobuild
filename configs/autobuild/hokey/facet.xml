@@ -29,6 +29,7 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
+    <command name="file_manipulation" options="type=create file=RTEvent/facet/platform.properties output=`cat RTEvent/facet/platform_template`"/>
 
     <command name="make"              options="" />
     <command name="make"              options="-buildfile gcj.xml" />
