@@ -1,3 +1,8 @@
+Sat Aug 17 08:33:20 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/sirion/Full.xml: Made the realclean without -j
+	  2 option.  
+
 Fri Aug 16 13:51:14 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml:
