@@ -1,3 +1,7 @@
+Wed Apr 16 07:11:05 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao_dre.sh: New scoreboard at tao.dre.
+
 Wed Apr 16 06:35:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
