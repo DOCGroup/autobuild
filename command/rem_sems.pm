@@ -48,6 +48,18 @@ sub CheckRequirements ()
 ##############################################################################
 sub Run ($)
 {
+    my $root = main::GetVariable ('root');
+    
+    if (!defined $root) {
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
+        return 0;
+    }
+    
+    if (!-r $root || !-d $root) {
+        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
+        return 0;
+    }
+
     my $current_dir = getcwd ();
 
     if (!chdir $root) {

@@ -1,3 +1,8 @@
+Thu Dec 12 11:03:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* command/rem_sems.pm: Get the symbol root before changing
+	  directory. 
+
 Thu Dec 12 06:58:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/*.xml:
