@@ -1,3 +1,14 @@
+Thu Apr 29 12:40:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * autobuild.pl:
+          - Fixed automatic addition to INC paths for OpenVMS
+          - Changed to load command::vmsmake instead of command::make on
+          OpenVMS
+          - Added getExecutePath and which helper functions because
+            FindBin doesn't work on VMS.
+          Changes from Martin Corino <mcorino@remedy.nl> to get autobuild
+          working on OpenVMS.
+
 Thu Apr 29 12:33:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/vmsmake.pm:
