@@ -1,3 +1,13 @@
+Wed Nov 27 19:18:19 2002  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Set LIBPATH,
+          not LD_LIBRARY_PATH for AIX; don't try -j 2 builds; causes problems
+          with the AIX template junk.
+
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml: New configs
+          for AIX 5.1; 64-bit Visual Age C++ 6, and gcc 3.2, respectively.
+
 Tue Nov 26 13:54:40 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Fixed a typo!
