@@ -36,7 +36,7 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -notoplevel -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
 
