@@ -164,6 +164,13 @@ all the OS/platform combinations ACE is tested everyday.
    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
+      <name>Solaris_9_gcc3_Debug</name>
+      <url>http://www.riverace.com/build_logs/essie/dev/gcc3_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
+   <build>
       <name>Solaris_9_Forte7_64bit_Debug</name>
       <url>http://www.riverace.com/build_logs/essie/dev/forte7-64_debug</url>
       <red>36</red>
