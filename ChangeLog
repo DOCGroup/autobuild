@@ -1,3 +1,9 @@
+Wed Mar  9 11:43:51 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Removed PocketPC 2002, Windows
+	  CE .NET, and Win XP 64 on Itanium builds. We're not supporting
+	  these platforms any longer.
+
 Wed Mar  9 11:27:29 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:

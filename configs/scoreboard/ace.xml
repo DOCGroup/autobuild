@@ -147,14 +147,6 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
-   <!-- build -->
-      <!-- name>WindowsXP-IA64_VC7_Debug</name -->
-      <!-- url>http://www.riverace.com/build_logs/kitty-puss/dev/vc7_debug</url -->
-      <!-- orange>24</orange -->
-      <!-- red>96</red -->
-      <!-- build_sponsor>Riverace</build_sponsor -->
-      <!-- build_sponsor_url>http://www.riverace.com</build_sponsor_url -->
-   <!-- /build -->
    <build>
       <name>WindowsXP_VC.NET_Debug(IPv6)</name>
       <url>http://www.riverace.com/build_logs/hope/dev/vc7_debug</url>
@@ -162,22 +154,6 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
-    <build>
-       <name>Windows_PocketPC2002_Debug</name>
-       <url>http://www.riverace.com/build_logs/beebee/dev/pocketpc_debug</url>
-       <orange>48</orange>
-       <red>96</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-    </build>
-    <build>
-       <name>Windows_CE.NET_Debug</name>
-       <url>http://www.riverace.com/build_logs/beebee/dev/wince4_debug</url>
-       <orange>48</orange>
-       <red>96</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
       <build>
          <name>WinXP_BCB6_Pro_Dynamic_Debug_Unicode</name>
          <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6ddu</url>
