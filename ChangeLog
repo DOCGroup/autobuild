@@ -1,3 +1,7 @@
+Thu Aug  8 16:02:59 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/balar/Debian_Core.xml: Added.
+
 Thu Aug  8 15:01:40 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* autobuild.pl:
