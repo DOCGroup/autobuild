@@ -1,3 +1,9 @@
+Sun Mar  9 18:45:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml: Moved Cygwin and MingW builds to the
+          not for release section because we are still working on these
+          compilers.
+
 Thu Mar  6 18:43:26 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/charlie_dev_va5_debug.xml: AIX 4.3 build.
