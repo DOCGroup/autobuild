@@ -417,9 +417,9 @@ all the OS/platform combinations TAO is tested everyday.
    <name>Irix</name>
    <build>
       <name>Irix 6.5</name>
-      <url>http://www.vrac.iastate.edu/~mccdo/tao/</url>
+      <url>http://www.vrac.iastate.edu/~mccdo/tao</url>
       <build_sponsor>VRAC</build_sponsor>
-      <build_sponsor_url>http://www.vrac.iastate.edu/</build_sponsor_url>
+      <build_sponsor_url>http://www.vrac.iastate.edu</build_sponsor_url>
    </build>
 </group>
 
