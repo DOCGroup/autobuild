@@ -1,3 +1,10 @@
+Mon Jan  3 12:56:29 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Noted that Riverace's Solaris 8 and 9
+	  builds with Sun Forte 6 and 7 use explicit template instantiation.
+	  Also, commented out the AIX 5.1 build - the machine is down with no
+	  ETA for a fix.
+
 Sun Jan  2 19:13:34 MST 2005  Yan Dai <dai_y@ociweb.com>
 
         * buildmatrix/buildmatrix.pl
