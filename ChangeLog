@@ -1,3 +1,8 @@
+Fri Dec 13 09:11:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*.xml:
+          Add check_compiler command to print out BCB compiler version.
+
 Thu Dec 12 17:12:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/ace/LYNX_PPC.xml:
@@ -11,7 +16,7 @@ Thu Dec 12 17:12:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 Thu Dec 12 11:03:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* command/rem_sems.pm: Get the symbol root before changing
-	  directory. 
+	  directory.
 
 Thu Dec 12 06:58:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
