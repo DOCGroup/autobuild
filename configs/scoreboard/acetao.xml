@@ -27,6 +27,13 @@
         </build>
     </group>
     <group>
+        <name>Lynx</name>
+        <build>
+            <name>Lynx_PPC</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_LYNX_PPC_newbuild</url> 
+        </build>
+    </group>
+    <group>
         <name>Windows</name>
         <build>
             <name>WinXP_Legacy</name>
