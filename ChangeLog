@@ -1,3 +1,16 @@
+Thu Aug  7 18:05:50 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/driver_freebsd.sh:
+        * configs/autobuild/dresystems/freebsd_ace.xml:
+        * configs/autobuild/dresystems/freebsd_ace_debug.xml:
+        * configs/autobuild/dresystems/freebsd_ace_dump.xml:
+        * configs/autobuild/dresystems/freebsd_ace_explicit_template.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_exception.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_inline.xml:
+        * configs/autobuild/dresystems/freebsd_ace_single.xml:
+        * configs/scoreboard/ace.xml:
+          Added new build on FreeBSD.
+
 Thu Aug  7 11:59:29 2003  Justin Michel  <michel_j@ociweb.com>
 
         * command/auto_run_tests.pm:
