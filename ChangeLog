@@ -1,3 +1,11 @@
+Fri Oct 22 17:39:19 2004  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+	  Removed "templates=implicit" from platform_macros.GNU. It still can't
+	  hack it in all situations, and the APG examples motivating the
+	  addition of this were changed to not even attempt building
+	  without implicit templates, so the scoreboard should be ok.
+
 Thu Oct 21 12:12:55 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/update_scoreboard.sh:
