@@ -5,11 +5,11 @@ Thu May  9 19:55:34 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 Thu May  9 19:23:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC51.xml: Removed this build
-	  of the scorebiard since the compiler is busted. 
+	  of the scoreboard since the compiler is busted. 
 
 	* configs/autobuild/danzon/SunOS_SunCC53.xml: New build in places
 	  of CC51. SSL has been disabled for the timebeing. Need to see
-	  how to run egd for that. My guess is that ut should be started
+	  how to run egd for that. My guess is that it should be started
 	  in driver.sh. Once this build settles down will do that.
 
 	* configs/autobuild/danzon/driver.sh: Changed the compiler that
