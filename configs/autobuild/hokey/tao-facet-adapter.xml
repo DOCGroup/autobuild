@@ -5,11 +5,10 @@
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/export/home/bugzilla/FACET/RTEvent/facet" />
+        <variable name="root"     value="/export/home/bugzilla/FACET" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_FACET" />
         <variable name="configs"  value="Linux" />
-        <variable name="make_program"     value="ant" />
 
     </configuration>
 
@@ -17,11 +16,10 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
+    <command name="cvs"               options="-z 3 -q checkout -P RTEvent/tao-facet-adapter" />
 
-    <command name="make"              options="" />
-    <command name="make"              options="-buildfile gcj.xml" />
-    <command name="make"              options="" />
+    <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs -f Makefile.RTEvent realclean" />
+    <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs -f Makefile.Facet" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
