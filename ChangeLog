@@ -1,3 +1,13 @@
+Fri May 14 22:18:43 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Removed "-Wundef" preprocessor flag from CPPFLAGS make
+	  variable.  It causes "use of undefined preprocessor constant"
+	  warnings to occur in flex, yacc and bison generated sources,
+	  which we're not concerned about.  All of uses we were concerned
+	  about have been corrected.
+
 Fri May 14 15:31:32 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* common/prettify.pm (Test_Handler):
