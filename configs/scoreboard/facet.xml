@@ -11,11 +11,75 @@ this is only linux.
 <group>
 <name>Linux</name>
    <build>
-   <name>Facet</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_FACET/</url>
+   <name>Facet-consumer_dispatcher</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/consumer_dispatcher</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
+
+   <build>
+   <name>Facet-eventtype</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventtype/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-eventvector</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventvector</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-realtime_dispatcher</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/realtime_dispatcher/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-source_filter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/source_filter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-supplier_dispatcher</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/supplier_dispatcher/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-throughput_test</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/throughput_test</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-timestamp</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/timestamp/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-tracing</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/tracing/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-ttl</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/ttl</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
 </group>
 
 </scoreboard>
