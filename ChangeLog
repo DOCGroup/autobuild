@@ -1,3 +1,11 @@
+Fri May 21 15:56:22 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	  Use MPC to generate the Makefile.am files, in preparation for
+	  removing all the Makefile.am files from the repo and generating
+	  them during a release.
+
 Fri May 21 15:39:38 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:

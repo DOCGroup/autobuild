@@ -22,8 +22,14 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
+    <!-- Delete all the Makefile.am files so cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers-repository -name 'Makefile.am' -exec rm '{}' ';'" />
+
     <command name="cvs"               options="checkout -P MPC" />
     <command name="cvs"               options="checkout -P ACE" />
+
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers-repository -name 'Makefile.am' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
@@ -33,6 +39,10 @@
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -hierarchy -make_coexistence -exclude build,Kokyu" />
+
     <command name="configure"         options="--preclean" />
 
     <command name="make"              options="dir=build/autoconf_gcc_debug -j 2 -k" />
