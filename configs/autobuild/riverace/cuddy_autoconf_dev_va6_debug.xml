@@ -48,6 +48,6 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=build/autoconf_va6_debug/.disable" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/build/autoconf_va6_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>
