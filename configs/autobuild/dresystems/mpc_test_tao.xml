@@ -29,18 +29,13 @@
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/mpc_test_tao/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/mpc_test_tao/build.mwc output='workspace {\n ace\n ACEXML\n netsvcs\n tests\n apps\n examples\n performance-tests\n websvcs\n Kokyu\n}\n'" />
-
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/mpc_test_tao/TAO/build.mwc output='workspace {\n tao\n TAO_IDL\n tests\n orbsvcs\n examples\n performance-tests\n utils\n docs/tutorials/Quoter\n}\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
  <command name="print_ace_config" />
 
- <!-- clean up all the libs just in case they get moved around by an evolving MPC ;-) -->
- <command name="shell"                 options="find . -name \x22lib*\x22 -exec rm '{}' ';'" />
-
- <command name="generate_workspace"    options="build.mwc -make_coexistence" />
+ <command name="generate_workspace"    options="-recurse=TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
  <command name="generate_workspace"    options="TAO/build.mwc -make_coexistence" />
 
  <!-- ACE -->
