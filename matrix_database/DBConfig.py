@@ -19,11 +19,11 @@ class CompilationDBFileConfig:
 
 # Edit your build system configuration here. 
 # The format of the configuration:
-#  'build_name':['os_type', 'is_64bit', 'compiler_type', 'is_debug',
+#  'build_name':['hostname', 'os_type', 'is_64bit', 'compiler_type', 'is_debug',
 #                'is_optimized', 'is_static', 'is_minimum_corba']
 # Note the 'is_64bit', 'is_debug', 'is_optimized', 'is_static' and 'is_minimum_corba'
 # are flags, the values are 0 or 1.
 
 class BuildConfig:
-          config =  {'Redhat_Enterprise_Linux_3_Debug': ['RH_Enterprise_ES', 0, 'g++3.2.3', 1, 0, 0, 0], 
-		     'Redhat_Enterprise_Linux_3_Static_Release': ['RH_Enterprise_ES', 0, 'g++3.2.3', 0, 0, 1, 0]}
+          config =  {'Redhat_Enterprise_Linux_3_Debug': ['jane', 'RH_Enterprise_ES', 0, 'g++3.2.3', 1, 0, 0, 0], 
+		     'Redhat_Enterprise_Linux_3_Static_Release': ['jane', 'RH_Enterprise_ES', 0, 'g++3.2.3', 0, 0, 1, 0]}

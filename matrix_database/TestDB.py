@@ -48,10 +48,10 @@ class TestDB:
                     self.build_ids[name] = build_id
                 else:
 		    if BuildConfig.config.has_key(name) == 0:
-                        query = "INSERT INTO build VALUES (NULL, '%s', NULL, NULL, NULL, NULL, NULL, NULL, NULL);" % (name)
+                        query = "INSERT INTO build VALUES (NULL, '%s', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);" % (name)
                     else:
                         config = BuildConfig.config[name]
-                        query = "INSERT INTO build VALUES (NULL, '%s', '%s', %d, '%s', %d, %d, %d, %d);" %(name, config[0], config[1], config[2], config[3], config[4], config[5], config[6])
+                        query = "INSERT INTO build VALUES (NULL, '%s', '%s', '%s', %d, '%s', %d, %d, %d, %d);" %(name, config[0], config[1], config[2], config[3], config[4], config[5], config[6], config[7])
                     #print "AddBuild ", query
                     self.curs.execute(query)
                     self.build_ids[name] = self.curs.insert_id() 
