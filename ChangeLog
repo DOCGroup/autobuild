@@ -1,3 +1,7 @@
+Wed May  1 16:12:06 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/chipper/driver.sh: Minor fixes.
+
 Wed May  1 15:15:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/log.pm:  STDOUT was not being redirected properly.
