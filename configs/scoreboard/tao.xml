@@ -124,8 +124,13 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_Static</name>
+      <name>SuSE_Stats_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/flamenco_Static</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+      <name>SuSE_Static</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>

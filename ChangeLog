@@ -1,3 +1,8 @@
+Tue Oct 14 17:24:52 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+	  Added the new build and renamed flamenco_Static.
+
 Tue Oct 14 17:16:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/flamenco/Static.xml: Do not run the test. We
