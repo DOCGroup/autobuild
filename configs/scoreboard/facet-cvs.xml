@@ -2,9 +2,9 @@
 <preamble>
 <center><h1>Facet and ACE+TAO Adapter Scoreboard</h1></center>
 <hr>
-This is the Facet and ACE+TAO Adapter (based on HEAD from ACE+TAO cvs)
-virtual scoreboard, it shows all the OS/platform combinations facet
-is tested everyday. Currently this is only linux.
+This is the ACE+TAO Adapter (based on ACE+TAO from cvs)
+virtual scoreboard, it shows all the OS/platform combinations the
+adapter is tested everyday. Currently this is only linux.
 <hr>
 </preamble>
 
