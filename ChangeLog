@@ -1,3 +1,10 @@
+Tue May 11 08:12:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+          Corrected LD_LIBRARY_PATH, remove old makefiles before doing a
+          cvs checkout and removed not needed excluses from mpc generation
+
 Mon May 10 09:13:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
