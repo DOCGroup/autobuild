@@ -1,3 +1,9 @@
+Mon Jun 23 22:02:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* command/file_manipulation.pm: Added an extra option that does
+	  append to existing files. Thanks to Michael Rice
+	  <MichaelARice@knology.net> for providing the patch.
+
 Sat Jun 21 14:33:11 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/*.xml: Cosmetic fixes.

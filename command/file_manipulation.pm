@@ -104,8 +104,33 @@ sub Run ($)
     }
 
     # Act on the type
+    if ($type eq "append") {
+        if (!defined $output) {
+            print STDERR __FILE__, ": No output specified for \"append\" type\n"; 
+            return 0;
+        }
 
-    if ($type eq "create") {
+        if (-e $filename) {
+            # Expand some codes
+            $output =~ s/\\n/\n/g;
+            $output =~ s/\\x22/"/g;
+            $output =~ s/\\x27/'/g;
+
+            my $file_handle = new FileHandle ($root . '/' . $filename, 'a');
+
+            if (!defined $file_handle) {
+                print STDERR __FILE__, ": Error opening file ($root/$filename): $!\n";
+                return 0;
+            }
+
+            print $file_handle $output;
+        }
+        else {
+            print STDERR __FILE__, ": \"$filename\" does not exist!\n";
+            return 0;
+        }
+    } elsif ($type eq "create") {
+
         if (!defined $output) {
             print STDERR __FILE__, ": No output specified for \"create\" type\n";
             return 0;
