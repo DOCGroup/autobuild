@@ -32,7 +32,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_PTHREAD\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_PTHREADS\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninline=1\nprobe=1\nfl_reactor=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\noverride RM:=C:/tools/nixtools/rm -f\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
 
