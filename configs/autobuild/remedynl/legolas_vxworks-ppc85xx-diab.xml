@@ -59,7 +59,7 @@
     <!-- command name="make"              options="-k -C Kokyu" / -->
     <command name="make"              options="-k -C ACEXML" />
     <command name="make"              options="-k -C protocols" />
-    <!-- command name="make"              options="-k -C examples" / -->
+    <command name="make"              options="-k -C examples" />
     <!-- command name="make"              options="-k -C netsvcs" / -->
     <!-- command name="make"              options="-k -C performance-tests" / -->
     <command name="make"              options="-k -C tests" />
