@@ -1,3 +1,22 @@
+Fri Nov 12 17:54:02 2004  Carlos O'Ryan  <coryan@atdesk.com>
+
+	* buildmatrix/buildmatrix.pl:
+	  Create a summary with the results (pass, error, warning) for
+	  each project and each platform in the scoreboard.  Generates an
+	  HTML page with the results, with links to *small* files with the
+	  logs for each project/platform combo.
+
+	* buildmatrix/Matrix_Prettify.pm:
+	  Base module for the script.
+
+	* buildmatrix/buildmatrix.css:
+	  CSS for the generated webpage.
+
+	* common/parse_compiler_output.pm:
+	* common/prettify.pm:
+	  Refactor the code to parse the compiler output into its own
+	  module, that way it can be reused in buildmatrix.pl
+
 Fri Nov 12 17:36:19 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
