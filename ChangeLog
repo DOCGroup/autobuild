@@ -1,3 +1,11 @@
+Fri Jun  4 16:34:22 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	  No need to mechanically add ACLOCAL stuff to Makefile.am any
+	  longer; added bootstrap command to bootstrap the generated
+	  Makefile.am files.
+
 Thu May 27 16:17:37 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
