@@ -1,3 +1,13 @@
+Thu Aug 12 07:51:58 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+
+	  Do not generate workspaces for CCF too.
+
 Thu Aug 12 07:18:48 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/tango_isis/Debian_Core.xml:
