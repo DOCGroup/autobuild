@@ -314,7 +314,7 @@ sub load_web_latest ($)
     my $response = $ua->request($request);
 
     if (!$response->is_success ()) {
-        print "        ERROR: Could not latest.txt\n";
+        print "        ERROR: Could not retrieve latest.txt\n";
         return ();
     }
 
@@ -592,7 +592,7 @@ sub update_html ($$)
     print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
     print $indexhtml "<html>\n<head>\n<title>Scoreboard</title>\n</head>\n";
 
-    
+
     ### Start body
     print $indexhtml "<body bgcolor=white>\n";
     print $indexhtml "$preamble\n";
@@ -911,7 +911,7 @@ sub update_html_table ($$@)
         print $indexhtml "</a>";
 
         print $indexhtml "</td>";
-       
+
 	print $indexhtml "</tr>\n";
     }
     print $indexhtml "</table>\n";
@@ -941,23 +941,23 @@ sub GetVariable ($)
 sub build_integrated_page ($)
 {
     my $dir = shift;
-    
+
     unlink ("$dir/temp.xml");
     print "Build Integrated page\n" if ($verbose);
 
-    my @file_list = ("ace", 
+    my @file_list = ("ace",
                      "ace_future",
                      "tao",
                      "tao_future",
                      "misc");
-    
+
     my $newfile = new FileHandle;
 
     unless ($newfile->open (">>$dir/temp.xml")) {
         print "could not create file $dir/temp.xml";
         return;
     }
-    
+
     print $newfile "<INTEGRATED>\n";
     foreach my $file_list(@file_list) {
         my $file_handle = new FileHandle;
@@ -966,7 +966,7 @@ sub build_integrated_page ($)
         } elsif ($file_list eq 'tao') {
             print $newfile "<build_tao> \n";
         }
-            
+
         $file_handle->open ("<configs/scoreboard/$file_list.xml");
         my @list = <$file_handle>;
         print $newfile @list;
@@ -976,7 +976,7 @@ sub build_integrated_page ($)
     print $newfile "\n</INTEGRATED>\n";
 
     close $newfile;
-    
+
     my $parser = new IntegratedParser;
     $parser->Parse("$dir/temp.xml", \%builds);
 
@@ -999,7 +999,7 @@ sub build_integrated_page ($)
 
 # Getopts
 #
-# You can do the followingt with this set os options. 
+# You can do the followingt with this set os options.
 # 1. You can generate the index page for the scoreboard
 # 2. You can generate individual scoreboards for every subset ie. ace,
 #    ace_future, or whatever
@@ -1008,7 +1008,7 @@ sub build_integrated_page ($)
 # Any one should be able to use #1 and #2. How to use them?
 #
 # 1: You can run like this
-# 
+#
 #    $ ./scoreboard.pl -v -d [path to the directory where you would like
 #                             place your html files]
 #                         -i [path to the file with the name where you
@@ -1016,14 +1016,14 @@ sub build_integrated_page ($)
 #                             format]
 #
 #     This command just generates an index ie. index.html page from
-#     whatever XML file that you pass through in -i option and places 
+#     whatever XML file that you pass through in -i option and places
 #     it in the directory pointed by -d option. The option -v is for
-#     verbose! 
+#     verbose!
 #
 # 2: For generating individual html pagesyou can do this
-# 
-#    $ ./scoreboard.pl -d [please see above for explanation] 
-#                      -f [name and path of the XML file that needs 
+#
+#    $ ./scoreboard.pl -d [please see above for explanation]
+#                      -f [name and path of the XML file that needs
 #                          to be used as a meta-file for HTML
 #                          generation]
 #                      -o [name of the output file. The html file will
@@ -1039,7 +1039,7 @@ if (!getopts ('d:f:hi:o:vz')
     print "\n";
     print "    -d         directory where the output files are placed \n";
     print "    -h         display this help\n";
-    print "    -f         file for which html should be generated \n"; 
+    print "    -f         file for which html should be generated \n";
     print "    -i         use <file> as the index file to generate Index page only\n";
     print "    All other options will be ignored  \n";
     print "    -o         name of file where the output HTML files are placed\n";

@@ -1,3 +1,4 @@
+<!-- $Id$ -->
 <intropage>
     <preamble>
 You have reached the logically existing, virtual ACE+TAO scoreboard.
@@ -7,30 +8,26 @@ everyday, all over the world.  We have builds running continuously at
 St. Louis</a>,
 <a href="http://doc.ece.uci.edu/">University of
 California,Irvine</a>,
-<a href="http://www.isis.vanderbilt.edu">ISIS,Vanderbilt University</a>,
-<a href="http://www.atdesk.com">Automatic Trading Desk</a>,
+<a href="http://www.isis.vanderbilt.edu/">ISIS,Vanderbilt University</a>,
+<a href="http://www.atdesk.com/">Automatic Trading Desk</a>,
 <a href="http://www.atl.external.lmco.com">LMCO-ATL</a>,
-<a href="http://www.cs.umd.edu">University of Maryland</a>,
+<a href="http://www.cs.umd.edu/">University of Maryland</a>,
 <a href="http://www.makexs.com/~zorko/">John Zorko</a>,
-<a href="http://nenya.ms.mff.cuni.cz">Charles University</a>,
-<a href="http://www.dist-systems.bbn.com/projects/">BBN
-Technologies</a>,
 <a href="http://www.theaceorb.nl">Remedy IT</a>,
 <a href="http://www.hunleth.com/~acebuild/">Hunleth.com</a>,
-<a href="http://www.rtlogic.com/">RT Logic!</a>,
 <a href="http://www.riverace.com/">Riverace Corporation</a>,
 <a href="http://www.prismtechnologies.com/">PrismTech</a>,
-<a href="http://www.dresystems.com">DRE Systems</a>, and
-<a href="http://www.waei.net">WAEI</a>.
+<a href="http://www.dresystems.com/">DRE Systems</a>, and
+<a href="http://www.waei.net/">WAEI</a>.
 <p>
 The distributed scoreboard is divided into following five
 categories: 
-<li><a href="./ace.html"> ACE Builds</a> for Beta/Release</li>
-<li><a href="./ace_future.html"> ACE Builds</a> not for Beta/Release</li>
-<li><a href="./tao.html"> TAO Builds</a> for Beta/Release</li>
-<li><a href="./tao_future.html"> TAO Builds</a> not for Beta/Release</li>
-<li><a href="./misc.html"> Miscellaneous</a> Builds</li>
-<li><a href="./integrated.html"> Integrated</a> page having all the
+<li><a href="./ace.html">ACE Builds</a> for Beta/Release</li>
+<li><a href="./ace_future.html">ACE Builds</a> not for Beta/Release</li>
+<li><a href="./tao.html">TAO Builds</a> for Beta/Release</li>
+<li><a href="./tao_future.html">TAO Builds</a> not for Beta/Release</li>
+<li><a href="./misc.html">Miscellaneous</a> Builds</li>
+<li><a href="./integrated.html">Integrated</a> page having all the
     above in a single page for folks who like it! </li>
 <li><a href="http://escher.isis.vanderbilt.edu/skoll">SKOLL Builds</a> <a href="http://www.cs.umd.edu/projects/skoll">Skoll -- Distributed Continuous Quality Assurance</a></li>
 </p>

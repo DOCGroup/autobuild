@@ -1,3 +1,4 @@
+<!-- $Id$ -->
 <scoreboard>
 <preamble>
 <center><h1>TAO Test Scoreboard</h1></center>
@@ -15,31 +16,6 @@ decide the migration paths and strategies.
       <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
       <build_sponsor>Washington University</build_sponsor>
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-      <build>
-         <name>RHRH_IA64_GCC296</name>
-         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/mitsu/gcc296_full</url>
-         <build_sponsor>Charles University</build_sponsor>
-         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
-      </build>
-      <build>
-         <name>RHRH_IA64_GCC32</name>
-         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/mitsu/gcc32_full</url>
-         <build_sponsor>Charles University</build_sponsor>
-         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
-      </build>
-      <build>
-         <name>RH72_IA64_GCC296</name>
-         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/gcc296_full</url>
-         <build_sponsor>Charles University</build_sponsor>
-         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
-      </build>
-      <build>
-         <name>RH72_IA64_ICC70</name>
-         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/icc70_full</url>
-         <build_sponsor>Charles University</build_sponsor>
-         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
-      </build>
 </group>
 
 <group>
@@ -56,33 +32,26 @@ decide the migration paths and strategies.
       <build_sponsor>Washington University</build_sponsor>
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
-      <build>
-             <name>Redhat_Linux_8_Debug(autoconf)</name>
-             <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
-             <red>36</red>
-             <build_sponsor>Riverace</build_sponsor>
-             <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-         </build>
-        <build>
-            <name>SuSE_90_Kylix_3</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Kylix3</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
-   <name>VxWorks</name>
    <build>
-   <name>SunOS_5.8_GCC_2.96_(rtlogic.com)</name>
-   <url>http://www.rtlogic.com/acetao</url>
-   <build_sponsor>RTLogic!</build_sponsor>
-   <build_sponsor_url>http://www.rtlogic.com</build_sponsor_url>
+      <name>Redhat_Linux_8_Debug(autoconf)</name>
+      <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
+  <build>
+      <name>SuSE_90_Kylix_3</name>
+      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Kylix3</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+       <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
+       <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
+       <build_sponsor>DRE Systems</build_sponsor>
+       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+       <orange>30</orange>
+       <red>36</red>
    </build>
    <name>BSD</name>
    <build>
