@@ -1,3 +1,8 @@
+Tue Jun 17 16:07:31 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Changed the RH8_WChar build to be a
+	  RH9_WChar build
+
 Tue Jun 17 09:15:01 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/equus/*: Moved the WChar build from doc_isis
