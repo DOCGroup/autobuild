@@ -1,3 +1,9 @@
+Sun May  9 13:45:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
+          Corrected LD_LIBRARY_PATH, remove old makefiles before doing a
+          cvs checkout and removed not needed excluses from mpc generation
+
 Sun May  9 13:07:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/lindy_isis/Static.xml:
