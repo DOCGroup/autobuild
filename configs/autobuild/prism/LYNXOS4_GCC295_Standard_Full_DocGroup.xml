@@ -31,7 +31,7 @@
     <!-- Now, delete all the Makefiles to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n#define ACE_HAS_NONCONST_MSGSND\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='VERSION=4.0.0\nOBJSFORMAT=elf\noptimize=1\nexceptions=1\ndebug=0\nthreads=1\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\ninline=0\nCXX=c++\nTAO_IDL:=/usr/users/tao/ultra5/doc_scoreboard/TAO14/gcc295/standard/static/ACE_wrappers/bin/tao_idl\nTAO_IDLFLAGS+=-g /usr/users/tao/ultra5/doc_scoreboard/TAO14/gcc295/standard/static/ACE_wrappers/bin/gperf\n'" />
 
     <command name="print_os_version" />

@@ -1,3 +1,9 @@
+Thu Oct 14 17:16:35 2004  Olli Savia  <ops@iki.fi>
+
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
+          Removed reduntant setting of ACE_HAS_NONCONST_MSGSND.
+          config-lynxos.h sets this correctly.
+        
 Thu Oct 14 10:03:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
@@ -95,15 +101,15 @@ Mon Oct 11 18:20:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Oct 11 11:34:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
- 	* command/win32make.pm:
+        * command/win32make.pm:
 
           Fixed to allow for missing ACE_wrappers tree without killing build.
 
 Sat Oct  9 06:20:34 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
 
-	  Fixed a typo in the XML file.
+          Fixed a typo in the XML file.
 
 Thu Oct  7 13:55:49 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
@@ -120,23 +126,23 @@ Thu Oct  7 07:43:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Oct  6 16:23:29 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	  Removed -relative and use -noreldefs instead. The workspace
-	  sets ACE_ROOT correctly based on the build-time settings and we
-	  don't want ACE_ROOT removed.
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+          Removed -relative and use -noreldefs instead. The workspace
+          sets ACE_ROOT correctly based on the build-time settings and we
+          don't want ACE_ROOT removed.
 
 Mon Oct  4 17:32:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/ace_isis/RH8_Minimum.xml:
-	* configs/autobuild/ace_isis/RH8_NoInline.xml:
-	* configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
 
-	  Added CIAo in the daily builds.
+          Added CIAo in the daily builds.
 
-	* configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
 
-	  Removed CIAO from the build.
+          Removed CIAO from the build.
 
 Mon Oct  4 13:57:46 2004  Chad Elliott  <elliott_c@ociweb.com>
 
