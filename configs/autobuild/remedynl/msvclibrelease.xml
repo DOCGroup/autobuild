@@ -26,14 +26,14 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
 
+    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
+
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
-
-    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
-    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <command name="generate_workspace" options="-exclude TAO/CIAO -make_coexistence -type vc6 -static -recurse" /> 
 
