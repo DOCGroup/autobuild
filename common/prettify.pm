@@ -608,7 +608,7 @@ sub Test_Handler ($)
     # Check for the subsection indicator
     
     if ($s =~ m/auto_run_tests: (.*)/) {
-        $self->Output_Section ($1);
+        $self->Output_Subsection ($1);
         return;
     }
 

@@ -58,7 +58,7 @@ sub Run ($)
         $ace_root = $1;
     }
 
-    print "\n#################### Tests (auto_run_tests) [" . (scalar gmtime(time())) . " UTC]\n";
+    print "\n#################### Test (auto_run_tests) [" . (scalar gmtime(time())) . " UTC]\n";
 
     my $current_dir = getcwd ();
 
