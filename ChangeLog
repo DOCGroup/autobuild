@@ -1,3 +1,9 @@
+Tue Apr  8 11:47:44 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_Sun53.xml:
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Changed the
+	  path to location of the builds.
+
 Wed Apr  2 10:15:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao_future.xml:
