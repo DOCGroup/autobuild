@@ -8,13 +8,14 @@
 	<environment name="ACE_ROOT"        value="/export/home/bugzilla/FACET/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/export/home/bugzilla/FACET/ACE_wrappers/TAO"/>
         <environment name="JACE_ROOT"       value="/export/home/bugzilla/FACET/RTEvent/tao-facet-adapter/jACE" />
+        <environment name="FACET_ROOT"      value="/export/home/bugzilla/FACET/RTEvent/facet" />
         <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/FACET/ACE_wrappers/ace" />
         <environment name="ANT_HOME"        value="/docpkg/jakarta-ant-1.5" />
         <environment name="ASPECTJ_HOME"    value="/docpkg/aspectj_1.0.6" />
         <environment name="CLASSPATH"       value="/docpkg/JacORB1_3_30/lib/jacorb.jar:/docpkg/JacORB1_3_30/lib/idl.jar:/docpkg/dlconcurrent_1.3.1/lib/dlconcurrent.jar:.:/docpkg/junit3.7/junit.jar:/docpkg/aspectj_1.0.6/lib/aspectjrt.jar:/docpkg/aspectj_1.0.6/lib/aspectj-ant.jar:/docpkg/aspectj_1.0.6/lib/aspectjtools.jar:/docpkg/jakarta-ant-1.5/lib/ant.jar:/docpkg/jakarta-ant-1.5/lib/ant-optional.jar:/home/hokey/bugzilla/FACET/RTEvent/facet/classes" />
         <environment name="JAVA_HOME"       value="/docpkg/java_1.4.0" />
         <environment name="LIBRARYCLASSPATH" value="/docpkg/java_1.4.0/jre/lib/rt.jar:." />
-        <environment name="PATH"            value="/docpkg/jikes-1.15/bin:/docpkg/JacORB1_3_30/bin:/docpkg/java_1.4.0/bin:/docpkg/aspectj_1.0.6/bin:/docpkg/jakarta-ant-1.5/bin:.:/docpkg/jakarta-ant-1.5/bin:/bin:/usr/bin" />
+        <environment name="PATH"            value="/export/home/bugzilla/FACET/ACE_wrappers/ace:/docpkg/jikes-1.15/bin:/docpkg/JacORB1_3_30/bin:/docpkg/java_1.4.0/bin:/docpkg/aspectj_1.0.6/bin:/docpkg/jakarta-ant-1.5/bin:.:/docpkg/jakarta-ant-1.5/bin:/bin:/usr/bin" />
 
         <variable name="root"     value="/export/home/bugzilla/FACET" />
         <variable name="log_file" value="build.txt" />
