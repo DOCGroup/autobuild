@@ -1,3 +1,15 @@
+Wed Aug 25 16:01:52 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/Makefile:
+        * testmatrix/test-list-extract:
+          Removed the Makefile
+
+        * testmatrix/test-list-extract.pl:
+        * testmatrix/update_scoreboard.sh:
+        * testmatrix/00README:
+          Changed the parsing of the build names to be done by
+          a perl script that uses the common::scoreparser
+
 Wed Aug 25 10:02:28 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao_future.xml:

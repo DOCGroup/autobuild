@@ -11,13 +11,6 @@ The python program requires python >= 2.1
 
 
 Setting up:
-  Edit Makefile
-   - change the SCOREBOARD_CONFIG_DIR variable to the directory
-     that contains the xml configuration file for the scoreboard
-   - add the name of the test list to the "all:" target
-   - add a test list target (copy an existing list target and
-     change the target name)
-
   Edit update_scoreboard.sh
    - change the log directory variable LOG_DIR to the directory of
      your log directories.  This is the directory below where the
@@ -26,10 +19,12 @@ Setting up:
      directory.
    - change the BUILD_LIST variable to the name of the file list
      that was added to the Makefile.
+   - change the SCOREBOARD_CONFIG_DIR variable to the directory
+     that contains the xml configuration file for the scoreboard
    - Change the name of the test matrix generated file
      (TEST_MATRIX)
-   - [if necessary] change the 'make' command to have the full
-     path to make.
+   - [if necessary] change the 'perl' command to have the full
+     path to perl.
    - [Optional] Uncomment the autobuild command to have the shell
      script run the build.
 
