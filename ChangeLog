@@ -1,3 +1,10 @@
+Fri Aug  1 17:15:00 2003  Justin Michel  <michel_j@ociweb.com>
+
+        * command/vc6make.pm:
+        * autobuild.pl:
+
+          Added a new simple vc6 builder much like the one for vc7.
+
 Fri Aug  1 15:45:00 2003  Dan Troesser  <troesser_d@ociweb.com>
 
         * command/generate_makefile.pm:

@@ -140,6 +140,7 @@ require command::win32make;
 require command::rem_sems;
 require command::generate_makefile;
 require command::generate_workspace;
+require command::vc6make;
 require command::vc7make;
 require command::wincemake;
 
