@@ -188,10 +188,16 @@
     <group>
          <name>BSD</name>
          <build>
-             <name>OpenBSD_Core</name>
-             <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Core</url>
-             <orange>48</orange>
-             <red>72</red>
+             <name>OpenBSD_Full</name>
+             <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Fule</url>
+             <orange>96</orange>
+             <red>192</red>
+         </build>
+         <build>
+             <name>OpenBSD_Single_Threaded</name>
+             <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Single_Threaded</url>
+             <orange>96</orange>
+             <red>192</red>
          </build>
     </group>
     <group>

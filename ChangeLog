@@ -1,5 +1,12 @@
 Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
 
+	* configs/scoreboard/acetao.xml: Enabled Full and Single_Threaded
+          OpenBSD builds and disabled the OpenBSD_Core one for now.  The
+          current schedule is to run a build every other day - hence the
+          high orange and red values.
+ 
+Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
+
 	* configs/scoreboard/acetao.xml: Changed build orange
           and red times for the OpenBSD_Core build to avoid having it 
       	  flagged too soon.
