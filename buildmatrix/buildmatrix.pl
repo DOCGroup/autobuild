@@ -156,7 +156,7 @@ sub add_results($$) {
      qr{^-+\sRebuild\s.*\sstarted:\sProject:\s(\S+),\s}x,
 
      # This one matches BCB6 and CBuilderX builds
-     qr{make\s-i\s-l\s-o\s.*\s-f\s(\S+).bor\s}x,
+     qr{make.*\s-f\s(\S+).bor\s}x,
     );
 
   my $state = 'NOT IN COMPILE';
@@ -167,8 +167,10 @@ sub add_results($$) {
     chomp $line;
     if ($line =~ m/^$enter_compile/) {
       $state = 'COMPILE';
+      $self->{_current_project} = undef;
     } elsif ($line =~ m/^$leave_compile/) {
       $state = 'NOT IN COMPILE';
+      $self->{_current_project} = undef;
     }
     next unless $state eq 'COMPILE';
 
@@ -179,6 +181,8 @@ sub add_results($$) {
         next LINE;
       }
     }
+    next unless defined $self->{_current_project};
+
     $self->handle_compiler_output_line($line);
 #    push @{$current}, $line;
   }

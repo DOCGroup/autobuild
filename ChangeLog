@@ -1,3 +1,12 @@
+Wed Nov 17 13:47:08 2004  Carlos O'Ryan  <coryan@atdesk.com>
+
+	* buildmatrix/buildmatrix.pl:
+	  Switch the "current project" each time we enter and/or leave the
+	  'Compile' log section.  Otherwise output can be leaked from one
+	  build platform to the next.  Ideally I should create a new
+	  object of type common::parse_compiler_output for each plaform /
+	  project combo, but it looked like too much work.
+
 Wed Nov 17 18:23:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
