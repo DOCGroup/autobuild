@@ -237,6 +237,7 @@ require command::create_ace_build;
 require command::create_ace_build_legacy;
 require command::clone_build_tree;
 require command::cvs;
+require command::cvsgrab;
 require command::file_manipulation;
 require command::fuzz;
 require command::log;

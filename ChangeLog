@@ -1,3 +1,9 @@
+Tue Jan 25 11:05:31 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+
+	  Added pipes=0 to get things going.
+
 Sun Jan 23 08:21:54 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* autobuild.pl:
