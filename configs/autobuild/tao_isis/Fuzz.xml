@@ -19,7 +19,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q -C checkout -P ACE_wrappers" />
 
     <command name="fuzz"         options="" />
 
