@@ -843,9 +843,9 @@ sub Compile_Handler ($)
         # for the timebeing
         $self->Output_Normal ($s);
     }
-    elsif ($s =~ m/ is deprecated, use /) {
+    elsif ($s =~ m/ is deprecated. use /) {
         # Among these are glibc warnings to stop using the deprecated
-        # pthraed_setstackaddr in favor of pthread_setstack.
+        # pthread_setstackaddr in favor of pthread_setstack.
         $self->Output_Warning ($s);
     }
     elsif ($s =~ m/possibly used unsafely; consider using/) {
@@ -901,6 +901,10 @@ sub Compile_Handler ($)
       $self->Output_Warning ($s);
     }
     elsif ($s =~ m/out of memory/)
+    {
+      $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/In function/)
     {
       $self->Output_Error ($s);
     }
