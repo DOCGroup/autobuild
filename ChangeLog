@@ -1,3 +1,10 @@
+Thu Dec 11 13:25:45 2003  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/doc_spider_rh80_gcc3.2_d1o0.xml:
+
+          Remove the SSL_ROOT setting.  It causes build problems on systems
+          with openssl installed in /usr/include.
+
 Wed Dec 10 10:36:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/vc7.xml:
@@ -21,15 +28,15 @@ Tue Dec  9 13:33:34 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
 Mon Dec  8 18:03:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/cbxdd.xml:
-	  Added default.features creation with rwho=0
+        * configs/autobuild/remedynl/cbxdd.xml:
+          Added default.features creation with rwho=0
 
 Mon Dec  8 10:29:23 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* command/printaceconfig.pm:
+        * command/printaceconfig.pm:
 
-	  Fixed a typo from this change "Mon Dec  8 15:52:12 UTC 2003
-	  Johnny Willemsen  <jwillemsen@remedy.nl>".
+          Fixed a typo from this change "Mon Dec  8 15:52:12 UTC 2003
+          Johnny Willemsen  <jwillemsen@remedy.nl>".
 
 Mon Dec  8 15:52:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -41,30 +48,30 @@ Mon Dec  8 15:52:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sun Dec  7 18:02:56 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
 
-	  Do not make rt_corb=0 in the default.features. minimum_corba
-	  doesn't mean rt_corba=0.
+          Do not make rt_corb=0 in the default.features. minimum_corba
+          doesn't mean rt_corba=0.
 
 Sun Nov 30 07:24:57 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/ace_future.xml:
 
-	  Added John Zorko's <jmzorko@mac.com> panther and Jaguar builds.
+          Added John Zorko's <jmzorko@mac.com> panther and Jaguar builds.
 
 Wed Nov 26 12:17:29 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
 
-	  Added the config option NO_MESSAGING to the builds.
+          Added the config option NO_MESSAGING to the builds.
 
 Sat Nov 22 20:53:58 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
-	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Removed LynxOS builds since it was not running and moved a SuSE9
-	  from the future page to the main page.
+          Removed LynxOS builds since it was not running and moved a SuSE9
+          from the future page to the main page.
 
 Thu Nov 20 20:15:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
@@ -85,15 +92,15 @@ Thu Nov 20 20:15:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
 Tue Nov 18 12:06:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Added ssl=1 for the daily builds.
+          Added ssl=1 for the daily builds.
 
 Sun Nov 16 23:05:45 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/flamenco/footprint_metrics.xml:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
 
-	  Added the orbsvcs libraries for footprint.
+          Added the orbsvcs libraries for footprint.
 
 Fri Nov 14 16:09:17 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
@@ -112,47 +119,47 @@ Wed Nov 12 11:53:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Nov  8 17:47:50 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tao_isis/Fuzz.xml:
+        * configs/autobuild/tao_isis/Fuzz.xml:
 
-	  New fuzz build at ISIS.
+          New fuzz build at ISIS.
 
 Thu Nov  6 07:57:02 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Do a coreclean for CIAO instead of a realclean.
+          Do a coreclean for CIAO instead of a realclean.
 
 Wed Nov  5 22:03:54 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Do not try mailing things to the devo_group. You dont have
-	  permissions anyway.
+          Do not try mailing things to the devo_group. You dont have
+          permissions anyway.
 
 Wed Nov  5 21:54:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Fixed a typo that caused the builds to bomb!
+          Fixed a typo that caused the builds to bomb!
 
 Wed Nov  5 17:06:07 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Changed the build now to build CIAO_Core. This is now important.
+          Changed the build now to build CIAO_Core. This is now important.
 
 Wed Nov  5 16:57:47 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added the IPV6 build to the scoreboard.
+          Added the IPV6 build to the scoreboard.
 
 Wed Nov  5 12:20:18 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/driver_ipv6.sh:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/driver_ipv6.sh:
 
-	  New build for ACE+TAO with IPV6 enabled.
+          New build for ACE+TAO with IPV6 enabled.
 
 Mon Nov 03 13:21:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -184,15 +191,15 @@ Sat Nov 01 15:50:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Oct 30 11:52:39 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/essie_gcc3_debug.xml:
-	* configs/scoreboard/ace.xml: Added Solaris 9 gcc3 debug build.
+        * configs/autobuild/riverace/essie_gcc3_debug.xml:
+        * configs/scoreboard/ace.xml: Added Solaris 9 gcc3 debug build.
 
 Wed Oct 29 17:20:41 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
-	* configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
-	* configs/scoreboard/ace_future.xml: Added Solaris 8 and 9 autoconf/MPC
-	  builds.
+        * configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+        * configs/scoreboard/ace_future.xml: Added Solaris 8 and 9 autoconf/MPC
+          builds.
 
 Wed Oct 29 08:38:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -265,79 +272,79 @@ Tue Oct 21 18:10:00 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
 Mon Oct 20 16:29:55 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added ATD's build to the scoreboard.
+        * configs/scoreboard/tao.xml: Added ATD's build to the scoreboard.
 
 Sun Oct 19 19:04:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/ace_future.xml: Removed FreeBSD builds from
-	  Yi-Kai Tsai <cuma@dslab.csie.ncu.edu.tw> since he has moved.
+        * configs/scoreboard/ace_future.xml: Removed FreeBSD builds from
+          Yi-Kai Tsai <cuma@dslab.csie.ncu.edu.tw> since he has moved.
 
 Sat Oct 18 08:36:54 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/autobuild/ace_isis/RH8_Minimum.xml: Made changes so that
-	  ec_typed_events=0 will be added to the default.features file.
+        * configs/autobuild/ace_isis/RH8_Minimum.xml: Made changes so that
+          ec_typed_events=0 will be added to the default.features file.
 
 Fri Oct 17 22:56:33 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/autobuild/ace_isis/RH8_Minimum.xml: Added
-	  ec_typed_events=0 for minimum_corba build.
+        * configs/autobuild/ace_isis/RH8_Minimum.xml: Added
+          ec_typed_events=0 for minimum_corba build.
 
 Fri Oct 17 17:10:17 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Corrected
-	  the directives to build IORInterceptor and ValueType. TAO/
-	  prefix was missing.
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Corrected
+          the directives to build IORInterceptor and ValueType. TAO/
+          prefix was missing.
 
 Wed Oct 15 22:40:35 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
 
-	  Added directives to build libraries that PortableServer
-	  depends. Strangely this was missing.
+          Added directives to build libraries that PortableServer
+          depends. Strangely this was missing.
 
 Wed Oct 15 16:27:27 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/autobuild/balar_isis/Static.xml: Removed
-	  -Wold-style-cast since it was spewing a lot of warnings.
+        * configs/autobuild/balar_isis/Static.xml: Removed
+          -Wold-style-cast since it was spewing a lot of warnings.
 
 Wed Oct 15 06:46:27 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/scoreboard/tao.xml: Changed name of
-	  RH71_Implicit_templates build to SuSE_Implicit_Templates.
+        * configs/scoreboard/tao.xml: Changed name of
+          RH71_Implicit_templates build to SuSE_Implicit_Templates.
 
 Tue Oct 14 20:27:33 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/scoreboard/tao.xml: Added <build> tag before
-	  Suse_Static.
+        * configs/scoreboard/tao.xml: Added <build> tag before
+          Suse_Static.
 
 Tue Oct 14 17:24:52 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
-	  Added the new build and renamed flamenco_Static.
+        * configs/scoreboard/tao.xml:
+          Added the new build and renamed flamenco_Static.
 
 Tue Oct 14 17:16:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/flamenco/Static.xml: Do not run the test. We
-	  have another build to run the test.
+        * configs/autobuild/flamenco/Static.xml: Do not run the test. We
+          have another build to run the test.
 
 Tue Oct 14 17:14:49 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/balar_isis/Static.xml: A new static build on
-	  balar.vuse.
+        * configs/autobuild/balar_isis/Static.xml: A new static build on
+          balar.vuse.
 
 Tue Oct 14 12:39:06 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml: Added a /
-	  infront of build for the log_root variable.
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml: Added a /
+          infront of build for the log_root variable.
 
 Tue Oct 14 10:38:30 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/scoreboard/tao.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	* configs/autobuild/balar_isis/driver.sh: Moved the
-	  ImplicitTemplates build from amrod.ece.uci.edu to
-	  balar.dre.vanderbilt.edu. The amrod built was mostly not
-	  running.
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/driver.sh: Moved the
+          ImplicitTemplates build from amrod.ece.uci.edu to
+          balar.dre.vanderbilt.edu. The amrod built was mostly not
+          running.
 
 Fri Oct 10 12:33:32 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -358,11 +365,11 @@ Fri Oct 10 07:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Oct  9 17:13:00 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/scoreboard/tao.xml: Taking off the
-	  Win2K_VC7_NET_DLL_Core build out of the scoreboard based on
-	  Nanbor's suggestion. The .NET compiler on this machine is old
-	  and needs to be upgraded. This issue needs to be revisited
-	  later.
+        * configs/scoreboard/tao.xml: Taking off the
+          Win2K_VC7_NET_DLL_Core build out of the scoreboard based on
+          Nanbor's suggestion. The .NET compiler on this machine is old
+          and needs to be upgraded. This issue needs to be revisited
+          later.
 
 Mon Oct 06 07:27:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -392,12 +399,12 @@ Wed Oct 01 09:55:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Sep 29 09:04:01 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
 
-	  Fixed the path to the shared libraries used.
+          Fixed the path to the shared libraries used.
 
 Mon Sep 29 07:37:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -406,128 +413,128 @@ Mon Sep 29 07:37:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sun Sep 28 22:00:41 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
-	  Disabled MPC makefile generation. Since the upcoming beta is
-	  close and is not dependant on MPC, we have a moral obligation to
-	  check our Makefiles.
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+          Disabled MPC makefile generation. Since the upcoming beta is
+          close and is not dependant on MPC, we have a moral obligation to
+          check our Makefiles.
 
 Fri Sep 26 15:17:19 2003  Irfan Pyarali  <irfan@oomworks.com>
 
-	* Linux builds have exceptions enabled by default.  Therefore,
-	  added the "Exceptions" config option to the following autobuild
-	  file so that tests that require native exceptions can be
-	  excuted:
+        * Linux builds have exceptions enabled by default.  Therefore,
+          added the "Exceptions" config option to the following autobuild
+          file so that tests that require native exceptions can be
+          excuted:
 
-	  - ace_isis/RH8_Minimum.xml
-	  - atl/2.6.0.test4-lksctp.xml
-	  - atl/2.6.0.test4.xml
-	  - atl/RH9-2.4.20-18.9-SCTP.xml
-	  - balar/Debian_Core.xml
-	  - balar/Debian_Minimum.xml
-	  - beguine/Redhat_7.1_No_AMI_Messaging.xml
-	  - dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml
-	  - dresystems/skoll_1.xml
-	  - dresystems/skoll_2.xml
-	  - flamenco/compiletime_metrics.xml
-	  - hokey/jRate.xml
-	  - hokey/javart-jRate.xml
-	  - hokey/javart-jvm.xml
-	  - hokey/javart-rtsj.xml
-	  - remedynl/GCC32.xml
-	  - remedynl/GCCACE.xml
-	  - remedynl/Kylix3.xml
-	  - remedynl/Kylix3ACE.xml
-	  - skukuza/skoll_3.xml
-	  - tango_isis/Debian_Core.xml
-	  - tango_isis/Debian_ORB_Core.xml
-	  - toutatis/IA64_GCC3.1.xml
+          - ace_isis/RH8_Minimum.xml
+          - atl/2.6.0.test4-lksctp.xml
+          - atl/2.6.0.test4.xml
+          - atl/RH9-2.4.20-18.9-SCTP.xml
+          - balar/Debian_Core.xml
+          - balar/Debian_Minimum.xml
+          - beguine/Redhat_7.1_No_AMI_Messaging.xml
+          - dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml
+          - dresystems/skoll_1.xml
+          - dresystems/skoll_2.xml
+          - flamenco/compiletime_metrics.xml
+          - hokey/jRate.xml
+          - hokey/javart-jRate.xml
+          - hokey/javart-jvm.xml
+          - hokey/javart-rtsj.xml
+          - remedynl/GCC32.xml
+          - remedynl/GCCACE.xml
+          - remedynl/Kylix3.xml
+          - remedynl/Kylix3ACE.xml
+          - skukuza/skoll_3.xml
+          - tango_isis/Debian_Core.xml
+          - tango_isis/Debian_ORB_Core.xml
+          - toutatis/IA64_GCC3.1.xml
 
 Thu Sep 25 17:24:43 2003  Irfan Pyarali  <irfan@oomworks.com>
 
-	* configs\autobuild:
+        * configs\autobuild:
 
-	  Added "Exception" config option to these files:
+          Added "Exception" config option to these files:
 
-	  - ace/SunOS_FORTE_UPDATE_1.xml
-	  - amrod/ImplicitTemplates.xml
-	  - charanga/Debian_NoInterceptors.xml
-	  - chipper/SOLARIS8_FORTE_UPDATE1.xml
-	  - cuni/hitotsu_gcc296_full.xml
-	  - cuni/hitotsu_icc70_full.xml
-	  - cuni/mitsu_gcc296_full.xml
-	  - cuni/mitsu_gcc32_full.xml
-	  - curufin/SingleThreaded.xml
-	  - danzon/SunOS_SunCC53.xml
-	  - doc_isis/RH8_wchar.xml
-	  - dresystems/freebsd_ace.xml
-	  - dresystems/freebsd_ace_debug.xml
-	  - dresystems/freebsd_ace_dump.xml
-	  - dresystems/freebsd_ace_explicit_template.xml
-	  - dresystems/freebsd_ace_no_inline.xml
-	  - dresystems/freebsd_ace_single.xml
-	  - dresystems/freebsd_tao.xml
-	  - dresystems/mpc_test.xml
-	  - dresystems/mpc_test_tao.xml
-	  - dresystems/sol9_gcc33.xml
-	  - dresystems/sol9_gcc33_tao.xml
-	  - dresystems/sol9_gcc33_tao_legacy.xml
-	  - dresystems/sol9_spro54.xml
-	  - dresystems/sol9_spro54_tao.xml
-	  - dresystems/sol9_spro54_tao_legacy.xml
-	  - equus/RH9_wchar.xml
-	  - flamenco/footprint_metrics.xml
-	  - guajira/TRU64_CXX.xml
-	  - remedynl/SunForte.xml
-	  - riverace/benjamin_dev_debug.xml
-	  - riverace/benjamin_dev_ipv6_debug.xml
-	  - riverace/benjamin_dev_optimize.xml
-	  - riverace/bumbles_dev_acc_debug.xml
-	  - riverace/charlie_dev_va5_debug.xml
-	  - riverace/cuddy_dev_gcc3_debug.xml
-	  - riverace/cuddy_dev_va6-64_debug.xml
-	  - riverace/cuddy_dev_va6_debug.xml
-	  - riverace/essie_dev_forte7-64_debug.xml
-	  - riverace/jane_dev_debug.xml
-	  - riverace/jane_dev_static_release.xml
-	  - rumba/Debian_GCC_3.0.4.xml
-	  - rumba/Debian_WChar.xml
-	  - sirion/Full.xml
-	  - sirion/Full_new.xml
-	  - slytherin/OpenBSD_Single_Threaded.xml
-	  - tango/SunOS_GCC_2_95.xml
-	  - tango_isis/Full.xml
-	  - tango_isis/SingleThreaded.xml
-	  - tao_isis/GIOP10_GCC32.xml
-	  - remedynl/BCB6DynamicDebugMbg.xml
-	  - remedynl/BCB6DynamicDebugUnicodeMbg.xml
-	  - remedynl/BCB6DynamicRelease.xml
-	  - remedynl/BCB6DynamicReleaseUnicodeMbg.xml
-	  - remedynl/BCB6StaticRelease.xml
-	  - remedynl/MingW.xml
-	  - remedynl/vc7.xml
-	  - ringil/Legacy.xml
-	  - ringil/Unicode.xml
-	  - riverace/beebee_dev_wince4_debug.xml
-	  - riverace/hope_dev_vc7_debug.xml
-	  - riverace/kitty-puss_dev_sdk_debug.xml
-	  - tao/Borland_wchar.xml
-	  - tao/Unicode.xml
-	  - tao/Wchar.xml
+          - ace/SunOS_FORTE_UPDATE_1.xml
+          - amrod/ImplicitTemplates.xml
+          - charanga/Debian_NoInterceptors.xml
+          - chipper/SOLARIS8_FORTE_UPDATE1.xml
+          - cuni/hitotsu_gcc296_full.xml
+          - cuni/hitotsu_icc70_full.xml
+          - cuni/mitsu_gcc296_full.xml
+          - cuni/mitsu_gcc32_full.xml
+          - curufin/SingleThreaded.xml
+          - danzon/SunOS_SunCC53.xml
+          - doc_isis/RH8_wchar.xml
+          - dresystems/freebsd_ace.xml
+          - dresystems/freebsd_ace_debug.xml
+          - dresystems/freebsd_ace_dump.xml
+          - dresystems/freebsd_ace_explicit_template.xml
+          - dresystems/freebsd_ace_no_inline.xml
+          - dresystems/freebsd_ace_single.xml
+          - dresystems/freebsd_tao.xml
+          - dresystems/mpc_test.xml
+          - dresystems/mpc_test_tao.xml
+          - dresystems/sol9_gcc33.xml
+          - dresystems/sol9_gcc33_tao.xml
+          - dresystems/sol9_gcc33_tao_legacy.xml
+          - dresystems/sol9_spro54.xml
+          - dresystems/sol9_spro54_tao.xml
+          - dresystems/sol9_spro54_tao_legacy.xml
+          - equus/RH9_wchar.xml
+          - flamenco/footprint_metrics.xml
+          - guajira/TRU64_CXX.xml
+          - remedynl/SunForte.xml
+          - riverace/benjamin_dev_debug.xml
+          - riverace/benjamin_dev_ipv6_debug.xml
+          - riverace/benjamin_dev_optimize.xml
+          - riverace/bumbles_dev_acc_debug.xml
+          - riverace/charlie_dev_va5_debug.xml
+          - riverace/cuddy_dev_gcc3_debug.xml
+          - riverace/cuddy_dev_va6-64_debug.xml
+          - riverace/cuddy_dev_va6_debug.xml
+          - riverace/essie_dev_forte7-64_debug.xml
+          - riverace/jane_dev_debug.xml
+          - riverace/jane_dev_static_release.xml
+          - rumba/Debian_GCC_3.0.4.xml
+          - rumba/Debian_WChar.xml
+          - sirion/Full.xml
+          - sirion/Full_new.xml
+          - slytherin/OpenBSD_Single_Threaded.xml
+          - tango/SunOS_GCC_2_95.xml
+          - tango_isis/Full.xml
+          - tango_isis/SingleThreaded.xml
+          - tao_isis/GIOP10_GCC32.xml
+          - remedynl/BCB6DynamicDebugMbg.xml
+          - remedynl/BCB6DynamicDebugUnicodeMbg.xml
+          - remedynl/BCB6DynamicRelease.xml
+          - remedynl/BCB6DynamicReleaseUnicodeMbg.xml
+          - remedynl/BCB6StaticRelease.xml
+          - remedynl/MingW.xml
+          - remedynl/vc7.xml
+          - ringil/Legacy.xml
+          - ringil/Unicode.xml
+          - riverace/beebee_dev_wince4_debug.xml
+          - riverace/hope_dev_vc7_debug.xml
+          - riverace/kitty-puss_dev_sdk_debug.xml
+          - tao/Borland_wchar.xml
+          - tao/Unicode.xml
+          - tao/Wchar.xml
 
-	  Consolidated configs options from the auto_run_tests command to
-	  the "configs" xml tag.  Also added "Exception" config option:
+          Consolidated configs options from the auto_run_tests command to
+          the "configs" xml tag.  Also added "Exception" config option:
 
-	  - nirvana/DLL_Release.xml
-	  - riverace/beebee_dev_msvc6_debug.xml
-	  - riverace/beebee_dev_pocketpc2002_debug.xml
-	  - riverace/timmy_dev_bcb5_debug.xml
-	  - riverace/timmy_dev_msvc6_debug.xml
-	  - tao/Borland.xml
-	  - tao/DLL_Debug.xml
-	  - tao/Purify.xml
+          - nirvana/DLL_Release.xml
+          - riverace/beebee_dev_msvc6_debug.xml
+          - riverace/beebee_dev_pocketpc2002_debug.xml
+          - riverace/timmy_dev_bcb5_debug.xml
+          - riverace/timmy_dev_msvc6_debug.xml
+          - tao/Borland.xml
+          - tao/DLL_Debug.xml
+          - tao/Purify.xml
 
 Thu Sep 25 15:31:00 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
@@ -550,16 +557,16 @@ Wed Sep 24 10:52:00 2003  Simon McQueen  <sm@prismtechnologies.com>
 
 Mon Sep 22 10:01:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* command/printaceconfig.pm (Run): Added CIAO's changeLog entries
-	  to the configuration.
+        * command/printaceconfig.pm (Run): Added CIAO's changeLog entries
+          to the configuration.
 
 Tue Sep 16 16:23:39 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
-	* configs/scoreboard/tao.xml:
-	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Moved OCI's example MPC builds to the tao_future scoreboard
-	  until "Example MPC Usage" builds.
+          Moved OCI's example MPC builds to the tao_future scoreboard
+          until "Example MPC Usage" builds.
 
 Fri Sep 12 14:10:41 MST 2003 Trevor Fields <fields_t@ociweb.com>
 
@@ -577,53 +584,53 @@ Fri Sep 12 10:05:00 2003 Dan Troesser <troesser_d@ociweb.com>
 
 Thu Sep 11 17:11:04 MST 2003 Trevor Fields <fields_t@ociweb.com>
 
-	* configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
 
-	  Added command to make the bin/MakeProjectCreator/config/default.features
+          Added command to make the bin/MakeProjectCreator/config/default.features
           file for overriding the minimum_corba value
           for MPC.
 
 Wed Sep 10 15:02:51 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
-	* configs/autobuild/ace_isis/RH8_Minimum.xml:
-	* configs/autobuild/ace_isis/RH8_NoInline.xml:
-	* configs/autobuild/balar/Debian_Minimum.xml:
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	* configs/autobuild/doc/Doxygen.xml:
-	* configs/autobuild/guajira/TRU64_CXX.xml:
-	* configs/autobuild/hokey/facet/ACE_TAO.xml:
-	* configs/autobuild/pokey/GCC32_Core.xml:
-	* configs/autobuild/tango/Debian_NoInline.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
-	* configs/autobuild/tao/Purify.xml:
-	* configs/autobuild/tao_isis/GIOP10_GCC32.xml:
-	* configs/autobuild/toutatis/IA64_GCC3.1.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/doc/Doxygen.xml:
+        * configs/autobuild/guajira/TRU64_CXX.xml:
+        * configs/autobuild/hokey/facet/ACE_TAO.xml:
+        * configs/autobuild/pokey/GCC32_Core.xml:
+        * configs/autobuild/tango/Debian_NoInline.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tao/Purify.xml:
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+        * configs/autobuild/toutatis/IA64_GCC3.1.xml:
 
-	  Added <command "print_os_version" /> to all of these for
-	  consistent config and log information.
+          Added <command "print_os_version" /> to all of these for
+          consistent config and log information.
 
 Wed Sep 10 14:32:54 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml: Removed an
-	  extra dash that somehow got inserted before the "k" option on
-	  the "make reverseclean" command.
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml: Removed an
+          extra dash that somehow got inserted before the "k" option on
+          the "make reverseclean" command.
 
 Tue Sep  9 21:18:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
-	* configs/autobuild/dresystems/freebsd_tao.xml:
-	* configs/autobuild/dresystems/skoll_1.xml:
-	* configs/autobuild/dresystems/skoll_2.xml:
-	* configs/autobuild/dresystems/sol9_gcc33_tao.xml:
-	* configs/autobuild/dresystems/sol9_spro54_tao.xml:
-	  Removed the stubs generation from the XML file since they are
-	  not needed. These build don't use MPC and the normal
-	  dependencies should take care of it.
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/freebsd_tao.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+        * configs/autobuild/dresystems/sol9_gcc33_tao.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao.xml:
+          Removed the stubs generation from the XML file since they are
+          not needed. These build don't use MPC and the normal
+          dependencies should take care of it.
 
 Thu Sep  4 17:52:57 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
-	* command/print_os_version.pm (Run): Added in a clause to print
-	  out the hostname using the standard Sys::Hostname module.
+        * command/print_os_version.pm (Run): Added in a clause to print
+          out the hostname using the standard Sys::Hostname module.
 
 Sat Aug 30 19:43:30 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
@@ -1073,22 +1080,22 @@ Sat Aug  9 13:35:30 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
 Fri Aug  8 14:39:29 2003  Justin Michel  <michel_j@ociweb.com>
 
-	* command/vc6make.pm:
+        * command/vc6make.pm:
 
           vc6 is not as flexible with the order of commands as vc7, so
         the .dsw file must come first.
 
 Fri Aug  8 12:24:03 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/ace_isis/RH8_Static_Core.xml:
-	* configs/autobuild/balar/Debian_Core.xml:
-	* configs/autobuild/slytherin/OpenBSD_Core.xml:
-	* configs/autobuild/maedhros/Core.xml:
-	* configs/autobuild/pokey/GCC32_Core.xml:
-	* configs/autobuild/hokey/facet-cvs/ACE_TAO.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/balar/Debian_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/pokey/GCC32_Core.xml:
+        * configs/autobuild/hokey/facet-cvs/ACE_TAO.xml:
 
-	  Modified these builds to build Kokyu before TAO/orbsvcs.
+          Modified these builds to build Kokyu before TAO/orbsvcs.
 
 Fri Aug  8 12:30:50 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
@@ -1130,20 +1137,20 @@ Thu Aug  7 14:09:29 2003  Justin Michel  <michel_j@ociweb.com>
 
 Thu Aug  7 13:59:29 2003  Justin Michel  <michel_j@ociweb.com>
 
-	* command/auto_run_tests.pm:
-	* command/file_manipulation.pm:
-	* command/fuzz.pm:
-	* command/generate_makefile.pm:
-	* command/generate_workspace.pm:
-	* command/make.pm:
-	* command/printaceconfig.pm:
-	* command/vc6make.pm:
-	* command/vc7make.pm:
-	* command/win32make.pm:
-	* command/wincemake.pm:
+        * command/auto_run_tests.pm:
+        * command/file_manipulation.pm:
+        * command/fuzz.pm:
+        * command/generate_makefile.pm:
+        * command/generate_workspace.pm:
+        * command/make.pm:
+        * command/printaceconfig.pm:
+        * command/vc6make.pm:
+        * command/vc7make.pm:
+        * command/win32make.pm:
+        * command/wincemake.pm:
 
-	  Removed project_root from most check_requirements() and
-	default it to ACE_wrappers when not defined.
+          Removed project_root from most check_requirements() and
+        default it to ACE_wrappers when not defined.
 
 Thu Aug  7 18:32:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
@@ -1193,7 +1200,7 @@ Thu Aug  7 11:59:29 2003  Justin Michel  <michel_j@ociweb.com>
         * command/win32make.pm:
         * command/wincemake.pm:
 
-		  Add support for escaped double quotes to all commands that take options.
+                  Add support for escaped double quotes to all commands that take options.
 
 Wed Aug  6 15:05:00 2003  Dan Troesser  <troesser_d@ociweb.com>
 

@@ -2,7 +2,6 @@
 	<configuration>
 		<environment name="ACE_ROOT" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0"/>
 		<environment name="TAO_ROOT" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0/TAO"/>
-		<environment name="SSL_ROOT" value="/usr"/>
 		<environment name="LD_LIBRARY_PATH" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0/lib:/opt/gcc/3.2/lib:/usr/lib:"/>
 		<environment name="TAO_ORBSVCS" value=""/>
 		<environment name="SELECTION_CRITERIA" value=" -Config Linux "/>
