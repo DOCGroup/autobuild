@@ -45,7 +45,7 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_Debian_WChar/</url>
         </build>
         <build>
-            <name>RedHat_Core</name>
+            <name>RedHat_Static_Core</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maedhros_Core/</url>
         </build>
         <build>

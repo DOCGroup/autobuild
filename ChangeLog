@@ -1,3 +1,8 @@
+Sun Oct 20 09:14:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Renamed the Redhat_Core build as
+	  Redhat_Static_Core build. 
+
 Sun Oct 20 09:10:03 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/maedhros/Core.xml: Made the following
