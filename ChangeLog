@@ -1,3 +1,9 @@
+Wed Apr  2 10:15:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao_future.xml:
+	* configs/scoreboard/tao.xml: Removed the three builds from ISIS,
+	  since we have some rearrangement going on here.
+
 Sun Mar 30 22:00:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/maglor/Static.xml: Added optimized and

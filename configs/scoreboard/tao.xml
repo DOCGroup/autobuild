@@ -94,12 +94,6 @@ all the OS/platform combinations TAO is tested everyday.
         <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
      </build>
      <build>
-        <name>RH73_GCC32_GIOP10</name>
-        <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_GIOP10</url>
-        <build_sponsor>Vanderbilt University</build_sponsor>
-        <build_sponsor_url>http://www.isis.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
         <name>RH71_Explicit_Templates</name>
         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_Explicit_Templates</url>
         <build_sponsor>Washington University</build_sponsor>
@@ -110,12 +104,6 @@ all the OS/platform combinations TAO is tested everyday.
          <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/pokey_Core</url>
          <build_sponsor>Washington University</build_sponsor>
          <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
-      <build>
-         <name>RH8_GCC32_Full_IPV6</name>
-         <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/GCC32_RH8_Full/</url>
-         <build_sponsor> ISIS</build_sponsor>
-         <build_sponsor_url>http://www.isis.vanderbilt.edu</build_sponsor_url>
       </build>
       <build>
          <name>RH72_IA64_GCC296</name>
