@@ -20,13 +20,16 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 9 -q update -P -d ." />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=delete file=.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=build/gcc296_full/.disable" />
-    <command name="create_ace_build_legacy"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/gcc296_full/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/gcc296_full/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
@@ -35,6 +38,11 @@
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++296" />
     <command name="print_ace_config" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />

@@ -19,7 +19,13 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 9 -q co -P ACE" />
+
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#include \x22ace/config-macosx-panther.h\x22\n\n '" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_panther.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\n\n '" />
@@ -27,6 +33,9 @@
     <command name="print_os_version" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-j 2 -k" />

@@ -1,3 +1,48 @@
+Thu Apr 29 19:35:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+	* configs/autobuild/amrod/ImplicitTemplates.xml:
+	* configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+	* configs/autobuild/atl/2.6.0.test7.xml:
+	* configs/autobuild/balar/Debian_Core.xml:
+	* configs/autobuild/balar/Debian_Minimum.xml:
+	* configs/autobuild/balar_isis/DynamicHash.xml:
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+	* configs/autobuild/balar_isis/wchar.xml:
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
+	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
+	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+	* configs/autobuild/cuni/hitotsu_icc70_doc.xml:
+	* configs/autobuild/cuni/hitotsu_icc70_full.xml:
+	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
+	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
+	* configs/autobuild/curufin/SingleThreaded.xml:
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
+	* configs/autobuild/jmz/Mac_OSX_Jaguar.xml:
+	* configs/autobuild/jmz/Mac_OSX_Panther.xml:
+	* configs/autobuild/lindy_isis/Static.xml:
+	* configs/autobuild/maglor/Static.xml:
+	* configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+	* configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
+	* configs/autobuild/slytherin/OpenBSD_Core.xml:
+	* configs/autobuild/slytherin/OpenBSD_Full.xml:
+	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+	* configs/autobuild/valinor/Full.xml:
+
+	  Converted these builds to use MPC.
+
 Thu Apr 29 20:26:28 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
@@ -344,8 +389,8 @@ Fri Apr  9 10:57:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Borland.xml:
         * configs/autobuild/tao/Borland_wchar.xml:
-          Generate a default.features file needed for MPC and print make, linker
-          and perl version in the config page of the build
+          Generate a default.features file needed for MPC and print make,
+	  linker and perl version in the config page of the build
 
 Fri Apr  9 10:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -359,11 +404,11 @@ Fri Apr  9 10:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
         * configs/autobuild/remedynl/cbxpreview.xml:
           Now the Borland makefiles are removed from the repo I have cleaned
           up the files above. When the build starts we do a realclean, then we
-          remote all .bor files (this is because when we for example change the
+          remove all .bor files (this is because when we for example change the
           name of a project, or remove a mpc file, cvs will not remove the
           generated files, so we don't want to risk the change that later we
-          build an old file). Then we checkout all files and do a MPC generation
-          and then the build again.
+          build an old file). Then we checkout all files and do a MPC
+	  generation and then the build again.
 
 Fri Apr  9 09:52:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -1457,7 +1502,7 @@ Sun Dec  7 18:02:56 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
         * configs/autobuild/ace_isis/RH8_Minimum.xml:
 
-          Do not make rt_corb=0 in the default.features. minimum_corba
+          Do not make rt_corba=0 in the default.features. minimum_corba
           doesn't mean rt_corba=0.
 
 Sun Nov 30 07:24:57 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>

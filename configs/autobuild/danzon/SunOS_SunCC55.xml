@@ -19,8 +19,13 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
+
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef TAO_IDL_PREPROCESSOR \n#define TAO_IDL_PREPROCESSOR \x22cc\x22\n#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-sunos5.8.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nssl=1\nPLATFORM_SSL_CPPFLAGS=-I/project/danzon/pkg/openssl/include\nPLATFORM_SSL_LDFLAGS=-L/project/danzon/pkg/openssl/lib/\nPLATFORM_SSL_LIBS=-lssl -lcrypto\n'" />
@@ -30,6 +35,11 @@
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
