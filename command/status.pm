@@ -2,7 +2,7 @@
 # $Id$
 #
 
-package Shell;
+package Status;
 
 use strict;
 use warnings;
@@ -19,6 +19,8 @@ sub new
     my $class = ref ($proto) || $proto;
     my $self = {};
 
+    $self->{INIT} = 0;
+
     bless ($self, $class);
     return $self;
 }
@@ -28,15 +30,15 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('root');
+    my $log_root = main::GetVariable ('log_root');
 
-    if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
+    if (!defined $log_root) {
+        print STDERR __FILE__, ": Requires \"log_root\" variable\n";
         return 0;
     }
 
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
+    if (!-r $log_root || !-d $log_root) {
+        print STDERR __FILE__, ": Cannot access \"log_root\" directory: $log_root\n";
         return 0;
     }
 
@@ -49,29 +51,26 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $root = main::GetVariable ('root');
+    my $log_root = main::GetVariable ('log_root');
 
     # chop off trailing slash
-    if ($root =~ m/^(.*)\/$/) {
-        $root = $1;
+    if ($log_root =~ m/^(.*)\/$/) {
+        $log_root = $1;
     }
 
-    main::PrintStatus ('Setup', 'Shell');
+    main::PrintStatus ('Setup', 'Status');
 
-    my $current_dir = getcwd ();
-
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
+    if (uc $options eq "ON") {
+        main::SetStatusFile ($log_root . "/status.txt");
     }
-
-    system ($options);
-
-    chdir $current_dir;
+    elsif (uc $options eq "OFF") {
+        main::ChangeStatus ('Inactive', '');
+        main::SetStatusFile ('');
+    }
 
     return 1;
 }
 
 ##############################################################################
 
-main::RegisterCommand ("shell", new Shell ());
+main::RegisterCommand ("status", new Status ());

@@ -9,7 +9,6 @@ use warnings;
 
 use Cwd;
 use File::Find;
-use Time::Local;
 
 sub create ($);
 sub sam ($);
@@ -61,7 +60,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Setup (File_Manipulation) [" . (scalar gmtime(time())) . " UTC]\n";
+    main::PrintStatus ('Setup', 'File_Manipulation');
 
     my $current_dir = getcwd ();
 
@@ -117,7 +116,7 @@ sub Run ($)
         $output =~ s/\\x22/"/g;
         $output =~ s/\\x27/'/g;
         
-        my $file_handle = new FileHandle ($root . '/' . $filename, "w");
+        my $file_handle = new FileHandle ($root . '/' . $filename, 'w');
 
         if (!defined $file_handle) {
             print STDERR __FILE__, ": Error creating file ($root/$filename): $!\n";

@@ -9,7 +9,6 @@ use warnings;
 
 use Cwd;
 use FileHandle;
-use Time::Local;
 
 ###############################################################################
 # Constructor
@@ -61,7 +60,7 @@ sub Run ($)
     }
     $root .= '/ACE_wrappers';
 
-    print "\n#################### Test (auto_run_tests) [" . (scalar gmtime(time())) . " UTC]\n";
+    main::PrintStatus ('Test', 'auto_run_tests');
 
     my $current_dir = getcwd ();
 

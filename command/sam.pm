@@ -10,7 +10,6 @@ use warnings;
 use Cwd;
 use FileHandle;
 use File::Find;
-use Time::Local;
 
 sub create ($);
 sub sam ($);
@@ -78,7 +77,7 @@ sub Run ($)
         $sam_root = $1;
     }
 
-    print "\n#################### Compile (SAM) [" . (scalar gmtime(time())) . " UTC]\n";
+    main::PrintStatus ('Compile', 'SAM');
 
     my $current_dir = getcwd ();
 

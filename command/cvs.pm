@@ -9,7 +9,6 @@ use warnings;
 
 use Cwd;
 use FileHandle;
-use Time::Local;
 
 ###############################################################################
 # Constructor
@@ -57,7 +56,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Setup (CVS) [" . (scalar gmtime(time())) . " UTC]\n";
+    main::PrintStatus ('Setup', 'CVS');
 
     my $current_dir = getcwd ();
 

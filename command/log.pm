@@ -73,6 +73,8 @@ sub Run ($)
         open (OLDOUT, ">&STDOUT");
         open (OLDERR, ">&STDERR");
 
+        main::PrintStatus ('Setup', 'Logging: stdout/stderr redirected');
+
         # Redirect to the logfile
 
         if (!open (STDOUT, "> $logpath")) {
@@ -84,10 +86,10 @@ sub Run ($)
             return 0;
         }
 
-        print "\n#################### Begin [" . (scalar gmtime(time())) . " UTC]\n";
+        main::PrintStatus ('Begin', '');
     }
     elsif (uc $options eq "OFF") {
-        print "\n#################### End [" . (scalar gmtime(time())) . " UTC]\n";
+        main::PrintStatus ('End', '');
 
         # Close the logging filehandles
 
@@ -120,6 +122,8 @@ sub Run ($)
             print STDERR __FILE__, ": Error closing OLDERR: $!\n";
             return 0;
         }
+
+        main::PrintStatus ('Setup', 'Logging: stdout/stderr restored');
     }
 
     return 1;

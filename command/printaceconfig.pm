@@ -58,7 +58,7 @@ sub Run ($)
 
     $root .= '/ACE_wrappers';
 
-    print "\n#################### Config (PrintACEConfig) [" . (scalar gmtime(time())) . " UTC]\n";
+    main::PrintStatus ('Config', 'PrintACEConfig');
 
     #
     # last ACE Changelog Entry

@@ -75,7 +75,7 @@ sub Run ($)
     my $keep = 20;
     my $moved = 0;
 
-    print "\n#################### Processing Logs [" . (scalar gmtime(time())) . " UTC]\n";
+    main::PrintStatus ('Processing Logs', '');
 
     # Move the logs
 

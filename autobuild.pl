@@ -6,14 +6,19 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 # $Id$
 #
 
+
 use FindBin;
 use lib $FindBin::Bin;
 use common::simpleparser;
 
+use Time::Local;
+
+my $status_file = '';
+my $build_start_time = scalar gmtime(time());
 my $verbose = 0;
 my @files;
 my %data = ();
-my %commandtable = ();
+my %command_table = ();
 
 #
 # Parse the arguments
@@ -54,13 +59,57 @@ sub RegisterCommand ($$)
     my $name = shift;
     my $obj = shift;
 
-    if (defined %commandtable->{$name}) {
+    if (defined %command_table->{$name}) {
         print STDERR "Command \"$name\" already defined\n";
         return 0;
     }
 
-    %commandtable->{$name} = $obj;
+    %command_table->{$name} = $obj;
     return 1;
+}
+
+sub SetStatusFile ($)
+{
+    $status_file = shift;
+}
+
+sub ChangeStatus ($$)
+{
+    my $command = shift;
+    my $details = shift;
+    
+    if ($status_file ne '') {
+        my $file_handle = new FileHandle ($status_file, 'w');
+        
+        if (!defined $file_handle) {
+            print STDERR __FILE__, ": Error setting status to file ($status_file): $!\n";
+            
+            # Non fatal error, so just return.
+            return;
+        }
+
+        print $file_handle "SCOREBOARD_STATUS: $command\n\n";
+        
+        print $file_handle "Command details:    $details\n" if ($details ne '');
+        
+        print $file_handle 'Command started:    ' . (scalar gmtime(time())) . " UTC\n";
+        print $file_handle "Last Build started: $build_start_time UTC\n";
+    }
+}
+
+sub PrintStatus ($$)
+{
+    my $section = shift;
+    my $description = shift;
+    
+    ChangeStatus ($section, $description);
+    
+    if ($description ne '') {
+        $description = "($description) ";
+    }
+
+    print "\n#################### $section $description";
+    print "[" . (scalar gmtime(time())) . " UTC]\n";
 }
 
 #
@@ -68,14 +117,15 @@ sub RegisterCommand ($$)
 #
 
 require command::auto_run_tests;
-require command::process_logs;
 require command::cvs;
 require command::file_manipulation;
 require command::log;
 require command::make;
 require command::printaceconfig;
-require command::shell;
+require command::process_logs;
 require command::sam;
+require command::shell;
+require command::status;
 
 #
 # Parse, CheckReqs, and Run
@@ -111,11 +161,11 @@ foreach my $file (@files) {
 
     foreach my $command (@{%data->{COMMANDS}}) {
         print "Command: ", $command->{NAME}, "\n" if ($verbose);
-        if (!defined %commandtable->{$command->{NAME}}) {
+        if (!defined %command_table->{$command->{NAME}}) {
             print STDERR "Unknown Command: $command->{NAME}\n";
             exit;
         }
-        if (%commandtable->{$command->{NAME}}->CheckRequirements () == 0) {
+        if (%command_table->{$command->{NAME}}->CheckRequirements () == 0) {
             exit;
         }
     }
@@ -124,7 +174,7 @@ foreach my $file (@files) {
 
     foreach my $command (@{%data->{COMMANDS}}) {
         print "Command: ", $command->{NAME}, "\n" if ($verbose);
-        if (%commandtable->{$command->{NAME}}->Run ($command->{OPTIONS}) == 0) {
+        if (%command_table->{$command->{NAME}}->Run ($command->{OPTIONS}) == 0) {
             last;
         }
     }
