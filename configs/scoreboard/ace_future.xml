@@ -1,0 +1,25 @@
+<scoreboard>
+<preamble>
+<center><h1>ACE Test Scoreboard</h1></center>
+<hr>
+This is the ACE scoreboard where the test builds are placed. It shows
+all the OS/platform combinations ACE is tested everyday.
+<hr>
+</preamble>
+
+<group>
+  <name>Test Builds for ACE</name>
+   <build>
+    <name>FreeBSD_5</name>
+    <url>http://192.83.171.67/~cuma/auto_compile_logs/FreeBSD_5</url>
+    <build_sponsor>WAEI</build_sponsor>
+    <build_sponsor_url>http://www.waei.net</build_sponsor_url>
+    </build>  
+    <build>
+    <name>MACOS_X</name>
+    <url>http://makexs.com/~zorko/</url>
+     <build_sponsor>John Zorko</build_sponsor>
+    </build>
+</group>
+
+</scoreboard>

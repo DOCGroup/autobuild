@@ -2,7 +2,6 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-#
 # $Id$
 #
 
@@ -11,6 +10,8 @@ use warnings;
 use diagnostics;
 use common::prettify;
 use common::scoreparser;
+use common::indexparser;
+use common::integratedparser;
 use DirHandle;
 use English;
 use FileHandle;
@@ -82,6 +83,60 @@ sub load_build_list ($)
 
     my $parser = new ScoreboardParser;
     $parser->Parse ($file, \%builds);
+}
+
+###############################################################################
+#
+# build_index_page
+#
+# Reads and develops an index page
+#
+# Arguments:  $ - dir to read
+# Arguments:  $ - file to read
+#
+# Returns:    Nothing
+#
+###############################################################################
+sub build_index_page ($$)
+{
+    my $dir = shift;
+    my $index = shift;
+    my $filename = "$dir/index.html";
+
+    my $indexhtml = new FileHandle;
+
+    print "Generating index page\n" if ($verbose);
+
+    unless ($indexhtml->open (">$filename")) {
+        warn 'Could not create file: '.$filename." ".$_;
+        return;
+    }
+
+    ### Print Header
+    print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO's Distributed Scoreboard</title>\n</head>\n";
+
+    ### Start body
+
+    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO's Distributed Scoreboard\n</h1></center>\n<hr>\n";
+    my $parser = new IndexParser;
+    $parser->Parse ($index, \%builds);
+    print $indexhtml "$preamble\n";
+    print $indexhtml "\n<hr>\n";
+
+    ### Print timestamp
+
+    print $indexhtml '<br>Last updated at '.scalar (gmtime ())." UTC<br>\n";
+
+    ### Print the Footer
+
+    print $indexhtml "</body>\n</html>\n";
+
+    $indexhtml->close ();
+
+    my $file = shift;
+
+    print "Creating index page\n" if ($verbose);
 }
 
 ###############################################################################
@@ -505,36 +560,37 @@ sub found_section ($$)
 #
 # update_html
 #
-# Runs make_pretty on a bunch of files and creates an index.html
+# Runs make_pretty on a bunch of files and creates an html file.
 #
 # Arguments:  $ - directory
-#
+#             $ - input xml file name
+#             $ - outside html file name
 # Returns:    Nothing
 #
 ###############################################################################
-sub update_html ($)
+sub update_html ($$)
 {
     my $dir = shift;
-    my $filename = "$dir/index.html";
+    my $out_file = shift;
 
     my $indexhtml = new FileHandle;
 
     print "Generating Scoreboard\n" if ($verbose);
 
-    unless ($indexhtml->open (">$filename")) {
-        warn 'Could not create file: '.$filename." ".$_;
+    unless ($indexhtml->open (">$out_file")) {
+        warn 'Could not create file: '.$out_file." ".$_;
         return;
     }
 
     ### Print Header
     print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
-    print $indexhtml "<html>\n<head>\n<title>Build Scoreboard</title>\n</head>\n";
+    print $indexhtml "<html>\n<head>\n<title>Scoreboard</title>\n</head>\n";
 
+    
     ### Start body
-
-    print $indexhtml "<body bgcolor=white>\n<h1>Build Scoreboard</h1>\n<hr>\n";
+    print $indexhtml "<body bgcolor=white>\n";
     print $indexhtml "$preamble\n";
-    print $indexhtml "\n<hr>\n";
+
     ### Print tables (first the empty one)
 
     update_html_table ($dir, $indexhtml, undef) if ($#nogroup >= 0);
@@ -851,6 +907,69 @@ sub GetVariable ($)
 
 ###############################################################################
 #
+# Reads lists of builds from different XML files and develops a
+# integrated scoreboard. This is in adition to the individual
+# scoreboards for ACE and TAO seperately.  The names of xml files have
+# been hardcoded.
+#
+# Arguments:  $ - Output directory
+#
+# Returns:    Nothing
+#
+###############################################################################
+sub build_integrated_page ($)
+{
+    my $dir = shift;
+    
+    unlink ("$dir/temp.xml");
+    print "Build Integrated page\n" if ($verbose);
+
+    my @file_list = ("ace", 
+                     "ace_future",
+                     "tao",
+                     "tao_future",
+                     "misc");
+    
+    my $newfile = new FileHandle;
+
+    unless ($newfile->open (">>$dir/temp.xml")) {
+        print "could not create file $dir/temp.xml";
+        return;
+    }
+    
+    print $newfile "<INTEGRATED>\n";
+    foreach my $file_list(@file_list) {
+        my $file_handle = new FileHandle;
+        if ($file_list eq 'ace') {
+            print $newfile "<build_ace>\n";
+        } elsif ($file_list eq 'tao') {
+            print $newfile "<build_tao> \n";
+        }
+            
+        $file_handle->open ("<configs/scoreboard/$file_list.xml");
+        my @list = <$file_handle>;
+        print $newfile @list;
+        print $newfile "\n";
+        close $file_handle;
+    }
+    print $newfile "\n</INTEGRATED>\n";
+
+    close $newfile;
+    
+    my $parser = new IntegratedParser;
+    $parser->Parse("$dir/temp.xml", \%builds);
+
+    build_group_hash ();
+    query_latest ();
+    update_cache ($dir);
+    clean_cache ($dir);
+    query_status ();
+    update_html ($dir,"$dir/integrated.html");
+    unlink ("$dir/temp.xml");
+}
+
+###############################################################################
+#
 # Callbacks for commands
 #
 
@@ -859,47 +978,63 @@ sub GetVariable ($)
 
 # Getopts
 
-use vars qw/$opt_c $opt_h $opt_o $opt_v/;
+use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_z/;
 
-if (!getopts ('c:ho:v') || defined $opt_h || !defined $opt_c) {
-    print "scoreboard.pl [-c file] [-h] [-o dir] [-m script] [-r]\n";
+if (!getopts ('d:f:hi:o:vz')
+    || !defined $opt_d
+    || defined $opt_h) {
+    print "scoreboard.pl -f file [-h] [-i file]-o file [-m script] [-s dir] [-r] [-z]\n";
     print "\n";
-    print "    -c file    use <file> as the configuration file\n";
+    print "    -d         directory where the output files are placed \n";
     print "    -h         display this help\n";
-    print "    -o dir     directory to place output HTML files [def: html]\n";
+    print "    -f         file for which html should be generated \n"; 
+    print "    -i         use <file> as the index file to generate Index page only\n";
+    print "    All other options will be ignored  \n";
+    print "    -o         name of file where the output HTML files are placed\n";
     print "    -v         enable verbose debugging [def: only print errors]\n";
+    print "    -z         Integrated page. Only the output directory is valid\n";
     exit (1);
 }
 
-my $file = "configs/scoreboard/acetao.xml";
+my $index = "configs/scoreboard/index.xml";
+my $inp_file = "configs/scoreboard/ace.xml";
+my $out_file = "ace.html";
+
 my $dir = "html";
 
-$file = $opt_c;
+$index = $opt_i;
 
-if (defined $opt_o) {
-    $dir = $opt_o;
-}
-
-if (! -d $dir) {
-   warn "Cannot access directory $dir";
-   exit(1);
-}
+# Just generate Index page alone
+$dir = $opt_d;
 
 if (defined $opt_v) {
     $verbose = 1;
 }
 
-# Do the stuff
+if (defined $opt_i){
+$index = $opt_i;
+print 'Running Index Page Update at '.scalar (gmtime ())."\n" if ($verbose);
+build_index_page ($dir, $index);
+exit (1);
+}
 
-print 'Running Scoreboard Update at '.scalar (gmtime ())."\n" if ($verbose);
+if (defined $opt_z) {
+print 'Running Integrated Page Update at '.scalar (gmtime ())."\n" if ($verbose);
+build_integrated_page ($dir);
+exit (1);
+}
 
-load_build_list ($file);
+$inp_file = $opt_f;
+
+$out_file = $opt_o;
+
+load_build_list ($inp_file);
 build_group_hash ();
 query_latest ();
 update_cache ($dir);
 clean_cache ($dir);
 query_status ();
-update_html ($dir);
+update_html ($dir,$out_file);
 
 print 'Finished Scoreboard Update at '.scalar (gmtime ())."\n" if ($verbose);
 
