@@ -1,3 +1,8 @@
+Thu Jul 24 09:38:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/remedynl/SunForte.xml: Added a few nice
+	  options to the build.
+
 Thu Jul 24 06:19:53 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
