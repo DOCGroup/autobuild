@@ -70,7 +70,7 @@
         </build>
         <build>
             <name>GCC32_GIOP10</name>
-            <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/itao_GIOP10</url>
+            <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_GIOP10</url>
         </build>
         <build>
             <name>RedHat_Explicit_Templates</name>

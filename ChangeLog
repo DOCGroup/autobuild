@@ -1,7 +1,11 @@
+Tue Nov 26 13:54:40 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Fixed a typo!
+
 Tue Nov 26 08:54:44  isisbuilds  <isisbuilds@tao.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Added a new build at ISIS to the
-	scoreboard. The config files will be checekd in later.
+ 	  scoreboard. The config files will be checekd in later.
 
 Tue Nov 26 01:44:44 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
