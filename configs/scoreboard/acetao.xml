@@ -13,6 +13,10 @@
             <name>RedHat_Single_Threaded</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/curufin_SingleThreaded/</url>
         </build>
+        <build>
+            <name>RedHat_GCC_3.1</name>
+            <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
+        </build>
     </group>
     <group>
         <name>Windows</name>
@@ -32,5 +36,5 @@
             <name>Win2000_Lib_Release</name>
             <url>http://ringil.ece.uci.edu/bugzilla/lib_release</url>
         </build>
-    </group>        
+    </group>
 </scoreboard>
