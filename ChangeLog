@@ -1,3 +1,11 @@
+Sun Dec 15 21:37:25 2002  Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/rumba/Debian_WChar.xml:
+
+	  Reconfigured build to use g++ 3.2.  g++ 3.1 no longer appears to
+	  be available in the version of Debian GNU/Linux installed on
+	  Linux.
+
 Fri Dec 13 17:31:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/ace/LYNX_PPC.xml:
