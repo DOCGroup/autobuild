@@ -127,6 +127,10 @@
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug</url>
         </build>
         <build>
+            <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug_Unicode</url>
+        </build>
+        <build>
             <name>WinXP_Legacy</name>
             <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
         </build>
