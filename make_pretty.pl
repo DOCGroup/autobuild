@@ -464,7 +464,7 @@ sub makefile_compiler_output (@)
 
     sub print_summary ()
     {
-        print $output $_.$line_break if (!$opt_b);
+        print $output $_.$line_break if (!$opt_b && defined $_);
         $total_errors = $total_errors + $project_errors;
         $total_warnings = $total_warnings + $project_warnings;
         $project_errors = 0;
