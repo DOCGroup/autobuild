@@ -1,3 +1,8 @@
+Tue Nov 26 01:32:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
+
+	* configs/scoreboard/acetao.xml:  Commented out the fi2010.org
+	  Sun build due to problems on our network.
+
 Mon Nov 25 18:35:49 2002  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Put the
