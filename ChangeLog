@@ -1,3 +1,13 @@
+Sun Dec 21 14:40:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new msvc unicode debug build.
+
+        * configs/autobuild/remedynl/msvcwchardebug.xml:
+        * configs/autobuild/remedynl/msvcwunicodedebug.xml:
+          Removed this file as wchar, added with unicode, this matches better
+          its settings. A new daily msvc unicode build.
+
 Sun Dec 21 08:28:50 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/msvcwchardebug.xml:
