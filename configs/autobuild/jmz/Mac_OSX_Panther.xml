@@ -1,8 +1,8 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/Users/jmzorko/ace_daily_build/ACE_wrappers-repository" />
-        <environment name="DYLD_LIBRARY_PATH" value="/Users/jmzorko/ace_daily_build/ACE_wrappers-repository/lib" />
+        <environment name="ACE_ROOT"        value="/Users/jmzorko/ace_daily_build/ACE_wrappers" />
+        <environment name="DYLD_LIBRARY_PATH" value="/Users/jmzorko/ace_daily_build/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":pserver:anonymous@anoncvs.ociweb.com:/cvs" />
         <environment name="CVS_RSH"         value="/usr/bin/ssh" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.3" />
@@ -10,7 +10,7 @@
         <variable name="root"     value="/Users/jmzorko/ace_daily_build" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/Users/jmzorko/ace_daily_build" />
-        <variable name="project_root" value="/Users/jmzorko/ace_daily_build/ACE_wrappers-repository" />
+        <variable name="project_root" value="/Users/jmzorko/ace_daily_build/ACE_wrappers" />
 
     </configuration>
 
@@ -27,8 +27,8 @@
     <!-- Now, delete them again to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#include \x22ace/config-macosx-panther.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_panther.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\n\n '" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-panther.h\x22\n\n '" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_panther.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\n\n '" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="gcc" />
