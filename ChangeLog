@@ -1,4 +1,9 @@
-Mon Oct 11 18:20:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+Tue Oct 12 05:57:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/print_cidlc_version.pm:
+          Fixed some small errors
+
+Mon Oct 11 18:20:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_cidlc_version.pm
         * autobuild.pl:
