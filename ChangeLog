@@ -1,3 +1,9 @@
+Sun May 19 23:38:39 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/auto_run_tests.pm: Add an extra space for each
+	  argument when specifying multiple configurations with 
+	  the "-Config" flag.
+
 Sat May 18 19:36:17 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Move STATIC

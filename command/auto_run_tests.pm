@@ -82,7 +82,7 @@ sub Run ($)
     }
 
     if (defined $configs) {
-        $options .= " -Config " . join (" -Config", split (' ', $configs));
+        $options .= " -Config " . join (" -Config ", split (' ', $configs));
     }
 
     my $command = "perl bin/auto_run_tests.pl $options";
