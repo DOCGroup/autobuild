@@ -43,7 +43,7 @@
 
     <command name="make"              options="-k reverseclean" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k -j 2" />
 
     <command name="auto_run_tests"    options="-a" /> 
 
