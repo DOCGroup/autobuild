@@ -45,8 +45,8 @@
     <command name="shell"             options="bunzip2 cidlc/`cat cidlc/latest.txt`" />
     <command name="shell"             options="mv `cat cidlc/latest.txt | sed -e 's/\(.*\)\.bz2$/cidlc\/\1/g'` $CIAO_ROOT/bin/cidlc" />
 
-    <command name="make"              options="reverseclean" />
-    <command name="make"              options="-C TAO reverseclean" />
+    <command name="make"              options="realclean" />
+    <command name="make"              options="-C TAO realclean" />
     <command name="make"              options="-j 4 -k" />
     <command name="make"              options="-j 4 -k -C TAO" />
 

@@ -36,8 +36,8 @@
     <!-- TAO -->
     <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
 
-    <command name="make"              options="reverseclean" />
-    <command name="make"              options="-C TAO reverseclean" />
+    <command name="make"              options="realclean" />
+    <command name="make"              options="-C TAO realclean" />
     <command name="make"              options="-j 4 -k" />
     <command name="make"              options="-j 4 -k -C TAO" />
 

@@ -34,8 +34,8 @@
 
     <command name="generate_workspace" options="-exclude TAO/CIAO -hierarchy -make_coexistence" />
 
-    <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k --dry-run > $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k CXX=$ACE_ROOT/bin/g++_metric.sh" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />

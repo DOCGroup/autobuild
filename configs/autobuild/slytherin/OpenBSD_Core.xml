@@ -40,8 +40,8 @@
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
-    <command name="make" options="-k reverseclean" />
-    <command name="make" options="-k -C TAO reverseclean" />
+    <command name="make" options="-k realclean" />
+    <command name="make" options="-k -C TAO realclean" />
     <command name="make" options="-C ace" />
     <command name="make" options="-C apps/gperf/src" />
     <command name="make" options="-C TAO/tao" />

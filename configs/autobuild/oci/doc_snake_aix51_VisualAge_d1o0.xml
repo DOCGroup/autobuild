@@ -46,8 +46,8 @@
 
     <command name="print_ace_config" />
 
-    <command name="make" options="-s -k reverseclean" />
-    <command name="make" options="-s -k -C TAO reverseclean" />
+    <command name="make" options="-s -k realclean" />
+    <command name="make" options="-s -k -C TAO realclean" />
 
     <command name="make" options="-s -k" />
     <command name="make" options="-s -k -C TAO" />
@@ -63,8 +63,8 @@
     <command name="log"               options="off" />
 
     <!-- clean up the build so it doesnt take up a lot of space -->
-    <command name="make" options="-s -k reverseclean" />
-    <command name="make" options="-s -k -C TAO reverseclean" />
+    <command name="make" options="-s -k realclean" />
+    <command name="make" options="-s -k -C TAO realclean" />
 
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=ACE_wrappers/build/doc_snake_aix51_VisualAge_d1o0/.disable" />

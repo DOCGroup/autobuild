@@ -21,7 +21,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k realclean" />
 
     <command name="cvs"               options="checkout -P MPC" />
     <command name="cvs"               options="checkout -P ACE" />

@@ -35,7 +35,7 @@
     <command name="generate_workspace" options="-exclude TAO/CIAO -hierarchy -make_coexistence" />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
-    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C ACEXML     --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C apps/gperf --dry-run >> $ACE_ROOT/../.metrics/targets" />
@@ -46,7 +46,7 @@
 
 
     <!-- TAO: only build the minimum, tao -->
-    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="-k -C TAO realclean" />
     <!-- Build the TAO_IDL compiler first and gen the idl_stubs, so that --dry-run will create a list of all targets. -->
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO/tests idl_stubs" />

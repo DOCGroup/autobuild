@@ -39,7 +39,7 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO -make_coexistence" />
 
-    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k realclean" />
 
     <command name="make"              options="-k" />
 

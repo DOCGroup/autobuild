@@ -37,7 +37,7 @@
     <command name="print_ace_config" />
 
     <!-- make -j 2 sometimes messes up the xlC version check -->
-    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k realclean" />
     <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options="-a" />

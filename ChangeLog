@@ -1,9 +1,112 @@
+Thu Jul  1 12:55:36 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/ace/LYNX_PPC.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/balar/Debian_Core.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_doc.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+        * configs/autobuild/dresystems/sol9_gcc33.xml:
+        * configs/autobuild/dresystems/sol9_gcc33_tao.xml:
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao.xml:
+        * configs/autobuild/flamenco/Static.xml:
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+        * configs/autobuild/hokey/facet-cvs/ACE_TAO.xml:
+        * configs/autobuild/hokey/facet-oep/ACE_TAO.xml:
+        * configs/autobuild/hokey/facet/ACE_TAO.xml:
+        * configs/autobuild/jmz/Mac_OSX_Jaguar.xml:
+        * configs/autobuild/jmz/Mac_OSX_Panther.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/oci/doc_snake_aix51_VisualAge_d1o0.xml:
+        * configs/autobuild/pokey/GCC32_Core.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
+        * configs/autobuild/remedynl/Cygwin.xml:
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/GCC64AXP.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/GCCNoInline.xml:
+        * configs/autobuild/remedynl/MingW.xml:
+        * configs/autobuild/remedynl/MingWTAO.xml:
+        * configs/autobuild/remedynl/SunForte.xml:
+        * configs/autobuild/remedynl/hpux.xml:
+        * configs/autobuild/remedynl/mingws.xml:
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+        * configs/autobuild/remedynl/tribeardacc.xml:
+        * configs/autobuild/remedynl/tribeardgcc.xml:
+        * configs/autobuild/remedynl/tru64.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
+        * configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/rtlogic/VxWorks_5.4.2_Full.xml:
+        * configs/autobuild/rtlogic/VxWorks_5.5.1_Full.xml:
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml:
+        * configs/autobuild/sirion/Full.xml:
+        * configs/autobuild/sirion/Full_new.xml:
+        * configs/autobuild/skukuza/skoll_3.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/tango/Debian_NoInline.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+        * configs/autobuild/valinor/Full.xml:
+
+          Changed "reverseclean" to "realclean" in preparation for removal
+          of deprecated "reverseclean" from the GNUmakefiles.
+
 Thu Jul  1 07:13:03 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Fixed subtle errors that were spoiling the builds like:
-	  setting qt=1, cidl=1, omitting CIATAO.mwc etc.
+          Fixed subtle errors that were spoiling the builds like:
+          setting qt=1, cidl=1, omitting CIATAO.mwc etc.
 
 
 Tue Jun 29 19:47:40 UTC 2004  Don Hinton  <don.hinton@vanderbilt.edu>
@@ -24,17 +127,17 @@ Thu Jun 29 12:35:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Jun 26 12:26:58 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Corrected QTDIR environment variable.  There is no need to use a
-	  fake Qt directory created for this build.
+          Corrected QTDIR environment variable.  There is no need to use a
+          fake Qt directory created for this build.
 
-	  Override PLATFORM_QT_LIBS make variable in generated
-	  platform_macros.GNU file.  Debian deprecates the single threaded
-	  version of the Qt library (-lqt).  Use the multi-threaded
-	  version (-lqt-mt) instead.
+          Override PLATFORM_QT_LIBS make variable in generated
+          platform_macros.GNU file.  Debian deprecates the single threaded
+          version of the Qt library (-lqt).  Use the multi-threaded
+          version (-lqt-mt) instead.
 
-	  Enabled SSL in the MPC "default.features" file.
+          Enabled SSL in the MPC "default.features" file.
 
 Fri Jun 25 21:04:47 UTC 2004  Don Hinton  <don.hinton@vanderbilt.edu>
 
@@ -126,9 +229,9 @@ Mon Jun 21 10:15:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Jun 19 13:19:51 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
 
-	  Added -Gd and -Gp to the IDL compiler options.
+          Added -Gd and -Gp to the IDL compiler options.
 
 Wed Jun 16 12:08:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -181,30 +284,30 @@ Wed Jun  9 09:55:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jun  8 10:39:31 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
-	* configs/scoreboard/ace.xml: New HP-UX aC++ static release build.
+        * configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
+        * configs/scoreboard/ace.xml: New HP-UX aC++ static release build.
 
 Mon Jun  7 13:06:31 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/jane_dev_debug_wchar.xml: New build
-	  using ACE_USES_WCHAR for Linux.
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml: New build
+          using ACE_USES_WCHAR for Linux.
 
-	* configs/scoreboard/ace.xml: Added the above build.
+        * configs/scoreboard/ace.xml: Added the above build.
 
 Fri Jun  4 16:34:22 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	  No need to mechanically add ACLOCAL stuff to Makefile.am any
-	  longer; added bootstrap command to bootstrap the generated
-	  Makefile.am files.
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+          No need to mechanically add ACLOCAL stuff to Makefile.am any
+          longer; added bootstrap command to bootstrap the generated
+          Makefile.am files.
 
 Thu May 27 16:17:37 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Borland C++ 5 is no longer supported.  Removed corresponding
-	  build entry.
+          Borland C++ 5 is no longer supported.  Removed corresponding
+          build entry.
 
 Thu May 27 22:01:46 UTC 2004  Don Hinton  <dhinton@dre.vanderbilt.edu>
 
@@ -215,59 +318,59 @@ Thu May 27 22:01:46 UTC 2004  Don Hinton  <dhinton@dre.vanderbilt.edu>
 
 Wed May 26 23:24:17 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml (CCFLAGS):
+        * configs/autobuild/lindy_isis/Static.xml (CCFLAGS):
 
-	  Removed "-Wfloat-equal" warning flag.  It flagged too many
-	  pieces of code that aren't critical, basically creating too much
-	  noise in this build's scoreboard results.
+          Removed "-Wfloat-equal" warning flag.  It flagged too many
+          pieces of code that aren't critical, basically creating too much
+          noise in this build's scoreboard results.
 
 Wed May 26 18:11:29 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
-	* configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
-	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
-	  Added a by-hand addition of missing ACLOCAL lines required for
-	  bootstrapping the generated Makefile.am files. These should be
-	  added by MPC, but until I get around to that, this will have to do.
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+          Added a by-hand addition of missing ACLOCAL lines required for
+          bootstrapping the generated Makefile.am files. These should be
+          added by MPC, but until I get around to that, this will have to do.
 
 Wed May 26 02:32:03 UTC 2004  Don Hinton  <dhinton@dre.vanderbilt.edu>
 
-	* configs/scoreboard/index.xml:
-	* configs/scoreboard/misc.xml:
-	  Removed Skoll builds--they haven't run for months.
+        * configs/scoreboard/index.xml:
+        * configs/scoreboard/misc.xml:
+          Removed Skoll builds--they haven't run for months.
 
 Fri May 21 15:56:22 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	  Use MPC to generate the Makefile.am files, in preparation for
-	  removing all the Makefile.am files from the repo and generating
-	  them during a release.
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+          Use MPC to generate the Makefile.am files, in preparation for
+          removing all the Makefile.am files from the repo and generating
+          them during a release.
 
 Fri May 21 15:39:38 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
-	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
-	  Set templates=implicit. ACE does fine with this on either
-	  compiler, and some APG examples in Naming use STL which is
-	  too hairy to try with explicit templates.
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+          Set templates=implicit. ACE does fine with this on either
+          compiler, and some APG examples in Naming use STL which is
+          too hairy to try with explicit templates.
 
 Thu May 20 17:50:21 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
-	  Fixed project_root to be the ACE_wrappers-repository directory,
-	  and added "dir=build/<build name>" to both make and auto_run_tests
-	  to get into the configured location.
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+          Fixed project_root to be the ACE_wrappers-repository directory,
+          and added "dir=build/<build name>" to both make and auto_run_tests
+          to get into the configured location.
 
 Thu May 20 17:44:39 2004  Steve Huston  <shuston@riverace.com>
 
-	* command/auto_run_tests.pm: Add the ability to specify "dir=..."
-	  in the options to change directory from $project_root to the
-	  specified directory before running the tests.
+        * command/auto_run_tests.pm: Add the ability to specify "dir=..."
+          in the options to change directory from $project_root to the
+          specified directory before running the tests.
 
 Wed May 19 06:40:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -294,19 +397,19 @@ Tue May 18 06:24:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon May 17 18:22:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Removed -Wno-variadic-macros command line option.  It isn't
-	  supported by g++ 3.4.0.
+          Removed -Wno-variadic-macros command line option.  It isn't
+          supported by g++ 3.4.0.
 
 Mon May 17 11:30:07 2004  Frank Hunleth  <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/driver.sh:
-	* configs/autobuild/slytherin/driver_Full.sh:
-	* configs/autobuild/slytherin/driver_Single_Threaded.sh:
+        * configs/autobuild/slytherin/driver.sh:
+        * configs/autobuild/slytherin/driver_Full.sh:
+        * configs/autobuild/slytherin/driver_Single_Threaded.sh:
 
-	Run cvs up on the autobuild directory before trying to
-	build.
+        Run cvs up on the autobuild directory before trying to
+        build.
 
 Sun May 16 15:37:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -320,47 +423,47 @@ Sun May 16 11:07:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri May 14 23:52:10 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Added "-Wno-variadic-macros" and "-Wformat=2" compiler flags to
-	  disable warnings about variadic macros being introduced in C99
-	  and enable some format specifier (e.g. for printf()) checks,
-	  respectively.
+          Added "-Wno-variadic-macros" and "-Wformat=2" compiler flags to
+          disable warnings about variadic macros being introduced in C99
+          and enable some format specifier (e.g. for printf()) checks,
+          respectively.
 
 Fri May 14 22:18:43 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Removed "-Wundef" preprocessor flag from CPPFLAGS make
-	  variable.  It causes "use of undefined preprocessor constant"
-	  warnings to occur in flex, yacc and bison generated sources,
-	  which we're not concerned about.  All of uses we were concerned
-	  about have been corrected.
+          Removed "-Wundef" preprocessor flag from CPPFLAGS make
+          variable.  It causes "use of undefined preprocessor constant"
+          warnings to occur in flex, yacc and bison generated sources,
+          which we're not concerned about.  All of uses we were concerned
+          about have been corrected.
 
 Fri May 14 15:31:32 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* common/prettify.pm (Test_Handler):
+        * common/prettify.pm (Test_Handler):
 
-	  Flag output containing "fatal" as an error.
+          Flag output containing "fatal" as an error.
 
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
 
-	  Added OpenSSL library directory to linker path.
+          Added OpenSSL library directory to linker path.
 
 Fri May 14 12:45:35 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Changed tk/tcl8.3 to 8.4.
+          Changed tk/tcl8.3 to 8.4.
 
 Thu May 13 14:59:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Removed "/usr/include/linux" from the beginning of the include
-	  path.  It isn't needed and only served to interfere/conflict
-	  with other system headers.  Addresses compile-time errors in
-	  this build.
+          Removed "/usr/include/linux" from the beginning of the include
+          path.  It isn't needed and only served to interfere/conflict
+          with other system headers.  Addresses compile-time errors in
+          this build.
 
 Thu May 13 07:48:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -369,9 +472,9 @@ Thu May 13 07:48:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed May 12 16:50:33 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml: Removed
-	  the setup for SSL. It fails at link time, and I don't know why.
-	  The 32-bit build uses SSL and is ok.
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml: Removed
+          the setup for SSL. It fails at link time, and I don't know why.
+          The 32-bit build uses SSL and is ok.
 
 Wed May 12 06:28:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -487,39 +590,39 @@ Sun May  9 11:30:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri May  7 23:40:38 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/driver.sh (SSL_EGD_FILE):
+        * configs/autobuild/danzon/driver.sh (SSL_EGD_FILE):
 
-	  Explicitly set this environment variable to the location of the
-	  entropy gathering daemon (EGD) UNIX domain socket set earlier in
-	  this script.  An entropy source for OpenSSL must be explicitly
-	  set on Solaris.
+          Explicitly set this environment variable to the location of the
+          entropy gathering daemon (EGD) UNIX domain socket set earlier in
+          this script.  An entropy source for OpenSSL must be explicitly
+          set on Solaris.
 
 Fri May  7 23:28:00 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
 
-	  Disabled inlining to help speed up compile-times and to make
-	  it easier to debug problems inside the build workspace itself.
+          Disabled inlining to help speed up compile-times and to make
+          it easier to debug problems inside the build workspace itself.
 
 Fri May  7 23:26:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
-	* configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/tango_isis/Full.xml:
 
-	  Set SSL_ROOT and create a MPC local.features file that
-	  explicitly enables SSL support.
+          Set SSL_ROOT and create a MPC local.features file that
+          explicitly enables SSL support.
 
 Fri May  7 16:10:22 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/charlie_dev_va5_debug.xml: Removed.
-	  Riverace doesn't support Visual Age C++ 5 any longer.
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml: Removed.
+          Riverace doesn't support Visual Age C++ 5 any longer.
 
-	* configs/autobuild/riverace/charlie_dev_va6_debug.xml: Fixed the
-	  SSL_ROOT setting and MPC_ROOT.
+        * configs/autobuild/riverace/charlie_dev_va6_debug.xml: Fixed the
+          SSL_ROOT setting and MPC_ROOT.
 
 Fri May  7 11:52:20 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
           Removed ACE_HAS_EVENT_POLL.
 
 Fri May  7 10:23:06 2004  Chad Elliott  <elliott_c@ociweb.com>

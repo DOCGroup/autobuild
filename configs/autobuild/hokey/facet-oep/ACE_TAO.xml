@@ -43,7 +43,7 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k realclean" />
     <command name="make"              options="-j 1" />
 
     <command name="log"               options="off" />
