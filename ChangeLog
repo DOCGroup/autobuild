@@ -1,3 +1,9 @@
+Thu May  9 22:27:26 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/beguine/*: Set LD_LIBRARY_PATH so that /usr/local/lib
+	  comes first.  This is necessary to pick up the version of libstdc++ that
+	  comes with gcc 2.95.3 which is installed in /usr/local/lib.
+
 Wed May  8 23:02:44 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/beguine/driver_no_ami.sh:
