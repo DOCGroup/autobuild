@@ -1,3 +1,8 @@
+Wed Oct 20 18:30:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new TAO x86_64 build
+
 Wed Oct 20 18:19:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
