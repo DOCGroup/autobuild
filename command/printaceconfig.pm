@@ -55,7 +55,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -80,7 +80,7 @@ sub Run ($)
           return 0;
     }
 
-    if (!chdir $ENV{'ACE_ROOT'} ) 
+    if (!chdir $ENV{'ACE_ROOT'} )
     {
         if (!chdir $project_root) {
             print STDERR __FILE__, ": Cannot change to $project_root or $ENV{'ACE_ROOT'}\n";
@@ -113,6 +113,20 @@ sub Run ($)
     if (-r "TAO/CIAO/ChangeLog") {
         print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/TAO/CIAO/ChangeLog\">CIAO ChangeLog</a> ================\n";
         print_file ("TAO/CIAO/ChangeLog", 0);
+    }
+
+    #
+    # last MPC Changelog Entry
+    #
+
+    # Look if MPC_ROOT is set, if this is set, then we take MPC_ROOT, else we take MPC/ChangeLog
+    my($mpcroot) = $ENV{MPC_ROOT};
+    my($mpcpath) = (defined $mpcroot ? $mpcroot :
+                                        'MPC');
+
+    if (-r "$mpcpath/ChangeLog") {
+        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/ChangeLog?cvsroot=MPC\">MPC ChangeLog</a> ================\n";
+        print_file ("$mpcpath/ChangeLog", 0);
     }
 
     #
@@ -153,13 +167,13 @@ sub Run ($)
 
         print_file ("TAO/VERSION", 0);
     }
-  
+
     if ( -r "TAO/CIAO/VERSION" ) {
         print "================ CIAO VERSION ================\n";
 
         print_file ("TAO/CIAO/VERSION", 0);
     }
-  
+
     chdir $current_dir;
 
     return 1;
