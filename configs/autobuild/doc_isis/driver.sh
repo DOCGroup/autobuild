@@ -4,4 +4,4 @@
 #
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                            $HOME/autobuild/configs/autobuild/doc_isis/NoIntNoEx.xml
+                            $HOME/autobuild/configs/autobuild/doc_isis/NoInt_NoEx.xml
