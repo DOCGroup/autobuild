@@ -13,5 +13,5 @@ export PATH
 
 cvs -z9 up -P -d
 
-exec /usr/local/bin/perl /build/ACE/autobuild/autobuild.pl \
+exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
                              /build/ACE/autobuild/configs/autobuild/remedynl/hpux.xml
