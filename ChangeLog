@@ -1,3 +1,8 @@
+Tue May 18 06:24:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/msvc*.xml:
+          Added mfc=1 to the default.features file, msvc6 has mfc.
+
 Mon May 17 18:22:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
