@@ -23,12 +23,12 @@ all the OS/platform combinations ACE is tested everyday.
     </build> 
     <build>
       <name>MACOS_X_Jaguar</name>
-      <url>http://www.darwinarts.com/~zorko/Jaguar</url>
+      <url>http://www.makexs.com/~zorko/Jaguar</url>
       <build_sponsor>John Zorko</build_sponsor>
     </build>
     <build>
       <name>MACOS_X_Panther</name>
-      <url>http://www.darwinarts.com/~zorko/Panther</url>
+      <url>http://www.makexs.com/~zorko/Panther</url>
       <build_sponsor>John Zorko</build_sponsor>
     </build>
     <build>
