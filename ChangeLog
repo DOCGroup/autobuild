@@ -1,3 +1,8 @@
+Sun May 16 11:07:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new HPUX build
+
 Fri May 14 23:52:10 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
