@@ -1,3 +1,8 @@
+Wed Dec 10 10:36:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/vc7.xml:
+          Added qos=1 to default.features
+
 Tue Dec  9 13:33:34 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * common/prettify.pm:
