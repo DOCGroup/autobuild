@@ -34,7 +34,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude examples,performance-tests,apps,Kokye,protocol,netsvcs,websvcs,ACEXML,TAO" />
+    <command name="generate_workspace" options="-exclude examples,performance-tests,apps,Kokyu,ASNMP,protocol,netsvcs,websvcs,ACEXML,TAO" />
 
     <command name="make"              options="-k realclean" />
 
