@@ -10,8 +10,9 @@ University</a>,
 <a href="http://www.dist-systems.bbn.com/projects/">BBN Technologies</a>,
 <a href="http://www.theaceorb.nl">Remedy IT</a>,
 <a href="http://www.objectsciences.com/">ObjectSciences</a>,
-<a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>, and
-<a href="http://www.rtlogic.com/">RT Logic!</a>.
+<a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>,
+<a href="http://www.rtlogic.com/">RT Logic!</a>, and
+<a href="http://www.riverace.com/">Riverace Corporation</a>.
 <p>
 If you'd like to contribute builds to our virtual
 scoreboard please contact <a href="mailto:devo_group@cs.wustl.edu">us</a>
@@ -25,6 +26,42 @@ and let us know which platform combinations you can contribute.
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/doc_TAO_doxygen/</url>
         </build>
     </group>
+    <group>
+        <name>ACE-only</name>
+        <build>
+            <name>Redhat_8.0_ACE_Debug</name>
+            <url>http://www.riverace.com/build_logs/jane/dev/debug</url>
+        </build>
+        <build>
+            <name>AIX_5.1_gcc3_Debug</name>
+            <url>http://www.riverace.com/build_logs/cuddy/dev/gcc3_debug</url>
+        </build>
+        <build>
+            <name>AIX_5.1_VA6_Debug</name>
+            <url>http://www.riverace.com/build_logs/cuddy/dev/va6_debug</url>
+        </build>
+        <build>
+            <name>AIX_5.1_VA6-64_Debug</name>
+            <url>http://www.riverace.com/build_logs/cuddy/dev/va6-64_debug</url>
+        </build>
+        <build>
+            <name>HP-UX_11.00_aC++_Debug</name>
+            <url>http://www.riverace.com/build_logs/bumbles/dev/acc_debug</url>
+        </build>
+        <build>
+            <name>HP-UX_11.00_gcc3_Debug</name>
+            <url>http://www.riverace.com/build_logs/bumbles/dev/gcc3_debug</url>
+        </build>
+        <build>
+            <name>Redhat_Linux_8_Debug</name>
+            <url>http://www.riverace.com/build_logs/jane/dev/debug</url>
+        </build>
+        <build>
+            <name>WindowsXP_VC.NET_Debug</name>
+            <url>http://www.riverace.com/build_logs/hope/dev/vc7_debug</url>
+        </build>
+    </group>
+
     <group>
         <name>Linux</name>
         <build>

@@ -1,3 +1,9 @@
+Tue Jan  7 12:04:31 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/acetao.xml: Added an ACE-only section with the
+          Riverace web-available builds. Will add more as things migrate to
+          the new build system.
+
 Mon Jan  6 17:01:42 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/maglor/Static.xml: Added the iorize collection
