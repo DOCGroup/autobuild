@@ -4,7 +4,7 @@
 
   <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/no-rtcorba_no-messaging/ACE_wrappers" />
   <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/no-rtcorba_no-messaging/ACE_wrappers/TAO"/>
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/no-rtcorba_no-messaging/ACE_wrappers/ace" />
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/no-rtcorba_no-messaging/ACE_wrappers/lib" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
@@ -20,6 +20,8 @@
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
 
+ <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
  <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
  <command name="cvs"                   options="-z9 -q checkout -P ACE_MPC"/>
 
@@ -32,6 +34,11 @@
  <command name="check_compiler"        options="gcc" />
  <command name="check_linker"          options="ld" />
  <command name="print_ace_config" />
+
+ <!-- Uses ACE.mwc -->
+ <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+ <!-- Uses TAO/TAO.mwc -->
+ <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
