@@ -1,3 +1,8 @@
+Thu Aug  5 12:11:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+          Keep history of 5, not more, logfiles with valgrind are huge
+
 Wed Aug  4 10:10:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCCNoInline.xml:
