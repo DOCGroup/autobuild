@@ -26,7 +26,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#define ACE_HAS_SIGNAL_SAFE_OS_CALLS\n#define ACE_NLOGGING\n#define ACE_HAS_WCHAR\n#include \x22ace/config-linux.h\x22\n'"/> 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OCFLAGS=-O2\nCCFLAGS += -I-\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OCFLAGS=-O2\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
