@@ -1,3 +1,9 @@
+Sun Dec 21 09:54:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC32.xml:
+          Added probe=1, just seen a PRF form that things didn't compile, so
+          let us monitor this on a daily basis.
+
 Sun Dec 21 09:28:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
