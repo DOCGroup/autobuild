@@ -1,0 +1,35 @@
+<scoreboard>
+<preamble>
+<center><h1>Real Time Java Scoreboard</h1></center>
+<hr>
+This is the Real Time Java virtual scoreboard, it shows
+all the OS/platform combinations javart is tested everyday. Currently
+this is only linux.
+<hr>
+</preamble>
+
+<group>
+<name>Linux</name>
+   <build>
+   <name>javart-jvm</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_javart/jvm/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>javart-rtsj</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_javart/rtsj/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>javart-jRate</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_javart/jRate/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+</group>
+
+</scoreboard>

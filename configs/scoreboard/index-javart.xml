@@ -1,0 +1,21 @@
+<intropage>
+    <preamble>
+You have reached the logically existing, virtual Real Time Java scoreboard.
+It shows all the OS/compiler  combinations that Facet are tested against
+everyday, all over the world.  We have builds running continuously at 
+Washington University, St. Louis.
+<p>
+<a href="./javart.html"> Real Time Java Builds</a>
+</p>
+
+<p>
+
+If you'd like to contribute builds to our virtual
+scoreboard <a href="mailto:djc2@cs.wustl.edu">please contact us</a>
+and let us know which platform combinations you can
+contribute. Instructions for setting up your own daily build and
+scoreboard are
+<a href="http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/README?cvsroot=autobuild"> here</a>
+</p>
+ </preamble>
+</intropage>
