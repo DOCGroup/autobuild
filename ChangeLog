@@ -1,3 +1,8 @@
+Tue Mar 16 11:29:39 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/*.xml: Change process_logs 'clean'
+	  period to 5 days; 7-10 days' of logs is taking up too much space.
+
 Tue Mar 16 12:36:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/MingWTAO.xml:

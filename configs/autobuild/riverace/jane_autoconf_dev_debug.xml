@@ -3,7 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers/build/autoconf_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers/build/autoconf_debug/ace:/acebuilds/ACE_wrappers/build/autoconf_debug/tests:/usr/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers/build/autoconf_debug/ace/.libs:/acebuilds/ACE_wrappers/build/autoconf_debug/tests/.libs:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
@@ -37,7 +37,7 @@
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="file_manipulation" options="type=delete file=build/autoconf_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>
