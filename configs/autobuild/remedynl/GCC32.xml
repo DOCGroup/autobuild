@@ -39,7 +39,7 @@
     <command name="auto_run_tests" options="-a" /> 
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=1 move prettify index" />
+    <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="ssh bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_SuSE81_GCC/* -f" />
