@@ -1,3 +1,8 @@
+Tue Mar  1 19:02:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added SuSE Linux Enterprise 9 build on IA64.
+
 Tue Mar  1 18:46:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/*.xml:
