@@ -1,18 +1,18 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib:/usr/lib:" />
-        <environment name="SHLIB_PATH"      value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib:/usr/lib:" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/lib:/usr/local/lib:/usr/lib:" />
+        <environment name="SHLIB_PATH"      value="/home/build/ACE/GCC/ACE_wrappers/lib:/usr/local/lib:/usr/lib:" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="PATH"            value="/usr/local/bin:/opt/perl/bin:/opt/aCC/bin:" type="prefix" />
         <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="make_program"       value="gmake" />
-        <variable name="root"               value="/home/build/ACE/gcc" />
+        <variable name="root"               value="/home/build/ACE/GCC" />
         <variable name="log_file"           value="log.txt" />
-        <variable name="log_root"           value="/home/build/ACE/gcc" />
+        <variable name="log_root"           value="/home/build/ACE/GCC" />
         <variable name="configs"            value="Exceptions STATIC" />
         <variable name="name"               value="HPUX" />
     </configuration>
