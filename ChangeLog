@@ -1,3 +1,16 @@
+Fri Mar 18 19:58:52 UTC 2005  Don Hinton  <don.hinton@vanderbilt.edu>
+
+        * config/autobuild/escher3/cidlcstatic.xml:
+          Due to the recent upgrade of the dre boxes, had to changed
+          isisbuilds@tao.dre.vanderbilt.edu to
+          bczar@www.dre.vanderbilt.edu.
+
+Wed Mar 16 21:28:07 UTC 2005  Don Hinton  <don.hinton@vanderbilt.edu>
+
+        * configs/scoreboard/tao.xml:
+          Removed the corona builds (Solaris 10 x86).  This box is
+          being rebuilt.
+
 Fri Mar 18 12:13:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
