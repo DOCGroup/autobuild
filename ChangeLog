@@ -1,3 +1,8 @@
+Fri Aug 13 07:20:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Cygwin is upgraded to 3.3.3
+
 2004-08-12  J.T. Conklin  <jtc@acorntoolworks.com>
 
 	* configs/scoreboard/tao_future.xml:
