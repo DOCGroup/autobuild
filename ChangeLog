@@ -1,3 +1,8 @@
+Mon May 26 10:15:36 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/jane_dev_static_release.xml: Added
+	  -Config STATIC to the test invocation.
+
 Sat May 24 10:19:07 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* common/prettify.pm (Compile_Handler): Make "File <xxx> exists
