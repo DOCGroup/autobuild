@@ -1,3 +1,8 @@
+Fri Nov 14 16:09:17 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/scoreboard/tao_future.xml:
+          Removed Skoll_1 and Skoll_2.
+
 Thu Nov 13 22:41:16 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/remedynl/driverbuildpc3.bat:

@@ -102,22 +102,6 @@ decide the migration paths and strategies.
             <red>36</red>
         </build>
         <build>
-            <name>SKOLL_1</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_1</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
-        <build>
-            <name>SKOLL_2</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_2</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
-        <build>
             <name>SuSE_90_GCC3.3.1(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
             <build_sponsor>Remedy IT</build_sponsor>
