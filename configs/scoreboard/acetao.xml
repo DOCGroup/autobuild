@@ -117,12 +117,6 @@ here</a>
             <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
         </build>
         <build>
-            <name>WinNT4_BCB5_Ent_Static_Release</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>Windows_PocketPC2002_Debug</name>
             <url>http://www.riverace.com/build_logs/beebee/dev/pocketpc_debug</url>
             <orange>48</orange>
@@ -315,6 +309,12 @@ here</a>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_release</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinNT4_BCB5_Ent_Static_Release</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>Win2K_Borland_C++_5</name>

@@ -1,3 +1,11 @@
+Tue Feb 25 06:59:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+          Also build TAO
+
+        * configs/scoreboard/acetao.xml:
+          Moved BCB5 Static build to Windows part, now  builds everything
+
 Mon Feb 24 07:54:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:

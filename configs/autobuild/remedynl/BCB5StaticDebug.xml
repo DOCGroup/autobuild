@@ -32,7 +32,7 @@
     <command name="check_compiler" options="borland" />
     <command name="print_ace_config" />
 
-    <command name="make"              options=" -i -f Makefile.bor" />
+    <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
