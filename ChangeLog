@@ -1,3 +1,9 @@
+Sun Jun  8 14:28:52 UTC 2003 Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+          Fixed a path problem.
+
 Sun Jun  8 14:12:24 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/flamenco/compiletime_metrics.xml:

@@ -41,7 +41,7 @@
 
     <command name="log"               options="off" />
 
-    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /build/isisbuilds/compile_metrics/metrics $ACE_ROOT/../.metrics/targets Compilation" />
+    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /web/users/isisbuilds/auto_compile_logs/compile_metrics/metrics $ACE_ROOT/../.metrics/targets Compilation" />
 
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />

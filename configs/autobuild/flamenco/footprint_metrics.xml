@@ -59,7 +59,7 @@
 
     <command name="log"               options="off" />
 
-    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /build/isisbuilds/footprint_metrics/metrics $ACE_ROOT/../.metrics/targets Footprint" />
+    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /web/users/isisbuilds/auto_compile_logs/footprint_metrics/metrics $ACE_ROOT/../.metrics/targets Footprint" />
 
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
