@@ -26,17 +26,21 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLES_THREAD_LIBRARY_CALLS 1\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
+    <command name="print_perl_version" />
 
-    <command name="win32make"         options="msvc_auto_compile -DLL -Release -ACE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -DLL -Release -CORE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -DLL -Release -TAO -u -k" />
+    <command name="generate_workspace" options="-recurse -make_coexistence -type vc6" /> 
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -ALL -Release -k" />
 
     <command name="auto_run_tests"    options="-a -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release" />
     <command name="auto_run_tests"    options="-o -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release" />
     <command name="auto_run_tests"    options="-t -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release" />
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
