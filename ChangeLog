@@ -1,3 +1,9 @@
+Thu May 01 05:46:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Added Cygwin GCC 3.2 ACE Only build. This is used for testing
+          Cygwin with threading enabled.
+
 Tue Apr 29 18:08:37 2003  Steve Huston  <shuston@riverace.com>
 
 	* command/make.pm: If "dir=..." is given in options, remove that
