@@ -1,0 +1,23 @@
+Readme for using autobuild/scoreboard with facet and ace-tao-facet-adapter
+Author: Dante Cannarozzi
+Date: Summer 2003
+-----------------
+
+Setting up autobuild for facet wasn't quite as easy as anticipated.
+
+I had to do the following things to get it to build properly.
+
+1) Facet requires ACE_Wrappers to be handy to build, but facet
+   builds first, then ACE, so I had to manually check out 
+   RTEvent/facet
+   RTEvent/tao-facet-adapter
+   ACE_Wrappers
+
+   first before running driver.csh to get things going. I could have 
+   (maybe) order the cvs checkouts funny or put them into separate
+   xml files, but one manual checkout seemed the easiest way.
+
+2) Facet requires platform_template and facet_template copied to
+   platform.properties and facet.properties. Autobuild didn't seem to
+   easily support this, so again, I did it by hand. Plus, facet_template
+   does not have any 
