@@ -1,3 +1,8 @@
+Mon Jan  6 17:01:42 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/maglor/Static.xml: Added the iorize collection
+	  scripts to run with the daily builds.
+
 Wed Jan  1 16:56:10 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Added the pokey build to the
