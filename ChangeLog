@@ -1,3 +1,8 @@
+Mon Jan 12 15:59:36 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Corrected
+	  ACE_ROOT and added $ACE_ROOT/tests to LD_LIBRARY_PATH.
+
 Mon Jan 12 10:33:23 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
 
         * configs/scoreboard/tao.xml
