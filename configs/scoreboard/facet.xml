@@ -11,8 +11,8 @@ this is only linux.
 <group>
 <name>Linux</name>
    <build>
-   <name>Facet-consumer_dispatcher</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/consumer_dispatcher</url>
+   <name>Facet-consumer_dispatch</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/consumer_dispatch</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
@@ -47,7 +47,7 @@ this is only linux.
 
    <build>
    <name>Facet-supplier_dispatcher</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/supplier_dispatcher/</url>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/supplier_dispatch/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
