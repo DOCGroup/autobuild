@@ -1,3 +1,12 @@
+Fri Jan 16 11:22:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/balar_isis/DynamicHash.xml:
+	* configs/autobuild/balar_isis/driver_DynamicHash.sh:
+
+	  New build on balar with DynamicHash option used in the IDL
+	  compiler. As a first step we will run the ORB core tests and
+	  them move on to other things as we make progress. 
+
 Thu Jan 15 17:41:26 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Removed the Windows NT4 MSVC6 and BCB5

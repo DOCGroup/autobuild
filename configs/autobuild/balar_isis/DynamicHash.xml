@@ -1,0 +1,45 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers/ace" />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+
+        <variable name="root"     value="/build/isisbuilds/Dynamic_Hash/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_Dynamic_Hash" />
+        <variable name="configs"  value="Linux Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nTAO_IDLFLAGS += -H dynamic_hash\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\n\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="-k -j 4 -C ace" />
+    <command name="make"              options="-k -j 4 -C apps/gperf/src" />
+    <command name="make"              options="-k -j 4 -C TAO/tao" />
+    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 4 -C TAO/tests idl_stubs" />
+    <command name="make"              options="-k -j 4 -C TAO/tests" />
+    <command name="auto_run_tests"    options="-o" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
