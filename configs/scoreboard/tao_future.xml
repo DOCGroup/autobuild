@@ -75,6 +75,12 @@ decide the migration paths and strategies.
       <build_sponsor>J.T. Conklin</build_sponsor>
       <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
    </build>
+     <build>
+      <name>SuSE_91_PGI5.2_x86_64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_pgi/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 
 </scoreboard>
