@@ -1,3 +1,11 @@
+Mon Jul 29 16:25:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml: Added BCB6 Unicode build
+
+        * configs/autobuild/remedynl/MingWGCC31.XML:
+          Added first version of XML config file for MingW build using the
+          MingW GCC 3.1 compiler.
+
 Mon Jul 29 08:12:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/*.XML:

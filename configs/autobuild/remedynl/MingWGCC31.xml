@@ -1,9 +1,10 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="D:\MingW\ACE_wrappers" />
+        <environment name="ACE_ROOT"     value="D:/MingW/ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
+        <environment name="MINGW_BASE"   value="C:\MingW" />
         <environment name="Path"         value="c:\mingw\bin;c:\cygwin\bin;D:\MingW\ACE_wrappers\bin;D:\;c:\putty" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
