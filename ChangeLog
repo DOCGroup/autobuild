@@ -1,3 +1,11 @@
+Mon Aug 16 10:07:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/msvclibrelease.xml:
+          configs/autobuild/remedynl/msvclibdebug.xml:
+          
+          Changed to use updates (name_modifier) in vc6 static build 
+          scripts (msvc_static_compile.pl).
+
 Mon Aug 16 09:48:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/vc71.xml:
