@@ -1,3 +1,9 @@
+Fri Feb 18 21:27:08 2005  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+
+          Removed problematic VxWorks PENTIUM build.
+
 Fri Feb 18 20:52:08 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
