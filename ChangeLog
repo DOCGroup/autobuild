@@ -1,3 +1,8 @@
+Mon Apr 26 14:25:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+          Also build and run the ACE tests.
+
 Mon Apr 26 11:14:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/cbxdd.xml:
