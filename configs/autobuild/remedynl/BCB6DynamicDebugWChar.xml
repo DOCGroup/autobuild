@@ -1,20 +1,21 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="D:\BCB6dd\ACE_wrappers" />
+        <environment name="ACE_ROOT"     value="D:\BCB6ddwchar\ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\BCB6dd\ACE_wrappers\bin\Dynamic\Debug;D:\BCB6dd\ACE_wrappers\bin\Dynamic\Release;c:\putty" type="prefix" />
+        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\BCB6ddwchar\ACE_wrappers\bin\Dynamic\Debug\Unicode;c:\putty" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 	<environment name="DEBUG"    value="1" />
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
+	<environment name="UNICODE"  value="1" />
 
-        <variable name="root"     value="D:\BCB6dd\" />
+        <variable name="root"     value="D:\BCB6ddwchar\" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="D:\BCB6dd\" />
-        <variable name="name"     value="WinXP BCB6 Debug" />
+        <variable name="log_root" value="D:\BCB6ddwchar\" />
+        <variable name="name"     value="WinXP BCB6 Debug WChar" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -27,7 +28,7 @@
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#define ACE_USES_WCHAR\n#include \x22ace/config-win32.h\x22\n'" />
 
     <command name="print_ace_config" />
 
@@ -37,7 +38,6 @@
     <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="pscp *.txt *.html charanga:.www-docs/auto_compile_logs/remedy.nl_WinXP_BCB6_Dynamic_Debug" />
 </autobuild>
 
 
