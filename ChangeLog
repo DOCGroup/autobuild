@@ -1,3 +1,20 @@
+Wed Dec 11 16:15:46 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* README:
+	* autobuild.pl:
+	* scoreboard.pl:
+	* command/process_logs.pm:
+	* command/print_os_version.pm (Added):
+	* common/prettify.pm:
+
+	 Add a new command, print_os_version, which prints some information
+	 about the OS version of the build host.  Output configuration
+	 information such as compiler and OS version to a new file, _Config.html.
+	 This should make retrieving the config information from the web
+	 faster.  The current method requires the user to download the
+	 entire processed build log file (which takes a long time)
+	 in order to view the build config info.
+
 Tue Dec 10 16:55:02 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/ace/LYNX_PPC.xml:

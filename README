@@ -186,6 +186,10 @@ MISCELLANEOUS NOTES
 
    Will invoke: auto_run_tests.pl -Config Linux -Config ST
 
+(3) print_os_version -> print out some information about the operating system
+                        being used for the build
+
+<command name="print_os_version" />
 
 E-MAIL NOTIFICATION
 ===================

@@ -408,7 +408,13 @@ sub Section_Totals ()
     print {$self->{FH}} "  <tr>\n";
     print {$self->{FH}} "    <td>$self->{LAST_SECTION}</td>";
 
-    print {$self->{FH}} "    <td>[<a href=\"$self->{FULLHTML}#section_$counter\">Full</a>] ";
+    if($self->{LAST_SECTION} eq "Config") {
+      print {$self->{FH}} "    <td>[<a href=\"$self->{BASENAME}_Config.html\">Full</a>] ";
+    } 
+    else {
+      print {$self->{FH}} "    <td>[<a href=\"$self->{FULLHTML}#section_$counter\">Full</a>] ";
+    }
+
     if ($self->{SECTION_ERRORS} > 0 || $self->{SECTION_WARNINGS} > 0) {
         print {$self->{FH}} "[<a href=\"$self->{BRIEFHTML}#section_$counter\">Brief</a>] ";
     }
@@ -641,7 +647,7 @@ sub new ($)
         (
             'begin'   => \&Normal_Handler,
             'setup'   => \&Setup_Handler,
-            'config'  => \&Normal_Handler,
+            'config'  => \&Config_Handler,
             'compile' => \&Compile_Handler,
             'test'    => \&Test_Handler,
             'end'     => \&Normal_Handler
@@ -654,6 +660,7 @@ sub new ($)
             new Prettify::Full_HTML ($basename),
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename),
+            new Prettify::Config_HTML ($basename),
         );
 
     # Output the header for the files
@@ -700,7 +707,7 @@ sub Process_Line ($)
 
         if ($self->{LAST_SECTION} eq $section) {
             foreach my $output (@{$self->{OUTPUT}}) {
-                $output->Description ($description);
+                $output->Description ($description, $section);
                 $output->Timestamp ($timestamp);
             }
 
@@ -709,7 +716,7 @@ sub Process_Line ($)
         else {
             foreach my $output (@{$self->{OUTPUT}}) {
                 $output->Section ($section);
-                $output->Description ($description) if defined ($description);
+                $output->Description ($description, $section) if defined ($description);
                 $output->Timestamp ($timestamp);
             }
         }
@@ -923,6 +930,17 @@ sub Compile_Handler ($)
     }
 }
 
+sub Config_Handler ($)
+{
+    my $self = shift;
+    my $s = shift;
+    my @outputs = @{$self->{OUTPUT}};
+    my $state = $self->{STATE};
+
+    # We only want to output config stuff to the Config_HTML class
+    $outputs[3]->Normal($s, $state);
+}
+
 sub Test_Handler ($)
 {
     my $self = shift;
@@ -1058,5 +1076,121 @@ sub SendEmailNotification($)
                       );
 
 }
+
+###############################################################################
+
+package Prettify::Config_HTML;
+
+use strict;
+use warnings;
+
+use FileHandle;
+
+sub new ($)
+{
+    my $proto = shift;
+    my $class = ref ($proto) || $proto;
+    my $self = {};
+    my $basename = shift;
+    my $filename = $basename . "_Config.html";
+
+    $basename =~ s/^.*\///;
+
+    $self->{FULLHTML} = $basename . "_Full.html";
+    $self->{ERROR_COUNTER} = 0;
+    $self->{WARNING_COUNTER} = 0;
+    $self->{SECTION_COUNTER} = 0;
+    $self->{SUBSECTION_COUNTER} = 0;
+    $self->{FH} = new FileHandle ($filename, 'w');
+
+    bless ($self, $class);
+    return $self;
+}
+
+sub Header ()
+{
+    my $self = shift;
+    print {$self->{FH}} "<html>\n";
+    print {$self->{FH}} "<head>\n<title>Daily Build Configuration</title>\n</head>\n";
+    print {$self->{FH}} "<body bgcolor=\"white\">\n";
+    print {$self->{FH}} "<h1>Daily Build Configuration</h1>\n";
+    print {$self->{FH}} "<pre>\n";
+}
+
+sub Footer ()
+{
+    my $self = shift;
+    print {$self->{FH}} "</pre>\n";
+    print {$self->{FH}} "</body>\n";
+    print {$self->{FH}} "</html>\n";
+}
+
+sub Normal ($)
+{
+    my $self = shift;
+    my $s = shift;
+    my $state = shift;
+    $state = lc $state;
+
+    if( defined $state && $state eq 'config' ) { 
+      print {$self->{FH}} "$s\n";
+    }
+}
+
+sub Section ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    my $counter = ++$self->{SECTION_COUNTER};
+
+    # Save for later use
+    $self->{LAST_SECTION} = $s;
+}
+
+sub Timestamp ($)
+{
+    my $self = shift;
+    # Ignore
+}
+
+sub Subsection ($)
+{
+   my $self = shift;
+   # Ignore
+}
+
+sub Description ($)
+{
+    my $self = shift;
+    my $s = shift;
+    my $state = shift;
+    $state = lc $state;
+
+    # Escape any '<' or '>' signs
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+   
+    if(defined $state && $state eq "config") {
+      print {$self->{FH}} "<h3>$s</h3>\n";
+    }
+}
+
+sub Error ($)
+{
+   my $self = shift;
+   # Ignore
+}
+
+sub Warning ($)
+{
+   my $self = shift;
+   # Ignore
+}
+
 
 1;

@@ -659,7 +659,7 @@ sub update_html_table ($$@)
 
             print $indexhtml '<td>';
             if (defined %builds->{$buildname}->{CONFIG_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . %builds->{$buildname}->{CONFIG_SECTION} . "\">Config</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Config.html\">Config</a>] ";
             }
             else {
                 print $indexhtml "&nbsp;";
