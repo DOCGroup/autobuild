@@ -1,11 +1,17 @@
+Fri Jun 27 09:53:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Added VxWorks 5.5 x86 build. Uses a Win2K host runing VxSim
+          for x86.
+
 Thu Jun 26 13:40:42 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml: 
-	  
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+
 	  Turned off optimizations on this build so that it will complete
 	  quicker.
-	
-	* configs/scoreboard/tao.xml: 
+
+	* configs/scoreboard/tao.xml:
 	* configs/scoreboard/tao_future.xml:
 
 	  Moved the following builds from the main scoreboard to the
