@@ -1,7 +1,8 @@
 Mon Nov 25 18:35:49 2002  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Put the
-          platform_macros.GNU file in the correct place.
+          platform_macros.GNU file in the correct place, and get the right
+          aix config file.
 
 Thu Nov 21 10:17:30 2002  Ossama Othman  <ossama@uci.edu>
 
