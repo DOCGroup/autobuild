@@ -67,9 +67,15 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
   <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
 
 
-(4) Edit the file autobuild/configs/scoreboard/acetao.xml, and add the
-    URL of the directory where the log files are located.
-    For example:
+(4) Edit one of the files in autobuild/configs/scoreboard/*.xml. The
+    logic for choosing the file is as follows. If you choose to donate
+    an ACE build which you think is important for the beta/release
+    please edit ace.xml and add the following information. If you
+    choose to donate a build which compiles ACE on a new
+    platform/compiler or different sets of options or your own
+    development branch please edit the file ace_future.xml. The same
+    logic applies for TAO too.  An example on how to edit the xml
+    file is given below:
 
 <scoreboard>
     <preamble>
