@@ -1,3 +1,7 @@
+Wed Dec 29 11:27:22 2004  Steve Huston  <shuston@riverace.com>
+
+        * command/auto_run_tests.pm: Fixed use of uninitialized variable $dir.
+
 Mon Dec 27 21:08:56 CST 2004  Yan Dai <dai_y@ociweb.com>
 
         * testmatrix/GenerateTestMatrix.py:
