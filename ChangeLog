@@ -1,3 +1,9 @@
+Tue Aug 10 14:05:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCCNoInline.xml:
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+          Add ssl=1 to platform_macros.GNU
+
 Tue Aug 10 11:02:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
