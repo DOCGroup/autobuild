@@ -3,10 +3,10 @@
 # $Id$
 #
 
-PATH=/opt/SUNWspro_6.2/SUNWspro/bin:/pkg/perl-5.6.1/bin:/pkg/gnu/bin:$PATH
+PATH=/opt/SUNWspro_6.2/SUNWspro/bin:/pkg/perl-5.6.1/bin:/pkg/gnu2k1/bin:${PATH}
 export PATH
 
-/pkg/perl-5.6.1/bin/perl $HOME/autobuild/autobuild.pl \
+perl $HOME/autobuild/autobuild.pl \
                              $HOME/autobuild/configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml  
 
 
