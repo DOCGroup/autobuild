@@ -10,19 +10,19 @@ This is a miscellaneous scoreboard for ACE+TAO.
   <name>Skoll Builds</name>
   <build>
     <name>Redhat_Linux_2.4.20_1</name> 
-    <url>http://thrym.cs.umd.edu:8080/skoll/sites/thrym.cs.umd.edu/thrym_linux1/autobuild</url>
+    <url>http://escher.isis.vanderbilt.edu:80/skoll/sites/thrym.cs.umd.edu/thrym_linux1/autobuild</url>
     <build_sponsor>What is Skoll???</build_sponsor>
     <build_sponsor_url>http://www.cs.umd.edu/projects/skoll</build_sponsor_url>
   </build>  
   <build>
     <name>Redhat_Linux_2.4.20_2</name> 
-    <url>http://thrym.cs.umd.edu:8080/skoll/sites/thrym.cs.umd.edu/thrym_linux2/autobuild</url>
+    <url>http://escher.isis.vanderbilt.edu:80/skoll/sites/thrym.cs.umd.edu/thrym_linux2/autobuild</url>
     <build_sponsor>What is Skoll???</build_sponsor>
     <build_sponsor_url>http://www.cs.umd.edu/projects/skoll</build_sponsor_url>
   </build>  
   <build>
     <name>Redhat_Linux_2.4.20_3</name> 
-    <url>http://thrym.cs.umd.edu:8080/skoll/sites/thrym.cs.umd.edu/thrym_linux3/autobuild</url>
+    <url>http://escher.isis.vanderbilt.edu:80/skoll/sites/thrym.cs.umd.edu/thrym_linux3/autobuild</url>
     <build_sponsor>What is Skoll???</build_sponsor>
     <build_sponsor_url>http://www.cs.umd.edu/projects/skoll</build_sponsor_url>
   </build>  
