@@ -1,3 +1,9 @@
+Thu Aug  1 09:03:21 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/ringil/Legacy.xml:
+	* configs/autobuild/ringil/Unicode.xml: These builds were using
+	  the pippen script. They now use the msvc_auto_compile.pl script! 
+
 Thu Aug 01 07:49:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:
