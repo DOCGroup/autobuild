@@ -1,3 +1,18 @@
+Mon Sep 27 07:25:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/Full.xml:
+          Removed sam_root setting, and removed local_features file usage in
+          mpc generation, file is not there, so no need to pass it
+
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/GCCNoInline.xml:
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+        * configs/autobuild/remedynl/gandalf_cbxdd.xml:
+        * configs/autobuild/remedynl/gandalf_cbxsr.xml:
+        * configs/autobuild/remedynl/gandalf_vc71.xml:
+          Added building of CIAO, the CIDLC compiler is being copied by the
+          builds from Vanderbilt.
+
 Mon Sep 27 06:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
