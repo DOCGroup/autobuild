@@ -1,3 +1,8 @@
+Fri May  7 11:56:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/Full.xml:
+          Corrected LD_LIBRARY_PATH, remove GNUmakefile* instead of Makefile*
+
 Fri May  7 11:49:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/charanga/Debian_Minimum_Static.xml:
