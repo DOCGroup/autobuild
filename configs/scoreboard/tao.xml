@@ -46,10 +46,10 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
     </build>
     <build>
-       <name>Debian_Minimum</name>
-       <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/balar_Minimum/</url>
-       <build_sponsor>UC Irvine</build_sponsor>
-       <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+       <name>RH8_Minimum</name>
+       <url>http://www.dre.vanderbilt/~isisbuilds/auto_compile_logs/ace_Minimum/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
        <name>Debian_Minimum_Static</name>
@@ -58,10 +58,10 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://www.cs.wustl.edu/~doc</build_sponsor_url>
      </build>
      <build>
-        <name>Debian_NoInline</name>
-        <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/tango_NoInline</url>
-        <build_sponsor>UC Irvine</build_sponsor>
-        <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+        <name>RH8_NoInline</name>
+       <url>http://www.dre.vanderbilt/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
         <name>Debian_NoInterceptors</name>
@@ -77,9 +77,9 @@ all the OS/platform combinations TAO is tested everyday.
      </build>
      <build>
         <name>RH80_Static_Core</name>
-        <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maedhros_Core/</url>
-        <build_sponsor>UC Irvine</build_sponsor>
-        <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
         <name>RH71_No_AMI_Messaging</name>

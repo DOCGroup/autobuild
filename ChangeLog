@@ -1,3 +1,9 @@
+Thu Apr 17 17:33:19 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Builds on ace.dre gets into the
+	  scoreboard. They effectively replaces builds on balar_Minimum,
+	  maedhros_Core and tango_NoInline.
+
 Thu Apr 17 12:55:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tao_isis/Doxygen.xml:
