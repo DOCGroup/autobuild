@@ -102,6 +102,10 @@
              <name>SunOS_FORTE_UP_1</name>
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
          </build>
+         <build>
+             <name>CROSS_COMPILE_TAO_IDL</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_CROSS_COMPILE_TAO_IDL</url>
+         </build>
     </group>
     <group>
          <name>TRU64_Unix</name>

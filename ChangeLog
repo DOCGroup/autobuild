@@ -1,3 +1,9 @@
+Sun Jun 23 15:14:33 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Added
+	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh: Added
+	* configs/scoreboard/acetao.xml: Added CROSS_COMPILE_TAO_IDL build.
+
 Thu Jun 20 11:46:17 2002  Carlos O'Ryan  <coryan@atdesk.com>
 
 	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
