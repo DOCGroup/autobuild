@@ -1,3 +1,13 @@
+Thu Jan 20 06:40:55 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* command/cvsgrab.pm:
+
+	  Added a new command for autobuilds.
+	
+	* configs/autobuild/atc/VxWorks.xml:
+
+	  Added the cvsgrab command.
+
 Wed Jan 19 15:49:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:

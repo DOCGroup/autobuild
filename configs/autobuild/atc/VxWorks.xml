@@ -32,7 +32,8 @@
 
     <command name="log"               options="on" />
 
-
+    <command name="cvsgrab"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvsgrab"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-vxworks5.x.h\x22\n'" />
 
