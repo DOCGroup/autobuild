@@ -1,3 +1,8 @@
+Fri Feb 11 10:11:22 PST 2005  Meghana Haridev <mharidev@qualcomm.com>
+
+	* configs/autobuild/qualcomm/x86-IPv6.xml:
+	  Removed generation of global.features file - using default.features.
+
 Thu Feb 10 12:45:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:

@@ -31,14 +31,13 @@
     <command name="shell"             options="cd ACE_wrappers/build/linux-x86/ace && touch ../../../ace/Svc_Conf_l.cpp" />
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers/build/linux-x86 -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/global.features" />
+    <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features" />
 
  
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define ACE_HAS_IPV6\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/include/makeinclude/platform_macros.GNU output='optimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features output='ssl=1\nqos=0\ncidl=0\nrwho=0\nsctp=0\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/global.features output='ssl           = 1\nqos           = 0\nrapi          = 0\nfl_reactor    = 0\nrepo          = 0\nminimum_corba = 0\njava          = 0\nqt            = 0\nwxWindows     = 0\nzlib          = 0\nzzip          = 0\nmfc           = 0\nrpc           = 0\nsctp 	      = 0\nxt_reactor    = 0\ndummy_label   = 0\ncidl          = 0\nuses_wchar    = 0\n'" />
     
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
