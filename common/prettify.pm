@@ -856,9 +856,25 @@ sub Compile_Handler ($)
         # but don't print it in the report.
         push( @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}}, $1 );
     }
-    elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/i) {
-        # Definitely an error
+    elsif (# filename:linenumber is the typical format for an error
+           $s =~ m/^.*:[0-9]+: /)
+    {
+      print STDERR "Possible ERROR $s\n";
+      if(# ... unless it is a warning
+         $s =~ m/^.*:[0-9]+: warning:/
+         # ... or a template location where it could be either a
+         # warning or an error, but the lines around it would show the
+         # real reason ...
+         || $s =~ m/^.*:[0-9]+:\s+instantiated\sfrom\s/)
+      {
+        print STDERR "Possible ERROR $s\n";
+        $self->Output_Warning ($s);
+      }
+      else
+      {
+        # Definately an error
         $self->Output_Error ($s);
+      }
     }
     elsif ($s =~ m/Assertion failed/) {
         # Definitely an error, can be given by the BCB6 compiler
@@ -901,6 +917,8 @@ sub Compile_Handler ($)
         $self->Output_Normal ($s);
     }
     elsif (($s =~ m/\berror\b/i
+            && $s !~ m;[/.]error;i
+            && $s !~ m;error[/.];i
             && $s !~ m/ error\(s\), /
             && $s !~ m/error \(future\)/i)
            || $s =~ m/^Fatal\:/
@@ -945,7 +963,7 @@ sub Compile_Handler ($)
             && $s !~ m/ warning\(s\)/)
            || $s =~ m/info: /i
            || $s =~ m/^error \(future\)/i
-           || $s =~ m/^.*\.(h|i|inl|cpp|java): /)
+           || $s =~ m/^.*\.(h|i|inl|hpp|ipp|cpp|java): /)
     {
         # Catch any other warnings
         $self->Output_Warning ($s);
