@@ -6,4 +6,6 @@ perl D:\ACE\autobuild\autobuild.pl Cygwin.xml
 perl D:\ACE\autobuild\autobuild.pl MingW.xml
 perl D:\ACE\autobuild\autobuild.pl VC7.xml
 perl D:\ACE\autobuild\autobuild.pl BCB6StaticRelease.xml
+perl D:\ACE\autobuild\autobuild.pl cbxpreview.xml
+perl D:\ACE\autobuild\autobuild.pl cbxdd.xml
 	

@@ -1,3 +1,9 @@
+Fri Oct 10 08:52:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Added the CBuilderX preview compiler build so that we can see our
+          progress for this new compiler.
+
 Fri Oct 10 07:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
