@@ -2,16 +2,16 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/project/taotmp/isisbuilds/GIOP10/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/project/taotmp/isisbuilds/GIOP10/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc32/lib:/project/taotmp/isisbuilds/GIOP10/ACE_wrappers/ace:/usr/lib:/lib" />
+        <environment name="ACE_ROOT"        value="/web/www/isisbuilds/GIOP10/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/web/www/isisbuilds/GIOP10/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc32/lib:/web/www/isisbuilds/GIOP10/ACE_wrappers/ace:/usr/lib:/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 	<environment name="PATH"            value="/usr/local/gcc32/bin:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
 
-        <variable name="root"     value="/project/taotmp/isisbuilds/GIOP10" />
+        <variable name="root"     value="/web/www/isisbuilds/GIOP10" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/isisbuilds/.www-docs/auto_compile_logs/tao_GIOP10" />
+        <variable name="log_root" value="$HOME/.www-docs/auto_compile_logs/tao_GIOP10" />
         <variable name="configs"  value="Linux GIOP10 Exceptions" />
 
     </configuration>

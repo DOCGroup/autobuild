@@ -11,8 +11,8 @@ require File::Path;
 
 local $dont_generate = 0;
 local $dont_install = 0;
-local $STAGING = '/project/taotmp/Doxygen/staging_area/Current';
-local $DEST    = '/project/taotmp/Doxygen/Current';
+local $STAGING = '/web/www/Doxygen/staging_area/Current';
+local $DEST    = '/web/www/Doxygen/Current';
 local $MODULE  = 'ACE_wrappers';
 
 $ENV{'PATH'} = $ENV{'PATH'}.':/usr/local/bin';
