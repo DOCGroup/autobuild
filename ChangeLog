@@ -1,3 +1,8 @@
+Fri Oct 18 01:04:49 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+	  Fix invocations of "make clean" so that they actually work.
+
 Thu Oct 17 12:16:31 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/rumba/Debian_WChar.xml: Removed
