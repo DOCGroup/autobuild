@@ -189,7 +189,7 @@ sub is_warning ()
     return 3 if (m/vnocompatwarnings/);
 
     # On platforms where glibc >= 2.2 and not __USE_XOPEN2K,
-    # linker warnings about deprecated interfaces come up. Dont show 
+    # linker warnings about deprecated interfaces come up. Dont show
     return 3 if (m/the use of `pthread_attr_setstackaddr' is deprecated, use `pthread_attr_setstack'/);
 
     # SUN CC 5.0 defines __pthread_cleanup_push as a macro which causes
@@ -246,6 +246,11 @@ sub is_error ()
     return 2 if (/Types pointed to are unrelated/
                  || /while compiling class-template/
                  || /requires an explicit cast/);
+
+    # Partial warnings lines like: 'stl_threads.h:122: instantiated from here'
+    # are getting reported as errors with gcc on AIX - we should ignore them.
+    # They will still get picked up as warnings.
+    return 0 if (/instantiated from here/);
 
     if (/^.*:[0-9]+: /
         && !/^.*:[0-9]+: warning:/) {
