@@ -9,7 +9,7 @@
         <environment name="PATH"            value="C:\T221-PPC_E500\host\gnu\3.3\x86-win32\bin;C:\T221-PPC_E500\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\Host\ACE_wrappers\lib;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE" type="prefix" />
         <environment name="WIND_BASE"       value="C:/T221-PPC_E500"/>
         <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
-        <environment name="CVSROOT"         value=":ext:mcorino@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="C:\cygwin\bin\ssh" />
         <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
 

@@ -14,7 +14,7 @@
         <!-- environment name="DTARGET"         value="PPCE500"/ -->
         <!-- environment name="DOBJECT"         value="F"/ -->
         <!-- environment name="DFP"             value="S"/ -->
-        <environment name="CVSROOT"         value=":ext:mcorino@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="C:\cygwin\bin\ssh" />
         <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
 
