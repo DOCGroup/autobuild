@@ -264,8 +264,8 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>AIX</name>
    <build>
-   <name>AIX5.1_VisualAge5_Debug</name>
-   <url>http://www.theaceorb.com/scoreboard/doc_nightly/snake_aix51_VisualAge_d1o0</url>
+   <name>doc_snake_aix51_VisualAge_d1o0</name>
+   <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_snake_aix51_VisualAge_d1o0</url>
    <build_sponsor>OCI</build_sponsor>
    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
