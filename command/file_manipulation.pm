@@ -117,6 +117,12 @@ sub Run ($)
         $output =~ s/\\x27/'/g;
         
         my $file_handle = new FileHandle ($root . '/' . $filename, "w");
+
+        if (!defined $file_handle) {
+            print STDERR __FILE__, ": Error creating file ($root/$filename): $!\n";
+            return 0;
+        }
+
         print $file_handle $output;
     }
     elsif ($type eq "delete") {
