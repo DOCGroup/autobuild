@@ -29,14 +29,14 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $ace_root = main::GetVariable ('ace_root');
+    my $root = main::GetVariable ('root');
 
-    if (!defined $ace_root) {
-        print STDERR __FILE__, ": Requires \"ace_root\" variable\n";
+    if (!defined $root) {
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $ace_root) {
-        print STDERR __FILE__, ": Cannot read ace_root: $ace_root\n";
+    if (!-r $root) {
+        print STDERR __FILE__, ": Cannot read root: $root\n";
         return 0;
     }
 
@@ -49,36 +49,41 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $ace_root = main::GetVariable ('ace_root');
+    my $root = main::GetVariable ('root');
     my $configs = main::GetVariable ('configs');
     my $sandbox = main::GetVariable ('sandbox');
+    my $test_ace_only = main::GetVariable ('test_ace_only');
 
     # chop off trailing slash
-    if ($ace_root =~ m/^(.*)\/$/) {
-        $ace_root = $1;
+    if ($root =~ m/^(.*)\/$/) {
+        $root = $1;
     }
+    $root .= '/ACE_wrappers';
 
     print "\n#################### Test (auto_run_tests) [" . (scalar gmtime(time())) . " UTC]\n";
 
     my $current_dir = getcwd ();
 
-    if (!chdir $ace_root) {
-        print STDERR __FILE__, ": Cannot change to $ace_root\n";
+    if (!chdir $root) {
+        print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
 
     if (defined $sandbox) {
         $options .= " -s $sandbox";
     }
-    
+    if (defined $test_ace_only) {
+        $options .= " -a";
+    }
+
     if (defined $configs) {
         $options .= " -Config " . join (" -Config", split (' ', $configs));
     }
 
-    my $command = "perl $ace_root/bin/auto_run_tests.pl $options";
+    my $command = "perl $root/bin/auto_run_tests.pl $options";
 
     print "Running: $command\n";
-    system ("perl $ace_root/bin/auto_run_tests.pl $options");
+    system ("perl $root/bin/auto_run_tests.pl $options");
 
     chdir $current_dir;
 

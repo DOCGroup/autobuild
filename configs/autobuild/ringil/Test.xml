@@ -2,16 +2,15 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT" value="C:/Users/bugzilla/builds/ACE_wrappers" />
-        <variable name="root" value="C:/Users/bugzilla/builds/ACE_wrappers" />
-        <variable name="ace_root" value="C:/Users/bugzilla/builds/ACE_wrappers" />
+        <variable name="root"     value="C:/Users/bugzilla/builds/ACE_wrappers" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:/Inetpub/wwwroot/bugzilla/test" />
     </configuration> 
     <command name="log"               options="ON" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
-    <command name="file_manipulation" options="type=create file=ace/config.h output='#include \x22ace/config-win32.h\x22\n'" />
-    <command name="cvs"               options="update" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-win32.h\x22\n'" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="print_ace_config" />
     <command name="auto_run_tests"    options="" />
     <command name="file_manipulation" options="type=delete file=.disable" />

@@ -28,14 +28,14 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $ace_root = main::GetVariable ('ace_root');
+    my $root = main::GetVariable ('root');
 
-    if (!defined $ace_root) {
-        print STDERR __FILE__, ": Requires \"ace_root\" variable\n";
+    if (!defined $root) {
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $ace_root) {
-        print STDERR __FILE__, ": Cannot read ace_root: $ace_root\n";
+    if (!-d $root || !-r $root) {
+        print STDERR __FILE__, ": Cannot read root: $root\n";
         return 0;
     }
 
@@ -48,15 +48,17 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $root = main::GetVariable ('ace_root');
+    my $root = main::GetVariable ('root');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
     }
 
+    $root .= '/ACE_wrappers';
+
     print "\n#################### Config (PrintACEConfig) [" . (scalar gmtime(time())) . " UTC]\n";
-    
+
     #
     # last ACE Changelog Entry
     #

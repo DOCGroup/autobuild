@@ -1,3 +1,33 @@
+Mon Dec 17 16:17:28 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* command/cvs.pm:
+	* command/sam.pm:
+	* command/auto_run_tests.pm:
+	* command/printaceconfig.pm:
+	* command/process_logs.pm:
+	  Consistently use the 'root' variable for the directory
+	  immediately above ACE_wrappers (or whatever the project name
+	  is).
+	  Used (!-d || !-r) to detect if a directory is both readable and
+	  really a directory.
+
+	* command/log.pm:
+	* command/process_logs.pm:
+	  Fixed inconsistencies in the management of the log_file
+	  variable, for log.pm it could be an absolute path, for
+	  process_logs.pm it needed to be a relatively path.  Now it is
+	  always relative.
+
+	* configs/autobuild/maedhros/driver.sh:
+	  Removed dead code. Dump autobuild.pl output to /dev/null, only
+	  used when debugging.
+
+	* configs/autobuild/maedhros/Core.xml:
+	* configs/autobuild/sirion/Full.xml:
+	* configs/autobuild/ringil/Test.xml:
+	  Adjusted all XML files to the new variables, including changes
+	  in semantics.
+
 Mon Dec 17 10:48:46 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* configs/autobuild/maedhros/Core.xml:

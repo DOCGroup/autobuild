@@ -1,21 +1,37 @@
+<!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="root" value="/project/sirion/coryan/samwise/ACE_wrappers" />
-        <variable name="ace_root" value="/project/sirion/coryan/samwise/ACE_wrappers" />
+
+        <environment name="ACE_ROOT"        value="/project/sirion/coryan/samwise/ACE_wrappers" />
+        <environment name="CVSROOT"         value=":ext:coryan@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="/usr/bin/ssh" />
+        <environment name="LD_LIBRARY_PATH" value="/project/sirion/coryan/samwise/ACE_wrappers/ace" />
+
+        <variable name="root"     value="/project/sirion/coryan/samwise" />
+        <variable name="log_file" value="sirion_Full.txt" />
         <variable name="sam_root" value="/project/sirion/coryan/samwise/ACE_wrappers/samwise" />
+        <variable name="log_root" value="/home/coryan/.www-docs/auto_compile_logs/sirion_Full" />
+
     </configuration>
+
+    <command name="log"               options="ON" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
-    <command name="file_manipulation" options="type=create file=ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=1\nexceptions=1\nTAO_IDLFLAGS += $(ACE_ROOT)/apps/gperf/src/gperf\n'" />
-    <command name="sam" options="clean" />
-    <command name="cvs" options="update" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\n'" />
+    <command name="sam"               options="clean" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="print_ace_config" />
-<!--    <command name="sam" options="create" /> -->
-<!--    <command name="sam" options="sam" /> -->
-    <command name="make" options="makeopts='-j 2 -k -C . realclean'" />
-    <command name="make" options="makeopts='-j 2 -k -C TAO realclean'" />
-    <command name="make" options="makeopts='-j 2 -k -C .'" />
-    <command name="make" options="makeopts='-j 2 -k -C TAO'" />
+    <command name="sam"               options="create" />
+    <command name="sam"               options="sam" />
+    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/tests realclean'" />
+    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/ace realclean'" />
+    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/ace'" />
+    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/tests'" />
+    <command name="auto_run_tests"    options="" />
     <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify" />
+
 </autobuild>

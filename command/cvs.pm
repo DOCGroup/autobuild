@@ -65,7 +65,7 @@ sub Run ($)
         return 0;
     }
 
-    system ("cvs up");
+    system ("cvs $options");
 
     chdir $current_dir;
 

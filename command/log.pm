@@ -36,7 +36,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $root) {
+    if (!-d $root || !-r $root) {
         print STDERR __FILE__, ": Cannot read root dir: $root\n";
         return 0;
     }
@@ -63,23 +63,18 @@ sub Run ($)
         $root = $1;
     }
 
-    my $current_dir = getcwd ();
-
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
-    }
-
+    # Force file paths to always be relative....
+    my $logpath = $root . '/' . $logfile;
 
     if (uc $options eq "ON") {
         # Make copies of current handles
-    
+
         open (OLDOUT, ">&STDOUT");
         open (OLDERR, ">&STDERR");
-    
+
         # Redirect to the logfile
-    
-        if (!open (STDOUT, "> $logfile")) {
+
+        if (!open (STDOUT, "> $logpath")) {
             print STDERR __FILE__, ": Can't redirect stdout: $!\n";
             return 0;
         }
@@ -87,14 +82,14 @@ sub Run ($)
             print STDERR __FILE__, ": Can't dup stdout: $!\n";
             return 0;
         }
-    
+
         print "\n#################### Begin [" . (scalar gmtime(time())) . " UTC]\n";
     }
     elsif (uc $options eq "OFF") {
         print "\n#################### End [" . (scalar gmtime(time())) . " UTC]\n";
-            
+
         # Close the logging filehandles
-        
+
         if (!close (STDOUT)) {
             print OLDERR __FILE__, ": Error closing logging stdout: $!\n";
             return 0;
@@ -125,8 +120,6 @@ sub Run ($)
             return 0;
         }
     }
-
-    chdir $current_dir;
 
     return 1;
 }

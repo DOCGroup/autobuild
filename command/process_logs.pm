@@ -47,7 +47,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $root) {
+    if (!-d $root || !-r $root) {
         print STDERR __FILE__, ": Cannot read root dir: $root\n";
         return 0;
     }
@@ -56,7 +56,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"log_root\" variable\n";
         return 0;
     }
-    if (!-r $logroot) {
+    if (!-d $root || !-r $logroot) {
         print STDERR __FILE__, ": Cannot read log_root dir: $logroot\n";
         return 0;
     }
@@ -76,7 +76,7 @@ sub Run ($)
     print "\n#################### Processing Logs [" . (scalar gmtime(time())) . " UTC]\n";
 
     # Move the logs
-    
+
     if ($options =~ m/move/) {
         $moved = 1;
         my $retval = $self->move_log ();
@@ -84,14 +84,14 @@ sub Run ($)
     }
 
     # Prettify the logs
-    
+
     if ($options =~ m/prettify/) {
         my $retval = $self->prettify_log ($moved);
         return 0 if ($retval == 0);
     }
 
     # Clean the logs
-    
+
     if ($options =~ m/clean='(.*?)'/ || $options =~ m/clean=([^\s]*)/) {
         my $retval = $self->clean_logs ($1);
         return 0 if ($retval == 0);
@@ -112,7 +112,7 @@ sub clean_logs ($)
     my $logroot = main::GetVariable ('log_root');
     my $keep = shift;
     my @existing;
-    
+
     # chop off trailing slash
     if ($logroot =~ m/^(.*)\/$/) {
         $logroot = $1;
@@ -125,7 +125,7 @@ sub clean_logs ($)
     if (!defined $d) {
     }
 
-    while (defined($_ = $d->read)) { 
+    while (defined($_ = $d->read)) {
         if ($_ =~ m/^(...._.._.._.._..).txt/) {
             push @existing, $logroot . '/' . $1;
         }
@@ -135,9 +135,9 @@ sub clean_logs ($)
     @existing = reverse sort @existing;
 
     # Remove the latest $keep logs from the list
-    
+
     for (my $i = 0; $i < $keep; ++$i) {
-        shift @existing;  
+        shift @existing;
     }
 
     # Delete anything left in the list
@@ -167,9 +167,9 @@ sub move_log ()
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
     }
-    
+
     $logfile = $root . "/" . $logfile;
-    
+
     if (!defined $logfile) {
         print STDERR __FILE__, ": Requires \"logfile\" variable\n";
         return 0;
@@ -178,7 +178,7 @@ sub move_log ()
         print STDERR __FILE__, ": Cannot read logfile: $logfile\n";
         return 0;
     }
-    
+
     my $timestamp = POSIX::strftime("%Y_%m_%d_%H_%M", gmtime);
     $newlogfile = $logroot . "/" . $timestamp . ".txt";
 
@@ -187,7 +187,7 @@ sub move_log ()
     print "Moving $logfile to $newlogfile\n";
     copy ($logfile, $newlogfile);
     unlink ($logfile);
-    
+
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);
     return 1;
@@ -200,11 +200,11 @@ sub prettify_log ($)
     my $moved = shift;
     my $root = main::GetVariable ('root');
     my $logfile = main::GetVariable ('log_file');
-    
+
     if ($moved) {
         $logfile = $newlogfile;
     }
-    
+
     Prettify::Process ($logfile);
     return 1;
 }
