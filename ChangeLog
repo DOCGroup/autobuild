@@ -117,6 +117,12 @@ Mon Feb 10 07:47:24 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 	* configs/scoreboard/acetao.xml: Added MSVC6 compiler version to
 	  the build names that use the compiler.
 
+Fri Feb  7 17:34:27 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/jane_dev_static_release.xml: New build.
+
+        * configs/scoreboard/acetao.xml: Added new RH 8 Static Release build.
+
 Fri Feb  7 17:11:39 2003  Steve Huston  <shuston@riverace.com>
 
         * scoreboard.pl:
