@@ -1,3 +1,10 @@
+Fri Dec 26 13:48:56 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/balar_isis/IPV6.xml:
+
+	  Enabled ssl=1 in the above build. Not sure how this missed
+	  before. 
+
 Fri Dec 26 12:57:30 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
