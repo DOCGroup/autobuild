@@ -1,3 +1,8 @@
+Sat Oct  5 12:31:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/doc.sh: Update from cvs before building the
+	  scoreboard.  Specify output directory for html files.
+
 Fri Oct  4 05:50:08 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:
