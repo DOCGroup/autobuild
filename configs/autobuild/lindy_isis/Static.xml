@@ -27,7 +27,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nexceptions=1\noptimize=0\ninline=0\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCXX = g++-3.4\nCCFLAGS += -pedantic -Wno-long-long -Wwrite-strings -Wcast-align -Wformat=2\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nexceptions=1\noptimize=0\ninline=0\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCXX = g++-3.4.1\nCCFLAGS += -pedantic -Wno-long-long -Wwrite-strings -Wcast-align -Wformat=2\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="g++-3.4" />
