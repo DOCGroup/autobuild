@@ -1,3 +1,8 @@
+Thu Apr 29 07:52:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Wchar.xml:
+          Added missing MPC generation
+
 Thu Apr 29 06:58:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/cbxdd.xml:
