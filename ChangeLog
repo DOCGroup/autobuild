@@ -1,3 +1,9 @@
+Wed Nov  3 14:42:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/eowyn_gcc.xml:
+          Also try to build CIAO on x86_64, with SuSE92 xerces is part of
+          SuSE, so just try it.
+
 Wed Nov  3 14:14:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
