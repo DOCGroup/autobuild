@@ -7,7 +7,6 @@
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="PATH"         value="C:\Perl\Bin;C:\CBuilderX\bin;C:\CBuilderX\lib;C:\ACE\CBXdd\ACE_wrappers\lib;C:\ACE\CBXdd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
-	<environment name="BUILD"    value="all" />
 	<environment name="DEBUG"    value="1" />
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
