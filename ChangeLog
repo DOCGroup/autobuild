@@ -1,3 +1,9 @@
+Fri Oct 10 12:33:32 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new CBuilderX build. Everything buils as normal and the idea
+          is now to use this build for MPC testing with Borland soon.
+
 Fri Oct 10 08:52:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
