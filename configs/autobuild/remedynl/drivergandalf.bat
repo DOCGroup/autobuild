@@ -10,3 +10,4 @@ perl C:\ACE\autobuild\autobuild.pl gandalf_vc71.xml
 perl C:\ACE\autobuild\autobuild.pl gandalfvc71dr.xml
 perl C:\ACE\autobuild\autobuild.pl gandalfvc71sd.xml
 perl C:\ACE\autobuild\autobuild.pl gandalf_cbxddace.xml
+perl C:\ACE\autobuild\autobuild.pl gandalf_dmc.xml
