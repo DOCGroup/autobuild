@@ -33,7 +33,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#define ACE_USES_WCHAR\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USES_WCHAR\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
 
     <command name="print_os_version" />
@@ -53,9 +53,7 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/BCB6dru/* -f" / -->
-    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/BCB6dru" / -->
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/BCB6dru/*" / -->
+
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/BCB6dru" />
 </autobuild>
 
