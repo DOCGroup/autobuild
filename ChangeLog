@@ -1,3 +1,9 @@
+Fri Feb  7 16:28:48 2003  Steve Huston  <shuston@riverace.com>
+
+        * common/prettify.pm: In Compile_Handler, flag as a warning the
+          glibc-cased "<foo> is deprecated, use <bar>" diagnostics.
+          A recent fix to ACE was supposed to correct these, so be sure.
+
 Thu Feb  6 19:23:51 2003  Steve Huston  <shuston@riverace.com>
 
         * command/vc7make.pm: Specify devenv.com, not plain devenv. This
