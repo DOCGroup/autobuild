@@ -37,4 +37,11 @@
             <url>http://ringil.ece.uci.edu/bugzilla/lib_release</url>
         </build>
     </group>
+    <group>
+         <name>Solaris</name>
+         <build>
+             <name>SunOS_SunCC51</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC51_newbuild</url>
+         </build>
+    </group>
 </scoreboard>

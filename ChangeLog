@@ -1,3 +1,7 @@
+Fri Apr 26 17:50:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Add SunOS_SunCC51 build.
+
 Fri Apr 26 15:19:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* autobuild.pl: Add require command::check_compiler;
