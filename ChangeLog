@@ -1,3 +1,12 @@
+Wed Mar 10 19:23:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
+	  We don't know what caused it but the GCC 3.3.1 compiler hangs when
+	  compiling the RB_Tree_Test. It is caused by the optimizer, using -O3
+	  fails, using -O2 works without problems. So we have explicitly set
+	  -O2.
+
 Wed Mar 10 15:00:39 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/index.xml:
