@@ -1,3 +1,9 @@
+Tue May 11 15:44:43 UTC 2004  Don Hinton  <dhinton@dre.vanderbilt.edu>
+
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+          Added MPC.
+
 Tue May 11 08:12:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:

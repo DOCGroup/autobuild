@@ -29,6 +29,8 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
+    <command name="generate_workspace" options="-hierarchy -make_coexistence" />
+
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
@@ -51,7 +53,7 @@
     <command name="make"              options="-k -C TAO/tests/ORB_destroy  --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs                --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metrics/targets" />
 
     <command name="make"              options="-k -j4 -C TAO/tao" />
     <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />

@@ -29,6 +29,8 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
+    <command name="generate_workspace" options="-hierarchy -make_coexistence" />
+
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
     <command name="make"              options="-k --dry-run > $ACE_ROOT/../.metrics/targets" />
