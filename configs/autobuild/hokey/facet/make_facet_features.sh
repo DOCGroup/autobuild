@@ -25,6 +25,10 @@ FEATURES="
  correlation_filter
  eventtype
  eventvector
+ event_object
+ eventbody_object
+ eventbody_octetseq
+ eventbody_string
  realtime_dispatcher
  rtec_correlation_filter
  source_filter
