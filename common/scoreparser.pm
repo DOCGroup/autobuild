@@ -44,8 +44,17 @@ sub Parse ($\@)
     while (<$file_handle>) {
         chomp;
 
-        # Ignore comments and blank lines
+        # Strip out a single-line comment 
         s/<!--(.*?)-->//g;
+
+        # Need to do something more fancy for a multi-line comment
+        # First find the opening tag <--
+        if(m/<!--/) {
+           # After we find the opening tag, keep reading each character
+           # until we hit the end tag -->
+           $self->parse_comment($file_handle);
+           next;
+        } 
         next if (m/^\s*$/);
 
         if ($state eq 'none') {
@@ -146,6 +155,54 @@ sub Parse ($\@)
     }
 
     return 1;
+}
+
+
+###############################################################################
+# Before we call this function, we have already found the opening tag
+# for an XML comment: <!--
+# This function keeps parsing the stream until it finds the tag to terminate 
+# the comment: --> , and returns when it finds it.
+#
+# Arguments:  An open file stream.
+#
+# Returns:    Nothing
+#
+###############################################################################
+sub parse_comment($\@)
+{
+   my $self = shift;
+   my $result = shift;
+   my @c;
+   my $i=0;
+   my $leave_loop=0;
+   my $ch;
+   while(1){
+     $ch = $result->getc();
+
+     # determine if we have hit an EOF or not     
+     if( ! defined $ch) { 
+        last; # break out of the whlie loop
+     }
+
+     $c[$i] = $ch;
+
+     # Keep parsing character by character until we find "-->".
+     # Perl doesn't support a portable version of ungetc, so we
+     # need to keep our own buffer of characters to hold the "-->"
+     # as we parse character by character.
+     if($i >= 2) {
+        my $tag="";
+        $tag = join('', @c);
+        if($tag eq "-->") { 
+          last;  # break out of the while loop
+        }
+        $c[0] = $c[1];
+        $c[1] = $c[2];
+        $i=1; 
+     }
+     ++$i;
+   }
 }
 
 1;

@@ -1,4 +1,8 @@
-Fri Dec  6 00:24:15 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+Fri Dec  6 06:03:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* common/scoreparser.pm: Fix parsing of XML style comments.
+
+Fri Dec  5 00:24:15 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Added RH's version info.
 
