@@ -1,3 +1,9 @@
+2002-07-22      Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/tao/Borland_wchar.xml: 
+	* configs/autobuild/tao/Borland.xml: Added the missing statement 
+	  to invoke the second test suite.
+
 Mon Jul 22 15:12:25 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/Wchar.xml: Explicitly spelled out the

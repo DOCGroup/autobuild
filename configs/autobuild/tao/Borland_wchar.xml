@@ -29,6 +29,7 @@
     <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 all" />
 
     <command name="auto_run_tests"    options="-a -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug\Unicode" />
+    <command name="auto_run_tests"    options="-t -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Dynamic\Debug\Unicode" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
