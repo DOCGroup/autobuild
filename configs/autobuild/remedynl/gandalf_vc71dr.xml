@@ -5,6 +5,7 @@
         <environment name="TAO_ROOT"     value="C:\ACE\VC71dr\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
+        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71dr\ACE_wrappers\bin;C:\opensslvc71\openssl-0.9.7d\out32dll" type="prefix" />
         <environment name="SSL_ROOT"     value="C:\opensslvc71\openssl-0.9.7d" />
 
@@ -45,7 +46,8 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/VC71dr/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VC71dr" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/VC71dr/*" />
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/VC71dr/* -f" / -->
+    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VC71dr" / -->
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/VC71dr/*" / -->
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VC71dr" />
 </autobuild>
