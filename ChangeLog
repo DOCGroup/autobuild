@@ -1,5 +1,10 @@
 Fri May  7 08:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+          Corrected LD_LIBRARY_PATH, remove GNUmakefile* instead of Makefile*
+
+Fri May  7 08:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
         * configs/autobuild/remedynl/*.xml:
           Changed build xml files that before doing a cvs update we remove
           all GNUmakefiles and after the cvs update we don't do a remove
