@@ -1,4 +1,4 @@
-o!/usr/bin/python
+#!/usr/bin/python
 
 # ******************************************************************
 #      Author: Heather Drury
