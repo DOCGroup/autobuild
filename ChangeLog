@@ -1,3 +1,11 @@
+Mon Mar 17 12:57:30 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* scoreboard.pl: Added documentation for the options. Changed the
+	  behaviour of the -o option. It now takes only the output file
+	  name and relying on the -d option to get the output path right! 
+
+	* configs/scoreboard/doc.sh: Removed the output file's path!
+
 Mon Mar 17 11:55:22 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/doc.sh (CVS_RSH): Added comments to a couple

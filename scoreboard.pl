@@ -977,6 +977,37 @@ sub build_integrated_page ($)
 ###############################################################################
 
 # Getopts
+#
+# You can do the followingt with this set os options. 
+# 1. You can generate the index page for the scoreboard
+# 2. You can generate individual scoreboards for every subset ie. ace,
+#    ace_future, or whatever
+# 3. Generate an integrated page for #2 having all in one page. This
+#    step is heavily hard coded for the scoreboard at the doc_group!
+# Any one should be able to use #1 and #2. How to use them?
+#
+# 1: You can run like this
+# 
+#    $ ./scoreboard.pl -v -d [path to the directory where you would like
+#                             place your html files]
+#                         -i [path to the file with the name where you
+#                             have placed your index file in XML
+#                             format]
+#
+#     This command just generates an index ie. index.html page from
+#     whatever XML file that you pass through in -i option and places 
+#     it in the directory pointed by -d option. The option -v is for
+#     verbose! 
+#
+# 2: For generating individual html pagesyou can do this
+# 
+#    $ ./scoreboard.pl -d [please see above for explanation] 
+#                      -f [name and path of the XML file that needs 
+#                          to be used as a meta-file for HTML
+#                          generation]
+#                      -o [name of the output file. The html file will
+#                          be saved by this name and placed in the
+#                          directory pointed by -d].
 
 use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_z/;
 
@@ -1034,7 +1065,7 @@ query_latest ();
 update_cache ($dir);
 clean_cache ($dir);
 query_status ();
-update_html ($dir,$out_file);
+update_html ($dir,"$dir/$out_file");
 
 print 'Finished Scoreboard Update at '.scalar (gmtime ())."\n" if ($verbose);
 
