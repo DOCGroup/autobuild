@@ -38,7 +38,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
 
@@ -50,8 +50,8 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tango.dre.vanderbilt.edu rm /web/users/willemsenj/CygwinACE/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tango.dre.vanderbilt.edu:/web/users/willemsenj/CygwinACE" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/CygwinACE/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/CygwinACE" />
 </autobuild>
 
 
