@@ -1,3 +1,9 @@
+Tue May 28 20:18:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/tango/driver_debian_noinline.sh: Added.
+	* configs/autobuild/tango/Debian_NoInline.xml: Added.
+	* configs/scoreboard/acetao.xml: Add Debian_NoInline build.
+
 Fri May 24 16:06:57 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/check_compiler.pm: Add checks for compiler binaries named
