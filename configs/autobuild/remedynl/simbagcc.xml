@@ -40,12 +40,17 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests"    options="-a" /> 
+    <command name="auto_run_tests"    options="" /> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
@@ -54,5 +59,4 @@
     <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/hpuxtaogcc/* -f" />
     <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/hpuxtaogcc" />
 </autobuild>
-
 
