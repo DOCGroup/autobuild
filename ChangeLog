@@ -1,3 +1,9 @@
+Wed Sep 24 10:52:00 2003  Simon McQueen  <sm@prismtechnologies.com>
+
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+
+          Changed CVSROOT.
+
 Mon Sep 22 10:01:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* command/printaceconfig.pm (Run): Added CIAO's changeLog entries
@@ -15,7 +21,7 @@ Fri Sep 12 14:10:41 MST 2003 Trevor Fields <fields_t@ociweb.com>
 
         * configs/autobuild/ace_isis/RH8_Minimum.xml:
 
-          Added rt_corba=0 to the generated 
+          Added rt_corba=0 to the generated
           bin/MakeProjectCreator/config/default.features
 
 Fri Sep 12 10:05:00 2003 Dan Troesser <troesser_d@ociweb.com>
@@ -31,7 +37,7 @@ Thu Sep 11 17:11:04 MST 2003 Trevor Fields <fields_t@ociweb.com>
 
 	  Added command to make the bin/MakeProjectCreator/config/default.features
           file for overriding the minimum_corba value
-          for MPC. 
+          for MPC.
 
 Wed Sep 10 15:02:51 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
