@@ -1,3 +1,8 @@
+Mon Aug 23 16:04:23 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/Makefile
+          Changed to use the full path for source files
+
 Mon Aug 23 15:56:26 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * configs/scoreboard/tao_dre.sh:

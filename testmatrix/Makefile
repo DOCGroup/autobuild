@@ -1,4 +1,4 @@
-SCOREBOARD_CONFIG_DIR=$HOME/autobuild/configs/scoreboard/
+SCOREBOARD_CONFIG_DIR=/home/isisbuilds/autobuild/configs/scoreboard
 
 all : ace-list tsprdsh
 
