@@ -159,10 +159,28 @@ foreach my $file (@files) {
     ## named BUILD_CONFIG_FILE. 
     $data{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename( $file );
 
-    ## Grab the relative path for the config file so we can pull a copy from cvs later
+    ## Grab the relative path for the config file so we can pull a copy
+    ##  from cvs later
     my $temp_file = $file;
+
+    ## If $temp_file doesn't include the path, we need to get it relative
+    ## to the current directory.
+    if ($temp_file !~ m/\/configs\/autobuild/){
+        ## we need to prepend the path if the caller cd'd into the directory
+        ## that contains the config file (this assumes it's in the autobuild
+        ## tree...
+        my $current_dir = getcwd ();
+        $current_dir =~ s/\\/\//g;
+        # add trailing slash if not there
+        if ($current_dir !~ m/^.*\/$/) {
+            $current_dir = $current_dir."/";
+        }
+        $temp_file = $current_dir.$temp_file;
+    }
+
     ## replace windows seperators with unix ones
-    $temp_file =~ s/\\/\//;
+    $temp_file =~ s/\\/\//g;
+
     ## strip off the anything prior to "configs/autobuild"
     $temp_file =~ s/.*configs\/autobuild/configs\/autobuild/;
     $data{VARS}->{CVS_CONFIG_FILE} = $temp_file;

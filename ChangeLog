@@ -1,3 +1,10 @@
+Mon Aug 11 18:25:13 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * autobuild.pl:
+          Made the seperator replacement for the CVS_CONFIG_FILE variable
+          global so that it replaces all the backslashes, not just the
+          first.
+
 Mon Aug 11 17:15:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
