@@ -1,3 +1,9 @@
+Wed Apr 28 15:51:39 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/jane_dev_debug.xml: Converted to check out
+	  only ACE and MPC, not all of TAO as well, and use MPC to generate
+	  the gnuace Makefiles.
+
 Mon Apr 26 12:31:28 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/scoreboard/index.xml:
