@@ -29,10 +29,6 @@ and let us know which platform combinations you can contribute.
     <group>
         <name>ACE-only</name>
         <build>
-            <name>Redhat_8.0_ACE_Debug</name>
-            <url>http://www.riverace.com/build_logs/jane/dev/debug</url>
-        </build>
-        <build>
             <name>AIX_5.1_gcc3_Debug</name>
             <url>http://www.riverace.com/build_logs/cuddy/dev/gcc3_debug</url>
         </build>
