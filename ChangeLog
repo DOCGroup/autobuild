@@ -1,3 +1,9 @@
+Thu Apr 17 10:05:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Added Full and singleThreaded builds
+	  at ISIS into the scoreboard. They replace the Full builds on
+	  sirion.ece and single threaded builds on curufin.
+
 2003-04-17  Build Account  <isisbuilds@tango.dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/SingleThreaded.xml:
