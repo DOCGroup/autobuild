@@ -35,10 +35,10 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -make_coexistence" />
     <!-- This builds TAO... -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,tests,examples,CCF -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,tests,examples,CCF -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

@@ -33,9 +33,9 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF -make_coexistence" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />
