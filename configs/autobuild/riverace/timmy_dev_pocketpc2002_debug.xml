@@ -7,7 +7,7 @@
         <variable name="root"     value="C:\ace\ACE_wrappers-repository" />
         <variable name="project_root" value="." />
 	<variable name="log_file" value="pocket_debug.txt" />
-        <variable name="log_root" value="C:\ace\build_logs\dev\pocketpc_debug" />
+        <variable name="log_root" value="G:\build_logs\dev\pocketpc_debug" />
         <variable name="name"     value="Pocket PC 2002 Debug" />
     </configuration>
 

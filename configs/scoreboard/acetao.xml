@@ -64,6 +64,14 @@ and let us know which platform combinations you can contribute.
             <name>WinNT4_BCB5_Ent_Static_Debug_(remedy.nl)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
         </build>
+        <build>
+            <name>Windows_PocketPC2002_Debug</name>
+            <url>http://www.riverace.com/build_logs/beebee/dev/pocketpc_debug</url>
+        </build>
+        <build>
+            <name>Windows_CE.NET_Debug</name>
+            <url>http://www.riverace.com/build_logs/beebee/dev/wince4_debug</url>
+        </build>
     </group>
 
     <group>

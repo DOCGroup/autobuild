@@ -1,3 +1,16 @@
+Wed Jan 15 11:40:19 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/timmy_dev_wince4_debug.xml: Changed
+          build configurations from x86 to emulator. Changed log location
+          to a place that'll get out to where the DOC scoreboard can reach it.
+
+        * configs/autobuild/riverace/timmy_dev_pocketpc2002_debug.xml: Changed
+          log location to a place that'll get out to where the DOC scoreboard
+          can reach it.
+
+        * configs/scoreboard/acetao.xml: Added Windows PocketPC2002 and CE 4
+          builds to ACE-only section.
+
 Wed Jan 15 07:35:43 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/pokey/GCC32_Core.xml: Compiled TAO and
