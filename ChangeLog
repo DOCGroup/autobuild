@@ -1,3 +1,12 @@
+Mon Aug 26 10:11:17 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml:
+	* configs/autobuild/valinor/driver.xml:
+
+	  New "full" build that enables all reactors, including the
+	  Dev_Poll_Reactor, but excluding the WFMO_Reactor.  Native
+	  exceptions are disabled.  GNU g++ 3.2 is used.
+
 Mon Aug 26 16:24:47 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* autobuild.pl: Change occurences of things like:
