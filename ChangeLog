@@ -1,3 +1,9 @@
+Tue Aug  6 17:30:46 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC53.xml: Reeanbled exceptions
+	  in this build since the problem with SunOS 53 has been fixed by
+	  adding new patches. 
+
 Sat Aug  3 18:11:14 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/ringil/Legacy.xml: 
