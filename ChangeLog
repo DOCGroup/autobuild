@@ -1,3 +1,10 @@
+Fri Mar 14 13:11:17 UTC 2003  Don Hinton  <dhinton@ieee.org>
+
+	* configs/autobuild/dresystems/driver_local_scoreboard.sh:
+	* configs/autobuild/dresystems/local_scoreboard.xml:
+	* configs/scoreboard/acetao.xml: Updated url for DRE Systems
+	  builds.
+
 Wed Mar 12 08:36:27 2003  Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
