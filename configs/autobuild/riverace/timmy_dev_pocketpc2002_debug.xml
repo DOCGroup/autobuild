@@ -18,8 +18,7 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
-<command name="file_manipulation" options="type=delete file=ace/ace.vcp" />
-<command name="file_manipulation" options="type=delete file=tests/*.vcp" />
+
     <command name="print_os_version" />
     <command name="print_ace_config" />
 
