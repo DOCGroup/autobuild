@@ -169,4 +169,12 @@
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/guajira.cs.wustl.edu_TRU64_CXX_newbuild</url>
          </build>
     </group>
+
+    <group>
+         <name>XML Test (Sanity checking only)</name>
+         <build>
+             <name>WinXP XML Debug</name>
+             <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
+         </build>
+    </group>
 </scoreboard>
