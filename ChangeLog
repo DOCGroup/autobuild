@@ -1,3 +1,9 @@
+Thu Nov 28 10:31:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+          Only build ace as static, because TAO doesn't build because of a
+          linker crash in the TAO_IDL compiler.
+
 Wed Nov 27 19:18:19 2002  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Set LIBPATH,
@@ -89,10 +95,10 @@ Mon Nov 11 19:46:55 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 Sat Nov 9 18:20:13 2002  Frank Hunleth  <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml: 
+	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
           Added ST flag to not run the multithreaded-only tests.  Thanks
 	  to Don Hinton for point this out.
-	
+
 Mon Nov  4 18:48:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
 	* configs/autobuild/rumba/Debian_WChar.xml:  Removed the ST flag
@@ -101,7 +107,7 @@ Mon Nov  4 18:48:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
 Sun Nov  3 10:39:25 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Mesaging.xml: Added
-	  RH_7.1 as the config option. 
+	  RH_7.1 as the config option.
 
 Thu Oct 31 20:31:19 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
@@ -110,7 +116,7 @@ Thu Oct 31 20:31:19 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 	  been stopped and removed for the following reasons
 	  1. The machine is running out of disk space
 	  2. The builds configuration has been repeated elsewhere in other
-	  builds. 
+	  builds.
 
 Thu Oct 31 20:23:39 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
