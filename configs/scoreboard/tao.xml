@@ -75,7 +75,7 @@ all the OS/platform combinations TAO is tested everyday.
     <build>
        <name>Debian_Minimum_Static</name>
        <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_Minimum_Static/</url>
-       <build_sponsor>WashU</build_sponsor>
+       <build_sponsor>Washington University</build_sponsor>
        <build_sponsor_url>http://www.cs.wustl.edu/~doc</build_sponsor_url>
      </build>
      <build>
