@@ -1,3 +1,9 @@
+Tue Nov 30 18:40:27 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	  Changed 'make' options from -j2 to -P since this build now uses
+	  the HP make, not GNU make.
+
 Mon Nov 22 20:05:03 2004  Carlos O'Ryan  <coryan@atdesk.com>
 
 	* configs/scoreboard/tao_dre.sh:

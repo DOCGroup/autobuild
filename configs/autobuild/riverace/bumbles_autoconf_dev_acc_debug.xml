@@ -41,7 +41,7 @@
 
     <command name="configure"         options="CXX=aCC AR=/usr/ccs/bin/ar --preclean --with-ssl=no" />
 
-    <command name="make"              options="dir=build/autoconf_acc_debug -j 2 -k" />
+    <command name="make"              options="dir=build/autoconf_acc_debug -P -k" />
 
     <command name="auto_run_tests"    options="dir=build/autoconf_acc_debug -a" />
 
