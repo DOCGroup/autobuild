@@ -55,7 +55,7 @@
         </build>
         <build>
             <name>RedHat_Explict_Templates</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Explict_Templates</url>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Explicit_Templates</url>
         </build>
     </group>
     <group>
