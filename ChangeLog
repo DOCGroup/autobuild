@@ -1,3 +1,20 @@
+Wed Dec 11 16:53:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/maedhros/Core.xml:
+	* configs/autobuild/maglor/Static.xml:
+	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+	* configs/autobuild/rumba/Debian_WChar.xml:
+	* configs/autobuild/sirion/Full.xml:
+	* configs/autobuild/sirion/Full_new.xml:
+	* configs/autobuild/slytherin/OpenBSD_Core.xml:
+	* configs/autobuild/slytherin/OpenBSD_Full.xml:
+	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+	* configs/autobuild/tango/Debian_NoInline.xml:
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+	* configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+	* configs/autobuild/valinor/Full.xml:  Used reverseclean instead
+	  of realclean.
+
 Wed Dec 11 16:15:57 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/amrod/ImplicitTemplates.xml: Do not do a clean
