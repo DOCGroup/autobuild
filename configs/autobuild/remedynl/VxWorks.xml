@@ -28,6 +28,8 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-vxworks5.x.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nCPU=SIMNT\nWIND_BASE=c:/T22-Proto\nWIND_HOST_TYPE=x86-win32\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.x_g++.GNU\n'" />
 
+    <command name="print_os_version"/>
+    <command name="check_compiler" options="ccsimpc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />

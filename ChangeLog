@@ -1,3 +1,10 @@
+Thu Jun 26 17:07:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added ccsimpc compiler which is the VxWorks simulator compiler.
+          This is needed for the VxWorks 5.5 GCC 2.96 build we are setting
+          up.
+
 Thu Jun 26 16:05:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
         Please direct any problems with this commit to Jason Cohen

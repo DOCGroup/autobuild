@@ -53,7 +53,7 @@ sub Run ($)
 
     print "================ Compiler version ================\n";
 
-    if($compiler =~ m/^(gcc|g\+\+)/){
+    if($compiler =~ m/^(gcc|g\+\+|ccsimpc)/){
         system($compiler." -v 2>&1");
     }
     elsif(lc $compiler eq "sun_cc"){
