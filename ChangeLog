@@ -1,9 +1,15 @@
+Thu Oct 14 10:46:20 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+
+          Minimized the default.features to only include cidl=1.
+
 Thu Oct 14 17:16:35 2004  Olli Savia  <ops@iki.fi>
 
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
           Removed reduntant setting of ACE_HAS_NONCONST_MSGSND.
           config-lynxos.h sets this correctly.
-        
+
 Thu Oct 14 10:03:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
