@@ -1,3 +1,12 @@
+Sat May 31 14:37:39 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/benjamin_dev_debug.xml:
+	* configs/autobuild/riverace/benjamin_dev_optimize.xml:
+	* configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml:
+	  New Redhat Linux 7.1 ACE builds.
+
+	* configs/scoreboard/ace.xml: Added the above three builds.
+
 Thu May 29 19:22:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
