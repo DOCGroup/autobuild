@@ -63,5 +63,5 @@
     <command name="process_logs"      options="clean=8 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC85XX_DIAB" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC85XX_DIAB" />
 </autobuild>
