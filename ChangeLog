@@ -1,3 +1,9 @@
+Wed Apr 16 17:10:03 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/driver_core.sh: A new core build
+	  since the balar one is having problems.
+
 Wed Apr 16 14:04:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Fixed a syntax error.
