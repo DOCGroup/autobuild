@@ -68,6 +68,7 @@ sub RegisterCommand ($$)
 #
 
 require command::auto_run_tests;
+require command::process_logs;
 require command::cvs;
 require command::file_manipulation;
 require command::log;
