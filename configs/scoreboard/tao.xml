@@ -256,8 +256,20 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC71_NET_DLL</name>
+            <name>WinXP_VC71_NET_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_VC71_NET_Dynamic_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71dr</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_VC71_NET_Static_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71sd</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
