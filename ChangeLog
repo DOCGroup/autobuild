@@ -1,14 +1,17 @@
+Mon Apr 19 08:47:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/tao.xml:
+          Added MinGW TAO build
+
 Sun Apr 18 22:08:21 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
-
 	  Update the scoreboard xml for lindy.
 
 Sun Apr 18 21:02:38 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
 	* configs/autobuild/lindy_isis/driver_static.sh
-
 	  lindy.dre.vanderbilt.edu runs static build with gcc-3.4 now.
 
 
