@@ -28,7 +28,7 @@
     <command name="create_ace_build_legacy"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/forte6_debug/.disable output='RUNNING'" />
 
-    <command name="file_manipulation" options="type=create file=build/forte6_debug/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/forte6_debug/ace/config.h output='#define ACE_HAS_IPV6\n#include \x22ace/config-sunos5.8.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=build/forte6_debug/include/makeinclude/platform_macros.GNU output='ssl=1\ndebug=1\nPLATFORM_SSL_CPPFLAGS=-I/usr/local/ssl/include\nPLATFORM_SSL_LIBS=-lssl -lcrypto\nPLATFORM_SSL_LDFLAGS=-L/usr/local/ssl/lib\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
 
     <command name="print_os_version" />
