@@ -1,3 +1,8 @@
+Tue Jul 30 13:38:47 2002  Jaiganesh Balasubramanian  <jai@doc.ece.uci.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+	  Changed the settings for exceptions from 1 to 0.
+
 Mon Jul 29 23:54:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/doc/acetao.xml: Added Doxygen build.
