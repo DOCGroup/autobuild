@@ -18,7 +18,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -36,4 +36,7 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command name="shell"             options="ssh bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_SuSE81_GCC/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_SuSE81_GCC" />
+
 </autobuild>
