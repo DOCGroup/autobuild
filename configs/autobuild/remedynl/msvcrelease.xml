@@ -29,8 +29,8 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="win32make"         options="msvc_auto_compile -DLL -Release -ACE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -CORE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Release -ACE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -TAO -u -k" />
 
     <command name="log"               options="OFF" />

@@ -1,3 +1,12 @@
+Sat Jan 10 19:39:53 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/remedynl/msvclibdebug.xml:
+	* configs/autobuild/remedynl/msvcrelease.xml:
+
+	  Build the core builds first since all the dependencies are set
+	  right for the core builds. Doing this should help a lot with the
+	  whacked problems that we are seeing.
+
 Sat Jan 10 11:24:44 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/remedynl/vc7.xml:
