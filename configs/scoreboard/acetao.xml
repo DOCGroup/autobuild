@@ -10,6 +10,10 @@
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_Core/</url> 
         </build>
         <build>
+            <name>RedHat_7.1_No_AMI_(beguine)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_No_AMI</url> 
+        </build>
+        <build>
             <name>RedHat_Implicit_Templates</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/amrod_ImplicitTemplates/</url>
         </build>
