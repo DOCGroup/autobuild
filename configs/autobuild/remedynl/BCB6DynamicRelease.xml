@@ -42,10 +42,10 @@
     <command name="auto_run_tests"    options="-a -s \x22D:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Release" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=4 index" />
+    <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_WinNT4_BCB6_Dynamic_Release/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_WinNT4_BCB6_Dynamic_Release" />
+    <command name="shell"             options="ssh willemsenj@tango.dre.vanderbilt.edu rm /web/users/willemsenj/BCB6dr/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tango.dre.vanderbilt.edu:/web/users/willemsenj/BCB6dr" />
 </autobuild>
 
