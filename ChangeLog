@@ -1,9 +1,17 @@
+Mon Dec 29 13:41:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          When finding an "out of memory" in the compile phase of the build,
+          handle this as error. This is reported by the Tru64 box we use
+          at this moment and as resulting action the process memory limit
+          should be increased.
+
 Fri Dec 26 13:48:56 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/balar_isis/IPV6.xml:
 
 	  Enabled ssl=1 in the above build. Not sure how this missed
-	  before. 
+	  before.
 
 Fri Dec 26 12:57:30 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
@@ -11,7 +19,7 @@ Fri Dec 26 12:57:30 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/scoreboard/tao_future.xml:
 
 	  Moved some of the Charles University's build to the relegated
-	  section.  None of them are in prague to help us with this now. 
+	  section.  None of them are in prague to help us with this now.
 
 Fri Dec 26 15:01:08 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
