@@ -1,3 +1,11 @@
+Mon Aug 16 12:08:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/msvclibrelease.xml:
+          configs/autobuild/remedynl/msvclibdebug.xml:
+          configs/autobuild/remedynl/gandalfvc71sd.xml:
+          
+          Added '-apply_project' to MPC generation.
+
 Mon Aug 16 11:00:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
 
         * configs/autobuild/prism/HPUX11_ACC339_Full.xml

@@ -34,7 +34,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -make_coexistence -type vc6 -static -name_modifier *_Static" /> 
+    <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -make_coexistence -type vc6 -static -name_modifier *_Static -apply_project" /> 
 
     <command name="win32make"         options="msvc_static_compile -Debug -CORE -u -k -name_modifier *_Static" />
     <command name="win32make"         options="msvc_static_compile -Debug -ACE -u -k -name_modifier *_Static" />
