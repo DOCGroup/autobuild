@@ -1,3 +1,9 @@
+Mon Oct 14 00:36:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/doc/auto_doxygen.pl: Added.
+	* configs/autobuild/doc/Doxygen.xml: Use auto_doxygen.pl which is in
+	  CVS.
+
 Wed Oct  9 15:24:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/prettify.pm: Don't highlight extraneous recursive make
