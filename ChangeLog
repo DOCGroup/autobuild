@@ -1,3 +1,8 @@
+Tue Aug 10 11:02:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+          Added SuSE 90 Autoconf test build
+
 Tue Aug 10 09:50:00 UTC  Simon Massey  <simon.massey@prismtechnologies.com>
 
         * configs/scoreboard/tao.xml

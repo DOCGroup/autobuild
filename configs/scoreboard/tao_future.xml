@@ -28,6 +28,12 @@ decide the migration paths and strategies.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
+      <name>SuSE_90_Autoconf</name>
+      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC_autoconf</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
       <name>WinXP_MSVC6_XML_Debug</name>
       <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
       <build_sponsor>Washington University</build_sponsor>
