@@ -37,7 +37,6 @@
  <!-- TAO -->
  <command name="make"                  options="-k -C TAO reverseclean" />
  <command name="make"                  options="-k -C TAO/TAO_IDL" />
- <command name="make"                  options="-k -C TAO idl_stubs" />
  <command name="make"                  options="-k -C TAO" />
 
  <command name="log"                   options="off" />
