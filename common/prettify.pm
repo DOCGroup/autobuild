@@ -801,7 +801,8 @@ sub Setup_Handler ($)
     if ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
         $s =~ m/nothing known about/ ||
-        $s =~ m/ERROR/ ||
+        $s =~ m/^ERROR/ ||
+        $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i)
     {
         $self->Output_Error ($s);
