@@ -9,26 +9,26 @@ decide the migration paths and strategies.
 </preamble>
 
  <group>
-         <name>Test Builds for TAO</name>
-         <build>
-             <name>WinXP_MSVC6_XML_Debug</name>
-             <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
-             <build_sponsor>Washington University</build_sponsor>
-             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-         </build>
-         <build>
-             <name>WinXP_MSVC6_Warning_Level_4_Debug</name>
-             <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
-             <build_sponsor>Washington University</build_sponsor>
-             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-         </build>
-         <build>
-             <name>RedHat_GCC_3.3(pre-release)</name>
-             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
-             <build_sponsor>BBN Technologies</build_sponsor>
-             <build_sponsor_url>http://www.dist-systems.bbn.com</build_sponsor_url>
-         </build>
-         <build>
+   <name>Test Builds for TAO</name>
+   <build>
+   <name>WinXP_MSVC6_XML_Debug</name>
+      <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
+      <build_sponsor>Washington University</build_sponsor>
+      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+      </build>
+      <build>
+         <name>WinXP_MSVC6_Warning_Level_4_Debug</name>
+         <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
+         <build_sponsor>Washington University</build_sponsor>
+         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+      </build>
+      <build>
+         <name>RedHat_GCC_3.3(pre-release)</name>
+         <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
+         <build_sponsor>BBN Technologies</build_sponsor>
+         <build_sponsor_url>http://www.dist-systems.bbn.com</build_sponsor_url>
+      </build>
+      <build>
              <name>Redhat_Linux_8_Debug(autoconf)</name>
              <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
              <red>36</red>
@@ -77,8 +77,12 @@ decide the migration paths and strategies.
             <orange>30</orange>
             <red>36</red>
         </build>
-    </group>
-<group>
+         <build>
+         <name>SuSE_81_GCC32</name>
+         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
+         <build_sponsor>Remedy IT</build_sponsor>
+	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      </build>
    <name>VxWorks</name>
    <build>
    <name>SunOS_5.8_GCC_2.96_(rtlogic.com)</name>
@@ -86,9 +90,6 @@ decide the migration paths and strategies.
    <build_sponsor>RTLogic!</build_sponsor>
    <build_sponsor_url>http://www.rtlogic.com</build_sponsor_url>
    </build>
-</group>
-
-<group>
    <name>BSD</name>
    <build>
       <name>OpenBSD_Full</name>

@@ -1,3 +1,8 @@
+Tue Mar 18 13:24:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/tao_future.xml: Reordered the builds on the
+	  scoreboard. 
+
 Tue Mar 18 10:38:11 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Added a new FreeBSD build
