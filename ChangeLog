@@ -1,4 +1,10 @@
-Mon Oct 10 11:34:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+Mon Oct 11 18:20:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * command/print_cidlc_version.pm
+        * autobuild.pl:
+          New module to print cidlc version info to the config page
+
+Mon Oct 11 11:34:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
  	* command/win32make.pm:
 
