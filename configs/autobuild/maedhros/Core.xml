@@ -24,5 +24,5 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="process_logs" options="clean" />
     <command name="log" options="OFF" />
-    <command name="process_logs" options="prettify" />
+    <command name="process_logs" options="move prettify clean" />
 </autobuild>
