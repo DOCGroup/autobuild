@@ -1,3 +1,8 @@
+Wed Jun 16 12:08:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          The HPUX 11i GCC 3.3.3 build will be static
+
 Wed Jun 16 09:40:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
