@@ -6,6 +6,10 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
         </build>  
         <build>
+            <name>Debian_Minimum</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/balar_Minimum/</url>
+        </build> 
+        <build>
             <name>Debian_Minimum_Static</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_Minimum_Static/</url> 
         </build>
