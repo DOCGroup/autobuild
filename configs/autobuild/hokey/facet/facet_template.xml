@@ -39,7 +39,7 @@
         <variable name="root"               value="/export/home/bugzilla/facet" />
         <variable name="project_root"       value="/export/home/bugzilla/facet/RTEvent/facet" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/timestamp" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/#logfile#" />
         <variable name="configs"            value="Linux" />
         <variable name="make_program"       value="ant" />
 
@@ -51,7 +51,7 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
 
-    <command name="make"              options="-Duse_feature_timestamp=t" />
+    <command name="make"              options="-Duse_feature_#feature#=t" />
 
     <command name="auto_run_tests"    />
 
