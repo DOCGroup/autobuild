@@ -8,7 +8,7 @@
         <environment name="PATH"                  value="/usr/local/bin" type="prefix" />
         <environment name="CVSROOT"               value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"               value="ssh" />
-        <environment name="VALGRIND_OPTS"         value="-q --tool=addrcheck --num-callers=5 --leak-check=yes --trace-children=yes" />
+        <environment name="VALGRIND_OPTS"         value="-v -q --tool=addrcheck --num-callers=25 --leak-check=yes --trace-children=yes" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
 
         <variable name="root"     value="/home/build/ACE/valgrind/" />

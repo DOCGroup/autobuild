@@ -1,3 +1,8 @@
+Fri Jun  2 09:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          The VC8 build is now using beta 1
+
 Thu Jul  1 12:55:36 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/ace/LYNX_PPC.xml:
