@@ -1,3 +1,13 @@
+Mon Dec 23 10:57:29 2002  Steve Huston  <shuston@riverace.com>
+
+        * autobuild.pl: Added wincemake to the commands. For real this time.
+
+        * command/wincemake.pm: Allow options to be quoted using ''in XML
+          file; change them back to "" before executing evc.
+
+        * configs/autobuild/riverace/timmy_dev_pocketpc2002_debug.xml: Change
+          ace library build to use the wincemake command.
+          
 Sat Dec 21 14:43:22 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/CygwinGCC32.xml:

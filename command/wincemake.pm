@@ -72,6 +72,10 @@ sub Run ($)
     }
     $options =~ s/search=$dir//;
 
+    # Allow quoted options to be delimited by ' ' in .xml file; change
+    # them back here.
+    $options =~ s/'/"/g;
+
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;

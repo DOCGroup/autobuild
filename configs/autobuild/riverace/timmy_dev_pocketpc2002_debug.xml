@@ -18,10 +18,16 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
+<command name="file_manipulation" options="type=delete file=ace/ace.vcp" />
+<command name="file_manipulation" options="type=delete file=tests/*.vcp" />
+    <command name="print_os_version" />
     <command name="print_ace_config" />
 
-    <command name="win32make"         options="-evc3 -clean -recurse ace tests" />
-    <command name="win32make"         options="-evc3 -recurse ace tests" />
+    <command name="generate_workspace" options="-type em3 ace/ace.mwc" />
+    <command name="generate_workspace" options="-type em3 tests/tests.mwc" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ace DLL - Win32 (WCE ARM) Debug' /REBUILD /CECONFIG 'Pocket PC 2002'" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast DLL - Win32 (WCE ARM) Debug' /REBUILD /CECONFIG 'Pocket PC 2002'" />
+    <command name="win32make"         options="-evc3 -recurse tests" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
