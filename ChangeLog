@@ -1,3 +1,9 @@
+Wed Mar 31 13:43:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Clarified in the build names that we have a debug and release
+          MinGW build.
+
 2004-03-30  Build Account  <isisbuilds@dre.vanderbilt.edu>
 
  	* scoreboard.pl:
