@@ -9,6 +9,7 @@ use warnings;
 
 use Cwd;
 use File::Path;
+use Sys::Hostname;
 
 ###############################################################################
 # Constructor
@@ -40,6 +41,9 @@ sub Run ($)
     my $useuname = shift;
 
     main::PrintStatus ('Config', "print OS Version" );
+
+    print "<h3>Hostname</h3>\n";
+    print hostname(), "\n";
 
     if(-x "/bin/uname"){
         print "<h3>OS version (uname -a)</h3>\n";

@@ -1,3 +1,8 @@
+Thu Sep  4 17:52:57 2003  Chris Cleeland  <cleeland_c@ociweb.com>
+
+	* command/print_os_version.pm (Run): Added in a clause to print
+	  out the hostname using the standard Sys::Hostname module.
+
 Sat Aug 30 19:43:30 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * autobuild.pl:
