@@ -3,6 +3,12 @@ Mon May 26 10:15:36 2003  Steve Huston  <shuston@riverace.com>
 	* configs/autobuild/riverace/jane_dev_static_release.xml: Added
 	  -Config STATIC to the test invocation.
 
+Sun May 25 11:06:39 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/jane_dev_static_release.xml: Added
+	  missing \n in platform_macros.GNU. Thanks to Don Hinton for
+	  noticing this.
+
 Sat May 24 10:19:07 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* common/prettify.pm (Compile_Handler): Make "File <xxx> exists
