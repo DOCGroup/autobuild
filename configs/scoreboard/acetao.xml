@@ -22,6 +22,10 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/tango_NoInline</url>
         </build>
         <build>
+            <name>Debian_NoInterceptors</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_NoInterceptors/</url> 
+        </build>
+        <build>
             <name>Debian_WChar_GCC_3.1</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_Debian_WChar/</url>
         </build>

@@ -1,3 +1,9 @@
+Wed May 29 14:35:37 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/charanga/Debian_NoInterceptors.xml: Added.
+	* configs/autobuild/charanga/driver_no_interceptors.sh: Added.
+	* configs/scoreboard/acetao.xml: Add Debian_NoInterceptors build.
+
 Wed May 29 02:11:29 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Clean up names for RedHat builds.
