@@ -539,6 +539,149 @@ sub Normal ($)
 ###############################################################################
 ###############################################################################
 
+package Prettify::Latest;
+
+use strict;
+use warnings;
+
+use FileHandle;
+
+###############################################################################
+
+sub new ($)
+{
+    my $proto = shift;
+    my $class = ref ($proto) || $proto;
+    my $self = {};
+    my $basename = shift;
+    my $filename = "";
+    
+    if ($basename =~ s/^(.*)\///) {
+        $filename = $1 . "/latest.txt";
+    }
+    else {
+        $filename = "latest.txt"
+    }
+            
+    $self->{BASENAME} = $basename;
+    $self->{LAST_SECTION} = "";
+    $self->{SECTION_COUNTER} = 0;
+    $self->{ERROR_COUNTER} = 0;
+    $self->{WARNING_COUNTER} = 0;
+    $self->{FH} = new FileHandle ($filename, 'w');
+
+    bless ($self, $class);
+    return $self;
+}
+
+sub Header ()
+{
+    # Do nothing
+}
+
+
+sub Footer ()
+{
+    my $self = shift;
+
+    $self->RecordSection ();
+
+    print {$self->{FH}} $self->{BASENAME};
+    print {$self->{FH}} " Config: $self->{CONFIG_SECTION}" if (defined $self->{CONFIG_SECTION});
+    print {$self->{FH}} " Setup: $self->{SETUP_SECTION}-$self->{SETUP_ERRORS}-$self->{SETUP_WARNINGS}";
+    print {$self->{FH}} " Compile: $self->{COMPILE_SECTION}-$self->{COMPILE_ERRORS}-$self->{COMPILE_WARNINGS}";
+    print {$self->{FH}} " Test: $self->{TEST_SECTION}-$self->{TEST_ERRORS}-$self->{TEST_WARNINGS}";
+    print {$self->{FH}} "\n";
+}
+
+sub RecordSection ()
+{
+    my $self = shift;
+    
+    if ($self->{LAST_SECTION} eq 'Config') {
+        $self->{CONFIG_SECTION} = $self->{SECTION_COUNTER};
+    }
+    
+    if ($self->{LAST_SECTION} eq 'Setup') {
+        $self->{SETUP_SECTION} = $self->{SECTION_COUNTER} if (!defined $self->{SETUP_SECTION});
+        $self->{SETUP_ERRORS} += $self->{ERROR_COUNTER};
+        $self->{SETUP_WARNINGS} += $self->{WARNING_COUNTER};
+    }
+    
+    if ($self->{LAST_SECTION} eq 'Compile') {
+        $self->{COMPILE_SECTION} = $self->{SECTION_COUNTER} if (!defined $self->{COMPILE_SECTION});
+        $self->{COMPILE_ERRORS} += $self->{ERROR_COUNTER};
+        $self->{COMPILE_WARNINGS} += $self->{WARNING_COUNTER};
+    }
+
+    if ($self->{LAST_SECTION} eq 'Test') {
+        $self->{TEST_SECTION} = $self->{SECTION_COUNTER} if (!defined $self->{TEST_SECTION});
+        $self->{TEST_ERRORS} += $self->{ERROR_COUNTER};
+        $self->{TEST_WARNINGS} += $self->{WARNING_COUNTER};
+    }
+
+    $self->{ERROR_COUNTER} = 0;
+    $self->{WARNING_COUNTER} = 0;
+}
+
+sub Section ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs 
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    $self->RecordSection ();
+
+    ++$self->{SECTION_COUNTER};
+
+    # Save for later use
+    
+    $self->{LAST_SECTION} = $s;
+}
+
+sub Description ($)
+{
+    # Do nothing
+}
+
+sub Timestamp ($)
+{
+    # Do nothing
+}
+
+sub Subsection ($)
+{
+    # Do nothing
+}
+
+sub Error ($)
+{
+    my $self = shift;
+    my $s = shift;
+ 
+    ++$self->{ERROR_COUNTER};
+}
+
+sub Warning ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    ++$self->{WARNING_COUNTER};
+}
+
+sub Normal ($)
+{
+    # Do nothing
+}
+
+
+###############################################################################
+###############################################################################
+
 package Prettify;
 
 use strict;
@@ -582,6 +725,7 @@ sub new ($)
             new Prettify::Full_HTML ($basename),
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename),
+            new Prettify::Latest ($basename),
         );
     
     # Output the header for the files
