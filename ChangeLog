@@ -1,3 +1,9 @@
+Sat Jan 11 09:23:02 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/pokey/GCC32_Core.xml: Removed LoadBalancing
+	  from the services that can be compiled. Please refer to bugzilla
+	  entry ### for why this breaks.
+
 Sat Jan 11 09:17:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Changed the name of the builds
