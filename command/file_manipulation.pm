@@ -5,7 +5,6 @@
 package File_Manipulation;
 
 use strict;
-use FileHandle;
 use Cwd;
 use File::Find;
 
