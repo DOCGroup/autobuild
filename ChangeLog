@@ -1,3 +1,8 @@
+Mon Mar 10 21:57:45 UTC 2003  Don Hinton  <dhinton@ieee.org>
+
+	* configs/scoreboard/acetao.xml: Added red and orange timeouts
+	  for the DRE Systems builds, since they only run once a day.
+
 Mon Mar 10 19:41:10 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
 	* configs/autobuild/dresystems/driver_local_scoreboard.sh:
