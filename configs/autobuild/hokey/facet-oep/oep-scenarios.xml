@@ -1,0 +1,19 @@
+
+
+        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-boeing-OEP/RTEvent/facet" />
+	<environment name="OCP_ROOT"        value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP"/>
+	<environment name="OEP_ROOT"        value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP"/>
+	<environment name="COMPILER_TYPE"   value="EGCS"/>
+
+<environment name="LD_LIBRARY_PATH" value="." />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/_Libfiles" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/bin" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO/TAO_IDL" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan/c/lib" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_6_0-linux/lib" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2/lib" type="suffix" />
+
+<environment name="XALANXERCESCROOT"value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_6_0-linux"/>
+<environment name="XERCESCROOT"     value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2"/>
+<environment name="XALANCROOT"      value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan"/>
