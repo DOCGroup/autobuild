@@ -1,3 +1,9 @@
+Thu Apr 29 12:44:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/cbxdd.xml:
+          Also don't build generate makefiles for TAO/CIAO/docs because we
+          don't have the cidl compiler.
+
 Thu Apr 29 12:40:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:
