@@ -1,8 +1,14 @@
+Sat Jan 11 10:46:53 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* common/prettify.pm: Had to revert this change "Fri Jan 10
+	  21:36:09 UTC 2003  Don Hinton  <dhinton@ieee.org>" since it
+	  broke Win32 builds.
+
 Sat Jan 11 09:23:02 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/pokey/GCC32_Core.xml: Removed LoadBalancing
 	  from the services that can be compiled. Please refer to bugzilla
-	  entry ### for why this breaks.
+	  entry 1419 for why this breaks.
 
 Sat Jan 11 09:17:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
