@@ -1,3 +1,9 @@
+Tue Jun 15 12:58:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new HPUX 64 build and SuSE gcc no inline build. The first
+          results will be uploaded when the builds are ready.
+
 Tue Jun 15 08:50:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
