@@ -1,3 +1,8 @@
+Thu Feb 19 13:59:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/SunForte.xml:
+	  Added /usr/local/ssl/lib to LD_LIBRARY_PATH
+
 Thu Feb 19 13:21:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
