@@ -27,8 +27,6 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\nssl=1\ninline=0\nCCFLAGS+= -Woverloaded-virtual -Wcast-qual -Weffc++\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nssl=1\n'" />
 
-    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
-
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
@@ -37,23 +35,13 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-exclude TAO" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
-
-    <command name="generate_workspace" options="-exclude TAO" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF" />
 
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO" />
-    <command name="make"              options="-k -C TAO/CIAO" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_x86_64_gccwarn/* -f" />
