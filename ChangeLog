@@ -1,3 +1,8 @@
+Tue Mar  1 14:36:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed alpha linux build, system is powered down
+
 Mon Feb 28 18:21:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
