@@ -1,3 +1,13 @@
+Wed Mar  9 11:27:29 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
+	* configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+	  Removed qos from MPC generations and platform_macros.GNU.
+
+	* configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+	  Added ssl capability and SSL_ROOT setting to platform_macros.GNU.
+
 Tue Mar  8 17:09:38 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml: Added
