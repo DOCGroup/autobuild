@@ -1,86 +1,50 @@
 <!-- $Id$ -->
-
 <autobuild>
-
     <configuration>
-
         <environment name="ACE_ROOT"        value="/space/build/ACE_wrappers" />
-
         <environment name="TAO_ROOT"        value="/space/build/ACE_wrappers/TAO"/>
-
-        <environment name="LD_LIBRARY_PATH"        value="$WIND_BASE/host/sun4-solaris2/lib:$OPENWINHOME/lib:/usr/lib:/opt/SUNWmotif/lib:/opt/SUNWspro/lib:/usr/dt/lib:/usr/ucblib:$ROSERT_HOME/bin/sun5/summit:$ROSERT_HOME/bin:$ACE_ROOT/build/Solaris/ACE_wrappers/TAO/TAO_IDL:$ACE_ROOT/lib:$ACE_ROOT/ace:/usr/local/lib"/>
-
-
+        <environment name="LD_LIBRARY_PATH" value="$WIND_BASE/host/sun4-solaris2/lib:$OPENWINHOME/lib:/usr/lib:/opt/SUNWmotif/lib:/opt/SUNWspro/lib:/usr/dt/lib:/usr/ucblib:$ROSERT_HOME/bin/sun5/summit:$ROSERT_HOME/bin:$ACE_ROOT/build/Solaris/ACE_wrappers/TAO/TAO_IDL:$ACE_ROOT/lib:$ACE_ROOT/ace:/usr/local/lib"/>
 
         <variable name="root"     value="/space/build" />
-
         <variable name="log_file" value="build.txt" />
-
         <variable name="log_root" value="/space/logs" />
-
-
-
+        <variable name="configs"  value="VxWorks" />   
     </configuration>
 
-
-
     <command name="status"            options="on" />
-
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
     <command name="log"               options="on" />
 
-    <command name="cvsgrab"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvsgrab"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="cvsgrab"           options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvsgrab"           options="-z 3 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-vxworks5.x.h\x22\n'" />
-
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rmcast=0\n rtti=1\n exceptions=1\n ami=1\n rt_corba=1\n inline=1\n corba_messaging=1\n shared_libs_only=1\n probe=0\n profile=0\n fakesvcconf=0\n debug=0\n optimize=0\n TAO_ORBSVCS=Naming Notify RTEvent Sched\n CPU=PENTIUM\n override TOOLENV=pentium\n SONAME=\n SOVERSION=\n include $(ACE_ROOT)/include/makeinclude/platform_vxworks5.x_g++.GNU\n ACE_SHLIBS=\n LDLIBS=\n ACE_HAS_GNUG_PRE_2_8 := 0\n CFLAGS += $(VXWORKS_VERSION_FLAG) -Wno-uninitialized\n CCFLAGS += $(TEMPLATES_FLAG)\n'" />
-
-    
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks5.x.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rmcast=0\n exceptions=1\n ami=1\n rt_corba=1\n inline=1\n corba_messaging=1\n shared_libs_only=1\n probe=0\n profile=0\n fakesvcconf=0\n debug=0\n optimize=0\n TAO_ORBSVCS=Naming Notify RTEvent Sched\n CPU=PENTIUM\n SONAME=\n SOVERSION=\n include $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n ACE_SHLIBS=\n LDLIBS=\nCFLAGS += -Wno-uninitialized\n'" />
 
     <command name="print_os_version" />
-
-    <command name="check_compiler"    options="g++" />
-
+    <command name="check_compiler"    options="ccpentium" />
     <command name="print_ace_config" />
-
     <command name="print_make_version" />
-
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-
     <command name="generate_workspace" options="-exclude TAO" />
-
     <!-- Uses TAO/TAO.mwc -->
-
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
 
-    
-
     <command name="make"              options="-k realclean" />
-
     <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-j 2 -k" />
-
     <command name="make"              options="-j 2 -k -C TAO" />
 
-
-
-    <command name="auto_run_tests"    options="" />
-
-
+    <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="off" />
 
     <command name="process_logs"      options="clean move prettify index" />
-
     <command name="file_manipulation" options="type=delete file=.disable" />
-
     <command name="status"            options="off" />
-
 </autobuild>

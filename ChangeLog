@@ -1,3 +1,9 @@
+Thu Mar 10 09:55:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/ace_isis/*.xml:
+        * configs/autobuild/tango_isis/*.xml:
+          Added "-envmod LD_ASSUME_KERNEL=2.4.19" to the auto_run_tests
+
 Wed Mar  9 16:17:52 MST 2005  Trevor Fields  <fields_t@ociweb.com>
 
         * configs/autobuild/oci/doc_g5_MACOSX_gcc33_d0o1.xml:
