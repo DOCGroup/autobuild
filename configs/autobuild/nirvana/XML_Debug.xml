@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="G:\bugzilla\XML_Debug\ACE_wrappers" />
         <environment name="ACE_RUNTEST_SVCCONF_EXT"         value=".conf.xml" />
-        <environment name="Path"         value="G:\bugzilla\XML_Debug\ACE_wrappers\bin;" type="prefix" />
+        <environment name="Path"         value="G:\bugzilla\XML_Debug\ACE_wrappers\bin;d:\ssl\openssl-0.9.6\out32dll" type="prefix" />
 
         <variable name="root"     value="G:/bugzilla/XML_Debug/" />
 	<variable name="log_file" value="log.txt" />

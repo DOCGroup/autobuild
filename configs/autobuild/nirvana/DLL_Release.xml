@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="G:\bugzilla\DLL_Release\ACE_wrappers" />
-	<environment name="Path"             value="G:\bugzilla\DLL_Release\ACE_wrappers\bin;" type="prefix" />
+	<environment name="Path"             value="G:\bugzilla\DLL_Release\ACE_wrappers\bin;d:\ssl\openssl-0.9.6\out32dll" type="prefix" />
 
         <variable name="root"     value="G:/bugzilla/DLL_Release/" />
 	<variable name="log_file" value="log.txt" />
