@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"     value="D:\ACE\BCB6sr\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~1\bin;D:\progra~\borland\cbuild~1\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6sr\ACE_wrappers\bin\Static\Release;d:\cygwin\bin;D:\perl\bin" type="prefix" />
+        <environment name="Path"         value="D:\progra~1\borland\cbuild~1\bin;D:\progra~\borland\cbuild~1\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6sr\ACE_wrappers\bin\Static\Release;D:\ACE\BCB6sr\ACE_wrappers\lib\Static\Release;d:\cygwin\bin;D:\perl\bin" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 	<environment name="STATIC"   value="1" />
