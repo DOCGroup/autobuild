@@ -1,0 +1,17 @@
+/**
+
+ @page Autobuild and scoreboard tools
+
+ @section Autobuild_Introduction Introduction
+
+The autobuild tools are a set of perl scripts, perl modules and
+XML configuration files to automatically build our projects (ACE+TAO)
+on multiple platforms.  The tools run on Unix (several flavors) and
+Windows NT/2k/XP.
+
+They clearly need more documentation, but it is fairly easy to guess
+how another build can be added or how to change the configuration for
+a build.
+
+<CODE>$Id$</CODE>
+*/

@@ -1,0 +1,46 @@
+Fri Dec  7 15:21:57 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* README:
+	  Documentation
+
+	* autobuild.pl:
+	  A script to automatically download, compile and test a module.
+
+	* make_pretty.pl:
+	  A script to format the output of a Win32 or Unix build in HTML.
+	  Also extracts a summary of the problems detected, if any.
+
+	* scoreboard.pl:
+	  A script to download multiple build results from several sites
+	  and hosts and show them in a single web page.
+
+	* command/cvs.pm:
+	* command/make.pm:
+	* command/sam.pm:
+	* command/printaceconfig.pm:
+	  Modules to implement the stages in the autobuild.pl script.
+
+	* common/simpleparser.pm:
+	  A simple parser for XML files.
+
+	* configs/autobuild/sirion/Full.xml:
+	  autobuild.pl configuration for the Full build on
+	  sirion.ece.uci.edu
+
+	* configs/scoreboard/acetao.lst:
+	  scoreboard.pl configuration for the ACE+TAO builds.
+
+	* win32sandbox/ReadMe.txt:
+	* win32sandbox/StdAfx.cpp:
+	* win32sandbox/StdAfx.h:
+	* win32sandbox/sandbox.cpp:
+	* win32sandbox/sandbox.dsp:
+	* win32sandbox/sandbox.dsw:
+	  A wrapper to run tests under tighter control, it avoids popups
+	  when exceptions or faults are detected.  It also can limit the
+	  total time spent by the test or its children.
+
+	* posixsandbox/sandbox.cpp:
+	  Like the previous one, but for POSIX platforms.  Unfortunately
+	  ACE breaks havoc with process groups, so it does not work all
+	  that great.
