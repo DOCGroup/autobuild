@@ -1,0 +1,43 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"         value="C:\ACE\MSVC6sd\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="C:\ACE\MSVC6sd\ACE_wrappers\TAO"/>
+        <environment name="Path"             value="C:\ACE\MSVC6sd\ACE_wrappers\bin" type="prefix" /> 
+        <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"          value="ssh" />
+
+        <variable name="root"     value="C:/ACE/MSVC6sd/" />
+	<variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:/ACE/MSVC6sd/" />
+        <variable name="name"     value="WinXP LIB Debug" />
+        <variable name="configs"   value="Win32 SANDBOX Exceptions" /> 
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -u -k -clean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
+
+    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -ACE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -CORE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -TAO -u -k" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MSVC6sd/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MSVC6sd" />
+</autobuild>
