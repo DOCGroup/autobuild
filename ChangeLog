@@ -1,3 +1,10 @@
+Mon Jan 27 20:02:41 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml: New build
+          for Solaris 8 with Sun Forte 6 (update 2).
+
+        * configs/scoreboard/acetao.xml: Added new Solaris 8 build.
+
 Mon Jan 27 18:10:19 2003  Heather Drury  <drury_h@ociweb.com>
 
         * configs/autobuild/tango/Debian_NoInline.xml: Removed reference 
