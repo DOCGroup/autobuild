@@ -1,6 +1,12 @@
 Wed Apr 16 06:35:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
+          Add ACE to the Kylix ACE only build to make the name of the build
+          be different than the full build.
+
+Wed Apr 16 06:35:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
           Added Kylix3 ACE build. In TAO it looks we have a lot of problems
           still to solve, but ACE is much better, so first focus on ACE. The
           full builds stays there, it only takes 1,5 hours to run it.
