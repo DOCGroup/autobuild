@@ -1,5 +1,6 @@
 Sat Apr 26 08:13:26 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
 	* configs/autobuild/ace/SUNOS_FORTE_UPDATE_1.xml: Use implicit
 	  templates. 
 
