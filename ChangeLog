@@ -1,3 +1,11 @@
+2002-06-25    <bugzilla@TAO>
+
+	* configs/autobuild/tao/DLL_Core.xml:
+	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/tao/driver.sh:
+	* configs/scoreboard/acetao.xml: Added new build scripts for
+	  tao.doc.wustl.edu.  
+
 Tue Jun 25 16:34:34 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/nirvana/DLL_Release.xml: Expanded everything.h
