@@ -1,0 +1,42 @@
+#! /bin/sh
+
+# this is a script to build a simple html matrix of test failures.
+
+buildlist=$1
+if [ -z "$buildlist" ]; then
+  buildlist=test-list
+fi
+
+othtml=$2
+if [ -z "$othtml" ]; then
+  othtml=test_matrix.html
+fi
+
+othtml2=$3
+if [ -z "$othtml2" ]; then
+  othtml=test_complex
+fi
+
+logdir="/project/taotmp/scoreboard/html"
+
+otraw=test_spread.raw
+filelist=`cat $buildlist`
+
+rm -f $otraw
+
+for filedir in $filelist
+do
+  latest="$logdir/$filedir/latest.txt"
+  if file=`cut -f 1 -d ' ' $latest 2>/dev/null`
+  then
+    path="$logdir/$filedir/$file.txt"
+    echo "$filedir $path" >>$otraw
+  fi
+done
+
+./tsprdsh $otraw -html >$logdir/$othtml
+
+python GenerateTestMatrix.py $otraw $logdir $othtml2
+
+exit 0
+

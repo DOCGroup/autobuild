@@ -1,0 +1,75 @@
+body {background-color: white;}
+
+table {
+	background-color: #D3D3D3; 
+	color: black; 
+	border: 4px solid black;
+	margin: 5px 0; 
+	border-collapse: collapse;
+	table-layout: fixed;
+	font: 10pt arial; 
+}
+
+tr {overflow: hidden; }
+tr.odd {background-color: #D3D3D3;  color: black; }
+
+tr.oddlnk {background-color: gray; color: white; cursor: pointer; }
+
+th.head {
+	background-color: #A9A9A9;
+	font: bold 12pt verdana, arial; 
+	cursor: arrow;
+}
+th {
+	background-color: #A9A9A9; 
+	border: 2px solid white; 
+	padding:2px 2px; 
+	cursor: default;
+	font: bold 10pt verdana, arial; 
+}
+td {border: 2px solid white; padding:0 2px; overflow: hidden; text-align: right;} 
+td.txt {text-align: left;}
+
+table.matrix tr td {
+  border: 1px solid white;
+}
+
+table.matrix tr th.head {
+	background-color: #A9A9A9;
+	font: bold 12pt verdana, arial; 
+	cursor: default;
+}
+
+table.matrix tr th {
+  border: 1px solid white;
+  cursor: default;
+  background-color: #D3D3D3;
+  color: black;
+}
+
+table.matrix tr th.colhead {
+  font: 8pt sans-serif;
+  background-color: steelblue;
+  color: black;
+}
+
+
+.p {background-color:green}
+.f {background-color:red; color: black;}
+.w {background-color:gold; color: black;}
+.s {background-color:gainsboro; color: black; text-decoration: line-through;}
+
+.lnk {cursor: pointer;}
+.faillnk {background-color:firebrick; cursor: pointer; color: white; }
+.warnlnk {background-color:gold; color: black; cursor: pointer;}
+.skiplnk {background-color:gainsboro; color: black; text-decoration: line-through; cursor: pointer;}
+
+
+.lnk:hover {background-color: hotpink;}
+.odd:hover {background-color: hotpink;}
+.oddlnk:hover {background-color: hotpink;}
+.faillnk:hover {background-color: hotpink;}
+.warnlnk:hover {background-color: hotpink;}
+.skiplnk:hover {background-color: hotpink;}
+
+

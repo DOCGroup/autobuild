@@ -1,0 +1,60 @@
+The files in this directory are used for creating html pages
+ with statistical information about the builds.
+
+The bash shell script buildMatrix parses the log files and calls
+ two programs to generate the html pages.  buildMatrix takes 3
+ parameters, the list of builds, name of the simple matrix page,
+ and beginning of the name of the fancy page.  The string
+ ".matrix.html" will be appended to the name of the fancy page
+ when it is generated.
+
+Of the two programs that generate the pages, one (tsprdsh) is a
+ compiled C program and the other (GenerateTestMatrix.py) is a
+ python program.  Either of these can be disabled by editing the
+ buildMatrix script.
+
+The python program requires python >= 2.1
+
+The bash shell script buildMatrixSummary parses the log files and
+ calls one of the program to generate an html page containing only
+ the statistics.
+
+
+Setting up:
+  Edit Makefile
+   - change the SCOREBOARD_CONFIG_DIR variable to the directory
+     that contains the xml configuration file for the scoreboard
+   - add the name of the test list to the "all:" target
+   - add a test list target (copy an existing list target and
+     change the target name)
+
+  Edit update_scoreboard.sh
+   - change the log directory variable LOG_DIR to the directory of
+     your log directories.  This is the directory below where the
+     actual log .html files are.
+   - change the TEST_MATRIX_DIR variable to the location of this
+     directory.
+   - change the BUILD_LIST variable to the name of the file list
+     that was added to the Makefile.
+   - Change the name of the simple test matrix generated file
+     (SIMPLE_TEST_MATRIX)
+   - Change the name of the complex test matrix generated file
+     (COMPLEX_TEST_MATRIX)
+   - [if necessary] change the 'make' command to have the full
+     path to make.
+   - [Optional] Uncomment the autobuild command to have the shell
+     script run the build.
+
+  Edit buildMatrix*
+   - change the "logdir" variable to the location of the log files
+     on your system.  This is the same value as LOG_DIR in
+     update_scoreboard.sh
+   - change the path to the python executable [if necessary]
+
+  Edit *.py 
+   - change the path to the python executable [if necessary]
+
+
+Running:
+  Run the update_scoreboard.sh script.
+

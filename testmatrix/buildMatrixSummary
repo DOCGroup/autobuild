@@ -1,0 +1,37 @@
+#! /bin/sh
+
+# this is a script to build a simple html with a summary of the test failures.
+
+buildlist=$1
+if [ -z "$buildlist" ]; then
+  buildlist=test-list
+fi
+
+othtml=$2
+if [ -z "$othtml" ]; then
+  othtml=test_matrix_summary.html
+fi
+
+otraw=test_spread.raw
+logdir="/project/taotmp/scoreboard/html"
+
+filelist=`cat $buildlist`
+
+rm -f $otraw
+
+for filedir in $filelist
+do
+  latest="$logdir/$filedir/latest.txt"
+  if file=`cut -f 1 -d ' ' $latest 2>/dev/null`
+  then
+    path="$logdir/$filedir/$file.txt"
+    echo "$filedir $path" >>$otraw
+  fi
+done
+
+./tsprdsh $otraw -html -summary >$logdir/$othtml
+
+rm $otraw
+
+exit 0
+

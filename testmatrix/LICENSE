@@ -1,0 +1,43 @@
+TestMatrix (Licensed Product) is protected by copyright, and is distributed
+under the following terms.
+
+TestMatrix is an open source tool, developed by OCI and written in 
+unix shell, C, and Python (>= 2.1).  It is designed to generate webpages
+for displaying the statistics of ACE and TAO builds.
+
+Since TestMatrix is open source and free of licensing fees, you are free to
+use, modify, and distribute the source code, as long as you include this
+copyright statement.
+
+Note, however, that you may not do anything to the TestMatrix code, such as
+copyrighting it yourself or claiming authorship of the TestMatrix code, that
+will prevent TestMatrix from being distributed freely using an open source
+development model.
+
+Warranty
+
+LICENSED PRODUCT IS PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND INCLUDING
+THE WARRANTIES OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE, NONINFRINGEMENT, OR ARISING FROM A COURSE OF DEALING, USAGE OR
+TRADE PRACTICE.
+
+Support
+
+LICENSED PRODUCT IS PROVIDED WITH NO SUPPORT AND WITHOUT ANY OBLIGATION ON
+THE PART OF OCI OR ANY OF ITS SUBSIDIARIES OR AFFILIATES TO ASSIST IN ITS
+USE, CORRECTION, MODIFICATION OR ENHANCEMENT.
+
+Support may be available from OCI to users who have agreed to a support
+contract.
+
+Liability
+
+OCI OR ANY OF ITS SUBSIDIARIES OR AFFILIATES SHALL HAVE NO LIABILITY WITH
+RESPECT TO THE INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS BY
+LICENSED PRODUCT OR ANY PART THEREOF.
+
+IN NO EVENT WILL OCI OR ANY OF ITS SUBSIDIARIES OR AFFILIATES BE LIABLE FOR
+ANY LOST REVENUE OR PROFITS OR OTHER SPECIAL, INDIRECT AND CONSEQUENTIAL
+DAMAGES, EVEN IF OCI HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+TestMatrix copyright OCI. St. Louis MO USA, 2004
