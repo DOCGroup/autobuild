@@ -11,9 +11,9 @@ all the OS/platform combinations TAO is tested everyday.
 <name>Linux</name>
    <build>
    <name>Debian_Core</name>
-   <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/balar_Core/</url>
-   <build_sponsor>UC Irvine</build_sponsor>
-   <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_Core/</url>
+   <build_sponsor>ISIS</build_sponsor>
+   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
    <name>Debian_ORB_Core</name>
