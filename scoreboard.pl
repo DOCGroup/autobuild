@@ -647,7 +647,7 @@ sub update_html_table ($$@)
     # check to see if we are doing the "NONE" group
     if (!defined $name) {
         print "    Building table for ungrouped\n" if ($verbose);
-        @builds = sort @nogroup;
+        @builds = sort @{$groups{$name}};
     }
     else {
         print "    Building table for group $name\n" if ($verbose);

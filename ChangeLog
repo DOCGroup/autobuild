@@ -1,3 +1,11 @@
+Mon Mar 29 16:08:06 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* scoreboard.pl:
+	* common/integratedparser.pm:
+	* common/scoreparser.pm:
+
+	  Patches that get the scoreboard usable on with perl 5.8.
+
 Mon Mar 29 14:29:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCCACE.xml:

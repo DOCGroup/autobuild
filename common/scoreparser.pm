@@ -111,7 +111,7 @@ sub Parse ($\@)
                 
                 $build_info{GROUP} = $group_name;
                 
-                %{%{$data}->{$build_info{NAME}}} = %build_info;
+                %{$data->{$build_info{NAME}}} = %build_info;
                 %build_info = ();
                 
                 $state = 'group';
