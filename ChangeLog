@@ -1,5 +1,13 @@
 Fri Dec 13 09:11:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
+        * configs/autobuild/tao/Borland.xml:
+          Print version of borland compiler
+
+        * configs/autobuild/tao/Borland_wchar.xml:
+          Print version of borland compiler and version of OS.
+
+Fri Dec 13 09:11:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
         * configs/autobuild/remedynl/*.xml:
           Add check_compiler command to print out BCB compiler version.
 
