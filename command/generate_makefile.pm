@@ -28,15 +28,16 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
-    if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
+    if (!defined $project_root) {
+        print STDERR __FILE__, ": Requires \"project_root\" variable\n";
         return 0;
     }
     
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
+    if (!-r $project_root || !-d $project_root) {
+        print STDERR __FILE__, ": Cannot access \"project_root\"
+        directory: $project_root\n";
         return 0;
     }
 
@@ -49,44 +50,44 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
     # chop off trailing slash
-    if ($root =~ m/^(.*)\/$/) {
-        $root = $1;
+    if ($project_root =~ m/^(.*)\/$/) {
+        $project_root = $1;
     }
 
     main::PrintStatus ('Setup', 'Generate Makefiles');
 
     my $current_dir = getcwd ();
 
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
     }
 
     # If dirs=a[,b...] given, extract the dirs, then remove them from
     # the options string. If no dirs given, just run the command with
-    # specified options in $root.
+    # specified options in $project_root.
     my $dirs;
     if ($options =~ m/dirs=([^\s]*)/) {
         $dirs = $1;
         $options =~ s/dirs=$dirs//;
     }
 
-    my $command = "perl $root/bin/mpc.pl $options";
+    my $command = "perl $project_root/bin/mpc.pl $options";
 
     if ($dirs) {
         my $dir;
         my @dirlist = split(/,/, $dirs);
         foreach $dir (@dirlist) {
             if (!chdir $dir) {
-                print STDERR __FILE__, ": Cannot change to $root/$dir\n";
+                print STDERR __FILE__, ": Cannot change to $project_root/$dir\n";
                 return 0;
             }
             print "Running: $command in $dir\n";
             system ($command);
-            chdir $root;
+            chdir $project_root;
         }
     }
     else {

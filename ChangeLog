@@ -1,3 +1,9 @@
+Fri Aug  1 15:45:00 2003  Dan Troesser  <troesser_d@ociweb.com>
+
+        * command/generate_makefile.pm:
+          Made the command require and run from project_root instead
+          of root so it works with builds created using create_ace_build.pl
+
 Fri Aug  1 15:00:00 2003  Dan Troesser  <troesser_d@ociweb.com>
 
         * command/create_ace_build.pm:
