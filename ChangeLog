@@ -1,3 +1,16 @@
+Mon Aug 11 14:23:16 UTC 2003
+
+        * command/create_ace_build.pm:
+          Changed the logic so that it does a chdir to $root is used
+          instead of $project_root/../.. in order to create the build
+          directory.  This should allow existing builds to continue
+          working without change.
+
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+          Added back the idl_stubs and depend steps.  Otherwise there are
+          just too many errors.  These steps still have errors, but not
+          nearly as many.
+
 Sun Aug 10 15:54:40 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * autobuild.pl:

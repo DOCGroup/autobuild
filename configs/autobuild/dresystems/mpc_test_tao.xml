@@ -49,8 +49,8 @@
 
  <!-- TAO -->
  <command name="make"                  options="-k -C TAO realclean" />
- <!--<command name="make"                  options="-k -C TAO idl_stubs" />-->
- <!--<command name="make"                  options="-k -C TAO depend" />-->
+ <command name="make"                  options="-k -C TAO idl_stubs" />
+ <command name="make"                  options="-k -C TAO depend" />
  <command name="make"                  options="-k -j1 -C TAO" />
 
  <command name="log"                   options="off" />

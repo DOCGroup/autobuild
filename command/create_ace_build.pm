@@ -52,6 +52,7 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
+    my $root = main::GetVariable ('root');
     my $wrappers = main::GetVariable ('project_root');
     my $build = main::GetVariable ('build_name');
 
@@ -63,14 +64,17 @@ sub Run ($)
         $wrappers = $1;
     }
 
+    my $current_dir = getcwd ();
+
+    chdir $root;
+
     if (!-r $wrappers || !-d $wrappers) {
         mkpath($wrappers);
     }
 
     main::PrintStatus ('Setup', 'Create ACE Build');
 
-    my $current_dir = getcwd ();
-
+    # I don't think this is needed, but it's probably okay to leave it.  dhinton
     if (!chdir "$wrappers/../..") {
         print STDERR __FILE__, ": Cannot change to $wrappers../..\n";
         return 0;
