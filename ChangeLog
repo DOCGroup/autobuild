@@ -1,3 +1,13 @@
+Mon Apr 12 15:41:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/msvclibdebug.xml:
+        * configs/autobuild/remedynl/msvclibrelease.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+          Now the dsp/dsw files are removed from the repo no need to remove
+          them after a cvs checkout
+
 Mon Apr 12 06:34:17 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
