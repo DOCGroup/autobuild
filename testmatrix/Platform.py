@@ -129,21 +129,12 @@ class Platform:
 			testname = testname + " " + splits[n]
 		if len(tokens) > 2:
 			ttime=tokens[2]
-			if len(tokens) == 3:
+			if len(tokens) < 3:
 				ttime = "" 
 				tresult = "" 
-			elif len(tokens) == 4:
-				ttime = tokens[2]
-				tresult = tokens[3]
-			elif len(tokens) == 5:
-				ttime = tokens[3]
-				tresult = tokens[4]
-			elif len(tokens) == 6:
-				ttime = tokens[4]
-				tresult = tokens[5]
 			else:
-				print "ERROR: What is happening here?"
-				sys.exit(-1)
+				ttime = tokens[len(tokens)-2]
+				tresult = tokens[len(tokens)-1]
 			if ttime != "":
 				e,f=ttime.split(":")
 				time=int(f.replace('s',''))

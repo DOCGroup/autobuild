@@ -1,3 +1,9 @@
+Mon Aug 30 12:57:16 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/Platform.py:
+          Fixed bug that would cause parsing to fail if a test had
+          more than 2 arguments.
+
 Sun Aug 29 09:38:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/gandalfvc71sd.xml:
