@@ -122,7 +122,7 @@ all the OS/platform combinations ACE is tested everyday.
      </build>
      <build>
      <name>SuSE_90_GCC3.3.1_Debug(MPC)</name>
-     <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCCACE</url>
+     <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCCACE</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>

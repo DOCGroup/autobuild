@@ -83,7 +83,7 @@ decide the migration paths and strategies.
          </build>
         <build>
             <name>SuSE_90_Kylix_3(MPC)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_Kylix3</url>
+            <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Kylix3</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -119,7 +119,7 @@ decide the migration paths and strategies.
         </build>
         <build>
             <name>SuSE_90_GCC3.3.1(MPC)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
+            <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
             <build_sponsor>Remedy IT</build_sponsor>
     	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>

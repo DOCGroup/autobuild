@@ -1,3 +1,10 @@
+Sat Nov 01 15:50:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved first set of build log files from WashU to Vanderbilt.
+
 Thu Oct 30 11:52:39 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/essie_gcc3_debug.xml:
