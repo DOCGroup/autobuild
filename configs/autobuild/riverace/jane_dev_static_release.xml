@@ -10,10 +10,10 @@
 
         <variable name="root"         value="/acebuilds" />
         <variable name="build_name"   value="static_release" />
-        <variable name="project_root" value="ACE_wrappers-repository/build/static_release" />
+        <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/static_release" />
         <variable name="log_file"     value="ACE_wrappers-repository/static_release.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/static_release" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions STATIC" />
 
     </configuration>
 
@@ -22,16 +22,27 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repsitory/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 3 -q update -P -d ." />
+    <command name="make"              options="-k reverseclean" />
 
-    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="cvs"               options="checkout -P MPC" />
+    <command name="cvs"               options="checkout -P ACE" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=build/static_release/.disable" />
-    <command name="create_ace_build_legacy"  options="-a -v" />
-    <command name="file_manipulation" options="type=create file=build/static_release/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
-    <command name="file_manipulation" options="type=create file=build/static_release/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/static_release/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=0\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/static_release/.disable" />
+
+    <command name="create_ace_build"  options="-a -v" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/static_release/.disable output='RUNNING'" />
+
+    <!-- Delete the build's Makefiles before regenerating them. -->
+    <command name="shell"             options="find ACE_wrappers-repository/build/static_release -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers-repository/build/static_release -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/debug -type gnuace -hierarchy -make_coexistence" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/static_release/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/static_release/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=0\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
@@ -40,10 +51,10 @@
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-j 2 -k" />
 
-    <command name="auto_run_tests"    options="-a -Config STATIC" />
+    <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=build/static_release/.disable" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/build/static_release/.disable" />
     <command name="status"            options="off" />
 </autobuild>
