@@ -2,15 +2,15 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/footprint_metrics/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/footprint_metrics/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/footprint_metrics/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT"        value="/project/builds/isisbuilds/FP_Metrics/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/project/builds/isisbuilds/FP_Metrics/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/project/builds/isisbuilds/FP_Metrics/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/build/isisbuilds/footprint_metrics" />
+        <variable name="root"     value="/project/builds/isisbuilds/FP_Metrics" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/footprint_metrics" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/FP_Metrics" />
         <variable name="configs"  value="Linux" />
 
     </configuration>
@@ -19,10 +19,10 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -59,7 +59,7 @@
 
     <command name="log"               options="off" />
 
-    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /web/users/isisbuilds/auto_compile_logs/footprint_metrics/metrics $ACE_ROOT/../.metrics/targets Footprint" />
+    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /web/users/isisbuilds/auto_compile_logs/FP_Metrics/metrics $ACE_ROOT/../.metrics/targets Footprint" />
 
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
