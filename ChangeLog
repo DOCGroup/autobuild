@@ -1,3 +1,10 @@
+Fri Oct 25 06:33:20 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Removed the two BCB6 Personal builds because those configurations
+          are also done with BCB6 Professional. Added a BCB4 build that
+          runs on buildpc1.
+
 Thu Oct 24 05:58:20 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:
