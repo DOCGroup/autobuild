@@ -1,3 +1,10 @@
+Fri May  7 23:28:00 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Disabled inlining to help speed up compile-times and to make
+	  it easier to debug problems inside the build workspace itself.
+
 Fri May  7 23:26:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC55.xml:
