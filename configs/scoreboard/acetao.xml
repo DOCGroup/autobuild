@@ -304,30 +304,6 @@ here</a>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
-        <build>
-            <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
-        <build>
-            <name>SKOLL_1</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_1</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
-        <build>
-            <name>SKOLL_2</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_2</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
     </group>
     <group>
         <name>Lynx</name>
@@ -522,6 +498,30 @@ here</a>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_MingW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
+            <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
+            <build_sponsor>DRE Systems</build_sponsor>
+            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+            <orange>30</orange>
+            <red>36</red>
+        </build>
+        <build>
+            <name>SKOLL_1</name>
+            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_1</url>
+            <build_sponsor>DRE Systems</build_sponsor>
+            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+            <orange>30</orange>
+            <red>36</red>
+        </build>
+        <build>
+            <name>SKOLL_2</name>
+            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_2</url>
+            <build_sponsor>DRE Systems</build_sponsor>
+            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+            <orange>30</orange>
+            <red>36</red>
         </build>
     </group>
     <group>

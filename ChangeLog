@@ -1,3 +1,10 @@
+Tue Mar 11 13:28:50 UTC 2003  Don Hinton  <dhinton@ieee.org>
+
+	* configs/scoreboard/acetao.xml: Move following builds to the
+	  XTest_sanity_check_not_for_release section to make it easier
+	  on the build czar since these configurations are expected to
+	  fail: RH8_GCC32_No_RTCORBA_No_Messaging, SKOLL_1, and SKOLL_2.
+
 Tue Mar 11 07:32:40 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
 	* configs/autobuild/dresystems/skoll_2.xml: Fixed cut-n-paste
