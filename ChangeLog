@@ -6,7 +6,7 @@ Tue Sep 28 08:13:24 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/balar_isis/Static.xml:
 	* configs/autobuild/balar_isis/wchar.xml:
 
-	  Moved removing GNUmakefiles after teh checkout.
+	  Moved removing GNUmakefiles after the checkout.
 
 Tue Sep 28 11:14:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
