@@ -1,3 +1,15 @@
+Mon Jul  5 09:00:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/balar_isis/DynamicHash.xml:
+
+	  Include the orbsvcs in the build. 
+	
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+
+	  Removed deprecated .mwc files from the list. 
+
 Mon Jun  4 08:23:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
