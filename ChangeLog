@@ -1,3 +1,10 @@
+Mon Jan 19 16:34:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/*.xml:
+	  Removed ASNMP from the exclude when generating makefiles. With
+	  the changes in ASNMP of last weekend we can also build this
+	  directory.
+
 Fri Jan 16 11:22:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:
@@ -5,7 +12,7 @@ Fri Jan 16 11:22:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	  New build on balar with DynamicHash option used in the IDL
 	  compiler. As a first step we will run the ORB core tests and
-	  them move on to other things as we make progress. 
+	  them move on to other things as we make progress.
 
 Thu Jan 15 17:41:26 2004  Steve Huston  <shuston@riverace.com>
 
