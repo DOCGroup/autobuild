@@ -1,3 +1,9 @@
+Mon Aug 26 10:40:23 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml:
+
+	  Fixed include path problem for <linux/eventpoll.h> header.
+
 Mon Aug 26 10:13:37 2002 Ossama Othman  <ossama@uci.edu>
 
 	* configs/scoreboard/acetao.xml: 
