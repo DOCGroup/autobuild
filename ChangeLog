@@ -1,3 +1,33 @@
+Sun Mar 16 18:25:23 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	The following changes are for reorganizing the scoreboard
+	presentation. The builds of ACE+TAO have been split across
+	multiple pages. We also have an integrated page that will be
+	closer what was there before. 
+
+	* common/indexparser.pm: A simple parser that parses the index
+	  page to generate a html file.
+
+	* common/integratedparser.pm: A parser that generates the
+	  integrated page from the available xml files. The parser has got
+	  _lots_ of commonalities with the scoreboardparser.pm. Need to
+	  abstract out the common parser code. We will do this once the
+	  changes settle down. If the devo_group rejects the change it
+	  will easier for me to revert it back to original scoreboard
+	  format. If the changes are accepted we can do some abstraction.
+
+	* configs/scoreboard/ace.xml:
+	* configs/scoreboard/tao.xml:
+	* configs/scoreboard/ace_future.xml:
+	* configs/scoreboard/tao_future.xml:
+	* configs/scoreboard/misc.xml: New XML configuration files. These
+	  have been split off from acetao.xml.
+
+	* configs/scoreboard/doc.sh: Used the new options to generate
+	  multiple html files.
+	* scoreboard.pl: Changes to the main script to use the new parser
+	  and generate all these pages.
+
 Sat Mar 15 15:31:54 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/tao/DLL_Core.xml: Turned on the verbose flag!
