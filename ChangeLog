@@ -1,3 +1,11 @@
+Mon Jul 12 20:16:34 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Removed #define ACE_HAS_EVENT_POLL.  The build host doesn't have
+	  a new enough version of the Linux kernel installed that supports
+	  the sys_epoll interface.
+
 Sat Jul 10 01:03:07 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/nirvana/New_DLL_Release.xml:
