@@ -16,7 +16,7 @@ Thu May  6 17:11:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 	* common/prettify.pm (Compile_Handler):
 
 	  Corrected regex for the "is deprecated" case.  Some deprecation
-	  warning were not flagged.
+	  warnings were not flagged.
 
 Wed May  5 23:09:45 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
