@@ -42,7 +42,7 @@ sub Run ($)
 
     print "================ Compiler version ================\n";
 
-    if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc)/){
+    if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc|ccpentium)/){
         system($compiler." -v 2>&1");
       if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9])/){
           my $linker = `$compiler -print-prog-name=ld`;
