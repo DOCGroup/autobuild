@@ -48,8 +48,8 @@
     <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="plink bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_Win2K_MingW/* -f" />
-    <command name="shell"             options="pscp -C *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_Win2K_MingW" />
+    <command name="shell"             options="ssh bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_Win2K_MingW/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_Win2K_MingW" />
 </autobuild>
 
 
