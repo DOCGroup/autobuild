@@ -1,3 +1,8 @@
+Tue Mar 18 10:38:11 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/ace_future.xml: Added a new FreeBSD build
+	  from Yi-Kai Tsai <cuma@netbuck.com.tw>. 
+
 Tue Mar 18 14:10:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
