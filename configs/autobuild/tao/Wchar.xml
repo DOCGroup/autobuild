@@ -31,6 +31,8 @@
 
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -dir ace -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -dir tests -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -dir ACEXML\common -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -dir ACEXML\parser\parser -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -dir ACEXML -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -dir examples\Reactor\WFMO_Reactor -u -k" />
 
