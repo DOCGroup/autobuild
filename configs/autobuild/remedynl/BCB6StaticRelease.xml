@@ -22,7 +22,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"              options=" -i -f Makefile.bor realclean dir=TAO" />
+    <command name="make"              options=" -i -f Makefile.bor realclean" />
 
     <command name="log"               options="ON" />
 
@@ -38,7 +38,7 @@
 
     <command name="generate_workspace" options="-type borland -recurse -static -make_coexistence" />
 
-    <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
+    <command name="make"              options=" -i -f Makefile.bor" />
 
     <command name="auto_run_tests"    options="-a -s \x22D:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Static\Release" />
 
