@@ -1,3 +1,14 @@
+Thu Aug 14 02:10:21 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/sol9_gcc33.xml:
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+          Set these two builds to run tests.
+
+        * configs/autobuild/dresystems/sol9_gcc33_tao_legacy.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao_legacy.xml:
+        * configs/scoreboard/tao.xml:
+          Added 2 new builds under the existing build system.
+
 Wed Aug 13 17:38:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
