@@ -1,6 +1,6 @@
 cd ..\..\..\
 start c:\putty\pageant.exe c:\putty\privatenokey
-sleep 4
+c:\cygwin\bin\sleep 30
 rem del D:\bcb6d\.disable
 rem del D:\BCB6ddwchar\.disable
 rem del D:\BCB6dr\.disable
