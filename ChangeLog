@@ -1,3 +1,8 @@
+Sun Jan  2 13:45:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added x86 VxWorks build.
+
 Sun Jan  2 13:23:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
