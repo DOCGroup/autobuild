@@ -60,6 +60,14 @@ sub Run ($)
     if(lc $compiler eq "sun_cc"){
         system("CC -V");
     }
+
+    if(lc $compiler eq "borland"){
+	system("bcc32 -V"); 
+    }
+
+    if(lc $compiler eq "msvc"){
+        system("cl /V");
+    }
     return 1;
 }
 
