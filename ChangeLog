@@ -1,3 +1,11 @@
+Wed Sep  1 11:52:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*.xml:
+          Updated the location of the build results, moved to a new directory
+
+        * configs/scoreboard/*.xml:
+          Updated location of remedy builds
+
 Wed Sep  1 05:45:40 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/Static.xml:
@@ -27,7 +35,7 @@ Fri Aug 27 13:26:35 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/scoreboard/tao.xml:
 
 	  Added compilation and footprint metrics builds to the
-	  scorboard. 
+	  scorboard.
 
 Thu Aug 26 15:37:12 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
