@@ -29,7 +29,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nssl=1\nfl_reactor=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
 
     <!-- Uses ACE.mwc -->
