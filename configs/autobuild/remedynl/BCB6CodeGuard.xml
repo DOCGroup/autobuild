@@ -38,7 +38,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
     <command name="file_manipulation" options="type=create file=CG32.CGI output='[Options]\nCodeGuard=yes\nStats=no\nMessageBox=no\nDebugInfo=yes\nAppend=no\nRepeats=yes\nSrcpath=\nIgnoredModules=\nErrorCaption=CodeGuard Error\nErrorText=CodeGuard detected error(s) in the program. A log file will be created\nOutputDebugString=no\nStackFillFrequency=2\nResourceLeakReport=yes\nMaxCGLerrors=1000\nLimitCGLerrors=yes\n[memory block]\nTrack=yes\nParam=yes\nLeak=yes\nDelay=yes\nDelayMax=256\nDelayMaxSize=512\n[file handle]\nTrack=yes\nParam=yes\nLeak=yes\nDelay=yes\nDelayMax=4\nDelayMaxSize=0\n'" />
 
-    <command name="shell"             options="cp CG32.CGI C:\Windows\CG32.GCI" />
+    <command name="shell"             options="cp CG32.CGI C:\Windows\CG32.CGI" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="borland" />
