@@ -29,11 +29,11 @@ sub CheckRequirements ()
     my $root = main::GetVariable ('root');
 
     if (!defined $root) {
-        print STDERR "printaceconfig: Requires \"root\" variable\n";
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
     if (!-r $root) {
-        print STDERR "printaceconfig: Cannot read root dir: $root\n";
+        print STDERR __FILE__, ": Cannot read root dir: $root\n";
         return 0;
     }
 
@@ -53,12 +53,12 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### CVS\n\n";
+    print "\n#################### Setup (CVS)\n\n";
 
     my $current_dir = getcwd ();
 
     if (!chdir $root) {
-        print STDERR "CVS: Cannot change to $root\n";
+        print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
 

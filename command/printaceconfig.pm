@@ -28,11 +28,11 @@ sub CheckRequirements ()
     my $ace_root = main::GetVariable ('ace_root');
 
     if (!defined $ace_root) {
-        print STDERR "printaceconfig: Requires \"ace_root\" variable\n";
+        print STDERR __FILE__, ": Requires \"ace_root\" variable\n";
         return 0;
     }
     if (!-r $ace_root) {
-        print STDERR "printaceconfig: Cannot read ace_root: $ace_root\n";
+        print STDERR __FILE__, ": Cannot read ace_root: $ace_root\n";
         return 0;
     }
 
@@ -111,4 +111,4 @@ sub print_file ($$)
 
 ##############################################################################
 
-main::RegisterCommand ("printaceconfig", new PrintACEConfig ());
+main::RegisterCommand ("print_ace_config", new PrintACEConfig ());

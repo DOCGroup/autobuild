@@ -29,11 +29,11 @@ sub CheckRequirements ()
     my $root = main::GetVariable ('root');
 
     if (!defined $root) {
-        print STDERR "make: Requires \"root\" variable\n";
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
     if (!-r $root) {
-        print STDERR "make: Cannot read root dir: $root\n";
+        print STDERR __FILE__, ": Cannot read root dir: $root\n";
         return 0;
     }
 
@@ -58,7 +58,7 @@ sub Run ($)
     my $current_dir = getcwd ();
 
     if (!chdir $root) {
-        print STDERR "make.pm: Cannot change to $root\n";
+        print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
 

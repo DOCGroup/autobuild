@@ -92,7 +92,7 @@ foreach my $file (@files) {
             exit;
         }
         if (%commandtable->{$command->{NAME}}->CheckRequirements () == 0) {
-            last;
+            exit;
         }
     }
 

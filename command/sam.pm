@@ -35,20 +35,20 @@ sub CheckRequirements ()
     my $sam_root = main::GetVariable ('sam_root');
 
     if (!defined $root) {
-        print STDERR "sam: Requires \"root\" variable\n";
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
     if (!-r $root) {
-        print STDERR "sam: Cannot read root dir: $root\n";
+        print STDERR __FILE__, ": Cannot read root dir: $root\n";
         return 0;
     }
 
     if (!defined $sam_root) {
-        print STDERR "sam: Requires \"sam_root\" variable\n";
+        print STDERR __FILE__, ": Requires \"sam_root\" variable\n";
         return 0;
     }
     if (!-r $sam_root) {
-        print STDERR "sam: Cannot read sam_root dir: $root\n";
+        print STDERR __FILE__, ": Cannot read sam_root dir: $root\n";
         return 0;
     }
 
@@ -78,7 +78,7 @@ sub Run ($)
     my $current_dir = getcwd ();
 
     if (!chdir $root) {
-        print STDERR "SAM: Cannot change to $root\n";
+        print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
 
