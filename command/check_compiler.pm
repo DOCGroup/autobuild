@@ -55,6 +55,11 @@ sub Run ($)
 
     if($compiler =~ m/^(gcc|g\+\+|ccsimpc)/){
         system($compiler." -v 2>&1");
+      if($compiler =~ m/^(gcc|g\+\+)/){
+          my $linker = `$compiler -print-prog-name=ld`;
+          chomp $linker;
+          system($linker." -v 2>&1");
+      }
     }
     elsif(lc $compiler eq "sun_cc"){
         system("CC -V");
