@@ -10,16 +10,6 @@ decide the migration paths and strategies.
 </preamble>
 
 <group>
-   <name>Relegated Builds from the Main Scoreboard</name>
-   <build>
-      <name>SunOS_FORTE_UP_1</name>
-      <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-</group>
-
-<group>
    <name>Test Builds for TAO</name>
    <build>
       <name>SuSE_90_Autoconf</name>
@@ -61,14 +51,6 @@ decide the migration paths and strategies.
       <orange>96</orange>
       <red>192</red>
    </build>
-   <build>
-      <name>OpenBSD_Single_Threaded</name>
-      <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Single_Threaded</url>
-      <build_sponsor>Frank Hunleth</build_sponsor>
-      <build_sponsor_url>http://www.hunleth.com/~acebuild/</build_sponsor_url>
-      <orange>96</orange>
-      <red>192</red>
-    </build>
    <build>
       <name>NetBSD_amd64</name>
       <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_amd64</url>
