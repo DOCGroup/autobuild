@@ -62,12 +62,6 @@ sub CheckRequirements ()
         return 0;
     }
 
-    my $name = main::GetVariable ('name');
-    if (!defined $name) {
-        print STDERR __FILE__, ": Requires \"name\" variable\n";
-        return 0;
-    }
-
     return 1;
 }
 
