@@ -85,6 +85,9 @@ sub Run ($)
     elsif(lc $compiler eq "acc"){
         system("aCC -V");
     }
+    elsif(lc $compiler eq "pgcc"){
+        system("pgCC -V");
+    }
     elsif(lc $compiler eq "mipspro"){
         system("CC -version");
     }
