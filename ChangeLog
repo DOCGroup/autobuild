@@ -1,3 +1,8 @@
+Sun Aug 18 15:53:19 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/scoreboard/acetao.xml: Added this new build in place of
+	  Sirion_Full build.
+
 Sun Aug 18 15:36:00 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/sirion/Full_new.xml:

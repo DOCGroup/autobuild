@@ -14,7 +14,7 @@
         </build>
         <build>
             <name>Debian_Full</name>
-            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full_new/</url>
         </build>
         <build>
             <name>Debian_GCC_3.0.4</name>
