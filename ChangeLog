@@ -1,3 +1,8 @@
+Wed Dec 11 16:15:57 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/amrod/ImplicitTemplates.xml: Do not do a clean
+	  with -j option set.
+
 Wed Dec 11 20:10:54 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/print_os_version.pm: Improve formatting of Debian version.
