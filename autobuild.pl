@@ -128,6 +128,7 @@ require command::print_make_version;
 require command::configure;
 require command::create_ace_build;
 require command::create_ace_build_legacy;
+require command::clone_build_tree;
 require command::cvs;
 require command::file_manipulation;
 require command::fuzz;
