@@ -1,3 +1,11 @@
+Thu Aug 01 07:49:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Added BCB6 Dynamic Release build.
+
+        * configs/autobuild/remedynl/BCB6DynamicRelease.xml:
+          Added shell command to upload logfiles.
+
 Tue Jul 30 13:38:47 2002  Jaiganesh Balasubramanian  <jai@doc.ece.uci.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC53.xml:

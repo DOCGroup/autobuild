@@ -1,10 +1,10 @@
 <scoreboard>
     <group>
         <name>Doxygen</name>
-        <build> 
+        <build>
             <name>Doxygen</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/doc_TAO_doxygen/</url>
-        </build> 
+        </build>
     </group>
     <group>
         <name>Linux</name>
@@ -109,6 +109,10 @@
         <build>
             <name>WinNT4_BCB6_Dynamic_Debug_(remedy.nl)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinXP_BCB6_Dynamic_Debug/</url>
+        </build>
+        <build>
+            <name>WinNT4_BCB6_Dynamic_Release_(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB6_Dynamic_Release/</url>
         </build>
         <build>
             <name>WinNT4_BCB6_Dynamic_Debug_Unicode(remedy.nl)</name>
