@@ -191,6 +191,12 @@ sub Header ()
 sub Footer ()
 {
     my $self = shift;
+
+    # In the case where there was no errors or warnings, output a note
+    if ($self->{ERROR_COUNTER} == 0 && $self->{WARNING_COUNTER} == 0) {
+        print {$self->{FH}} "No Errors or Warnings detected<br>\n";
+    }
+
     print {$self->{FH}} "</body>\n";
     print {$self->{FH}} "</html>\n";
 }
@@ -305,6 +311,234 @@ sub Normal ($)
 ###############################################################################
 ###############################################################################
 
+package Prettify::Totals_HTML;
+
+use strict;
+use warnings;
+use integer;
+
+use FileHandle;
+
+###############################################################################
+
+sub new ($)
+{
+    my $proto = shift;
+    my $class = ref ($proto) || $proto;
+    my $self = {};
+    my $basename = shift;
+    my $filename = $basename . "_Totals.html";
+    
+    $basename =~ s/^.*\///;
+    
+    $self->{FULLHTML} = $basename . "_Full.html";
+    $self->{BRIEFHTML} = $basename . "_Brief.html";
+    $self->{ERROR_COUNTER} = 0;
+    $self->{WARNING_COUNTER} = 0;
+    $self->{SECTION_COUNTER} = 0;
+    $self->{SUBSECTION_COUNTER} = 0;
+    $self->{FH} = new FileHandle ($filename, 'w');
+
+    $self->{SECTION_SUBSECTIONS} = 0;
+    $self->{SECTION_ERRORS} = 0;
+    $self->{SECTION_WARNINGS} = 0;
+    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
+    $self->{SECTION_WARNING_SUBSECTIONS} = 0;
+
+    $self->{SUBSECTION_ERROR_FOUND} = 0;
+    $self->{SUBSECTION_WARNING_FOUND} = 0;
+
+    bless ($self, $class);
+    return $self;
+}
+
+sub Header ()
+{
+    my $self = shift;
+    print {$self->{FH}} "<html>\n";
+    print {$self->{FH}} "<head>\n<title>Daily Build Log (Totals)</title>\n</head>\n";
+    print {$self->{FH}} "<body bgcolor=\"white\">\n";
+    print {$self->{FH}} "<h1>Daily Build Log (Totals)</h1>\n";
+    print {$self->{FH}} "<hr>\n";
+    print {$self->{FH}} "[<a href=\"$self->{BRIEFHTML}\">Brief Log</a>] ";
+    print {$self->{FH}} "[<a href=\"$self->{FULLHTML}\">Full Log</a>] \n";
+    print {$self->{FH}} "<hr>\n";
+    print {$self->{FH}} "<table border=\"1\">\n";
+    print {$self->{FH}} "  <tr>\n";
+    print {$self->{FH}} "    <th>Section</th>\n";
+    print {$self->{FH}} "    <th>Links</th>\n";
+    print {$self->{FH}} "    <th>Total Subsections</th>\n";
+    print {$self->{FH}} "    <th>Total Errors</th>\n";
+    print {$self->{FH}} "    <th>Total Warnings</th>\n";
+    print {$self->{FH}} "    <th>Subsections with Errors</th>\n";
+    print {$self->{FH}} "    <th>Subsections with Warnings</th>\n";
+    print {$self->{FH}} "  </tr>\n";
+}
+
+sub Section_Totals ()
+{
+    my $self = shift;
+    
+    # Bail out if there is no totals
+    if ($self->{SECTION_COUNTER} == 0) {
+        return;
+    } 
+
+    my $percentage;
+    my $color;
+    my $counter = $self->{SECTION_COUNTER};
+
+    print {$self->{FH}} "  <tr>\n";
+    print {$self->{FH}} "    <td>$self->{LAST_SECTION}</td>";
+    
+    print {$self->{FH}} "    <td>[<a href=\"$self->{FULLHTML}#section_$counter\">Full</a>] ";
+    if ($self->{SECTION_ERRORS} > 0 || $self->{SECTION_WARNINGS} > 0) {
+        print {$self->{FH}} "[<a href=\"$self->{BRIEFHTML}#section_$counter\">Brief</a>] ";
+    }
+    print {$self->{FH}} "</td>\n";
+
+    print {$self->{FH}} "    <td>$self->{SECTION_SUBSECTIONS}</td>";
+
+    $color = 'white';
+    $color = 'red' if ($self->{SECTION_ERRORS} > 0);
+
+    print {$self->{FH}} "    <td bgcolor=\"$color\">$self->{SECTION_ERRORS}</td>";
+    
+    $color = 'white';
+    $color = 'orange' if ($self->{SECTION_WARNINGS} > 0);
+    
+    print {$self->{FH}} "    <td bgcolor=\"$color\">$self->{SECTION_WARNINGS}</td>";
+    
+    $percentage = "--";
+    if ($self->{SECTION_SUBSECTIONS} > 0) {
+        $percentage = $self->{SECTION_ERROR_SUBSECTIONS} * 100 / $self->{SECTION_SUBSECTIONS};
+    }
+    
+    $color = 'white';
+    $color = 'red' if ($self->{SECTION_ERROR_SUBSECTIONS} > 0);
+
+    print {$self->{FH}} "    <td bgcolor=\"$color\">$self->{SECTION_ERROR_SUBSECTIONS} ($percentage%)</td>";
+
+    $percentage = "--";
+    if ($self->{SECTION_SUBSECTIONS} > 0) {
+        $percentage = $self->{SECTION_WARNING_SUBSECTIONS} * 100 / $self->{SECTION_SUBSECTIONS};
+    }
+
+    $color = 'white';
+    $color = 'orange' if ($self->{SECTION_WARNING_SUBSECTIONS} > 0);
+
+    print {$self->{FH}} "    <td bgcolor=\"$color\">$self->{SECTION_WARNING_SUBSECTIONS} ($percentage%)</td>";
+    print {$self->{FH}} "\n  </tr>\n";
+
+    $self->{SECTION_SUBSECTIONS} = 0;
+    $self->{SECTION_ERRORS} = 0;
+    $self->{SECTION_WARNINGS} = 0;
+    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
+    $self->{SECTION_WARNING_SUBSECTIONS} = 0;
+}
+
+sub Footer ()
+{
+    my $self = shift;
+
+    $self->Section_Totals ();
+
+    print {$self->{FH}} "</table>\n";
+    print {$self->{FH}} "</body>\n";
+    print {$self->{FH}} "</html>\n";
+}
+
+sub Section ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs 
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    $self->Section_Totals ();
+    
+    ++$self->{SECTION_COUNTER};
+    
+    # Save for later use
+    
+    $self->{LAST_SECTION} = $s;
+}
+
+sub Description ($)
+{
+    my $self = shift;
+    
+    # Ignore
+}
+
+sub Timestamp ($)
+{
+    my $self = shift;
+    # Ignore
+}
+
+sub Subsection ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs 
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+    
+    ++$self->{SUBSECTION_COUNTER};
+    ++$self->{SECTION_SUBSECTIONS};
+
+    $self->{SUBSECTION_ERROR_FOUND} = 0;
+    $self->{SUBSECTION_WARNING_FOUND} = 0;
+}
+
+sub Error ($)
+{
+    my $self = shift;
+    my $s = shift;
+ 
+    ++$self->{ERROR_COUNTER};
+    ++$self->{SECTION_ERRORS};
+
+    if ($self->{SUBSECTION_ERROR_FOUND} == 0) {
+        ++$self->{SECTION_ERROR_SUBSECTIONS};
+        $self->{SUBSECTION_ERROR_FOUND} = 1;
+    }
+}
+
+sub Warning ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs 
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    ++$self->{WARNING_COUNTER};
+    ++$self->{SECTION_WARNINGS};
+
+    if ($self->{SUBSECTION_WARNING_FOUND} == 0) {
+        ++$self->{SECTION_WARNING_SUBSECTIONS};
+        $self->{SUBSECTION_WARNING_FOUND} = 1;
+    }
+
+}
+
+sub Normal ($)
+{
+    my $self = shift;
+    
+    # Ignore
+}
+
+
+###############################################################################
+###############################################################################
+
 package Prettify;
 
 use strict;
@@ -347,6 +581,7 @@ sub new ($)
         ( 
             new Prettify::Full_HTML ($basename),
             new Prettify::Brief_HTML ($basename),
+            new Prettify::Totals_HTML ($basename),
         );
     
     # Output the header for the files
