@@ -1,3 +1,8 @@
+Sat Apr 19 19:31:55 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Removed the rumba builds from the
+	  scoreboard. 
+
 Fri Apr 18 12:29:39 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:

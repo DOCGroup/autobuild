@@ -33,12 +33,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
-   <build>
-       <name>Debian_GCC_3.0.4</name>
-       <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_GCC_3.0/</url>
-       <build_sponsor>UC Irvine</build_sponsor>
-       <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
-   </build>
     <build>
        <name>Debian_Full_Reactors</name>
        <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/valinor_Full/</url>
@@ -68,12 +62,6 @@ all the OS/platform combinations TAO is tested everyday.
         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_NoInterceptors/</url>
         <build_sponsor>Washington University</build_sponsor>
         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-     </build>
-     <build>
-        <name>Debian_WChar</name>
-        <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_Debian_WChar/</url>
-        <build_sponsor>UC Irvine</build_sponsor>
-        <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
      </build>
      <build>
         <name>RH80_Static_Core</name>
