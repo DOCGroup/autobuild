@@ -1,3 +1,10 @@
+Mon Feb  7 11:27:39 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/timmy_dev_bcb5_debug.xml:
+	* configs/autobuild/riverace/timmy_dev_msvc6_debug.xml:
+	  Deleted. These were Win NT4 builds, which we no longer support.
+	  We also don't support BCB5 any longer.
+
 Fri Feb  4 12:32:16 2005  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/parse_compiler_output.pm:
