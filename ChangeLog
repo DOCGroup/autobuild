@@ -1,3 +1,11 @@
+Wed May 26 23:24:17 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml (CCFLAGS):
+
+	  Removed "-Wfloat-equal" warning flag.  It flagged too many
+	  pieces of code that aren't critical, basically creating too much
+	  noise in this build's scoreboard results.
+
 Wed May 26 18:11:29 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
