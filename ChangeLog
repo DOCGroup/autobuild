@@ -1,3 +1,10 @@
+Tue Dec 16 15:33:18 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace_future.xml:
+	* configs/scoreboard/ace.xml: Changed Redhat Linux 8 builds to
+	  Redhat Enterprise Linux 3. Redhat Linux 8 builds will return
+	  in the near future but this box is now an EL 3 box.
+
 Mon Dec 15 20:35:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
         Please send all questions regarding this update to Jason Cohen

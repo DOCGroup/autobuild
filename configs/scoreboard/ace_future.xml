@@ -53,7 +53,7 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
     <build>
-      <name>Redhat_Linux_8_Debug(autoconf)</name>
+      <name>Redhat_Enterprise_Linux_3_Debug(autoconf)</name>
       <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
