@@ -15,8 +15,8 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="shell" options="call g:\bugzilla\W4_Debug\cleanup.cmd" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -u -k -clean" />
+    <command name="shell" options="call g:\bugzilla\W4_Debug\cleanup.cmd" />
 
     <command name="log"               options="ON" />
 
