@@ -1,3 +1,13 @@
+Fri May 14 15:31:32 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* common/prettify.pm (Test_Handler):
+
+	  Flag output containing "fatal" as an error.
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Added OpenSSL library directory to linker path.
+
 Fri May 14 12:45:35 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full_Reactors.xml:
