@@ -74,6 +74,9 @@ sub Run ($)
     elsif(lc $compiler eq "acc"){
         system("aCC -V"); 
     }
+    elsif($compiler =~ m/^(ecc|icc)/){
+        system($compiler." -V 2>&1");
+    }
     elsif($compiler =~ m/^(ibmcxx)/i ){
         if(-x "/usr/bin/lslpp"){
            system("/usr/bin/lslpp -l ibmcxx.cmp | grep ibmcxx.cmp");
