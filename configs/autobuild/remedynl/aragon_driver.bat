@@ -6,5 +6,4 @@ perl c:\ACE\autobuild\autobuild.pl aragon_msvcdebug.xml
 perl c:\ACE\autobuild\autobuild.pl aragon_msvcwchar.xml
 perl c:\ACE\autobuild\autobuild.pl aragon_msvcunicode.xml
 perl c:\ACE\autobuild\autobuild.pl aragon_msvclibdebug.xml
-perl c:\ACE\autobuild\autobuild.pl aragon_msvcunicodedebug.xml
 call aragon_vxworks-pcPentiumX-gnu-run.bat
