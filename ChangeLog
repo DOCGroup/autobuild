@@ -1,3 +1,9 @@
+Wed Mar 24 17:25:00 2004  Martin Corino <mcorino@remedy.nl>
+
+	* configs/scoreboard/tao.xml:
+
+	  added new SuSE Linux for Alpha GCC build at Remedy
+
 Wed Mar 24 17:15:00 2004  Martin Corino <mcorino@remedy.nl>
 
 	* configs/scoreboard/ace.xml:
