@@ -1,3 +1,16 @@
+Thu Jul 31 14:15:48 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/file_manipulation.pm:
+          Added the path when printing out that a file exists, e.g.,
+          ".disable", so I could cut-n-paste it to remove the stop file.
+
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+          Converted these builds to use MPC.  Had to turn off parallel
+          builds since I couldn't find a way to specify .NOTPARALLEL in
+          MPC and several TAO projects need it.
+
 Thu Jul 31 09:52:39 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:

@@ -158,7 +158,7 @@ sub Run ($)
     elsif ($type eq "mustnotexist") {
         
         if (-e $filename) {
-            print STDERR "\"$filename\" exists!\n";
+            print STDERR "\"$root/$filename\" exists!\n";
             return 0;
         }
     }
