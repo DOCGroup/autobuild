@@ -1,3 +1,9 @@
+Tue Oct 26 12:16:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * command/check_compiler.pm:
+
+          Added compiler type "diab" for VxWorks DIAB compiler.
+
 Mon Oct 25 07:35:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace_isis/RH8_Static_Core.xml:

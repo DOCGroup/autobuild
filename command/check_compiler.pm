@@ -70,6 +70,9 @@ sub Run ($)
     elsif(lc $compiler eq "kylix"){
 	system("bc++ -V");
     }
+    elsif(lc $compiler eq "diab"){
+	system("dplus -V");
+    }
     elsif(lc $compiler eq "dm"){
 	system("scppn");
     }
