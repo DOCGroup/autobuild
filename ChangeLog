@@ -1,3 +1,8 @@
+Wed Mar 19 06:59:18 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/ace_future.xml: Fixed a cut and past error in
+	  the URL for WAEI. 
+
 Wed Mar 19 06:00:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Changed the URL for MACOS
