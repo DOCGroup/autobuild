@@ -12,6 +12,7 @@
 	<environment name="BCBVER"   value="6" />
 	<environment name="UNICODE"  value="1" />
 
+        <variable name="configs"  value="Win32 Borland" />
         <variable name="root"     value="D:\BCB6ddwchar\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\BCB6ddwchar\" />

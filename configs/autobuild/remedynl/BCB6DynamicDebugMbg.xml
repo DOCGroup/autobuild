@@ -11,6 +11,7 @@
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
 
+        <variable name="configs"  value="Win32 Borland" />
         <variable name="root"     value="D:\ACE\BCB6dd\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\ACE\BCB6dd\" />
