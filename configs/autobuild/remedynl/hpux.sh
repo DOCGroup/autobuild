@@ -14,4 +14,4 @@ export PATH
 cvs -z9 up -P -d
 
 exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
-                             /build/ACE/autobuild/configs/autobuild/remedynl/hpux.xml
+                             /build/ACE/autobuild/configs/autobuild/remedynl/hpux_aCC.xml
