@@ -14,20 +14,16 @@
 
     </configuration>
 
-    <command name="log"               options="on" />
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
-<!--    <command name="sam" options="clean" /> -->
+    <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-<!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-sunos5.8.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nssl=0\nPLATFORM_SSL_CPPFLAGS=-I/project/danzon/pkg/openssl/include\nPLATFORM_SSL_LDFLAGS=-L/project/danzon/pkg/openssl/lib/\nPLATFORM_SSL_LIBS=-lssl\n'" />
     <command name="check_compiler"    options="sun_cc" />
     <command name="print_ace_config" />
-<!--    <command name="sam"               options="create" /> -->
-<!--    <command name="sam"               options="sam" /> -->
 
     <command name="make"              options="-j 2 -k realclean" />
     <command name="make"              options="-j 2 -k -C TAO realclean" />

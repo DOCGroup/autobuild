@@ -19,10 +19,10 @@
 
     </configuration>
 
-    <command name="log"               options="on" />
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_ONLY_LATEST_AND_GREATEST\n#include \x22ace/config-sunos5.8.h\x22\n'" />
