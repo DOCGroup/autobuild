@@ -1,3 +1,8 @@
+Mon Feb 24 07:54:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Removed BCB4 build. The build pc is needed for other stuff.
+
 Sun Feb 23 09:20:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB5StaticDebug.xml:

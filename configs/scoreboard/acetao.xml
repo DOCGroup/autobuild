@@ -329,12 +329,6 @@ here</a>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinNT4_BCB4_Dynamic_Debug</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB4_Dynamic_Debug</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>Win2K_BCB6_Pro_Dynamic_Debug</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug</url>
             <build_sponsor>Remedy IT</build_sponsor>
