@@ -1,3 +1,10 @@
+Sun Dec 16 06:00:42 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* configs/autobuild/maedhros/driver.sh:
+	* configs/autobuild/maedhros/Core.xml:
+	  Use process_logs to install the logs.
+	  First configuration is for a dry run.
+
 Sat Dec 15 09:22:33 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* configs/autobuild/maedhros/driver.sh:

@@ -5,6 +5,8 @@
         <variable name="ace_root" value="/project/maedhros/bugzilla/Core/ACE_wrappers" />
         <variable name="sam_root" value="/project/maedhros/bugzilla/Core/ACE_wrappers/samwise" />
         <variable name="log_file" value="/project/maedhros/bugzilla/Core/build_log.txt" />
+        <variable name="logroot" value="/home/bugzilla/.www-docs/auto_compile_logs/maedhros_Core/"
+        <environment name="ACE_ROOT" value="/project/maedhros/bugzilla/Core/ACE_wrappers" />
     </configuration>
     <command name="log" options="ON" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
@@ -18,7 +20,9 @@
 <!--    <command name="sam" options="sam" /> -->
     <command name="make" options="makeopts='-j 2 -k -C . realclean'" />
     <command name="make" options="makeopts='-j 2 -k -C TAO realclean'" />
-    <command name="make" options="makeopts='-j 2 -k -C . Core'" />
+    <command name="make" options="makeopts='-j 2 -k -C ace'" />
     <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="process_logs" options="clean" />
     <command name="log" options="OFF" />
+    <command name="process_logs" options="prettify" />
 </autobuild>
