@@ -1,3 +1,8 @@
+Wed Dec 18 18:00:31 2002  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Fix the
+          ACE_ROOT part of PATH.
+
 Wed Dec 18 16:37:41 2002  Steve Huston  <shuston@riverace.com>
 
         * command/generate_workspace.pm: New command, generate_workspace.
