@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/sh
 
 # Purpose: Update the scoreboard and test matrix
 # Original author: Byron Harris
@@ -72,13 +72,11 @@ if [ -d "$LOG_DIR" ]; then
   # Protect against simultaneous attempts to build the
   # test matrix.
   if [ ! -f "$TEST_MATRIX_PROTECTION_FILE" ]; then
-
     touch "$TEST_MATRIX_PROTECTION_FILE"
-
     update_local_scoreboard
-
     rm "$TEST_MATRIX_PROTECTION_FILE"
-
+  else
+    echo "Matrix is still being built."
   fi
 
 fi

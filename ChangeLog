@@ -1,3 +1,13 @@
+Thu Aug 26 14:15:34 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/update_scoreboard.sh:
+          Echo a message when skipping the test matrix generation
+          because it is already running.
+
+        * configs/scoreboard/tao_dre.sh:
+          Changed the method for executing the testmatrix
+          generation script.
+
 Thu Aug 26 08:34:35 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao_future.xml:
