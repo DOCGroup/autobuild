@@ -1,5 +1,12 @@
 2002-07-24  Johnny Willemsen  <jwillemsen@remedy.nl>
 
+        * configs/scoreboard/acetao.xml:
+          Improved the name of the doc group borland build. It is running
+          the free Borland C++ compiler, Remedy is running the Borland C++
+          Builder version.
+
+2002-07-24  Johnny Willemsen  <jwillemsen@remedy.nl>
+
         * configs/autobuild/remedynl/BCB5StaticDebug.xml:
         * configs/autobuild/remedynl/BCB6DynamicDebug.xml:
           Added new config files that I use to do the BCB builds.

@@ -92,11 +92,11 @@
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_release</url>
         </build>
         <build>
-            <name>Win2K_Borland_WChar</name>
+            <name>Win2K_Borland_C++_5_WChar</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
         </build>
         <build>
-            <name>Win2K_Borland</name>
+            <name>Win2K_Borland_C++_5</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
         </build>
         <build>
