@@ -1,3 +1,8 @@
+Mon Nov 03 05:57:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+          Moved Cygwin build logs from WashU to Vanderbilt.
+
 Sun Nov 02 09:53:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
