@@ -1,3 +1,10 @@
+Fri Oct 1 14:55:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/scarab_MingWTAO.xml:
+        * configs/autobuild/remedynl/scarab_MingWs.xml:
+        * configs/autobuild/remedynl/scarab_MingW.xml:
+          Removed unnecessary MPC arguments because of new warnings.
+
 Tue Sep 28 22:33:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/scoreboard/tao.xml:
