@@ -1,3 +1,8 @@
+Wed Mar  9 20:14:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Removed digital mars build
+
 Wed Mar  9 11:43:51 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Removed PocketPC 2002, Windows
