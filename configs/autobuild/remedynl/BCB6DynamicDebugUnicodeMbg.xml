@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="D:\ACE\BCB6ddu\ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6ddu\ACE_wrappers\bin\Dynamic\Debug\Unicode;d:\putty;d:\perl\bin" type="prefix" />
+        <environment name="PATH"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6ddu\ACE_wrappers\bin\Dynamic\Debug\Unicode;d:\putty;d:\perl\bin" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 	<environment name="DEBUG"    value="1" />
