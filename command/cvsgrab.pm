@@ -84,4 +84,4 @@ sub Run ($)
 
 ##############################################################################
 
-main::RegisterCommand ("cvsgrab", new CVS ());
+main::RegisterCommand ("cvsgrab", new CVSGrab ());
