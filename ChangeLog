@@ -1,3 +1,13 @@
+Wed Oct  2 14:26:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Added BCB6 Pro Unicode build.
+
+        * configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
+          On the build pc3 a complete BCB build takes about 1.5 hours,
+          only ace with tests/examples 15 minutes so added another build
+          on this pc.
+
 Wed Oct  2 12:01:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:
