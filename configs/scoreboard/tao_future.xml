@@ -12,12 +12,6 @@ decide the migration paths and strategies.
 <group>
    <name>Test Builds for TAO</name>
    <build>
-      <name>SuSE_90_Autoconf</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_GCC_autoconf</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
       <name>Sequence_Test_Build</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Sequence_Test_Build</url>
       <build_sponsor>Carlos O'Ryan</build_sponsor>

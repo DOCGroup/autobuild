@@ -77,6 +77,12 @@ all the OS/platform combinations ACE is tested everyday.
        <orange>30</orange>
        <red>36</red>
      </build>
+     <build>
+        <name>SuSE_90_Autoconf</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_GCC_autoconf</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 
 <group>
