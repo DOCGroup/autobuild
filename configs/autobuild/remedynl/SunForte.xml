@@ -27,7 +27,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='templates=implicit\nrtti=1\ninline=0\nexceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ninline=0\nexceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="sun_cc" />
