@@ -193,6 +193,13 @@
          </build>
     </group> -->
     <group>
+         <name>BSD</name>
+         <build>
+             <name>OpenBSD_Core</name>
+             <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Core</url>
+         </build>
+    </group>
+    <group>
          <name>XML_Test_sanity_check_not_for_release</name>
          <build>
              <name>WinXP_XML_Debug</name>

@@ -2,15 +2,15 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/project/slytherin/acebuild/Core/ACE_wrappers" />
-        <environment name="LD_LIBRARY_PATH" value="/project/slytherin/acebuild/Core/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT"        value="/home/acebuild/Core/ACE_wrappers" />
+        <environment name="LD_LIBRARY_PATH" value="/home/acebuild/Core/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:fhunleth@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/project/slytherin/acebuild/Core" />
-        <variable name="sam_root" value="/project/slytherin/acebuild/Core/ACE_wrappers/samwise" />
+        <variable name="root"     value="/home/acebuild/Core" />
+        <variable name="sam_root" value="/home/acebuild/Core/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/project/slytherin/acebuild/.www-docs/auto_compile_logs/slytherin_Core" />
+        <variable name="log_root" value="/home/acebuild/public_html/auto_compile_logs/slytherin_Core" />
         <variable name="configs"  value="OpenBSD" />
         <variable name="MAIL_ADMIN" value="frank@hunleth.com" />
 

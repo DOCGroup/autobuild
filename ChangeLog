@@ -1,3 +1,10 @@
+Sat Oct 19 11:23:24 2002  Frank Hunleth <frank@hunleth.com>
+
+	* configs/autobuild/slytherin/OpenBSD_Core.xml:
+	* configs/autobuild/slytherin/driver.sh:
+	* configs/scoreboard/acetao.xml: 
+          Added OpenBSD Core build.
+
 Fri Oct 18 20:50:58 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Removed TRU 64 from the
