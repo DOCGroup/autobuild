@@ -1,17 +1,23 @@
+Wed Jan 21 08:52:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          The Cygwin ACE build and the MinGW TAO build now use GCC 3.3.1
+
 Tue Jan 20 16:56:22 2004  Steve Huston  <shuston@riverace.com>
 
 	* command/win32make.pm: Typo. elseif -> elsif.
 
 Tue Jan 20 15:22:14 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcdebug.xml: 
+	* configs/autobuild/remedynl/msvcdebug.xml:
 
-	  Turned off ssl=1 for this builds. Need to keep things simpler to 
+	  Turned off ssl=1 for this builds. Need to keep things simpler to
 	  debug in case of problems.
 
 Tue Jan 20 15:14:23 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcdebug.xml: 
+	* configs/autobuild/remedynl/msvcdebug.xml:
 
 	  Used the new msvc_mpc script to run the builds. If the builds go
 	  fine we can permanently start using this. It seems to work fine
@@ -20,7 +26,7 @@ Tue Jan 20 15:14:23 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* command/win32make.pm:
 
 	  Added an extra condition for using msvc_mpc_auto_compile
-	  script. 
+	  script.
 
 Mon Jan 19 16:34:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
