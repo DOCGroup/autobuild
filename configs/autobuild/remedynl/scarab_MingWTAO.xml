@@ -1,0 +1,51 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:/ACE/MingWTAO/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:/ACE/MingWTAO/ACE_wrappers/TAO"/>
+        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"      value="ssh" />
+        <environment name="Path"         value="C:\MingW\bin;C:\ACE\MingWTAO\ACE_wrappers\bin;C:\ACE\MingWTAO\ACE_wrappers\lib;" type="prefix" />
+        <environment name="include"      value="" />
+        <environment name="lib"          value="" />
+
+        <variable name="configs"  value="Win32" />
+        <variable name="root"     value="C:\ACE\MingWTAO\" />
+        <variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\ACE\MingWTAO\" />
+        <variable name="name"     value="MingWTAO" />
+    </configuration>
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO" />
+    <command name="auto_run_tests"    options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MinGWTAO/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MinGWTAO" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/willemsenj/MinGWTAO/*" />
+</autobuild>
