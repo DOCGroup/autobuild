@@ -39,7 +39,7 @@
         <variable name="root"               value="/export/home/bugzilla/facet" />
         <variable name="project_root"       value="/export/home/bugzilla/facet/RTEvent/facet" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/correlation_filter" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/correlation_filter-ttl" />
         <variable name="configs"            value="Linux" />
         <variable name="make_program"       value="ant" />
 

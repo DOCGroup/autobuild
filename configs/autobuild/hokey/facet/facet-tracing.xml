@@ -20,6 +20,7 @@
         <environment name="CLASSPATH" value="/docpkg/aspectj_1.0.6/lib/aspectjtools.jar"      type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/jakarta-ant-1.5/lib/ant.jar"             type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/jakarta-ant-1.5/lib/ant-optional.jar"    type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/log4j/dist/lib/log4j-1.2.5.jar"          type="suffix"/>
         <environment name="CLASSPATH" value="/export/home/bugzilla/facet/RTEvent/facet/classes" type="suffix"/>
         <environment name="CLASSPATH" value="." type="suffix"/>
 
