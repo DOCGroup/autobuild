@@ -28,8 +28,8 @@
 
     <command name="generate_makefile" options="-type nmake -value_template platforms=Win64 ace/ace.mpc" />
     <command name="generate_workspace" options="-type nmake -value_template platforms=Win64 tests/tests.mwc" />
-    <command name="make"           options="dir=ace ace.mak CFG='Win64 Debug' CLEAN" />
-    <command name="make"           options="dir=tests tests.mak CFG='Win64 Debug' CLEAN" />
+    <command name="make"           options="dir=ace ace.mak CFG='Win64 Debug' REALCLEAN" />
+    <command name="make"           options="dir=tests tests.mak CFG='Win64 Debug' REALCLEAN" />
     <command name="make"           options="dir=ace ace.mak CFG='Win64 Debug'" />
     <command name="make"           options="dir=tests tests.mak CFG='Win64 Debug'" />
     <command name="auto_run_tests"    options="-a" />
