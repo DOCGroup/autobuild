@@ -1,3 +1,8 @@
+Tue Oct 14 17:14:49 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/balar_isis/Static.xml: A new static build on
+	  balar.vuse. 
+
 Tue Oct 14 12:39:06 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/autobuild/balar_isis/ImplicitTemplates.xml: Added a /

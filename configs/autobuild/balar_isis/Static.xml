@@ -2,39 +2,37 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT"        value="/builds/isisbuilds/Static/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/builds/isisbuilds/Static/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/builds/isisbuilds/Static/ACE_wrappers/ace:." />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/build/isisbuilds/ImplicitTemplates" />
+        <variable name="root"     value="/builds/isisbuilds/Static" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates" />
-        <variable name="configs"  value="SSL Linux Exceptions" />
-
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_Static" />
+        <variable name="configs"  value="Linux STATIC SSL" />
     </configuration>
 
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='IMPLICIT_TEMPLATES_FLAG=-fimplicit-templates\noptimize=1\nexceptions=1\nrtti=1\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nexceptions=1\noptimize=0\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -Wold-style-cast -Wwrite-strings -Wcast-align\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="reverseclean" />
+    <command name="make"              options="-C TAO reverseclean" />
     <command name="make"              options="-j 4 -k" />
     <command name="make"              options="-j 4 -k -C TAO" />
 
     <command name="auto_run_tests"    options="" />
-
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
