@@ -1,3 +1,10 @@
+Tue Aug  3 06:20:33 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/remedynl/gandalf_cbxddace.xml:
+
+          Reverted my change from Mon Aug  2 08:04:06 2004.  It is now taken
+          care of in the acedefaults base project.
+
 Mon Aug  2 10:24:00 2004  Simon Massey  <simon.massey@prismtechnologies.com>
 
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml
