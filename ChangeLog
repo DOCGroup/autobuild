@@ -1,3 +1,9 @@
+Sat Aug  9 21:19:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/printaceconfig.pm:
+          Added a link to the config page to display the xml configuration
+          file.
+
 Sat Aug  9 15:47:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/check_compiler.pm:
