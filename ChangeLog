@@ -1,3 +1,9 @@
+Mon Apr  5 12:41:22 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          The CBX Preview build is already running months on WinXP so
+          updated scoreboard
+
 Sun Apr  4 22:37:59 UTC 2004  Craig Rodrigues  <rodrigc@crodrigues.org>
 
 	* common/prettify.pm: Only display "Possible ERROR" messages
