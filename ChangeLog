@@ -1,3 +1,9 @@
+Wed Aug  7 19:56:57 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+          Added an extra shell command to remove the old log files from the
+          charange server.
+
 Tue Aug  6 17:38:57 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
@@ -8,11 +14,11 @@ Tue Aug  6 17:30:46 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC53.xml: Reeanbled exceptions
 	  in this build since the problem with SunOS 53 has been fixed by
-	  adding new patches. 
+	  adding new patches.
 
 Sat Aug  3 18:11:14 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/ringil/Legacy.xml: 
+	* configs/autobuild/ringil/Legacy.xml:
 	* configs/autobuild/ringil/Unicode.xml: Fixes to use the
 	  msvc_auto_compile.pl properly.
 
@@ -34,7 +40,7 @@ Thu Aug  1 09:03:21 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/ringil/Legacy.xml:
 	* configs/autobuild/ringil/Unicode.xml: These builds were using
-	  the pippen script. They now use the msvc_auto_compile.pl script! 
+	  the pippen script. They now use the msvc_auto_compile.pl script!
 
 Thu Aug 01 07:49:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
