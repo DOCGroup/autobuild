@@ -13,8 +13,9 @@ Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt University</a>,
 <a href="http://www.objectsciences.com/">ObjectSciences</a>,
 <a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>,
 <a href="http://www.rtlogic.com/">RT Logic!</a>,
-<a href="http://www.riverace.com/">Riverace Corporation</a>, and
-<a href="http://www.prismtechnologies.com/">PrismTech</a>.
+<a href="http://www.riverace.com/">Riverace Corporation</a>,
+<a href="http://www.prismtechnologies.com/">PrismTech</a>, and
+<a href="http://www.dresystems.com">DRE Systems</a>.
 <p>
 If you'd like to contribute builds to our virtual
 scoreboard <a href="mailto:devo_group@cs.wustl.edu">please contact us</a>
@@ -294,6 +295,12 @@ here</a>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
+            <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
+            <build_sponsor>DRE Systems</build_sponsor>
+            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
         </build>
     </group>
     <group>

@@ -1,3 +1,11 @@
+Mon Mar 10 11:54:34 UTC 2003  Don Hinton <dhinton@ieee.org>
+
+	* configs/scoreboard/acetao.xml:
+	* configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+	* configs/autobuild/dresystems/driver_no-rt_no-msg.sh:
+	* configs/autobuild/dresystems/local_scoreboard.xml: Added
+	  new build.
+
 Sun Mar  9 23:26:37 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/GCC32.xml: Added new configurations
