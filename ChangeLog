@@ -1,3 +1,10 @@
+Tue Sep 28 16:00:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved SuSE 90 autoconf build from future to ace, just builds ace
+          and should work for release
+
 Tue Sep 28 14:32:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
