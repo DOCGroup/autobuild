@@ -853,6 +853,10 @@ sub Compile_Handler ($)
         # other errors in the future
         $self->Output_Warning ($s);
     }
+    elsif ($s =~ m/Rule line too long/) {
+        # Can be given by Borland make
+        $self->Output_Error ($s);
+    }
     elsif ($s =~ m/possibly used unsafely; consider using/) {
         # Similar warnings on OpenBSD
         $self->Output_Normal ($s);
