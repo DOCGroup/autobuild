@@ -5,6 +5,5 @@ cd configs\autobuild\remedynl
 perl C:\ACE\autobuild\autobuild.pl Cygwin.xml
 perl C:\ACE\autobuild\autobuild.pl cbxdd.xml
 perl C:\ACE\autobuild\autobuild.pl cbxsr.xml
-perl C:\ACE\autobuild\autobuild.pl cbxpreview.xml
 perl C:\ACE\autobuild\autobuild.pl vc71.xml
 
