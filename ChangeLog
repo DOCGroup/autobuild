@@ -1,3 +1,9 @@
+Sat Jul 24 15:53:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+	  
+	  Fixed the LD_LIBRARY_PATH to point to $ACE_ROOT/lib.
+
 Fri Jul 23 16:32:47 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
