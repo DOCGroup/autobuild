@@ -34,7 +34,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k reverseclean" /> 
+    <command name="make"              options="-k realclean" /> 
 
     <command name="make"              options="-k" />
 
