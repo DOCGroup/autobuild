@@ -1,3 +1,8 @@
+Thu Apr 22 08:40:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/ace.xml:
+          Removed MinGW Debug build
+
 Wed Apr 21 13:11:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/scoreboard/ace_future.xml:
