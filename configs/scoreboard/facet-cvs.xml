@@ -32,7 +32,7 @@ is tested everyday. Currently this is only linux.
    </build>
 
    <build>
-   <name>ACE_TAO Adapter</name>
+   <name>ACE_TAO_Adapter</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter-cvs</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
