@@ -1,3 +1,10 @@
+Thu Sep 12 05:47:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Removed the BCB6 builds we run at remedy.nl. The pc running the
+          builds was needed for an external programmer that is doing a
+          delivery. It will be offline a number of weeks.
+
 Thu Sep 12 00:16:15 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/danzon/driver.sh: Put directory with newer
@@ -67,7 +74,7 @@ Mon Aug 26 10:40:23 2002 Ossama Othman  <ossama@uci.edu>
 
 Mon Aug 26 10:13:37 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/scoreboard/acetao.xml: 
+	* configs/scoreboard/acetao.xml:
 
 	  Added "valinor_Full_Reactors" build.
 
@@ -84,7 +91,7 @@ Mon Aug 26 16:24:47 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* autobuild.pl: Change occurences of things like:
           " %command_table->{$command}" to "$command_table{$command}"
-	  to remove Perl 5.8 warning messages: 
+	  to remove Perl 5.8 warning messages:
 	  "Using a hash as a reference is deprecated".
 	  Thanks to Carlos <coryan@atdesk.com> for the Perl wisdom.
 
@@ -97,7 +104,7 @@ Thu Aug 22 18:06:41 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 Thu Aug 22 04:25:48 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/maglor/Static.xml: Add a Linux static build
-	  which generates statistics for TAO performance and 
+	  which generates statistics for TAO performance and
 	  footprint.
 
 Mon Aug 21 13:25:17 2002 Stephen Torri <storri@cs.wustl.edu>
@@ -106,10 +113,10 @@ Mon Aug 21 13:25:17 2002 Stephen Torri <storri@cs.wustl.edu>
 
           Added four new options for builds; PDF, PS, HTML and
           SNAPSHOT. nORB project creates the documentation via
-          doxygen in pdf, ps and html format. It also uses 
+          doxygen in pdf, ps and html format. It also uses
           automake/autoconf to create a snapshot of the distribution.
 
-        * common/prettify.pm: 
+        * common/prettify.pm:
 
           Correct false positive when functions include the
           word 'error' in the name. (Fixed by kitty)
@@ -124,17 +131,17 @@ Sun Aug 18 15:36:00 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 	* configs/autobuild/sirion/Full_new.xml:
 	* configs/autobuild/sirion/driver_new.sh: Files for a new
 	  workspace. The old workspace seems busted with some bizzare
-	  problem. 
+	  problem.
 
 Sun Aug 18 15:23:39 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/balar/Debian_Minimum.xml: Made the realclean
-	  without -j 2 option.    
+	  without -j 2 option.
 
 Sat Aug 17 08:33:20 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/sirion/Full.xml: Made the realclean without -j
-	  2 option.  
+	  2 option.
 
 Fri Aug 16 13:51:14 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 

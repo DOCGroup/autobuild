@@ -66,7 +66,7 @@
         </build>
         <build>
             <name>RedHat_Static</name>
-            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maglor_Static</url> 
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maglor_Static</url>
         </build>
         <build>
             <name>RedHat_GCC_3.2</name>
@@ -117,18 +117,6 @@
         <build>
             <name>Win2K_Borland_C++_5</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
-        </build>
-        <build>
-            <name>WinNT4_BCB6_Dynamic_Debug_(remedy.nl)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinXP_BCB6_Dynamic_Debug/</url>
-        </build>
-        <build>
-            <name>WinNT4_BCB6_Dynamic_Release_(remedy.nl)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB6_Dynamic_Release/</url>
-        </build>
-        <build>
-            <name>WinNT4_BCB6_Dynamic_Debug_Unicode(remedy.nl)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB6_Dynamic_Debug_Unicode/</url>
         </build>
         <build>
             <name>WinNT4_BCB5_Static_Debug_(remedy.nl)</name>
