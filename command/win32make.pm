@@ -95,7 +95,7 @@ sub Run ($)
         $command = "perl bin/msvc_static_compile.pl $1";
     } else {
         # allow an arbitrary command
-        $command = "perl $options";
+        $command = "$options";
     }
 
     print "Running: $command\n";
