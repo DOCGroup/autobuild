@@ -40,6 +40,10 @@
     <group>
          <name>Solaris</name>
          <build>
+             <name>Solaris8_FORTE_UP_1</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/chipper_SOLARIS8_FORTE_UPDATE1_newbuild</url>
+         </build>  
+         <build>
              <name>SunOS_SunCC51</name>
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC51_newbuild</url>
          </build>
