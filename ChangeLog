@@ -1,3 +1,18 @@
+Thu Oct 31 20:31:19 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/beguine/driver.sh:
+	* configs/autobuild/beguine/Redhat_7.1_Full.xml: This build has
+	  been stopped and removed for the following reasons
+	  1. The machine is running out of disk space
+	  2. The builds configuration has been repeated elsewhere in other
+	  builds. 
+
+Thu Oct 31 20:23:39 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Removed the RedHat 7.1 Full
+	  build. It served no purpose. The build was repeated by other
+	  builds from Irvine.
+
 Sun Oct 27 22:32:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/prettify.pm:  Tag make output of the form:
