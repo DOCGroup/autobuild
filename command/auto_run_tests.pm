@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     if (!-r $root || !-d $root) {
         print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
@@ -59,6 +59,8 @@ sub Run ($)
         $root = $1;
     }
 
+    $options =~ s/\\x22/"/g;
+
     main::PrintStatus ('Test', 'auto_run_tests');
 
     my $current_dir = getcwd ();
@@ -71,7 +73,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
