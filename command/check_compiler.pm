@@ -47,7 +47,12 @@ sub Run ($)
       if($compiler =~ m/^(gcc|g\+\+)/){
           my $linker = `$compiler -print-prog-name=ld`;
           chomp $linker;
-          system($linker." -v 2>&1");
+          if($linker eq "ld"){
+              system($linker." -v 2>&1");
+          }
+          elsif($linker =~ m/ccs/){
+              system($linker." -V 2>&1");
+          }
       }
     }
     elsif(lc $compiler eq "sun_cc"){

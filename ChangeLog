@@ -1,3 +1,14 @@
+Sat Aug  9 15:47:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/check_compiler.pm:
+          Modified the gcc linker check to only print out version if gcc
+          -print-prog-name=ld returns ld or contains css, i.e., Solaris, and
+          added the appropriate option for each case.
+
+        * configs/scoreboard/ace.xml:
+          Changed name of ACE MPC build below.  Seems that names aren't
+          scoped and must be unique.
+
 Sat Aug  9 15:15:48 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/scoreboard/ace.xml:
