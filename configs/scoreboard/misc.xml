@@ -7,12 +7,18 @@ This is a miscellaneous scoreboard for ACE+TAO.
 </preamble>
 
 <group>
- <name>Doxygen</name>
+ <name>Utility Builds</name>
     <build>
-            <name>Doxygen</name>
-            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/doc_TAO_doxygen/</url>
-            <build_sponsor>UC Irvine</build_sponsor>
-            <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
-        </build>
+       <name>Doxygen</name>
+       <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/doc_TAO_doxygen/</url>
+       <build_sponsor>UC Irvine</build_sponsor>
+       <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+    </build>
+    <build>
+       <name>Win2K_Fuzz</name>
+       <url>http://tao.doc.wustl.edu/bugzilla/new_fuzz</url>
+       <build_sponsor>Washington University</build_sponsor>
+       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+    </build>
     </group>
 </scoreboard>
