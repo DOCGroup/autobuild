@@ -1,24 +1,27 @@
 #!/bin/sh
 
+The buildmatrix database
+DATABASE_NAME=""
 # Webserver of the remote db files
-WEBSERVER=internal.ociweb.com
+WEBSERVER=""
 # Directory on the webserver where the db files are stored
-WEBDIR=OCIscoreboard/test_matrix_db
+WEBDIR=""
+# Script directory
+SCRIPT_DIRECTORY=""
+
 # File on the remote server that contains the list of available db files
 REMOTE_FILE_LIST=available_db_files.log
 
 # File for preventing multiple instances occuring
-PROTECTION_FILE=/tmp/GETTING_DB_FILES.LOCK
+PROTECTION_FILE=/tmp/GETTING_REMOTE_COMPILATION_DB_FILES.LOCK
 # List of files to add to the database
 FILES_TO_ADD_TO_DB=files_to_add_to_DB
 # Full path to the list of files currently in the database
 CURRENT_DB_FILES=files_in_DB
 # Script that generates list of files currently in the DB
-CURRENT_DB_FILES_SCRIPT=RecentDBFiles.sh
+CURRENT_DB_FILES_SCRIPT=RecentCompilationDBFiles.sh
 # Script to add the files to the database
-ADD_FILES_TO_DB_SCRIPT=SaveFileToDB.sh
-# Script directory
-SCRIPT_DIRECTORY=/home/taoadmin/nightly/test_matrix
+ADD_FILES_TO_DB_SCRIPT=SaveCompilationsToDB.sh
 # Return value of this program
 RETVAL=0
 
@@ -101,7 +104,7 @@ done
 # If there are files to add then add them
 if [ -r $FILES_TO_ADD_TO_DB ]; then
     cd $SCRIPT_DIRECTORY
-    $SCRIPT_DIRECTORY/$ADD_FILES_TO_DB_SCRIPT $DB_TEMP_DIR/$FILES_TO_ADD_TO_DB
+    $SCRIPT_DIRECTORY/$ADD_FILES_TO_DB_SCRIPT $DB_TEMP_DIR/$FILES_TO_ADD_TO_DB $DATABASE_NAME
 fi
 
 rm -rf $DB_TEMP_DIR

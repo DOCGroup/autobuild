@@ -10,6 +10,7 @@
 
 import sys, string, fileinput, re, math, os, time
 
+sys.path.append("../matrix_database")
 from utils import *
 
 class HTMLTestMatrix2:

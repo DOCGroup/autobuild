@@ -18,11 +18,16 @@ use IO::File;
 use File::Path;
 
 sub load_scoreboard_config($);
-sub add_results($$);
+sub add_results($$$);
 sub dump_log($$$);
 
 my $config_file = shift @ARGV;
 my $scoreboard_directory = shift @ARGV;
+my $save_flag = 0;
+my $flag = shift @ARGV;
+if ($flag != 0) {
+   $save_flag = $flag;
+}
 
 my $build = new buildmatrix;
 $build->process;
@@ -52,13 +57,16 @@ sub process {
 
   my %summary = ();
   while(my ($k,$v) = each %builds) {
-    $self->add_results($v);
     $summary{$v->{NAME}} = {
+                            log_fname => "",
+                            build_start_time => "",
+                            build_end_time => "",
                             passed => 0,
-                            had_errors => 0,
+                            had_errors => 0,			    
                             had_warnings => 0,
-                            total => 0
-                           };
+                            total => 0			    
+                           };			    
+    $self->add_results($v, $summary{$v->{NAME}});
   }
   while(my ($project, $results) = each %{$self->{results}}) {
     while (my ($name, $data) = each %{$results}) {
@@ -78,6 +86,10 @@ sub process {
   $self->print_table(\%summary);
 
   $self->print_epilogue(\%summary);
+  
+  if ($save_flag != 0) {
+    $self->save_results(\%summary);
+  }
 }
 
 sub load_scoreboard_config($) {
@@ -110,9 +122,10 @@ sub add_project($$$) {
   return $results->{$project}->{$name};
 }
 
-sub add_results($$) {
+sub add_results($$$) {
   my $self = shift;
   my $build = shift;
+  my $data = shift;
   my $results = $self->{results};
 
   my $name = $build->{NAME};
@@ -133,6 +146,7 @@ sub add_results($$) {
 
   my $logfile = "$scoreboard_directory/$name/$file.txt";
   print STDERR "Parsing $logfile\n";
+  $data->{log_fname} = $logfile;
 
   $fh = new IO::File $logfile, 'r';
   if (not defined $fh) {
@@ -159,27 +173,35 @@ sub add_results($$) {
      qr{make.*\s-f\s(\S+).(bor|bmak)\s}x,
 
      # This one matches MSVC builds with nmake!
-     qr{nmake\s.*/[fF]\s+(\S+).mak\s}x,
+     qr{nmake\s.*/[fF]\s+(\S+).mak\s}x
+     
     );
 
   my $state = 'NOT IN COMPILE';
   my $leave_compile = '#################### ';
   my $enter_compile = $leave_compile.'Compile ';
-
+    
   LINE: while($line = $fh->getline) {
     chomp $line;
-    if ($line =~ m/^$enter_compile/) {
+    if ($line =~ m/^\#+\sBegin\s\[(.+)\sUTC\]/) {
+	$data->{build_start_time} = $1;
+        $self->{_current_project} = undef;
+    } elsif ($line =~ m/^\#+\sEnd\s\[(.+)\sUTC\]/) {
+	$data->{build_end_time} = $1;
+        $self->{_current_project} = undef;
+    } elsif ($line =~ m/^$enter_compile/) {
       $state = 'COMPILE';
       $self->{_current_project} = undef;
     } elsif ($line =~ m/^$leave_compile/) {
       $state = 'NOT IN COMPILE';
       $self->{_current_project} = undef;
     }
+    
     next unless $state eq 'COMPILE';
-
     foreach my $re (@regexp_list) {
       if ($line =~ m/$re/) {
         my $project = $1;
+        #print STDERR "addproject $project\n";
         $self->{_current_project} = add_project($name, $project, $results);
         next LINE;
       }
@@ -374,3 +396,58 @@ __TABLE_START
   print '</table>';
 }
 
+# Write results out in text files that can later be read for insertion
+# into database.  An approach similar to saving test matrix text files
+# is used.
+sub save_results($) {
+  my $self = shift;
+  my $summary = shift;
+  while (my ($name, $data) = each %{$summary}) {
+    my @fields = split("/", $data->{log_fname});
+    my $len = $#fields;
+    my $db_fname = "$fields[$len - 1]_$fields[$len]";
+    $db_fname =~ s/.txt/.db/;
+    #print STDERR "name $name\n";
+    #print STDERR "log_fname $data->{log_fname} \n";
+    #print STDERR "start_time $data->{build_start_time} \n";
+    #print STDERR "end_time $data->{build_end_time} \n";
+
+    my $result_file_dir = "$scoreboard_directory/compilation_matrix_db";
+    if (! -e $result_file_dir) {
+      mkdir $result_file_dir;
+    }
+
+    my $result_file_name_tmp = "$result_file_dir/$db_fname.tmp";
+    my $result_file_name = "$result_file_dir/$db_fname";
+    
+    my $result_file = new IO::File $result_file_name_tmp, 'w';
+    if (not defined $result_file) {
+      warn "Cannot open $result_file_name for writing\n";
+      next;
+    }
+    $result_file->print("$name\n");
+    $result_file->print("$data->{log_fname} \n");
+    $result_file->print("$data->{build_start_time} \n"); 
+    $result_file->print("$data->{build_end_time} \n");
+    
+    my $skip_build = 1;
+
+    foreach my $project (sort keys %{$self->{results}}) {
+      $result_file->print(" $project");
+      my $data = $self->{results}->{$project};
+      if (defined $data->{$name}) {
+        $result_file->print(";$data->{$name}->{errors}");
+	$result_file->print(";$data->{$name}->{warnings}");
+        $skip_build = 0;
+      }
+      $result_file->print("\n");
+    }
+   
+    if ($skip_build == 1) {
+      unlink $result_file_name_tmp; 
+    }
+    else {
+      rename($result_file_name_tmp, $result_file_name);
+    }
+  }
+}

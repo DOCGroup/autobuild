@@ -7,10 +7,12 @@
 #         $Id$
 # ******************************************************************
 
+import sys
+sys.path.append("../matrix_database")
+
 from HTMLScoreboard import *
-from Platform import *
+from TestPlatform import *
 from utils import *
-from DBLogHandle import *
 import string
 
 #Temporary comment out to avoid the requirement of MySQLdb.
@@ -26,7 +28,7 @@ def ReadLogFiles ():
 	for build in fh.readlines():
 		name, file = build.split()
 		print "********* BUILD", name
-		builds.append (Platform (name, file))
+		builds.append (TestPlatform (name, file))
 	return builds
 	fh.close()	
 
@@ -136,13 +138,13 @@ testMatrix = BuildTestMatrix (builds, directory, fname, outfile)
 SaveBuildResults2HTML(directory,outfile)
 
 if option == 1:
-   WriteDBLogFiles(builds)
+   WriteTestDBFiles(builds)
 
 # Temporary comment out to avoid the requirement of MySQLdb.
 # Uncomment when you need save the test results to database.
 #if option == 2:
 #   database_name = sys.argv[5]
-#   SaveBuildResults2DB(builds, database_name)
+#   SaveTestResults2DB(builds, database_name)
 
 if option > 2:
    print "ERROR: invalid option", option

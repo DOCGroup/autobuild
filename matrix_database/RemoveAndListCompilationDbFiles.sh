@@ -1,7 +1,6 @@
 #!/bin/sh
 
-
-DB_FILE_DIR=/project/taotmp/scoreboard/html/test_matrix_db
+DB_FILE_DIR=/project/taotmp/scoreboard/html/compilation_matrix_db
 OLD_NUMBER_DAYS=+3
 LIST_FILENAME=available_db_files.log
 

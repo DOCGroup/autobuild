@@ -40,6 +40,59 @@ Tue Nov 30 18:40:27 2004  Steve Huston  <shuston@riverace.com>
           Changed 'make' options from -j2 to -P since this build now uses
           the HP make, not GNU make.
 
+
+Tue Nov 23 18:06:01 2004  Trevor Fields  <fields_t@ociweb.com>
+                          Yan Dai <dai_y@ociweb.com>
+
+        * testmatrix/RecentDBFiles.py:
+        * testmatrix/HTMLScoreboard.py:
+        * testmatrix/SaveFileToDB.py:
+        * testmatrix/DBLogHandle.py:
+       	* testmatrix/TestDB.py:
+	* testmatrix/TestDBConfig.py:
+	* testmatrix/CreateDBTables.py:
+	* testmatrix/utils.py:
+	* testmatrix/Platform.py:
+	* testmatrix/RecentDBFiles.sh:
+	* testmatrix/CreateDBTables.sh:
+	* testmatrix/RemoveAndListDbFiles.sh:
+        * testmatrix/GetAndInsertDbFiles.sh:
+	* testmatrix/update_scoreboard.sh:
+        * testmatrix/GenerateTestMatrix.py:
+        * testmatrix/SaveFileToDB.sh:
+
+          Added testmatrix database. 
+         
+          1) The first parameter passed to buildmatrix determine whether the 
+             testmatrix data should be written to an intermediate file - file 
+             with "db" extension. 
+             Here is the list of possible value of the parameter.
+             0 -- write the testmatrix to html
+             1 -- write the testmatrix to html and create the corresponding db
+                  file.
+             2 -- write the testmatrix to html and save to database.
+             
+          2) The TestDBConfig.py provides configurations for accessing the 
+             database, the output path of db files and the build 
+             configurations. 
+             Note the database name can be passed via the parameter or
+             defined in TestDBConfig.py file. The name with non-empty string
+             passed as parameter overwrites the one defined in configuration 
+             file.
+            
+          3) New scripts:
+            
+             CreateDBTables.sh        -- Create the database tables. 
+             GetAndInsertDbFiles.sh   -- Download the db files from the remote
+                                         server webpage and insert the testmatrix
+                                         to database.
+             RecentDBFiles.sh         -- Get the list of db files recently(last 4 days)
+                                         loaded to database.                      
+             RemoveAndListDbFiles.sh  -- Remove the obsolete(older than 3 days) db files
+                                         and list the available db files.
+             SaveFileToDB.sh          -- Save the testmatrix data in the db files to 
+                                         database. 
+
 Mon Nov 22 20:05:03 2004  Carlos O'Ryan  <coryan@atdesk.com>
 
         * configs/scoreboard/tao_dre.sh:
