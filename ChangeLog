@@ -1,3 +1,9 @@
+Wed Mar 10 15:00:39 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/index.xml:
+
+	  Added scoreboard contributors to the scoreboard.
+
 Wed Mar 10 10:21:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/msvcdebug.xml:
