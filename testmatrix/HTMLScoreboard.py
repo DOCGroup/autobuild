@@ -333,6 +333,25 @@ Summary</th>
 		finally:
 			f.close()
 	
+        def writeHTMLsummary (self):
+                fname = self.directory + "/" + self.title + "-summary.html"
+                fname = os.path.normpath(fname)
+                print "Writing html summary to '" + fname + "'"
+        
+                f = open(fname, "w", 1)
+                try:
+                        f.write(self.html_start)
+                        f.write(self.main_summary_html)
+                        f.write("</table>")
+                        f.write(self.ace_summary_html)
+                        f.write("</table>")
+                        f.write(self.tao_summary_html)
+                        f.write("</table>")
+                        f.write(self.html_end)
+                finally:
+                        f.close()
+
+
 class HTMLPlatformTestTable:
 	def __init__ (self, title, dir):
 		self.title = title

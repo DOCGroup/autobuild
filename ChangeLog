@@ -1,3 +1,10 @@
+Thu Oct  7 13:55:49 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/GenerateTestMatrix.py:
+        * testmatrix/HTMLScoreboard.py:
+
+          Added the generation of a html page with just the summaries.
+
 Thu Oct  7 07:43:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace_isis/RH8_Minimum.xml:

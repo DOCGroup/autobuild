@@ -69,6 +69,7 @@ def BuildTestMatrix (builds, directory, fname, filename):
 		HTMLtestMatrix.writeBuildSummary (n, builds[n])
 	getSummaryResults(HTMLtestMatrix, builds, filename)
 	HTMLtestMatrix.writeHTML()
+	HTMLtestMatrix.writeHTMLsummary()
 	return testMatrix
 
 # Write one HTML file for each test with each row representing a platform
