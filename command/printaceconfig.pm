@@ -5,7 +5,10 @@
 package PrintACEConfig;
 
 use strict;
+use warnings;
+
 use FileHandle;
+use Time::Local;
 
 ###############################################################################
 # Constructor
@@ -52,8 +55,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Config (PrintACEConfig)\n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Config (PrintACEConfig) [" . (scalar gmtime(time())) . " UTC\n";
     
     #
     # last ACE Changelog Entry

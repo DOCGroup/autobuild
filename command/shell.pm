@@ -5,8 +5,11 @@
 package Shell;
 
 use strict;
-use FileHandle;
+use warnings;
+
 use Cwd;
+use FileHandle;
+use Time::Local;
 
 ###############################################################################
 # Constructor
@@ -53,8 +56,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Setup (Shell) \n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Setup (Shell) [" . (scalar gmtime(time())) . " UTC\n";
 
     my $current_dir = getcwd ();
 

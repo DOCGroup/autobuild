@@ -5,8 +5,11 @@
 package Auto_Run_Tests;
 
 use strict;
-use FileHandle;
+use warnings;
+
 use Cwd;
+use FileHandle;
+use Time::Local;
 
 ###############################################################################
 # Constructor
@@ -55,8 +58,7 @@ sub Run ($)
         $ace_root = $1;
     }
 
-    print "\n#################### Tests (auto_run_tests) \n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Tests (auto_run_tests) [" . (scalar gmtime(time())) . " UTC\n";
 
     my $current_dir = getcwd ();
 

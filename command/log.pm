@@ -5,6 +5,7 @@
 package Log;
 
 use strict;
+use warnings;
 
 use Cwd;
 use FileHandle;
@@ -87,12 +88,10 @@ sub Run ($)
             return 0;
         }
     
-        print "\n#################### Begin\n\n";
-        print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+        print "\n#################### Begin [" . (scalar gmtime(time())) . " UTC\n";
     }
     elsif (uc $options eq "OFF") {
-        print "\n#################### End\n\n";
-        print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+        print "\n#################### End [" . (scalar gmtime(time())) . " UTC\n";
             
         # Close the logging filehandles
         

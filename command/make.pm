@@ -5,8 +5,10 @@
 package Make;
 
 use strict;
-use FileHandle;
+use warnings;
+
 use Cwd;
+use FileHandle;
 
 ###############################################################################
 # Constructor
@@ -53,8 +55,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Compile (make) \n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Compile (make) [" . (scalar gmtime(time())) . " UTC\n";
 
     my $current_dir = getcwd ();
 

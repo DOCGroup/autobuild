@@ -5,9 +5,12 @@
 package SAM;
 
 use strict;
-use FileHandle;
+use warnings;
+
 use Cwd;
+use FileHandle;
 use File::Find;
+use Time::Local;
 
 sub create ($);
 sub sam ($);
@@ -73,8 +76,7 @@ sub Run ($)
         $sam_root = $1;
     }
 
-    print "\n#################### Compile (SAM) \n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Compile (SAM) [" . (scalar gmtime(time())) . " UTC\n";
 
     my $current_dir = getcwd ();
 

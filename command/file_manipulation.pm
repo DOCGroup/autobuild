@@ -5,8 +5,11 @@
 package File_Manipulation;
 
 use strict;
+use warnings;
+
 use Cwd;
 use File::Find;
+use Time::Local;
 
 sub create ($);
 sub sam ($);
@@ -57,8 +60,7 @@ sub Run ($)
         $root = $1;
     }
 
-    print "\n#################### Setup (File_Manipulation) \n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Setup (File_Manipulation) [" . (scalar gmtime(time())) . " UTC\n";
 
     my $current_dir = getcwd ();
 

@@ -5,16 +5,20 @@
 package Process_Logs;
 
 use strict;
+use warnings;
 
+use common::prettify;
 use DirHandle;
 use File::Copy;
 use POSIX;
+use Time::Local;
 
 ###############################################################################
 # Forward Declarations
 
 sub move_log ();
 sub clean_logs ($);
+sub prettify_log ($);
 
 my $newlogfile;
 
@@ -67,22 +71,30 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $keep = 20;
+    my $moved = 0;
 
-    print "\n#################### Processing Logs\n\n";
-    print "Command starting at ", (scalar gmtime(time())), " UTC\n\n";
+    print "\n#################### Processing Logs [" . (scalar gmtime(time())) . " UTC\n";
 
     # Move the logs
     
     if ($options =~ m/move/) {
+        $moved = 1;
         my $retval = $self->move_log ();
-        return 0 if (!$retval == 0);
+        return 0 if ($retval == 0);
+    }
+
+    # Prettify the logs
+    
+    if ($options =~ m/prettify/) {
+        my $retval = $self->prettify_log ($moved);
+        return 0 if ($retval == 0);
     }
 
     # Clean the logs
     
     if ($options =~ m/clean='(.*?)'/ || $options =~ m/clean=([^\s]*)/) {
         my $retval = $self->clean_logs ($1);
-        return 0 if (!$retval == 0);
+        return 0 if ($retval == 0);
     }
     elsif ($options =~ m/clean/) {
         my $retval = $self->clean_logs ($keep);
@@ -133,7 +145,7 @@ sub clean_logs ($)
     foreach my $file (@existing) {
         print "        Removing $file files\n";
         unlink $file . ".txt";
-        unlink $file . ".html";
+        unlink $file . "_Full.html";
         unlink $file . "_Brief.html";
     }
     return 1;
@@ -175,9 +187,24 @@ sub move_log ()
     
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);
+    return 1;
 }
 
 
+sub prettify_log ($)
+{
+    my $self = shift;
+    my $moved = shift;
+    my $root = main::GetVariable ('root');
+    my $logfile = main::GetVariable ('log_file');
+    
+    if ($moved) {
+        $logfile = $newlogfile;
+    }
+    
+    Prettify::Process ($logfile);
+    return 1;
+}
 
 ##############################################################################
 
