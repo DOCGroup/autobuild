@@ -21,6 +21,8 @@
 
     <command name="log"               options="ON" />
 
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Release -u -k -clean" />
+
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
 
@@ -37,7 +39,9 @@
 
     <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -make_coexistence -type vc6 -static -recurse" /> 
 
-    <command name="vc6make"           options="TAO/TAOACE.dsw /REBUILD /make \x22all - win32 debug\x22" /> 
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Release -ACE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Release -CORE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Release -TAO -u -k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />

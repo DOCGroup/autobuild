@@ -7,10 +7,9 @@
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
 
-        <variable name="root"     value="C:/ACE/MSVC6sd/" />
-	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:/ACE/MSVC6sd/" />
-        <variable name="project_root" value="C:/ACE/MSVC6sd/ACE_wrappers" />
+        <variable name="root"      value="C:/ACE/MSVC6sd/" />
+	<variable name="log_file"  value="log.txt" />
+        <variable name="log_root"  value="C:/ACE/MSVC6sd/" />
         <variable name="name"      value="WinXP LIB Debug" />
         <variable name="configs"   value="Win32 SANDBOX Exceptions" /> 
     </configuration>
@@ -20,6 +19,8 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
     <command name="log"               options="ON" />
+
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -u -k -clean" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
@@ -37,7 +38,9 @@
 
     <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -recurse -make_coexistence -type vc6 -static" /> 
 
-    <command name="vc6make"           options="TAO/TAOACE.dsw /REBUILD /make \x22all - win32 debug\x22" /> 
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -ACE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -CORE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -TAO -u -k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
