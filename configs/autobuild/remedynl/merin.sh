@@ -12,5 +12,5 @@ cd $HOME/ACE/autobuild
 
 cvs -z9 up -P -d
 
-$HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc2valgrind.sh
-$HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc2gccnoinline.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/merin_valgrind.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/merin_gccnoinline.sh
