@@ -1,3 +1,10 @@
+Thu Apr 29 12:33:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/vmsmake.pm:
+          Added vmsMake. Using GNU make under VMS is different than under
+          the other OS's. Therefor added a special vmsMake that we will
+          use for this OS.
+
 Thu Apr 29 07:52:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Wchar.xml:
