@@ -1,3 +1,12 @@
+Wed Nov 17 10:19:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/cvs.pm:
+          Added support for the variable cvs_program, with this the default
+          cvs can be overruled. We need this for the VxWorks port, where we
+          use the cygwin cvs, but can't have cygwin in the PATH, so we must
+          execute c:\cygwin\bin\cvs instead of cvs. WIth cvs_program we can
+          just overrule the default from our autobuild xml config file
+
 Wed Nov 17 08:05:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
