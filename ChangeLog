@@ -1,3 +1,12 @@
+Mon Oct  4 10:18:55 2004  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/autobuild/acorn/netbsd_amd64.xml:
+	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+	* configs/autobuild/acorn/netbsd_i386.xml:
+	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+
+          Removed unnecessary MPC arguments because of new warnings.
+
 Mon Oct 4 14:03:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/tribeardgcc.xml:
