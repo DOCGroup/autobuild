@@ -158,7 +158,6 @@ sub clean_logs ($)
     # Delete anything left in the list
 
     foreach my $file (@existing) {
-        print "        Removing $file files\n";
         unlink $file . ".txt";
         unlink $file . "_Full.html";
         unlink $file . "_Brief.html";

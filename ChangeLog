@@ -1,3 +1,7 @@
+Wed Oct  2 02:58:36 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/process_logs.pm: Remove extraneous print statement.
+
 Wed Oct  2 00:49:10 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* autobuild.pl: Make $verbose a global variable with 'our' keyword.
