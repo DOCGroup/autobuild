@@ -1,4 +1,5 @@
-<!-- $Id$ --><autobuild>
+<!-- $Id$ -->
+<autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:/ACE/MingWTAO/ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:/ACE/MingWTAO/ACE_wrappers/TAO"/>
@@ -7,9 +8,10 @@
         <environment name="Path"         value="C:\Perl\Bin;C:\ACE\MingWTAO\ACE_wrappers\bin;C:\ACE\MingWTAO\ACE_wrappers\lib;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
-	<variable name="configs"  value="Win32" />
+
+        <variable name="configs"  value="Win32" />
         <variable name="root"     value="C:\ACE\MingWTAO\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\MingWTAO\" />
         <variable name="name"     value="MingWTAO" />
     </configuration>

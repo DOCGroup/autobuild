@@ -5,12 +5,13 @@
         <environment name="TAO_ROOT"     value="C:/ACE/MingW/ACE_wrappers/TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="C:\MSYS\1.0\bin;C:\MinGW\bin;C:\Perl\Bin;C:\Cygwin\bin;C:\ACE\MingW\ACE_wrappers\bin;C:\ACE\MingW\ACE_wrappers\lib;" type="prefix" />
+        <environment name="Path"         value="C:\Perl\Bin;C:\ACE\MingW\ACE_wrappers\bin;C:\ACE\MingW\ACE_wrappers\lib;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
+        <variable name="configs"  value="Win32" />
         <variable name="root"     value="C:\ACE\MingW\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\MingW\" />
         <variable name="name"     value="MingW" />
     </configuration>
@@ -29,7 +30,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
 
-    <command name="print_os_version" options="useuname" />
+    <command name="print_os_version"/>
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
@@ -50,6 +51,7 @@
     <command name="status"            options="off" />
     <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/MinGW/* -f" />
     <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/MinGW" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/willemsenj/MinGW/*" />
 </autobuild>
 
 
