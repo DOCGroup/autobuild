@@ -15,3 +15,4 @@ cvs -z9 up -P -d
 $HOME/ACE/autobuild/configs/autobuild/remedynl/eowyn_gcc.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/eowyn_pgi.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/eowyn_poarefactor.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/eowyn_gccwarn.sh
