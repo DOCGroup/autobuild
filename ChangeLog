@@ -1,3 +1,9 @@
+Thu Apr 17 11:52:54 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace_isis/RH8_Static_Core.xml:
+	* configs/autobuild/ace_isis/driver_static.sh: New static core
+	  builds at ISIS. 
+
 Thu Apr 17 11:46:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Changed the sponsors name of the
