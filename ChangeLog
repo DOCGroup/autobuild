@@ -1,3 +1,8 @@
+Tue Jul 20 10:36:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed (MPC) from the msvc6 core build, all builds now use MPC
+
 Sat Jul 17 12:44:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/SingleThreaded.xml:
