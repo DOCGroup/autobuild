@@ -1,3 +1,9 @@
+Mon Oct 10 11:34:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+ 	* command/win32make.pm:
+
+          Fixed to allow for missing ACE_wrappers tree without killing build.
+
 Sat Oct  9 06:20:34 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:
