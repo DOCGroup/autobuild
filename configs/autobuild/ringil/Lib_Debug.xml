@@ -6,7 +6,7 @@
         <variable name="root"     value="C:/builds/lib_debug/" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:/Inetpub/wwwroot/bugzilla/lib_debug" />
-        <variable name="name"     value="Win2000 Lib Debug" />
+        <variable name="name"     value="WinXP Lib Debug" />
     </configuration>
 
     <command name="status"            options="on" />

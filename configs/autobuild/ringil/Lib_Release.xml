@@ -6,7 +6,7 @@
         <variable name="root"     value="C:/builds/lib_release/" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:/Inetpub/wwwroot/bugzilla/lib_release" />
-        <variable name="name"     value="Win2000 Lib Release" />
+        <variable name="name"     value="WinXP Lib Release" />
     </configuration>
 
     <command name="status"            options="on" />
