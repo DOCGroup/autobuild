@@ -1,3 +1,8 @@
+Wed Apr 23 16:47:38 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Correctly URLs for the NT4 BCB5 and
+	  MSVC6 builds that run at Riverace.
+
 Wed Apr 23 14:05:43 2003  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/prettify.pm:
