@@ -34,6 +34,7 @@
     <command name="generate_workspace" options="-feature_file c:\ace\ACE_wrappers-repository\local.features -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -recurse -type em3" /> 
 
     <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast - Win32 (WCE ARM) Debug' /REBUILD /USEENV /CECONFIG 'Pocket PC 2002'" />
+    <command name="wincemake"         options="protocols/protocols.vcw /MAKE 'HTBP - Win32 (WCE ARM) Debug' /REBUILD /USEENV /CECONFIG 'Pocket PC 2002'" />
     <command name="wincemake"         options="tests/tests.vcw /MAKE 'ALL - Win32 (WCE ARM) Debug' /USEENV /CECONFIG 'Pocket PC 2002'" />
     <command name="file_manipulation" options="type=create file=copy_ace.cmd output='copy c:\ace\ACE_wrappers-repository\lib\ARM\ACEd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\tests\Config_Test_Import_1.ini 1:\ \ncopy c:\ace\ACE_wrappers-repository\lib\ARM\DLL_Testd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\lib\ARM\Service_Config_DLLd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\lib\ARM\Framework_Component_DLLd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\lib\ARM\Test_Outputd.dll 1:\Windows\n'" />
     <command name="shell"             options="PocketControllerEnterprise -l DEVICE_PATH=\Riverace\Steve's Toshiba Pocket PC;CONNECT=default; -m NAME=copy_ace.cmd;WAIT=30000; -e" />
