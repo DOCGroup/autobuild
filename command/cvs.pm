@@ -35,7 +35,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -68,7 +68,14 @@ sub Run ($)
         return 0;
     }
 
-    system ("cvs $options");
+    my $cvs_program = main::GetVariable ('cvs_program');
+    if (! defined $cvs_program) {
+        # The "cvs_program" variable was not defined in the
+        # XML config file.  Default to using a program called "cvs".
+        $cvs_program = "cvs"
+    }
+
+    system ("$cvs_program $options");
 
     chdir $current_dir;
 
