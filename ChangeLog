@@ -1,3 +1,8 @@
+Fri Feb 20 16:07:51 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/msvclibrelease.xml:
+	  Use msvc_static_compile to do the build.
+
 Thu Feb 19 13:59:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/SunForte.xml:
