@@ -622,7 +622,7 @@ package Prettify;
 
 use strict;
 use warnings;
-use common::parse_compiler_output;
+use parse_compiler_output;
 use base qw(parse_compiler_output);
 
 use Data::Dumper;
