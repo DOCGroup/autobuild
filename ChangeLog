@@ -1,3 +1,16 @@
+Sun Oct 20 09:10:03 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/maedhros/Core.xml: Made the following
+	  changes. 
+	  
+	  . This build shold not run tests. This is supposed to be a core
+	    build.
+
+	  . This build will be a static core build. 
+
+	  Our builds have to be used effectively to test various
+	  configurations. No point in falling a victim for DRY.
+
 Sat Oct 19 13:38:42 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/scoreboard/acetao.xml: 

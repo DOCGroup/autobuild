@@ -23,7 +23,7 @@
 <!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\ninline=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\ninline=0\nstatic_libs_only=1\n'" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
@@ -32,10 +32,11 @@
 
     <command name="make"              options="-j 2 -k realclean" />
     <command name="make"              options="-j 2 -k -C TAO realclean" />
-    <command name="make"              options="-j 2 -k" />
-    <command name="make"              options="-j 2 -k -C TAO" />
-
-    <command name="auto_run_tests"    options="" />
+    <command name="make"              options="-j 2 -C ace" />
+    <command name="make"              options="-j 2 -C apps/gperf/src" />
+    <command name="make"              options="-j 2 -C TAO/tao" />
+    <command name="make"              options="-j 2 -C TAO/TAO_IDL" />
+    <command name="make"              options="-j 2 -C TAO/orbsvcs/orbsvcs" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify clean index" />
