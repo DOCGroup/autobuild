@@ -1,3 +1,18 @@
+Thu Nov 11 11:28:04 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/W4_Debug.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/ringil/Legacy.xml:
+        * configs/autobuild/ringil/Unicode.xml:
+        * configs/autobuild/riverace/timmy_dev_msvc6_debug.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Purify.xml:
+
+          Removed the -DLL option from all msvc_mpc_auto_compile commands as
+          it is not an accepted option.
+
 Thu Nov 11 09:45:20 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/ace_isis/RH8_NoInline.xml:
