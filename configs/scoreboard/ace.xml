@@ -39,7 +39,7 @@ all the OS/platform combinations ACE is tested everyday.
      </build>
 </group>
 
-<group>          
+<group>
   <name>Linux</name>
      <build>
      <name>Redhat_Linux_7.1_Debug</name>
@@ -233,6 +233,12 @@ all the OS/platform combinations ACE is tested everyday.
         <build>
             <name>WinXP_MingW_GCC_3_2_3(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGW</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_MingW_GCC_3_2_3(MPC)_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGWACE</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
