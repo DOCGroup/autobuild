@@ -31,14 +31,14 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
 
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO" />
+
     <command name="print_os_version" options="useuname" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
-
-    <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO" />
 
     <command name="make"              options="-k realclean" />
 
