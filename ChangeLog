@@ -1,3 +1,11 @@
+Sat Jun 21 09:21:07 2003  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/equus/RH9_wchar.xml:
+
+	  Declare configuration variables prior to including
+	  `platform_linux.GNU' so that the latter will detect the
+	  configuration variables rather than ignore them.
+
 Sat Jun 21 12:39:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
