@@ -1,6 +1,7 @@
 Thu Apr 17 12:55:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tao_isis/Doxygen.xml:
+	* configs/autobuild/tao_isis/driver_doxygen.sh:
 	* configs/autobuild/tao_isis/auto_doxygen.pl: Doxygen builds at
 	  ISIS. 
 	
