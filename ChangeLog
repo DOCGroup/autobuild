@@ -1,3 +1,11 @@
+Wed Jul 16 15:29:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+          Added VC71 build, first under tests to see how it builds.
+
+        * configs/autobuild/remedynl/vc7.xml:
+          Config build for our vc71 build.
+
 Mon Jul 14 17:56:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
