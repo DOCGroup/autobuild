@@ -1,3 +1,8 @@
+Thu Nov 18 13:29:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new GCC2.96 VxWorks build.
+
 Thu Nov 18 10:06:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
 	* command/check_compiler.pm:
