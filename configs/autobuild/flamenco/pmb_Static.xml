@@ -25,7 +25,11 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+<!--
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\noptimize=1\ndebug=0\nexceptions=0\n#ssl=1\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
+-->
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nshared_libs_only=1\ndebug=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\n'" />
+
 
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
