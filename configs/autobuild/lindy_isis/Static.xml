@@ -2,13 +2,13 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Static/ACE_wrappers/ace:.:/usr/local/lib" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="LD_ASSUME_KERNEL"         value="2.4.21" />
-        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="ACE_ROOT"           value="/build/isisbuilds/Static/ACE_wrappers" />
+        <environment name="TAO_ROOT"           value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"          value="/build/isisbuilds/Static/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH"    value="/build/isisbuilds/Static/ACE_wrappers/lib:.:/usr/local/lib" />
+        <environment name="CVSROOT"            value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="LD_ASSUME_KERNEL"   value="2.4.21" />
+        <environment name="CVS_RSH"            value="ssh" />
 
         <variable name="root"     value="/build/isisbuilds/Static" />
         <variable name="log_file" value="build.txt" />
@@ -21,6 +21,8 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
@@ -32,7 +34,7 @@
     <command name="print_ace_config" />
 
     <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- This builds TAO... -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
 

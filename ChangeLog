@@ -1,3 +1,9 @@
+Sun May  9 13:05:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/ace_isis/*.xml:
+          Removed GNUmakefiles before a cvs checkout and removed not needed
+          excluses from mpc generation
+
 Sun May  9 12:54:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
