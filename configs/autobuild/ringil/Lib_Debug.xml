@@ -15,13 +15,15 @@
 
     <command name="win32make"         options="msvc_auto_compile -LIB -Debug -u -k -clean" />
 
-    <command name="log"               options="ON" /> 
+    <command name="log"               options="ON" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
 
-    <command name="print_ace_config" /> 
+    <command name="print_os_version" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
 
     <command name="win32make"         options="msvc_auto_compile -LIB -Debug -ACE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -LIB -Debug -CORE -u -k" />

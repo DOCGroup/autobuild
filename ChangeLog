@@ -1,3 +1,17 @@
+Mon Feb 10 09:50:38 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/nirvana/DLL_Release.xml:
+	* configs/autobuild/nirvana/W4_Debug.xml:
+	* configs/autobuild/ringil/Legacy.xml:
+	* configs/autobuild/ringil/Lib_Debug.xml:
+	* configs/autobuild/ringil/Lib_Release.xml:
+	* configs/autobuild/ringil/Unicode.xml:
+	* configs/autobuild/tao/DLL_Core.xml:
+	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/tao/Unicode.xml:
+	* configs/autobuild/tao/Wchar.xml: Made sure both OS and compiler
+	  info got recorded in config sections.
+
 Mon Feb 10 07:47:24 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml: Added MSVC6 compiler version to
