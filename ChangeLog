@@ -1,3 +1,8 @@
+Thu Apr  8 14:01:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCCACE.xml:
+          Added ACE_HAS_TOKENS_LIBRARY to the config.h generation.
+
 Wed Apr  7 14:32:29 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/ace/LYNX_PPC.xml:
