@@ -65,39 +65,12 @@ Pundaleeka.
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
-   <!-- this build isn't setup right, it needs another feature enabled
-   <build>
-   <name>FACET-eventtype</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventtype/</url>
-   <build_sponsor>Washington University</build_sponsor>
-   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   -->
-
-   <!-- This build requires another dependent feature
-   <build>
-   <name>FACET-eventvector</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventvector</url>
-   <build_sponsor>Washington University</build_sponsor>
-   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   -->
-
    <build>
    <name>FACET-event_pull</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/event_pull</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
-
-   <!-- This build requires another dependent feature
-   <build>
-   <name>FACET-realtime_dispatcher</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/realtime_dispatcher/</url>
-   <build_sponsor>Washington University</build_sponsor>
-   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   -->
 
    <build>
    <name>FACET-source_filter</name>
@@ -155,6 +128,76 @@ Pundaleeka.
 <name>FACET-Features (with CORBA enabled)</name>
 
    <build>
+   <name>FACET-corba-correlation_filter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/correlation_filter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-rtec_correlation_filter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/rtec_correlation_filter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-consumer_dispatch</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/consumer_dispatch</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-event_pull</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/event_pull</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-source_filter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/source_filter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-supplier_dispatcher</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/supplier_dispatch/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-throughput_test</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/throughput_test</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-timestamp</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/timestamp/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-tracing</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/tracing/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>FACET-corba-correlation_filter-ttl</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/correlation_filter-ttl</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
    <name>FACET-corba-ttl</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/ttl/</url>
    <build_sponsor>Washington University</build_sponsor>
@@ -164,8 +207,15 @@ Pundaleeka.
 </group>
 
 <group>
-<name>TAO-FACET Adapter</name>
-   
+<name>TAO-FACET Adapter (built with FACET in no-CORBA mode)</name>
+   <!--
+   <build>
+   <name>FACET-correlation_filter-ttl</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/correlation_filter-ttl</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>-->
+
    <build>
    <name>ACE_TAO</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0</url>
@@ -188,7 +238,5 @@ Pundaleeka.
    </build>
 
 </group>
-
-
 
 </scoreboard>
