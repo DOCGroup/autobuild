@@ -33,11 +33,11 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc " />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO " />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF " />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

@@ -1,3 +1,23 @@
+Sat Oct  2 08:21:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/ace_isis/RH8_Minimum.xml:
+	* configs/autobuild/ace_isis/RH8_NoInline.xml:
+	* configs/autobuild/ace_isis/RH8_Static_Core.xml:
+	* configs/autobuild/balar_isis/DynamicHash.xml:
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+	* configs/autobuild/balar_isis/wchar.xml:
+	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
+	* configs/autobuild/lindy_isis/Static.xml:
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+
+          Removed unnecessary MPC arguments because of new warnings.
+
 Fri Oct  1 20:40:36 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:

@@ -32,11 +32,11 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc " />
 
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO " />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,tests,examples,DAnCE,CIDLC,CCF -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,tests,examples,DAnCE,CIDLC,CCF" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
