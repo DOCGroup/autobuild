@@ -7,9 +7,14 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 #
 
 
-use FindBin;
-use lib $FindBin::Bin;
-use common::simpleparser;
+if ( $^O eq 'VMS' ) {
+  unshift(@INC, getExecutePath($0));
+} else  {
+  use FindBin;
+  use lib $FindBin::Bin;
+}
+
+require common::simpleparser;
 use diagnostics;
 use Time::Local;
 use File::Basename;
@@ -45,6 +50,95 @@ while ($#ARGV >= 0)
 if (scalar @files == 0) {
     print "No input files\n";
     exit;
+}
+
+#
+# Subroutines to get execution path into @INC (nicked  from MPC:-)
+# because FindBin does not work on OpenVMS
+#
+if ($^O eq "VMS") {
+  require VMS::Filespec;
+  import VMS::Filespec qw(unixpath);
+}
+
+sub which {
+  my($prog)   = shift;
+  my($exec)   = $prog;
+  my($part)   = '';
+  if ( $^O eq 'VMS' ) {
+    my($envSep) = ';';
+    if (defined $ENV{'PATH'}) {
+      foreach $part (split(/$envSep/, $ENV{'PATH'})) {
+        $part .= "$prog";
+        if ( -x $part ) {
+          $exec = $part;
+          last;
+        }
+      }
+    }
+  }
+  else  {
+    my($envSep) = ($^O eq 'MSWin32' ? ';' : ':');
+    if (defined $ENV{'PATH'}) {
+      foreach $part (split(/$envSep/, $ENV{'PATH'})) {
+        $part .= "/$prog";
+        if ( -x $part ) {
+          $exec = $part;
+          last;
+        }
+      }
+    }
+  }
+
+  return $exec;
+}
+
+
+sub getExecutePath {
+  my($prog) = shift;
+  my($loc)  = '';
+
+  if ( $^O eq 'VMS' ) {
+    if ($prog ne basename($prog)) {
+      my($dir) = unixpath( dirname($prog) );
+      if ($prog =~ /^[\/\\]/) {
+        $loc = $dir;
+      }
+      else {
+        $loc = unixpath(getcwd()) . $dir;
+      }
+    }
+    else {
+      $loc = unixpath( dirname(which($prog)) );
+    }
+
+    if ($loc eq '.') {
+      $loc = unixpath( getcwd() );
+    }
+  } else {
+    if ($prog ne basename($prog)) {
+      if ($prog =~ /^[\/\\]/ ||
+          $prog =~ /^[A-Za-z]:[\/\\]?/) {
+        $loc = dirname($prog);
+      }
+      else {
+        $loc = getcwd() . '/' . dirname($prog);
+      }
+    }
+    else {
+      $loc = dirname(which($prog));
+    }
+
+    if ($loc eq '.') {
+      $loc = getcwd();
+    }
+
+    if ($loc ne '') {
+      $loc .= '/';
+    }
+  }
+
+  return $loc;
 }
 
 #
@@ -133,7 +227,12 @@ require command::cvs;
 require command::file_manipulation;
 require command::fuzz;
 require command::log;
-require command::make;
+if ( $^O eq 'VMS' ) {
+  require command::vmsmake;
+} 
+else {
+  require command::make;
+}
 require command::printaceconfig;
 require command::process_logs;
 require command::sam;
