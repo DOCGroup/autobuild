@@ -1,3 +1,19 @@
+Tue Nov 19 12:38:51 2002  Steve Huston  <shuston@riverace.com>
+
+        * README: Added some more info about important <configuration> section
+          variables.
+
+        * command/create_ace_build.pm: New command to run bin/create_ace_build
+          to use multiple builds under one CVS source tree. This command takes
+          options for create_ace_build (typically -a -v) and requires the
+          build_name variable.
+
+        * autobuild.pl: Added require for create_ace_build.
+
+        * configs/autobuild/riverace/jane_dev_debug.xml: New directory to
+          hold Riverace's build configurations for development builds.
+          First up is Redhat Linux 8.
+
 Fri Nov 15 11:22:25 2002  Ossama Othman  <ossama@uci.edu>
 
 	* make_pretty.pl (tests_output):

@@ -35,6 +35,13 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 
     <environment name="ACE_ROOT"        value="/export/bugzilla/Minimum_newbuild/ACE_wrappers" />
 
+    The "root" variable is important. It is the root of all future
+    "file_manipulation" commands.
+
+    The "configs" variable should contain a space-separated list of -Config
+    options that are passed to auto_run_tests.pl. For Windows, it should
+    include Win32.
+
 (3)  In the <configuration></configuration> section, specify the directory 
      where to place the log files from the build.
      Ideally this directory should be accessible by a web server, so

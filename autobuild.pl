@@ -119,6 +119,8 @@ sub PrintStatus ($$)
 #
 require common::mail;
 require command::auto_run_tests;
+require command::check_compiler;
+require command::create_ace_build;
 require command::cvs;
 require command::file_manipulation;
 require command::fuzz;
@@ -130,7 +132,6 @@ require command::sam;
 require command::shell;
 require command::status;
 require command::win32make;
-require command::check_compiler;
 
 #
 # Parse, CheckReqs, and Run
