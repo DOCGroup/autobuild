@@ -1,0 +1,53 @@
+<autobuild>
+	<configuration>
+		<environment name="ACE_ROOT" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0"/>
+		<environment name="TAO_ROOT" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0/TAO"/>
+		<environment name="SSL_ROOT" value="/usr"/>
+		<environment name="LD_LIBRARY_PATH" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0/lib:/opt/gcc/3.2/lib:/usr/lib:"/>
+		<environment name="TAO_ORBSVCS" value=""/>
+		<environment name="SELECTION_CRITERIA" value=" -Config Linux "/>
+		<environment name="PATH" value="/opt/gcc/3.2/bin:/usr/bin:/bin"/>
+		<environment name="CVSROOT" value=":ext:oci@cvs.doc.wustl.edu:/project/cvs-repository"/>
+		<environment name="CVS_RSH" value="ssh"/>
+		<variable name="root" value="/tao_builds/taoadmin/doc"/>
+		<variable name="project_root" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0"/>
+		<variable name="log_file" value="gcc3.2_d1o0.txt"/>
+		<!--  where to move the logs to  -->
+		<variable name="log_root" value="/home/taoadmin/.www-docs/autobuild_logs/doc_spider_rh80_gcc3.2_d1o0"/>
+		<!--  configuration options for running tests;  equivalent to CONFIG var in auto_compile scripts  -->
+		<variable name="configs" value="Linux "/>
+		<!--  needed for the create_ace_build command -->
+		<variable name="build_name" value="gcc3.2_d1o0"/>
+	</configuration>
+	<command name="status" options="on"/>
+	<command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers/build/gcc3.2_d1o0/.disable"/>
+	<command name="log" options="on"/>
+	<command name="cvs" options="-z 9 -q checkout -P ACE_wrappers"/>
+	<command name="create_ace_build"/>
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc3.2_d1o0/.disable output='RUNNING'"/>
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc3.2_d1o0/ace/config.h output='\n#include \x22ace/config-linux.h\x22\n\n'"/>
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc3.2_d1o0/include/makeinclude/platform_macros.GNU output='ssl=1\nexceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nshared_libs_only=1\ndebug=1\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc3.2_d1o0/bin/MakeProjectCreator/config/default.features output='ssl=1\nexceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nshared_libs_only=1\ndebug=1\noptimize=0\n'"/>
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc3.2_d1o0/setupenv.sh output='umask 002\nACE_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc3.2_d1o0; export ACE_ROOT\nTAO_ROOT=$ACE_ROOT/TAO; export TAO_ROOT\nLD_LIBRARY_PATH=$ACE_ROOT/lib:/opt/gcc/3.2/lib:/usr/lib; export LD_LIBRARY_PATH\nPATH=/opt/gcc/3.2/bin:/usr/bin:/bin:$ACE_ROOT/bin; export PATH\nLM_LICENSE_FILE=; export LM_LICENSE_FILE\n'"/>
+	<command name="generate_workspace" options="-type gnuace -recurse"/>
+	<command name="print_ace_config"/>
+	<command name="make" options="-s -k -C TAO -f Makefile.TAOACE"/>
+	<command name="make" options="-s -k -C tests"/>
+	<command name="make" options="-s -k -C examples"/>
+	<command name="make" options="-s -k -C performance-tests"/>
+	<command name="make" options="-s -k -C TAO/tests"/>
+	<command name="make" options="-s -k -C TAO/examples"/>
+	<command name="make" options="-s -k -C TAO/performance-tests"/>
+	<command name="make" options="-s -k -C TAO/orbsvcs/tests"/>
+	<command name="make" options="-s -k -C TAO/orbsvcs/examples"/>
+	<command name="make" options="-s -k -C TAO/orbsvcs/performance-tests"/>
+	<command name="auto_run_tests" options="-Config SSL"/>
+	<command name="log" options="off"/>
+	<command name="process_logs" options="clean move prettify index"/>
+	<command name="file_manipulation" options="type=delete file=ACE_wrappers/build/gcc3.2_d1o0/.disable"/>
+	<command name="status" options="off"/>
+	<!-- We also want to copy this stuff to the doc group scoreboard.-->
+	<command name="shell" options="/home/taoadmin/nightly/putDGbuildlogs doc_spider_rh80_gcc3.2_d1o0"/>
+	<!-- Push the logs to the webserver -->
+	<command name="shell" options="/home/taoadmin/nightly/uploadBuildLogs.sh doc_spider_rh80_gcc3.2_d1o0"/>
+</autobuild>
