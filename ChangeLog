@@ -1,3 +1,8 @@
+Wed Dec  4 20:59:37 2002  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml: Put the
+          platform_macros.GNU file in the right place.
+
 Wed Dec  4 11:38:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/tao/DLL_Debug.xml:

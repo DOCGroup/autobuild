@@ -29,7 +29,7 @@
     <command name="file_manipulation" options="type=create file=build/acc_debug/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/acc_debug/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/acc_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
     <command name="check_compiler"    options="aCC" />
     <command name="print_ace_config" />
 
