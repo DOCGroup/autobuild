@@ -23,7 +23,7 @@
     <command name="cvs"               options="checkout -P MPC" />
     <command name="cvs"               options="checkout -P ACE" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_IPV6\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_IPV6\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\n'" />
 
     <command name="print_os_version" />
