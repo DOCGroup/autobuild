@@ -3,6 +3,9 @@ Thu Aug  7 18:32:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
         * configs/scoreboard/ace.xml:
           Fixed formatting problem from last checkin.
 
+        * configs/file_manipulation.pm:
+          Temporarily rolled back the double quote change.
+
 Thu Aug  7 18:05:50 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/driver_freebsd.sh:
