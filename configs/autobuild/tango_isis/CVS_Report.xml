@@ -27,7 +27,7 @@
 
     <command name="shell"    options="cd ${ACE_ROOT}; perl ${HOME}/cvschangelogbuilder-2.0/cvschangelogbuilder.pl -ssh -output=buildhtmlreport >ACE_wrappers.html" />
 
-    <command name="shell"    options="cp ACE_wrappers.html /web/users/isisbuilds/auto_compile_logs/CVS_Report/ACE_wrappers.html" />
+    <command name="shell"    options="cp ${ACE_ROOT}/ACE_wrappers.html /web/users/isisbuilds/auto_compile_logs/CVS_Report/ACE_wrappers.html" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
