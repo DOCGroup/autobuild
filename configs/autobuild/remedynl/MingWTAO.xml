@@ -37,11 +37,17 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO -hierarchy -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
 
     <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
