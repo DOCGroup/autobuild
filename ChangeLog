@@ -1,3 +1,22 @@
+Tue Jan 18 12:58:16 MST 2005  Yan Dai <dai_y@ociweb.com>
+
+	* matrix_database/TestPlatform.py:
+          Removed extra constructor.
+
+	* matrix_database/DBConnection.py:
+          Removed the CreateTables method since it's not used.
+  
+	* matrix_database/TestDB.py:
+	* matrix_database/CompilationDB.py:
+        * matrix_database/DBConfig.py:
+	* matrix_database/CreateTables.py:
+          Added 'hostname' field to the build table.
+
+	* matrix_database/UpdateBuildTable.py:
+        * matrix_database/UpdateBuildTable.sh:
+          Scripts added to update the build table base on the 
+          configuration specified in DBConfig.py script.
+
 Wed Jan 12 14:10:30 MST 2005  Trevor Fields  <fields_t@ociweb.com>
 
         * matrix_database/InsertLocalTestDbFiles.sh:
