@@ -885,7 +885,7 @@ sub Compile_Handler ($)
     }
     elsif ($s =~ m/.*\d+\-\d+:? \([SI]\)/) {
         # Again, IBM's compilers speak in code langauge
-        if ($s =~ /.*Compilation will proceed shortly./) {
+        if ($s =~ m/.*Compilation will proceed shortly./) {
             # Ignore licensing messages
             $self->Output_Normal ($s);
         }
@@ -926,7 +926,15 @@ sub Compile_Handler ($)
     }
     elsif ($s =~ m/^.*\d+\-\d+:? \(W\)/) {
         # IBM's compilers don't say the word "warning" - check for their code
-        $self->Output_Warning ($s);
+
+        if ($s =~ m/.*Compilation will proceed shortly./) {
+            # Ignore licensing messages
+            $self->Output_Normal ($s);
+        }
+        else {
+            $self->Output_Warning ($s);
+        }
+
     }
     else {
         # Must be normal
