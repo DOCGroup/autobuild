@@ -1,3 +1,10 @@
+Sun May 12 15:41:29 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml: Do
+	  not run the tests. There is no point in running the test since
+	  most of the test depends on some policy. We can run the test if
+	  we have a seperate build list created. Till then..
+
 Thu May  9 19:55:34 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml: Changed CC51 build to CC53.
