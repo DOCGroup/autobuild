@@ -153,8 +153,19 @@ sub add_results($$) {
      qr{^-+\sBuild\sstarted:\sProject:\s(\S+),\s}x
     );
 
+  my $state = 'NOT IN COMPILE';
+  my $leave_compile = '#################### ';
+  my $enter_compile = $leave_compile.'Compile';
+
   LINE: while($line = $fh->getline) {
     chomp $line;
+    if (m/^$enter_compile/) {
+      $state = 'COMPILE';
+    } elsif (m/^$leave_compile/) {
+      $state = 'NOT IN COMPILE';
+    }
+    next unless $state eq 'COMPILE';
+
     foreach my $re (@regexp_list) {
       if ($line =~ m/$re/) {
         my $project = $1;
@@ -299,7 +310,8 @@ sub print_results_header($) {
   my $counter = 0;
   foreach my $i (keys %{$summary}) {
     $counter++;
-    print '<td>'.$counter.'</td>';
+    my $text = join('<br>', split(//, $counter));
+    print '<td>'.$text.'</td>';
   }
   print "</tr>\n";
 }

@@ -1,3 +1,12 @@
+Wed Nov 17 10:25:57 2004  Carlos O'Ryan  <coryan@atdesk.com>
+
+	* buildmatrix/buildmatrix.pl:
+	  We only want to parse the log sections marked by '#### Compile'.
+	  Split long build numbers across multiple lines.
+
+	* buildmatrix/buildmatrix.css:
+	  Fixed link colors for warnings.
+
 Wed Nov 17 10:19:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/cvs.pm:

@@ -56,11 +56,11 @@ td.W {
 }
 
 td.W a:link { 
-  background-color: gold;
+  color: gold;
 }
 
 td.W a:visited { 
-  background-color: gold;
+  color: gold;
 }
 
 td.M { 
