@@ -1,3 +1,11 @@
+Wed Dec 22 11:57:44 MST 2004  Yan Dai <dai_y@ociweb.com>
+
+        * configs/scoreboard/tao_dre.sh
+          Passed the parameter save_flag 1 to buildmatrix.pl to generate
+          compilation db files for builds.
+          Added the RemoveAndListCompilationDbFiles.sh command to remove
+          the obsolete db files and give the list of available db files.  
+
 Wed Dec 22 11:44:21 MST 2004  Yan Dai <dai_y@ociweb.com>
 
    	* buildmatrix/buildmatrix.pl:
