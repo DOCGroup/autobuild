@@ -65,16 +65,16 @@ sub Parse ($\%)
             elsif (m/^\s*<command\s*name\s*=\s*"([^"]*)"\s*options\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 my %value;
 
-                %value->{NAME} = $1;
-                %value->{OPTIONS} = $2;
+                $value{NAME} = $1;
+                $value{OPTIONS} = $2;
 
                 push @{$data->{COMMANDS}}, \%value;
             }
             elsif (m/^\s*<command\s*name\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 my %value;
 
-                %value->{NAME} = $1;
-                %value->{OPTIONS} = '';
+                $value{NAME} = $1;
+                $value{OPTIONS} = '';
 
                 push @{$data->{COMMANDS}}, \%value;
             }
@@ -93,9 +93,9 @@ sub Parse ($\%)
             elsif (m/^\s*<environment\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 my %value;
 
-                %value->{NAME} = $1;
-                %value->{VALUE} = $2;
-                %value->{TYPE} = 'replace';
+                $value{NAME} = $1;
+                $value{VALUE} = $2;
+                $value{TYPE} = 'replace';
 
                 push @{$data->{ENVIRONMENT}}, \%value;
             }
@@ -107,9 +107,9 @@ sub Parse ($\%)
                     return 0;
                 }
 
-                %value->{NAME} = $1;
-                %value->{VALUE} = $2;
-                %value->{TYPE} = $3;
+                $value{NAME} = $1;
+                $value{VALUE} = $2;
+                $value{TYPE} = $3;
 
                 push @{$data->{ENVIRONMENT}}, \%value;
             }

@@ -1,3 +1,8 @@
+Sat Jun 21 14:17:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* common/simpleparser.pm: Fixed cases where hash was used as a
+	  reference. 
+
 Sat Jun 21 09:21:07 2003  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/equus/RH9_wchar.xml:
