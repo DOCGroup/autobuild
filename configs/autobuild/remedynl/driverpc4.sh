@@ -12,6 +12,7 @@ cd $HOME/ACE/autobuild
 
 cvs -z9 up -P -d
 
+$HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc4kylixace.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc4a.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc4b.sh
 
