@@ -1,3 +1,8 @@
+Mon Mar 10 11:31:45 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Added a FreeBSD_5, ACE only build
+	  from Yi-Kai Tsai <cuma@netbuck.com.tw> to the scoreboard!
+
 Mon Mar 10 11:54:34 UTC 2003  Don Hinton <dhinton@ieee.org>
 
 	* configs/scoreboard/acetao.xml:

@@ -14,8 +14,10 @@ Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt University</a>,
 <a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>,
 <a href="http://www.rtlogic.com/">RT Logic!</a>,
 <a href="http://www.riverace.com/">Riverace Corporation</a>,
-<a href="http://www.prismtechnologies.com/">PrismTech</a>, and
-<a href="http://www.dresystems.com">DRE Systems</a>.
+<a href="http://www.prismtechnologies.com/">PrismTech</a>
+<a href="http://www.dresystems.com">DRE Systems</a>,
+<a href="http://www.waei.net">WAEI</a>,
+
 <p>
 If you'd like to contribute builds to our virtual
 scoreboard <a href="mailto:devo_group@cs.wustl.edu">please contact us</a>
@@ -159,6 +161,12 @@ here</a>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Release_Unicode</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>FreeBSD_5</name>
+            <url>http://192.83.171.67/~cuma/auto_compile_logs/FreeBSD_5</url>
+            <build_sponsor>WAEI</build_sponsor>
+            <build_sponsor_url>http://www.waei.net</build_sponsor_url>
         </build>
     </group>
 
