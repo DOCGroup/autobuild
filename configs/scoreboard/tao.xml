@@ -174,12 +174,6 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Windows</name>
    <build>
-   <name>Win2K_VC7_NET_DLL_Core</name>
-   <url>http://tao.doc.wustl.edu/bugzilla/vc7_debug</url>
-   <build_sponsor>Washington University</build_sponsor>
-   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   <build>
    <name>Win2K_MSVC6_DLL_Core</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_core</url>
             <build_sponsor>Washington University</build_sponsor>
