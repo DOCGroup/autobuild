@@ -91,6 +91,7 @@ class TestMatrix:
 
 class Platform:
         def __init__(self, name, raw_file, db_file=""):
+                self.db_parse_error = 0
                 self.db_file = db_file
                 self.name = name
                 self.raw_file = raw_file
@@ -139,6 +140,10 @@ class Platform:
                 line = fh.readline()
                 while line != "":
                    splits = line.split(";")
+                   if len(splits) != 3 or splits[0] == "":
+                      print "ERROR: db file parse failed.", self.name, self.raw_file, self.db_file
+                      fh.close()
+                      self.db_parse_error = 1
                    name = splits[0]
                    passflag = string.atoi(splits[1])
                    time = string.atof(removeNewLine(splits[2]))
@@ -146,6 +151,7 @@ class Platform:
                    self.test_results.append(ACE_TAO_Test (name, 0, time, passflag))
                    line = fh.readline()
                 fh.close()
+                return 0
 
 	def addtest (self, name, result, time, flag):
 		self.test_results.append(ACE_TAO_Test (name, result, time, flag))

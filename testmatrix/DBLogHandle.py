@@ -14,7 +14,9 @@ def ReadDBLogFiles(lsfile):
     for dbfile in fh.readlines():
        dbfile = removeNewLine(dbfile)
        if dbfile != "":
-           builds.append (Platform("", "", dbfile))
+          build = Platform("", "", dbfile)
+          if build.db_parse_error == 0:  
+             builds.append (build)
     fh.close()
     return builds
 
