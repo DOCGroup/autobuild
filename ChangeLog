@@ -1,3 +1,8 @@
+Tue Mar  8 13:25:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          HPUX aCC is updated from 3.57 to 3.63
+
 Mon Mar  7 18:29:06 UTC 2005  Don Hinton  <don.hinton@vanderbilt.edu>
 
         * configs/autobuild/tango_isis/driver_cvs_report.xml:
