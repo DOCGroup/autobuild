@@ -1,3 +1,9 @@
+Mon May 26 19:34:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Added our first Solaris 8, Sun Forte 7 build. First just as ACE
+          build, later as TAO build.
+
 Mon May 26 10:15:36 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/jane_dev_static_release.xml: Added
