@@ -8,6 +8,7 @@
         <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO"/>
 	<environment name="PATH"            value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
         <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-oep/RTEvent/facet" />
+        <environment name="JACE_ROOT"       value="/export/home/bugzilla/facet-oep/RTEvent/tao-facet-adapter/jACE" />
 	<environment name="OCP_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP"/>
 	<environment name="OEP_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP"/>
 	<environment name="COMPILER_TYPE"   value="EGCS"/>
@@ -25,7 +26,7 @@
 <environment name="XERCESCROOT"     value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2"/>
 <environment name="XALANCROOT"      value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan"/>
 
-        <variable name="root"             value="/export/home/bugzilla/facet-oep/" />
+        <variable name="root"             value="/export/home/bugzilla/facet-oep" />
         <variable name="project_root"     value="OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers" />
         <variable name="log_file"         value="build.txt" />
         <variable name="log_root"         value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_Redhat_8.0-oep" />
