@@ -5,6 +5,8 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 # $Id$
 #
 
+use FindBin;
+use lib $FindBin::Bin;
 use strict;
 use warnings;
 use diagnostics;

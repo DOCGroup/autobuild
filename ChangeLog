@@ -1,3 +1,10 @@
+Wed Jun 18 15:51:25 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* scoreboard.pl: Add "use FindBin" to locate the directory
+	  of the perl script.  Similar trick used in autobuild.pl, so
+	  now scoreboard.pl can be invoked without changing directories
+	  to the autobuild root directory.
+
 Tue Jun 17 16:07:31 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Changed the RH8_WChar build to be a
