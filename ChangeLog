@@ -1,3 +1,11 @@
+Mon Mar  8 18:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+          The wrong perl script was used for the clean step at the start
+          of the build, this resulted in all kinds of strange problems.
+
 Mon Mar  8 15:19:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/CygwinGCC32.xml:
