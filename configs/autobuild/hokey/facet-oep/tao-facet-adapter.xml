@@ -5,17 +5,32 @@
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-	<environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-boeing-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers" />
-        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-boeing-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO"/>
-        <environment name="JACE_ROOT"       value="/export/home/bugzilla/facet-boeing-oep/RTEvent/tao-facet-adapter/jACE" />
-        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-boeing-oep/RTEvent/facet" />
-        <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" />
+	<environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers" />
+        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO"/>
+        <environment name="JACE_ROOT"       value="/export/home/bugzilla/facet-oep/RTEvent/tao-facet-adapter/jACE" />
+        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-oep/RTEvent/facet" />
         <environment name="ANT_HOME"        value="/docpkg/jakarta-ant-1.5" />
         <environment name="ASPECTJ_HOME"    value="/docpkg/aspectj_1.0.6" />
         <environment name="JAVA_HOME"       value="/docpkg/java_1.4.0" />
         <environment name="LIBRARYCLASSPATH" value="/docpkg/java_1.4.0/jre/lib/rt.jar:." />
+	<environment name="OCP_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP"/>
+	<environment name="OEP_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP"/>
+	<environment name="COMPILER_TYPE"   value="EGCS"/>
+<environment name="LD_LIBRARY_PATH" value="." />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/_Libfiles" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/bin" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO/TAO_IDL" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan/c/lib" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_6_0-linux/lib" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2/lib" type="suffix" />
 
-        <environment name="CLASSPATH"       value="/export/home/bugzilla/facet-boeing-OEP/RTEvent/facet/classes" />
+<environment name="XALANXERCESCROOT"value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_6_0-linux"/>
+<environment name="XERCESCROOT"     value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2"/>
+<environment name="XALANCROOT"      value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan"/>
+
+
+        <environment name="CLASSPATH"       value="/export/home/bugzilla/facet-oep/RTEvent/facet/classes" />
         <environment name="CLASSPATH"       value="/docpkg/JacORB1_3_30/lib/idl.jar"                type="suffix"/>
         <environment name="CLASSPATH"       value="/docpkg/JacORB1_3_30/lib/jacorb.jar"             type="suffix"/>
         <environment name="CLASSPATH"       value="/docpkg/dlconcurrent_1.3.1/lib/dlconcurrent.jar" type="suffix"/>
@@ -27,7 +42,7 @@
         <environment name="CLASSPATH"       value="/docpkg/jakarta-ant-1.5/lib/ant-optional.jar"    type="suffix"/>
         <environment name="CLASSPATH"       value="."                                               type="suffix"/>
 
-        <environment name="PATH"            value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" />
+        <environment name="PATH"            value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" />
         <environment name="PATH"            value="/docpkg/jikes-1.15/bin"                   type="suffix"/>
         <environment name="PATH"            value="/docpkg/JacORB1_3_30/bin"                 type="suffix"/>
         <environment name="PATH"            value="/docpkg/java_1.4.0/bin"                   type="suffix"/>
@@ -37,7 +52,7 @@
         <environment name="PATH"            value="/usr/bin"                                 type="suffix"/>
         <environment name="PATH"            value="."                                        type="suffix"/>
 
-        <variable name="root"     value="/export/home/bugzilla/facet-boeing-oep" />
+        <variable name="root"     value="/export/home/bugzilla/facet-oep" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet-adapter" />
         <variable name="configs"  value="Linux" />
@@ -49,9 +64,6 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/tao-facet-adapter" />
-    <command name="cvs"               options="-d /home/hokey/bugzilla/BoeingOEP_2.4 -q checkout -P OEP_B2_4" />
-
-    <command name="shell"             options="/bin/csh -c 'cd /export/home/bugzilla/facet-cvs-head/RTEvent/tao-facet-adapter && ./boeing.sh'" />
 
     <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs -f Makefile.Facet.gcj" />
     <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs" />

@@ -2,16 +2,16 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers/TAO"/>
-        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-cvs-head/RTEvent/facet" />
-        <environment name="LD_LIBRARY_PATH" value="/usr/lib:/export/home/bugzilla/facet-cvs-head/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-cvs/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-cvs/ACE_wrappers/TAO"/>
+        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-cvs/RTEvent/facet" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/lib:/export/home/bugzilla/facet-cvs/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-	<environment name="PATH"            value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
+	<environment name="PATH"            value="/export/home/bugzilla/facet-cvs/ACE_wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
 
-        <variable name="root"     value="/export/home/bugzilla/facet-cvs-head/" />
-        <variable name="sam_root" value="/export/home/bugzilla/facet-cvs-head/ACE_wrappers/samwise" />
+        <variable name="root"     value="/export/home/bugzilla/facet-cvs/" />
+        <variable name="sam_root" value="/export/home/bugzilla/facet-cvs/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_Redhat_8.0-cvs" />
         <variable name="configs"  value="Linux" />
@@ -26,7 +26,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
 
-    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-cvs-head/RTEvent/tao-facet-adapter && ./setup.sh'" />
+    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-cvs/RTEvent/tao-facet-adapter && ./setup.sh'" />
 
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />

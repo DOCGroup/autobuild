@@ -18,7 +18,7 @@
         <variable name="project_root"       value="jACE/jace" />
 
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_FACET_jACE" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet-jACE" />
         <variable name="configs"  value="Linux" />
 
     </configuration>

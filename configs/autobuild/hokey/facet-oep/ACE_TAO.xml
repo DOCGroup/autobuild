@@ -4,15 +4,32 @@
 
         <environment name="CVSROOT"         value="/export/home/BoeingOEP_2.4" />
         <environment name="CVS_RSH"         value="ssh" />
-	<environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers" />
-        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" />
-	<environment name="PATH"            value="/export/home/bugzilla/facet-boeing-OEP/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
+	<environment name="ACE_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers" />
+        <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO"/>
+	<environment name="PATH"            value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace:/usr/bin:/usr/local/bin:/bin:/usr/sbin" />
+        <environment name="FACET_ROOT"      value="/export/home/bugzilla/facet-oep/RTEvent/facet" />
+	<environment name="OCP_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP"/>
+	<environment name="OEP_ROOT"        value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP"/>
+	<environment name="COMPILER_TYPE"   value="EGCS"/>
 
-        <variable name="root"     value="/export/home/bugzilla/facet-boeing-OEP/" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_Redhat_8.0-oep" />
-        <variable name="configs"  value="Linux" />
+<environment name="LD_LIBRARY_PATH" value="." />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/_Libfiles" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/bin" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/ace" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers/TAO/TAO_IDL" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan/c/lib" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_6_0-linux/lib" type="suffix" />
+<environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2/lib" type="suffix" />
+
+<environment name="XALANXERCESCROOT"value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_6_0-linux"/>
+<environment name="XERCESCROOT"     value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xerces-c1_7_0-linux7.2"/>
+<environment name="XALANCROOT"      value="/export/home/bugzilla/facet-oep/OEP_B2_4/OFP/OEP/XML_Libraries/xml-xalan"/>
+
+        <variable name="root"             value="/export/home/bugzilla/facet-oep/" />
+        <variable name="project_root"     value="OEP_B2_4/OFP/OCP/Infrastructure/PlatformServices/ACE_Wrappers" />
+        <variable name="log_file"         value="build.txt" />
+        <variable name="log_root"         value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_Redhat_8.0-oep" />
+        <variable name="configs"          value="Linux" />
 
     </configuration>
 
@@ -21,21 +38,19 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <command name="cvs"               options="-q checkout -P OEP_B2_4" />
-    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-boeing-OEP/RTEvent/tao-facet-adapter && ./boeing.sh'" />
+    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-oep/RTEvent/tao-facet-adapter && ./boeing.sh'" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
     <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-j 2 -C ace" />
-    <command name="make"              options="-j 2 -C ACEXML" />
-    <command name="make"              options="-j 1 -C TAO/tao" />
-    <command name="make"              options="-j 1 -C TAO/TAO_IDL" />
-    <command name="make"              options="-j 1 -C TAO/utils" />
-    <command name="make"              options="-j 1 -C TAO/orbsvcs" />
+    <command name="make"              options="-j 1" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
+
+
+
+
