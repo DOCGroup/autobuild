@@ -11,7 +11,7 @@
         <variable name="root"     value="C:\ACE\VC8\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\VC8\" />
-        <variable name="vctool"   value="VCExpress.exe" />
+        <variable name="vctool"   value="vcbuild" />
         <variable name="name"     value="WinXP VS.NET 2005 Beta 1" />
     </configuration>
 
