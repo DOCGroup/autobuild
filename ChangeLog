@@ -1,3 +1,8 @@
+Mon Mar 24 07:04:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
+	  scoreboard. 
+
 Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml: Replaced the BCB5 Static build with a

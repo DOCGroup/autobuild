@@ -112,6 +112,12 @@ all the OS/platform combinations TAO is tested everyday.
          <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
       </build>
       <build>
+         <name>RH8_GCC32_Full_IPV6</name>
+         <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/GCC32_RH8_Full/</url>
+         <build_sponsor> ISIS</build_sponsor>
+         <build_sponsor_url>http://www.isis.vanderbilt.edu</build_sponsor_url>
+      </build>
+      <build>
          <name>RH72_IA64_GCC296</name>
          <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/gcc296_full</url>
          <build_sponsor>Charles University</build_sponsor>
