@@ -16,11 +16,11 @@
 
     </configuration>
 
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="ON" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\n'" />
 
