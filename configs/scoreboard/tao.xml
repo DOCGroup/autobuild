@@ -312,15 +312,4 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
 </group>
 
-<group>
-   <name>Tru64</name>
-   <build>
-      <name>Tru64_Full(MPC)</name>
-      <url>http://www.dre.vanderbilt.edu/~willemsenj/Tru64</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-</group>
-
-
 </scoreboard>
