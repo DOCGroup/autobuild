@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="C:\ACE\MSVC6dd\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="C:\ACE\MSVC6dd\ACE_wrappers\TAO"/>
+        <environment name="CIAO_ROOT"        value="C:\ACE\MSVC6dd\ACE_wrappers\TAO\CIAO"/>
         <environment name="Path"             value="C:\ACE\MSVC6dd\ACE_wrappers\bin;C:\ACE\MSVC6dd\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;C:\openssl-0.9.7d\out32dll" type="prefix" />
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
