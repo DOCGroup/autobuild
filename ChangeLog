@@ -1,3 +1,8 @@
+Mon Dec 24 12:47:55 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* configs/autobuild/curufin/SingleThreaded.xml:
+	  Add LD_LIBRARY_PATH.
+
 Mon Dec 24 10:28:41 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* configs/autobuild/curufin/driver.sh:

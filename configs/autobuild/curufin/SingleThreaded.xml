@@ -2,9 +2,10 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT" value="/project/curufin/bugzilla/SingleThreaded/ACE_wrappers" />
-        <environment name="CVSROOT"  value=":ext:ucibuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"  value="/usr/bin/ssh" />
+        <environment name="ACE_ROOT"        value="/project/curufin/bugzilla/SingleThreaded/ACE_wrappers" />
+        <environment name="LD_LIBRARY_PATH" value="/project/curufin/bugzilla/SingleThreaded/ACE_wrappers/ace" />
+        <environment name="CVSROOT"         value=":ext:ucibuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="/usr/bin/ssh" />
 
         <variable name="root"     value="/project/curufin/bugzilla/SingleThreaded" />
         <variable name="sam_root" value="/project/curufin/bugzilla/SingleThreade/ACE_wrappers/samwise" />
