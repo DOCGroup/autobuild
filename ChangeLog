@@ -1,3 +1,11 @@
+Fri Jun 25 14:56:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Removed Kylix3 builds. Kylix3 is not mature and we don't have the
+          idea that Borland will ever fix this, so we can use the cpu cycles
+          for better things
+
 Fri Jun 25 07:59:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCC32.xml:
