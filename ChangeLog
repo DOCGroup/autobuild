@@ -1,13 +1,18 @@
+Thu Dec 12 06:58:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*.xml:
+          Add print_os_version command.
+
 Wed Dec 11 23:17:15 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* autobuild.pl: Added a new command rem_sems.
-	* command/rem_sems.pm: A new command file that cleans semaphores.  
-	
+	* command/rem_sems.pm: A new command file that cleans semaphores.
+
 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
 	* configs/autobuild/danzon/SunOS_SunCC53.xml:
 	* configs/autobuild/tango/SunOS_GCC_2_95.xml: Called rem_sems from
 	  the above builds. If it goes fine, we can add it to all the *nix
-	  builds. 
+	  builds.
 
 Wed Dec 11 23:46:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
