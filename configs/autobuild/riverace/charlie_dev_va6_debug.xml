@@ -6,7 +6,7 @@
         <environment name="LIBPATH"   value="/home/shuston/ace/builds/ACE_wrappers-repository/build/va6_debug/lib:.:/usr/lib" />
         <environment name="CVSROOT"   value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"   value="ssh" />
-        <environment name="MPC_ROOT"  value="/home/shuston/ace/MPC" />
+        <environment name="MPC_ROOT"  value="/home/shuston/ace/builds/MPC" />
 
         <variable name="root"         value="/home/shuston/ace/builds" />
         <variable name="build_name"   value="va6_debug" />
@@ -41,7 +41,7 @@
     <command name="generate_workspace" options="-feature_file /home/shuston/ace/builds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/home/shuston/ace/builds/ACE_wrappers-repository/build/va6_debug -type gnuace -hierarchy -make_coexistence" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/ace/config.h output='#include \x22ace/config-aix5.1.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nPLATFORM_SSL_CPPFLAGS=-I/usr/local/ssl/include\nPLATFORM_SSL_LDFLAGS=-L/usr/local/ssl/lib\nPLATFORM_SSL_LIBS=-lssl -lcrypto\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nSSL_ROOT=/usr/local/ssl\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="vacpp" />
