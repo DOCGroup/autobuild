@@ -1,3 +1,9 @@
+Wed Aug 25 07:57:39 2004  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+
+	  Added amd64 noinline build.
+
 Tue Aug 24 21:41:44 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
 	* configs/autobuild/acorn/netbsd_amd64.xml:
@@ -7482,3 +7488,7 @@ Fri Dec  7 15:21:57 2001  Carlos O'Ryan  <coryan@uci.edu>
           Like the previous one, but for POSIX platforms.  Unfortunately
           ACE breaks havoc with process groups, so it does not work all
           that great.
+
+Local Variables:
+add-log-time-format: current-time-string
+End:
