@@ -1,3 +1,8 @@
+Wed Oct 20 18:19:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added support for the Portland Group pgcc compiler
+
 Wed Oct 20 12:25:39 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/beebee_dev_pocketpc2002_debug.xml:
