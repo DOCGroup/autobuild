@@ -294,23 +294,5 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
 </group>
 
-<group>
-   <name>BSD</name>
-   <build>
-      <name>OpenBSD_Full</name>
-      <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Full</url>
-      <build_sponsor>Frank Hunleth</build_sponsor>
-      <build_sponsor_url>http://www.hunleth.com/~acebuild/</build_sponsor_url>
-      <orange>96</orange>
-      <red>192</red>
-   </build>
-   <build>
-      <name>OpenBSD_Single_Threaded</name>
-      <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Single_Threaded</url>
-      <build_sponsor>Frank Hunleth</build_sponsor>
-      <build_sponsor_url>http://www.hunleth.com/~acebuild/</build_sponsor_url>
-      <orange>96</orange>
-      <red>192</red>
-    </build>
-    </group>
+
 </scoreboard>
