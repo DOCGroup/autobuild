@@ -1,3 +1,8 @@
+Wed May  5 11:40:54 2004  Tao Lu  <lu@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+	  Delete all the Makefiles before running MPC.
+
 Wed May  5 09:27:31 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/lindy_isis/Static.xml:
@@ -12,7 +17,7 @@ Wed May  5 09:27:31 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	  Removed UCI "Debian_Full_Reactors" build from the scoreboard due
 	  to lack of support from sponsor.
-	
+
 Wed May  5 11:41:39 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:

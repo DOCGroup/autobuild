@@ -31,6 +31,7 @@
     <command name="shell"              options="find ./ -name 'GNUMake*' | xargs rm"  />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="shell"              options="find ./ -name 'Makefile*' | xargs rm"
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- Uses TAO/TAO.mwc -->
