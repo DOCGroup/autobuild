@@ -843,6 +843,10 @@ sub Compile_Handler ($)
         # for the timebeing
         $self->Output_Normal ($s);
     }
+    elsif ($s =~ m/\-W:c:,\-Xmismatch\-warning\=2/) {
+        # catch VxWorks DIAB warning option before it is caught as Warning
+        $self->Output_Normal ($s);
+    }
     elsif ($s =~ m/ is deprecated. use /) {
         # Among these are glibc warnings to stop using the deprecated
         # pthread_setstackaddr in favor of pthread_setstack.
