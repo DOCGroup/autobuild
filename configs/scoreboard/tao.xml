@@ -194,7 +194,7 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
-      <name>SunOS_8_Forte7_Debug</name>
+      <name>SunOS_8_Forte8_Debug</name>
       <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SUNOS_Forte</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
