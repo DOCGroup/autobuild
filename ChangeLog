@@ -1,3 +1,11 @@
+Thu Jul  1 07:13:03 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Fixed subtle errors that were spoiling the builds like:
+	  setting qt=1, cidl=1, omitting CIATAO.mwc etc.
+
+
 Tue Jun 29 19:47:40 UTC 2004  Don Hinton  <don.hinton@vanderbilt.edu>
 
         * configs/scoreboard/ace.xml:
