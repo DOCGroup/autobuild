@@ -45,7 +45,7 @@
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />
 
-    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
