@@ -1,3 +1,10 @@
+Mon Sep  3 15:27:22 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml (PLATFORM_TK_LIBS):
+
+	  Added the Tk library to the list of necessary Tcl/Tk libraries.
+	  Fixes a link-time failure in the build.
+
 Tue Sep  3 22:07:42 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/curufin/driver.sh:
