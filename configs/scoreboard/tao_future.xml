@@ -23,14 +23,6 @@ decide the migration paths and strategies.
       <build_sponsor>Carlos O'Ryan</build_sponsor>
    </build>
    <build>
-       <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
-       <url>http://www.dresystems.com/autobuild_output/no-rtcorba_no-messaging</url>
-       <build_sponsor>DRE Systems</build_sponsor>
-       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-       <orange>30</orange>
-       <red>36</red>
-   </build>
-   <build>
       <name>MACOSX_gcc33</name>
       <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_g5_MACOSX_gcc33_d0o1</url>
       <build_sponsor>OCI</build_sponsor>
