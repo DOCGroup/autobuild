@@ -1,3 +1,13 @@
+Wed Dec 31 09:29:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved cygwin builds from future to normal, except the gperf problem
+          that is caused by something on the build system it should build
+          without errors. Buildpc changed from win2k to xp
+
 Tue Dec 30 12:51:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/SunForte.xml:
