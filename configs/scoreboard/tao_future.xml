@@ -34,13 +34,6 @@ decide the migration paths and strategies.
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
    <build>
-      <name>Redhat_Linux_8_Debug(autoconf)</name>
-      <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-   </build>
-   <build>
        <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
        <url>http://www.dresystems.com/autobuild_output/no-rtcorba_no-messaging</url>
        <build_sponsor>DRE Systems</build_sponsor>
