@@ -30,15 +30,16 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='ssl=1\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="gcc" />
+    <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence -feature_file ACE_wrappers/local.features" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence -feature_file ACE_wrappers/local.features" />
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />

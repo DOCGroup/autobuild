@@ -1,6 +1,7 @@
-Fri May  7 23:19:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+Fri May  7 23:26:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+	* configs/autobuild/tango_isis/Full.xml:
 
 	  Set SSL_ROOT and create a MPC local.features file that
 	  explicitly enables SSL support.
