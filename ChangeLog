@@ -1,3 +1,8 @@
+Wed Jan 15 13:44:36 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/scoreboard/acetao.xml: Added a note indicating
+	  that a build is donated from OCI.
+
 Wed Jan 15 11:40:19 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/timmy_dev_wince4_debug.xml: Changed
