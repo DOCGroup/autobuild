@@ -170,7 +170,7 @@ sub clean_wanted
             $name =~ s/\/CVS//;
             $name =~ s/\/\//\//;
             $output .= "Cleaning Sam generated files in $name\n";
-            unlink <*.dsp>, <*.dsw>, <*.bor>, <*.gnu>, <*.am>, 'GNUMakefile';
+            unlink <*.dsp>, <*.dsw>, <*.bor>, <*.gnu>, <*.am>, <.*.gnu.depend>, 'GNUMakefile';
         }
     }
 }

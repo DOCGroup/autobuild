@@ -68,10 +68,15 @@ sub Run ($)
         $make_options = $1;
     }
 
-    my $output = `make $make_options`;
-
-    chdir $current_dir;
-    print $output;
+    if (!open (MAKE, "make $make_options 2>&1 |")) {
+      print STDERR __FILE__, ": Cannot run make subprocess\n";
+      return 0;
+    }
+    while (<MAKE>) {
+      chomp;
+      print $_, "\n";
+    }
+    close (MAKE);
 
     return 1;
 }

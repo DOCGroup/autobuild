@@ -4,13 +4,18 @@
         <variable name="ace_root" value="/project/sirion/coryan/samwise/ACE_wrappers" />
         <variable name="sam_root" value="/project/sirion/coryan/samwise/ACE_wrappers/samwise" />
     </configuration>
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="file_manipulation" options="type=create file=ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=1\nexceptions=1\nTAO_IDLFLAGS += $(ACE_ROOT)/apps/gperf/src/gperf\n'" />
     <command name="sam" options="clean" />
     <command name="cvs" options="update" />
-    <command name="printaceconfig" />
-    <command name="sam" options="create" />
-    <command name="sam" options="sam" />
-    <command name="make" options="makeopts='-k -C .'" />
-    <command name="make" options="makeopts='-k -C TAO'" />
+    <command name="print_ace_config" />
+<!--    <command name="sam" options="create" /> -->
+<!--    <command name="sam" options="sam" /> -->
+    <command name="make" options="makeopts='-j 2 -k -C . realclean'" />
+    <command name="make" options="makeopts='-j 2 -k -C TAO realclean'" />
+    <command name="make" options="makeopts='-j 2 -k -C .'" />
+    <command name="make" options="makeopts='-j 2 -k -C TAO'" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
 </autobuild>

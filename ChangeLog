@@ -1,3 +1,19 @@
+Tue Dec 11 11:05:16 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* command/make.pm:
+	  Use open() instead of `` to run the subprocess, we have to wait
+	  too long for the output otherwise.
+
+	* command/sam.pm:
+	  Also remove .*.gnu.depend files.
+
+	* configs/autobuild/sirion/Full.xml:
+	  Do not run samwise, it is not ready for prime time yet.
+	  Use the file_manipulation command to lock the build directory,
+	  we do not want more than one build running at a time.
+	  Run a realclean target before compiling, use -j 2 to speed up
+	  the build.
+
 Fri Dec  7 19:36:12 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* autobuild.pl:
