@@ -107,6 +107,15 @@ sub Run ($)
     }
 
     #
+    # last CIAO Changelog Entry
+    #
+
+    if (-r "TAO/CIAO/ChangeLog") {
+        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/TAO/CIAO/ChangeLog\">CIAO ChangeLog</a> ================\n";
+        print_file ("TAO/CIAO/ChangeLog", 0);
+    }
+
+    #
     # config.h, if it exists
     #
 
@@ -136,6 +145,11 @@ sub Run ($)
         print_file ("TAO/VERSION", 0);
     }
   
+    if ( -r "TAO/CIAO/VERSION" ) {
+        print "================ CIAO VERSION ================\n";
+
+        print_file ("TAO/CIAO/VERSION", 0);
+    }
   
     chdir $current_dir;
 
