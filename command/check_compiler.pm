@@ -57,6 +57,14 @@ sub Run ($)
         system("gcc -v 2>&1");
     }
 
+    if(lc $compiler eq "gcc-3.0"){
+        system("gcc-3.0 -v 2>&1");
+    }
+
+    if(lc $compiler eq "gcc-3.1"){
+        system("gcc-3.1 -v 2>&1");
+    }
+   
     if(lc $compiler eq "sun_cc"){
         system("CC -V");
     }
