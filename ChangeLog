@@ -1,3 +1,9 @@
+Tue Sep 24 03:27:13 UTC 2002  Don Hinton  <dhinton@ieee.org>
+
+	* configs/autobuild/rumba/Debian_WChar.xml: Added ST to
+	  the configs variable so that only single threaded
+	  tests would be run.
+
 Tue Sep 17 14:51:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Add SunOS 5.8/Sun CC 5.4 build
