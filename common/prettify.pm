@@ -851,7 +851,7 @@ sub Compile_Handler ($)
     elsif ($s =~ m/Too many levels of symbolic links/) {
         # Indicates a broken file system. Must be fixed to prevent
         # other errors in the future
-        $self->Output_Error ($s);
+        $self->Output_Warning ($s);
     }
     elsif ($s =~ m/possibly used unsafely; consider using/) {
         # Similar warnings on OpenBSD

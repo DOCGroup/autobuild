@@ -1,3 +1,9 @@
+Mon Sep 27 07:06:00 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* common/prettify.pm:
+
+	  Made the change to be a warning instead of an error.
+
 Mon Sep 27 09:13:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
