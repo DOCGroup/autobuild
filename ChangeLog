@@ -1,3 +1,14 @@
+Sat Mar 27 14:08:58 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/balar_isis/DynamicHash.xml:
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+	* configs/autobuild/balar_isis/wchar.xml:
+
+	  Use LD_ASSUME_KERNEL to be 2.4.19 since this machine runs RHAS
+	  which has NPTL enabled.
+
 Wed Mar 24 17:25:00 2004  Martin Corino <mcorino@remedy.nl>
 
 	* configs/scoreboard/tao.xml:
