@@ -1,3 +1,8 @@
+Mon Dec  8 18:03:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/cbxdd.xml:
+	  Added default.features creation with rwho=0
+
 Mon Dec  8 10:29:23 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* command/printaceconfig.pm:
