@@ -1,3 +1,9 @@
+Thu Nov  6 07:57:02 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+
+	  Do a coreclean for CIAO instead of a realclean. 
+
 Wed Nov  5 22:03:54 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
