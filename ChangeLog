@@ -1,3 +1,9 @@
+Tue May 28 21:18:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/rumba/driver_gcc_304.sh: Added.
+	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Added.
+	* configs/scoreboard/acetao.xml: Add Debian_GCC_3.0.4 build.
+
 Tue May 28 20:18:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/tango/driver_debian_noinline.sh: Added.

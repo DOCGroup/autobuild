@@ -6,6 +6,10 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
         </build>  
         <build>
+            <name>Debian_GCC_3.0.4</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_GCC_3.0/</url> 
+        </build>
+        <build>
             <name>Debian_Minimum</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/balar_Minimum/</url>
         </build> 
