@@ -6,6 +6,7 @@
         <environment name="Path"             value="C:\ACE\MSVC6sd\ACE_wrappers\bin;C:\ACE\MSVC6sd\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;" type="prefix" />
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
+        <environment name="RSYNC_RSH"        value="C:\cygwin\bin\ssh" />
 
         <variable name="root"      value="C:/ACE/MSVC6sd/" />
 	<variable name="log_file"  value="log.txt" />
@@ -44,6 +45,7 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/MSVC6sd/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/MSVC6sd" />
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/MSVC6sd/* -f" / -->
+    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/MSVC6sd" / -->
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/MSVC6sd" />
 </autobuild>
