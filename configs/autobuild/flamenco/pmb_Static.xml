@@ -1,0 +1,53 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/project/builds/isisbuilds/pmb_Static/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/project/builds/isisbuilds/pmb_Static/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/project/builds/isisbuilds/pmb_Static/ACE_wrappers/lib:." />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+
+        <variable name="root"     value="/project/builds/isisbuilds/pmb_Static" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/flamenco_pmb_Static" />
+        <variable name="configs"  value="Linux STATIC SSL" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="cvs"               options="-z 9 -q checkout -r pmb_integration -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\noptimize=1\ndebug=0\nexceptions=0\n#ssl=1\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="g++" />
+    <command name="print_ace_config" />
+
+    <!-- ACE -->
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <!-- TAO -->
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
+
+    <command name="make"              options="realclean" />
+    <command name="make"              options="-C TAO realclean" />
+    <command name="make"              options="-j 4 -k" />
+    <command name="make"              options="-j 4 -k -C TAO" />
+
+    <!-- Forces a sync to clean state -->
+    <command name="shell"             options="/bin/sync" /> 
+    <command name="shell"             options="sleep 10" /> 
+    <command name="shell"             options="/bin/sync" /> 
+    <command name="shell"              options="/project/builds/isisbuilds/pmb_Static/ACE_wrappers/bin/performance_stats.sh /project/builds/isisbuilds/pmb_Static/ACE_wrappers /web/users/isisbuilds/pmb_Stats" />
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
