@@ -3,14 +3,15 @@
     <configuration>
         <environment name="ACE_ROOT"         value="C:\ACE\MSVC6sd\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="C:\ACE\MSVC6sd\ACE_wrappers\TAO"/>
-        <environment name="Path"             value="C:\ACE\MSVC6sd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" /> 
+        <environment name="Path"             value="C:\ACE\MSVC6sd\ACE_wrappers\bin;C:\Perl\bin;C:\cygwin\bin;" type="prefix" /> 
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"          value="ssh" />
 
         <variable name="root"     value="C:/ACE/MSVC6sd/" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:/ACE/MSVC6sd/" />
-        <variable name="name"     value="WinXP LIB Debug" />
+        <variable name="project_root" value="C:/ACE/MSVC6sd/ACE_wrappers" />
+        <variable name="name"      value="WinXP LIB Debug" />
         <variable name="configs"   value="Win32 SANDBOX Exceptions" /> 
     </configuration>
 
@@ -34,11 +35,11 @@
     <command name="shell"             options="find ACE_wrappers -name '*.ds[pw]' -exec rm '{}' ';'" /> 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
-    <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -make_coexistence -type vc6 -static" /> 
+    <command name="shell"             options="find ACE_wrappers -name '*.ds[pw]' -exec rm '{}' ';'" /> 
 
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -ACE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -CORE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -TAO -u -k" />
+    <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -recurse -make_coexistence -type vc6 -static" /> 
+
+    <command name="vc6make"           options="TAO/TAOACE.dsw /make \x22all - win32 debug\x22" /> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
