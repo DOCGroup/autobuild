@@ -339,7 +339,7 @@ sub update_cache ($)
 
             if (!$response->is_success ()) {
                 print "WARNING: Unable to download $address\n";
-                return;
+                next;
             }
 
             print "        Prettifying\n";
