@@ -1,3 +1,8 @@
+Mon Jul  8 15:44:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/guajira/TRU64_CXX.xml: Add . to LD_LIBRARY_PATH to
+	  eliminate DLL_ORB test failure.
+
 Sun Jul  7 17:48:02 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/guajira/TRU64_CXX.xml: Fix LD_LIBRARY_PATH.
