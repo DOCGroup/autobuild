@@ -33,7 +33,7 @@
 
     <command name="make"              options="clean" />
 
-    <command name="make"              options="-Duse_feature_correlation_filter=t" />
+    <command name="make"              options="-Duse_feature_correlation_filter=t -Duse_feature_ttl=t " />
     <command name="make"              options="-buildfile gcj.xml -Duse_feature_correlation_filter=t -Duse_feature_ttl=t" />
     <command name="make"              options="-Duse_feature_correlation_filter=t -Duse_feature_ttl=t" />
 
