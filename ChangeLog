@@ -1,3 +1,8 @@
+Thu Jan 22 17:18:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/driverbuildpc3.bat:
+	  Enabled the MinGW build again
+
 Wed Jan 21 15:51:00 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
          * configs/scoreboard/tao.xml:
@@ -6,8 +11,8 @@ Wed Jan 21 15:51:00 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 Wed Jan 21 15:14:49 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcunicodedebug.xml: 
-	
+	* configs/autobuild/remedynl/msvcunicodedebug.xml:
+
 	  Use the new build scripts in msvc_mpc_auto_compile.pl. instead
 	  of the old one that was broken all over for MPC builds.
 
@@ -15,7 +20,7 @@ Wed Jan 21 15:09:54 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/msvcrelease.xml:
 
-	  Use the new build scripts in msvc_mpc_auto_compile.pl. instead 
+	  Use the new build scripts in msvc_mpc_auto_compile.pl. instead
 	  of the old one that was broken all over for MPC builds.
 
 Wed Jan 21 11:43:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
