@@ -1,3 +1,10 @@
+Wed Nov  5 12:20:18 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/balar_isis/IPV6.xml: 
+	* configs/autobuild/balar_isis/driver_ipv6.sh:
+
+	  New build for ACE+TAO with IPV6 enabled. 
+
 Mon Nov 03 13:21:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
