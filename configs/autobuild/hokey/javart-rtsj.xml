@@ -25,7 +25,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P javart" />
 
     <command name="make"              options="realclean" />
-    <command name="make"              options="" />
+    <command name="make"              options=" rtsj" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
