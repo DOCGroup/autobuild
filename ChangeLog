@@ -1,3 +1,10 @@
+Mon Mar  1 10:35:55 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Removed an option that is totally unncessary, ie. -GT for the
+	  IDL compiler.
+
 Mon Mar  1 06:45:51 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
