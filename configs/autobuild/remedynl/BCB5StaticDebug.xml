@@ -39,6 +39,7 @@
     <command name="status"            options="off" />
     <command name="shell"             options="plink charanga rm .www-docs/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug/* -f" />
     <command name="shell"             options="pscp *.txt *.html charanga:.www-docs/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug" />
+    <command name="make"              options=" -i -f Makefile.bor realclean dir=TAO" />
 </autobuild>
 
 
