@@ -35,9 +35,9 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc -hierarchy -make_coexistence" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -recurse=TAOACE.mwc,CIAO -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

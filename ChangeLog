@@ -1,3 +1,44 @@
+Wed Aug 27 21:33:52 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/freebsd_ace.xml:
+        * configs/autobuild/dresystems/freebsd_ace_debug.xml:
+        * configs/autobuild/dresystems/freebsd_ace_dump.xml:
+        * configs/autobuild/dresystems/freebsd_ace_explicit_template.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_exception.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_inline.xml:
+        * configs/autobuild/dresystems/freebsd_ace_single.xml:
+        * configs/autobuild/dresystems/freebsd_tao.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+        * configs/autobuild/dresystems/sol9_gcc33.xml:
+        * configs/autobuild/dresystems/sol9_gcc33_tao.xml:
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao.xml:
+        * configs/autobuild/remedynl/Cygwin.xml:
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/Kylix3.xml:
+        * configs/autobuild/remedynl/Kylix3ACE.xml:
+        * configs/autobuild/remedynl/MingW.xml:
+        * configs/autobuild/remedynl/SunForte.xml:
+        * configs/autobuild/remedynl/VxWorks.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+          Modified these builds to use the new "-exclude" and "-hierarcy"
+          options instead of "-recurse=" to exclude directories and mwc
+          files.
+
+
+
 Tue Aug 26 16:58:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/sol9_gcc33_tao_legacy.xml:

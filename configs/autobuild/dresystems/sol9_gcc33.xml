@@ -32,7 +32,7 @@
  <command name="print_ace_config" />
 
  <!-- Uses ACE.mwc -->
- <command name="generate_workspace"    options="-recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+ <command name="generate_workspace"    options="-exclude TAO,vc7_nightly.mwc -hierarchy -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
