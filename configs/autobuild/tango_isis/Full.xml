@@ -11,7 +11,7 @@
         <variable name="root"     value="/build/isisbuilds/Full" />
         <variable name="log_file" value="build.txt" />
         <variable name="sam_root" value="/build/isisbuilds/Full/ACE_wrappers/ACE_wrappers/samwise" />
-        <variable name="log_root" value="/web/users/auto_compile_logs/tango_Full_new" />
+        <variable name="log_root" value="/web/users/auto_compile_logs/tango_Full" />
         <variable name="configs"  value="Linux SSL" />
 
     </configuration>
