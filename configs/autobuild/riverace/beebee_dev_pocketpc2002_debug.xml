@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
+        <environment name="MPC_CORE"     value="C:\ace\MPC" />
         <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE ARM) Debug" />
         <environment name="ACE_WINCE_TEST_CONTROLLER" value="PocketControllerEnterprise" />
         <environment name="ACE_PCE_DEVICE" value="-l DEVICE_PATH=\Riverace\Steve's Toshiba Pocket PC;CONNECT=default;" />

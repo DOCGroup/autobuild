@@ -1,3 +1,11 @@
+Tue Apr  6 17:50:31 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+	* configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+	  Added MPC_CORE environment variable.
+
 Tue Apr  6 11:12:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6CodeGuard.xml:
