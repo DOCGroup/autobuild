@@ -326,7 +326,7 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
    </build>
    <build>
-      <name>HPUX11i_aCC357_64bit</name>
+      <name>HPUX11i_aCC363_64bit</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/hpux64</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
