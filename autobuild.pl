@@ -134,12 +134,14 @@ require command::shell;
 require command::status;
 require command::win32make;
 require command::rem_sems;
+require command::generate_makefile;
 
 #
 # Parse, CheckReqs, and Run
 #
 
 my $parser = new SimpleParser;
+my $pathsep = ':';
 
 foreach my $file (@files) {
     print "Parsing file: $file\n" if ($verbose);
@@ -149,8 +151,12 @@ foreach my $file (@files) {
     ## named BUILD_CONFIG_FILE. 
     $data{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename( $file );
 
-    print "\nSetting Enviroment variables\n" if ($verbose);
-    
+    if($^O eq "MSWin32"){
+        $pathsep = ';';
+    }
+
+    print "\nSetting Enviroment variables, pathsep '$pathsep'\n" if ($verbose);
+
     foreach my $variable (@{$data{ENVIRONMENT}}) {
         print "Variable: ", $variable->{NAME}, "=", $variable->{VALUE}, "\n" if ($verbose);
         
@@ -158,10 +164,10 @@ foreach my $file (@files) {
             $ENV{$variable->{NAME}} = $variable->{VALUE};
         }
         elsif ($variable->{TYPE} eq 'prefix') {
-            $ENV{$variable->{NAME}} = $variable->{VALUE} . $ENV{$variable->{NAME}};
+            $ENV{$variable->{NAME}} = $variable->{VALUE} . $pathsep . $ENV{$variable->{NAME}};
         }
         elsif ($variable->{TYPE} eq 'suffix') {
-            $ENV{$variable->{NAME}} = $ENV{$variable->{NAME}} . $variable->{VALUE};
+            $ENV{$variable->{NAME}} = $ENV{$variable->{NAME}} . $pathsep . $variable->{VALUE};
         }
         else {
             print STDERR "Don't know type: $variable->{TYPE}\n";

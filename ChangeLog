@@ -1,3 +1,19 @@
+Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
+
+        * command/generate_makefile.pm: New command, generate_makefile. Takes
+          options="mpc options and dirs" dirs is a comma-separated list of
+          directories under $root in which to run mpc with the options
+          (after removing the dirs). If no dirs are specified, then some
+          file(s) should be included in the mpc options. Everything starts
+          based at $root.
+
+        * autobuild.pl: Added generate_makefile to the commands list.
+          When doing environment prefix or suffix setting, add the appropriate
+          path item separator between the added piece and the existing value.
+
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: New for a WinXP
+          build with VC 7 (aka VC .NET).
+
 Mon Dec 16 11:23:33 2002  Ossama Othman  <ossama@uci.edu>
 
 	* configs/scoreboard/acetao.xml:
