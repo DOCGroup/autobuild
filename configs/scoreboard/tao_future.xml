@@ -83,14 +83,4 @@ decide the migration paths and strategies.
       <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
    </build>
 </group>
-
-<group>
-      <name>TAO on OpenVMS</name>
-      <build>
-         <name>OpenVMS_7.3-2_Compaq_C++_65</name>
-         <url>http://www.dre.vanderbilt.edu/~remedynl/OpenVMS</url>
-         <build_sponsor>Remedy IT</build_sponsor>
-         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      </build>
-</group>
 </scoreboard>
