@@ -46,6 +46,12 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
+       <name>RH8_WChar</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/doc_wchar/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
        <name>Debian_Minimum_Static</name>
        <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_Minimum_Static/</url>
        <build_sponsor>WashU</build_sponsor>
