@@ -1,3 +1,9 @@
+Tue Feb 11 14:07:00 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/nirvana/VC7_Core.xml: Temporarily removed
+	  ACE_HAS_XML_SVC_CONF from the config file.  We are not able to
+	  generate ACEXML projects with MPC yet.
+
 Tue Feb 11 19:43:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/make.pm:
