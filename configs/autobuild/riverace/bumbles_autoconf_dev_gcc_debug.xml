@@ -33,15 +33,15 @@
 
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/autoconf_acc_debug/.disable" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/autoconf_acc_debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/autoconf_gcc_debug/.disable" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/autoconf_gcc_debug/.disable output='RUNNING'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -hierarchy -make_coexistence -exclude build,Kokyu" />
+    <command name="generate_workspace" options="dirs=/acebuilds/ACE_wrappers-repository -feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -hierarchy -make_coexistence -exclude build,Kokyu" />
 
     <command name="configure"         options="--preclean" />
 
