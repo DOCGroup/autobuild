@@ -1,3 +1,11 @@
+Mon Jan 10 17:41:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml:
+          Added uses_wchar=1 to default.features file so that we don't build
+          things that do not work with wchar. Also removed defines from config.h
+          that are for TAO, these are ACE builds
+
 Thu Jan  7 09:54:57 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
@@ -12,13 +20,13 @@ Thu Jan  6 07:53:57 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 Wed Jan  5 22:22:02 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: 
+	* configs/scoreboard/tao.xml:
 
 	  Added the studio 9 build to the scoreboard.
 
 Tue Jan  4 18:28:12 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: 
+	* configs/scoreboard/tao.xml:
 
 	  Added a build.
 
