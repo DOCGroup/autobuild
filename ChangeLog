@@ -1,3 +1,11 @@
+Tue Feb  8 13:36:53 PST 2005  Meghana Haridev <mharidev@qualcomm.com>
+
+	* configs/autobuild/qualcomm/x86-IPv6.xml:
+	  Added new build for FC3_x86_IPv6.
+
+	* configs/scoreboard/tao.xml:
+	  Added FC3_x86_IPv6 build to Linux scoreboard.
+
 Tue Feb  8 17:19:12 UTC 2005  Johnny Willemsen <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
