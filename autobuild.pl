@@ -13,6 +13,7 @@ use common::simpleparser;
 use diagnostics;
 use Time::Local;
 use File::Basename;
+use Cwd;
 
 my $status_file = '';
 my $build_start_time = scalar gmtime(time());

@@ -1,3 +1,9 @@
+Tue Aug 12 09:35:40 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * autobuild.pl:
+          Added "use Cwd" to pickup the getcw().  Thanks to Johnny
+          Willemsen <jwillemsen@remedy.nl> for reporting the problem.
+
 Mon Aug 11 19:54:55 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/freebsd_ace.xml:
