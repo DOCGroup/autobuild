@@ -13,11 +13,7 @@ else
   exit 1;
 fi
 
-if [ "$config_file" = "sol9_spro54" ]; then 
-  PATH=/export/home/opt/SUNWspro/bin:$PATH
-fi
-
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/export/home/opt/SUNWspro/bin:/usr/ccs/bin:$PATH
 export PATH
 
 exec /usr/bin/perl $HOME/development/ace/autobuild/autobuild.pl \
