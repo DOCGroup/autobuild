@@ -1,3 +1,9 @@
+Wed Nov  5 17:06:07 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+
+	  Changed the build now to build CIAO_Core. This is now important.
+
 Wed Nov  5 16:57:47 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:

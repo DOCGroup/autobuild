@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Core/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Core/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Core/ACE_wrappers/ace" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Core/ACE_wrappers/ace;/build/isisbuilds/Core/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
@@ -31,12 +31,7 @@
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-k -j 4 -C ace" />
-    <command name="make"              options="-k -j 4 -C apps/gperf/src" />
-    <command name="make"              options="-k -j 4 -C TAO/tao" />
-    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -j 4 -C Kokyu" />
-    <command name="make"              options="-k -j 4 -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -j 4 -C CIAO_Core" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
