@@ -1,3 +1,12 @@
+Wed Dec 12 09:27:49 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* command/log.pm:
+	  Remove unused access to a variable.
+
+	* configs/autobuild/maedhros/Core.xml:
+	* configs/autobuild/maedhros/driver.sh:
+	  Add configuration files for a Core build on maedhros.ece.uci.edu
+
 Tue Dec 11 11:05:16 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* command/make.pm:

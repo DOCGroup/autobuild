@@ -29,7 +29,6 @@ sub CheckRequirements ()
 {
     my $self = shift;
     my $root = main::GetVariable ('root');
-    my $buildname = main::GetVariable ('build_name');
     my $logfile = main::GetVariable ('log_file');
 
     if (!defined $root) {
