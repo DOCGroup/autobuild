@@ -1,3 +1,8 @@
+2002-06-28      Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/tao/DLL_Debug.xml: Don't run the release
+	  programs in tests. :)
+
 2002-06-27      Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/DLL_Debug.xml: Enabled testing.
