@@ -1,8 +1,16 @@
+Sat Dec 21 14:43:22 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+          Removed the define ACE_DISABLE_WIN32_ERROR_WINDOWS, this looks to give
+          compile errors. Also enable the building of the tests and examples
+          directory, this will give more error right now but gives us an overview
+          where we are with Cygwin.
+
 Fri Dec 20 13:55:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: The
 	  tests will not run in this build.
-	
+
 	* configs/autobuild/maglor/Static.xml:
 	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Run the SSL tests
 	  in these builds.
