@@ -22,7 +22,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\noptimize=1\nminimum_corba=1\nexceptions=0\nstatic_libs_only=1\nCPPFLAGS += -DACE_USE_RCSID=0'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\noptimize=1\nminimum_corba=1\nexceptions=0\nCPPFLAGS += -DACE_USE_RCSID=0'" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
