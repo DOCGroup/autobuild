@@ -1,3 +1,8 @@
+Tue Oct 12 06:03:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml:
+          Added print_cidlc_version
+
 Tue Oct 12 05:57:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_cidlc_version.pm:
