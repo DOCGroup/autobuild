@@ -2,7 +2,6 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
-        <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE emulator) Debug" />
 
         <variable name="root"     value="C:\ace\ACE_wrappers-repository" />
         <variable name="project_root" value="." />
@@ -14,7 +13,7 @@
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
-    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -u -k -clean" />
+    <command name="win32make"         options="msvc_auto_compile -ACE -DLL -Debug -u -k -clean" />
 
     <command name="log"               options="ON" />
 

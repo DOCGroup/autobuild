@@ -1,3 +1,14 @@
+Fri Apr 25 10:47:49 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml: Changed
+	  ACE_WINCE_TEST_CONTROLLER value to the Pocket Controller Enterprise
+	  v4 image name, and added new ACE_PCE_DEVICE environment value to
+	  tell the test procedure which device to connect to.
+
+	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml: Remove the
+	  WINMAKE_CONFIGS environment value; it's only for WinCE makes. Also
+	  added -ACE to the win32make clean command to avoid TAO.
+
 Fri Apr 25 06:41:24 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/SingleThreaded.xml: 
