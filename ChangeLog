@@ -1,3 +1,9 @@
+Sun Aug 15 10:24:43 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Use the new xerces installation and CIDLC installation.
+
 Sun Aug 15 08:49:06 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:
