@@ -72,6 +72,10 @@
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_core</url>
         </build>
         <build>
+            <name>Win2K_DLL_Debug</name>
+            <url>http://tao.doc.wustl.edu/bugzilla/new_dll_debug</url>
+        </build>
+        <build>
             <name>WinXP_DLL_Release</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_release</url>
         </build>
