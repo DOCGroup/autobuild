@@ -15,6 +15,7 @@
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\Cygwin\" />
         <variable name="name"     value="Cygwin GCC 3.2" />
+        <variable name="configs"  value="Cygwin" />
     </configuration>
 
     <command name="status"            options="on" />
