@@ -1,3 +1,12 @@
+Sun May  9 12:54:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+          Removed not needed GNUmakefile removal
+
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
+          Corrected LD_LIBRARY_PATH, remove old makefiles before doing a
+          cvs checkout and removed not needed excluses from mpc generation
+
 Sun May  9 12:47:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/maglor/Static.xml:
