@@ -11,7 +11,7 @@
         <variable name="root"     value="/usr/users/tao/hp1/doc_scoreboard/Full" />
         <variable name="sam_root" value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard" />
+        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/hp1" />
         <variable name="configs"  value="HPUX11.11 aCC 3.39" />
         <variable name="MAIL_ADMIN" value="eas@prismtechnologies.com" />
 

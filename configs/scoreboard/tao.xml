@@ -290,9 +290,19 @@ all the OS/platform combinations TAO is tested everyday.
    <name>HP</name>
    <build>
    <name>HPUX11_ACC339_Full</name>
-   <url>http://www.prismtechnologies.com/tao-scoreboard/</url>
+   <url>http://www.prismtechnologies.com/tao-scoreboard/hp1</url>
    <build_sponsor>PrismTech</build_sponsor>
    <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
+   </build>
+</group>
+
+<group>
+   <name>LynxOS</name>
+   <build>
+      <name>LYNXOS4_GCC295_Standard_Full</name>
+      <url>http://www.prismtechnologies.com/tao-scoreboard/lynxos</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
    </build>
 </group>
 

@@ -1,0 +1,48 @@
+
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT" value="/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/lynxos/ACE_wrappers" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-2.95.3/lib:/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/lynxos/ACE_wrappers/ace:/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/gcc295/standard/static/ACE_wrappers/ace" />
+        <environment name="CVSROOT"         value=":ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="PATH" value="/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/gcc295/standard/static/ACE_wrappers/bin:/usr/local/lynx/4.0.0/x86/cdk/sunos-elf-x86/bin:/usr/local/lynx/4.0.0/x86/cdk/sunos-elf-x86/usr/bin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
+        <environment name="ENV_PREFIX" value="/usr/local/lynx/4.0.0/x86" />
+
+        <variable name="root" value="/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/lynxos" />
+        <variable name="sam_root" value="/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/lynxos/ACE_wrappers/samwise" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos" />
+        <variable name="MAIL_ADMIN" value="epm@prismtechnologies.com" />
+        <variable name="project_root" value="ACE_wrappers" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+
+    <command name="file_manipulation" options="type=rmtree file=ACE_wrappers" />
+    <command name="cvs"               options="-q checkout -P ACE_wrappers" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='VERSION=4.0.0\nOBJSFORMAT=elf\noptimize=1\nexceptions=1\ndebug=0\nthreads=1\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\ninline=0\nCXX=c++\nTAO_IDL:=/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/gcc295/standard/static/ACE_wrappers/TAO/TAO_IDL/tao_idl\nTAO_IDLFLAGS+=-g /var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/gcc295/standard/static/ACE_wrappers/bin/gperf'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
+
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+
+</autobuild>
+      
