@@ -10,15 +10,36 @@
         <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet/ACE_wrappers/ace" />
         <environment name="ANT_HOME"        value="/docpkg/jakarta-ant-1.5" />
         <environment name="ASPECTJ_HOME"    value="/docpkg/aspectj_1.0.6" />
-        <environment name="CLASSPATH"       value="/docpkg/JacORB1_3_30/lib/jacorb.jar:/docpkg/JacORB1_3_30/lib/idl.jar:/docpkg/dlconcurrent_1.3.1/lib/dlconcurrent.jar:.:/docpkg/junit3.7/junit.jar:/docpkg/aspectj_1.0.6/lib/aspectjrt.jar:/docpkg/aspectj_1.0.6/lib/aspectj-ant.jar:/docpkg/aspectj_1.0.6/lib/aspectjtools.jar:/docpkg/jakarta-ant-1.5/lib/ant.jar:/docpkg/jakarta-ant-1.5/lib/ant-optional.jar:/home/hokey/bugzilla/facet/RTEvent/facet/classes" />
+
+        <environment name="CLASSPATH" value="/docpkg/JacORB1_3_30/lib/idl.jar"                type="replace"/>
+        <environment name="CLASSPATH" value="/docpkg/JacORB1_3_30/lib/jacorb.jar"             type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/dlconcurrent_1.3.1/lib/dlconcurrent.jar" type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/junit3.7/junit.jar"                      type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/aspectj_1.0.6/lib/aspectjrt.jar"         type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/aspectj_1.0.6/lib/aspectj-ant.jar"       type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/aspectj_1.0.6/lib/aspectjtools.jar"      type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/jakarta-ant-1.5/lib/ant.jar"             type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/jakarta-ant-1.5/lib/ant-optional.jar"    type="suffix"/>
+        <environment name="CLASSPATH" value="/export/home/bugzilla/facet/RTEvent/facet/classes" type="suffix"/>
+        <environment name="CLASSPATH" value="." type="suffix"/>
+
+        <environment name="PATH" value="/export/home/bugzilla/facet/ACE_wrappers/ace" type="replace" />
+        <environment name="PATH" value="/docpkg/jikes-1.15/bin"                   type="suffix"/>
+        <environment name="PATH" value="/docpkg/JacORB1_3_30/bin"                 type="suffix"/>
+        <environment name="PATH" value="/docpkg/java_1.4.0/bin"                   type="suffix"/>
+        <environment name="PATH" value="/docpkg/aspectj_1.0.6/bin"                type="suffix"/>
+        <environment name="PATH" value="/docpkg/jakarta-ant-1.5/bin"              type="suffix"/>
+        <environment name="PATH" value="/bin"                                     type="suffix"/>
+        <environment name="PATH" value="/usr/bin"                                 type="suffix"/>
+        <environment name="PATH" value="."                                        type="suffix"/>
+
         <environment name="JAVA_HOME"       value="/docpkg/java_1.4.0" />
         <environment name="LIBRARYCLASSPATH" value="/docpkg/java_1.4.0/jre/lib/rt.jar:." />
-        <environment name="PATH"            value="/docpkg/jikes-1.15/bin:/docpkg/JacORB1_3_30/bin:/docpkg/java_1.4.0/bin:/docpkg/aspectj_1.0.6/bin:/docpkg/jakarta-ant-1.5/bin:.:/docpkg/jakarta-ant-1.5/bin:/bin:/usr/bin" />
 
         <variable name="root"               value="/export/home/bugzilla/facet" />
         <variable name="project_root"       value="/export/home/bugzilla/facet/RTEvent/facet" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/correlation_filter-ttl" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/correlation_filter" />
         <variable name="configs"            value="Linux" />
         <variable name="make_program"       value="ant" />
 
@@ -30,10 +51,9 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
 
-    <command name="make"              options="-Duse_feature_correlation_filter=t -Duse_feature_ttl=t featuredeps" />
     <command name="make"              options="-Duse_feature_correlation_filter=t -Duse_feature_ttl=t" />
 
-    <command name="auto_run_tests"     />
+    <command name="auto_run_tests"    />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
