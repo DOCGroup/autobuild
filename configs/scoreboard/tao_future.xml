@@ -70,6 +70,12 @@ decide the migration paths and strategies.
       <orange>96</orange>
       <red>192</red>
     </build>
+   <build>
+      <name>NetBSD_i386(autoconf)</name>
+      <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_i386</url>
+      <build_sponsor>J.T. Conklin</build_sponsor>
+      <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
+   </build>
 </group>
 
 </scoreboard>

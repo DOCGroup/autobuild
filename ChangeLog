@@ -1,3 +1,8 @@
+2004-08-12  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/scoreboard/tao_future.xml:
+	  Add my NetBSD/i386 autoconf build.
+
 Thu Aug 12 07:51:58 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/tango_isis/Debian_Core.xml:
@@ -26,8 +31,8 @@ Wed Aug 11 21:38:33 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/tango_isis/cidlc.sh:
 
 	  A seperate build for CIDL on Linux. We will use this to build
-	  all our linux builds. 
-	
+	  all our linux builds.
+
  	* configs/autobuild/tango_isis/Debian_Core.xml:
 	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
 	* configs/autobuild/tango_isis/Full.xml:
