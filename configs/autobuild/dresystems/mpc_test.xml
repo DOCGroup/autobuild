@@ -35,13 +35,15 @@
  <command name="print_ace_config" />
 
  <!-- Uses ACE.mwc -->
- <command name="shell"                 options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+ <!--<command name="shell"                 options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />-->
+ <command name="generate_workspace"    options="dirs=.,ace -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+ <command name="generate_makefile"     options="dirs=.,ace,apps/gperf/src" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
  <command name="make"                  options="-k" />
 
- <command name="auto_run_tests"        options="-a"/>
+ <!--<command name="auto_run_tests"        options="-a"/>-->
 
  <command name="log"                   options="off" />
  <command name="process_logs"          options="clean move prettify index" />

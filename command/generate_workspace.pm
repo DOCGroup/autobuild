@@ -52,7 +52,7 @@ sub Run ($)
     $options =~ s/\\x22/"/g;
 
     if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
+        $project_root = $root . '/ACE_wrappers';
     }
     
     if (!-r $project_root || !-d $project_root) {
@@ -94,7 +94,7 @@ sub Run ($)
         $options =~ s/dirs=$dirs//;
     }
 
-    my $command = "perl bin/mwc.pl $options";
+    my $command = "perl $project_root/bin/mwc.pl $options";
 
     if ($dirs) {
         my $dir;
