@@ -1,3 +1,8 @@
+Mon Feb 28 18:21:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Replaced VxWorks PPC 604 with a PPC 603 build
+
 Mon Feb 28 13:21:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
