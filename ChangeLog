@@ -1,3 +1,8 @@
+Sat Apr 26 08:13:26 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace/SUNOS_FORTE_UPDATE_1.xml: Use implicit
+	  templates. 
+
 Fri Apr 25 10:47:49 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml: Changed
