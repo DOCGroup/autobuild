@@ -1,3 +1,9 @@
+Fri Jan  2 10:52:06 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+
+	  Changed the targets for the core build.
+
 Fri Jan  2 15:16:37 UTC 2004  Don Hinton  <dhinton@dresystems.com>
 
         * configs/scoreboard/ace.xml:

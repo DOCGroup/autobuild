@@ -32,6 +32,10 @@
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -j 4" />
     <command name="make"              options="-k -j 4 -C TAO" />
+    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 4 -C TAO/tao" />
+    <command name="make"              options="-k -j 4 -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -j 4 -C TAO/CIAO" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
