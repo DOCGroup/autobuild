@@ -125,6 +125,15 @@ sub Run ($)
     }
 
     #
+    # default.features, if it exists
+    #
+
+    if (-r "bin/MakeProjectCreator/config/default.features") {
+        print "================ default.features ================\n";
+        print_file (""bin/MakeProjectCreator/config/default.features", 1);
+    }
+
+    #
     # platform_macros.GNU, if it exists
     #
 
