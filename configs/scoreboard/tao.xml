@@ -288,22 +288,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor>Washington University</build_sponsor>
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
-   <build>
-      <name>Solaris_9_Forte7</name>
-      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_spro54_tao</url>
-      <build_sponsor>DRE Systems</build_sponsor>
-      <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-      <orange>30</orange>
-      <red>36</red>
-   </build>
-   <build>
-      <name>Solaris_9_GCC_3.3</name>
-      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_gcc33_tao</url>
-      <build_sponsor>DRE Systems</build_sponsor>
-      <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-      <orange>30</orange>
-      <red>36</red>
-   </build>
 </group>
 
 <group>

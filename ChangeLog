@@ -1,3 +1,10 @@
+Fri Jan  2 15:16:37 UTC 2004  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          Removed the dresystems Solaris builds, so I can move them to
+          Nashville.  They will be readded next week.
+
 Thu Jan  1 22:41:31 UTC 2004  Don Hinton  <dhinton@dresystems.com>
 
         * configs/scoreboard/ace.xml:
