@@ -10,7 +10,7 @@ Sat Jul 10 01:03:07 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/scoreboard/ace.xml:
 
-	  Removed Wash Borland C++ 5.5. build from the build list.  That
+	  Removed Wash U Borland C++ 5.5. build from the build list.  That
 	  compiler is no longer supported.
 
 Fri Jul  9 23:23:35 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
