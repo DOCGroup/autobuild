@@ -8,7 +8,7 @@ export PERLLIB
 #CVS_RSH=ssh
 #export CVS_RSH
 
-#cd $HOME/autobuild
+cd $HOME/autobuild
 #cvs up
 
 
