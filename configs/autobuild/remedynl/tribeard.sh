@@ -15,3 +15,6 @@ cvs -z9 up -P -d
 
 exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
                              /build/ACE/autobuild/configs/autobuild/remedynl/tribeardacc.xml
+
+exec /opt/perl/bin/perl /build/ACE/autobuild/autobuild.pl \
+                             /build/ACE/autobuild/configs/autobuild/remedynl/tribeardgcc.xml
