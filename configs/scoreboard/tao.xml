@@ -233,7 +233,7 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_BCB6_Pro_Static_Release</name>
+            <name>WinXP_BCB6_Pro_Static_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6sr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -257,19 +257,19 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_CBuilderX_Dynamic_Debug(MPC)</name>
+            <name>WinXP_CBuilderX_Dynamic_Debug(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXdd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_VC71_NET_DLL(MPC)</name>
+            <name>WinXP_VC71_NET_DLL(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_MingW_GCC_3_2_3(MPC)</name>
+            <name>WinXP_MingW_GCC_3_2_3(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
