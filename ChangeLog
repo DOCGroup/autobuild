@@ -1,3 +1,8 @@
+Tue Mar 22 10:45:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed Itanium build
+
 Tue Mar 22 10:35:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
