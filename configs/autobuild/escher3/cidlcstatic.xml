@@ -27,6 +27,7 @@
 
 
     <command name="win32make"         options="msvc_cidlc -vc7 -s -clean" />
+    <command name="win32make"         options="msvc_cidlc -vc7 -s" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
