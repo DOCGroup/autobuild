@@ -6,7 +6,7 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maedhros_Core/</url>
         </build>
         <build>
-            <name>RedHat_7.1_Core (beguine)</name>
+            <name>RedHat_7.1_Core_(beguine)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_Core/</url> 
         </build>
         <build>
