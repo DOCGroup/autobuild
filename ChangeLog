@@ -1,9 +1,15 @@
+Tue Feb  1 13:55:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/lindy_isis/Static.xml:
+          Moved cp of cidlc earlier in this file, print cidlc and perl version
+          on the config page
+
 Sun Jan 30 07:32:53 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
   	* configs/scoreboard/tao_dre.sh:
 
-	  Do not run the buildmatrix scripts since they take too 
-	  much memory. 
+	  Do not run the buildmatrix scripts since they take too
+	  much memory.
 
 Wed Jan 26 14:43:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
