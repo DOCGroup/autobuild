@@ -10,7 +10,7 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
   <name>BSD</name>
      <build>
-        <name>FreeBSD_5.0_(MPC)</name>
+        <name>FreeBSD_5.0</name>
         <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -18,7 +18,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD_5.0_Explicit_Templates_(MPC)</name>
+        <name>FreeBSD_5.0_Explicit_Templates</name>
         <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_explicit_template</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -26,7 +26,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD_5.0_No_Inline_(MPC)</name>
+        <name>FreeBSD_5.0_No_Inline</name>
         <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_no_inline</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -34,7 +34,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD_5.0_Single_Threaded_(MPC)</name>
+        <name>FreeBSD_5.0_Single_Threaded</name>
         <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_single</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -42,7 +42,7 @@ all the OS/platform combinations ACE is tested everyday.
         <red>36</red>
      </build>
      <build>
-        <name>FreeBSD_5.0_Dump_(MPC)</name>
+        <name>FreeBSD_5.0_Dump</name>
         <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_dump</url>
         <build_sponsor>DRE Systems</build_sponsor>
         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -171,7 +171,7 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris_9_Forte7_ACE_(MPC)</name>
+      <name>Solaris_9_Forte7_ACE</name>
       <url>http://www2.dresystems.com:8092/autobuild_output/sol9_spro54_ace</url>
       <build_sponsor>DRE Systems</build_sponsor>
       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
@@ -179,7 +179,7 @@ all the OS/platform combinations ACE is tested everyday.
       <red>36</red>
    </build>
    <build>
-      <name>Solaris_9_GCC_3.3__ACE_(MPC)</name>
+      <name>Solaris_9_GCC_3.3_ACE</name>
       <url>http://www2.dresystems.com:8092/autobuild_output/sol9_gcc33_ace</url>
       <build_sponsor>DRE Systems</build_sponsor>
       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>

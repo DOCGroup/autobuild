@@ -3,7 +3,7 @@
  <configuration>
 
   <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_ace/ACE_wrappers" />
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/freebsd_ace/ACE_wrappers/lib" />
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/freebsd_ace/ACE_wrappers/ace" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
@@ -19,11 +19,7 @@
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
 
- <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
- <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
  <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
- <!-- Now, delete them again to insure a clean slate. -->
- <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-freebsd.h\x22\n'" />
 
@@ -32,9 +28,6 @@
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
  <command name="print_ace_config" />
-
- <!-- Uses ACE.mwc -->
- <command name="generate_workspace"    options="-exclude TAO,vc7_nightly.mwc -hierarchy -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k reverseclean" />

@@ -4,7 +4,7 @@
 
   <environment name="ACE_ROOT"         value="/export/home/dhinton/development/ace/autobuilds/sol9_spro54_tao/ACE_wrappers" />
   <environment name="TAO_ROOT"         value="/export/home/dhinton/development/ace/autobuilds/sol9_spro54_tao/ACE_wrappers/TAO"/>
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/export/home/dhinton/development/ace/autobuilds/sol9_spro54_tao/ACE_wrappers/lib" />
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/export/home/dhinton/development/ace/autobuilds/sol9_spro54_tao/ACE_wrappers/ace" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
@@ -19,11 +19,8 @@
  <command name="file_manipulation"     options="type=mustnotexist file=.disable" />
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
- <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
- <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+
  <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
- <!-- Now, delete them again to insure a clean slate. -->
- <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
 
@@ -32,11 +29,6 @@
  <command name="print_os_version" />
  <command name="check_compiler"        options="sun_cc" />
  <command name="print_ace_config" />
-
- <!-- Uses ACE.mwc -->
- <command name="generate_workspace"    options="-exclude TAO,vc7_nightly.mwc -hierarchy -make_coexistence" />
- <!-- Uses TAO/TAO.mwc -->
- <command name="generate_workspace"    options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k reverseclean" />
