@@ -1,3 +1,13 @@
+Sun May 12 15:50:39 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/beguine/Redhat_7.1_Core.xml: Renamed it as a
+	  Full build. This build is not a core build. 
+
+	* configs/autobuild/beguine/Redhat_7.1_Full.xml: A full build on
+	  beguine.doc. 
+
+	* configs/autobuild/beguine/driver.sh: Start the right build.
+
 Sun May 12 15:41:29 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml: Do
