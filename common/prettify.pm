@@ -835,7 +835,7 @@ sub Compile_Handler ($)
         # for the timebeing
         $self->Output_Normal ($s);
     }
-    elsif ($s =~ m/is deprecated, use/) {
+    elsif ($s =~ m/ is deprecated, use /) {
         # Among these are glibc warnings to stop using the deprecated
         # pthraed_setstackaddr in favor of pthread_setstack.
         $self->Output_Warning ($s);
