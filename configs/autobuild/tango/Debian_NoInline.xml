@@ -10,7 +10,7 @@
         <variable name="root"     value="/project/tango/bugzilla/NoInline" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/tango_NoInline" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux SSL" />
 
     </configuration>
 

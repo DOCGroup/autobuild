@@ -1,3 +1,11 @@
+Thu Dec 19 06:54:36 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs//autobuild/sirion/Full_new.xml:
+	* configs//autobuild/tango/Debian_NoInline.xml:
+	* configs//autobuild/valinor/Full.xml: Added SSL to all the
+	  above. Doesnt seem to run the tests yet. Need to check after yet
+	  another build.
+
 Wed Dec 18 18:00:31 2002  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Fix the
