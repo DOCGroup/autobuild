@@ -1,3 +1,11 @@
+Wed Jan 21 09:29:42 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added mingwcygwin compiler. This is the MinGW compiler as part of the
+          Cygwin setup. We then just use the g++ compiler, but have to pass
+          -mno-cygwin as commandline options. Added this as special compiler
+          version, else we get the version of the Cygwin g++ compiler
+
 Wed Jan 21 08:52:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
