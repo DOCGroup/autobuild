@@ -34,7 +34,7 @@ testmatrix/update_scoreboard.sh 2>&1 &
 #/usr/bin/perl buildmatrix/buildmatrix.pl $HOME/autobuild/configs/scoreboard/tao.xml /project/taotmp/scoreboard/html 1 > /project/taotmp/scoreboard/buildmatrix/tao.html 2> /tmp/build.out
 
 #Remove the obsolete db files and give the list of available db files.
-#matrix_database/RemoveAndListCompilationDbFiles.sh
+matrix_database/RemoveAndListCompilationDbFiles.sh
 
 # 
 wait
