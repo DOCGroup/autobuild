@@ -41,8 +41,8 @@
     <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/footprint_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats" />
     <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/performance_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats" />
     <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/topinfo_simple_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats isisbuilds" />
-    <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/topinfo_iorsize_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats bugzilla 1" />
-    <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/topinfo_iorsize_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats bugzilla 0" />
+    <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/topinfo_iorsize_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats isisbuil 1" />
+    <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/topinfo_iorsize_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats isisbuil 0" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
