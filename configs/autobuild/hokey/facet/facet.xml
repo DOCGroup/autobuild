@@ -33,7 +33,7 @@
     <command name="make"              options="realclean" />
     <command name="make"              options="init" />
     <command name="make"              options="-buildfile gcj.xml" />
-    <command name="make"              options="" />
+    <command name="make"              options="-Duse_feature_disable_corba=t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

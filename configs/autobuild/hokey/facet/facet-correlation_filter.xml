@@ -53,7 +53,7 @@
     <command name="cvs"               options="-z 3 -q update -Pd RTEvent/facet" />
 
     <command name="make"	      options="clean" />
-    <command name="make"              options="-Duse_feature_correlation_filter=t" />
+    <command name="make"              options="-Duse_feature_disable_corba=t -Duse_feature_correlation_filter=t" />
 
     <command name="auto_run_tests"    />
 

@@ -51,7 +51,7 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
 
-    <command name="make"              options="-Duse_feature_event_pull=t -Duse_feature_ttl=t" />
+    <command name="make"    options="-Duse_feature_disable_corba=t -Duse_feature_event_pull=t -Duse_feature_ttl=t" />
 
     <command name="auto_run_tests"    />
 

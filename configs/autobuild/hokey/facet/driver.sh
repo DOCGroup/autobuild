@@ -13,7 +13,9 @@
 BASE=$HOME/autobuild/configs/autobuild/hokey/facet
 
 /usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/facet.xml
+/usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/corba-facet.xml
 /usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/jACE.xml
+
 # do we really need to do this every night?
 #/usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/ACE_TAO.xml
 
@@ -28,4 +30,5 @@ do
     /usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/tao-facet-adapter.xml
   fi
 done
+
 

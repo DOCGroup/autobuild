@@ -21,7 +21,7 @@
         <environment name="CLASSPATH" value="/docpkg/ant/lib/ant.jar"             type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/ant/lib/ant-optional.jar"    type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/log4j/dist/lib/log4j.jar"          type="suffix"/>
-        <environment name="CLASSPATH" value="/export/home/bugzilla/facet/RTEvent/facet/classes" type="suffix"/>
+        <environment name="CLASSPATH" value="/export/home/bugzilla/facet/corba/RTEvent/facet/classes" type="suffix"/>
         <environment name="CLASSPATH" value="." type="suffix"/>
 
         <environment name="PATH" value="/export/home/bugzilla/facet/ACE_wrappers/ace" type="replace" />
@@ -37,10 +37,10 @@
         <environment name="JAVA_HOME"       value="/docpkg/java" />
         <environment name="LIBRARYCLASSPATH" value="/docpkg/java/jre/lib/rt.jar:." />
 
-        <variable name="root"               value="/export/home/bugzilla/facet" />
-        <variable name="project_root"       value="/export/home/bugzilla/facet/RTEvent/facet" />
+        <variable name="root"               value="/export/home/bugzilla/facet/corba" />
+        <variable name="project_root"       value="/export/home/bugzilla/facet/corba/RTEvent/facet" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/supplier_dispatch" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/corba/tracing" />
         <variable name="configs"            value="Linux" />
         <variable name="make_program"       value="ant" />
 
@@ -53,7 +53,7 @@
     <command name="cvs"               options="-z 3 -q update -Pd RTEvent/facet" />
 
     <command name="make"	      options="clean" />
-    <command name="make"              options="-Duse_feature_disable_corba=t -Duse_feature_supplier_dispatch=t" />
+    <command name="make"              options="-Duse_feature_enable_corba=t -Duse_feature_tracing=t" />
 
     <command name="auto_run_tests"    />
 
