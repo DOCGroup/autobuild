@@ -33,9 +33,10 @@
 
     <command name="make"              options="clean" />
 
-    <command name="make"              options="-Duse_feature_correlation_filter=t" />
-    <command name="make"              options="-buildfile gcj.xml -Duse_feature_correlation_filter=t" />
-    <command name="make"              options="-Duse_feature_correlation_filter=t" />
+    <command name="make"              options="featuredeps -Duse_feature_correlation_filter=t" />
+    <command name="make"              options="" />
+
+    <command name="auto_run_tests"    />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

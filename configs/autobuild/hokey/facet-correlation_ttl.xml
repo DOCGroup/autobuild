@@ -18,7 +18,7 @@
         <variable name="root"               value="/export/home/bugzilla/facet" />
         <variable name="project_root"       value="/export/home/bugzilla/facet/RTEvent/facet" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/eventtype" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/correlation_filter-ttl" />
         <variable name="configs"            value="Linux" />
         <variable name="make_program"       value="ant" />
 
@@ -32,10 +32,10 @@
 
     <command name="make"              options="clean" />
 
-    <command name="make"              options="featuredeps -Duse_feature_eventtype=t" />
+    <command name="make"              options="featuredeps -Duse_feature_correlation_filter=t -Duse_feature_ttl=t" />
     <command name="make"              options="" />
 
-    <command name="auto_run_tests"    />
+    <command name="auto_run_tests"     />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
