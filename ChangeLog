@@ -1,3 +1,9 @@
+Thu Jul 29 08:38:09 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+  	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+
+	  Added LD_ASSUME_KERNEL to run the priority tests.
+
 Wed Jul 28 17:39:29 BST 2004  Paul Morrison <epm@prismtechnologies.com>
 
 	* configs/scoreboard/tao.xml
