@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"     value="C:/ACE/MingW/ACE_wrappers/TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="C:\MinGW\bin\C:\Perl\Bin;C:\Cygwin\bin;C:\ACE\MingW\ACE_wrappers\bin;C:\ACE\MingW\ACE_wrappers\lib;" type="prefix" />
+        <environment name="Path"         value="C:\MSYS\1.0\bin;C:\MinGW\bin;C:\Perl\Bin;C:\Cygwin\bin;C:\ACE\MingW\ACE_wrappers\bin;C:\ACE\MingW\ACE_wrappers\lib;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
