@@ -1,3 +1,10 @@
+Wed Jul 23 13:01:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added support for the Digital Mars compiler (dm) which is called
+          scppn. Just using dmc doesn't work because that exe doesn't have
+          a -v flag
+
 Wed Jul 23 08:31:29 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
