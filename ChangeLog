@@ -1,9 +1,15 @@
+Wed Mar 24 17:15:00 2004  Martin Corino <mcorino@remedy.nl>
+
+	* configs/scoreboard/ace.xml:
+
+	  added new MingW ACE Debug build at Remedy
+
 Wed Mar 24 10:09:17 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
 
 	  Removed Nt4 cygwin build of remedy. Johnny will move this build
-	  to Remedy on his return. 
+	  to Remedy on his return.
 
 Wed Mar 24 06:42:26 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
@@ -5291,3 +5297,4 @@ Fri Dec  7 15:21:57 2001  Carlos O'Ryan  <coryan@uci.edu>
           Like the previous one, but for POSIX platforms.  Unfortunately
           ACE breaks havoc with process groups, so it does not work all
           that great.
+
