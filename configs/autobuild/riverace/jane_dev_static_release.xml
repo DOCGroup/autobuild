@@ -29,7 +29,7 @@
     <command name="file_manipulation" options="type=create file=build/static_release/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/static_release/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/static_release/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=0\static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/static_release/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=0\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
