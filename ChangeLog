@@ -1,14 +1,21 @@
+Thu Oct 24 05:58:20 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          The BCB6 Dynamic Release build is running on another pc now.
+          All BCB6 Personal builds will be removed soon and that pc will run
+          BCB4 builds soon.
+
 Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/scoreboard/acetao.xml: Enabled Full and Single_Threaded
           OpenBSD builds and disabled the OpenBSD_Core one for now.  The
           current schedule is to run a build every other day - hence the
           high orange and red values.
- 
+
 Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/scoreboard/acetao.xml: Changed build orange
-          and red times for the OpenBSD_Core build to avoid having it 
+          and red times for the OpenBSD_Core build to avoid having it
       	  flagged too soon.
 
 Mon Oct 21 17:16:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
@@ -18,7 +25,7 @@ Mon Oct 21 17:16:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 Sun Oct 20 18:47:53 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/autobuild/slytherin/OpenBSD_Core.xml: Fixed cosmetic typo.
-	
+
 	* configs/autobuild/slytherin/OpenBSD_Full.xml:
 	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
 	* configs/autobuild/slytherin/driver_Full.sh:
@@ -33,31 +40,31 @@ Sun Oct 20 09:24:29 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 Sun Oct 20 09:14:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Renamed the Redhat_Core build as
-	  Redhat_Static_Core build. 
+	  Redhat_Static_Core build.
 
 Sun Oct 20 09:10:03 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/maedhros/Core.xml: Made the following
-	  changes. 
-	  
+	  changes.
+
 	  . This build shold not run tests. This is supposed to be a core
 	    build.
 
-	  . This build will be a static core build. 
+	  . This build will be a static core build.
 
 	  Our builds have to be used effectively to test various
 	  configurations. No point in falling a victim for DRY.
 
 Sat Oct 19 13:38:42 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/scoreboard/acetao.xml: 
+	* configs/scoreboard/acetao.xml:
 	  Shuffled the TRU 64 build down to the bottom to see whether
           that causes the OpenBSD and XML builds to show up.  The "-"
           change below didn't change anything (not too surprising).
 
 Sat Oct 19 12:32:09 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/scoreboard/acetao.xml: 
+	* configs/scoreboard/acetao.xml:
           Removed extraneous "-" in comment that seems to prevent
           the OpenBSD and XML builds from showing up.
 
@@ -65,13 +72,13 @@ Sat Oct 19 11:23:24 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/autobuild/slytherin/OpenBSD_Core.xml:
 	* configs/autobuild/slytherin/driver.sh:
-	* configs/scoreboard/acetao.xml: 
+	* configs/scoreboard/acetao.xml:
           Added OpenBSD Core build.
 
 Fri Oct 18 20:50:58 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Removed TRU 64 from the
-	  scoreboard for the timebeing. 
+	  scoreboard for the timebeing.
 
 Fri Oct 18 01:04:49 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
@@ -97,7 +104,7 @@ Wed Oct  9 15:24:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 Tue Oct  8 15:19:22 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Add GNU ld's ": cannot find" to list of 
+	* common/prettify.pm: Add GNU ld's ": cannot find" to list of
 	  error messages to highlight.
 
 Sat Oct  5 12:31:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
