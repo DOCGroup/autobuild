@@ -50,7 +50,7 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/VC71/* -f" / -->
-    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VC71" / -->
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/VC71/*" / -->
+    <command name="shell"             options="c:\cygwin\bin\ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/VxWorks_Host/* -f" />
+    <command name="shell"             options="c:\cygwin\bin\scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_Host" />
+    <command name="shell"             options="c:\cygwin\bin\ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/VxWorks_Host/*" />
 </autobuild>
