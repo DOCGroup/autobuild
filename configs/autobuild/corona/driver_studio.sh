@@ -3,7 +3,7 @@
 # $Id$
 #
 
-PATH=/opt/csw/bin:/opt/SUNWspro:$PATH
+PATH=/opt/csw/bin:/opt/SUNWspro/bin:$PATH
 export PATH
 
 # OpenSSL requires an explicit source of entropy on Solaris.  The
