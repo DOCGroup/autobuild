@@ -1,3 +1,11 @@
+Mon Aug 16 11:00:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
+
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_PRETTIFY_DocGroup.xml
+        * configs/autobuild/prism/SOLARIS8_GCC295_Standard_Static_for_LynxOS_DocGroup.xml
+          Use the up-to-date doc_group autobuild not our local frozen one, correct project root
+
 Mon Aug 16 10:07:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/msvclibrelease.xml:
