@@ -1,3 +1,10 @@
+Fri Sep 12 10:05:00 2003 Dan Troesser <troesser_d@ociweb.com>
+
+        * configs/scoreboard/tao.xml
+
+          Added RH8_GCC_3.2_Debug, WinXP_MSVC6_DLL_Debug, and 
+          Win2003_VC71_NET_DLL_Debug builds.
+
 Thu Sep 11 17:11:04 MST 2003 Trevor Fields <fields_t@ociweb.com>
 
 	* configs/autobuild/ace_isis/RH8_Minimum.xml:
