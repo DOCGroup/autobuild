@@ -51,6 +51,7 @@ sub Run ($)
     my $configs = main::GetVariable ('configs');
     my $sandbox = main::GetVariable ('sandbox');
     my $project_root = main::GetVariable ('project_root');
+    my $automake_build = main::GetVariable ('automake_build');
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
@@ -129,12 +130,20 @@ sub Run ($)
         $options =~ s/dir=$dir//;
     }
 
-    if (defined $sandbox) {
-        $options .= " -s $sandbox";
+    my $command;
+    if (defined $automake_build) {
+      $command = "make -k check";
     }
+    else {
+      if (defined $sandbox) {
+          $options .= " -s $sandbox";
+      }
 
-    if (defined $configs) {
-        $options .= " -Config " . join (" -Config ", split (' ', $configs));
+      if (defined $configs) {
+          $options .= " -Config " . join (" -Config ", split (' ', $configs));
+      }
+
+      $command = "perl bin/auto_run_tests.pl $options";
     }
 
     if (defined $dir) {
@@ -144,9 +153,7 @@ sub Run ($)
         }
     }
 
-    my $command = "perl bin/auto_run_tests.pl $options";
-
-    print "Running: $command\n";
+    print "Running: $command in $dir\n";
     system ($command);
 
     chdir $current_dir;
