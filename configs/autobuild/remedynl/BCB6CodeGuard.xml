@@ -1,0 +1,63 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\ACE\BCB6cg\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\BCB6cg\ACE_wrappers\TAO"/>
+        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"      value="ssh" />
+        <environment name="Path"         value="C:\Perl\Bin;C:\progra~1\borland\cbuild~1\bin;C:\progra~\borland\cbuild~1\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6cg\ACE_wrappers\bin;C:\ACE\BCB6cg\ACE_wrappers\lib;C:\Cygwin\bin;" type="prefix" />
+
+        <environment name="BCBVER"       value="6" />
+        <environment name="CODEGUARD"    value="1" />
+        <environment name="DEBUG"        value="1" />
+
+
+        <variable name="configs"  value="Win32 Borland Release Exceptions" />
+        <variable name="root"     value="C:\ACE\BCB6cg\" />
+	<variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\ACE\BCB6cg\" />
+        <variable name="name"     value="WinXP BCB6 Code Guard" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="make"              options=" -i -f Makefile.bor realclean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
+
+    <command name="cvs"               options="-z9 update ACE_wrappers/include/makeinclude" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=CG32.CGI output='[Options]\nCodeGuard=yes\nStats=no\nMessageBox=no\nDebugInfo=yes\nAppend=no\nRepeats=yes\nSrcpath=\nIgnoredModules=\nErrorCaption=CodeGuard Error\nErrorText=CodeGuard detected error(s) in the program. A log file will be created\nOutputDebugString=no\nStackFillFrequency=2\nResourceLeakReport=yes\nMaxCGLerrors=65535\nLimitCGLerrors=no\n[memory block]\nTrack=yes\nParam=yes\nLeak=yes\nDelay=yes\nDelayMax=256\nDelayMaxSize=512\n[file handle]\nTrack=yes\nParam=yes\nLeak=yes\nDelay=yes\nDelayMax=4\nDelayMaxSize=0\n'" />
+
+    <command name="shell"             options="cp CG32.CGI C:\Windows\CG32.GCI" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="borland" />
+    <command name="check_linker" options="ilink32" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO/CIAO -make_coexistence -type borland" />
+
+    <command name="make"              options=" -i -f Makefile.bor" />
+
+    <command name="auto_run_tests"    options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/BCB6cg/* -f" />
+    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/BCB6cg" />
+</autobuild>
+
