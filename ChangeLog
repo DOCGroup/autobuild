@@ -1,3 +1,11 @@
+Wed Oct  6 16:23:29 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	  Removed -relative and use -noreldefs instead. The workspace
+	  sets ACE_ROOT correctly based on the build-time settings and we
+	  don't want ACE_ROOT removed.
+
 Mon Oct  4 17:32:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/ace_isis/RH8_Minimum.xml:
