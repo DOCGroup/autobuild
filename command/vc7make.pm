@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -46,6 +46,7 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
+    my $vctool = main::GetVariable ('vctool');
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
@@ -53,7 +54,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -70,7 +71,7 @@ sub Run ($)
     main::PrintStatus ('Compile', 'vc7make');
 
     my $current_dir = getcwd ();
-    
+
     my @dirs;
     my $dir='';
     if ($options =~ m/search='([^']*)'/) {
@@ -91,14 +92,18 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
+    if (!defined $vctool) {
+        $vctool = 'devenv.com';
+    }
+
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
     }
 
     my $basedir = getcwd();
-    my $command = "devenv.com $options";
+    my $command = "$vctool $options";
 
     print "Running: $command\n";
 
@@ -109,7 +114,7 @@ sub Run ($)
         my $working_dir = getcwd();
 
         print "[BUILD ERROR detected in $working_dir]\n ";
-    } 
+    }
 
     chdir $current_dir;
 
