@@ -1,3 +1,10 @@
+Sat Jan 18 19:33:51 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: New
+          build for Solaris 9, Forte 7 64-bit.
+
+        * configs/scoreboard/acetao.xml: Add new build to scoreboard.
+
 Sat Jan 18 12:13:44 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/scoreboard/acetao.xml:

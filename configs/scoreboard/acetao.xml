@@ -57,6 +57,10 @@ and let us know which platform combinations you can contribute.
             <url>http://www.riverace.com/build_logs/jane/dev/debug</url>
         </build>
         <build>
+            <name>Solaris_9_Forte7_64bit_Debug</name>
+            <url>http://www.riverace.com/build_logs/essie/dev/forte7-64_debug</url>
+        </build>
+        <build>
             <name>WindowsXP_VC.NET_Debug</name>
             <url>http://www.riverace.com/build_logs/hope/dev/vc7_debug</url>
         </build>
