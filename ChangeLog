@@ -1,3 +1,8 @@
+Mon Aug  9 15:13:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/simbagcc.xml:
+          Added buildbits=64 to the platform_macros.GNU file
+
 2004-08-08  J.T. Conklin  <jtc@acorntoolworks.com>
 
 	* configs/autobuild/remedynl/GCCautoconfig.xml:
