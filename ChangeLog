@@ -1,3 +1,9 @@
+Fri Jan 10 14:16:31 2003  Steve Huston  <shuston@riverace.com>
+
+        * command/check_compiler.pm: Add sections for IBM C/C++ compiler
+          version (ibmcxx) and Visual Age C++ (vacpp) detection. Thanks to
+          Craig Rodrigues for finding out how to do this.
+
 Fri Jan 10 16:37:13 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Add MacOS X build maintained by John
