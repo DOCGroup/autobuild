@@ -1,3 +1,8 @@
+Wed Apr 16 11:59:58 2003  Build Account  <isisbuilds@tango.dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Added the new build to the
+	  scoreboard.  
+
 Wed Apr 16 10:46:58 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:

@@ -16,10 +16,12 @@ all the OS/platform combinations TAO is tested everyday.
    <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
    </build>
    <build>
+   <name>Debian_ORB_Core</name>
+   <build>
    <name>Debian_Full</name>
-      <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full_new/</url>
-      <build_sponsor>UC Irvine</build_sponsor>
-      <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_ORB_Core/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
        <name>Debian_GCC_3.0.4</name>
