@@ -1,3 +1,11 @@
+Sat Feb 14 15:22:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/nirvana/New_DLL_Release.xml:
+	* configs/autobuild/nirvana/new_driver.bat:
+
+	  New builds on nirvana. The old builds seem to have
+	  problems. Hence a new build to check what is going on. 
+
 Thu Feb 12 16:00:31 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Added
