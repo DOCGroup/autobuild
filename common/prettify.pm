@@ -355,6 +355,13 @@ sub new ($)
     $self->{SUBSECTION_ERROR_FOUND} = 0;
     $self->{SUBSECTION_WARNING_FOUND} = 0;
 
+    $self->{SETUP_ERRORS} = 0;
+    $self->{SETUP_WARNINGS} = 0;
+    $self->{COMPILE_ERRORS} = 0;
+    $self->{COMPILE_WARNINGS} = 0;
+    $self->{TEST_ERRORS} = 0;
+    $self->{TEST_WARNINGS} = 0;
+
     bless ($self, $class);
     return $self;
 }
@@ -476,10 +483,23 @@ sub Footer ()
 
     my $totals = '';
     
-    $totals .= " Config: $self->{CONFIG_SECTION}" if (defined $self->{CONFIG_SECTION});
-    $totals .= " Setup: $self->{SETUP_SECTION}-$self->{SETUP_ERRORS}-$self->{SETUP_WARNINGS}";
-    $totals .= " Compile: $self->{COMPILE_SECTION}-$self->{COMPILE_ERRORS}-$self->{COMPILE_WARNINGS}";
-    $totals .= " Test: $self->{TEST_SECTION}-$self->{TEST_ERRORS}-$self->{TEST_WARNINGS}";
+    if (defined $self->{CONFIG_SECTION}) {
+        $totals .= " Config: $self->{CONFIG_SECTION}";
+    }
+
+    if (defined $self->{SETUP_SECTION}) {
+        $totals .= " Setup: $self->{SETUP_SECTION}-$self->{SETUP_ERRORS}-$self->{SETUP_WARNINGS}";
+    }
+
+    
+    if (defined $self->{COMPILE_SECTION}) {
+        $totals .= " Compile: $self->{COMPILE_SECTION}-$self->{COMPILE_ERRORS}-$self->{COMPILE_WARNINGS}";
+    }
+
+    if (defined $self->{TEST_SECTION}) {
+        $totals .= " Test: $self->{TEST_SECTION}-$self->{TEST_ERRORS}-$self->{TEST_WARNINGS}";
+    }
+
     $totals .= "\n";
     
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";

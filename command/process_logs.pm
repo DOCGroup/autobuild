@@ -297,7 +297,7 @@ sub index_logs ()
                         print $fh '</td>';
                     }
                     else {
-                        print $fh '<td>$nbsp;</td>';
+                        print $fh '<td>&nbsp;</td>';
                     }
                     
                     if (m/Compile: (\d+)-(\d+)-(\d+)/) {
@@ -318,7 +318,7 @@ sub index_logs ()
                         print $fh '</td>';
                     }
                     else {
-                        print $fh '<td>$nbsp;</td>';
+                        print $fh '<td>&nbsp;</td>';
                     }
 
                     if (m/Test: (\d+)-(\d+)-(\d+)/) {
@@ -339,7 +339,7 @@ sub index_logs ()
                         print $fh '</td>';
                     }
                     else {
-                        print $fh '<td>$nbsp;</td>';
+                        print $fh '<td>&nbsp;</td>';
                     }
 
                     last;
