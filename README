@@ -101,8 +101,13 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 (6) To update the scoreboard, you run scoreboard.pl with acetao.xml as the
     argument:
 
-  scoreboard.pl -o [output directory] -c acetao.xml
-
+  scoreboard.pl -d [Output directory where the html files are placed] 
+                -f [name and path of the XML file that needs 
+                   to be used as a meta-file for HTML
+                   generation]
+                -o [name of the output file. The html file will
+                   be saved by this name and placed in the
+                   directory pointed by -d].
 
 
 OTHER NOTES

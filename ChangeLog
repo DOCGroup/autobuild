@@ -1,3 +1,7 @@
+Mon Mar 17 13:03:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* README: Fixed the documentation for scoreboard scripts usage. 
+
 Mon Mar 17 12:57:30 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* scoreboard.pl: Added documentation for the options. Changed the
