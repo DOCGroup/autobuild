@@ -1,3 +1,13 @@
+Wed Jul 23 08:31:29 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+	* configs/autobuild/riverace/benjamin_dev_debug.xml:
+	* configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml: Specify
+	  log cleanup of 7 days, overriding the default of 10. Experimenting
+	  to keep the disk space down on the web server.
+
 Mon Jul 21 19:01:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6StaticRelease.xml:
