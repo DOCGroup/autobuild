@@ -1,15 +1,15 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="G:/bugzilla/VC7.NET/ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="G:/bugzilla/VC7.NET/ACE_wrappers/TAO"/>
-        <environment name="TAO_ROOT"     value="G:/bugzilla/VC7.NET/ACE_wrappers/TAO" />
-        <environment name="Path"         value="G:/bugzilla/VC7.NET/ACE_wrappers\bin;G:/bugzilla/VC7.NET/ACE_wrappers\lib;D:\ssl\openssl-0.9.6\out32dll" type="prefix" />
+        <environment name="ACE_ROOT"     value="G:/bugzilla/new_VC7.NET/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="G:/bugzilla/new_VC7.NET/ACE_wrappers/TAO"/>
+        <environment name="TAO_ROOT"     value="G:/bugzilla/new_VC7.NET/ACE_wrappers/TAO" />
+        <environment name="Path"         value="G:/bugzilla/new_VC7.NET/ACE_wrappers\bin;G:/bugzilla/VC7.NET/ACE_wrappers\lib;D:\ssl\openssl-0.9.6\out32dll" type="prefix" />
 
         <variable name="root"            value="G:/bugzilla/VC7.NET/" />
         <variable name="project_root"            value="ACE_wrappers" />
 	<variable name="log_file"        value="vc7_debug.log" />
-        <variable name="log_root" value="Z:/VC7_Debug" />
+        <variable name="log_root" value="Z:/new_VC7_Debug" />
 
         <variable name="name"            value="WinXP VC.NET Debug" />
     </configuration>
@@ -27,16 +27,16 @@
     <command name="cvs"               options="update -P -d ACE_wrappers" />
     <command name="cvs"               options="checkout -P ACE_MPC"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" /> 
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
+    <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc7 vc7_nightly.mwc" />
-    <command name="generate_workspace" options="-type vc7 TAO/orbsvcs/vc7_orbsvcs.mwc" />
-    <command name="vc7make"           options="/build debug vc7_nightly.sln" />
-    <command name="vc7make"           options="/build debug TAO/orbsvcs/vc7_orbsvcs.sln" />
-    <command name="auto_run_tests"    options="-a" />
+    <command name="generate_workspace" options="-type vc71 -recurse"/>
+    <command name="vc7make"            options="/rebuild debug TAO/TAOACE.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/CIAO/CIAOTAO.sln" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
