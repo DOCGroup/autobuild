@@ -1,19 +1,25 @@
+Mon May 19 13:47:01 2003  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/check_compiler.pm:
+
+          Added support for MIPSpro Compilers on IRIX.
+
 Sat May 10 12:15:37 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* common/prettify.pm: Tried suppressing the "is deprecated"
-	  message. 
+        * common/prettify.pm: Tried suppressing the "is deprecated"
+          message.
 
 Thu May  8 18:46:29 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml: Use
-	  the correct all-encompassing "workspace" nmake file generated
-	  by mwc - it generates *.nmake, not *.mak for "workspaces".
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml: Use
+          the correct all-encompassing "workspace" nmake file generated
+          by mwc - it generates *.nmake, not *.mak for "workspaces".
 
 Fri May  2 22:00:39 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml: Use
-	  REALCLEAN instead of CLEAN to try and clean up ACEd.* and the
-	  test executables before building.
+          REALCLEAN instead of CLEAN to try and clean up ACEd.* and the
+          test executables before building.
 
 Thu May  1 13:35:09 2003  Chad Elliott  <elliott_c@ociweb.com>
 

@@ -74,6 +74,9 @@ sub Run ($)
     elsif(lc $compiler eq "acc"){
         system("aCC -V"); 
     }
+    elsif(lc $compiler eq "mipspro"){
+        system("CC -version");
+    }
     elsif($compiler =~ m/^(ecc|icc)/){
         system($compiler." -V 2>&1");
     }
