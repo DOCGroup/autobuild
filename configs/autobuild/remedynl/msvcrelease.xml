@@ -37,7 +37,7 @@
 
     <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
 
-    <command name="generate_workspace" options="-exclude ASNMP -recurse -make_coexistence -type vc6" /> 
+    <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -recurse -make_coexistence -type vc6" /> 
 
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -CORE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -ACE -u -k" />
