@@ -1,3 +1,8 @@
+Tue Feb 11 15:45:57 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* command/generate_workspace.pm: Changed to work from $ACE_ROOT
+	  when generating workspaces.
+
 Tue Feb 11 14:07:00 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/nirvana/VC7_Core.xml: Temporarily removed

@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     if (!-r $root || !-d $root) {
         print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
@@ -50,6 +50,7 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
@@ -61,8 +62,20 @@ sub Run ($)
     my $current_dir = getcwd ();
 
     if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
+          print STDERR __FILE__, ": Cannot change to $root\n";
+          return 0;
+    }
+
+    if (!chdir $ENV{'ACE_ROOT'} )
+    {
+        if (!defined $project_root) {
+            $project_root = 'ACE_wrappers';
+        }
+
+        if (!chdir $project_root) {
+            print STDERR __FILE__, ": Cannot change to $project_root or $ENV{'ACE_ROOT'}\n";
+            return 0;
+        }
     }
 
     # If dirs=a[,b...] given, extract the dirs, then remove them from
@@ -74,7 +87,7 @@ sub Run ($)
         $options =~ s/dirs=$dirs//;
     }
 
-    my $command = "perl $root/bin/mwc.pl $options";
+    my $command = "perl bin/mwc.pl $options";
 
 # The idea here is to do a find at the specified dirs looking for .mwc files
 # and run mwc on each. For now, all the mwc files have to be specified
