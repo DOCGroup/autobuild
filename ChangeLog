@@ -1,3 +1,8 @@
+Wed Jan 26 09:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new Irix build that is being setup
+
 Tue Jan 25 11:05:31 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
@@ -8,8 +13,8 @@ Sun Jan 23 08:21:54 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* autobuild.pl:
 
-	  Added cvsgrab to the llist of thingies. 
-	
+	  Added cvsgrab to the llist of thingies.
+
 	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
 
 	  Set debug=0
