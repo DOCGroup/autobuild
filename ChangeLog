@@ -1,3 +1,23 @@
+Fri Jul 26 13:24:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*.XML:
+          Improved environment variables and settings for the builds
+
+        * configs/autobuild/remedynl/dobuildpc1.bat:
+        * configs/autobuild/remedynl/dobuildpc2.bat:
+        * configs/autobuild/remedynl/driverbuildpc1.bat:
+        * configs/autobuild/remedynl/driverbuildpc2.bat:
+          Added these batch files. The scheduling of time triggered tasks
+          on our WinNT4 boxes isn't stable and really good fail safe.
+          Because the boxes only do builds I have added these batch files.
+          The driverbuildpc# batch files start the correct builds, the
+          dobuildpc# batch file trigger the build batch file. This way we
+          can easily upgrade the driverbuildpc# batch file and when all
+          builds are ready, the cvs update will automatically use the new
+          build settings. This also gives us the change to do much more
+          different builds on build pc1 because it has at least 20 hours of
+          compile time left.
+
 Thu Jul 25 22:56:13 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml: Added the new build to the
@@ -6,7 +26,7 @@ Thu Jul 25 22:56:13 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 Thu Jul 25 22:20:44 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/beguine/driver_explicit.sh: 
+	* configs/autobuild/beguine/driver_explicit.sh:
 	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Yest
 	  another build on beguine.
 
@@ -15,7 +35,7 @@ Thu Jul 25 22:20:44 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 	* command/printaceconfig.pm: Print the contents of
 	  $ACE_ROOT/VERSION and $TAO_ROOT/VERSION.  This is useful
 	  when using the autobuild scripts to build a project
-	  which uses ACE/TAO, but is not ACE/TAO itself. 
+	  which uses ACE/TAO, but is not ACE/TAO itself.
 
 2002-07-24  Johnny Willemsen  <jwillemsen@remedy.nl>
 

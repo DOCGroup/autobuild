@@ -1,25 +1,27 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="D:\ACE_wrappers" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;c:\progra~\borland\cbuild~1\projects\bpl;D:\ACE_wrappers\bin\Static\Debug;D:\ACE_wrappers\bin\Static\Release;" type="prefix" />
+        <environment name="ACE_ROOT"     value="D:\ACE_wrappers" />
+        <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
+        <environment name="CVS_RSH"      value="plink" />
+        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;c:\progra~\borland\cbuild~1\projects\bpl;D:\ACE_wrappers\bin\Static\Debug;D:\ACE_wrappers\bin\Static\Release;d:\putty" type="prefix" />
 
-	<environment name="BUILD"  value="nightlybuild" />
+	<environment name="BUILD"  value="all" />
 	<environment name="DEBUG"  value="1" />
-	<environment name="STATIC"  value="1" />
-	<environment name="BCBVER"  value="5" />
+	<environment name="STATIC" value="1" />
+	<environment name="BCBVER" value="5" />
 
-        <variable name="root"     value="D:\" />
-	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="D:\" />
-        <variable name="name"     value="WinNT4 BCB5 Static" />
+        <variable name="root"      value="D:\" />
+	<variable name="log_file"  value="log.txt" />
+        <variable name="log_root"  value="D:\" />
+        <variable name="name"      value="WinNT4 BCB5 Static" />
     </configuration>
 
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"         options=" -i -f Makefile.bor realclean" />
+    <command name="make"              options=" -i -f Makefile.bor realclean dir=TAO" />
 
     <command name="log"               options="ON" />
 
@@ -29,7 +31,7 @@
 
     <command name="print_ace_config" />
 
-    <command name="make"         options=" -i -f Makefile.bor all" />
+    <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
