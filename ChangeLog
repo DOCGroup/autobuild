@@ -1,3 +1,13 @@
+Wed Nov  3 13:24:23 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/auto_run_tests.pm:
+
+          Added the framework for adding internal options to the
+          auto_run_tests module and added a new option called -envmod.  This
+          option will allow the user to modify the environment prior to
+          running the tests and, as a side effect, for any command subsequent
+          to this.
+
 Wed Nov  3 14:42:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/eowyn_gcc.xml:

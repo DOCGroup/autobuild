@@ -18,7 +18,9 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $self = {'internal_options' => {'-envmod' => \&Handle_Envmod,
+                                      },
+               };
 
     bless ($self, $class);
     return $self;
@@ -53,6 +55,38 @@ sub Run ($)
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
 
+    # Pull out options meant for this module
+    my($next) = undef;
+    my($remainder) = '';
+    foreach my $part (grep(!/^\s*$/,
+                           split(/(\"[^\"]+\"|\'[^\']+\'|\s+)/, $options))) {
+      # This assumes that all internal options will take only
+      # one parameter.
+      if (defined $self->{'internal_options'}->{$part}) {
+        $next = $part;
+      }
+      else {
+        if (defined $next) {
+          # Handle the internal option
+          my($func) = $self->{'internal_options'}->{$next};
+          $self->$func($part);
+
+          # Undef these so they are not added to the options
+          # that get passed to the auto_run_test.pl script.
+          $part = undef;
+          $next = undef;
+        }
+      }
+
+      # If this wasn't an internal option or option parameter, put
+      # it in the remainder string.
+      if (defined $part && !defined $next) {
+        $remainder .= $part . ' ';
+      }
+    }
+    $options = $remainder;
+    $options =~ s/\s+$//;
+
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
@@ -85,7 +119,7 @@ sub Run ($)
     }
 
     my $dir;
- 
+
     if ($options =~ m/dir='([^']*)'/) {
         $dir = $1;
         $options =~ s/dir='$dir'//;
@@ -106,7 +140,7 @@ sub Run ($)
     if (defined $dir) {
         if (!chdir $dir) {
           print STDERR __FILE__, ": Cannot change to $dir\n";
-          return 0; 
+          return 0;
         }
     }
 
@@ -118,6 +152,17 @@ sub Run ($)
     chdir $current_dir;
 
     return 1;
+}
+
+##############################################################################
+
+sub Handle_Envmod {
+  my($self)  = shift;
+  my($value) = shift;
+
+  if ($value =~ /(\w+)=(.*)/) {
+    $ENV{$1} = $2;
+  }
 }
 
 ##############################################################################
