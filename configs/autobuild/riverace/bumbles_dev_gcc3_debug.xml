@@ -2,17 +2,17 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/export/home/shuston/ace/builds/ACE_wrappers-repository/build/gcc3_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/export/home/shuston/ace/builds/ACE_wrappers-repository/build/gcc3_debug/lib:/usr/local/lib:/usr/local/ssl/lib:/usr/lib" />
+        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers-repository/build/gcc3_debug" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/gcc3_debug/lib:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-        <environment name="MPC_ROOT"        value="/export/home/shuston/ace/builds/MPC" />
+        <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
 
-        <variable name="root"         value="/export/home/shuston/ace/builds" />
+        <variable name="root"         value="/acebuilds" />
         <variable name="build_name"   value="gcc3_debug" />
-        <variable name="project_root" value="/export/home/shuston/ace/builds/ACE_wrappers-repository/build/gcc3_debug" />
+        <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/gcc3_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/gcc3_debug.txt" />
-        <variable name="log_root"     value="/jane/acebuilds/logs/heidi/dev/gcc3_debug" />
+        <variable name="log_root"     value="/jane/acebuilds/logs/bumbles/dev/gcc3_debug" />
 
     </configuration>
 
@@ -29,7 +29,6 @@
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/gcc3_debug/.disable" />
-
     <command name="create_ace_build"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/.disable output='RUNNING'" />
 
@@ -38,10 +37,10 @@
     <command name="shell"             options="find ACE_wrappers-repository/build/gcc3_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /export/home/shuston/ace/builds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/export/home/shuston/ace/builds/ACE_wrappers-repository/build/gcc3_debug -type gnuace -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/gcc3_debug -type gnuace -hierarchy -make_coexistence" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/include/makeinclude/platform_macros.GNU output='ssl=1\ndebug=1\nPLATFORM_SSL_CPPFLAGS=-I/usr/local/ssl/include\nPLATFORM_SSL_LIBS=-lssl -lcrypto\nPLATFORM_SSL_LDFLAGS=-L/usr/local/ssl/lib\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_gcc.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />

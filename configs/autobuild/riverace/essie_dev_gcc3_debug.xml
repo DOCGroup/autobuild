@@ -2,47 +2,58 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/space/ace/builds/ACE_wrappers/build/gcc3_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/space/ace/builds/ACE_wrappers/build/gcc3_debug/ace:/usr/local/lib:/usr/local/ssl/lib:/usr/lib" />
+        <environment name="ACE_ROOT"        value="/space/ace/builds/ACE_wrappers-repository/build/gcc3_debug" />
+        <environment name="LD_LIBRARY_PATH" value="/space/ace/builds/ACE_wrappers-repository/build/gcc3_debug/ace:/usr/local/lib:/usr/local/ssl/lib:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
+        <environment name="MPC_ROOT"        value="/space/ace/builds/MPC" />
 
-        <variable name="root"         value="/space/ace/builds/ACE_wrappers" />
+        <variable name="root"         value="/space/ace/builds" />
         <variable name="build_name"   value="gcc3_debug" />
-        <variable name="project_root" value="build/gcc3_debug" />
-        <variable name="log_file"     value="gcc3_debug.txt" />
+        <variable name="project_root" value="/space/ace/builds/ACE_wrappers-repository/build/gcc3_debug" />
+        <variable name="log_file"     value="ACE_wrappers-repository/gcc3_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/essie/dev/gcc3_debug" />
         <variable name="configs"      value="Exceptions" />
 
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/.disable" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 3 -q update -P -d ." />
+    <command name="make"              options="-k reverseclean" />
 
-    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="cvs"               options="checkout -P MPC" />
+    <command name="cvs"               options="checkout -P ACE" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=build/gcc3_debug/.disable" />
-    <command name="create_ace_build_legacy"  options="-a -v" />
-    <command name="file_manipulation" options="type=create file=build/gcc3_debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repsitory/.disable" />
 
-    <command name="file_manipulation" options="type=create file=build/gcc3_debug/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/gcc3_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\n'" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/gcc3_debug/.disable" />
+
+    <command name="create_ace_build"  options="-a -v" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/.disable output='RUNNING'" />
+
+    <!-- Delete the build's Makefiles before regenerating them. -->
+    <command name="shell"             options="find ACE_wrappers-repository/build/gcc3_debug -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers-repository/build/gcc3_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='qos=1\n'" />
+    <command name="generate_workspace" options="-feature_file /space/ace/builds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/space/ace/builds/ACE_wrappers-repository/build/gcc3_debug -type gnuace -hierarchy -make_coexistence" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k realclean" />
     <command name="make"              options="-j 2 -k" />
 
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=build/gcc3_debug/.disable" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/build/gcc3_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>

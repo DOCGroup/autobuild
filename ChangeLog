@@ -1,3 +1,22 @@
+Mon May  3 17:39:22 2004  Steve Huston  <shuston@riverace.com>
+
+	* command/configure.pm: Changed to chdir $project_root before
+	  trying to make and/or delete the build directory.
+
+	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/charlie_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+	* configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/jane_dev_debug.xml:
+	  Converted builds to MPC.
+
 Mon May  3 11:52:31 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Removed the Redhat Linux 7 builds.

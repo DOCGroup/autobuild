@@ -90,6 +90,11 @@ sub Run ($)
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
+    
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
+        return 0;
+    }
 
     my $build_path = "build/" . "$build_name";
     if (!-r $build_path || !-d $build_path) {
@@ -110,7 +115,7 @@ sub Run ($)
         return 0;
     }
 
-    my $command = File::Spec->abs2rel($root) . "/configure $options";
+    my $command = File::Spec->abs2rel($project_root) . "/configure $options";
 
     print "Running: $command\n";
 
