@@ -1,3 +1,13 @@
+Mon Aug 29 15:20:11 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml:
+
+	  Zapped "-fstack-check" option from CCFLAGS until we get a better
+	  understanding of its utility.
+
+	  Reenabled optimization with "-O" flag instead of the "-O3"
+	  flag.  No need to go all out for an automated build.
+
 Mon Aug 26 12:02:11 2002 Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/valinor/Full.xml:
