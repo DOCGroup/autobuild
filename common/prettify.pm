@@ -834,6 +834,9 @@ sub Compile_Handler ($)
         # have the word 'error' in the symbol name - ignore those.
         $self->Output_Normal ($s);
     }
+    elsif ($s =~ m/\.depend\..*:\s+no\s+such\s+file/i) {
+      $self->Output_Normal ($s);
+    }
     elsif ($s =~ m/is dangerous, better use/) {
         # Linux has this annoying mktemp, mkstemp stuff. Ignore that
         # for the timebeing

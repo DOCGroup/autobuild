@@ -1,3 +1,10 @@
+Wed Aug  6 15:05:00 2003  Dan Troesser  <troesser_d@ociweb.com>
+
+        * scoreboard.pl
+        * common/prettify.pm:
+
+          Added Failures column to scoreboard
+
 Wed Aug  6 14:11:29 2003  Justin Michel  <michel_j@ociweb.com>
 
         * command/auto_run_tests.pm:
