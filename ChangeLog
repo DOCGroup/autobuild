@@ -1,3 +1,11 @@
+Wed Aug 18 23:56:43 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* common/prettify.pm (Compile_Handler):
+
+	  Do not flag an 'extern "C"' related warning in the OpenSSL
+	  headers as a warning in the scoreboard log.  The problem lies in
+	  the OpenSSL headers, not ACE/TAO/CIAO.
+
 Wed Aug 18 13:40:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
 
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_Tests_DocGroup.xml

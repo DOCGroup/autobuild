@@ -807,7 +807,7 @@ sub Setup_Handler ($)
         $self->Output_Error ($s);
     }
     elsif ($s =~ /^M / ||
-           $s =~ m/WARNING/) 
+           $s =~ m/WARNING/)
     {
         $self->Output_Warning ($s);
     }
@@ -956,10 +956,18 @@ sub Compile_Handler ($)
         $self->Output_Normal ($s);
     }
     elsif ($s =~ m/in call to __pthread_cleanup_push\(extern/) {
-        # SUN CC 5.0 defines __pthread_cleanup_push as a macro which causes
-        # warnings. See /usr/include/pthread.h and
-        # $ACE_ROOT/examples/Timer_Queue/Thread_Timer_Queue_Test.cpp for more
-        # information.
+        # Solaris 8 defines __pthread_cleanup_push as a macro which
+        # causes warnings. See /usr/include/pthread.h and
+        # $ACE_ROOT/examples/Timer_Queue/Thread_Timer_Queue_Test.cpp
+        # for more information.
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/in call to ASN1_dup\(extern/) {
+        # Sun CC 5.x flags a warning regarding a problem in the
+        # OpenSSL headers where the ASN1_dup() function expects an
+        # extern "C" int(*)() function for its first parameter but a
+        # non-extern "C" int(*)() function is passed in instead.  This
+        # is a problem with the OpenSSL headers, not ACE/TAO/CIAO.
         $self->Output_Normal ($s);
     }
     elsif ( $s =~ m/^make.*\*\*\*/ ) {
