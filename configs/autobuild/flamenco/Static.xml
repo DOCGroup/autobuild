@@ -32,7 +32,7 @@
     <command name="print_ace_config" />
 
     <!-- ACE -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- TAO -->
     <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
 

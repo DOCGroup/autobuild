@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/project/builds/isisbuilds/CP_Metrics/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/project/builds/isisbuilds/CP_Metrics/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/project/builds/isisbuilds/CP_Metrics/ACE_wrappers/ace" />
+        <environment name="LD_LIBRARY_PATH" value="/project/builds/isisbuilds/CP_Metrics/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
@@ -19,6 +19,9 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
@@ -29,7 +32,7 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
