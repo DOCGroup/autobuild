@@ -6,7 +6,7 @@
 PATH=/usr/local/bin:$PATH
 export PATH
 
-LD_LIBRARY_PATH=/usr/local/bin:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
