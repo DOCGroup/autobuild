@@ -9,3 +9,6 @@ perl D:\ACE\autobuild\autobuild.pl BCB6DynamicDebugUnicodeMbg.xml
 perl D:\ACE\autobuild\autobuild.pl BCB6DynamicRelease.xml
 perl D:\ACE\autobuild\autobuild.pl BCB6DynamicReleaseUnicodeMbg.xml
 perl D:\ACE\autobuild\autobuild.pl MingW.xml
+perl D:\ACE\autobuild\autobuild.pl BCB6StaticRelease.xml
+perl D:\ACE\autobuild\autobuild.pl BCB6DynamicDebugMbg.xml
+
