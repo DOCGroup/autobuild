@@ -34,5 +34,4 @@
     <command name="shell"             options="pscp  ACE_wrappers\TAO\CIAO\bin\cidlc.exe isisbuilds@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32" />
     <command name="shell"             options="pscp  *.txt isisbuilds@tao.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/Win32_CIDLC" />
     <command name="shell"             options="pscp  *.html isisbuilds@tao.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/Win32_CIDLC" />
-    <command name="shell"             options="del *.html *.txt" />
 </autobuild>
