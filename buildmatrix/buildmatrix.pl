@@ -156,7 +156,7 @@ sub add_results($$) {
      qr{^-+\sRebuild\s.*\sstarted:\sProject:\s(\S+),\s}x,
 
      # This one matches BCB6 and CBuilderX builds
-     qr{make.*\s-f\s(\S+).bor\s}x,
+     qr{make.*\s-f\s(\S+).(bor|bmak)\s}x,
 
      # This one matches MSVC builds with nmake!
      qr{nmake\s.*/[fF]\s+(\S+).mak\s}x,
