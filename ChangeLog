@@ -1,3 +1,19 @@
+Tue Dec  7 18:53:22 2004  Steve Huston  <shuston@riverace.com>
+
+	* command/auto_run_tests.pm: If the variable automake_build is set,
+	  this command runs the tests via "make check" instead of directly
+	  executing auto_run_tests.pl. "make check" knows how to find all the
+	  scripts and insures that defined test programs are built before
+	  trying to execute them.
+
+	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	* configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+	  Changed the tests part to use the new "make check" feature, above.
+
 Wed Dec  1 10:21:39 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:

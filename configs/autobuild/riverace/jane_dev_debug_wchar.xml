@@ -38,7 +38,7 @@
     <command name="shell"             options="find ACE_wrappers-repository/build/debug_wchar -name 'Makefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers-repository/build/debug_wchar -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\nuses_wchar=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/debug_wchar -type gnuace" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug_wchar/ace/config.h output='#define ACE_USES_WCHAR\n#include \x22ace/config-linux.h\x22\n'" />

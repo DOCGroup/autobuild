@@ -16,6 +16,7 @@
         <variable name="log_file"     value="autoconf_mpc_forte7_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/essie/dev/autoconf_mpc_forte7_debug" />
         <variable name="configs"      value="Exceptions" />
+        <variable name="automake_build" value="yes" />
 
     </configuration>
 
@@ -44,7 +45,7 @@
     <command name="configure"         options="CXX=CC --preclean" />
     <command name="make"              options="dir=build/autoconf_mpc_forte7_debug -j 2 -k" />
 
-    <command name="auto_run_tests"    options="dir=build/autoconf_mpc_forte7_debug -a" />
+    <command name="auto_run_tests"    options="dir=build/autoconf_mpc_forte7_debug" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
