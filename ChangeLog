@@ -1,3 +1,12 @@
+Fri May  7 23:40:38 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/driver.sh (SSL_EGD_FILE):
+
+	  Explicitly set this environment variable to the location of the
+	  entropy gathering daemon (EGD) UNIX domain socket set earlier in
+	  this script.  An entropy source for OpenSSL must be explicitly
+	  set on Solaris.
+
 Fri May  7 23:28:00 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC55.xml:

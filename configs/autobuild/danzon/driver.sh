@@ -11,6 +11,10 @@ export PATH
 ENTROPY_FILE=/tmp/entropy
 test -f $ENTROPY_FILE || /project/doc/pkg/perl5/bin/egd.pl $ENTROPY_FILE
 
+# ACE_SSL recognizes the "SSL_EGD_FILE" environment variable.
+SSL_EGD_FILE=$ENTROPY_FILE
+export SSL_EGD_FILE
+
 exec /pkg/perl-5.6.1/bin/perl $HOME/autobuild/autobuild.pl \
                              $HOME/autobuild/configs/autobuild/danzon/SunOS_SunCC55.xml 2>&1 
 
