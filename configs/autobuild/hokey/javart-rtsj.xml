@@ -1,0 +1,34 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="LD_LIBRARY_PATH" value="/docpkg/rtsj/lib:/export/home/bugzilla/javart/brutil/timing" />
+        <environment name="JAVART_HOME"     value="/export/home/bugzilla/javart" />
+        <environment name="JAVART_ROOT"     value="/export/home/bugzilla/javart" />
+        <environment name="PATH"            value="/docpkg/rtsj/bin:/docpkg/jikes/bin:/docpkg/java/bin" />
+        <environment name="CLASSPATH"       value="/docpkg/JLex:/docpkg/java/jre/lib/rt.jar:.:/docpkg/java_cup:/docpkg/java/jre/lib/rt.jar:/docpkg/JLex/:/export/home/bugzilla/javart/classes:../..:../../..:." />
+
+        <variable name="root"               value="/export/home/bugzilla/" />
+        <variable name="project_root"       value="javart" />
+        <variable name="log_file"           value="build.txt" />
+        <variable name="log_root"           value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_javart" />
+        <variable name="configs"            value="Linux" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+    <command name="cvs"               options="-z 3 -q checkout -P javart" />
+
+    <command name="make"              options="realclean" />
+    <command name="make"              options="" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
