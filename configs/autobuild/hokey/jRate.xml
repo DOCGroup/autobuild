@@ -8,11 +8,11 @@
 	<environment name="JRATE_HOME"      value="/export/home/bugzilla/jRate" />
         <environment name="JRATE_GCC_HOME"  value="/export/home/bugzilla/jRate-gcc"/>
         <environment name="JRATE_GCC_SRC_HOME" value="/export/home/bugzilla/jRateGCC" />
-        <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/jRate/lib:/export/home/bugzilla/jRateGCC/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/jRate-gcc/lib:/export/home/bugzilla/jRate/lib:/export/home/bugzilla/jRateGCC/lib" />
         <environment name="ANT_HOME"        value="/docpkg/jakarta-ant-1.5" />
         <environment name="CLASSPATH"       value="/docpkg/jakarta-ant-1.5/lib/ant.jar:/docpkg/jakarta-ant-1.5/lib/ant-optional.jar:." />
         <environment name="JAVA_HOME"       value="/docpkg/java_1.4.0" />
-        <environment name="PATH"            value="/docpkg/jikes-1.15/bin:/docpkg/java_1.4.0/bin:/docpkg/jakarta-ant-1.5/bin:/export/home/bugzilla/jRate/bin:.:/bin:/usr/bin" />
+        <environment name="PATH"            value="/export/home/bugzilla/jRate-gcc/bin:/docpkg/jikes-1.15/bin:/docpkg/java_1.4.0/bin:/docpkg/jakarta-ant-1.5/bin:/export/home/bugzilla/jRate/bin:.:/bin:/usr/bin" />
 
         <variable name="root"     value="/export/home/bugzilla" />
         <variable name="log_file" value="build.txt" />
@@ -26,6 +26,7 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P jRate" />
+    <command name="shell"             options="/bin/csh -c 'cd /export/home/bugzilla && ./setup.jRate'" />
 
     <command name="make"              options="-C jRate jRate-gcc-cvs" />
 
