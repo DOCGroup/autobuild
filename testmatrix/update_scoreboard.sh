@@ -10,6 +10,9 @@ LOG_DIR="/project/taotmp/scoreboard/html"
 # location of the autobuild directory
 AUTOBUILD_DIR="$HOME/autobuild"
 TEST_MATRIX_DIR="$AUTOBUILD_DIR/testmatrix"
+# Location of database scripts directory
+DB_SCRIPT_DIRECTORY="$AUTOBUILD_DIR/matrix_database"
+
 
 # name of the file used to prevent running the update at the same time
 TEST_MATRIX_PROTECTION_FILE="$TEST_MATRIX_DIR/MATRIX_UNDER_CONSTRUCTION"
@@ -74,7 +77,7 @@ function update_local_scoreboard()
   cp -f matrix.css $LOG_DIR/matrix.css
 
   # update the list of db files
-  ./RemoveAndListDbFiles.sh
+  $DB_SCRIPT_DIRECTORY/RemoveAndListTestDbFiles.sh
 }
 
 
