@@ -2,10 +2,10 @@
 <scoreboard>
 <preamble>
 <center><h1>ACE Beta/Release Candidate Scoreboard</h1></center>
-<hr>
+<hr/>
 This is the ACE virtual scoreboard for the beta or release. It shows
 all the OS/platform combinations ACE is tested everyday.
-<hr>
+<hr/>
 </preamble>
 
 <group>
