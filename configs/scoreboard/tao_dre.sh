@@ -25,4 +25,5 @@ exec /usr/bin/perl ./scoreboard.pl -d /project/taotmp/scoreboard/html -f $HOME/a
 exec /usr/bin/perl ./scoreboard.pl -d /project/taotmp/scoreboard/html -z 2>&1;
 
 # Generate the test matrices!
-$HOME/autobuild/update_scoreboard.sh
+$HOME/autobuild/testmatrix/update_scoreboard.sh 2>&1;
+
