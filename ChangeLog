@@ -1,3 +1,9 @@
+Fri May  7 10:23:06 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/log.pm:
+
+          Added the ability to "pause" logging.
+
 Fri May  7 12:49:33 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Debian_Core.xml:
@@ -55,98 +61,98 @@ Fri May  7 08:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu May  6 17:36:56 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* command/check_compiler.pm (Run):
+        * command/check_compiler.pm (Run):
 
-	  Improved regex to catch GNU C++ compilers with names like
-	  "g++-3.4" and "g++296", which is not uncommon on hosts with
-	  multiple versions of the same compiler.
+          Improved regex to catch GNU C++ compilers with names like
+          "g++-3.4" and "g++296", which is not uncommon on hosts with
+          multiple versions of the same compiler.
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Removed compiler path from the "check_compiler" command.
-	  `check_compiler.pm' doesn't recognize paths.
+          Removed compiler path from the "check_compiler" command.
+          `check_compiler.pm' doesn't recognize paths.
 
 Thu May  6 17:11:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* common/prettify.pm (Compile_Handler):
+        * common/prettify.pm (Compile_Handler):
 
-	  Corrected regex for the "is deprecated" case.  Some deprecation
-	  warnings were not flagged.
+          Corrected regex for the "is deprecated" case.  Some deprecation
+          warnings were not flagged.
 
 Wed May  5 23:09:45 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
-	* configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
 
-	  Moved "make reverseclean" command after the "generate_workspace"
-	  command.  Fixes a "no rule tomake target `reverseclean'" build
-	  error.
+          Moved "make reverseclean" command after the "generate_workspace"
+          command.  Fixes a "no rule tomake target `reverseclean'" build
+          error.
 
-	* configs/autobuild/dresystems/mpc_test.xml:
-	* configs/autobuild/dresystems/mpc_test_tao.xml:
-	* configs/autobuild/flamenco/Static.xml:
-	* configs/autobuild/maglor/Static.xml:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+        * configs/autobuild/flamenco/Static.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
 
-	  Added missing MPC workspace generation command.  Addresses "no
-	  rule to make ..." build errors.
+          Added missing MPC workspace generation command.  Addresses "no
+          rule to make ..." build errors.
 
 Wed May  5 15:26:43 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
-	  Added QTDIR for the QT moc compiler to work.
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+          Added QTDIR for the QT moc compiler to work.
 
 Wed May  5 11:40:54 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
-	  Delete all the Makefiles before running MPC.
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+          Delete all the Makefiles before running MPC.
 
 Wed May  5 09:27:31 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Corrected path to G++ 3.4 compiler in "check_compiler" command.
+          Corrected path to G++ 3.4 compiler in "check_compiler" command.
 
-	* configs/scoreboard/index.xml:
+        * configs/scoreboard/index.xml:
 
-	  Minor cosmetic changes.
+          Minor cosmetic changes.
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Removed UCI "Debian_Full_Reactors" build from the scoreboard due
-	  to lack of support from sponsor.
+          Removed UCI "Debian_Full_Reactors" build from the scoreboard due
+          to lack of support from sponsor.
 
 Wed May  5 11:41:39 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
- 	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
- 	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml: Fixed the
-	  SSL_ROOT stuff, something that changed when switching to MPC.
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml: Fixed the
+          SSL_ROOT stuff, something that changed when switching to MPC.
 
 Tue May  4 15:08:29 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
           Build CCF and CIDLC first before build CIAO.
-	  To build CIDL
-	  1. we also need to set cidl=1 in default.features.
+          To build CIDL
+          1. we also need to set cidl=1 in default.features.
           2. CIAO_ROOT needs to be set.
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/lindy_isis/Static.xml:
-	* configs/autobuild/balar_isis/wchar.xml:
-	* configs/autobuild/balar_isis/Static.xml:
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	  These autobuilds get CIDL compiler(binary) from CVS.
-	  Note: This is only a temporary solution for linux machines.
-	  The extra requriement for this to work is: bunzip2.
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+          These autobuilds get CIDL compiler(binary) from CVS.
+          Note: This is only a temporary solution for linux machines.
+          The extra requriement for this to work is: bunzip2.
 
 Tue May  4 16:53:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
         * configs/autobuild/remedynl/GCC32.xml:
         * configs/autobuild/remedynl/SunForte.xml:
         * configs/autobuild/remedynl/GCC64AXP.xml:
@@ -154,98 +160,98 @@ Tue May  4 16:53:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon May  3 17:39:22 2004  Steve Huston  <shuston@riverace.com>
 
-	* command/configure.pm: Changed to chdir $project_root before
-	  trying to make and/or delete the build directory.
+        * command/configure.pm: Changed to chdir $project_root before
+          trying to make and/or delete the build directory.
 
-	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/charlie_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
-	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
-	* configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
-	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/jane_dev_debug.xml:
-	  Converted builds to MPC.
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+          Converted builds to MPC.
 
 Mon May  3 11:52:31 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Removed the Redhat Linux 7 builds.
-	  Riverace isn't supporting ACE on Red Hat Linux 7, 8, or 9 past
-	  ACE 5.4.
+        * configs/scoreboard/ace.xml: Removed the Redhat Linux 7 builds.
+          Riverace isn't supporting ACE on Red Hat Linux 7, 8, or 9 past
+          ACE 5.4.
 
 Fri Apr 30 08:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/ace_future.xml:
         Added OpenVMS ACE build. This will be updated manually so
         sometimes it can be old.
 
 Thu Apr 29 19:35:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	* configs/autobuild/atl/2.6.0.test7-lksctp.xml:
-	* configs/autobuild/atl/2.6.0.test7.xml:
-	* configs/autobuild/balar/Debian_Core.xml:
-	* configs/autobuild/balar/Debian_Minimum.xml:
-	* configs/autobuild/balar_isis/DynamicHash.xml:
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	* configs/autobuild/balar_isis/Static.xml:
-	* configs/autobuild/balar_isis/wchar.xml:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
-	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
-	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
-	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
-	* configs/autobuild/cuni/hitotsu_icc70_doc.xml:
-	* configs/autobuild/cuni/hitotsu_icc70_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
-	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
-	* configs/autobuild/jmz/Mac_OSX_Jaguar.xml:
-	* configs/autobuild/jmz/Mac_OSX_Panther.xml:
-	* configs/autobuild/lindy_isis/Static.xml:
-	* configs/autobuild/maglor/Static.xml:
-	* configs/autobuild/prism/HPUX11_ACC339_Full.xml:
-	* configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
-	* configs/autobuild/slytherin/OpenBSD_Core.xml:
-	* configs/autobuild/slytherin/OpenBSD_Full.xml:
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
-	* configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+        * configs/autobuild/balar/Debian_Core.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_doc.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+        * configs/autobuild/jmz/Mac_OSX_Jaguar.xml:
+        * configs/autobuild/jmz/Mac_OSX_Panther.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/valinor/Full.xml:
 
-	  Converted these builds to use MPC.
+          Converted these builds to use MPC.
 
 Thu Apr 29 20:26:28 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
-	* configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
 
-	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
 
-	* configs/autobuild/balar_isis/wchar.xml:
-	* configs/autobuild/balar_isis/Static.xml:
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
 
-	* configs/autobuild/balar_isis/DynamicHash.xml:
-	  These builds use MPC now.
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+          These builds use MPC now.
 
 Thu Apr 29 12:44:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -284,49 +290,49 @@ Thu Apr 29 06:58:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Apr 28 15:51:39 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/jane_dev_debug.xml: Converted to check out
-	  only ACE and MPC, not all of TAO as well, and use MPC to generate
-	  the gnuace Makefiles.
+        * configs/autobuild/riverace/jane_dev_debug.xml: Converted to check out
+          only ACE and MPC, not all of TAO as well, and use MPC to generate
+          the gnuace Makefiles.
 
 Mon Apr 26 12:31:28 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/scoreboard/index.xml:
+        * configs/scoreboard/index.xml:
 
-	  Corrected name of one of our build sponsors.  "Automated Trading
-	  Desk", not "Automatic Trading Desk".
+          Corrected name of one of our build sponsors.  "Automated Trading
+          Desk", not "Automatic Trading Desk".
 
 Mon Apr 26 12:26:51 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Added missing "</build>" ending tag to SunOS_FORTE_UP_1 build
-	  entry.  This should address a problem where corresponding HTML
-	  for this XML was not generated correctly.
+          Added missing "</build>" ending tag to SunOS_FORTE_UP_1 build
+          entry.  This should address a problem where corresponding HTML
+          for this XML was not generated correctly.
 
 Mon Apr 26 12:16:36 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* common/integratedparser.pm:
-	* common/scoreparser.pm:
+        * common/integratedparser.pm:
+        * common/scoreparser.pm:
 
-	  Nuked trailing whitespace.
+          Nuked trailing whitespace.
 
 Mon Apr 26 12:00:05 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* scoreboard.pl:
+        * scoreboard.pl:
 
-	  Nuked trailing whitespace.
+          Nuked trailing whitespace.
 
-	* configs/scoreboard/ace.xml:
-	* configs/scoreboard/ace_future.xml:
-	* configs/scoreboard/misc.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/misc.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added missing RCS ID.
+          Added missing RCS ID.
 
-	* configs/scoreboard/index.xml:
-	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/index.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Removed builds and sponsors that no longer exist.
+          Removed builds and sponsors that no longer exist.
 
 Mon Apr 26 14:25:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -352,22 +358,22 @@ Sun Apr 25 14:24:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Apr 23 17:56:22 2004  Steve Huston  <shuston@riverace.com>
 
-	* command/shell.pm: Added \n to line that logs the shell command.
+        * command/shell.pm: Added \n to line that logs the shell command.
 
-	* ChangeLog: Converted file back to proper line-termination format.
+        * ChangeLog: Converted file back to proper line-termination format.
 
 Fri Apr 23 14:50:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/BCB6CodeGuard.xml:
+        * configs/autobuild/remedynl/BCB6CodeGuard.xml:
           Added Codeguard to the configs so that we look for codeguard
           logs when having run the tests.
 
 Thu Apr 22 16:11:08 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Changed argument to "check_compiler" command to match the
-	  compiler used in this build (currently "g++-3.4").
+          Changed argument to "check_compiler" command to match the
+          compiler used in this build (currently "g++-3.4").
 
 Thu Apr 22 12:59:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -382,48 +388,48 @@ Thu Apr 22 12:59:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Apr 22 10:06:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/ace_future.xml:
-	* configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/ace.xml:
           Moved vc8 preview from future to normal scoreboard. Some new
           warnings where we should have a look at.
 
 Thu Apr 22 08:40:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace.xml:
           Removed MinGW Debug build
 
 Wed Apr 21 13:11:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/ace_future.xml:
           Added VC8 preview
 
 Wed Apr 21 06:34:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/tao/Borland.xml:
-	* configs/autobuild/tao/Borland_wchar.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_wchar.xml:
           Removed usage of -ExeSubDir from running the tests, the executables
           are stored now on the same place as with other compilers.
 
 Mon Apr 19 08:47:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
           Added MinGW TAO build
 
 Sun Apr 18 22:08:21 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
-	  Update the scoreboard xml for lindy.
+        * configs/scoreboard/tao.xml:
+          Update the scoreboard xml for lindy.
 
 Sun Apr 18 21:02:38 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
-	* configs/autobuild/lindy_isis/driver_static.sh
-	  lindy.dre.vanderbilt.edu runs static build with gcc-3.4 now.
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/driver_static.sh
+          lindy.dre.vanderbilt.edu runs static build with gcc-3.4 now.
 
 
 Sat Apr 17 12:44:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/tru64.xml:
+        * configs/autobuild/remedynl/tru64.xml:
           Enabled running of all the tests
 
 Wed Apr 14 06:58:26 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
@@ -440,10 +446,10 @@ Wed Apr 14 08:36:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Apr 13 15:03:41 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
-	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
-	* configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
-	  Converted to use MPC.
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
+          Converted to use MPC.
 
 Tue Apr 13 07:01:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -575,7 +581,7 @@ Fri Apr  9 10:57:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
         * configs/autobuild/tao/Borland.xml:
         * configs/autobuild/tao/Borland_wchar.xml:
           Generate a default.features file needed for MPC and print make,
-	  linker and perl version in the config page of the build
+          linker and perl version in the config page of the build
 
 Fri Apr  9 10:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -593,7 +599,7 @@ Fri Apr  9 10:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
           name of a project, or remove a mpc file, cvs will not remove the
           generated files, so we don't want to risk the change that later we
           build an old file). Then we checkout all files and do a MPC
-	  generation and then the build again.
+          generation and then the build again.
 
 Fri Apr  9 09:52:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
