@@ -144,6 +144,7 @@ class Platform:
                       print "ERROR: db file parse failed.", self.name, self.raw_file, self.db_file
                       fh.close()
                       self.db_parse_error = 1
+                      break
                    name = splits[0]
                    passflag = string.atoi(splits[1])
                    time = string.atof(removeNewLine(splits[2]))
