@@ -1,3 +1,11 @@
+Mon Aug 26 16:24:47 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* autobuild.pl: Change occurences of things like:
+          " %command_table->{$command}" to "$command_table{$command}"
+	  to remove Perl 5.8 warning messages: 
+	  "Using a hash as a reference is deprecated".
+	  Thanks to Carlos <coryan@atdesk.com> for the Perl wisdom.
+
 Thu Aug 22 18:06:41 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Add RedHat_Static build.
@@ -59,7 +67,6 @@ Fri Aug 16 12:16:14 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	* configs/scoreboard/acetao.xml: Change RedHat_GCC_3.1.1 build
 	  to RedHat_GCC_3.2.
 
->>>>>>> 1.132
 Sun Aug 11 21:52:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/mail.pm: First cut at e-mail notification support under Windows,

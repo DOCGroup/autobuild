@@ -52,7 +52,7 @@ if (scalar @files == 0) {
 sub GetVariable ($)
 {
     my $varname = shift;
-    return %data->{VARS}->{$varname};
+    return $data{VARS}->{$varname};
 }
 
 sub RegisterCommand ($$)
@@ -60,12 +60,12 @@ sub RegisterCommand ($$)
     my $name = shift;
     my $obj = shift;
 
-    if (defined %command_table->{$name}) {
+    if (defined $command_table{$name}) {
         print STDERR "Command \"$name\" already defined\n";
         return 0;
     }
 
-    %command_table->{$name} = $obj;
+    $command_table{$name} = $obj;
     return 1;
 }
 
@@ -143,11 +143,11 @@ foreach my $file (@files) {
 
     ## Put the name of the file we are parsing into a global variable
     ## named BUILD_CONFIG_FILE. 
-    %data->{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename( $file );
+    $data{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename( $file );
 
     print "\nSetting Enviroment variables\n" if ($verbose);
     
-    foreach my $variable (@{%data->{ENVIRONMENT}}) {
+    foreach my $variable (@{$data{ENVIRONMENT}}) {
         print "Variable: ", $variable->{NAME}, "=", $variable->{VALUE}, "\n" if ($verbose);
         
         if ($variable->{TYPE} eq 'replace') {
@@ -167,22 +167,22 @@ foreach my $file (@files) {
 
     print "\nChecking Requirements\n" if ($verbose);
 
-    foreach my $command (@{%data->{COMMANDS}}) {
+    foreach my $command (@{$data{COMMANDS}}) {
         print "Command: ", $command->{NAME}, "\n" if ($verbose);
-        if (!defined %command_table->{$command->{NAME}}) {
+        if (!defined $command_table{$command->{NAME}}) {
             print STDERR "Unknown Command: $command->{NAME}\n";
             exit;
         }
-        if (%command_table->{$command->{NAME}}->CheckRequirements () == 0) {
+        if ($command_table{$command->{NAME}}->CheckRequirements () == 0) {
             exit;
         }
     }
 
     print "\nRunning Commands\n" if ($verbose);
 
-    foreach my $command (@{%data->{COMMANDS}}) {
+    foreach my $command (@{$data{COMMANDS}}) {
         print "Command: ", $command->{NAME}, "\n" if ($verbose);
-        if (%command_table->{$command->{NAME}}->Run ($command->{OPTIONS}) == 0) {
+        if ($command_table{$command->{NAME}}->Run ($command->{OPTIONS}) == 0) {
             last;
         }
     }
