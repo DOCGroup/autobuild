@@ -3,7 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers-repository/build/static_release" />
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/static_release/ace:/usr/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/static_release/lib:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
@@ -19,7 +19,7 @@
 
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/.disable" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repsitory/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
     <command name="make"              options="-k reverseclean" />
