@@ -1,3 +1,8 @@
+Mon Mar 17 14:33:59 2003  Steve Huston  <shuston@riverace.com>
+
+	* scoreboard.pl: Removed an unneeded, old comment; only set out_file
+	  if -o specified.
+
 Mon Mar 17 13:06:57 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao.bat: Removed the output file's path!
