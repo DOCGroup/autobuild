@@ -311,6 +311,12 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor>Washington University</build_sponsor>
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
+   <build>
+      <name>Solaris10-x86</name>
+      <url>http://www.atl.external.lmco.com/projects/QoS/buildlogs/Solaris10-x86</url>
+      <build_sponsor>Lockheed Martin Adv. Tech. Labs</build_sponsor>
+      <build_sponsor_url>http://www.atl.external.lmco.com/projects/QoS</build_sponsor_url>
+   </build>
 </group>
 
 <group>
