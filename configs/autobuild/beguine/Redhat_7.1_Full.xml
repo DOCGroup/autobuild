@@ -10,7 +10,7 @@
         <variable name="root"     value="/project/beguinetmp/bugzilla/Full_newbuild" />
         <variable name="sam_root" value="/project/beguinetmp/bugzilla/Full_newbuild/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/beguine_Redhat_7.1_Full_new" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/beguine_Redhat_7.1_Full" />
         <variable name="configs"  value="Linux" />
 
     </configuration>
