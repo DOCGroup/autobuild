@@ -110,9 +110,9 @@
 
     <command name="status"            options="off" />
 
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/Tru64/* -f" />
+    <command name="shell"             options="ssh johnnyw@naboo.dre.vanderbilt.edu rm /web/users/remedynl/Tru64/* -f" />
 
-    <command name="shell"             options="scp *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/Tru64" />
+    <command name="shell"             options="scp *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Tru64" />
 
 </autobuild>
 

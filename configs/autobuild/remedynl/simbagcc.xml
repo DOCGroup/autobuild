@@ -105,9 +105,9 @@
 
     <command name="status"            options="off" />
 
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/hpuxtaogcc/* -f" />
+    <command name="shell"             options="ssh johnnyw@naboo.dre.vanderbilt.edu rm /web/users/remedynl/hpuxtaogcc/* -f" />
 
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/hpuxtaogcc" />
+    <command name="shell"             options="scp -C *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/hpuxtaogcc" />
 
 </autobuild>
 

@@ -27,7 +27,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\nssl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nssl=1\n'" />
 
-    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -55,5 +55,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_x86_64_gcc" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/SuSE_x86_64_gcc" />
 </autobuild>

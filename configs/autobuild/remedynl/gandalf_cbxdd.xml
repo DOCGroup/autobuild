@@ -38,7 +38,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#define TAO_EC_ENABLE_DEBUG_MESSAGES 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nrwho=0\nqos=1\nssl=1\n'" />
 
-    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
@@ -60,6 +60,6 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/CBXdd" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/CBXdd" />
 </autobuild>
 
