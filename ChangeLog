@@ -1,3 +1,17 @@
+Thu Oct 14 09:53:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/cbxpreview.xml:
+        * configs/autobuild/remedynl/driverpc4.sh:
+        * configs/autobuild/remedynl/driverpc4a.sh:
+        * configs/autobuild/remedynl/driverpc4autoconf.sh:
+        * configs/autobuild/remedynl/driverpc4gccace.sh:
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/GCCautoconfig.xml:
+          Removed these files. The cbxpreview was already removed some time ago.
+          The system rite-dev-srv is now dedicated for our RT system and as
+          gateway to all build systems so we removed all builds.
+
 Thu Oct 14 08:47:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/nirvana/New_DLL_Release.xml:
