@@ -30,7 +30,7 @@
     <command name="file_manipulation" options="type=create file=build/va6_debug/.disable output='RUNNING'" />
 
     <command name="file_manipulation" options="type=create file=build/va6_debug/ace/config.h output='#include \x22ace/config-aix5.1.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nPLATFORM_SSL_CPPFLAGS=-I/opt/freeware/include\nPLATFORM_SSL_LDFLAGS=-L/opt/freeware/lib\nPLATFORM_SSL_LIBS=-lssl -lcrypto\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="vacpp" />

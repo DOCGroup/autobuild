@@ -1,3 +1,7 @@
+Wed Jan  7 17:40:29 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Enable SSL.
+
 Wed Jan  7 15:12:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
