@@ -18,7 +18,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -u -k -clean" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -u -k -clean" />
 
     <command name="log"               options="ON" />
 
@@ -37,9 +37,9 @@
 
     <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -make_coexistence -type vc6 -static" /> 
 
-    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -CORE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -ACE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -TAO -u -k" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -CORE -u -k" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -ACE -u -k" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -TAO -u -k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
