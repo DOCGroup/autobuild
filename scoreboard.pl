@@ -379,7 +379,8 @@ sub clean_cache ($)
 
         print "    Looking at $buildname\n" if ($verbose);
 
-        my $dh = new DirHandle ($directory);
+        my $cache_dir = $directory . "/" . $buildname;
+        my $dh = new DirHandle ($cache_dir);
 
         # Load the directory contents into the @existing array
 
@@ -390,7 +391,7 @@ sub clean_cache ($)
 
         while (defined($_ = $dh->read)) {
             if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
-                push @existing, "$directory/$1";
+                push @existing, "$cache_dir/$1";
             }
         }
         undef $dh;
