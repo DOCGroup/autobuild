@@ -31,16 +31,15 @@
  <command name="print_ace_config" />
 
  <!-- ACE -->
- <command name="make"                  options="-k reverseclean" />
+ <command name="make"                  options="-k realclean" />
  <command name="make"                  options="-kj2 -C ace" />
  <command name="make"                  options="-kj2 -C apps/gperf/src" />
  <command name="make"                  options="-kj2 -C Kokyu" />
 
  <!-- TAO -->
- <command name="make"                  options="-k -C TAO reverseclean" />
+ <command name="make"                  options="-k -C TAO realclean" />
  <command name="make"                  options="-k -j2 -C TAO/tao" />
  <command name="make"                  options="-k -j2 -C TAO/TAO_IDL" />
- <command name="make"                  options="-k -j2 -C TAO/orbsvcs/orbsvcs idl_stubs" />
  <command name="make"                  options="-k -j2 -C TAO/orbsvcs/orbsvcs" />
 
  <command name="log"                   options="off" />

@@ -1,3 +1,19 @@
+Tue Dec  9 13:33:34 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * common/prettify.pm:
+          Added the "-undefined warning" compiler option to the list of
+          ignored warnings, otherwise every link line on MacOSX is flagged
+          as a warning.
+
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+          Changed the reverseclean to realclean, reverseclean is no longer
+          needed.
+
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+          Removed the explicite call to idl_stubs.
+
 Mon Dec  8 18:03:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/cbxdd.xml:

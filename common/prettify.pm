@@ -961,7 +961,7 @@ sub Compile_Handler ($)
         $self->Output_Error ($s);
     }
     elsif (($s =~ m/warning/i
-            && $s !~ m/ warning\(s\)/)
+            && ($s !~ m/ warning\(s\)/ && $s !~ m/\-undefined warning/))
            || $s =~ m/info: /i
            || $s =~ m/^error \(future\)/i
            || $s =~ m/^.*\.(h|i|inl|hpp|ipp|cpp|java): /)
