@@ -1,0 +1,44 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/project/beguinetmp/bugzilla/Explicit_Templates_newbuild/ACE_wrappers" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/lib:/project/beguinetmp/bugzilla/Explicit_Templates_newbuild/ACE_wrappers/ace" />
+        <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+
+        <variable name="root"     value="/project/beguinetmp/bugzilla/Full_newbuild" />
+        <variable name="sam_root" value="/project/beguinetmp/bugzilla/Full_newbuild/ACE_wrappers/samwise" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/beguine_Redhat_Explicit_Templates" />
+        <variable name="configs"  value="Linux" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+<!--    <command name="sam" options="clean" /> -->
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+<!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_LAZY_MAP_MANAGER 1\n#define ACE_LACKS_IOSTREAM_TOTALLY 1'#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nexceptions=0\ntemplates=explicit\ndebug=0\noptimize=1\n'" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+<!--    <command name="sam"               options="create" /> -->
+<!--    <command name="sam"               options="sam" /> -->
+
+    <command name="make"              options="-j 2 -k realclean" />
+    <command name="make"              options="-j 2 -k -C TAO realclean" />
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
+
+    <command name="auto_run_tests"    options="" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>

@@ -1,3 +1,9 @@
+Thu Jul 25 22:20:44 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/beguine/driver_explicit.sh: 
+	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Yest
+	  another build on beguine.
+
 2002-07-25  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/printaceconfig.pm: Print the contents of
