@@ -23,6 +23,7 @@
     <command name="log"               options="ON" />
 
     <command name="shell"              options="find ./ -name 'GNUMake*' | xargs rm"  />
+    <command name="shell"              options="find ./ -name 'GNUmake*' | xargs rm"  />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
     <command name="shell"              options="find ./ -name 'Makefile*' | xargs rm" />
