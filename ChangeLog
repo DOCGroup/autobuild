@@ -1,9 +1,17 @@
+Wed Oct 01 09:55:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/driverbuildpcreeuwijk.bat:
+        * configs/autobuild/remedynl/BCB6StaticRelease.xml:
+        * configs/autobuild/remedynl/driverbuildpc3.bat:
+          Moved last BCB6 Build from pc3 to the borland box so that pc3 is free
+          for CBuilderX when it arrives.
+
 Mon Sep 29 09:04:01 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
 	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
 	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml: 
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
 
 	  Fixed the path to the shared libraries used.
 

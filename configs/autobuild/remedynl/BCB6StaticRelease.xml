@@ -5,13 +5,13 @@
         <environment name="TAO_ROOT"     value="D:\ACE\BCB6sr\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~1\bin;D:\progra~\borland\cbuild~1\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6sr\ACE_wrappers\bin\Static\Release;d:\cygwin\bin;D:\perl\bin" type="prefix" />
+        <environment name="PATH"         value="C:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;C:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6dru\ACE_wrappers\bin\Dynamic\Release\Unicode;d:\perl\bin;d:\cygwin\bin" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 	<environment name="STATIC"   value="1" />
 	<environment name="BCBVER"   value="6" />
 
-        <variable name="configs"  value="Win32 Borland STATIC Exceptions" />
+        <variable name="configs"  value="Win32 Borland Static Exceptions" />
         <variable name="root"     value="D:\ACE\BCB6sr\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\ACE\BCB6sr\" />
