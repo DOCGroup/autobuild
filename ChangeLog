@@ -2,6 +2,7 @@ Fri May 24 01:28:25 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/sirion/driver.sh: Added.
 	* configs/autobuild/sirion/Full.xml: Import Debian_Full build for old scoreboard.
+	* configs/autobuild/scoreboard/acetao.xml: Add Debian_Full build.
 
 Thu May 23 22:55:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 

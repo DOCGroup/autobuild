@@ -2,6 +2,9 @@
     <group>
         <name>Linux</name>
         <build>
+            <name>Debian_Full</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
+        </build>  
             <name>Debian_Minimum_Static</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_Minimum_Static/</url> 
         </build>
