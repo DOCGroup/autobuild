@@ -1,3 +1,10 @@
+Fri May  7 12:01:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Wchar.xml:
+        * configs/autobuild/tao/Unicode.xml:
+          Added ACE_wrappers\lib to the path, this is the place with MPC
+          where the libs are created
+
 Fri May  7 11:56:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Full.xml:
