@@ -1,3 +1,30 @@
+Fri Apr 18 12:29:39 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml
+	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml
+	  Moved build from the autotools branch to the main development line.
+
+	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+	* configs/autobuild/riverace/jane_dev_debug.xml:
+	* configs/autobuild/riverace/jane_dev_static_release.xml:
+	  Removed TAO_ROOT variable; these are ACE-only builds.
+
 Thu Apr 17 17:39:49 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/misc.xml: The doxygen builds have moved to

@@ -2,14 +2,13 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/va6_debug" />
-        <environment name="TAO_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/va6_debug/TAO"/>
+        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers/build/autoconf_va6_debug" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"         value="/acebuilds/autoconf/ACE_wrappers" />
-        <variable name="build_name"   value="va6_debug" />
-        <variable name="project_root" value="build/va6_debug" />
+        <variable name="root"         value="/acebuilds/ACE_wrappers" />
+        <variable name="build_name"   value="autoconf_va6_debug" />
+        <variable name="project_root" value="build/autoconf_va6_debug" />
         <variable name="log_file"     value="autoconf_va6_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/cuddy/dev/autoconf_va6_debug" />
 
@@ -24,13 +23,13 @@
 
     <command name="file_manipulation" options="type=delete file=.disable" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=build/va6_debug/.disable" />
+    <command name="file_manipulation" options="type=mustnotexist file=build/autoconf_va6_debug/.disable" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="vacpp" />
     <command name="print_ace_config" />
     <command name="configure"         options="CXX=xlC_r --preclean" />
-    <command name="file_manipulation" options="type=create file=build/va6_debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=build/autoconf_va6_debug/.disable output='RUNNING'" />
 
     <command name="make"              options="-j 2 -k" />
 
@@ -38,6 +37,6 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=build/va6_debug/.disable" />
+    <command name="file_manipulation" options="type=delete file=build/autoconf_va6_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>

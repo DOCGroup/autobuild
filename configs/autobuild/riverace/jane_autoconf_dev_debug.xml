@@ -2,15 +2,14 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/debug" />
-        <environment name="TAO_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/debug/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/autoconf/ACE_wrappers/build/debug/ace:/usr/lib" />
+        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers/build/debug" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers/build/autoconf_debug/ace:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"         value="/acebuilds/autoconf/ACE_wrappers" />
-        <variable name="build_name"   value="debug" />
-        <variable name="project_root" value="build/debug" />
+        <variable name="root"         value="/acebuilds/ACE_wrappers" />
+        <variable name="build_name"   value="autoconf_debug" />
+        <variable name="project_root" value="build/autoconf_debug" />
         <variable name="log_file"     value="autoconf_debug.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/autoconf_debug" />
 
@@ -25,13 +24,13 @@
 
     <command name="file_manipulation" options="type=delete file=.disable" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=build/debug/.disable" />
+    <command name="file_manipulation" options="type=mustnotexist file=build/autoconf_debug/.disable" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
     <command name="configure"         options="--preclean" />
-    <command name="file_manipulation" options="type=create file=build/debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=build/autoconf_debug/.disable output='RUNNING'" />
 
     <command name="make"              options="-j 2 -k" />
 
@@ -39,6 +38,6 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=build/debug/.disable" />
+    <command name="file_manipulation" options="type=delete file=build/autoconf_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>
