@@ -85,6 +85,9 @@ sub Run ($)
     elsif(lc $compiler eq "mipspro"){
         system("CC -version");
     }
+    elsif(lc $compiler eq "doxygen"){
+        system("doxygen --version");
+    }
     elsif($compiler =~ m/^(ecc|icc)/){
         system($compiler." -V 2>&1");
     }

@@ -22,6 +22,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-doxygen.h\x22\n'" />
 
     <command name="print_os_version" />
+    <command name="check_compiler" options="doxygen" />
     <command name="print_ace_config" />
 
     <command name="shell" options="/home/bugzilla/autobuild/configs/autobuild/doc/auto_doxygen.pl" />
