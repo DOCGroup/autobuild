@@ -23,7 +23,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name GNUmakefile* -exec \x22rm {}\x22 \x22;\x22" />
 
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
