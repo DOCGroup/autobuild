@@ -1,3 +1,9 @@
+Thu Dec 23 12:40:06 CST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/GenerateTestMatrix.py:
+
+          Uncommented necessary include.
+
 Wed Dec 23 07:43:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:

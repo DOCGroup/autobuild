@@ -15,10 +15,8 @@ from TestPlatform import *
 from utils import *
 import string
 
-#Temporary comment out to avoid the requirement of MySQLdb.
 #Uncomment when you need save the test results to database
-
-#from TestDB import *
+from TestDB import *
 
 
 def ReadLogFiles ():
