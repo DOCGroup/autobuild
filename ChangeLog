@@ -10,7 +10,6 @@ Tue Jul 27 14:40:55 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 	  it requires exception. CIAO/DAnCE/RepositoryManager is
 	  excluded from the build since it requries xerces and exception.
 
->>>>>>> 1.920
 Tue Jul 27 17:41:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/vc71.xml:
