@@ -42,7 +42,7 @@ decide the migration paths and strategies.
    </build>
    <build>
        <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
-       <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
+       <url>http://www.dresystems.com/autobuild_output/no-rtcorba_no-messaging</url>
        <build_sponsor>DRE Systems</build_sponsor>
        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
        <orange>30</orange>
