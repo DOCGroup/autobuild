@@ -9,7 +9,7 @@
 
         <variable name="root"     value="/export/bugzilla/Debian_NoInterceptors" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/charanga_Debian_NoInterceptors" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/charanga_Debian_NoInterceptors" />
         <variable name="configs"  value="Linux" />
 
     </configuration>
