@@ -151,13 +151,14 @@ sub Run ($)
           print STDERR __FILE__, ": Cannot change to $dir\n";
           return 0;
         }
+        print "Running: $command in $dir\n";
+    }
+    else {
+        print "Running: $command\n";
     }
 
-    print "Running: $command in $dir\n";
     system ($command);
-
     chdir $current_dir;
-
     return 1;
 }
 
