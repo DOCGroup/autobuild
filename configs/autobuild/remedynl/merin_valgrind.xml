@@ -56,10 +56,8 @@
     <command name="auto_run_tests" options="-a -o -Config Valgrind" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="process_logs"      options="clean=3 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_Valgrind/* -f" / -->
-    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_Valgrind" / -->
     <command name="shell"             options="rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_Valgrind" />
 </autobuild>

@@ -40,7 +40,7 @@
     <command name="win32make"         options="msvc_mpc_auto_compile -ALL -Release -k" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 

@@ -49,12 +49,9 @@
     <command name="make"              options=" -i -f ACE_wrappers.bmake" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/CBXddace/* -f" / -->
-    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/CBXddace" / -->
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/CBXddace" />
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/CBXddace/*" / -->
 </autobuild>
 

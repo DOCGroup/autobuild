@@ -42,7 +42,7 @@
     <command name="auto_run_tests"    options="-a -s \x22c:\ace\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 

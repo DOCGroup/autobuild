@@ -53,7 +53,7 @@
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -TAO -Release -k" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_Host" />
