@@ -68,6 +68,10 @@
     <group>
         <name>Windows</name>
         <build>
+            <name>Win2K_Fuzz</name>
+            <url>http://tao.doc.wustl.edu/bugzilla/new_fuzz</url>
+        </build>
+        <build>
             <name>Win2K_DLL_Core</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_core</url>
         </build>
