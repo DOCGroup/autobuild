@@ -1,5 +1,6 @@
 Thu Oct 30 11:52:39 2003  Steve Huston  <shuston@riverace.com>
 
+	* configs/autobuild/riverace/essie_gcc3_debug.xml:
 	* configs/scoreboard/ace.xml: Added Solaris 9 gcc3 debug build.
 
 Wed Oct 29 17:20:41 2003  Steve Huston  <shuston@riverace.com>
