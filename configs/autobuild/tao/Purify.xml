@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="G:\purifybuilds\Purify\ACE_wrappers" />
         <environment name="Path"         value="G:\purifybuilds\Purify\ACE_wrappers\bin;F:\bugzilla\ssl\openssl-0.9.6\out32dll" type="prefix" />
+        <environment name="ACE_RUN_PURIFY_CMD"         value="G:\bugzilla\purify\purify.exe" />
 
         <variable name="root"     value="G:/purifybuilds/Purify/" />
 	<variable name="log_file" value="log.txt" />
