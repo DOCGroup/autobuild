@@ -1,3 +1,8 @@
+Wed Jan 15 07:35:43 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/pokey/GCC32_Core.xml: Compiled TAO and
+	  associated  libraries in -j 1 mode.
+
 Tue Jan 14 11:21:39 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/timmy_dev_wince4_debug.xml: Added
