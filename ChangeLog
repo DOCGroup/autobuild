@@ -1,3 +1,8 @@
+Tue Jun  3 15:40:16 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC53.xml: Do not run SSL tests
+	  on this platform.
+
 Sat May 31 14:37:39 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/benjamin_dev_debug.xml:

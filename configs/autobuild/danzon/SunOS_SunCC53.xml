@@ -11,7 +11,7 @@
         <variable name="root"     value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC53_newbuild" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/danzon_SUNOS_SUNCC53_newbuild" />
-        <variable name="configs"  value="SUNCC5_3 SSL" />
+        <variable name="configs"  value="SUNCC5_3" />
 
     </configuration>
 
