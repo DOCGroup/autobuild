@@ -1,6 +1,6 @@
 SCOREBOARD_CONFIG_DIR=/home/isisbuilds/autobuild/configs/scoreboard
 
-all : ace-list tsprdsh
+all : ace-list ace_future-list tao-list tao_future-list misc-list tsprdsh
 
 ace-list : $(SCOREBOARD_CONFIG_DIR)/ace.xml
 	./test-list-extract $< > $@
