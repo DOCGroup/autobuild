@@ -12,7 +12,7 @@
 	<environment name="BCBVER"   value="6" />
 
         <variable name="make_program" value="bmake" />
-        <variable name="configs"      value="Win32 CBorlandX Exceptions" />
+        <variable name="configs"      value="Win32 Borland Exceptions" />
         <variable name="root"         value="C:\ACE\CBXdd\" />
 	<variable name="log_file"     value="log.txt" />
         <variable name="log_root"     value="C:\ACE\CBXdd\" />
