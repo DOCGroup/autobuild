@@ -1,3 +1,8 @@
+Wed Jan  7 15:12:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          The MSVC6 Static builds now use MPC!
+
 Mon Jan  5 10:58:44 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/doc_spider_rh80_gcc3.2_d1o0.xml:
