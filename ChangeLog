@@ -1,3 +1,9 @@
+Tue Jun 25 15:25:04 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/nirvana/DLL_Release.xml:
+	* configs/autobuild/nirvana/driver.bat:
+	* configs/scoreboard/acetao.xml: Added WinXP DLL Release stuff.
+
 Mon Jun 24 16:08:24 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
@@ -5,7 +11,7 @@ Mon Jun 24 16:08:24 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 Mon Jun 24 00:32:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: 
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
 	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
 	  Switch to g++.  The tao_idl binary generated with CC doesn't
 	  like to use CC as the preprocessor in the LYNX cross compile build which
@@ -114,26 +120,26 @@ Thu May 23 21:33:16 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 Sun May 19 23:38:39 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/auto_run_tests.pm: Add an extra space for each
-	  argument when specifying multiple configurations with 
+	  argument when specifying multiple configurations with
 	  the "-Config" flag.
 
 Sat May 18 19:36:17 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Move STATIC
 	  to "configs" section.
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml: 
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
 	  Move MINIMUM to "configs" section.
 
 Fri May 17 13:29:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/LYNX_PPC.xml: Comment out 
+	* configs/autobuild/ace/LYNX_PPC.xml: Comment out
 	  auto_run_tests.  They are built with a LYNX cross compiler
 	  on Solaris, so cannot actually run under Solaris.
 
 Thu May 16 21:35:35 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Add STATIC
-	  to "auto_run_tests" command.  Thanks to 
+	  to "auto_run_tests" command.  Thanks to
 	  Don Hinton <dhinton@ieee.org>.
 
 Thu May 16 18:10:51 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
@@ -159,10 +165,10 @@ Sun May 12 16:01:35 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 Sun May 12 15:50:39 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/beguine/Redhat_7.1_Core.xml: Renamed it as a
-	  Full build. This build is not a core build. 
+	  Full build. This build is not a core build.
 
 	* configs/autobuild/beguine/Redhat_7.1_Full.xml: A full build on
-	  beguine.doc. 
+	  beguine.doc.
 
 	* configs/autobuild/beguine/driver.sh: Start the right build.
 
@@ -180,7 +186,7 @@ Thu May  9 19:55:34 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 Thu May  9 19:23:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC51.xml: Removed this build
-	  of the scoreboard since the compiler is busted. 
+	  of the scoreboard since the compiler is busted.
 
 	* configs/autobuild/danzon/SunOS_SunCC53.xml: New build in places
 	  of CC51. SSL has been disabled for the timebeing. Need to see
@@ -218,7 +224,7 @@ Mon May  6 17:46:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 Fri May  3 00:15:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/tango/driver.sh: Put /pkg/gnu2k1/bin
-	  in the PATH so that gcc 2.95.3 is used instead of 
+	  in the PATH so that gcc 2.95.3 is used instead of
 	  gcc 2.95.1.
 
 Thu May  2 02:22:15 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
@@ -252,7 +258,7 @@ Wed May  1 15:15:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 Wed May  1 04:02:01 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/ace/*: Added
-	* configs/scoreboard/acetao.xml: Added SUNOS_FORTE_UPDATE_1. 
+	* configs/scoreboard/acetao.xml: Added SUNOS_FORTE_UPDATE_1.
 
 Mon Apr 29 22:41:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
