@@ -9,6 +9,52 @@ decide the migration paths and strategies.
 </preamble>
 
 <group>
+   <name>Relegated Builds from the Main Scoreboard</name>
+   <build>
+      <name>SunOS_FORTE_UP_1</name>
+      <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
+      <build_sponsor>Washington University</build_sponsor>
+      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+        <build>
+            <name>WinXP_MSVC6_Legacy</name>
+            <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
+            <build_sponsor>UC Irvine</build_sponsor>
+            <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_MSVC6_Unicode</name>
+            <url>http://ringil.ece.uci.edu/bugzilla/unicode</url>
+            <build_sponsor>UC Irvine</build_sponsor>
+            <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_MSVC6_Lib_Debug</name>
+            <url>http://ringil.ece.uci.edu/bugzilla/lib_debug</url>
+            <build_sponsor>UC Irvine</build_sponsor>
+            <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_MSVC6_Lib_Release</name>
+            <url>http://ringil.ece.uci.edu/bugzilla/lib_release</url>
+            <build_sponsor>UC Irvine</build_sponsor>
+            <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
+        </build>
+      <build>
+         <name>RHRH_IA64_GCC296</name>
+         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/mitsu/gcc296_full</url>
+         <build_sponsor>Charles University</build_sponsor>
+         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
+      </build>
+      <build>
+         <name>RHRH_IA64_GCC32</name>
+         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/mitsu/gcc32_full</url>
+         <build_sponsor>Charles University</build_sponsor>
+         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
+      </build>
+</group>
+
+<group>
    <name>Test Builds for TAO</name>
    <build>
       <name>WinXP_MSVC6_XML_Debug</name>

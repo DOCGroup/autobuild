@@ -1,3 +1,19 @@
+Thu Jun 26 13:40:42 2003  Chris Cleeland  <cleeland_c@ociweb.com>
+
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml: 
+	  
+	  Turned off optimizations on this build so that it will complete
+	  quicker.
+	
+	* configs/scoreboard/tao.xml: 
+	* configs/scoreboard/tao_future.xml:
+
+	  Moved the following builds from the main scoreboard to the
+	  future scoreboard: SunOS_FORTE_UP_1, WinXP_MSVC6_Legacy,
+	  WinXP_MSVC6_Unicode, WinXP_MSVC6_Lib_Debug,
+	  WinXP_MXVC6_Lib_Release.  None have run for over a month.  If
+	  they come active again, we can move them back.
+
 Thu Jun 26 17:07:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
