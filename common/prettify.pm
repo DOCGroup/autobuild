@@ -458,6 +458,12 @@ sub Section_Totals ()
         $self->{TEST_ERRORS} += $self->{SECTION_ERRORS};
         $self->{TEST_WARNINGS} += $self->{SECTION_WARNINGS};
     }
+
+    $self->{SECTION_SUBSECTIONS} = 0;
+    $self->{SECTION_ERRORS} = 0;
+    $self->{SECTION_WARNINGS} = 0;
+    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
+    $self->{SECTION_WARNING_SUBSECTIONS} = 0;
 }
 
 sub Footer ()
