@@ -10,6 +10,7 @@ Mon Sep 27 07:25:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
         * configs/autobuild/remedynl/gandalf_cbxdd.xml:
         * configs/autobuild/remedynl/gandalf_cbxsr.xml:
         * configs/autobuild/remedynl/gandalf_vc71.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml:
           Added building of CIAO, the CIDLC compiler is being copied by the
           builds from Vanderbilt.
 
