@@ -37,7 +37,7 @@ sub Run ($)
 {
     my $self = shift;
 
-    $cidlc_program = "ACE_wrappers/TAO/CIAO/bin/cidlc"
+    $cidlc_program = "ACE_wrappers/TAO/CIAO/bin/cidlc";
 
     main::PrintStatus ('Config', "print cidlc version" );
 
