@@ -1,8 +1,15 @@
+Mon Aug  2 08:04:06 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/remedynl/gandalf_cbxddace.xml:
+
+          Added MPC command line options to set the unicode macro and the
+          ACE_LD_DECORATOR_STR macro.
+
 Fri Jul 30 19:23:34 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Fixed minor typo in platform_macros.GNU contents.
+          Fixed minor typo in platform_macros.GNU contents.
 
 Fri Jul 30 10:39:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -15,27 +22,27 @@ Thu Jul 29 18:54:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml
           Added new HPUX GCC 3.3.3 build, will convert probably soon to
-	  64bit build. The build is now in the test phase, so when it is
-	  ready it will upload the results.
+          64bit build. The build is now in the test phase, so when it is
+          ready it will upload the results.
 
 Thu Jul 29 08:38:09 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-  	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
 
-	  Added LD_ASSUME_KERNEL to run the priority tests.
+          Added LD_ASSUME_KERNEL to run the priority tests.
 
 Wed Jul 28 17:39:29 BST 2004  Paul Morrison <epm@prismtechnologies.com>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	  Changed PrismTech scoreboard url.
+          Changed PrismTech scoreboard url.
 
 Wed Jul 28 00:26:28 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Enabled SSL code to verify that ACE/TAO statically linked SSL
-	  support is functioning properly.
+          Enabled SSL code to verify that ACE/TAO statically linked SSL
+          support is functioning properly.
 
 Tue Jul 27 14:47:00 UTC 2004  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
@@ -44,10 +51,10 @@ Tue Jul 27 14:47:00 UTC 2004  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
 Tue Jul 27 14:40:55 2004  Tao Lu  <lu@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml
-	  Added download command to get the binary of CIDLC since
-	  it requires exception. CIAO/DAnCE/RepositoryManager is
-	  excluded from the build since it requries xerces and exception.
+        * configs/autobuild/tango_isis/Full_Reactors.xml
+          Added download command to get the binary of CIDLC since
+          it requires exception. CIAO/DAnCE/RepositoryManager is
+          excluded from the build since it requries xerces and exception.
 
 Tue Jul 27 17:41:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -93,31 +100,31 @@ Mon Jul 26 14:29:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sun Jul 25 18:07:02 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
 
-	  Define ACE_HAS_DEV_POLL in generated `config.h' file.  It is
-	  supported on Solaris 7.
+          Define ACE_HAS_DEV_POLL in generated `config.h' file.  It is
+          supported on Solaris 7.
 
 Sat Jul 24 15:53:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
 
-	  Fixed the LD_LIBRARY_PATH to point to $ACE_ROOT/lib.
+          Fixed the LD_LIBRARY_PATH to point to $ACE_ROOT/lib.
 
 Fri Jul 23 15:54:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/nirvana/New_DLL_Release.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
 
-	  MPC generated MSVC++ 6 project files are not set up to use the
-	  INCLUDE and LIB environment variables.  In the case of SSL, set
-	  the SSL_ROOT environment variable instead.  The generated
-	  project files do recognize that environment variable.
+          MPC generated MSVC++ 6 project files are not set up to use the
+          INCLUDE and LIB environment variables.  In the case of SSL, set
+          the SSL_ROOT environment variable instead.  The generated
+          project files do recognize that environment variable.
 
-	* configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
 
-	  Removed OpenSSL library directory from the PATH environment
-	  variable.  OpenSSL isn't used in this build.
+          Removed OpenSSL library directory from the PATH environment
+          variable.  OpenSSL isn't used in this build.
 
 Fri Jul 23 07:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -126,28 +133,28 @@ Fri Jul 23 07:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Jul 22 14:26:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
 
-	  Add OpenSSL include and library directories to the "INCLUDE" and
-	  "LIB" environment variables, respectively.  Addresses build
-	  errors caused by the inability of the compiler to find the
-	  OpenSSL headers and libraries.
+          Add OpenSSL include and library directories to the "INCLUDE" and
+          "LIB" environment variables, respectively.  Addresses build
+          errors caused by the inability of the compiler to find the
+          OpenSSL headers and libraries.
 
 Thu Jul 22 13:00:32 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
 
-	  Updated compiler path.  The compiler is now installed in a
-	  different location.
+          Updated compiler path.  The compiler is now installed in a
+          different location.
 
-	  Compile with inlining disabled to provide another static build
-	  variety/configuration.
+          Compile with inlining disabled to provide another static build
+          variety/configuration.
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Updated g++ 3.4 build to reflect the fact that the build now
-	  uses g++ 3.4.1.
+          Updated g++ 3.4 build to reflect the fact that the build now
+          uses g++ 3.4.1.
 
 Tue Jul 20 10:47:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -170,70 +177,70 @@ Sat Jul 17 12:44:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Jul 14 10:18:38 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Dropped the "-pedantic" compiler flag.  Once we figure out how
-	  to disable the variadic macro warnings flagged in some of the
-	  ACE APG example code, it will be reenabled.
+          Dropped the "-pedantic" compiler flag.  Once we figure out how
+          to disable the variadic macro warnings flagged in some of the
+          ACE APG example code, it will be reenabled.
 
 Mon Jul 12 20:16:34 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Removed #define ACE_HAS_EVENT_POLL.  The build host doesn't have
-	  a new enough version of the Linux kernel installed that supports
-	  the sys_epoll interface.
+          Removed #define ACE_HAS_EVENT_POLL.  The build host doesn't have
+          a new enough version of the Linux kernel installed that supports
+          the sys_epoll interface.
 
 Sat Jul 10 01:03:07 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/nirvana/New_DLL_Release.xml:
-	* configs/autobuild/nirvana/XML_Debug.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/Purify.xml:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Purify.xml:
 
-	  Added "ssl=1" to generated `default.features' file to enable SSL
-	  related ACE/TAO code to be built.
+          Added "ssl=1" to generated `default.features' file to enable SSL
+          related ACE/TAO code to be built.
 
-	* configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace.xml:
 
-	  Removed Wash U Borland C++ 5.5. build from the build list.  That
-	  compiler is no longer supported.
+          Removed Wash U Borland C++ 5.5. build from the build list.  That
+          compiler is no longer supported.
 
 Fri Jul  9 23:23:35 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
 
-	  Added missing carriage return to generated `config.h' file.
-	  Addresses build errors.
+          Added missing carriage return to generated `config.h' file.
+          Addresses build errors.
 
 Thu Jul  8 11:32:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Removed extraneous carriage return with string.  Addresses
-	  problem where the build wouldn't run.
+          Removed extraneous carriage return with string.  Addresses
+          problem where the build wouldn't run.
 
 Wed Jul  7 21:52:35 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
 
-	  Define ACE_HAS_DEV_POLL in generated `config.h' file.  ACE
-	  has always supported it.
+          Define ACE_HAS_DEV_POLL in generated `config.h' file.  ACE
+          has always supported it.
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Define ACE_HAS_EVENT_POLL in generated `config.h' file.  ACE
-	  once again supports it.
+          Define ACE_HAS_EVENT_POLL in generated `config.h' file.  ACE
+          once again supports it.
 
 Wed Jul  7 09:47:39 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Added
-	  "-exclude Kokyu" to the generate_workspace options. Kokyu doesn't
-	  follow the particular declaration/definition separation for the
-	  way Visual Age C++ handles templates. Since nobody is interested
-	  in Kokyu for AIX, I'm disabling this to help clean up the scoreboard,
-	  lest I rock the boat for others making it build on AIX.
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Added
+          "-exclude Kokyu" to the generate_workspace options. Kokyu doesn't
+          follow the particular declaration/definition separation for the
+          way Visual Age C++ handles templates. Since nobody is interested
+          in Kokyu for AIX, I'm disabling this to help clean up the scoreboard,
+          lest I rock the boat for others making it build on AIX.
 
 Wed Jul  7 13:52:59 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -252,27 +259,27 @@ Wed Jul  7 05:56:59 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jul  6 14:29:59 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/cbxdd.xml:
+        * configs/autobuild/remedynl/cbxdd.xml:
 
-	  Excluded DAnCE from he builds.
+          Excluded DAnCE from he builds.
 
 Tue Jul  6 13:51:44 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Tried to print the configuraion.
+          Tried to print the configuraion.
 
 Mon Jul  5 09:00:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
 
-	  Include the orbsvcs in the build.
+          Include the orbsvcs in the build.
 
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	* configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
 
-	  Removed deprecated .mwc files from the list.
+          Removed deprecated .mwc files from the list.
 
 Mon Jun  4 08:23:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
