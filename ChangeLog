@@ -1,3 +1,20 @@
+Thu Nov  4 07:31:29 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/W4_Debug.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/ringil/Legacy.xml:
+        * configs/autobuild/ringil/Lib_Debug.xml:
+        * configs/autobuild/ringil/Lib_Release.xml:
+        * configs/autobuild/ringil/Unicode.xml:
+        * configs/autobuild/riverace/timmy_dev_msvc6_debug.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Purify.xml:
+
+          Replaced references to msvc_auto_compile (which has been removed)
+          with a corresponding msvc_mpc_auto_compile or msvc_static_compile.
+
 Wed Nov  3 13:32:11 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/atl/RH9-2.4.20-19.9.xml:

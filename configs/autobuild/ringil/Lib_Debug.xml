@@ -14,7 +14,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -u -k -clean" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -u -k -clean" />
 
     <command name="log"               options="ON" />
 
@@ -27,9 +27,9 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -ACE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -CORE -u -k" />
-    <command name="win32make"         options="msvc_auto_compile -LIB -Debug -TAO -u -k" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -ACE -u -k" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -CORE -u -k" />
+    <command name="win32make"         options="msvc_static_compile -LIB -Debug -TAO -u -k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />

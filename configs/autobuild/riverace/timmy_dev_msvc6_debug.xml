@@ -14,7 +14,7 @@
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
-    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k -clean" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -DLL -Debug -ACE -u -k -clean" />
 
     <command name="log"               options="ON" />
 
@@ -24,7 +24,7 @@
     <command name="check_compiler"    options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -DLL -Debug -ACE -u -k" />
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
