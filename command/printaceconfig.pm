@@ -47,7 +47,7 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
-    my $config_file = main::GetVariable ('BUILD_CONFIG_FILE');
+    my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
@@ -71,7 +71,7 @@ sub Run ($)
 
     main::PrintStatus ('Config', 'PrintACEConfig');
 
-    print "XML Config file: <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/configs/autobuild/dresystems/${config_file}/?cvsroot=autobuild\">${config_file}</a>\n";
+    print "XML Config file: <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/${config_file}/?cvsroot=autobuild\">${config_file}</a>\n";
 
     my $current_dir = getcwd ();
 

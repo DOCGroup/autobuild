@@ -159,6 +159,15 @@ foreach my $file (@files) {
     ## named BUILD_CONFIG_FILE. 
     $data{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename( $file );
 
+    ## Grab the relative path for the config file so we can pull a copy from cvs later
+    my $temp_file = $file;
+    ## replace windows seperators with unix ones
+    $temp_file =~ s/\\/\//;
+    ## strip off the anything prior to "configs/autobuild"
+    $temp_file =~ s/.*configs\/autobuild/configs\/autobuild/;
+    $data{VARS}->{CVS_CONFIG_FILE} = $temp_file;
+
+
     if($^O eq "MSWin32"){
         $pathsep = ';';
     }

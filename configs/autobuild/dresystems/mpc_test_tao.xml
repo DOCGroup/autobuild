@@ -48,10 +48,10 @@
  <command name="make"                  options="-k" />
 
  <!-- TAO -->
- <command name="make"                  options="-k -C TAO realclean rmcast=1" />
- <command name="make"                  options="-k -C TAO idl_stubs rmcast=1" />
- <command name="make"                  options="-k -C TAO depend rmcast=1" />
- <command name="make"                  options=" -k -j1 -C TAO rmcast=1" />
+ <command name="make"                  options="-k -C TAO realclean" />
+ <!--<command name="make"                  options="-k -C TAO idl_stubs" />-->
+ <!--<command name="make"                  options="-k -C TAO depend" />-->
+ <command name="make"                  options="-k -j1 -C TAO" />
 
  <command name="log"                   options="off" />
  <command name="process_logs"          options="clean move prettify index" />

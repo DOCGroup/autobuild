@@ -1,3 +1,15 @@
+Sun Aug 10 15:54:40 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * autobuild.pl:
+        * command/printaceconfig.pm:
+          Added new variable, CVS_CONFIG_FILE that contains the name and
+          relative path of the config file in use and modified
+          printaceconfig.pm to use this variable.
+
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+          Commented out the idl_stubs and depend make steps since they
+          seem not to work correctly and may not be correct anyway.
+
 Sat Aug  9 21:19:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/printaceconfig.pm:
