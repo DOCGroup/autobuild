@@ -9,6 +9,13 @@ XML configuration files to automatically build our projects (ACE+TAO)
 on multiple platforms.  The tools run on Unix (several flavors) and
 Windows NT/2k/XP.
 
+SOFTWARE REQUIREMENTS
+=====================
+
+(1) perl 5.6.1 or higher
+
+(2) Libwww-perl module.  You can get this from http://www.cpan.org.
+    Red Hat Linux distributions may have an optional package perl-libwww-perl.
 
 
 QUICK GUIDE GETTING STARTED WITH AUTOBUILD

@@ -59,6 +59,15 @@ sub Run ($)
     main::PrintStatus ('Compile', 'make');
 
     my $current_dir = getcwd ();
+    
+    my $dir;
+ 
+    if ($options =~ m/dir='([^"]*)'/) {
+        $dir = $1;
+    }
+    elsif ($options =~ m/dir=([^\s]*)/) {
+        $dir = $1;
+    }
 
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
@@ -75,6 +84,14 @@ sub Run ($)
     }
 
     my $command = "make $options";
+
+    if( defined $dir )
+    {
+        if(!chdir $dir) {
+          print STDERR __FILE__, ": Cannot change to $dir\n";
+          return 0; 
+        }
+    }
 
     print "Running: $command\n";
     system ($command);

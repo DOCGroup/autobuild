@@ -62,8 +62,11 @@ sub Run ($)
     my $current_dir = getcwd ();
 
     if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
+        if (!chdir $ENV{'ACE_ROOT'} ) 
+        {
+          print STDERR __FILE__, ": Cannot change to $root or $ENV{'ROOT'}\n";
+          return 0;
+        }
     }
 
     if (!defined $project_root) {

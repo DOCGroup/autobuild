@@ -1,3 +1,14 @@
+2002-07-22  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* README: Add documentation on software requirements.
+	* command/make.pm: Add a new option "dir=", which changes the working
+          before invoking make.  Needed for Borland make, which does not support
+	  GNU make's -C option.
+	* command/printaceconfig.pm: In addition to the root environment variable,
+	  try looking in $ACE_ROOT when printing out the ACE configuration.
+	  This allows the printaceconfig.pm module to be used on projects
+	  which want to print the ACE configuration, but not build ACE itself.
+
 2002-07-11    Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/Borland.xml: Updated Borland build script
