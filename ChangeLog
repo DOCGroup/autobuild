@@ -1,3 +1,11 @@
+Wed Jan 12 14:10:30 MST 2005  Trevor Fields  <fields_t@ociweb.com>
+
+        * matrix_database/InsertLocalTestDbFiles.sh:
+          Added new script to insert local Test matrix db files.
+
+        * matrix_database/README.txt:
+          Added readme for setting up a database.
+
 Mon Jan 10 17:41:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Unicode.xml:
