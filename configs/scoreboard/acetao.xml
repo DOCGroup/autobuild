@@ -190,6 +190,8 @@
          <build>
              <name>OpenBSD_Core</name>
              <url>http://www.hunleth.com/~acebuild/auto_compile_logs/slytherin_Core</url>
+             <orange>48</orange>
+             <red>72</red>
          </build>
     </group>
     <group>

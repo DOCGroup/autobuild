@@ -1,3 +1,9 @@
+Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
+
+	* configs/scoreboard/acetao.xml: Changed build orange
+          and red times for the OpenBSD_Core build to avoid having it 
+      	  flagged too soon.
+
 Mon Oct 21 17:16:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* scoreboard.pl: Add link to scoreboard instructions.
