@@ -1,3 +1,9 @@
+Sat Jan 11 11:36:36 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Removed the build from BBN off
+	  the scoreboard since it is running a build that doesnt contrain
+	  our process. 
+
 Sat Jan 11 11:00:00 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* common/prettify.pm: Just omit the warnings that is emitted by
