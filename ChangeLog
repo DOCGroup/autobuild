@@ -1,3 +1,7 @@
+Tue Feb  4 12:22:49 2003  Steve Huston  <shuston@riverace.com>
+
+        * command/configure.pm: Corrected error check when recreating build dir
+
 Sun Feb  2 21:04:01 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Added the sponsors name back to

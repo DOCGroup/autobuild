@@ -90,7 +90,7 @@ sub Run ($)
     }
     elsif ($preclean) {
 	rmtree($build_path);
-        if (mkpath($build_path)) {
+        if (!mkpath($build_path)) {
             print STDERR __FILE__, ": Cannot recreate \"build_path\" directory: $build_path\n";
             return 0;
 	}
