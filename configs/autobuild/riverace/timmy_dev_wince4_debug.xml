@@ -2,13 +2,13 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
-        <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE ARM) Debug" />
+        <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE x86) Debug" />
 
         <variable name="root"     value="C:\ace\ACE_wrappers-repository" />
         <variable name="project_root" value="." />
-	<variable name="log_file" value="pocket_debug.txt" />
-        <variable name="log_root" value="C:\ace\build_logs\dev\pocketpc_debug" />
-        <variable name="name"     value="Pocket PC 2002 Debug" />
+	<variable name="log_file" value="ce4_debug.txt" />
+        <variable name="log_root" value="C:\ace\build_logs\dev\wince4_debug" />
+        <variable name="name"     value="Windows CE .NET Debug" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -24,9 +24,10 @@
 
     <command name="generate_workspace" options="-type em3 ace/ace.mwc" />
     <command name="generate_workspace" options="-type em3 tests/tests.mwc" />
-    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ace DLL - Win32 (WCE ARM) Debug' /CLEAN /USEENV /CECONFIG 'Pocket PC 2002'" />
-    <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast DLL - Win32 (WCE ARM) Debug' /REBUILD /USEENV /CECONFIG 'Pocket PC 2002'" />
-    <command name="win32make"         options="-evc3 -recurse tests" />
+    <!-- RMCast is defined as depending on ace, so clean ace, then rebuild RMCast to get both -->
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ace DLL - Win32 (WCE x86) Debug' /CLEAN" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast DLL - Win32 (WCE x86) Debug' /REBUILD /CECONFIG 'STANDARDSDK'" />
+    <command name="win32make"         options="-verbose -evc3 -recurse tests" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />

@@ -68,6 +68,9 @@ sub Run ($)
     elsif(lc $compiler eq "cxx"){
         system("cxx -V"); 
     }
+    elsif(lc $compiler eq "acc"){
+        system("aCC -V"); 
+    }
     else{
         print "ERROR: I cannot figure out what compiler you are ";
         print "using!!\nSee check_compiler.pm for more details.\n"; 

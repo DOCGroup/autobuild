@@ -30,6 +30,8 @@
 
     <command name="file_manipulation" options="type=create file=build/va6_debug/ace/config.h output='#include \x22ace/config-aix5.1.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=build/va6_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
+
+    <command name="print_os_version" />
     <command name="check_compiler"    options="xlC_r" />
     <command name="print_ace_config" />
 

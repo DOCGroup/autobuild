@@ -1,3 +1,21 @@
+Thu Jan  9 15:51:39 2003  Steve Huston  <shuston@riverace.com>
+
+        * command/check_compiler.pm: Teach it how to get HP aC++ version.
+
+        * configs/autobuild/riverace/timmy_dev_wince4_debug.xml: Build for
+          Windows CE .NET.
+
+        * configs/autobuild/riverace/timmy_dev_pocketpc2002_debug.xml: Don't
+          build ACE twice; added the /USEENV option to pick up env variables.
+
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+          Added print_os_version command.
+
 Thu Jan  9 07:42:22 UTC 2003  Frank Hunleth  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:

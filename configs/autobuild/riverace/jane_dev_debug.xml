@@ -30,6 +30,8 @@
 
     <command name="file_manipulation" options="type=create file=build/debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=build/debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+
+    <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
 
