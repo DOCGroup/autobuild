@@ -3,7 +3,6 @@ Fri Dec 20 13:55:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: The
 	  tests will not run in this build.
 	
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
 	* configs/autobuild/maglor/Static.xml:
 	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Run the SSL tests
 	  in these builds.
