@@ -131,9 +131,16 @@ progress.  Unix supported only for now, NT support on the way.
 
 (1)  Add the following line to the configuration file:
 
-     <variable name="MAIL_ADMIN"  value="myname@myhost.com" />
+     <variable name="MAIL_ADMIN"  value="myname@mydomain.com" />
 
-     When build errors are detected, an e-mail will be sent to myname@myhost.com 
+     When build errors are detected, an e-mail will be sent to myname@mydomain.com 
+
+(2)  For Windows NT only, you also need to add the domain name of the SMTP
+     server used to send outgoing mail.  You do not need to add this line on
+     UNIX platforms:
+
+     <variable name="MAIL_ADMIN_SMTP_HOST"  value="smtphostame.mydomain.com" />
+ 
 
 <CODE>$Id$</CODE>
 */

@@ -1,3 +1,9 @@
+Sun Aug 11 21:52:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* common/mail.pm: First cut at e-mail notification support under Windows,
+	  using the Perl Net::SMTP module included with ActiveState Perl.
+	* README: Document MAIL_ADMIN_SMTP_HOST variable.
+
 Sun Aug 11 17:08:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/prettify.pm: Fix wording in e-mail notification. 
