@@ -68,7 +68,7 @@ sub Run ($)
         return 0;
     }
 
-    print "Running: ${options}";
+    print "Running: ${options}\n";
 
     system ($options);
 
