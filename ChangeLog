@@ -1,3 +1,10 @@
+Thu Jul  8 11:32:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Removed extraneous carriage return with string.  Addresses
+	  problem where the build wouldn't run.
+
 Wed Jul  7 21:52:35 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC55.xml:
