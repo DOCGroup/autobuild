@@ -33,7 +33,9 @@
     <command name="win32make"         options="msvc_auto_compile -TAO -Debug -ACE -u -k" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command name="shell"             options="plink bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_WinXP_MSVC6/* -f" />
+    <command name="shell"             options="pscp -C *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_WinXP_MSVC6" />
 </autobuild>
