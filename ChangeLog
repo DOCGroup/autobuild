@@ -1,8 +1,15 @@
+Mon Apr 28 18:02:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+          Enabled threading. We are now going to work active on getting Cygwin
+          with threading enabled working and we will use this build as a todo
+          list.
+
 Sat Apr 26 08:13:26 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
         * configs/autobuild/danzon/SunOS_SunCC53.xml:
 	* configs/autobuild/ace/SUNOS_FORTE_UPDATE_1.xml: Use implicit
-	  templates. 
+	  templates.
 
 Fri Apr 25 10:47:49 2003  Steve Huston  <shuston@riverace.com>
 
@@ -17,7 +24,7 @@ Fri Apr 25 10:47:49 2003  Steve Huston  <shuston@riverace.com>
 
 Fri Apr 25 06:41:24 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/SingleThreaded.xml: 
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
 	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
 	* configs/autobuild/tango_isis/Debian_Core.xml:
 	* configs/autobuild/tango_isis/Full.xml: Cosmetic fixes.
