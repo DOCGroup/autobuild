@@ -867,7 +867,9 @@ sub Compile_Handler ($)
          # real reason ...
          || $s =~ m/^.*:[0-9]+:\s+instantiated\sfrom\s/)
       {
-        print STDERR "Possible ERROR $s\n";
+        if ($main::verbose == 1) {
+          print STDERR "Possible ERROR $s\n";
+        }
         $self->Output_Warning ($s);
       }
       else

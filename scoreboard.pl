@@ -469,7 +469,7 @@ sub clean_cache ($)
         # Delete anything left in the list
 
         foreach my $file (@existing) {
-            print "        Removing $file files\n";
+            print "        Removing $file files\n" if ($verbose);
             unlink $file . ".txt";
             unlink $file . "_Full.html";
             unlink $file . "_Brief.html";
