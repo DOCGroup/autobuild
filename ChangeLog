@@ -1,3 +1,8 @@
+Tue Sep 21 10:03:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC32.xml:
+          Enabled Qt
+
 Sun Sep 19 11:41:04 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/tao/DLL_Core.xml:
@@ -9,7 +14,7 @@ Sun Sep 19 08:14:12 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
  	* command/win32make.pm:
 
 	  Added a new command for building the CIDL compiler.
-	
+
 	* configs/autobuild/escher3/cidlcstatic.xml:
 
 	  Added some options for the build.
