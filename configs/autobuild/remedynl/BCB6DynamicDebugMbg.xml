@@ -39,7 +39,7 @@
 
     <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
 
-    <command name="auto_run_tests"    options="-a -s \x22D:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug" />
+    <command name="auto_run_tests"    options="-s \x22D:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
