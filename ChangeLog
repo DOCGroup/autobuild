@@ -1,3 +1,29 @@
+Fri Aug  8 12:30:50 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+          Modified these builds to use the new *root variable rules.
+
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/freebsd_ace.xml:
+        * configs/autobuild/dresystems/freebsd_ace_debug.xml:
+        * configs/autobuild/dresystems/freebsd_ace_dump.xml:
+        * configs/autobuild/dresystems/freebsd_ace_explicit_template.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_exception.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_inline.xml:
+        * configs/autobuild/dresystems/freebsd_ace_single.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+          Removed a preceeding space in options variable assignment for
+          make that seemed to cause a problem the new double quote fix
+          below.  Moved the "rmcast=1" from the same options section to
+          platforms_macros.GNU.
+
 Thu Aug  7 14:09:29 2003  Justin Michel  <michel_j@ociweb.com>
 
         * command/file_manipulation.pm:

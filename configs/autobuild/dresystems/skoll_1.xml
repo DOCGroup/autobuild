@@ -8,9 +8,9 @@
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
-  <variable name="root"                value="/home/dhinton/development/ace/autobuilds/skoll_1/ACE_wrappers" />
+  <variable name="root"                value="/home/dhinton/development/ace/autobuilds/skoll_1" />
   <variable name="build_name"          value="skoll_1" />
-  <variable name="project_root"        value="build/skoll_1" />
+  <variable name="project_root"        value="/home/dhinton/development/ace/autobuilds/skoll_1/ACE_wrappers/build/skoll_1" />
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/home/svn/www/autobuild_output/skoll_1" />
   <variable name="configs"             value="Linux" />
@@ -21,21 +21,20 @@
  <command name="file_manipulation"     options="type=mustnotexist file=.disable" />
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
- <command name="cvs"                   options="-z 3 -q update -Pd" />
+ <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
 
  <command name="create_ace_build"      options="" />
 
- <command name="file_manipulation"     options="type=create file=build/skoll_1/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 0\n#define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 0\n#define TAO_HAS_CORBA_MESSAGING 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 0\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/skoll_1/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 0\n#define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 0\n#define TAO_HAS_CORBA_MESSAGING 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 0\n'" />
 
- <command name="file_manipulation"     options="type=create file=build/skoll_1/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/skoll_1/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\n'" />
 
- <command name="file_manipulation"     options="type=create file=build/skoll_1/build.mwc output='workspace {\n ace\n ACEXML\n netsvcs\n tests\n apps\n examples\n performance-tests\n websvcs\n}\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/skoll_1/build.mwc output='workspace {\n ace\n ACEXML\n netsvcs\n tests\n apps\n examples\n performance-tests\n websvcs\n}\n'" />
 
- <command name="file_manipulation"     options="type=create file=build/skoll_1/TAO/build.mwc output='workspace {\n tao\n TAO_IDL\n tests\n orbsvcs\n examples\n performance-tests\n utils\n docs/tutorials/Quoter\n}\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/skoll_1/TAO/build.mwc output='workspace {\n tao\n TAO_IDL\n tests\n orbsvcs\n examples\n performance-tests\n utils\n docs/tutorials/Quoter\n}\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
- <command name="check_linker"          options="ld" />
  <command name="print_ace_config" />
 
  <!-- clean up all the libs just in case they get moved around by an evolving MPC ;-) -->
