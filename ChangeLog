@@ -1,6 +1,11 @@
+Sat Jan 22 13:57:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+          Removed building of CIAO
+
 Thu Jan 20 16:47:03 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* command/cvsgrab.pm (CheckRequirements): 
+	* command/cvsgrab.pm (CheckRequirements):
 
 	  Fixed a typo while registering.
 
@@ -9,7 +14,7 @@ Thu Jan 20 06:40:55 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
  	* command/cvsgrab.pm:
 
 	  Added a new command for autobuilds.
-	
+
 	* configs/autobuild/atc/VxWorks.xml:
 
 	  Added the cvsgrab command.
