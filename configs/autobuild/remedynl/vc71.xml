@@ -46,6 +46,8 @@
     <command name="vc7make"            options="/rebuild debug TAO/orbsvcs/examples/examples.sln" />
     <command name="vc7make"            options="/rebuild debug TAO/orbsvcs/performance-tests/perf.sln" />
 
+    <command name="auto_run_tests"    options="-s \x22c:\ace\autobuild\win32sandbox\sandbox.exe -t 1200000\x22" /> 
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
