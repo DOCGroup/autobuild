@@ -849,7 +849,7 @@ sub Compile_Handler ($)
         # but don't print it in the report.
         push( @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}}, $1 );
     }
-    elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/) {
+    elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/i) {
         # Definitely an error
         $self->Output_Error ($s);
     }
@@ -867,9 +867,8 @@ sub Compile_Handler ($)
             $self->Output_Error ($s);
         }
     }
-    elsif ($s =~ m/^Warning: cannot find/)
+    elsif ($s =~ m/\s*warning:\s/i)
     {
-      ## nmake warning about dependency files
       $self->Output_Warning ($s);
     }
     elsif ($s =~ m/undefined reference to/
