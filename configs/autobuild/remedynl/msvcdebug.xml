@@ -35,8 +35,6 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
-
     <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -make_coexistence -type vc6" /> 
 
     <command name="win32make"         options="msvc_mpc_auto_compile -ALL -Debug -k" />
