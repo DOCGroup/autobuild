@@ -1,3 +1,15 @@
+Wed Jul  7 21:52:35 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Define ACE_HAS_DEV_POLL in generated `config.h' file.  ACE
+	  has always supported it.
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Define ACE_HAS_EVENT_POLL in generated `config.h' file.  ACE
+	  once again supports it.
+
 Wed Jul  7 09:47:39 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
