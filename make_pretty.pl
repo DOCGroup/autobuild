@@ -591,8 +591,6 @@ sub tests_output (@)
                || m/ERROR/
                || m/FAILED/
                || m/EXCEPTION/
-	       || $s =~ m/system exception/
-	       || $s =~ m/user exception/
 	       || m/ACE_ASSERT/
                || m/pure virtual /i) {
             if (!$opt_t) {

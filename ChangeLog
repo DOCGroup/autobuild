@@ -1,3 +1,11 @@
+Fri Mar 21 11:28:28 2003  Ossama Othman  <ossama@uci.edu>
+
+	* make_pretty.pl (tests_output):
+	* common/prettify.pm (Test_Handler):
+
+	  Reverted previous change.  Some tests print expected exception
+	  output.
+
 Thu Mar 20 14:21:33 2003  Ossama Othman  <ossama@uci.edu>
 
 	* make_pretty.pl (tests_output):
