@@ -61,7 +61,8 @@ University</a>, <A
 HREF=\"http://www.dist-systems.bbn.com/projects/\">BBN Technologies</A>,
 <A HREF=\"http://www.theaceorb.nl\">Remedy IT</A>,
 <a href=\"http://www.objectsciences.com/\">ObjectSciences</a>, and
-hunleth.com. <P> If you'd like to contribute builds to our virtual
+<a href=\"http://www.hunleth.com/~acebuild/\">hunleth.com</a>. <P>
+ If you'd like to contribute builds to our virtual
 scoreboard please contact <A
 HREF=\"mailto:devo_group\@cs.wustl.edu\">us</A> and let us know which
 platform combinations you can contribute.";
