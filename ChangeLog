@@ -1,3 +1,9 @@
+Sat Oct  9 06:20:34 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/balar_isis/DynamicHash.xml:
+
+	  Fixed a typo in the XML file.
+
 Thu Oct  7 13:55:49 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/GenerateTestMatrix.py:
