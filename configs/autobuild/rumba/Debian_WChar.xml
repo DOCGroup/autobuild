@@ -27,10 +27,10 @@
     <command name="check_compiler" options="gcc-3.1" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO" />
+    <command name="make"              options="-j 2 -k realclean" />
+    <command name="make"              options="-j 2 -k -C TAO realclean" />
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
 
     <command name="auto_run_tests"    options="" />
 
