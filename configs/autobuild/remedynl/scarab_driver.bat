@@ -2,4 +2,7 @@ cd ..\..\..\
 set CVS_RSH=ssh
 cvs -d :ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
 cd configs\autobuild\remedynl
-rem perl C:\ACE\autobuild\autobuild.pl Cygwin.xml
+perl C:\ACE\autobuild\autobuild.pl scarab_bcb6dru.xml
+perl C:\ACE\autobuild\autobuild.pl scarab_bcb6ddu.xml
+perl C:\ACE\autobuild\autobuild.pl scarab_bcb6dr.xml
+perl C:\ACE\autobuild\autobuild.pl scarab_bcb6dd.xml
