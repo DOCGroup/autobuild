@@ -1,3 +1,16 @@
+Tue Jul 29 03:25:21 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/check_linker.pm:
+        * autobuild.pl:
+          Added new file check_linker.pm that works just like
+          check_compiler.pm, and prints out the version of the linker.
+          It's currently only wired up to support "ld -v" if passed "ld."
+
+        * configs/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+          Added new check for linker.
+
 Mon Jul 28 12:52:19 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6StaticRelease.xml:

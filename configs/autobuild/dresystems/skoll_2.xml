@@ -26,6 +26,7 @@
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
+    <command name="check_linker" options="ld" />
     <command name="print_ace_config" />
 
     <command name="make"              options="-k reverseclean" />
