@@ -1,3 +1,9 @@
+Thu Apr 17 06:59:28 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/driver_full.sh: Full builds on
+	  sirion move in to tango at ISIS.
+
 Wed Apr 16 17:17:50 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Added the new core build and removed
