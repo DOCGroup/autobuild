@@ -71,18 +71,6 @@ sub Run ($)
 
     my $current_dir = getcwd ();
     
-    my @dirs;
-    my $dir='';
-    if ($options =~ m/search='([^']*)'/) {
-        $dir = $1;
-        @dirs = split(/,/, $1);
-    }
-    elsif ($options =~ m/search=([^\s]*)/) {
-        $dir = $1;
-        @dirs = split(/,/, $1);
-    }
-    $options =~ s/search=$dir//;
-
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;

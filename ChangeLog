@@ -1,3 +1,10 @@
+Fri Aug  8 14:39:29 2003  Justin Michel  <michel_j@ociweb.com>
+
+	* command/vc6make.pm:
+
+          vc6 is not as flexible with the order of commands as vc7, so
+        the .dsw file must come first.
+
 Fri Aug  8 12:24:03 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
