@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/Kylix/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/Kylix/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/usr/local/kylix3/bin:/home/build/ACE/Kylix/ACE_wrappers/ace" />
-        <environment name="PATH"            value="/usr/local/kylix3/bin:/usr/local/kylix3/lib:/usr/local/bin:/usr/bin:/home/build/ACE/Kylix/ACE_wrappers/ace" />
+        <environment name="PATH"            value="/bin:/usr/local/kylix3/bin:/usr/local/kylix3/lib:/usr/local/bin:/usr/bin:/home/build/ACE/Kylix/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
