@@ -24,6 +24,8 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P javart" />
 
+    <command name="shell"             options="/bin/csh -c 'unalias rm cp && cd /export/home/bugzilla/javart && source setup.jvm" />
+
     <command name="make"              options="realclean" />
     <command name="make"              options=" jvm" />
 
