@@ -1,3 +1,10 @@
+Fri Aug  6 17:35:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC64AXP.xml:
+          Exclude two directories where the linker has problems. These are known
+          bugs in the linker, but there is no newer SuSE version for Alpha,
+          so just disable these, then we get a better view when things break
+
 Fri Aug  6 10:15:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
 
         * autobuild/configs/autobuild/prism/HPUX11_ACC339_Full.xml
