@@ -1,3 +1,11 @@
+Tue Aug 24 21:41:44 2004  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/autobuild/acorn/netbsd_amd64.xml:
+	* configs/autobuild/acorn/netbsd_i386.xml:
+	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+
+	  Configs for my current nightly builds.
+
 Tue Aug 24 12:37:15 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/buildMatrixSummary:
