@@ -13,7 +13,7 @@
         <variable name="root"               value="/build/ACE/gcc" />
         <variable name="log_file"           value="log.txt" />
         <variable name="log_root"           value="/build/ACE/gcc" />
-        <variable name="configs"            value="Exceptions" />
+        <variable name="configs"            value="Exceptions Static" />
         <variable name="name"               value="HPUX" />
     </configuration>
 
