@@ -30,6 +30,7 @@
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="MPC_Make" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />
     <command name="make"              options="-k -j 4 CIAO_Core" />
 
