@@ -1,3 +1,8 @@
+Thu Sep 12 00:16:15 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/driver.sh: Put directory with newer
+	  GNU utilities in PATH.
+
 Tue Sep 10 10:32:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/maglor/Static.xml: Do not send the mail to the
