@@ -1,3 +1,23 @@
+Fri Aug  1 17:02:14 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/check_linker.pm:
+          Changed an if to elsif when testing linkers.  This in a
+          temporary fix since this will be moved to the check_compiler.pm
+          script soon.
+
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+          Added a find command to clean up all lib*'s before building,
+          just in case.
+
+        * configs/autobuild/dresystems/mpc_test.sh:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/scoreboard/tao_future.xml:
+          Added a new build to test MPC.  It builds ACE+TAO without any
+          special options, but doesn't run any tests.  It also uses "-j2"
+          so we can test parallel builds that seem to have problems.
+
 Thu Jul 31 14:15:48 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/file_manipulation.pm:

@@ -36,6 +36,9 @@
  <command name="check_linker"          options="ld" />
  <command name="print_ace_config" />
 
+ <!-- clean up all the libs just in case they get moved around by an evolving MPC ;-) -->
+ <command name="shell"                 options="find . -name \x22lib*\x22 -exec rm '{}' ';'" />
+
  <command name="generate_workspace"    options="build.mwc -make_coexistence" />
 
  <command name="make"                  options="-k realclean" />

@@ -55,7 +55,7 @@ sub Run ($)
     if(lc $linker eq "ld"){
         system("ld -v");
     }
-    if(lc $linker eq "ilink32"){
+    elsif(lc $linker eq "ilink32"){
         system("ilink32 -v");
     }
     else{
