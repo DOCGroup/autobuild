@@ -1,3 +1,9 @@
+Sun May  9 11:33:22 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/flamenco/Static.xml:
+          Removed GNUmakefiles before a cvs checkout and corrected
+          LD_LIBRARY_PATH
+
 Sun May  9 11:30:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Debian_Core.xml:

@@ -4,8 +4,8 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO"/>
-	<environment name="CIAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/ace" />
+        <environment name="CIAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="LD_ASSUME_KERNEL"         value="2.4.19" />
         <environment name="CVS_RSH"         value="ssh" />
@@ -22,12 +22,10 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <!-- Delete all the GNUmakefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
-    <!-- Now, delete them again to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='IMPLICIT_TEMPLATES_FLAG=-fimplicit-templates\noptimize=1\nexceptions=1\nrtti=1\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -41,15 +39,12 @@
     <!-- Every thing inside of TAO including CIAO -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
 
-
-
     <!--Get the cidlc compiler Note this is only for linux with bunzip2 installed-->
     <command name="shell"             options="rm -rf cidlc" />
     <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/latest.txt" />
     <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/`cat cidlc/latest.txt`" />
     <command name="shell"             options="bunzip2 cidlc/`cat cidlc/latest.txt`" />
     <command name="shell"             options="mv `cat cidlc/latest.txt | sed -e 's/\(.*\)\.bz2$/cidlc\/\1/g'` $CIAO_ROOT/bin/cidlc" />
-
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />

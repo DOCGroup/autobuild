@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers/ace" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Dynamic_Hash/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="LD_ASSUME_KERNEL"         value="2.4.19" />
         <environment name="CVS_RSH"         value="ssh" />
@@ -21,11 +21,9 @@
     <command name="log"               options="on" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
-    <!-- Now, delete them again to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nTAO_IDLFLAGS += -H dynamic_hash\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\n\n'" />
