@@ -1,3 +1,8 @@
+Sat Jan  1 14:45:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*.xml:
+          Reduced the number of logs to keep to save webspace
+
 Wed Dec 29 11:27:22 2004  Steve Huston  <shuston@riverace.com>
 
         * command/auto_run_tests.pm: Fixed use of uninitialized variable $dir.
@@ -6,12 +11,12 @@ Mon Dec 27 21:08:56 CST 2004  Yan Dai <dai_y@ociweb.com>
 
         * testmatrix/GenerateTestMatrix.py:
           Fixed missing includes.
-        
+
         * matrix_database/TestPlatform.py:
           Merged previous testmatrix/Platform.py to this script.
 
         * matrix_database/InsertLocalCompilationDbFiles.sh:
-          Cleaned files_to_add_to_DB before appending to the file. 
+          Cleaned files_to_add_to_DB before appending to the file.
 
         * matrix_database/CompilationDB.py:
           Commented log message in BuildLogLoaded().
