@@ -34,19 +34,30 @@ this is only linux.
    </build>
    -->
 
+   <!-- This build requires another dependent feature
    <build>
    <name>Facet-eventvector</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventvector</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
+   -->
 
+   <build>
+   <name>Facet-event_pull</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/event_pull</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <!-- This build requires another dependent feature
    <build>
    <name>Facet-realtime_dispatcher</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/realtime_dispatcher/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
+   -->
 
    <build>
    <name>Facet-source_filter</name>
