@@ -69,6 +69,10 @@
             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
         </build>
         <build>
+            <name>GCC32_GIOP10</name>
+            <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/itao_GIOP10</url>
+        </build>
+        <build>
             <name>RedHat_Explicit_Templates</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_Explicit_Templates</url>
         </build>
