@@ -10,7 +10,7 @@
         <variable name="root"     value="/project/maglor/bugzilla/Static" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/maglor_Static" />
-        <variable name="configs"  value="Linux STATIC" />
+        <variable name="configs"  value="Linux STATIC SSL" />
         <variable name="MAIL_ADMIN"  value="bugzilla@cs.wustl.edu" /> 
 
     </configuration>

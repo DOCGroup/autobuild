@@ -10,7 +10,7 @@
         <variable name="root"     value="/export/project/rumbatmp/bugzilla/GCC_3.0" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/rumba_GCC_3.0" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux SSL" />
 
     </configuration>
 
