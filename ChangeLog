@@ -1,6 +1,7 @@
-Thu Jul 22 13:46:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+Thu Jul 22 14:26:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/nirvana/New_DLL_Release.xml:
 
 	  Add OpenSSL include and library directories to the "INCLUDE" and
 	  "LIB" environment variables, respectively.  Addresses build
