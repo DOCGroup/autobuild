@@ -3,7 +3,7 @@
 # $Id$
 #
 
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:$PATH:$HOME/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/build/mpc_test_tao/bin
 export PATH
 
 LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH

@@ -2,15 +2,13 @@
 <autobuild>
  <configuration>
 
-  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/build/mpc_test_tao" />
-  <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/build/mpc_test_tao/TAO"/>
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/build/mpc_test_tao/lib" />
+  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers" />
+  <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/TAO"/>
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/lib" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
   <variable name="root"                value="/home/dhinton/development/ace/autobuilds/mpc_test_tao" />
-  <variable name="build_name"          value="mpc_test_tao" />
-  <variable name="project_root"        value="/home/dhinton/development/ace/autobuilds/mpc_test_tao/ACE_wrappers/build/mpc_test_tao" />
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/home/svn/www/autobuild_output/mpc_test_tao" />
   <variable name="configs"             value="Linux" />
@@ -21,32 +19,39 @@
  <command name="file_manipulation"     options="type=mustnotexist file=.disable" />
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
- <command name="cvs"                   options="-z 3 -q co -P ACE_wrappers" />
 
- <command name="create_ace_build"      options="" />
+ <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+ <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+ <command name="cvs"                   options="-z 9 -q co -P ACE_wrappers" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/mpc_test_tao/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+ <!-- Now, delete them again to insure a clean slate. -->
+ <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/mpc_test_tao/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/mpc_test_tao/TAO/build.mwc output='workspace {\n tao\n TAO_IDL\n tests\n orbsvcs\n examples\n performance-tests\n utils\n docs/tutorials/Quoter\n}\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
  <command name="print_ace_config" />
 
- <command name="generate_workspace"    options="-recurse=TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
- <command name="generate_workspace"    options="TAO/build.mwc -make_coexistence" />
+ <!-- Uses ACE.mwc -->
+ <command name="shell"                 options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
+ <!-- Uses TAO/TAO.mwc -->
+ <command name="shell"                 options="cd ACE_wrappers/TAO; ../bin/mwc.pl -recurse=TAOACE.mwc -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
- <command name="make"                  options="-k" />
+ <command name="make"                  options="-kj4 -C ace" />
+ <command name="make"                  options="-kj4 -C apps/gperf/src" />
+ <command name="make"                  options="-kj4 -C Kokyu" />
 
  <!-- TAO -->
  <command name="make"                  options="-k -C TAO realclean" />
- <command name="make"                  options="-k -C TAO idl_stubs" />
- <command name="make"                  options="-k -C TAO depend" />
- <command name="make"                  options="-k -j1 -C TAO" />
+ <command name="make"                  options="-k -j4 -C TAO/tao" />
+ <command name="make"                  options="-k -j2 -C TAO/TAO_IDL" />
+ <command name="make"                  options="-k -C TAO/orbsvcs/orbsvcs idl_stubs" />
+ <command name="make"                  options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
 
  <command name="log"                   options="off" />
  <command name="process_logs"          options="clean move prettify index" />

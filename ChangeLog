@@ -1,3 +1,19 @@
+Thu Aug 21 17:10:20 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/mpc_test_tao.sh:
+          Added $ACE_ROOT/bin to PATH.
+
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+          Removed use of build directory and adjusted all paths.  Added
+          steps to remove all existing Makefiles before and after cvs
+          checkout (once MPC is fully implemented they will be removed
+          from CVS, these steps emulate there removal). Modified make
+          steps to mimic the Core builds for testing.
+
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+          Modified this build to use MPC in the same manner as the
+          mpc_test_tao build above.
+
 Mon Aug 18 23:56:54 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/freebsd_*.xml:
