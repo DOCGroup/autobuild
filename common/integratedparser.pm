@@ -95,6 +95,9 @@ sub Parse ($\@)
         elsif ($state eq 'scoreboard') {
             if (m/^\s*<\/scoreboard>\s*$/i) {
                 $state = 'integrated';
+
+                # Make the global name null
+                $global_build_name = '';
             }
             elsif (m/^\s*<group>\s*$/i) {
                 $state = 'group';
@@ -127,7 +130,11 @@ sub Parse ($\@)
                     return 0;
                 }
                 
-                $build_info{GROUP} = $global_build_name.' On '.$group_name;
+                if ($global_build_name ne '') {
+                    $build_info{GROUP} = $global_build_name.' On '.$group_name;
+                } else {
+                    $build_info{GROUP} = $group_name;
+                }
                 
                 %{%{$data}->{$build_info{NAME}}} = %build_info;
                 %build_info = ();

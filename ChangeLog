@@ -1,6 +1,11 @@
+Sun Mar 16 21:22:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* common/integratedparser.pm (Parse): Cosmetic fixes that never
+	  got merged from my branch!
+
 Sun Mar 16 20:02:38 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.bat: Bat file for the Win32 webserver.
+	* configs/scoreboard/tao.bat: Bat file for the Win32 webserver. 
 
 Sun Mar 16 19:11:23 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
