@@ -1,3 +1,10 @@
+Sat Oct 04 13:09:32 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          In the setup phase, when found "nothing known about", handle that as
+          error. This cvs error was in the setup phase of all the builds but was
+          not detected as error that should be corrected.
+
 Thu Oct 02 11:40:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
