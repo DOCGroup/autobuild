@@ -1,3 +1,7 @@
+Thu May 23 22:55:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Added Debian_Minimum_Static build.
+
 Thu May 23 21:53:41 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/check_compiler.pm: Add checks for Borland and MSVC++.
