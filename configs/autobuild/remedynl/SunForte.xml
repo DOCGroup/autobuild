@@ -22,7 +22,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ntemplates=implicit\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="sun_cc" />
@@ -31,8 +31,10 @@
     <command name="print_perl_version" />
 
     <command name="make"              options="-k reverseclean" />
+    <command make="make"              options="-k -C TAO reverseclean" />
 
     <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
 
     <command name="auto_run_tests" options="-a" /> 
 
