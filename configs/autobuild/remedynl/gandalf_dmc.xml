@@ -31,7 +31,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_win32_dmc.GNU\n'" />
 
     <command name="print_os_version" options="useuname" />
-    <command name="check_compiler" options="dmc" />
+    <command name="check_compiler" options="dm" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
