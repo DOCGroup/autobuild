@@ -32,7 +32,10 @@
     <command name="print_perl_version" />
 
     <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-C ace" />
+    <command name="make"              options="-k -C TAO reverseclean" />
+
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=1 move prettify index" />
