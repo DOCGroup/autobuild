@@ -1,3 +1,8 @@
+Mon Feb 28 10:57:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Removed VxWorks pthread build
+
 Sun Feb 27 07:34:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
