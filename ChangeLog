@@ -1,3 +1,9 @@
+Thu Jan  1 21:56:48 UTC 2004  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+          Removed the MPC_Make, CIAO coreclean, and CIAO_Core.  Use the
+          standard target instead.
+
 Wed Dec 31 09:29:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
