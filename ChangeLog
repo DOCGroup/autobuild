@@ -1,3 +1,8 @@
+Sat Jan 30 13:11:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/GCC32.xml:
+	  Cleanded this file and build with fl_reactor enabled.
+
 Sat Jan 24 16:19:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* command/win32make.pm:
