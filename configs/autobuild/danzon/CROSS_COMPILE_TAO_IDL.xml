@@ -1,5 +1,6 @@
 <!-- $Id$ -->
-<!-- This build is used to just build the TAO IDL compiler,     -->
+<!-- This build is used to just build the TAO IDL compiler      -->
+<!-- and TAO psdl_tao compiler.                                 -->
 <!-- so that it can be used with the Lynx cross compile build.  -->
 <!-- We just need to build the apps/gperf/src, ace, and         -->
 <!-- TAO/TAO_IDL directories.  We do not need to run the tests. -->
@@ -15,7 +16,6 @@
         <variable name="root"     value="/export1/project/danzontmp1/bugzilla/CROSS_COMPILE_TAO_IDL" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/danzon_CROSS_COMPILE_TAO_IDL" />
-        <variable name="configs"  value="SUNCC5_3" />
 
     </configuration>
 
