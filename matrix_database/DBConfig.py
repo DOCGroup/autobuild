@@ -10,12 +10,12 @@ class DBConfig:
 # Configuration of the *.db files.
 class DBFileConfig:
 	  # Output directory for the *.db files. 
-	  dbdir_w = "/project/taotmp/scoreboard/html/test_matrix_db"
+	  dbdir_w = "/export/web/www/scoreboard/test_matrix_db"
 
 # Configuration of the compilation db files.
 class CompilationDBFileConfig:
           # Output directory for the *.db files.
-          dbdir_w = "/project/taotmp/scoreboard/html/compilation_matrix_db"
+          dbdir_w = "/export/web/www/scoreboard/compilation_matrix_db"
 
 # Edit your build system configuration here. 
 # The format of the configuration:

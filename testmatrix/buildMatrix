@@ -24,7 +24,7 @@ if [ -z "$othtml" ]; then
   othtml=test_complex
 fi
 
-logdir="/project/taotmp/scoreboard/html"
+logdir="/export/web/www/scoreboard"
 
 otraw=test_spread.raw
 filelist=`cat $buildlist`
