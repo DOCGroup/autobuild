@@ -3,7 +3,7 @@
 # $Id$
 #
 
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/sbin:$PATH
 export PATH
 
 LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH

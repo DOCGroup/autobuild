@@ -2,15 +2,15 @@
 <autobuild>
  <configuration>
 
-  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_tao/ACE_wrappers" />
-  <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_tao/ACE_wrappers/TAO"/>
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/freebsd_tao/ACE_wrappers/ace" />
+  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_tao_explicit/ACE_wrappers" />
+  <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_tao_explicit/ACE_wrappers/TAO"/>
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/freebsd_tao_explicit/ACE_wrappers/ace" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
-  <variable name="root"                value="/home/dhinton/development/ace/autobuilds/freebsd_tao" />
+  <variable name="root"                value="/home/dhinton/development/ace/autobuilds/freebsd_tao_explicit" />
   <variable name="log_file"            value="build.txt" />
-  <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_tao" />
+  <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_tao_explicit" />
   <variable name="configs"             value="Exceptions" />
   <variable name="make_program"        value="gmake" />
 
@@ -25,7 +25,7 @@
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-freebsd.h\x22\n#define TAO_HAS_SHMIOP 0\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nexceptions=1\noptimize=0\nrmcast=1\ntemplates=explicit\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
@@ -37,7 +37,6 @@
 
  <!-- TAO -->
  <command name="make"                  options="-k -C TAO realclean" />
- <command name="make"                  options="-k -C TAO/TAO_IDL" />
  <command name="make"                  options="-k -C TAO" />
 
  <command name="log"                   options="off" />

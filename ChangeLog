@@ -1,10 +1,23 @@
+Fri Dec 26 14:36:44 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/freebsd_tao_explicit:
+        * configs/scoreboard/tao.xml:
+          Added new full explicit template build on FreeBSD.
+
+        * configs/autobuild/dresystems/freebsd_ace_wchar.xml:
+        * configs/scoreboard/ace.xml:
+          Added new ACE wchar build.
+
+        * configs/autobuild/dresystems/freebsd_ace_explicit_template.xml:
+          Set templates=explicit *before* including platform_linux.GNU.
+
 Fri Dec 26 08:36:16 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
 	* configs/autobuild/danzon/SunOS_SunCC53.xml:
 	* configs/autobuild/dresystems/sol9_spro54_tao_legacy.xml:
 
-	  All of them needed -GT option. I don't think this is goping to
+	  All of them needed -GT option. I don't think this is going to
 	  change the result by any means.
 
 Mon Dec 22 18:44:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>

@@ -49,6 +49,14 @@ all the OS/platform combinations ACE is tested everyday.
         <orange>30</orange>
         <red>36</red>
      </build>
+     <build>
+        <name>FreeBSD_5.0_WCHAR</name>
+        <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_ace_wchar</url>
+        <build_sponsor>DRE Systems</build_sponsor>
+        <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+        <orange>30</orange>
+        <red>36</red>
+     </build>
 </group>
 
 <group>
