@@ -1,3 +1,8 @@
+Wed Mar 19 06:00:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/ace_future.xml: Changed the URL for MACOS
+	  build. 
+
 Tue Mar 18 14:27:56 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao_future.xml: Added skoll_3 to the

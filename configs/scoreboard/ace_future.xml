@@ -23,7 +23,7 @@ all the OS/platform combinations ACE is tested everyday.
     </build> 
     <build>
     <name>MACOS_X</name>
-    <url>http://makexs.com/~zorko/</url>
+    <url>http://www.darwinarts.com/~zorko/</url>
      <build_sponsor>John Zorko</build_sponsor>
     </build>
     <build>
