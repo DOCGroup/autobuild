@@ -28,8 +28,8 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="--k reverseclean" />
-    <command name="make"              options="-k -C TAO" />
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
     <command name="make"              options="-j 4 -C ace" />
     <command name="make"              options="-j 4 -C apps/gperf/src" />
     <command name="make"              options="-j 4 -C TAO/tao" />
