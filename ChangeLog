@@ -1,3 +1,8 @@
+Fri Jul 25 16:44:05 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/index.xml: Added reference to the Stats
+	  pages. 
+
 Thu Jul 24 09:38:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/SunForte.xml: Added a few nice

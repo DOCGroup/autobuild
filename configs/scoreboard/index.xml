@@ -39,5 +39,11 @@ contribute. Instructions for setting up your own daily build and
 scoreboard are
 <a href="http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/README?cvsroot=autobuild"> here</a>
 </p>
+
+<p> We use the daily builds as a basis to collect important metrics
+like compilation time, footprint and performance details. Please 
+refer to <a href="http://www.dre.vanderbilt.edu/scoreboard"> this 
+page </A> for more details.
+</p>
  </preamble>
 </intropage>
