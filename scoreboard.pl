@@ -65,6 +65,10 @@ scoreboard please contact <A
 HREF=\"mailto:devo_group\@cs.wustl.edu\">us</A> and let us know which
 platform combinations you can contribute.";
 
+my $build_instructions = "<br><p>Instructions for setting up your
+own scoreboard are <A HREF=\"http://cvs.doc.wustl.edu/ace-latest/autobuild/README\">
+here</A>\n";
+
 ###############################################################################
 #
 # load_build_list
@@ -533,7 +537,8 @@ sub update_html ($)
     ### Start body
 
     print $indexhtml "<body bgcolor=white>\n<h1>Build Scoreboard</h1>\n<hr>\n";
-    print $indexhtml "$preamble\n<hr>\n";
+    print $indexhtml "$preamble\n";
+    print $indexhtml "$build_instructions\n<hr>\n"; 
     ### Print tables (first the empty one)
 
     update_html_table ($dir, $indexhtml, undef) if ($#nogroup >= 0);
