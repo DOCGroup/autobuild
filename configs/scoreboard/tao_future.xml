@@ -94,7 +94,7 @@ decide the migration paths and strategies.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_MingW_GCC_3_2</name>
+            <name>Win2K_MingW_GCC_3_2_3</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_MingW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
