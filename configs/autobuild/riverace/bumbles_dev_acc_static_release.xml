@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/acc_static_release" />
         <variable name="log_file"     value="ACE_wrappers-repository/acc_static_release.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/bumbles/dev/acc_static_release" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions STATIC" />
 
     </configuration>
 
