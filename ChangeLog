@@ -1,3 +1,10 @@
+Tue Jan 28 23:07:05 2003  Frank Hunleth  <frank@hunleth.com>
+
+	* configs/autobuild/slytherin/OpenBSD_Full.xml:
+	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+	* configs/autobuild/slytherin/OpenBSD_Core.xml: Updated to support
+	  the merged config-openbsd.h and platform_openbsd.GNU files.
+
 Mon Jan 27 20:02:41 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/heidi_dev_forte6_debug.xml: New build
@@ -7,7 +14,7 @@ Mon Jan 27 20:02:41 2003  Steve Huston  <shuston@riverace.com>
 
 Mon Jan 27 18:10:19 2003  Heather Drury  <drury_h@ociweb.com>
 
-        * configs/autobuild/tango/Debian_NoInline.xml: Removed reference 
+        * configs/autobuild/tango/Debian_NoInline.xml: Removed reference
           to SSL in configs so that SSL tests are not run.
 
 Sat Jan 25 14:55:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
