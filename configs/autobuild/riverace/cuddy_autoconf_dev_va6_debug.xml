@@ -28,7 +28,7 @@
     <command name="print_os_version" />
     <command name="check_compiler"    options="vacpp" />
     <command name="print_ace_config" />
-    <command name="configure"         options="CXX=xlC_r --preclean" />
+    <command name="configure"         options="CXX=xlC_r ACE_TLS_CPPFLAGS=-I/opt/freeware/include ACE_TLS_LDFLAGS=-L/opt/freeware/lib --preclean" />
     <command name="file_manipulation" options="type=create file=build/autoconf_va6_debug/.disable output='RUNNING'" />
 
     <command name="make"              options="-j 2 -k" />

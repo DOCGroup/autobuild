@@ -1,3 +1,8 @@
+Thu Feb 26 18:05:22 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: Add SSL
+	  options to ACE_TLS_CPPFLAGS and ACE_TLS_LDFLAGS.
+
 Fri Feb 20 17:12:14 2004  Yamuna Krishnamurthy  <yamuna@oomworks.com>	
 
 	* configs/autobuild/atl/2.6.0.test7-lksctp.xml: 
