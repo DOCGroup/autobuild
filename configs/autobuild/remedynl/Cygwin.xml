@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers" />
         <environment name="TAO_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers/TAO"/>
-        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVSROOT"      value="jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\perl\bin;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
@@ -52,7 +52,4 @@
     <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/willemsenj/CygwinACE/* -f" />
     <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/willemsenj/CygwinACE" />
 </autobuild>
-
-
-
 
