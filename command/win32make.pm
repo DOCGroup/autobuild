@@ -87,6 +87,9 @@ sub Run ($)
         # override with the old file
 
         $command = "perl bin/msvc_auto_compile.pl $1";
+    } elseif ($options =~ m/msvc_mpc_auto_compile(.*)$/) {
+        # override with the old file
+        $command = "perl bin/msvc_mpc_auto_compile.pl $1";
     }
 
     print "Running: $command\n";

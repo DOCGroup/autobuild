@@ -1,3 +1,16 @@
+Tue Jan 20 15:14:23 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/remedynl/msvcdebug.xml: 
+
+	  Used the new msvc_mpc script to run the builds. If the builds go
+	  fine we can permanently start using this. It seems to work fine
+	  on my laptop.
+
+	* command/win32make.pm:
+
+	  Added an extra condition for using msvc_mpc_auto_compile
+	  script. 
+
 Mon Jan 19 16:34:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/*.xml:
