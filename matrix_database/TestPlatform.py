@@ -314,6 +314,10 @@ class TestPlatform:
 			return
 		state = 0
 		line = file.readline()
+                if line == "":
+                        print "ERROR: file is empty:", self.raw_file
+                        return
+
 		time = 0.0
 		# scan thru the file, state=0 while in pre-test stuff and state=1 while in tests 
 		while line != "":
