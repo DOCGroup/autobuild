@@ -30,7 +30,7 @@
  <command name="print_ace_config" />
 
  <!-- ACE -->
- <command name="make"                  options="-k reverseclean" />
+ <command name="make"                  options="-k realclean" />
  <command name="make"                  options="-k" />
 
  <command name="auto_run_tests"        options="-a"/>
