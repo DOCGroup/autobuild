@@ -1,3 +1,13 @@
+Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+	  Changed from make realclean to make reverseclean to insure
+	  that everything gets cleaned out so Visual Age can deal with
+	  template properly.
+
 Mon Mar 24 07:04:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
