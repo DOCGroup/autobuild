@@ -1,3 +1,9 @@
+Tue Feb 22 09:59:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed msvc6 release builds and VxWorks diab build. We have more
+          builds then cpu's at this moment so we had to remove a few.
+
 Fri Feb 18 21:27:08 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
