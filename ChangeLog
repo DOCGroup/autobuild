@@ -1,3 +1,9 @@
+Wed Aug 11 21:41:33 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/scoreboard/tao.xml:
+
+	  Put the CIDLC build on the scoreboard.
+
 Wed Aug 11 21:38:33 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/CIDLC.xml:
@@ -13,7 +19,8 @@ Wed Aug 11 21:38:33 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/tango_isis/SingleThreaded.xml:
 
 	  Use the CIDLC from the above build. Do cidl=1 in all the
-	  builds. 
+	  builds. I am sick of seeing some errors or the other and I want
+	  to clean those away.
 
 Wed Aug 11 14:45:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml
@@ -88,9 +95,10 @@ Mon Aug  9 15:13:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 Fri Aug  6 17:35:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCC64AXP.xml:
-          Exclude two directories where the linker has problems. These are known
-          bugs in the linker, but there is no newer SuSE version for Alpha,
-          so just disable these, then we get a better view when things break
+          Exclude two directories where the linker has problems. These are
+	  known bugs in the linker, but there is no newer SuSE version for
+	  Alpha, so just disable these, then we get a better view when
+	  things break.
 
 Fri Aug  6 10:15:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
 
