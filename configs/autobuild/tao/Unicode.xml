@@ -3,10 +3,10 @@
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_unicode\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="F:\bugzilla\new_unicode\ACE_wrappers\TAO"/>
-        <environment name="Path"         value="F:\bugzilla\new_unicode\ACE_wrappers\bin;" type="prefix" />
+        <environment name="Path"             value="F:\bugzilla\new_unicode\ACE_wrappers\bin;F:\bugzilla\new_unicode\ACE_wrappers\lib;" type="prefix" />
 
         <variable name="root"     value="F:/bugzilla/new_unicode/" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\Inetpub\wwwroot\bugzilla\new_unicode" />
         <variable name="name"     value="Win2K Unicode" />
         <variable name="configs"  value="Win32 Exceptions" />
