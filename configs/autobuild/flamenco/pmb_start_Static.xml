@@ -31,16 +31,6 @@
     <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
 
-    <!-- ACE -->
-    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
-    <!-- TAO -->
-    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
-
-    <command name="make"              options="realclean" />
-    <command name="make"              options="-C TAO realclean" />
-    <command name="make"              options="-j 4 -k" />
-    <command name="make"              options="-j 4 -k -C TAO" />
-
     <!-- Forces a sync to clean state -->
     <command name="shell"             options="/bin/sync" /> 
     <command name="shell"             options="sleep 10" /> 
