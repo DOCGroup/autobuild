@@ -1,7 +1,14 @@
+Sun Jul 27 17:07:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          In the setup phase, when encountered WARNING, thread this as warning
+          for the build output. This way MPC warnings are visible easily on the
+          scoreboard
+
 Fri Jul 25 16:44:05 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/index.xml: Added reference to the Stats
-	  pages. 
+	  pages.
 
 Thu Jul 24 09:38:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 

@@ -804,7 +804,9 @@ sub Setup_Handler ($)
     elsif ($s =~ /^C /) {
         $self->Output_Error ($s);
     }
-    elsif  ($s =~ /^M /) {
+    elsif ($s =~ /^M / ||
+           $s =~ m/WARNING/) 
+    {
         $self->Output_Warning ($s);
     }
     else {
