@@ -42,6 +42,7 @@ use Time::Local;
 #                 ->{TEST_SECTION}     <- Section number for the Test section
 #                 ->{TEST_ERRORS}      <- Number of Test Errors
 #                 ->{TEST_WARNINGS}    <- Number of Test Warnings
+#                 ->{SECTION_ERROR_SUBSECTIONS} <- Number of subsections with errors
 
 my %builds;
 
@@ -214,6 +215,10 @@ sub query_latest ()
             $builds{$buildname}{TEST_SECTION} = $1;
             $builds{$buildname}{TEST_ERRORS} = $2;
             $builds{$buildname}{TEST_WARNINGS} = $3;
+        }
+
+        if ($latest =~ m/Failures: (\d+)/) {
+            $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
         }
     }
 }
@@ -674,7 +679,7 @@ sub update_html_table ($$@)
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
     print $indexhtml "<th>Build Name</th><th>Last Finished</th>";
-    print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th>";
+    print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th><th>Failures</th>";
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
     print $indexhtml "<th>Build <br>Sponsor</th>";
@@ -800,6 +805,13 @@ sub update_html_table ($$@)
             else {
                 print $indexhtml "&nbsp;";
             }
+            print $indexhtml "<TD bgcolor=$color>";
+            if (defined $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS}) {
+                print $indexhtml $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS};
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
         }
         else {
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Time
@@ -807,6 +819,7 @@ sub update_html_table ($$@)
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # CVS
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Compiler
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Tests
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # Subsections with Errors
         }
 
 

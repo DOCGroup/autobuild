@@ -478,7 +478,6 @@ sub Section_Totals ()
     $self->{SECTION_SUBSECTIONS} = 0;
     $self->{SECTION_ERRORS} = 0;
     $self->{SECTION_WARNINGS} = 0;
-    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
     $self->{SECTION_WARNING_SUBSECTIONS} = 0;
 }
 
@@ -508,6 +507,8 @@ sub Footer ()
     if (defined $self->{TEST_SECTION}) {
         $totals .= " Test: $self->{TEST_SECTION}-$self->{TEST_ERRORS}-$self->{TEST_WARNINGS}";
     }
+
+    $totals .= " Failures: $self->{SECTION_ERROR_SUBSECTIONS}";
 
     $totals .= "\n";
 
@@ -832,9 +833,6 @@ sub Compile_Handler ($)
         # AIX reports a bazillion multiple defines when doing templates; some
         # have the word 'error' in the symbol name - ignore those.
         $self->Output_Normal ($s);
-    }
-    elsif ($s =~ m/\.depend\..*:\s+no\s+such\s+file/i) {
-      $self->Output_Normal ($s);
     }
     elsif ($s =~ m/is dangerous, better use/) {
         # Linux has this annoying mktemp, mkstemp stuff. Ignore that
