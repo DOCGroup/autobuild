@@ -997,7 +997,7 @@ sub SendEmailNotification($)
 
     Mail::send_message($mail_admin, 
                        "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
-                       scalar(@errors)." errors detected during while executing the build in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
+                       scalar(@errors)." errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
                        "Please check the scoreboard for details.\n\n".
                         $errors_string 
                       ); 
