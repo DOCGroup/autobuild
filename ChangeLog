@@ -1,3 +1,8 @@
+Mon Mar 03 12:41:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added support for the kylix compiler, which executable is named bc++
+
 Fri Feb 28 06:47:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/MingW.xml:
