@@ -860,9 +860,8 @@ sub Compile_Handler ($)
     elsif (# filename:linenumber is the typical format for an error
            $s =~ m/^.*:[0-9]+: /)
     {
-      print STDERR "Possible ERROR $s\n";
       if(# ... unless it is a warning
-         $s =~ m/^.*:[0-9]+: warning:/
+         $s =~ m/^.*:[0-9]+: warning:/i
          # ... or a template location where it could be either a
          # warning or an error, but the lines around it would show the
          # real reason ...
