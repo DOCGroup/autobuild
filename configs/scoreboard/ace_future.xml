@@ -80,7 +80,7 @@ all the OS/platform combinations ACE is tested everyday.
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-        <name>Win2K_CBuilderX_Preview(MPC)</name>
+        <name>WinXP_CBuilderX_Preview(MPC)</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXpreview</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
