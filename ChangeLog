@@ -7,7 +7,7 @@ Tue Mar 30 10:32:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 Mon Mar 29 16:08:06 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* scoreboard.pl:
+	* scoreboard.pl:
 	* common/integratedparser.pm:
 	* common/scoreparser.pm:
 
@@ -5339,4 +5339,3 @@ Fri Dec  7 15:21:57 2001  Carlos O'Ryan  <coryan@uci.edu>
           Like the previous one, but for POSIX platforms.  Unfortunately
           ACE breaks havoc with process groups, so it does not work all
           that great.
-
