@@ -11,13 +11,14 @@
         <environment name="JRATE_GCC_SRC_HOME"  value="/project/swing/corsaro/Software/GNU/jRateGCC" />
         <environment name="RTSJ_BENCH_HOME" value="/project/swing/corsaro/Software/RTSJBench" />
         <environment name="PYTHONPATH"      value="/project/swing/corsaro/Software/RTSJBench/script:" />
-        <environment name="JAVART_HOME"     value="/export/home/bugzilla/javart" />
-        <environment name="PATH"            value="project/swing/corsaro/Software/jRate-gcc/bin:/project/swing/corsaro/Software/RTSJBench/bin:/usr/local/bin:/bin:/usr/bin" />
+        <environment name="JAVART_ROOT"     value="/export/home/bugzilla/javart" />
+        <environment name="JTOOLS_HOME"     value="/project/swing/corsaro/Software/jTools" />
+        <environment name="PATH"            value="/project/swing/corsaro/Software/jRate-gcc/bin:/project/swing/corsaro/Software/RTSJBench/bin:/usr/local/bin:/bin:/usr/bin" />
 
         <variable name="root"               value="/export/home/bugzilla/" />
         <variable name="project_root"       value="javart" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root"           value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_javart" />
+        <variable name="log_root"           value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_javart/jRate" />
         <variable name="configs"            value="Linux" />
 
     </configuration>
@@ -29,7 +30,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P javart" />
 
     <command name="make"              options="realclean" />
-    <command name="make"              options="" />
+    <command name="make"              options=" jRate" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

@@ -8,12 +8,12 @@
         <environment name="JAVART_HOME"     value="/export/home/bugzilla/javart" />
         <environment name="JAVART_ROOT"     value="/export/home/bugzilla/javart" />
         <environment name="PATH"            value="/docpkg/rtsj/bin:/docpkg/jikes/bin:/docpkg/java/bin:/usr/bin/:/bin" />
-        <environment name="CLASSPATH"       value="/docpkg/JLex:/docpkg/java/jre/lib/rt.jar:.:/docpkg/java_cup:/docpkg/java/jre/lib/rt.jar:/docpkg/JLex/:/export/home/bugzilla/javart/classes:../..:../../..:." />
+        <environment name="CLASSPATH"       value="/docpkg/JLex:/docpkg/java_cup:/docpkg/java/jre/lib/rt.jar:/export/home/bugzilla/javart/classes:../..:../../..:." />
 
         <variable name="root"               value="/export/home/bugzilla/" />
         <variable name="project_root"       value="javart" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root"           value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_javart" />
+        <variable name="log_root"           value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_javart/rtsj" />
         <variable name="configs"            value="Linux" />
 
     </configuration>
