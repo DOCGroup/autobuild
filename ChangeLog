@@ -1,5 +1,7 @@
 Tue Mar 18 13:24:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
+	* configs/scoreboard/tao.xml: Moved the SuSe build to
+	  tao_future.xml. 
 	* configs/scoreboard/tao_future.xml: Reordered the builds on the
 	  scoreboard. 
 
