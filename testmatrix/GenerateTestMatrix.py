@@ -135,8 +135,8 @@ builds = ReadLogFiles ()
 testMatrix = BuildTestMatrix (builds, directory, fname, outfile)
 SaveBuildResults2HTML(directory,outfile)
 
-#if option == 1:
-#   WriteTestDBFiles(builds)
+if option == 1:
+   WriteTestDBFiles(builds)
 
 # Temporary comment out to avoid the requirement of MySQLdb.
 # Uncomment when you need save the test results to database.
