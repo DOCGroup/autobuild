@@ -3,6 +3,7 @@ setlocal
 set "LIB=%LIB%;d:\ssl\openssl-0.9.6\out32dll"
 set "INCLUDE=%INCLUDE%;D:\ssl\openssl-0.9.6\inc32"
 set "CVSROOT=:ext:wustlbuilds@cvs:/project/cvs-repository"
+set "CVS_RSH=plink"
 call "C:\Program Files\Microsoft Visual Studio\VC98\Bin\vcvars32.bat"
 cd ..\..\..\
 cvs up -P -d
