@@ -1,3 +1,10 @@
+2002-07-25  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/printaceconfig.pm: Print the contents of
+	  $ACE_ROOT/VERSION and $TAO_ROOT/VERSION.  This is useful
+	  when using the autobuild scripts to build a project
+	  which uses ACE/TAO, but is not ACE/TAO itself. 
+
 2002-07-24  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:

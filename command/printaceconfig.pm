@@ -114,6 +114,19 @@ sub Run ($)
         print_file ("include/makeinclude/platform_macros.GNU", 1);
     }
 
+    if ( -r "VERSION" ) {
+        print "================ ACE VERSION ================\n";
+
+        print_file ("VERSION", 0);
+    }
+
+    if ( -r "TAO/VERSION" ) {
+        print "================ TAO VERSION ================\n";
+
+        print_file ("TAO/VERSION", 0);
+    }
+  
+  
     chdir $current_dir;
 
     return 1;
