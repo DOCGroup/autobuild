@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="D:/ACE/MingW/ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\mingw\bin;D:\ACE\MingW\ACE_wrappers\bin;D:\;d:\putty;d:\perl\bin" type="prefix" />
+        <environment name="Path"         value="D:\MingW\bin;D:\ACE\MingW\ACE_wrappers\bin;D:\;d:\putty;d:\perl\bin" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 
@@ -29,9 +29,9 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="shell"             options="mingw32-make -k realclean" />
 
-    <command name="make"              options="-k" />
+    <command name="shell"              options="mingw32-make -k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
