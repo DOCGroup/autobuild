@@ -1,3 +1,8 @@
+Wed Feb  5 14:19:31 2003  Steve Huston  <shuston@riverace.com>
+
+        * common/prettify.pm: Added a new section handler for the autoconf
+          output filtering. It sends everything to the "normal" output for now.
+
 Tue Feb  4 18:31:41 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Re-enable

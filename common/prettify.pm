@@ -645,12 +645,13 @@ sub new ($)
 
     %{$self->{HANDLERS}} =
         (
-            'begin'   => \&Normal_Handler,
-            'setup'   => \&Setup_Handler,
-            'config'  => \&Config_Handler,
-            'compile' => \&Compile_Handler,
-            'test'    => \&Test_Handler,
-            'end'     => \&Normal_Handler
+            'begin'     => \&Normal_Handler,
+            'setup'     => \&Setup_Handler,
+            'config'    => \&Config_Handler,
+            'configure' => \&Autoconf_Handler,
+            'compile'   => \&Compile_Handler,
+            'test'      => \&Test_Handler,
+            'end'       => \&Normal_Handler
         );
 
     # Initialize the list of output classes
@@ -724,12 +725,13 @@ sub Process_Line ($)
         $self->{LAST_SECTION} = $section;
 
         $self->{STATE} = 'unknown';
-        $self->{STATE} = 'begin'   if (lc $section eq 'begin');
-        $self->{STATE} = 'setup'   if (lc $section eq 'setup');
-        $self->{STATE} = 'config'  if (lc $section eq 'config');
-        $self->{STATE} = 'compile' if (lc $section eq 'compile');
-        $self->{STATE} = 'test'    if (lc $section eq 'test');
-        $self->{STATE} = 'end'     if (lc $section eq 'end');
+        $self->{STATE} = 'begin'     if (lc $section eq 'begin');
+        $self->{STATE} = 'setup'     if (lc $section eq 'setup');
+        $self->{STATE} = 'config'    if (lc $section eq 'config');
+        $self->{STATE} = 'configure' if (lc $section eq 'configure');
+        $self->{STATE} = 'compile'   if (lc $section eq 'compile');
+        $self->{STATE} = 'test'      if (lc $section eq 'test');
+        $self->{STATE} = 'end'       if (lc $section eq 'end');
 
         return;
     }
@@ -843,7 +845,7 @@ sub Compile_Handler ($)
         push( @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}}, $1 );
     }
     elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/) {
-        # Definately an error
+        # Definitely an error
         $self->Output_Error ($s);
     }
     elsif ($s =~ m/^ld: \d+\-\d+/) {
@@ -951,6 +953,17 @@ sub Config_Handler ($)
 
     # We only want to output config stuff to the Config_HTML class
     $outputs[3]->Normal($s, $state);
+}
+
+sub Autoconf_Handler ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # For now, everything goes to the normal output. If we figure out
+    # something that should be an error or warning, then add processing
+    # like is done in the compile section.
+    $self->Output_Normal ($s);
 }
 
 sub Test_Handler ($)
