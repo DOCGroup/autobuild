@@ -1,3 +1,8 @@
+Sat Dec  7 19:58:31 2002  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/timmy_dev_pocketpc2002_debug.xml:
+          New config for Pocket PC 2002 on StrongARM build.
+
 Sun Dec  8 00:15:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* scoreboard.pl:
@@ -11,7 +16,7 @@ Sun Dec  8 00:15:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	  ACE/TAO specific messages appear in my build scoreboard
 	  web page. :)
 
-Fri Dec  7 10:40:11 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+Sat Dec  7 10:40:11 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
           Enabled tests
@@ -20,11 +25,11 @@ Fri Dec  7 10:40:11 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
         * configs/autobuild/tao/Wchar.xml:
           Set environment configs for auto_run_tests script
 
-Tue Dec  6 16:05:15 UTC 2002  Don Hinton  <dhinton@ieee.org>
+Fri Dec  6 16:05:15 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
 	* scoreboard.pl:  Added RT Logic! to list of build hosts.
 
-Tue Dec  6 15:48:41 UTC 2002  Don Hinton  <dhinton@ieee.org>
+Fri Dec  6 15:48:41 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
 	* configs/scoreboard/acetao.xml: Added SunOS_5.8_GCC_2.96
 	  VxWorks build maintained by Rob Andzik <andzik@rtlogic.com>.

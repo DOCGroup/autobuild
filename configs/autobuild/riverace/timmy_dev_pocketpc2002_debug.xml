@@ -1,0 +1,30 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
+        <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE ARM) Debug" />
+
+        <variable name="root"     value="C:\ace\ACE_wrappers-repository" />
+        <variable name="project_root" value="." />
+	<variable name="log_file" value="pocket_debug.txt" />
+        <variable name="log_root" value="C:\ace\build_logs\dev\pocketpc_debug" />
+        <variable name="name"     value="Pocket PC 2002 Debug" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="log"               options="ON" />
+
+    <command name="cvs"               options="update -P -d ." />
+    <command name="print_ace_config" />
+
+    <command name="win32make"         options="-evc3 -clean -recurse ace tests" />
+    <command name="win32make"         options="-evc3 -recurse ace tests" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean=1 index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
