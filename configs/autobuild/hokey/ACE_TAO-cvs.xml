@@ -22,8 +22,8 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <!-- we're building from the latest release available from tao.doc.wustl.edu, so we don't checkout from cvs -->
-    <!-- <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" /> -->
+
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 
     <!-- running setup.sh in the tao-facet-adapter dir takes care of the file_manipulation stuff -->
     <!-- <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" /> -->
