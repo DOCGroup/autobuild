@@ -994,9 +994,12 @@ sub SendEmailNotification($)
     my @errors = $self->BuildErrors();
     my @error_text = @{$self->{OUTPUT}[0]->{ERROR_TEXT}};
 
+    # @error_text can be pretty huge.  Cut it down to 100 lines.
+    splice (@error_text, 100, $#error_text);
+
     ## Combine the array of errors into one string which we can put in an e-mail
     my $errors_string = join("\n", @errors );
-    $errors_string .= "\n\nDisplaying errors from build: \n";
+    $errors_string .= "\n\nDisplaying first 100 lines from error log: \n";
     $errors_string .= 
     "\n================================================================\n\n";
 
@@ -1030,7 +1033,7 @@ sub SendEmailNotification($)
  
     Mail::send_message($mail_admin, 
                        "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
-                       scalar(@errors)." errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
+                       "Errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
                        "Please check the scoreboard for details.\n\n".
                         $errors_string 
                       ); 

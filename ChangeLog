@@ -1,3 +1,8 @@
+Wed Oct  2 14:48:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* common/prettify.pm: Cut down error messages sent in e-mail
+	  notification.  Correct some wording in e-mail notification.
+
 Wed Oct  2 14:26:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:
