@@ -228,19 +228,19 @@ all the OS/platform combinations TAO is tested everyday.
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_CBuilderX_Dynamic_Debug</name>
+            <name>Win2K_CBuilderX_Dynamic_Debug(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_CBX_Dynamic_Debug</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_VC71_NET_DLL</name>
+            <name>Win2K_VC71_NET_DLL(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_VC71</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_MingW_GCC_3_2_3</name>
+            <name>Win2K_MingW_GCC_3_2_3(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_MingW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -250,7 +250,7 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
-      <name>SunOS_8_Forte8_Debug</name>
+      <name>SunOS_8_Forte8_Debug(MPC)</name>
       <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SUNOS_Forte</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>

@@ -82,13 +82,13 @@ decide the migration paths and strategies.
              <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
          </build>
         <build>
-            <name>SuSE_82_Kylix_3</name>
+            <name>SuSE_82_Kylix_3(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_Kylix3</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinNT4_Cygwin_GCC_3_2_3</name>
+            <name>WinNT4_Cygwin_GCC_3_2_3(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_CygwinGCC32</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -118,13 +118,13 @@ decide the migration paths and strategies.
             <red>36</red>
         </build>
         <build>
-            <name>SuSE_82_GCC33</name>
+            <name>SuSE_82_GCC33(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
             <build_sponsor>Remedy IT</build_sponsor>
     	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>VxWorks_5_5_x86</name>
+            <name>VxWorks_5_5_x86(MPC)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_VxWorks</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
