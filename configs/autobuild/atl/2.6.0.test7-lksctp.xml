@@ -41,7 +41,8 @@
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -j 2 Core debug=0 sctp=lksctp" />
+    <command name="make"              options="-k -j 2 debug=0 sctp=lksctp" />
+    <command name="make"              options="-k -C TAO -j 2 debug=0 sctp=lksctp" />
 
     <command name="auto_run_tests"    options="" />
     <command name="process_logs"      options="clean" />
