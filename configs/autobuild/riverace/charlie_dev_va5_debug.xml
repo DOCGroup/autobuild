@@ -28,7 +28,7 @@
     <command name="create_ace_build"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=build/va5_debug/.disable output='RUNNING'" />
 
-    <command name="file_manipulation" options="type=create file=build/va5_debug/ace/config.h output='#include \x22ace/config-aix4.x.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/va5_debug/ace/config.h output='#include \x22ace/config-aix-4.x.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=build/va5_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
