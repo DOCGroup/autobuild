@@ -1,3 +1,8 @@
+Thu Apr 17 11:46:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Changed the sponsors name of the
+	  Minumum_Static build.
+
 Thu Apr 17 11:22:24 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/ace_isis/RH8_NoInline.xml:
