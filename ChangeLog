@@ -1,3 +1,9 @@
+Sun Feb 27 07:34:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+          Don't build PSS, we don't generate makefiles for it anymore because
+          it is broken
+
 Fri Feb 25 21:26:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:

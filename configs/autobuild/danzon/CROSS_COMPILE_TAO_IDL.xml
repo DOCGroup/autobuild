@@ -4,7 +4,7 @@
 <!-- so that it can be used with the Lynx cross compile build.  -->
 <!-- We just need to build the apps/gperf/src, ace, and         -->
 <!-- TAO/TAO_IDL directories.  We do not need to run the tests. -->
-     
+
 <autobuild>
     <configuration>
 
@@ -50,7 +50,6 @@
     <command name="make"              options="-k -C apps/gperf/src" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO/tao" />
-    <command name="make"              options="-k -C TAO/orbsvcs/PSS" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
