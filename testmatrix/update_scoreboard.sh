@@ -18,6 +18,7 @@ TEST_MATRIX_PROTECTION_FILE="$TEST_MATRIX_DIR/MATRIX_UNDER_CONSTRUCTION"
 SCOREBOARD_CONFIG_DIR="$AUTOBUILD_DIR/configs/scoreboard"
 
 PERLLIB=$AUTOBUILD_DIR
+export PERLLIB
 
 function update_local_scoreboard()
 {
@@ -37,7 +38,7 @@ function update_local_scoreboard()
   TEST_MATRIX=ace_detailed
 
   # generate the list of files
-  perl ./test-list-extract.pl $SCOREBOARD_CONFIG_DIR/ace.xml > $BUILD_LIST
+  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ace.xml > $BUILD_LIST
 
   # generate the matrix
   ./buildMatrix $BUILD_LIST $TEST_MATRIX
@@ -45,19 +46,19 @@ function update_local_scoreboard()
 
   BUILD_LIST=$TEST_MATRIX_DIR/ace_future-list
   TEST_MATRIX=ace_future_detailed
-  perl ./test-list-extract.pl $SCOREBOARD_CONFIG_DIR/ace_future.xml > $BUILD_LIST
+  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ace_future.xml > $BUILD_LIST
   ./buildMatrix $BUILD_LIST $TEST_MATRIX
 
 
   BUILD_LIST=$TEST_MATRIX_DIR/tao-list
   TEST_MATRIX=tao_detailed
-  perl ./test-list-extract.pl $SCOREBOARD_CONFIG_DIR/tao.xml > $BUILD_LIST
+  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao.xml > $BUILD_LIST
   ./buildMatrix $BUILD_LIST $TEST_MATRIX
 
 
   BUILD_LIST=$TEST_MATRIX_DIR/tao_future-list
   TEST_MATRIX=tao_future_detailed
-  perl ./test-list-extract.pl $SCOREBOARD_CONFIG_DIR/tao_future.xml > $BUILD_LIST
+  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao_future.xml > $BUILD_LIST
   ./buildMatrix $BUILD_LIST $TEST_MATRIX
 
 
