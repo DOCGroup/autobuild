@@ -32,8 +32,8 @@
 
     <command name="make"              options="-j 2 -k realclean" />
     <command name="make"              options="-j 2 -k -C TAO realclean" />
-    <command name="make"              options="-j 2 -k -C apps/gperf/src" />
     <command name="make"              options="-j 2 -k -C ace" />
+    <command name="make"              options="-j 2 -k -C apps/gperf/src" />
     <command name="make"              options="-j 2 -k -C TAO/TAO_IDL" />
 
     <command name="log"               options="off" />
