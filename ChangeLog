@@ -3,7 +3,8 @@ Fri Sep 24 19:59:20 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
  	* configs/autobuild/flamenco/driver_pmb_start.sh:
 	* configs/autobuild/flamenco/pmb_start_Static.xml:
 
-	  A seperate build for pmb_start branch
+	  A seperate build for pmb_integration_start branch. This is an
+	  evaluation build for OCI.
 
 Wed Sep 22 12:12:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
