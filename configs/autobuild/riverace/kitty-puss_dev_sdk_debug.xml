@@ -21,6 +21,7 @@
 
     <command name="make"           options="dir=ace ace.nmake CFG='Win64 Debug' REALCLEAN" />
     <command name="make"           options="dir=ACEXML ACEXML.nmake CFG='Win64 Debug' REALCLEAN" />
+    <command name="make"           options="dir=protocols protocols.nmake CFG='Win64 Debug' REALCLEAN" />
     <command name="make"           options="dir=ASNMP ASNMP.nmake CFG='Win64 Debug' REALCLEAN" />
     <command name="make"           options="dir=apps apps.nmake CFG='Win64 Debug' REALCLEAN" />
     <command name="make"           options="dir=examples examples.nmake CFG='Win64 Debug' REALCLEAN" />
@@ -43,6 +44,7 @@
 
     <command name="make"           options="dir=ace ace.nmake CFG='Win64 Debug'" />
     <command name="make"           options="dir=ACEXML ACEXML.nmake CFG='Win64 Debug'" />
+    <command name="make"           options="dir=protocols protocols.nmake CFG='Win64 Debug'" />
     <command name="make"           options="dir=ASNMP ASNMP.nmake CFG='Win64 Debug'" />
     <command name="make"           options="dir=apps apps.nmake CFG='Win64 Debug'" />
     <command name="make"           options="dir=examples examples.nmake CFG='Win64 Debug'" />

@@ -1,7 +1,16 @@
+Mon Nov  8 06:39:21 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+
+          Added the protocols directory to the build lists.
+
 Fri Nov  5 16:09:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
-	* common/prettify.pm:
-	  Added a check to prevent VxWorks DIAB compilecommands to be reported
+        * common/prettify.pm:
+          Added a check to prevent VxWorks DIAB compilecommands to be reported
           as warnings.
 
 Thu Nov  4 07:31:29 2004  Chad Elliott  <elliott_c@ociweb.com>
