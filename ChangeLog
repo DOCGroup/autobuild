@@ -1,3 +1,9 @@
+Wed Jan 22 08:05:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Removed remedy.nl from the build name because now a build sponsor
+          is shown. No need to give this information twice.
+
 Tue Jan 21 20:41:32 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml: Updated URL to hunleth.com.
