@@ -1,3 +1,7 @@
+Tue Mar 18 13:59:16 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Fixed a problem with the meta-data. 
+
 Tue Mar 18 13:24:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Moved the SuSe build to
