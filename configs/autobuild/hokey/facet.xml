@@ -10,7 +10,7 @@
         <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/FACET/ACE_wrappers/ace" />
 
 
-        <variable name="root"     value="/export/home/bugzilla/FACET/RTEvent/facet" />
+        <variable name="root"     value="/export/home/bugzilla/FACET" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_FACET" />
         <variable name="configs"  value="Linux" />
