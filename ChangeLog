@@ -1,3 +1,14 @@
+Mon Nov 03 13:21:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved logs from remedy it builds from WashU to Vanderbilt. Removed
+          the VxWorks build. Because the build system has died and will
+          be replaced in a few days, just moved the build without the logs
+          so that we don't clutter the scoreboard with old logs.
+
 Mon Nov 03 05:57:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:

@@ -259,13 +259,13 @@ all the OS/platform combinations ACE is tested everyday.
       </build>
       <build>
          <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode</name>
-         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug_Unicode</url>
+         <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6ddu</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
          <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode</name>
-         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Release_Unicode</url>
+         <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dru</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>

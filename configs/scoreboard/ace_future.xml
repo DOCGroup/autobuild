@@ -76,13 +76,13 @@ all the OS/platform combinations ACE is tested everyday.
     </build>
     <build>
         <name>Win2K_Cygwin_GCC_3_2_3_ACE(MPC)</name>
-        <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_Cygwin</url>
+         <url>http://www.dre.vanderbilt.edu/~willemsenj/CygwinACE</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
         <name>Win2K_CBuilderX_Preview</name>
-        <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_CBXPreview</url>
+         <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXpreview</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
