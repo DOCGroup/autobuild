@@ -1,3 +1,12 @@
+Sun Jun  8 14:12:24 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/driver_compiletime.sh:
+        * configs/autobuild/flamenco/driver_footprint.sh:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+          Added new metrics autobuilds.  Thanks to Kitty
+          <kitty@cse.wustl.edu> for setting up the box.
+
 Tue Jun  3 15:40:16 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC53.xml: Do not run SSL tests
