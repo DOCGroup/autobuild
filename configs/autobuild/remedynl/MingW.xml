@@ -25,15 +25,20 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
 
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
     <command name="make"              options="-k realclean" />
+
     <command name="make"              options="-k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command name="shell"             options="plink bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_Win2K_MingW/* -f" />
+    <command name="shell"             options="pscp *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_Win2K_MingW" />
 </autobuild>
 
 
