@@ -25,8 +25,6 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
-    <!-- Now, delete them again to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
