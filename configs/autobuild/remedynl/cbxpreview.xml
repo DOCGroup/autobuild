@@ -30,8 +30,7 @@
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#define TAO_EC_ENABLE_DEBUG_MESSAGES 1\n#define ACE_CONFIG_WIN32_H
-n#include \x22ace/config-win32-borland.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#define TAO_EC_ENABLE_DEBUG_MESSAGES 1\n#define ACE_CONFIG_WIN32_H\n#include \x22ace/config-win32-borland.h\x22\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="cbx" />
