@@ -1,3 +1,10 @@
+Mon May 17 18:22:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Removed -Wno-variadic-macros command line option.  It isn't
+	  supported by g++ 3.4.0.
+
 Mon May 17 11:30:07 2004  Frank Hunleth  <frank@hunleth.com>
 
 	* configs/autobuild/slytherin/driver.sh:
