@@ -33,7 +33,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.vcproj*' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers -name '*.sln*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-type vc8 -recurse -exclude TAO"/>
+    <command name="generate_workspace" options="-type vc8 -exclude TAO"/>
     <command name="vc7make"            options="/rebuild debug ace/ace.sln" />
     <command name="vc7make"            options="/rebuild debug tests/tests.sln" />
 
