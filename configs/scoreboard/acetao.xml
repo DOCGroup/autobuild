@@ -170,7 +170,7 @@
          </build>
     </group>
     <group>
-         <name>XML_Test</name>
+         <name>XML_Test_sanity_check_not_for_release</name>
          <build>
              <name>WinXP_XML_Debug</name>
              <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
