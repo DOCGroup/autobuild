@@ -1,3 +1,13 @@
+Sat Aug  9 15:15:48 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved, and renamed, MPC builds from the tests pages to the
+          release pages.  Moved builds are both called RH8_GCC_3.2_(MPC),
+          one for ACE and one for TAO.
+
 Sat Aug  9 14:52:54 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/sol9_gcc33.xml:

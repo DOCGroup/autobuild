@@ -124,14 +124,6 @@ decide the migration paths and strategies.
             <red>36</red>
         </build>
         <build>
-            <name>MPC_Test_TAO_RH8_GCC_3.2</name>
-            <url>http://www2.dresystems.com:8090/autobuild_output/mpc_test_tao</url>
-            <build_sponsor>DRE Systems</build_sponsor>
-            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-            <orange>30</orange>
-            <red>36</red>
-        </build>
-        <build>
             <name>SuSE_82_GCC33</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
             <build_sponsor>Remedy IT</build_sponsor>

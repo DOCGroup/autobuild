@@ -9,14 +9,6 @@ all the OS/platform combinations ACE is tested everyday.
 
 <group>
   <name>Test Builds for ACE</name>
-    <build>
-      <name>MPC_Test_RH8_GCC_3.2</name>
-      <url>http://www2.dresystems.com:8090/autobuild_output/mpc_test</url>
-      <build_sponsor>DRE Systems</build_sponsor>
-      <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-      <orange>30</orange>
-      <red>36</red>
-    </build>
     <build> 
       <name>FreeBSD_5</name>
       <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_5</url>

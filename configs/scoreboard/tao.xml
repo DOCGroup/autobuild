@@ -129,6 +129,14 @@ all the OS/platform combinations TAO is tested everyday.
          <build_sponsor>Charles University</build_sponsor>
          <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
       </build>
+      <build>
+         <name>RH8_GCC_3.2_(MPC)</name>
+         <url>http://www2.dresystems.com:8090/autobuild_output/mpc_test_tao</url>
+         <build_sponsor>DRE Systems</build_sponsor>
+         <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+         <orange>30</orange>
+         <red>36</red>
+      </build>
 </group>
 <group>
    <name>Lynx</name>
