@@ -50,7 +50,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
+    <command name="cvs"               options="-z 3 -q update -Pd RTEvent/facet" />
 
     <command name="make"	      options="clean" />
     <command name="make"              options="-Duse_feature_#feature#=t" />
