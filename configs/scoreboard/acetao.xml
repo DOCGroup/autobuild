@@ -45,23 +45,23 @@
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_Debian_WChar/</url>
         </build>
         <build>
-            <name>RedHat_Static_Core</name>
+            <name>RH80_Static_Core</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maedhros_Core/</url>
         </build>
         <build>
-            <name>RedHat_7.1_No_AMI_Messaging</name>
+            <name>RH71_No_AMI_Messaging</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_No_AMI</url>
         </build>
         <build>
-            <name>RedHat_Implicit_Templates</name>
+            <name>RH71_Implicit_Templates</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/amrod_ImplicitTemplates/</url>
         </build>
         <build>
-            <name>RedHat_Single_Threaded</name>
+            <name>RH71_Single_Threaded</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/curufin_SingleThreaded/</url>
         </build>
         <build>
-            <name>RedHat_Static</name>
+            <name>RH71_Static</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maglor_Static</url>
         </build>
         <build>
@@ -69,11 +69,11 @@
             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
         </build>
         <build>
-            <name>GCC32_GIOP10</name>
+            <name>RH73_GCC32_GIOP10</name>
             <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_GIOP10</url>
         </build>
         <build>
-            <name>RedHat_Explicit_Templates</name>
+            <name>RH71_Explicit_Templates</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_Explicit_Templates</url>
         </build>
     </group>

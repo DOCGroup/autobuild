@@ -1,3 +1,7 @@
+Fri Dec  6 00:24:15 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Added RH's version info.
+
 Thu Dec  5 14:59:41 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/tao_isis/GIOP10_GCC32.xml: Added a -Config
