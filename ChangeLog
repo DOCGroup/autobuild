@@ -1,3 +1,9 @@
+Sun Aug 29 09:38:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/gandalfvc71sd.xml:
+
+          Changed from Release to Debug build.
+
 Sat Aug 28 16:20:52 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/flamenco/compiletime_metrics.xml:

@@ -18,7 +18,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="msvc_static_compile -v -vc7 -Release -k -clean -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -v -vc7 -Debug -k -clean -name_modifier *_Static" />
 
 
 
@@ -40,9 +40,9 @@
 
     <command name="generate_workspace" options="-exclude TAO/CIAO -type vc71 -recurse -static -name_modifier *_Static -apply_project"/>
 
-    <command name="win32make"         options="msvc_static_compile -vc7 -Release -CORE -k -name_modifier *_Static" />
-    <command name="win32make"         options="msvc_static_compile -vc7 -Release -ACE -k -name_modifier *_Static" />
-    <command name="win32make"         options="msvc_static_compile -vc7 -Release -TAO -k -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -vc7 -Debug -CORE -k -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -vc7 -Debug -ACE -k -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -vc7 -Debug -TAO -k -name_modifier *_Static" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
