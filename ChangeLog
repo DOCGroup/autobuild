@@ -1,9 +1,15 @@
+Mon Aug 16 14:35:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedy/*:
+          Removed several files and added scarab_* files, this is our
+          new build systems that will run MinGW, VC8 and BCB6.
+
 Mon Aug 16 12:08:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/msvclibrelease.xml:
           configs/autobuild/remedynl/msvclibdebug.xml:
           configs/autobuild/remedynl/gandalfvc71sd.xml:
-          
+
           Added '-apply_project' to MPC generation.
 
 Mon Aug 16 11:00:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
@@ -18,8 +24,8 @@ Mon Aug 16 10:07:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/msvclibrelease.xml:
           configs/autobuild/remedynl/msvclibdebug.xml:
-          
-          Changed to use updates (name_modifier) in vc6 static build 
+
+          Changed to use updates (name_modifier) in vc6 static build
           scripts (msvc_static_compile.pl).
 
 Mon Aug 16 09:48:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
@@ -27,7 +33,7 @@ Mon Aug 16 09:48:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
         * configs/autobuild/remedynl/vc71.xml:
           configs/autobuild/remedynl/gandalfvc71dr.xml:
           configs/autobuild/remedynl/gandalfvc71sd.xml:
-          
+
           Changed to use new vc71 compatibility in (previously) vc6
           build scripts (win32make.pm, msvc_mpc_auto_compile.pl and
           msvc_sttaic_compile.pl).
