@@ -1,5 +1,6 @@
-Wed Dec 11 10:46:41 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
+Wed Dec 11 10:49:42 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
+	* configs/scoreboard/acetao.xml:
 	* configs/autobuild/nirvana/W4_Debug.xml: Added a new build which
 	  compiles with MSVC at Warning level 4.
 
