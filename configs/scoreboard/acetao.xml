@@ -1,4 +1,23 @@
 <scoreboard>
+    <preamble>
+This is the ACE/TAO virtual scoreboard.  It shows all
+the OS/platform combinations ACE/TAO are tested against everyday, all
+over the world.  We have builds running continuously at 
+<a href="http://deuce.doc.wustl.edu/">Washington University, St. Louis</a>,
+<a href="http://doc.ece.uci.edu/">University of California,
+Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt
+University</a>, 
+<a href="http://www.dist-systems.bbn.com/projects/">BBN Technologies</a>,
+<a href="http://www.theaceorb.nl">Remedy IT</a>,
+<a href="http://www.objectsciences.com/">ObjectSciences</a>, 
+<a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>, and
+<a href="http://www.rtlogic.com/">RT Logic!</a>.
+<p>
+If you'd like to contribute builds to our virtual
+scoreboard please contact <a href="mailto:devo_group@cs.wustl.edu">us</a> 
+and let us know which platform combinations you can contribute.
+
+    </preamble>
     <group>
         <name>Doxygen</name>
         <build>

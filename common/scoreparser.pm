@@ -57,6 +57,11 @@ sub Parse ($\@)
         } 
         next if (m/^\s*$/);
 
+        if(m/<preamble>/) {
+            $main::preamble = $self->parse_preamble($file_handle);
+            next;
+        }
+ 
         if ($state eq 'none') {
             if (m/^\s*<scoreboard>\s*$/i) {
                 $state = 'scoreboard';
@@ -175,8 +180,8 @@ sub parse_comment($\@)
    my $result = shift;
    my @c;
    my $i=0;
-   my $leave_loop=0;
    my $ch;
+
    while(1){
      $ch = $result->getc();
 
@@ -197,12 +202,64 @@ sub parse_comment($\@)
         if($tag eq "-->") { 
           last;  # break out of the while loop
         }
-        $c[0] = $c[1];
-        $c[1] = $c[2];
+       
+        # Pop off the first element of the array and shift everything up 
+        shift(@c);
         $i=1; 
      }
      ++$i;
    }
+}
+
+###############################################################################
+# Before we call this function, we have already found the opening tag
+# for an XML comment: <preamble>
+# This function keeps parsing the stream until it finds the tag to terminate 
+# the comment: --> , and returns when it finds it.
+#
+# Arguments:  An open file stream.
+#
+# Returns:    All the text that is between the tags: <preamble> </preamble>
+#
+###############################################################################
+sub parse_preamble($\@)
+{
+   my $self = shift;
+   my $result = shift;
+   my @c;
+   my @buf;
+   my $i=0;
+   my $ch;
+
+   while(1){
+     $ch = $result->getc();
+
+     # determine if we have hit an EOF or not     
+     if( ! defined $ch) { 
+        last; # break out of the whlie loop
+     }
+
+     $c[$i] = $ch;
+     push(@buf, $ch);
+
+     # Keep parsing character by character until we find "</preamble>".
+     # Perl doesn't support a portable version of ungetc, so we
+     # need to keep our own buffer of characters to hold the "</preamble>"
+     # as we parse character by character.
+     if($i > 9) {
+        my $tag="";
+        $tag = join('', @c);
+        if($tag eq "</preamble>") { 
+          last;  # break out of the while loop
+        }
+
+        # Pop off the first element of the array and shift everything up 
+        shift(@c);
+        $i=9; 
+     }
+     ++$i;
+   }
+   return( join('', @buf)); 
 }
 
 1;

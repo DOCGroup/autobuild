@@ -55,6 +55,9 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
      For example:
 
 <scoreboard>
+    <preamble>
+      Put some <b>HTML</b> introductory text between these tags.
+    </preamble>
     <group>
         <name>Linux</name>
         <build>
@@ -73,7 +76,7 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 (6) To update the scoreboard, you run scoreboard.pl with acetao.xml as the 
     argument:
 
-  scoreboard.pl acetao.xml
+  scoreboard.pl -o [output directory] -c acetao.xml
 
 
 

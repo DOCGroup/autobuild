@@ -1,3 +1,16 @@
+Sun Dec  8 00:15:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* scoreboard.pl:
+	* common/scoreparser.pm:
+	* configs/scoreboard/acetao.xml:
+	* README:
+	  Create a new <preamble> tag in the scoreboard parser.
+	  Move the ACE/TAO specific informational messages to
+	  acetao.xml.  This is so that I can reuse the autobuild
+	  scripts for my own non-ACE/TAO projects and not have the
+	  ACE/TAO specific messages appear in my build scoreboard
+	  web page. :)
+
 Fri Dec  7 10:40:11 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:

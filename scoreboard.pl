@@ -51,22 +51,10 @@ my @nogroup;
 my $orange_default = 24;
 my $red_default = 48;
 
-my $preamble = "This is the ACE/TAO virtual scoreboard.  It shows all
-the OS/platform combinations ACE/TAO are tested against everyday, all
-over the world.  We have builds running continuously at <A
-HREF=\"http://deuce.doc.wustl.edu/\">Washington University, St. Louis</A>,
-<A HREF=\"http://doc.ece.uci.edu/\">University of California,
-Irvine</A>, <A HREF=\"http://www.isis.vanderbilt.edu\">Vanderbilt
-University</a>, <A
-HREF=\"http://www.dist-systems.bbn.com/projects/\">BBN Technologies</A>,
-<A HREF=\"http://www.theaceorb.nl\">Remedy IT</A>,
-<a href=\"http://www.objectsciences.com/\">ObjectSciences</a>, 
-<a href=\"http://www.hunleth.com/~acebuild/\">hunleth.com</a>, and
-<a href=\"http://www.rtlogic.com/\">RT Logic!</a>.<P>
- If you'd like to contribute builds to our virtual
-scoreboard please contact <A
-HREF=\"mailto:devo_group\@cs.wustl.edu\">us</A> and let us know which
-platform combinations you can contribute.";
+# Do not set the value of this variable here.  Instead, edit the
+# XML file for the scoreboard, and put the text in between the
+# <preamble> </preamble> tags.
+our $preamble = "";
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
@@ -421,6 +409,7 @@ sub clean_cache ($)
             unlink $file . "_Full.html";
             unlink $file . "_Brief.html";
             unlink $file . "_Totals.html";
+            unlink $file . "_Config.html";
         }
     }
 }
