@@ -13,6 +13,7 @@ Tue Aug 26 16:58:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
           Removed use of build directory;  uses generate_workspace.pm.
 
         * configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace.xml:
           Changed the paths in the builds noted above.
 
 Tue Aug 26 13:09:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
