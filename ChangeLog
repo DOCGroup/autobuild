@@ -1,3 +1,13 @@
+Thu Jun 29 12:35:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/vc7make.pm:
+          With VS.NET 2005 Beta 1 Microsoft ships a so called express
+          version of C++, this is just the IDE and the compiler. Instead of
+          devenv.com it is now called vcexpress.exe, so instead of making
+          a new module, extended this module so that in the autobuild xml
+          file vctool can be set as variable, this is then taken instead
+          of devenv.com
+
 Sat Jun 26 12:26:58 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full_Reactors.xml:
