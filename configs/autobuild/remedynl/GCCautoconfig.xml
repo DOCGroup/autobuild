@@ -7,6 +7,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCCautoconf/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
+        <environment name="PATH"            value="/usr/local/bin:" type="prefix" /> 
 
         <variable name="root"     value="/home/build/ACE/GCCautoconf/" />
         <variable name="log_file" value="build.txt" />
