@@ -1,3 +1,9 @@
+Wed Nov 17 16:00:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future:
+          Added new GCC ACE build which has more GCC warnings enabled then
+          normally. Just see what the warnings are and if we need to fix some
+
 Wed Nov 17 10:44:04 2004  Carlos O'Ryan  <coryan@atdesk.com>
 
 	* buildmatrix/buildmatrix.pl:
