@@ -1,3 +1,7 @@
+Wed Apr 17 16:26:21 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/check_compiler.pm: Added.
+
 Fri Dec 28 20:21:19 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* configs/autobuild/curufin/SingleThreaded.xml:
