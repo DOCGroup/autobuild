@@ -149,6 +149,13 @@
              <name>SunOS_SunCC53</name>
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC53_newbuild</url>
          </build>
+          <build>
+             <name>SunOS_5.8_SunCC_5.4(fi2010.org)</name>
+
+             <url>http://ike2.dctd.saic.com/status/scoreboard/autobuild_output/FI2010_CVS_ACE_SUNOS_5.8_SUNCC54</url>
+          </build>
+
+
          <build>
              <name>SunOS_FORTE_UP_1</name>
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
