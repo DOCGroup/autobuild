@@ -30,12 +30,10 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
    <build>
    <name>Debian_Full_Reactor</name>
-
-<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Full_Reactors/</url>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Full_Reactors/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
-
    <build>
    <name>Debian_Full</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_Full/</url>
@@ -182,11 +180,11 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Windows</name>
    <build>
-   <name>Win2K_MSVC6_DLL_Core</name>
-            <url>http://tao.doc.wustl.edu/bugzilla/new_dll_core</url>
-            <build_sponsor>Washington University</build_sponsor>
-            <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-        </build>
+       <name>Win2K_MSVC6_DLL_Core</name>
+       <url>http://tao.doc.wustl.edu/bugzilla/new_dll_core</url>
+       <build_sponsor>Washington University</build_sponsor>
+       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
         <build>
             <name>Win2K_MSVC6_DLL_Debug</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_debug</url>
@@ -283,7 +281,7 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
          </build>
-    </group>
+</group>
 
 <group>
    <name>Solaris</name>
@@ -364,6 +362,16 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
+   <name>Irix</name>
+   <build>
+      <name>Irix_6.5</name>
+      <url>http://www.vrac.iastate.edu/~mccdo/tao</url>
+      <build_sponsor>VRAC</build_sponsor>
+      <build_sponsor_url>http://www.vrac.iastate.edu</build_sponsor_url>
+   </build>
+</group>
+
+<group>
    <name>LynxOS</name>
    <build>
       <name>LYNXOS4_GCC295_Cross_Compile_Solaris8_Build</name>
@@ -410,16 +418,6 @@ all the OS/platform combinations TAO is tested everyday.
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_Pentium_GNU</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-</group>
-
-<group>
-   <name>Irix</name>
-   <build>
-      <name>Irix_6.5</name>
-      <url>http://www.vrac.iastate.edu/~mccdo/tao</url>
-      <build_sponsor>VRAC</build_sponsor>
-      <build_sponsor_url>http://www.vrac.iastate.edu</build_sponsor_url>
    </build>
 </group>
 
