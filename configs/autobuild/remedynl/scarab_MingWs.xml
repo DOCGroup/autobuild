@@ -13,6 +13,7 @@
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\MingWStatic\" />
         <variable name="name"     value="MingW Static" />
+        <variable name="configs"  value="Win32 STATIC" />
     </configuration>
 
     <command name="status"            options="on" />
