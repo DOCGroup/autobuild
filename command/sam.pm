@@ -116,7 +116,7 @@ sub create_wanted
             $name =~ s/\/CVS//;
             $name =~ s/\/\//\//;
             print "Running Create_Sam in $name\n";
-            system ("perl -w $sam_root/create_sam.pl");
+            system ("perl $sam_root/create_sam.pl");
         }
     }
 }
@@ -139,7 +139,7 @@ sub sam_wanted
             $name =~ s/\/CVS//;
             $name =~ s/\/\//\//;
             print "Running Sam in $name\n";
-            system ("perl -w $sam_root/sam.pl");
+            system ("perl $sam_root/sam.pl");
         }
     }
 }

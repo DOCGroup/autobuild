@@ -119,6 +119,7 @@ sub PrintStatus ($$)
 require command::auto_run_tests;
 require command::cvs;
 require command::file_manipulation;
+require command::fuzz;
 require command::log;
 require command::make;
 require command::printaceconfig;
@@ -126,6 +127,8 @@ require command::process_logs;
 require command::sam;
 require command::shell;
 require command::status;
+require command::win32make;
+
 
 #
 # Parse, CheckReqs, and Run

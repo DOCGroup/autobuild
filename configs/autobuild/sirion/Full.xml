@@ -14,9 +14,10 @@
 
     </configuration>
 
-    <command name="log"               options="ON" />
+    <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\n'" />
     <command name="sam"               options="clean" />
@@ -24,14 +25,15 @@
     <command name="print_ace_config" />
     <command name="sam"               options="create" />
     <command name="sam"               options="sam" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/tests realclean'" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/ace realclean'" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/ace'" />
-    <command name="make"              options="makeopts='-j 2 -k -C ACE_wrappers/tests'" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers/tests realclean" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers/ace realclean" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers/ace" />
+    <command name="make"              options="-j 2 -k -C ACE_wrappers/tests" />
     <command name="auto_run_tests"    options="" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
 
 </autobuild>

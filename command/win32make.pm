@@ -2,7 +2,7 @@
 # $Id$
 #
 
-package Make;
+package Win32Make;
 
 use strict;
 use warnings;
@@ -55,7 +55,7 @@ sub Run ($)
         $root = $1;
     }
 
-    main::PrintStatus ('Compile', 'make');
+    main::PrintStatus ('Compile', 'win32make');
 
     my $current_dir = getcwd ();
 
@@ -64,11 +64,11 @@ sub Run ($)
         return 0;
     }
 
-    system ("make $options");
+    system ("perl ACE_wrappers/bin/pippen.pl $options");
 
     return 1;
 }
 
 ##############################################################################
 
-main::RegisterCommand ("make", new Make ());
+main::RegisterCommand ("win32make", new Win32Make ());
