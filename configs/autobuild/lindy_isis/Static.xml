@@ -28,9 +28,13 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nexceptions=1\noptimize=0\ninline=0\nssl=1\ndebug=0\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wwrite-strings -Wcast-align -Wformat=2\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='ssl=1\ncidl=1\n'" />
 
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
+    <command name="print_perl_version" />
 
     <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options="-exclude TAO" />
@@ -42,7 +46,7 @@
     <command name="make"              options="realclean" />
     <command name="make"              options="-C TAO realclean" />
     <command name="make"              options="-C TAO/CIAO realclean" />
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
     <command name="make"              options="-j 4 -k" />
     <command name="make"              options="-j 4 -k -C TAO" />
     <command name="make"              options="-j 4 -k -C TAO/CIAO" />
