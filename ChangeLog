@@ -1,3 +1,9 @@
+Fri Feb  4 12:32:16 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/parse_compiler_output.pm:
+
+          Filter out evc complaints about scanning files for dependencies.
+
 Tue Feb  1 13:55:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/lindy_isis/Static.xml:
@@ -7,10 +13,10 @@ Tue Feb  1 13:55:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sun Jan 30 07:32:53 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-  	* configs/scoreboard/tao_dre.sh:
+        * configs/scoreboard/tao_dre.sh:
 
-	  Do not run the buildmatrix scripts since they take too
-	  much memory.
+          Do not run the buildmatrix scripts since they take too
+          much memory.
 
 Wed Jan 26 14:43:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -29,19 +35,19 @@ Wed Jan 26 09:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jan 25 11:05:31 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
 
-	  Added pipes=0 to get things going.
+          Added pipes=0 to get things going.
 
 Sun Jan 23 08:21:54 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* autobuild.pl:
+        * autobuild.pl:
 
-	  Added cvsgrab to the llist of thingies.
+          Added cvsgrab to the llist of thingies.
 
-	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
 
-	  Set debug=0
+          Set debug=0
 
 Sat Jan 22 13:57:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -50,19 +56,19 @@ Sat Jan 22 13:57:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Jan 20 16:47:03 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* command/cvsgrab.pm (CheckRequirements):
+        * command/cvsgrab.pm (CheckRequirements):
 
-	  Fixed a typo while registering.
+          Fixed a typo while registering.
 
 Thu Jan 20 06:40:55 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* command/cvsgrab.pm:
+        * command/cvsgrab.pm:
 
-	  Added a new command for autobuilds.
+          Added a new command for autobuilds.
 
-	* configs/autobuild/atc/VxWorks.xml:
+        * configs/autobuild/atc/VxWorks.xml:
 
-	  Added the cvsgrab command.
+          Added the cvsgrab command.
 
 Wed Jan 19 15:49:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -77,19 +83,19 @@ Wed Jan 19 12:54:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jan 18 12:58:16 MST 2005  Yan Dai <dai_y@ociweb.com>
 
-	* matrix_database/TestPlatform.py:
+        * matrix_database/TestPlatform.py:
           Removed extra constructor.
 
-	* matrix_database/DBConnection.py:
+        * matrix_database/DBConnection.py:
           Removed the CreateTables method since it's not used.
 
-	* matrix_database/TestDB.py:
-	* matrix_database/CompilationDB.py:
+        * matrix_database/TestDB.py:
+        * matrix_database/CompilationDB.py:
         * matrix_database/DBConfig.py:
-	* matrix_database/CreateTables.py:
+        * matrix_database/CreateTables.py:
           Added 'hostname' field to the build table.
 
-	* matrix_database/UpdateBuildTable.py:
+        * matrix_database/UpdateBuildTable.py:
         * matrix_database/UpdateBuildTable.sh:
           Scripts added to update the build table base on the
           configuration specified in DBConfig.py script.
@@ -112,76 +118,76 @@ Mon Jan 10 17:41:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Jan  7 09:54:57 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
-	* configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
 
           Added /usr/sfw/include for SSL.
 
 Thu Jan  6 07:53:57 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
- 	* configs/autobuild/corona/driver_gcc34.sh:
+        * configs/autobuild/corona/driver_gcc34.sh:
 
-	  Added path to pick up cc.
+          Added path to pick up cc.
 
 Wed Jan  5 22:22:02 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added the studio 9 build to the scoreboard.
+          Added the studio 9 build to the scoreboard.
 
 Tue Jan  4 18:28:12 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added a build.
+          Added a build.
 
 Tue Jan  4 23:14:30 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 
-	* configs/scoreboard/ace.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
 
-	Changed <hr> tags in <preamble> to <hr/> to conform to XML standard so the
-	files can be parsed by 'real' XML parsers.
+        Changed <hr> tags in <preamble> to <hr/> to conform to XML standard so the
+        files can be parsed by 'real' XML parsers.
 
 Tue Jan  4 16:32:30 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/corona/SunOS10_x86_GCC34.xml:
-	* configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
 
-	  New config files for two builds.
+          New config files for two builds.
 
-	* configs/autobuild/corona/SunOS9_Sun_Studio9.xml:
+        * configs/autobuild/corona/SunOS9_Sun_Studio9.xml:
 
-	  Removed this since it is not right.
+          Removed this since it is not right.
 
-	* configs/autobuild/corona/driver_studio.sh:
-	* configs/autobuild/corona/driver_gcc34.sh:
+        * configs/autobuild/corona/driver_studio.sh:
+        * configs/autobuild/corona/driver_gcc34.sh:
 
-	  New driver files.
+          New driver files.
 
 Mon Jan  3 22:51:46 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/corona/SunOS9_Sun_Studio9.xml:
-	* configs/autobuild/corona/driver_studio.sh:
+        * configs/autobuild/corona/SunOS9_Sun_Studio9.xml:
+        * configs/autobuild/corona/driver_studio.sh:
 
-	  New build for Solaris 9 with Studio 9. Not running yet due to a
-	  problem with the machine setup. Should be running in another 12
-	  hours or so.
+          New build for Solaris 9 with Studio 9. Not running yet due to a
+          problem with the machine setup. Should be running in another 12
+          hours or so.
 
 Mon Jan  3 12:56:29 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Noted that Riverace's Solaris 8 and 9
-	  builds with Sun Forte 6 and 7 use explicit template instantiation.
-	  Also, commented out the AIX 5.1 build - the machine is down with no
-	  ETA for a fix.
+        * configs/scoreboard/ace.xml: Noted that Riverace's Solaris 8 and 9
+          builds with Sun Forte 6 and 7 use explicit template instantiation.
+          Also, commented out the AIX 5.1 build - the machine is down with no
+          ETA for a fix.
 
 Sun Jan  2 19:13:34 MST 2005  Yan Dai <dai_y@ociweb.com>
 
         * buildmatrix/buildmatrix.pl
-	* matrix_database/CompilationPlatform.py:
-	* matrix_database/TestPlatform.py:
-	* matrix_database/RecentCompilationDBFiles.py:
-	* testmatrix/GenerateTestMatrix.py:
-	  Made scripts handle empty log and incomplate log.
+        * matrix_database/CompilationPlatform.py:
+        * matrix_database/TestPlatform.py:
+        * matrix_database/RecentCompilationDBFiles.py:
+        * testmatrix/GenerateTestMatrix.py:
+          Made scripts handle empty log and incomplate log.
 
 Sun Jan  2 13:45:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -243,63 +249,63 @@ Wed Dec 22 11:57:44 MST 2004  Yan Dai <dai_y@ociweb.com>
 
 Wed Dec 22 11:44:21 MST 2004  Yan Dai <dai_y@ociweb.com>
 
-   	* buildmatrix/buildmatrix.pl:
-	  Added save_result function to generate a db file for each build.
-  	  Added third parameter, the save flag to generate the db files
+        * buildmatrix/buildmatrix.pl:
+          Added save_result function to generate a db file for each build.
+          Added third parameter, the save flag to generate the db files
           optionally.
-	  The command line would be:
+          The command line would be:
             buildmatrix.pl <$config_file> <$scoreboard_directory> [$save_flag]
-	  This defaults to not create the db file. To create db file, add any
-	  non-zero integer as the $save_flag.
-	  The db file will be output to the
-	  $scoreboard_directory/compilation_matrix_db directory.
+          This defaults to not create the db file. To create db file, add any
+          non-zero integer as the $save_flag.
+          The db file will be output to the
+          $scoreboard_directory/compilation_matrix_db directory.
 
 
-	* matrix_database/CompilationDBFileHandle.py:
-	* matrix_database/CompilationDB.py:
-	* matrix_database/CompilationPlatform.py:
-	* matrix_database/CreateDBTables.py:
-	* matrix_database/CreateDBTables.sh:
-	* matrix_database/DBConfig.py:
-	* matrix_database/DBConnection.py:
-	* matrix_database/GetAndInsertRemoteCompilationDbFiles.sh:
-	* matrix_database/GetAndInsertRemoteTestDbFiles.sh:
-	* matrix_database/InsertLocalCompilationDbFiles.sh:
-	* matrix_database/RecentCompilationDBFiles.py:
-	* matrix_database/RecentCompilationDBFiles.sh:
-	* matrix_database/RecentTestDBFiles.py:
-	* matrix_database/RecentTestDBFiles.sh:
-	* matrix_database/RemoveAndListCompilationDbFiles.sh:
-	* matrix_database/RemoveAndListTestDbFiles.sh:
-	* matrix_database/SaveCompilationsToDB.py:
-	* matrix_database/SaveCompilationsToDB.sh:
-	* matrix_database/SaveTestsToDB.py:
-	* matrix_database/SaveTestsToDB.sh:
-	* matrix_database/TestDBFileHandle.py:
-	* matrix_database/TestDB.py:
-	* matrix_database/TestPlatform.py:
-	* matrix_database/utils.py:
+        * matrix_database/CompilationDBFileHandle.py:
+        * matrix_database/CompilationDB.py:
+        * matrix_database/CompilationPlatform.py:
+        * matrix_database/CreateDBTables.py:
+        * matrix_database/CreateDBTables.sh:
+        * matrix_database/DBConfig.py:
+        * matrix_database/DBConnection.py:
+        * matrix_database/GetAndInsertRemoteCompilationDbFiles.sh:
+        * matrix_database/GetAndInsertRemoteTestDbFiles.sh:
+        * matrix_database/InsertLocalCompilationDbFiles.sh:
+        * matrix_database/RecentCompilationDBFiles.py:
+        * matrix_database/RecentCompilationDBFiles.sh:
+        * matrix_database/RecentTestDBFiles.py:
+        * matrix_database/RecentTestDBFiles.sh:
+        * matrix_database/RemoveAndListCompilationDbFiles.sh:
+        * matrix_database/RemoveAndListTestDbFiles.sh:
+        * matrix_database/SaveCompilationsToDB.py:
+        * matrix_database/SaveCompilationsToDB.sh:
+        * matrix_database/SaveTestsToDB.py:
+        * matrix_database/SaveTestsToDB.sh:
+        * matrix_database/TestDBFileHandle.py:
+        * matrix_database/TestDB.py:
+        * matrix_database/TestPlatform.py:
+        * matrix_database/utils.py:
 
-  	  These files are added or moved from testmatrix directory.
-	  These scripts are used to support both testmatrix and
-	  buildmatrix database.
+          These files are added or moved from testmatrix directory.
+          These scripts are used to support both testmatrix and
+          buildmatrix database.
           Note: Some variables are left as empty in the shell scripts,
                 they need be configurated appropriately before running
                 the scripts.
 
-	* testmatrix/CreateDBTables.py:
-	* testmatrix/CreateDBTables.sh:
-	* testmatrix/DBLogHandle.py:
-	* testmatrix/GetAndInsertDbFiles.sh:
-	* testmatrix/Platform.py:
-	* testmatrix/RecentDBFiles.py:
-	* testmatrix/RecentDBFiles.sh:
-	* testmatrix/RemoveAndListDbFiles.sh:
-	* testmatrix/SaveFileToDB.py:
-	* testmatrix/SaveFileToDB.sh:
-	* testmatrix/TestDBConfig.py:
-	* testmatrix/TestDB.py:
-  	* testmatrix/utils.py:
+        * testmatrix/CreateDBTables.py:
+        * testmatrix/CreateDBTables.sh:
+        * testmatrix/DBLogHandle.py:
+        * testmatrix/GetAndInsertDbFiles.sh:
+        * testmatrix/Platform.py:
+        * testmatrix/RecentDBFiles.py:
+        * testmatrix/RecentDBFiles.sh:
+        * testmatrix/RemoveAndListDbFiles.sh:
+        * testmatrix/SaveFileToDB.py:
+        * testmatrix/SaveFileToDB.sh:
+        * testmatrix/TestDBConfig.py:
+        * testmatrix/TestDB.py:
+        * testmatrix/utils.py:
 
           These scripts are renamed and moved to matrix_database directory.
           Some scripts are renamed to distinguish from the scripts used by the

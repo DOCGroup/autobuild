@@ -42,6 +42,13 @@ sub handle_compiler_output_line($) {
 
   # Check out the line to figure out whether it is an error or not
 
+  if ($s =~ m/^Error scanning file .* for dependencies/) {
+    # EVC 4 complains about non-existent files during dependency
+    # generation.  This is not an actual error.
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/^ld: \d+\-\d+ WARNING: Duplicate symbol:/) {
     # AIX reports a bazillion multiple defines when doing templates; some
     # have the word 'error' in the symbol name - ignore those.
