@@ -1,3 +1,13 @@
+Mon Aug 16 09:48:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/vc71.xml:
+          configs/autobuild/remedynl/gandalfvc71dr.xml:
+          configs/autobuild/remedynl/gandalfvc71sd.xml:
+          
+          Changed to use new vc71 compatibility in (previously) vc6
+          build scripts (win32make.pm, msvc_mpc_auto_compile.pl and
+          msvc_sttaic_compile.pl).
+
 Mon Aug 16 09:21:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * command/win32make.pm:
