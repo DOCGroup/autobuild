@@ -29,9 +29,12 @@ function update_local_scoreboard()
   # change directory to the testmatrix directory
   cd $TEST_MATRIX_DIR
 
+  # directory for output the db file
+  DBLOGDIR=$LOG_DIR/DBLogFiles
+
   # create the db log file directory if it does not exist
-  if [ ! -d DBLogFiles ]; then 
-     mkdir DBLogFiles
+  if [ ! -d $DBLOGDIR ]; then 
+     mkdir -p $DBLOGDIR
   fi
 
   # file with the list of builds

@@ -10,7 +10,7 @@ class DBConfig:
 # Configuration of the *.db files.
 class DBFileConfig:
 	  # Output directory for the *.db files. 
-	  dbdir_w = "/home/isisbuilds/autobuild/testmatrix/DBLogFiles"
+	  dbdir_w = "/project/taotmp/scoreboard/html/DBLogFiles"
 
 # Edit your build system configuration here. 
 # The format of the configuration:

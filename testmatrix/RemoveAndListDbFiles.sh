@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-DB_FILE_DIR=/home/isisbuilds/autobuild/testmatrix/DBLogFiles
+DB_FILE_DIR=/project/taotmp/scoreboard/html/DBLogFiles
 OLD_NUMBER_DAYS=+3
 LIST_FILENAME=available_db_files.log
 
