@@ -1,3 +1,74 @@
+Wed Dec 22 11:44:21 MST 2004  Yan Dai <dai_y@ociweb.com>
+
+   	* buildmatrix/buildmatrix.pl:
+	  Added save_result function to generate a db file for each build.
+  	  Added third parameter, the save flag to generate the db files 
+          optionally.
+	  The command line would be:
+            buildmatrix.pl <$config_file> <$scoreboard_directory> [$save_flag]
+	  This defaults to not create the db file. To create db file, add any
+	  non-zero integer as the $save_flag.
+	  The db file will be output to the 
+	  $scoreboard_directory/compilation_matrix_db directory.
+
+
+	* matrix_database/CompilationDBFileHandle.py:
+	* matrix_database/CompilationDB.py:
+	* matrix_database/CompilationPlatform.py:
+	* matrix_database/CreateDBTables.py:
+	* matrix_database/CreateDBTables.sh:
+	* matrix_database/DBConfig.py:
+	* matrix_database/DBConnection.py:
+	* matrix_database/GetAndInsertRemoteCompilationDbFiles.sh:
+	* matrix_database/GetAndInsertRemoteTestDbFiles.sh:
+	* matrix_database/InsertLocalCompilationDbFiles.sh:
+	* matrix_database/RecentCompilationDBFiles.py:
+	* matrix_database/RecentCompilationDBFiles.sh:
+	* matrix_database/RecentTestDBFiles.py:
+	* matrix_database/RecentTestDBFiles.sh:
+	* matrix_database/RemoveAndListCompilationDbFiles.sh:
+	* matrix_database/RemoveAndListTestDbFiles.sh:
+	* matrix_database/SaveCompilationsToDB.py:
+	* matrix_database/SaveCompilationsToDB.sh:
+	* matrix_database/SaveTestsToDB.py:
+	* matrix_database/SaveTestsToDB.sh:
+	* matrix_database/TestDBFileHandle.py:
+	* matrix_database/TestDB.py:
+	* matrix_database/TestPlatform.py:
+	* matrix_database/utils.py:
+
+  	  These files are added or moved from testmatrix directory.
+	  These scripts are used to support both testmatrix and 
+	  buildmatrix database.
+          Note: Some variables are left as empty in the shell scripts,
+                they need be configurated appropriately before running 
+                the scripts.
+
+	* testmatrix/CreateDBTables.py:
+	* testmatrix/CreateDBTables.sh:
+	* testmatrix/DBLogHandle.py:
+	* testmatrix/GetAndInsertDbFiles.sh:
+	* testmatrix/Platform.py:
+	* testmatrix/RecentDBFiles.py:
+	* testmatrix/RecentDBFiles.sh:
+	* testmatrix/RemoveAndListDbFiles.sh:
+	* testmatrix/SaveFileToDB.py:
+	* testmatrix/SaveFileToDB.sh:
+	* testmatrix/TestDBConfig.py:
+	* testmatrix/TestDB.py:
+  	* testmatrix/utils.py:
+
+          These scripts are renamed and moved to matrix_database directory.
+          Some scripts are renamed to distinguish from the scripts used by the
+          buildmatrix.
+
+        * testmatrix/GenerateTestMatrix.py:
+        * testmatrix/HTMLScoreboard.py:
+
+          Added the python path so they can access the module under 
+          matrix_database directory.
+
+
 Wed Dec 22 07:43:49 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/atl/Solaris10-x86.xml:
