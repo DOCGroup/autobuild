@@ -197,6 +197,12 @@ all the OS/platform combinations ACE is tested everyday.
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
+         <name>WinXP_CBuilderX_Dynamic_Debug_MPC_BMake</name>
+         <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXddace</url>
+         <build_sponsor>Remedy IT</build_sponsor>
+	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      </build>
+      <build>
          <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dru</url>
          <build_sponsor>Remedy IT</build_sponsor>
