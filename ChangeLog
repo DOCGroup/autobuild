@@ -1,3 +1,20 @@
+Wed Aug  4 10:10:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCCNoInline.xml:
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+          Enabled ssl, I am using this system to test the fixes for bug1476
+          and had to install SSL, so enable it at the same time for the
+          builds running at rite-dev-srv2.
+
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/msvclibdebug.xml:
+        * configs/autobuild/remedynl/msvclibrelease.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+          First do a cvs checkout, then create the config.h and
+          default.features files, the other way around gives problems
+          when we zap the ACE_wrappers tree
+
 Tue Aug  3 06:20:33 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/remedynl/gandalf_cbxddace.xml:
