@@ -100,8 +100,8 @@ sub build_group_hash ()
     print "Grouping builds\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
-        if (defined %builds->{$buildname}->{GROUP}) {
-            push @{%groups->{%builds->{$buildname}->{GROUP}}}, $buildname;
+        if (defined $builds{$buildname}->{GROUP}) {
+            push @{$groups{$builds{$buildname}{GROUP}}}, $buildname;
         }
         else {
             push @nogroup, $buildname;
@@ -126,11 +126,11 @@ sub query_latest ()
     print "Getting latest files\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
-        my $latest = load_web_latest (%builds->{$buildname}->{URL});
+        my $latest = load_web_latest ($builds{$buildname}{URL});
 
 	if (defined $latest && $latest =~ m/(...._.._.._.._..) /)
 	{
-       	    %builds->{$buildname}->{BASENAME} = $1;
+       	    $builds{$buildname}{BASENAME} = $1;
 	}
 	else {
 		print STDERR "    Error: Could not find latest.txt for $buildname\n";
@@ -138,25 +138,25 @@ sub query_latest ()
 	}
 
         if ($latest =~ m/Config: (\d+)/) {
-            %builds->{$buildname}->{CONFIG_SECTION} = $1;
+            $builds{$buildname}{CONFIG_SECTION} = $1;
         }
 
         if ($latest =~ m/Setup: (\d+)-(\d+)-(\d+)/) {
-            %builds->{$buildname}->{SETUP_SECTION} = $1;
-            %builds->{$buildname}->{SETUP_ERRORS} = $2;
-            %builds->{$buildname}->{SETUP_WARNINGS} = $3;
+            $builds{$buildname}{SETUP_SECTION} = $1;
+            $builds{$buildname}{SETUP_ERRORS} = $2;
+            $builds{$buildname}{SETUP_WARNINGS} = $3;
         }
 
         if ($latest =~ m/Compile: (\d+)-(\d+)-(\d+)/) {
-            %builds->{$buildname}->{COMPILE_SECTION} = $1;
-            %builds->{$buildname}->{COMPILE_ERRORS} = $2;
-            %builds->{$buildname}->{COMPILE_WARNINGS} = $3;
+            $builds{$buildname}{COMPILE_SECTION} = $1;
+            $builds{$buildname}{COMPILE_ERRORS} = $2;
+            $builds{$buildname}{COMPILE_WARNINGS} = $3;
         }
 
         if ($latest =~ m/Test: (\d+)-(\d+)-(\d+)/) {
-            %builds->{$buildname}->{TEST_SECTION} = $1;
-            %builds->{$buildname}->{TEST_ERRORS} = $2;
-            %builds->{$buildname}->{TEST_WARNINGS} = $3;
+            $builds{$buildname}{TEST_SECTION} = $1;
+            $builds{$buildname}{TEST_ERRORS} = $2;
+            $builds{$buildname}{TEST_WARNINGS} = $3;
         }
     }
 }
@@ -179,7 +179,7 @@ sub query_status ()
     print "Getting status messages\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
-        my $link = %builds->{$buildname}->{URL} . '/status.txt';
+        my $link = $builds{$buildname}{URL} . '/status.txt';
         if (defined $link) {
             print "    Status [$buildname] from $link\n" if ($verbose);
 
@@ -203,7 +203,7 @@ sub query_status ()
 
             foreach my $line (@contents) {
                 if ($line =~ m/SCOREBOARD_STATUS\:(.*)$/) {
-                    %builds->{$buildname}->{STATUS} = $1;
+                    $builds{$buildname}{STATUS} = $1;
                 }
             }
         }
@@ -320,14 +320,14 @@ sub update_cache ($)
     foreach my $buildname (keys %builds) {
         ### Check to see if we had problems.  If there is no basename,
         ### we had problems downloading.
-        if (!defined %builds->{$buildname}->{BASENAME}) {
+        if (!defined $builds{$buildname}{BASENAME}) {
             next;
         }
 
-        my $basename = %builds->{$buildname}->{BASENAME};
-        my $address = %builds->{$buildname}->{URL} . "/" . %builds->{$buildname}->{BASENAME} . ".txt";
+        my $basename = $builds{$buildname}{BASENAME};
+        my $address = $builds{$buildname}{URL} . "/" . $builds{$buildname}{BASENAME} . ".txt";
 
-        my $filename = %builds->{$buildname}->{BASENAME} . '.txt';
+        my $filename = $builds{$buildname}{BASENAME} . '.txt';
 
         print "    Looking at $buildname\n" if ($verbose);
 
@@ -593,22 +593,22 @@ sub update_html_table ($$@)
     }
 
     foreach my $buildname (@builds) {
-        if (defined %builds->{$buildname}->{STATUS}) {
+        if (defined $builds{$buildname}->{STATUS}) {
             $havestatus = 1;
         }
-        if (defined %builds->{$buildname}->{MANUAL_LINK}) {
+        if (defined $builds{$buildname}->{MANUAL_LINK}) {
             $havemanual = 1;
         }
-	if (defined %builds->{$buildname}->{PDF}) {
+	if (defined $builds{$buildname}->{PDF}) {
 	    $havepdf = 1;
 	}
-	if (defined %builds->{$buildname}->{PS}) {
+	if (defined $builds{$buildname}->{PS}) {
 	    $haveps = 1;
 	}
-	if (defined %builds->{$buildname}->{HTML}) {
+	if (defined $builds{$buildname}->{HTML}) {
 	    $havehtml = 1;
 	}
-	if (defined %builds->{$buildname}->{SNAPSHOT}) {
+	if (defined $builds{$buildname}->{SNAPSHOT}) {
 	    $havesnapshot = 1;
 	}
     }
@@ -633,8 +633,8 @@ sub update_html_table ($$@)
 
         print $indexhtml '<tr><td>';
 
-        if (defined %builds->{$buildname}->{URL}) {
-            print $indexhtml "<a href=\"".%builds->{$buildname}->{URL} ."/\">" ;
+        if (defined $builds{$buildname}->{URL}) {
+            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/\">" ;
             print $indexhtml $buildname;
             print $indexhtml "</a> ";
         }
@@ -642,19 +642,19 @@ sub update_html_table ($$@)
             print $indexhtml $buildname;
         }
 
-        if (defined %builds->{$buildname}->{BASENAME}) {
-            my $basename = %builds->{$buildname}->{BASENAME};
+        if (defined $builds{$buildname}->{BASENAME}) {
+            my $basename = $builds{$buildname}->{BASENAME};
             my $webfile = "$buildname/$basename";
 
             my $orange = $orange_default;
             my $red = $red_default;
 
-            if (defined %builds->{$buildname}->{ORANGE_TIME}) {
-                $orange = %builds->{$buildname}->{ORANGE_TIME};
+            if (defined $builds{$buildname}->{ORANGE_TIME}) {
+                $orange = $builds{$buildname}->{ORANGE_TIME};
             }
 
-            if (defined %builds->{$buildname}->{RED_TIME}) {
-                $red = %builds->{$buildname}->{RED_TIME};
+            if (defined $builds{$buildname}->{RED_TIME}) {
+                $red = $builds{$buildname}->{RED_TIME};
             }
 
             print $indexhtml '<td bgcolor=';
@@ -664,20 +664,20 @@ sub update_html_table ($$@)
             my $color;
 
             print $indexhtml '<td>';
-            if (defined %builds->{$buildname}->{CONFIG_SECTION}) {
+            if (defined $builds{$buildname}->{CONFIG_SECTION}) {
                 print $indexhtml "[<a href=\"".$webfile."_Config.html\">Config</a>] ";
             }
             else {
                 print $indexhtml "&nbsp;";
             }
 
-            if (!defined %builds->{$buildname}->{SETUP_SECTION}) {
+            if (!defined $builds{$buildname}->{SETUP_SECTION}) {
                 $color = 'white';
             }
-            elsif (%builds->{$buildname}->{SETUP_ERRORS} > 0) {
+            elsif ($builds{$buildname}->{SETUP_ERRORS} > 0) {
                 $color = 'red';
             }
-            elsif (%builds->{$buildname}->{SETUP_WARNINGS} > 0) {
+            elsif ($builds{$buildname}->{SETUP_WARNINGS} > 0) {
                 $color = 'orange';
             }
             else {
@@ -685,23 +685,23 @@ sub update_html_table ($$@)
             }
 
             print $indexhtml "<td bgcolor=$color>";
-            if (defined %builds->{$buildname}->{SETUP_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . %builds->{$buildname}->{SETUP_SECTION} . "\">Full</a>] ";
-                if (%builds->{$buildname}->{SETUP_ERRORS} + %builds->{$buildname}->{SETUP_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . %builds->{$buildname}->{SETUP_SECTION} . "\">Brief</a>]";
+            if (defined $builds{$buildname}->{SETUP_SECTION}) {
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\">Full</a>] ";
+                if ($builds{$buildname}->{SETUP_ERRORS} + $builds{$buildname}->{SETUP_WARNINGS} > 0) {
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\">Brief</a>]";
                 }
             }
             else {
                 print $indexhtml "&nbsp;";
             }
 
-            if (!defined %builds->{$buildname}->{COMPILE_SECTION}) {
+            if (!defined $builds{$buildname}->{COMPILE_SECTION}) {
                 $color = 'white';
             }
-            elsif (%builds->{$buildname}->{COMPILE_ERRORS} > 0) {
+            elsif ($builds{$buildname}->{COMPILE_ERRORS} > 0) {
                 $color = 'red';
             }
-            elsif (%builds->{$buildname}->{COMPILE_WARNINGS} > 0) {
+            elsif ($builds{$buildname}->{COMPILE_WARNINGS} > 0) {
                 $color = 'orange';
             }
             else {
@@ -709,23 +709,23 @@ sub update_html_table ($$@)
             }
 
             print $indexhtml "<td bgcolor=$color>";
-            if (defined %builds->{$buildname}->{COMPILE_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . %builds->{$buildname}->{COMPILE_SECTION} . "\">Full</a>] ";
-                if (%builds->{$buildname}->{COMPILE_ERRORS} + %builds->{$buildname}->{COMPILE_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . %builds->{$buildname}->{COMPILE_SECTION} . "\">Brief</a>]";
+            if (defined $builds{$buildname}->{COMPILE_SECTION}) {
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\">Full</a>] ";
+                if ($builds{$buildname}->{COMPILE_ERRORS} + $builds{$buildname}->{COMPILE_WARNINGS} > 0) {
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\">Brief</a>]";
                 }
             }
             else {
                 print $indexhtml "&nbsp;";
             }
 
-            if (!defined %builds->{$buildname}->{TEST_SECTION}) {
+            if (!defined $builds{$buildname}->{TEST_SECTION}) {
                 $color = 'white';
             }
-            elsif (%builds->{$buildname}->{TEST_ERRORS} > 0) {
+            elsif ($builds{$buildname}->{TEST_ERRORS} > 0) {
                 $color = 'red';
             }
-            elsif (%builds->{$buildname}->{TEST_WARNINGS} > 0) {
+            elsif ($builds{$buildname}->{TEST_WARNINGS} > 0) {
                 $color = 'orange';
             }
             else {
@@ -733,10 +733,10 @@ sub update_html_table ($$@)
             }
 
             print $indexhtml "<TD bgcolor=$color>";
-            if (defined %builds->{$buildname}->{TEST_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . %builds->{$buildname}->{TEST_SECTION} . "\">Full</a>] ";
-                if (%builds->{$buildname}->{TEST_ERRORS} + %builds->{$buildname}->{TEST_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . %builds->{$buildname}->{TEST_SECTION} . "\">Brief</a>]";
+            if (defined $builds{$buildname}->{TEST_SECTION}) {
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\">Full</a>] ";
+                if ($builds{$buildname}->{TEST_ERRORS} + $builds{$buildname}->{TEST_WARNINGS} > 0) {
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\">Brief</a>]";
                 }
             }
             else {
@@ -754,10 +754,10 @@ sub update_html_table ($$@)
 
         if ($havemanual) {
             print $indexhtml "<td align=center>";
-            if (defined %builds->{$buildname}->{MANUAL_LINK}) {
+            if (defined $builds{$buildname}->{MANUAL_LINK}) {
                 print $indexhtml "<input type=\"button\" value=\"Start\" ";
                 print $indexhtml "onclikc=\"window.location.href='";
-                print $indexhtml %builds->{$buildname}->{MANUAL_LINK};
+                print $indexhtml $builds{$buildname}->{MANUAL_LINK};
                 print $indexhtml "'\">";
             }
             else {
@@ -766,9 +766,9 @@ sub update_html_table ($$@)
         }
         if ($havestatus) {
             print $indexhtml "<td>";
-            if (defined %builds->{$buildname}->{STATUS}) {
-                print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "/status.txt\"\>";
-                print $indexhtml %builds->{$buildname}->{STATUS};
+            if (defined $builds{$buildname}->{STATUS}) {
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "/status.txt\"\>";
+                print $indexhtml $builds{$buildname}->{STATUS};
                 print $indexhtml "</a>";
             }
             else {
@@ -778,8 +778,8 @@ sub update_html_table ($$@)
 
 	if ($havepdf) {
 		print $indexhtml "<td>";
-		if (defined %builds->{$buildname}->{PDF}) {
-			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{PDF}, "\"\>";
+		if (defined $builds{$buildname}->{PDF}) {
+			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
 			print $indexhtml "pdf</a>";
 		}
 		else {
@@ -789,8 +789,8 @@ sub update_html_table ($$@)
 
 	if ($haveps) {
 		print $indexhtml "<td>";
-		if (defined %builds->{$buildname}->{PS}) {
-			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{PS}, "\"\>";
+		if (defined $builds{$buildname}->{PS}) {
+			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
 			print $indexhtml "ps</a>";
 		}
 		else {
@@ -800,8 +800,8 @@ sub update_html_table ($$@)
 
 	if ($havehtml) {
 		print $indexhtml "<td>";
-		if (defined %builds->{$buildname}->{HTML}) {
-			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{HTML}, "\/index.html\"\>";
+		if (defined $builds{$buildname}->{HTML}) {
+			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
 			print $indexhtml "html</a>";
 		}
 		else {
@@ -812,8 +812,8 @@ sub update_html_table ($$@)
 
 	if ($havesnapshot) {
 		print $indexhtml "<td>";
-		if (defined %builds->{$buildname}->{SNAPSHOT}) {
-			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{SNAPSHOT}, "\"\>";
+		if (defined $builds{$buildname}->{SNAPSHOT}) {
+			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
 			print $indexhtml "snapshot</a>";
 		}
 		else {
@@ -823,12 +823,12 @@ sub update_html_table ($$@)
 
         print $indexhtml "<td>";
         print $indexhtml "<a href=\"";
-        if (defined %builds->{$buildname}->{BUILD_SPONSOR_URL}) {
-               print $indexhtml %builds->{$buildname}->{BUILD_SPONSOR_URL}."\n";
+        if (defined $builds{$buildname}->{BUILD_SPONSOR_URL}) {
+               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."\n";
         }
         print $indexhtml "\" target=\"_blank\">";
-        if (defined %builds->{$buildname}->{BUILD_SPONSOR}) {
-               print $indexhtml %builds->{$buildname}->{BUILD_SPONSOR}."\n";
+        if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
+               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."\n";
         }
         print $indexhtml "</a>";
 

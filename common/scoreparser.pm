@@ -104,14 +104,14 @@ sub Parse ($\@)
         }
         elsif ($state eq 'build') {
             if (m/^\s*<\/build>\s*$/i) {
-                if (!defined %build_info->{NAME}) {
+                if (!defined $build_info{NAME}) {
                     print STDERR "Error: All builds must have a name\n";
                     return 0;
                 }
                 
-                %build_info->{GROUP} = $group_name;
+                $build_info{GROUP} = $group_name;
                 
-                %{%{$data}->{%build_info->{NAME}}} = %build_info;
+                %{%{$data}->{$build_info{NAME}}} = %build_info;
                 %build_info = ();
                 
                 $state = 'group';
@@ -122,40 +122,40 @@ sub Parse ($\@)
                     print "Warning: Found whitespace in build name, shrinking \"$1\" to \"$name\"\n";
                 }
                 
-                %build_info->{NAME} = $1;
+                $build_info{NAME} = $1;
             }
             elsif (m/^\s*<url>(.*)<\/url>\s*$/i) {
-                %build_info->{URL} = $1;
+                $build_info{URL} = $1;
                 
                 # Remove a trailing slash, if there is one
-                %build_info->{URL} =~ s/\/$//;
+                $build_info{URL} =~ s/\/$//;
             }
             elsif (m/^\s*<build_sponsor>(.*)<\/build_sponsor>\s*$/i) {
-                %build_info->{BUILD_SPONSOR} = $1;
+                $build_info{BUILD_SPONSOR} = $1;
             }
             elsif (m/^\s*<build_sponsor_url>(.*)<\/build_sponsor_url>\s*$/i) {
-                %build_info->{BUILD_SPONSOR_URL} = $1;
+                $build_info{BUILD_SPONSOR_URL} = $1;
                 
                 # Remove a trailing slash, if there is one
-                #%build_info->{BUILD_SPONSOR_URL} =~ s/\/$//;
+                #$build_info{BUILD_SPONSOR_URL} =~ s/\/$//;
             }
             elsif (m/^\s*<manual>(.*)<\/manual>\s*$/i) {
-                %build_info->{MANUAL_LINK} = $1;
+                $build_info{MANUAL_LINK} = $1;
             }
             elsif (m/^\s*<orange>(.*)<\/orange>\s*$/i) {
-                %build_info->{ORANGE_TIME} = $1;
+                $build_info{ORANGE_TIME} = $1;
             }
             elsif (m/^\s*<red>(.*)<\/red>\s*$/i) {
-                %build_info->{RED_TIME} = $1;
+                $build_info{RED_TIME} = $1;
             }
 	    elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
-		%build_info->{PDF} = $1;
+		$build_info{PDF} = $1;
 	    }
 	    elsif (m/^\s*<ps>(.*)<\/ps>\s*$/i) {
-	 	%build_info->{PS} = $1;
+	 	$build_info{PS} = $1;
 	    }
 	    elsif (m/^\s*<html>(.*)<\/html>\s*$/i) {
-	 	%build_info->{HTML} = $1;
+	 	$build_info{HTML} = $1;
 	    }
             else {
                 print STDERR "Error: Unexpected in state <$state>: $_\n";
