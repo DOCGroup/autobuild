@@ -1,3 +1,9 @@
+Sun Dec 21 08:28:50 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/remedynl/msvcwchardebug.xml:
+
+	  Fixed the configuration for Johnny to start the builds.
+
 Sun Dec 21 09:54:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCC32.xml:
