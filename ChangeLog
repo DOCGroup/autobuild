@@ -1,3 +1,9 @@
+Wed Jan 19 15:49:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Added two new msvc6 ace builds, same as from WashU, can replace
+          the WashU builds
+
 Wed Jan 19 12:54:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
