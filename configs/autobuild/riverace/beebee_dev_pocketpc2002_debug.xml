@@ -29,7 +29,7 @@
     <command name="win32make"         options="-evc3 -recurse tests" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=1 index" />
+    <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>

@@ -1,3 +1,12 @@
+Thu Feb  6 18:31:47 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+          Remove the "=1" from process_logs clean in order to leave the
+          default number of historical logs available.
+
 Wed Feb  5 14:19:31 2003  Steve Huston  <shuston@riverace.com>
 
         * common/prettify.pm: Added a new section handler for the autoconf
