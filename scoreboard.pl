@@ -55,7 +55,7 @@ my $preamble = "
 This is the ACE/TAO scoreboard.<p>
 
 It shows all the OS/platform combinations ACE/TAO are tested against
-everyday, all over the world.<p>
+everyday, all over the world.
 ";
 
 ###############################################################################
