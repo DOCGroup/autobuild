@@ -1,3 +1,13 @@
+Sat Aug  9 14:52:54 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/sol9_gcc33.xml:
+        * configs/autobuild/dresystems/driver_blade.sh:
+        * configs/scoreboard/ace.xml:
+          Added another MPC based Solaris 9 build and new driver script.
+
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+          Changed compiler from gcc to sun_cc.
+
 Sat Aug  9 13:35:30 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/sol9_spro54.xml:

@@ -170,6 +170,14 @@ all the OS/platform combinations ACE is tested everyday.
       <orange>30</orange>
       <red>36</red>
    </build>
+   <build>
+      <name>Solaris_9_GCC_3.3_(MPC)</name>
+      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_gcc33_ace</url>
+      <build_sponsor>DRE Systems</build_sponsor>
+      <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+      <orange>30</orange>
+      <red>36</red>
+   </build>
 </group>
 <group>
 <name>Windows</name>
