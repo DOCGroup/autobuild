@@ -11,7 +11,7 @@
         <variable name="sam_root" value="/project/beguinetmp/bugzilla/Explicit_Templates_newbuild/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/beguine_Redhat_Explicit_Templates" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux RH_7.1" />
 
     </configuration>
 
