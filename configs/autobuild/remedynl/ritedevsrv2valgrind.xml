@@ -7,6 +7,7 @@
         <environment name="LD_LIBRARY_PATH"       value="/home/build/ACE/valgrind/ACE_wrappers/lib" />
         <environment name="CVSROOT"               value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"               value="ssh" />
+        <environment name="VALGRIND_OPTS"         value="--tool=memcheck" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
 
         <variable name="root"     value="/home/build/ACE/valgrind/" />
