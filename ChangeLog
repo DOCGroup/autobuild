@@ -1,3 +1,10 @@
+Tue Feb 22 14:26:39 3005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Added
+	  "instances=explicit" to platform_macros.GNU - Forte 7 can't
+	  survive on implicit templates. This dooms it for ACE versions
+	  past 5.5, but for now it needs to be tested.
+
 Tue Feb 22 09:59:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
