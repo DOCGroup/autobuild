@@ -7,6 +7,7 @@
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="PATH"         value="C:\Perl\Bin;C:\CBuilderX\bin;C:\CBuilderX\lib;C:\ACE\CBXdd\ACE_wrappers\lib;C:\ACE\CBXdd\ACE_wrappers\bin;C:\cygwin\bin;C:\opensslcbx\openssl-0.9.7d\out32" type="prefix" />
         <environment name="SSL_ROOT"     value="C:\opensslcbx\openssl-0.9.7d" />
+        <environment name="XERCESCROOT"  value="C:\xerces-c_2_5_0-windows_nt-cbx" />
 
 	<environment name="DEBUG"    value="1" />
 	<environment name="DYNAMIC"  value="1" />

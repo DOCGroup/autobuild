@@ -1,3 +1,8 @@
+Tue Sep 28 09:51:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Tag "Rule line too long" as error.
+
 Mon Sep 27 11:11:34 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:

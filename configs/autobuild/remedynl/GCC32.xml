@@ -25,8 +25,8 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 1\n#define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 1\n#define TAO_HAS_CORBA_MESSAGING 1\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\nprobe=1\nfl_reactor=1\nOCFLAGS=-O2\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nfl_reactor=1\ntk_reactor=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='probe=1\nfl_reactor=1\nOCFLAGS=-O2\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=1\ntk_reactor=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -36,18 +36,13 @@
 
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
-
-    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO" />
-    <command name="make"              options="-k -C TAO/CIAO" />
 
     <command name="auto_run_tests" options="" />
 

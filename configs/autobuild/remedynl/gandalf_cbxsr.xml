@@ -6,14 +6,15 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="PATH"         value="C:\Perl\Bin;C:\CBuilderX\bin;C:\CBuilderX\lib;C:\ACE\CBXdd\ACE_wrappers\lib;C:\ACE\CBXdd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="XERCESCROOT"  value="C:\xerces-c_2_5_0-windows_nt-cbx" />
 
-	<environment name="STATIC"   value="1" />
-	<environment name="BCBVER"   value="6" />
+        <environment name="STATIC"   value="1" />
+        <environment name="BCBVER"   value="6" />
 
         <variable name="make_program" value="bmake" />
         <variable name="configs"  value="Win32 Borland STATIC Release Exceptions" />
         <variable name="root"     value="C:\ACE\CBXsr\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\CBXsr\" />
         <variable name="name"     value="WinXP CBX Static Release" />
     </configuration>
