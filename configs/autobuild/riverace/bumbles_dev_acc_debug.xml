@@ -33,7 +33,7 @@
     <command name="check_compiler"    options="aCC" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-j 2 -k realclean" />
+    <command name="make"              options="-k realclean" />
     <command name="make"              options="-j 2 -k" />
 
     <command name="auto_run_tests"    options="-a" />
