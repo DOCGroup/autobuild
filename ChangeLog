@@ -1,3 +1,14 @@
+Wed May  1 15:15:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/log.pm:  STDOUT was not being redirected properly.
+	  For some reason, this problem only showed up under Solaris cron.
+
+	* configs/autobuild/chipper/driver.sh:
+	* configs/autobuild/danzon/SunOS_SunCC51.xml:
+	* configs/autobuild/danzon/driver.sh:
+	* configs/autobuild/tango/driver.sh:
+          Minor fixes to appease Solaris cron.
+
 Wed May  1 04:02:01 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/ace/*: Added

@@ -69,7 +69,7 @@ sub Run ($)
 
     if (uc $options eq "ON") {
         # Make copies of current handles
-
+        # Type "perlfunc -f open" to see an example of redirecting STDOUT
         open (OLDOUT, ">&STDOUT");
         open (OLDERR, ">&STDERR");
 
@@ -77,7 +77,7 @@ sub Run ($)
 
         # Redirect to the logfile
 
-        if (!open (STDOUT, "> $logpath")) {
+        if (!open (STDOUT, '>', "$logpath")) {
             print STDERR __FILE__, ": Can't redirect stdout: $!\n";
             return 0;
         }
@@ -85,6 +85,8 @@ sub Run ($)
             print STDERR __FILE__, ": Can't dup stdout: $!\n";
             return 0;
         }
+        select(STDERR); $| = 1;    # make unbuffered
+        select(STDOUT); $| = 1;    # make unbuffered
 
         main::PrintStatus ('Begin', '');
     }

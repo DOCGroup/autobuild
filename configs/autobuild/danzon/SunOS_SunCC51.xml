@@ -14,10 +14,10 @@
 
     </configuration>
 
+    <command name="log"               options="on" />
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
-    <command name="log"               options="on" />
 <!--    <command name="sam" options="clean" /> -->
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
 <!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
