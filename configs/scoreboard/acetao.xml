@@ -260,6 +260,10 @@ and let us know which platform combinations you can contribute.
              <name>WinXP_Warning_Level_4_Debug</name>
              <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
          </build>
+         <build>
+         <name>RedHat_GCC_3.3(pre-release)</name>
+<        <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
+         </build>
     </group>
     <group>
          <name>VxWorks</name>
