@@ -1,3 +1,18 @@
+Fri Sep 13 22:44:39 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+	  Danzon was upgraded to Solaris 2.8, so switch config files in build
+	  to Solaris 2.8
+
+	* command/make.pm: Don't quit if we cannot chdir() to $project_root.
+
+	* common/prettify.pm:
+	  Enhanced e-mail notification capability: 
+	   - put the error messages in the e-mail
+	   - do a cvs diff on $ACE_ROOT/ChangeLog and $TAO_ROOT/ChangeLog in the
+	     past 24 hours.
+
 Thu Sep 12 05:47:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:

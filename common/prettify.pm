@@ -27,6 +27,7 @@ sub new ($)
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
 
+    @{ $self->{ERROR_TEXT} }= ();
     @{ $self->{BUILD_ERROR_COUNTER} }= ();
 
     bless ($self, $class);
@@ -114,6 +115,7 @@ sub Error ($)
     $s =~ s/>/&gt;/g;
     
     my $counter = ++$self->{ERROR_COUNTER};
+    push( @{$self->{ERROR_TEXT}}, $s );
     
     print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
     print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
@@ -745,7 +747,6 @@ sub Output_Error ($)
 {
     my $self = shift;
     my $s = shift;
-    
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Error ($s);
     }
@@ -991,10 +992,42 @@ sub SendEmailNotification($)
 
     my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
     my @errors = $self->BuildErrors();
+    my @error_text = @{$self->{OUTPUT}[0]->{ERROR_TEXT}};
 
     ## Combine the array of errors into one string which we can put in an e-mail
     my $errors_string = join("\n", @errors );
+    $errors_string .= "\n\nDisplaying errors from build: \n";
+    $errors_string .= 
+    "\n================================================================\n\n";
 
+    $errors_string .= join("\n", @error_text); 
+    $errors_string .=
+    "\n================================================================\n\n";
+
+    my $root = main::GetVariable( 'root' );
+    if ( -r $root."/ACE_wrappers/ChangeLog")
+    {
+       $errors_string .= "ACE changes in last 24 hours:\n\n";
+       chdir("$root/ACE_wrappers");
+       $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`; 
+       $errors_string .= "\n\n";
+       chdir("$root");
+    }else{
+       $errors_string .= "\nCouldn't find ".$root."/ACE_wrappers/ChangeLogg???\n\n"
+    }
+
+    if ( -r $root."/ACE_wrappers/TAO/ChangeLog")
+    {
+       $errors_string .=
+       "================================================================\n\n";
+       $errors_string .= "TAO changes in last 24 hours:\n\n";
+       chdir("$root/ACE_wrappers/TAO");
+       $errors_string .= `cvs diff -D \"24 hours ago\" ChangeLog`; 
+       $errors_string .= "\n\n";
+       chdir("$root");
+
+    }
+ 
     Mail::send_message($mail_admin, 
                        "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
                        scalar(@errors)." errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
