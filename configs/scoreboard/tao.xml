@@ -295,10 +295,16 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>HP</name>
    <build>
-   <name>HPUX11_ACC339_Full</name>
-   <url>http://www.prismtechnologies.com/tao-scoreboard/hp1</url>
-   <build_sponsor>PrismTech</build_sponsor>
-   <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
+      <name>HPUX11_ACC339_Full</name>
+      <url>http://www.prismtechnologies.com/tao-scoreboard/hp1</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
+   </build>
+   <build>
+      <name>HPUX11_aCC</name>
+      <url>http://www.dre.vanderbilt.edu/~willemsenj/hpux</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
 </group>
 
