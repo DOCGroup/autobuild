@@ -1,3 +1,10 @@
+Sat Jan 25 14:55:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml: Added MingW again.
+          Installed MSYS package of MinGW. After installing this package
+          the make didn't crash anymore. Build will run once a day after
+          the 4 BCB builds.
+
 Sat Jan 25 08:46:34 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml: Removed new MinGW build.
