@@ -1,3 +1,10 @@
+Wed Jun 25 11:14:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          In the setup phase, ERROR is something that must be outputted as
+          error. ERROR can be outputted by MPC when generating project
+          files
+
 Mon Jun 23 22:02:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* command/file_manipulation.pm: Added an extra option that does
@@ -11,7 +18,7 @@ Sat Jun 21 14:33:11 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 Sat Jun 21 14:17:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* common/simpleparser.pm: Fixed cases where hash was used as a
-	  reference. 
+	  reference.
 
 Sat Jun 21 09:21:07 2003  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
