@@ -1,3 +1,10 @@
+Wed Jan 14 14:04:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          Restored full build names. Until the upcoming release we will shown
+          things without MPC.
+
 Wed Jan 14 12:58:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
