@@ -1,3 +1,8 @@
+Tue Mar 22 10:35:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed MSVC6 Unicode build
+
 Tue Mar 22 10:33:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
