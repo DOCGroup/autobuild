@@ -23,7 +23,7 @@ Pundaleeka.
 </preamble>
 
 <group>
-<name>FACET (with CORBA disabled)</name>
+<name>FACET-Core</name>
 
    <build>
    <name>FACET-libs</name>
@@ -31,6 +31,18 @@ Pundaleeka.
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
+
+   <build>
+   <name>FACET-corba-libs</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/corba/libs</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+</group>
+
+<group>
+<name>FACET-Features (with CORBA disabled)</name>
 
    <build>
    <name>FACET-correlation_filter</name>
@@ -140,7 +152,7 @@ Pundaleeka.
 
 
 <group>
-<name>FACET (with CORBA enabled)</name>
+<name>FACET-Features (with CORBA enabled)</name>
 
    <build>
    <name>FACET-corba-ttl</name>
