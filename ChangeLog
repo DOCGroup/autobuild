@@ -1,3 +1,11 @@
+Mon Nov 22 20:05:03 2004  Carlos O'Ryan  <coryan@atdesk.com>
+
+	* configs/scoreboard/tao_dre.sh:
+	  Using "exec" and then putting the process in the background is
+	  superfluous and really confusing.
+	  wait for all the background processes before exit.
+	  Run buildmatrix for all the tao.xml configuration.
+
 Fri Nov 19 18:23:14 2004  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml: Use the
