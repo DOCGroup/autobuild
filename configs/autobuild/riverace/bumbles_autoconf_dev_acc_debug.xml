@@ -22,14 +22,8 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <!-- Delete all the Makefile.am files so cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers-repository -name 'Makefile.am' -exec rm '{}' ';'" />
-
     <command name="cvs"               options="checkout -P MPC" />
     <command name="cvs"               options="checkout -P ACE" />
-
-    <!-- Now, delete them again to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers-repository -name 'Makefile.am' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
