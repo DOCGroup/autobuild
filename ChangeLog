@@ -1,3 +1,8 @@
+Thu Nov 13 22:41:16 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/remedynl/driverbuildpc3.bat:
+          Changed VC7 to vc7 so the config page link to cvs will work.
+
 Wed Nov 12 11:53:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
