@@ -1,3 +1,10 @@
+Thu Apr 22 10:06:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/ace_future.xml:
+	* configs/scoreboard/ace.xml:
+          Moved vc8 preview from future to normal scoreboard. Some new
+          warnings where we should have a look at.
+
 Thu Apr 22 08:40:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/scoreboard/ace.xml:
