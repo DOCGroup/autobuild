@@ -1,6 +1,7 @@
 Wed Dec  4 11:38:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/tao/Borland.xml:
 	* configs/autobuild/nirvana/DLL_Release.xml: Added -Config Win32
 	  to the auto_run_test script line when running the tests.
 
