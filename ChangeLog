@@ -1,3 +1,13 @@
+Fri Feb 20 18:58:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* command/check_compiler.pm:
+	  Added doxygen as compiler, so that we can output the doxygen version
+	  in the config page.
+
+	* configs/autobuild/doc/Doxygen.xml:
+	* configs/autobuild/tao_isis/Doxygen.xml:
+	  Added a check_compiler with doxygen as options.
+
 Fri Feb 20 16:07:51 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/msvclibrelease.xml:
