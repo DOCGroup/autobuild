@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="D:/Cygwin/ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="c:\cygwin\bin;D:\Cygwin\ACE_wrappers\bin;D:\;c:\putty" type="prefix" />
+        <environment name="Path"         value="c:\cygwin\bin;D:\Cygwin\ACE_wrappers\bin;D:\;c:\putty;d:\perl\bin;" type="prefix" />
 
         <variable name="root"     value="D:\Cygwin\" />
 	<variable name="log_file" value="log.txt" />
