@@ -52,6 +52,7 @@ sub CheckRequirements ()
 sub Run ($)
 {
     my $self = shift;
+    my $options = shift;
     my $root = main::GetVariable ('root');
     my $wrappers = main::GetVariable ('project_root');
     my $build = main::GetVariable ('build_name');
@@ -60,6 +61,8 @@ sub Run ($)
     if ($wrappers =~ m/^(.*)\/$/) {
         $wrappers = $1;
     }
+
+    main::PrintStatus ('Setup', 'Clone Build Tree');
 
     my $current_dir = getcwd ();
 
@@ -82,19 +85,13 @@ sub Run ($)
         $mpcpath = File::Spec->canonpath("$dir/MPC");
     }
     if (! -d $mpcpath) {
-        $mpcpath = File::Spec->canonpath("$dir/../MPC");
-    }
-    if (! -d $mpcpath) {
-        $mpcpath = File::Spec->canonpath("$dir/../../MPC");
-    }
-    if (! -d $mpcpath) {
-        print STDERR "Cannot find MPC. Either set MPC_ROOT, or put MPC in a known location.\n";
+        print STDERR "ERROR: Cannot find MPC. Either set MPC_ROOT, or put MPC in a known location.\n";
         return 1;
     }
     
     $mpcpath = File::Spec->canonpath("$mpcpath/clone_build_tree.pl");
 
-    my $command = "perl $mpcpath $build";
+    my $command = "perl $mpcpath $options $build";
 
     print "Running: $command\n";
     system ($command);
