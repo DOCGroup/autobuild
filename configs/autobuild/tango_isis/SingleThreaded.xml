@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/SingleThreaded/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/SingleThreaded/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/SingleThreaded/ACE_wrappers/ace:." />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/SingleThreaded/ACE_wrappers/lib:." />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/usr/bin/ssh" />
 
@@ -19,17 +19,28 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 3 -q co -P ACE_wrappers" />
+    <!-- Now, delete them again to insure a clean slate. -->
+   <command name="shell"              options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='threads=0\ndebug=0\nexceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-k -j 2 -k" />
-    <command name="make"              options="-k -j 2 -k -C TAO" />
+    <!-- Uses ACE.mwc -->
+    <command name="shell"             options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="shell"             options="cd ACE_wrappers/TAO; ../bin/mwc.pl -recurse=TAOACE.mwc -make_coexistence" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -j 2" />
+    <command name="make"              options="-k -j 2 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 2 -C TAO idl_stubs" />
+    <command name="make"              options="-k -j 2 -C TAO" />
 
     <command name="auto_run_tests"    options="" />
 

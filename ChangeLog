@@ -1,3 +1,23 @@
+Fri Aug 22 00:39:39 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/freebsd_ace.xml:
+        * configs/autobuild/dresystems/freebsd_ace_debug.xml:
+        * configs/autobuild/dresystems/freebsd_ace_dump.xml:
+        * configs/autobuild/dresystems/freebsd_ace_explicit_template.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_exception.xml:
+        * configs/autobuild/dresystems/freebsd_ace_no_inline.xml:
+        * configs/autobuild/dresystems/freebsd_ace_single.xml:
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+          Removed use of build directory, adjusted pathes. etc...
+
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+          Migrated to MPC.
+
 Thu Aug 21 20:59:35 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/Debian_ORB_Core.xml:

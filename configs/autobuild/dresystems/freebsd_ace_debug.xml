@@ -2,14 +2,12 @@
 <autobuild>
  <configuration>
 
-  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_ace_debug/ACE_wrappers/build/freebsd_ace" />
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/freebsd_ace_debug/ACE_wrappers/build/freebsd_ace/lib" />
+  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_ace_debug/ACE_wrappers" />
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/home/dhinton/development/ace/autobuilds/freebsd_ace_debug/ACE_wrappers/lib" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
   <variable name="root"                value="/home/dhinton/development/ace/autobuilds/freebsd_ace_debug" />
-  <variable name="build_name"          value="freebsd_ace" />
-  <variable name="project_root"        value="/home/dhinton/development/ace/autobuilds/freebsd_ace_debug/ACE_wrappers/build/freebsd_ace" />
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_ace_debug" />
   <variable name="make_program"        value="gmake" />
@@ -20,19 +18,23 @@
  <command name="file_manipulation"     options="type=mustnotexist file=.disable" />
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
+
+ <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+ <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
  <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
+ <!-- Now, delete them again to insure a clean slate. -->
+ <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
- <command name="create_ace_build"      options="" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-freebsd.h\x22\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/ace/config.h output='#include \x22ace/config-freebsd.h\x22\n'" />
-
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\ndebug=1\nexceptions=1\noptimize=0\nrmcast=1\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\ndebug=1\nexceptions=1\noptimize=0\nrmcast=1\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
  <command name="print_ace_config" />
 
- <command name="generate_workspace"    options="-recurse=TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
+ <!-- Uses ACE.mwc -->
+ <command name="shell"                 options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
