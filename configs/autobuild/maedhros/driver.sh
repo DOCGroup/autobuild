@@ -14,10 +14,11 @@ export PATH
 LD_LIBRARY_PATH=$ACE_ROOT/ace:/usr/local/redhat-7.1/gcc-3.0.2/lib
 export LD_LIBRARY_PATH
 
-cd $ACE_ROOT/..
-cvs -r -z 3 -Q checkout -P autobuild >run.txt 2>&1
+cd $ACE_ROOT
+cd ..
+cvs -r -z 3 -Q checkout -P autobuild
 
-perl -w ./autobuild/autobuild.pl autobuild/configs/autobuild/maedhros/Core.xml >run.txt 2>&1
+perl -w ./autobuild/autobuild.pl autobuild/configs/autobuild/maedhros/Core.xml
 
 WEBLOG=$HOME/.www-docs/auto_compile_logs/maedhros_Core
 

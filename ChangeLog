@@ -1,3 +1,8 @@
+Sat Dec 15 09:22:33 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* configs/autobuild/maedhros/driver.sh:
+	  Minor changes to make debugging easier.
+
 Fri Dec 14 11:16:12 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* make_pretty.pl (makefile_compiler_output):
