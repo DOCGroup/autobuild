@@ -96,9 +96,23 @@ sub Run ($)
 
     my $command = "perl bin/mwc.pl $options";
 
-    print "Running: $command\n";
-    system ($command);
-
+    if ($dirs) {
+        my $dir;
+        my @dirlist = split(/,/, $dirs);
+        foreach $dir (@dirlist) {
+            if (!chdir $dir) {
+                print STDERR __FILE__, ": Cannot change to $project_root/$dir\n";
+                return 0;
+            }
+            print "Running: $command in $dir\n";
+            system ($command);
+            chdir $project_root;
+        }
+    }
+    else {
+        print "Running: $command\n";
+        system ($command);
+    }
     chdir $current_dir;
 
     return 1;

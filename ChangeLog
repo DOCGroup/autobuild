@@ -1,3 +1,8 @@
+Mon Aug 25 13:13:45 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/generate_workspace.pm:
+          Added code to process the "dirs=" option that was missing.
+
 Sun Aug 24 20:44:45 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/remedynl/Cygwin.xml:
