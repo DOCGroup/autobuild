@@ -25,8 +25,9 @@
 
     <command name="print_ace_config" /> 
 
-    <command name="win32make"         options="-recurse -auto_compile" />
-
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -CORE -u -k" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -TAO -u -k" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
