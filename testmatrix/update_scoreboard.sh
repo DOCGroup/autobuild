@@ -72,12 +72,35 @@ if [ -d "$LOG_DIR" ]; then
   # Protect against simultaneous attempts to build the
   # test matrix.
   if [ ! -f "$TEST_MATRIX_PROTECTION_FILE" ]; then
-    touch "$TEST_MATRIX_PROTECTION_FILE"
+    date +%s > $TEST_MATRIX_PROTECTION_FILE
     update_local_scoreboard
     rm "$TEST_MATRIX_PROTECTION_FILE"
   else
-    echo "Matrix is still being built."
+    STARTED_TIME=`cat $TEST_MATRIX_PROTECTION_FILE`
+
+    if [ -n "$STARTED_TIME" ]; then
+      # add 4 hours (60*60*4) to the number of seconds
+      LATE_TIME=`expr $STARTED_TIME + 14400`
+      CURRENT_TIME=`date +%s`
+
+      if [ $CURRENT_TIME -gt $LATE_TIME ]; then
+        echo "Detected stuck Matrix generation.  Removing the protection file."
+        rm "$TEST_MATRIX_PROTECTION_FILE"
+      else
+        echo "Matrix is still being built."
+      fi
+      # end of  if [ $CURRENT_TIME -gt $LATE_TIME ]
+
+    else
+      # More likely it is a munged attempt than two processes
+      # spawned at about the same time.
+      echo "Found empty protection file.  Removing."
+      rm "$TEST_MATRIX_PROTECTION_FILE"
+    fi 
+    # end of  if [ -n $STARTED_TIME ]
+
   fi
+  # end of  if [ ! -f "$TEST_MATRIX_PROTECTION_FILE" ]
 
 fi
 
