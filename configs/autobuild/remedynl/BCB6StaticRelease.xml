@@ -25,10 +25,10 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -name '*.bor' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
-    <command name="shell"             options="find ACE_wrappers -name '*.bor' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
 
     <command name="cvs"               options="-z9 update ACE_wrappers/include/makeinclude" />
 
