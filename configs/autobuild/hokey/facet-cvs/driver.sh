@@ -7,7 +7,7 @@
 #          It first builds the external libraries that facet uses, then jACE and ACE_TAO.
 
 # the directory which contains all of the configuration files
-BASE = $HOME/autobuild/configs/autobuild/hokey/facet-cvs
+BASE=$HOME/autobuild/configs/autobuild/hokey/facet-cvs
 
 /usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/facet.xml
 /usr/bin/perl $HOME/autobuild/autobuild.pl $BASE/jACE.xml
