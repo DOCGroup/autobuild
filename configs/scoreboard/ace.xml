@@ -184,12 +184,6 @@ all the OS/platform combinations ACE is tested everyday.
        <build_sponsor>Riverace</build_sponsor>
        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
-     <build>
-        <name>Win2K_Borland_C++_5_WChar</name>
-        <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
-        <build_sponsor>Washington University</build_sponsor>
-	<build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
       <build>
          <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6ddu</url>
@@ -213,12 +207,6 @@ all the OS/platform combinations ACE is tested everyday.
           <url>http://tao.doc.wustl.edu/bugzilla/new_wchar</url>
           <build_sponsor>Washington University</build_sponsor>
           <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
-      <build>
-         <name>Win2K_Borland_C++_5_WChar</name>
-         <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
-         <build_sponsor>Washington University</build_sponsor>
-         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
       </build>
       <build>
           <name>Win2K_MSVC6_WChar_Unicode</name>
