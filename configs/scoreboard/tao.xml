@@ -367,4 +367,26 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
 </group>
 
+<group>
+   <name>VxWorks</name>
+   <build>
+      <name>Windows_XP_VC71_Host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_Host</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>VxWorks5.5.1_PPC85XX_DIAB</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PPC85XX_DIAB</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>VxWorks5.5.1_PPC85XX_GCC3.3</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PPC85XX_GNU</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+</group>
+
 </scoreboard>
