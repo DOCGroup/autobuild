@@ -1,3 +1,9 @@
+2003-04-20  Build Account  <isisbuilds@doc.dre.vanderbilt.edu>
+
+	* configs/autobuild/doc_isis/RH8_wchar.xml:
+	* configs/autobuild/doc_isis/driver_wchar.xml: WChar builds on
+	  rumba.ece.uci.edu being  shifted to ISIS.
+
 Sat Apr 19 19:31:55 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Removed the rumba builds from the
