@@ -8,20 +8,26 @@ decide the migration paths and strategies.
 <hr>
 </preamble>
 
- <group>
+<group>
    <name>Test Builds for TAO</name>
    <build>
-   <name>WinXP_MSVC6_XML_Debug</name>
+      <name>WinXP_MSVC6_XML_Debug</name>
       <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
       <build_sponsor>Washington University</build_sponsor>
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
-      <build>
-         <name>WinXP_MSVC6_Warning_Level_4_Debug</name>
-         <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
-         <build_sponsor>Washington University</build_sponsor>
-         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-      </build>
+   </build>
+   <build>
+      <name>WinXP_MSVC6_Warning_Level_4_Debug</name>
+      <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
+      <build_sponsor>Washington University</build_sponsor>
+      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+   <build>
+      <name>SKOLL_3</name>
+      <url>http://tao.isis.vanderbilt.edu/~isisbuilds/auto_compile_logs/skoll_3</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.isis.vanderbilt.edu</build_sponsor_url>
+   </build>
       <build>
          <name>RedHat_GCC_3.3(pre-release)</name>
          <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
@@ -77,7 +83,7 @@ decide the migration paths and strategies.
             <orange>30</orange>
             <red>36</red>
         </build>
-         <build>
+        <build>
          <name>SuSE_81_GCC32</name>
          <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_SuSE81_GCC</url>
          <build_sponsor>Remedy IT</build_sponsor>

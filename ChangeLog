@@ -1,3 +1,8 @@
+Tue Mar 18 14:27:56 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/tao_future.xml: Added skoll_3 to the
+	  scoreboard.  
+
 2003-03-18  ISIS Builds  <isisbuild@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/skukuza/driver_skoll_3.sh:
