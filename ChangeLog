@@ -1,3 +1,9 @@
+Sun Jan  4 17:30:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Pulled out a DRE systems build off the scoreboard. 
+
 Sun Jan  4 17:29:09 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
