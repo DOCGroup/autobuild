@@ -8,7 +8,10 @@ export CVSROOT
 ACE_ROOT=/project/maedhros/bugzilla/Core/ACE_wrappers
 export ACE_ROOT
 
-LD_LIBRARY_PATH=$ACE_ROOT/ace
+PATH=/usr/local/redhat-7.1/gcc-3.0.2/bin:$PATH
+export PATH
+
+LD_LIBRARY_PATH=$ACE_ROOT/ace:/usr/local/redhat-7.1/gcc-3.0.2/lib
 export LD_LIBRARY_PATH
 
 cd $ACE_ROOT/..

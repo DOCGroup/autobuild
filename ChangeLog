@@ -1,3 +1,9 @@
+Wed Dec 12 17:31:19 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* configs/autobuild/maedhros/driver.sh:
+	  Changed the build to use gcc-3.0.2 because the compiler on this
+	  platform is busted.
+
 Wed Dec 12 16:03:35 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* configs/autobuild/maedhros/driver.sh:
