@@ -65,6 +65,11 @@ sub Run ($)
 	system("cat /etc/redhat-release");
     }
 
+    if(-r "/etc/SuSE-release"){
+        print "<h3>SuSE Linux Version (/etc/SuSE-release)</h3>\n";
+        system("cat /etc/SuSE-release");
+    }
+
     if(-r "/etc/debian_version"){
         print "<h3>Debian Linux Version (/etc/debian_version)</h3>\n";
 	system("cat /etc/debian_version");
