@@ -26,8 +26,16 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    
-    # No requirements
+    my $root = main::GetVariable ('root');
+
+    if (!defined $root) {
+        print STDERR __FILE__, ": Requires \"root\" variable\n";
+        return 0;
+    }
+    if (!-r $root) {
+        print STDERR __FILE__, ": Cannot read root dir: $root\n";
+        return 0;
+    }    
 
     return 1;
 }
@@ -38,12 +46,27 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
+    my $root = main::GetVariable ('root');
+
+    # chop off trailing slash
+    if ($root =~ m/^(.*)\/$/) {
+        $root = $1;
+    }
 
     print "\n#################### Setup (Shell) \n\n";
+
+    my $current_dir = getcwd ();
+
+    if (!chdir $root) {
+        print STDERR __FILE__, ": Cannot change to $root\n";
+        return 0;
+    }
 
     my $output = `$options`;
 
     print $output;
+
+    chdir $current_dir;
 
     return 1;
 }
