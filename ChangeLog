@@ -1,3 +1,9 @@
+Mon Mar  1 06:45:51 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Added SunCC 55 build to the scoreboard. 
+
 Sun Feb 29 17:19:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/autobuild/remedynl/msvclibrelease.xml:
