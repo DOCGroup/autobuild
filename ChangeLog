@@ -1,3 +1,11 @@
+Wed Oct  2 11:26:33  Ossama Othman  <ossama@uci.edu>
+
+	* configs/scoreboard/doc.sh:
+
+	  Recreated missing shell driver file.  It was accidentally erased
+	  when clearing up diskspace.  For some reason, it was never
+	  committed to the CVS repository!
+
 Wed Oct  2 14:48:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/prettify.pm: Cut down error messages sent in e-mail
