@@ -1,3 +1,13 @@
+Wed Mar 10 10:21:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+          Added -k to the msvc_mpc_auto_compile usage. Without -k the build
+          quits after found one error, but it should continue with the next
+          dsw. We didn't build dozens of things with MSVC6 the last month or
+          so, so prepare for new errors :-(
+
 Tue Mar  9 12:14:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
