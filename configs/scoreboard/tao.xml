@@ -277,16 +277,6 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
-   <name>AIX</name>
-   <build>
-   <name>doc_snake_aix51_VisualAge_d1o0</name>
-   <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_snake_aix51_VisualAge_d1o0</url>
-   <build_sponsor>OCI</build_sponsor>
-   <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>
-</group>
-
-<group>
    <name>HP</name>
    <build>
    <name>HPUX11_ACC339_Full</name>

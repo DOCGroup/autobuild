@@ -1,23 +1,31 @@
+Wed Feb 18 09:34:09 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/scoreboard/index.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+
+          Removing the temporary example MPC builds.
+
 Sat Feb 14 15:22:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/nirvana/New_DLL_Release.xml:
-	* configs/autobuild/nirvana/new_driver.bat:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/new_driver.bat:
 
-	  New builds on nirvana. The old builds seem to have
-	  problems. Hence a new build to check what is going on. 
+          New builds on nirvana. The old builds seem to have
+          problems. Hence a new build to check what is going on.
 
 Thu Feb 12 16:00:31 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Added
-	  ACE_HAS_IPV6 to the config.h file.
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Added
+          ACE_HAS_IPV6 to the config.h file.
 
-	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml: New config for
-	  g++ 3 build, no IPv6.
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml: New config for
+          g++ 3 build, no IPv6.
 
-	* configs/scoreboard/ace.xml: Removed Riverace's AIX 4.3 Visual Age 5
-	  build since we're not supporting AIX 4.3 after ACE 5.3.
-	  Solaris 8: added gcc3 build; added an IPv6 note to the Forte6 build.
-	  Win XP: Added note that this is an IPv6 build.
+        * configs/scoreboard/ace.xml: Removed Riverace's AIX 4.3 Visual Age 5
+          build since we're not supporting AIX 4.3 after ACE 5.3.
+          Solaris 8: added gcc3 build; added an IPv6 note to the Forte6 build.
+          Win XP: Added note that this is an IPv6 build.
 
 Wed Feb 11 14:15:33 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -26,17 +34,17 @@ Wed Feb 11 14:15:33 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Feb 10 17:11:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/SunForte.xml:
-	  Cleaned this file, just generate all project files with one call, and
-	  just use one normale make invocation.
+        * configs/autobuild/remedynl/SunForte.xml:
+          Cleaned this file, just generate all project files with one call, and
+          just use one normale make invocation.
 
 Tue Feb 10 07:41:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
 
-	  Added the options ACE_HAS_REACTOR_NOTIFICATION_QUEUE,
-	  ACE_HAS_SIGNALS_SAFE_OS_CALLS, ACE_NLOGGING and ACE_HAS_WCHAR
-	  to the xml file.
+          Added the options ACE_HAS_REACTOR_NOTIFICATION_QUEUE,
+          ACE_HAS_SIGNALS_SAFE_OS_CALLS, ACE_NLOGGING and ACE_HAS_WCHAR
+          to the xml file.
 
 Sat Feb  7 15:00:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -46,41 +54,41 @@ Sat Feb  7 15:00:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Jan 30 13:11:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/GCC32.xml:
-	  Cleaned this file and build with fl_reactor enabled.
+        * configs/autobuild/remedynl/GCC32.xml:
+          Cleaned this file and build with fl_reactor enabled.
 
 Sat Jan 24 16:19:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* command/win32make.pm:
-	  Added support for msvc_static_compile.pl
+        * command/win32make.pm:
+          Added support for msvc_static_compile.pl
 
-	* configs/autobuild/remedynl/msvclibdebug.xml:
-	  Use msvc_static_compile
+        * configs/autobuild/remedynl/msvclibdebug.xml:
+          Use msvc_static_compile
 
 Thu Jan 22 17:18:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/driverbuildpc3.bat:
-	  Enabled the MinGW build again
+        * configs/autobuild/remedynl/driverbuildpc3.bat:
+          Enabled the MinGW build again
 
 Wed Jan 21 15:51:00 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
          * configs/scoreboard/tao.xml:
 
-	   Added Dynamic_Hash builds to the scoreboard.
+           Added Dynamic_Hash builds to the scoreboard.
 
 Wed Jan 21 15:14:49 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcunicodedebug.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
 
-	  Use the new build scripts in msvc_mpc_auto_compile.pl. instead
-	  of the old one that was broken all over for MPC builds.
+          Use the new build scripts in msvc_mpc_auto_compile.pl. instead
+          of the old one that was broken all over for MPC builds.
 
 Wed Jan 21 15:09:54 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
 
-	  Use the new build scripts in msvc_mpc_auto_compile.pl. instead
-	  of the old one that was broken all over for MPC builds.
+          Use the new build scripts in msvc_mpc_auto_compile.pl. instead
+          of the old one that was broken all over for MPC builds.
 
 Wed Jan 21 11:43:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -112,65 +120,65 @@ Wed Jan 21 08:52:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jan 20 16:56:22 2004  Steve Huston  <shuston@riverace.com>
 
-	* command/win32make.pm: Typo. elseif -> elsif.
+        * command/win32make.pm: Typo. elseif -> elsif.
 
 Tue Jan 20 15:22:14 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/msvcdebug.xml:
 
-	  Turned off ssl=1 for this builds. Need to keep things simpler to
-	  debug in case of problems.
+          Turned off ssl=1 for this builds. Need to keep things simpler to
+          debug in case of problems.
 
 Tue Jan 20 15:14:23 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/msvcdebug.xml:
 
-	  Used the new msvc_mpc script to run the builds. If the builds go
-	  fine we can permanently start using this. It seems to work fine
-	  on my laptop.
+          Used the new msvc_mpc script to run the builds. If the builds go
+          fine we can permanently start using this. It seems to work fine
+          on my laptop.
 
-	* command/win32make.pm:
+        * command/win32make.pm:
 
-	  Added an extra condition for using msvc_mpc_auto_compile
-	  script.
+          Added an extra condition for using msvc_mpc_auto_compile
+          script.
 
 Mon Jan 19 16:34:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/*.xml:
-	  Removed ASNMP from the exclude when generating makefiles. With
-	  the changes in ASNMP of last weekend we can also build this
-	  directory.
+        * configs/autobuild/remedynl/*.xml:
+          Removed ASNMP from the exclude when generating makefiles. With
+          the changes in ASNMP of last weekend we can also build this
+          directory.
 
 Fri Jan 16 11:22:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/DynamicHash.xml:
-	* configs/autobuild/balar_isis/driver_DynamicHash.sh:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/driver_DynamicHash.sh:
 
-	  New build on balar with DynamicHash option used in the IDL
-	  compiler. As a first step we will run the ORB core tests and
-	  them move on to other things as we make progress.
+          New build on balar with DynamicHash option used in the IDL
+          compiler. As a first step we will run the ORB core tests and
+          them move on to other things as we make progress.
 
 Thu Jan 15 17:41:26 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Removed the Windows NT4 MSVC6 and BCB5
-	  builds. Riverace doesn't support NT after ACE 5.3, and doesn't
-	  support BCB5 at all any longer.
+        * configs/scoreboard/ace.xml: Removed the Windows NT4 MSVC6 and BCB5
+          builds. Riverace doesn't support NT after ACE 5.3, and doesn't
+          support BCB5 at all any longer.
 
 Thu Jan 15 16:18:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
         * configs/scoreboard/tao.xml:
-	  All our builds now use MPC.
+          All our builds now use MPC.
 
 Wed Jan 14 18:36:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/autobuild/remedynl/Cygwin.xml:
-	* configs/autobuild/remedynl/CygwinGCC32.xml:
-	  Exclude the directory apps/gperf/tests from the MPC generation. The
-	  running of these tests gives problems that only occur on the build
-	  systems, but not on my own system. So disabled this because we now
-	  have errors which are not really there. If I have time I will have
-	  a look at this later.
+        * configs/autobuild/remedynl/Cygwin.xml:
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+          Exclude the directory apps/gperf/tests from the MPC generation. The
+          running of these tests gives problems that only occur on the build
+          systems, but not on my own system. So disabled this because we now
+          have errors which are not really there. If I have time I will have
+          a look at this later.
 
 Wed Jan 14 14:04:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -212,8 +220,8 @@ Tue Jan 13 09:50:35 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
 
 Mon Jan 12 15:59:36 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Corrected
-	  ACE_ROOT and added $ACE_ROOT/tests to LD_LIBRARY_PATH.
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Corrected
+          ACE_ROOT and added $ACE_ROOT/tests to LD_LIBRARY_PATH.
 
 Mon Jan 12 10:33:23 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
 
@@ -226,31 +234,31 @@ Mon Jan 12 10:33:23 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
 
 Mon Jan 12 01:30:05 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/msvclibrelease.xml:
+        * configs/autobuild/remedynl/msvclibrelease.xml:
 
-	  Build the core builds first since all the dependencies are set
+          Build the core builds first since all the dependencies are set
           right for the core builds. Doing this should help a lot with the
-	  whacked problems that we are seeing.
+          whacked problems that we are seeing.
 
 Sat Jan 10 19:39:53 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/remedynl/msvclibdebug.xml:
-	* configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvclibdebug.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
 
-	  Build the core builds first since all the dependencies are set
-	  right for the core builds. Doing this should help a lot with the
-	  whacked problems that we are seeing.
+          Build the core builds first since all the dependencies are set
+          right for the core builds. Doing this should help a lot with the
+          whacked problems that we are seeing.
 
 Sat Jan 10 11:24:44 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/remedynl/vc7.xml:
+        * configs/autobuild/remedynl/vc7.xml:
 
-	  Do cleanup of the vcproj and sln files before starting the
-	  build.
+          Do cleanup of the vcproj and sln files before starting the
+          build.
 
 Wed Jan  7 17:40:29 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Enable SSL.
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Enable SSL.
 
 Wed Jan  7 15:12:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
