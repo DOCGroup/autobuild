@@ -68,6 +68,8 @@ sub Run ($)
         return 0;
     }
 
+    print "Running: ${options}";
+
     system ($options);
 
     chdir $current_dir;

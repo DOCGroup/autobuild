@@ -1,3 +1,19 @@
+Sat Aug 23 03:15:22 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/remedynl/Cygwin.xml:
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/Kylix3.xml:
+        * configs/autobuild/remedynl/Kylix3ACE.xml:
+        * configs/autobuild/remedynl/MingW.xml:
+        * configs/autobuild/remedynl/SunForte.xml:
+        * configs/autobuild/remedynl/VxWorks.xml:
+          Changed builds to use generate_makefile.pm.
+
+        * command/shell.pm:
+          Print out shell command that gets executed..
+
 Fri Aug 22 16:29:32 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/remedynl/CygwinGCC32.xml:
