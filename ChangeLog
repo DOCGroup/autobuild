@@ -1,3 +1,8 @@
+2004-08-07  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/autobuild/remedynl/GCCautoconfig.xml:
+	  Update to configure and build ACE.
+
 Fri Aug  6 17:35:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCC64AXP.xml:
