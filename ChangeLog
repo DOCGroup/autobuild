@@ -1,3 +1,8 @@
+Mon Dec  2 19:32:19 2002  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/jane_dev_debug.xml: Don't use -j 2 for
+          realclean step... they clash removing .obj from examples dirs.
+
 Thu Nov 28 10:31:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB5StaticDebug.xml:
