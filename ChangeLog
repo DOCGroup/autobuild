@@ -1,3 +1,9 @@
+Thu Aug 22 04:25:48 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/maglor/Static.xml: Add a Linux static build
+	  which generates statistics for TAO performance and 
+	  footprint.
+
 Mon Aug 21 13:25:17 2002 Stephen Torri <storri@cs.wustl.edu>
 
         * scoreboard.pl:
