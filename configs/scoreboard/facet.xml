@@ -1,0 +1,21 @@
+<scoreboard>
+<preamble>
+<center><h1>Facet Scoreboard</h1></center>
+<hr>
+This is the Facet virtual scoreboard, it shows
+all the OS/platform combinations Facet is tested everyday. Currently
+this is only linux.
+<hr>
+</preamble>
+
+<group>
+<name>Linux</name>
+   <build>
+   <name>Facet</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_FACET/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+</group>
+
+</scoreboard>
