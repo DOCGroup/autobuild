@@ -95,6 +95,10 @@ and let us know which platform combinations you can contribute.
             <name>RH71_Explicit_Templates</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_Explicit_Templates</url>
         </build>
+        <build>
+            <name>RH73_GCC32_NoInterceptorsNoExceptions</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/pokey_Core</url>
+        </build>
     </group>
     <group>
         <name>Lynx</name>
