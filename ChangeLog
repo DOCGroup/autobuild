@@ -1,3 +1,10 @@
+Sat Dec 20 10:34:10 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/doc_isis/RH8_wchar.xml:
+	* configs/autobuild/doc_isis/driver_wchar.sh:
+
+	  These builds migrated long back.
+
 Sat Dec 20 10:31:12 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
