@@ -9,6 +9,7 @@ use warnings;
 
 use Cwd;
 use FileHandle;
+use File::Path;
 
 ###############################################################################
 # Constructor
@@ -51,20 +52,24 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $root = main::GetVariable ('project_root');
+    my $wrappers = main::GetVariable ('project_root');
     my $build = main::GetVariable ('build_name');
 
     # chop off trailing slash
-    if ($root =~ m/^(.*)\/$/) {
-        $root = $1;
+    if ($wrappers =~ m/^(.*)\/$/) {
+        $wrappers = $1;
+    }
+
+    if (!-r $wrappers || !-d $wrappers) {
+        mkpath($wrappers);
     }
 
     main::PrintStatus ('Setup', 'Create ACE Build');
 
     my $current_dir = getcwd ();
 
-    if (!chdir "$root/../..") {
-        print STDERR __FILE__, ": Cannot change to $root\n";
+    if (!chdir "$wrappers/../..") {
+        print STDERR __FILE__, ": Cannot change to $wrappers../..\n";
         return 0;
     }
 
