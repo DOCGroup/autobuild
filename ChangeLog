@@ -1,3 +1,10 @@
+Sun Jul 25 18:07:02 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+
+	  Define ACE_HAS_DEV_POLL in generated `config.h' file.  It is
+	  supported on Solaris 7.
+
 Sat Jul 24 15:53:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/atl/RH9-2.4.20-19.9.xml:
