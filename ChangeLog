@@ -1,3 +1,8 @@
+Tue Jun 17 09:15:01 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/equus/*: Moved the WChar build from doc_isis
+	  to this box. This is RH9 box.
+
 Mon Jun  9 15:51:12 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/flamenco/Static.xml: Fixed a typo.
