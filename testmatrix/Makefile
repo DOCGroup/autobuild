@@ -14,4 +14,3 @@ tao-list : $(SCOREBOARD_CONFIG_DIR)/tao.xml
 tao_future-list : $(SCOREBOARD_CONFIG_DIR)/tao_future.xml
 	./test-list-extract $< > $@
 
-tsprdsh : tsprdsh.o

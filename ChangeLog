@@ -1,3 +1,16 @@
+  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/buildMatrixSummary:
+        * testmatrix/tsprdsh.c:
+          Removed the c program version.  It just duplicates
+          the work that the python program does.
+
+        * testmatrix/00README:
+        * testmatrix/Makefile:
+        * testmatrix/buildMatrix:
+        * testmatrix/update_scoreboard.sh:
+          Dont build a simple version of the test matrix.
+
 Tue Aug 24 11:28:16 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/test-list-extract:

@@ -9,11 +9,6 @@ fi
 
 othtml=$2
 if [ -z "$othtml" ]; then
-  othtml=test_matrix.html
-fi
-
-othtml2=$3
-if [ -z "$othtml2" ]; then
   othtml=test_complex
 fi
 
@@ -34,9 +29,7 @@ do
   fi
 done
 
-./tsprdsh $otraw -html >$logdir/$othtml
-
-python GenerateTestMatrix.py $otraw $logdir $othtml2
+python GenerateTestMatrix.py $otraw $logdir $othtml
 
 exit 0
 
