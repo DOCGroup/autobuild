@@ -31,8 +31,8 @@
 
     <command name="generate_workspace" options="-type vc7 -dynamic_only vc7_nightly.mwc" />
     <command name="generate_workspace" options="-type vc7 -dynamic_only TAO/orbsvcs/vc7_orbsvcs.mwc" />
-    <command name="vc7make"           options="/build debug ACE_wrappers.sln" />
-    <command name="vc7make"           options="/build debug TAO/orbsvcs/orbsvcs.sln" />
+    <command name="vc7make"           options="/Y3 /build debug ACE_wrappers.sln" />
+    <command name="vc7make"           options="/Y3 /build debug TAO/orbsvcs/orbsvcs.sln" />
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
