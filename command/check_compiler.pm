@@ -76,6 +76,10 @@ sub Run ($)
     if(lc $compiler eq "msvc"){
         system("cl /V");
     }
+
+    if(lc $compiler eq "cxx"){
+        system("cxx -V"); 
+    }
     return 1;
 }
 

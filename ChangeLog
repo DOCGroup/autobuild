@@ -1,3 +1,7 @@
+Tue Jun 18 15:06:17 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/check_compiler.pm: Add check for cxx compiler.
+
 Tue Jun 18 02:12:36 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* README:  Add lots of information.
