@@ -1,3 +1,10 @@
+Mon Jun  7 13:06:31 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/jane_dev_debug_wchar.xml: New build
+	  using ACE_USES_WCHAR for Linux.
+
+	* configs/scoreboard/ace.xml: Added the above build.
+
 Fri Jun  4 16:34:22 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
