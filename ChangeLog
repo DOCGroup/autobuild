@@ -1,3 +1,10 @@
+Fri Oct 15 12:38:02 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/print_os_version.pm:
+
+          Added information about BogoMIPS  which may be helpful in
+          determining if test failures are due to machine speed/load.
+
 Thu Oct 14 10:46:20 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/ace_isis/RH8_NoInline.xml:
