@@ -1,3 +1,10 @@
+Fri May  7 23:19:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Set SSL_ROOT and create a MPC local.features file that
+	  explicitly enables SSL support.
+
 Fri May  7 16:10:22 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/charlie_dev_va5_debug.xml: Removed.
