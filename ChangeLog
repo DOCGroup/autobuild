@@ -1,3 +1,11 @@
+2004-03-30  Build Account  <isisbuilds@dre.vanderbilt.edu>
+
+ 	* scoreboard.pl:
+	* common/integratedparser.pm:
+
+	  Fixed some logic errors that prevented the scoreboards from
+	  getting regenerated.
+
 Tue Mar 30 14:35:50 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* scoreboard.pl:

@@ -651,7 +651,7 @@ sub update_html_table ($$@)
     }
     else {
         print "    Building table for group $name\n" if ($verbose);
-        @builds = sort @{%groups{$name}};
+        @builds = sort @{$groups{$name}};
         print $indexhtml "<h2><a name=\"$name\">$name</a></h2>\n";
     }
 
