@@ -75,7 +75,7 @@ sub Run ($)
         }
     }
 
-    my $cidlc_program = "TAO/CIAO/bin/cidlc.exe";
+    my $cidlc_program = "TAO/CIAO/bin/cidlc";
 
     main::PrintStatus ('Config', "print cidlc version" );
 
@@ -85,9 +85,7 @@ sub Run ($)
 
     my $command = "$cidlc_program --version";
 
-    if (-r $cidlc_program) {
-      system($command);
-    }
+    system($command);
 
     chdir $current_dir;
 
