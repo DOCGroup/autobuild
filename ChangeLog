@@ -1,3 +1,9 @@
+Mon Jun 21 10:36:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Removed BCB6 Codeguard. Codeguard is not stable enough for
+          in a daily build.
+
 Mon Jun 21 10:31:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
