@@ -1,0 +1,27 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"         value="/project/taotmp/isisbuilds/Fuzz/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/project/taotmp/isisbuilds/Fuzz/ACE_wrappers/TAO"/>
+
+        <variable name="root"     value="/project/taotmp/isisbuilds/Fuzz" />
+	<variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/tao_Fuzz" />
+        <variable name="name"     value="Linux Fuzz" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="log"               options="ON" />
+
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+
+    <command name="fuzz"         options="" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
