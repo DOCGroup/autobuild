@@ -1,3 +1,10 @@
+Wed Jan 21 11:13:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          The Cygwin ACE build and the MinGW TAO are back to 3.2.3, 3.3.1
+          was causing a lot of warnings
+
 Wed Jan 21 09:29:42 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
