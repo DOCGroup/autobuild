@@ -1,3 +1,11 @@
+Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml: Replaced the BCB5 Static build with a
+          BCB6 Static build
+
+        * configs/autobuild/remedynl/BCB6StaticRelease.xml: Added this file.
+          Also removed obsolete config files in this directory.
+
 Sat Mar 22 08:02:39 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/nirvana/VC7_Core.xml: Removed obsolete mwc

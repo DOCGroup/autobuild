@@ -172,8 +172,8 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinNT4_BCB5_Ent_Static_Release</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
+            <name>Win2K_BCB6_Pro_Static_Release</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB6_Static_Release</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
