@@ -6,6 +6,10 @@ Thu Feb 12 16:00:31 2004  Steve Huston  <shuston@riverace.com>
 	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml: New config for
 	  g++ 3 build, no IPv6.
 
+	* configs/scoreboard/ace.xml: Removed Riverace's AIX 4.3 Visual Age 5
+	  build since we're not supporting AIX 4.3 after ACE 5.3.
+	  Solaris 8: added gcc3 build; added an IPv6 note to the Forte6 build.
+
 Wed Feb 11 14:15:33 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/SunForte.xml:
