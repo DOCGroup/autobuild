@@ -4,7 +4,6 @@
 
         <environment name="ACE_ROOT"        value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers/TAO"/>
-        <environment name="PATH"        value="/export/project/studio8/SUNWspro/bin:$PATH"/>
         <environment name="LD_LIBRARY_PATH" value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers/ace:/export/project/studio8/SUNWspro/bin:/export/project/studio8/SUNWspro/lib" />
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/project/danzon/pkg/OpenSSH/bin/ssh" />
