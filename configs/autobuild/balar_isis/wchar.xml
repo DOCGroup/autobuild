@@ -30,6 +30,11 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <!-- Every thing inside of TAO including CIAO -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
+
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
     <command name="make"              options="-j 2 -k" />

@@ -1,3 +1,22 @@
+Thu Apr 29 20:26:28 2004  Tao Lu  <lu@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+
+	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
+
+	* configs/autobuild/balar_isis/wchar.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+
+	* configs/autobuild/balar_isis/DynamicHash.xml:
+	  These builds use MPC now.
+
 Thu Apr 29 12:44:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/cbxdd.xml:

@@ -29,6 +29,11 @@
     <command name="check_compiler" options="g++-3.4" />
     <command name="print_ace_config" />
 
+    <!-- This builds everthing exclude TAO directory-->
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <!-- This builds TAO... -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
+
     <command name="make"              options="reverseclean" />
     <command name="make"              options="-C TAO reverseclean" />
     <command name="make"              options="-j 4 -k" />
