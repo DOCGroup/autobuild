@@ -30,7 +30,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USES_WCHAR\n#define UNICODE\n#define _UNICODE\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USES_WCHAR\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nrwho=0\nqos=1\nmfc=1\nssl=1\nuses_wchar=1\n'" />
 
     <command name="print_os_version" />
