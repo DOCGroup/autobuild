@@ -7,7 +7,6 @@
         <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6dr\ACE_wrappers\bin\Dynamic\Release;d:\putty" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
-	<environment name="DEBUG"    value="0" />
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
 
