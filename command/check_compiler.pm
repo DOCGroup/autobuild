@@ -61,6 +61,9 @@ sub Run ($)
     elsif(lc $compiler eq "borland"){
 	system("bcc32 -V"); 
     }
+    elsif(lc $compiler eq "cbx"){
+	system("bccx -V"); 
+    }
     elsif(lc $compiler eq "kylix"){
 	system("bc++ -V"); 
     }
