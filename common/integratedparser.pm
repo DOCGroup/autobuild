@@ -28,11 +28,11 @@ sub Parse ($\@)
     my $self = shift;
     my $file = shift;
     my $data = shift;
-    
+
     my $group_name;
     my $global_build_name ='';
     my %build_info;
-    
+
     my $file_handle = new FileHandle ($file, 'r');
 
     if (!defined $file_handle) {
@@ -45,7 +45,7 @@ sub Parse ($\@)
     while (<$file_handle>) {
         chomp;
 
-        # Strip out a single-line comment 
+        # Strip out a single-line comment
         s/<!--(.*?)-->//g;
 
         # Need to do something more fancy for a multi-line comment
@@ -55,7 +55,7 @@ sub Parse ($\@)
            # until we hit the end tag -->
            $self->parse_comment($file_handle);
            next;
-        } 
+        }
         next if (m/^\s*$/);
 
         if(m/<preamble>/) {
@@ -129,18 +129,18 @@ sub Parse ($\@)
                     print STDERR "Error: All builds must have a name\n";
                     return 0;
                 }
-                
+
                 if ($global_build_name ne '') {
                     $build_info{GROUP} = $global_build_name.' On '.$group_name;
                 } else {
                     $build_info{GROUP} = $group_name;
                 }
-                
+
 		#%{%{$data}->{$build_info{NAME}}} = %build_info;
                 #$data->{$build_info{NAME}} = %build_info;
 		%{$data->{$build_info{NAME}}} = %build_info;
                 %build_info = ();
-                
+
                 $state = 'group';
             }
             elsif (m/^\s*<name>(.*)<\/name>\s*$/i) {
@@ -148,12 +148,12 @@ sub Parse ($\@)
                 if ($name =~ s/\s//g) {
                     print "Warning: Found whitespace in build name, shrinking \"$1\" to \"$name\"\n";
                 }
-                
+
                 $build_info{NAME} = $1;
             }
             elsif (m/^\s*<url>(.*)<\/url>\s*$/i) {
                 $build_info{URL} = $1;
-                
+
                 # Remove a trailing slash, if there is one
                 $build_info{URL} =~ s/\/$//;
             }
@@ -162,7 +162,7 @@ sub Parse ($\@)
             }
             elsif (m/^\s*<build_sponsor_url>(.*)<\/build_sponsor_url>\s*$/i) {
                 $build_info{BUILD_SPONSOR_URL} = $1;
-                
+
                 # Remove a trailing slash, if there is one
                 #$build_info{BUILD_SPONSOR_URL} =~ s/\/$//;
             }
@@ -203,7 +203,7 @@ sub Parse ($\@)
 ###############################################################################
 # Before we call this function, we have already found the opening tag
 # for an XML comment: <!--
-# This function keeps parsing the stream until it finds the tag to terminate 
+# This function keeps parsing the stream until it finds the tag to terminate
 # the comment: --> , and returns when it finds it.
 #
 # Arguments:  An open file stream.
@@ -219,12 +219,12 @@ sub parse_comment($)
   my @c;
   my $i=0;
   my $ch;
-  
+
   while(1){
      $ch = $result->getc();
 
-     # determine if we have hit an EOF or not     
-     if( ! defined $ch) { 
+     # determine if we have hit an EOF or not
+     if( ! defined $ch) {
         last; # break out of the whlie loop
      }
 
@@ -237,13 +237,13 @@ sub parse_comment($)
      if($i >= 2) {
         my $tag="";
         $tag = join('', @c);
-        if($tag eq "-->") { 
+        if($tag eq "-->") {
           last;  # break out of the while loop
         }
-       
-        # Pop off the first element of the array and shift everything up 
+
+        # Pop off the first element of the array and shift everything up
         shift(@c);
-        $i=1; 
+        $i=1;
      }
      ++$i;
    }
@@ -252,7 +252,7 @@ sub parse_comment($)
 ###############################################################################
 # Before we call this function, we have already found the opening tag
 # for an XML comment: <preamble>
-# This function keeps parsing the stream until it finds the tag to terminate 
+# This function keeps parsing the stream until it finds the tag to terminate
 # the comment: --> , and returns when it finds it.
 #
 # Arguments:  An open file stream.
@@ -272,8 +272,8 @@ sub parse_preamble($\@)
    while(1){
      $ch = $result->getc();
 
-     # determine if we have hit an EOF or not     
-     if( ! defined $ch) { 
+     # determine if we have hit an EOF or not
+     if( ! defined $ch) {
         last; # break out of the whlie loop
      }
 
@@ -292,9 +292,9 @@ sub parse_preamble($\@)
           last;  # break out of the while loop
         }
 
-        # Pop off the first element of the array and shift everything up 
+        # Pop off the first element of the array and shift everything up
         shift(@c);
-        $i=9; 
+        $i=9;
      }
      ++$i;
    }
