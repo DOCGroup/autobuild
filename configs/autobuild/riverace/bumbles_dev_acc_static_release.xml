@@ -39,7 +39,7 @@
     <command name="shell"             options="find ACE_wrappers-repository/build/acc_static_release -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/acc_static_release -type gnuace -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/acc_static_release -type gnuace" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/acc_static_release/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/acc_static_release/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=0\noptimize=1\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />

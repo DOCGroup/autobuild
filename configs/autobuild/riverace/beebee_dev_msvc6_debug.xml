@@ -30,7 +30,7 @@
     <command name="print_ace_config" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho=0\nssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file c:\ace\ACE_wrappers-repository\local.features -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -recurse -make_coexistence -type vc6" /> 
+    <command name="generate_workspace" options="-feature_file c:\ace\ACE_wrappers-repository\local.features -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -recurse -type vc6" /> 
 
     <command name="win32make"         options="msvc_mpc_auto_compile -dir ace -dir ACEXML -dir apps -dir ASNMP -dir examples -dir netsvcs -dir performance-tests -dir websvcs -dir tests -Debug -u -k" />
     <command name="auto_run_tests"    options="-a" />

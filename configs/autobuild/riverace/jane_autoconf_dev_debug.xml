@@ -35,7 +35,7 @@
     <command name="print_ace_config" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="dirs=/acebuilds/ACE_wrappers-repository -feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -hierarchy -make_coexistence -exclude build,Kokyu" />
+    <command name="generate_workspace" options="dirs=/acebuilds/ACE_wrappers-repository -feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -exclude build,Kokyu" />
 
     <command name="shell"             options="(cd ACE_wrappers-repository; ./bin/bootstrap)" />
 

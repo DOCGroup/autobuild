@@ -33,7 +33,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -make_coexistence -type borland" />
+    <command name="generate_workspace" options="-exclude TAO -type borland" />
 
     <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 realclean" />
 

@@ -33,7 +33,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc " />
+    <command name="generate_workspace" options="-exclude TAO,build.mwc " />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO " />
     <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF " />
     <command name="make"              options="-k realclean" />

@@ -34,7 +34,7 @@
  <command name="print_ace_config" />
 
  <!-- ACE -->
- <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+ <command name="generate_workspace" options="-exclude TAO" />
 
  <command name="make"                  options="-k realclean" />
  <command name="make"                  options="-k" />

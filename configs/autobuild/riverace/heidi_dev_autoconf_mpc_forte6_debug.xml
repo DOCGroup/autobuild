@@ -38,7 +38,7 @@
     <command name="check_compiler"    options="sun_cc" />
     <command name="print_ace_config" />
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-type automake -exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-type automake -exclude TAO,build.mwc" />
     <command name="configure"         options="CXX=CC --preclean" />
     <command name="file_manipulation" options="type=create file=build/autoconf_mpc_forte6_debug/.disable output='RUNNING'" />
     <command name="make"              options="-j 2 -k" />

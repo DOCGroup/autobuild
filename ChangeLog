@@ -1,9 +1,80 @@
+Mon Oct  4 13:57:46 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/balar/Debian_Core.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_doc.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml:
+        * configs/autobuild/jmz/Mac_OSX_Jaguar.xml:
+        * configs/autobuild/jmz/Mac_OSX_Panther.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS8_GCC295_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/remedynl/simbagcc.xml:
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
+        * configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/rtlogic/VxWorks_5.4.2_Full.xml:
+        * configs/autobuild/rtlogic/VxWorks_5.5.1_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_wchar.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml:
+        * configs/autobuild/valinor/Full.xml:
+
+          Removed extra -hierarchy and -make_coexistence options to avoid
+          MPC warnings.
+
 Mon Oct  4 10:18:55 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
-	* configs/autobuild/acorn/netbsd_amd64.xml:
-	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
-	* configs/autobuild/acorn/netbsd_i386.xml:
-	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
 
           Removed unnecessary MPC arguments because of new warnings.
 
@@ -26,54 +97,54 @@ Mon Oct 4 14:03:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
 Sat Oct  2 08:34:11 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
-	* configs/autobuild/danzon/SunOS_SunCC55.xml:
-	* configs/autobuild/flamenco/Static.xml:
-	* configs/autobuild/flamenco/compiletime_metrics.xml:
-	* configs/autobuild/flamenco/footprint_metrics.xml:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/flamenco/Static.xml:
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
 
           Removed unnecessary MPC arguments because of new warnings.
 
 Sat Oct  2 08:21:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/ace_isis/RH8_Minimum.xml:
-	* configs/autobuild/ace_isis/RH8_NoInline.xml:
-	* configs/autobuild/ace_isis/RH8_Static_Core.xml:
-	* configs/autobuild/balar_isis/DynamicHash.xml:
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	* configs/autobuild/balar_isis/Static.xml:
-	* configs/autobuild/balar_isis/wchar.xml:
-	* configs/autobuild/doc_isis/NoInt_NoEx.xml:
-	* configs/autobuild/lindy_isis/Static.xml:
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
 
           Removed unnecessary MPC arguments because of new warnings.
 
 Fri Oct  1 20:40:36 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/DynamicHash.xml:
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	* configs/autobuild/balar_isis/Static.xml:
-	* configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
 
           Removed unnecessary MPC arguments because of new warnings.
 
 Fri Oct  1 20:34:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
 
           Removed unnecessary MPC arguments because of new warnings.
 
@@ -95,9 +166,9 @@ Fri Oct 1 14:55:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
 Tue Sep 28 22:33:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Removed lmco builds since they haven't been updated in a while.
+          Removed lmco builds since they haven't been updated in a while.
 
 
 Tue Sep 28 16:00:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
@@ -114,13 +185,13 @@ Tue Sep 28 14:32:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Sep 28 08:13:24 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/DynamicHash.xml:
-	* configs/autobuild/balar_isis/IPV6.xml:
-	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
-	* configs/autobuild/balar_isis/Static.xml:
-	* configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
 
-	  Moved removing GNUmakefiles after the checkout.
+          Moved removing GNUmakefiles after the checkout.
 
 Tue Sep 28 11:14:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -150,10 +221,10 @@ Tue Sep 28 09:51:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Sep 27 11:11:34 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
-	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Removed some old builds.
+          Removed some old builds.
 
 Mon Sep 27 14:20:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -185,9 +256,9 @@ Mon Sep 27 13:35:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Sep 27 07:06:00 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* common/prettify.pm:
+        * common/prettify.pm:
 
-	  Made the change to be a warning instead of an error.
+          Made the change to be a warning instead of an error.
 
 Mon Sep 27 09:13:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -231,11 +302,11 @@ Mon Sep 27 06:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Sep 24 19:59:20 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/flamenco/driver_pmb_start.sh:
-	* configs/autobuild/flamenco/pmb_start_Static.xml:
+        * configs/autobuild/flamenco/driver_pmb_start.sh:
+        * configs/autobuild/flamenco/pmb_start_Static.xml:
 
-	  A seperate build for pmb_integration_start branch. This is an
-	  evaluation build for OCI.
+          A seperate build for pmb_integration_start branch. This is an
+          evaluation build for OCI.
 
 Wed Sep 22 12:12:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -245,9 +316,9 @@ Wed Sep 22 12:12:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Sep 21 14:54:55 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Added the new Sequence_Test_Build to the scoreboard.
+          Added the new Sequence_Test_Build to the scoreboard.
 
 Tue Sep 21 10:03:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -256,25 +327,25 @@ Tue Sep 21 10:03:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sun Sep 19 11:41:04 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
 
-	  Added commands to install the CIDL compiler.
+          Added commands to install the CIDL compiler.
 
 Sun Sep 19 08:14:12 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* command/win32make.pm:
+        * command/win32make.pm:
 
-	  Added a new command for building the CIDL compiler.
+          Added a new command for building the CIDL compiler.
 
-	* configs/autobuild/escher3/cidlcstatic.xml:
+        * configs/autobuild/escher3/cidlcstatic.xml:
 
-	  Added some options for the build.
+          Added some options for the build.
 
 Sat Sep 18 23:31:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/escher3/cidlcstatic.xml:
+        * configs/autobuild/escher3/cidlcstatic.xml:
 
-	  A new build for static CIDLC build on Win32.
+          A new build for static CIDLC build on Win32.
 
 Thu Sep  9 09:21:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -286,11 +357,11 @@ Thu Sep  9 09:21:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Sep  3 16:22:19 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml: Changed
-	  the win32make command invocations to include "perl bin/pippen.pl"
-	  in the options. Restores build behavior from before:
-	  Wed Jun 23 21:42:21 UTC 2004  Don Hinton  <d.hinton@vanderbilt.edu>
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml: Changed
+          the win32make command invocations to include "perl bin/pippen.pl"
+          in the options. Restores build behavior from before:
+          Wed Jun 23 21:42:21 UTC 2004  Don Hinton  <d.hinton@vanderbilt.edu>
 
 Fri Sep  3 06:38:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -314,9 +385,9 @@ Wed Sep  1 11:52:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Sep  1 05:45:40 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/Static.xml:
 
-	  Fixed to run the CIDL compiler.
+          Fixed to run the CIDL compiler.
 
 Mon Aug 30 12:57:16 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
@@ -332,16 +403,16 @@ Sun Aug 29 09:38:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
 Sat Aug 28 16:20:52 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
 
-	  Fixed the compile time file. This was totally busted.
+          Fixed the compile time file. This was totally busted.
 
 Fri Aug 27 13:26:35 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added compilation and footprint metrics builds to the
-	  scorboard.
+          Added compilation and footprint metrics builds to the
+          scorboard.
 
 Thu Aug 26 15:37:12 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
@@ -368,24 +439,24 @@ Thu Aug 26 08:34:35 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao_future.xml:
 
-	  Added my NetBSD/amd64 GNUACE builds.
+          Added my NetBSD/amd64 GNUACE builds.
 
-	* configs/autobuild/acorn/netbsd_amd64.xml:
-	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
-	* configs/autobuild/acorn/netbsd_i386.xml:
-	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
 
-	  Rsync results to my webserver.
+          Rsync results to my webserver.
 
 Wed Aug 25 22:22:46 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
-	* configs/autobuild/acorn/netbsd_amd64.xml:
-	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
-	* configs/autobuild/acorn/netbsd_i386.xml:
-	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
 
-	  Added -j 4 to take advantage of multiple processors and to hide
-	  I/O latency on these test boxes.
+          Added -j 4 to take advantage of multiple processors and to hide
+          I/O latency on these test boxes.
 
 Wed Aug 25 17:01:18 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
@@ -408,21 +479,21 @@ Wed Aug 25 10:02:28 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao_future.xml:
 
-	  Added my NetBSD/i386 GNUACE builds.
+          Added my NetBSD/i386 GNUACE builds.
 
 Wed Aug 25 07:57:39 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
-	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
 
-	  Added amd64 noinline build.
+          Added amd64 noinline build.
 
 Tue Aug 24 21:41:44 2004  J.T. Conklin  <jtc@acorntoolworks.com>
 
-	* configs/autobuild/acorn/netbsd_amd64.xml:
-	* configs/autobuild/acorn/netbsd_i386.xml:
-	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
 
-	  Configs for my current nightly builds.
+          Configs for my current nightly builds.
 
 Tue Aug 24 12:37:15 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
@@ -494,11 +565,11 @@ Fri Aug 20 13:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Aug 18 23:56:43 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* common/prettify.pm (Compile_Handler):
+        * common/prettify.pm (Compile_Handler):
 
-	  Do not flag an 'extern "C"' related warning in the OpenSSL
-	  headers as a warning in the scoreboard log.  The problem lies in
-	  the OpenSSL headers, not ACE/TAO/CIAO.
+          Do not flag an 'extern "C"' related warning in the OpenSSL
+          headers as a warning in the scoreboard log.  The problem lies in
+          the OpenSSL headers, not ACE/TAO/CIAO.
 
 Wed Aug 18 13:40:00 UTC 2004  Simon Massey  <simon.massey@prismtechnologies.com>
 

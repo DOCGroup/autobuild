@@ -36,7 +36,7 @@
     <command name="print_ace_config" />
 
     <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc" />
+    <command name="generate_workspace" options="-exclude TAO,build.mwc" />
     <!-- This builds TAO... -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
 
