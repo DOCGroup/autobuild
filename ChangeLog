@@ -1,3 +1,11 @@
+Wed Oct 29 08:38:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Our linux box is upgraded to SuSE 90, including an upgrade of
+          GCC 3.3 to GCC 3.3.1
+
 Mon Oct 27 20:45:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
         This update performed by Jason Cohen <jcohen@atl.lmco.com>
