@@ -1,3 +1,8 @@
+Wed Oct 15 16:27:27 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
+
+	* configs/autobuild/balar_isis/Static.xml: Removed
+	  -Wold-style-cast since it was spewing a lot of warnings.
+
 Wed Oct 15 06:46:27 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/scoreboard/tao.xml: Changed name of
