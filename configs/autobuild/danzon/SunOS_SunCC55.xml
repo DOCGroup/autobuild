@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers/ace:/export/project/studio8/SUNWspro/bin:/export/project/studio8/SUNWspro/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC55_newbuild/ACE_wrappers/lib:/export/project/studio8/SUNWspro/bin:/export/project/studio8/SUNWspro/lib" />
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/project/danzon/pkg/OpenSSH/bin/ssh" />
 
@@ -20,6 +20,8 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
@@ -34,7 +36,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence -feature_file local.features" />
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence -feature_file local.features" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence -feature_file ../local.features" />
 
