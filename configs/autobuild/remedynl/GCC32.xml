@@ -20,8 +20,7 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
-    <command name="file_manipulation" options="type=create
-    file=ACE_wrappers/ace/config.h output='#include\x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 1\n #define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 1\n#define TAO_HAS_CORBA_MESSAGING 1\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1'"/> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_AMI 1\n #define TAO_HAS_AMI_CALLBACK 0\n#define TAO_HAS_AMI_POLLER 1\n#define TAO_HAS_CORBA_MESSAGING 1\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_INTERCEPTORS 0\n#define TAO_HAS_MINIMUM_CORBA 0\n#define TAO_HAS_MINIMUM_POA 0\n#define TAO_HAS_MINIMUM_POA_MAPS 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1'"/> 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
