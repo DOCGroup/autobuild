@@ -67,7 +67,7 @@ HREF=\"mailto:devo_group\@cs.wustl.edu\">us</A> and let us know which
 platform combinations you can contribute.";
 
 my $build_instructions = "<br><p>Instructions for setting up your
-own scoreboard are <A HREF=\"http://cvs.doc.wustl.edu/ace-latest/autobuild/README\">
+own scoreboard are <A HREF=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/README?cvsroot=autobuild\">
 here</A>.\n";
 
 ###############################################################################
