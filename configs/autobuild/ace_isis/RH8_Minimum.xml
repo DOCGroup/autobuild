@@ -46,7 +46,7 @@
     <command name="make"              options="-j 2 -k -C TAO" />
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
-    <command name="auto_run_tests"    options="" />
+    <command name="auto_run_tests"    options="-envmod LD_ASSUME_KERNEL=2.4.19" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
