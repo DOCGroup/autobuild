@@ -1,3 +1,8 @@
+Wed Jun 25 09:59:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Added the flamenco.dre builds to the
+	  scoreboard. 
+
 Wed Jun 25 11:14:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
