@@ -64,10 +64,16 @@ all the OS/platform combinations ACE is tested everyday.
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-     <name>SuSE_90_GCC3.3.1_Debug</name>
-     <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCCACE</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+       <name>SuSE_90_GCC3.3.1_Debug</name>
+       <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCCACE</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+       <name>SuSE_91_GCC3.3.3_Debug_Valgrind</name>
+       <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_Valgrind</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
        <name>RH8_GCC_3.2_ACE</name>
