@@ -1,3 +1,7 @@
+Tue May  7 00:11:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Add new beguine build to scoreboard.
+
 Mon May  6 17:46:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/beguine/*: Add beguine build for Redhat_7.1_Core.
