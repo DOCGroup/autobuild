@@ -30,7 +30,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n\n#define ACE_HAS_WCHAR 1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=0\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\nxt_reactor=1\nfl_reactor=0\ntk_reactor=1\nqt_reactor=1\ngtk_reactor=1\noptimize=1\ndebug=0\ninline=0\n\qt=1\ncidl=1\n# Override -Wno-uninitiialized to verify that uninitialized variable\n# warnings actually work properly when exception handling is\n# enabled in g++ 3.3.\n\nCCFLAGS += -Wuninitialized\n\n# Perform some stricter C/C++ checking using the -pedantic flag, but\n# disable the long long warnings since we need to support that type\n# in ACE/TAO.\nCCFLAGS += -Wno-long-long -Wwrite-strings -Wcast-align\n\nOCFLAGS=-O\n\n\n# For QT headers\nPLATFORM_QT_CPPFLAGS = -I/usr/include/qt3\n\n# For TK headers\nPLATFORM_TK_CPPFLAGS = -I/usr/include/tcl8.4\n\n# For TCL library\nPLATFORM_TK_LIBS += -ltk8.4 -ltcl8.4\n\n# Additional XtReactor flags\nPLATFORM_XT_LIBS += -lXm\n\n# Override default ACE settings.  Debian deprecates the single threaded Qt library.\nPLATFORM_QT_LIBS=-lqt-mt\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqt=1\nxt_reactor=1\nssl=1\ncidl=1\n\n'" />
-    
+
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
@@ -40,17 +40,26 @@
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc -hierarchy -make_coexistence" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,DAnCE/RepositoryManager -hierarchy -make_coexistence" />
+
+    <!--CIDLC requires exception so we will get it from the web-->
+    <!--command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC -hierarchy -make_coexistence" /-->
+
+    <!--Get the cidlc compiler Note this is only for linux with bunzip2 installed-->
+    <command name="shell"             options="rm -rf cidlc" />
+    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/latest.txt" />
+    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/`cat cidlc/latest.txt`" />
+    <command name="shell"             options="bunzip2 cidlc/`cat cidlc/latest.txt`" />
+    <command name="shell"             options="mv `cat cidlc/latest.txt | sed -e 's/\(.*\)\.bz2$/cidlc\/\1/g'` $CIAO_ROOT/bin/cidlc" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO/CIDLC realclean" />
+    <!--command name="make"              options="-k -C TAO/CIAO/CIDLC realclean" /-->
     <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
-    <command name="make"              options="-j 2 -k -C TAO/CIAO/CIDLC" />
+    <!--command name="make"              options="-j 2 -k -C TAO/CIAO/CIDLC" /-->
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="auto_run_tests"    options="" />

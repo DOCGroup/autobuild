@@ -1,3 +1,10 @@
+Tue Jul 27 14:40:55 2004  Tao Lu  <lu@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml
+	  Added download command to get the binary of CIDLC since
+	  it requires exception. CIAO/DAnCE/RepositoryManager is
+	  excluded from the build since it requries xerces and exception.
+
 Tue Jul 27 17:41:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/vc71.xml:
