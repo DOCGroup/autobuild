@@ -1,3 +1,10 @@
+Mon Jul 14 17:56:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
+          Define TAO_EC_ENABLE_DEBUG_MESSAGES to 1 to compile the RTEvent
+          debug messages in this build so that we know for sure that there
+          are no compile errors in the RTEvent debug code.
+
 Fri Jul 11 17:51:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/*:
