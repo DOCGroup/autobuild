@@ -112,13 +112,13 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_90_GCC3.3.1(MPC)</name>
+      <name>SuSE_90_GCC3.3.1</name>
       <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCC</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_81_AXP_64Bit_GCC3.2.2(MPC)</name>
+      <name>SuSE_81_AXP_64Bit_GCC3.2.2</name>
       <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_AXP_GCC</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -169,49 +169,49 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_MSVC6_DLL_Debug(MPC)</name>
+            <name>Win2K_MSVC6_DLL_Debug</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_debug</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_DLL_Release(MPC)</name>
+            <name>WinXP_MSVC6_DLL_Release</name>
             <url>http://tao.doc.wustl.edu/bugzilla/Another_dll_release</url>
             <build_sponsor>Washington University</build_sponsor>
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP6_LIB_Debug(MPC)</name>
+            <name>WinXP_MSVC6_SP6_LIB_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6sd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP6_LIB_Release(MPC)</name>
+            <name>WinXP_MSVC6_SP6_LIB_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6sr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP6_DLL_Debug_Unicode(MPC)</name>
+            <name>WinXP_MSVC6_SP6_DLL_Debug_Unicode</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6ddu</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP6_DLL_Debug(MPC)</name>
+            <name>WinXP_MSVC6_SP6_DLL_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6dd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_SP6_DLL_Release(MPC)</name>
+            <name>WinXP_MSVC6_SP6_DLL_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVC6dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_BCB6_Pro_Static_Release(MPC)</name>
+            <name>WinXP_BCB6_Pro_Static_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6sr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -223,25 +223,25 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_BCB6_Pro_Dynamic_Release(MPC)</name>
+            <name>Win2K_BCB6_Pro_Dynamic_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_BCB6_Pro_Dynamic_Debug(MPC)</name>
+            <name>Win2K_BCB6_Pro_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_CBuilderX_Dynamic_Debug(MPC)</name>
+            <name>WinXP_CBuilderX_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXdd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC71_NET_DLL(MPC)</name>
+            <name>WinXP_VC71_NET_DLL</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/VC71</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -251,7 +251,7 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
-      <name>SunOS_8_Forte8_Debug(MPC)</name>
+      <name>SunOS_8_Forte8_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~willemsenj/Solaris</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>

@@ -77,7 +77,7 @@ all the OS/platform combinations ACE is tested everyday.
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-     <name>SuSE_90_GCC3.3.1_Debug(MPC)</name>
+     <name>SuSE_90_GCC3.3.1_Debug</name>
      <url>http://www.dre.vanderbilt.edu/~willemsenj/SuSE_GCCACE</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -189,19 +189,19 @@ all the OS/platform combinations ACE is tested everyday.
 	<build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
       </build>
       <build>
-         <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode(MPC)</name>
+         <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6ddu</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
-         <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode(MPC)</name>
+         <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dru</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
-         <name>WinXP_BCB6_Pro_Dynamic_Debug_Codeguard(MPC)</name>
+         <name>WinXP_BCB6_Pro_Dynamic_Debug_Codeguard</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6cg</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -225,25 +225,25 @@ all the OS/platform combinations ACE is tested everyday.
           <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
       </build>
       <build>
-          <name>WinXP_Cygwin_GCC_3_2_3_ACE(MPC)</name>
+          <name>WinXP_Cygwin_GCC_3_2_3_ACE</name>
            <url>http://www.dre.vanderbilt.edu/~willemsenj/CygwinACE</url>
           <build_sponsor>Remedy IT</build_sponsor>
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
         <build>
-            <name>WinXP_MingW_GCC_3_2_3_Release(MPC)</name>
+            <name>WinXP_MingW_GCC_3_2_3_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGW</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MingW_GCC_3_2_3_Debug(MPC)</name>
+            <name>WinXP_MingW_GCC_3_2_3_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGWACE</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MingW_GCC_3_2_3_Static(MPC)</name>
+            <name>WinXP_MingW_GCC_3_2_3_Static</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGWStatic</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
