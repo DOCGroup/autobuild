@@ -1,3 +1,9 @@
+Mon Aug 26 10:51:57 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml:
+
+	  Fixed FL, TK and QT include path problems.
+
 Mon Aug 26 10:40:23 2002 Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/valinor/Full.xml:
