@@ -252,7 +252,7 @@ all the OS/platform combinations TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC71_CIDL</name>
+            <name>WinXP_VC71_CIDLC</name>
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/CIDLC/Win32</url>
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
