@@ -123,7 +123,7 @@
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
         </build>
         <build>
-            <name>WinNT4_BCB6_Per_Dynamic_Release_(remedy.nl)</name>
+            <name>Win2K_BCB6_Pro_Dynamic_Release_(remedy.nl)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB6_Dynamic_Release</url>
         </build>
         <build>
