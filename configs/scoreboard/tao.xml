@@ -322,16 +322,6 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
-   <name>Tru64</name>
-   <build>
-      <name>Tru64_Compaq_C++</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/Tru64</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-</group>
-
-<group>
    <name>Irix</name>
    <build>
       <name>Irix_6.5</name>
