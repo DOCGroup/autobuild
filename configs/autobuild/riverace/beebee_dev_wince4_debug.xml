@@ -18,9 +18,9 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <!-- RMCast is defined as depending on ace, so clean ace, then rebuild RMCast to get both -->
-    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ACE - Win32 (WCE emulator) Debug' /CLEAN /USEENV" />
-    <command name="wincemake"         options="tests/tests.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /CLEAN USEENV" />
+    <command name="wincemake"         options="tests/tests.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /CLEAN /CECONFIG 'STANDARDSDK' /USEENV" />
+    <command name="wincemake"         options="protocols/protocols.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /CLEAN /CECONFIG 'STANDARDSDK' /USEENV" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /CLEAN /CECONFIG 'STANDARDSDK' /USEENV" />
 
     <command name="log"               options="ON" />
 
@@ -32,9 +32,8 @@
     <command name="file_manipulation" options="type=create file=local.features output='rwho=0\nwince=1\n'" />
     <command name="generate_workspace" options="-feature_file c:\ace\ACE_wrappers-repository\local.features -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -recurse -type em3" /> 
 
-    <!-- RMCast is defined as depending on ace, so clean ace, then rebuild RMCast to get both -->
-    <command name="wincemake"         options="ace/ace.vcw /MAKE 'RMCast - Win32 (WCE emulator) Debug' /REBUILD /CECONFIG 'STANDARDSDK' /USEENV" />
-    <command name="wincemake"         options="protocols/protocols.vcw /MAKE 'HTBP - Win32 (WCE emulator) Debug' /REBUILD /CECONFIG 'STANDARDSDK' /USEENV" />
+    <command name="wincemake"         options="ace/ace.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /REBUILD /CECONFIG 'STANDARDSDK' /USEENV" />
+    <command name="wincemake"         options="protocols/protocols.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /REBUILD /CECONFIG 'STANDARDSDK' /USEENV" />
     <command name="wincemake"         options="tests/tests.vcw /MAKE 'ALL - Win32 (WCE emulator) Debug' /CECONFIG 'STANDARDSDK' /USEENV" />
 
     <command name="log"               options="OFF" />
