@@ -1,3 +1,9 @@
+Wed Nov 26 12:17:29 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+
+	  Added the config option NO_MESSAGING to the builds.
+
 Sat Nov 22 20:53:58 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
