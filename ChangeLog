@@ -1,3 +1,10 @@
+Thu May 27 16:17:37 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Borland C++ 5 is no longer supported.  Removed corresponding
+	  build entry.
+
 Thu May 27 22:01:46 UTC 2004  Don Hinton  <dhinton@dre.vanderbilt.edu>
 
         * configs/autobuild/flamenco/footprint_metrics.xml:
