@@ -5,6 +5,9 @@ Fri Mar  4 18:17:22 2005  Steve Huston  <shuston@riverace.com>
 	  XP-64 on Itanium is probably not going to be supported any longer,
 	  but not completely decided yet.
 
+	* configs/scoreboard/ace_future.xml: Commented out Riverace's AIX 5.1
+	  and Solaris 8 builds since those machines are busted with no ETA.
+
 Fri Mar  4 18:06:29 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
