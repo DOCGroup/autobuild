@@ -987,6 +987,8 @@ sub Test_Handler ($)
         || $s =~ m/ERROR/
         || $s =~ m/FAILED/
         || $s =~ m/EXCEPTION/
+        || $s =~ m/system exception/
+        || $s =~ m/user exception/
 	|| $s =~ m/ACE_ASSERT/
         || $s =~ m/pure virtual /i)
     {

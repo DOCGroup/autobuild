@@ -1,17 +1,24 @@
+Thu Mar 20 14:21:33 2003  Ossama Othman  <ossama@uci.edu>
+
+	* make_pretty.pl (tests_output):
+	* common/prettify.pm (Test_Handler):
+
+	  Prettify the actual CORBA exception output.
+
 Wed Mar 19 06:59:18 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Fixed a cut and past error in
-	  the URL for WAEI. 
+	  the URL for WAEI.
 
 Wed Mar 19 06:00:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Changed the URL for MACOS
-	  build. 
+	  build.
 
 Tue Mar 18 14:27:56 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao_future.xml: Added skoll_3 to the
-	  scoreboard.  
+	  scoreboard.
 
 2003-03-18  ISIS Builds  <isisbuild@isis-server.isis.vanderbilt.edu>
 
@@ -21,19 +28,19 @@ Tue Mar 18 14:27:56 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 
 Tue Mar 18 13:59:16 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Fixed a problem with the meta-data. 
+	* configs/scoreboard/tao.xml: Fixed a problem with the meta-data.
 
 Tue Mar 18 13:24:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Moved the SuSe build to
-	  tao_future.xml. 
+	  tao_future.xml.
 	* configs/scoreboard/tao_future.xml: Reordered the builds on the
-	  scoreboard. 
+	  scoreboard.
 
 Tue Mar 18 10:38:11 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Added a new FreeBSD build
-	  from Yi-Kai Tsai <cuma@netbuck.com.tw>. 
+	  from Yi-Kai Tsai <cuma@netbuck.com.tw>.
 
 Tue Mar 18 14:10:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
