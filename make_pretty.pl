@@ -188,6 +188,10 @@ sub is_warning ()
     # HP-UX uses 'nocompatwarnings' as an option to the compiler.
     return 3 if (m/vnocompatwarnings/);
 
+    # On platforms where glibc >= 2.2 and not __USE_XOPEN2K,
+    # linker warnings about deprecated interfaces come up. Dont show 
+    return 3 if (m/^the use of `pthread_attr_setstackaddr' is deprecated, use `pthread_attr_setstack'/);
+
     # SUN CC 5.0 defines __pthread_cleanup_push as a macro which causes
     # warnings. See /usr/include/pthread.h and
     # $ACE_ROOT/examples/Timer_Queue/Thread_Timer_Queue_Test.cpp for more
