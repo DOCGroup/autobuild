@@ -61,6 +61,7 @@ my $red_default = 48;
 our $preamble = "";
 ## Use 'our' to make $verbose visible outside this file
 our $verbose = 0;
+our $scoreboard_title = 'Scoreboard';
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
@@ -590,7 +591,7 @@ sub update_html ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
-    print $indexhtml "<html>\n<head>\n<title>Scoreboard</title>\n</head>\n";
+    print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n</head>\n";
 
 
     ### Start body
@@ -1030,9 +1031,9 @@ sub build_integrated_page ($)
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_z/;
+use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z/;
 
-if (!getopts ('d:f:hi:o:vz')
+if (!getopts ('d:f:hi:o:t:vz')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl -f file [-h] [-i file]-o file [-m script] [-s dir] [-r] [-z]\n";
@@ -1043,6 +1044,7 @@ if (!getopts ('d:f:hi:o:vz')
     print "    -i         use <file> as the index file to generate Index page only\n";
     print "    All other options will be ignored  \n";
     print "    -o         name of file where the output HTML files are placed\n";
+    print "    -t         the title for the scoreboard (default Scoreboard)\n";
     print "    -v         enable verbose debugging [def: only print errors]\n";
     print "    -z         Integrated page. Only the output directory is valid\n";
     exit (1);
@@ -1061,6 +1063,10 @@ $dir = $opt_d;
 
 if (defined $opt_v) {
     $verbose = 1;
+}
+
+if (defined $opt_t) {
+    $scoreboard_title = $opt_t;
 }
 
 if (defined $opt_i){
