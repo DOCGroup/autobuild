@@ -1,3 +1,10 @@
+Wed Mar 24 10:09:17 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Removed Nt4 cygwin build of remedy. Johnny will move this build
+	  to Remedy on his return. 
+
 Wed Mar 24 06:42:26 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:
