@@ -31,21 +31,11 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k -C ace realclean" />
-    <command name="make"              options="-k -C ACEXML realclean" />
-    <command name="make"              options="-k -C apps realclean" />
-    <command name="make"              options="-k -C tests realclean" />
-    <command name="make"              options="-k -C examples realclean" />
-    <command name="make"              options="-k -C performance-tests realclean" />
-    <command name="make"              options="-k -C netsvcs realclean" />
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
 
-    <command name="make"              options="-k -C ace" />
-    <command name="make"              options="-k -C ACEXML" />
-    <command name="make"              options="-k -C apps" />
-    <command name="make"              options="-k -C tests" />
-    <command name="make"              options="-k -C examples" />
-    <command name="make"              options="-k -C performance-tests" />
-    <command name="make"              options="-k -C netsvcs" />
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
