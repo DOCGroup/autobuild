@@ -56,6 +56,10 @@ and let us know which platform combinations you can contribute.
             <name>WindowsXP_VC.NET_Debug</name>
             <url>http://www.riverace.com/build_logs/hope/dev/vc7_debug</url>
         </build>
+        <build>
+            <name>WinNT4_BCB5_Ent_Static_Debug_(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
+        </build>
     </group>
 
     <group>
@@ -173,10 +177,6 @@ and let us know which platform combinations you can contribute.
         <build>
             <name>Win2K_Borland_C++_5</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
-        </build>
-        <build>
-            <name>WinNT4_BCB5_Ent_Static_Debug_Core_(remedy.nl)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
         </build>
         <build>
             <name>Win2K_BCB6_Pro_Dynamic_Release_(remedy.nl)</name>
