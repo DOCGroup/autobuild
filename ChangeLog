@@ -1,3 +1,9 @@
+Thu Aug 22 18:06:41 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Add RedHat_Static build.
+	  Throughput and footprint measurements and statistics are
+	  gathered from this build.
+
 Thu Aug 22 04:25:48 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/maglor/Static.xml: Add a Linux static build
