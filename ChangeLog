@@ -1,3 +1,11 @@
+Fri Jul 18 12:35:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Our linux build system is upgraded to SuSE 8.2 with GCC3.3 so
+          updated scoreboard with this info.
+
 Wed Jul 16 15:29:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
