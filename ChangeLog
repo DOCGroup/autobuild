@@ -1,3 +1,8 @@
+Thu Mar 10 10:18:07 MST 2005  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/update_scoreboard.sh:
+          Changed the log directory to /export/web/www/scoreboard
+
 Thu Mar 10 13:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:

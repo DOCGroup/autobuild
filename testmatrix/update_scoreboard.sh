@@ -5,7 +5,7 @@
 # Modified : Aug 17 2004 : Trevor Fields
 
 # Directory where the build log directories are
-LOG_DIR="/project/taotmp/scoreboard/html"
+LOG_DIR="/export/web/www/scoreboard"
 
 # location of the autobuild directory
 AUTOBUILD_DIR="$HOME/autobuild"
