@@ -1,4 +1,4 @@
-#!/pkg/gnu/bin/bash
+#!/bin/bash
 #
 # $Id$
 #
@@ -10,5 +10,5 @@ export PATH
 # Entropy Gathering Daemon perl script fulfills that requirement.
 
 exec $HOME/autobuild/autobuild.pl \
-     $HOME/autobuild/configs/autobuild/carona/SunOS9_Sun_Studio9.xml 2>&1 
+     $HOME/autobuild/configs/autobuild/corona/SunOS9_Sun_Studio9.xml 2>&1 
 
