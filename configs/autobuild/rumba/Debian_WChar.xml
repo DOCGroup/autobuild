@@ -10,7 +10,7 @@
         <variable name="root"     value="/export/project/rumbatmp/bugzilla/Debian_WChar" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/rumba_Debian_WChar" />
-        <variable name="configs"  value="Linux ST" />
+        <variable name="configs"  value="Linux" />
         <variable name="MAKEFLAGS" value="CC=gcc-3.1 CXX=g++-3.1 -j 2" />
 
     </configuration>

@@ -1,3 +1,8 @@
+Mon Nov  4 18:48:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
+
+	* configs/autobuild/rumba/Debian_WChar.xml:  Removed the ST flag
+	  so that multithreaded tests will be run.
+
 Sun Nov  3 10:39:25 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Mesaging.xml: Added
