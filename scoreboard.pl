@@ -60,8 +60,9 @@ Irvine</A>, <A HREF=\"http://www.isis.vanderbilt.edu\">Vanderbilt
 University</a>, <A
 HREF=\"http://www.dist-systems.bbn.com/projects/\">BBN Technologies</A>,
 <A HREF=\"http://www.theaceorb.nl\">Remedy IT</A>,
-<a href=\"http://www.objectsciences.com/\">ObjectSciences</a>, and
-<a href=\"http://www.hunleth.com/~acebuild/\">hunleth.com</a>. <P>
+<a href=\"http://www.objectsciences.com/\">ObjectSciences</a>, 
+<a href=\"http://www.hunleth.com/~acebuild/\">hunleth.com</a>, and
+<a href=\"http://www.rtlogic.com/\">RT Logic!</a>.<P>
  If you'd like to contribute builds to our virtual
 scoreboard please contact <A
 HREF=\"mailto:devo_group\@cs.wustl.edu\">us</A> and let us know which

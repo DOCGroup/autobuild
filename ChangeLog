@@ -1,3 +1,7 @@
+Tue Dec  6 16:05:15 UTC 2002  Don Hinton  <dhinton@ieee.org>
+
+	* scoreboard.pl:  Added RT Logic! to list of build hosts.
+
 Tue Dec  6 15:48:41 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
 	* configs/scoreboard/acetao.xml: Added SunOS_5.8_GCC_2.96
