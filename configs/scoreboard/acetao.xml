@@ -1,0 +1,17 @@
+<scoreboard>
+    <group>
+        <name>Linux</name>
+        <build>
+            <name>RedHat_Core</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maedhros_Core/</url>
+        </build>
+        <build>
+            <name>RedHat_Implicit_Templates</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/amrod_ImplicitTemplates/</url>
+        </build>
+        <build>
+            <name>RedHat_Single_Threaded</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/curufin_SingleThreaded/</url>
+        </build>
+    </group>
+</scoreboard>
