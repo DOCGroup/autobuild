@@ -1,3 +1,8 @@
+Mon Apr 28 14:50:29 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Added Windows XP-64 build that runs
+	  at Riverace.
+
 Mon Apr 28 18:02:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/CygwinGCC32.xml:

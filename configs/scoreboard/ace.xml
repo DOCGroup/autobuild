@@ -119,6 +119,14 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
+      <name>WindowsXP-IA64_VC7_Debug</name>
+      <url>http://www.riverace.com/build_logs/kitty-puss/dev/vc7_debug</url>
+      <orange>24</orange>
+      <red>96</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
+   <build>
       <name>WindowsXP_VC.NET_Debug</name>
       <url>http://www.riverace.com/build_logs/hope/dev/vc7_debug</url>
       <red>36</red>
