@@ -38,7 +38,7 @@
     <command name="make"              options="-j 2 -k -C apps/gperf/src" />
     <command name="make"              options="-j 2 -k -C TAO/TAO_IDL" />
     <command name="make"              options="-j 2 -k -C TAO/tao libTAO.a" />
-    <command name="make"              options="-j 2 -k -C TAO/PortableServer" />
+    <command name="make"              options="-j 2 -k -C TAO/tao/PortableServer" />
     <command name="make"              options="-j 2 -k -C TAO/orbsvcs/PSS" />
 
     <command name="log"               options="off" />
