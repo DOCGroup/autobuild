@@ -4,9 +4,11 @@
         <environment name="ACE_ROOT"        value="/home/docgroup/builds/ICC70/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/docgroup/builds/ICC70/ACE_wrappers/TAO"/>
         <environment name="CVSROOT"         value="isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/home/docgroup/builds/ICC70/ACE_wrappers/ace:$LD_LIBRARY_PATH" />
 
         <variable name="root"         value="/home/docgroup/builds/ICC70"/>
+        <variable name="build_name"   value="icc70" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/home/docgroup/builds/ICC70/" />
 	<variable name="configs"  value="Linux Exceptions" />
