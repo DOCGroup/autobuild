@@ -1,3 +1,13 @@
+Mon Jul 28 12:52:19 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB6StaticRelease.xml:
+        * configs/autobuild/remedynl/Cygwin.xml:
+        * configs/autobuild/remedynl/vc7.xml:
+          Don't use pscp and plink, but just scp and ssh from Cygwin SSH.
+          All our windows systems are converted to cygwin ssh so that we
+          are not dependent on putty anymore and the pscp of putty can't
+          use compression and then our upload is very slow.
+
 Sun Jul 27 17:07:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
