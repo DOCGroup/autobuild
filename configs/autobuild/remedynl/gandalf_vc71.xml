@@ -30,14 +30,16 @@
     <command name="shell"             options="find ACE_wrappers -name '*.sln*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nrwho=0\nqos=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type vc71 -recurse"/>
+    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC -type vc71 -recurse"/>
+
+    <command name="anonymous_shell"   options="scp -C willemsenj@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe TAO/CIAO/bin" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ALL -Debug -k" />
 
