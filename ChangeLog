@@ -1,3 +1,9 @@
+Thu Jan  6 07:53:57 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/corona/driver_gcc34.sh:
+
+	  Added path to pick up cc.
+
 Wed Jan  5 22:22:02 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: 
