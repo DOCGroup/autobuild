@@ -1,3 +1,10 @@
+Mon Jan  3 22:51:46 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/corona/SunOS9_Sun_Studio9.xml:
+	* configs/autobuild/corona/driver_studio.sh:
+
+	  New build for Solaris 9 with Studio 9.
+
 Mon Jan  3 12:56:29 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Noted that Riverace's Solaris 8 and 9
