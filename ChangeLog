@@ -1,3 +1,10 @@
+Tue Aug 26 13:09:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/Cygwin.xml:
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+          Removed environment variable BUILD, this is for Borland and not for
+          Cygwin.
+
 Mon Aug 25 19:05:23 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/generate_makefile.pm:
