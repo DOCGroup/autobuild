@@ -11,6 +11,7 @@
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:/ACE/MSVC6dd/" />
         <variable name="name"     value="WinXP DLL Debug" />
+        <variable name="configs"   value="Win32 SANDBOX Exceptions" /> 
     </configuration>
 
     <command name="status"            options="on" />
