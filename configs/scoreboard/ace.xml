@@ -202,7 +202,7 @@ all the OS/platform combinations ACE is tested everyday.
       </build>
       <build>
          <name>WinXP_BCB6_Pro_Dynamic_Debug_Codeguard(MPC)</name>
-         <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6dcg</url>
+         <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6cg</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
