@@ -12,7 +12,7 @@
         <variable name="root" value="/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/lynxos" />
         <variable name="sam_root" value="/var/sun16/users/tao/ultra5/Overnight_Builds/TAO13/lynxos/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos" />
+        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos/cross_compile_build" />
         <variable name="MAIL_ADMIN" value="epm@prismtechnologies.com" />
         <variable name="project_root" value="ACE_wrappers" />
 

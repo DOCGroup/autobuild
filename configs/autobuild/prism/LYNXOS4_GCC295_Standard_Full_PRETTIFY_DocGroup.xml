@@ -4,7 +4,7 @@
 
         <variable name="root" value="/usr/users/tao/ultra5/Overnight_Builds/TAO13/lynxos" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos" />
+        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos/tests_on_lynxos" />
         <variable name="MAIL_ADMIN" value="epm@prismtechnologies.com" />
         <variable name="project_root" value="tao13" />
 

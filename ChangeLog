@@ -1,3 +1,11 @@
+Tue Jan 13 09:50:35 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
+
+        * configs/scoreboard/tao.xml
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_PRETTIFY_DocGroup.xml
+
+          Changed log_root to separate LynxOS build results and test results.
+	
 Mon Jan 12 15:59:36 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Corrected

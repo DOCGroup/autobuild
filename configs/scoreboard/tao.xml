@@ -299,8 +299,14 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>LynxOS</name>
    <build>
-      <name>LYNXOS4_GCC295_Standard_Full</name>
-      <url>http://www.prismtechnologies.com/tao-scoreboard/lynxos</url>
+      <name>LYNXOS4_GCC295_Cross_Compile_Solaris8_Build</name>
+      <url>http://www.prismtechnologies.com/tao-scoreboard/lynxos/cross_compile_build</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
+   </build>
+   <build>
+      <name>LYNXOS4_GCC295_Tests</name>
+      <url>http://www.prismtechnologies.com/tao-scoreboard/lynxos/tests_on_lynxos</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
    </build>
