@@ -30,6 +30,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/tao-facet-adapter" />
 
     <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs -f Makefile.RTEvent realclean" />
+    <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs -f Makefile.Facet.lib depend" />
     <command name="make"              options="-C $TAO_ROOT/orbsvcs/orbsvcs -f Makefile.Facet" />
 
     <command name="log"               options="off" />
