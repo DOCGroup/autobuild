@@ -1,3 +1,9 @@
+Mon Sep 27 06:56:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+          Build TAO_IDL before tao, because TAO_IDL is needed for building
+          the PortableServer library.
+
 Fri Sep 24 19:59:20 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/flamenco/driver_pmb_start.sh:
