@@ -8,34 +8,34 @@
         <environment name="TAO_ROOT"        value="/export/home/bugzilla/facet/ACE_wrappers/TAO"/>
         <environment name="JACE_ROOT"       value="/export/home/bugzilla/facet/RTEvent/tao-facet-adapter/jACE" />
         <environment name="LD_LIBRARY_PATH" value="/export/home/bugzilla/facet/ACE_wrappers/ace" />
-        <environment name="ANT_HOME"        value="/docpkg/jakarta-ant-1.5" />
+        <environment name="ANT_HOME"        value="/docpkg/ant" />
         <environment name="ASPECTJ_HOME"    value="/docpkg/aspectj_1.1" />
 
-        <environment name="CLASSPATH" value="/docpkg/JacORB1_3_30/lib/idl.jar"                type="replace"/>
-        <environment name="CLASSPATH" value="/docpkg/JacORB1_3_30/lib/jacorb.jar"             type="suffix"/>
-        <environment name="CLASSPATH" value="/docpkg/dlconcurrent_1.3.1/lib/dlconcurrent.jar" type="suffix"/>
-        <environment name="CLASSPATH" value="/docpkg/junit3.7/junit.jar"                      type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/jacorb/lib/idl.jar"                type="replace"/>
+        <environment name="CLASSPATH" value="/docpkg/jacorb/lib/jacorb.jar"             type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/dlconcurrent/lib/dlconcurrent.jar" type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/junit/junit.jar"                      type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/aspectj_1.1/lib/aspectjrt.jar"         type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/aspectj_1.1/lib/aspectj-ant.jar"       type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/aspectj_1.1/lib/aspectjtools.jar"      type="suffix"/>
-        <environment name="CLASSPATH" value="/docpkg/jakarta-ant-1.5/lib/ant.jar"             type="suffix"/>
-        <environment name="CLASSPATH" value="/docpkg/jakarta-ant-1.5/lib/ant-optional.jar"    type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/ant/lib/ant.jar"             type="suffix"/>
+        <environment name="CLASSPATH" value="/docpkg/ant/lib/ant-optional.jar"    type="suffix"/>
         <environment name="CLASSPATH" value="/docpkg/log4j/dist/lib/log4j-1.2.5.jar"          type="suffix"/>
         <environment name="CLASSPATH" value="/export/home/bugzilla/facet/RTEvent/facet/classes" type="suffix"/>
         <environment name="CLASSPATH" value="." type="suffix"/>
 
         <environment name="PATH" value="/export/home/bugzilla/facet/ACE_wrappers/ace" type="replace" />
-        <environment name="PATH" value="/docpkg/jikes-1.15/bin"                   type="suffix"/>
-        <environment name="PATH" value="/docpkg/JacORB1_3_30/bin"                 type="suffix"/>
-        <environment name="PATH" value="/docpkg/java_1.4.0/bin"                   type="suffix"/>
+        <environment name="PATH" value="/docpkg/jikes/bin"                   type="suffix"/>
+        <environment name="PATH" value="/docpkg/jacorb/bin"                 type="suffix"/>
+        <environment name="PATH" value="/docpkg/java_/bin"                   type="suffix"/>
         <environment name="PATH" value="/docpkg/aspectj_1.1/bin"                type="suffix"/>
-        <environment name="PATH" value="/docpkg/jakarta-ant-1.5/bin"              type="suffix"/>
+        <environment name="PATH" value="/docpkg/ant/bin"              type="suffix"/>
         <environment name="PATH" value="/bin"                                     type="suffix"/>
         <environment name="PATH" value="/usr/bin"                                 type="suffix"/>
         <environment name="PATH" value="."                                        type="suffix"/>
 
-        <environment name="JAVA_HOME"       value="/docpkg/java_1.4.0" />
-        <environment name="LIBRARYCLASSPATH" value="/docpkg/java_1.4.0/jre/lib/rt.jar:." />
+        <environment name="JAVA_HOME"       value="/docpkg/java" />
+        <environment name="LIBRARYCLASSPATH" value="/docpkg/java/jre/lib/rt.jar:." />
 
         <variable name="root"               value="/export/home/bugzilla/facet" />
         <variable name="project_root"       value="/export/home/bugzilla/facet/RTEvent/facet" />
