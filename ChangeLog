@@ -7,7 +7,7 @@ Tue Sep  9 21:18:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/dresystems/sol9_gcc33_tao.xml:
 	* configs/autobuild/dresystems/sol9_spro54_tao.xml:
 	  Removed the stubs generation from the XML file since they are
-	  not needed. These build don't use MPC and teh normal
+	  not needed. These build don't use MPC and the normal
 	  dependencies should take care of it.
 
 Thu Sep  4 17:52:57 2003  Chris Cleeland  <cleeland_c@ociweb.com>
