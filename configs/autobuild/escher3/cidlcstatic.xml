@@ -15,8 +15,6 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="msvc_cidlc" />
-
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
