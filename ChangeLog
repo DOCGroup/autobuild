@@ -1,3 +1,8 @@
+Wed Apr 16 10:46:58 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/driver.sh: A new ORB_Core build. 
+
 Wed Apr 16 07:11:05 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao_dre.sh: New scoreboard at tao.dre.
