@@ -1,3 +1,10 @@
+Wed Dec  8 12:55:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/ace_future.xml:
+          Moved OpenVMS build from ACE to TAO page, we are building now with
+          TAO
+
 Tue Dec  7 18:53:22 2004  Steve Huston  <shuston@riverace.com>
 
 	* command/auto_run_tests.pm: If the variable automake_build is set,
