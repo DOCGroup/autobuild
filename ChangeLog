@@ -1,4 +1,16 @@
+Thu Jun 26 15:15:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
+
+        Please direct any problems with this commit to Jason Cohen
+        at jcohen@atl.lmco.com
+
+        * configs/scoreboard/tao.xml:
+
+          Changed URL of Lockheed Martin ATL to point to project webpage.
+
 Wed Jun 25 19:45:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
+
+        Please direct any problems with this commit to Jason Cohen
+        at jcohen@atl.lmco.com
 
         * configs/autobuild/atl:
         * configs/autobuild/atl/RH9_2.4.20-18.9-SCTP.xml:

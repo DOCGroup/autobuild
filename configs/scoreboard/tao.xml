@@ -55,7 +55,7 @@ all the OS/platform combinations TAO is tested everyday.
        <name>RH9_SCTP</name>
        <url>http://www.atl.lmco.com/projects/QoS/buildlog/</url>
        <build_sponsor>Lockheed Martin ATL</build_sponsor>
-       <build_sponsor_url>http://www.atl.lmco.com</build_sponsor_url>
+       <build_sponsor_url>http://www.atl.lmco.com/projects/QoS</build_sponsor_url>
     </build>
     <build>
        <name>Debian_Minimum_Static</name>
