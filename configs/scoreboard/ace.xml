@@ -104,7 +104,7 @@ all the OS/platform combinations ACE is tested everyday.
         <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-        <name>HP-UX_11i_GCC3_3_3</name>
+        <name>HP-UX_11i_GCC3_3_3_Static</name>
         <url>http://www.dre.vanderbilt.edu/~willemsenj/hpuxgcc</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
