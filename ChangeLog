@@ -1,3 +1,9 @@
+Tue Aug  6 17:38:57 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+	* configs/autobuild/rumba/Debian_WChar.xml: Removed the "-j 2" for
+	  realclean.
+
 Tue Aug  6 17:30:46 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC53.xml: Reeanbled exceptions
