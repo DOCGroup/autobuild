@@ -45,7 +45,7 @@
 
     <command name="shell"             options="(cd ACE_wrappers-repository; ./bin/bootstrap)" />
 
-    <command name="configure"         options="CXX=aCC --preclean --with-ssl=no" />
+    <command name="configure"         options="CXX=aCC AR=/usr/ccs/bin/ar --preclean --with-ssl=no" />
 
     <command name="make"              options="dir=build/autoconf_acc_debug -j 2 -k" />
 
