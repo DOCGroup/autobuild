@@ -1,3 +1,8 @@
+Fri Aug  9 18:21:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* scoreboard.pl: Implement a no-op main::GetVariable() to work around
+	  some problems introduced by new features in prettify.pm.
+
 Thu Aug  8 20:08:44 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/scoreboard/acetao.xml: Add Debian_Core build.

@@ -8,7 +8,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 
 use strict;
 use warnings;
-
+use diagnostics;
 use common::prettify;
 use common::scoreparser;
 use DirHandle;
@@ -743,7 +743,19 @@ sub update_html_table ($$@)
     print $indexhtml "</table>\n";
 }
 
+## Eventually this should probably be shared code with autobuild.pl, but
+## for now, implement it as a no-op which returns something which is undefined. 
+sub GetVariable ($)
+{
+   my %a=();
+   return $a{'UNDEFINED'};
+}
 
+
+###############################################################################
+#
+# Callbacks for commands
+#
 
 ###############################################################################
 ###############################################################################
