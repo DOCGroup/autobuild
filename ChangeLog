@@ -1,3 +1,17 @@
+Tue Sep 28 09:54:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/gandalf_cbxdd.xml:
+        * configs/autobuild/remedynl/gandalf_cbxsr.xml:
+          Added XERCESROOT
+
+        * configs/autobuild/remedynl/GCC32.xml:
+          Removed building of CIAO again, this system is older and slower,
+          don't have room here.
+
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml:
+          vc71 dll's are in windows\system32 now, so shortened path again
+
 Tue Sep 28 09:51:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
