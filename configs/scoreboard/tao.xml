@@ -172,18 +172,6 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2K_MSVC6_WChar</name>
-            <url>http://tao.doc.wustl.edu/bugzilla/new_wchar</url>
-            <build_sponsor>Washington University</build_sponsor>
-            <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2K_MSVC6_WChar_Unicode</name>
-            <url>http://tao.doc.wustl.edu/bugzilla/new_unicode</url>
-            <build_sponsor>Washington University</build_sponsor>
-            <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_MSVC6_DLL_Release</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_release</url>
             <build_sponsor>Washington University</build_sponsor>
@@ -236,12 +224,6 @@ all the OS/platform combinations TAO is tested everyday.
             <url>http://ringil.ece.uci.edu/bugzilla/lib_release</url>
             <build_sponsor>UC Irvine</build_sponsor>
             <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
-        </build>
-        <build>
-           <name>Win2K_Borland_C++_5_WChar</name>
-           <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
-           <build_sponsor>Washington University</build_sponsor>
-           <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
     </group>
 

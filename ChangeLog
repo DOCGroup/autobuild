@@ -1,3 +1,12 @@
+Tue Mar 18 14:10:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          Moved the following builds from the tao page to the ace page because
+          they only build ace: Win2K_Borland_C++_5_WChar, Win2K_MSVC6_WChar,
+          Win2K_MSVC6_WChar_Unicode. Renamed Win32 section to Windows section
+          in the ace build to match the other pages
+
 Mon Mar 17 14:33:59 2003  Steve Huston  <shuston@riverace.com>
 
 	* scoreboard.pl: Removed an unneeded, old comment; only set out_file
@@ -9,13 +18,13 @@ Mon Mar 17 13:06:57 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 
 Mon Mar 17 13:03:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* README: Fixed the documentation for scoreboard scripts usage. 
+	* README: Fixed the documentation for scoreboard scripts usage.
 
 Mon Mar 17 12:57:30 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* scoreboard.pl: Added documentation for the options. Changed the
 	  behaviour of the -o option. It now takes only the output file
-	  name and relying on the -d option to get the output path right! 
+	  name and relying on the -d option to get the output path right!
 
 	* configs/scoreboard/doc.sh: Removed the output file's path!
 
@@ -30,14 +39,14 @@ Mon Mar 17 09:08:14 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 
 Mon Mar 17 09:02:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao_future.xml: 
+	* configs/scoreboard/tao_future.xml:
 	* configs/scoreboard/ace_future.xml:
 	* configs/scoreboard/tao.xml: Added missing builds. Thanks to Don
-	  for pointing this out. 
+	  for pointing this out.
 
 Mon Mar 17 06:40:33 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Removed the file from the repo. 
+	* configs/scoreboard/acetao.xml: Removed the file from the repo.
 
 Mon Mar 17 06:22:31 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
@@ -55,14 +64,14 @@ Sun Mar 16 21:22:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 
 Sun Mar 16 20:02:38 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.bat: Bat file for the Win32 webserver. 
+	* configs/scoreboard/tao.bat: Bat file for the Win32 webserver.
 
 Sun Mar 16 19:11:23 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	The following changes are for reorganizing the scoreboard
 	presentation. The builds of ACE+TAO have been split across
 	multiple pages. We also have an integrated page that will be
-	closer what was there before. 
+	closer what was there before.
 
 	* common/indexparser.pm: A simple parser that parses the index
 	  page to generate a html file.
@@ -92,7 +101,7 @@ Sat Mar 15 15:31:54 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 	* configs/autobuild/tao/DLL_Core.xml: Turned on the verbose flag!
 
 Fri Mar 14 20:09:05 UTC 2003  Don Hinton  <dhinton@ieee.org>
-        
+
 	* configs/autobuild/dresystems/local_scoreboard.xml:
 	* configs/scoreboard/acetao.xml: Rolled back url change from
           Fri Mar 14 13:11:17 UTC 2003  Don Hinton  <dhinton@ieee.org>.
