@@ -113,12 +113,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_81_AXP_64Bit_GCC3.2.2</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_AXP_GCC</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>ATD_Build</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ATD_Build</url>
       <build_sponsor>ATD</build_sponsor>
