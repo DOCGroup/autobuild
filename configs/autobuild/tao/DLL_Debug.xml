@@ -3,9 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_DLL_Debug\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="F:\bugzilla\new_DLL_Debug\ACE_wrappers\TAO"/>
+        <environment name="SSL_ROOT"         value="F:\bugzilla\ssl\openssl-0.9.6" />
         <environment name="PATH"         value="F:\bugzilla\new_DLL_Debug\ACE_wrappers\bin;F:\bugzilla\new_DLL_Debug\ACE_wrappers\lib;F:\bugzilla\ssl\openssl-0.9.6\out32dll" type="prefix" />
-        <environment name="INCLUDE"      value="F:\bugzilla\ssl\openssl-0.9.6\inc32" type="prefix" />
-        <environment name="LIB"          value="F:\bugzilla\ssl\openssl-0.9.6\out32dll" type="prefix" />
 
         <variable name="root"     value="F:/bugzilla/new_DLL_Debug/" />
 	<variable name="log_file" value="log.txt" />

@@ -1,3 +1,18 @@
+Fri Jul 23 15:54:25 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/nirvana/New_DLL_Release.xml:
+	* configs/autobuild/tao/DLL_Debug.xml:
+
+	  MPC generated MSVC++ 6 project files are not set up to use the
+	  INCLUDE and LIB environment variables.  In the case of SSL, set
+	  the SSL_ROOT environment variable instead.  The generated
+	  project files do recognize that environment variable.
+
+	* configs/autobuild/tao/DLL_Core.xml:
+
+	  Removed OpenSSL library directory from the PATH environment
+	  variable.  OpenSSL isn't used in this build.
+
 Fri Jul 23 07:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
