@@ -47,6 +47,9 @@ sub Run ($)
     elsif(lc $linker eq "ilink32"){
         system("ilink32 -v");
     }
+    elsif(lc $linker eq "ilink"){
+        system("ilink -v");
+    }
     else{
         print "ERROR: I cannot figure out what linker you are ";
         print "using!!\nSee check_linker.pm for more details.\n"; 
