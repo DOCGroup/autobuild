@@ -1,3 +1,8 @@
+Wed May 28 13:14:35 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/nirvana/VC7_Core.xml: Changed the target sln
+	  filenames.  MPC now generates workspace names using different rules.
+
 Wed May 28 08:35:05 2003  Simon McQueen  <sm@prismtechnologies.com>
 
         * make_pretty.pl:

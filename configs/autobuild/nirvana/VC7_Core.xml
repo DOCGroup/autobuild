@@ -18,8 +18,8 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="vc7make"           options="/clean debug ACE_wrappers.sln" />
-    <command name="vc7make"           options="/clean debug TAO/orbsvcs/orbsvcs.sln" />
+    <command name="vc7make"           options="/clean debug vc7_nightly.sln" />
+    <command name="vc7make"           options="/clean debug TAO/orbsvcs/vc7_orbsvcs.sln" />
     <command name="shell" options="call G:\bugzilla\VC7.NET\cleanup.cmd" />
 
     <command name="log"               options="ON" />
@@ -33,8 +33,8 @@
 
     <command name="generate_workspace" options="-type vc7 vc7_nightly.mwc" />
     <command name="generate_workspace" options="-type vc7 TAO/orbsvcs/vc7_orbsvcs.mwc" />
-    <command name="vc7make"           options="/build debug ACE_wrappers.sln" />
-    <command name="vc7make"           options="/build debug TAO/orbsvcs/orbsvcs.sln" />
+    <command name="vc7make"           options="/build debug vc7_nightly.sln" />
+    <command name="vc7make"           options="/build debug TAO/orbsvcs/vc7_orbsvcs.sln" />
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
