@@ -622,8 +622,9 @@ package Prettify;
 
 use strict;
 use warnings;
+use FindBin;
 use common::parse_compiler_output;
-use base qw(parse_compiler_output);
+use base qw(common::parse_compiler_output);
 
 use Data::Dumper;
 use File::Basename;

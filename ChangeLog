@@ -1,3 +1,8 @@
+Tue Nov 16 08:24:27 2004  Carlos O'Ryan  <coryan@atdesk.com>
+
+	* common/prettify.pm:
+	  Fixed search path for the parse_compiler_output module.
+
 Tue Nov 16 08:24:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
