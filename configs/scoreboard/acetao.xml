@@ -50,5 +50,6 @@
          <build>
              <name>SunOS_GCC_2_95</name>
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/tango_SUNOS_GCC_2_95</url> 
+i        </build>
     </group>
 </scoreboard>
