@@ -1,3 +1,8 @@
+Thu Mar 10 09:59:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/atc/VxWorks.xml:
+          Fixed several issues in this file
+
 Thu Mar 10 09:55:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace_isis/*.xml:
