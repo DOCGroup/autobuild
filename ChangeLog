@@ -1,3 +1,10 @@
+Sun Jan  2 16:34:53 2005  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/scoreboard/tao_dre.sh:
+
+	  Prevented the buildmatrix scripts from running since it was
+	  consuming lots of memory.
+
 Sun Jan  2 13:45:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
