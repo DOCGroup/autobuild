@@ -12,7 +12,7 @@
         <variable name="root"     value="/home/build/ACE/KylixACE/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/KylixACE/" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
 

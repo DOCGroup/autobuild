@@ -11,7 +11,7 @@
         <variable name="root"     value="/build/isisbuilds/Core/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/tango_Core" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux Exceptions" />
         <variable name="MAIL_ADMIN" value="devo_group@cs.wustl.edu" />
     </configuration>
 

@@ -12,7 +12,7 @@
         <variable name="sam_root" value="/home/jcohen/ACE_2.6.0-test4/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/jcohen/ACE_2.6.0-test4/buildlog" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux Exceptions" />
         <variable name="MAIL_ADMIN" value="jcohen@atl.lmco.com" />
 
     </configuration>

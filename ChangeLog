@@ -1,3 +1,34 @@
+Fri Sep 26 15:17:19 2003  Irfan Pyarali  <irfan@oomworks.com>
+
+	* Linux builds have exceptions enabled by default.  Therefore,
+	  added the "Exceptions" config option to the following autobuild
+	  file so that tests that require native exceptions can be
+	  excuted:
+
+	  - ace_isis/RH8_Minimum.xml
+	  - atl/2.6.0.test4-lksctp.xml
+	  - atl/2.6.0.test4.xml
+	  - atl/RH9-2.4.20-18.9-SCTP.xml
+	  - balar/Debian_Core.xml
+	  - balar/Debian_Minimum.xml
+	  - beguine/Redhat_7.1_No_AMI_Messaging.xml
+	  - dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml
+	  - dresystems/skoll_1.xml
+	  - dresystems/skoll_2.xml
+	  - flamenco/compiletime_metrics.xml
+	  - hokey/jRate.xml
+	  - hokey/javart-jRate.xml
+	  - hokey/javart-jvm.xml
+	  - hokey/javart-rtsj.xml
+	  - remedynl/GCC32.xml
+	  - remedynl/GCCACE.xml
+	  - remedynl/Kylix3.xml
+	  - remedynl/Kylix3ACE.xml
+	  - skukuza/skoll_3.xml
+	  - tango_isis/Debian_Core.xml
+	  - tango_isis/Debian_ORB_Core.xml
+	  - toutatis/IA64_GCC3.1.xml	
+
 Thu Sep 25 17:24:43 2003  Irfan Pyarali  <irfan@oomworks.com>
 
 	* configs\autobuild:
