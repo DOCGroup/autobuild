@@ -1,3 +1,10 @@
+Wed Aug  6 11:01:29 2003  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/prettify.pm:
+
+          Added a regular expression to detect the .depend.* warnings and
+          output them as normal text.
+
 Wed Aug  6 01:03:14 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/check_compiler.pm:
@@ -26,22 +33,22 @@ Tue Aug  5 18:07:28 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
 Tue Aug  5 11:38:00 2003  Justin Michel  <michel_j@ociweb.com>
 
-	* command/create_ace_build.pm:
+        * command/create_ace_build.pm:
 
           Fixed bug on unixes using mkpath.
 
 Mon Aug  4 13:30:00 2003  Justin Michel  <michel_j@ociweb.com>
 
-	* command/create_ace_build.pm:
- 	* command/process_logs.pm:
-	* command/status.pm:
+        * command/create_ace_build.pm:
+        * command/process_logs.pm:
+        * command/status.pm:
 
-	  Changes to allow use of autobuild without first having to set 
-        up any directories. 
+          Changes to allow use of autobuild without first having to set
+        up any directories.
 
 Mon Aug  4 09:40:00 2003  Justin Michel  <michel_j@ociweb.com>
 
-	* command/create_ace_build.pm:
+        * command/create_ace_build.pm:
 
           Removed requirement that build_path must exist. It will be
         created or updated by this command.
@@ -99,17 +106,17 @@ Thu Jul 31 14:15:48 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
 Thu Jul 31 09:52:39 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml: Changed
-	  to-build ACE and RMCast project names from old style to new (upper
-	  case, and doesn't say "DLL") to match recent MPC changes.
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml: Changed
+          to-build ACE and RMCast project names from old style to new (upper
+          case, and doesn't say "DLL") to match recent MPC changes.
 
 Thu Jul 31 09:05:31 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
-	* configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
-	  Changed PATH to reference ACE_wrappers\lib, not ACE_wrappers\bin.
-	  Necessary from recent MPC changes that moved the DLLs.
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
+          Changed PATH to reference ACE_wrappers\lib, not ACE_wrappers\bin.
+          Necessary from recent MPC changes that moved the DLLs.
 
 Tue Jul 29 07:15:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -148,13 +155,13 @@ Sun Jul 27 17:07:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Jul 25 16:44:05 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/index.xml: Added reference to the Stats
-	  pages.
+        * configs/scoreboard/index.xml: Added reference to the Stats
+          pages.
 
 Thu Jul 24 09:38:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/SunForte.xml: Added a few nice
-	  options to the build.
+        * configs/autobuild/remedynl/SunForte.xml: Added a few nice
+          options to the build.
 
 Thu Jul 24 06:19:53 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -170,13 +177,13 @@ Wed Jul 23 13:01:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Jul 23 08:31:29 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
-	* configs/autobuild/riverace/benjamin_dev_debug.xml:
-	* configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml: Specify
-	  log cleanup of 7 days, overriding the default of 10. Experimenting
-	  to keep the disk space down on the web server.
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml: Specify
+          log cleanup of 7 days, overriding the default of 10. Experimenting
+          to keep the disk space down on the web server.
 
 Mon Jul 21 19:01:21 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -222,9 +229,9 @@ Fri Jul 11 17:51:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Jul  2 11:20:31 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
-	  Commented out the test run - the unit to run the tests is out of
-	  the office for an extended time.
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+          Commented out the test run - the unit to run the tests is out of
+          the office for an extended time.
 
 Sun Jun 29 09:45:14 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -241,19 +248,19 @@ Fri Jun 27 09:53:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Jun 26 13:40:42 2003  Chris Cleeland  <cleeland_c@ociweb.com>
 
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
 
-	  Turned off optimizations on this build so that it will complete
-	  quicker.
+          Turned off optimizations on this build so that it will complete
+          quicker.
 
-	* configs/scoreboard/tao.xml:
-	* configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
 
-	  Moved the following builds from the main scoreboard to the
-	  future scoreboard: SunOS_FORTE_UP_1, WinXP_MSVC6_Legacy,
-	  WinXP_MSVC6_Unicode, WinXP_MSVC6_Lib_Debug,
-	  WinXP_MXVC6_Lib_Release.  None have run for over a month.  If
-	  they come active again, we can move them back.
+          Moved the following builds from the main scoreboard to the
+          future scoreboard: SunOS_FORTE_UP_1, WinXP_MSVC6_Legacy,
+          WinXP_MSVC6_Unicode, WinXP_MSVC6_Lib_Debug,
+          WinXP_MXVC6_Lib_Release.  None have run for over a month.  If
+          they come active again, we can move them back.
 
 Thu Jun 26 17:07:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -291,7 +298,7 @@ Wed Jun 25 19:45:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
         * configs/scoreboard/tao.xml:
 
           Added atl subdir, and RedHat 9.0 with SCTP support turned on.
-	  Also added to Linux section of tao.xml for scoreboard.
+          Also added to Linux section of tao.xml for scoreboard.
 
 Wed Jun 25 11:56:47 2003  Chad Elliott  <elliott_c@ociweb.com>
 
