@@ -235,12 +235,6 @@ all the OS/platform combinations TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MingW_GCC_3_2_3(MPC)</name>
-            <url>http://www.dre.vanderbilt.edu/~willemsenj/MinGW</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinNT4_Cygwin_GCC_3_2_3(MPC)</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/Cygwin</url>
             <build_sponsor>Remedy IT</build_sponsor>
