@@ -11,7 +11,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/maglor_Static" />
         <variable name="configs"  value="Linux STATIC" />
-        <variable name="MAIL_ADMIN"  value="devo_group@cs.wustl.edu" /> 
+        <variable name="MAIL_ADMIN"  value="bugzilla@cs.wustl.edu" /> 
 
     </configuration>
 

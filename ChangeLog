@@ -1,3 +1,8 @@
+Tue Sep 10 10:32:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/maglor/Static.xml: Do not send the mail to the
+	  devo_group. Just send the mail to bugzilla account!
+
 Mon Sep  3 15:27:22 2002 Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/valinor/Full.xml (PLATFORM_TK_LIBS):
