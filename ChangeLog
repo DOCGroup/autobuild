@@ -1,3 +1,13 @@
+Wed Aug 11 11:52:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+          Create a default.features file with ssl=1 and added missing ssl=1 to
+          platform_macros.GNU file. All these builds had SSL in the Config list
+          but didn't build with ssl enabled
+
 Wed Aug 11 10:34:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCC32.xml:
