@@ -10,10 +10,8 @@ export CVS_RSH
 
 cd $HOME/ACE/autobuild
 
-cvs -d :ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
+cvs -z9 up -P -d
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/GCC32.xml
+$HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc4a.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/driverpc4b.sh
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/Kylix3.xml
