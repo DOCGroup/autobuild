@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="D:\bugzilla\XML_Debug\ACE_wrappers" />
+        <environment name="ACE_RUNTEST_SVCCONF_EXT"         value=".conf.xml" />
         <environment name="Path"         value="D:\bugzilla\XML_Debug\ACE_wrappers\bin;" type="prefix" />
 
         <variable name="root"     value="D:/bugzilla/XML_Debug/" />
