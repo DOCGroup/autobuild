@@ -1,3 +1,9 @@
+Thu Jan 15 17:41:26 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Removed the Windows NT4 MSVC6 and BCB5
+	  builds. Riverace doesn't support NT after ACE 5.3, and doesn't
+	  support BCB5 at all any longer.
+
 Thu Jan 15 16:18:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
