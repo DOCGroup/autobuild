@@ -28,7 +28,7 @@
     <command name="print_os_version" />
     <command name="check_compiler"    options="aCC" />
     <command name="print_ace_config" />
-    <command name="configure"         options="CC=aCC --preclean" />
+    <command name="configure"         options="CXX=aCC --preclean" />
     <command name="file_manipulation" options="type=create file=build/acc_debug/.disable output='RUNNING'" />
 
     <command name="make"              options="-j 2 -k" />
