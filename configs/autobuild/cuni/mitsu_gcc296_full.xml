@@ -1,0 +1,47 @@
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/home/autobuild/src/ACE_wrappers/build/gcc296_full" />
+        <environment name="CVSROOT"         value=":pserver:anonymous@anoncvs.ociweb.com:/cvs" />
+        <environment name="LD_LIBRARY_PATH" value="/home/autobuild/src/ACE_wrappers/build/gcc296_full/ace" />
+
+        <variable name="root"         value="/home/autobuild/src/ACE_wrappers"/>
+        <variable name="build_name"   value="gcc296_full" />
+        <variable name="project_root" value="build/gcc296_full" />
+        <variable name="log_file"     value="gcc296_full.log" />
+        <variable name="log_root"     value="/home/autobuild/log/mitsu/gcc296_full" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="cvs"               options="-z 9 -q update -P -d ." />
+
+    <command name="file_manipulation" options="type=delete file=.disable" />
+
+    <command name="file_manipulation" options="type=mustnotexist file=build/gcc296_full/.disable" />
+    <command name="create_ace_build"  options="-a -v" />
+    <command name="file_manipulation" options="type=create file=build/gcc296_full/.disable output='RUNNING'" />
+
+    <command name="file_manipulation" options="type=create file=build/gcc296_full/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/gcc296_full/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\n\nCC=gcc296\nCXX=g++296\nPLATFORM_SSL_CPPFLAGS := $(shell pkg-config --cflags openssl)\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler"    options="g++296" />
+    <command name="print_ace_config" />
+
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="-j 4 -k" />
+    <command name="make"              options="-j 4 -k -C TAO" />
+
+    <command name="auto_run_tests"    options="" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=build/gcc296_full/.disable" />
+    <command name="status"            options="off" />
+</autobuild>
