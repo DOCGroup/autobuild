@@ -210,13 +210,13 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_DLL_Debug</name>
+            <name>WinXP_MSVC6_SP5_DLL_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVCdd</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MSVC6_DLL_Release</name>
+            <name>WinXP_MSVC6_SP5_DLL_Release</name>
             <url>http://www.dre.vanderbilt.edu/~willemsenj/MSVCdr</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
