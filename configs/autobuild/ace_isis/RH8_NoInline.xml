@@ -47,7 +47,7 @@
 
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
-    <command name="make"              options="-j 2 -k -C CIAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
     <command name="auto_run_tests"    options="" />
 
     <command name="log"               options="off" />
