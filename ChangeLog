@@ -1,3 +1,17 @@
+Wed Apr 16 13:02:16 2003  Irfan Pyarali  <irfan@oomworks.com>
+
+	* configs/autobuild/nirvana/DLL_Release.xml:
+	* configs/autobuild/nirvana/W4_Debug.xml:
+	* configs/autobuild/nirvana/XML_Debug.xml:
+	* configs/autobuild/tao/Borland.xml:
+	* configs/autobuild/tao/Borland_wchar.xml:
+	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/tao/Purify.xml:
+
+	  auto_run_tests.pl was only being run with the -a and -t options,
+	  but not the -o option.  Thus all the tests in tao_orb_tests.lst
+	  were being skipped.
+	
 Wed Apr 16 11:59:58 2003  Build Account  <isisbuilds@tango.dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Added the new build to the
