@@ -36,8 +36,46 @@ sub CheckRequirements ()
 sub Run ($)
 {
     my $self = shift;
+    my $options = shift;
+    my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
-    my $cidlc_program = "ACE_wrappers/TAO/CIAO/bin/cidlc";
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
+    }
+
+    if (!-r $root || !-d $root) {
+        mkpath($root);
+    }
+
+    # chop off trailing slash
+    if ($root =~ m/^(.*)\/$/) {
+        $root = $1;
+    }
+
+    my $current_dir = getcwd ();
+
+    if (!chdir $root) {
+          print STDERR __FILE__, ": Cannot change to $root or $ENV{'ROOT'}\n";
+          return 0;
+    }
+
+    if (!chdir $ENV{'ACE_ROOT'} )
+    {
+        if (!chdir $project_root) {
+            print STDERR __FILE__, ": Cannot change to $project_root or $ENV{'ACE_ROOT'}\n";
+            return 0;
+        }
+    }
+
+    my $cidlc_program = "TAO/CIAO/bin/cidlc.exe";
 
     main::PrintStatus ('Config', "print cidlc version" );
 
@@ -47,7 +85,11 @@ sub Run ($)
 
     my $command = "$cidlc_program --version";
 
-    system($command);
+    if (-r $cidlc_program) {
+      system($command);
+    }
+
+    chdir $current_dir;
 
     return 1;
 }
