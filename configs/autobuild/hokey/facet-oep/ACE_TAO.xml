@@ -21,7 +21,7 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <command name="cvs"               options="-q checkout -P OEP_B2_4" />
-    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-boeing-OEP/RTEvent/tao-facet-adapter && ./setup.sh'" />
+    <command name="shell" options="/bin/csh -c 'cd /export/home/bugzilla/facet-boeing-OEP/RTEvent/tao-facet-adapter && ./boeing.sh'" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
