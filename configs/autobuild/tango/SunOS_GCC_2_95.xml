@@ -18,23 +18,19 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-<!--    <command name="sam" options="clean" /> -->
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-<!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_ONLY_LATEST_AND_GREATEST\n#include \x22ace/config-sunos5.7.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\nxt_reactor=0\nfl_reactor=0\nPLATFORM_XT_CPPFLAGS=\nPLATFORM_XT_LIBS=-lXt -lICE -lSM\nPLATFORM_XT_LDFLAGS=\nPLATFORM_FL_CPPFLAGS=-I/project/doc/pkg/fltk-1.0.3/include\nPLATFORM_FL_LIBS=-lfltk -lXext\nPLATFORM_FL_LDFLAGS=-L/project/doc/pkg/fltk-1.0.3/solaris7-sparc-egcs/lib\n\nPLATFORM_X11_CPPFLAGS=-I/project/doc/pkg/X11/include\nPLATFORM_X11_LIBS=-lX11\nPLATFORM_X11_LDFLAGS=-L/project/doc/pkg/X11/lib\nPLATFORM_GL_CPPFLAGS=\nPLATFORM_GL_LIBS=-lMesaGL\nPLATFORM_GL_LDFLAGS=\n'" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
-<!--    <command name="sam"               options="create" /> -->
-<!--    <command name="sam"               options="sam" /> -->
 
     <command name="make"              options="-j 2 -k realclean" />
     <command name="make"              options="-j 2 -k -C TAO realclean" />
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
 
-    <command name="auto_run_tests"    options="" />
+    <command name="auto_run_tests"    />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
