@@ -2,14 +2,16 @@
 <autobuild>
  <configuration>
 
-  <environment name="ACE_ROOT"         value="/export/home/dhinton/development/ace/autobuilds/sol9_spro54/ACE_wrappers" />
-  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/export/home/dhinton/development/ace/autobuilds/sol9_spro54/ACE_wrappers/lib" />
+  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_tao/ACE_wrappers" />
+  <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_tao/ACE_wrappers/TAO"/>
+  <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/export/home/dhinton/development/ace/autobuilds/freedsb_tao/ACE_wrappers/lib" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
-  <variable name="root"                value="/export/home/dhinton/development/ace/autobuilds/sol9_spro54" />
+  <variable name="root"                value="/home/dhinton/development/ace/autobuilds/freebsd_tao" />
   <variable name="log_file"            value="build.txt" />
-  <variable name="log_root"            value="/export/home/dhinton/public_html/autobuild_output/sol9_spro54_ace" />
+  <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_tao" />
+  <variable name="make_program"        value="gmake" />
 
  </configuration>
 
@@ -17,28 +19,37 @@
  <command name="file_manipulation"     options="type=mustnotexist file=.disable" />
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
+
  <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
  <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
  <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
  <!-- Now, delete them again to insure a clean slate. -->
  <command name="shell"                 options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-freebsd.h\x22\n#define TAO_HAS_SHMIOP 0\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
 
  <command name="print_os_version" />
- <command name="check_compiler"        options="sun_cc" />
+ <command name="check_compiler"        options="gcc" />
  <command name="print_ace_config" />
 
  <!-- Uses ACE.mwc -->
  <command name="generate_workspace"    options="-recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+ <!-- Uses TAO/TAO.mwc -->
+ <command name="generate_workspace"    options="dirs=TAO -recurse=TAOACE.mwc,CIAO -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
  <command name="make"                  options="-k" />
 
- <command name="auto_run_tests"        options="-a"/>
+ <!-- TAO -->
+ <command name="make"                  options="-k -C TAO realclean" />
+ <command name="make"                  options="-k -C TAO/TAO_IDL" />
+ <command name="make"                  options="-k -C TAO idl_stubs" />
+ <command name="make"                  options="-k -C TAO" />
+
+ <command name="auto_run_tests"        options=""/>
 
  <command name="log"                   options="off" />
  <command name="process_logs"          options="clean move prettify index" />

@@ -1,3 +1,20 @@
+Tue Aug 26 16:58:09 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/sol9_gcc33_tao_legacy.xml:
+        * configs/autobuild/dresystems/sol9_gcc33_tao.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao_legacy.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao.xml:
+        * configs/autobuild/dresystems/freebsd_gcc33_tao_legacy.xml:
+        * configs/autobuild/dresystems/freebsd_tao.xml:
+          Removed the legacy builds and added the new mpc based ones.
+
+        * configs/autobuild/dresystems/sol9_gcc33.xml:
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+          Removed use of build directory;  uses generate_workspace.pm.
+
+        * configs/scoreboard/tao.xml:
+          Changed the paths in the builds noted above.
+
 Tue Aug 26 13:09:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/Cygwin.xml:

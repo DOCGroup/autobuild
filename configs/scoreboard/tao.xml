@@ -10,8 +10,8 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
   <name>BSD</name>
    <build>
-      <name>FreeBSD_5.0_GCC_3.2</name>
-      <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_gcc33_tao_legacy</url>
+      <name>FreeBSD_5.0_GCC_3.2_(MPC)</name>
+      <url>http://www2.dresystems.com:8091/autobuild_output/freebsd_tao</url>
       <build_sponsor>DRE Systems</build_sponsor>
       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
       <orange>30</orange>
@@ -244,16 +244,16 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris_9_Forte7</name>
-      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_spro54_tao_legacy</url>
+      <name>Solaris_9_Forte7_(MPC)</name>
+      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_spro54_tao</url>
       <build_sponsor>DRE Systems</build_sponsor>
       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
       <orange>30</orange>
       <red>36</red>
    </build>
    <build>
-      <name>Solaris_9_GCC_3.3</name>
-      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_gcc33_tao_legacy</url>
+      <name>Solaris_9_GCC_3.3_(MPC)</name>
+      <url>http://www2.dresystems.com:8092/autobuild_output/sol9_gcc33_tao</url>
       <build_sponsor>DRE Systems</build_sponsor>
       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
       <orange>30</orange>
