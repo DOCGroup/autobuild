@@ -11,8 +11,6 @@
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
-	<environment name="BUILD"    value="all" />
-
         <variable name="root"     value="D:\ACE\MingW\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\ACE\MingW\" />

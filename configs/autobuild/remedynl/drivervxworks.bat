@@ -1,3 +1,4 @@
+del c:\ACE\VxWorks\.disable
 cd ..\..\..\
 set CVS_RSH=ssh
 cvs -d :ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
