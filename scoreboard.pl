@@ -54,15 +54,15 @@ my $red_default = 48;
 my $preamble = "This is the ACE/TAO virtual scoreboard.  It shows all
 the OS/platform combinations ACE/TAO are tested against everyday, all
 over the world.  We have builds running continuously at <A
-HREF="http://tao.doc.wustl.edu/">Washington University, St. Louis</A>,
-<A HREF="http://doc.ece.uci.edu/">University of California,
-Irvine</A>, <A HREF="http://www.isis.vanderbilt.edu">Vanderbilt
+HREF=\"http://tao.doc.wustl.edu/\">Washington University, St. Louis</A>,
+<A HREF=\"http://doc.ece.uci.edu/\">University of California,
+Irvine</A>, <A HREF=\"http://www.isis.vanderbilt.edu\">Vanderbilt
 University</a>, <A
-HREF="http://www.dist-systems.bbn.com/projects/">BBN Technologies</A>,
-<A HREF="http://www.theaceorb.nl">Remedy IT</A>, ObjectSciences, and
+HREF=\"http://www.dist-systems.bbn.com/projects/\">BBN Technologies</A>,
+<A HREF=\"http://www.theaceorb.nl\">Remedy IT</A>, ObjectSciences, and
 hunleth.com. <P> If you'd like to contribute builds to our virtual
 scoreboard please contact <A
-HREF="mailto:devo_group@cs.wustl.edu">us</A> and let us know which
+HREF=\"mailto:devo_group@cs.wustl.edu\">us</A> and let us know which
 platform combinations you can contribute.";
 
 ###############################################################################
