@@ -94,7 +94,23 @@ sub Run ($)
     }
 
     print "Running: $command\n";
-    system ($command);
+
+    my $ret = system ($command);
+
+    if( $ret != 0  )
+    {
+        my $working_dir = getcwd();
+
+        ## If we used 'make -C' to change the directory, let's
+        ## append that information to the working_dir, so that we generate
+        ## a more accurate error message.
+        if( $command =~ /\-C\s+([\w\/]+)/  )
+        {
+            $working_dir = "$working_dir/$1"; 
+        }
+
+        print "[BUILD ERROR detected in $working_dir]\n ";
+    } 
 
     chdir $current_dir;
 

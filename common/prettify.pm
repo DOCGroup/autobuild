@@ -21,12 +21,13 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . "_Full.html";
-    
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+
+    @{ $self->{BUILD_ERROR_COUNTER} }= ();
 
     bless ($self, $class);
     return $self;
@@ -824,6 +825,10 @@ sub Compile_Handler ($)
         # for the timebeing
         $self->Output_Normal ($s);
     }
+    elsif ($s =~ m/(BUILD ERROR detected in [\w\/]+)/ ) {
+        push( @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}}, $1 );
+        $self->Output_Error ($s);
+    }
     elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/) {
         # Definately an error
         $self->Output_Error ($s);
@@ -929,8 +934,17 @@ sub Test_Handler ($)
     }
 }
 
+sub BuildErrors ($)
+{
+     my $self = shift;
+     return @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}};
+}
+
 ###############################################################################
 # Exposed subroutines
+#
+# In this function we process the log file line by line, 
+# looking for errors.
 
 sub Process ($)
 {
@@ -945,7 +959,19 @@ sub Process ($)
     while (<$input>) {
         chomp;
         $processor->Process_Line ($_);
-    }    
+    }
+
+    # When we finish processing each line of the log file,
+    # if we detect any BUILD ERROR messages, send an e-mail
+    # notification if MAIL_ADMIN was specified in the XML config 
+    # file.
+
+    my @errors = $processor->BuildErrors();
+    my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
+    if ( (scalar( @errors ) > 0) && (defined $mail_admin) )
+    { 
+        $processor->SendEmailNotification();
+    } 
 }
 
 sub WriteLatest($)
@@ -959,6 +985,23 @@ sub WriteLatest($)
     print $output "Latest logfile = $filename\n";
 }
 
+sub SendEmailNotification($)
+{
+    my $self = shift;
 
+    my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
+    my @errors = $self->BuildErrors();
+
+    ## Combine the array of errors into one string which we can put in an e-mail
+    my $errors_string = join("\n", @errors );
+
+    Mail::send_message($mail_admin, 
+                       "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
+                       scalar(@errors)." errors detected during while executing the build in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
+                       "Please check the scoreboard for details.\n\n".
+                        $errors_string 
+                      ); 
+
+}
 
 1;

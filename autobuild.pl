@@ -10,8 +10,9 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 use FindBin;
 use lib $FindBin::Bin;
 use common::simpleparser;
-
+use diagnostics;
 use Time::Local;
+use File::Basename;
 
 my $status_file = '';
 my $build_start_time = scalar gmtime(time());
@@ -115,7 +116,7 @@ sub PrintStatus ($$)
 #
 # Load the commands here
 #
-
+require common::mail;
 require command::auto_run_tests;
 require command::cvs;
 require command::file_manipulation;
@@ -139,6 +140,10 @@ my $parser = new SimpleParser;
 foreach my $file (@files) {
     print "Parsing file: $file\n" if ($verbose);
     $parser->Parse ($file, \%data);
+
+    ## Put the name of the file we are parsing into a global variable
+    ## named BUILD_CONFIG_FILE. 
+    %data->{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename( $file );
 
     print "\nSetting Enviroment variables\n" if ($verbose);
     

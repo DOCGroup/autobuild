@@ -123,6 +123,18 @@ MISCELLANEOUS NOTES
    Will invoke: auto_run_tests.pl -Config Linux -Config ST
 
 
+E-MAIL NOTIFICATION
+===================
+
+Preliminary e-mail notification support has been added.  It is still a work in
+progress.  Unix supported only for now, NT support on the way.
+
+(1)  Add the following line to the configuration file:
+
+     <variable name="MAIL_ADMIN"  value="myname@myhost.com" />
+
+     When build errors are detected, an e-mail will be sent to myname@myhost.com 
+
 <CODE>$Id$</CODE>
 */
 
