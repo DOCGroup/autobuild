@@ -42,9 +42,9 @@ sub Run ($)
 
     print "================ Compiler version ================\n";
 
-    if($compiler =~ m/^(gcc|g\+\+|ccsimpc)/){
+    if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc)/){
         system($compiler." -v 2>&1");
-      if($compiler =~ m/^(gcc|g\+\+)/){
+      if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9])/){
           my $linker = `$compiler -print-prog-name=ld`;
           chomp $linker;
           if($linker eq "ld"){
@@ -62,16 +62,16 @@ sub Run ($)
         system("g++ -v -mno-cygwin");
     }
     elsif(lc $compiler eq "borland"){
-	system("bcc32 -V"); 
+	system("bcc32 -V");
     }
     elsif(lc $compiler eq "cbx"){
-	system("bccx --version"); 
+	system("bccx --version");
     }
     elsif(lc $compiler eq "kylix"){
-	system("bc++ -V"); 
+	system("bc++ -V");
     }
     elsif(lc $compiler eq "dm"){
-	system("scppn"); 
+	system("scppn");
     }
     elsif(lc $compiler eq "msvc"){
         system("cl /V");
@@ -80,10 +80,10 @@ sub Run ($)
         system("cxx/VERSION");
     }
     elsif(lc $compiler eq "cxx"){
-        system("cxx -V"); 
+        system("cxx -V");
     }
     elsif(lc $compiler eq "acc"){
-        system("aCC -V"); 
+        system("aCC -V");
     }
     elsif(lc $compiler eq "mipspro"){
         system("CC -version");
@@ -110,7 +110,7 @@ sub Run ($)
     }
     else{
         print "ERROR: I cannot figure out what compiler you are ";
-        print "using!!\nSee check_compiler.pm for more details.\n"; 
+        print "using!!\nSee check_compiler.pm for more details.\n";
     }
     return 1;
 }

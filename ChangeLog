@@ -1,3 +1,16 @@
+Thu May  6 17:36:56 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* command/check_compiler.pm (Run):
+
+	  Improved regex to catch GNU C++ compilers with names like
+	  "g++-3.4" and "g++296", which is not uncommon on hosts with
+	  multiple versions of the same compiler.
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Removed compiler path from the "check_compiler" command.
+	  `check_compiler.pm' doesn't recognize paths.
+
 Thu May  6 17:11:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* common/prettify.pm (Compile_Handler):
