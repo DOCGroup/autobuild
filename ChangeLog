@@ -1,3 +1,12 @@
+Thu May 13 14:59:29 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Removed "/usr/include/linux" from the beginning of the include
+	  path.  It isn't needed and only served to intefere/conflict with
+	  other system headers.  Addresses compile-time errors in this
+	  build.
+
 Thu May 13 07:48:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/VxWorks.xml:
