@@ -1,3 +1,7 @@
+Wed Apr 16 14:04:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml: Fixed a syntax error.
+
 Wed Apr 16 13:02:16 2003  Irfan Pyarali  <irfan@oomworks.com>
 
 	* configs/autobuild/nirvana/DLL_Release.xml:
