@@ -1,3 +1,9 @@
+Wed Jul  2 11:20:31 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+	  Commented out the test run - the unit to run the tests is out of
+	  the office for an extended time.
+
 Sun Jun 29 09:45:14 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:

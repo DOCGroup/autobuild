@@ -32,7 +32,7 @@
     <command name="file_manipulation" options="type=create file=copy_ace.cmd output='copy c:\ace\ACE_wrappers-repository\bin\ARM\ACEd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\tests\Config_Test_Import_1.ini 1:\ \ncopy c:\ace\ACE_wrappers-repository\bin\ARM\DLL_Testd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\bin\ARM\Service_Config_DLLd.dll 1:\Windows\ncopy c:\ace\ACE_wrappers-repository\bin\ARM\Framework_Component_DLLd.dll 1:\Windows\nreset /s\n'" />
     <command name="shell"             options="pocketcontroller -m NAME=copy_ace.cmd" />
     <command name="file_manipulation" options="type=delete file=copy_ace.cmd" />
-    <command name="auto_run_tests"    options="-a -Config Win32 -Config WinCE -ExeSubDir ARM" />
+    <!-- command name="auto_run_tests"    options="-a -Config Win32 -Config WinCE -ExeSubDir ARM" -->
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
