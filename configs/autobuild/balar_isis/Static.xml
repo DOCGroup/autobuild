@@ -5,10 +5,11 @@
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Static/ACE_wrappers/lib:." />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Static/ACE_wrappers/lib:/usr/local/lib:." />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="LD_ASSUME_KERNEL"         value="2.4.19" />
         <environment name="CVS_RSH"         value="ssh" />
+        <environment name="XERCESCROOT"         value="/usr/include" />
 
         <variable name="root"     value="/build/isisbuilds/Static" />
         <variable name="log_file" value="build.txt" />
