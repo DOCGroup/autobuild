@@ -1,3 +1,9 @@
+Thu Oct 17 12:16:31 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/rumba/Debian_WChar.xml: Removed
+	  threads=0. This build shold not do many many things. Just do one
+	  thing that needs testing.
+
 Mon Oct 14 00:36:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/doc/auto_doxygen.pl: Added.
