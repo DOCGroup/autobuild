@@ -1,3 +1,9 @@
+Thu Aug 12 07:18:48 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/tango_isis/Debian_Core.xml:
+
+	  Do not build CIDLC in this build.
+
 Wed Aug 11 21:41:33 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/scoreboard/tao.xml:
