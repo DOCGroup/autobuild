@@ -1,3 +1,9 @@
+Thu Apr 29 06:58:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/cbxdd.xml:
+          Don't build TAO/CIAO/DnC, it used Xerces and I have not installed
+          that
+
 Wed Apr 28 15:51:39 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/jane_dev_debug.xml: Converted to check out
