@@ -5,10 +5,7 @@ It shows all the OS/compiler  combinations that Facet are tested against
 everyday, all over the world.  We have builds running continuously at 
 Washington University, St. Louis.
 <p>
-The distributed scoreboard is divided into following five
-categories: 
-<li><a href="./facet.html"> Facet Builds</a></li>
-<li><a href="./tao-facet-adapter.html"> TAO-Facet-Adapter</a> </li>
+<a href="./facet.html">Facet Builds</a>
 </p>
 
 <p>
