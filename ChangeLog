@@ -1,3 +1,13 @@
+Wed Jan 14 18:36:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/Cygwin.xml:
+	* configs/autobuild/remedynl/CygwinGCC32.xml:
+	  Exclude the directory apps/gperf/tests from the MPC generation. The
+	  running of these tests gives problems that only occur on the build
+	  systems, but not on my own system. So disabled this because we now
+	  have errors which are not really there. If I have time I will have
+	  a look at this later.
+
 Wed Jan 14 14:04:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
