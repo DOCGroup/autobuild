@@ -1,3 +1,11 @@
+Mon Jun 21 10:31:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+          Removed WAEI builds, they are offline already a long time
+
+        * configs/scoreboard/index.xml:
+          Removed WAEI, they are not delivering any builds anymore.
+
 Mon Jun 21 10:25:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:
