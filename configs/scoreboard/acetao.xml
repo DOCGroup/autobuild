@@ -119,8 +119,12 @@
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
         </build>
         <build>
-            <name>WinNT4_BCB5_Static_Debug_(remedy.nl)</name>
+            <name>WinNT4_BCB5_Ent_Static_Debug_(remedy.nl)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB5_Static_Debug</url>
+        </build>
+        <build>
+            <name>Win2K_BCB6_Pro_Dynamic_Debug_(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug</url>
         </build>
         <build>
             <name>WinXP_Legacy</name>

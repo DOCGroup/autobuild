@@ -1,3 +1,15 @@
+Wed Oct  2 12:01:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Added BCB6 Pro build
+
+        * configs/autobuild/remedynl/dobuildpc3.bat:
+        * configs/autobuild/remedynl/driverbuildpc3.bat:
+        * configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
+          Added new XML config file for a new build pc we are running
+          at our location in Maarsbergen, The Netherlands. This test
+          server will run builds only at night.
+
 Wed Oct  2 02:58:36 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/process_logs.pm: Remove extraneous print statement.
@@ -10,7 +22,7 @@ Wed Oct  2 00:49:10 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	* command/process_logs.pm:
 	* command/status.pm:
 	  Remove extraneous print statements.
-	  Check $main::verbose before printing a few other 
+	  Check $main::verbose before printing a few other
 	  messages.  This should prevent unnecessary messages
 	  from being emitted when autobuild is run as a cron job.
 
@@ -29,7 +41,7 @@ Mon Sep 16 13:58:05 2002 Stephen Torri <storri@cs.wustl.edu>
 
 	* scoreboard.pl:
 
-	  Added a check to eliminate perl warning generate at 
+	  Added a check to eliminate perl warning generate at
 	  line 119. If latest.txt was not in the target directory
 	  then $latest would be undefined. This caused a perl
 	  warning for the conditional.
@@ -51,7 +63,7 @@ Fri Sep 13 22:44:39 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	* command/make.pm: Don't quit if we cannot chdir() to $project_root.
 
 	* common/prettify.pm:
-	  Enhanced e-mail notification capability: 
+	  Enhanced e-mail notification capability:
 	   - put the error messages in the e-mail
 	   - do a cvs diff on $ACE_ROOT/ChangeLog and $TAO_ROOT/ChangeLog in the
 	     past 24 hours.
