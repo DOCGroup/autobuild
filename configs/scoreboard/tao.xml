@@ -253,7 +253,7 @@ all the OS/platform combinations TAO is tested everyday.
         </build>
         <build>
             <name>WinXP_VC71_CIDLC</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/CIDLC/Win32</url>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Win32_CIDLC</url>
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
