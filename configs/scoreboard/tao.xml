@@ -46,7 +46,7 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-       <name>SUSE82_WChar</name>
+       <name>RHAS_WChar</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_wchar/</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
