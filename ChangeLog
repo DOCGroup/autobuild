@@ -1,3 +1,9 @@
+Wed Jun 23 10:41:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Tag valgrind output "are definitely lost in loss record" in the
+          test section as error
+
 Tue Jun 22 13:59:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
