@@ -1,3 +1,9 @@
+2003-04-17  Build Account  <isisbuilds@tango.dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+	* configs/autobuild/tango_isis/driver_st.sh: ST builds on
+	  curufin move in to tango at ISIS.
+
 Thu Apr 17 06:59:28 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full.xml:
