@@ -12,11 +12,11 @@
         <environment name="DEBUG"        value="1" />
 
 
-        <variable name="configs"  value="Win32 Borland Release Exceptions" />
+        <variable name="configs"  value="Win32 Borland Release Exceptions Codeguard" />
         <variable name="root"     value="C:\ACE\BCB6cg\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\BCB6cg\" />
-        <variable name="name"     value="WinXP BCB6 Code Guard" />
+        <variable name="name"     value="WinXP BCB6 Codeguard" />
     </configuration>
 
     <command name="status"            options="on" />
