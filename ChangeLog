@@ -1,3 +1,8 @@
+Thu Nov 18 10:06:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+	* command/check_compiler.pm:
+	  Change to facillitate compiler reporting with VxWorks DIAB compiler.
+
 Wed Nov 17 15:34:24 2004  Carlos O'Ryan  <coryan@atdesk.com>
 
 	* buildmatrix/buildmatrix.pl:
