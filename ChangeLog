@@ -1,22 +1,27 @@
+Wed Dec 23 07:43:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added ccpentium as compiler
+
 Wed Dec 22 11:57:44 MST 2004  Yan Dai <dai_y@ociweb.com>
 
         * configs/scoreboard/tao_dre.sh
           Passed the parameter save_flag 1 to buildmatrix.pl to generate
           compilation db files for builds.
           Added the RemoveAndListCompilationDbFiles.sh command to remove
-          the obsolete db files and give the list of available db files.  
+          the obsolete db files and give the list of available db files.
 
 Wed Dec 22 11:44:21 MST 2004  Yan Dai <dai_y@ociweb.com>
 
    	* buildmatrix/buildmatrix.pl:
 	  Added save_result function to generate a db file for each build.
-  	  Added third parameter, the save flag to generate the db files 
+  	  Added third parameter, the save flag to generate the db files
           optionally.
 	  The command line would be:
             buildmatrix.pl <$config_file> <$scoreboard_directory> [$save_flag]
 	  This defaults to not create the db file. To create db file, add any
 	  non-zero integer as the $save_flag.
-	  The db file will be output to the 
+	  The db file will be output to the
 	  $scoreboard_directory/compilation_matrix_db directory.
 
 
@@ -46,10 +51,10 @@ Wed Dec 22 11:44:21 MST 2004  Yan Dai <dai_y@ociweb.com>
 	* matrix_database/utils.py:
 
   	  These files are added or moved from testmatrix directory.
-	  These scripts are used to support both testmatrix and 
+	  These scripts are used to support both testmatrix and
 	  buildmatrix database.
           Note: Some variables are left as empty in the shell scripts,
-                they need be configurated appropriately before running 
+                they need be configurated appropriately before running
                 the scripts.
 
 	* testmatrix/CreateDBTables.py:
@@ -73,7 +78,7 @@ Wed Dec 22 11:44:21 MST 2004  Yan Dai <dai_y@ociweb.com>
         * testmatrix/GenerateTestMatrix.py:
         * testmatrix/HTMLScoreboard.py:
 
-          Added the python path so they can access the module under 
+          Added the python path so they can access the module under
           matrix_database directory.
 
 
