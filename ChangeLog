@@ -1,3 +1,15 @@
+Tue Nov 16 13:50:21 2004  Carlos O'Ryan  <coryan@atdesk.com>
+
+	* buildmatrix/buildmatrix.pl:
+	  Include the modules with the common:: prefix, that way the
+	  parse_compiler_output module is consistently 'use' and
+	  'required' in all platforms and scripts.  Hopefully this will
+	  fix the problems that Steve and Johnny are having.
+
+	* common/parse_compiler_output.pm:
+	  Changed the package name to common::parse_compiler_output
+	  because it is easier to consistently use like that.
+
 Tue Nov 16 08:24:27 2004  Carlos O'Ryan  <coryan@atdesk.com>
 
 	* common/prettify.pm:

@@ -9,10 +9,10 @@ use strict;
 use warnings;
 
 use FindBin;
-use lib "$FindBin::Bin/../common";
-use scoreparser;
+use lib "$FindBin::Bin/..";
+use common::scoreparser;
 
-use base qw(parse_compiler_output);
+use base qw(common::parse_compiler_output);
 
 use IO::File;
 use File::Path;
