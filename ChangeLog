@@ -1,3 +1,13 @@
+Fri Oct  1 20:40:36 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/balar_isis/DynamicHash.xml:
+	* configs/autobuild/balar_isis/IPV6.xml:
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	* configs/autobuild/balar_isis/Static.xml:
+	* configs/autobuild/balar_isis/wchar.xml:
+	
+          Removed unnecessary MPC arguments because of new warnings.
+
 Fri Oct  1 20:34:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/tango_isis/Debian_Core.xml:
