@@ -1,3 +1,13 @@
+Sun Sep 28 22:00:41 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Full.xml:
+	* configs/autobuild/tango_isis/SingleThreaded.xml:
+	  Disabled MPC makefile generation. Since the upcoming beta is
+	  close and is not dependant on MPC, we have a moral obligation to
+	  check our Makefiles. 
+
 Fri Sep 26 15:17:19 2003  Irfan Pyarali  <irfan@oomworks.com>
 
 	* Linux builds have exceptions enabled by default.  Therefore,
