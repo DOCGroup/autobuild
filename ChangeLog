@@ -1,3 +1,8 @@
+Sun Oct 20 09:24:29 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/tango/Debian_Noinline.xml: Removed -j 2 for
+	  realclean.
+
 Sun Oct 20 09:14:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Renamed the Redhat_Core build as
