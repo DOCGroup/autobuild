@@ -2,13 +2,13 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/builds/isisbuilds/Static/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/builds/isisbuilds/Static/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/builds/isisbuilds/Static/ACE_wrappers/ace:." />
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Static/ACE_wrappers/ace:." />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/builds/isisbuilds/Static" />
+        <variable name="root"     value="/build/isisbuilds/Static" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_Static" />
         <variable name="configs"  value="Linux STATIC SSL" />
