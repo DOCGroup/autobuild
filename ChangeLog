@@ -1,3 +1,15 @@
+Thu Jan 30 19:16:42 2003  Steve Huston  <shuston@riverace.com>
+
+        * command/configure.pm: New command to run the configure script
+
+        * autobuild.pl: Added new configure command to the requires.
+
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml: New build
+          to run using the autoconf method.
+
+        * configs/scoreboard/acetao.xml: Added RH8 autoconf build to the
+          XTest_sanity_check_not_for_release group.
+
 Thu Jan 30 18:28:33 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* scoreboard.pl:

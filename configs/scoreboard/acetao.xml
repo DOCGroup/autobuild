@@ -427,6 +427,13 @@ are also collected every day.
              <build_sponsor>BBN Technologies</build_sponsor>
              <build_sponsor_url>http://www.dist-systems.bbn.com</build_sponsor_url>
          </build>
+         <build>
+             <name>Redhat_Linux_8_Debug(autoconf)</name>
+             <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
+             <red>36</red>
+             <build_sponsor>Riverace</build_sponsor>
+             <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+         </build>
     </group>
     <group>
          <name>VxWorks</name>
