@@ -29,6 +29,8 @@
     <command name="make"              options="realclean" />
     <command name="make"              options=" rtsj" />
 
+    <command name="auto_run_tests"    options="rtsj"/>
+    
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
