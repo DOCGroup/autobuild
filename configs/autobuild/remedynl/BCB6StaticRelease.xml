@@ -1,21 +1,21 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="D:\ACE\BCB6sr\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="D:\ACE\BCB6sr\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\BCB6sr\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\BCB6sr\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~1\bin;D:\progra~\borland\cbuild~1\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\ACE\BCB6sr\ACE_wrappers\bin\Static\Release;D:\ACE\BCB6sr\ACE_wrappers\lib\Static\Release;d:\cygwin\bin;D:\perl\bin" type="prefix" />
+        <environment name="Path"         value="C:\progra~1\borland\cbuild~1\bin;C:\progra~\borland\cbuild~1\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6sr\ACE_wrappers\bin\Static\Release;C:\ACE\BCB6sr\ACE_wrappers\lib\Static\Release;" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 	<environment name="STATIC"   value="1" />
 	<environment name="BCBVER"   value="6" />
 
         <variable name="configs"  value="Win32 Borland Static Release Exceptions" />
-        <variable name="root"     value="D:\ACE\BCB6sr\" />
+        <variable name="root"     value="C:\ACE\BCB6sr\" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="D:\ACE\BCB6sr\" />
-        <variable name="name"     value="Win2K BCB6 Static Release" />
+        <variable name="log_root" value="C:\ACE\BCB6sr\" />
+        <variable name="name"     value="WinXP BCB6 Static Release" />
     </configuration>
 
     <command name="status"            options="on" />

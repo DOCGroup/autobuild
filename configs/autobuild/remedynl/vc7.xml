@@ -1,17 +1,17 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="D:\ACE\VC71\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="D:\ACE\VC71\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\VC71\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="PATH"         value="D:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;D:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;D:\ACE\VC71\ACE_wrappers\bin" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71\ACE_wrappers\bin" type="prefix" />
 
         <variable name="configs"  value="Win32 VC71 Exceptions" />
-        <variable name="root"     value="D:\ACE\VC71\" />
+        <variable name="root"     value="C:\ACE\VC71\" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="D:\ACE\VC71\" />
-        <variable name="name"     value="Win2K VS.NET 2003" />
+        <variable name="log_root" value="C:\ACE\VC71\" />
+        <variable name="name"     value="WinXP VS.NET 2003" />
     </configuration>
 
     <command name="status"            options="on" />

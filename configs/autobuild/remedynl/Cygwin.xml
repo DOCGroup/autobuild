@@ -1,17 +1,17 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="/cygdrive/d/ACE/Cygwin/ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="/cygdrive/d/ACE/Cygwin/ACE_wrappers/TAO"/>
+        <environment name="ACE_ROOT"     value="/cygdrive/c/ACE/Cygwin/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="/cygdrive/c/ACE/Cygwin/ACE_wrappers/TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="d:\ACE\Cygwin\ACE_wrappers\bin;D:\ACE\Cygwin\ACE_wrappers\lib;d:\cygwin\bin;d:\perl\bin" type="prefix" />
+        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
-        <variable name="root"     value="D:\ACE\Cygwin\" />
+        <variable name="root"     value="C:\ACE\Cygwin\" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="D:\ACE\Cygwin\" />
+        <variable name="log_root" value="C:\ACE\Cygwin\" />
         <variable name="name"     value="Cygwin ACE" />
         <variable name="configs"  value="Cygwin" />
     </configuration>
@@ -44,7 +44,7 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests" options="-a -s \x22/cygdrive/d/ACE/autobuild/win32sandbox/sandbox.exe -t 1200000\x22" /> 
+    <command name="auto_run_tests" options="-a -s \x22/cygdrive/c/ACE/autobuild/win32sandbox/sandbox.exe -t 1200000\x22" /> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
