@@ -1,3 +1,15 @@
+Thu Aug  7 14:09:29 2003  Justin Michel  <michel_j@ociweb.com>
+
+        * command/file_manipulation.pm:
+        * command/make.pm:
+        * command/process_logs.pm:
+        * command/vc6make.pm:
+        * command/vc7make.pm:
+        * command/wincemake.pm:
+
+         Put the double quote fix back in. I think I've fixed the
+         incorrect regex's that were causing the problem.
+
 Thu Aug  7 13:59:29 2003  Justin Michel  <michel_j@ociweb.com>
 
 	* command/auto_run_tests.pm:

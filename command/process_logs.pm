@@ -108,7 +108,7 @@ sub Run ($)
 
     # Clean the logs
 
-    if ($options =~ m/clean='([^"]*)'/ || $options =~ m/clean=([^\s]*)/) {
+    if ($options =~ m/clean='([^']*)'/ || $options =~ m/clean=([^\s]*)/) {
         my $retval = $self->clean_logs ($1);
         return 0 if ($retval == 0);
     }

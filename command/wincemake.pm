@@ -73,7 +73,7 @@ sub Run ($)
     
     my @dirs;
     my $dir='';
-    if ($options =~ m/search='([^"]*)'/) {
+    if ($options =~ m/search='([^']*)'/) {
         $dir = $1;
         @dirs = split(/,/, $1);
     }

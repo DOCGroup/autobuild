@@ -65,7 +65,7 @@ sub Run ($)
     
     my $dir;
  
-    if ($options =~ m/dir='([^"]*)'/) {
+    if ($options =~ m/dir='([^']*)'/) {
         $dir = $1;
         $options =~ s/dir='$dir'//;
     }
