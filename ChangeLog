@@ -1,3 +1,20 @@
+Wed Oct 13 14:04:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/gandalf_cbxdd.xml:
+        * configs/autobuild/remedynl/gandalf_cbxddu.xml:
+        * configs/autobuild/remedynl/gandalf_cbxsr.xml:
+        * configs/autobuild/remedynl/gandalf_cygwin.xml:
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/gandalf_vc71.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+        * configs/autobuild/remedynl/scarab_MingW.xml:
+        * configs/autobuild/remedynl/scarab_MingWTAO.xml:
+        * configs/autobuild/remedynl/scarab_MingWs.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml:
+        * configs/autobuild/remedynl/scarab_bcb6ddu.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dr.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dru.xml:
+
 Tue Oct 12 06:54:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/gandalf_cbxdd.xml:
