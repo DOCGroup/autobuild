@@ -1,3 +1,10 @@
+Sun Jun 29 09:45:14 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved VxWorks 5.5 x86 build from ACE to TAO because we are
+          now building a part of TAO.
+
 Fri Jun 27 09:53:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace_future.xml:
