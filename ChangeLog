@@ -1,3 +1,10 @@
+Sat Jan 10 11:24:44 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/remedynl/vc7.xml:
+
+	  Do cleanup of the vcproj and sln files before starting the
+	  build.
+
 Wed Jan  7 17:40:29 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Enable SSL.

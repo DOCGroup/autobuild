@@ -29,6 +29,9 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
+    <command name="shell"             options="find ACE_wrappers -name '*.vcproj' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.sln' -exec rm '{}' ';'" />
+
     <command name="generate_workspace" options="-type vc71 -recurse"/>
     <command name="vc7make"            options="/rebuild debug TAO/TAOACE.sln" />
     <command name="vc7make"            options="/rebuild debug tests/tests.sln" />
