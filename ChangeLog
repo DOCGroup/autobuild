@@ -1,3 +1,9 @@
+Thu Jul 25 22:56:13 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/scoreboard/acetao.xml: Added the new build to the
+	  scoreboard. Removed the build on toutatis since they are not
+	  running anyway.
+
 Thu Jul 25 22:20:44 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/beguine/driver_explicit.sh: 
