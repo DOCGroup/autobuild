@@ -23,6 +23,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
+    <command name="make"              options=" -i -f Makefile.bor realclean" />
     <command name="make"              options=" -i -f Makefile.bor realclean dir=TAO" />
 
     <command name="log"               options="ON" />
@@ -51,6 +52,7 @@
     <!--  Uses TAO/TAO.mwc --> 
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence -type borland" /> 
 
+    <command name="make"              options=" -i -f Makefile.bor" />
     <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
 
     <command name="auto_run_tests"    options="-a -s \x22D:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug" />
