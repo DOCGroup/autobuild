@@ -18,8 +18,6 @@ Thu May  6 17:11:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 	  Corrected regex for the "is deprecated" case.  Some deprecation
 	  warning were not flagged.
 
-	  Added regex for "in function" link-time error text.
-
 Wed May  5 23:09:45 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:

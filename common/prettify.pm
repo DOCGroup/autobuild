@@ -904,10 +904,6 @@ sub Compile_Handler ($)
     {
       $self->Output_Error ($s);
     }
-    elsif ($s =~ m/In function/)
-    {
-      $self->Output_Error ($s);
-    }
     elsif ($s =~ m/undefined reference to/
            || $s =~ m/: cannot open/
            || $s =~ m/: cannot find/
