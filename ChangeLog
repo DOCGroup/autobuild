@@ -1,3 +1,10 @@
+Tue Mar 30 10:32:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/valinor/Full.xml (check_compiler):
+
+	  Updated "g++" compiler name, "g++-3.2" -> "g++".  The former is
+	  no longer used.
+
 Mon Mar 29 16:08:06 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* scoreboard.pl:
