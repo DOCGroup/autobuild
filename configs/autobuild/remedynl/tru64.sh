@@ -14,4 +14,4 @@ export PATH
 cvs -z9 up -P -d
 
 exec /usr//bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/Tru64.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/tru64.xml
