@@ -4,17 +4,16 @@
         <environment name="ACE_ROOT"     value="D:\ACE_wrappers" />
         <environment name="CVSROOT"      value=":ext:wustl:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
-        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;c:\progra~\borland\cbuild~1\projects\bpl;D:\ACE_wrappers\bin\Static\Debug;d:\putty" type="prefix" />
+        <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;c:\progra~\borland\cbuild~1\projects\bpl;D:\ACE_wrappers\bin\Static\Release;d:\putty" type="prefix" />
 
 	<environment name="BUILD"  value="all" />
-	<environment name="DEBUG"  value="1" />
 	<environment name="STATIC" value="1" />
 	<environment name="BCBVER" value="5" />
 
         <variable name="root"      value="D:\" />
 	<variable name="log_file"  value="log.txt" />
         <variable name="log_root"  value="D:\" />
-        <variable name="name"      value="WinNT4 BCB5 Static" />
+        <variable name="name"      value="WinNT4 BCB5 Static Release" />
     </configuration>
 
     <command name="status"            options="on" />

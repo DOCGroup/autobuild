@@ -1,15 +1,22 @@
+Sun Feb 23 09:20:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+        * configs/scoreboard/acetao.xml:
+          Made the BCB5 Static build a release build. Then the building of TAO
+          can be enabled again.
+
 Sat Feb 15 14:11:49 2003  Priyanka Gontla  <pgontla@ece.uci.edu>
 
-	* make_pretty.pl (is_warning): 
+	* make_pretty.pl (is_warning):
 	  Fixed the matching string from the previous commit by removing
 	  the ^ that came in as a typo.
-	
+
 Fri Feb 14 16:39:26 2003  Priyanka Gontla  <pgontla@ociweb.com>
 
-	* make_pretty.pl (is_warning): 
+	* make_pretty.pl (is_warning):
           Suppressing the deprecated functions ld warnings that come on
 	  platforms that has glibc >= 2.2 but __USE_XOPEN2K not defined.
-	
+
 Tue Feb 11 15:45:57 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* command/generate_workspace.pm: Changed to work from $ACE_ROOT
