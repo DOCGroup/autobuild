@@ -8,7 +8,7 @@
 #         $Id$
 # ******************************************************************
 
-import sys, string, fileinput, re, math, os
+import sys, string, fileinput, re, math, os, time
 
 from utils import *
 
@@ -16,7 +16,7 @@ class HTMLTestMatrix2:
 	def __init__ (self, title, directory):
 		self.title = title
 		self.directory = directory
-		self.matrix_html = None
+		self.matrix_html = None 
 		self.matrix_header = None
 		self.build_summary_html = None
 		self.main_summary_html = None
@@ -37,6 +37,8 @@ class HTMLTestMatrix2:
 	</head>
 	<body>
 """
+		self.html_start += time.strftime('%X %x %Z')
+		print "TIME IS:", "TIME IS:", time.strftime('%X %x %Z')
 
 		self.html_end = """</body></html>
 """
@@ -97,6 +99,7 @@ class HTMLTestMatrix2:
 		
 
 	def addTestData (self, name, results, linkfile, builds=None):
+
 		if not self.matrix_html:
 			width = 160 + (10 * len(results)) + 500
 			## Mozilla ignores the table-layout css attribute unless you specify <table width="...
@@ -173,7 +176,6 @@ class HTMLTestMatrix2:
 	<tr>
 		<th class="head" colspan="6">
 """
-		
 		html += name + """
 Summary</th>
 </tr>
@@ -191,7 +193,10 @@ Summary</th>
 		html += '<td>%d</td>' % total
 		html += '<td>%d</td>' % npass
 		html += '<td>%d</td>' % nfail
-		html += '<td>%d</td>' % nskip
+		if nskip == -1:
+			html += '<td>-</td>'
+		else:
+			html += '<td>%d</td>' % nskip
 		html += '<td>%.1f</td>' % pperc
 		html += '<td>%.1f</td>' % fperc
 		html += '</tr>\n'
@@ -201,8 +206,8 @@ Summary</th>
 		self.main_summary_html = self.getSummaryHTML("", npass, nfail, nskip)
 
 	def writeSummary (self, ACEpass, ACEtotal, ACEperc, TAOpass, TAOtotal, TAOperc):
-		self.ace_summary_html = self.getSummaryHTML("ACE ", ACEpass, (ACEtotal - ACEpass), 0)
-		self.tao_summary_html = self.getSummaryHTML("TAO ", TAOpass, (TAOtotal - TAOpass), 0)
+		self.ace_summary_html = self.getSummaryHTML("ACE ", ACEpass, (ACEtotal - ACEpass), -1)
+		self.tao_summary_html = self.getSummaryHTML("TAO ", TAOpass, (TAOtotal - TAOpass), -1)
 
 	def writeBuildSummary (self, num, build):
 		num += 1 
