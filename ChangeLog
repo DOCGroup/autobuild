@@ -1,3 +1,12 @@
+Sat Jul 27 14:48:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Borland.xml:
+          When doing a build from the TAO directory, it must do an all
+          build and not only a nightlybuild. The nightlybuild in the TAO
+          directory doesn't build ACE. Also use an environment variable
+          DEBUG instead of using -DDEBUG=1 twice, this makes maintenance
+          easier.
+
 Fri Jul 26 14:10:54 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Changed
