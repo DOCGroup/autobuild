@@ -28,8 +28,8 @@
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -CORE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -TAO -u -k" />
 
-    <command name="auto_run_tests"    options="-a -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release -Config SANDBOX" />
-    <command name="auto_run_tests"    options="-a -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
+    <command name="auto_run_tests"    options="-a -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
+    <command name="auto_run_tests"    options="-t -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
