@@ -1,3 +1,17 @@
+Fri Dec 26 15:01:08 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/sol9_spro54.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao.xml:
+          Removed implicit template instantiation since it doesn't work
+          well.
+
+        * configs/autobuild/dresystems/sol9_spro54_tao.xml:
+          Added -GT to TAO_IDLFLAGS per Bala's entry below.
+
+        * configs/autobuild/dresystems/sol9_gcc33_tao_legacy.xml:
+        * configs/autobuild/dresystems/sol9_spro54_tao_legacy.xml:
+          Removed these files.
+
 Fri Dec 26 14:36:44 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/freebsd_tao_explicit:

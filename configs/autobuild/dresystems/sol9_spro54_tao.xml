@@ -24,7 +24,7 @@
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='templates=implicit\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+ <command name="file_manipulation"     options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='TAO_IDLFLAGS += -GT \ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="sun_cc" />
