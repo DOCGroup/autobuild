@@ -1,3 +1,8 @@
+Fri Mar 18 12:13:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed CBuilderX Bmake build, no room anymore to run it
+
 Tue Mar 15 15:08:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
