@@ -1,3 +1,10 @@
+Fri Aug 22 12:20:57 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+          Migrated to MPC.
+
 Fri Aug 22 00:39:39 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/freebsd_ace.xml:
