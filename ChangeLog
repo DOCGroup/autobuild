@@ -1,3 +1,9 @@
+Mon Apr  5 19:16:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+          Added ACE_HAS_TOKENS_LIBRARY to the config.h generation. We had
+          no builds where this was set.
+
 Mon Apr  5 13:11:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
