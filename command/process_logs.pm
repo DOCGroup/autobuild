@@ -251,6 +251,8 @@ sub index_logs ()
     }
     undef $dh;
 
+    @files = reverse sort @files;
+
     my $fh = new FileHandle ($logroot . '/index.html', 'w');
     
     if (!defined $fh) {
@@ -345,7 +347,7 @@ sub index_logs ()
             }
         }
         else {
-            print $fh '<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>';
+            print $fh "<td>$file</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
         }
         print $fh "</tr>\n";
     }
