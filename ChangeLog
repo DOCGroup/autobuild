@@ -1,3 +1,12 @@
+Fri Oct 1 15:05:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/GCCACE.xml:
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/GCC64AXP.xml:
+        * configs/autobuild/remedynl/ritedevsrv2valgrind.xml:
+        * configs/autobuild/remedynl/GCCNoInline.xml:
+          Removed unnecessary MPC arguments because of new warnings.
+
 Fri Oct 1 14:55:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/scarab_MingWTAO.xml:

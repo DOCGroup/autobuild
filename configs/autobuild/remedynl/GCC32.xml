@@ -34,8 +34,8 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
