@@ -41,8 +41,8 @@
     <command name="make"              options="-k -C apps/gperf/src" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO/tao libTAO.a" />
-    <command name="make"              options="-k -C TAO/IORInterceptor" />
-    <command name="make"              options="-k -c tao/Valuetype" />
+    <command name="make"              options="-k -C TAO/tao/IORInterceptor" />
+    <command name="make"              options="-k -C TAO/tao/Valuetype" />
     <command name="make"              options="-k -C TAO/tao/ObjRefTemplate" />
     <command name="make"              options="-k -C TAO/tao/PortableServer" />
     <command name="make"              options="-k -C TAO/orbsvcs/PSS" />
