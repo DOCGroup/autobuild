@@ -1,3 +1,10 @@
+Wed Jan 21 11:43:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          The MinGW build just builds ACE, not enough resources to build
+          also TAO.
+
 Wed Jan 21 11:13:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
