@@ -2,15 +2,15 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC51_newbuild/ACE_wrappers" />
-        <environment name="LD_LIBRARY_PATH" value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC51_newbuild/ACE_wrappers/ace:/project/danzon/pkg/openssl/lib" />
+        <environment name="ACE_ROOT"        value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC53_newbuild/ACE_wrappers" />
+        <environment name="LD_LIBRARY_PATH" value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC53_newbuild/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/project/danzon/pkg/OpenSSH/bin/ssh" />
 
-        <variable name="root"     value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC51_newbuild" />
+        <variable name="root"     value="/export1/project/danzontmp1/bugzilla/SUNOS_SUNCC53_newbuild" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/danzon_SUNOS_SUNCC51_newbuild" />
-        <variable name="configs"  value="SUNCC5_1" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/danzon_SUNOS_SUNCC53_newbuild" />
+        <variable name="configs"  value="SUNCC5_3" />
 
     </configuration>
 
@@ -23,7 +23,7 @@
 <!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-sunos5.7.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nssl=1\nPLATFORM_SSL_CPPFLAGS=-I/project/danzon/pkg/openssl/include\nPLATFORM_SSL_LDFLAGS=-L/project/danzon/pkg/openssl/lib/\nPLATFORM_SSL_LIBS=-lssl\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nssl=0\nPLATFORM_SSL_CPPFLAGS=-I/project/danzon/pkg/openssl/include\nPLATFORM_SSL_LDFLAGS=-L/project/danzon/pkg/openssl/lib/\nPLATFORM_SSL_LIBS=-lssl\n'" />
     <command name="check_compiler"    options="sun_cc" />
     <command name="print_ace_config" />
 <!--    <command name="sam"               options="create" /> -->
