@@ -56,8 +56,8 @@
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/tango_SUNOS_GCC_2_95</url> 
          </build>
          <build>
-             <name>SunOS_SunCC51</name>
-             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC51_newbuild</url>
+             <name>SunOS_SunCC53</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC53_newbuild</url>
          </build>
          <build>
              <name>SunOS_FORTE_UP_1</name>

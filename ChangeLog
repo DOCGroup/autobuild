@@ -1,3 +1,7 @@
+Thu May  9 19:55:34 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/scoreboard/acetao.xml: Changed CC51 build to CC53.
+
 Thu May  9 19:23:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC51.xml: Removed this build
