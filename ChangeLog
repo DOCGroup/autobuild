@@ -1,3 +1,21 @@
+Wed Dec 11 23:46:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/amrod/ImplicitTemplates.xml:
+	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
+	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
+	* configs/autobuild/maedhros/Core.xml:
+	* configs/autobuild/maglor/Static.xml:
+	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+	* configs/autobuild/rumba/Debian_WChar.xml:
+	* configs/autobuild/sirion/Full.xml:
+	* configs/autobuild/sirion/Full_new.xml:
+	* configs/autobuild/tao/Borland.xml:
+	* configs/autobuild/tao/DLL_Core.xml:
+	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/tao/Unicode.xml:
+	* configs/autobuild/valinor/Full.xml:
+	  Add print_os_version command.
+
 Wed Dec 11 16:53:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/maedhros/Core.xml:

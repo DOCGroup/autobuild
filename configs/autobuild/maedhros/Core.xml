@@ -18,17 +18,14 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-<!--    <command name="sam" options="clean" /> -->
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-<!--    <command name="cvs"               options="-d :ext:ucibuilds@cvs.doc.wustl.edu:/project/SAM -z 3 -q checkout -P -d ACE_wrappers/samwise samwise" /> -->
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\ninline=0\nstatic_libs_only=1\n'" />
+
+    <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
-
-<!--    <command name="sam"               options="create" /> -->
-<!--    <command name="sam"               options="sam" /> -->
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
