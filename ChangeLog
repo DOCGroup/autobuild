@@ -1,3 +1,16 @@
+Mon Aug 26 12:02:11 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml:
+
+	  Disable optimization, debugging and inlining to conserve space.
+
+	  (CCFLAGS):
+
+	  Added "-fstack-check" option to make g++ generate code that
+	  causes the OS verify stack boundaries are not crossed.  Useful
+	  for multi-threaded code.  Generally not needed for
+	  single-threaded code.  This is a sanity check.
+
 Mon Aug 26 16:56:23 2002 Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/valinor/Full.xml:
