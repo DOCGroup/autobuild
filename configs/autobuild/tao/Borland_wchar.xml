@@ -18,7 +18,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 clean" />
+    <command name="make"         options=" -i -f Makefile.bor -DUNICODE -DDEBUG=1 realclean" />
 
     <command name="log"               options="ON" />
 

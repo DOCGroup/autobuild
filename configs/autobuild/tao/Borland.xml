@@ -20,7 +20,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"         options=" -i -f Makefile.bor clean dir=TAO" />
+    <command name="make"         options=" -i -f Makefile.bor realclean dir=TAO" />
 
     <command name="log"               options="ON" />
 
