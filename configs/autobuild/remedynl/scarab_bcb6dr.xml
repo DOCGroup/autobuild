@@ -5,6 +5,7 @@
         <environment name="TAO_ROOT"     value="C:\ACE\BCB6dr\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
+        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
         <environment name="Path"         value="C:\progra~1\borland\cbuild~\bin;C:\progra~\borland\cbuild~\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dr\ACE_wrappers\bin;C:\ACE\BCB6dr\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin" type="prefix" />
 
 	<environment name="DYNAMIC"  value="1" />
@@ -50,8 +51,9 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/BCB6dr/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/BCB6dr" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/BCB6dr/*" />
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/BCB6dr/* -f" / -->
+    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/BCB6dr" / -->
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/BCB6dr/*" / -->
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/BCB6dr" />
 </autobuild>
 
