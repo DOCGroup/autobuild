@@ -1,3 +1,8 @@
+Mon Jun 21 10:25:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * autobuild.pl:
+          Added print_valgrind_version
+
 Mon Jun 21 10:15:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_valgrind_version.pm:
