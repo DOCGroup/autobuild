@@ -38,6 +38,7 @@
     <command name="make"              options="-j 1 -C TAO/tao" />
     <command name="make"              options="-j 1 -C TAO/TAO_IDL" />
     <command name="make"              options="-j 1 -C TAO/utils" />
+    <command name="make"              options="-j 1 -C Kokyu" />
     <command name="make"              options="-j 1 -C TAO/orbsvcs" />
 
     <command name="log"               options="off" />

@@ -35,6 +35,7 @@
     <command name="make" options="-C apps/gperf/src" />
     <command name="make" options="-C TAO/tao" />
     <command name="make" options="-C TAO/TAO_IDL" />
+    <command name="make" options="-C Kokyu" />
     <command name="make" options="-C TAO/orbsvcs/orbsvcs" />
 
     <command name="log"               options="off" />
