@@ -1,9 +1,14 @@
+Mon Jun 21 10:15:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/print_valgrind_version.pm:
+          Added new module to printout the valgrind version to the config
+          page. This is handy for the new Valgrind build I am setting up
+
 Sat Jun 19 13:19:51 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
 
 	  Added -Gd and -Gp to the IDL compiler options.
-
 
 Wed Jun 16 12:08:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
