@@ -23,6 +23,7 @@ exec /usr/bin/perl ./scoreboard.pl -v -d /project/deuce/pces/facet/scoreboard -i
 # Generate other pages!
 exec /usr/bin/perl ./scoreboard.pl -v -d /project/deuce/pces/facet/scoreboard -f $HOME/autobuild/configs/scoreboard/facet.xml -o facet.html  2>&1 &
 exec /usr/bin/perl ./scoreboard.pl -v -d /project/deuce/pces/facet/scoreboard -f $HOME/autobuild/configs/scoreboard/facet-cvs.xml -o facet-cvs.html  2>&1 &
+exec /usr/bin/perl ./scoreboard.pl -v -d /project/deuce/pces/facet/scoreboard -f $HOME/autobuild/configs/scoreboard/facet-oep.xml -o facet-oep.html  2>&1 &
 
 # Generate integrated pages!
 #exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html -z 2>&1;

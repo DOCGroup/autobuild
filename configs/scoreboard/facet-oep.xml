@@ -2,7 +2,7 @@
 <preamble>
 <center><h1>Facet and ACE+TAO Adapter Scoreboard</h1></center>
 <hr>
-This is the ACE+TAO Adapter (based on ACE+TAO from cvs)
+This is the ACE+TAO Adapter (based on ACE+TAO from the Boeing OEP project)
 virtual scoreboard, it shows all the OS/platform combinations the
 adapter is tested everyday. Currently this is only linux.
 <hr>
@@ -12,28 +12,28 @@ adapter is tested everyday. Currently this is only linux.
 <name>Linux</name>
    <build>
    <name>Facet</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-cvs</url>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-oep</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
    <name>jACE</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-jACE-cvs</url>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-jACE-oep</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
    <name>ACE_TAO</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0-cvs</url>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0-oep</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
    <build>
    <name>ACE_TAO_Adapter</name>
-   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter-cvs</url>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter-oep</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>

@@ -5,15 +5,25 @@
 This is the Facet virtual scoreboard, it shows
 all the OS/platform combinations Facet is tested everyday. Currently
 this is only linux.
+<p>
+The core of Facet is first built (as shown below in the table Facet-core) 
+and then we enable several different features and rebuild accordingly.
 <hr>
 </preamble>
 
 <group>
-<name>Linux</name>
+<name>Facet-features</name>
 
    <build>
    <name>Facet-correlation_filter</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/correlation_filter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-rtec_correlation_filter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/rtec_correlation_filter</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
@@ -97,6 +107,45 @@ this is only linux.
    <build>
    <name>Facet-ttl</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/ttl</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>Facet-correlation_filter-ttl</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/correlation_filter-ttl</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+</group>
+
+<group>
+<name>Facet-core</name>
+   <build>
+   <name>Facet-libs</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/libs</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>TAO-facet-adapter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-adapter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>ACE_TAO</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_Redhat_8.0</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
+   <build>
+   <name>jACE</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet-jACE</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
