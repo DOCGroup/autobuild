@@ -67,12 +67,13 @@ sub RegisterCommand ($$)
 # Load the commands here
 #
 
-require command::printaceconfig;
+require command::auto_run_tests;
 require command::cvs;
-require command::sam;
-require command::make;
-require command::shell;
 require command::file_manipulation;
+require command::make;
+require command::printaceconfig;
+require command::shell;
+require command::sam;
 
 #
 # Parse, CheckReqs, and Run
