@@ -1,3 +1,9 @@
+Fri May  7 11:49:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+          Corrected LD_LIBRARY_PATH, remove GNUmakefile* instead of Makefile*
+
 Fri May  7 09:43:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/SingleThreaded.xml:
