@@ -5,9 +5,10 @@
         <environment name="TAO_ROOT"     value="C:\ACE\VC71dr\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71\ACE_wrappers\bin" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71dr\ACE_wrappers\bin;C:\opensslvc71\openssl-0.9.7d\out32dll" type="prefix" />
+        <environment name="SSL_ROOT"     value="C:\opensslvc71\openssl-0.9.7d" />
 
-        <variable name="configs"  value="Win32 VC71 Exceptions" />
+        <variable name="configs"  value="Win32 VC71 Exceptions SSL" />
         <variable name="root"     value="C:\ACE\VC71dr\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\VC71dr\" />
@@ -23,7 +24,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
