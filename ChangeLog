@@ -1,3 +1,10 @@
+Fri Mar  4 18:17:22 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Commented out Riverace's Solaris 8
+	  and Win XP-64 Itanium builds. Solaris 8 box is on the fritz and
+	  XP-64 on Itanium is probably not going to be supported any longer,
+	  but not completely decided yet.
+
 Fri Mar  4 18:06:29 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
