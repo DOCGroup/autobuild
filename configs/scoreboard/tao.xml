@@ -173,7 +173,7 @@ all the OS/platform combinations TAO is tested everyday.
         </build>
         <build>
             <name>Win2K_BCB6_Pro_Static_Release</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_BCB6_Static_Release</url>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Static_Release</url>
             <build_sponsor>Remedy IT</build_sponsor>
 	    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
