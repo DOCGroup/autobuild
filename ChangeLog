@@ -1,3 +1,12 @@
+Wed Oct 22 09:53:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved the MinGW build from the future to the normal scoreboard.
+          The fix for the last compile error is in my workspace and then
+          all errors be gone and by putting the MinGW build on the normal
+          scoreboard it is then everyones responsibility to keep it green.
+
 Tue Oct 21 18:10:00 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
         This update performed by Jason Cohen <jcohen@atl.lmco.com>
@@ -12,7 +21,7 @@ Tue Oct 21 18:10:00 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
 Mon Oct 20 16:29:55 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added ATD's build to the scoreboard. 
+	* configs/scoreboard/tao.xml: Added ATD's build to the scoreboard.
 
 Sun Oct 19 19:04:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
@@ -33,11 +42,11 @@ Fri Oct 17 17:10:17 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Corrected
 	  the directives to build IORInterceptor and ValueType. TAO/
-	  prefix was missing. 
+	  prefix was missing.
 
 Wed Oct 15 22:40:35 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: 
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
 
 	  Added directives to build libraries that PortableServer
 	  depends. Strangely this was missing.
@@ -50,12 +59,12 @@ Wed Oct 15 16:27:27 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 Wed Oct 15 06:46:27 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/scoreboard/tao.xml: Changed name of
-	  RH71_Implicit_templates build to SuSE_Implicit_Templates. 
+	  RH71_Implicit_templates build to SuSE_Implicit_Templates.
 
 Tue Oct 14 20:27:33 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 	* configs/scoreboard/tao.xml: Added <build> tag before
-	  Suse_Static. 
+	  Suse_Static.
 
 Tue Oct 14 17:24:52 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
@@ -70,7 +79,7 @@ Tue Oct 14 17:16:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 Tue Oct 14 17:14:49 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/balar_isis/Static.xml: A new static build on
-	  balar.vuse. 
+	  balar.vuse.
 
 Tue Oct 14 12:39:06 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
@@ -79,12 +88,12 @@ Tue Oct 14 12:39:06 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
 Tue Oct 14 10:38:30 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
 
-	* configs/scoreboard/tao.xml: 
+	* configs/scoreboard/tao.xml:
 	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
 	* configs/autobuild/balar_isis/driver.sh: Moved the
 	  ImplicitTemplates build from amrod.ece.uci.edu to
 	  balar.dre.vanderbilt.edu. The amrod built was mostly not
-	  running. 
+	  running.
 
 Fri Oct 10 12:33:32 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
