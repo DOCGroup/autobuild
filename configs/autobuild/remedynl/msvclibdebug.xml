@@ -18,9 +18,9 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="log"               options="ON" />
-
     <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -u -k -clean" />
+
+    <command name="log"               options="ON" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
@@ -28,7 +28,6 @@
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
-    <command name="print_make_version" />
     <command name="print_perl_version" />
 
     <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
@@ -36,7 +35,7 @@
 
     <command name="shell"             options="find ACE_wrappers -iname '*.ds[pw]' -exec rm '{}' ';'" /> 
 
-    <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -recurse -make_coexistence -type vc6 -static" /> 
+    <command name="generate_workspace" options="-exclude ASNMP -recurse -make_coexistence -type vc6 -static" /> 
 
     <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -CORE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -MPC -LIB -Debug -ACE -u -k" />
