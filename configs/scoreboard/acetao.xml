@@ -470,6 +470,15 @@ here</a>
              <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
          </build>
     </group>
+    <group>
+         <name>HP</name>
+         <build>
+             <name>HPUX11_ACC339_Full</name>
+             <url>http://www.prismtechnologies.com/tao-scoreboard/</url>
+             <build_sponsor>PrismTech</build_sponsor>
+             <build_sponsor_url>http://www.prismtechnologies.com/</build_sponsor_url>
+         </build>
+    </group>
 <!--    <group>
          <name>TRU64_Unix</name>
          <build>
