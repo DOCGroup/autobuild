@@ -1,3 +1,9 @@
+Fri Sep  3 06:38:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Mark "Invalid read of size" and "Invalid write of size" in the test
+          phase as error, these are errors reported by valgrind
+
 Thu Sep  2 19:18:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/GCCNoInline.xml
