@@ -1,3 +1,9 @@
+Sat Aug 28 16:20:52 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/flamenco/compiletime_metrics.xml:
+
+	  Fixed the compile time file. This was totally busted.
+
 Fri Aug 27 13:26:35 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml:

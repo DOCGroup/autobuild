@@ -32,17 +32,16 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -hierarchy -make_coexistence" />
-
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k --dry-run > $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k CXX=$ACE_ROOT/bin/g++_metric.sh" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO idl_stubs" />
-    <command name="make"              options="-k -C TAO/TAO_IDL realclean" />
-
     <command name="make"              options="-k -C TAO --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/TAO_IDL realclean" />
     <command name="make"              options="-k -C TAO CXX=$ACE_ROOT/bin/g++_metric.sh" />
 
     <command name="log"               options="off" />
