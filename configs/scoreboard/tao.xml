@@ -324,7 +324,7 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
-   <name>HP</name>
+   <name>HP-UX</name>
    <build>
       <name>HPUX11i_aCC339_Full</name>
       <url>http://tao.prismtechnologies.com/doc-scoreboard/hp1</url>
