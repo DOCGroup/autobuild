@@ -1,3 +1,12 @@
+Mon Feb 28 07:19:14 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/lindy_isis/Static.xml:
+
+          Put the MPC feature information in
+          ACE_wrappers/bin/MakeProjectCreator/config/default.features
+          instead of ACE_wrappers/local.features.  MPC will automatically
+          pick it up and generate the required projects (ssl and cidl).
+
 Mon Feb 28 11:04:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
@@ -21,10 +30,10 @@ Fri Feb 25 21:26:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Feb 22 14:26:39 3005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Added
-	  "instances=explicit" to platform_macros.GNU - Forte 7 can't
-	  survive on implicit templates. This dooms it for ACE versions
-	  past 5.5, but for now it needs to be tested.
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Added
+          "instances=explicit" to platform_macros.GNU - Forte 7 can't
+          survive on implicit templates. This dooms it for ACE versions
+          past 5.5, but for now it needs to be tested.
 
 Tue Feb 22 09:59:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
