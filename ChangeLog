@@ -1,3 +1,8 @@
+Sun Feb  2 21:04:01 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Added the sponsors name back to
+	  scoreboard. 
+
 Thu Jan 30 19:16:42 2003  Steve Huston  <shuston@riverace.com>
 
         * command/configure.pm: New command to run the configure script
