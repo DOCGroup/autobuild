@@ -1,3 +1,8 @@
+Wed Dec 12 16:03:35 2001  Carlos O'Ryan  <coryan@uci.edu>
+
+	* configs/autobuild/maedhros/driver.sh:
+	  Fixed -i options.
+
 Wed Dec 12 09:27:49 2001  Carlos O'Ryan  <coryan@uci.edu>
 
 	* command/log.pm:

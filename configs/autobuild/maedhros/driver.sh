@@ -20,5 +20,8 @@ WEBLOG=$HOME/.www-docs/auto_compile_logs/maedhros_Core
 
 DATE=`date -u +%Y_%m_%d_%H_%M`
 /bin/cp build_log.txt $WEBLOG/$DATE.txt
-perl -w ./autobuild/make_pretty.pl -b -c makefile -o$WEBLOG/${DATE}_brief.html $WEBLOG/$DATE.txt  
-perl -w ./autobuild/make_pretty.pl -c makefile -o$WEBLOG/${DATE}.html $WEBLOG/$DATE.txt  
+perl -w ./autobuild/make_pretty.pl -b -c makefile -i $WEBLOG/$DATE.txt \
+    -o $WEBLOG/${DATE}_brief.html
+perl -w ./autobuild/make_pretty.pl    -c makefile -i $WEBLOG/$DATE.txt \
+    -o $WEBLOG/${DATE}.html
+    
