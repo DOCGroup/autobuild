@@ -6,7 +6,7 @@
         <environment name="CIAO_ROOT"        value="C:\ACE\MSVC6dd\ACE_wrappers\TAO\CIAO"/>
         <environment name="Path"             value="C:\ACE\MSVC6dd\ACE_wrappers\bin;C:\ACE\MSVC6dd\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin;C:\openssl-0.9.7d\out32dll" type="prefix" />
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"          value="ssh" />
+        <environment name="CVS_RSH"          value="c:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"        value="C:\cygwin\bin\ssh" />
         <environment name="SSL_ROOT"         value="C:\openssl-0.9.7d" />
         <environment name="XERCESCROOT"      value="C:\xerces-c_2_5_0-windows_nt-msvc_60" />
