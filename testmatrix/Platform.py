@@ -138,6 +138,9 @@ class Platform:
 			elif len(tokens) == 5:
 				ttime = tokens[3]
 				tresult = tokens[4]
+			elif len(tokens) == 6:
+				ttime = tokens[4]
+				tresult = tokens[5]
 			else:
 				print "ERROR: What is happening here?"
 				sys.exit(-1)
