@@ -1,3 +1,9 @@
+2003-03-18  ISIS Builds  <isisbuild@isis-server.isis.vanderbilt.edu>
+
+	* configs/autobuild/skukuza/driver_skoll_3.sh:
+	* configs/autobuild/skukuza/skoll_3.xml: New builds that
+	  represents one of the test configurations.
+
 Tue Mar 18 13:59:16 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml: Fixed a problem with the meta-data. 
