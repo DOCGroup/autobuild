@@ -1,5 +1,13 @@
 2002-07-11    Nanbor Wang  <nanbor@cs.wustl.edu>
 
+	* configs/autobuild/tao/Borland.xml: Updated Borland build script
+	  to take advantage of Makefile modification.
+
+	* configs/scoreboard/acetao.xml: Updated the list to include all
+	  the new Win32 builds.
+
+2002-07-11    Nanbor Wang  <nanbor@cs.wustl.edu>
+
 	* configs/autobuild/tao/Wchar.xml: 
 	* configs/autobuild/tao/Unicode.xml: 
 	* configs/autobuild/tao/Borland.xml: 

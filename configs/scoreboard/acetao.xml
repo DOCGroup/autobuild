@@ -96,6 +96,10 @@
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
         </build>
         <build>
+            <name>Win2K_Borland</name>
+            <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
+        </build>
+        <build>
             <name>WinXP_Legacy</name>
             <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
         </build>
