@@ -1,6 +1,13 @@
+Wed Jul 28 00:26:28 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Enabled SSL code to verify that ACE/TAO statically linked SSL
+	  support is functioning properly.
+
 Tue Jul 27 14:47:00 UTC 2004  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/tao/DLL_Core.xml: 
+        * configs/autobuild/tao/DLL_Core.xml:
           Removed running of DAnCE tests.
 
 Tue Jul 27 14:40:55 2004  Tao Lu  <lu@dre.vanderbilt.edu>
