@@ -1,6 +1,7 @@
 Tue Feb  1 13:55:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
           Moved cp of cidlc earlier in this file, print cidlc and perl version
           on the config page
 
