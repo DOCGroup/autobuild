@@ -87,7 +87,7 @@ sub Run ($)
     }
 
     my $basedir = getcwd();
-    my $command = "devenv $options";
+    my $command = "devenv.com $options";
 
 # The idea here is to do a find starting at all the @dirs, looking for
 # .sln files and run devenv on each. For now, need to specify all the
