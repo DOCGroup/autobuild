@@ -155,13 +155,13 @@ sub add_results($$) {
 
   my $state = 'NOT IN COMPILE';
   my $leave_compile = '#################### ';
-  my $enter_compile = $leave_compile.'Compile';
+  my $enter_compile = $leave_compile.'Compile ';
 
   LINE: while($line = $fh->getline) {
     chomp $line;
-    if (m/^$enter_compile/) {
+    if ($line =~ m/^$enter_compile/) {
       $state = 'COMPILE';
-    } elsif (m/^$leave_compile/) {
+    } elsif ($line =~ m/^$leave_compile/) {
       $state = 'NOT IN COMPILE';
     }
     next unless $state eq 'COMPILE';
