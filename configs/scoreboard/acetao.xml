@@ -72,6 +72,18 @@ and let us know which platform combinations you can contribute.
             <name>Windows_CE.NET_Debug</name>
             <url>http://www.riverace.com/build_logs/beebee/dev/wince4_debug</url>
         </build>
+        <build>
+            <name>Win2K_Borland_C++_5_WChar</name>
+            <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
+        </build>
+        <build>
+            <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug_Unicode</url>
+        </build>
+        <build>
+            <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Release_Unicode</url>
+        </build>
     </group>
 
     <group>
@@ -179,10 +191,6 @@ and let us know which platform combinations you can contribute.
             <url>http://tao.doc.wustl.edu/bugzilla/new_dll_release</url>
         </build>
         <build>
-            <name>Win2K_Borland_C++_5_WChar</name>
-            <url>http://tao.doc.wustl.edu/bugzilla/new_borland_wchar</url>
-        </build>
-        <build>
             <name>Win2K_Borland_C++_5</name>
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
         </build>
@@ -197,14 +205,6 @@ and let us know which platform combinations you can contribute.
         <build>
             <name>Win2K_BCB6_Pro_Dynamic_Debug_(remedy.nl)</name>
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug</url>
-        </build>
-        <build>
-            <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode(remedy.nl)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug_Unicode</url>
-        </build>
-        <build>
-            <name>Win2K_BCB6_Pro_Dynamic_Release_Unicode(remedy.nl)</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Release_Unicode</url>
         </build>
         <build>
             <name>WinNT4_Cygwin_GCC_3_2_(remedy.nl)</name>

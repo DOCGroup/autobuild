@@ -1,3 +1,9 @@
+Sat Jan 18 12:13:44 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/scoreboard/acetao.xml:
+          Moved the BCB6 Unicode builds and the Borland WChar build to the
+          ace only section because they only build ACE and nothing of TAO
+
 Sat Jan 18 11:59:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/scoreboard/acetao.xml:
