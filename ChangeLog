@@ -1,3 +1,13 @@
+Wed Jul  7 09:47:39 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml: Added
+	  "-exclude Kokyu" to the generate_workspace options. Kokyu doesn't
+	  follow the particular declaration/definition separation for the
+	  way Visual Age C++ handles templates. Since nobody is interested
+	  in Kokyu for AIX, I'm disabling this to help clean up the scoreboard,
+	  lest I rock the boat for others making it build on AIX.
+
 Wed Jul  7 13:52:59 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
