@@ -1,3 +1,9 @@
+Thu Apr 17 11:22:24 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace_isis/RH8_NoInline.xml:
+	* configs/autobuild/ace_isis/driver_noinline.sh: New NoInline builds
+	  at ISIS. 
+
 Thu Apr 17 10:46:35 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/ace_isis/RH8_Minimum.xml:
