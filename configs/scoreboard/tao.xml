@@ -112,7 +112,7 @@ all the OS/platform combinations TAO is tested everyday.
         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
      </build>
      <build>
-        <name>RH71_Implicit_Templates</name>
+        <name>SuSE_Implicit_Templates</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
