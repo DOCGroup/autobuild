@@ -29,8 +29,8 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
-    <command name="shell" options="cd RTEvent/facet ; cp platform_template platform.properties" />
-    <command name="shell" options="cd RTEvent/facet/src/edu/wustl/doc ; cp facet_template facet.properties" />
+    <command name="shell" options="'cd RTEvent/facet ; cp platform_template platform.properties'" />
+    <command name="shell" options="'cd RTEvent/facet/src/edu/wustl/doc ; cp facet_template facet.properties'" />
 
     <command name="make"              options="" />
     <command name="make"              options="-buildfile gcj.xml" />
