@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_wchar\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="F:\bugzilla\new_wchar\ACE_wrappers\TAO"/>
-        <environment name="Path"             value="F:\bugzilla\new_wchar\ACE_wrappers\bin;F:\bugzilla\new_wchar\ACE_wrappers\lib;" type="prefix" />
+        <environment name="Path"             value="F:\bugzilla\new_wchar\ACE_wrappers\lib;F:\bugzilla\new_wchar\ACE_wrappers\bin;" type="prefix" />
 
         <variable name="root"     value="F:/bugzilla/new_wchar/" />
         <variable name="log_file" value="log.txt" />
