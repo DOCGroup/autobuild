@@ -1,167 +1,173 @@
+Wed Apr 23 14:05:43 2003  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/prettify.pm:
+
+          Added a check for nmake warnings about missing dependency files.
+
 Wed Apr 23 11:17:21 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Added NT4 BCB5 and MSVC6 builds
-	  that run at Riverace.
+        * configs/scoreboard/ace.xml: Added NT4 BCB5 and MSVC6 builds
+          that run at Riverace.
 
 Wed Apr 23 10:36:33 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/timmy_dev_bcb5_debug.xml:
-	* configs/autobuild/riverace/timmy_dev_msvc6_debug.xml: NT4 builds.
+        * configs/autobuild/riverace/timmy_dev_bcb5_debug.xml:
+        * configs/autobuild/riverace/timmy_dev_msvc6_debug.xml: NT4 builds.
 
 Tue Apr 22 06:44:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/ace_future.xml: Changed the IP address of the
-	  FreeBSD builds from Yi-Kai Tsai <cuma@netbuck.com.tw>.
+        * configs/scoreboard/ace_future.xml: Changed the IP address of the
+          FreeBSD builds from Yi-Kai Tsai <cuma@netbuck.com.tw>.
 
 Mon Apr 21 14:13:23 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_ORB_core.xml: Compile the
-	  tests actually.
+        * configs/autobuild/tango_isis/Debian_ORB_core.xml: Compile the
+          tests actually.
 
 Mon Apr 21 10:10:52 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added the wchar build to the
-	  scoreboard.
+        * configs/scoreboard/tao.xml: Added the wchar build to the
+          scoreboard.
 
 2003-04-20  Build Account  <isisbuilds@doc.dre.vanderbilt.edu>
 
-	* configs/autobuild/doc_isis/RH8_wchar.xml:
-	* configs/autobuild/doc_isis/driver_wchar.sh: WChar builds on
-	  rumba.ece.uci.edu being  shifted to ISIS.
+        * configs/autobuild/doc_isis/RH8_wchar.xml:
+        * configs/autobuild/doc_isis/driver_wchar.sh: WChar builds on
+          rumba.ece.uci.edu being  shifted to ISIS.
 
 Sat Apr 19 19:31:55 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Removed the rumba builds from the
-	  scoreboard. 
+        * configs/scoreboard/tao.xml: Removed the rumba builds from the
+          scoreboard.
 
 Fri Apr 18 12:29:39 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml
-	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml
-	  Moved build from the autotools branch to the main development line.
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml
+          Moved build from the autotools branch to the main development line.
 
-	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
-	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
-	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
-	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
-	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
-	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
-	* configs/autobuild/riverace/jane_dev_debug.xml:
-	* configs/autobuild/riverace/jane_dev_static_release.xml:
-	  Removed TAO_ROOT variable; these are ACE-only builds.
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+          Removed TAO_ROOT variable; these are ACE-only builds.
 
 Thu Apr 17 17:39:49 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/misc.xml: The doxygen builds have moved to
-	  ISIS. 
+        * configs/scoreboard/misc.xml: The doxygen builds have moved to
+          ISIS.
 
 Thu Apr 17 17:33:19 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Builds on ace.dre gets into the
-	  scoreboard. They effectively replaces builds on balar_Minimum,
-	  maedhros_Core and tango_NoInline.
+        * configs/scoreboard/tao.xml: Builds on ace.dre gets into the
+          scoreboard. They effectively replaces builds on balar_Minimum,
+          maedhros_Core and tango_NoInline.
 
 Thu Apr 17 12:55:13 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tao_isis/Doxygen.xml:
-	* configs/autobuild/tao_isis/driver_doxygen.sh:
-	* configs/autobuild/tao_isis/auto_doxygen.pl: Doxygen builds at
-	  ISIS. 
-	
+        * configs/autobuild/tao_isis/Doxygen.xml:
+        * configs/autobuild/tao_isis/driver_doxygen.sh:
+        * configs/autobuild/tao_isis/auto_doxygen.pl: Doxygen builds at
+          ISIS.
+
 Thu Apr 17 11:52:54 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace_isis/RH8_Static_Core.xml:
-	* configs/autobuild/ace_isis/driver_static.sh: New static core
-	  builds at ISIS. 
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/ace_isis/driver_static.sh: New static core
+          builds at ISIS.
 
 Thu Apr 17 11:46:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Changed the sponsors name of the
-	  Minumum_Static build.
+        * configs/scoreboard/tao.xml: Changed the sponsors name of the
+          Minumum_Static build.
 
 Thu Apr 17 11:22:24 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace_isis/RH8_NoInline.xml:
-	* configs/autobuild/ace_isis/driver_noinline.sh: New NoInline builds
-	  at ISIS. 
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/driver_noinline.sh: New NoInline builds
+          at ISIS.
 
 Thu Apr 17 10:46:35 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace_isis/RH8_Minimum.xml:
-	* configs/autobuild/ace_isis/driver_minimum.sh: New minimum build
-	  at ISIS. 
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/driver_minimum.sh: New minimum build
+          at ISIS.
 
 Thu Apr 17 10:05:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added Full and singleThreaded builds
-	  at ISIS into the scoreboard. They replace the Full builds on
-	  sirion.ece and single threaded builds on curufin.
+        * configs/scoreboard/tao.xml: Added Full and singleThreaded builds
+          at ISIS into the scoreboard. They replace the Full builds on
+          sirion.ece and single threaded builds on curufin.
 
 2003-04-17  Build Account  <isisbuilds@tango.dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/SingleThreaded.xml:
-	* configs/autobuild/tango_isis/driver_st.sh: ST builds on
-	  curufin move in to tango at ISIS.
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tango_isis/driver_st.sh: ST builds on
+          curufin move in to tango at ISIS.
 
 Thu Apr 17 06:59:28 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full.xml:
-	* configs/autobuild/tango_isis/driver_full.sh: Full builds on
-	  sirion move in to tango at ISIS.
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/driver_full.sh: Full builds on
+          sirion move in to tango at ISIS.
 
 Wed Apr 16 17:17:50 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added the new core build and removed
-	  the core build from balar.
+        * configs/scoreboard/tao.xml: Added the new core build and removed
+          the core build from balar.
 
 Wed Apr 16 17:10:03 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_Core.xml:
-	* configs/autobuild/tango_isis/driver_core.sh: A new core build
-	  since the balar one is having problems.
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/driver_core.sh: A new core build
+          since the balar one is having problems.
 
 Wed Apr 16 14:04:33 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Fixed a syntax error.
+        * configs/scoreboard/tao.xml: Fixed a syntax error.
 
 Wed Apr 16 13:02:16 2003  Irfan Pyarali  <irfan@oomworks.com>
 
-	* configs/autobuild/nirvana/DLL_Release.xml:
-	* configs/autobuild/nirvana/W4_Debug.xml:
-	* configs/autobuild/nirvana/XML_Debug.xml:
-	* configs/autobuild/tao/Borland.xml:
-	* configs/autobuild/tao/Borland_wchar.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/Purify.xml:
+        * configs/autobuild/nirvana/DLL_Release.xml:
+        * configs/autobuild/nirvana/W4_Debug.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_wchar.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Purify.xml:
 
-	  auto_run_tests.pl was only being run with the -a and -t options,
-	  but not the -o option.  Thus all the tests in tao_orb_tests.lst
-	  were being skipped.
-	
+          auto_run_tests.pl was only being run with the -a and -t options,
+          but not the -o option.  Thus all the tests in tao_orb_tests.lst
+          were being skipped.
+
 Wed Apr 16 11:59:58 2003  Build Account  <isisbuilds@tango.dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added the new build to the
-	  scoreboard.  
+        * configs/scoreboard/tao.xml: Added the new build to the
+          scoreboard.
 
 Wed Apr 16 10:46:58 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
-	* configs/autobuild/tango_isis/driver.sh: A new ORB_Core build. 
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/driver.sh: A new ORB_Core build.
 
 Wed Apr 16 07:11:05 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao_dre.sh: New scoreboard at tao.dre.
+        * configs/scoreboard/tao_dre.sh: New scoreboard at tao.dre.
 
 Wed Apr 16 06:35:11 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -184,108 +190,108 @@ Mon Apr 14 09:33:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Apr 10 15:14:34 2003  Simon McQueen  <sm@prismtechnologies.com>
 
-	* configs/autobuild/valinor/Full.xml:
-	* configs/autobuild/toutatis/IA64_GCC3.1.xml:
-	* configs/autobuild/tao_isis/GIOP10_GCC32.xml:
-	* configs/autobuild/tao/Borland.xml:
-	* configs/autobuild/tao/Borland_wchar.xml:
-	* configs/autobuild/tao/DLL_Core.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/Fuzz.xml:
-	* configs/autobuild/tao/Purify.xml:
-	* configs/autobuild/tao/Unicode.xml:
-	* configs/autobuild/tao/Wchar.xml:
-	* configs/autobuild/tango/Debian_NoInline.xml:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
-	* configs/autobuild/slytherin/OpenBSD_Core.xml:
-	* configs/autobuild/slytherin/OpenBSD_Full.xml:
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
-	* configs/autobuild/skukuza/skoll_3.xml:
-	* configs/autobuild/sirion/Full.xml:
-	* configs/autobuild/sirion/Full_new.xml:
-	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
-	* configs/autobuild/rumba/Debian_WChar.xml:
-	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
-	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
-	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
-	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
-	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
-	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
-	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
-	* configs/autobuild/riverace/jane_dev_debug.xml:
-	* configs/autobuild/riverace/jane_dev_static_release.xml:
-	* configs/autobuild/ringil/Legacy.xml:
-	* configs/autobuild/ringil/Lib_Debug.xml:
-	* configs/autobuild/ringil/Lib_Release.xml:
-	* configs/autobuild/ringil/Unicode.xml:
-	* configs/autobuild/remedynl/BCB4DynamicDebug.xml:
-	* configs/autobuild/remedynl/BCB5StaticDebug.xml:
-	* configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
-	* configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
-	* configs/autobuild/remedynl/BCB6DynamicRelease.xml:
-	* configs/autobuild/remedynl/BCB6DynamicReleaseUnicodeMbg.xml:
-	* configs/autobuild/remedynl/BCB6StaticRelease.xml:
-	* configs/autobuild/remedynl/CygwinGCC32.xml:
-	* configs/autobuild/remedynl/GCC32.xml:
-	* configs/autobuild/remedynl/Kylix3.xml:
-	* configs/autobuild/remedynl/MingW.xml:
-	* configs/autobuild/prism/HPUX11_ACC339_Full.xml:
-	* configs/autobuild/pokey/GCC32_Core.xml:
-	* configs/autobuild/nirvana/DLL_Release.xml:
-	* configs/autobuild/nirvana/VC7_Core.xml:
-	* configs/autobuild/nirvana/W4_Debug.xml:
-	* configs/autobuild/nirvana/XML_Debug.xml:
-	* configs/autobuild/maglor/Static.xml:
-	* configs/autobuild/maedhros/Core.xml:
-	* configs/autobuild/guajira/TRU64_CXX.xml:
-	* configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
-	* configs/autobuild/dresystems/skoll_1.xml:
-	* configs/autobuild/dresystems/skoll_2.xml:
-	* configs/autobuild/doc/Doxygen.xml:
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
-	* configs/autobuild/cuni/hitotsu_icc70_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
-	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
-	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
-	* configs/autobuild/balar/Debian_Core.xml:
-	* configs/autobuild/balar/Debian_Minimum.xml:
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	* configs/autobuild/ace/LYNX_PPC.xml:
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/toutatis/IA64_GCC3.1.xml:
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_wchar.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Fuzz.xml:
+        * configs/autobuild/tao/Purify.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml:
+        * configs/autobuild/tango/Debian_NoInline.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/skukuza/skoll_3.xml:
+        * configs/autobuild/sirion/Full.xml:
+        * configs/autobuild/sirion/Full_new.xml:
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml:
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/ringil/Legacy.xml:
+        * configs/autobuild/ringil/Lib_Debug.xml:
+        * configs/autobuild/ringil/Lib_Release.xml:
+        * configs/autobuild/ringil/Unicode.xml:
+        * configs/autobuild/remedynl/BCB4DynamicDebug.xml:
+        * configs/autobuild/remedynl/BCB5StaticDebug.xml:
+        * configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
+        * configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
+        * configs/autobuild/remedynl/BCB6DynamicRelease.xml:
+        * configs/autobuild/remedynl/BCB6DynamicReleaseUnicodeMbg.xml:
+        * configs/autobuild/remedynl/BCB6StaticRelease.xml:
+        * configs/autobuild/remedynl/CygwinGCC32.xml:
+        * configs/autobuild/remedynl/GCC32.xml:
+        * configs/autobuild/remedynl/Kylix3.xml:
+        * configs/autobuild/remedynl/MingW.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/pokey/GCC32_Core.xml:
+        * configs/autobuild/nirvana/DLL_Release.xml:
+        * configs/autobuild/nirvana/VC7_Core.xml:
+        * configs/autobuild/nirvana/W4_Debug.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/guajira/TRU64_CXX.xml:
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+        * configs/autobuild/doc/Doxygen.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/balar/Debian_Core.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/ace/LYNX_PPC.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
 
-	  Added TAO_ROOT environment variable.
+          Added TAO_ROOT environment variable.
 
 Tue Apr  8 11:47:44 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/danzon/SunOS_Sun53.xml:
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Changed the
-	  path to location of the builds.
+        * configs/autobuild/danzon/SunOS_Sun53.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Changed the
+          path to location of the builds.
 
 Wed Apr  2 10:15:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao_future.xml:
-	* configs/scoreboard/tao.xml: Removed the three builds from ISIS,
-	  since we have some rearrangement going on here.
+        * configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao.xml: Removed the three builds from ISIS,
+          since we have some rearrangement going on here.
 
 Sun Mar 30 22:00:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/maglor/Static.xml: Added optimized and
-	  non-optimized data collection points for IOR sizes.
+        * configs/autobuild/maglor/Static.xml: Added optimized and
+          non-optimized data collection points for IOR sizes.
 
 Sun Mar 30 11:44:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -296,26 +302,26 @@ Sun Mar 30 11:44:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Mar 29 19:08:33 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: New
-	  autoconf build for AIX 5.1, Visual Age C++ 6.
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: New
+          autoconf build for AIX 5.1, Visual Age C++ 6.
 
-	* configs/scoreboard/ace_future.xml: Added AIX 5.1, Visual Age 6
-	  autoconf build.
+        * configs/scoreboard/ace_future.xml: Added AIX 5.1, Visual Age 6
+          autoconf build.
 
 Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
-	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
-	  Changed from make realclean to make reverseclean to insure
-	  that everything gets cleaned out so Visual Age can deal with
-	  template properly.
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+          Changed from make realclean to make reverseclean to insure
+          that everything gets cleaned out so Visual Age can deal with
+          template properly.
 
 Mon Mar 24 07:04:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
-	  scoreboard.
+        * configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
+          scoreboard.
 
 Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -327,60 +333,60 @@ Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Mar 22 08:02:39 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/VC7_Core.xml: Removed obsolete mwc
-	  option -dynamic_only.
+        * configs/autobuild/nirvana/VC7_Core.xml: Removed obsolete mwc
+          option -dynamic_only.
 
 Fri Mar 21 11:28:28 2003  Ossama Othman  <ossama@uci.edu>
 
-	* make_pretty.pl (tests_output):
-	* common/prettify.pm (Test_Handler):
+        * make_pretty.pl (tests_output):
+        * common/prettify.pm (Test_Handler):
 
-	  Reverted previous change.  Some tests print expected exception
-	  output.
+          Reverted previous change.  Some tests print expected exception
+          output.
 
 Thu Mar 20 14:21:33 2003  Ossama Othman  <ossama@uci.edu>
 
-	* make_pretty.pl (tests_output):
-	* common/prettify.pm (Test_Handler):
+        * make_pretty.pl (tests_output):
+        * common/prettify.pm (Test_Handler):
 
-	  Prettify the actual CORBA exception output.
+          Prettify the actual CORBA exception output.
 
 Wed Mar 19 06:59:18 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/ace_future.xml: Fixed a cut and past error in
-	  the URL for WAEI.
+        * configs/scoreboard/ace_future.xml: Fixed a cut and past error in
+          the URL for WAEI.
 
 Wed Mar 19 06:00:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/ace_future.xml: Changed the URL for MACOS
-	  build.
+        * configs/scoreboard/ace_future.xml: Changed the URL for MACOS
+          build.
 
 Tue Mar 18 14:27:56 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao_future.xml: Added skoll_3 to the
-	  scoreboard.
+        * configs/scoreboard/tao_future.xml: Added skoll_3 to the
+          scoreboard.
 
 2003-03-18  ISIS Builds  <isisbuild@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/skukuza/driver_skoll_3.sh:
-	* configs/autobuild/skukuza/skoll_3.xml: New builds that
-	  represents one of the test configurations.
+        * configs/autobuild/skukuza/driver_skoll_3.sh:
+        * configs/autobuild/skukuza/skoll_3.xml: New builds that
+          represents one of the test configurations.
 
 Tue Mar 18 13:59:16 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Fixed a problem with the meta-data.
+        * configs/scoreboard/tao.xml: Fixed a problem with the meta-data.
 
 Tue Mar 18 13:24:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml: Moved the SuSe build to
-	  tao_future.xml.
-	* configs/scoreboard/tao_future.xml: Reordered the builds on the
-	  scoreboard.
+        * configs/scoreboard/tao.xml: Moved the SuSe build to
+          tao_future.xml.
+        * configs/scoreboard/tao_future.xml: Reordered the builds on the
+          scoreboard.
 
 Tue Mar 18 10:38:11 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/ace_future.xml: Added a new FreeBSD build
-	  from Yi-Kai Tsai <cuma@netbuck.com.tw>.
+        * configs/scoreboard/ace_future.xml: Added a new FreeBSD build
+          from Yi-Kai Tsai <cuma@netbuck.com.tw>.
 
 Tue Mar 18 14:10:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -393,188 +399,188 @@ Tue Mar 18 14:10:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Mar 17 14:33:59 2003  Steve Huston  <shuston@riverace.com>
 
-	* scoreboard.pl: Removed an unneeded, old comment; only set out_file
-	  if -o specified.
+        * scoreboard.pl: Removed an unneeded, old comment; only set out_file
+          if -o specified.
 
 Mon Mar 17 13:06:57 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.bat: Removed the output file's path!
+        * configs/scoreboard/tao.bat: Removed the output file's path!
 
 Mon Mar 17 13:03:06 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* README: Fixed the documentation for scoreboard scripts usage.
+        * README: Fixed the documentation for scoreboard scripts usage.
 
 Mon Mar 17 12:57:30 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* scoreboard.pl: Added documentation for the options. Changed the
-	  behaviour of the -o option. It now takes only the output file
-	  name and relying on the -d option to get the output path right!
+        * scoreboard.pl: Added documentation for the options. Changed the
+          behaviour of the -o option. It now takes only the output file
+          name and relying on the -d option to get the output path right!
 
-	* configs/scoreboard/doc.sh: Removed the output file's path!
+        * configs/scoreboard/doc.sh: Removed the output file's path!
 
 Mon Mar 17 11:55:22 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/doc.sh (CVS_RSH): Added comments to a couple
-	  of lines in the file to show what they are actually doing!
+        * configs/scoreboard/doc.sh (CVS_RSH): Added comments to a couple
+          of lines in the file to show what they are actually doing!
 
 Mon Mar 17 09:08:14 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/index.xml: Fixed a missing link.
+        * configs/scoreboard/index.xml: Fixed a missing link.
 
 Mon Mar 17 09:02:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao_future.xml:
-	* configs/scoreboard/ace_future.xml:
-	* configs/scoreboard/tao.xml: Added missing builds. Thanks to Don
-	  for pointing this out.
+        * configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao.xml: Added missing builds. Thanks to Don
+          for pointing this out.
 
 Mon Mar 17 06:40:33 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Removed the file from the repo.
+        * configs/scoreboard/acetao.xml: Removed the file from the repo.
 
 Mon Mar 17 06:22:31 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* README: Updated the file with new information!
+        * README: Updated the file with new information!
 
 Mon Mar 17 06:10:15 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/index.xml: Missed a few build sponsors in the
-	  index page. Thanks to Don Hinton for pointing this out!
+        * configs/scoreboard/index.xml: Missed a few build sponsors in the
+          index page. Thanks to Don Hinton for pointing this out!
 
 Sun Mar 16 21:22:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* common/integratedparser.pm (Parse): Cosmetic fixes that never
-	  got merged from my branch!
+        * common/integratedparser.pm (Parse): Cosmetic fixes that never
+          got merged from my branch!
 
 Sun Mar 16 20:02:38 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/tao.bat: Bat file for the Win32 webserver.
+        * configs/scoreboard/tao.bat: Bat file for the Win32 webserver.
 
 Sun Mar 16 19:11:23 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	The following changes are for reorganizing the scoreboard
-	presentation. The builds of ACE+TAO have been split across
-	multiple pages. We also have an integrated page that will be
-	closer what was there before.
+        The following changes are for reorganizing the scoreboard
+        presentation. The builds of ACE+TAO have been split across
+        multiple pages. We also have an integrated page that will be
+        closer what was there before.
 
-	* common/indexparser.pm: A simple parser that parses the index
-	  page to generate a html file.
+        * common/indexparser.pm: A simple parser that parses the index
+          page to generate a html file.
 
-	* common/integratedparser.pm: A parser that generates the
-	  integrated page from the available xml files. The parser has got
-	  _lots_ of commonalities with the scoreboardparser.pm. Need to
-	  abstract out the common parser code. We will do this once the
-	  changes settle down. If the devo_group rejects the change it
-	  will easier for me to revert it back to original scoreboard
-	  format. If the changes are accepted we can do some abstraction.
+        * common/integratedparser.pm: A parser that generates the
+          integrated page from the available xml files. The parser has got
+          _lots_ of commonalities with the scoreboardparser.pm. Need to
+          abstract out the common parser code. We will do this once the
+          changes settle down. If the devo_group rejects the change it
+          will easier for me to revert it back to original scoreboard
+          format. If the changes are accepted we can do some abstraction.
 
-	* configs/scoreboard/ace.xml:
-	* configs/scoreboard/tao.xml:
-	* configs/scoreboard/ace_future.xml:
-	* configs/scoreboard/tao_future.xml:
-	* configs/scoreboard/misc.xml: New XML configuration files. These
-	  have been split off from acetao.xml.
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/misc.xml: New XML configuration files. These
+          have been split off from acetao.xml.
 
-	* configs/scoreboard/doc.sh: Used the new options to generate
-	  multiple html files.
-	* scoreboard.pl: Changes to the main script to use the new parser
-	  and generate all these pages.
+        * configs/scoreboard/doc.sh: Used the new options to generate
+          multiple html files.
+        * scoreboard.pl: Changes to the main script to use the new parser
+          and generate all these pages.
 
 Sat Mar 15 15:31:54 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/tao/DLL_Core.xml: Turned on the verbose flag!
+        * configs/autobuild/tao/DLL_Core.xml: Turned on the verbose flag!
 
 Fri Mar 14 20:09:05 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* configs/autobuild/dresystems/local_scoreboard.xml:
-	* configs/scoreboard/acetao.xml: Rolled back url change from
+        * configs/autobuild/dresystems/local_scoreboard.xml:
+        * configs/scoreboard/acetao.xml: Rolled back url change from
           Fri Mar 14 13:11:17 UTC 2003  Don Hinton  <dhinton@ieee.org>.
           Verizon apparently blocks port 80.
 
 Fri Mar 14 13:11:17 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* configs/autobuild/dresystems/driver_local_scoreboard.sh:
-	* configs/autobuild/dresystems/local_scoreboard.xml:
-	* configs/scoreboard/acetao.xml: Updated url for DRE Systems
-	  builds.
+        * configs/autobuild/dresystems/driver_local_scoreboard.sh:
+        * configs/autobuild/dresystems/local_scoreboard.xml:
+        * configs/scoreboard/acetao.xml: Updated url for DRE Systems
+          builds.
 
 Wed Mar 12 08:36:27 2003  Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
 
-	  Corrected `configure' script command line option that sets which
-	  C++ compiler to use.  "CXX=aCC" instead of "CC=aCC".
+          Corrected `configure' script command line option that sets which
+          C++ compiler to use.  "CXX=aCC" instead of "CC=aCC".
 
 Tue Mar 11 18:33:49 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
-	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
-	* configs/scoreboard/acetao.xml:
-	  New autoconf builds for HP-UX 11 on PA-RISC; one aC++, one g++.
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/scoreboard/acetao.xml:
+          New autoconf builds for HP-UX 11 on PA-RISC; one aC++, one g++.
 
 Tue Mar 11 13:20:37 2003  Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/danzon/driver.sh:
+        * configs/autobuild/danzon/driver.sh:
 
-	  Run the "EGD" Entropy Gathering Daemon perl script so that SSL
-	  may be re-enabled in this configuration/build.
+          Run the "EGD" Entropy Gathering Daemon perl script so that SSL
+          may be re-enabled in this configuration/build.
 
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
 
-	  Re-enable SSL support in this build.
+          Re-enable SSL support in this build.
 
 Tue Mar 11 09:47:09 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
-	* configs/autobuild/cuni/hitotsu_icc70_full.xml: Added "configs"
-	  option to the build.
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml: Added "configs"
+          option to the build.
 
 Tue Mar 11 13:28:50 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* configs/scoreboard/acetao.xml: Move following builds to the
-	  XTest_sanity_check_not_for_release section to make it easier
-	  on the build czar since these configurations are expected to
-	  fail: RH8_GCC32_No_RTCORBA_No_Messaging, SKOLL_1, and SKOLL_2.
+        * configs/scoreboard/acetao.xml: Move following builds to the
+          XTest_sanity_check_not_for_release section to make it easier
+          on the build czar since these configurations are expected to
+          fail: RH8_GCC32_No_RTCORBA_No_Messaging, SKOLL_1, and SKOLL_2.
 
 Tue Mar 11 07:32:40 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* configs/autobuild/dresystems/skoll_2.xml: Fixed cut-n-paste
-	  error, turned on TAO_HAS_NAMED_RT_MUTEXES.
+        * configs/autobuild/dresystems/skoll_2.xml: Fixed cut-n-paste
+          error, turned on TAO_HAS_NAMED_RT_MUTEXES.
 
 Mon Mar 10 21:57:45 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* configs/scoreboard/acetao.xml: Added red and orange timeouts
-	  for the DRE Systems builds, since they only run once a day.
+        * configs/scoreboard/acetao.xml: Added red and orange timeouts
+          for the DRE Systems builds, since they only run once a day.
 
 Mon Mar 10 19:41:10 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* configs/autobuild/dresystems/driver_local_scoreboard.sh:
-	* configs/autobuild/dresystems/local_scoreboard.xml:
-	* configs/autobuild/dresystems/driver_skoll_1.sh:
-	* configs/autobuild/dresystems/driver_skoll_2.sh:
-	* configs/autobuild/dresystems/skoll_1.xml:
-	* configs/autobuild/dresystems/skoll_2.xml:
-	* configs/scoreboard/acetao.xml: Added new new builds.
+        * configs/autobuild/dresystems/driver_local_scoreboard.sh:
+        * configs/autobuild/dresystems/local_scoreboard.xml:
+        * configs/autobuild/dresystems/driver_skoll_1.sh:
+        * configs/autobuild/dresystems/driver_skoll_2.sh:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+        * configs/scoreboard/acetao.xml: Added new new builds.
 
 Mon Mar 10 11:31:45 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added a FreeBSD_5, ACE only build
-	  from Yi-Kai Tsai <cuma@netbuck.com.tw> to the scoreboard!
+        * configs/scoreboard/acetao.xml: Added a FreeBSD_5, ACE only build
+          from Yi-Kai Tsai <cuma@netbuck.com.tw> to the scoreboard!
 
 Mon Mar 10 11:54:34 UTC 2003  Don Hinton <dhinton@ieee.org>
 
-	* configs/scoreboard/acetao.xml:
-	* configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
-	* configs/autobuild/dresystems/driver_no-rt_no-msg.sh:
-	* configs/autobuild/dresystems/local_scoreboard.xml: Added
-	  new build.
+        * configs/scoreboard/acetao.xml:
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/driver_no-rt_no-msg.sh:
+        * configs/autobuild/dresystems/local_scoreboard.xml: Added
+          new build.
 
 Sun Mar  9 23:26:37 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/remedynl/GCC32.xml: Added new configurations
-	  to the build.
+        * configs/autobuild/remedynl/GCC32.xml: Added new configurations
+          to the build.
 
 Sun Mar  9 18:45:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -584,9 +590,9 @@ Sun Mar  9 18:45:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Mar  6 18:43:26 2003  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/charlie_dev_va5_debug.xml: AIX 4.3 build.
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml: AIX 4.3 build.
 
-	* configs/scoreboard/acetao.xml: Add new build to scoreboard.
+        * configs/scoreboard/acetao.xml: Add new build to scoreboard.
 
 Tue Mar  4 10:47:23 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -615,22 +621,22 @@ Fri Feb 28 06:47:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Feb 27 11:02:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added the build from Charles
-	  University to the scoreboard!
+        * configs/scoreboard/acetao.xml: Added the build from Charles
+          University to the scoreboard!
 
 Thu Feb 27 10:58:05 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
-	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
-	* configs/autobuild/cuni/hitotsu_icc70_full.xml: Builds from
-	  Distributed Systems Research Group, Charles University, Prague
-	  on Itanium box!
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml: Builds from
+          Distributed Systems Research Group, Charles University, Prague
+          on Itanium box!
 
 Wed Feb 26 11:53:36 2003  Edward Scott  <eas@prismtechnologies.com>
 
-	* configs/scoreboard/acetao.xml:
-	  Added PrismTech to introductory list of continuous builds.
+        * configs/scoreboard/acetao.xml:
+          Added PrismTech to introductory list of continuous builds.
 
 Tue Feb 25 06:59:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -654,26 +660,26 @@ Sun Feb 23 09:20:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sat Feb 15 14:11:49 2003  Priyanka Gontla  <pgontla@ece.uci.edu>
 
-	* make_pretty.pl (is_warning):
-	  Fixed the matching string from the previous commit by removing
-	  the ^ that came in as a typo.
+        * make_pretty.pl (is_warning):
+          Fixed the matching string from the previous commit by removing
+          the ^ that came in as a typo.
 
 Fri Feb 14 16:39:26 2003  Priyanka Gontla  <pgontla@ociweb.com>
 
-	* make_pretty.pl (is_warning):
+        * make_pretty.pl (is_warning):
           Suppressing the deprecated functions ld warnings that come on
-	  platforms that has glibc >= 2.2 but __USE_XOPEN2K not defined.
+          platforms that has glibc >= 2.2 but __USE_XOPEN2K not defined.
 
 Tue Feb 11 15:45:57 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* command/generate_workspace.pm: Changed to work from $ACE_ROOT
-	  when generating workspaces.
+        * command/generate_workspace.pm: Changed to work from $ACE_ROOT
+          when generating workspaces.
 
 Tue Feb 11 14:07:00 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/VC7_Core.xml: Temporarily removed
-	  ACE_HAS_XML_SVC_CONF from the config file.  We are not able to
-	  generate ACEXML projects with MPC yet.
+        * configs/autobuild/nirvana/VC7_Core.xml: Temporarily removed
+          ACE_HAS_XML_SVC_CONF from the config file.  We are not able to
+          generate ACEXML projects with MPC yet.
 
 Tue Feb 11 19:43:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -703,29 +709,29 @@ Tue Feb 11 19:43:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Feb 11 13:35:01 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml:
-	* configs/autobuild/nirvana/vc7_driver.bat:
-	* configs/autobuild/nirvana/VC7_Core.xml: Added a new VC7.NET core
-	  build.
+        * configs/scoreboard/acetao.xml:
+        * configs/autobuild/nirvana/vc7_driver.bat:
+        * configs/autobuild/nirvana/VC7_Core.xml: Added a new VC7.NET core
+          build.
 
 Mon Feb 10 09:50:38 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/DLL_Release.xml:
-	* configs/autobuild/nirvana/W4_Debug.xml:
-	* configs/autobuild/ringil/Legacy.xml:
-	* configs/autobuild/ringil/Lib_Debug.xml:
-	* configs/autobuild/ringil/Lib_Release.xml:
-	* configs/autobuild/ringil/Unicode.xml:
-	* configs/autobuild/tao/DLL_Core.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/Unicode.xml:
-	* configs/autobuild/tao/Wchar.xml: Made sure both OS and compiler
-	  info got recorded in config sections.
+        * configs/autobuild/nirvana/DLL_Release.xml:
+        * configs/autobuild/nirvana/W4_Debug.xml:
+        * configs/autobuild/ringil/Legacy.xml:
+        * configs/autobuild/ringil/Lib_Debug.xml:
+        * configs/autobuild/ringil/Lib_Release.xml:
+        * configs/autobuild/ringil/Unicode.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml: Made sure both OS and compiler
+          info got recorded in config sections.
 
 Mon Feb 10 07:47:24 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml: Added MSVC6 compiler version to
-	  the build names that use the compiler.
+        * configs/scoreboard/acetao.xml: Added MSVC6 compiler version to
+          the build names that use the compiler.
 
 Fri Feb  7 17:34:27 2003  Steve Huston  <shuston@riverace.com>
 
@@ -736,7 +742,7 @@ Fri Feb  7 17:34:27 2003  Steve Huston  <shuston@riverace.com>
 Fri Feb  7 17:11:39 2003  Steve Huston  <shuston@riverace.com>
 
         * scoreboard.pl:
-	* common/scoreparser.pm: Fixed Perl warnings of this sort:
+        * common/scoreparser.pm: Fixed Perl warnings of this sort:
               Using a hash as a reference is deprecated at
               /acebuilds/autobuild/common/scoreparser.pm line 114 (#1)
               (D deprecated) You tried to use a hash as a reference, as in
@@ -787,8 +793,8 @@ Tue Feb  4 12:22:49 2003  Steve Huston  <shuston@riverace.com>
 
 Sun Feb  2 21:04:01 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added the sponsors name back to
-	  scoreboard.
+        * configs/scoreboard/acetao.xml: Added the sponsors name back to
+          scoreboard.
 
 Thu Jan 30 19:16:42 2003  Steve Huston  <shuston@riverace.com>
 
@@ -804,21 +810,21 @@ Thu Jan 30 19:16:42 2003  Steve Huston  <shuston@riverace.com>
 
 Thu Jan 30 18:28:33 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl:
-	* common/scoreparser.pm: More HTML fixes,
-	  motivated by http://validator.w3.org
-	* configs/scoreboard/acetao.xml: Minor text changes.
+        * scoreboard.pl:
+        * common/scoreparser.pm: More HTML fixes,
+          motivated by http://validator.w3.org
+        * configs/scoreboard/acetao.xml: Minor text changes.
 
 Thu Jan 30 16:59:25 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl: Minor HTML fixes, motivated by http://validator.w3.org
+        * scoreboard.pl: Minor HTML fixes, motivated by http://validator.w3.org
 
 Tue Jan 28 23:07:05 2003  Frank Hunleth  <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/OpenBSD_Full.xml:
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
-	* configs/autobuild/slytherin/OpenBSD_Core.xml: Updated to support
-	  the merged config-openbsd.h and platform_openbsd.GNU files.
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml: Updated to support
+          the merged config-openbsd.h and platform_openbsd.GNU files.
 
 Mon Jan 27 20:02:41 2003  Steve Huston  <shuston@riverace.com>
 
@@ -1160,7 +1166,7 @@ Wed Dec 18 15:54:05 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
         * configs/autobuild/sirion/Full_new.xml: Added -config SSL to run
           the SSLIOP tests. We have been long kidding ourselves that the
           SSL tests have been run daily! What a joke! They haven't been
-	  run from the point they moved to the new scoreboard.
+          run from the point they moved to the new scoreboard.
 
 Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
 

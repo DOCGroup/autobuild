@@ -867,6 +867,11 @@ sub Compile_Handler ($)
             $self->Output_Error ($s);
         }
     }
+    elsif ($s =~ m/^Warning: cannot find/)
+    {
+      ## nmake warning about dependency files
+      $self->Output_Warning ($s);
+    }
     elsif ($s =~ m/undefined reference to/
            || $s =~ m/: cannot open/
            || $s =~ m/: cannot find/
