@@ -1,3 +1,17 @@
+Thu Oct 14 08:47:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/tao/DLL_debug.xml:
+        * configs/autobuild/tao/Purify.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml:
+
+          Increased timeout on test sandbox for ACE because is was far too
+          short for the complete set of ACE tests when some of the tests have
+          (timeout) problems (like Cygwin and Wchar/Unicode builds). The ACE
+          tests are run as one test as far as the sandbox is concerned.
+
 Thu Oct 14 07:53:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/balar_isis/ImplicitTemplates.xml:
