@@ -31,6 +31,8 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#define ACE_USES_WCHAR\n#include \x22ace/config-win32.h\x22\n'" />
 
     <command name="print_os_version" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
     <command name="check_compiler" options="borland" />
     <command name="print_ace_config" />
 

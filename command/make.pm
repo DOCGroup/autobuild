@@ -69,6 +69,13 @@ sub Run ($)
         $dir = $1;
     }
 
+    my $make_program = main::GetVariable ('make_program');
+    if (! defined $make_program) {
+        # The "make_program" variable was not defined in the
+        # XML config file.  Default to using a program called "make".
+        $make_program = "make"
+    }
+    
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
@@ -80,10 +87,9 @@ sub Run ($)
     
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
-        return 0;
     }
 
-    my $command = "make $options";
+    my $command = "$make_program $options";
 
     if( defined $dir )
     {

@@ -1,3 +1,29 @@
+Tue Feb 11 19:43:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/make.pm:
+          Added support for variable make_program. With this new variable the
+          name of the make program can be set to a different value. Thanks to
+          Craig for creating this support.
+
+        * command/print_os_version.pm:
+          Added optional option unseuname so that we can specify to run
+          uname -a to get OS version info. This is usefull for cygwin/mingw
+          builds.
+
+        * command/print_perl_version.pm:
+          Added support to print perl version.
+
+        * command/print_make_version.pm:
+          Added support to print make version. The variable make_program is
+          also supported.
+
+        * autobuild.pl:
+          Added print_make_version and print_perl_version.
+
+        * configs/autobuild/remedynl/*.xml:
+          Added print perl and print make version, in mingw/cygwin builds
+          also print uname.
+
 Tue Feb 11 13:35:01 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml:

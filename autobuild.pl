@@ -121,6 +121,8 @@ require common::mail;
 require command::auto_run_tests;
 require command::check_compiler;
 require command::print_os_version;
+require command::print_perl_version;
+require command::print_make_version;
 require command::configure;
 require command::create_ace_build;
 require command::cvs;

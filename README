@@ -29,22 +29,22 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
     then:
        cvs login
        (hit enter for password)
-       cvs co autobuild 
+       cvs co autobuild
 
     If you are checking out of the DOC group CVS and have an account there,
     set your CVSROOT to:
        :ext:[username]@cvs.doc.wustl.edu:/project/cvs-repository
 
     then:
-       cvs co autobuild 
+       cvs co autobuild
 
 (2) Look at the existing XML configuration files in
     autobuild/configs/autobuild/*.  Create a new XML configuration
     for your build and customize it according
-    to your local site.  
+    to your local site.
 
     In the <configuration></configuration> section, you can set environment
-    variables like ACE_ROOT, PATH, CVSROOT, LD_LIBRARY_PATH, etc.  
+    variables like ACE_ROOT, PATH, CVSROOT, LD_LIBRARY_PATH, etc.
     For example:
 
     <environment name="ACE_ROOT"        value="/export/bugzilla/Minimum_newbuild/ACE_wrappers" />
@@ -56,17 +56,20 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
     options that are passed to auto_run_tests.pl. For Windows, it should
     include Win32.
 
-(3)  In the <configuration></configuration> section, specify the directory 
-     where to place the log files from the build.
-     Ideally this directory should be accessible by a web server, so
-     that you can see the log files via http.  
-     For example:
+    The "make_program" variable enabled you to specify a different executable
+    to call for make.
+
+(3) In the <configuration></configuration> section, specify the directory
+    where to place the log files from the build.
+    Ideally this directory should be accessible by a web server, so
+    that you can see the log files via http.
+    For example:
   <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
 
 
-(4)  Edit the file autobuild/configs/scoreboard/acetao.xml, and add the
-     URL of the directory where the log files are located.
-     For example:
+(4) Edit the file autobuild/configs/scoreboard/acetao.xml, and add the
+    URL of the directory where the log files are located.
+    For example:
 
 <scoreboard>
     <preamble>
@@ -84,12 +87,12 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 </scoreboard
 
 
-(5) To run the build, you run autobuild.pl with the XML config file as the 
+(5) To run the build, you run autobuild.pl with the XML config file as the
     argument:
 
-  autobuild.pl Debian_Minimum_Static.xml 
+  autobuild.pl Debian_Minimum_Static.xml
 
-(6) To update the scoreboard, you run scoreboard.pl with acetao.xml as the 
+(6) To update the scoreboard, you run scoreboard.pl with acetao.xml as the
     argument:
 
   scoreboard.pl -o [output directory] -c acetao.xml
@@ -108,11 +111,11 @@ OTHER NOTES
 
      <variable name="PERL GLOBAL VARIABLE NAME"  value="VARIABLE VALUE" />
 
-(3)  Outside the configuration section, commands are specified with the 
+(3)  Outside the configuration section, commands are specified with the
      following tag:
 
      <command name="COMMAND NAME" options="COMMAND OPTIONS" />
-     
+
      Each command is located in Perl modules in the autobuild/command
      directory.  If you look in each Perl module, you will see a line
      such as:
@@ -136,7 +139,7 @@ SCOREBOARD NOTES
     <pdf>test.pdf</pdf> will cause a hyperlink to appear called
     'pdf' to appear on that row in the scoreboard. Clicking on the
     link will download/open the file. A column header will appear
-    called PDF. If this tag is the config file then the column will 
+    called PDF. If this tag is the config file then the column will
     not appear in the screen. This is useful if you use doxygen to
     create postscript output and convert it to PDF format for
     greater reader usability.
@@ -154,7 +157,7 @@ SCOREBOARD NOTES
     link will download/open the file. A column header will appear
     called PS. If this tag is the config file then the column will
     not appear on the screen. This is useful if you use doxygen to
-    create postscript output. 
+    create postscript output.
 
     The <url> contents plus the <ps> contents are used to
     refer to the document on the webserver. So if the <url> is
@@ -167,14 +170,14 @@ SCOREBOARD NOTES
     <html>test.html</html> will cause a hyperlink to appear called
     'html' to appear on that row in the scoreboard. Clicking on the
     link will download/open the file. A column header will appear
-    called HTML. If this tag is not in the config file then the 
-    column will not appear on the screen. This is useful if you 
+    called HTML. If this tag is not in the config file then the
+    column will not appear on the screen. This is useful if you
     use doxygen to create html output.
 
-(4) SNAPSHOT - for users of automake and autoconf, to display a 
+(4) SNAPSHOT - for users of automake and autoconf, to display a
     created snapshot of the present code, use the
     <snapshot>test.tar.gz</snapshot>. This will cause a hyperlink
-    to appear called 'snapshot' to appear on that row in the 
+    to appear called 'snapshot' to appear on that row in the
     scoreboard. Clicking on the link will download/open the file.
     A column header will appear called SNAPSHOT. If this tag is
     not in the config file then the column will not appear on the
@@ -207,6 +210,21 @@ MISCELLANEOUS NOTES
 
 <command name="print_os_version" />
 
+   If you run on Windows with Cygwin or MingW and you have uname installed
+   you can printed os version and uname results with
+
+<command name="print_os_version" options="useuname" />
+
+(3) print_perl_version -> print out some information about the perl version
+                          being used for the build
+
+<command name="print_perl_version" />
+
+(4) print_make_version -> print out some information about the make version
+                          being used for the build
+
+<command name="print_make_version" />
+
 E-MAIL NOTIFICATION
 ===================
 
@@ -220,14 +238,14 @@ progress.  Unix supported only for now, NT support on the way.
 
      When build errors are detected, an e-mail will be sent to myname@mydomain.com,
      showing an abbreviated list of errors, and referring the recipient to
-     look at SCOREBOARD_URL for a full list of the errors.  
+     look at SCOREBOARD_URL for a full list of the errors.
 
 (2)  For Windows NT only, you also need to add the domain name of the SMTP
      server used to send outgoing mail.  You do not need to add this line on
      UNIX platforms:
 
      <variable name="MAIL_ADMIN_SMTP_HOST"  value="smtphostame.mydomain.com" />
- 
+
 
 <CODE>$Id$</CODE>
 */

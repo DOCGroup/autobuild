@@ -33,7 +33,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     if (!-r $root || !-d $root) {
         print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
@@ -47,9 +47,9 @@ sub CheckRequirements ()
 sub Run ($)
 {
     my $self = shift;
+    my $useuname = shift;
 
     main::PrintStatus ('Config', "print OS Version" );
-
 
     if(-x "/bin/uname"){
         print "<h3>OS version (uname -a)</h3>\n";
@@ -68,22 +68,28 @@ sub Run ($)
 
     if(-r "/etc/redhat-release"){
         print "<h3>RedHat Linux Version (/etc/redhat-release)</h3>\n";
-	system("cat /etc/redhat-release"); 
+	system("cat /etc/redhat-release");
     }
 
     if(-r "/etc/debian_version"){
         print "<h3>Debian Linux Version (/etc/debian_version)</h3>\n";
-	system("cat /etc/debian_version"); 
+	system("cat /etc/debian_version");
     }
 
     if(-r "/proc/version"){
         print "<h3>Linux Kernel Version (/proc/version)</h3>\n";
-	system("cat /proc/version"); 
+	system("cat /proc/version");
+    }
+
+    if(lc $useuname eq "useuname"){
+        print "<h3>OS version (uname -a)</h3>\n";
+        system("uname -a");
+        print "\n";
     }
 
     if($^O eq "MSWin32"){
         print "<h3>Microsoft Version (VER)</h3>\n";
-	system("VER"); 
+	system("VER");
     }
     return 1;
 }
