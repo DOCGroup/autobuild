@@ -1,3 +1,13 @@
+Mon Aug 26 16:56:23 2002 Ossama Othman  <ossama@uci.edu>
+
+	* configs/autobuild/valinor/Full.xml:
+
+	  Disabled FL and QT reactors.  I was unable to get them to link.
+	  We'll have to figure out why not.
+
+	  Added "-lXm" to the PLATFORM_XT_LIBS make variable.  The Motif
+	  library is apparently required for the ACE XtReactor_Test.
+
 Mon Aug 26 10:51:57 2002 Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/valinor/Full.xml:
