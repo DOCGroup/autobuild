@@ -25,7 +25,7 @@
     <command name="cvs"               options="checkout -P MPC" />
     <command name="cvs"               options="checkout -P ACE" />
 
-    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repsitory/.disable" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
 
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/forte7-64_debug/.disable" />
 
