@@ -1,3 +1,10 @@
+Tue Mar 11 18:33:49 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/scoreboard/acetao.xml:
+	  New autoconf builds for HP-UX 11 on PA-RISC; one aC++, one g++.
+
 Tue Mar 11 13:20:37 2003  Ossama Othman  <ossama@uci.edu>
 
 	* configs/autobuild/danzon/driver.sh:
