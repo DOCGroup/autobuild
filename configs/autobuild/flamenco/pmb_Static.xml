@@ -36,6 +36,8 @@
     <command name="shell"             options="sleep 10" /> 
     <command name="shell"             options="/bin/sync" /> 
     <command name="shell"              options="/project/builds/isisbuilds/pmb_Static/ACE_wrappers/bin/performance_stats.sh /project/builds/isisbuilds/pmb_Static/ACE_wrappers /web/users/isisbuilds/pmb_Stats" />
+    <command name="shell"              options="/project/builds/isisbuilds/pmb_Static/ACE_wrappers/bin/performance_stats.sh /project/builds/isisbuilds/pmb_Static/ACE_wrappers /web/users/isisbuilds/pmb_Stats" />
+    <command name="shell"              options="/project/builds/isisbuilds/pmb_Static/ACE_wrappers/bin/performance_stats.sh /project/builds/isisbuilds/pmb_Static/ACE_wrappers /web/users/isisbuilds/pmb_Stats" />
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
