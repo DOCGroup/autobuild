@@ -27,29 +27,27 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_WCHAR\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" /> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" /> 
 
     <command name="print_os_version" options="gcc" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
-    <!-- Every thing inside of TAO including CIAO -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc -hierarchy -make_coexistence" />
 
-    <!--Get the cidlc compiler Note this is only for linux with bunzip2 installed-->
-    <command name="shell"             options="rm -rf cidlc" />
-    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/latest.txt" />
-    <command name="cvs"               options="-q co -d cidlc cidlc/binary/gnu-linux/i386/`cat cidlc/latest.txt`" />
-    <command name="shell"             options="bunzip2 cidlc/`cat cidlc/latest.txt`" />
-    <command name="shell"             options="mv `cat cidlc/latest.txt | sed -e 's/\(.*\)\.bz2$/cidlc\/\1/g'` $CIAO_ROOT/bin/cidlc" />
+    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+    <command name="shell"             options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="auto_run_tests"    options="" />
 

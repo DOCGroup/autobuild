@@ -26,7 +26,9 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nTAO_IDLFLAGS += -H dynamic_hash\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nTAO_IDLFLAGS += -H dynamic_hash\ncidl=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\n\n'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -35,12 +37,17 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO,CIAO -hierarchy -make_coexistence" />
+
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF -hierarchy -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C CIAO realclean" />
+    <command name="shell"             options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k -j 4" />
     <command name="make"              options="-k -j 4 -C TAO" />
+    <command name="make"              options="-k -j 4 -C TAO/CIAO" />
     <command name="auto_run_tests"    options="" />
 
     <command name="log"               options="off" />
