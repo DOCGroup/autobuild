@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
-        <environment name="PATH"     value="C:\ace\ACE_wrappers-repository\bin" type="prefix" />
+        <environment name="PATH"     value="C:\ace\ACE_wrappers-repository\lib" type="prefix" />
         <environment name="SSL_ROOT"         value="C:\OpenSSL" />
         <environment name="CVSROOT"  value=":ext:shuston@cvs.doc:/project/cvs-repository" />
         <environment name="MPC_ROOT" value="C:\ace\MPC" />
