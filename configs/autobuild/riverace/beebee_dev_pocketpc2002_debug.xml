@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
-        <environment name="MPC_CORE"     value="C:\ace\MPC" />
+        <environment name="MPC_ROOT"     value="C:\ace\MPC" />
         <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE ARM) Debug" />
         <environment name="ACE_WINCE_TEST_CONTROLLER" value="PocketControllerEnterprise" />
         <environment name="ACE_PCE_DEVICE" value="-l DEVICE_PATH=\Riverace\Steve's Toshiba Pocket PC;CONNECT=default;" />
@@ -23,7 +23,6 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
-    <command name="cvs"               options="checkout -P MPC"/>
 
     <command name="print_os_version" />
     <command name="print_ace_config" />

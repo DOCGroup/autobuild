@@ -1,66 +1,100 @@
+Mon Apr 12 06:34:17 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_optimize.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
+        * configs/autobuild/riverace/timmy_dev_bcb5_debug.xml:
+        * configs/autobuild/riverace/timmy_dev_msvc6_debug.xml:
+
+          Reverted my changes from Wed Apr  7 14:32:29 2004 to the
+          riverace configuration files at Steve's request.
+
 Sun Apr 11 21:29:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/tao/Unicode.xml:
-	* configs/autobuild/tao/Wchar.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml:
 
-	  Updated to use MPC.
+          Updated to use MPC.
 
 Sun Apr 11 19:00:04 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/nirvana/VC7_Core.xml:
+        * configs/autobuild/nirvana/VC7_Core.xml:
 
-	  Fixed some minor things with the builds.
+          Fixed some minor things with the builds.
 
 Sun Apr 11 18:37:56 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Cosmetic changes. 
+          Cosmetic changes.
 
 Sun Apr 11 12:48:48 2004  Justin Michel  <michel_j@ociweb.com>
 
-	* autobuild.pl:
-	* command/clone_build_tree.pm:
+        * autobuild.pl:
+        * command/clone_build_tree.pm:
 
-	  Added a new command for use with the new clone_build_tree.pl
-	  that Chad added to the MPC tools. This is basically equivalent
-	  to create_ace_build, except that it's much much faster. 
+          Added a new command for use with the new clone_build_tree.pl
+          that Chad added to the MPC tools. This is basically equivalent
+          to create_ace_build, except that it's much much faster.
 
 Sat Apr 10 23:28:38 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/nirvana/New_DLL_Release.xml:
-	* configs/autobuild/nirvana/VC7_Core.xml:
-	* configs/autobuild/nirvana/vc7_driver.bat:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/VC7_Core.xml:
+        * configs/autobuild/nirvana/vc7_driver.bat:
 
-	  Set the following builds to use MPC.
+          Set the following builds to use MPC.
 
 Sat Apr 10 23:13:03 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/nirvana/DLL_Release.xml:
-	* configs/autobuild/nirvana/driver.bat:
+        * configs/autobuild/nirvana/DLL_Release.xml:
+        * configs/autobuild/nirvana/driver.bat:
 
-	  Removed these builds since they don't and have been replaced
-	  with the one below.
+          Removed these builds since they don't and have been replaced
+          with the one below.
 
 Sat Apr 10 23:11:11 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/nirvana/New_DLL_Release.xml:
+        * configs/autobuild/nirvana/New_DLL_Release.xml:
 
-	  Moved this build to use MPC.
+          Moved this build to use MPC.
 
 Sat Apr 10 22:59:01 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/tao/DLL_Core.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
 
-	  Moved these builds to use MPC.
+          Moved these builds to use MPC.
 
 Sat Apr 10 17:01:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
- 	* configs/autobuild/tango_isis/Full_Reactors.xml:
-	* configs/autobuild/tango_isis/driver_c.sh:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/driver_c.sh:
 
-	  New full reactors build at ISIS
+          New full reactors build at ISIS
 
 Fri Apr  9 10:57:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -94,10 +128,10 @@ Fri Apr  9 09:52:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Apr  8 14:46:38 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Removed the MingW build since Johnny is trying to move this
-	  build.
+          Removed the MingW build since Johnny is trying to move this
+          build.
 
 Thu Apr  8 14:01:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 

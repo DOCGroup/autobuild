@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
-        <environment name="MPC_CORE"     value="C:\ace\MPC" />
+        <environment name="MPC_ROOT"     value="C:\ace\MPC" />
         <environment name="WINMAKE_CONFIGS"  value="Win32 (WCE emulator) Debug" />
 
         <variable name="root"     value="C:\ace\ACE_wrappers-repository" />
@@ -21,7 +21,6 @@
     <command name="log"               options="ON" />
 
     <command name="cvs"               options="update -P -d ." />
-    <command name="cvs"               options="checkout -P MPC"/>
 
     <command name="print_os_version" />
     <command name="print_ace_config" />
