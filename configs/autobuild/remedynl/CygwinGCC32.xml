@@ -36,6 +36,8 @@
     <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command name="shell"             options="plink charanga rm .www-docs/auto_compile_logs/remedy.nl_WinNT4_CygwinGCC32/* -f" />
+    <command name="shell"             options="pscp *.txt *.html charanga:.www-docs/auto_compile_logs/remedy.nl_WinNT4_CygwinGCC32" />
 </autobuild>
 
 
