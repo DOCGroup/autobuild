@@ -1,3 +1,8 @@
+Wed Apr  7 08:21:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Borland_wchar.xml:
+          This is an ACE build, so exclude TAO when generating makefiles.
+
 Tue Apr  6 17:50:31 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
