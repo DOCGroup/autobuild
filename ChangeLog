@@ -1,3 +1,8 @@
+Fri Dec  6 09:57:3 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Borland_wchar.xml:
+          Added setting of configs for running the right tests
+
 Fri Dec  6 06:03:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/scoreparser.pm: Fix parsing of XML style comments.
