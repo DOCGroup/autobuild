@@ -1,3 +1,8 @@
+Fri Jul 23 07:17:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          The hpux 64 build is upgraded from aCC 355 to 356
+
 Thu Jul 22 14:26:39 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/tao/DLL_Debug.xml:
