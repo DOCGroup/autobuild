@@ -3,6 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/acc_debug" />
+        <environment name="TAO_ROOT"        value="/acebuilds/autoconf/ACE_wrappers/build/acc_debug/TAO"/>
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 

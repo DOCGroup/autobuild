@@ -1,37 +1,125 @@
-Tue Apr  8 11:47:44 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+Thu Apr 10 15:14:34 2003  Simon McQueen  <sm@prismtechnologies.com>
 
+	* configs/autobuild/valinor/Full.xml:
+	* configs/autobuild/toutatis/IA64_GCC3.1.xml:
+	* configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+	* configs/autobuild/tao/Borland.xml:
+	* configs/autobuild/tao/Borland_wchar.xml:
+	* configs/autobuild/tao/DLL_Core.xml:
+	* configs/autobuild/tao/DLL_Debug.xml:
+	* configs/autobuild/tao/Fuzz.xml:
+	* configs/autobuild/tao/Purify.xml:
+	* configs/autobuild/tao/Unicode.xml:
+	* configs/autobuild/tao/Wchar.xml:
+	* configs/autobuild/tango/Debian_NoInline.xml:
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+	* configs/autobuild/slytherin/OpenBSD_Core.xml:
+	* configs/autobuild/slytherin/OpenBSD_Full.xml:
+	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+	* configs/autobuild/skukuza/skoll_3.xml:
+	* configs/autobuild/sirion/Full.xml:
+	* configs/autobuild/sirion/Full_new.xml:
+	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+	* configs/autobuild/rumba/Debian_WChar.xml:
+	* configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+	* configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+	* configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+	* configs/autobuild/riverace/jane_dev_debug.xml:
+	* configs/autobuild/riverace/jane_dev_static_release.xml:
+	* configs/autobuild/ringil/Legacy.xml:
+	* configs/autobuild/ringil/Lib_Debug.xml:
+	* configs/autobuild/ringil/Lib_Release.xml:
+	* configs/autobuild/ringil/Unicode.xml:
+	* configs/autobuild/remedynl/BCB4DynamicDebug.xml:
+	* configs/autobuild/remedynl/BCB5StaticDebug.xml:
+	* configs/autobuild/remedynl/BCB6DynamicDebugMbg.xml:
+	* configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
+	* configs/autobuild/remedynl/BCB6DynamicRelease.xml:
+	* configs/autobuild/remedynl/BCB6DynamicReleaseUnicodeMbg.xml:
+	* configs/autobuild/remedynl/BCB6StaticRelease.xml:
+	* configs/autobuild/remedynl/CygwinGCC32.xml:
+	* configs/autobuild/remedynl/GCC32.xml:
+	* configs/autobuild/remedynl/Kylix3.xml:
+	* configs/autobuild/remedynl/MingW.xml:
+	* configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+	* configs/autobuild/pokey/GCC32_Core.xml:
+	* configs/autobuild/nirvana/DLL_Release.xml:
+	* configs/autobuild/nirvana/VC7_Core.xml:
+	* configs/autobuild/nirvana/W4_Debug.xml:
+	* configs/autobuild/nirvana/XML_Debug.xml:
+	* configs/autobuild/maglor/Static.xml:
+	* configs/autobuild/maedhros/Core.xml:
+	* configs/autobuild/guajira/TRU64_CXX.xml:
+	* configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+	* configs/autobuild/dresystems/skoll_1.xml:
+	* configs/autobuild/dresystems/skoll_2.xml:
+	* configs/autobuild/doc/Doxygen.xml:
+	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+	* configs/autobuild/curufin/SingleThreaded.xml:
+	* configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+	* configs/autobuild/cuni/hitotsu_icc70_full.xml:
+	* configs/autobuild/cuni/mitsu_gcc296_full.xml:
+	* configs/autobuild/cuni/mitsu_gcc32_full.xml:
+	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
+	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+	* configs/autobuild/balar/Debian_Core.xml:
+	* configs/autobuild/balar/Debian_Minimum.xml:
+	* configs/autobuild/amrod/ImplicitTemplates.xml:
+	* configs/autobuild/ace/LYNX_PPC.xml:
+	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+	
+	  Added TAO_ROOT environment variable.
+
+Tue Apr  8 11:47:44 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+         
 	* configs/autobuild/danzon/SunOS_Sun53.xml:
 	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Changed the
 	  path to location of the builds.
-
+         
 Wed Apr  2 10:15:21 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
-
+         
 	* configs/scoreboard/tao_future.xml:
 	* configs/scoreboard/tao.xml: Removed the three builds from ISIS,
 	  since we have some rearrangement going on here.
-
+         
 Sun Mar 30 22:00:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
-
+         
 	* configs/autobuild/maglor/Static.xml: Added optimized and
 	  non-optimized data collection points for IOR sizes.
-
+         
 Sun Mar 30 11:44:12 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
-
+         
         * common/prettify.pm:
           BCB6 can give "Assertion failed" during compilation and this is
           than an error in the compiler. Mark this line as error so that it
           appears also in the brief build output as error.
-
+         
 Sat Mar 29 19:08:33 2003  Steve Huston  <shuston@riverace.com>
-
+         
 	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: New
 	  autoconf build for AIX 5.1, Visual Age C++ 6.
-
+         
 	* configs/scoreboard/ace_future.xml: Added AIX 5.1, Visual Age 6
 	  autoconf build.
-
+         
 Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
-
+         
 	* configs/autobuild/riverace/charlie_dev_va5_debug.xml:
 	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
 	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
@@ -39,45 +127,45 @@ Sat Mar 29 17:02:38 2003  Steve Huston  <shuston@riverace.com>
 	  Changed from make realclean to make reverseclean to insure
 	  that everything gets cleaned out so Visual Age can deal with
 	  template properly.
-
+         
 Mon Mar 24 07:04:44 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
-
+         
 	* configs/scoreboard/tao.xml: Added a IPV6 RH8 full builds to the
 	  scoreboard.
-
+         
 Mon Mar 24 06:48:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
-
+         
         * configs/scoreboard/tao.xml: Replaced the BCB5 Static build with a
           BCB6 Static build
-
+         
         * configs/autobuild/remedynl/BCB6StaticRelease.xml: Added this file.
           Also removed obsolete config files in this directory.
-
+         
 Sat Mar 22 08:02:39 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
-
+         
 	* configs/autobuild/nirvana/VC7_Core.xml: Removed obsolete mwc
 	  option -dynamic_only.
-
+         
 Fri Mar 21 11:28:28 2003  Ossama Othman  <ossama@uci.edu>
-
+         
 	* make_pretty.pl (tests_output):
 	* common/prettify.pm (Test_Handler):
-
+         
 	  Reverted previous change.  Some tests print expected exception
 	  output.
-
+         
 Thu Mar 20 14:21:33 2003  Ossama Othman  <ossama@uci.edu>
-
+         
 	* make_pretty.pl (tests_output):
 	* common/prettify.pm (Test_Handler):
-
+         
 	  Prettify the actual CORBA exception output.
-
+         
 Wed Mar 19 06:59:18 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
-
+         
 	* configs/scoreboard/ace_future.xml: Fixed a cut and past error in
 	  the URL for WAEI.
-
+         
 Wed Mar 19 06:00:26 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/ace_future.xml: Changed the URL for MACOS

@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_DLL_Core\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="F:\bugzilla\new_DLL_Core\ACE_wrappers\TAO"/>
 
         <variable name="root"     value="F:/bugzilla/new_DLL_Core/" />
 	<variable name="log_file" value="log.txt" />

@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="C:\builds\lib_release\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="C:\builds\lib_release\ACE_wrappers\TAO"/>
 
         <variable name="root"     value="C:/builds/lib_release/" />
 	<variable name="log_file" value="log.txt" />

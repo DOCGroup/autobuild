@@ -3,6 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/export1/tango/bugzilla/SUNOS_GCC_2_95/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/export1/tango/bugzilla/SUNOS_GCC_2_95/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/export1/tango/bugzilla/SUNOS_GCC_2_95/ACE_wrappers/ace:/project/danzon/pkg/OpenSSH/lib:/pkg/gnu2k1/lib:/pkg/gnu/lib" />
         <environment name="CVSROOT"         value=":ext:wustlbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/project/danzon/pkg/OpenSSH/bin/ssh" />

@@ -1,6 +1,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"        value="/home/autobuild/src/ACE_wrappers/build/gcc32_full" />
+        <environment name="TAO_ROOT"        value="/home/autobuild/src/ACE_wrappers/build/gcc32_full/TAO"/>
         <environment name="CVSROOT"         value=":pserver:anonymous@anoncvs.ociweb.com:/cvs" />
         <environment name="LD_LIBRARY_PATH" value="/home/autobuild/src/ACE_wrappers/build/gcc32_full/ace" />
 

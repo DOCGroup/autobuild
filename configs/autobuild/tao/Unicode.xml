@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_unicode\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="F:\bugzilla\new_unicode\ACE_wrappers\TAO"/>
         <environment name="Path"         value="F:\bugzilla\new_unicode\ACE_wrappers\bin;" type="prefix" />
 
         <variable name="root"     value="F:/bugzilla/new_unicode/" />

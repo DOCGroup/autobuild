@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="D:\BCB4dd\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="D:\BCB4dd\ACE_wrappers\TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
         <environment name="Path"         value="D:\progra~1\borland\cbuild~\bin;D:\progra~\borland\cbuild~\lib;D:\progra~\borland\cbuild~1\projects\bpl;D:\BCB6dd\ACE_wrappers\bin\Dynamic\Debug;c:\putty" type="prefix" />

@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_Fuzz\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="F:\bugzilla\new_Fuzz\ACE_wrappers\TAO"/>
 
         <variable name="root"     value="F:/bugzilla/new_Fuzz/" />
 	<variable name="log_file" value="log.txt" />

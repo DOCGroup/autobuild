@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_Borland_wchar\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="F:\bugzilla\new_Borland_wchar\ACE_wrappers\TAO"/>
         <environment name="Path"         value="E:\borland\bcc55\bin;F:\bugzilla\new_Borland_wchar\ACE_wrappers\bin\Dynamic\Debug\Unicode;F:\bugzilla\new_Borland_wchar\ACE_wrappers\bin\Dynamic\Release;" type="prefix" />
 
 	<environment name="BUILD"  value="all" />
