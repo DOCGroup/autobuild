@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="F:\bugzilla\new_DLL_Core\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="F:\bugzilla\new_DLL_Core\ACE_wrappers\TAO"/>
-	<environment name="Path"    value="F:\bugzilla\new_DLL_Core\ACE_wrappers\bin;G:\bugzilla\new_DLL_Core\ACE_wrappers\lib;%Path%" type="prefix" />
+	<environment name="Path"    value="F:\bugzilla\VC71_dlls;F:\bugzilla\new_DLL_Core\ACE_wrappers\bin;G:\bugzilla\new_DLL_Core\ACE_wrappers\lib;%Path%" type="prefix" />
 
         <variable name="root"     value="F:/bugzilla/new_DLL_Core/" />
 	<variable name="log_file" value="log.txt" />
@@ -29,6 +29,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
+    <command name="shell"             options="F:\bugzilla\bin\pscp  isisbuilds@tao.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers\TAO\CIAO\bin\cidlc.exe" />
     <command name="generate_workspace" options="-type vc6 TAO/TAOACE.mwc" /> 
     <command name="generate_workspace" options="-exclude TAO/CIAO/DAnCE/tests -type vc6 TAO/CIAO/CIAOTAO.mwc" /> 
     <command name="win32make"         options="msvc_mpc_auto_compile  -CIAO -Debug -k" />
@@ -37,4 +38,5 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    
 </autobuild>
