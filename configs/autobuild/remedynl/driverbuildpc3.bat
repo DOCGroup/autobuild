@@ -9,4 +9,5 @@ perl C:\ACE\autobuild\autobuild.pl cbxpreview.xml
 perl C:\ACE\autobuild\autobuild.pl cbxdd.xml
 perl C:\ACE\autobuild\autobuild.pl MingW.xml
 perl C:\ACE\autobuild\autobuild.pl mingws.xml
+perl C:\ACE\autobuild\autobuild.pl BCB6CodeGuard.xml
 
