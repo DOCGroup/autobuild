@@ -1,3 +1,11 @@
+Wed Mar  2 12:18:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/flamenco/driver_pmb.sh:
+        * configs/autobuild/flamenco/driver_pmb_start.sh:
+        * configs/autobuild/flamenco/pmb_start_Static.xml:
+        * configs/autobuild/flamenco/pmb_Static.xml:
+          Removed, pmb is now integrated with the main trunck
+
 Tue Mar  1 19:02:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
