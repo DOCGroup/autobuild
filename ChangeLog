@@ -1,3 +1,8 @@
+Tue Oct 14 17:16:48 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/flamenco/Static.xml: Do not run the test. We
+	  have another build to run the test.
+
 Tue Oct 14 17:14:49 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/balar_isis/Static.xml: A new static build on
