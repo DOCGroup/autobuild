@@ -1,3 +1,10 @@
+Tue Feb 11 13:35:01 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/scoreboard/acetao.xml:
+	* configs/autobuild/nirvana/vc7_driver.bat:
+	* configs/autobuild/nirvana/VC7_Core.xml: Added a new VC7.NET core
+	  build.
+
 Mon Feb 10 09:50:38 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/nirvana/DLL_Release.xml:

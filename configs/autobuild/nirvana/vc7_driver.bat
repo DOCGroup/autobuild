@@ -3,7 +3,7 @@ setlocal
 set "LIB=d:\ssl\openssl-0.9.6\out32dll"
 set "INCLUDE=D:\ssl\openssl-0.9.6\inc32"
 set "CVSROOT=:ext:wustlbuilds:/project/cvs-repository"
-C:\Program Files\Microsoft Visual Studio .NET\Vc7\bin\vcvars32.bat
+call "C:\Program Files\Microsoft Visual Studio .NET\Vc7\bin\vcvars32.bat"
 cd ..\..\..\
 cvs up -P -d
 cd configs\autobuild\nirvana

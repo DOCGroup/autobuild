@@ -1,14 +1,14 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="G:\bugzilla\VC7.NET\ACE_wrappers" />
-        <environment name="Path"         value="G:\bugzilla\VC7.NET\ACE_wrappers\bin;D:\ssl\openssl-0.9.6\out32dll" type="prefix" />
+        <environment name="ACE_ROOT"     value="G:/bugzilla/VC7.NET/ACE_wrappers" />
+        <environment name="Path"         value="G:/bugzilla/VC7.NET/ACE_wrappers\bin;D:\ssl\openssl-0.9.6\out32dll" type="prefix" />
 
-        <variable name="root"            value="G:/bugzilla/VC7.NET" />
-        <variable name="project_root"    value="." />
-        <variable name="configs"         value="Win32" />
+        <variable name="root"            value="G:/bugzilla/VC7.NET/" />
+        <variable name="project_root"            value="ACE_wrappers" />
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root" value="Z:/VC7_Debug" />
+
         <variable name="name"            value="WinXP VC.NET Debug" />
     </configuration>
 
@@ -18,7 +18,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="update -P -d ." />
+    <command name="cvs"               options="-q checkout -P ACE_wrappers" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_XML_SVC_CONF\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
 
     <command name="print_os_version" />
