@@ -25,8 +25,8 @@
     <command name="print_os_version" />
     <command name="print_ace_config" />
 
-    <command name="shell"    options="perl ${HOME}/cvschangelogbuilder-2.0/cvschangelogbuilder.pl -ssh -module=ACE_wrappers -output=buildhtmlreport >ACE_wrappers.html" />
-    <command name="shell"    options="perl ${HOME}/cvschangelogbuilder-2.0/cvschangelogbuilder.pl -ssh -module=ACE_MPC -output=buildhtmlreport >ACE_MPC.html" />
+    <command name="shell"    options="perl ${HOME}/cvschangelogbuilder-2.0/cvschangelogbuilder.pl -ssh -viewcvsurl=http://cvs.doc.wustl.edu/viewcvs.cgi/ -module=ACE_wrappers -output=buildhtmlreport >ACE_wrappers.html" />
+    <command name="shell"    options="perl ${HOME}/cvschangelogbuilder-2.0/cvschangelogbuilder.pl -ssh -viewcvsurl=http://cvs.doc.wustl.edu/viewcvs.cgi/ -module=ACE_MPC -output=buildhtmlreport >ACE_MPC.html" />
     <command name="shell"    options="cp ACE_wrappers.html /web/users/isisbuilds/auto_compile_logs/CVS_Report/AE_wrappers.html" />
     <command name="shell"    options="cp MPC.html /web/users/isisbuilds/auto_compile_logs/CVS_Report/AE_MPC.html" />
 
