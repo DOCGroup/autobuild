@@ -3,7 +3,7 @@
 # $Id$
 #
 
-PATH=/opt/SUNWspro_6.2/SUNWspro/bin:/pkg/perl-5.6.1/bin:/pkg/gnu2k1/bin:${PATH}
+PATH=/opt/SUNWspro_6.2/SUNWspro/bin:/pkg/perl-5.6.1/bin:/pkg/gnu2k1/bin:/pkg/gnu/bin:${PATH}
 export PATH
 
 perl $HOME/autobuild/autobuild.pl \

@@ -1,3 +1,8 @@
+Mon Jun 24 16:08:24 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
+	  Add cvs to PATH.
+
 Mon Jun 24 00:32:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: 
