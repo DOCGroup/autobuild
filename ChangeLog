@@ -1,3 +1,9 @@
+Fri Oct 24 09:21:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/cbxdd.xml:
+          Changed this build so that it uses MPC. Using this build we
+          can work on the MPC support for Borland.
+
 Wed Oct 22 09:53:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
