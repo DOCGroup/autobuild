@@ -11,7 +11,7 @@
         <variable name="project_root" value="build/gcc296_full" />
         <variable name="log_file"     value="gcc296_full.log" />
         <variable name="log_root"     value="/home/autobuild/log/hitotsu/gcc296_full" />
-	<variable name="configs"  value="Linux" />
+	<variable name="configs"  value="Linux Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />

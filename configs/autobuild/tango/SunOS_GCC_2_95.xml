@@ -11,6 +11,7 @@
         <variable name="root"     value="/export1/tango/bugzilla/SUNOS_GCC_2_95" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/tango_SUNOS_GCC_2_95" />
+        <variable name="configs"  value="Exceptions" />
 
 
     </configuration>

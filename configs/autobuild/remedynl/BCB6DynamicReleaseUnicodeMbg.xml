@@ -12,7 +12,7 @@
 	<environment name="BCBVER"   value="6" />
 	<environment name="UNICODE"  value="1" />
 
-        <variable name="configs"  value="Win32 Borland" />
+        <variable name="configs"  value="Win32 Borland Exceptions" />
         <variable name="root"     value="D:\ACE\BCB6dru\" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\ACE\BCB6dru\" />

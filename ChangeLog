@@ -1,3 +1,87 @@
+Thu Sep 25 17:24:43 2003  Irfan Pyarali  <irfan@oomworks.com>
+
+	* configs\autobuild:
+
+	  Added "Exception" config option to these files:
+
+	  - ace/SunOS_FORTE_UPDATE_1.xml
+	  - amrod/ImplicitTemplates.xml
+	  - charanga/Debian_NoInterceptors.xml
+	  - chipper/SOLARIS8_FORTE_UPDATE1.xml
+	  - cuni/hitotsu_gcc296_full.xml
+	  - cuni/hitotsu_icc70_full.xml
+	  - cuni/mitsu_gcc296_full.xml
+	  - cuni/mitsu_gcc32_full.xml
+	  - curufin/SingleThreaded.xml
+	  - danzon/SunOS_SunCC53.xml
+	  - doc_isis/RH8_wchar.xml
+	  - dresystems/freebsd_ace.xml
+	  - dresystems/freebsd_ace_debug.xml
+	  - dresystems/freebsd_ace_dump.xml
+	  - dresystems/freebsd_ace_explicit_template.xml
+	  - dresystems/freebsd_ace_no_inline.xml
+	  - dresystems/freebsd_ace_single.xml
+	  - dresystems/freebsd_tao.xml
+	  - dresystems/mpc_test.xml
+	  - dresystems/mpc_test_tao.xml
+	  - dresystems/sol9_gcc33.xml
+	  - dresystems/sol9_gcc33_tao.xml
+	  - dresystems/sol9_gcc33_tao_legacy.xml
+	  - dresystems/sol9_spro54.xml
+	  - dresystems/sol9_spro54_tao.xml
+	  - dresystems/sol9_spro54_tao_legacy.xml
+	  - equus/RH9_wchar.xml
+	  - flamenco/footprint_metrics.xml
+	  - guajira/TRU64_CXX.xml
+	  - remedynl/SunForte.xml
+	  - riverace/benjamin_dev_debug.xml
+	  - riverace/benjamin_dev_ipv6_debug.xml
+	  - riverace/benjamin_dev_optimize.xml
+	  - riverace/bumbles_dev_acc_debug.xml
+	  - riverace/charlie_dev_va5_debug.xml
+	  - riverace/cuddy_dev_gcc3_debug.xml
+	  - riverace/cuddy_dev_va6-64_debug.xml
+	  - riverace/cuddy_dev_va6_debug.xml
+	  - riverace/essie_dev_forte7-64_debug.xml
+	  - riverace/jane_dev_debug.xml
+	  - riverace/jane_dev_static_release.xml
+	  - rumba/Debian_GCC_3.0.4.xml
+	  - rumba/Debian_WChar.xml
+	  - sirion/Full.xml
+	  - sirion/Full_new.xml
+	  - slytherin/OpenBSD_Single_Threaded.xml
+	  - tango/SunOS_GCC_2_95.xml
+	  - tango_isis/Full.xml
+	  - tango_isis/SingleThreaded.xml
+	  - tao_isis/GIOP10_GCC32.xml
+	  - remedynl/BCB6DynamicDebugMbg.xml
+	  - remedynl/BCB6DynamicDebugUnicodeMbg.xml
+	  - remedynl/BCB6DynamicRelease.xml
+	  - remedynl/BCB6DynamicReleaseUnicodeMbg.xml
+	  - remedynl/BCB6StaticRelease.xml
+	  - remedynl/MingW.xml
+	  - remedynl/vc7.xml
+	  - ringil/Legacy.xml
+	  - ringil/Unicode.xml
+	  - riverace/beebee_dev_wince4_debug.xml
+	  - riverace/hope_dev_vc7_debug.xml
+	  - riverace/kitty-puss_dev_sdk_debug.xml
+	  - tao/Borland_wchar.xml
+	  - tao/Unicode.xml
+	  - tao/Wchar.xml
+
+	  Consolidated configs options from the auto_run_tests command to
+	  the "configs" xml tag.  Also added "Exception" config option:
+
+	  - nirvana/DLL_Release.xml
+	  - riverace/beebee_dev_msvc6_debug.xml
+	  - riverace/beebee_dev_pocketpc2002_debug.xml
+	  - riverace/timmy_dev_bcb5_debug.xml
+	  - riverace/timmy_dev_msvc6_debug.xml
+	  - tao/Borland.xml
+	  - tao/DLL_Debug.xml
+	  - tao/Purify.xml
+
 Thu Sep 25 15:31:00 2003  Gautam Thaker  <gthaker@atl.lmco.com>
 
         Please direct all questions regarding this update to:

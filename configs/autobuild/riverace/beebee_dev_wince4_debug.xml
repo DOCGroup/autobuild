@@ -9,6 +9,8 @@
 	<variable name="log_file" value="ce4_debug.txt" />
         <variable name="log_root" value="G:\build_logs\dev\wince4_debug" />
         <variable name="name"     value="Windows CE .NET Debug" />
+        <variable name="configs"  value="Win32 WinCE Exceptions" />
+
     </configuration>
 
     <command name="status"            options="on" />

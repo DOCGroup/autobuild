@@ -10,6 +10,7 @@
         <variable name="root"     value="/home/build/ACE/nightly" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="/home/build/ACE/nightly" />
+        <variable name="configs"  value="Exceptions" />
         <variable name="name"     value="Sun Forte" />
     </configuration>
 

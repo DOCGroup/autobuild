@@ -12,7 +12,7 @@
         <variable name="root"     value="/project/taotmp/isisbuilds/GIOP10" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/isisbuilds/.www-docs/auto_compile_logs/tao_GIOP10" />
-        <variable name="configs"  value="Linux GIOP10" />
+        <variable name="configs"  value="Linux GIOP10 Exceptions" />
 
     </configuration>
 

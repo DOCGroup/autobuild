@@ -10,6 +10,7 @@
   <variable name="root"                value="/home/dhinton/development/ace/autobuilds/freebsd_ace_debug" />
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_ace_debug" />
+  <variable name="configs"             value="Exceptions" />
   <variable name="make_program"        value="gmake" />
 
  </configuration>

@@ -11,7 +11,7 @@
         <variable name="project_root" value="build/icc70_full" />
         <variable name="log_file"     value="icc70_full.log" />
         <variable name="log_root"     value="/home/autobuild/log/hitotsu/icc70_full" />
-	<variable name="configs"  value="Linux" />
+	<variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
 

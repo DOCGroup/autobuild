@@ -11,6 +11,7 @@
         <variable name="root"     value="/beef/bugzilla/TRU64_CXX_newbuild" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/guajira.cs.wustl.edu_TRU64_CXX_newbuild" />
+         <variable name="configs" value="Exceptions" />
 
     </configuration>
 

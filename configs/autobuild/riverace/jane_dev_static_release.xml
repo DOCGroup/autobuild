@@ -12,6 +12,7 @@
         <variable name="project_root" value="build/static_release" />
         <variable name="log_file"     value="static_release.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/static_release" />
+        <variable name="configs"      value="Exceptions" />
 
     </configuration>
 

@@ -8,6 +8,7 @@
 	<variable name="log_file" value="msvc6_debug.txt" />
         <variable name="log_root" value="G:\build_logs\dev\msvc6_debug" />
         <variable name="name"     value="Windows 2000 MSVC6 Debug" />
+        <variable name="configs"  value="Win32 SSL Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -24,7 +25,7 @@
     <command name="print_ace_config" />
 
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k" />
-    <command name="auto_run_tests"    options="-a -Config Win32 -Config SSL" />
+    <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=7 index" />

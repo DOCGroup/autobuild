@@ -9,6 +9,8 @@
 	<variable name="log_file" value="bcb5_debug.txt" />
         <variable name="log_root" value="G:\build_logs\dev\bcb5_debug" />
         <variable name="name"     value="Windows NT4 BCB5 Debug" />
+        <variable name="configs"  value="Win32 Exceptions" />
+
     </configuration>
 
     <command name="status"            options="on" />
@@ -25,7 +27,7 @@
     <command name="print_ace_config" />
 
     <command name="make"              options=" -i -f Makefile.bor" />
-    <command name="auto_run_tests"    options="-a -Config Win32 -ExeSubDir Dynamic\Debug" />
+    <command name="auto_run_tests"    options="-a -ExeSubDir Dynamic\Debug" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />

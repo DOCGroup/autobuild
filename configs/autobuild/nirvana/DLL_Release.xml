@@ -9,6 +9,8 @@
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="Z:/new_dll_release" />
         <variable name="name"     value="WinXP DLL Release" />
+        <variable name="configs"  value="SANDBOX Win32 SSL Exceptions" />
+
     </configuration>
 
     <command name="status"            options="on" />
@@ -31,9 +33,9 @@
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -CORE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -TAO -u -k" />
 
-    <command name="auto_run_tests"    options="-a -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release -Config SANDBOX -Config Win32 -Config SSL" />
-    <command name="auto_run_tests"    options="-o -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release -Config SANDBOX -Config Win32 -Config SSL" />
-    <command name="auto_run_tests"    options="-t -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release -Config SANDBOX -Config Win32 -Config SSL" />
+    <command name="auto_run_tests"    options="-a -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release" />
+    <command name="auto_run_tests"    options="-o -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release" />
+    <command name="auto_run_tests"    options="-t -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />

@@ -12,6 +12,7 @@
         <variable name="project_root" value="build/debug" />
         <variable name="log_file"     value="debug.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/debug" />
+        <variable name="configs"      value="Exceptions" />
 
     </configuration>
 

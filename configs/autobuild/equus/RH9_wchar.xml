@@ -11,7 +11,7 @@
         <variable name="root"     value="/build/isisbuilds/wchar" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/equus_wchar" />
-        <variable name="configs"  value="Linux SSL" />
+        <variable name="configs"  value="Linux SSL Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />

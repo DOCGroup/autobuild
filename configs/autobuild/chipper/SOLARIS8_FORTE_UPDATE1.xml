@@ -11,7 +11,7 @@
         <variable name="root"     value="/export/home/chipper/bugzilla/SOLARIS8_FORTE_UPDATE1_newbuild" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/chipper_SOLARIS8_FORTE_UPDATE1_newbuild" />
-        <variable name="configs"  value="SUNCC5_1" />
+        <variable name="configs"  value="SUNCC5_1 Exceptions" />
 
     </configuration>
 

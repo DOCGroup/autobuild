@@ -12,7 +12,7 @@
         <variable name="sam_root" value="/home/acebuild/Single_Threaded/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/acebuild/public_html/auto_compile_logs/slytherin_Single_Threaded" />
-        <variable name="configs"  value="OpenBSD ST" />
+        <variable name="configs"  value="OpenBSD ST Exceptions" />
         <variable name="MAIL_ADMIN" value="frank@hunleth.com" />
 
     </configuration>

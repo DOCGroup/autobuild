@@ -12,7 +12,7 @@
         <variable name="sam_root" value="/project/amrod/bugzilla/SingleThreade/ACE_wrappers/samwise" />
         <variable name="log_file" value="amrod_ImplicitTemplates.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/amrod_ImplicitTemplates" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
 

@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"         value="C:\builds\unicode\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="C:\builds\unicode\ACE_wrappers\TAO"/>
         <environment name="WINMAKE_COMPILER" value="msvc6" />
-        <environment name="WINMAKE_CONFIGS"  value="Win32 Debug" />
+        <environment name="WINMAKE_CONFIGS"  value="Win32 Debug Exceptions" />
 
         <variable name="root"     value="C:/builds/unicode/" />
 	<variable name="log_file" value="log.txt" />

@@ -11,7 +11,7 @@
   <variable name="root"                value="/export/home/dhinton/development/ace/autobuilds/sol9_gcc33_tao" />
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/export/home/dhinton/public_html/autobuild_output/sol9_gcc33_tao" />
-  <variable name="configs"             value="Linux" />
+  <variable name="configs"             value="Linux Exceptions" />
 
  </configuration>
 

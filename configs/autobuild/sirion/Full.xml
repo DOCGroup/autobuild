@@ -12,7 +12,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="sam_root" value="/project/sirion/bugzilla/Full/ACE_wrappers/ACE_wrappers/samwise" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/sirion_Full" />
-        <variable name="configs"  value="Linux" />
+        <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
 

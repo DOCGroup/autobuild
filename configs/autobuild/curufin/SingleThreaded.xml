@@ -11,7 +11,7 @@
         <variable name="root"     value="/project/curufin/bugzilla/SingleThreaded" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
-        <variable name="configs"  value="Linux ST" />
+        <variable name="configs"  value="Linux ST Exceptions" />
 
     </configuration>
 

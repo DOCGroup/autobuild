@@ -11,6 +11,7 @@
         <variable name="project_root" value="build/optimize" />
         <variable name="log_file"     value="optimize.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/benjamin/dev/optimize" />
+        <variable name="configs"      value="Exceptions" />
 
     </configuration>
 

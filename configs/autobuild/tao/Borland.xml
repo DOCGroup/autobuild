@@ -12,6 +12,8 @@
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:\Inetpub\wwwroot\bugzilla\new_Borland" />
         <variable name="name"     value="Win2K Borland" />
+        <variable name="configs"  value="Win32 Exceptions" />
+
     </configuration>
 
     <command name="status"            options="on" />
@@ -32,9 +34,9 @@
 
     <command name="make"         options=" -i -f Makefile.bor dir=TAO" />
 
-    <command name="auto_run_tests"    options="-a -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug -Config Win32" />
-    <command name="auto_run_tests"    options="-o -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Dynamic\Debug -Config Win32" />
-    <command name="auto_run_tests"    options="-t -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Dynamic\Debug -Config Win32" />
+    <command name="auto_run_tests"    options="-a -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug" />
+    <command name="auto_run_tests"    options="-o -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Dynamic\Debug" />
+    <command name="auto_run_tests"    options="-t -s \x22f:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Dynamic\Debug" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
