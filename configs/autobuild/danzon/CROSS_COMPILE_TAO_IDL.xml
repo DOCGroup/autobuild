@@ -38,7 +38,7 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,vc7_nightly.mwc,build.mwc -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
@@ -49,11 +49,7 @@
     <command name="make"              options="-k -C ace" />
     <command name="make"              options="-k -C apps/gperf/src" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO/tao libTAO.a" />
-    <command name="make"              options="-k -C TAO/tao/IORInterceptor" />
-    <command name="make"              options="-k -C TAO/tao/Valuetype" />
-    <command name="make"              options="-k -C TAO/tao/ObjRefTemplate" />
-    <command name="make"              options="-k -C TAO/tao/PortableServer" />
+    <command name="make"              options="-k -C TAO/tao" />
     <command name="make"              options="-k -C TAO/orbsvcs/PSS" />
 
     <command name="log"               options="off" />
