@@ -44,12 +44,12 @@
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/chipper_SOLARIS8_FORTE_UPDATE1_newbuild</url>
          </build>  
          <build>
-             <name>SunOS_SunCC51</name>
-             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC51_newbuild</url>
-         </build>
-         <build>
              <name>SunOS_GCC_2_95</name>
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/tango_SUNOS_GCC_2_95</url> 
 i        </build>
+         <build>
+             <name>SunOS_SunCC51</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC51_newbuild</url>
+         </build>
     </group>
 </scoreboard>
