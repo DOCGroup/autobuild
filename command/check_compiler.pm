@@ -62,7 +62,7 @@ sub Run ($)
 	system("bcc32 -V"); 
     }
     elsif(lc $compiler eq "cbx"){
-	system("bccx -V"); 
+	system("bccx --version"); 
     }
     elsif(lc $compiler eq "kylix"){
 	system("bc++ -V"); 
