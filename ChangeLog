@@ -1,3 +1,8 @@
+Tue May 28 23:30:04 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/sirion/Full.xml: Add "clean" and "index" to
+	  process_logs directive.
+
 Tue May 28 21:18:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/rumba/driver_gcc_304.sh: Added.
