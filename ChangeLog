@@ -1,3 +1,12 @@
+Mon May 17 11:30:07 2004  Frank Hunleth  <frank@hunleth.com>
+
+	* configs/autobuild/slytherin/driver.sh:
+	* configs/autobuild/slytherin/driver_Full.sh:
+	* configs/autobuild/slytherin/driver_Single_Threaded.sh:
+
+	Run cvs up on the autobuild directory before trying to
+	build.
+
 Sun May 16 15:37:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/CygwinGCC32.xml:
