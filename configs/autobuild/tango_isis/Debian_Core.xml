@@ -38,8 +38,8 @@
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence" />
 
     <!-- Unfortunately the reverseclean target is not available under MPC. -->
-    <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
     <command name="make"              options="-k -j 4 -C ace" />
     <command name="make"              options="-k -j 4 -C apps/gperf/src" />
     <command name="make"              options="-k -j 4 -C TAO/tao" />
