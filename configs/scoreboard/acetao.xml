@@ -158,6 +158,10 @@ and let us know which platform combinations you can contribute.
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_Win2K_BCB6_Dynamic_Debug_Unicode</url>
         </build>
         <build>
+            <name>WinNT4_Cygwin_GCC_3_2_(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinNT4_CygwinGCC32</url>
+        </build>
+        <build>
             <name>WinXP_Legacy</name>
             <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
         </build>

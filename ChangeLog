@@ -1,3 +1,8 @@
+Fri Dec 20 07:46:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/acetao.xml:
+          Added Cygwin GCC 32 build
+
 Thu Dec 19 18:43:51 2002  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Fix the PATH
