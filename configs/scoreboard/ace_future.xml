@@ -11,11 +11,6 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
   <name>Test Builds for ACE</name>
     <build>
-      <name>MACOS_X_Jaguar</name>
-      <url>http://www.makexs.com/~zorko/Jaguar</url>
-      <build_sponsor>John Zorko</build_sponsor>
-    </build>
-    <build>
       <name>MACOS_X_Panther</name>
       <url>http://www.makexs.com/~zorko/Panther</url>
       <build_sponsor>John Zorko</build_sponsor>
