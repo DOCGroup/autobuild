@@ -10,6 +10,7 @@ use warnings;
 use Cwd;
 use File::Find;
 use File::Path;
+use File::Compare;
 
 sub create ($);
 sub sam ($);
@@ -152,6 +153,48 @@ sub Run ($)
         }
 
         print $file_handle $output;
+    }
+    elsif ($type eq "update") {
+
+        if (!defined $output) {
+            print STDERR __FILE__, ": No output specified for \"update\" type\n";
+            return 0;
+        }
+
+        # Expand some codes
+
+        $output =~ s/\\n/\n/g;
+        $output =~ s/\\x27/'/g;
+
+        my $full_path = $root . '/' . $filename;
+        my $tmp_path  = $full_path . ".$$";
+        my $file_handle = new FileHandle ($tmp_path, 'w');
+
+        if (!defined $file_handle) {
+            print STDERR __FILE__, ": Error creating file ($tmp_path): $!\n";
+            return 0;
+        }
+
+        print $file_handle $output;
+        close($file_handle);
+
+        my $different = 1;
+        if (-r $full_path &&
+            -s $tmp_path == -s $full_path &&
+            compare($tmp_path, $full_path) == 0) {
+          $different = 0;
+        }
+
+        if ($different) {
+          unlink($full_path);
+          if (!rename($tmp_path, $full_path)) {
+            print STDERR __FILE__, ": Error renaming $tmp_path to $full_path: $!\n";
+            return 0;
+          }
+        }
+        else {
+          unlink($tmp_path);
+        }
     }
     elsif ($type eq "delete") {
         
