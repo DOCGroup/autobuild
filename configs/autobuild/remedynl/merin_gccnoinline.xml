@@ -50,13 +50,11 @@
     <command name="make"              options="-k -C TAO" />
     <command name="make"              options="-k -C TAO/CIAO" />
 
-    <command name="auto_run_tests" options="" />
+    <command name="auto_run_tests"    options="" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_NoInline/* -f" / -->
-    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_NoInline" / -->
     <command name="shell"             options="rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_NoInline" />
 </autobuild>
