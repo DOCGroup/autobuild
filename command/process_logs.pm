@@ -74,7 +74,7 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $keep = 20;
+    my $keep = 10;
     my $moved = 0;
 
     if ($main::verbose == 1 ) {

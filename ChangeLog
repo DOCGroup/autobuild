@@ -1,3 +1,10 @@
+Thu Oct  3 14:56:08 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* command/process_logs.pm: Reduce amount of kept logs from 20 to 10
+	  to reduce disk utilization ( Johnny Willemsen  <jwillemsen@remedy.nl> ).
+	* common/prettify.pm: Add additional check before splicing error_text
+	  array, to eliminate Perl 5.8 warning.
+
 Wed Oct  2 11:26:33  Ossama Othman  <ossama@uci.edu>
 
 	* configs/scoreboard/doc.sh:

@@ -995,7 +995,9 @@ sub SendEmailNotification($)
     my @error_text = @{$self->{OUTPUT}[0]->{ERROR_TEXT}};
 
     # @error_text can be pretty huge.  Cut it down to 100 lines.
-    splice (@error_text, 100, $#error_text);
+    if ($#error_text > 100 ) {
+        splice (@error_text, 100, $#error_text);
+    }
 
     ## Combine the array of errors into one string which we can put in an e-mail
     my $errors_string = join("\n", @errors );
