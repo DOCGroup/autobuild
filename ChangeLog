@@ -1,7 +1,8 @@
 Mon Jul 29 23:54:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/doc/driver.sh: Added.
-	* configs/scoreboard/doc/Doxygen.xml: Added. First cut at a doxygen autobuild.
+	* configs/scoreboard/doc/acetao.xml: Added Doxygen build.
+	* configs/autobuild/doc/driver.sh: Added.
+	* configs/autobuild/doc/Doxygen.xml: Added. First cut at a doxygen autobuild.
 
 Mon Jul 29 16:25:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
