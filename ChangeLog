@@ -1,3 +1,9 @@
+Sun May  9 12:29:01 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+          Corrected these files
+
 Sun May  9 12:25:32 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/dresystems/mpc_test.xml:
