@@ -53,12 +53,6 @@ function update_local_scoreboard()
   ./buildMatrix $BUILD_LIST $SIMPLE_TEST_MATRIX $COMPLEX_TEST_MATRIX
 
 
-  BUILD_LIST=$TEST_MATRIX_DIR/misc-list
-  SIMPLE_TEST_MATRIX=misc_simple_matrix.html
-  COMPLEX_TEST_MATRIX=misc_detailed
-  ./buildMatrix $BUILD_LIST $SIMPLE_TEST_MATRIX $COMPLEX_TEST_MATRIX
-
-
   cp -f matrix.css $LOG_DIR/matrix.css
 }
 

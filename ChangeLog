@@ -1,6 +1,12 @@
+Mon Aug 23 16:24:21 MST 2004  Trevor Fields  <fields_t@ociweb.com>
+
+        * testmatrix/Makefile:
+        * testmatrix/update_scoreboard.sh:
+          Removed misc test matrix.
+
 Mon Aug 23 16:04:23 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
-        * testmatrix/Makefile
+        * testmatrix/Makefile:
           Added remaining scoreboard pages to the all target.
 
 Mon Aug 23 15:56:26 MST 2004  Trevor Fields  <fields_t@ociweb.com>
