@@ -12,7 +12,7 @@ decide the migration paths and strategies.
 <group>
    <name>Test Builds for TAO</name>
      <build>
-      <name>SuSE_91_PGI5.2_x86_64</name>
+      <name>SuSE_92_PGI5.2_x86_64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_pgi/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
