@@ -1,5 +1,8 @@
 Sat Mar 29 19:08:33 2003  Steve Huston  <shuston@riverace.com>
 
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: New
+	  autoconf build for AIX 5.1, Visual Age C++ 6.
+
 	* configs/scoreboard/ace_future.xml: Added AIX 5.1, Visual Age 6
 	  autoconf build.
 
