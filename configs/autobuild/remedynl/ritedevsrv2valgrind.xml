@@ -7,14 +7,13 @@
         <environment name="LD_LIBRARY_PATH"       value="/home/build/ACE/valgrind/ACE_wrappers/lib" />
         <environment name="CVSROOT"               value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"               value="ssh" />
-        <environment name="VALGRIND_OPTS"         value="--tool=memcheck" />
+        <environment name="VALGRIND_OPTS"         value="-q --tool=addrcheck --num-callers=5 --leak-check=yes --trace-children=yes" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
 
         <variable name="root"     value="/home/build/ACE/valgrind/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/valgrind/" />
         <variable name="configs"  value="Linux Exceptions" />
-
     </configuration>
 
     <command name="status"            options="on" />
