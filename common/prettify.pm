@@ -899,6 +899,10 @@ sub Compile_Handler ($)
     {
       $self->Output_Warning ($s);
     }
+    elsif ($s =~ m/out of memory/)
+    {
+      $self->Output_Error ($s);
+    }
     elsif ($s =~ m/undefined reference to/
            || $s =~ m/: cannot open/
            || $s =~ m/: cannot find/
