@@ -73,6 +73,8 @@ sub Run ($)
 
     print "XML Config file: <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/${config_file}/?cvsroot=autobuild\">${config_file}</a>\n";
 
+    print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/ChangeLog/?cvsroot=autobuild\">Autobuild ChangeLog</a> ================\n";
+
     my $current_dir = getcwd ();
 
     if (!chdir $root) {

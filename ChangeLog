@@ -1,3 +1,13 @@
+Wed Jun 23 21:42:21 UTC 2004  Don Hinton  <d.hinton@vanderbilt.edu>
+
+        * command/printaceconfig.pm:
+          Added link to autobuild ChangeLog.
+
+        * command/win32make.pm:
+          Allow arbitrary command to be passed, i.e., it no longer has to
+          be msvc_[mpc_auto|static]_compile.pl which must be in the bin
+          directory.
+        
 Wed Jun 23 10:41:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
