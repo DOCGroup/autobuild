@@ -1,3 +1,8 @@
+Thu Aug 14 14:58:43 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC32.xml:
+          Also run TAO tests
+
 Thu Aug 14 02:59:18 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/freebsd_ace.xml:
