@@ -95,7 +95,7 @@ Wed Apr 23 10:36:33 2003  Steve Huston  <shuston@riverace.com>
 Tue Apr 22 06:44:51 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
         * configs/scoreboard/ace_future.xml: Changed the IP address of the
-          FreeBSD builds from Yi-Kai Tsai <cuma@netbuck.com.tw>.
+          FreeBSD builds from Yi-Kai Tsai <cuma@dslab.csie.ncu.edu.tw>.
 
 Mon Apr 21 14:13:23 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
