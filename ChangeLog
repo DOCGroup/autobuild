@@ -1,3 +1,10 @@
+Tue Nov  9 08:49:10 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/clone_build_tree.pm:
+
+          Added a new command similar to create_ace_build, except that it is
+          much faster and is part of MPC.
+
 Tue Nov  9 07:14:31 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/nirvana/New_DLL_Release.xml:
