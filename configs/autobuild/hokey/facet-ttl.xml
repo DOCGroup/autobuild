@@ -1,4 +1,4 @@
-<!-- $Id$ -->
+<!-- $Id $ -->
 <autobuild>
     <configuration>
 
@@ -18,7 +18,7 @@
         <variable name="root"               value="/export/home/bugzilla/FACET" />
         <variable name="project_root"       value="/export/home/bugzilla/FACET/RTEvent/facet" />
         <variable name="log_file"           value="build.txt" />
-        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet" />
+        <variable name="log_root" value="/home/cs/group/bugzilla/.www-docs/auto_compile_logs/hokey_facet/ttl" />
         <variable name="configs"            value="Linux" />
         <variable name="make_program"       value="ant" />
 
@@ -31,9 +31,10 @@
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
 
     <command name="make"              options="clean" />
-    <command name="make"              options="" />
-    <command name="make"              options="-buildfile gcj.xml" />
-    <command name="make"              options="" />
+
+<command name="make"              options="-Duse_feature_ttl=t" />
+<command name="make"              options="-buildfile gcj.xml -Duse_feature_ttl=t" />
+<command name="make"              options="-Duse_feature_ttl=t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
