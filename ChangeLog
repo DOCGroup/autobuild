@@ -1,3 +1,23 @@
+Tue Aug  5 18:07:28 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+          Broke up the generate workspace and make steps so that ACE and
+          TAO are done independently, added rmcast,, and turned off the
+          tests.
+
+        * configs/autobuild/dresystems/mpc_test.xml:
+        * configs/autobuild/dresystems/mpc_test_tao.xml
+        * configs/autobuild/dresystems/mpc_test_tao.sh:
+          Added a new autobuild to test MPC for ACE and renamed the old
+          build.
+
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Renamed the TAO MPC test build and added a new ACE MPC test
+          build.
+
 Tue Aug  5 11:38:00 2003  Justin Michel  <michel_j@ociweb.com>
 
 	* command/create_ace_build.pm:

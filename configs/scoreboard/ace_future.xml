@@ -9,50 +9,58 @@ all the OS/platform combinations ACE is tested everyday.
 
 <group>
   <name>Test Builds for ACE</name>
-   <build>
-    <name>FreeBSD_5</name>
-    <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_5</url>
-    <build_sponsor>WAEI</build_sponsor>
-    <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url> 
+    <build>
+      <name>MPC_Test_RH8_GCC_3.2</name>
+      <url>http://www2.dresystems.com:8090/autobuild_output/mpc_test</url>
+      <build_sponsor>DRE Systems</build_sponsor>
+      <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+      <orange>30</orange>
+      <red>36</red>
     </build>
-     <build>
-    <name>FreeBSD_RELENG_4</name>
-    <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_RELENG_4</url>
-    <build_sponsor>WAEI</build_sponsor>
-    <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url>
+    <build> 
+      <name>FreeBSD_5</name>
+      <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_5</url>
+      <build_sponsor>WAEI</build_sponsor>
+      <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url> 
+    </build>
+    <build>
+      <name>FreeBSD_RELENG_4</name>
+      <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_RELENG_4</url>
+      <build_sponsor>WAEI</build_sponsor>
+      <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url>
     </build> 
     <build>
-    <name>MACOS_X</name>
-    <url>http://www.darwinarts.com/~zorko/</url>
-     <build_sponsor>John Zorko</build_sponsor>
+      <name>MACOS_X</name>
+      <url>http://www.darwinarts.com/~zorko/</url>
+      <build_sponsor>John Zorko</build_sponsor>
     </build>
     <build>
-     <name>AIX_5.1_VA6_Debug(autoconf)</name>
-     <url>http://www.riverace.com/build_logs/cuddy/dev/autoconf_va6_debug</url>
-     <red>36</red>
-     <build_sponsor>Riverace</build_sponsor>
-     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+      <name>AIX_5.1_VA6_Debug(autoconf)</name>
+      <url>http://www.riverace.com/build_logs/cuddy/dev/autoconf_va6_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
     <build>
-     <name>HP-UX_11.00_aC++_Debug(autoconf)</name>
-     <url>http://www.riverace.com/build_logs/bumbles/dev/autoconf_acc_debug</url>
-     <red>36</red>
-     <build_sponsor>Riverace</build_sponsor>
-     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+      <name>HP-UX_11.00_aC++_Debug(autoconf)</name>
+      <url>http://www.riverace.com/build_logs/bumbles/dev/autoconf_acc_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
     <build>
-    <name>HP-UX_11.00_gcc3_Debug(autoconf)</name>
-    <url>http://www.riverace.com/build_logs/bumbles/dev/autoconf_gcc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+      <name>HP-UX_11.00_gcc3_Debug(autoconf)</name>
+      <url>http://www.riverace.com/build_logs/bumbles/dev/autoconf_gcc_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
     <build>
-    <name>Redhat_Linux_8_Debug(autoconf)</name>
-    <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+      <name>Redhat_Linux_8_Debug(autoconf)</name>
+      <url>http://www.riverace.com/build_logs/jane/dev/autoconf_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
     <build>
         <name>SuSE_82_Kylix_3_ACE</name>

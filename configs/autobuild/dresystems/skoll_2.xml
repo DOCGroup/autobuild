@@ -29,7 +29,9 @@
 
  <command name="file_manipulation"     options="type=create file=build/skoll_2/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\n'" />
 
- <command name="file_manipulation"     options="type=create file=build/skoll_2/build.mwc output='workspace {\n ace\n ACEXML\n netsvcs\n tests\n apps\n examples\n performance-tests\n websvcs\n TAO/tao\n TAO/TAO_IDL\n TAO/tests\n TAO/orbsvcs\n TAO/examples\n TAO/performance-tests\n TAO/utils\n TAO/docs/tutorials/Quoter\n}\n'" />
+ <command name="file_manipulation"     options="type=create file=build/skoll_2/build.mwc output='workspace {\n ace\n ACEXML\n netsvcs\n tests\n apps\n examples\n performance-tests\n websvcs\n}\n'" />
+
+ <command name="file_manipulation"     options="type=create file=build/skoll_2/TAO/build.mwc output='workspace {\n tao\n TAO_IDL\n tests\n orbsvcs\n examples\n performance-tests\n utils\n docs/tutorials/Quoter\n}\n'" />
 
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
@@ -40,11 +42,17 @@
  <command name="shell"                 options="find . -name \x22lib*\x22 -exec rm '{}' ';'" />
 
  <command name="generate_workspace"    options="build.mwc -make_coexistence" />
+ <command name="generate_workspace"    options="TAO/build.mwc -make_coexistence" />
 
- <command name="make"                  options="-k realclean" />
- <command name="make"                  options=" -k" />
+ <!-- ACE -->
+ <command name="make"                  options="-k realclean rmcast=1" />
+ <command name="make"                  options="-k rmcast=1" />
 
- <command name="auto_run_tests"        options="" />
+ <!-- TAO -->
+ <command name="make"                  options="-k -C TAO realclean rmcast=1" />
+ <command name="make"                  options="-k -C TAO rmcast=1" />
+
+ <!--<command name="auto_run_tests"        options="" />-->
 
  <command name="log"                   options="off" />
  <command name="process_logs"          options="clean move prettify index" />
