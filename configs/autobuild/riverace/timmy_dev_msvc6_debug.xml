@@ -1,0 +1,33 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="D:\ace\ACE_wrappers" />
+
+        <variable name="root"     value="D:\ace\ACE_wrappers" />
+        <variable name="project_root" value="." />
+	<variable name="log_file" value="msvc6_debug.txt" />
+        <variable name="log_root" value="G:\build_logs\dev\msvc6_debug" />
+        <variable name="name"     value="Windows NT4 MSVC6 Debug" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k -clean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="cvs"               options="update -P -d ." />
+
+    <command name="print_os_version" />
+    <command name="check_compiler"    options="msvc" />
+    <command name="print_ace_config" />
+
+    <command name="win32make"         options="msvc_auto_compile -DLL -Debug -ACE -u -k" />
+    <command name="auto_run_tests"    options="-a -Config Win32 -Config SSL" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
