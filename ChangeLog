@@ -1,3 +1,10 @@
+Sat Jan 18 21:18:31 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/acetao.xml: Extended the 'red' times for all
+          Riverace builds - they don't run on weekends. And extended the
+          orange and red times for the Windows CE builds - they don't run
+          every day.
+
 Sat Jan 18 19:33:51 2003  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: New
@@ -7,18 +14,18 @@ Sat Jan 18 19:33:51 2003  Steve Huston  <shuston@riverace.com>
 
 Sat Jan 18 12:13:44 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-        * configs/autobuild/scoreboard/acetao.xml:
+        * configs/scoreboard/acetao.xml:
           Moved the BCB6 Unicode builds and the Borland WChar build to the
           ace only section because they only build ACE and nothing of TAO
 
 Sat Jan 18 11:59:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-        * configs/autobuild/scoreboard/acetao.xml:
+        * configs/scoreboard/acetao.xml:
           Added new BCB6 Dynamic Release Unicode build
 
 Wed Jan 15 13:44:36 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/scoreboard/acetao.xml: Added a note indicating
+	* configs/scoreboard/acetao.xml: Added a note indicating
 	  that a build is donated from OCI.
 
 Wed Jan 15 11:40:19 2003  Steve Huston  <shuston@riverace.com>
