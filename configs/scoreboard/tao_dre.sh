@@ -26,7 +26,7 @@ exec /usr/bin/perl ./scoreboard.pl -d /project/taotmp/scoreboard/html -f $HOME/a
 exec testmatrix/update_scoreboard.sh 2>&1 &
 
 # Generate integrated pages!
-exec /usr/bin/perl ./scoreboard.pl -d /project/taotmp/scoreboard/html -z 2>&1;
+exec /usr/bin/perl ./scoreboard.pl -d /project/taotmp/scoreboard/html -z 2>&1 &
 
 #Generate build matrix
-exec /usr/bin/perl buildmatrix/buildmatrix.pl $HOME/autobuild/configs/scoreboard/ace.xml /project/taotmp/scoreboard/html > /project/taotmp/scoreboard/buildmatrix/output.html 2> /tmp/build.out
+exec /usr/bin/perl buildmatrix/buildmatrix.pl $HOME/autobuild/configs/scoreboard/ace.xml /project/taotmp/scoreboard/html > /project/taotmp/scoreboard/buildmatrix/output.html 2> /tmp/build.out;
