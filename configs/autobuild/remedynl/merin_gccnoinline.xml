@@ -6,6 +6,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/NoInline/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
+        <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/home/build/ACE/NoInline/" />
         <variable name="log_file" value="build.txt" />
@@ -55,6 +56,7 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_NoInline/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_NoInline" />
+    <!-- command name="shell"             options="ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/SuSE_NoInline/* -f" / -->
+    <!-- command name="shell"             options="scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_NoInline" / -->
+    <command name="shell"             options="rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/SuSE_NoInline" />
 </autobuild>
