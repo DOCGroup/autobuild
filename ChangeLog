@@ -1,3 +1,13 @@
+Sun Oct 20 18:47:53 2002  Frank Hunleth <frank@hunleth.com>
+
+	* configs/autobuild/slytherin/OpenBSD_Core.xml: Fixed cosmetic typo.
+	
+	* configs/autobuild/slytherin/OpenBSD_Full.xml:
+	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+	* configs/autobuild/slytherin/driver_Full.sh:
+	* configs/autobuild/slytherin/driver_Single_Threaded.sh:
+	  Created Full and Single_Threaded configurations for OpenBSD.
+
 Sun Oct 20 09:24:29 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/tango/Debian_Noinline.xml: Removed -j 2 for
