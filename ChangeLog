@@ -1,3 +1,19 @@
+Tue Aug 24 10:46:47 MST 2004  Trevor Fields <fields_t@ociweb.com>
+
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+          Changed to use anonymous_shell instead of shell for copying
+          command in the middle of the compile sections.
+
 Mon Aug 23 16:46:59 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/Platform.py:
