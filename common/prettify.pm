@@ -857,7 +857,7 @@ sub Compile_Handler ($)
         # Can be given by Borland make
         $self->Output_Error ($s);
     }
-    elsif ($s =~ m/possibly used unsafely; consider using/) {
+    elsif ($s =~ m/possibly used unsafely[;,] consider using/) {
         # Similar warnings on OpenBSD
         $self->Output_Normal ($s);
     }
@@ -932,6 +932,7 @@ sub Compile_Handler ($)
         $self->Output_Normal ($s);
     }
     elsif (($s =~ m/\berror\b/i
+            && $s !~ m/::error/i
             && $s !~ m;[/.]error;i
             && $s !~ m;error[/.];i
             && $s !~ m/ error\(s\), /

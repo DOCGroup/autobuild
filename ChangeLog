@@ -1,3 +1,10 @@
+Thu Oct 21 12:30:56 2004  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/prettify.pm:
+
+          Recognize NetBSD warnings similarly to OpenBSD.
+          Do not recognize c++ methods named error as compile errors.
+
 Wed Oct 20 18:30:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
@@ -10,9 +17,9 @@ Wed Oct 20 18:19:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Oct 20 12:25:39 2004  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/beebee_dev_pocketpc2002_debug.xml:
-	* configs/autobuild/beebee_dev_wince4_debug.xml: Corrected library
-	  names and MPC options.
+        * configs/autobuild/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/beebee_dev_wince4_debug.xml: Corrected library
+          names and MPC options.
 
 Tue Oct 19 10:23:43 2004  Chad Elliott  <elliott_c@ociweb.com>
 
