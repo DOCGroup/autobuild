@@ -11,6 +11,7 @@
         <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="C:\cygwin\bin\ssh" />
+        <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
 
         <variable name="root"     value="C:\ACE\VxWorks\PPC604GNU\" />
@@ -56,7 +57,8 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/VxWorks_PPC604_GNU/* -f" />
-    <command name="shell"             options="c:\cygwin\bin\scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC604_GNU" />
-    <command name="shell"             options="c:\cygwin\bin\ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/VxWorks_PPC604_GNU/*" />
+    <!-- command name="shell"             options="c:\cygwin\bin\ssh willemsenj@tao.dre.vanderbilt.edu rm /web/users/remedynl/VxWorks_PPC604_GNU/* -f" / -->
+    <!-- command name="shell"             options="c:\cygwin\bin\scp -C *.txt *.html willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC604_GNU" / -->
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --delete -z --include *.txt --include *.html --exclude * ./ willemsenj@tao.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC604_GNU" />
+    <!-- command name="shell"             options="c:\cygwin\bin\ssh willemsenj@tao.dre.vanderbilt.edu chmod 755 /web/users/remedynl/VxWorks_PPC604_GNU/*" / -->
 </autobuild>
