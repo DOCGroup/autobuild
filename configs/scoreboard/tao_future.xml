@@ -22,6 +22,12 @@ decide the migration paths and strategies.
 <group>
    <name>Test Builds for TAO</name>
    <build>
+      <name>WinXP_CBuilderX_Dynamic_Debug_MPC_BMake</name>
+      <url>http://www.dre.vanderbilt.edu/~willemsenj/CBXddace</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
       <name>WinXP_MSVC6_XML_Debug</name>
       <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
       <build_sponsor>Washington University</build_sponsor>
