@@ -1,3 +1,8 @@
+Tue Jun 18 15:40:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/guajira/*: Added.
+	* configs/scoreboard/acetao.xml: Add TRU64_CXX build.
+
 Tue Jun 18 15:06:17 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* command/check_compiler.pm: Add check for cxx compiler.

@@ -99,4 +99,11 @@
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
          </build>
     </group>
+    <group>
+         <name>TRU64_Unix</name>
+         <build>
+             <name>TRU64_CXX</name>
+             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/guajira.cs.wustl.edu_TRU64_CXX_newbuild</url>
+         </build>
+    </group>
 </scoreboard>
