@@ -1,3 +1,9 @@
+Tue Jul  6 13:51:44 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml: 
+
+	  Tried to print the configuraion.
+
 Mon Jul  5 09:00:16 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/balar_isis/DynamicHash.xml:
