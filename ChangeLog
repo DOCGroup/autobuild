@@ -1,3 +1,13 @@
+Sat Feb 28 15:52:53 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Added a new configuration for the build on danzon.
+
+	* configs/autobuild/danzon/SunOS_SunCC53.xml:
+	  
+	  Removed the old configuration.
+
 Fri Feb 27 15:01:44 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/charlie_dev_va6_debug.xml: New config
