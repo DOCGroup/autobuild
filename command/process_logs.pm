@@ -10,6 +10,7 @@ use warnings;
 use common::prettify;
 use DirHandle;
 use File::Copy;
+use FileHandle;
 use POSIX;
 use Time::Local;
 
@@ -19,6 +20,7 @@ use Time::Local;
 sub move_log ();
 sub clean_logs ($);
 sub prettify_log ($);
+sub index_logs ();
 
 my $newlogfile;
 
@@ -102,6 +104,13 @@ sub Run ($)
         my $retval = $self->clean_logs ($keep);
         return 0 if ($retval == 0);
     }
+    
+    # Create an index
+
+    if ($options =~ m/index/) {
+        my $retval = $self->index_logs ();
+        return 0 if ($retval == 0);
+    }
 
     return 1;
 }
@@ -120,19 +129,21 @@ sub clean_logs ($)
         $logroot = $1;
     }
 
-    my $d = new DirHandle ($logroot);
+    my $dh = new DirHandle ($logroot);
 
     # Load the directory contents into the @existing array
 
-    if (!defined $d) {
+    if (!defined $dh) {
+        print STDERR __FILE__, ": Could not read directory $logroot\n";
+        return 0;
     }
 
-    while (defined($_ = $d->read)) {
+    while (defined($_ = $dh->read)) {
         if ($_ =~ m/^(...._.._.._.._..).txt/) {
             push @existing, $logroot . '/' . $1;
         }
     }
-    undef $d;
+    undef $dh;
 
     @existing = reverse sort @existing;
 
@@ -209,6 +220,137 @@ sub prettify_log ($)
     }
 
     Prettify::Process ($logfile);
+    return 1;
+}
+
+sub index_logs ()
+{
+    my $self = shift;
+    my $logroot = main::GetVariable ('log_root');
+    my $name = main::GetVariable ('name');
+    my @files;
+    
+    # chop off trailing slash
+    if ($logroot =~ m/^(.*)\/$/) {
+        $logroot = $1;
+    }
+    
+    my $dh = new DirHandle ($logroot);
+
+    # Load the directory contents into the @existing array
+
+    if (!defined $dh) {
+        print STDERR __FILE__, ": Could not read directory $logroot\n";
+        return 0;
+    }
+
+    while (defined($_ = $dh->read)) {
+        if ($_ =~ m/^(...._.._.._.._..).txt/) {
+            push @files, $1;
+        }
+    }
+    undef $dh;
+
+    my $fh = new FileHandle ($logroot . '/index.html', 'w');
+    
+    if (!defined $fh) {
+        print STDERR __FILE__, ": Cannot create index.html in $logroot\n";
+        return 0;
+    }
+    
+    my $title = 'Build History';
+    
+    if (defined $name) {
+        $title .= " for $name";
+    }
+    
+    print $fh "<html>\n<head>\n<title>$title</title>\n</head>\n";
+    print $fh "<body bgcolor=\"white\"><h1>$title</h1>\n<hr>\n";
+    print $fh "<table border=\"1\">\n<th>Timestamp</th><th>Setup</th><th>Compile</th><th>Test</th>\n";
+    
+    foreach my $file (@files) {
+        my $totals_fh = new FileHandle ($logroot . '/' . $file . '_Totals.html', 'r');
+        
+        print $fh '<tr>';
+        
+        if (defined $totals_fh) {
+            print $fh "<td><a href=\"${file}_Totals.html\">$file</a></td>";
+            while (<$totals_fh>) {
+                if (m/^<!-- BUILD_TOTALS\:/) {
+                    if (m/Setup: (\d+)-(\d+)-(\d+)/) {
+                        print $fh '<td>';
+                        
+                        if ($2 > 0) {
+                            print $fh "<font color=\"red\">$2 Error(s)</font> ";
+                        }
+                        
+                        if ($3 > 0) {
+                            print $fh "<font color=\"orange\">$3 Warning(s)</font>";
+                        }
+                        
+                        if ($2 == 0 && $3 == 0) {
+                            print $fh '&nbsp';
+                        }
+                        
+                        print $fh '</td>';
+                    }
+                    else {
+                        print $fh '<td>$nbsp;</td>';
+                    }
+                    
+                    if (m/Compile: (\d+)-(\d+)-(\d+)/) {
+                        print $fh '<td>';
+                        
+                        if ($2 > 0) {
+                            print $fh "<font color=\"red\">$2 Error(s)</font> ";
+                        }
+                        
+                        if ($3 > 0) {
+                            print $fh "<font color=\"orange\">$3 Warning(s)</font>";
+                        }
+                        
+                        if ($2 == 0 && $3 == 0) {
+                            print $fh '&nbsp';
+                        }
+                        
+                        print $fh '</td>';
+                    }
+                    else {
+                        print $fh '<td>$nbsp;</td>';
+                    }
+
+                    if (m/Test: (\d+)-(\d+)-(\d+)/) {
+                        print $fh '<td>';
+                        
+                        if ($2 > 0) {
+                            print $fh "<font color=\"red\">$2 Error(s)</font> ";
+                        }
+                        
+                        if ($3 > 0) {
+                            print $fh "<font color=\"orange\">$3 Warning(s)</font>";
+                        }
+                        
+                        if ($2 == 0 && $3 == 0) {
+                            print $fh '&nbsp';
+                        }
+                        
+                        print $fh '</td>';
+                    }
+                    else {
+                        print $fh '<td>$nbsp;</td>';
+                    }
+
+                    last;
+                }
+            }
+        }
+        else {
+            print $fh '<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>';
+        }
+        print $fh "</tr>\n";
+    }
+    
+    print $fh "</table>\n</body>\n</html>\n";
     return 1;
 }
 
