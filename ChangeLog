@@ -1,3 +1,16 @@
+Fri Jan 24 13:56:41 2003  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml: New build
+          for Windows 2000, MSVC 6.
+
+        * configs/scoreboard/acetao.xml: Added new Win2K build.
+
+        * configs/autobuild/riverace/timmy_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/timmy_dev_wince4_debug.xml:
+          Renamed to:
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+
 Wed Jan 22 08:05:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml:
