@@ -1,3 +1,9 @@
+Wed Nov 17 08:05:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+          Moved MacOS build to normal TAO tests build instead of in the BSD
+          part
+
 Tue Nov 16 13:50:21 2004  Carlos O'Ryan  <coryan@atdesk.com>
 
 	* buildmatrix/buildmatrix.pl:
