@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"         value="D:\isisbuilds\CIDLC\ACE_wrappers" />
         <environment name="TAO_ROOT"         value="D:\isisbuilds\CIDLC\ACE_wrappers\TAO"/>
-        <environment name="Path"             value="D:\isisbuilds\CIDLC\ACE_wrappers\bin;D:\isisbuilds\CIDLC\ACE_wrappers\lib;C:\Perl\bin;C:\putty\;" type="prefix" />
+        <environment name="Path"             value="D:\isisbuilds\CIDLC\ACE_wrappers\bin;D:\isisbuilds\CIDLC\ACE_wrappers\lib;C:\cvs\;C:\Perl\bin;C:\putty\;" type="prefix" />
         <variable name="root"     value="D:/isisbuilds/CIDLC/" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="D:/isisbuilds/CIDLC/" />
