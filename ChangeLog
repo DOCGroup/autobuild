@@ -1,3 +1,8 @@
+Mon Aug 18 23:56:54 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * configs/autobuild/dresystems/freebsd_*.xml:
+          Modified builds to use new mpc -recurse options.
+
 Fri Aug 15 18:11:15 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/printaceconfig.pm:

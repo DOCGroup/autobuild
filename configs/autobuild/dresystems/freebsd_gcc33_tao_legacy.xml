@@ -2,16 +2,16 @@
 <autobuild>
  <configuration>
 
-  <environment name="ACE_ROOT"         value="/export/home/dhinton/development/ace/autobuilds/freebsd_gcc33_tao_legacy/ACE_wrappers" />
-  <environment name="TAO_ROOT"         value="/export/home/dhinton/development/ace/autobuilds/freebsd_gcc33_tao_lecacy/ACE_wrappers/TAO"/>
+  <environment name="ACE_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_gcc33_tao_legacy/ACE_wrappers" />
+  <environment name="TAO_ROOT"         value="/home/dhinton/development/ace/autobuilds/freebsd_gcc33_tao_legacy/ACE_wrappers/TAO"/>
   <environment name="LD_LIBRARY_PATH"  value="/usr/local/lib:/export/home/dhinton/development/ace/autobuilds/freedsb_gcc33_tao_legacy/ACE_wrappers/ace" />
   <environment name="CVSROOT"          value=":ext:dhinton@cvs.doc.wustl.edu:/project/cvs-repository" />
   <environment name="CVS_RSH"          value="ssh" />
 
-  <variable name="root"                value="/export/home/dhinton/development/ace/autobuilds/freebsd_gcc33_tao" />
+  <variable name="root"                value="/home/dhinton/development/ace/autobuilds/freebsd_gcc33_tao_legacy" />
   <variable name="log_file"            value="build.txt" />
-  <variable name="log_root"            value="/export/home/dhinton/public_html/autobuild_output/freebsd_gcc33_tao_legacy" />
-  <variable name="configs"             value="" />
+  <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_gcc33_tao_legacy" />
+  <variable name="make_program"        value="gmake" />
 
  </configuration>
 
@@ -20,8 +20,6 @@
  <command name="file_manipulation"     options="type=create file=.disable output='RUNNING'" />
  <command name="log"                   options="on" />
  <command name="cvs"                   options="-z9 -q checkout ACE_wrappers" />
-
- <command name="create_ace_build"      options="" />
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-freebsd.h\x22\n'" />
 

@@ -12,7 +12,6 @@
   <variable name="project_root"        value="/home/dhinton/development/ace/autobuilds/freebsd_ace_no_inline/ACE_wrappers/build/freebsd_ace" />
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_ace_no_inline" />
-  <variable name="configs"             value="Linux" />
   <variable name="make_program"        value="gmake" />
 
  </configuration>
@@ -29,16 +28,11 @@
 
  <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_freebsd.GNU\ndebug=0\nexceptions=1\noptimize=0\nrmcast=1\n'" />
 
- <command name="file_manipulation"     options="type=create file=ACE_wrappers/build/freebsd_ace/build.mwc output='workspace {\n ace\n ACEXML\n netsvcs\n tests\n apps\n examples\n performance-tests\n websvcs\n Kokyu\n}\n'" />
-
  <command name="print_os_version" />
  <command name="check_compiler"        options="gcc" />
  <command name="print_ace_config" />
 
- <!-- clean up all the libs just in case they get moved around by an evolving MPC ;-) -->
- <command name="shell"                 options="find . -name \x22lib*\x22 -exec rm '{}' ';'" />
-
- <command name="generate_workspace"    options="build.mwc -make_coexistence" />
+ <command name="generate_workspace"    options="-recurse=TAO,vc7_nightly.mwc,build.mwc -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
