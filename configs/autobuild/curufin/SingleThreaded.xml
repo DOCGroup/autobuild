@@ -8,7 +8,7 @@
 
         <variable name="root"     value="/project/curufin/bugzilla/SingleThreaded" />
         <variable name="sam_root" value="/project/curufin/bugzilla/SingleThreade/ACE_wrappers/samwise" />
-        <variable name="log_file" value="maedhros_Core.txt" />
+        <variable name="log_file" value="curufin_SingleThreaded.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
         <variable name="configs"  value="Linux ST" />
 
