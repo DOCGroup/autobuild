@@ -52,6 +52,7 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
 
+    <command name="make"	      options="clean" />
     <command name="make"              options="-Duse_feature_#feature#=t" />
 
     <command name="auto_run_tests"    />
