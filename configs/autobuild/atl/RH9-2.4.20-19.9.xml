@@ -6,7 +6,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/jcohen/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:gthaker@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/home/jcohen/sshwrapper" />
-        <environment name="PATH"            value="/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/jcohen/bin" />
+        <environment name="PATH"            value="/usr/local/gcc/3.3.1/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/jcohen/bin" />
 
         <variable name="root"     value="/home/jcohen" />
         <variable name="sam_root" value="/home/jcohen/ACE_wrappers/samwise" />
@@ -31,8 +31,8 @@
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-k -j 2 debug=0 sctp=1" />
-    <command name="make"              options="-k -j 2 debug=0 sctp=1 -C TAO" />
+    <command name="make"              options="-k -j 2 debug=0" />
+    <command name="make"              options="-k -j 2 debug=0 -C TAO" />
 
     <command name="auto_run_tests"    options="" />
     <command name="process_logs"      options="clean" />

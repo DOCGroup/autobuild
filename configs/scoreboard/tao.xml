@@ -64,7 +64,7 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-       <name>RH9</name>
+       <name>RH9-gcc3.3.1</name>
        <url>http://www.atl.external.lmco.com/projects/QoS/buildlog/</url>
        <build_sponsor>Lockheed Martin ATL</build_sponsor>
        <build_sponsor_url>http://www.atl.external.lmco.com/projects/QoS</build_sponsor_url>

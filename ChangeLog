@@ -1,3 +1,20 @@
+Thu Nov 20 20:15:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
+
+        Please direct all question regarding this commit to:
+        Jason Cohen <jcohen@atl.lmco.com>
+
+        * configs/autobuild/atl/RH9-2.4.20-18.9-SCTP.xml:
+
+          Removed old RH9 autobuild script (See below)
+
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+
+          Added new RH9 autobuild script to reflect newer kernel.
+
+        * configs/scoreboard/tao.xml:
+
+          Changed name of RH9 build to show gcc version (3.3.1)
+
 Tue Nov 18 12:06:06 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
