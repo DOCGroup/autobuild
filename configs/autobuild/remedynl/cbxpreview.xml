@@ -8,7 +8,7 @@
         <environment name="PATH"         value="C:\CBuilderX\Preview\bin;C:\CBuilderX\Preview\lib;C:\CBuilderX\bin;C:\CBuilderX\lib;C:\ACE\CBXpreview\ACE_wrappers\bin\;C:\ACE\CBXpreview\ACE_wrappers\lib;c:\perl\bin;c:\cygwin\bin;" type="prefix" />
 
 	<environment name="DEBUG"    value="1" />
-	<environment name="DYNAMIC"  value="1" />
+	<environment name="STATIC"   value="1" />
 	<environment name="BCBVER"   value="6" />
 	<environment name="CBX"      value="1" />
 
