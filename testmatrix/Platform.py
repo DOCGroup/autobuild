@@ -1,4 +1,4 @@
-#!/usr/bin/python
+o!/usr/bin/python
 
 # ******************************************************************
 #      Author: Heather Drury
@@ -123,7 +123,7 @@ class Platform:
                 fh.write(self.end_time + "\n")
                 fh.write(str(self.compile) + "\n")
                 for n in range(0, len(self.test_results)):
-                   test_str = self.test_results[n].name + "," + str(self.test_results[n].passFlag) + "," + str(self.test_results[n].time)
+                   test_str = self.test_results[n].name + ";" + str(self.test_results[n].passFlag) + ";" + str(self.test_results[n].time)
                    fh.write (test_str + "\n")
                 fh.close()
                 os.rename(tmpfname, fname)
@@ -138,7 +138,7 @@ class Platform:
                 #print "processDBLog ", self.db_file, self.name, self.raw_file, self.start_time, self.end_time, self.compile
                 line = fh.readline()
                 while line != "":
-                   splits = line.split(",")
+                   splits = line.split(";")
                    name = splits[0]
                    passflag = string.atoi(splits[1])
                    time = string.atof(removeNewLine(splits[2]))
