@@ -1,3 +1,18 @@
+Wed May  5 09:27:31 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/lindy_isis/Static.xml:
+
+	  Corrected path to G++ 3.4 compiler in "check_compiler" command.
+
+	* configs/scoreboard/index.xml:
+
+	  Minor cosmetic changes.
+
+	* configs/scoreboard/tao.xml:
+
+	  Removed UCI "Debian_Full_Reactors" build from the scoreboard due
+	  to lack of support from sponsor.
+	
 Wed May  5 11:41:39 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:

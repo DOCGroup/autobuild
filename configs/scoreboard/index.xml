@@ -4,16 +4,16 @@
 You have reached the logically existing, virtual ACE+TAO scoreboard.
 It shows all the OS/compiler  combinations ACE+TAO are tested against
 everyday, all over the world.  We have builds running continuously at
+<a href="http://www.isis.vanderbilt.edu/">ISIS, Vanderbilt University</a>,
 <a href="http://deuce.doc.wustl.edu/">Washington University,
 St. Louis</a>,
 <a href="http://doc.ece.uci.edu/">University of
 California,Irvine</a>,
-<a href="http://www.isis.vanderbilt.edu/">ISIS,Vanderbilt University</a>,
 <a href="http://www.atdesk.com/">Automated Trading Desk</a>,
 <a href="http://www.atl.external.lmco.com">LMCO-ATL</a>,
 <a href="http://www.cs.umd.edu/">University of Maryland</a>,
 <a href="http://www.makexs.com/~zorko/">John Zorko</a>,
-<a href="http://www.theaceorb.nl">Remedy IT</a>,
+<a href="http://www.theaceorb.nl/">Remedy IT</a>,
 <a href="http://www.hunleth.com/~acebuild/">Hunleth.com</a>,
 <a href="http://www.riverace.com/">Riverace Corporation</a>,
 <a href="http://www.prismtechnologies.com/">PrismTech</a>,
@@ -34,10 +34,10 @@ categories:
 <p>
 
 If you'd like to contribute builds to our virtual
-scoreboard <a href="mailto:devo_group@cs.wustl.edu">please contact us</a>
-and let us know which platform combinations you can
-contribute. Instructions for setting up your own daily build and
-scoreboard are
+scoreboard <a href="mailto:devo-group@list.isis.vanderbilt.edu">please
+contact us</a> and let us know which platform combinations you can
+contribute.  Instructions for setting up your own daily build and
+scoreboard are available
 <a href="http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/README?cvsroot=autobuild">here</a>.
 </p>
 
