@@ -24,13 +24,13 @@ function update_local_scoreboard()
 {
 
   # Update the scoreboard
-#  $HOME/autobuild/scoreboard.pl -f $SCOREBOARD_CONFIG_DIR/acetao.xml -d $LOG_DIR -o acetao.html
+  #  $HOME/autobuild/scoreboard.pl -f $SCOREBOARD_CONFIG_DIR/acetao.xml -d $LOG_DIR -o acetao.html
 
   # change directory to the testmatrix directory
   cd $TEST_MATRIX_DIR
 
   # directory for output the db file
-  DBLOGDIR=$LOG_DIR/DBLogFiles
+  DBLOGDIR=$LOG_DIR/test_matrix_db
 
   # create the db log file directory if it does not exist
   if [ ! -d $DBLOGDIR ]; then 
@@ -47,7 +47,7 @@ function update_local_scoreboard()
   # generate the list of files
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ace.xml > $BUILD_LIST
 
-  # generate the matrix
+  # generate the matrix and the *.db files
   ./buildMatrix 1 $BUILD_LIST $TEST_MATRIX
 
 
@@ -60,6 +60,8 @@ function update_local_scoreboard()
   BUILD_LIST=$TEST_MATRIX_DIR/tao-list
   TEST_MATRIX=tao_detailed
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao.xml > $BUILD_LIST
+  
+  # generate the matrix and the *.db files
   ./buildMatrix 1 $BUILD_LIST $TEST_MATRIX
 
 

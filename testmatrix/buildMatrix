@@ -4,8 +4,15 @@
 
 # The first parameter implies the additional operation when creating test matrix# and write to html.
 # 0 -- no additional operation
-# 1 -- create the *.db files
-# 2 -- save tests to database
+# 1 -- create the *.db files. 
+#      Note: This does not require the database accessing.
+# 2 -- save tests to database. 
+#      Note: To access database, the database name needs to be passed 
+#            as the last parameter to the GenerateMatrix.sh command or 
+#            specified in the TestDBConfig.py. The database name from 
+#            the command line will overwrite the one specified in the 
+#            static DBConfig object if it's not empty.
+
 operation=$1
 buildlist=$2
 if [ -z "$buildlist" ]; then

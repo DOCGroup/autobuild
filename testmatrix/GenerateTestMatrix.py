@@ -11,9 +11,12 @@ from HTMLScoreboard import *
 from Platform import *
 from utils import *
 from DBLogHandle import *
-
-
 import string
+
+#Temporary comment out to avoid the requirement of MySQLdb.
+#Uncomment when you need save the test results to database
+
+#from TestDB import *
 
 
 def ReadLogFiles ():
@@ -135,10 +138,12 @@ SaveBuildResults2HTML(directory,outfile)
 if option == 1:
    WriteDBLogFiles(builds)
 
-# Comment out to avoid the requirement of MySQLdb
-
+# Temporary comment out to avoid the requirement of MySQLdb.
+# Uncomment when you need save the test results to database.
 #if option == 2:
-#   SaveBuildResults2DB(builds)
+#   database_name = sys.argv[5]
+#   SaveBuildResults2DB(builds, database_name)
+
 if option > 2:
    print "ERROR: invalid option", option
 # there is no standardization of how the test names are created for ACE, TAO, until there is,

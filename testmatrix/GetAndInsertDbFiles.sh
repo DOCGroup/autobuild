@@ -18,7 +18,7 @@ CURRENT_DB_FILES_SCRIPT=RecentDBFiles.sh
 # Script to add the files to the database
 ADD_FILES_TO_DB_SCRIPT=SaveFileToDB.sh
 # Script directory
-SCRIPT_DIRECTORY=/home/taoadmin/nightly/test_matrix_db
+SCRIPT_DIRECTORY=/home/taoadmin/nightly/test_matrix
 # Return value of this program
 RETVAL=0
 

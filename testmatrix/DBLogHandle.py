@@ -12,11 +12,11 @@ def ReadDBLogFiles(lsfile):
     fh = open(lsfile, "r")
     builds = []
     for dbfile in fh.readlines():
-       dbfile = removeNewLine(dbfile)
-       if dbfile != "":
-          build = Platform("", "", dbfile)
-          if build.db_parse_error == 0:  
-             builds.append (build)
+        file = removeNewLine(dbfile)
+        if file != "":
+           build = Platform("", "", file)
+           if build.valid_db_file == 1:
+              builds.append (build)
     fh.close()
     return builds
 

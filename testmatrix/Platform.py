@@ -91,7 +91,7 @@ class TestMatrix:
 
 class Platform:
         def __init__(self, name, raw_file, db_file=""):
-                self.db_parse_error = 0
+                self.valid_db_file = 1
                 self.db_file = db_file
                 self.name = name
                 self.raw_file = raw_file
@@ -113,6 +113,47 @@ class Platform:
                    self.processDBLog()
                 else:
                    self.processLog()
+                #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
+
+        def writeDBLog(self):
+                fname = DBFileConfig.dbdir_w + "/" + txt2DbFname(self.raw_file)
+                tmpfname = fname + ".tmp"
+                fh = open(tmpfname, "w")
+                fh.write(self.name + "\n")
+                fh.write(self.raw_file + "\n")
+                fh.write(self.start_time + "\n")
+                fh.write(self.end_time + "\n")
+                fh.write(str(self.compile) + "\n")
+                for n in range(0, len(self.test_results)):
+                   test_str = self.test_results[n].name + ";" + str(self.test_results[n].passFlag) + ";" + str(self.test_results[n].time)
+                   fh.write (test_str + "\n")
+                fh.close()
+                os.rename(tmpfname, fname)
+
+        def __init__(self, name, raw_file, db_file=""):
+                self.valid_db_file = 1
+                self.db_file = db_file
+                self.name = name
+                self.raw_file = raw_file
+                self.compile = PASS
+                self.npass = 0
+                self.nfail = 0
+                self.nskip = 0
+                self.ACEtotal = 0
+                self.ACEfail = 0
+                self.TAOtotal = 0
+                self.TAOfail = 0
+                self.testMin = 4000.0
+                self.testMax = 0.0
+                self.timeTotal = 0.0
+                self.test_results = []
+                self.start_time = ""
+                self.end_time = ""
+                if self.db_file != "":
+                   self.processDBLog()
+                else:
+                   self.processLog()
+                #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
 
         def writeDBLog(self):
                 fname = DBFileConfig.dbdir_w + "/" + txt2DbFname(self.raw_file)
@@ -138,21 +179,25 @@ class Platform:
                 self.compile = string.atoi(removeNewLine(fh.readline()))
                 #print "processDBLog ", self.db_file, self.name, self.raw_file, self.start_time, self.end_time, self.compile
                 line = fh.readline()
+                parse_error = 0
                 while line != "":
                    splits = line.split(";")
                    if len(splits) != 3 or splits[0] == "":
-                      print "ERROR: db file parse failed.", self.name, self.raw_file, self.db_file
-                      fh.close()
-                      self.db_parse_error = 1
-                      break
+                        parse_error = 1
+                        break
                    name = splits[0]
                    passflag = string.atoi(splits[1])
                    time = string.atof(removeNewLine(splits[2]))
                    #print "test_result: ", line
                    self.test_results.append(ACE_TAO_Test (name, 0, time, passflag))
                    line = fh.readline()
+                if parse_error == 1:
+                   print "ERROR: db file parse failed. Check log file", self.raw_file
+                   self.valid_db_file = 0
+                if len(self.test_results) == 0:
+                   print "ERROR: no test in db file. Check log file", self.raw_file
+                   self.valid_db_file = 0
                 fh.close()
-                return 0
 
 	def addtest (self, name, result, time, flag):
 		self.test_results.append(ACE_TAO_Test (name, result, time, flag))

@@ -1,37 +1,46 @@
 #!/usr/bin/python
 
-import MySQLdb;
+
+import sys
+import MySQLdb
+import _mysql_exceptions
 import mx.DateTime.Parser as Parser
 from utils import *
 from TestDBConfig import *
 from Platform import *
 
 
-def SaveBuildResults2DB (builds):
+def SaveBuildResults2DB (builds, dbname):
     builds_no_dup = []
-    db = TestDB()
+    db = TestDB(dbname)
     for m in range(0, len(builds)):
       if db.BuildLogLoaded(builds[m].name, builds[m].raw_file) == 1:
          print "********* Already saved", builds[m].name, builds[m].raw_file
       else:
-         print "********* Save build", builds[m].name
+         print "********* Save build", builds[m].name, builds[m].raw_file
          builds_no_dup.append (builds[m])
     if len(builds_no_dup) > 0 :
-      db.FillTable(builds_no_dup)
-												       
+      try:                                                                              db.FillTable(builds_no_dup)
+      except:
+        print "ERROR: failed to insert to database", dbname, sys.exc_type, sys.exc_value
+        sys.exit(-1)
+ 
 class TestDB:
-        def __init__ (self):
+        def __init__ (self, dbname):
+                if dbname != "":
+                  DBConfig.dbname = dbname
                 self.table_created = 0
-	        self.build_filled = 0
-		self.test_filled = 0
-		self.test_ids = {}
-		self.build_ids = {}
-		self.build_instance_ids = {}
-		self.build_config = BuildConfig()
-	        self.curs = self.Connect()
+                self.test_ids = {}
+                self.build_ids = {}
+                self.build_instance_ids = {}
+                self.curs = self.Connect()
 	
 	def Connect (self):
-		db = MySQLdb.connect(DBConfig.hostname, DBConfig.username, DBConfig.password, DBConfig.dbname);
+                try:
+                   db = MySQLdb.connect(DBConfig.hostname, DBConfig.username, DBConfig.password, DBConfig.dbname);
+                except:
+                   print "ERROR: failed to connect to database", DBConfig.dbname, sys.exc_type, sys.exc_value
+                   sys.exit(-1)
                 curs = db.cursor();
                 return curs
 		  
@@ -39,7 +48,7 @@ class TestDB:
 		if self.table_created == 0:           
                    query = "CREATE TABLE IF NOT EXISTS build(build_id SMALLINT NOT NULL AUTO_INCREMENT, build_name VARCHAR(50) NOT NULL, os VARCHAR(20), 64bit TINYINT, compiler VARCHAR(20), debug TINYINT, optimized TINYINT, static TINYINT, minimum TINYINT, PRIMARY KEY(build_id));"
                    self.curs.execute(query)
-                   query = "CREATE TABLE IF NOT EXISTS build_instance(build_instance_id INT NOT NULL AUTO_INCREMENT, build_id SMALLINT NOT NULL, start_time DATETIME, end_time DATETIME, insert_time DATETIME, baseline VARCHAR(20), log_fname VARCHAR(200), PRIMARY KEY(build_instance_id));"
+                   query = "CREATE TABLE IF NOT EXISTS build_instance(build_instance_id INT NOT NULL AUTO_INCREMENT, build_id SMALLINT NOT NULL, start_time DATETIME, end_time DATETIME, baseline VARCHAR(20), log_fname VARCHAR(200), insert_time DATETIME, PRIMARY KEY(build_instance_id));"
                    self.curs.execute(query)
                    query = "CREATE TABLE IF NOT EXISTS test(test_id SMALLINT NOT NULL AUTO_INCREMENT, test_name VARCHAR(100) NOT NULL, PRIMARY KEY(test_id));" 
                    self.curs.execute(query)
@@ -50,77 +59,72 @@ class TestDB:
 		   print "CreateTable: already created"
 
         def FillTable (self, builds):
-	        if (self.build_filled == 0):
-                   self.AddBuilds(builds)
-                   self.build_filled = 1
-                self.AddBuildInstances(builds)
-                if (self.test_filled == 0):
-                   self.AddTests(builds)
-                   self.test_filled = 1
-                self.AddTestInstances(builds)
-
-        def AddBuilds (self, builds):
-# Insert to table build
                 for m in range (0, len(builds)):
-		    self.AddBuild(builds[m].name)
-		    
-        def AddBuild (self, name):
-	        build_id = self.GetBuildId(name)
-                #print "GetBuildId", builds[m].name, build_id
+                   self.AddBuild(builds[m])
+                   self.AddBuildInstance(builds[m])
+                   if m == 0:
+                      self.AddTests(builds[m])
+                   self.AddTestInstance(builds[m])
+
+         def AddBuild (self, build):
+                name = build.name
+                build_id = self.GetBuildId(name)
+                #print "GetBuildId", name, build_id
                 if build_id != 0:
                     self.build_ids[name] = build_id
                 else:
-		    if BuildConfig.config.has_key(name) == 0:
+                    if BuildConfig.config.has_key(name) == 0:
                         query = "INSERT INTO build VALUES (NULL, '%s', NULL, NULL, NULL, NULL, NULL, NULL, NULL);" % (name)
                     else:
                         config = BuildConfig.config[name]
                         query = "INSERT INTO build VALUES (NULL, '%s', '%s', %d, '%s', %d, %d, %d, %d);" %(name, config[0], config[1], config[2], config[3], config[4], config[5], config[6])
                     #print "AddBuild ", query
                     self.curs.execute(query)
-                    self.build_ids[name] = self.curs.insert_id() 
+                    self.build_ids[name] = self.curs.insert_id()
                     #print "AddBuild: insert ", self.curs.insert_id()
 
-        def AddBuildInstances (self, builds):
-                for m in range (0, len(builds)):
-		   if self.build_ids.has_key(builds[m].name) == 0:
-		      self.AddBuild(builds[m].name)
-                   query = "INSERT INTO build_instance VALUES (NULL, %d, '%s', '%s', NOW(), NULL, '%s');" % (self.build_ids[builds[m].name], str(Parser.DateTimeFromString(builds[m].start_time)), str(Parser.DateTimeFromString(builds[m].end_time)), builds[m].raw_file)
+        def AddBuildInstance (self, build):
+                   if self.build_ids.has_key(build.name) == 0:
+                      self.AddBuild(build.name)
+                   query = "INSERT INTO build_instance VALUES (NULL, %d, '%s', '%s', NULL, '%s', NOW());" % (self.build_ids[build.name], str(Parser.DateTimeFromString(build.start_time)), str(Parser.DateTimeFromString(build.end_time)), build.raw_file)
                    #print "AddBuildInstance ", query              
                    self.curs.execute(query)
-                   self.build_instance_ids[builds[m].name] = self.curs.insert_id()             
-	
-        def AddTests(self, builds):    
-                for m in range (0, len(builds[0].test_results)):
-                   name = builds[0].test_results[m].name; 
+                   self.build_instance_ids[build.name] = self.curs.insert_id()
+
+        def AddTests(self, build):
+                for m in range (0, len(build.test_results)):
+                   name = build.test_results[m].name;
                    self.AddTest(name)
 
         def AddTest(self, name):
-	        test_id = self.GetTestId(name)
-		if test_id == 0:
-	           query = "INSERT INTO test VALUES (NULL, '%s');" % (name)
+                test_id = self.GetTestId(name)
+                if test_id == 0:
+                   query = "INSERT INTO test VALUES (NULL, '%s');" % (name)
                    self.curs.execute(query)
-		   #print "AddTest ", query 
-	           query = "SELECT LAST_INSERT_ID()"
-	           self.curs.execute(query)
-		   self.test_ids[name] = self.curs.insert_id()
-		   #print "AddTest: insert ", self.curs.insert_id()
-		else:
-		   self.test_ids[name] = test_id
+                   #print "AddTest ", query 
+                   query = "SELECT LAST_INSERT_ID()"
+                   self.curs.execute(query)
+                   self.test_ids[name] = self.curs.insert_id()
+                   #print "AddTest: insert ", self.curs.insert_id()
+                else:
+                   self.test_ids[name] = test_id
 
-        def AddTestInstances(self, builds):      
-                for m in range (0, len(builds)):
-                   for n in range (0, len(builds[m].test_results)):
-                      if (builds[m].test_results[n].passFlag == PASS):
-                         pass_flag = 'P'
-                      elif (builds[m].test_results[n].passFlag == FAIL):
-                         pass_flag = 'F'
-                      else: 
-                         pass_flag = 'S'    
-		      if self.test_ids.has_key(builds[m].test_results[n].name) == 0:
-		         self.AddTest(builds[m].test_results[n].name)
-                      query = "INSERT INTO test_instance VALUES(%d, %d, '%s', '%s');" % (self.test_ids[builds[m].test_results[n].name], self.build_instance_ids[builds[m].name], pass_flag, builds[m].test_results[n].time)
-                      #print "AddTestInstances ", query         
-                      self.curs.execute(query)
+        def AddTestInstance(self, build):
+                for n in range (0, len(build.test_results)):
+                   if (build.test_results[n].passFlag == PASS):
+                       pass_flag = 'P'
+                   elif (build.test_results[n].passFlag == FAIL):
+                       pass_flag = 'F'
+                   else:
+                       pass_flag = 'S'
+                   if self.test_ids.has_key(build.test_results[n].name) == 0:
+                       self.AddTest(build.test_results[n].name)
+                   query = "INSERT INTO test_instance VALUES(%d, %d, '%s', '%s');" % (self.test_ids[build.test_results[n].name], self.build_instance_ids[build.name], pass_flag, build.test_results[n].time)
+                   #print "AddTestInstance ", query         
+                   try:
+                       self.curs.execute(query)
+                   except _mysql_exceptions.IntegrityError:
+                       print "AddTestInstance failed: ", build.test_results[n].name, build.raw_file, sys.exc_type, sys.exc_value
 
         def BuildLogLoaded(self, build_name, log_fname):
 		found = 0
