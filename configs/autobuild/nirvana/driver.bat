@@ -8,5 +8,5 @@ cd ..\..\..\
 cvs up -P -d
 cd configs\autobuild\nirvana
 if not exist Z: net use Z: \\TAO\bugzilla_www
-perl D:\bugzilla\autobuild\autobuild.pl %1 %2 %3 %4 %5 %6 %7 %8 %9
+perl G:\bugzilla\autobuild\autobuild.pl %1 %2 %3 %4 %5 %6 %7 %8 %9
 endlocal

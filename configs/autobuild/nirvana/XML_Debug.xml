@@ -1,11 +1,11 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="D:\bugzilla\XML_Debug\ACE_wrappers" />
+        <environment name="ACE_ROOT"         value="G:\bugzilla\XML_Debug\ACE_wrappers" />
         <environment name="ACE_RUNTEST_SVCCONF_EXT"         value=".conf.xml" />
-        <environment name="Path"         value="D:\bugzilla\XML_Debug\ACE_wrappers\bin;" type="prefix" />
+        <environment name="Path"         value="G:\bugzilla\XML_Debug\ACE_wrappers\bin;" type="prefix" />
 
-        <variable name="root"     value="D:/bugzilla/XML_Debug/" />
+        <variable name="root"     value="G:/bugzilla/XML_Debug/" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="Z:/XML_Debug" />
 
@@ -30,8 +30,8 @@
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -CORE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -TAO -u -k" />
 
-    <command name="auto_run_tests"    options="-a -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -Config SANDBOX" />
-    <command name="auto_run_tests"    options="-t -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -Config SANDBOX -Config SSL" />
+    <command name="auto_run_tests"    options="-a -s \x22G:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -Config SANDBOX" />
+    <command name="auto_run_tests"    options="-t -s \x22G:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -Config SANDBOX -Config SSL" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />

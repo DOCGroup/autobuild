@@ -1,10 +1,10 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="D:\bugzilla\new_DLL_Release\ACE_wrappers" />
-	<environment name="Path"             value="D:\bugzilla\new_DLL_Release\ACE_wrappers\bin;" type="prefix" />
+        <environment name="ACE_ROOT"         value="G:\bugzilla\DLL_Release\ACE_wrappers" />
+	<environment name="Path"             value="G:\bugzilla\DLL_Release\ACE_wrappers\bin;" type="prefix" />
 
-        <variable name="root"     value="D:/bugzilla/new_DLL_Release/" />
+        <variable name="root"     value="G:/bugzilla/DLL_Release/" />
 	<variable name="log_file" value="log.txt" />
         <variable name="log_root" value="Z:/new_dll_release" />
         <variable name="name"     value="WinXP DLL Release" />
@@ -28,8 +28,8 @@
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -CORE -u -k" />
     <command name="win32make"         options="msvc_auto_compile -DLL -Release -TAO -u -k" />
 
-    <command name="auto_run_tests"    options="-a -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
-    <command name="auto_run_tests"    options="-t -s \x22d:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
+    <command name="auto_run_tests"    options="-a -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 1200000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
+    <command name="auto_run_tests"    options="-t -s \x22g:\bugzilla\sandbox\Release\sandbox.exe -t 300000\x22 -ExeSubDir Release -Config SANDBOX -Config SSL" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
