@@ -60,7 +60,7 @@ and let us know which platform combinations you can contribute.
             <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_NoInterceptors/</url>
         </build>
         <build>
-            <name>Debian_WChar_GCC_3.1</name>
+            <name>Debian_WChar</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/rumba_Debian_WChar/</url>
         </build>
         <build>
