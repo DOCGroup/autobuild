@@ -157,6 +157,9 @@ sub add_results($$) {
 
      # This one matches BCB6 and CBuilderX builds
      qr{make.*\s-f\s(\S+).bor\s}x,
+
+     # This one matches MSVC builds with nmake!
+     qr{nmake\s.*/[fF]\s+(\S+).mak\s}x,
     );
 
   my $state = 'NOT IN COMPILE';
