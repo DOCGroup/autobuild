@@ -4,4 +4,4 @@
 #
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                             $HOME/autobuild/configs/autobuild/tango_isis/Debian_Core.xml
+                             $HOME/autobuild/configs/autobuild/balar_isis/DynamicHash.xml
