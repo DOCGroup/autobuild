@@ -1,3 +1,10 @@
+Wed Apr 21 06:34:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/tao/Borland.xml:
+	* configs/autobuild/tao/Borland_wchar.xml:
+          Removed usage of -ExeSubDir from running the tests, the executables
+          are stored now on the same place as with other compilers.
+
 Mon Apr 19 08:47:54 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/scoreboard/tao.xml:
