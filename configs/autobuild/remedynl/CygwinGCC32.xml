@@ -26,7 +26,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='threads=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
 
     <command name="print_os_version" options="useuname" />
     <command name="print_make_version" />
