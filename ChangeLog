@@ -1,3 +1,16 @@
+Wed Jan 14 09:28:53 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          The BCB6ddu build is now using MPC
+
+        * configs/scoreboard/tao.xml:
+          The BCB6sr release is now using MPC
+
+        * configs/autobuild/remedynl/*.xml:
+          Converted some builds to mpc and use -iname as argument for find
+          because there are some files with DSP extension in the archive
+          so always to a case insensitive find.
+
 Tue Jan 13 09:50:35 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
 
         * configs/scoreboard/tao.xml
@@ -5,7 +18,7 @@ Tue Jan 13 09:50:35 GMT 2004  Paul Morrison  <epm@prismtechnologies.com>
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_PRETTIFY_DocGroup.xml
 
           Changed log_root to separate LynxOS build results and test results.
-	
+
 Mon Jan 12 15:59:36 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Corrected
@@ -26,7 +39,7 @@ Mon Jan 12 01:30:05 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	  Build the core builds first since all the dependencies are set
           right for the core builds. Doing this should help a lot with the
-	  whacked problems that we are seeing.  
+	  whacked problems that we are seeing.
 
 Sat Jan 10 19:39:53 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
