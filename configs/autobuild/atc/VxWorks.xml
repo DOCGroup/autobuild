@@ -4,9 +4,9 @@
 
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/space/ACE_wrappers" />
+        <environment name="ACE_ROOT"        value="/space/build/ACE_wrappers" />
 
-        <environment name="TAO_ROOT"        value="/space/ACE_wrappers/TAO"/>
+        <environment name="TAO_ROOT"        value="/space/build/ACE_wrappers/TAO"/>
 
         <environment name="LD_LIBRARY_PATH"        value="$WIND_BASE/host/sun4-solaris2/lib:$OPENWINHOME/lib:/usr/lib:/opt/SUNWmotif/lib:/opt/SUNWspro/lib:/usr/dt/lib:/usr/ucblib:$ROSERT_HOME/bin/sun5/summit:$ROSERT_HOME/bin:$ACE_ROOT/build/Solaris/ACE_wrappers/TAO/TAO_IDL:$ACE_ROOT/lib:$ACE_ROOT/ace:/usr/local/lib"/>
 
