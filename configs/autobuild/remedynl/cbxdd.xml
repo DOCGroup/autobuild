@@ -25,7 +25,6 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
     <command name="make"              options=" -i -f Makefile.bor realclean" />
-    <command name="make"              options=" -i -f Makefile.bor realclean dir=TAO" />
 
     <command name="log"               options="ON" />
 
@@ -34,7 +33,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
 
     <!--  Now, delete them again to insure a clean slate.   --> 
-    <command name="shell" options="find ACE_wrappers -name '*.bor' -exec rm '{}' ';'" /> 
+    <command name="shell"             options="find ACE_wrappers -name '*.bor' -exec rm '{}' ';'" /> 
 
     <!--  Now, checkout include/makeinclude to get all Borland needed files   --> 
     <command name="cvs"               options="-z9 update ACE_wrappers/include/makeinclude" />
@@ -49,13 +48,9 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <!--  Uses ACE.mwc --> 
-    <command name="generate_workspace" options="-exclude ASNMP,TAO -hierarchy -make_coexistence -type borland" /> 
-    <!--  Uses TAO/TAO.mwc --> 
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -hierarchy -make_coexistence -type borland" /> 
+    <command name="generate_workspace" options="-exclude ASNMP,TAO/CIAO -make_coexistence -type borland" /> 
 
     <command name="make"              options=" -i -f Makefile.bor" />
-    <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
 
     <command name="auto_run_tests"    options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -ExeSubDir Dynamic\Debug" />
 
