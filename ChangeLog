@@ -1,3 +1,11 @@
+Tue Apr 29 18:08:37 2003  Steve Huston  <shuston@riverace.com>
+
+	* command/make.pm: If "dir=..." is given in options, remove that
+	  part before passing the options to the make. Ditto for "find=...".
+
+	* configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml: Build
+	  for Windows XP 64-bit edition.
+
 Mon Apr 28 14:50:29 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Added Windows XP-64 build that runs

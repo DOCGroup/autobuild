@@ -64,9 +64,11 @@ sub Run ($)
  
     if ($options =~ m/dir='([^"]*)'/) {
         $dir = $1;
+        $options =~ s/dir='$dir'//;
     }
     elsif ($options =~ m/dir=([^\s]*)/) {
         $dir = $1;
+        $options =~ s/dir=$dir//;
     }
 
     my $make_program = main::GetVariable ('make_program');
@@ -89,8 +91,6 @@ sub Run ($)
         print STDERR __FILE__, ": Cannot change to $project_root\n";
     }
 
-    my $command = "$make_program $options";
-
     if( defined $dir )
     {
         if(!chdir $dir) {
@@ -99,9 +99,29 @@ sub Run ($)
         }
     }
 
-    print "Running: $command\n";
-
-    my $ret = system ($command);
+    my $command;
+    my $pattern;
+    my $ret;
+ 
+    if ($options =~ m/find=([^\s]*)/) {
+        $pattern = $1;
+        $options =~ s/find=$pattern//;
+        print "Pattern: $pattern\n";
+        my @makes = glob $pattern;
+        my $makefile;
+        $options =~ s/'/"/g;
+        foreach $makefile (@makes) {
+            $command = "$make_program $makefile $options";
+            print "Running: $command\n";
+            $ret = system ($command);
+        }
+    }
+    else {
+        $options =~ s/'/"/g;
+        $command = "$make_program $options";
+        print "Running: $command\n";
+        $ret = system ($command);
+    }
 
     if( $ret != 0  )
     {
