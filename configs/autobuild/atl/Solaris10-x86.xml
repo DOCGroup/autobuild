@@ -27,7 +27,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n#   if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 4))\n#     define ACE_EXPLICIT_TEMPLATE_DESTRUCTOR_TAKES_ARGS\n#   endif /* __GNUC__ >= 3.4 */\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\nCFLAGS+=-D_POSIX_PTHREAD_SEMANTICS\nFLAGS=-shared\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='exceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\nCFLAGS+=-D_POSIX_PTHREAD_SEMANTICS\nFLAGS=-shared\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
