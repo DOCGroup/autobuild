@@ -22,12 +22,6 @@ decide the migration paths and strategies.
 <group>
    <name>Test Builds for TAO</name>
    <build>
-      <name>WinXP_CBuilderX_Dynamic_Debug_MPC_BMake</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/CBXddace</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
       <name>SuSE_90_Autoconf</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_GCC_autoconf</url>
       <build_sponsor>Remedy IT</build_sponsor>
