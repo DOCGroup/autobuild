@@ -149,6 +149,7 @@ sub clean_logs ($)
         unlink $file . ".txt";
         unlink $file . "_Full.html";
         unlink $file . "_Brief.html";
+        unlink $file . "_Totals.html";
     }
     return 1;
 }
