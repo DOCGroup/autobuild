@@ -37,7 +37,7 @@
     <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC CIDLC.mwc" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean -C TAO/CIAO/CIDLC" />
     <command name="make"              options="-k -j 4 -C TAO/CIAO/CIDLC" />
 
     <command name="log"               options="off" />
@@ -45,6 +45,6 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     
-    <command name="shell"             options="/bin/mv TAO/CIAO/CIDLC/cidlc /web/users/isisbuilds/CIDLC/gnu-linux" />
+    <command name="shell"             options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc /web/users/isisbuilds/CIDLC/gnu-linux" />
 
 </autobuild>
