@@ -25,7 +25,12 @@ class CompilationPlatform:
 	        #print "platform ", self.name, self.raw_file, self.start_time, self.end_time 	
 	
 	def processDBFile(self):
-		fh=open(self.db_file, "r")
+		try:
+           	   fh=open(self.db_file, "r")
+                except IOError:
+                   print "ERROR: Cannot open db file", self.db_file
+                   return
+
 	        self.name = trim(fh.readline())
 		self.raw_file = trim(fh.readline())
 		self.start_time = trim(fh.readline())
@@ -54,11 +59,9 @@ class CompilationPlatform:
 		   #print "compilation_result: ", line 
 		   self.compilation_results.append(ACE_TAO_Compilation (name, skipped, num_errors, num_warnings))
 		   line = trim(fh.readline())
-		if parse_error == 1:
-		   print "ERROR: compilation db file parse failed. Check log file", self.raw_file
-                   self.valid_db_file = 0 
-		if len(self.compilation_results) == 0:
-		   print "ERROR: no project in db file. Check log file", self.raw_file
-		   self.valid_db_file = 0
+                if (parse_error == 1 or self.name == "" or self.raw_file == "" or self.start_time == "" or self.end_time == "" or len(self.compilation_results) == 0):
+                   print "ERROR: invalid db file: ", self.db_file
+                   self.valid_db_file = 0
+                                                                              
 		fh.close()
                 

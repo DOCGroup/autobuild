@@ -91,6 +91,7 @@ class TestMatrix:
 
 class TestPlatform:
         def __init__(self, name, raw_file, db_file=""):
+                self.valid_raw_file = 1
                 self.valid_db_file = 1
                 self.db_file = db_file
                 self.name = name
@@ -113,6 +114,9 @@ class TestPlatform:
                    self.processDBLog()
                 else:
                    self.processLog()
+                   if (self.start_time == "" or self.end_time == "" or len(self.test_results) == 0):
+                      self.valid_raw_file = 0
+
                 #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
 
         def writeDBLog(self):
@@ -171,7 +175,12 @@ class TestPlatform:
                 os.rename(tmpfname, fname)
 
         def processDBLog(self):
-                fh=open(self.db_file, "r")
+                try:
+                   fh=open(self.db_file, "r")
+                except IOError:
+                   print "ERROR: Cannot open db file", self.db_file
+                   return
+
                 self.name = trim(fh.readline())
                 self.raw_file = trim(fh.readline())
                 self.start_time = trim(fh.readline())
@@ -191,12 +200,10 @@ class TestPlatform:
                    #print "test_result: ", line
                    self.test_results.append(ACE_TAO_Test (name, 0, time, passflag))
                    line = trim(fh.readline())
-                if parse_error == 1:
-                   print "ERROR: db file parse failed. Check log file", self.raw_file
-                   self.valid_db_file = 0
-                if len(self.test_results) == 0:
-                   print "ERROR: no test in db file. Check log file", self.raw_file
-                   self.valid_db_file = 0
+                   if (parse_error == 1 or self.name == "" or self.raw_file == "" or self.start_time == "" or self.end_time == "" or len(self.test_results) == 0):
+                       print "ERROR: invalid db file: ", self.db_file
+                       return
+
                 fh.close()
 
 	def addtest (self, name, result, time, flag):

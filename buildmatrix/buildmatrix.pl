@@ -403,6 +403,10 @@ sub save_results($) {
   my $self = shift;
   my $summary = shift;
   while (my ($name, $data) = each %{$summary}) {
+    if ($data->{build_start_time} eq "" || $data->{build_end_time} eq "") {
+       print STDERR "invalid log $name $data->{log_fname} \n";
+       next;
+    }
     my @fields = split("/", $data->{log_fname});
     my $len = $#fields;
     my $db_fname = "$fields[$len - 1]_$fields[$len]";

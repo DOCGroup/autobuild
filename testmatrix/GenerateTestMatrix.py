@@ -24,12 +24,16 @@ def ReadLogFiles ():
 	fh=open(infile,"r")
 	builds = []
 	# read in text files containing test results for each platform
-	for build in fh.readlines():
-		name, file = build.split()
-		print "********* BUILD", name
-		builds.append (TestPlatform (name, file))
-	return builds
+        for line in fh.readlines():
+            name, file = line.split()
+            build = TestPlatform (name, file)
+            if (build.valid_raw_file == 1):
+               print "********* BUILD", name
+               builds.append (build)
+            else:
+               print "ERROR: invalid log file:", name, file
 	fh.close()	
+	return builds
 
 def SaveBuildResults2HTML (directory, fname):
 	# now print the results to an HTML file
