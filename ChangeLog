@@ -1,3 +1,8 @@
+Sat May 24 10:19:07 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* common/prettify.pm (Compile_Handler): Make "File <xxx> exists
+	  but should be cleaned up" a warning.
+
 Sat May 24 09:18:03 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:

@@ -871,6 +871,10 @@ sub Compile_Handler ($)
     {
       $self->Output_Warning ($s);
     }
+    elsif ($s =~ m/exists but should be cleaned up/i)
+    {
+      $self->Output_Warning ($s);
+    }
     elsif ($s =~ m/undefined reference to/
            || $s =~ m/: cannot open/
            || $s =~ m/: cannot find/
