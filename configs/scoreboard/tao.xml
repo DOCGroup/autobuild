@@ -318,8 +318,14 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.atl.external.lmco.com/projects/QoS</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris10_x86</name>
+      <name>Solaris10_x86_GCC34</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_GCC34</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.isis.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+   <name>Solaris10_x86_Studio9</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.isis.vanderbilt.edu</build_sponsor_url>
    </build>
