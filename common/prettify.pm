@@ -828,7 +828,6 @@ sub Compile_Handler ($)
     }
     elsif ($s =~ m/(BUILD ERROR detected in [\w\/]+)/ ) {
         push( @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}}, $1 );
-        $self->Output_Error ($s);
     }
     elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/) {
         # Definately an error
@@ -846,6 +845,7 @@ sub Compile_Handler ($)
     }
     elsif ($s =~ m/undefined reference to/
            || $s =~ m/: cannot open/
+           || $s =~ m/: cannot find/
            || $s =~ m/: multiple definition of/
            || $s =~ m/path name does not exist/)
     {
