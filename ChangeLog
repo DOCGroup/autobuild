@@ -1,3 +1,9 @@
+Tue Mar 30 14:35:50 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* scoreboard.pl:
+
+	  Fixed a typo.
+
 Tue Mar 30 10:32:54 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/valinor/Full.xml (check_compiler):
