@@ -827,6 +827,8 @@ sub Compile_Handler ($)
         $self->Output_Normal ($s);
     }
     elsif ($s =~ m/(BUILD ERROR detected in [\w\/]+)/ ) {
+        # If we see "BUILD ERROR detected in" then increment the build counter
+        # but don't print it in the report.
         push( @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}}, $1 );
     }
     elsif ($s =~ m/^.*:[0-9]+: / && $s !~ m/^.*:[0-9]+: warning:/) {
@@ -852,6 +854,15 @@ sub Compile_Handler ($)
         # Look for linking errors too
         $self->Output_Error ($s);
     }
+    elsif ($s =~ m/^make.*:.*Error [2-9]$/ )
+    {
+        # We only want to flag as errors
+        # make messages which are of the form:
+        # make: ........Error 1
+        # If we have Error 2 or higher, it is a recursive error, and has already 
+        # been flagged earlier at the occurrence of "Error 1".
+        $self->Output_Normal ($s);
+    } 
     elsif (($s =~ m/\berror\b/i 
             && $s !~ m/ error\(s\), / 
             && $s !~ m/error \(future\)/i)

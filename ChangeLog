@@ -1,3 +1,8 @@
+Wed Oct  9 15:24:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* common/prettify.pm: Don't highlight extraneous recursive make
+	  error messages.
+
 Tue Oct  8 15:19:22 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/prettify.pm: Add GNU ld's ": cannot find" to list of 
