@@ -1,3 +1,10 @@
+Sun Aug 18 15:36:00 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
+
+	* configs/autobuild/sirion/Full_new.xml:
+	* configs/autobuild/sirion/driver_new.sh: Files for a new
+	  workspace. The old workspace seems busted with some bizzare
+	  problem. 
+
 Sun Aug 18 15:23:39 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/autobuild/balar/Debian_Minimum.xml: Made the realclean
