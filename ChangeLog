@@ -1,3 +1,11 @@
+Mon Jul 29 08:12:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*.XML:
+          Improved settings for the builds and added a unicode build
+
+        * configs/scoreboard/acetao.xml: The BCB6 builds are running now
+          on NT4 and not on XP.
+
 Sat Jul 27 14:48:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Borland.xml:
