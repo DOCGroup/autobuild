@@ -1,3 +1,10 @@
+Mon Aug 11 16:38:36 UTC 2003  Don Hinton  <dhinton@dresystems.com>
+
+        * command/create_ace_build.pm:
+          Make sure that we handle both $root variables that include
+          ACE_wrappers and those that don't.  Thanks to Justin Michel
+          <michel_j@ociweb.com> for pointing this out.
+
 Mon Aug 11 10:00:00 2003  Dan Troesser  <troesser_d@ociweb.com>
 
         * scoreboard.pl
@@ -5,7 +12,7 @@ Mon Aug 11 10:00:00 2003  Dan Troesser  <troesser_d@ociweb.com>
           Made coloring of Failures column depend on whether the
           number of failures is greater than zero.
 
-Mon Aug 11 14:23:16 UTC 2003
+Mon Aug 11 14:23:16 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * command/create_ace_build.pm:
           Changed the logic so that it does a chdir to $root is used

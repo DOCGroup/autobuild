@@ -66,7 +66,14 @@ sub Run ($)
 
     my $current_dir = getcwd ();
 
-    chdir $root;
+    my $dir = $root;
+    # strip off ACE_wrappers if it's there (sometimes it is, sometimes it isn't) and then readd it.
+    if ($dir =~ m/^(.*)\/ACE_wrappers/) {
+        $dir = $1;
+    }
+    $dir = $dir."/ACE_wrappers";
+
+    chdir $dir;
 
     if (!-r $wrappers || !-d $wrappers) {
         mkpath($wrappers);
