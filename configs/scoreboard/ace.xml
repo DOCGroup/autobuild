@@ -63,14 +63,6 @@ all the OS/platform combinations ACE is tested everyday.
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
-     <build>
-       <name>RH8_GCC_3.2_ACE</name>
-       <url>http://www.dresystems.com/autobuild_output/mpc_test</url>
-       <build_sponsor>DRE Systems</build_sponsor>
-       <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
-       <orange>30</orange>
-       <red>36</red>
-     </build>
 </group>
 
 <group>
