@@ -36,7 +36,7 @@
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests" options="-a" /> 
+    <command name="auto_run_tests"    options="" /> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
