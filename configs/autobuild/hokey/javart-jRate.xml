@@ -29,6 +29,8 @@
     <command name="log"               options="on" />
     <command name="cvs"               options="-z 3 -q checkout -P javart" />
 
+    <command name="shell"             options="/bin/csh -c 'cd /export/home/bugzilla/javart && ./setup.jRate'" />
+
     <command name="make"              options="realclean" />
     <command name="make"              options=" jRate" />
 
