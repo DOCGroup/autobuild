@@ -125,7 +125,7 @@ and let us know which platform combinations you can contribute.
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/maglor_Static</url>
         </build>
         <build>
-            <name>RedHat_GCC_3.2</name>
+            <name>RedHat_GCC_3.3(pre-release)</name>
             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
         </build>
         <build>

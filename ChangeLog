@@ -1,3 +1,8 @@
+Sat Jan 11 09:17:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
+
+	* configs/scoreboard/acetao.xml: Changed the name of the builds
+	  from BBN. 
+
 Fri Jan 10 21:36:09 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
 	* common/prettify.pm:  Modified the regular expressions used to
