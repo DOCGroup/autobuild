@@ -1,3 +1,8 @@
+Wd May 19 06:40:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/hpux.xml:
+          Added setting of SHLIB_PATH
+
 Tue May 18 08:39:14 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
