@@ -1,3 +1,8 @@
+Wed Apr 23 11:17:21 2003  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Added NT4 BCB5 and MSVC6 builds
+	  that run at Riverace.
+
 Wed Apr 23 10:36:33 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/timmy_dev_bcb5_debug.xml:

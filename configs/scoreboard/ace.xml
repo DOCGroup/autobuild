@@ -95,12 +95,28 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
 <name>Windows</name>
    <build>
-   <name>Windows2000_MSVC6_Debug</name>
-   <url>http://www.riverace.com/build_logs/beebee/dev/msvc6_debug</url>
-   <orange>24</orange>
-   <red>96</red>
-   <build_sponsor>Riverace</build_sponsor>
-   <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+      <name>WindowsNT4_BCB5_Debug</name>
+      <url>http://jane/ACE/build_logs/timmy/dev/bcb5_debug</url>
+      <orange>24</orange>
+      <red>96</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>WindowsNT4_MSVC6_Debug</name>
+      <url>http://jane/ACE/build_logs/timmy/dev/msvc6_debug</url>
+      <orange>24</orange>
+      <red>96</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>Windows2000_MSVC6_Debug</name>
+      <url>http://www.riverace.com/build_logs/beebee/dev/msvc6_debug</url>
+      <orange>24</orange>
+      <red>96</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
       <name>WindowsXP_VC.NET_Debug</name>
