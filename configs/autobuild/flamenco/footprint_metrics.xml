@@ -32,7 +32,7 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO " />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k realclean" />

@@ -1,3 +1,17 @@
+Sat Oct  2 08:34:11 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
+	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+	* configs/autobuild/flamenco/Static.xml:
+	* configs/autobuild/flamenco/compiletime_metrics.xml:
+	* configs/autobuild/flamenco/footprint_metrics.xml:
+	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
+
+          Removed unnecessary MPC arguments because of new warnings.	  
+
 Sat Oct  2 08:21:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/ace_isis/RH8_Minimum.xml:
