@@ -54,8 +54,8 @@
             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
         </build>
         <build>
-            <name>RedHat_Explict_Templates</name>
-            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Explicit_Templates</url>
+            <name>RedHat_Explicit_Templates</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_RedHat_Explicit_Templates</url>
         </build>
     </group>
     <group>
