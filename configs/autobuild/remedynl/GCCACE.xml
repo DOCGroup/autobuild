@@ -20,11 +20,11 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
     <!-- Now, delete them again to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#define ACE_HAS_SIGNAL_SAFE_OS_CALLS\n#define ACE_NLOGGING\n#define ACE_HAS_WCHAR\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-linux.h\x22\n'"/> 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OCFLAGS=-O2\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
