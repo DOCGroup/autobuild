@@ -1,3 +1,10 @@
+Thu Oct 14 07:26:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_wchar.xml:
+          Removed these files, WashU isn't doing any Borland builds for several
+          months now
+
 Wed Oct 13 14:04:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/remedynl/gandalf_cbxdd.xml:
@@ -15,8 +22,8 @@ Wed Oct 13 14:04:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
         * configs/autobuild/remedynl/scarab_bcb6dr.xml:
         * configs/autobuild/remedynl/scarab_bcb6dru.xml:
 
-          Increased timeout on test sandbox because is was far too short 
-          for the complete set of ACE tests which are run as one test as 
+          Increased timeout on test sandbox because is was far too short
+          for the complete set of ACE tests which are run as one test as
           far as the sandbox is concerned.
 
 Tue Oct 12 06:54:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
