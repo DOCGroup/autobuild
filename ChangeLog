@@ -1,3 +1,17 @@
+Mon Oct 27 20:45:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
+
+        This update performed by Jason Cohen <jcohen@atl.lmco.com>
+
+        * configs/scoreboard/tao/xml:
+        Updated kernel version of 2.6.0-test4.xml to test7.
+        Did same for 2.6.0-test4-lksctp to 2.6.0-test7-lksctp.
+
+        * configs/autobuild/atl/2.6.0-test4.xml:
+        * configs/autobuild/atl/2.6.0-test4-lksctp.xml:
+        * configs/autobuild/atl/2.6.0-test7.xml:
+        * configs/autobuild/atl/2.6.0-test7-lksctp.xml:
+        Removed test4 scripts and added test7 scripts.
+
 Sat Oct 25 11:33:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
