@@ -9,9 +9,108 @@ XML configuration files to automatically build our projects (ACE+TAO)
 on multiple platforms.  The tools run on Unix (several flavors) and
 Windows NT/2k/XP.
 
-They clearly need more documentation, but it is fairly easy to guess
-how another build can be added or how to change the configuration for
-a build.
+
+
+QUICK GUIDE GETTING STARTED WITH AUTOBUILD
+==========================================
+
+(1) Check out the latest build scripts from CVS.  Use the following CVSROOT:
+    :ext:[username]@cvs.doc.wustl.edu:/project/cvs-repository
+
+(2) Look at the existing XML configuration files in
+    autobuild/configs/autobuild/*.  Create a new XML configuration
+    for your build and customize it according
+    to your local site.  
+
+    In the <configuration></configuration> section, you can set environment
+    variables like ACE_ROOT, PATH, CVSROOT, LD_LIBRARY_PATH, etc.  
+    For example:
+
+    <environment name="ACE_ROOT"        value="/export/bugzilla/Minimum_newbuild/ACE_wrappers" />
+
+(3)  In the <configuration></configuration> section, specify the directory 
+     where to place the log files from the build.
+     Ideally this directory should be accessible by a web server, so
+     that you can see the log files via http.  
+     For example:
+  <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
+
+
+(4)  Edit the file autobuild/configs/scoreboard/acetao.xml, and add the
+     URL of the directory where the log files are located.
+     For example:
+
+<scoreboard>
+    <group>
+        <name>Linux</name>
+        <build>
+            <name>Debian_Full</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
+        </build>
+    </group>
+</scoreboard
+
+
+(5) To run the build, you run autobuild.pl with the XML config file as the 
+    argument:
+
+  autobuild.pl Debian_Minimum_Static.xml 
+
+(6) To update the scoreboard, you run scoreboard.pl with acetao.xml as the 
+    argument:
+
+  scoreboard.pl acetao.xml
+
+
+
+OTHER NOTES
+===========
+(1)  In the <configuration></configuration> section, you set shell environment
+     variables with the following tag:
+
+     <environment name="ENV VARIABLE NAME"  value="ENV VARIABLE VALUE" />
+
+(2)  In the <configuration></configuration> section, you set Perl global
+     variables with the following tag:
+
+     <variable name="PERL GLOBAL VARIABLE NAME"  value="VARIABLE VALUE" />
+
+(3)  Outside the configuration section, commands are specified with the 
+     following tag:
+
+     <command name="COMMAND NAME" options="COMMAND OPTIONS" />
+     
+     Each command is located in Perl modules in the autobuild/command
+     directory.  If you look in each Perl module, you will see a line
+     such as:
+
+     main::RegisterCommand ("COMMAND NAME", new COMMAND ());
+
+     This line registers "COMMAND NAME" in a global table used by
+     autobuild.pl to locate a command specified in the XML file.
+
+
+MISCELLANEOUS NOTES
+===================
+
+(1) check_compiler  ->  print out the version of the compiler being used
+
+    For example:
+
+<command name="check_compiler" options="gcc" />
+
+    The values which can be specified in the options field are in
+    the Run() method of autobuild/command/check_compiler.pm
+
+(2) configs  ->  Specify a special configuration for auto_run_tests.pl
+
+    For example:
+
+<variable name="configs"  value="Linux ST" />
+
+   Will invoke: auto_run_tests.pl -Config Linux -Config ST
+
 
 <CODE>$Id$</CODE>
 */
+
