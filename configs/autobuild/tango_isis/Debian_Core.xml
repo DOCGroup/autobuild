@@ -31,7 +31,8 @@
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-k -j 4 -C CIAO_Core" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+    <command name="make"              options="-k -j 4 CIAO_Core" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
