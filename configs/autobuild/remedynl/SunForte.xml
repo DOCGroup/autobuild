@@ -36,18 +36,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -make_coexistence" />
-    <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO -make_coexistence" />
 
     <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
 
     <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO idl_stubs" />
-    <command name="make"              options="-k -C TAO" />
 
     <command name="auto_run_tests"    options="" /> 
 

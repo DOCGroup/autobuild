@@ -1,3 +1,9 @@
+Tue Feb 10 17:11:13 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/SunForte.xml:
+	  Cleaned this file, just generate all project files with one call, and
+	  just use one normale make invocation.
+
 Tue Feb 10 07:41:37 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/remedynl/GCCACE.xml:
