@@ -1,3 +1,10 @@
+Fri Apr  9 10:57:43 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_wchar.xml:
+          Generate a default.features file needed for MPC and print make, linker
+          and perl version in the config page of the build
+
 Fri Apr  9 10:43:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/BCB6CodeGuard.xml:
