@@ -28,6 +28,11 @@ decide the migration paths and strategies.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
+      <name>Sequence_Test_Build</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Sequence_Test_Build</url>
+      <build_sponsor>Carlos O'Ryan</build_sponsor>
+   </build>
+   <build>
       <name>WinXP_MSVC6_XML_Debug</name>
       <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
       <build_sponsor>Washington University</build_sponsor>
