@@ -1,3 +1,16 @@
+Fri Jul 11 17:51:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/*:
+          We are restructering build pc's at this moment so changed several
+          files. The builds are the same but just run on different hosts.
+          The BCB6 dd, ddu, dr and dru builds are moved to a older system
+          because the bcb compiler is very fast, the sr build will be moved
+          when CPU is available but first see how long these four takes. The
+          VxWorks build now runs on our big build box in vmware to make sure
+          that it doesn't interfere with other builds. The vxworks and msvc
+          laptop are offline again, using laptops isn't stable. On the big
+          build box we have now room for msvc.
+
 Wed Jul  2 11:20:31 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
