@@ -31,7 +31,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P RTEvent/facet" />
 
     <command name="make"              options="realclean" />
-    <command name="make"              options="" />
+    <command name="make"              options="init" />
     <command name="make"              options="-buildfile gcj.xml" />
     <command name="make"              options="" />
 
