@@ -35,7 +35,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_makefile" options="-recurse=TAO,vc7_nightly.mwc -make_coexistence" />
+    <command name="generate_workspace" options="-recurse=TAO,vc7_nightly.mwc -make_coexistence" />
 
     <command name="make"              options="-k realclean" />
 
