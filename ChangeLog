@@ -1,3 +1,9 @@
+Sun May  9 12:43:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Wchar.xml:
+          Corrected these files
+
 Sun May  9 12:29:01 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/slytherin/OpenBSD_Full.xml:
