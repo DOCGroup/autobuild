@@ -1,3 +1,9 @@
+Sat Sep 18 23:31:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/escher3/cidlcstatic.xml:
+
+	  A new build for static CIDLC build on Win32.
+
 Thu Sep  9 09:21:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
