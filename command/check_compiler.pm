@@ -76,6 +76,9 @@ sub Run ($)
     elsif(lc $compiler eq "msvc"){
         system("cl /V");
     }
+    elsif(lc $compiler eq "deccxx"){
+        system("cxx/VERSION");
+    }
     elsif(lc $compiler eq "cxx"){
         system("cxx -V"); 
     }
