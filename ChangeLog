@@ -1,3 +1,9 @@
+Thu Oct 02 11:40:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace_future.xml:
+        * configs/scoreboard/tao_future.xml:
+          Both Cygwin builds now use GCC 3.2.3, 3.3.1 was giving to much warnings.
+
 Wed Oct 01 09:55:12 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/remedynl/driverbuildpcreeuwijk.bat:
