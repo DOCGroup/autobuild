@@ -79,7 +79,7 @@
 
 
 
-    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <command name="generate_workspace" options="-exclude TAO" />
 
 
 

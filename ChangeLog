@@ -1,3 +1,20 @@
+Mon Oct 2 14:03:12 UTC 2004  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/autobuild/remedynl/tribeardgcc.xml:
+        * configs/autobuild/remedynl/gandalf_cygwin.xml:
+        * configs/autobuild/remedynl/hpux.xml:
+        * configs/autobuild/remedynl/tribeardacc.xml:
+        * configs/autobuild/remedynl/SunForte.xml:
+        * configs/autobuild/remedynl/tru64.xml:
+        * configs/autobuild/remedynl/msvcunicodedebug.xml:
+        * configs/autobuild/remedynl/msvcrelease.xml:
+        * configs/autobuild/remedynl/msvclibrelease.xml:
+        * configs/autobuild/remedynl/msvclibdebug.xml:
+        * configs/autobuild/remedynl/msvcdebug.xml:
+        * configs/autobuild/remedynl/gandalf_dmc.xml:
+
+          Removed unnecessary MPC arguments because of new warnings.
+
 Sat Oct  2 08:34:11 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
  	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
@@ -10,7 +27,7 @@ Sat Oct  2 08:34:11 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/flamenco/footprint_metrics.xml:
 	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
 
-          Removed unnecessary MPC arguments because of new warnings.	  
+          Removed unnecessary MPC arguments because of new warnings.
 
 Sat Oct  2 08:21:25 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
@@ -39,7 +56,7 @@ Fri Oct  1 20:40:36 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
 	* configs/autobuild/balar_isis/Static.xml:
 	* configs/autobuild/balar_isis/wchar.xml:
-	
+
           Removed unnecessary MPC arguments because of new warnings.
 
 Fri Oct  1 20:34:41 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>

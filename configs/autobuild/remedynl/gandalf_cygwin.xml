@@ -38,7 +38,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO -make_coexistence" />
+    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO" />
 
     <command name="make"              options="-k realclean" />
 
