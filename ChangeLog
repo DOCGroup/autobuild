@@ -1,3 +1,15 @@
+Wed Jan 22 00:52:50 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* README:
+	* scoreboard.pl:
+	* common/scoreparser.pm:
+	* configs/scoreboard/acetao.xml:
+	  - Add <build_sponsor> and <build_sponsor_url> tags to the Scoreboard.
+	  - Add a -v to scoreboard.pl.  Only print status messages if -v is
+	    specified.  Default is to print out error messages only.
+	  - scoreboard.pl will now print out instructions of no arguments are
+	    specified
+
 Tue Jan 21 17:28:05 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/scoreboard/tao.bat: Changed to specify the scoreboard

@@ -130,6 +130,15 @@ sub Parse ($\@)
                 # Remove a trailing slash, if there is one
                 %build_info->{URL} =~ s/\/$//;
             }
+            elsif (m/^\s*<build_sponsor>(.*)<\/build_sponsor>\s*$/i) {
+                %build_info->{BUILD_SPONSOR} = $1;
+            }
+            elsif (m/^\s*<build_sponsor_url>(.*)<\/build_sponsor_url>\s*$/i) {
+                %build_info->{BUILD_SPONSOR_URL} = $1;
+                
+                # Remove a trailing slash, if there is one
+                #%build_info->{BUILD_SPONSOR_URL} =~ s/\/$//;
+            }
             elsif (m/^\s*<manual>(.*)<\/manual>\s*$/i) {
                 %build_info->{MANUAL_LINK} = $1;
             }

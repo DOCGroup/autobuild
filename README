@@ -77,6 +77,8 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
         <build>
             <name>Debian_Full</name>
             <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/sirion_Full/</url>
+            <build_sponsor>UC Irvine</build_sponsor>
+            <build_sponsor_url>http://doc.ece.uci.edu</build_sponsor_url>
         </build>
     </group>
 </scoreboard

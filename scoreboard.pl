@@ -55,6 +55,8 @@ my $red_default = 48;
 # XML file for the scoreboard, and put the text in between the
 # <preamble> </preamble> tags.
 our $preamble = "";
+## Use 'our' to make $verbose visible outside this file
+our $verbose = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
@@ -76,7 +78,7 @@ sub load_build_list ($)
 {
     my $file = shift;
 
-    print "Loading Build List\n";
+    print "Loading Build List\n" if ($verbose);
 
     my $parser = new ScoreboardParser;
     $parser->Parse ($file, \%builds);
@@ -95,7 +97,7 @@ sub load_build_list ($)
 ###############################################################################
 sub build_group_hash ()
 {
-    print "Grouping builds\n";
+    print "Grouping builds\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
         if (defined %builds->{$buildname}->{GROUP}) {
@@ -121,7 +123,7 @@ sub build_group_hash ()
 ###############################################################################
 sub query_latest ()
 {
-    print "Getting latest files\n";
+    print "Getting latest files\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
         my $latest = load_web_latest (%builds->{$buildname}->{URL});
@@ -174,12 +176,12 @@ sub query_latest ()
 ###############################################################################
 sub query_status ()
 {
-    print "Getting status messages\n";
+    print "Getting status messages\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
         my $link = %builds->{$buildname}->{URL} . '/status.txt';
         if (defined $link) {
-            print "    Status [$buildname] from $link\n";
+            print "    Status [$buildname] from $link\n" if ($verbose);
 
             my $ua = LWP::UserAgent->new;
 
@@ -191,7 +193,7 @@ sub query_status ()
             my $response = $ua->request($request);
 
             if (!$response->is_success ()) {
-                print "        No status for $buildname\n";
+                print "        No status for $buildname\n" if ($verbose);
                 next;
             }
 
@@ -225,7 +227,7 @@ sub load_web_latest ($)
 {
     my $address = shift;
 
-    print "    Loading latest from $address/latest.txt\n";
+    print "    Loading latest from $address/latest.txt\n" if ($verbose);
 
     ### Check the address
 
@@ -308,7 +310,7 @@ sub update_cache ($)
 {
     my $directory = shift;
 
-    print "Updating Local Cache\n";
+    print "Updating Local Cache\n" if ($verbose);
 
     if (!-w $directory) {
         warn "Cannot write to $directory";
@@ -327,22 +329,22 @@ sub update_cache ($)
 
         my $filename = %builds->{$buildname}->{BASENAME} . '.txt';
 
-        print "    Looking at $buildname\n";
+        print "    Looking at $buildname\n" if ($verbose);
 
         mkpath "$directory/$buildname";
 
         if (! -r "$directory/$buildname/$filename") {
-            print "        Downloading\n";
+            print "        Downloading\n" if ($verbose);
             my $ua = LWP::UserAgent->new;
             my $request = HTTP::Request->new('GET', $address);
             my $response = $ua->request($request, "$directory/$buildname/$filename");
 
             if (!$response->is_success ()) {
-                print "WARNING: Unable to download $address\n";
+                warn "WARNING: Unable to download $address\n";
                 next;
             }
 
-            print "        Prettifying\n";
+            print "        Prettifying\n" if($verbose);
             Prettify::Process ("$directory/$buildname/$filename");
         }
     }
@@ -365,7 +367,7 @@ sub clean_cache ($)
     my $directory = shift;
     my $keep = 5;
 
-    print "Cleaning Local Cache\n";
+    print "Cleaning Local Cache\n" if ($verbose);
 
     if (!-w $directory) {
         warn "Cannot write to $directory";
@@ -375,7 +377,7 @@ sub clean_cache ($)
     foreach my $buildname (keys %builds) {
         my @existing;
 
-        print "    Looking at $buildname\n";
+        print "    Looking at $buildname\n" if ($verbose);
 
         my $dh = new DirHandle ($directory);
 
@@ -516,7 +518,7 @@ sub update_html ($)
 
     my $indexhtml = new FileHandle;
 
-    print "Generating Scoreboard\n";
+    print "Generating Scoreboard\n" if ($verbose);
 
     unless ($indexhtml->open (">$filename")) {
         warn 'Could not create file: '.$filename." ".$_;
@@ -531,7 +533,7 @@ sub update_html ($)
 
     print $indexhtml "<body bgcolor=white>\n<h1>Build Scoreboard</h1>\n<hr>\n";
     print $indexhtml "$preamble\n";
-    print $indexhtml "$build_instructions\n<hr>\n";
+    print $indexhtml "\n<hr>\n";
     ### Print tables (first the empty one)
 
     update_html_table ($dir, $indexhtml, undef) if ($#nogroup >= 0);
@@ -581,11 +583,11 @@ sub update_html_table ($$@)
 
     # check to see if we are doing the "NONE" group
     if (!defined $name) {
-        print "    Building table for ungrouped\n";
+        print "    Building table for ungrouped\n" if ($verbose);
         @builds = sort @nogroup;
     }
     else {
-        print "    Building table for group $name\n";
+        print "    Building table for group $name\n" if ($verbose);
         @builds = sort @{%groups->{$name}};
         print $indexhtml "<a name=\"$name\"><h2></a>$name</h2>\n";
     }
@@ -615,6 +617,7 @@ sub update_html_table ($$@)
     print $indexhtml "<th>Config<th>Setup<th>Compile<th>Tests";
     print $indexhtml "<th>Manual" if ($havemanual);
     print $indexhtml "<th>Status" if ($havestatus);
+    print $indexhtml "<th>Build <br>Sponsor";
     # New entries
     print $indexhtml "<th>PDF" if ($havepdf);
     print $indexhtml "<th>PS" if ($haveps);
@@ -623,7 +626,7 @@ sub update_html_table ($$@)
     print $indexhtml "\n";
 
     foreach my $buildname (@builds) {
-        print "        Looking at $buildname\n";
+        print "        Looking at $buildname\n" if ($verbose);
 
         print $indexhtml '<tr><td>';
 
@@ -814,7 +817,21 @@ sub update_html_table ($$@)
 			print $indexhtml "&nbsp;";
 		}
 	}
-	print $indexhtml "\n";
+
+        print $indexhtml "<td>";
+        print $indexhtml "<a href=\"";
+        if (defined %builds->{$buildname}->{BUILD_SPONSOR_URL}) {
+               print $indexhtml %builds->{$buildname}->{BUILD_SPONSOR_URL}."\n";
+        }
+        print $indexhtml "\" target=\"_blank\">";
+        if (defined %builds->{$buildname}->{BUILD_SPONSOR}) {
+               print $indexhtml %builds->{$buildname}->{BUILD_SPONSOR}."\n";
+        }
+        print $indexhtml "</a>";
+
+        print $indexhtml "</td>";
+       
+	print $indexhtml "</tr>\n";
     }
     print $indexhtml "</table>\n";
 }
@@ -838,31 +855,39 @@ sub GetVariable ($)
 
 # Getopts
 
-use vars qw/$opt_c $opt_h $opt_o /;
+use vars qw/$opt_c $opt_h $opt_o $opt_v/;
 
-if (!getopts ('c:ho:') || defined $opt_h) {
+if (!getopts ('c:ho:v') || defined $opt_h || !defined $opt_c) {
     print "scoreboard.pl [-c file] [-h] [-o dir] [-m script] [-r]\n";
     print "\n";
-    print "    -c file    use <file> as the configuration file [def: configs/scoreboard/acetao.xml]\n";
+    print "    -c file    use <file> as the configuration file\n";
     print "    -h         display this help\n";
-    print "    -o dir     directory to place files [def: html]\n";
+    print "    -o dir     directory to place output HTML files [def: html]\n";
+    print "    -v         enable verbose debugging [def: only print errors]\n";
     exit (1);
 }
 
 my $file = "configs/scoreboard/acetao.xml";
 my $dir = "html";
 
-if (defined $opt_c) {
-    $file = $opt_c;
-}
+$file = $opt_c;
 
 if (defined $opt_o) {
     $dir = $opt_o;
 }
 
+if (! -d $dir) {
+   warn "Cannot access directory $dir";
+   exit(1);
+}
+
+if (defined $opt_v) {
+    $verbose = 1;
+}
+
 # Do the stuff
 
-print 'Running Scoreboard Update at '.scalar (gmtime ())."\n";
+print 'Running Scoreboard Update at '.scalar (gmtime ())."\n" if ($verbose);
 
 load_build_list ($file);
 build_group_hash ();
@@ -872,7 +897,7 @@ clean_cache ($dir);
 query_status ();
 update_html ($dir);
 
-print 'Finished Scoreboard Update at '.scalar (gmtime ())."\n";
+print 'Finished Scoreboard Update at '.scalar (gmtime ())."\n" if ($verbose);
 
 ###############################################################################
 ###############################################################################
