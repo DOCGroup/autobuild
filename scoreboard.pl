@@ -526,7 +526,7 @@ sub update_html ($)
     }
 
     ### Print Header
-
+    print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
     print $indexhtml "<html>\n<head>\n<title>Build Scoreboard</title>\n</head>\n";
 
     ### Start body
@@ -589,7 +589,7 @@ sub update_html_table ($$@)
     else {
         print "    Building table for group $name\n" if ($verbose);
         @builds = sort @{%groups->{$name}};
-        print $indexhtml "<a name=\"$name\"><h2></a>$name</h2>\n";
+        print $indexhtml "<a name=\"$name\"><h2>$name</h2></a>\n";
     }
 
     foreach my $buildname (@builds) {

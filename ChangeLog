@@ -1,3 +1,7 @@
+Thu Jan 30 16:59:25 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* scoreboard.pl: Minor HTML fixes, motivated by http://validator.w3.org
+
 Tue Jan 28 23:07:05 2003  Frank Hunleth  <frank@hunleth.com>
 
 	* configs/autobuild/slytherin/OpenBSD_Full.xml:
