@@ -1,3 +1,8 @@
+Tue Jan 21 17:28:05 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/scoreboard/tao.bat: Changed to specify the scoreboard
+	  table explicitly, per Craig's request.
+
 Mon Jan 20 16:30:07 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* scoreboard.pl (update_cache): If we have a problem downloading
