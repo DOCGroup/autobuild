@@ -1,0 +1,44 @@
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/home/jcohen/ACE_2.6.0-test4-lksctp/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/jcohen/ACE_2.6.0-test4-lksctp/ACE_wrappers/TAO" />
+        <environment name="LD_LIBRARY_PATH" value="/home/jcohen/ACE_2.6.0-test4-lksctp/ACE_wrappers/ace" />
+        <environment name="CVSROOT"         value=":ext:gthaker@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="/home/jcohen/sshwrapper" />
+        <environment name="PATH"            value="/proj/pces/gcc-3_2-release/bin:/proj/pces/scripts:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/jcohen/ACE_2.6.0-test4-lksctp/ACE_wrappers/bin:/proj/pces/scripts:/home/jcohen/bin" />
+
+        <variable name="root"     value="/home/jcohen/ACE_2.6.0-test4-lksctp" />
+        <variable name="sam_root" value="/home/jcohen/ACE_2.6.0-test4-lksctp/ACE_wrappers/samwise" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/jcohen/ACE_2.6.0-test4-lksctp/buildlog" />
+        <variable name="configs"  value="Linux" />
+        <variable name="MAIL_ADMIN" value="jcohen@atl.lmco.com" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="print_os_version" />
+    <command name="check_compiler" options="" />
+    <command name="print_ace_config" />
+
+    <command name="make"              options="-k reverseclean" />
+    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="make"              options="-k -j 2 debug=0 sctp=lksctp Core" />
+    <command name="make"              options="-k -j 2 debug=0 sctp=lksctp -C TAO Core" />
+
+    <command name="auto_run_tests"    options="" />
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+
+</autobuild>
