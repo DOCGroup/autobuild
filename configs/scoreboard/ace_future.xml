@@ -11,18 +11,6 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
   <name>Test Builds for ACE</name>
     <build>
-      <name>FreeBSD_5</name>
-      <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_5</url>
-      <build_sponsor>WAEI</build_sponsor>
-      <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url>
-    </build>
-    <build>
-      <name>FreeBSD_RELENG_4</name>
-      <url>http://140.112.190.181/~cuma/auto_compile_logs/FreeBSD_RELENG_4</url>
-      <build_sponsor>WAEI</build_sponsor>
-      <build_sponsor_url>http://www.waei.net/English/default.htm</build_sponsor_url>
-    </build>
-    <build>
       <name>MACOS_X_Jaguar</name>
       <url>http://www.makexs.com/~zorko/Jaguar</url>
       <build_sponsor>John Zorko</build_sponsor>
