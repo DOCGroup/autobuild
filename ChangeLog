@@ -1,3 +1,12 @@
+Tue Oct 14 10:38:30 2003  Venkita Subramonian  <venkita@cs.wustl.edu>
+
+	* configs/scoreboard/tao.xml: 
+	* configs/autobuild/balar_isis/ImplicitTemplates.xml:
+	* configs/autobuild/balar_isis/driver.sh: Moved the
+	  ImplicitTemplates build from amrod.ece.uci.edu to
+	  balar.dre.vanderbilt.edu. The amrod built was mostly not
+	  running. 
+
 Fri Oct 10 12:33:32 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
