@@ -1,3 +1,10 @@
+Fri Mar 14 20:09:05 UTC 2003  Don Hinton  <dhinton@ieee.org>
+        
+	* configs/autobuild/dresystems/local_scoreboard.xml:
+	* configs/scoreboard/acetao.xml: Rolled back url change from
+          Fri Mar 14 13:11:17 UTC 2003  Don Hinton  <dhinton@ieee.org>.
+          Verizon apparently blocks port 80.
+
 Fri Mar 14 13:11:17 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
 	* configs/autobuild/dresystems/driver_local_scoreboard.sh:

@@ -8,7 +8,7 @@ see the entire scoreboard.
         <name>Linux</name>
         <build>
             <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
-            <url>http://www.dresystems.com/autobuild_output/no-rtcorba_no-messaging</url>
+            <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
             <build_sponsor>DRE Systems</build_sponsor>
             <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
             <orange>30</orange>
@@ -16,7 +16,7 @@ see the entire scoreboard.
         </build>
         <build>
             <name>SKOLL_1</name>
-            <url>http://www.dresystems.com/autobuild_output/skoll_1</url>
+            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_1</url>
             <build_sponsor>DRE Systems</build_sponsor>
             <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
             <orange>30</orange>
@@ -24,7 +24,7 @@ see the entire scoreboard.
         </build>
         <build>
             <name>SKOLL_2</name>
-            <url>http://www.dresystems.com/autobuild_output/skoll_2</url>
+            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_2</url>
             <build_sponsor>DRE Systems</build_sponsor>
             <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
             <orange>30</orange>
