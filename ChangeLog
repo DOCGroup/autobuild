@@ -1,3 +1,9 @@
+Fri Nov 15 11:22:25 2002  Ossama Othman  <ossama@uci.edu>
+
+	* make_pretty.pl (tests_output):
+
+	  Flag failed run-time assertions.
+
 Mon Nov 11 19:46:55 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/prettify.pm: Add new SCOREBOARD_URL variable for e-mail
