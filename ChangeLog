@@ -1,11 +1,17 @@
+Sun Apr 11 18:37:56 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+
+	  Cosmetic changes. 
+
 Sun Apr 11 12:48:48 2004  Justin Michel  <michel_j@ociweb.com>
 
 	* autobuild.pl:
 	* command/clone_build_tree.pm:
 
-	  Added a new command for use with the new clone_build_tree.pl that Chad
-	added to the MPC tools. This is basically equivalent to create_ace_build, except
-	that it's much much faster. 
+	  Added a new command for use with the new clone_build_tree.pl
+	  that Chad added to the MPC tools. This is basically equivalent
+	  to create_ace_build, except that it's much much faster. 
 
 Sat Apr 10 23:28:38 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
