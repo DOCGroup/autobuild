@@ -13,6 +13,7 @@
   <variable name="log_file"            value="build.txt" />
   <variable name="log_root"            value="/home/dhinton/public_html/autobuild_output/freebsd_ace_single" />
   <variable name="configs"             value="Linux" />
+  <variable name="make_program"        value="gmake" />
 
  </configuration>
 
