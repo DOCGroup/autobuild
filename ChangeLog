@@ -1,3 +1,13 @@
+Wed Jan 26 14:43:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/nirvana/*:
+          Removed these files
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Removed builds running on nirvana at WashU. Will be replaced
+          by a new system at ISIS
+
 Wed Jan 26 09:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
