@@ -901,10 +901,12 @@ sub Compile_Handler ($)
         # information.
         $self->Output_Normal ($s);
     }
+    elsif ( $s =~ m/^make.*\*\*\*/ ) {
+        $self->Output_Error ($s);
+    }
     elsif (($s =~ m/warning/i 
             && $s !~ m/ warning\(s\)/)
            || $s =~ m/info: /i
-           || $s =~ m/^make.*\*\*\*/
            || $s =~ m/^error \(future\)/i
            || $s =~ m/^.*\.(h|i|inl|cpp|java): /) 
     {
