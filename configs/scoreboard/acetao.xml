@@ -53,6 +53,10 @@
             <name>RedHat_GCC_3.1</name>
             <url>http://www.dist-systems.bbn.com/projects/AIRES/UAV/scoreboard/linux/</url>
         </build>
+        <build>
+            <name>RedHat_IA64_GCC3.1</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/toutatis_IA64_GCC3.1</url> 
+        </build>
     </group>
     <group>
         <name>Lynx</name>

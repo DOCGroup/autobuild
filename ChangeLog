@@ -1,3 +1,8 @@
+Tue Jun 18 23:50:52 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/toutatis/*: Added.
+	* configs/scoreboard/acetao.xml: Add RedHat_IA64_GCC3.1 build.
+
 Tue Jun 18 15:40:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/guajira/*: Added.
