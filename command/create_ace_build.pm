@@ -79,7 +79,7 @@ sub Run ($)
         return 0;
     }
 
-    my $command = "perl bin/create_ace_build $options $build";
+    my $command = "perl bin/create_ace_build.pl $options $build";
 
     print "Running: $command\n";
     system ($command);
