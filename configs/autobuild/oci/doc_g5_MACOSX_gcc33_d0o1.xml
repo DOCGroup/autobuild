@@ -1,0 +1,81 @@
+<autobuild>
+<!-- The command used to create this file was -->
+<!-- ./gen_autobuild -cvsroot :ext:oci@cvs.doc.wustl.edu:/project/cvs-repository -verbose /tao_builds/taoadmin/doc gcc33 MACOSX debug=0 optimize=1 -->
+    <configuration>
+        <environment name="ACE_ROOT"           value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1" />
+        <environment name="TAO_ROOT"           value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1/TAO" />
+        <environment name="LD_LIBRARY_PATH"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1/lib:" />
+        <!-- DYLD... needed for mac osx -->
+        <environment name="DYLD_LIBRARY_PATH"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1/lib:" />
+        <!-- LIBPATH needed for hp -->
+        <environment name="SHLIB_PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1/lib:" />
+        <environment name="TAO_ORBSVCS"        value="" />
+        <environment name="SELECTION_CRITERIA" value="" />
+        <environment name="PATH"               value="/bin:/sbin:/usr/bin:/usr/sbin" />
+        <environment name="LM_LICENSE_FILE"    value="" />
+
+        <environment name="CVSROOT"            value=":ext:oci@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"            value="ssh" />
+        <environment name="DEPGEN"             value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1/bin/depgen.pl" />
+        <environment name="DYLD_BIND_AT_LAUNCH"  value="1" />
+        <environment name="MACOSX_DEPLOYMENT_TARGET"  value="10.2" />
+        <environment name="ACE_RUNTEST_DELAY"  value="2" />
+        <!-- <variable name="MAIL_ADMIN"  value="buildczar@ociweb.com" /> -->
+
+        <variable name="root" value="/tao_builds/taoadmin/doc" />
+        <variable name="project_root" value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1" />
+        <variable name="log_file" value="gcc33_d0o1.txt" />
+
+        <!--  where to move the logs to  -->
+        <variable name="log_root" value="/home/taoadmin/.www-docs/autobuild_logs/doc_g5_MACOSX_gcc33_d0o1" />
+
+        <!--  needed for the create_ace_build command -->
+        <variable name="build_name" value="gcc33_d0o1" />
+
+    </configuration>
+    
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers/build/gcc33_d0o1/.disable" />
+    <command name="log"               options="on" />
+
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="create_ace_build" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/.disable output='RUNNING'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/ace/config.h output='\n#include \x22ace/config-macosx.h\x22\n\n'" /> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/include/makeinclude/platform_macros.GNU output='exceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nssl=0\nshared_libs_only=1\ndebug=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/bin/MakeProjectCreator/config/default.features output='exceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nssl=0\nshared_libs_only=1\ndebug=0\noptimize=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/setupenv.sh output='umask 002\nACE_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1; export ACE_ROOT\nTAO_ROOT=$ACE_ROOT/TAO; export TAO_ROOT\nLD_LIBRARY_PATH=$ACE_ROOT/lib:; export LD_LIBRARY_PATH\nDYLD_LIBRARY_PATH=$LD_LIBRARY_PATH; export DYLD_LIBRARY_PATH\nSHLIB_PATH=$LD_LIBRARY_PATH; export SHLIB_PATH\nTAO_ORBSVCS=; export TAO_ORBSVCS\nSELECTION_CRITERIA=\x22\x22; export SELECTION_CRITERIA\nPATH=/bin:/sbin:/usr/bin:/usr/sbin; export PATH\nLM_LICENSE_FILE=; export LM_LICENSE_FILE\nDYLD_BIND_AT_LAUNCH=1 export DYLD_BIND_AT_LAUNCH\nMACOSX_DEPLOYMENT_TARGET=10.2\nACE_RUNTEST_DELAY=2 export ACE_RUNTEST_DELAY\n'" />
+    
+
+    <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/TAO.mwc"/>
+
+    <command name="print_ace_config" />
+
+
+    <command name="make" options=" -k -C TAO" />
+    <command name="make" options=" -k -C tests" />
+    <command name="make" options=" -k -C examples" />
+    <command name="make" options=" -k -C performance-tests" />
+    <command name="make" options=" -k -C TAO/tests" />
+    <command name="make" options=" -k -C TAO/examples" />
+    <command name="make" options=" -k -C TAO/performance-tests" />
+    <command name="make" options=" -k -C TAO/orbsvcs/tests" />
+    <command name="make" options=" -k -C TAO/orbsvcs/examples" />
+    <command name="make" options=" -k -C TAO/orbsvcs/performance-tests" />
+    <!-- Might want to disable the following if this is not an OCI x.xa build -->
+    <!-- <command name="make" options=" -k -C TAO/DevGuideExamples" /> -->
+    <command name="auto_run_tests"    options="" />
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers/build/gcc33_d0o1/.disable" />
+    <command name="status"            options="off" />
+
+    <!-- Push the logs to the webserver -->
+    <command name="shell" options="/home/taoadmin/nightly/uploadBuildLogs.sh doc_g5_MACOSX_gcc33_d0o1" />
+
+    <!-- We also want to copy this stuff to the doc group scoreboard.-->
+    <command name="shell" options="/home/taoadmin/nightly/putDGbuildlogs doc_g5_MACOSX_gcc33_d0o1" />
+
+</autobuild>

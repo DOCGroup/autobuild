@@ -36,12 +36,6 @@ decide the migration paths and strategies.
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
    </build>
-   <build>
-      <name>AIX52_VA6</name>
-      <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_adder_aix52_va6_d1o0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
-   </build>
 
    <name>BSD</name>
    <build>
