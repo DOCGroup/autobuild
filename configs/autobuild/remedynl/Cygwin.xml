@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"     value="/cygdrive/c/ACE/Cygwin/ACE_wrappers/TAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
-        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\cygwin\bin;" type="prefix" />
+        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\perl\bin;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
@@ -28,7 +28,7 @@
     <!-- Now, delete them again to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -iname 'Makefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
 
     <command name="print_os_version" options="useuname" />
@@ -44,7 +44,7 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests" options="-a -s \x22/cygdrive/c/ACE/autobuild/win32sandbox/sandbox.exe -t 1200000\x22" /> 
+    <command name="auto_run_tests" options="-a -s \x22c:\ACE\autobuild\win32sandbox\sandbox.exe -t 1200000\x22" /> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
