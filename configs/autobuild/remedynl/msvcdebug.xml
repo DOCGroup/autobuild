@@ -1,15 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="C:\ACE\msvc6\ACE_wrappers" />
-        <environment name="TAO_ROOT"         value="C:\ACE\msvc6\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"         value="C:\ACE\MSVC6dd\ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="C:\ACE\MSVC6dd\ACE_wrappers\TAO"/>
+        <environment name="Path"             value="C:\ACE\MSVC6dd\ACE_wrappers\bin" type="prefix" /> 
         <environment name="CVSROOT"          value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"          value="plink" />
+        <environment name="CVS_RSH"          value="ssh" />
 
-        <variable name="root"     value="C:/ACE/msvc6/" />
+        <variable name="root"     value="C:/ACE/MSVC6dd/" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:/ACE/msvc6/" />
-        <variable name="name"     value="WinXP Lib Debug" />
+        <variable name="log_root" value="C:/ACE/MSVC6dd/" />
+        <variable name="name"     value="WinXP DLL Debug" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -33,9 +34,7 @@
     <command name="win32make"         options="msvc_auto_compile -DLL -Debug -TAO -u -k" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=1 index" />
+    <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="plink bugzilla@charanga.cs.wustl.edu rm .www-docs/auto_compile_logs/remedy.nl_WinXP_MSVC6/* -f" />
-    <command name="shell"             options="pscp -C *.txt *.html bugzilla@charanga.cs.wustl.edu:.www-docs/auto_compile_logs/remedy.nl_WinXP_MSVC6" />
 </autobuild>
