@@ -1,7 +1,10 @@
 <scoreboard>
     <group>
         <name>Doxygen</name>
-        <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/doc_TAO_doxygen/</url>
+        <build> 
+            <name>Doxygen</name>
+            <url>http://doc.ece.uci.edu/~bugzilla/auto_compile_logs/doc_TAO_doxygen/</url>
+        </build> 
     </group>
     <group>
         <name>Linux</name>
