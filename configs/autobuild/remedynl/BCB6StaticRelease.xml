@@ -36,7 +36,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type borland -recurse -static" />
+    <command name="generate_workspace" options="-type borland -recurse -static -make_coexistence" />
 
     <command name="make"              options=" -i -f Makefile.bor dir=TAO" />
 
