@@ -1,3 +1,9 @@
+Fri Feb 27 15:01:44 2004  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/charlie_dev_va6_debug.xml: New config
+	  for Visual Age C++ 6 build on AIX 5.1. cuddy is being upgraded to
+	  AIX 5.2.
+
 Thu Feb 26 18:05:22 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml: Add SSL
