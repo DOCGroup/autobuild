@@ -30,7 +30,7 @@
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-C TAO realclean" />
+    <command name="make"              options="-C TAO reverseclean" />
     <command name="make"              options="-C apps/gperf/src realclean" />
     <command name="make"              options="-C ace realclean" />
 
