@@ -794,14 +794,20 @@ sub Setup_Handler ($)
 
     if ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
-        $s =~ m/no such file/i)
+        $s =~ m/no such file/i ||
+        $s =~ m/^.*: [Cc]ommand not found/ ||
+        $s =~ m/(^|[\W])(ERROR)($|\W)/i ||
+        $s =~ m/^Fatal:/ ||
+        $s =~ m/:\sfatal:/)
     {
         $self->Output_Error ($s);
     }
     elsif ($s =~ /^C /) {
         $self->Output_Error ($s);
     }
-    elsif  ($s =~ /^M /) {
+    elsif ($s =~ m/(^|[\W])(WARNING)($|\W)/i ||
+	   $s =~ /^M /)
+    {
         $self->Output_Warning ($s);
     }
     else {
@@ -870,11 +876,9 @@ sub Compile_Handler ($)
         # been flagged earlier at the occurrence of "Error 1".
         $self->Output_Normal ($s);
     }
-    elsif (($s =~ m/\berror\b/i
-            && $s !~ m/ error\(s\), /
-            && $s !~ m/error \(future\)/i)
-           || $s =~ m/^Fatal\:/
-           || $s =~ m/: fatal:/)
+    elsif (($s =~ m/(^|[\W])(ERROR)($|\W)/i && $s !~ m/^error \(future\)/i) ||
+	   $s =~ m/^[Ff]atal:/ ||
+	   $s =~ m/:\sfatal:/)
     {
         # Look for possible errors
         $self->Output_Error ($s);
@@ -911,8 +915,7 @@ sub Compile_Handler ($)
     elsif ( $s =~ m/^make.*\*\*\*/ ) {
         $self->Output_Error ($s);
     }
-    elsif (($s =~ m/warning/i
-            && $s !~ m/ warning\(s\)/)
+    elsif ($s =~ m/(^|[\W])(WARNING)($|\W)/i
            || $s =~ m/info: /i
            || $s =~ m/^error \(future\)/i
            || $s =~ m/^.*\.(h|i|inl|cpp|java): /)
@@ -953,14 +956,23 @@ sub Test_Handler ($)
         return;
     }
 
-    if ($s =~ m/Error/
-        || $s =~ m/ERROR/
+    if ($s =~ m/aborted/i 
+        || $s =~ m/cannot access/i 
+        || $s =~ m/no such file/i 
+        || $s =~ m/^.*: [Cc]ommand not found/ 
+        || $s =~ m/(^|[\W])(ERROR)($|\W)/i
+        || $s =~ m/^Fatal:/
+        || $s =~ m/:\sfatal:/
         || $s =~ m/FAILED/
         || $s =~ m/EXCEPTION/
-	|| $s =~ m/ACE_ASSERT/
+        || $s =~ m/ACE_ASSERT/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/(^|[\W])(WARNING)($|\W)/i)
+    {
+        $self->Output_Warning ($s);
     }
     else {
         $self->Output_Normal ($s);

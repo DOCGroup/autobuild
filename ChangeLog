@@ -1,3 +1,9 @@
+Fri Jan 10 21:36:09 UTC 2003  Don Hinton  <dhinton@ieee.org>
+
+	* common/prettify.pm:  Modified the regular expressions used to
+	  identify errors and warnings.  Thanks to Russ Noseworthy for 
+	  submitting the patch and Craig Rodrigues for his suggestions.
+
 Fri Jan 10 14:16:31 2003  Steve Huston  <shuston@riverace.com>
 
         * command/check_compiler.pm: Add sections for IBM C/C++ compiler
