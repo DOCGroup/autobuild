@@ -25,16 +25,10 @@
 
     <command name="log"               options="ON" />
 
-    <!--  Delete all the bor files so the cvs checkout won't complain. --> 
     <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
+
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
-
-    <!--  Now, delete them again to insure a clean slate.   --> 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" /> 
-
-    <!--  Now, checkout include/makeinclude to get all Borland needed files   --> 
-    <command name="cvs"               options="-z9 update ACE_wrappers/include/makeinclude" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_SMART_PROXIES 1\n#define TAO_HAS_AMI 1\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_INTERFACE_REPOSITORY 1\n#define TAO_HAS_RT_CORBA 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
