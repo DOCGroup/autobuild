@@ -12,7 +12,7 @@ This is a miscellaneous scoreboard for ACE+TAO.
     <name>Redhat_Linux_2.4.20</name> 
     <url>http://thor.cs.umd.edu:8080/skoll/sites/thor.cs.umd.edu/thor_linux/autobuild</url>
     <build_sponsor>Skoll - University of Maryland</build_sponsor>
-    <build_sponsor_url>http://cs.umd.edu/projects/skoll</build_sponsor_url>
+    <build_sponsor_url>http://www.cs.umd.edu/projects/skoll</build_sponsor_url>
   </build> 
 </group>
 
