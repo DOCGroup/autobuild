@@ -76,6 +76,9 @@ sub Run ($)
     my $log_root = main::GetVariable ('log_root');
     my $root = main::GetVariable ('root');
 
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
     if (!-r $log_root || !-d $log_root) {
         mkpath($log_root);
     }

@@ -56,6 +56,9 @@ sub Run ($)
     my $sandbox = main::GetVariable ('sandbox');
     my $project_root = main::GetVariable ('project_root');
 
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -68,8 +71,6 @@ sub Run ($)
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
     }
-
-    $options =~ s/\\x22/"/g;
 
     main::PrintStatus ('Test', 'auto_run_tests');
 

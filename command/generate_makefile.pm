@@ -48,6 +48,9 @@ sub Run ($)
     my $options = shift;
     my $project_root = main::GetVariable ('project_root');
 
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }

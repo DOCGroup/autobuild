@@ -1,3 +1,32 @@
+Thu Aug  7 11:59:29 2003  Justin Michel  <michel_j@ociweb.com>
+
+        * command/auto_run_tests.pm:
+        * command/check_compiler.pm:
+        * command/check_linker.pm:
+        * command/configure.pm:
+        * command/cvs.pm:
+        * command/file_manipulation.pm:
+        * command/fuzz.pm:
+        * command/generate_makefile.pm:
+        * command/generate_workspace.pm:
+        * command/log.pm:
+        * command/make.pm:
+        * command/print_make_version.pm:
+        * command/print_os_version.pm:
+        * command/print_perl_version.pm:
+        * command/printaceconfig.pm:
+        * command/process_logs.pm:
+        * command/rem_sems.pm:
+        * command/sam.pm:
+        * command/shell.pm:
+        * command/status.pm:
+        * command/vc6make.pm:
+        * command/vc7make.pm:
+        * command/win32make.pm:
+        * command/wincemake.pm:
+
+		  Add support for escaped double quotes to all commands that take options.
+
 Wed Aug  6 15:05:00 2003  Dan Troesser  <troesser_d@ociweb.com>
 
         * scoreboard.pl

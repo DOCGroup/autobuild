@@ -55,6 +55,9 @@ sub Run ($)
     my $wrappers = main::GetVariable ('project_root');
     my $build = main::GetVariable ('build_name');
 
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
     # chop off trailing slash
     if ($wrappers =~ m/^(.*)\/$/) {
         $wrappers = $1;

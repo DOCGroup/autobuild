@@ -59,6 +59,9 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $sam_root = main::GetVariable ('sam_root');
 
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
     if (!-r $sam_root || !-d $sam_root) {
         mkpath($sam_root);
     }

@@ -55,6 +55,9 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $logfile = main::GetVariable ('log_file');
 
+    # replace all '\x22' with '"'
+    $options =~ s/\\x22/"/g;
+
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
