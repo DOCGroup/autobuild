@@ -2,19 +2,19 @@
     <preamble>
 This is the ACE/TAO virtual scoreboard.  It shows all
 the OS/platform combinations ACE/TAO are tested against everyday, all
-over the world.  We have builds running continuously at 
+over the world.  We have builds running continuously at
 <a href="http://deuce.doc.wustl.edu/">Washington University, St. Louis</a>,
 <a href="http://doc.ece.uci.edu/">University of California,
 Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt
-University</a>, 
+University</a>,
 <a href="http://www.dist-systems.bbn.com/projects/">BBN Technologies</a>,
 <a href="http://www.theaceorb.nl">Remedy IT</a>,
-<a href="http://www.objectsciences.com/">ObjectSciences</a>, 
+<a href="http://www.objectsciences.com/">ObjectSciences</a>,
 <a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>, and
 <a href="http://www.rtlogic.com/">RT Logic!</a>.
 <p>
 If you'd like to contribute builds to our virtual
-scoreboard please contact <a href="mailto:devo_group@cs.wustl.edu">us</a> 
+scoreboard please contact <a href="mailto:devo_group@cs.wustl.edu">us</a>
 and let us know which platform combinations you can contribute.
 
     </preamble>
@@ -210,12 +210,16 @@ and let us know which platform combinations you can contribute.
          </build>
     </group>
     <group>
-         <name>XML_Test_sanity_check_not_for_release</name>
+         <name>XTest_sanity_check_not_for_release</name>
          <build>
              <name>WinXP_XML_Debug</name>
              <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
          </build>
-    </group>    
+         <build>
+             <name>WinXP_Warning_Level_4_Debug</name>
+             <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
+         </build>
+    </group>
     <group>
          <name>VxWorks</name>
          <build>

@@ -1,3 +1,8 @@
+Wed Dec 11 10:46:41 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/nirvana/W4_Debug.xml: Added a new build which
+	  compiles with MSVC at Warning level 4.
+
 Wed Dec 11 16:31:30 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/balar/Debian_Core.xml:
