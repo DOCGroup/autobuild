@@ -1,3 +1,8 @@
+Mon Apr 29 22:41:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/autobuild/danzon/driver.sh:
+	* configs/autobuild/tango/driver.sh:  Make sure that cvs is in path.
+
 Sat Apr 27 17:36:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* configs/autobuild/chipper/driver.sh:
