@@ -1,8 +1,18 @@
+Sat Jan  3 12:04:23 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/autobuild/remedynl/cbxdd.xml:
+	* configs/autobuild/remedynl/cbxpreview.xml:
+	  On the reinstalled build box I installed CBuilderX Enterprise Edition.
+	  Just found out that our nice Borland people have renamed the Borland
+	  make to bmake in that version, make is the GNU make. The personal
+	  edition has not had this change. Add make_program variable so that
+	  the autobuild environment uses bmake.
+
 Fri Jan  2 15:29:40 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Removed the whole build of ace. 
+	  Removed the whole build of ace.
 
 Fri Jan  2 12:02:35 2004  Chad Elliott  <elliott_c@ociweb.com>
 

@@ -13,11 +13,12 @@
 	<environment name="BCBVER"   value="6" />
 	<environment name="CBX"      value="1" />
 
-        <variable name="configs"  value="Win32 CBorlandX Preview Exceptions" />
-        <variable name="root"     value="C:\ACE\CBXpreview\" />
-	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\ACE\CBXpreview\" />
-        <variable name="name"     value="WinXP CBuilderX Preview Debug" />
+        <variable name="make_program" value="bmake" />
+        <variable name="configs"      value="Win32 CBorlandX Preview Exceptions" />
+        <variable name="root"         value="C:\ACE\CBXpreview\" />
+        <variable name="log_file"     value="log.txt" />
+        <variable name="log_root"     value="C:\ACE\CBXpreview\" />
+        <variable name="name"         value="WinXP CBuilderX Preview Debug" />
     </configuration>
 
     <command name="status"            options="on" />
