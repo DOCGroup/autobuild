@@ -102,6 +102,60 @@ OTHER NOTES
 
      <command name="shell" options="ls" />
 
+SCOREBOARD NOTES
+===================
+
+(1) PDF - to display a PDF file use the <pdf> build option in the
+    configuration file for the scoreboard.pl script. For example,
+    <pdf>test.pdf</pdf> will cause a hyperlink to appear called
+    'pdf' to appear on that row in the scoreboard. Clicking on the
+    link will download/open the file. A column header will appear
+    called PDF. If this tag is the config file then the column will 
+    not appear in the screen. This is useful if you use doxygen to
+    create postscript output and convert it to PDF format for
+    greater reader usability.
+
+    The <url> contents plus the <pdf> contents are used to
+    refer to the document on the webserver. So if the <url> is
+    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu and the
+    <pdf> is test.pdf, the webserver will look for the file at
+    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu/test.pdf
+
+(2) PS - to display a PS file use the <ps> build option in the
+    configuration file for the scoreboard.pl script. For example,
+    <ps>test.ps</ps> will cause a hyperlink to appear called
+    'ps' to appear on that row in the scoreboard. Clicking on the
+    link will download/open the file. A column header will appear
+    called PS. If this tag is the config file then the column will
+    not appear on the screen. This is useful if you use doxygen to
+    create postscript output. 
+
+    The <url> contents plus the <ps> contents are used to
+    refer to the document on the webserver. So if the <url> is
+    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu and the
+    <ps> is test.ps, the webserver will look for the file at
+    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu/test.ps
+
+(3) HTML - to display a HTML file use the <html> build option in the
+    configuration file for the scoreboard.pl script. For example,
+    <html>test.html</html> will cause a hyperlink to appear called
+    'html' to appear on that row in the scoreboard. Clicking on the
+    link will download/open the file. A column header will appear
+    called HTML. If this tag is not in the config file then the 
+    column will not appear on the screen. This is useful if you 
+    use doxygen to create html output.
+
+(4) SNAPSHOT - for users of automake and autoconf, to display a 
+    created snapshot of the present code, use the
+    <snapshot>test.tar.gz</snapshot>. This will cause a hyperlink
+    to appear called 'snapshot' to appear on that row in the 
+    scoreboard. Clicking on the link will download/open the file.
+    A column header will appear called SNAPSHOT. If this tag is
+    not in the config file then the column will not appear on the
+    screen for taht row. This is useful if you want to release
+    a snapshot of the CVS repository ready for a user to download
+    and run "./configure".
+
 MISCELLANEOUS NOTES
 ===================
 

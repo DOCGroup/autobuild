@@ -558,7 +558,10 @@ sub update_html_table ($$@)
     my $name = shift;
     my $havestatus = 0;
     my $havemanual = 0;
-
+    my $havepdf = 0;
+    my $haveps = 0;
+    my $havehtml = 0;
+    my $havesnapshot = 0;
     my @builds;
 
     ### Table
@@ -581,12 +584,29 @@ sub update_html_table ($$@)
         if (defined %builds->{$buildname}->{MANUAL_LINK}) {
             $havemanual = 1;
         }
+	if (defined %builds->{$buildname}->{PDF}) {
+	    $havepdf = 1;
+	}
+	if (defined %builds->{$buildname}->{PS}) {
+	    $haveps = 1;
+	}
+	if (defined %builds->{$buildname}->{HTML}) {
+	    $havehtml = 1;
+	}
+	if (defined %builds->{$buildname}->{SNAPSHOT}) {
+	    $havesnapshot = 1;
+	}
     }
 
     print $indexhtml "<table border=1><th>Build Name<th>Last Finished";
     print $indexhtml "<th>Config<th>Setup<th>Compile<th>Tests";
     print $indexhtml "<th>Manual" if ($havemanual);
     print $indexhtml "<th>Status" if ($havestatus);
+    # New entries
+    print $indexhtml "<th>PDF" if ($havepdf);
+    print $indexhtml "<th>PS" if ($haveps);
+    print $indexhtml "<th>HTML" if ($havehtml);
+    print $indexhtml "<th>SNAPSHOT" if ($havesnapshot);
     print $indexhtml "\n";
 
     foreach my $buildname (@builds) {
@@ -736,10 +756,53 @@ sub update_html_table ($$@)
                 print $indexhtml "&nbsp;";
             }
         }
+	
+	if ($havepdf) {
+		print $indexhtml "<td>";
+		if (defined %builds->{$buildname}->{PDF}) {
+			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{PDF}, "\"\>";
+			print $indexhtml "pdf</a>";
+		}
+		else {
+			print $indexhtml "&nbsp;";
+		}
+	}
 
-        print $indexhtml "\n";
+	if ($haveps) {
+		print $indexhtml "<td>";
+		if (defined %builds->{$buildname}->{PS}) {
+			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{PS}, "\"\>";
+			print $indexhtml "ps</a>";
+		}
+		else {
+			print $indexhtml "&nbsp;";
+		}
+	}
+
+	if ($havehtml) {
+		print $indexhtml "<td>";
+		if (defined %builds->{$buildname}->{HTML}) {
+			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{HTML}, "\/index.html\"\>";
+			print $indexhtml "html</a>";
+		}
+		else {
+			print $indexhtml "&nbsp;";
+		}
+
+	}
+
+	if ($havesnapshot) {
+		print $indexhtml "<td>";
+		if (defined %builds->{$buildname}->{SNAPSHOT}) {
+			print $indexhtml "<a href=\"", %builds->{$buildname}->{URL}, "\/", %builds->{$buildname}->{SNAPSHOT}, "\"\>";
+			print $indexhtml "snapshot</a>";
+		}
+		else {
+			print $indexhtml "&nbsp;";
+		}
+	}
+	print $indexhtml "\n";
     }
-
     print $indexhtml "</table>\n";
 }
 

@@ -851,7 +851,7 @@ sub Compile_Handler ($)
         # Look for linking errors too
         $self->Output_Error ($s);
     }
-    elsif (($s =~ m/error/i 
+    elsif (($s =~ m/\berror\b/i 
             && $s !~ m/ error\(s\), / 
             && $s !~ m/error \(future\)/i)
            || $s =~ m/^Fatal\:/

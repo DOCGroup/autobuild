@@ -1,3 +1,17 @@
+Mon Aug 21 13:25:17 2002 Stephen Torri <storri@cs.wustl.edu>
+
+        * scoreboard.pl:
+
+          Added four new options for builds; PDF, PS, HTML and
+          SNAPSHOT. nORB project creates the documentation via
+          doxygen in pdf, ps and html format. It also uses 
+          automake/autoconf to create a snapshot of the distribution.
+
+        * common/prettify.pm: 
+
+          Correct false positive when functions include the
+          word 'error' in the name. (Fixed by kitty)
+
 Sun Aug 18 15:53:19 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 	* configs/scoreboard/acetao.xml: Added this new build in place of
@@ -33,6 +47,7 @@ Fri Aug 16 12:16:14 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 	* configs/scoreboard/acetao.xml: Change RedHat_GCC_3.1.1 build
 	  to RedHat_GCC_3.2.
 
+>>>>>>> 1.132
 Sun Aug 11 21:52:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
 	* common/mail.pm: First cut at e-mail notification support under Windows,
