@@ -1,3 +1,13 @@
+Wed Aug 25 22:22:46 2004  J.T. Conklin  <jtc@acorntoolworks.com>
+
+	* configs/autobuild/acorn/netbsd_amd64.xml:
+	* configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+	* configs/autobuild/acorn/netbsd_i386.xml:
+	* configs/autobuild/acorn/netbsd_i386_noinline.xml:
+
+	  Added -j 4 to take advantage of multiple processors and to hide
+	  I/O latency on these test boxes.
+
 Wed Aug 25 17:01:18 MST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/update_scoreboard.sh:
