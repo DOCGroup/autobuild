@@ -58,6 +58,9 @@ sub Run ($)
     elsif(lc $compiler eq "sun_cc"){
         system("CC -V");
     }
+    elsif(lc $compiler eq "mingwcygwin"){
+        system("g++ -v -mno-cygwin");
+    }
     elsif(lc $compiler eq "borland"){
 	system("bcc32 -V"); 
     }
