@@ -160,10 +160,10 @@ all the OS/platform combinations TAO is tested everyday.
         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
       </build>
       <build>
-         <name>RH73_GCC32_NoInterceptorsNoExceptions</name>
-         <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/pokey_Core</url>
-         <build_sponsor>Washington University</build_sponsor>
-         <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+         <name>NoInterceptorsNoExceptions_Core</name>
+         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/doc_NoIntNoEx</url>
+         <build_sponsor>ISIS</build_sponsor>
+         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
       </build>
       <build>
          <name>RH72_IA64_GCC296</name>
