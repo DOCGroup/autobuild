@@ -41,8 +41,9 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $root) {
-        print STDERR __FILE__, ": Cannot read root dir: $root\n";
+
+    if (!-r $root || !-d $root) {
+        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
     }
 
@@ -50,8 +51,9 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"sam_root\" variable\n";
         return 0;
     }
-    if (!-r $sam_root) {
-        print STDERR __FILE__, ": Cannot read sam_root dir: $root\n";
+
+    if (!-r $sam_root || !-d $sam_root) {
+        print STDERR __FILE__, ": Cannot access \"sam_root\" directory: $sam_root\n";
         return 0;
     }
 

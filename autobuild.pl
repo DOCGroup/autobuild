@@ -91,7 +91,20 @@ foreach my $file (@files) {
     
     foreach my $variable (@{%data->{ENVIRONMENT}}) {
         print "Variable: ", $variable->{NAME}, "=", $variable->{VALUE}, "\n" if ($verbose);
-        $ENV{$variable->{NAME}} = $variable->{VALUE};
+        
+        if ($variable->{TYPE} eq 'replace') {
+            $ENV{$variable->{NAME}} = $variable->{VALUE};
+        }
+        elsif ($variable->{TYPE} eq 'prefix') {
+            $ENV{$variable->{NAME}} = $variable->{VALUE} . $ENV{$variable->{NAME}};
+        }
+        elsif ($variable->{TYPE} eq 'suffix') {
+            $ENV{$variable->{NAME}} = $ENV{$variable->{NAME}} . $variable->{VALUE};
+        }
+        else {
+            print STDERR "Don't know type: $variable->{TYPE}\n";
+            exit;
+        }
     }
 
     print "\nChecking Requirements\n" if ($verbose);

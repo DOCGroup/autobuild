@@ -35,8 +35,9 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $root) {
-        print STDERR __FILE__, ": Cannot read root dir: $root\n";
+    
+    if (!-r $root || !-d $root) {
+        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
     }
 

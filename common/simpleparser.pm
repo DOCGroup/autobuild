@@ -62,7 +62,7 @@ sub Parse ($\%)
             elsif (m/^\s*<configuration>\s*$/i) {
                 $state = 'configuration';
             }
-            elsif (m/^\s*<command\s*name\s*=\s*"(.*?)"\s*options\s*=\s*"(.*?)"\s*\/\s*>\s*$/i) {
+            elsif (m/^\s*<command\s*name\s*=\s*"([^"]*)"\s*options\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 my %value;
 
                 %value->{NAME} = $1;
@@ -70,7 +70,7 @@ sub Parse ($\%)
 
                 push @{$data->{COMMANDS}}, \%value;
             }
-            elsif (m/^\s*<command\s*name\s*=\s*"(.*?)"\s*\/\s*>\s*$/i) {
+            elsif (m/^\s*<command\s*name\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 my %value;
 
                 %value->{NAME} = $1;
@@ -87,14 +87,29 @@ sub Parse ($\%)
             if (m/^\s*<\/configuration>\s*$/i) {
                 $state = 'autobuild';
             }
-            elsif (m/^\s*<variable\s*name\s*=\s*"(.*?)"\s*value\s*=\s*"(.*?)"\s*\/\s*>\s*$/i) {
+            elsif (m/^\s*<variable\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 $data->{VARS}->{$1} = $2;
             }
-            elsif (m/^\s*<environment\s*name\s*=\s*"(.*?)"\s*value\s*=\s*"(.*?)"\s*\/\s*>\s*$/i) {
+            elsif (m/^\s*<environment\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
                 my %value;
 
                 %value->{NAME} = $1;
                 %value->{VALUE} = $2;
+                %value->{TYPE} = 'replace';
+
+                push @{$data->{ENVIRONMENT}}, \%value;
+            }
+            elsif (m/^\s*<environment\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*type\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
+                my %value;
+                
+                if ($3 ne 'replace' && $3 ne 'prefix' && $3 ne 'suffix') {
+                    print STDERR "Error: environment type must be 'replace', 'prefix', or 'suffix'\n";
+                    return 0;
+                }
+
+                %value->{NAME} = $1;
+                %value->{VALUE} = $2;
+                %value->{TYPE} = $3;
 
                 push @{$data->{ENVIRONMENT}}, \%value;
             }

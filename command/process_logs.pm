@@ -47,8 +47,9 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-d $root || !-r $root) {
-        print STDERR __FILE__, ": Cannot read root dir: $root\n";
+
+    if (!-r $root || !-d $root) {
+        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
     }
 
@@ -56,11 +57,12 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"log_root\" variable\n";
         return 0;
     }
-    if (!-d $root || !-r $logroot) {
-        print STDERR __FILE__, ": Cannot read log_root dir: $logroot\n";
+
+    if (!-r $logroot || !-d $logroot) {
+        print STDERR __FILE__, ": Cannot access \"logroot\" directory: $logroot\n";
         return 0;
     }
-
+    
     return 1;
 }
 
@@ -92,7 +94,7 @@ sub Run ($)
 
     # Clean the logs
 
-    if ($options =~ m/clean='(.*?)'/ || $options =~ m/clean=([^\s]*)/) {
+    if ($options =~ m/clean='([^"]*)'/ || $options =~ m/clean=([^\s]*)/) {
         my $retval = $self->clean_logs ($1);
         return 0 if ($retval == 0);
     }

@@ -39,8 +39,9 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    if (!-r $root) {
-        print STDERR __FILE__, ": Cannot read root dir: $root\n";
+    
+    if (!-r $root || !-d $root) {
+        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
         return 0;
     }
 
@@ -75,7 +76,7 @@ sub Run ($)
     my $filename;
     my $output;
     
-    if ($options =~ m/type='(.*?)'/) {
+    if ($options =~ m/type='([^"]*)'/) {
         $type = $1;
     }
     elsif ($options =~ m/type=([^\s]*)/) {
@@ -86,7 +87,7 @@ sub Run ($)
         return 0;
     }
     
-    if ($options =~ m/file='(.*?)'/) {
+    if ($options =~ m/file='([^"]*)'/) {
         $filename = $1;
     }
     elsif ($options =~ m/file=([^\s]*)/) {
@@ -97,7 +98,7 @@ sub Run ($)
         return 0;
     }
 
-    if ($options =~ m/output='(.*?)'/) {
+    if ($options =~ m/output='([^"]*)'/) {
         $output = $1;
     }
 
