@@ -1,3 +1,8 @@
+2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* README: Add documentation for shell command.
+	* configs/scoreboard/acetao.xml: Add WinXP_BCB6_Dynamic_Debug build.
+
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/Borland.xml: Changed to use the new dir option 

@@ -100,6 +100,10 @@
             <url>http://tao.doc.wustl.edu/bugzilla/new_borland</url>
         </build>
         <build>
+            <name>WinXP_BCB6_Dynamic_Debug_(remedy.nl)</name>
+            <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/remedy.nl_WinXP_BCB6_Dynamic_Debug/</url>
+        </build>
+        <build>
             <name>WinXP_Legacy</name>
             <url>http://ringil.ece.uci.edu/bugzilla/legacy</url>
         </build>
