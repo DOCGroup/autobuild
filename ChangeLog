@@ -1,3 +1,8 @@
+Mon Jan 27 18:10:19 2003  Heather Drury  <drury_h@ociweb.com>
+
+        * configs/autobuild/tango/Debian_NoInline.xml: Removed reference 
+          to SSL in configs so that SSL tests are not run.
+
 Sat Jan 25 14:55:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/acetao.xml: Added MingW again.
@@ -37,29 +42,29 @@ Wed Jan 22 08:05:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jan 21 20:41:32 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml: Updated URL to hunleth.com.
+        * configs/scoreboard/acetao.xml: Updated URL to hunleth.com.
 
 Wed Jan 22 00:52:50 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* README:
-	* scoreboard.pl:
-	* common/scoreparser.pm:
-	* configs/scoreboard/acetao.xml:
-	  - Add <build_sponsor> and <build_sponsor_url> tags to the Scoreboard.
-	  - Add a -v to scoreboard.pl.  Only print status messages if -v is
-	    specified.  Default is to print out error messages only.
-	  - scoreboard.pl will now print out instructions of no arguments are
-	    specified
+        * README:
+        * scoreboard.pl:
+        * common/scoreparser.pm:
+        * configs/scoreboard/acetao.xml:
+          - Add <build_sponsor> and <build_sponsor_url> tags to the Scoreboard.
+          - Add a -v to scoreboard.pl.  Only print status messages if -v is
+            specified.  Default is to print out error messages only.
+          - scoreboard.pl will now print out instructions of no arguments are
+            specified
 
 Tue Jan 21 17:28:05 2003  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/tao.bat: Changed to specify the scoreboard
-	  table explicitly, per Craig's request.
+        * configs/scoreboard/tao.bat: Changed to specify the scoreboard
+          table explicitly, per Craig's request.
 
 Mon Jan 20 16:30:07 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl (update_cache): If we have a problem downloading
-	  logs for a build, move on to the next build instead of quitting.
+        * scoreboard.pl (update_cache): If we have a problem downloading
+          logs for a build, move on to the next build instead of quitting.
 
 Sat Jan 18 21:18:31 2003  Steve Huston  <shuston@riverace.com>
 
@@ -88,8 +93,8 @@ Sat Jan 18 11:59:22 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Jan 15 13:44:36 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added a note indicating
-	  that a build is donated from OCI.
+        * configs/scoreboard/acetao.xml: Added a note indicating
+          that a build is donated from OCI.
 
 Wed Jan 15 11:40:19 2003  Steve Huston  <shuston@riverace.com>
 
@@ -106,8 +111,8 @@ Wed Jan 15 11:40:19 2003  Steve Huston  <shuston@riverace.com>
 
 Wed Jan 15 07:35:43 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/pokey/GCC32_Core.xml: Compiled TAO and
-	  associated  libraries in -j 1 mode.
+        * configs/autobuild/pokey/GCC32_Core.xml: Compiled TAO and
+          associated  libraries in -j 1 mode.
 
 Tue Jan 14 11:21:39 2003  Steve Huston  <shuston@riverace.com>
 
@@ -120,43 +125,43 @@ Tue Jan 14 11:21:39 2003  Steve Huston  <shuston@riverace.com>
 
 Sat Jan 11 12:13:19 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Moved the BBN's build to the
-	  Sanity portion of the  scoreboard. Thanks to Nanbor for suggesting
+        * configs/scoreboard/acetao.xml: Moved the BBN's build to the
+          Sanity portion of the  scoreboard. Thanks to Nanbor for suggesting
           this.
 
 Sat Jan 11 11:36:36 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Removed the build from BBN off
-	  the scoreboard since it is running a build that doesnt contrain
-	  our process.
+        * configs/scoreboard/acetao.xml: Removed the build from BBN off
+          the scoreboard since it is running a build that doesnt contrain
+          our process.
 
 Sat Jan 11 11:00:00 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* common/prettify.pm: Just omit the warnings that is emitted by
-	  the compiler on seeing mktemp () on OpenBSD.
+        * common/prettify.pm: Just omit the warnings that is emitted by
+          the compiler on seeing mktemp () on OpenBSD.
 
 Sat Jan 11 10:46:53 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* common/prettify.pm: Had to revert this change "Fri Jan 10
-	  21:36:09 UTC 2003  Don Hinton  <dhinton@ieee.org>" since it
-	  broke Win32 builds.
+        * common/prettify.pm: Had to revert this change "Fri Jan 10
+          21:36:09 UTC 2003  Don Hinton  <dhinton@ieee.org>" since it
+          broke Win32 builds.
 
 Sat Jan 11 09:23:02 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/pokey/GCC32_Core.xml: Removed LoadBalancing
-	  from the services that can be compiled. Please refer to bugzilla
-	  entry 1419 for why this breaks.
+        * configs/autobuild/pokey/GCC32_Core.xml: Removed LoadBalancing
+          from the services that can be compiled. Please refer to bugzilla
+          entry 1419 for why this breaks.
 
 Sat Jan 11 09:17:59 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Changed the name of the builds
-	  from BBN.
+        * configs/scoreboard/acetao.xml: Changed the name of the builds
+          from BBN.
 
 Fri Jan 10 21:36:09 UTC 2003  Don Hinton  <dhinton@ieee.org>
 
-	* common/prettify.pm:  Modified the regular expressions used to
-	  identify errors and warnings.  Thanks to Russ Noseworthy for
-	  submitting the patch and Craig Rodrigues for his suggestions.
+        * common/prettify.pm:  Modified the regular expressions used to
+          identify errors and warnings.  Thanks to Russ Noseworthy for
+          submitting the patch and Craig Rodrigues for his suggestions.
 
 Fri Jan 10 14:16:31 2003  Steve Huston  <shuston@riverace.com>
 
@@ -166,8 +171,8 @@ Fri Jan 10 14:16:31 2003  Steve Huston  <shuston@riverace.com>
 
 Fri Jan 10 16:37:13 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add MacOS X build maintained by John
-	  Zorko.
+        * configs/scoreboard/acetao.xml: Add MacOS X build maintained by John
+          Zorko.
 
 Thu Jan  9 15:51:39 2003  Steve Huston  <shuston@riverace.com>
 
@@ -194,16 +199,16 @@ Thu Jan  9 07:42:22 UTC 2003  Frank Hunleth  Johnny Willemsen  <jwillemsen@remed
 
 Wed Jan  8 20:04:13 2003  Frank Hunleth  <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/OpenBSD_Core.xml:
-	* configs/autobuild/slytherin/OpenBSD_Full.xml:
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
 
-	Added command to "print_os_version" per recommendation from Craig
-	Rodriguies.
+        Added command to "print_os_version" per recommendation from Craig
+        Rodriguies.
 
 Thu Jan  9 00:05:05 UTC 2003  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* README: Add anonymous CVS instructions.
+        * README: Add anonymous CVS instructions.
 
 Tue Jan  7 16:10:39 2003  Steve Huston  <shuston@riverace.com>
 
@@ -217,32 +222,32 @@ Tue Jan  7 12:04:31 2003  Steve Huston  <shuston@riverace.com>
 
 Mon Jan  6 17:01:42 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/maglor/Static.xml: Added the iorize collection
-	  scripts to run with the daily builds.
+        * configs/autobuild/maglor/Static.xml: Added the iorize collection
+          scripts to run with the daily builds.
 
 Wed Jan  1 16:56:10 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added the pokey build to the
-	  scoreboard.
+        * configs/scoreboard/acetao.xml: Added the pokey build to the
+          scoreboard.
 
 Wed Jan  1 14:28:03 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/maglor/Static.xml: Added the user name when
-	  kick starting the memory usage collection scripts.
+        * configs/autobuild/maglor/Static.xml: Added the user name when
+          kick starting the memory usage collection scripts.
 
 Wed Jan 01 12:48:07 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/pokey: New Core build.
+        * configs/autobuild/pokey: New Core build.
 
 Tue Dec 31 21:26:07 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/maglor/Static.xml: Added the memory usage
-	  stats collection scripts to the daily build.
+        * configs/autobuild/maglor/Static.xml: Added the memory usage
+          stats collection scripts to the daily build.
 
 Sun Dec 29 18:25:39 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/tao_isis/GIOP10_GCC32.xml: Added GIOP 10 as
-	  the Config option.
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml: Added GIOP 10 as
+          the Config option.
 
 Mon Dec 23 10:57:29 2002  Steve Huston  <shuston@riverace.com>
 
@@ -264,12 +269,12 @@ Sat Dec 21 14:43:22 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Dec 20 13:55:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: The
-	  tests will not run in this build.
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml: The
+          tests will not run in this build.
 
-	* configs/autobuild/maglor/Static.xml:
-	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Run the SSL tests
-	  in these builds.
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Run the SSL tests
+          in these builds.
 
 
 Fri Dec 20 07:46:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
@@ -290,11 +295,11 @@ Thu Dec 19 20:41:12 UTC 2002  Johnny Willemsen <jwillemsen@remedy.nl>
 
 Thu Dec 19 06:54:36 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs//autobuild/sirion/Full_new.xml:
-	* configs//autobuild/tango/Debian_NoInline.xml:
-	* configs//autobuild/valinor/Full.xml: Added SSL to all the
-	  above. Doesnt seem to run the tests yet. Need to check after yet
-	  another build.
+        * configs//autobuild/sirion/Full_new.xml:
+        * configs//autobuild/tango/Debian_NoInline.xml:
+        * configs//autobuild/valinor/Full.xml: Added SSL to all the
+          above. Doesnt seem to run the tests yet. Need to check after yet
+          another build.
 
 Wed Dec 18 18:00:31 2002  Steve Huston  <shuston@riverace.com>
 
@@ -323,10 +328,10 @@ Wed Dec 18 16:37:41 2002  Steve Huston  <shuston@riverace.com>
 
 Wed Dec 18 15:54:05 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/sirion/Full_new.xml: Added -config SSL to run
-	  the SSLIOP tests. We have been long kidding ourselves that the
-	  SSL tests have been run daily! What a joke! They havent been run
-	  from the point they moved to the new scoreboard.
+        * configs/autobuild/sirion/Full_new.xml: Added -config SSL to run
+          the SSLIOP tests. We have been long kidding ourselves that the
+          SSL tests have been run daily! What a joke! They havent been run
+          from the point they moved to the new scoreboard.
 
 Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
 
@@ -346,29 +351,29 @@ Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
 
 Mon Dec 16 11:23:33 2002  Ossama Othman  <ossama@uci.edu>
 
-	* configs/scoreboard/acetao.xml:
+        * configs/scoreboard/acetao.xml:
 
-	  Corrected Debian_WChar build name to reflect the fact it no
-	  longer uses GCC 3.1.
+          Corrected Debian_WChar build name to reflect the fact it no
+          longer uses GCC 3.1.
 
 Sun Dec 15 21:37:25 2002  Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/rumba/Debian_WChar.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml:
 
-	  Reconfigured build to use g++ 3.2.  g++ 3.1 no longer appears to
-	  be available in the version of Debian GNU/Linux installed on
-	  Linux.
+          Reconfigured build to use g++ 3.2.  g++ 3.1 no longer appears to
+          be available in the version of Debian GNU/Linux installed on
+          Linux.
 
 Fri Dec 13 17:31:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/LYNX_PPC.xml:
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
-	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	  Add print_os_version.
+        * configs/autobuild/ace/LYNX_PPC.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+          Add print_os_version.
 
 Fri Dec 13 09:11:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -385,18 +390,18 @@ Fri Dec 13 09:11:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Dec 12 17:12:45 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/ace/LYNX_PPC.xml:
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml: Removed -j 2 from
-	  reverseclean's.
+        * configs/autobuild/ace/LYNX_PPC.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml: Removed -j 2 from
+          reverseclean's.
 
 Thu Dec 12 11:03:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* command/rem_sems.pm: Get the symbol root before changing
-	  directory.
+        * command/rem_sems.pm: Get the symbol root before changing
+          directory.
 
 Thu Dec 12 06:58:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -405,111 +410,111 @@ Thu Dec 12 06:58:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Dec 11 23:17:15 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* autobuild.pl: Added a new command rem_sems.
-	* command/rem_sems.pm: A new command file that cleans semaphores.
+        * autobuild.pl: Added a new command rem_sems.
+        * command/rem_sems.pm: A new command file that cleans semaphores.
 
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml: Called rem_sems from
-	  the above builds. If it goes fine, we can add it to all the *nix
-	  builds.
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml: Called rem_sems from
+          the above builds. If it goes fine, we can add it to all the *nix
+          builds.
 
 Wed Dec 11 23:46:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
-	* configs/autobuild/maedhros/Core.xml:
-	* configs/autobuild/maglor/Static.xml:
-	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
-	* configs/autobuild/rumba/Debian_WChar.xml:
-	* configs/autobuild/sirion/Full.xml:
-	* configs/autobuild/sirion/Full_new.xml:
-	* configs/autobuild/tao/Borland.xml:
-	* configs/autobuild/tao/DLL_Core.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/Unicode.xml:
-	* configs/autobuild/valinor/Full.xml:
-	  Add print_os_version command.
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml:
+        * configs/autobuild/sirion/Full.xml:
+        * configs/autobuild/sirion/Full_new.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/valinor/Full.xml:
+          Add print_os_version command.
 
 Wed Dec 11 16:53:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/maedhros/Core.xml:
-	* configs/autobuild/maglor/Static.xml:
-	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
-	* configs/autobuild/rumba/Debian_WChar.xml:
-	* configs/autobuild/sirion/Full.xml:
-	* configs/autobuild/sirion/Full_new.xml:
-	* configs/autobuild/slytherin/OpenBSD_Core.xml:
-	* configs/autobuild/slytherin/OpenBSD_Full.xml:
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
-	* configs/autobuild/tango/Debian_NoInline.xml:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
-	* configs/autobuild/tao_isis/GIOP10_GCC32.xml:
-	* configs/autobuild/valinor/Full.xml:  Used reverseclean instead
-	  of realclean.
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml:
+        * configs/autobuild/sirion/Full.xml:
+        * configs/autobuild/sirion/Full_new.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/tango/Debian_NoInline.xml:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+        * configs/autobuild/valinor/Full.xml:  Used reverseclean instead
+          of realclean.
 
 Wed Dec 11 16:15:57 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/amrod/ImplicitTemplates.xml: Do not do a clean
-	  with -j option set.
+        * configs/autobuild/amrod/ImplicitTemplates.xml: Do not do a clean
+          with -j option set.
 
 Wed Dec 11 20:10:54 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/print_os_version.pm: Improve formatting of Debian version.
+        * command/print_os_version.pm: Improve formatting of Debian version.
 
 Wed Dec 11 10:49:42 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml:
-	* configs/autobuild/nirvana/W4_Debug.xml: Added a new build which
-	  compiles with MSVC at Warning level 4.
+        * configs/scoreboard/acetao.xml:
+        * configs/autobuild/nirvana/W4_Debug.xml: Added a new build which
+          compiles with MSVC at Warning level 4.
 
 Wed Dec 11 16:31:30 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/balar/Debian_Core.xml:
-	  Add print_os_version command.
+        * configs/autobuild/balar/Debian_Core.xml:
+          Add print_os_version command.
 
 Wed Dec 11 16:15:46 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* README:
-	* autobuild.pl:
-	* scoreboard.pl:
-	* command/process_logs.pm:
-	* command/print_os_version.pm (Added):
-	* common/prettify.pm:
+        * README:
+        * autobuild.pl:
+        * scoreboard.pl:
+        * command/process_logs.pm:
+        * command/print_os_version.pm (Added):
+        * common/prettify.pm:
 
-	 Add a new command, print_os_version, which prints some information
-	 about the OS version of the build host.  Output configuration
-	 information such as compiler and OS version to a new file, _Config.html.
-	 This should make retrieving the config information from the web
-	 faster.  The current method requires the user to download the
-	 entire processed build log file (which takes a long time)
-	 in order to view the build config info.
+         Add a new command, print_os_version, which prints some information
+         about the OS version of the build host.  Output configuration
+         information such as compiler and OS version to a new file, _Config.html.
+         This should make retrieving the config information from the web
+         faster.  The current method requires the user to download the
+         entire processed build log file (which takes a long time)
+         in order to view the build config info.
 
 Tue Dec 10 16:55:02 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/ace/LYNX_PPC.xml:
-	* configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	* configs/autobuild/balar/Debian_Core.xml:
-	* configs/autobuild/balar/Debian_Minimum.xml:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
-	* configs/autobuild/charanga/Debian_Minimum_Static.xml:
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
-	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml: Used reverse clean
-	  instead of realclean. If these builds go fine, we can make the
-	  changes on others.
+        * configs/autobuild/ace/LYNX_PPC.xml:
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/balar/Debian_Core.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml: Used reverse clean
+          instead of realclean. If these builds go fine, we can make the
+          changes on others.
 
 Sun Dec  8 01:43:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/check_compiler.pm: Fix compiler check so that
-	  gcc, g++, g++ppc, g++-xx, gcc-xx, etc. can be used as
-	  an argument in the check_compiler XML directive.
-	* common/prettify.pm: Remove extraneous debug statement.
+        * command/check_compiler.pm: Fix compiler check so that
+          gcc, g++, g++ppc, g++-xx, gcc-xx, etc. can be used as
+          an argument in the check_compiler XML directive.
+        * common/prettify.pm: Remove extraneous debug statement.
 
 Sat Dec  7 19:58:31 2002  Steve Huston  <shuston@riverace.com>
 
@@ -518,16 +523,16 @@ Sat Dec  7 19:58:31 2002  Steve Huston  <shuston@riverace.com>
 
 Sun Dec  8 00:15:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl:
-	* common/scoreparser.pm:
-	* configs/scoreboard/acetao.xml:
-	* README:
-	  Create a new <preamble> tag in the scoreboard parser.
-	  Move the ACE/TAO specific informational messages to
-	  acetao.xml.  This is so that I can reuse the autobuild
-	  scripts for my own non-ACE/TAO projects and not have the
-	  ACE/TAO specific messages appear in my build scoreboard
-	  web page. :)
+        * scoreboard.pl:
+        * common/scoreparser.pm:
+        * configs/scoreboard/acetao.xml:
+        * README:
+          Create a new <preamble> tag in the scoreboard parser.
+          Move the ACE/TAO specific informational messages to
+          acetao.xml.  This is so that I can reuse the autobuild
+          scripts for my own non-ACE/TAO projects and not have the
+          ACE/TAO specific messages appear in my build scoreboard
+          web page. :)
 
 Sat Dec  7 10:40:11 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -540,12 +545,12 @@ Sat Dec  7 10:40:11 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Dec  6 16:05:15 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
-	* scoreboard.pl:  Added RT Logic! to list of build hosts.
+        * scoreboard.pl:  Added RT Logic! to list of build hosts.
 
 Fri Dec  6 15:48:41 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
-	* configs/scoreboard/acetao.xml: Added SunOS_5.8_GCC_2.96
-	  VxWorks build maintained by Rob Andzik <andzik@rtlogic.com>.
+        * configs/scoreboard/acetao.xml: Added SunOS_5.8_GCC_2.96
+          VxWorks build maintained by Rob Andzik <andzik@rtlogic.com>.
 
 Fri Dec  6 09:57:3 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -554,16 +559,16 @@ Fri Dec  6 09:57:3 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Dec  6 06:03:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/scoreparser.pm: Fix parsing of XML style comments.
+        * common/scoreparser.pm: Fix parsing of XML style comments.
 
 Fri Dec  5 00:24:15 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added RH's version info.
+        * configs/scoreboard/acetao.xml: Added RH's version info.
 
 Thu Dec  5 14:59:41 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/tao_isis/GIOP10_GCC32.xml: Added a -Config
-	  option  for GIOP 10.
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml: Added a -Config
+          option  for GIOP 10.
 
 Wed Dec  4 20:59:37 2002  Steve Huston  <shuston@riverace.com>
 
@@ -572,10 +577,10 @@ Wed Dec  4 20:59:37 2002  Steve Huston  <shuston@riverace.com>
 
 Wed Dec  4 11:38:12 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/Borland.xml:
-	* configs/autobuild/nirvana/DLL_Release.xml: Added -Config Win32
-	  to the auto_run_test script line when running the tests.
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/nirvana/DLL_Release.xml: Added -Config Win32
+          to the auto_run_test script line when running the tests.
 
 Mon Dec  2 19:32:19 2002  Steve Huston  <shuston@riverace.com>
 
@@ -600,23 +605,23 @@ Wed Nov 27 19:18:19 2002  Steve Huston  <shuston@riverace.com>
 
 Tue Nov 26 13:54:40 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Fixed a typo!
+        * configs/scoreboard/acetao.xml: Fixed a typo!
 
 Tue Nov 26 08:54:44  isisbuilds  <isisbuilds@tao.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Added a new build at ISIS to the
- 	  scoreboard. The config files will be checekd in later.
+        * configs/scoreboard/acetao.xml: Added a new build at ISIS to the
+          scoreboard. The config files will be checekd in later.
 
 Tue Nov 26 01:44:44 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
-	* configs/scoreboard/acetao.xml:  Same thing, only this
-	  time I deleted the entry.  The parser we are using doesn't
-	  seem to handle <!--  --> multi-line comments very well.
+        * configs/scoreboard/acetao.xml:  Same thing, only this
+          time I deleted the entry.  The parser we are using doesn't
+          seem to handle <!--  --> multi-line comments very well.
 
 Tue Nov 26 01:32:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
-	* configs/scoreboard/acetao.xml:  Commented out the fi2010.org
-	  Sun build due to problems on our network.
+        * configs/scoreboard/acetao.xml:  Commented out the fi2010.org
+          Sun build due to problems on our network.
 
 Mon Nov 25 18:35:49 2002  Steve Huston  <shuston@riverace.com>
 
@@ -626,19 +631,19 @@ Mon Nov 25 18:35:49 2002  Steve Huston  <shuston@riverace.com>
 
 Thu Nov 21 10:17:30 2002  Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/nirvana/DLL_Release.xml:
-	* configs/autobuild/nirvana/XML_Debug.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/nirvana/DLL_Release.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
 
-	  Added OpenSSL library path to the PATH environment variable.
-	  This should fix the security test run-time failures exhibited in
-	  these builds.
+          Added OpenSSL library path to the PATH environment variable.
+          This should fix the security test run-time failures exhibited in
+          these builds.
 
 Thu Nov 21 10:03:08 2002  Ossama Othman  <ossama@uci.edu>
 
-	* common/prettify.pm (Test_Handler):
+        * common/prettify.pm (Test_Handler):
 
-	  Flag failed run-time assertions.
+          Flag failed run-time assertions.
 
 Tue Nov 19 20:15:31 2002  Steve Huston  <shuston@riverace.com>
 
@@ -667,51 +672,51 @@ Tue Nov 19 12:38:51 2002  Steve Huston  <shuston@riverace.com>
 
 Fri Nov 15 11:22:25 2002  Ossama Othman  <ossama@uci.edu>
 
-	* make_pretty.pl (tests_output):
+        * make_pretty.pl (tests_output):
 
-	  Flag failed run-time assertions.
+          Flag failed run-time assertions.
 
 Mon Nov 11 19:46:55 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Add new SCOREBOARD_URL variable for e-mail
-	  notifications.
-	* README: Document it.
+        * common/prettify.pm: Add new SCOREBOARD_URL variable for e-mail
+          notifications.
+        * README: Document it.
 
 Sat Nov 9 18:20:13 2002  Frank Hunleth  <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
           Added ST flag to not run the multithreaded-only tests.  Thanks
-	  to Don Hinton for point this out.
+          to Don Hinton for point this out.
 
 Mon Nov  4 18:48:34 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
-	* configs/autobuild/rumba/Debian_WChar.xml:  Removed the ST flag
-	  so that multithreaded tests will be run.
+        * configs/autobuild/rumba/Debian_WChar.xml:  Removed the ST flag
+          so that multithreaded tests will be run.
 
 Sun Nov  3 10:39:25 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Mesaging.xml: Added
-	  RH_7.1 as the config option.
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Mesaging.xml: Added
+          RH_7.1 as the config option.
 
 Thu Oct 31 20:31:19 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/beguine/driver.sh:
-	* configs/autobuild/beguine/Redhat_7.1_Full.xml: This build has
-	  been stopped and removed for the following reasons
-	  1. The machine is running out of disk space
-	  2. The builds configuration has been repeated elsewhere in other
-	  builds.
+        * configs/autobuild/beguine/driver.sh:
+        * configs/autobuild/beguine/Redhat_7.1_Full.xml: This build has
+          been stopped and removed for the following reasons
+          1. The machine is running out of disk space
+          2. The builds configuration has been repeated elsewhere in other
+          builds.
 
 Thu Oct 31 20:23:39 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Removed the RedHat 7.1 Full
-	  build. It served no purpose. The build was repeated by other
-	  builds from Irvine.
+        * configs/scoreboard/acetao.xml: Removed the RedHat 7.1 Full
+          build. It served no purpose. The build was repeated by other
+          builds from Irvine.
 
 Sun Oct 27 22:32:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm:  Tag make output of the form:
-	  "make: *** " as an error.
+        * common/prettify.pm:  Tag make output of the form:
+          "make: *** " as an error.
 
 Fri Oct 25 06:33:20 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -729,110 +734,110 @@ Thu Oct 24 05:58:20 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/scoreboard/acetao.xml: Enabled Full and Single_Threaded
+        * configs/scoreboard/acetao.xml: Enabled Full and Single_Threaded
           OpenBSD builds and disabled the OpenBSD_Core one for now.  The
           current schedule is to run a build every other day - hence the
           high orange and red values.
 
 Mon Oct 21 17:17:03 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/scoreboard/acetao.xml: Changed build orange
+        * configs/scoreboard/acetao.xml: Changed build orange
           and red times for the OpenBSD_Core build to avoid having it
-      	  flagged too soon.
+          flagged too soon.
 
 Mon Oct 21 17:16:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl: Add link to scoreboard instructions.
+        * scoreboard.pl: Add link to scoreboard instructions.
 
 Sun Oct 20 18:47:53 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/OpenBSD_Core.xml: Fixed cosmetic typo.
+        * configs/autobuild/slytherin/OpenBSD_Core.xml: Fixed cosmetic typo.
 
-	* configs/autobuild/slytherin/OpenBSD_Full.xml:
-	* configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
-	* configs/autobuild/slytherin/driver_Full.sh:
-	* configs/autobuild/slytherin/driver_Single_Threaded.sh:
-	  Created Full and Single_Threaded configurations for OpenBSD.
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/slytherin/driver_Full.sh:
+        * configs/autobuild/slytherin/driver_Single_Threaded.sh:
+          Created Full and Single_Threaded configurations for OpenBSD.
 
 Sun Oct 20 09:24:29 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/tango/Debian_Noinline.xml: Removed -j 2 for
-	  realclean.
+        * configs/autobuild/tango/Debian_Noinline.xml: Removed -j 2 for
+          realclean.
 
 Sun Oct 20 09:14:23 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Renamed the Redhat_Core build as
-	  Redhat_Static_Core build.
+        * configs/scoreboard/acetao.xml: Renamed the Redhat_Core build as
+          Redhat_Static_Core build.
 
 Sun Oct 20 09:10:03 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/maedhros/Core.xml: Made the following
-	  changes.
+        * configs/autobuild/maedhros/Core.xml: Made the following
+          changes.
 
-	  . This build shold not run tests. This is supposed to be a core
-	    build.
+          . This build shold not run tests. This is supposed to be a core
+            build.
 
-	  . This build will be a static core build.
+          . This build will be a static core build.
 
-	  Our builds have to be used effectively to test various
-	  configurations. No point in falling a victim for DRY.
+          Our builds have to be used effectively to test various
+          configurations. No point in falling a victim for DRY.
 
 Sat Oct 19 13:38:42 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/scoreboard/acetao.xml:
-	  Shuffled the TRU 64 build down to the bottom to see whether
+        * configs/scoreboard/acetao.xml:
+          Shuffled the TRU 64 build down to the bottom to see whether
           that causes the OpenBSD and XML builds to show up.  The "-"
           change below didn't change anything (not too surprising).
 
 Sat Oct 19 12:32:09 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/scoreboard/acetao.xml:
+        * configs/scoreboard/acetao.xml:
           Removed extraneous "-" in comment that seems to prevent
           the OpenBSD and XML builds from showing up.
 
 Sat Oct 19 11:23:24 2002  Frank Hunleth <frank@hunleth.com>
 
-	* configs/autobuild/slytherin/OpenBSD_Core.xml:
-	* configs/autobuild/slytherin/driver.sh:
-	* configs/scoreboard/acetao.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/driver.sh:
+        * configs/scoreboard/acetao.xml:
           Added OpenBSD Core build.
 
 Fri Oct 18 20:50:58 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/scoreboard/acetao.xml: Removed TRU 64 from the
-	  scoreboard for the timebeing.
+        * configs/scoreboard/acetao.xml: Removed TRU 64 from the
+          scoreboard for the timebeing.
 
 Fri Oct 18 01:04:49 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	  Fix invocations of "make clean" so that they actually work.
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+          Fix invocations of "make clean" so that they actually work.
 
 Thu Oct 17 12:16:31 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
-	* configs/autobuild/rumba/Debian_WChar.xml: Removed
-	  threads=0. This build shold not do many many things. Just do one
-	  thing that needs testing.
+        * configs/autobuild/rumba/Debian_WChar.xml: Removed
+          threads=0. This build shold not do many many things. Just do one
+          thing that needs testing.
 
 Mon Oct 14 00:36:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/doc/auto_doxygen.pl: Added.
-	* configs/autobuild/doc/Doxygen.xml: Use auto_doxygen.pl which is in
-	  CVS.
+        * configs/autobuild/doc/auto_doxygen.pl: Added.
+        * configs/autobuild/doc/Doxygen.xml: Use auto_doxygen.pl which is in
+          CVS.
 
 Wed Oct  9 15:24:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Don't highlight extraneous recursive make
-	  error messages.
+        * common/prettify.pm: Don't highlight extraneous recursive make
+          error messages.
 
 Tue Oct  8 15:19:22 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Add GNU ld's ": cannot find" to list of
-	  error messages to highlight.
+        * common/prettify.pm: Add GNU ld's ": cannot find" to list of
+          error messages to highlight.
 
 Sat Oct  5 12:31:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/doc.sh: Update from cvs before building the
-	  scoreboard.  Specify output directory for html files.
+        * configs/scoreboard/doc.sh: Update from cvs before building the
+          scoreboard.  Specify output directory for html files.
 
 Fri Oct  4 05:50:08 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -841,23 +846,23 @@ Fri Oct  4 05:50:08 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Oct  3 14:56:08 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/process_logs.pm: Reduce amount of kept logs from 20 to 10
-	  to reduce disk utilization ( Johnny Willemsen  <jwillemsen@remedy.nl> ).
-	* common/prettify.pm: Add additional check before splicing error_text
-	  array, to eliminate Perl 5.8 warning.
+        * command/process_logs.pm: Reduce amount of kept logs from 20 to 10
+          to reduce disk utilization ( Johnny Willemsen  <jwillemsen@remedy.nl> ).
+        * common/prettify.pm: Add additional check before splicing error_text
+          array, to eliminate Perl 5.8 warning.
 
 Wed Oct  2 11:26:33  Ossama Othman  <ossama@uci.edu>
 
-	* configs/scoreboard/doc.sh:
+        * configs/scoreboard/doc.sh:
 
-	  Recreated missing shell driver file.  It was accidentally erased
-	  when clearing up diskspace.  For some reason, it was never
-	  committed to the CVS repository!
+          Recreated missing shell driver file.  It was accidentally erased
+          when clearing up diskspace.  For some reason, it was never
+          committed to the CVS repository!
 
 Wed Oct  2 14:48:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Cut down error messages sent in e-mail
-	  notification.  Correct some wording in e-mail notification.
+        * common/prettify.pm: Cut down error messages sent in e-mail
+          notification.  Correct some wording in e-mail notification.
 
 Wed Oct  2 14:26:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -883,61 +888,61 @@ Wed Oct  2 12:01:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Oct  2 02:58:36 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/process_logs.pm: Remove extraneous print statement.
+        * command/process_logs.pm: Remove extraneous print statement.
 
 Wed Oct  2 00:49:10 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* autobuild.pl: Make $verbose a global variable with 'our' keyword.
-	* command/file_manipulation.pm:
-	* command/log.pm:
-	* command/process_logs.pm:
-	* command/status.pm:
-	  Remove extraneous print statements.
-	  Check $main::verbose before printing a few other
-	  messages.  This should prevent unnecessary messages
-	  from being emitted when autobuild is run as a cron job.
+        * autobuild.pl: Make $verbose a global variable with 'our' keyword.
+        * command/file_manipulation.pm:
+        * command/log.pm:
+        * command/process_logs.pm:
+        * command/status.pm:
+          Remove extraneous print statements.
+          Check $main::verbose before printing a few other
+          messages.  This should prevent unnecessary messages
+          from being emitted when autobuild is run as a cron job.
 
 Tue Sep 24 03:27:13 UTC 2002  Don Hinton  <dhinton@ieee.org>
 
-	* configs/autobuild/rumba/Debian_WChar.xml: Added ST to
-	  the configs variable so that only single threaded
-	  tests would be run.
+        * configs/autobuild/rumba/Debian_WChar.xml: Added ST to
+          the configs variable so that only single threaded
+          tests would be run.
 
 Tue Sep 17 14:51:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add SunOS 5.8/Sun CC 5.4 build
-	  maintained by Don Hinton <dhinton@objectsciences.com> .
+        * configs/scoreboard/acetao.xml: Add SunOS 5.8/Sun CC 5.4 build
+          maintained by Don Hinton <dhinton@objectsciences.com> .
 
 Mon Sep 16 13:58:05 2002 Stephen Torri <storri@cs.wustl.edu>
 
-	* scoreboard.pl:
+        * scoreboard.pl:
 
-	  Added a check to eliminate perl warning generate at
-	  line 119. If latest.txt was not in the target directory
-	  then $latest would be undefined. This caused a perl
-	  warning for the conditional.
+          Added a check to eliminate perl warning generate at
+          line 119. If latest.txt was not in the target directory
+          then $latest would be undefined. This caused a perl
+          warning for the conditional.
 
 Sat Sep 14 21:32:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	  Check for the .disable file before turning on logging.
-	  Thanks to Don Hinton <dhinton@objectsciences.com>.
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+          Check for the .disable file before turning on logging.
+          Thanks to Don Hinton <dhinton@objectsciences.com>.
 
 Fri Sep 13 22:44:39 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	  Danzon was upgraded to Solaris 2.8, so switch config files in build
-	  to Solaris 2.8
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+          Danzon was upgraded to Solaris 2.8, so switch config files in build
+          to Solaris 2.8
 
-	* command/make.pm: Don't quit if we cannot chdir() to $project_root.
+        * command/make.pm: Don't quit if we cannot chdir() to $project_root.
 
-	* common/prettify.pm:
-	  Enhanced e-mail notification capability:
-	   - put the error messages in the e-mail
-	   - do a cvs diff on $ACE_ROOT/ChangeLog and $TAO_ROOT/ChangeLog in the
-	     past 24 hours.
+        * common/prettify.pm:
+          Enhanced e-mail notification capability:
+           - put the error messages in the e-mail
+           - do a cvs diff on $ACE_ROOT/ChangeLog and $TAO_ROOT/ChangeLog in the
+             past 24 hours.
 
 Thu Sep 12 05:47:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -948,105 +953,105 @@ Thu Sep 12 05:47:12 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Sep 12 00:16:15 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/driver.sh: Put directory with newer
-	  GNU utilities in PATH.
+        * configs/autobuild/danzon/driver.sh: Put directory with newer
+          GNU utilities in PATH.
 
 Tue Sep 10 10:32:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/maglor/Static.xml: Do not send the mail to the
-	  devo_group. Just send the mail to bugzilla account!
+        * configs/autobuild/maglor/Static.xml: Do not send the mail to the
+          devo_group. Just send the mail to bugzilla account!
 
 Mon Sep  3 15:27:22 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml (PLATFORM_TK_LIBS):
+        * configs/autobuild/valinor/Full.xml (PLATFORM_TK_LIBS):
 
-	  Added the Tk library to the list of necessary Tcl/Tk libraries.
-	  Fixes a link-time failure in the build.
+          Added the Tk library to the list of necessary Tcl/Tk libraries.
+          Fixes a link-time failure in the build.
 
 Tue Sep  3 22:07:42 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/curufin/driver.sh:
-	* configs/autobuild/curufin/SingleThreaded.xml: Minor fixes.
+        * configs/autobuild/curufin/driver.sh:
+        * configs/autobuild/curufin/SingleThreaded.xml: Minor fixes.
 
 Mon Aug 29 15:20:11 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/valinor/Full.xml:
 
-	  Zapped "-fstack-check" option from CCFLAGS until we get a better
-	  understanding of its utility.
+          Zapped "-fstack-check" option from CCFLAGS until we get a better
+          understanding of its utility.
 
-	  Reenabled optimization with "-O" flag instead of the "-O3"
-	  flag.  No need to go all out for an automated build.
+          Reenabled optimization with "-O" flag instead of the "-O3"
+          flag.  No need to go all out for an automated build.
 
 Mon Aug 26 12:02:11 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/valinor/Full.xml:
 
-	  Disable optimization, debugging and inlining to conserve space.
+          Disable optimization, debugging and inlining to conserve space.
 
-	  (CCFLAGS):
+          (CCFLAGS):
 
-	  Added "-fstack-check" option to make g++ generate code that
-	  causes the OS verify stack boundaries are not crossed.  Useful
-	  for multi-threaded code.  Generally not needed for
-	  single-threaded code.  This is a sanity check.
+          Added "-fstack-check" option to make g++ generate code that
+          causes the OS verify stack boundaries are not crossed.  Useful
+          for multi-threaded code.  Generally not needed for
+          single-threaded code.  This is a sanity check.
 
 Mon Aug 26 16:56:23 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/valinor/Full.xml:
 
-	  Disabled FL and QT reactors.  I was unable to get them to link.
-	  We'll have to figure out why not.
+          Disabled FL and QT reactors.  I was unable to get them to link.
+          We'll have to figure out why not.
 
-	  Added "-lXm" to the PLATFORM_XT_LIBS make variable.  The Motif
-	  library is apparently required for the ACE XtReactor_Test.
+          Added "-lXm" to the PLATFORM_XT_LIBS make variable.  The Motif
+          library is apparently required for the ACE XtReactor_Test.
 
 Mon Aug 26 10:51:57 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/valinor/Full.xml:
 
-	  Fixed FL, TK and QT include path problems.
+          Fixed FL, TK and QT include path problems.
 
 Mon Aug 26 10:40:23 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/valinor/Full.xml:
 
-	  Fixed include path problem for <linux/eventpoll.h> header.
+          Fixed include path problem for <linux/eventpoll.h> header.
 
 Mon Aug 26 10:13:37 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/scoreboard/acetao.xml:
+        * configs/scoreboard/acetao.xml:
 
-	  Added "valinor_Full_Reactors" build.
+          Added "valinor_Full_Reactors" build.
 
 Mon Aug 26 10:11:17 2002 Ossama Othman  <ossama@uci.edu>
 
-	* configs/autobuild/valinor/Full.xml:
-	* configs/autobuild/valinor/driver.xml:
+        * configs/autobuild/valinor/Full.xml:
+        * configs/autobuild/valinor/driver.xml:
 
-	  New "full" build that enables all reactors, including the
-	  Dev_Poll_Reactor, but excluding the WFMO_Reactor.  Native
-	  exceptions are disabled.  GNU g++ 3.2 is used.
+          New "full" build that enables all reactors, including the
+          Dev_Poll_Reactor, but excluding the WFMO_Reactor.  Native
+          exceptions are disabled.  GNU g++ 3.2 is used.
 
 Mon Aug 26 16:24:47 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* autobuild.pl: Change occurences of things like:
+        * autobuild.pl: Change occurences of things like:
           " %command_table->{$command}" to "$command_table{$command}"
-	  to remove Perl 5.8 warning messages:
-	  "Using a hash as a reference is deprecated".
-	  Thanks to Carlos <coryan@atdesk.com> for the Perl wisdom.
+          to remove Perl 5.8 warning messages:
+          "Using a hash as a reference is deprecated".
+          Thanks to Carlos <coryan@atdesk.com> for the Perl wisdom.
 
 Thu Aug 22 18:06:41 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add RedHat_Static build.
-	  Throughput and footprint measurements and statistics are
-	  gathered from this build.
+        * configs/scoreboard/acetao.xml: Add RedHat_Static build.
+          Throughput and footprint measurements and statistics are
+          gathered from this build.
 
 Thu Aug 22 04:25:48 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/maglor/Static.xml: Add a Linux static build
-	  which generates statistics for TAO performance and
-	  footprint.
+        * configs/autobuild/maglor/Static.xml: Add a Linux static build
+          which generates statistics for TAO performance and
+          footprint.
 
 Mon Aug 21 13:25:17 2002 Stephen Torri <storri@cs.wustl.edu>
 
@@ -1064,107 +1069,107 @@ Mon Aug 21 13:25:17 2002 Stephen Torri <storri@cs.wustl.edu>
 
 Sun Aug 18 15:53:19 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml: Added this new build in place of
-	  Sirion_Full build.
+        * configs/scoreboard/acetao.xml: Added this new build in place of
+          Sirion_Full build.
 
 Sun Aug 18 15:36:00 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/sirion/Full_new.xml:
-	* configs/autobuild/sirion/driver_new.sh: Files for a new
-	  workspace. The old workspace seems busted with some bizzare
-	  problem.
+        * configs/autobuild/sirion/Full_new.xml:
+        * configs/autobuild/sirion/driver_new.sh: Files for a new
+          workspace. The old workspace seems busted with some bizzare
+          problem.
 
 Sun Aug 18 15:23:39 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/balar/Debian_Minimum.xml: Made the realclean
-	  without -j 2 option.
+        * configs/autobuild/balar/Debian_Minimum.xml: Made the realclean
+          without -j 2 option.
 
 Sat Aug 17 08:33:20 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/sirion/Full.xml: Made the realclean without -j
-	  2 option.
+        * configs/autobuild/sirion/Full.xml: Made the realclean without -j
+          2 option.
 
 Fri Aug 16 13:51:14 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml:
-	* configs/autobuild/nirvana/XML_Debug.xml: Added a new build to
-	  test out ACE_HAS_XML_SVC_CONF.  The XML parser was broken a
-	  while back and we didn't even notice that.  Hopefully, this
-	  build will help catch the problem.
+        * configs/scoreboard/acetao.xml:
+        * configs/autobuild/nirvana/XML_Debug.xml: Added a new build to
+          test out ACE_HAS_XML_SVC_CONF.  The XML parser was broken a
+          while back and we didn't even notice that.  Hopefully, this
+          build will help catch the problem.
 
 Fri Aug 16 12:16:14 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Change RedHat_GCC_3.1.1 build
-	  to RedHat_GCC_3.2.
+        * configs/scoreboard/acetao.xml: Change RedHat_GCC_3.1.1 build
+          to RedHat_GCC_3.2.
 
 Sun Aug 11 21:52:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/mail.pm: First cut at e-mail notification support under Windows,
-	  using the Perl Net::SMTP module included with ActiveState Perl.
-	* README: Document MAIL_ADMIN_SMTP_HOST variable.
+        * common/mail.pm: First cut at e-mail notification support under Windows,
+          using the Perl Net::SMTP module included with ActiveState Perl.
+        * README: Document MAIL_ADMIN_SMTP_HOST variable.
 
 Sun Aug 11 17:08:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* common/prettify.pm: Fix wording in e-mail notification.
+        * common/prettify.pm: Fix wording in e-mail notification.
 
 Fri Aug  9 18:21:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* scoreboard.pl: Implement a no-op main::GetVariable() to work around
-	  some problems introduced by new features in prettify.pm.
+        * scoreboard.pl: Implement a no-op main::GetVariable() to work around
+          some problems introduced by new features in prettify.pm.
 
 Thu Aug  8 20:08:44 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add Debian_Core build.
+        * configs/scoreboard/acetao.xml: Add Debian_Core build.
 
 Thu Aug  8 19:20:22 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/balar/Debian_Core.xml:
-	  Remove auto_run_tests command.  This build just builds the core
-	  of ACE, gperf, TAO, TAO_IDL, and orbsvcs.  No tests are built.
+        * configs/autobuild/balar/Debian_Core.xml:
+          Remove auto_run_tests command.  This build just builds the core
+          of ACE, gperf, TAO, TAO_IDL, and orbsvcs.  No tests are built.
 
 Thu Aug  8 16:02:59 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/balar/Debian_Core.xml: Added.
+        * configs/autobuild/balar/Debian_Core.xml: Added.
 
 Thu Aug  8 15:01:40 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* autobuild.pl:
-	   - Put the name of the file being parsed in the variable
-	     BUILD_CONFIG_FILE
-	   - "use diagnostics" to increase helpfulness of Perl error messages
-	   - add "require common::mail"
+        * autobuild.pl:
+           - Put the name of the file being parsed in the variable
+             BUILD_CONFIG_FILE
+           - "use diagnostics" to increase helpfulness of Perl error messages
+           - add "require common::mail"
 
-	* command/make.pm:
-	   - Check the return status after invoking make.  A return status
-	     of 0 indicates success.  A non-zero return status indicates failure.
-	   - Upon make failure, print an easily parseable message:
-	     [BUILD ERROR detected in {directory}].  This is makes it easier
-	     to determine the occurrence of a build failure when parsing
-	     the build logs.
+        * command/make.pm:
+           - Check the return status after invoking make.  A return status
+             of 0 indicates success.  A non-zero return status indicates failure.
+           - Upon make failure, print an easily parseable message:
+             [BUILD ERROR detected in {directory}].  This is makes it easier
+             to determine the occurrence of a build failure when parsing
+             the build logs.
 
-	* command/printaceconfig.pm:
-	   - Try looking in the ACE_ROOT environment variable for the
-	     ACE root directory before looking in the project_root Perl
-	     variable.  This makes it easier to use the autobuild scripts
-	     to build projects which *use* ACE, but are not *building* ACE.
+        * command/printaceconfig.pm:
+           - Try looking in the ACE_ROOT environment variable for the
+             ACE root directory before looking in the project_root Perl
+             variable.  This makes it easier to use the autobuild scripts
+             to build projects which *use* ACE, but are not *building* ACE.
 
-	* common/prettify.pm:
-	   - Create an array named BUILD_ERROR_COUNTER.  While parsing the
-	     build log, every time we detect [BUILD error detected in {directory}],
-	     add the directory to the BUILD_ERROR_COUNTER array.
-	   - After parsing the build log, look for the MAIL_ADMIN variable
-	     which is defined in the XML config file.  If MAIL_ADMIN is
-	     defined, and if we have more than 0 items in the BUILD_ERROR_COUNTER
-	     array, then send an e-mail notification to the MAIL_ADMIN
-	     address with a list of directories where build errors were detected.
+        * common/prettify.pm:
+           - Create an array named BUILD_ERROR_COUNTER.  While parsing the
+             build log, every time we detect [BUILD error detected in {directory}],
+             add the directory to the BUILD_ERROR_COUNTER array.
+           - After parsing the build log, look for the MAIL_ADMIN variable
+             which is defined in the XML config file.  If MAIL_ADMIN is
+             defined, and if we have more than 0 items in the BUILD_ERROR_COUNTER
+             array, then send an e-mail notification to the MAIL_ADMIN
+             address with a list of directories where build errors were detected.
 
-	* common/mail.pm:
-	   - Preliminary e-mail notification support.  Look for a mail program
-	     that supports the "-s Subject" flag, either mail or mailx.
-	   - Send an e-mail message.
-	   - Unix only supported now.  NT support on the way soon.
+        * common/mail.pm:
+           - Preliminary e-mail notification support.  Look for a mail program
+             that supports the "-s Subject" flag, either mail or mailx.
+           - Send an e-mail message.
+           - Unix only supported now.  NT support on the way soon.
 
-	* README: Add little info on e-mail notification.
+        * README: Add little info on e-mail notification.
 
 Wed Aug  7 19:56:57 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -1174,41 +1179,41 @@ Wed Aug  7 19:56:57 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Aug  6 17:38:57 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
-	* configs/autobuild/rumba/Debian_WChar.xml: Removed the "-j 2" for
-	  realclean.
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml: Removed the "-j 2" for
+          realclean.
 
 Tue Aug  6 17:30:46 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC53.xml: Reeanbled exceptions
-	  in this build since the problem with SunOS 53 has been fixed by
-	  adding new patches.
+        * configs/autobuild/danzon/SunOS_SunCC53.xml: Reeanbled exceptions
+          in this build since the problem with SunOS 53 has been fixed by
+          adding new patches.
 
 Sat Aug  3 18:11:14 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/ringil/Legacy.xml:
-	* configs/autobuild/ringil/Unicode.xml: Fixes to use the
-	  msvc_auto_compile.pl properly.
+        * configs/autobuild/ringil/Legacy.xml:
+        * configs/autobuild/ringil/Unicode.xml: Fixes to use the
+          msvc_auto_compile.pl properly.
 
 Sat Aug  3 16:15:06 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/LYNX_PPC.xml:
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
-	  Add psdl_tao binary to the Lynx cross compile build.
-	  The Lynx build was trying to execute the Lynx-compiled psdl_tao
-	  on Solaris, which is bad.
+        * configs/autobuild/ace/LYNX_PPC.xml:
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
+          Add psdl_tao binary to the Lynx cross compile build.
+          The Lynx build was trying to execute the Lynx-compiled psdl_tao
+          on Solaris, which is bad.
 
 Fri Aug  2 20:28:44 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Change scoreboard name to RedHat_GCC_3.1.1
-	  to reflect use of new compiler version.
+        * configs/scoreboard/acetao.xml: Change scoreboard name to RedHat_GCC_3.1.1
+          to reflect use of new compiler version.
 
 Thu Aug  1 09:03:21 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/ringil/Legacy.xml:
-	* configs/autobuild/ringil/Unicode.xml: These builds were using
-	  the pippen script. They now use the msvc_auto_compile.pl script!
+        * configs/autobuild/ringil/Legacy.xml:
+        * configs/autobuild/ringil/Unicode.xml: These builds were using
+          the pippen script. They now use the msvc_auto_compile.pl script!
 
 Thu Aug 01 07:49:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -1220,14 +1225,14 @@ Thu Aug 01 07:49:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jul 30 13:38:47 2002  Jaiganesh Balasubramanian  <jai@doc.ece.uci.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC53.xml:
-	  Changed the settings for exceptions from 1 to 0.
+        * configs/autobuild/danzon/SunOS_SunCC53.xml:
+          Changed the settings for exceptions from 1 to 0.
 
 Mon Jul 29 23:54:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/doc/acetao.xml: Added Doxygen build.
-	* configs/autobuild/doc/driver.sh: Added.
-	* configs/autobuild/doc/Doxygen.xml: Added. First cut at a doxygen autobuild.
+        * configs/scoreboard/doc/acetao.xml: Added Doxygen build.
+        * configs/autobuild/doc/driver.sh: Added.
+        * configs/autobuild/doc/Doxygen.xml: Added. First cut at a doxygen autobuild.
 
 Mon Jul 29 16:25:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -1256,9 +1261,9 @@ Sat Jul 27 14:48:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Jul 26 14:10:54 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Changed
-	  some options in the build setup since they dont make much sense
-	  for the linux environment in which this build runs.
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Changed
+          some options in the build setup since they dont make much sense
+          for the linux environment in which this build runs.
 
 Fri Jul 26 13:24:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -1282,22 +1287,22 @@ Fri Jul 26 13:24:12 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Jul 25 22:56:13 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml: Added the new build to the
-	  scoreboard. Removed the build on toutatis since they are not
-	  running anyway.
+        * configs/scoreboard/acetao.xml: Added the new build to the
+          scoreboard. Removed the build on toutatis since they are not
+          running anyway.
 
 Thu Jul 25 22:20:44 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/beguine/driver_explicit.sh:
-	* configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Yest
-	  another build on beguine.
+        * configs/autobuild/beguine/driver_explicit.sh:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml: Yest
+          another build on beguine.
 
 2002-07-25  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/printaceconfig.pm: Print the contents of
-	  $ACE_ROOT/VERSION and $TAO_ROOT/VERSION.  This is useful
-	  when using the autobuild scripts to build a project
-	  which uses ACE/TAO, but is not ACE/TAO itself.
+        * command/printaceconfig.pm: Print the contents of
+          $ACE_ROOT/VERSION and $TAO_ROOT/VERSION.  This is useful
+          when using the autobuild scripts to build a project
+          which uses ACE/TAO, but is not ACE/TAO itself.
 
 2002-07-24  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -1314,615 +1319,615 @@ Thu Jul 25 22:20:44 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
 2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add WinNT4_BCB5_Static_Debug build.
-	* README: Add documentation for shell command.
+        * configs/scoreboard/acetao.xml: Add WinNT4_BCB5_Static_Debug build.
+        * README: Add documentation for shell command.
 
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Unicode.xml: Explicitly specify build order
-	  for some ACEXML projects.
+        * configs/autobuild/tao/Unicode.xml: Explicitly specify build order
+          for some ACEXML projects.
 
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/nirvana/DLL_Release.xml: Changed the set of tests
-	  getting invoked.
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/nirvana/DLL_Release.xml: Changed the set of tests
+          getting invoked.
 
 2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add WinXP_BCB6_Dynamic_Debug build.
+        * configs/scoreboard/acetao.xml: Add WinXP_BCB6_Dynamic_Debug build.
 
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Borland.xml: Changed to use the new dir option
-	  Craig added.
+        * configs/autobuild/tao/Borland.xml: Changed to use the new dir option
+          Craig added.
 
 2002-07-22      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Borland_wchar.xml:
-	* configs/autobuild/tao/Borland.xml: Added the missing statement
-	  to invoke the second test suite.
+        * configs/autobuild/tao/Borland_wchar.xml:
+        * configs/autobuild/tao/Borland.xml: Added the missing statement
+          to invoke the second test suite.
 
 Mon Jul 22 15:12:25 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Wchar.xml: Explicitly spelled out the
-	  order to compile ACEXML libs.  If this works, we will apply to
-	  other settings.
+        * configs/autobuild/tao/Wchar.xml: Explicitly spelled out the
+          order to compile ACEXML libs.  If this works, we will apply to
+          other settings.
 
 2002-07-22  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* README: Add documentation on software requirements.
-	* command/make.pm: Add a new option "dir=", which changes the working
+        * README: Add documentation on software requirements.
+        * command/make.pm: Add a new option "dir=", which changes the working
           before invoking make.  Needed for Borland make, which does not support
-	  GNU make's -C option.
-	* command/printaceconfig.pm: In addition to the root environment variable,
-	  try looking in $ACE_ROOT when printing out the ACE configuration.
-	  This allows the printaceconfig.pm module to be used on projects
-	  which want to print the ACE configuration, but not build ACE itself.
+          GNU make's -C option.
+        * command/printaceconfig.pm: In addition to the root environment variable,
+          try looking in $ACE_ROOT when printing out the ACE configuration.
+          This allows the printaceconfig.pm module to be used on projects
+          which want to print the ACE configuration, but not build ACE itself.
 
 2002-07-11    Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Borland.xml: Updated Borland build script
-	  to take advantage of Makefile modification.
+        * configs/autobuild/tao/Borland.xml: Updated Borland build script
+          to take advantage of Makefile modification.
 
-	* configs/scoreboard/acetao.xml: Updated the list to include all
-	  the new Win32 builds.
+        * configs/scoreboard/acetao.xml: Updated the list to include all
+          the new Win32 builds.
 
 2002-07-11    Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Wchar.xml:
-	* configs/autobuild/tao/Unicode.xml:
-	* configs/autobuild/tao/Borland.xml:
-	* configs/autobuild/tao/Borland_Wchar.xml: Added new configurations.
-	  Borland builds are still not working right.
+        * configs/autobuild/tao/Wchar.xml:
+        * configs/autobuild/tao/Unicode.xml:
+        * configs/autobuild/tao/Borland.xml:
+        * configs/autobuild/tao/Borland_Wchar.xml: Added new configurations.
+          Borland builds are still not working right.
 
 Wed Jul 10 11:30:24 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/Fuzz.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/DLL_Core.xml: Removed -z 3 flag from cvs
-	  options.  There's no need to use compression.
+        * configs/autobuild/tao/Fuzz.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/DLL_Core.xml: Removed -z 3 flag from cvs
+          options.  There's no need to use compression.
 
 Mon Jul  8 15:44:43 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/guajira/TRU64_CXX.xml: Add . to LD_LIBRARY_PATH to
-	  eliminate DLL_ORB test failure.
+        * configs/autobuild/guajira/TRU64_CXX.xml: Add . to LD_LIBRARY_PATH to
+          eliminate DLL_ORB test failure.
 
 Sun Jul  7 17:48:02 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/guajira/TRU64_CXX.xml: Fix LD_LIBRARY_PATH.
+        * configs/autobuild/guajira/TRU64_CXX.xml: Fix LD_LIBRARY_PATH.
 
 Wed Jul 03 10:11:59 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/driver.bat: Remember to mount disk Z:
-	  if it is not already mounted.
+        * configs/autobuild/nirvana/driver.bat: Remember to mount disk Z:
+          if it is not already mounted.
 
 Tue Jul  2 15:06:19 2002  Jaiganesh Balasubramanian  <jai@doc.ece.uci.edu>
 
-	* configs/scoreboard/acetao.xml:
-	  Removed the entry for the buil Solaris8_FORTE_UP_1
-	  as the build is temporarily stopped.
-	  Will add that entry oce the build starts.
+        * configs/scoreboard/acetao.xml:
+          Removed the entry for the buil Solaris8_FORTE_UP_1
+          as the build is temporarily stopped.
+          Will add that entry oce the build starts.
 
 2002-06-28      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/DLL_Debug.xml: Don't run the release
-	  programs in tests. :)
+        * configs/autobuild/tao/DLL_Debug.xml: Don't run the release
+          programs in tests. :)
 
 2002-06-27      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/DLL_Debug.xml: Enabled testing.
+        * configs/autobuild/tao/DLL_Debug.xml: Enabled testing.
 
 Thu Jun 27 12:02:16 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* command/auto_run_tests.pm (Run): Added a line to substitute \x22
-	  with '"' so we can pass quoted string to sandbox.
+        * command/auto_run_tests.pm (Run): Added a line to substitute \x22
+          with '"' so we can pass quoted string to sandbox.
 
-	* configs/autobuild/nirvana/DLL_Release.xml: Added a path
-	  environment variable so we can run auto_run_tests on Win32.
+        * configs/autobuild/nirvana/DLL_Release.xml: Added a path
+          environment variable so we can run auto_run_tests on Win32.
 
-	  Added commands to invoke auto_run_tests using sandbox.
+          Added commands to invoke auto_run_tests using sandbox.
 
 Thu Jun 27 13:01:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/guajira/TRU64_CXX.xml: Remove -j 2
-	  flag when doing make clean.
+        * configs/autobuild/guajira/TRU64_CXX.xml: Remove -j 2
+          flag when doing make clean.
 
 2002-06-26      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml:
-	* configs/autobuild/tao/Fuzz.xml: Added.
+        * configs/scoreboard/acetao.xml:
+        * configs/autobuild/tao/Fuzz.xml: Added.
 
 2002-06-25      Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/tao/DLL_Core.xml:
-	* configs/autobuild/tao/DLL_Debug.xml:
-	* configs/autobuild/tao/driver.sh:
-	* configs/scoreboard/acetao.xml: Added new build scripts for
-	  tao.doc.wustl.edu.
+        * configs/autobuild/tao/DLL_Core.xml:
+        * configs/autobuild/tao/DLL_Debug.xml:
+        * configs/autobuild/tao/driver.sh:
+        * configs/scoreboard/acetao.xml: Added new build scripts for
+          tao.doc.wustl.edu.
 
 Tue Jun 25 16:34:34 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/DLL_Release.xml: Expanded everything.h
-	  in place in ace/config.h.
+        * configs/autobuild/nirvana/DLL_Release.xml: Expanded everything.h
+          in place in ace/config.h.
 
 Tue Jun 25 15:25:04 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
-	* configs/autobuild/nirvana/DLL_Release.xml:
-	* configs/autobuild/nirvana/driver.bat:
-	* configs/scoreboard/acetao.xml: Added WinXP DLL Release stuff.
+        * configs/autobuild/nirvana/DLL_Release.xml:
+        * configs/autobuild/nirvana/driver.bat:
+        * configs/scoreboard/acetao.xml: Added WinXP DLL Release stuff.
 
 Mon Jun 24 16:08:24 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
-	  Add cvs to PATH.
+        * configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
+          Add cvs to PATH.
 
 Mon Jun 24 00:32:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
-	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
-	  Switch to g++.  The tao_idl binary generated with CC doesn't
-	  like to use CC as the preprocessor in the LYNX cross compile build which
-	  uses g++.
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml:
+        * configs/autobuild/danzon/driver_cross_compile_tao_idl.sh:
+          Switch to g++.  The tao_idl binary generated with CC doesn't
+          like to use CC as the preprocessor in the LYNX cross compile build which
+          uses g++.
 
 Sun Jun 23 15:14:33 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Added
-	* configs/autobuild/danzon/driver_cross_compile_tao_idl.sh: Added
-	* configs/scoreboard/acetao.xml: Added CROSS_COMPILE_TAO_IDL build.
+        * configs/autobuild/danzon/CROSS_COMPILE_TAO_IDL.xml: Added
+        * configs/autobuild/danzon/driver_cross_compile_tao_idl.sh: Added
+        * configs/scoreboard/acetao.xml: Added CROSS_COMPILE_TAO_IDL build.
 
 Thu Jun 20 11:46:17 2002  Carlos O'Ryan  <coryan@atdesk.com>
 
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml:
-	  Set the DISABLE_INTERCEPTORS flag in 'configs', that will stop
-	  auto_run_tests from running tests that are not compiled on this
-	  build.
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+          Set the DISABLE_INTERCEPTORS flag in 'configs', that will stop
+          auto_run_tests from running tests that are not compiled on this
+          build.
 
 Thu Jun 20 14:57:15 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/guajira/TRU64_CXX.xml: Include platform_tru64_cxx.GNU.
+        * configs/autobuild/guajira/TRU64_CXX.xml: Include platform_tru64_cxx.GNU.
 
 Thu Jun 20 14:28:35 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/guajira/driver.sh: Add some more config options,
-	  taken from crontab for old-style daily build.
+        * configs/autobuild/guajira/driver.sh: Add some more config options,
+          taken from crontab for old-style daily build.
 
 Tue Jun 18 23:50:52 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/toutatis/*: Added.
-	* configs/scoreboard/acetao.xml: Add RedHat_IA64_GCC3.1 build.
+        * configs/autobuild/toutatis/*: Added.
+        * configs/scoreboard/acetao.xml: Add RedHat_IA64_GCC3.1 build.
 
 Tue Jun 18 15:40:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/guajira/*: Added.
-	* configs/scoreboard/acetao.xml: Add TRU64_CXX build.
+        * configs/autobuild/guajira/*: Added.
+        * configs/scoreboard/acetao.xml: Add TRU64_CXX build.
 
 Tue Jun 18 15:06:17 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/check_compiler.pm: Add check for cxx compiler.
+        * command/check_compiler.pm: Add check for cxx compiler.
 
 Tue Jun 18 02:12:36 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* README:  Add lots of information.
+        * README:  Add lots of information.
 
 Wed May 29 14:35:37 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/charanga/Debian_NoInterceptors.xml: Added.
-	* configs/autobuild/charanga/driver_no_interceptors.sh: Added.
-	* configs/scoreboard/acetao.xml: Add Debian_NoInterceptors build.
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml: Added.
+        * configs/autobuild/charanga/driver_no_interceptors.sh: Added.
+        * configs/scoreboard/acetao.xml: Add Debian_NoInterceptors build.
 
 Wed May 29 02:11:29 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Clean up names for RedHat builds.
+        * configs/scoreboard/acetao.xml: Clean up names for RedHat builds.
 
 Tue May 28 23:30:04 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/sirion/Full.xml: Add "clean" and "index" to
-	  process_logs directive.
+        * configs/autobuild/sirion/Full.xml: Add "clean" and "index" to
+          process_logs directive.
 
 Tue May 28 21:18:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/rumba/driver_gcc_304.sh: Added.
-	* configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Added.
-	* configs/scoreboard/acetao.xml: Add Debian_GCC_3.0.4 build.
+        * configs/autobuild/rumba/driver_gcc_304.sh: Added.
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml: Added.
+        * configs/scoreboard/acetao.xml: Add Debian_GCC_3.0.4 build.
 
 Tue May 28 20:18:23 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/tango/driver_debian_noinline.sh: Added.
-	* configs/autobuild/tango/Debian_NoInline.xml: Added.
-	* configs/scoreboard/acetao.xml: Add Debian_NoInline build.
+        * configs/autobuild/tango/driver_debian_noinline.sh: Added.
+        * configs/autobuild/tango/Debian_NoInline.xml: Added.
+        * configs/scoreboard/acetao.xml: Add Debian_NoInline build.
 
 Fri May 24 16:06:57 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/check_compiler.pm: Add checks for compiler binaries named
-	 "gcc-3.0" or "gcc-3.1" on Debian.
-	* configs/autobuild/rumba/Debian_WChar.xml: Added.
-	* configs/autobuild/rumba/driver.sh: Added.
-	* configs/scoreboard/acetao.xml: Added Debian_WChar_GCC_3.1 build.
+        * command/check_compiler.pm: Add checks for compiler binaries named
+         "gcc-3.0" or "gcc-3.1" on Debian.
+        * configs/autobuild/rumba/Debian_WChar.xml: Added.
+        * configs/autobuild/rumba/driver.sh: Added.
+        * configs/scoreboard/acetao.xml: Added Debian_WChar_GCC_3.1 build.
 
 Fri May 24 14:55:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/balar/driver_minimu.sh: Added.
-	* configs/autobuild/balar/Debian_Minimu.xml: Added.
-	* configs/scoreboard/acetao.xml: Add Debian_Minimum build.
+        * configs/autobuild/balar/driver_minimu.sh: Added.
+        * configs/autobuild/balar/Debian_Minimu.xml: Added.
+        * configs/scoreboard/acetao.xml: Add Debian_Minimum build.
 
 Fri May 24 01:28:25 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/sirion/driver.sh: Added.
-	* configs/autobuild/sirion/Full.xml: Import Debian_Full build for old scoreboard.
-	* configs/autobuild/scoreboard/acetao.xml: Add Debian_Full build.
+        * configs/autobuild/sirion/driver.sh: Added.
+        * configs/autobuild/sirion/Full.xml: Import Debian_Full build for old scoreboard.
+        * configs/autobuild/scoreboard/acetao.xml: Add Debian_Full build.
 
 Thu May 23 22:55:21 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Added Debian_Minimum_Static build.
+        * configs/scoreboard/acetao.xml: Added Debian_Minimum_Static build.
 
 Thu May 23 21:53:41 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/check_compiler.pm: Add checks for Borland and MSVC++.
+        * command/check_compiler.pm: Add checks for Borland and MSVC++.
 
 Thu May 23 21:33:16 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/charanga/driver.sh: Added.
-	* configs/autobuild/charanga/Debian_Minimum_Static.xml: Added.
+        * configs/autobuild/charanga/driver.sh: Added.
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml: Added.
 
 Sun May 19 23:38:39 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/auto_run_tests.pm: Add an extra space for each
-	  argument when specifying multiple configurations with
-	  the "-Config" flag.
+        * command/auto_run_tests.pm: Add an extra space for each
+          argument when specifying multiple configurations with
+          the "-Config" flag.
 
 Sat May 18 19:36:17 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Move STATIC
-	  to "configs" section.
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	  Move MINIMUM to "configs" section.
+        * configs/autobuild/beguine/Redhat_7.1_Full.xml: Move STATIC
+          to "configs" section.
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+          Move MINIMUM to "configs" section.
 
 Fri May 17 13:29:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/LYNX_PPC.xml: Comment out
-	  auto_run_tests.  They are built with a LYNX cross compiler
-	  on Solaris, so cannot actually run under Solaris.
+        * configs/autobuild/ace/LYNX_PPC.xml: Comment out
+          auto_run_tests.  They are built with a LYNX cross compiler
+          on Solaris, so cannot actually run under Solaris.
 
 Thu May 16 21:35:35 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/beguine/Redhat_7.1_Full.xml: Add STATIC
-	  to "auto_run_tests" command.  Thanks to
-	  Don Hinton <dhinton@ieee.org>.
+        * configs/autobuild/beguine/Redhat_7.1_Full.xml: Add STATIC
+          to "auto_run_tests" command.  Thanks to
+          Don Hinton <dhinton@ieee.org>.
 
 Thu May 16 18:10:51 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/driver_lynx_ppc.sh: Put Lynx compiler in PATH.
+        * configs/autobuild/ace/driver_lynx_ppc.sh: Put Lynx compiler in PATH.
 
 Wed May 15 18:22:52 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/driver_lynx_ppc.sh: Added.
-	* configs/autobuild/ace/LYNX_PPC.xml: Added.
-	* configs/scoreboard/acetao.xml: Added LYNX_PPC build.
+        * configs/autobuild/ace/driver_lynx_ppc.sh: Added.
+        * configs/autobuild/ace/LYNX_PPC.xml: Added.
+        * configs/scoreboard/acetao.xml: Added LYNX_PPC build.
 
 Wed May 15 17:02:47 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	  Run MINIMUM tests.
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+          Run MINIMUM tests.
 
 Sun May 12 16:01:35 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml: Changed the beguine core build as
-	  Full build.
+        * configs/scoreboard/acetao.xml: Changed the beguine core build as
+          Full build.
 
 Sun May 12 15:50:39 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/beguine/Redhat_7.1_Core.xml: Renamed it as a
-	  Full build. This build is not a core build.
+        * configs/autobuild/beguine/Redhat_7.1_Core.xml: Renamed it as a
+          Full build. This build is not a core build.
 
-	* configs/autobuild/beguine/Redhat_7.1_Full.xml: A full build on
-	  beguine.doc.
+        * configs/autobuild/beguine/Redhat_7.1_Full.xml: A full build on
+          beguine.doc.
 
-	* configs/autobuild/beguine/driver.sh: Start the right build.
+        * configs/autobuild/beguine/driver.sh: Start the right build.
 
 Sun May 12 15:41:29 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml: Do
-	  not run the tests. There is no point in running the test since
-	  most of the test depends on some policy. We can run the test if
-	  we have a seperate build list created. Till then..
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml: Do
+          not run the tests. There is no point in running the test since
+          most of the test depends on some policy. We can run the test if
+          we have a seperate build list created. Till then..
 
 Thu May  9 19:55:34 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/scoreboard/acetao.xml: Changed CC51 build to CC53.
+        * configs/scoreboard/acetao.xml: Changed CC51 build to CC53.
 
 Thu May  9 19:23:45 2002  Balachandran Natarajan  <bala@cs.wustl.edu>
 
-	* configs/autobuild/danzon/SunOS_SunCC51.xml: Removed this build
-	  of the scoreboard since the compiler is busted.
+        * configs/autobuild/danzon/SunOS_SunCC51.xml: Removed this build
+          of the scoreboard since the compiler is busted.
 
-	* configs/autobuild/danzon/SunOS_SunCC53.xml: New build in places
-	  of CC51. SSL has been disabled for the timebeing. Need to see
-	  how to run egd for that. My guess is that it should be started
-	  in driver.sh. Once this build settles down will do that.
+        * configs/autobuild/danzon/SunOS_SunCC53.xml: New build in places
+          of CC51. SSL has been disabled for the timebeing. Need to see
+          how to run egd for that. My guess is that it should be started
+          in driver.sh. Once this build settles down will do that.
 
-	* configs/autobuild/danzon/driver.sh: Changed the compiler that
-	  needs to be used.
+        * configs/autobuild/danzon/driver.sh: Changed the compiler that
+          needs to be used.
 
 Thu May  9 22:27:26 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/beguine/*: Set LD_LIBRARY_PATH so that /usr/local/lib
-	  comes first.  This is necessary to pick up the version of libstdc++ that
-	  comes with gcc 2.95.3 which is installed in /usr/local/lib.
+        * configs/autobuild/beguine/*: Set LD_LIBRARY_PATH so that /usr/local/lib
+          comes first.  This is necessary to pick up the version of libstdc++ that
+          comes with gcc 2.95.3 which is installed in /usr/local/lib.
 
 Wed May  8 23:02:44 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/beguine/driver_no_ami.sh:
-	* configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
-	* configs/scoreboard/acetao.xml:
-	  Add a build with no AMI, no RT-CORBA, no Messaging.
+        * configs/autobuild/beguine/driver_no_ami.sh:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/scoreboard/acetao.xml:
+          Add a build with no AMI, no RT-CORBA, no Messaging.
 
 Tue May  7 00:21:32 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Remove space in name of new beguine build.
+        * configs/scoreboard/acetao.xml: Remove space in name of new beguine build.
 
 Tue May  7 00:11:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add new beguine build to scoreboard.
+        * configs/scoreboard/acetao.xml: Add new beguine build to scoreboard.
 
 Mon May  6 17:46:58 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/beguine/*: Add beguine build for Redhat_7.1_Core.
+        * configs/autobuild/beguine/*: Add beguine build for Redhat_7.1_Core.
 
 Fri May  3 00:15:05 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/tango/driver.sh: Put /pkg/gnu2k1/bin
-	  in the PATH so that gcc 2.95.3 is used instead of
-	  gcc 2.95.1.
+        * configs/autobuild/tango/driver.sh: Put /pkg/gnu2k1/bin
+          in the PATH so that gcc 2.95.3 is used instead of
+          gcc 2.95.1.
 
 Thu May  2 02:22:15 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/driver.sh: Minor fixes
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml: Remove "option" from
-	  auto_run_tests command.
+        * configs/autobuild/ace/driver.sh: Minor fixes
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml: Remove "option" from
+          auto_run_tests command.
 
 Wed May  1 19:07:22 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	* configs/autobuild/maedhros/Core.xml:
-	  Add check_compiler.
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/maedhros/Core.xml:
+          Add check_compiler.
 
 Wed May  1 16:12:06 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/chipper/driver.sh: Minor fixes.
+        * configs/autobuild/chipper/driver.sh: Minor fixes.
 
 Wed May  1 15:15:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/log.pm:  STDOUT was not being redirected properly.
-	  For some reason, this problem only showed up under Solaris cron.
+        * command/log.pm:  STDOUT was not being redirected properly.
+          For some reason, this problem only showed up under Solaris cron.
 
-	* configs/autobuild/chipper/driver.sh:
-	* configs/autobuild/danzon/SunOS_SunCC51.xml:
-	* configs/autobuild/danzon/driver.sh:
-	* configs/autobuild/tango/driver.sh:
+        * configs/autobuild/chipper/driver.sh:
+        * configs/autobuild/danzon/SunOS_SunCC51.xml:
+        * configs/autobuild/danzon/driver.sh:
+        * configs/autobuild/tango/driver.sh:
           Minor fixes to appease Solaris cron.
 
 Wed May  1 04:02:01 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/ace/*: Added
-	* configs/scoreboard/acetao.xml: Added SUNOS_FORTE_UPDATE_1.
+        * configs/autobuild/ace/*: Added
+        * configs/scoreboard/acetao.xml: Added SUNOS_FORTE_UPDATE_1.
 
 Mon Apr 29 22:41:28 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/driver.sh:
-	* configs/autobuild/tango/driver.sh:  Make sure that cvs is in path.
+        * configs/autobuild/danzon/driver.sh:
+        * configs/autobuild/tango/driver.sh:  Make sure that cvs is in path.
 
 Sat Apr 27 17:36:09 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/chipper/driver.sh:
-	* configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
-	* configs/scoreboard/acetao.xml:
-	  Added.
+        * configs/autobuild/chipper/driver.sh:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/scoreboard/acetao.xml:
+          Added.
 
 Sat Apr 27 13:46:12 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/autobuild/danzon/driver.sh:
-	* configs/autobuild/danzon/SunOS_SunCC51.xml:
-	* configs/autobuild/tango/driver.sh:
-	* configs/autobuild/tango/SunOS_GCC_2_95.xml:
-	  Added.
+        * configs/autobuild/danzon/driver.sh:
+        * configs/autobuild/danzon/SunOS_SunCC51.xml:
+        * configs/autobuild/tango/driver.sh:
+        * configs/autobuild/tango/SunOS_GCC_2_95.xml:
+          Added.
 
-	* command/check_compiler.pm: Put status messages in Config
-	  section.
+        * command/check_compiler.pm: Put status messages in Config
+          section.
 
 Fri Apr 26 17:50:31 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* configs/scoreboard/acetao.xml: Add SunOS_SunCC51 build.
+        * configs/scoreboard/acetao.xml: Add SunOS_SunCC51 build.
 
 Fri Apr 26 15:19:20 UTC 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* autobuild.pl: Add require command::check_compiler;
+        * autobuild.pl: Add require command::check_compiler;
 
 Wed Apr 17 16:26:21 2002  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* command/check_compiler.pm: Added.
+        * command/check_compiler.pm: Added.
 
 Fri Dec 28 20:21:19 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	  Add index generation to these builds.
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+          Add index generation to these builds.
 
 Wed Dec 26 12:47:38 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/amrod/driver.sh:
-	* configs/autobuild/amrod/ImplicitTemplates.xml:
-	  Add configuration for the amrod/ImplicitTemplates build.
+        * configs/autobuild/amrod/driver.sh:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+          Add configuration for the amrod/ImplicitTemplates build.
 
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	  Re-order the process_logs and log commands.
+        * configs/autobuild/curufin/SingleThreaded.xml:
+          Re-order the process_logs and log commands.
 
 Mon Dec 24 12:47:55 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	  Add LD_LIBRARY_PATH.
+        * configs/autobuild/curufin/SingleThreaded.xml:
+          Add LD_LIBRARY_PATH.
 
 Mon Dec 24 10:28:41 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/curufin/driver.sh:
-	* configs/autobuild/curufin/SingleThreaded.xml:
-	  Add configuration and driver file for the single threaded
-	  build.
+        * configs/autobuild/curufin/driver.sh:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+          Add configuration and driver file for the single threaded
+          build.
 
 Wed Dec 19 08:26:37 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/Core.xml:
-	  Changed configuration to run a full build.
+        * configs/autobuild/maedhros/Core.xml:
+          Changed configuration to run a full build.
 
 Mon Dec 17 18:20:05 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/driver.sh:
-	  Fixed LD_LIBRARY_PATH setting.
+        * configs/autobuild/maedhros/driver.sh:
+          Fixed LD_LIBRARY_PATH setting.
 
 Mon Dec 17 16:17:28 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* command/cvs.pm:
-	* command/sam.pm:
-	* command/auto_run_tests.pm:
-	* command/printaceconfig.pm:
-	* command/process_logs.pm:
-	  Consistently use the 'root' variable for the directory
-	  immediately above ACE_wrappers (or whatever the project name
-	  is).
-	  Used (!-d || !-r) to detect if a directory is both readable and
-	  really a directory.
+        * command/cvs.pm:
+        * command/sam.pm:
+        * command/auto_run_tests.pm:
+        * command/printaceconfig.pm:
+        * command/process_logs.pm:
+          Consistently use the 'root' variable for the directory
+          immediately above ACE_wrappers (or whatever the project name
+          is).
+          Used (!-d || !-r) to detect if a directory is both readable and
+          really a directory.
 
-	* command/log.pm:
-	* command/process_logs.pm:
-	  Fixed inconsistencies in the management of the log_file
-	  variable, for log.pm it could be an absolute path, for
-	  process_logs.pm it needed to be a relatively path.  Now it is
-	  always relative.
+        * command/log.pm:
+        * command/process_logs.pm:
+          Fixed inconsistencies in the management of the log_file
+          variable, for log.pm it could be an absolute path, for
+          process_logs.pm it needed to be a relatively path.  Now it is
+          always relative.
 
-	* configs/autobuild/maedhros/driver.sh:
-	  Removed dead code. Dump autobuild.pl output to /dev/null, only
-	  used when debugging.
+        * configs/autobuild/maedhros/driver.sh:
+          Removed dead code. Dump autobuild.pl output to /dev/null, only
+          used when debugging.
 
-	* configs/autobuild/maedhros/Core.xml:
-	* configs/autobuild/sirion/Full.xml:
-	* configs/autobuild/ringil/Test.xml:
-	  Adjusted all XML files to the new variables, including changes
-	  in semantics.
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/sirion/Full.xml:
+        * configs/autobuild/ringil/Test.xml:
+          Adjusted all XML files to the new variables, including changes
+          in semantics.
 
 Mon Dec 17 10:48:46 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/Core.xml:
-	  Run the move, prettify and clean stuff in a single command.
+        * configs/autobuild/maedhros/Core.xml:
+          Run the move, prettify and clean stuff in a single command.
 
 Sun Dec 16 06:00:42 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/driver.sh:
-	* configs/autobuild/maedhros/Core.xml:
-	  Use process_logs to install the logs.
+        * configs/autobuild/maedhros/driver.sh:
+        * configs/autobuild/maedhros/Core.xml:
+          Use process_logs to install the logs.
 
 Sat Dec 15 09:22:33 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/driver.sh:
-	  Minor changes to make debugging easier.
+        * configs/autobuild/maedhros/driver.sh:
+          Minor changes to make debugging easier.
 
 Fri Dec 14 11:16:12 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* make_pretty.pl (makefile_compiler_output):
-	  In print_summary(): use $_ only if it is defined.
+        * make_pretty.pl (makefile_compiler_output):
+          In print_summary(): use $_ only if it is defined.
 
 Wed Dec 12 17:31:19 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/driver.sh:
-	  Changed the build to use gcc-3.0.2 because the compiler on this
-	  platform is busted.
+        * configs/autobuild/maedhros/driver.sh:
+          Changed the build to use gcc-3.0.2 because the compiler on this
+          platform is busted.
 
 Wed Dec 12 16:03:35 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* configs/autobuild/maedhros/driver.sh:
-	  Fixed -i options.
+        * configs/autobuild/maedhros/driver.sh:
+          Fixed -i options.
 
 Wed Dec 12 09:27:49 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* command/log.pm:
-	  Remove unused access to a variable.
+        * command/log.pm:
+          Remove unused access to a variable.
 
-	* configs/autobuild/maedhros/Core.xml:
-	* configs/autobuild/maedhros/driver.sh:
-	  Add configuration files for a Core build on maedhros.ece.uci.edu
+        * configs/autobuild/maedhros/Core.xml:
+        * configs/autobuild/maedhros/driver.sh:
+          Add configuration files for a Core build on maedhros.ece.uci.edu
 
 Tue Dec 11 11:05:16 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* command/make.pm:
-	  Use open() instead of `` to run the subprocess, we have to wait
-	  too long for the output otherwise.
+        * command/make.pm:
+          Use open() instead of `` to run the subprocess, we have to wait
+          too long for the output otherwise.
 
-	* command/sam.pm:
-	  Also remove .*.gnu.depend files.
+        * command/sam.pm:
+          Also remove .*.gnu.depend files.
 
-	* configs/autobuild/sirion/Full.xml:
-	  Do not run samwise, it is not ready for prime time yet.
-	  Use the file_manipulation command to lock the build directory,
-	  we do not want more than one build running at a time.
-	  Run a realclean target before compiling, use -j 2 to speed up
-	  the build.
+        * configs/autobuild/sirion/Full.xml:
+          Do not run samwise, it is not ready for prime time yet.
+          Use the file_manipulation command to lock the build directory,
+          we do not want more than one build running at a time.
+          Run a realclean target before compiling, use -j 2 to speed up
+          the build.
 
 Fri Dec  7 19:36:12 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* autobuild.pl:
-	* command/create_config.pm:
-	  Add new command to generate config.h and platform_macros.GNU
-	  files.  This new command allow us to keep the complete
-	  configuration in a single file.  Still under development, I
-	  don't like the current interface.
+        * autobuild.pl:
+        * command/create_config.pm:
+          Add new command to generate config.h and platform_macros.GNU
+          files.  This new command allow us to keep the complete
+          configuration in a single file.  Still under development, I
+          don't like the current interface.
 
-	* common/simpleparser.pm:
-	  Changed name of the XML tags to match autobuild.pl name.
+        * common/simpleparser.pm:
+          Changed name of the XML tags to match autobuild.pl name.
 
-	* configs/autobuild/sirion/Full.xml:
-	  Use the create_config command.
+        * configs/autobuild/sirion/Full.xml:
+          Use the create_config command.
 
 Fri Dec  7 15:21:57 2001  Carlos O'Ryan  <coryan@uci.edu>
 
-	* README:
-	  Documentation
+        * README:
+          Documentation
 
-	* autobuild.pl:
-	  A script to automatically download, compile and test a module.
+        * autobuild.pl:
+          A script to automatically download, compile and test a module.
 
-	* make_pretty.pl:
-	  A script to format the output of a Win32 or Unix build in HTML.
-	  Also extracts a summary of the problems detected, if any.
+        * make_pretty.pl:
+          A script to format the output of a Win32 or Unix build in HTML.
+          Also extracts a summary of the problems detected, if any.
 
-	* scoreboard.pl:
-	  A script to download multiple build results from several sites
-	  and hosts and show them in a single web page.
+        * scoreboard.pl:
+          A script to download multiple build results from several sites
+          and hosts and show them in a single web page.
 
-	* command/cvs.pm:
-	* command/make.pm:
-	* command/sam.pm:
-	* command/printaceconfig.pm:
-	  Modules to implement the stages in the autobuild.pl script.
+        * command/cvs.pm:
+        * command/make.pm:
+        * command/sam.pm:
+        * command/printaceconfig.pm:
+          Modules to implement the stages in the autobuild.pl script.
 
-	* common/simpleparser.pm:
-	  A simple parser for XML files.
+        * common/simpleparser.pm:
+          A simple parser for XML files.
 
-	* configs/autobuild/sirion/Full.xml:
-	  autobuild.pl configuration for the Full build on
-	  sirion.ece.uci.edu
+        * configs/autobuild/sirion/Full.xml:
+          autobuild.pl configuration for the Full build on
+          sirion.ece.uci.edu
 
-	* configs/scoreboard/acetao.lst:
-	  scoreboard.pl configuration for the ACE+TAO builds.
+        * configs/scoreboard/acetao.lst:
+          scoreboard.pl configuration for the ACE+TAO builds.
 
-	* win32sandbox/ReadMe.txt:
-	* win32sandbox/StdAfx.cpp:
-	* win32sandbox/StdAfx.h:
-	* win32sandbox/sandbox.cpp:
-	* win32sandbox/sandbox.dsp:
-	* win32sandbox/sandbox.dsw:
-	  A wrapper to run tests under tighter control, it avoids popups
-	  when exceptions or faults are detected.  It also can limit the
-	  total time spent by the test or its children.
+        * win32sandbox/ReadMe.txt:
+        * win32sandbox/StdAfx.cpp:
+        * win32sandbox/StdAfx.h:
+        * win32sandbox/sandbox.cpp:
+        * win32sandbox/sandbox.dsp:
+        * win32sandbox/sandbox.dsw:
+          A wrapper to run tests under tighter control, it avoids popups
+          when exceptions or faults are detected.  It also can limit the
+          total time spent by the test or its children.
 
-	* posixsandbox/sandbox.cpp:
-	  Like the previous one, but for POSIX platforms.  Unfortunately
-	  ACE breaks havoc with process groups, so it does not work all
-	  that great.
+        * posixsandbox/sandbox.cpp:
+          Like the previous one, but for POSIX platforms.  Unfortunately
+          ACE breaks havoc with process groups, so it does not work all
+          that great.
