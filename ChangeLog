@@ -1,3 +1,9 @@
+Fri Aug 13 14:07:37 UTC 2004  Don Hinton  <don.hinton@vanderbilt.edu>
+
+        * autobuild.pl (GetVariable):
+          Added code to expand embedded environment variables, both
+          $(var) and %var% are supported.
+
 Fri Aug 13 07:20:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:

@@ -148,7 +148,17 @@ sub getExecutePath {
 sub GetVariable ($)
 {
     my $varname = shift;
-    return $data{VARS}->{$varname};
+    my $value = $data{VARS}->{$varname};
+    if ($value && $value ne '') {
+        # fix the seperators
+        $value =~ s/\\/\//g;
+        # expand environment variables
+        # on windows
+        $value =~ s/%([^%]*)%/$ENV{$1}/ge;
+        # on unix, note they must be in this form ${xxx}
+        $value =~ s'\$\{(\w+)\}'$ENV{$1}'ge;
+    }
+    return $value;
 }
 
 sub RegisterCommand ($$)
