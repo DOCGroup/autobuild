@@ -96,6 +96,11 @@ OTHER NOTES
      This line registers "COMMAND NAME" in a global table used by
      autobuild.pl to locate a command specified in the XML file.
 
+(4)  To run an arbitrary command for which a Perl "command module" has
+     not been written, you can use the "shell" command.  For example, to run
+     the ls command on a Unix system:
+
+     <command name="shell" options="ls" />
 
 MISCELLANEOUS NOTES
 ===================

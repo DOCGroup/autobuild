@@ -1,3 +1,8 @@
+2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
+
+	* configs/scoreboard/acetao.xml: Add WinNT4_BCB5_Static_Debug build.
+	* README: Add documentation for shell command.
+
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/Unicode.xml: Explicitly specify build order 
@@ -9,7 +14,6 @@
 
 2002-07-23  Craig Rodrigues  <crodrigu@bbn.com>
 
-	* README: Add documentation for shell command.
 	* configs/scoreboard/acetao.xml: Add WinXP_BCB6_Dynamic_Debug build.
 
 2002-07-23      Nanbor Wang  <nanbor@cs.wustl.edu>
