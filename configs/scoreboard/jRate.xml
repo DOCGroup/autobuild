@@ -1,0 +1,21 @@
+<scoreboard>
+<preamble>
+<center><h1>jRate Scoreboard</h1></center>
+<hr>
+This is the jRate virtual scoreboard, it shows
+all the OS/platform combinations javart is tested everyday. Currently
+this is only linux.
+<hr>
+</preamble>
+
+<group>
+<name>Linux</name>
+   <build>
+   <name>jRate_hokey</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_jRate/</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+</group>
+
+</scoreboard>
