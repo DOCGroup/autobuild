@@ -183,11 +183,14 @@ E-MAIL NOTIFICATION
 Preliminary e-mail notification support has been added.  It is still a work in
 progress.  Unix supported only for now, NT support on the way.
 
-(1)  Add the following line to the configuration file:
+(1)  Add the following lines to the configuration file:
 
      <variable name="MAIL_ADMIN"  value="myname@mydomain.com" />
+     <variable name="SCOREBOARD_URL"  value="http://mydomain.com/my_scoreboard_url" />
 
-     When build errors are detected, an e-mail will be sent to myname@mydomain.com 
+     When build errors are detected, an e-mail will be sent to myname@mydomain.com,
+     showing an abbreviated list of errors, and referring the recipient to
+     look at SCOREBOARD_URL for a full list of the errors.  
 
 (2)  For Windows NT only, you also need to add the domain name of the SMTP
      server used to send outgoing mail.  You do not need to add this line on

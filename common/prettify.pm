@@ -1004,6 +1004,7 @@ sub SendEmailNotification($)
     my $self = shift;
 
     my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
+    my $scoreboard_url = main::GetVariable('SCOREBOARD_URL');
     my @errors = $self->BuildErrors();
     my @error_text = @{$self->{OUTPUT}[0]->{ERROR_TEXT}};
 
@@ -1046,10 +1047,14 @@ sub SendEmailNotification($)
 
     }
  
+    if ( ! defined $scoreboard_url ) {
+       $scoreboard_url = "";
+    }
+ 
     Mail::send_message($mail_admin, 
                        "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
                        "Errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
-                       "Please check the scoreboard for details.\n\n".
+                       "Please check the scoreboard for details.\n$scoreboard_url\n\n".
                         $errors_string 
                       ); 
 
