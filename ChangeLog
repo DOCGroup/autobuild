@@ -1,3 +1,11 @@
+2002-07-11    Nanbor Wang  <nanbor@cs.wustl.edu>
+
+	* configs/autobuild/tao/Wchar.xml: 
+	* configs/autobuild/tao/Unicode.xml: 
+	* configs/autobuild/tao/Borland.xml: 
+	* configs/autobuild/tao/Borland_Wchar.xml: Added new configurations.  
+	  Borland builds are still not working right.  
+
 Wed Jul 10 11:30:24 2002  Nanbor Wang  <nanbor@cs.wustl.edu>
 
 	* configs/autobuild/tao/Fuzz.xml:
