@@ -1,3 +1,11 @@
+Thu Sep  9 09:21:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Moved the cbx bmake build to the normal scoreboard, Chad fixed the
+          problems in the template, so we should be able to build everything
+          now without errrors.
+
 Fri Sep  3 16:22:19 2004  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
