@@ -1,3 +1,12 @@
+Tue Jul 20 10:47:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+          Only needed to remove makefiles before cvs, not after
+
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+          Added missing MPC generation
+
 Tue Jul 20 10:36:12 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
