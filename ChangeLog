@@ -1,3 +1,11 @@
+Wed Jul 14 10:18:38 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Dropped the "-pedantic" compiler flag.  Once we figure out how
+	  to disable the variadic macro warnings flagged in some of the
+	  ACE APG example code, it will be reenabled.
+
 Mon Jul 12 20:16:34 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Full_Reactors.xml:
