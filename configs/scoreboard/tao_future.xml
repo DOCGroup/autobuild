@@ -23,18 +23,6 @@ decide the migration paths and strategies.
       <build_sponsor>Carlos O'Ryan</build_sponsor>
    </build>
    <build>
-      <name>WinXP_MSVC6_XML_Debug</name>
-      <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   <build>
-      <name>WinXP_MSVC6_Warning_Level_4_Debug</name>
-      <url>http://tao.doc.wustl.edu/bugzilla/W4_Debug</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   <build>
        <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
        <url>http://www.dresystems.com/autobuild_output/no-rtcorba_no-messaging</url>
        <build_sponsor>DRE Systems</build_sponsor>
