@@ -1,3 +1,9 @@
+Mon Mar 22 07:03:07 2004  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+ 	* configs/autobuild/maglor/Static.xml:
+
+	  Removed footprint measures that are done in this build.
+
 Fri Mar 19 07:33:11 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
