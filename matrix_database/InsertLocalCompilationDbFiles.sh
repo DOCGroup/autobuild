@@ -69,6 +69,10 @@ cd $SCRIPT_DIRECTORY
 $SCRIPT_DIRECTORY/$CURRENT_DB_FILES_SCRIPT $DATABASE_NAME > $DB_FILE_DIR/$CURRENT_DB_FILES
 cd $DB_FILE_DIR
 
+if [ -f $FILES_TO_ADD_TO_DB ]; then
+  rm  $FILES_TO_ADD_TO_DB
+fi
+
 # Find the files that are not currently in the database
 for file in `cat $REMOTE_FILE_LIST`
 do

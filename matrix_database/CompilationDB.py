@@ -111,7 +111,7 @@ class CompilationDB:
                      build_instance_id = self.curs.fetchall()[0][0]
                      insert_time = str(self.curs.fetchall()[0][1]) 
 		     dbfile_load_status = (insert_time != "None")
-	        print  "BuildLogLoaded ", query, "build_instance_id=", build_instance_id, "compilation_loaded=", dbfile_load_status 
+	        #print  "BuildLogLoaded ", query, "build_instance_id=", build_instance_id, "compilation_loaded=", dbfile_load_status 
                 return dbfile_load_status, build_instance_id
 
         def GetBuildId(self, build_name):

@@ -1,3 +1,17 @@
+Mon Dec 27 21:08:56 CST 2004  Yan Dai <dai_y@ociweb.com>
+
+        * testmatrix/GenerateTestMatrix.py:
+          Fixed missing includes.
+        
+        * matrix_database/TestPlatform.py:
+          Merged previous testmatrix/Platform.py to this script.
+
+        * matrix_database/InsertLocalCompilationDbFiles.sh:
+          Cleaned files_to_add_to_DB before appending to the file. 
+
+        * matrix_database/CompilationDB.py:
+          Commented log message in BuildLogLoaded().
+
 Thu Dec 23 12:40:06 CST 2004  Trevor Fields  <fields_t@ociweb.com>
 
         * testmatrix/GenerateTestMatrix.py:
