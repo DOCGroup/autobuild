@@ -1,3 +1,15 @@
+Mon Dec 15 20:35:00 UTC 2003  Gautam Thaker  <gthaker@atl.lmco.com>
+
+        Please send all questions regarding this update to Jason Cohen
+        jcohen@atl.lmco.com
+
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+
+          Corrected check_compiler options as per Johnny Willemsen's
+          comments.
+
 Mon Dec 15 11:39:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Borland.xml:
