@@ -198,7 +198,7 @@ all the OS/platform combinations ACE is tested everyday.
 	<build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
       </build>
       <build>
-         <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode</name>
+         <name>Win2K_BCB6_Pro_Dynamic_Debug_Unicode(MPC)</name>
          <url>http://www.dre.vanderbilt.edu/~willemsenj/BCB6ddu</url>
          <build_sponsor>Remedy IT</build_sponsor>
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
