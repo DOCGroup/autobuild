@@ -24,7 +24,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-openbsd-pthread.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_openbsd_pthread.GNU\n\ndebug=0\nexceptions=0\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\n#ssl=1\n'" />
-    <command name="print_os_verson" />
+    <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
