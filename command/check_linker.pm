@@ -55,6 +55,9 @@ sub Run ($)
     if(lc $linker eq "ld"){
         system("ld -v");
     }
+    if(lc $linker eq "ilink32"){
+        system("ilink32 -v");
+    }
     else{
         print "ERROR: I cannot figure out what linker you are ";
         print "using!!\nSee check_linker.pm for more details.\n"; 
