@@ -153,12 +153,6 @@ all the OS/platform combinations ACE is tested everyday.
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
-         <name>WinXP_CBuilderX_Dynamic_Debug_Unicode</name>
-         <url>http://www.dre.vanderbilt.edu/~remedynl/CBXddu</url>
-         <build_sponsor>Remedy IT</build_sponsor>
-	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      </build>
-      <build>
          <name>WinXP_BCB6_Pro_Dynamic_Release_Unicode</name>
          <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6dru</url>
          <build_sponsor>Remedy IT</build_sponsor>
@@ -182,23 +176,17 @@ all the OS/platform combinations ACE is tested everyday.
           <build_sponsor>Remedy IT</build_sponsor>
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
-        <build>
-            <name>WinXP_MingW_GCC_3_2_3_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MinGW</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_MingW_GCC_3_2_3_Static</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWStatic</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-     <build>
+      <build>
+          <name>WinXP_MingW_GCC_3_2_3_Static</name>
+          <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWStatic</url>
+          <build_sponsor>Remedy IT</build_sponsor>
+          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      </build>
+      <build>
          <name>WinXP_VisualStudio8_Beta_2</name>
          <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
          <build_sponsor>Remedy IT</build_sponsor>
          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
+      </build>
 </group>
 </scoreboard>
