@@ -39,7 +39,7 @@
  <!-- Uses ACE.mwc -->
  <command name="shell"                 options="cd ACE_wrappers; bin/mwc.pl -recurse=TAO,vc7_nightly.mwc -make_coexistence" />
  <!-- Uses TAO/TAO.mwc -->
- <command name="shell"                 options="cd ACE_wrappers/TAO; ../bin/mwc.pl -recurse=TAOACE.mwc -make_coexistence" />
+ <command name="shell"                 options="cd ACE_wrappers/TAO; ../bin/mwc.pl -recurse=TAOACE.mwc,CIAO -make_coexistence" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />
