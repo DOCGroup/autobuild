@@ -16,6 +16,7 @@ decide the migration paths and strategies.
       <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/ace_SUNOS_FORTE_UPDATE_1_newbuild</url>
       <build_sponsor>Washington University</build_sponsor>
       <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
 </group>
 
 <group>

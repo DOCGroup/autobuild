@@ -1,3 +1,11 @@
+Mon Apr 26 12:26:51 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao_future.xml:
+
+	  Added missing "</build>" ending tag to SunOS_FORTE_UP_1 build
+	  entry.  This should address a problem where corresponding HTML
+	  for this XML was not generated correctly.
+
 Mon Apr 26 12:16:36 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* common/integratedparser.pm:
