@@ -1,6 +1,9 @@
 cd ..\..\..\
 start c:\putty\pageant.exe c:\putty\privatenokey
 sleep 4
+del D:\bcb6d\.disable
+del D:\BCB6ddwchar\.disable
+del D:\BCB6dr\.disable
 set CVS_RSH=plink
 cvs -d :ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
 cd configs\autobuild\remedynl
