@@ -14,9 +14,9 @@ Irvine</a>, <a href="http://www.isis.vanderbilt.edu">Vanderbilt University</a>,
 <a href="http://www.hunleth.com/~acebuild/">hunleth.com</a>,
 <a href="http://www.rtlogic.com/">RT Logic!</a>,
 <a href="http://www.riverace.com/">Riverace Corporation</a>,
-<a href="http://www.prismtechnologies.com/">PrismTech</a>
-<a href="http://www.dresystems.com">DRE Systems</a>,
-<a href="http://www.waei.net">WAEI</a>,
+<a href="http://www.prismtechnologies.com/">PrismTech</a>,
+<a href="http://www.dresystems.com">DRE Systems</a>, and
+<a href="http://www.waei.net">WAEI</a>.
 
 <p>
 If you'd like to contribute builds to our virtual
@@ -307,6 +307,18 @@ here</a>
         <build>
             <name>RH8_GCC32_No_RTCORBA_No_Messaging</name>
             <url>http://www2.dresystems.com:8090/autobuild_output/no-rtcorba_no-messaging</url>
+            <build_sponsor>DRE Systems</build_sponsor>
+            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+        </build>
+        <build>
+            <name>SKOLL_1</name>
+            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_1</url>
+            <build_sponsor>DRE Systems</build_sponsor>
+            <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
+        </build>
+        <build>
+            <name>SKOLL_2</name>
+            <url>http://www2.dresystems.com:8090/autobuild_output/skoll_2</url>
             <build_sponsor>DRE Systems</build_sponsor>
             <build_sponsor_url>http://www.dresystems.com</build_sponsor_url>
         </build>

@@ -1,3 +1,13 @@
+Mon Mar 10 19:41:10 UTC 2003  Don Hinton  <dhinton@ieee.org>
+
+	* configs/autobuild/dresystems/driver_local_scoreboard.sh:
+	* configs/autobuild/dresystems/local_scoreboard.xml:
+	* configs/autobuild/dresystems/driver_skoll_1.sh:
+	* configs/autobuild/dresystems/driver_skoll_2.sh:
+	* configs/autobuild/dresystems/skoll_1.xml:
+	* configs/autobuild/dresystems/skoll_2.xml:
+	* configs/scoreboard/acetao.xml: Added new new builds.	
+
 Mon Mar 10 11:31:45 2003  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/scoreboard/acetao.xml: Added a FreeBSD_5, ACE only build
