@@ -21,17 +21,26 @@
     <command name="log"               options="ON" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n\n#define ACE_HAS_EVENT_POLL 1\n\n#define ACE_HAS_WCHAR 1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=0\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\nxt_reactor=1\nfl_reactor=0\ntk_reactor=1\nqt_reactor=0\ngtk_reactor=1\noptimize=1\ndebug=0\ninline=0\n\n# Override -Wno-uninitiialized to verify that uninitialized variable\n# warnings actually work properly when exception handling is\n# enabled in g++ 3.3.\n\nCCFLAGS += -Wuninitialized\n\n# Perform some stricter C/C++ checking using the -pedantic flag, but\n# disable the long long warnings since we need to support that type\n# in ACE/TAO.\nCCFLAGS += -pedantic -Wno-long-long -Wwrite-strings -Wcast-align\n\nOCFLAGS=-O\n\n\n# For <linux/eventpoll.h>\nCPPFLAGS += -I/usr/src/linux/include\n\n# For QT headers\nPLATFORM_QT_CPPFLAGS = -I/usr/include/qt\n\n# For TK headers\nPLATFORM_TK_CPPFLAGS = -I/usr/include/tcl8.3\n\n# For TCL library\nPLATFORM_TK_LIBS += -ltk8.3 -ltcl8.3\n\n# Additional XtReactor flags\nPLATFORM_XT_LIBS += -lXm\n\n'" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
-
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqt=1\nxt_reactor=1'" />
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="shell"              options="find ./ -name 'GNUmake*' | xargs rm"  />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO -hierarchy -make_coexistence" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc -hierarchy -make_coexistence" />
 
-    <command name="make"              options="-k reverseclean" />
-    <command name="make"              options="-k -C TAO reverseclean" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -hierarchy -make_coexistence" />
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO/CCF" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO/CIDLC" />
 
     <command name="auto_run_tests"    options="" />
     <command name="process_logs"      options="clean" />
@@ -39,5 +48,4 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-
 </autobuild>
