@@ -30,11 +30,11 @@
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-j 4 -C ace" />
-    <command name="make"              options="-j 4 -C apps/gperf/src" />
-    <command name="make"              options="-j 4 -C TAO/tao" />
-    <command name="make"              options="-j 4 -C TAO/TAO_IDL" />
-    <command name="make"              options="-j 4 -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -j 4 -C ace" />
+    <command name="make"              options="-k -j 4 -C apps/gperf/src" />
+    <command name="make"              options="-k -j 4 -C TAO/tao" />
+    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 4 -C TAO/orbsvcs/orbsvcs" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

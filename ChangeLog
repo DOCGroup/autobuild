@@ -1,3 +1,10 @@
+Fri Apr 25 06:41:24 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/SingleThreaded.xml: 
+	* configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+	* configs/autobuild/tango_isis/Debian_Core.xml:
+	* configs/autobuild/tango_isis/Full.xml: Cosmetic fixes.
+
 Wed Apr 23 16:47:38 2003  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Correctly URLs for the NT4 BCB5 and

@@ -28,8 +28,8 @@
 
     <command name="make"              options="-k reverseclean" />
     <command name="make"              options="-k -C TAO reverseclean" />
-    <command name="make"              options="-j 2 -k" />
-    <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-k -j 2 -k" />
+    <command name="make"              options="-k -j 2 -k -C TAO" />
 
     <command name="auto_run_tests"    options="" />
 
