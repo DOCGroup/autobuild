@@ -10,6 +10,14 @@ this is only linux.
 
 <group>
 <name>Linux</name>
+
+   <build>
+   <name>Facet-correlation_filter</name>
+   <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/correlation_filter</url>
+   <build_sponsor>Washington University</build_sponsor>
+   <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
+   </build>
+
    <build>
    <name>Facet-consumer_dispatch</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/consumer_dispatch</url>
@@ -17,12 +25,14 @@ this is only linux.
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
 
+   <!-- this build isn't setup right, it needs another feature enabled
    <build>
    <name>Facet-eventtype</name>
    <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/hokey_facet/eventtype/</url>
    <build_sponsor>Washington University</build_sponsor>
    <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
+   -->
 
    <build>
    <name>Facet-eventvector</name>
