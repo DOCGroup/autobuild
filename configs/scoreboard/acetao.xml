@@ -196,6 +196,13 @@
              <name>WinXP_XML_Debug</name>
              <url>http://tao.doc.wustl.edu/bugzilla/XML_Debug</url>
          </build>
+    </group>    
+    <group>
+         <name>VxWorks</name>
+         <build>
+             <name>SunOS_5.8_GCC_2.96_(rtlogic.com)</name>
+             <url>http://www.rtlogic.com/acetao</url>
+         </build>
     </group>
 <!--    <group>
          <name>TRU64_Unix</name>

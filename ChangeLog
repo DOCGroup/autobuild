@@ -1,3 +1,8 @@
+Tue Dec  6 15:48:41 UTC 2002  Don Hinton  <dhinton@ieee.org>
+
+	* configs/scoreboard/acetao.xml: Added SunOS_5.8_GCC_2.96
+	  VxWorks build maintained by Rob Andzik <andzik@rtlogic.com>.
+
 Fri Dec  6 09:57:3 UTC 2002  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tao/Borland_wchar.xml:
