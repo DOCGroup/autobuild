@@ -1,3 +1,13 @@
+Sun May  9 11:30:21 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+          No need anymore to remove the GNUMakefiles after a cvs checkout, there
+          are no files in cvs anymore. Make sure that we do a realclean at the moment
+          there are makefiles.
+
 Fri May  7 23:40:38 2004  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/driver.sh (SSL_EGD_FILE):
