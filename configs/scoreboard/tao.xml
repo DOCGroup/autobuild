@@ -113,6 +113,12 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
+      <name>SLES_9_IA64_NoInline</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/Itanium_NoInline/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
       <name>ATD_Build</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ATD_Build</url>
       <build_sponsor>ATD</build_sponsor>
