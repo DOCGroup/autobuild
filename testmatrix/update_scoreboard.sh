@@ -54,7 +54,7 @@ function update_local_scoreboard()
   BUILD_LIST=$TEST_MATRIX_DIR/ace_future-list
   TEST_MATRIX=ace_future_detailed
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ace_future.xml > $BUILD_LIST
-  ./buildMatrix $BUILD_LIST $TEST_MATRIX
+  ./buildMatrix 0 $BUILD_LIST $TEST_MATRIX
 
 
   BUILD_LIST=$TEST_MATRIX_DIR/tao-list
@@ -66,7 +66,7 @@ function update_local_scoreboard()
   BUILD_LIST=$TEST_MATRIX_DIR/tao_future-list
   TEST_MATRIX=tao_future_detailed
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao_future.xml > $BUILD_LIST
-  ./buildMatrix $BUILD_LIST $TEST_MATRIX
+  ./buildMatrix 0 $BUILD_LIST $TEST_MATRIX
 
 
   cp -f matrix.css $LOG_DIR/matrix.css
