@@ -1,12 +1,11 @@
-
 <autobuild>
     <configuration>
 
-        <variable name="root" value="/usr/users/tao/ultra5/Overnight_Builds/TAO13/lynxos" />
-        <variable name="log_file" value="build.txt" />
+        <variable name="root" value="/usr/users/tao/ultra5/doc_scoreboard/TAO14/lynxos_gcc295/standard" />
+        <variable name="log_file" value="test_results_run_on_lynxosx86.txt" />
         <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos/tests_on_lynxos" />
-        <variable name="MAIL_ADMIN" value="epm@prismtechnologies.com" />
-        <variable name="project_root" value="tao13" />
+        <variable name="MAIL_ADMIN" value="sma@ultra5.prismtechnologies.com" />
+        <variable name="project_root" value="tao14" />
 
     </configuration>
 

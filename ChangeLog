@@ -1,3 +1,11 @@
+Mon Aug  2 10:24:00 2004  Simon Massey  <simon.massey@prismtechnologies.com>
+
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_PRETTIFY_DocGroup.xml
+        * configs/autobuild/prism/SOLARIS8_GCC295_Standard_Static_for_LynxOS_DocGroup.xml
+
+          Changed CVS build and prism tech internal build accounts
+
 Mon Aug  2 08:04:06 2004  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/remedynl/gandalf_cbxddace.xml:
