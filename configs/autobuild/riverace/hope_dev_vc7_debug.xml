@@ -2,13 +2,12 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers" />
-        <environment name="PATH"         value="C:\ACE_wrappers\bin" type="prefix" />
-        <environment name="WINMAKE_CONFIGS" value="Debug|Win32" />
+        <environment name="PATH"         value="C:Program Files\Microsoft Visual Studio .NET\Common7\IDE;C:\ACE_wrappers\bin" type="prefix" />
 
         <variable name="root"            value="C:\ace\ACE_wrappers" />
         <variable name="project_root"    value="." />
 	<variable name="log_file"        value="vc7_debug.log" />
-        <variable name="log_root"        value="g:\build_logs\dev" />
+        <variable name="log_root"        value="g:\build_logs\dev\vc7_debug" />
         <variable name="name"            value="WinXP VC.NET Debug" />
     </configuration>
 
@@ -24,15 +23,14 @@
     <command name="print_os_version" />
     <command name="print_ace_config" />
 
-    <command name="generate_makefile" options="-type vc7 dirs=ace,tests" />
-    <command name="win32make"         options="-msvc7 -recurse ace tests" />
+    <command name="generate_workspace" options="-type vc7 ace/ace.mwc" />
+    <command name="generate_workspace" options="-type vc7 tests/tests.mwc" />
+    <command name="vc7make"           options="/rebuild debug ace/ace.sln" />
+    <command name="vc7make"           options="/rebuild debug tests/tests.sln" />
+    <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=1 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
-
-
-
-

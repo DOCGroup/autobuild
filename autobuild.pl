@@ -135,6 +135,8 @@ require command::status;
 require command::win32make;
 require command::rem_sems;
 require command::generate_makefile;
+require command::generate_workspace;
+require command::vc7make;
 
 #
 # Parse, CheckReqs, and Run

@@ -1,3 +1,23 @@
+Wed Dec 18 16:37:41 2002  Steve Huston  <shuston@riverace.com>
+
+        * command/generate_workspace.pm: New command, generate_workspace.
+          Takes mwc options.
+
+        * command/vc7make.pm:
+        * command/wincemake.pm: New commands to build using Visual Studio.NET
+          (aka VC7) and Microsoft Embedded Visual C++ 3 and 4, respectively.
+          These take advantage of the Visual Studio's ability to build
+          according to workspace-defined dependencies (that can be inserted
+          with mwc). The plan is to expand them to walk a directory tree
+          looking for files, but that's blue sky at this point.
+
+        * autobuild.pl: Added generate_workspace, vc7make, and wincemake to
+          the commands list.
+
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Updated to use the
+          new generate_workspace and vc7make commands, and to run the built
+          tests.
+
 Wed Dec 18 15:54:05 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderbilt.edu>
 
 	* configs/autobuild/sirion/Full_new.xml: Added -config SSL to run
@@ -5,6 +25,7 @@ Wed Dec 18 15:54:05 2002  Balachandran Natarajan  <bala@isis-server.isis.vanderb
 	  SSL tests have been run daily! What a joke! They havent been run
 	  from the point they moved to the new scoreboard. 
 
+>>>>>>> 1.233
 Tue Dec 17 21:43:51 2002  Steve Huston  <shuston@riverace.com>
 
         * command/generate_makefile.pm: New command, generate_makefile. Takes
