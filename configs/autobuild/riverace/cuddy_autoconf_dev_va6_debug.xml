@@ -35,9 +35,6 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository -type automake -exclude build,Kokyu -hierarchy -make_coexistence" />
 
-    <!-- For now, need to append this - MPC should do this eventually. -->
-    <command name="file_manipulation" options="type=append file=ACE_wrappers-repository/Makefile.am output='\nACLOCAL = @ACLOCAL@\nACLOCAL_AMFLAGS = -I m4\n'" />
-
     <command name="print_os_version" />
     <command name="check_compiler"    options="vacpp" />
     <command name="print_ace_config" />
