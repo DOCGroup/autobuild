@@ -1,3 +1,11 @@
+Fri Dec 26 12:57:30 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml:
+	* configs/scoreboard/tao_future.xml:
+
+	  Moved some of the Charles University's build to the relegated
+	  section.  None of them are in prague to help us with this now. 
+
 Fri Dec 26 15:01:08 UTC 2003  Don Hinton  <dhinton@dresystems.com>
 
         * configs/autobuild/dresystems/sol9_spro54.xml:

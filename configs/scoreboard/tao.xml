@@ -174,18 +174,6 @@ all the OS/platform combinations TAO is tested everyday.
          <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
       </build>
       <build>
-         <name>RH72_IA64_GCC296</name>
-         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/gcc296_full</url>
-         <build_sponsor>Charles University</build_sponsor>
-         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
-      </build>
-      <build>
-         <name>RH72_IA64_ICC70</name>
-         <url>http://nenya.ms.mff.cuni.cz/projects/corba/tao-scoreboard/hitotsu/icc70_full</url>
-         <build_sponsor>Charles University</build_sponsor>
-         <build_sponsor_url>http://nenya.ms.mff.cuni.cz</build_sponsor_url>
-      </build>
-      <build>
          <name>RH8_GCC_3.2</name>
          <url>http://www2.dresystems.com:8090/autobuild_output/mpc_test_tao</url>
          <build_sponsor>DRE Systems</build_sponsor>
