@@ -29,8 +29,17 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc71 -exclude TAO/CIAO" />
-    <command name="vc7make"            options="/rebuild debug ACE_wrappers.sln" />
+    <command name="generate_workspace" options="-type vc71 -recurse"/>
+    <command name="vc7make"            options="/rebuild debug TAO/TAOACE.sln" />
+    <command name="vc7make"            options="/rebuild debug tests/tests.sln" />
+    <command name="vc7make"            options="/rebuild debug examples/examples.sln" />
+    <command name="vc7make"            options="/rebuild debug performance-tests/perf.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/tests/tests.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/examples/examples.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/performance-tests/perf.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/orbsvcs/tests/tests.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/orbsvcs/examples/examples.sln" />
+    <command name="vc7make"            options="/rebuild debug TAO/orbsvcs/performance-tests/perf.sln" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
