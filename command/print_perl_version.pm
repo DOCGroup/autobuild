@@ -27,17 +27,6 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('root');
-
-    if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
-        return 0;
-    }
-
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
 
     return 1;
 }

@@ -13,6 +13,7 @@ use File::Copy;
 use FileHandle;
 use POSIX;
 use Time::Local;
+use File::Path;
 
 ###############################################################################
 # Forward Declarations
@@ -42,21 +43,28 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('root');
-    my $logroot = main::GetVariable ('log_root');
 
-    if (!defined $root) {
+    my $log_root = main::GetVariable ('root');
+    if (!defined $log_root) {
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
 
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
+    my $log_root = main::GetVariable ('log_root');
+    if (!defined $log_root) {
+        print STDERR __FILE__, ": Requires \"log_root\" variable\n";
         return 0;
     }
 
-    if (!defined $logroot) {
-        print STDERR __FILE__, ": Requires \"log_root\" variable\n";
+    my $log_file = main::GetVariable ('log_file');
+    if (!defined $log_file) {
+        print STDERR __FILE__, ": Requires \"log_file\" variable\n";
+        return 0;
+    }
+
+    my $name = main::GetVariable ('name');
+    if (!defined $name) {
+        print STDERR __FILE__, ": Requires \"name\" variable\n";
         return 0;
     }
 
@@ -71,6 +79,16 @@ sub Run ($)
     my $options = shift;
     my $keep = 10;
     my $moved = 0;
+    my $log_root = main::GetVariable ('log_root');
+    my $root = main::GetVariable ('root');
+
+    if (!-r $log_root || !-d $log_root) {
+        mkpath($log_root);
+    }
+
+    if (!-r $root || !-d $root) {
+        mkpath($root);
+    }
 
     if ($main::verbose == 1 ) {
         main::PrintStatus ('Processing Logs', '');
@@ -117,27 +135,27 @@ sub Run ($)
 sub clean_logs ($)
 {
     my $self = shift;
-    my $logroot = main::GetVariable ('log_root');
+    my $log_root = main::GetVariable ('log_root');
     my $keep = shift;
     my @existing;
 
     # chop off trailing slash
-    if ($logroot =~ m/^(.*)\/$/) {
-        $logroot = $1;
+    if ($log_root =~ m/^(.*)\/$/) {
+        $log_root = $1;
     }
 
-    my $dh = new DirHandle ($logroot);
+    my $dh = new DirHandle ($log_root);
 
     # Load the directory contents into the @existing array
 
     if (!defined $dh) {
-        print STDERR __FILE__, ": Could not read directory $logroot\n";
+        print STDERR __FILE__, ": Could not read directory $log_root\n";
         return 0;
     }
 
     while (defined($_ = $dh->read)) {
         if ($_ =~ m/^(...._.._.._.._..).txt/) {
-            push @existing, $logroot . '/' . $1;
+            push @existing, $log_root . '/' . $1;
         }
     }
     undef $dh;
@@ -166,12 +184,12 @@ sub move_log ()
 {
     my $self = shift;
     my $root = main::GetVariable ('root');
-    my $logroot = main::GetVariable ('log_root');
-    my $logfile = main::GetVariable ('log_file');
+    my $log_root = main::GetVariable ('log_root');
+    my $log_file = main::GetVariable ('log_file');
 
     # chop off trailing slash
-    if ($logroot =~ m/^(.*)\/$/) {
-        $logroot = $1;
+    if ($log_root =~ m/^(.*)\/$/) {
+        $log_root = $1;
     }
 
     # chop off trailing slash
@@ -179,37 +197,37 @@ sub move_log ()
         $root = $1;
     }
 
-    $logfile = $root . "/" . $logfile;
+    $log_file = $root . "/" . $log_file;
 
-    if (!defined $logfile) {
+    if (!defined $log_file) {
         print STDERR __FILE__, ": Requires \"logfile\" variable\n";
         return 0;
     }
-    if (!-r $logfile) {
-        print STDERR __FILE__, ": Cannot read logfile: $logfile\n";
+    if (!-r $log_file) {
+        print STDERR __FILE__, ": Cannot read logfile: $log_file\n";
         return 0;
     }
 
     my $timestamp = POSIX::strftime("%Y_%m_%d_%H_%M", gmtime);
-    $newlogfile = $logroot . "/" . $timestamp . ".txt";
+    $newlogfile = $log_root . "/" . $timestamp . ".txt";
 
     # Use copy/unlink instead of move so on Win32 it inherits
     # the destination dir's permissions
     if ($main::verbose == 1) {
-        print "Moving $logfile to $newlogfile\n";
+        print "Moving $log_file to $newlogfile\n";
     }
 
     my $ret;
     ## copy returns the number of successfully copied files
-    $ret = copy ($logfile, $newlogfile);
+    $ret = copy ($log_file, $newlogfile);
     if ( $ret < 1 ) {
-        print STDERR __FILE__, "Problem copying $logfile to $newlogfile\n";
+        print STDERR __FILE__, "Problem copying $log_file to $newlogfile\n";
     } 
 
     ## unlink returns the number of successfully copied files
-    $ret = unlink ($logfile);
+    $ret = unlink ($log_file);
     if ( $ret < 1 ) {
-        print STDERR __FILE__, "Problem deleting $logfile\n";
+        print STDERR __FILE__, "Problem deleting $log_file\n";
     } 
 
     # Make sure it has the correct permissions
@@ -223,34 +241,34 @@ sub prettify_log ($)
     my $self = shift;
     my $moved = shift;
     my $root = main::GetVariable ('root');
-    my $logfile = main::GetVariable ('log_file');
+    my $log_file = main::GetVariable ('log_file');
 
     if ($moved) {
-        $logfile = $newlogfile;
+        $log_file = $newlogfile;
     }
 
-    Prettify::Process ($logfile);
+    Prettify::Process ($log_file);
     return 1;
 }
 
 sub index_logs ()
 {
     my $self = shift;
-    my $logroot = main::GetVariable ('log_root');
+    my $log_root = main::GetVariable ('log_root');
     my $name = main::GetVariable ('name');
     my @files;
     
     # chop off trailing slash
-    if ($logroot =~ m/^(.*)\/$/) {
-        $logroot = $1;
+    if ($log_root =~ m/^(.*)\/$/) {
+        $log_root = $1;
     }
     
-    my $dh = new DirHandle ($logroot);
+    my $dh = new DirHandle ($log_root);
 
     # Load the directory contents into the @existing array
 
     if (!defined $dh) {
-        print STDERR __FILE__, ": Could not read directory $logroot\n";
+        print STDERR __FILE__, ": Could not read directory $log_root\n";
         return 0;
     }
 
@@ -263,10 +281,10 @@ sub index_logs ()
 
     @files = reverse sort @files;
 
-    my $fh = new FileHandle ($logroot . '/index.html', 'w');
+    my $fh = new FileHandle ($log_root . '/index.html', 'w');
     
     if (!defined $fh) {
-        print STDERR __FILE__, ": Cannot create index.html in $logroot\n";
+        print STDERR __FILE__, ": Cannot create index.html in $log_root\n";
         return 0;
     }
     
@@ -281,7 +299,7 @@ sub index_logs ()
     print $fh "<table border=\"1\">\n<th>Timestamp</th><th>Setup</th><th>Compile</th><th>Test</th>\n";
     
     foreach my $file (@files) {
-        my $totals_fh = new FileHandle ($logroot . '/' . $file . '_Totals.html', 'r');
+        my $totals_fh = new FileHandle ($log_root . '/' . $file . '_Totals.html', 'r');
         
         print $fh '<tr>';
         

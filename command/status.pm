@@ -49,13 +49,13 @@ sub Run ($)
     my $options = shift;
     my $log_root = main::GetVariable ('log_root');
 
+    if (!-r $log_root || !-d $log_root) {
+        mkpath($log_root);
+    }
+
     # chop off trailing slash
     if ($log_root =~ m/^(.*)\/$/) {
         $log_root = $1;
-    }
-
-    if (!-r $log_root || !-d $log_root) {
-        mkpath($log_root);
     }
 
     if ( $main::verbose == 1 ) {

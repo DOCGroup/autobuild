@@ -8,6 +8,7 @@ use strict;
 use warnings;
 
 use Cwd;
+use File::Path;
 
 sub create ($);
 sub sam ($);
@@ -37,11 +38,6 @@ sub CheckRequirements ()
         return 0;
     }
     
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
-
     return 1;
 }
 
@@ -49,11 +45,6 @@ sub CheckRequirements ()
 sub Run ($)
 {
     my $root = main::GetVariable ('root');
-    
-    if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
-        return 0;
-    }
     
     if (!-r $root || !-d $root) {
         print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";

@@ -10,6 +10,7 @@ use warnings;
 use Cwd;
 use FileHandle;
 use File::Find;
+use File::Path;
 
 sub create ($);
 sub sam ($);
@@ -41,18 +42,8 @@ sub CheckRequirements ()
         return 0;
     }
 
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
-
     if (!defined $sam_root) {
         print STDERR __FILE__, ": Requires \"sam_root\" variable\n";
-        return 0;
-    }
-
-    if (!-r $sam_root || !-d $sam_root) {
-        print STDERR __FILE__, ": Cannot access \"sam_root\" directory: $sam_root\n";
         return 0;
     }
 
@@ -67,6 +58,14 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $sam_root = main::GetVariable ('sam_root');
+
+    if (!-r $sam_root || !-d $sam_root) {
+        mkpath($sam_root);
+    }
+
+    if (!-r $root || !-d $root) {
+        mkpath($root);
+    }
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {

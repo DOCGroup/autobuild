@@ -9,6 +9,7 @@ use warnings;
 
 use Cwd;
 use FileHandle;
+use File::Path;
 
 ###############################################################################
 # Constructor
@@ -28,16 +29,11 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
+
     my $project_root = main::GetVariable ('project_root');
 
     if (!defined $project_root) {
         print STDERR __FILE__, ": Requires \"project_root\" variable\n";
-        return 0;
-    }
-    
-    if (!-r $project_root || !-d $project_root) {
-        print STDERR __FILE__, ": Cannot access \"project_root\"
-        directory: $project_root\n";
         return 0;
     }
 
@@ -51,6 +47,10 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $project_root = main::GetVariable ('project_root');
+
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
+    }
 
     # chop off trailing slash
     if ($project_root =~ m/^(.*)\/$/) {

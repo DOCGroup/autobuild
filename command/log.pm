@@ -10,6 +10,7 @@ use warnings;
 use Cwd;
 use FileHandle;
 use Time::Local;
+use File::Path;
 
 ###############################################################################
 # Constructor
@@ -37,11 +38,6 @@ sub CheckRequirements ()
         return 0;
     }
 
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
-
     if (!defined $logfile) {
         print STDERR __FILE__, ": Requires \"log_file\" variable\n";
         return 0;
@@ -58,6 +54,10 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $logfile = main::GetVariable ('log_file');
+
+    if (!-r $root || !-d $root) {
+        mkpath($root);
+    }
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {

@@ -9,6 +9,7 @@ use warnings;
 
 use Cwd;
 use File::Find;
+use File::Path;
 
 sub create ($);
 sub sam ($);
@@ -39,11 +40,6 @@ sub CheckRequirements ()
         return 0;
     }
     
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
-
     return 1;
 }
 
@@ -54,6 +50,10 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $root = main::GetVariable ('root');
+
+    if (!-r $root || !-d $root) {
+        mkpath($root);
+    }
 
     # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
