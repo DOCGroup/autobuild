@@ -1,3 +1,8 @@
+Wed Nov 12 11:53:13 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added MSVC6 DLL Debug/Release builds
+
 Sat Nov  8 17:47:50 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tao_isis/Fuzz.xml:
@@ -8,7 +13,7 @@ Thu Nov  6 07:57:02 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 	* configs/autobuild/tango_isis/Debian_Core.xml:
 
-	  Do a coreclean for CIAO instead of a realclean. 
+	  Do a coreclean for CIAO instead of a realclean.
 
 Wed Nov  5 22:03:54 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
@@ -37,10 +42,10 @@ Wed Nov  5 16:57:47 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
 Wed Nov  5 12:20:18 2003  Balachandran Natarajan  <bala@dre.vanderbilt.edu>
 
-	* configs/autobuild/balar_isis/IPV6.xml: 
+	* configs/autobuild/balar_isis/IPV6.xml:
 	* configs/autobuild/balar_isis/driver_ipv6.sh:
 
-	  New build for ACE+TAO with IPV6 enabled. 
+	  New build for ACE+TAO with IPV6 enabled.
 
 Mon Nov 03 13:21:33 UTC 2003  Johnny Willemsen  <jwillemsen@remedy.nl>
 
