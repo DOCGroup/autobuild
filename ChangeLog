@@ -1,3 +1,9 @@
+Sat Oct 19 12:32:09 2002  Frank Hunleth <frank@hunleth.com>
+
+	* configs/scoreboard/acetao.xml: 
+          Removed extraneous "-" in comment that seems to prevent
+          the OpenBSD and XML builds from showing up.
+
 Sat Oct 19 11:23:24 2002  Frank Hunleth <frank@hunleth.com>
 
 	* configs/autobuild/slytherin/OpenBSD_Core.xml:

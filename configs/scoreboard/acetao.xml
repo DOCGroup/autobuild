@@ -185,7 +185,7 @@
              <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_CROSS_COMPILE_TAO_IDL</url>
          </build>
     </group>
-<!---    <group>
+<!--    <group>
          <name>TRU64_Unix</name>
          <build>
              <name>TRU64_CXX</name>
