@@ -1,3 +1,9 @@
+Thu Jun 24 12:30:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/remedynl/GCC32.xml:
+          Set templates to explicit, I need an explicit template instantiation
+          build to test a few things.
+
 Wed Jun 23 21:42:21 UTC 2004  Don Hinton  <d.hinton@vanderbilt.edu>
 
         * command/printaceconfig.pm:
@@ -7,7 +13,7 @@ Wed Jun 23 21:42:21 UTC 2004  Don Hinton  <d.hinton@vanderbilt.edu>
           Allow arbitrary command to be passed, i.e., it no longer has to
           be msvc_[mpc_auto|static]_compile.pl which must be in the bin
           directory.
-        
+
 Wed Jun 23 10:41:31 UTC 2004  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
