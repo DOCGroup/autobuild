@@ -12,7 +12,8 @@ from utils import *
 from DBConfig import *
 
 #patterns for log file
-error = re.compile(r'error',re.IGNORECASE)
+compile_error = re.compile(r'error',re.IGNORECASE)
+test_error = re.compile(r'Error|ERROR|fatal|EXCEPTION|ACE_ASSERT|Assertion|Mismatched free|are definitely lost in loss record|Invalid write of size|Invalid read of size|pure virtual ')
 ace_test_start = re.compile (r'Running')
 build_begin = re.compile(r'#################### Begin');
 build_end   = re.compile(r'#################### End');
@@ -219,7 +220,7 @@ class TestPlatform:
 
 			if tresult != "":
 				f,h=tresult.split(":")
-				result=int(h)
+				result=h
 		return testname, result, time
 
 	def sortByTime (self):
@@ -268,7 +269,7 @@ class TestPlatform:
 		testname = ""
 		stop = findString (line, stop_strings)
 		while line != "" and stop == 1:
-			if error.match(line):
+			if test_error.search(line):
 				fail = 1
 			if test_finished.match(line):
 				testname, resultCode, time = self.checkTestTime(line)
@@ -314,7 +315,7 @@ class TestPlatform:
 					state=state+1
 			if state==0:
 				# this matches only lines that begin with "Error" or "ERROR" 
-				if error.match(line) and self.compile == PASS:
+				if compile_error.match(line) and self.compile == PASS:
 					self.compile = FAIL
 			if state==1 and test_start.match(line):
 		   		testname = (line.split())[1] 
