@@ -114,6 +114,9 @@ sub Run ($)
            print "ERROR: Could not find /usr/bin/lslpp!!\n";
         }
     }
+    elsif(lc $compiler eq "c89"){
+        system("c89 -Whelp 2>&1 | tail -2");
+    }
     else{
         print "ERROR: I cannot figure out what compiler you are ";
         print "using!!\nSee check_compiler.pm for more details.\n";
