@@ -1,3 +1,12 @@
+Fri Apr  8 08:48:42 2005  Venkita Subramonian  <venkita@cs.wustl.edu>
+
+	* configs/scoreboard/tao.xml: Deleted Debian_Minimum_Static and
+	  Debian_NoInterceptor builds that were running on
+	  charanga.cs.wustl.edu. charanga was hacked in the recent past
+	  and they are re-installing a couple of things. It may not be
+	  running Debian anymore. Until things are back in shape I am
+	  taking these builds off the scoreboard.
+
 Thu Apr  7 10:57:10 2005  Chad Elliott  <elliott_c@ociweb.com>
 
         * matrix_database/TestPlatform.py:

@@ -58,23 +58,11 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-    <build>
-       <name>Debian_Minimum_Static</name>
-       <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_Minimum_Static/</url>
-       <build_sponsor>Washington University</build_sponsor>
-       <build_sponsor_url>http://www.cs.wustl.edu/~doc</build_sponsor_url>
-     </build>
      <build>
         <name>RH8_NoInline</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-        <name>Debian_NoInterceptors</name>
-        <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/charanga_Debian_NoInterceptors/</url>
-        <build_sponsor>Washington University</build_sponsor>
-        <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
      </build>
      <build>
         <name>RH80_Static_Core</name>
