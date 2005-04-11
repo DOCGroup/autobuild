@@ -11,7 +11,7 @@ These are daily builds of the branches involved in the Subsetting effort.
  <name>subset_dh branch</name>
     <build>
        <name>Linux</name>
-       <!--<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_TAO_doxygen/</url>-->
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_subset/</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
