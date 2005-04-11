@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/PG/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/PG/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/PG/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/usr/pgi/linux86-64/5.2/bin" type="prefix" />
+        <environment name="PATH"            value="/usr/pgi/linux86-64/6.0/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="LM_LICENSE_FILE" value="/usr/pgi/license.dat" />
