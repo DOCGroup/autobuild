@@ -21,6 +21,7 @@ exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html
 exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html -f $HOME/autobuild/configs/scoreboard/tao.xml -o tao.html 2>&1  &
 exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html -f $HOME/autobuild/configs/scoreboard/tao_future.xml -o tao_future.html 2>&1 &
 exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
+exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html -f $HOME/autobuild/configs/scoreboard/subset.xml -o subset.html 2>&1 &
 # Generate integrated pages!
 exec /usr/bin/perl ./scoreboard.pl -d /export/project/workarea01/Scoreboard/html -z 2>&1;
 
