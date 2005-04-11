@@ -3,6 +3,7 @@ Mon Apr 11 14:55:22 UTC 2005  Don Hinton <don point hinton arobasque vanderbilt 
         * config/scoreboard/subset.xml:
         * config/scoreboard/index.html:
         * config/scoreboard/doc.sh:
+        * config/scoreboard/tao_dre.sh:
           Added the subsetting page and a link to it from the main
           page.
 
