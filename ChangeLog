@@ -1,3 +1,10 @@
+Mon Apr 11 14:55:22 UTC 2005  Don Hinton <don point hinton arobasque vanderbilt dot edu>
+
+        * config/scoreboard/subset.xml:
+        * config/scoreboard/index.html:
+          Added the subsetting page and a link to it from the main
+          page.
+
 Fri Apr  8 10:29:00 2005  Gary Maxey <gary.maxey@hp.com>
         * command/check_compiler.pm
           Added c89 as compiler
