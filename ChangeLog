@@ -1,3 +1,9 @@
+Tue Apr 12 08:13:06 2005  Olli Savia  <ops@iki.fi>
+
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
+          Removed setting of values which are now defaults in
+	  config files.
+	
 Mon Apr 11 16:36:07 UTC 2005  Don Hinton <don point hinton arobasque vanderbilt dot edu>
 
         * config/autobuild/tango_isis/subset.xml:
