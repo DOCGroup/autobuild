@@ -280,6 +280,16 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
+  <name>HP-NSK</name>
+     <build>
+      <name>HP_NonStop_MIPS</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_hp_nsk</url>
+      <build_sponsor>HP</build_sponsor>
+      <build_sponsor_url>http://www.hp.com</build_sponsor_url>
+     </build>
+</group>
+
+<group>
    <name>Irix</name>
    <build>
       <name>Irix_6.5</name>

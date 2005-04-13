@@ -1,3 +1,12 @@
+Wed Apr 13 15:57:00 2005  Gary Maxey <gary.maxey@hp.com>
+
+	* configs/scoreboard/tao.xml
+	  Added HP-NSK build
+	
+	* configs/autobuild/hp/gmaxey_dev.xml
+	* configs/autobuild/hp/gmaxey_dev_driver.bat
+	  New configuration for HP-NSK build
+	
 Wed Apr 13 09:17:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
