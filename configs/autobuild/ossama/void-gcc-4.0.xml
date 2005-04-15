@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"        value="/home/ossama/work/gcc-4.0-build/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/ossama/work/gcc-4.0-build/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/ossama/work/gcc-4.0-build/ACE_wrappers/lib:/home/ossama/GCC-4.0/lib" />
-        <environment name="PATH" value="/home/ossama/GCC-4.0/bin" />
+        <environment name="PATH" value="/home/ossama/GCC-4.0/bin:$PATH" />
         <environment name="CVSROOT"         value=":ext:ossama@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
