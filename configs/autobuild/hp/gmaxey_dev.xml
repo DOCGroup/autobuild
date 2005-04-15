@@ -36,8 +36,8 @@
     <command name="shell"             options="del /s GNUmakefile* > nul" />
 
 
-    <command name="cvs"               options="checkout -P ACE_wrappers" />
-    <command name="cvs"               options="checkout -P MPC" />
+    <command name="cvs"               options="-q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-q checkout -P MPC" />
 
     <!-- ############################################################ -->
     <!-- Build Windows based TAO IDL compiler for cross compiles.     -->
@@ -54,6 +54,9 @@
     <!-- ############################################################ -->
     <!-- Build ACE + TAO for NSK using cross compiler.                -->
     <!-- ############################################################ -->
+
+    <!-- Alter mpc files for srl build -->
+    <command name="shell"             options="perl -Mnsksrlcomp -e insert_srl_component;" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-tandem-nsk-mips-v3.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_nsk.GNU\n'" />
@@ -91,10 +94,13 @@
     <!-- Need to develop capability of running tests cross platform -->
     <!-- command name="auto_run_tests"    options="-a" / -->
 
+    <!-- restore mpc files -->
+    <command name="shell"             options="perl -Mnsksrlcomp -e undo_srl_component;" />
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=ACE_wrappers/.disable" />
+    <command name="status"            options="off" />
     <command name="shell"             options="c:\tools\Putty\pscp -batch c:\projects\ace_cvs\build_logs\* bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/tao_hp_nsk" />
 
-    <command name="status"            options="off" />
 </autobuild>
