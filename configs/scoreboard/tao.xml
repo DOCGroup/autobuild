@@ -174,12 +174,6 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
-            <name>WinXP_MSVC6_SP6_LIB_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6sd</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_MSVC6_SP6_DLL_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6dd</url>
             <build_sponsor>Remedy IT</build_sponsor>

@@ -1,3 +1,8 @@
+Fri Apr 15 13:04:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed MSVC6 LIB DEBUG build because of resource depletion.
+
 Thu Apr 14 21:30:58 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/ossama/void-gcc-4.0.sh:
