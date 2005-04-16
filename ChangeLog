@@ -1,3 +1,9 @@
+Sat Apr 16 15:27:29 MST 2005  Trevor Fields  <fields_t@ociweb.com>
+
+        * matrix_database/TestPlatform.py
+          Added message to indicate that the build file is marked invalid
+          because it ran no tests.
+
 Fri Apr 15 15:49:00  Gary Maxey <gary.maxey@hp.com>
 
         * configs/autobuild/hp/gmaxey_dev.xml

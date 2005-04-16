@@ -114,7 +114,10 @@ class TestPlatform:
                    self.processDBLog()
                 else:
                    self.processLog()
-                   if (self.start_time == "" or self.end_time == "" or len(self.test_results) == 0):
+                   if (self.start_time == "" or self.end_time == ""):
+                      self.valid_raw_file = 0
+                   if (len(self.test_results) == 0):
+                      print "NO TESTS RUN:"
                       self.valid_raw_file = 0
 
                 #print "platform ", self.name, self.raw_file, self.start_time, self.end_time
