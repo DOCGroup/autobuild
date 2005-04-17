@@ -11,6 +11,7 @@ use Cwd;
 use File::Find;
 use File::Path;
 use File::Compare;
+use File::Copy;
 
 sub create ($);
 sub sam ($);
@@ -81,6 +82,7 @@ sub Run ($)
     my $type;
     my $filename;
     my $output;
+    my $target;
     
     if ($options =~ m/type='([^']*)'/) {
         $type = $1;
@@ -106,6 +108,13 @@ sub Run ($)
 
     if ($options =~ m/output='([^']*)'/) {
         $output = $1;
+    }
+
+    if ($options =~ m/target='([^']*)'/) {
+      $target = $1;
+    }
+    elsif ($options =~ m/target=([^\s]*)/) {
+      $target = $1;
     }
 
     # Act on the type
@@ -205,6 +214,22 @@ sub Run ($)
         if (-e $filename) {
             print STDERR "\"$root/$filename\" exists!\n";
             return 0;
+        }
+    }
+    elsif ($type eq "copy") {
+
+        if (!defined $target) {
+            print STDERR __FILE__, ": No target specified for \"copy\" type\n";
+            return 0;
+        }
+
+        my $src_file_name = $root . '/' . $filename;
+        my $target_file_name = $root . '/' . $target;
+        my $result = copy($src_file_name, $target_file_name);
+
+        if ($result == 0) {
+          print STDERR __FILE__, ": Error copying file ($src_file_name to $target_file_name";
+          return 0;
         }
     }
     else {

@@ -1,3 +1,9 @@
+Sat Apr 16 20:35:31 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * command/file_manipulation.pm:
+
+          Added "copy" command to file_manipulation.
+
 Sat Apr 16 15:27:29 MST 2005  Trevor Fields  <fields_t@ociweb.com>
 
         * matrix_database/TestPlatform.py
