@@ -62,7 +62,7 @@ sub Run ($)
         system("g++ -v -mno-cygwin");
     }
     elsif(lc $compiler eq "borland"){
-	system("bcc32 -V");
+        system("bcc32 --version");
     }
     elsif(lc $compiler eq "cbx"){
 	system("bccx --version");
