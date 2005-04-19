@@ -1,3 +1,11 @@
+Tue Apr 19 17:06:29 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Added
+	  rmcast=0 to the MPC features. This test runs with explicit templates
+	  and the new RMCast code doesn't have the directives to support this.
+	  Since explicit template support is on its way out, I'm avoiding
+	  this issue, at least for now.
+
 Sat Apr 16 20:35:31 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * command/file_manipulation.pm:
