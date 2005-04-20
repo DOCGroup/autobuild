@@ -872,6 +872,7 @@ sub Test_Handler ($)
     if ($s =~ m/Error/
         || $s =~ m/ERROR/
 	|| $s =~ m/fatal/
+        || $s =~ m/FAIL:/
         || $s =~ m/FAILED/
         || $s =~ m/EXCEPTION/
 	|| $s =~ m/ACE_ASSERT/
