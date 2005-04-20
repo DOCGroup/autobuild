@@ -1,3 +1,8 @@
+Wed Apr 20 19:27:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Eowyn has been upgraded to SuSE 9.3
+
 Tue Apr 19 17:06:29 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Added
