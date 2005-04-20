@@ -1,3 +1,12 @@
+Wed Apr 20 16:03:16 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+	  Set ACE_ROOT to be the top of the ACE_wrappers tree. ACE_ROOT
+	  isn't used during an autobuild for building, but the
+	  tests/run_test.pl script uses it to find PerlACE stuff.
+
 Wed Apr 20 15:45:27 2005  Steve Huston  <shuston@riverace.com>
 
 	* common/prettify.pm (Test_Handler): Add "FAIL:" to the things noted
