@@ -101,7 +101,7 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_93_icc_8_1</name>
+      <name>SuSE_93_ICC_8_1</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
