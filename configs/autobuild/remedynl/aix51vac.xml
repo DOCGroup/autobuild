@@ -8,9 +8,9 @@
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/home/20000576/ACE/latest/ACE_wrappers/" />
+        <variable name="root"     value="/home/20000576/ACE/latest/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/20000576/ACE/latest/ACE_wrappers/" />
+        <variable name="log_root" value="/home/20000576/ACE/latest/" />
         <variable name="configs"  value="Linux Exceptions SSL" />
 
     </configuration>
