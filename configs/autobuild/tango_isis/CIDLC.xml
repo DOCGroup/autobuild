@@ -45,6 +45,8 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     
+    <command name="shell"             options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
+    <command name="shell"             options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc.bz2 /web/users/isisbuilds/CIDLC/gnu-linux" />
     <command name="shell"             options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc /web/users/isisbuilds/CIDLC/gnu-linux" />
 
 </autobuild>
