@@ -1,3 +1,9 @@
+Mon Apr 25 23:18:24 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/scoreboard/index.xml:
+
+	  Updated build sponsor list.
+
 Mon Apr 25 10:38:12 2005  Gan Deng  <dengg@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/CIDLC.xml:
