@@ -1,3 +1,8 @@
+Wed Apr 27 15:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added rhas 21 gcc ia64 build
+
 Mon Apr 25 23:18:24 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/scoreboard/index.xml:
