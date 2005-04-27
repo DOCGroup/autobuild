@@ -6,6 +6,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/remedy/ACE/GCC/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
+        <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/home/remedy/ACE/GCC/" />
         <variable name="log_file" value="build.txt" />
