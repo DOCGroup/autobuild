@@ -156,9 +156,9 @@ all the OS/platform combinations TAO is tested everyday.
      </build>
      <build>
       <name>Debian_GCC_4.0</name>
-      <url>http://www.dre.vanderbilt.edu/~ossama/builds/Debian_GCC_4.0</url>
-      <build_sponsor>Ossama Othman</build_sponsor>
-      <build_sponsor_url>http://</build_sponsor_url>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/flamenco-gcc.4.0/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
 </group>
 

@@ -2,21 +2,21 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/home/ossama/work/gcc-4.0-build/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/ossama/work/gcc-4.0-build/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/ossama/GCC-4.0/lib:/home/ossama/work/gcc-4.0-build/ACE_wrappers/lib" />
-        <environment name="PATH" value="/home/ossama/GCC-4.0/bin:/usr/bin:/bin" />
-        <environment name="CVSROOT"         value=":ext:ossama@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="ACE_ROOT"        value="/project/builds/isisbuilds/gcc-4.0/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/project/builds/isisbuilds/gcc-4.0/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-4.0.0/lib:/project/builds/isisbuilds/gcc-4.0/ACE_wrappers/lib" />
+        <environment name="PATH" value="/usr/local/gcc-4.0.0/bin:/usr/bin:/bin" />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/home/ossama/work/gcc-4.0-build/" />
+        <variable name="root"     value="/project/builds/isisbuilds/gcc-4.0/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/ossama/work/gcc-4.0-build/" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/flamenco-gcc-4.0" />
         <variable name="configs"  value="Linux SSL" />
 
     </configuration>
 
-    <command name="status"            options="off" />
+    <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
@@ -40,12 +40,12 @@
     <command name="generate_workspace" options="-exclude TAO" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO" />
-
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
 
-    <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j4" />
+    <command name="make"              options="-k -j4 -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
@@ -54,6 +54,4 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
-    <command name="shell"             options="ssh ossama@naboo.dre.vanderbilt.edu rm /web/users/ossama/builds/Debian_GCC_4.0/* -f" />
-    <command name="shell"             options="scp -C *.txt *.html ossama@naboo.dre.vanderbilt.edu:/web/users/ossama/builds/Debian_GCC_4.0" />
 </autobuild>

@@ -1,3 +1,19 @@
+Wed Apr 27 14:43:54 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/ossama/void-gcc-4.0.sh:
+	* configs/autobuild/ossama/void-gcc-4.0.xml:
+
+	  Removed this build.  It has been moved to ISIS.
+
+	* configs/autobuild/flamenco/gcc-4.0.sh: 
+	* configs/autobuild/flamenco/gcc-4.0.xml:
+
+	  New ISIS g++ 4.0 build.
+
+	* configs/scoreboard/tao.xml:
+
+	  Updated location of g++ 4.0 build.
+
 Wed Apr 27 15:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
