@@ -63,6 +63,13 @@ all the OS/platform combinations ACE is tested everyday.
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
+     <build>
+     <name>Redhat_Enterprise_Linux_4_Debug</name>
+     <url>http://www.riverace.com/build_logs/timmy/dev/debug</url>
+     <red>36</red>
+     <build_sponsor>Riverace</build_sponsor>
+     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
 </group>
 
 <group>

@@ -1,3 +1,10 @@
+Thu Apr 28 16:06:29 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/timmy_dev_debug.xml: New config for
+	  Red Hat Enterprise Linux 4.
+
+	* configs/scoreboard/ace.xml: Added Red Hat EL 4 build, above.
+
 Thu Apr 28 16:26:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
