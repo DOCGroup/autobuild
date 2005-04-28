@@ -1,16 +1,17 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/remedy/ACE/GCC/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/remedy/ACE/GCC/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/remedy/ACE/GCC/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"        value="/home/remedy/ACE/ICC/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/remedy/ACE/ICC/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel_cc_80/lib:/home/remedy/ACE/ICC/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/intel_cc_80/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="RSYNC_RSH"       value="ssh" />
 
-        <variable name="root"     value="/home/remedy/ACE/GCC/" />
+        <variable name="root"     value="/home/remedy/ACE/ICC/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/remedy/ACE/GCC/" />
+        <variable name="log_root" value="/home/remedy/ACE/ICC/" />
         <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
@@ -25,14 +26,13 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
 
-    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
-
     <command name="print_os_version" />
-    <command name="check_compiler" options="gcc" />
+    <command name="check_compiler" options="icc" />
     <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
@@ -52,5 +52,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ia64_gcc" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ia64_icc" />
 </autobuild>
