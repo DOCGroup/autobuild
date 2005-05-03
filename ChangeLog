@@ -1,3 +1,11 @@
+Tue May  3 02:20:44 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/pantera_isis/Code_Coverage.sh:
+	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+	* configs/scoreboard/tao.xml:
+
+	  New code coverage build.
+
 Mon May  2 23:39:07 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/scoreboard/index.xml:
