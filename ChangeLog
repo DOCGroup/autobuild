@@ -2,6 +2,7 @@ Tue May  3 02:20:44 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/pantera_isis/Code_Coverage.sh:
 	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+	* configs/autobuild/pantera_isis/gen_code_coverage_results.sh
 	* configs/scoreboard/tao.xml:
 
 	  New code coverage build.
