@@ -1,9 +1,10 @@
 <!-- $Id$ -->
 <intropage>
     <preamble>
-You have reached the logically existing, virtual ACE+TAO scoreboard.
-It shows all the OS/compiler  combinations ACE+TAO are tested against
-everyday, all over the world.  We have builds running continuously at
+You have reached the logically existing, virtual ACE+TAO+CIAO
+scoreboard.  It shows all the OS/compiler combinations ACE+TAO+CIAO are
+tested against everyday, all over the world.  We have builds running
+continuously at
 <a href="http://www.isis.vanderbilt.edu/">ISIS, Vanderbilt University</a>,
 <a href="http://deuce.doc.wustl.edu/">Washington University,
 St. Louis</a>,
@@ -52,5 +53,26 @@ like compilation time, footprint and performance details. Please
 refer to <a href="http://www.dre.vanderbilt.edu/Stats/"> this 
 page </A> for more details.
 </p>
+
+<h3>Additional Development Process Related Pages</h3>
+<p>
+In addition to the build results found in the Scoreboard described
+above, a number of other ACE/TAO/CIAO development process related web
+pages we use are the following:
+<ul>
+<li>
+  <a href="http://www.dre.vanderbilt.edu/Coverage/">Code Coverage</a>
+</li>
+<li>
+  <a href="http://www.dre.vanderbilt.edu/Stats/">Compile- and Run-Time
+Statistics</a>
+</li>
+</ul>
+The <i>Code Coverage</i> pages illustrate which areas of
+ACE+TAO+CIAO code are used, and how frequently.  The <i>Compile- and
+Run-Time</i> pages contain compilation times, static footprint
+measurements, and performance metrics.
+</p>
+
  </preamble>
 </intropage>

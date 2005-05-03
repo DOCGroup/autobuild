@@ -1,3 +1,9 @@
+Mon May  2 23:39:07 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/scoreboard/index.xml:
+
+	  Added links to the Code Coverage and Stats web pages.
+
 Thu Apr 28 16:06:29 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/timmy_dev_debug.xml: New config for
