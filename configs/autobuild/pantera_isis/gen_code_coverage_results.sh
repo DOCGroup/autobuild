@@ -34,6 +34,6 @@ for d in $covered_dirs; do
 done
 
 # Generate code coverage results web pages.
-$GENHTML --output-directory=Coverage --frames $COVERAGE_INFO
+$GENHTML --output-directory=$TMP_HTML_DIR --frames $COVERAGE_INFO
 
 mv $TMP_HTML_DIR/* $FINAL_HTML_DIR
