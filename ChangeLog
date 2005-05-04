@@ -1,3 +1,12 @@
+Wed May  4 12:37:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Removed WinXP_MSVC6_WChar_Unicode, no resources for it
+
+        * configs/autobuild/tao_isis/Fuzz.xml:
+          Print OS and ace config info. That way we can also see on which
+          host this build runs
+
 Tue May  3 19:47:43 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/flamenco/gcc-4.0.sh:
