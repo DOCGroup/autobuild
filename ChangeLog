@@ -1,3 +1,13 @@
+Tue May  3 19:47:43 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/flamenco/gcc-4.0.sh:
+	* configs/autobuild/flamenco/gcc-4.0.xml:
+	* configs/autobuild/pantera_isis/gcc-4.0.sh:
+	* configs/autobuild/pantera_isis/gcc-4.0.xml:
+	* configs/scoreboard/tao.xml:
+
+	  Moved g++ 4.0 build from flamenco to pantera.
+
 Tue May  3 02:20:44 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/pantera_isis/Code_Coverage.sh:

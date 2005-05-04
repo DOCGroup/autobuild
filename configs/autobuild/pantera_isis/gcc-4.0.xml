@@ -11,7 +11,7 @@
 
         <variable name="root"     value="/project/builds/isisbuilds/gcc-4.0/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/flamenco-gcc-4.0" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/pantera-gcc-4.0" />
         <variable name="configs"  value="Linux SSL" />
 
     </configuration>
