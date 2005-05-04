@@ -22,6 +22,9 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
+    <command name="print_os_version" />
+    <command name="print_ace_config" />
+
     <command name="fuzz"         options="" />
 
     <command name="log"               options="OFF" />
