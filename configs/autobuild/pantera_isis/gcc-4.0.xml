@@ -2,10 +2,9 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/project/builds/isisbuilds/gcc-4.0/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/project/builds/isisbuilds/gcc-4.0/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-4.0.0/lib:/project/builds/isisbuilds/gcc-4.0/ACE_wrappers/lib" />
-        <environment name="PATH" value="/usr/local/gcc-4.0.0/bin:/usr/bin:/bin" />
+        <environment name="ACE_ROOT"        value="/build/bczar/gcc-4.0/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/bczar/gcc-4.0/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/bczar/gcc-4.0/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
