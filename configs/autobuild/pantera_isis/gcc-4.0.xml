@@ -43,10 +43,9 @@
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
 
-    <command name="make"              options="-k -j4" />
-    <command name="make"              options="-k -j4 -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO idl_stubs" />
-    <command name="make"              options="-k -C TAO" />
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="auto_run_tests" options="" />
 
