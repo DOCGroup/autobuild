@@ -1,3 +1,12 @@
+Fri May  6 18:28:59 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/autobuild/merengue/merengue.bat:
+        * configs/autobuild/merengue/merengue_driver.bat:
+        * configs/autobuild/merengue/merengue_vc71.bat:
+        * configs/autobuild/merengue/merengue_vc71.xml:
+
+          The autobuild config files for ISIS/merengue (Windows Server 2003.)
+
 Fri May  6 10:52:58 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
