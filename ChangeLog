@@ -1,3 +1,8 @@
+Fri May  6 10:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
+          Added missing realclean of CIAO
+
 Wed May  4 12:37:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
