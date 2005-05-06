@@ -29,7 +29,7 @@
     <command name="make"              options="realclean" />
     <command name="make"              options=" jvm" />
 
-    <command name="auto_run_tests"    options="jvm" />
+    <command name="auto_run_tests"    options="jvm -a -o -t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

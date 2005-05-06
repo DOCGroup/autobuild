@@ -94,7 +94,7 @@
     <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests"    options="" />
+    <command name="auto_run_tests"    options=" -a -o -t -C" />
 
 
     <command name="log"               options="OFF" />

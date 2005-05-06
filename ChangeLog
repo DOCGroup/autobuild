@@ -1,3 +1,85 @@
+Fri May  6 10:52:58 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/autobuild/ace/SunOS_FORTE_UPDATE_1.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/amrod/ImplicitTemplates.xml:
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/balar/Debian_Minimum.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/chipper/SOLARIS8_FORTE_UPDATE1.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/cuni/hitotsu_gcc296_full.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_doc.xml:
+        * configs/autobuild/cuni/hitotsu_icc70_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc296_full.xml:
+        * configs/autobuild/cuni/mitsu_gcc32_full.xml:
+        * configs/autobuild/curufin/SingleThreaded.xml:
+        * configs/autobuild/danzon/SunOS_SunCC55.xml:
+        * configs/autobuild/dresystems/Redhat_8_no-RTCORBA_no-Messaging.xml:
+        * configs/autobuild/dresystems/skoll_1.xml:
+        * configs/autobuild/dresystems/skoll_2.xml:
+        * configs/autobuild/gmx/SunOS_SunGCC342.xml:
+        * configs/autobuild/guajira/TRU64_CXX.xml:
+        * configs/autobuild/hokey/javart-jRate.xml:
+        * configs/autobuild/hokey/javart-jvm.xml:
+        * configs/autobuild/hokey/javart-rtsj.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/maglor/Static.xml:
+        * configs/autobuild/oci/doc_g5_MACOSX_gcc33_d0o1.xml:
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_Tests_DocGroup.xml:
+        * configs/autobuild/remedynl/eowyn_gcc.xml:
+        * configs/autobuild/remedynl/eowyn_icc.xml:
+        * configs/autobuild/remedynl/hpux_aCC.xml:
+        * configs/autobuild/remedynl/ia64_gcc.xml:
+        * configs/autobuild/remedynl/ia64_icc.xml:
+        * configs/autobuild/remedynl/merin_gccnoinline.xml:
+        * configs/autobuild/remedynl/simbagcc.xml:
+        * configs/autobuild/remedynl/solaris_forte.xml:
+        * configs/autobuild/remedynl/taurus_gcc.xml:
+        * configs/autobuild/remedynl/tribeardacc.xml:
+        * configs/autobuild/remedynl/tru64.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/rumba/Debian_GCC_3.0.4.xml:
+        * configs/autobuild/rumba/Debian_WChar.xml:
+        * configs/autobuild/sirion/Full.xml:
+        * configs/autobuild/sirion/Full_new.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/tango/Debian_NoInline.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+        * configs/autobuild/tango_isis/subset.xml:
+        * configs/autobuild/tao_isis/GIOP10_GCC32.xml:
+        * configs/autobuild/toutatis/IA64_GCC3.1.xml:
+        * configs/autobuild/valinor/Full.xml:
+
+          Fixed autobuild commands, so that not all of the autobuilds try
+          to run CIAO tests.
+
 Fri May  6 10:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/pantera_isis/gcc-4.0.xml:

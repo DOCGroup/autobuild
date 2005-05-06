@@ -34,7 +34,7 @@
     <!-- <command name="make"              options=" jRate" /> -->
     <command name="make"              options="-f Makefile.jRate_timing" />
 
-    <command name="auto_run_tests"    options="jRate"/>
+    <command name="auto_run_tests"    options="jRate -a -o -t"/>
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

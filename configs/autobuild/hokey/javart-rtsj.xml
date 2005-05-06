@@ -29,7 +29,7 @@
     <command name="make"              options="realclean" />
     <command name="make"              options=" rtsj" />
 
-    <command name="auto_run_tests"    options="rtsj"/>
+    <command name="auto_run_tests"    options="rtsj -a -o -t"/>
     
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

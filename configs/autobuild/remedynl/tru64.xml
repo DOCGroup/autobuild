@@ -98,7 +98,7 @@
 
 
 
-    <command name="auto_run_tests" options="" />
+    <command name="auto_run_tests" options=" -a -o -t -C" />
 
 
 

@@ -45,7 +45,7 @@
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO" />
 
-    <command name="auto_run_tests"    options="" />
+    <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

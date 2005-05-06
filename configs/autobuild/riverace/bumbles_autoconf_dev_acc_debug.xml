@@ -44,7 +44,7 @@
 
     <command name="make"              options="dir=build/autoconf_acc_debug -P -k" />
 
-    <command name="auto_run_tests"    options="dir=build/autoconf_acc_debug" />
+    <command name="auto_run_tests"    options="dir=build/autoconf_acc_debug -a -o -t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
