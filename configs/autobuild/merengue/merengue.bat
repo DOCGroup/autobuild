@@ -1,4 +1,4 @@
-cd C:\ACE\VC71\ACE_wrappers\autobuild
+cd C:\ACE\autobuild
 set CVS_RSH=plink
 cvs -d :ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
 cd configs\autobuild\merengue
