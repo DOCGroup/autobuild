@@ -1,3 +1,9 @@
+Sun May  8 14:55:13 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/autobuild/merengue/merengue_vc71.xml: 
+
+          Deleted the find/delete project files section.
+
 Sat May  7 23:33:04 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml: 

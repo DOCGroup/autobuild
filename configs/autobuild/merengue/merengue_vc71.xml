@@ -25,10 +25,7 @@
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
-<!--
-    <command name="shell"             options="find ACE_wrappers -name '*.vcproj*' -exec rm '{}' ';'" />
-    <command name="shell"             options="find ACE_wrappers -name '*.sln*' -exec rm '{}' ';'" />
-  -->
+
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nrwho=0\nqos=1\nssl=1\n'" />
     <command name="anonymous_shell"   options="pscp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
