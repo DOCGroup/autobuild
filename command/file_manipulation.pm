@@ -80,7 +80,7 @@ sub Run ($)
     # Collect the options
     
     my $type;
-    my @filenames;
+    my $filename;
     my $output;
     my $target;
     
@@ -94,47 +94,16 @@ sub Run ($)
         print STDERR __FILE__, ": No type specified in command options\n";
         return 0;
     }
-  
-    my $dir = '';
-    if ($options =~ m/dir='([^']*)'/) {
-      $dir = $1;
+    
+    if ($options =~ m/file='([^']*)'/) {
+        $filename = $1;
     }
-    elsif ($options =~ m/dir=([^\s]*)/) {
-      $dir = $1;
-    }
-
-    if ($dir ne '') {
-      my $exp;
-      if ($options =~ m/file='([^']*)'/) {
-        $exp = $1;
-      }
-      elsif ($options =~ m/file=([^\s]*)/) {
-        $exp = $1;
-      }
-      else {
-        print STDERR __FILE__, ": No file specified in command options\n";
-        return 0;
-      }
-
-# Translate the shell like wildcards into perl regular expressions.
-      $_ = $exp;
-      $exp =~ s/\./\\./g;               # . => '.' not any char.
-      $exp =~ s/\?/./g;                 # ? => .
-      $exp =~ s/\*/.*/g;                # * => .*
-      $exp =~ s/\[!([^\]]*)\]/[^\1]/g;  # [!...] => [^...]
-      find(sub { /^$exp\z/s && (push(@filenames, $File::Find::name)) }, @rdir);
+    elsif ($options =~ m/file=([^\s]*)/) {
+        $filename = $1;
     }
     else {
-      if ($options =~ m/file='([^']*)'/) {
-          push(@filenames, $1);
-      }
-      elsif ($options =~ m/file=([^\s]*)/) {
-          push(@filenames, $1);
-      }
-      else {
         print STDERR __FILE__, ": No file specified in command options\n";
         return 0;
-      }
     }
 
     if ($options =~ m/output='([^']*)'/) {
@@ -154,25 +123,24 @@ sub Run ($)
             print STDERR __FILE__, ": No output specified for \"append\" type\n"; 
             return 0;
         }
-        foreach $filename(@filenames) {
-          if (-e $filename) {
-              # Expand some codes
-              $output =~ s/\\n/\n/g;
-              $output =~ s/\\x27/'/g;
 
-              my $file_handle = new FileHandle ($root . '/' . $filename, 'a');
+        if (-e $filename) {
+            # Expand some codes
+            $output =~ s/\\n/\n/g;
+            $output =~ s/\\x27/'/g;
 
-              if (!defined $file_handle) {
-                  print STDERR __FILE__, ": Error opening file ($root/$filename): $!\n";
-                  return 0;
-              }
+            my $file_handle = new FileHandle ($root . '/' . $filename, 'a');
 
-              print $file_handle $output;
-          }
-          else {
-              print STDERR __FILE__, ": \"$filename\" does not exist!\n";
-              return 0;
-          }
+            if (!defined $file_handle) {
+                print STDERR __FILE__, ": Error opening file ($root/$filename): $!\n";
+                return 0;
+            }
+
+            print $file_handle $output;
+        }
+        else {
+            print STDERR __FILE__, ": \"$filename\" does not exist!\n";
+            return 0;
         }
     } elsif ($type eq "create") {
 
@@ -185,16 +153,15 @@ sub Run ($)
         
         $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
-        foreach $filename(@filenames) { 
-          my $file_handle = new FileHandle ($root . '/' . $filename, 'w');
+        
+        my $file_handle = new FileHandle ($root . '/' . $filename, 'w');
 
-          if (!defined $file_handle) {
-              print STDERR __FILE__, ": Error creating file ($root/$filename): $!\n";
-              return 0;
-          }
-
-          print $file_handle $output;
+        if (!defined $file_handle) {
+            print STDERR __FILE__, ": Error creating file ($root/$filename): $!\n";
+            return 0;
         }
+
+        print $file_handle $output;
     }
     elsif ($type eq "update") {
 
@@ -208,51 +175,45 @@ sub Run ($)
         $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
 
-        foreach $filename(@filenames) {
-          my $full_path = $root . '/' . $filename;
-          my $tmp_path  = $full_path . ".$$";
-          my $file_handle = new FileHandle ($tmp_path, 'w');
+        my $full_path = $root . '/' . $filename;
+        my $tmp_path  = $full_path . ".$$";
+        my $file_handle = new FileHandle ($tmp_path, 'w');
 
-          if (!defined $file_handle) {
-              print STDERR __FILE__, ": Error creating file ($tmp_path): $!\n";
-              return 0;
-          }
+        if (!defined $file_handle) {
+            print STDERR __FILE__, ": Error creating file ($tmp_path): $!\n";
+            return 0;
+        }
 
-          print $file_handle $output;
-          close($file_handle);
+        print $file_handle $output;
+        close($file_handle);
 
-          my $different = 1;
-          if (-r $full_path &&
-              -s $tmp_path == -s $full_path &&
-              compare($tmp_path, $full_path) == 0) {
-            $different = 0;
-          }
+        my $different = 1;
+        if (-r $full_path &&
+            -s $tmp_path == -s $full_path &&
+            compare($tmp_path, $full_path) == 0) {
+          $different = 0;
+        }
 
-          if ($different) {
-            unlink($full_path);
-            if (!rename($tmp_path, $full_path)) {
-              print STDERR __FILE__, ": Error renaming $tmp_path to $full_path: $!\n";
-              return 0;
-            }
+        if ($different) {
+          unlink($full_path);
+          if (!rename($tmp_path, $full_path)) {
+            print STDERR __FILE__, ": Error renaming $tmp_path to $full_path: $!\n";
+            return 0;
           }
-          else {
-            unlink($tmp_path);
-          }
+        }
+        else {
+          unlink($tmp_path);
         }
     }
     elsif ($type eq "delete") {
         
-        foreach $filename(@filenames) {
-          unlink $filename;
-        }
+        unlink $filename;
     }
     elsif ($type eq "mustnotexist") {
-       
-        foreach $filename(@filenames) {
-          if (-e $filename) {
-              print STDERR "\"$root/$filename\" exists!\n";
-              return 0;
-          }
+        
+        if (-e $filename) {
+            print STDERR "\"$root/$filename\" exists!\n";
+            return 0;
         }
     }
     elsif ($type eq "copy") {
@@ -262,13 +223,6 @@ sub Run ($)
             return 0;
         }
 
-        my $filename_count = @filenames;
-        if ($filename_count > 1) {
-          print STDERR "The copy command accepts only one source file name.";
-          return 0;
-        }
-
-        my $filename = @filenames[0];
         my $src_file_name = $root . '/' . $filename;
         my $target_file_name = $root . '/' . $target;
         my $result = copy($src_file_name, $target_file_name);

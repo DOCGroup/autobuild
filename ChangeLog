@@ -1,3 +1,10 @@
+Sat May  7 22:23:57 2005  Ossama Othman  <ossamat@dre.vanderbilt.edu>
+
+	* command/file_manipulation.pm:
+
+	  Reverted wildcard changes.  They are preventing some builds from
+	  running.
+
 Sat May  7 19:23:27 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * command/file_manipulation.pm: 
