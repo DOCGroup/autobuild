@@ -1,3 +1,9 @@
+Mon May  9 15:19:57 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/autobuild/merengue/merengue_vc71.xml: 
+
+          Fixed the wrong xerces path.
+
 Mon May  9 15:13:40 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml: 
