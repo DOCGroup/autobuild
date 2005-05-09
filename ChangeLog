@@ -1,3 +1,9 @@
+Mon May  9 15:13:40 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/autobuild/merengue/merengue_vc71.xml: 
+
+          Removed SSL from configs.
+
 Sun May  8 14:55:13 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml: 
