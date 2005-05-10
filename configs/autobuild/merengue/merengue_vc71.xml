@@ -46,4 +46,6 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/merengue_full"/>
+    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/merengue_full"/>
 </autobuild>

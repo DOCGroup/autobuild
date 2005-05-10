@@ -1,3 +1,9 @@
+Tue May 10 15:25:08 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/autobuild/merengue/merengue_vc71.xml: 
+
+          Added lines to copy the log files to the server (naboo).
+
 Mon May  9 15:19:57 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml: 
