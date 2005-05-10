@@ -1,3 +1,9 @@
+Tue May 10 16:01:20 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/scoreboard/tao.xml: 
+
+          Added merengue full build logs to the scoreboard page.
+
 Tue May 10 15:25:08 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml: 
