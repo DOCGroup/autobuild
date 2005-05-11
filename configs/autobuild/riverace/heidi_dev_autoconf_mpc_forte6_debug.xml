@@ -44,7 +44,7 @@
     <command name="file_manipulation" options="type=create file=build/autoconf_mpc_forte6_debug/.disable output='RUNNING'" />
     <command name="make"              options="-j 2 -k" />
 
-    <command name="auto_run_tests"    options="dir=build/autoconf_mpc_forte6_debug -a -o -t" />
+    <command name="auto_run_tests"    options="dir=build/autoconf_mpc_forte6_debug" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
