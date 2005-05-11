@@ -9,6 +9,7 @@
         <!-- autom4te uses M4 or /usr/ccs/bin/m4, which isn't GNU. -->
         <environment name="M4"              value="/usr/local/bin/m4" />
         <environment name="MPC_ROOT"        value="/home/shuston/ace/builds/MPC" />
+        <environment name="SSL_ROOT"        value="/usr/local/ssl" />
 
         <variable name="root"         value="/home/shuston/ace/builds" />
         <variable name="build_name"   value="autoconf_mpc_forte7_debug" />
@@ -42,7 +43,7 @@
 
     <command name="shell"             options="(cd ACE_wrappers-repository; ./bin/bootstrap)" />
 
-    <command name="configure"         options="CXX=CC --preclean" />
+    <command name="configure"         options="CXX=CC SSL_ROOT=/usr/local/ssl --preclean" />
     <command name="make"              options="dir=build/autoconf_mpc_forte7_debug -j 2 -k" />
 
     <command name="auto_run_tests"    options="dir=build/autoconf_mpc_forte7_debug -a -o -t" />
