@@ -1,3 +1,12 @@
+Mon May 16 10:56:24 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/pantera_isis/gcc-4.0.xml:
+
+	  Temporarily disabled the "-Wformat=2" g++ 4.0 compiler flag.
+	  All ACE/TAO/CIAO format specifiers problems detected by g++ 4.0
+	  have been repaired.  The remaining problems are within the g++
+	  4.0 c++-locale.h header.
+
 Wed May 11 17:49:13 2005  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
