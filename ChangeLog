@@ -1,3 +1,14 @@
+Thu May 19 22:08:29 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/danzon/SunOS_SunCC55.xml:
+
+	  Generate a default.features file instead of a local.features
+	  file.  The generated local.features file was for some reason
+	  being ignored, probably due to an error in this XML file.
+	  Build configuration with a default.features file is more
+	  straightforward.  Addresses stale ACE_SSL library in build
+	  workspace, and lack of SSL related binary builds.
+
 Mon May 16 10:56:24 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/pantera_isis/gcc-4.0.xml:
