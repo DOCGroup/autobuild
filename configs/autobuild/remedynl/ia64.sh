@@ -12,5 +12,4 @@ cd $HOME/ACE/autobuild
 
 cvs -z9 up -P -d
 
-$HOME/ACE/autobuild/configs/autobuild/remedynl/ia64_icc.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/ia64_gcc.sh
