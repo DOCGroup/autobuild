@@ -95,12 +95,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>RHAS_21AS_ICC_IA64</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/ia64_icc</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>SuSE_92_GCC3.3.4_NoInline</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_NoInline</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -109,12 +103,6 @@ all the OS/platform combinations TAO is tested everyday.
      <build>
       <name>SuSE_93_GCC3.3.5_x86_64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_gcc/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>SuSE_93_ICC_8_1</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
