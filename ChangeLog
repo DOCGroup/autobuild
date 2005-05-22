@@ -1,3 +1,8 @@
+Sun May 22 10:27:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed ICC builds, the evaluation license has been expired
+
 Thu May 19 22:08:29 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/danzon/SunOS_SunCC55.xml:
@@ -34,43 +39,43 @@ Wed May 11 17:49:13 2005  Steve Huston  <shuston@riverace.com>
 
 Tue May 10 16:01:20 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/scoreboard/tao.xml: 
+        * configs/scoreboard/tao.xml:
 
           Added merengue full build logs to the scoreboard page.
 
 Tue May 10 15:25:08 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/merengue/merengue_vc71.xml: 
+        * configs/autobuild/merengue/merengue_vc71.xml:
 
           Added lines to copy the log files to the server (naboo).
 
 Mon May  9 15:19:57 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/merengue/merengue_vc71.xml: 
+        * configs/autobuild/merengue/merengue_vc71.xml:
 
           Fixed the wrong xerces path.
 
 Mon May  9 15:13:40 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/merengue/merengue_vc71.xml: 
+        * configs/autobuild/merengue/merengue_vc71.xml:
 
           Removed SSL from configs.
 
 Sun May  8 14:55:13 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/merengue/merengue_vc71.xml: 
+        * configs/autobuild/merengue/merengue_vc71.xml:
 
           Deleted the find/delete project files section.
 
 Sat May  7 23:33:04 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/merengue/merengue_vc71.xml: 
+        * configs/autobuild/merengue/merengue_vc71.xml:
 
           Corrected the log file name, and uncommented the sandbox.
 
 Sat May  7 22:44:42 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * configs/autobuild/merengue/merengue_vc71.xml: 
+        * configs/autobuild/merengue/merengue_vc71.xml:
 
           Autobuild file for merengue set up.
 
@@ -83,7 +88,7 @@ Sat May  7 22:23:57 2005  Ossama Othman  <ossamat@dre.vanderbilt.edu>
 
 Sat May  7 19:23:27 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
-        * command/file_manipulation.pm: 
+        * command/file_manipulation.pm:
 
           Added bash-like wildcards to the file selection. If the 'dir' is
           given then the filename is treated as a wildcard.
