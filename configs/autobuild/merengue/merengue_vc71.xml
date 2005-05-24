@@ -8,7 +8,7 @@
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71\ACE_wrappers\bin;C:\ACE\VC71\ACE_wrappers\lib;c:\xerces-c-2_5_0-win32-vc7\bin" type="prefix" />
         <environment name="XERCESCROOT"   value="C:\xerces-c-2_5_0-win32-vc7"/>
         <environment name="BOOST_ROOT"    value="C:\Boost"/>
-        <environemnt name="BOOST_VERSION" value="boost-1_32"/>
+        <environment name="BOOST_VERSION" value="boost-1_32"/>
 
         <variable name="configs"  value="Win32 VC71 Exceptions" />
         <variable name="root"     value="C:\ACE\VC71\" />
