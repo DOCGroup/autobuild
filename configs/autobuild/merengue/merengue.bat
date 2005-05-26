@@ -1,5 +1,2 @@
-cd C:\ACE\autobuild
-set CVS_RSH=plink
-cvs -d :ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
-cd configs\autobuild\merengue
+cd C:\ACE\autobuild\configs\autobuild\merengue
 call merengue_driver.bat
