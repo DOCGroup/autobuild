@@ -1,0 +1,50 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\ACE\VC8\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO"/>
+        <environment name="CVSROOT"      value=":ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"      value="C:\bin\plink.exe" />
+        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib" type="prefix" />
+
+        <variable name="configs"  value="Win32 VC8 Exceptions" />
+        <variable name="root"     value="C:\ACE\VC8\" />
+        <variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\ACE\VC8\" />
+        <variable name="name"     value="WinXP VS.NET 2005" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -Debug -k -clean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+    <command name="anonymous_shell"   options="pscp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/CCF -type vc8 -recurse"/>
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -Debug -k" />
+
+    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/tao_win2003_full"/>
+    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/tao_win2003_full"/>
+</autobuild>
