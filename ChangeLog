@@ -1,3 +1,9 @@
+Wed Jun  1 00:09:04 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
+
+        * configs/scoreboard/tao.xml:
+
+          Added tao.dre to the scoreboard.
+
 Tue May 31 22:12:36 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/autobuild/tao_win2003/tao_vc8.xml:
