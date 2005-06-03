@@ -1,3 +1,8 @@
+Fri Jun  3 08:33:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed IA64 GCC build
+
 Wed Jun  1 00:09:04 2005  Emre Turkay  <turkaye@dre.vanderbilt.edu>
 
         * configs/scoreboard/tao.xml:
