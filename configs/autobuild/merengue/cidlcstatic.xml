@@ -14,7 +14,6 @@
       <variable name="root" value="C:\ACE\CIDLC\"/>
       <variable name="log_file" value="log.txt"/>
       <variable name="log_root" value="C:\ACE\CIDLC\"/>
-      <variable name="project_root" value="C:\ACE\CIDLC\ACE_wrappers"/>
       <variable name="name" value="WinXP VS.NET 2003 - CIDLC Build" />
    </configuration>
 
@@ -33,7 +32,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc71 -static TAO\CIAO\CIDLC\CIDLC.mwc"/>
+    <command name="generate_workspace" options="-type vc71 -static ACE_wrappers\TAO\CIAO\CIDLC\CIDLC.mwc"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -s -dir ACE_wrappers\TAO\CIAO\CIDLC -k" />
 
