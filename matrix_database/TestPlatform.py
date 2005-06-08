@@ -12,7 +12,7 @@ from DBConfig import *
 
 #patterns for log file
 compile_error = re.compile(r'error',re.IGNORECASE)
-test_error = re.compile(r'Error|ERROR|fatal|EXCEPTION|ACE_ASSERT|Assertion|Mismatched free|are definitely lost in loss record|Invalid write of size|Invalid read of size|pure virtual ')
+test_error = re.compile(r'Error|ERROR|fatal|EXCEPTION|ACE_ASSERT|Assertion|Mismatched free|are definitely lost in loss record|: parse error|Invalid write of size|Invalid read of size|pure virtual ')
 ace_test_start = re.compile (r'Running')
 build_begin = re.compile(r'#################### Begin');
 build_end   = re.compile(r'#################### End');
