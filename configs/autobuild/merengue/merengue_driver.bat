@@ -6,5 +6,5 @@ set CVS_RSH=plink
 cvs -q -d :ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
 cd configs\autobuild\merengue
 
+call cidlc.bat
 call merengue_vc71.bat
-
