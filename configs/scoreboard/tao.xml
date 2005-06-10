@@ -184,12 +184,6 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
-            <name>WinXP_MSVC6_SP6_DLL_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MSVC6dd</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_CBuilderX_Static_Release</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/CBXsr</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -354,6 +348,12 @@ all the OS/platform combinations TAO is tested everyday.
    <build>
       <name>VxWorks5.5.1_x86_GCC2.96_Exceptions</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PentiumX_GNU</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>VxWorks5.5.1_x86_GCC2.96_NO_Exceptions</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_Pentium_GNU</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
