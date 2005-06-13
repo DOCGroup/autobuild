@@ -160,12 +160,6 @@ all the OS/platform combinations ACE is tested everyday.
 	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       </build>
       <build>
-         <name>WinXP_BCB6_Pro_Dynamic_Release_Unicode</name>
-         <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6dru</url>
-         <build_sponsor>Remedy IT</build_sponsor>
-	 <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      </build>
-      <build>
           <name>WinXP_Cygwin_GCC_3_3_3_ACE</name>
            <url>http://www.dre.vanderbilt.edu/~remedynl/CygwinACE</url>
           <build_sponsor>Remedy IT</build_sponsor>
