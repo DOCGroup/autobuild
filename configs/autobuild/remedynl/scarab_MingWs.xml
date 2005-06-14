@@ -6,7 +6,7 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="Path"         value="C:\MingW\bin;C:\ACE\MingWStatic\ACE_wrappers\bin;C:\ACE\MingWStatic\ACE_wrappers\lib;" type="prefix" />
+        <environment name="Path"         value="C:\MingW\bin;C:\Cygwin\bin;C:\ACE\MingWStatic\ACE_wrappers\bin;C:\ACE\MingWStatic\ACE_wrappers\lib;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
@@ -23,7 +23,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -name GNUmakefile* -exec \x22rm {}\x22 \x22;\x22" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>

@@ -6,7 +6,7 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="C:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="Path"         value="C:\MingW\bin;C:\ACE\MingWTAO\ACE_wrappers\bin;C:\ACE\MingWTAO\ACE_wrappers\lib;" type="prefix" />
+        <environment name="Path"         value="C:\MingW\bin;C:\Cygwin\bin;C:\ACE\MingWTAO\ACE_wrappers\bin;C:\ACE\MingWTAO\ACE_wrappers\lib;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
@@ -21,7 +21,7 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="ON" />
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name GNUmakefile* -exec \x22rm {}\x22 \x22;\x22" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
