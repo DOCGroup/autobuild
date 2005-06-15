@@ -1,3 +1,10 @@
+Tue Jun 14 21:13:05 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/tango_isis/Full_Reactors.xml:
+
+	  Enable XML-based Service Configurator support since none of our
+	  builds currently enable it.
+
 Tue Jun 14 12:31:00 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
