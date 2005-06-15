@@ -1,3 +1,11 @@
+Wed Jun 15 14:07:17 PDT 2005  Meghana Haridev <mharidev@qualcomm.com>
+
+        * configs/autobuild/qualcomm/x86-SCTP-IPv6.xml:
+          Added new build for FC3_x86_SCTP_IPv6.
+
+        * configs/scoreboard/tao.xml:
+          Added FC3_x86_SCTP_IPv6 build to Linux scoreboard.
+
 Wed Jun 15 10:12:00 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Full_Reactors.xml:
