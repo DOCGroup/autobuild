@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86-sctp" />
         <environment name="TAO_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86-sctp/TAO" />
         <environment name="LD_LIBRARY_PATH" value="/opt/data/acebuild/ACE_wrappers/build/linux-x86-sctp/lib:/opt/data/acebuild/ACE_wrappers/build/linux-x86-sctp/ace:/opt/data/acebuild/lksctp-tools/src/lib/.libs:" />
+        <environment name="CVSROOT"         value=":ext:mharidev@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="/usr/bin/ssh" />
 
         <variable name="project_root" value="/opt/data/acebuild/ACE_wrappers/build/linux-x86-sctp" />
