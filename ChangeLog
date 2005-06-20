@@ -1,3 +1,10 @@
+Mon Jun 20 09:20:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+          Removed HPUX builds. We powered down our last HPUX system
+          because of lack of sponsoring to keep it running
+
 Thu Jun 16 08:32:24 PDT 2005  Brian Buesker <bbuesker@qualcomm.com>
 
         * configs/autobuild/qualcomm/x86-SCTP-IPv6.xml:
