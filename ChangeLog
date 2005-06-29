@@ -1,3 +1,8 @@
+Wed Jun 29 09:42:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+          Added Windows 2003 MSVC6 Debug build
+
 Fri Jun 24 07:08:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
