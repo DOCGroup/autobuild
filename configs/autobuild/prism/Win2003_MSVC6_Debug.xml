@@ -11,7 +11,7 @@
 
         <variable name="root"         value="F:\Overnight_Builds\DOC_group\CL60\debug" />
         <variable name="log_file"     value="log.txt" />
-        <variable name="log_root"     value="F:\Overnight_Builds\DOC_group\CL60\debug" />
+        <variable name="log_root"     value="T:\doc-scoreboard\windows\MSVC6_Debug" />
         <variable name="name"         value="WinXP DLL Debug" />
         <variable name="configs"      value="Win32 SANDBOX Exceptions" />
     </configuration>
