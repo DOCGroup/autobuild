@@ -36,7 +36,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/CCF -recurse -type vc6" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO -recurse -type vc6" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -ALL -Debug -k" />
 
