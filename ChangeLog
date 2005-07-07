@@ -1,3 +1,10 @@
+Thu Jul  7 12:37:29 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+	* configs/autobuild/riverace/billy_dev_gcc3_debug.xml:
+	* configs/scoreboard/ace.xml: Added 2 new Solaris 10 x86 builds,
+	  one for Sun Studio 10, one for g++ 3.
+
 Wed Jun 29 09:42:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
 
         * configs/scoreboard/tao.xml:

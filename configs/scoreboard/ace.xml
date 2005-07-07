@@ -134,6 +134,20 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
+   <build>
+      <name>Solaris_10_x86_Studio10(64bit)_Debug</name>
+      <url>http://www.riverace.com/build_logs/billy/dev/studio10-64_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>Solaris_10_x86_gcc3_Debug</name>
+      <url>http://www.riverace.com/build_logs/billy/dev/gcc3_debug</url>
+      <red>36</red>
+      <build_sponsor>Riverace</build_sponsor>
+      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+   </build>
 </group>
 
 <group>
