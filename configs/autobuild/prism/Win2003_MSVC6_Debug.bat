@@ -6,4 +6,4 @@ set CVS_RSH=c:\cygwin\bin\ssh
 c:\cygwin\bin\cvs -z9 up -P -d
 cd configs\autobuild\prism
 perl f:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl Win2003_MSVC6_Debug.xml
-c:\cygwin\bin\chmod o+r T:\doc-scoreboard\windows\MSVC6_Debug\*
+c:\cygwin\bin\chmod o+r /cygdrive/T/doc-scoreboard/windows/MSVC6_Debug/*
