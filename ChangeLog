@@ -1,9 +1,14 @@
+Fri Jul  7 09:24:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added VxWorks 5.5.1 PENTIUM Shared Library build.
+
 Thu Jul  7 12:37:29 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
-	* configs/autobuild/riverace/billy_dev_gcc3_debug.xml:
-	* configs/scoreboard/ace.xml: Added 2 new Solaris 10 x86 builds,
-	  one for Sun Studio 10, one for g++ 3.
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+        * configs/autobuild/riverace/billy_dev_gcc3_debug.xml:
+        * configs/scoreboard/ace.xml: Added 2 new Solaris 10 x86 builds,
+          one for Sun Studio 10, one for g++ 3.
 
 Wed Jun 29 09:42:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
 
@@ -48,10 +53,10 @@ Wed Jun 15 10:12:00 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jun 14 21:13:05 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
 
-	  Enable XML-based Service Configurator support since none of our
-	  builds currently enable it.
+          Enable XML-based Service Configurator support since none of our
+          builds currently enable it.
 
 Tue Jun 14 12:31:00 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -80,12 +85,12 @@ Fri Jun  10 11:24:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/ace.xml:
 
-	Removed MSVC6 WChar build.
+          Removed MSVC6 WChar build.
 
         * configs/scoreboard/tao.xml:
 
-	Removed MSVC6 build.
-	Added new VxWorks build for PENTIUM without native exceptions.
+          Removed MSVC6 build.
+          Added new VxWorks build for PENTIUM without native exceptions.
 
 Wed Jun  8 09:51:22 2005  Chad Elliott  <elliott_c@ociweb.com>
 
