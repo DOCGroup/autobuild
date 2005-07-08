@@ -1,3 +1,9 @@
+Fri Jul  8 16:34:22 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Removed Solaris_10_x86_gcc3_Debug
+	  for now. The compiler is not looking good and I probably won't
+	  have time to fix it soon.
+
 Fri Jul  7 09:24:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
