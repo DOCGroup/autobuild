@@ -1,3 +1,10 @@
+Mon Jul 18 09:57:19 2005  Gary Maxey <gary.maxey@hp.com>
+
+	* configs/autobuild/hp/gmaxey_dev.xml: 
+
+          Exclude Bug_2183_Regression test on HP NSK platform due to its
+	  dependency on TAO_Strategies library.
+
 Fri Jul  8 16:34:22 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Removed Solaris_10_x86_gcc3_Debug
