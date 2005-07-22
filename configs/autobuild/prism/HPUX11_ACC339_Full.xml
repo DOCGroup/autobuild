@@ -14,7 +14,7 @@
         <variable name="sam_root" value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/hp1" />
-        <variable name="configs"  value="HPUX11.11 aCC 3.39" />
+        <variable name="configs"  value="HPUX aCC 3.39" />
 
     </configuration>
 
@@ -26,7 +26,7 @@
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
     <!-- Now, delete them again to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'Makefile*' -exec rm '{}' ';'" />
 
