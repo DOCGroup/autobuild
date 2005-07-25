@@ -43,7 +43,7 @@
     <command name="win32make"         options="msvc_static_compile -vc7 -Debug -ACE -k -name_modifier *_Static" />
     <command name="win32make"         options="msvc_static_compile -vc7 -Debug -TAO -k -name_modifier *_Static" />
 
-    <command name="auto_run_tests"    options="-ExeSubDir Static_Debug -a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"    options="-ExeSubDir Static_Debug -a -o -t -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
