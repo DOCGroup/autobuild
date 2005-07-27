@@ -49,7 +49,7 @@
     <!-- command name="auto_run_tests"    options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" / -->
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_SimPC_Host" />
