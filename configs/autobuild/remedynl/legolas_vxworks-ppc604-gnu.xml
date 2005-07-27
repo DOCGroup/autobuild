@@ -54,7 +54,7 @@
     <!-- command name="auto_run_tests" options="" / -->
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC604_GNU" />
