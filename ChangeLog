@@ -1,3 +1,8 @@
+Wed Jul 27 08:39:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added BCB6 VxWorks Host build
+
 Tue Jul 19 15:50:39 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/sunv210_studio10-64_debug.xml:
@@ -6,7 +11,7 @@ Tue Jul 19 15:50:39 2005  Steve Huston  <shuston@riverace.com>
 
 Mon Jul 18 09:57:19 2005  Gary Maxey <gary.maxey@hp.com>
 
-	* configs/autobuild/hp/gmaxey_dev.xml: 
+	* configs/autobuild/hp/gmaxey_dev.xml:
 
           Exclude Bug_2183_Regression test on HP NSK platform due to its
 	  dependency on TAO_Strategies library.
