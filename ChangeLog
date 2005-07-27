@@ -1,3 +1,8 @@
+Wed Jul 27 09:58:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added hostbuild we will be using for the SimPC build
+
 Wed Jul 27 08:39:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
