@@ -2,10 +2,10 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO"/>
+        <environment name="ACE_ROOT"        value="C:/ACE/VxWorks/pcPentium/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="C:/ACE/VxWorks/pcPentium/ACE_wrappers/TAO"/>
         <environment name="HOST_ROOT"       value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
-        <environment name="PATH"            value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
+        <environment name="PATH"            value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\MSVC6dd\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
         <environment name="WIND_BASE"       value="C:/Tornado2.2"/>
         <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
@@ -13,16 +13,16 @@
         <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
         <environment name="ACE_RUN_VX_TGTSVR"       value="P4" />
-        <environment name="ACE_RUN_VX_TGTSVR_ROOT"  value="/tgtsvr/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT"  value="/tgtsvr/ACE/VxWorks/pcPentium/ACE_wrappers" />
         <environment name="ACE_RUN_VX_TGTSVR_DEFGW" value="10.2.128.1" />
         <environment name="ACE_RUN_VX_REBOOT_TIME"  value="40" />
         <environment name="ACE_RUN_VX_REBOOT_TOOL"  value="perl C:/ACE/VxWorks/P4_reboot.pl" />
         <environment name="ACE_RUN_VX_TGT_REBOOT"   value="1" />
         <environment name="ACE_RUN_VX_TGT_HOST"     value="10.2.128.65" />
 
-        <variable name="root"     	value="C:\ACE\VxWorks\pcPentiumX\" />
+        <variable name="root"     	value="C:\ACE\VxWorks\pcPentium\" />
         <variable name="log_file" 	value="build.txt" />
-        <variable name="log_root" 	value="C:\ACE\VxWorks\pcPentiumX\" />
+        <variable name="log_root" 	value="C:\ACE\VxWorks\pcPentium\" />
         <variable name="configs"  	value="VxWorks STATIC" />
         <variable name="cvs_program"  	value="c:\cygwin\bin\cvs" />
 
@@ -38,7 +38,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\nexceptions=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\nexceptions=0\ndebug=0\ninline=1\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
 
     <command name="print_os_version" />
@@ -68,14 +68,14 @@
     <!-- command name="make"              options="-k -C TAO idl_stubs" / -->
     <command name="make"              options="-k -C TAO/tao" />
     <command name="make"              options="-k -C TAO/tests" />
-    <command name="make"              options="-k -C TAO/orbsvcs" />
+    <!-- command name="make"              options="-k -C TAO/orbsvcs" / -->
 
-    <command name="auto_run_tests" options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" />
+    <command name="auto_run_tests" options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PentiumX_GNU" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_Pentium_GNU" />
 </autobuild>
