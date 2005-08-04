@@ -1,3 +1,10 @@
+Thu Aug  4 14:33:43 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+
+	  Use g++ 4.0 instead 3.4.  The latter has a bug that causes
+	  coverage instrumented executables to crash upon process exit.
+
 Wed Jul 27 09:58:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
