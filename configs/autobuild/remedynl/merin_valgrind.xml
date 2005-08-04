@@ -9,7 +9,7 @@
         <environment name="PATH"                  value="/usr/local/bin" type="prefix" />
         <environment name="CVS_RSH"               value="ssh" />
         <environment name="RSYNC_RSH"             value="ssh" />
-        <environment name="VALGRIND_OPTS"         value="-q --tool=addrcheck --num-callers=25 --leak-check=yes --trace-children=yes --show-reachable=yes" />
+        <environment name="VALGRIND_OPTS"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --show-reachable=yes" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
 
         <variable name="root"     value="/home/build/ACE/valgrind/" />
