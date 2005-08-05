@@ -1,3 +1,13 @@
+Fri Aug  5 00:18:04 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+	* configs/autobuild/pantera_isis/gcc-4.0.xml:
+
+	  Disable use of the NPTL when running the regression tests.  The
+	  older version (2.3.2) of the installed GNU C library does not
+	  contain fixes necessary for proper execution of several pthreads
+	  functions.  Addresses regression test failures.
+
 Thu Aug  4 14:33:43 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/pantera_isis/Code_Coverage.xml:
