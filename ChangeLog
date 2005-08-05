@@ -1,3 +1,10 @@
+Fri Aug  5 01:02:22 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+
+	  Temporarily reverted switch to g++ 4.0.  Shared library coverage
+	  is currently broken in that compiler.
+
 Fri Aug  5 00:18:04 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/pantera_isis/Code_Coverage.xml:
