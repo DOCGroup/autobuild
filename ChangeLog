@@ -1,9 +1,14 @@
+Wed Aug 10 12:54:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed SuSE 92 NoInline build
+
 Tue Aug  9 19:20:53 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/CIDLC.xml
 	* configs/autobuild/abbarach/cidlc.sh
 
-	Add a PowerPC nightly CIDLC build. 
+	Add a PowerPC nightly CIDLC build.
 
 Fri Aug  5 11:21:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
