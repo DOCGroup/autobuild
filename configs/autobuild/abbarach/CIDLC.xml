@@ -1,0 +1,54 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/CIDLC/ACE_wrappers/ace;/build/isisbuilds/CIDLC/ACE_wrappers/lib" />
+        <environment name="BOOST_ROOT"        value="/build/isisbuilds/CIDLC/boost" />
+        <environment name="UTILITY_ROOT"      value="/build/isisbuilds/Utility" />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+
+        <variable name="root"     value="/build/isisbuilds/CIDLC/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/abbarach_CIDLC" />
+        <variable name="configs"  value="Darwin/PowerPC Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-tiger.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nexceptions=1\ncidl=1\nboost=1\nstatic_link=1\n# Perform some stricter C/C++ checking\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_tiger_gcc4.GNU\n\n'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='exceptions=1\ncidl=1\nboost=1\n'" />
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+
+    <!-- This builds everthing exclude TAO directory-->
+    <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC CIDLC.mwc" />
+
+    <command name="make"              options="-k realclean -C TAO/CIAO/CIDLC" />
+    <command name="make"              options="-k -j 4 -C TAO/CIAO/CIDLC" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    
+    <command name="shell"             options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
+    <command name="shell"             options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc.bz2 /web/users/isisbuilds/CIDLC/Darwin/PowerPC" />
+    <command name="shell"             options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc /web/users/isisbuilds/CIDLC/Darwin/PowerPC" />
+
+</autobuild>

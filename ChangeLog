@@ -1,3 +1,10 @@
+Tue Aug  9 19:20:53 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/abbarach/CIDLC.xml
+	* configs/autobuild/abbarach/cidlc.sh
+
+	Add a PowerPC nightly CIDLC build. 
+
 Fri Aug  5 11:21:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/tao_win2003/tao_vc8.xml
