@@ -1,3 +1,19 @@
+Thu Aug 11 15:30:03 2005  Justin Michel  <michel_j@ociweb.com>
+
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+        * configs/scoreboard/tao.xml:
+
+          Two new windows builds hosted at OCI. More to come.
+
+        * configs/autobuild/oci/doc_g5_MACOSX_gcc33_d0o1.xml:
+
+          This file is an old style. We'll start from scratch if
+        a new build on this platform is needed.
+
+
+
+
 Thu Aug 11 09:48:37 2005  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/simpleparser.pm:
