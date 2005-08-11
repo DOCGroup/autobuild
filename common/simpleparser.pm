@@ -87,10 +87,9 @@ sub Parse ($\%)
                     return 0;
                 }
 
-                my %value;
-                $value{NAME} = $1;
-                $value{VALUE} = $2;
-                $value{TYPE} = $type;
+                my %value = (NAME  => $1,
+                             VALUE => $2,
+                             TYPE  => $type);
 
                 push @{$data->{ENVIRONMENT}}, \%value;
             }
