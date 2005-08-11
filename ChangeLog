@@ -1,3 +1,10 @@
+Thu Aug 11 09:48:37 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/simpleparser.pm:
+
+          Simplified the parser in preparation for handling multi-lined xml
+          commands.
+
 Wed Aug 10 12:54:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
@@ -5,41 +12,41 @@ Wed Aug 10 12:54:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Aug  9 19:20:53 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/CIDLC.xml
-	* configs/autobuild/abbarach/cidlc.sh
+        * configs/autobuild/abbarach/CIDLC.xml
+        * configs/autobuild/abbarach/cidlc.sh
 
-	Add a PowerPC nightly CIDLC build.
+        Add a PowerPC nightly CIDLC build.
 
 Fri Aug  5 11:21:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/tao_win2003/tao_vc8.xml
+        * configs/autobuild/tao_win2003/tao_vc8.xml
 
-	Added XERCESCROOT environment variable and to the path to fix
-	broken CIAO build.
+        Added XERCESCROOT environment variable and to the path to fix
+        broken CIAO build.
 
 Fri Aug  5 01:02:22 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
 
-	  Temporarily reverted switch to g++ 4.0.  Shared library coverage
-	  is currently broken in that compiler.
+          Temporarily reverted switch to g++ 4.0.  Shared library coverage
+          is currently broken in that compiler.
 
 Fri Aug  5 00:18:04 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/pantera_isis/Code_Coverage.xml:
-	* configs/autobuild/pantera_isis/gcc-4.0.xml:
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
 
-	  Disable use of the NPTL when running the regression tests.  The
-	  older version (2.3.2) of the installed GNU C library does not
-	  contain fixes necessary for proper execution of several pthreads
-	  functions.  Addresses regression test failures.
+          Disable use of the NPTL when running the regression tests.  The
+          older version (2.3.2) of the installed GNU C library does not
+          contain fixes necessary for proper execution of several pthreads
+          functions.  Addresses regression test failures.
 
 Thu Aug  4 14:33:43 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/pantera_isis/Code_Coverage.xml:
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
 
-	  Use g++ 4.0 instead 3.4.  The latter has a bug that causes
-	  coverage instrumented executables to crash upon process exit.
+          Use g++ 4.0 instead 3.4.  The latter has a bug that causes
+          coverage instrumented executables to crash upon process exit.
 
 Wed Jul 27 09:58:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -53,22 +60,22 @@ Wed Jul 27 08:39:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Jul 19 15:50:39 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/sunv210_studio10-64_debug.xml:
-	* configs/scoreboard/ace.xml: Added new Solaris 10 on SPARC build
-	  using Sun Studio 10.
+        * configs/autobuild/riverace/sunv210_studio10-64_debug.xml:
+        * configs/scoreboard/ace.xml: Added new Solaris 10 on SPARC build
+          using Sun Studio 10.
 
 Mon Jul 18 09:57:19 2005  Gary Maxey <gary.maxey@hp.com>
 
-	* configs/autobuild/hp/gmaxey_dev.xml:
+        * configs/autobuild/hp/gmaxey_dev.xml:
 
           Exclude Bug_2183_Regression test on HP NSK platform due to its
-	  dependency on TAO_Strategies library.
+          dependency on TAO_Strategies library.
 
 Fri Jul  8 16:34:22 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Removed Solaris_10_x86_gcc3_Debug
-	  for now. The compiler is not looking good and I probably won't
-	  have time to fix it soon.
+        * configs/scoreboard/ace.xml: Removed Solaris_10_x86_gcc3_Debug
+          for now. The compiler is not looking good and I probably won't
+          have time to fix it soon.
 
 Fri Jul  7 09:24:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 

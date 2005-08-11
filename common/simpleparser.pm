@@ -37,17 +37,18 @@ sub Parse ($\%)
     my $state = 'none';
 
     while (<$file_handle>) {
-        chomp;
+        $_ =~ s/^\s+//;
+        $_ =~ s/\s+$//;
 
         # Ignore comments and blank lines
         s/<!--(.*?)-->//g;
-        next if (m/^\s*$/);
+        next if (length($_) == 0);
 
         if ($state eq 'none') {
-            if (m/^\s*<autobuild>\s*$/i) {
+            if (m/^<autobuild>$/i) {
                 $state = 'autobuild';
             }
-            elsif (m/^\s*<\?.*\?>\s*/i) {
+            elsif (m/^<\?.*\?>/i) {
                 # ignore
             }
             else {
@@ -56,26 +57,15 @@ sub Parse ($\%)
             }
         }
         elsif ($state eq 'autobuild') {
-            if (m/^\s*<\/autobuild>\s*$/i) {
+            if (m/^<\/autobuild>$/i) {
                 $state = 'none';
             }
-            elsif (m/^\s*<configuration>\s*$/i) {
+            elsif (m/^<configuration>$/i) {
                 $state = 'configuration';
             }
-            elsif (m/^\s*<command\s*name\s*=\s*"([^"]*)"\s*options\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
-                my %value;
-
-                $value{NAME} = $1;
-                $value{OPTIONS} = $2;
-
-                push @{$data->{COMMANDS}}, \%value;
-            }
-            elsif (m/^\s*<command\s*name\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
-                my %value;
-
-                $value{NAME} = $1;
-                $value{OPTIONS} = '';
-
+            elsif (m/^<command\s+name\s*=\s*"([^"]*)"(\s+options\s*=\s*"([^"]*)")?\s*\/\s*>$/i) {
+                my %value = (NAME    => $1,
+                             OPTIONS => (defined $3 ? $3 : ''));
                 push @{$data->{COMMANDS}}, \%value;
             }
             else {
@@ -84,32 +74,23 @@ sub Parse ($\%)
             }
         }
         elsif ($state eq 'configuration') {
-            if (m/^\s*<\/configuration>\s*$/i) {
+            if (m/^<\/configuration>$/i) {
                 $state = 'autobuild';
             }
-            elsif (m/^\s*<variable\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
+            elsif (m/^<variable\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"\s*\/\s*>$/i) {
                 $data->{VARS}->{$1} = $2;
             }
-            elsif (m/^\s*<environment\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
-                my %value;
-
-                $value{NAME} = $1;
-                $value{VALUE} = $2;
-                $value{TYPE} = 'replace';
-
-                push @{$data->{ENVIRONMENT}}, \%value;
-            }
-            elsif (m/^\s*<environment\s*name\s*=\s*"([^"]*)"\s*value\s*=\s*"([^"]*)"\s*type\s*=\s*"([^"]*)"\s*\/\s*>\s*$/i) {
-                my %value;
-                
-                if ($3 ne 'replace' && $3 ne 'prefix' && $3 ne 'suffix') {
+            elsif (m/^<environment\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>$/i) {
+                my($type) = (defined $4 ? $4 'replace');
+                if ($type ne 'replace' && $type ne 'prefix' && $type ne 'suffix') {
                     print STDERR "Error: environment type must be 'replace', 'prefix', or 'suffix'\n";
                     return 0;
                 }
 
+                my %value;
                 $value{NAME} = $1;
                 $value{VALUE} = $2;
-                $value{TYPE} = $3;
+                $value{TYPE} = $type;
 
                 push @{$data->{ENVIRONMENT}}, \%value;
             }
