@@ -81,7 +81,7 @@ sub Parse ($\%)
                 $data->{VARS}->{$1} = $2;
             }
             elsif (m/^<environment\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>$/i) {
-                my($type) = (defined $4 ? $4 'replace');
+                my($type) = (defined $4 ? $4 : 'replace');
                 if ($type ne 'replace' && $type ne 'prefix' && $type ne 'suffix') {
                     print STDERR "Error: environment type must be 'replace', 'prefix', or 'suffix'\n";
                     return 0;
