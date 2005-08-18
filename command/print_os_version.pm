@@ -88,14 +88,43 @@ sub Run ($)
     }
 
     if($^O eq "MSWin32"){
-        print "<h3>Microsoft Version (VER)</h3>\n";
-	system("VER");
+        my $systeminfo = `systeminfo` ;
+
+        print "<h3>Microsoft Version</h3>\n";
+        print filter_info($systeminfo, "os") . "\n";
+
+        print "<h3>Processor info</h3>\n";
+        print filter_info($systeminfo, "processor") . "\n";
+
+        print "<h3>Memory info</h3>\n";
+        print filter_info($systeminfo, "total physical memory") . "\n";
+        print filter_info($systeminfo, "virtual memory") . "\n";
     }
 
     print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
           $self->delay_factor(), "\n";
 
     return 1;
+}
+
+##############################################################################
+
+sub filter_info {
+    my $str = shift ;
+    my $pattern = shift ;
+    my @result ;
+    my $doing = 0 ;
+    foreach my $line (split("\n",$str)) {
+        if ($line =~ /^($pattern)/i) {
+            $doing = 1 ;
+            push(@result,$line) ;
+        } elsif (($doing) && ($line =~ /^\s+/o)) {
+            push(@result,$line) ;
+        } else {
+            $doing = 0 ;
+        }
+    }
+    return join("\n",@result) ;
 }
 
 ##############################################################################
