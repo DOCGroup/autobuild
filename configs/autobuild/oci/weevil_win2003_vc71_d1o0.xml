@@ -36,10 +36,9 @@
 	<command name="vc7make" options="/build release TAO/orbsvcs/tests/tests.sln" />
 	<command name="vc7make" options="/build release TAO/orbsvcs/examples/examples.sln" />
 	<command name="vc7make" options="/build release TAO/orbsvcs/performance-tests/perf.sln" />
-	<command name="vc7make" options="/build release TAO/DevGuideExamples/DevGuideExamples.sln" />
 	<command name="print_status" options="Test:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
-	<command name="auto_run_tests" options="-s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG -ExeSubDir Release -Config SLOW" />
+	<command name="auto_run_tests" options="-s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG -ExeSubDir Release" />
 	<command name="log" options="OFF" />
 	<command name="process_logs" options="clean move prettify index" />
 	<command name="status" options="off" />
