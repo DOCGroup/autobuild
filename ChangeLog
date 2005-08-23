@@ -1,3 +1,10 @@
+Tue Aug 23 17:09:22 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Removed the commented-out AIX 5.1
+	  builds - that machine (charlie) is going out for recycling.
+	  Uncommented the commented-out Solaris 8 builds - the machine
+	  is fixed and running builds again (it once seemed so fast... sigh).
+
 Thu Aug 18 18:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_os_version.pm:
