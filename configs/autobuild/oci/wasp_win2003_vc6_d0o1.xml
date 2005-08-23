@@ -15,7 +15,7 @@
 	<command name="shell" options="plink -batch -2 -l taoadmin xi.ociweb.com mkdir -p /home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
 	<command name="status" options="on" />
 	<command name="print_status" options="Setup:Windows Build" />
-	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
+	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
 	<command name="log" options="ON" />
 	<command name="cvs" options="-z 9 -q checkout -P ACE_wrappers" />
 	<command name="clone_build_tree" />
@@ -25,7 +25,7 @@
 	<command name="generate_workspace" options="dirs=TAO/CIAO -type vc6 -value_project includes+=D:/tao_builds/taoadmin/boost-1.30.2 -value_project libpaths+=D:/tao_builds/taoadmin/boost-1.30.2/lib CIAO.mwc CIDLC/CIDLC.mwc" />
 	<command name="print_ace_config" />
 	<command name="print_status" options="Compile:Windows Build" />
-	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
+	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
 	<command name="vc6make" options="TAO/TAOACE.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="tests/tests.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="examples/examples.dsw /make \x22all - win32 release\x22" />
@@ -39,10 +39,10 @@
 	<command name="vc6make" options="TAO/CIAO/CIDLC/CIDLC.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="TAO/CIAO/CIAO.dsw /make \x22all - win32 release\x22" />
 	<command name="print_status" options="Test:Windows Build" />
-	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
+	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
 	<command name="auto_run_tests" options="-s \x22d:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG -Config SSL -ExeSubDir Release" />
 	<command name="log" options="OFF" />
 	<command name="process_logs" options="clean move prettify index" />
 	<command name="status" options="off" />
-	<command name="shell" options="pscp -batch -2 -l taoadmin d:\tao_builds\taoadmin\logs\vc6_d0o1\*.* xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
+	<command name="shell" options="pscp -batch -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\*.* xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
 </autobuild>
