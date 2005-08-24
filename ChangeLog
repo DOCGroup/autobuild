@@ -1,3 +1,10 @@
+Wed Aug 24 08:32:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace_future.xml:
+          Upgraded compiler to GCC 4.0.1
+
 Tue Aug 23 17:09:22 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Removed the commented-out AIX 5.1
