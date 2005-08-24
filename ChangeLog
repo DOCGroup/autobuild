@@ -1,3 +1,11 @@
+Wed Aug 24 11:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace_future.xml:
+          Changed back to GCC 3.3.5, 4.0.1 doesn't work ok on x86_64, no
+          time to look in detail why
+
 Wed Aug 24 08:32:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
