@@ -1,3 +1,9 @@
+Thu Aug 25 18:32:42 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Removed
+	  "-j 2" from make flags - I think it's causing the template
+	  instantiations to get munched.
+
 Wed Aug 24 11:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
