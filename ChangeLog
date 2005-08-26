@@ -1,3 +1,8 @@
+Fri Aug 26 16:22:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/CVS_Report.xml:
+          Updated cvsreport tool to version 2.1
+
 Thu Aug 25 18:32:42 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Removed
