@@ -6,7 +6,8 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="D:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\bin;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include;D:\ACE\Intel90_64bit\ACE_wrappers\bin;D:\ACE\\ACE\Intel90_64bit\ACE_wrappers\lib;D:\Cygwin\bin" type="prefix" />
+        <environment name="PATH"         value="D:\Program Files\Microsoft Platform SDK\Include\;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\bin;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include;D:\ACE\Intel90_64bit\ACE_wrappers\bin;D:\ACE\\ACE\Intel90_64bit\ACE_wrappers\lib;D:\Cygwin\bin" type="prefix" />
+        <environment name="INCLUDE"      value="D:\Program Files\Microsoft Platform SDK\Include\;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include" type="prefix" />
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="D:\ACE\Intel90_64bit\" />
