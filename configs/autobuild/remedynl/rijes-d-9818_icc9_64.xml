@@ -1,0 +1,49 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="D:\ACE\Intel90_64bit\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="D:\ACE\Intel90_64bit\ACE_wrappers\TAO"/>
+        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"      value="ssh" />
+        <environment name="RSYNC_RSH"    value="D:\cygwin\bin\ssh" />
+        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\vcpackages;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\Program Files\Microsoft Visual Studio 8\VC\vcpackages;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\Cygwin\bin" type="prefix" />
+
+        <variable name="configs"  value="Win32 VC8 Exceptions" />
+        <variable name="root"     value="C:\ACE\Intel90_64bit\" />
+	<variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\ACE\Intel90_64bit\" />
+        <variable name="name"     value="Intel 90 64bit" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="win32make"         options="nmake CPP=icl.exe LINK32=xilink.exe CFG=\x22Win32 Debug\x22 REALCLEAN" />
+
+    <command name="log"               options="ON" />
+
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
+
+    <command name="shell"             options="find ACE_wrappers -name '*.vcproj*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.sln*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IPV6\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="icc" />
+    <command name="print_ace_config" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-type nmake -exclude TAO -recurse -value_template add_compile+=/Wp64"/>
+
+    <command name="win32make"         options="nmake CPP=icl.exe LINK32=xilink.exe CFG=\x22Win32 Debug\x22" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ICC90_64bit" />
+</autobuild>
