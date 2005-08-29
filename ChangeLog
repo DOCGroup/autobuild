@@ -1,3 +1,8 @@
+Mon Aug 29 14:09:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added support for icl, the Intel C++ compiler on Windows
+
 Fri Aug 26 16:22:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/CVS_Report.xml:

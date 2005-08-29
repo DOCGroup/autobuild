@@ -35,7 +35,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="icc" />
+    <command name="check_compiler" options="icl" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
