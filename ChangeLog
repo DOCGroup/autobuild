@@ -1,3 +1,11 @@
+Mon Aug 29 10:45:15 2005  Justin Michel  <michel_j@ociweb.com>
+
+        * command/cvs.pm:
+
+	  Return the failure code if the cvs command fails. This should prevent
+	the build from continuing. There's no point in rebuilding and running tests
+	if we couldn't get the changes from CVS.
+
 Mon Aug 29 14:09:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
