@@ -34,53 +34,63 @@ sub Parse ($\%)
         return 0;
     }
 
+    my $line  = '';
     my $state = 'none';
 
     while (<$file_handle>) {
+        # Remove leading and trailing spaces
         $_ =~ s/^\s+//;
         $_ =~ s/\s+$//;
 
-        # Ignore comments and blank lines
-        s/<!--(.*?)-->//g;
-        next if (length($_) == 0);
+        # Append it to the current line
+        $line .= ' ' . $_;
+
+        # Remove comments.  This is a fairly safe way to deal with
+        # multiple comments on the same line with non-commented text in
+        # the middle.
+        my($c) = pack('I', 1);
+        while($line =~ s/-->/$c/) {
+          ++$c;
+        }
+        for(my $i = pack('I', 1); ord($i) < ord($c); ++$i) {
+          if ($line !~ s/<!--.*$i//) {
+            $line =~ s/$i/-->/;
+          }
+        }
+
+        # Skip over blank lines
+        $line =~ s/^\s+//;
+        next if (length($line) == 0);
 
         if ($state eq 'none') {
-            if (m/^<autobuild>$/i) {
+            if ($line =~ s/^<\s*autobuild\s*>//i) {
                 $state = 'autobuild';
             }
-            elsif (m/^<\?.*\?>/i) {
+            elsif ($line =~ s/^<\?.*\?>//i) {
                 # ignore
-            }
-            else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
-                return 0;
             }
         }
         elsif ($state eq 'autobuild') {
-            if (m/^<\/autobuild>$/i) {
+            if ($line =~ s/^<\s*\/\s*autobuild\s*>//i) {
                 $state = 'none';
             }
-            elsif (m/^<configuration>$/i) {
+            elsif ($line =~ s/^<\s*configuration\s*>//i) {
                 $state = 'configuration';
             }
-            elsif (m/^<command\s+name\s*=\s*"([^"]*)"(\s+options\s*=\s*"([^"]*)")?\s*\/\s*>$/i) {
+            elsif ($line =~ s/^<\s*command\s+name\s*=\s*"([^"]*)"(\s+options\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
                 my %value = (NAME    => $1,
                              OPTIONS => (defined $3 ? $3 : ''));
                 push @{$data->{COMMANDS}}, \%value;
             }
-            else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
-                return 0;
-            }
         }
         elsif ($state eq 'configuration') {
-            if (m/^<\/configuration>$/i) {
+            if ($line =~ s/^<\s*\/\s*configuration\s*>//i) {
                 $state = 'autobuild';
             }
-            elsif (m/^<variable\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"\s*\/\s*>$/i) {
+            elsif ($line =~ s/^<\s*variable\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"\s*\/\s*>//i) {
                 $data->{VARS}->{$1} = $2;
             }
-            elsif (m/^<environment\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>$/i) {
+            elsif ($line =~ s/^<\s*environment\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
                 my($type) = (defined $4 ? $4 : 'replace');
                 if ($type ne 'replace' && $type ne 'prefix' && $type ne 'suffix') {
                     print STDERR "Error: environment type must be 'replace', 'prefix', or 'suffix'\n";
@@ -93,15 +103,16 @@ sub Parse ($\%)
 
                 push @{$data->{ENVIRONMENT}}, \%value;
             }
-            else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
-                return 0;
-            }
         }
         else {
             print STDERR "Error: Parser reached unknown state <$state>\n";
             return 0;
         }
+    }
+
+
+    if (length($line) != 0) {
+      print STDERR "Error: Unable to parse line:\n$line\n";
     }
 
     return 1;

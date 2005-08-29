@@ -1,10 +1,16 @@
+Mon Aug 29 13:58:56 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/simpleparser.pm:
+
+          Implemented a multi-lined parser.
+
 Mon Aug 29 10:45:15 2005  Justin Michel  <michel_j@ociweb.com>
 
         * command/cvs.pm:
 
-	  Return the failure code if the cvs command fails. This should prevent
-	the build from continuing. There's no point in rebuilding and running tests
-	if we couldn't get the changes from CVS.
+          Return the failure code if the cvs command fails. This should prevent
+        the build from continuing. There's no point in rebuilding and running tests
+        if we couldn't get the changes from CVS.
 
 Mon Aug 29 14:09:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -18,9 +24,9 @@ Fri Aug 26 16:22:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Aug 25 18:32:42 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Removed
-	  "-j 2" from make flags - I think it's causing the template
-	  instantiations to get munched.
+        * configs/autobuild/riverace/heidi_dev_forte6_debug.xml: Removed
+          "-j 2" from make flags - I think it's causing the template
+          instantiations to get munched.
 
 Wed Aug 24 11:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -39,10 +45,10 @@ Wed Aug 24 08:32:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Aug 23 17:09:22 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Removed the commented-out AIX 5.1
-	  builds - that machine (charlie) is going out for recycling.
-	  Uncommented the commented-out Solaris 8 builds - the machine
-	  is fixed and running builds again (it once seemed so fast... sigh).
+        * configs/scoreboard/ace.xml: Removed the commented-out AIX 5.1
+          builds - that machine (charlie) is going out for recycling.
+          Uncommented the commented-out Solaris 8 builds - the machine
+          is fixed and running builds again (it once seemed so fast... sigh).
 
 Thu Aug 18 18:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
