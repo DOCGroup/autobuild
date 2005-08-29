@@ -9,9 +9,9 @@
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\vcpackages;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\Program Files\Microsoft Visual Studio 8\VC\vcpackages;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\Cygwin\bin" type="prefix" />
 
         <variable name="configs"  value="Win32 VC8 Exceptions" />
-        <variable name="root"     value="C:\ACE\Intel90_64bit\" />
+        <variable name="root"     value="D:\ACE\Intel90_64bit\" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\ACE\Intel90_64bit\" />
+        <variable name="log_root" value="D:\ACE\Intel90_64bit\" />
         <variable name="name"     value="Intel 90 64bit" />
     </configuration>
 
