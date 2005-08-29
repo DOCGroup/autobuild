@@ -6,7 +6,7 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="D:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\bin;D:\ACE\Intel90_64bit\ACE_wrappers\bin;D:\ACE\\ACE\Intel90_64bit\ACE_wrappers\lib;D:\Cygwin\bin" type="prefix" />
+        <environment name="PATH"         value="D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\bin;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include;D:\ACE\Intel90_64bit\ACE_wrappers\bin;D:\ACE\\ACE\Intel90_64bit\ACE_wrappers\lib;D:\Cygwin\bin" type="prefix" />
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="D:\ACE\Intel90_64bit\" />
@@ -38,9 +38,9 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -exclude TAO -recurse -value_template add_compile+=/Wp64"/>
+    <command name="generate_workspace" options="-type nmake -exclude TAO -recurse -value_template add_compile+=/Wp64 -value_template cc=icl.exe -value_template link=xilink.exe"/>
 
-    <command name="win32make"         options="nmake CPP=icl.exe LINK32=xilink.exe CFG=\x22Win32 Debug\x22" />
+    <command name="win32make"         options="nmake CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
