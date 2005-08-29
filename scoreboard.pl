@@ -59,9 +59,10 @@ my $red_default = 48;
 # XML file for the scoreboard, and put the text in between the
 # <preamble> </preamble> tags.
 our $preamble = "";
-## Use 'our' to make $verbose visible outside this file
+
 our $verbose = 0;
 our $scoreboard_title = 'Scoreboard';
+our $use_local = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
@@ -130,7 +131,7 @@ sub build_index_page ($$)
 
     ### Print timestamp
 
-    print $indexhtml '<br>Last updated at '.scalar (gmtime ())." UTC<br>\n";
+    print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
 
@@ -342,13 +343,9 @@ sub decode_timestamp ($)
     my $description = '';
 
     if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
-        my %mon = ( 1 => 'Jan',  2 => 'Feb',  3 => 'Mar',
-                    4 => 'Apr',  5 => 'May',  6 => 'Jun',
-                    7 => 'Jul',  8 => 'Aug',  9 => 'Sep',
-                   10 => 'Oct', 11 => 'Nov', 12 => 'Dec');
-        $description =
-            sprintf ('%s %s, %s - %s:%s', $mon{int ($2)}, $3, $1, $4, $5);
 
+	my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
+	$description = format_time($buildtime);
     }
     else {
         warn 'Unable to decode time';
@@ -504,7 +501,7 @@ sub timestamp_color ($$$)
     if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
         my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
 
-        my $nowtime = timegm (gmtime ());
+        my $nowtime = timegm (gmtime());
 
         if ($nowtime - $buildtime > (60 * 60 * $red)) {
             return 'red';
@@ -607,7 +604,7 @@ sub update_html ($$)
 
     ### Print timestamp
 
-    print $indexhtml '<br>Last updated at '.scalar (gmtime ())." UTC<br>\n";
+    print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
 
@@ -992,6 +989,53 @@ sub build_integrated_page ($)
 
 ###############################################################################
 #
+# Formats a time passed in as seconds in timegm() format.
+#   Converts to local timezone if -l was specified to scoreboard.pl
+#
+###############################################################################
+sub format_time
+{
+    my $time_in_secs = shift;
+    my $use_long_format = shift;
+
+    if ($use_local) {
+	my @tmp = localtime($time_in_secs);
+        my $hour = int($tmp[2]);
+        my $ampm = ($hour >= 12 ? 'pm' : 'am');
+        if ($hour > 12) {
+          $hour -= 12;
+	}
+	elsif ($hour == 0) {
+	  $hour = 12;
+	}
+        my $year = int($tmp[5]) + 1900;
+	if (defined $use_long_format && $use_long_format) {
+	    return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
+			   int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
+	} else {
+	    return sprintf("%02d/%02d %02d:%02d %s",
+			   int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
+
+	}
+    }
+    return scalar(gmtime($time_in_secs)) . " UTC";
+}
+
+###############################################################################
+#
+# Returns the time as either local time or UTC time depending on
+# the -l command line option.
+#
+# Returns:    time
+#
+###############################################################################
+sub get_time_str
+{
+    return format_time(timegm(gmtime()), 1);
+}
+
+###############################################################################
+#
 # Callbacks for commands
 #
 
@@ -1031,22 +1075,24 @@ sub build_integrated_page ($)
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z/;
+use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l/;
 
-if (!getopts ('d:f:hi:o:t:vz')
+if (!getopts ('d:f:hi:o:t:vzl')
     || !defined $opt_d
     || defined $opt_h) {
-    print "scoreboard.pl -f file [-h] [-i file]-o file [-m script] [-s dir] [-r] [-z]\n";
+    print "scoreboard.pl -f file [-h] [-i file] -o file [-m script] [-s dir] [-r] [-z] [-l]\n",
+          "              [-t title]\n";
     print "\n";
     print "    -d         directory where the output files are placed \n";
     print "    -h         display this help\n";
     print "    -f         file for which html should be generated \n";
     print "    -i         use <file> as the index file to generate Index page only\n";
-    print "    All other options will be ignored  \n";
     print "    -o         name of file where the output HTML files are placed\n";
     print "    -t         the title for the scoreboard (default Scoreboard)\n";
     print "    -v         enable verbose debugging [def: only print errors]\n";
     print "    -z         Integrated page. Only the output directory is valid\n";
+    print "    -l         Use local instead of UTC time\n";
+    print "    All other options will be ignored  \n";
     exit (1);
 }
 
@@ -1062,6 +1108,7 @@ $index = $opt_i;
 $dir = $opt_d;
 
 if (defined $opt_v) {
+    print "Using verbose output\n";
     $verbose = 1;
 }
 
@@ -1069,15 +1116,20 @@ if (defined $opt_t) {
     $scoreboard_title = $opt_t;
 }
 
+if (defined $opt_l) {
+    print "Using localtime\n";
+    $use_local = 1;
+}
+
 if (defined $opt_i){
 $index = $opt_i;
-print 'Running Index Page Update at '.scalar (gmtime ())."\n" if ($verbose);
+print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
 build_index_page ($dir, $index);
 exit (1);
 }
 
 if (defined $opt_z) {
-print 'Running Integrated Page Update at '.scalar (gmtime ())."\n" if ($verbose);
+print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
 build_integrated_page ($dir);
 exit (1);
 }
@@ -1096,7 +1148,7 @@ clean_cache ($dir);
 query_status ();
 update_html ($dir,"$dir/$out_file");
 
-print 'Finished Scoreboard Update at '.scalar (gmtime ())."\n" if ($verbose);
+print 'Finished Scoreboard Update at ' . get_time_str() . "\n" if ($verbose);
 
 ###############################################################################
 ###############################################################################

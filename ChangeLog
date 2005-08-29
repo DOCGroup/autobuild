@@ -1,3 +1,12 @@
+Mon Aug 29 14:13:00 2005  Justin Michel  <michel_j@ociweb.com>
+
+        * scoreboard.pl:
+
+	  Add a new -l command line option that lets us use local
+	time in 12 hour format on OCI's scoreboard.
+	  Add a new -title option for specifying the title of the
+	scoreboard.
+
 Mon Aug 29 13:58:56 2005  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/simpleparser.pm:
