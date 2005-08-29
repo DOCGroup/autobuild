@@ -75,11 +75,7 @@ sub Run ($)
         $cvs_program = "cvs"
     }
 
-    my $ret = system ("$cvs_program $options");
-    if ($ret != 0) {
-      print STDERR __FILE__, ": CVS command failed.\n";
-      return 0;
-    }
+    system ("$cvs_program $options");
 
     chdir $current_dir;
 
