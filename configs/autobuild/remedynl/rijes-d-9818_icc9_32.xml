@@ -51,7 +51,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-value_template add_compile+=/Qvc7.1 -type nmake -exclude TAO -recurse -value_template cc=icl.exe -value_template link=xilink.exe"/>
+    <command name="generate_workspace" options="-value_template add_compile+=/Qvc7.1 -type nmake -exclude TAO/CIAO -value_template cc=icl.exe -value_template link=xilink.exe"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
