@@ -1,9 +1,15 @@
+Tue Aug 30 08:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added two new Intel 9.0 builds, working on this to get them running
+          fine but this way we can watch the output on the scoreboard
+
 Mon Aug 29 15:18:46 2005  Justin Michel  <michel_j@ociweb.com>
 
         * command/cvs.pm:
 
 	  Revert the previous change, because it doesn't clean up .disable
-	files in case of failure. 
+	files in case of failure.
 
 Mon Aug 29 14:13:00 2005  Justin Michel  <michel_j@ociweb.com>
 
