@@ -9,7 +9,7 @@
         <environment name="INTEL_LICENSE_FILE"      value="D:\Program Files (x86)\Common Files\Intel\Licenses" />
         <environment name="PATH"         value="D:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Bin;D:\Program Files\Microsoft Platform SDK\Include\;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\bin;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include;D:\ACE\Intel90_64bit\ACE_wrappers\bin;D:\ACE\\ACE\Intel90_64bit\ACE_wrappers\lib;D:\Program Files\Microsoft Platform SDK\Bin\Win64\x86\AMD64;D:\Program Files\Microsoft Platform SDK\Bin;D:\Program Files\Microsoft Platform SDK\Bin\WinNT;D:\Cygwin\bin" type="prefix" />
         <environment name="INCLUDE"      value="D:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Include;D:\Program Files\Microsoft Platform SDK\Include\;D:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include" type="prefix" />
-        <environment name="LIB"      value="D:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Include;D:\Program Files\Microsoft Platform SDK\Lib;" type="prefix" />
+        <environment name="LIB"      value="D:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Lib;D:\Program Files\Microsoft Platform SDK\Lib;" type="prefix" />
         <environment name="Include"      value="D:\Program Files\Microsoft Platform SDK\Include;D:\Program Files\Microsoft Platform SDK\Include\crt;D:\Program Files\Microsoft Platform SDK\Include\crt\sys;D:\Program Files\Microsoft Platform SDK\Include\mfc;D:\Program Files\Microsoft Platform SDK\Include\atl" type="prefix" />
         <environment name="CPU"      value="i386" />
         <environment name="APPVER"      value="5.01" />
