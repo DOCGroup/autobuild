@@ -15,6 +15,10 @@
         <environment name="APPVER"      value="5.01" />
         <environment name="TARGETOS"      value="WINNT" />
         <environment name="MSVCVer"      value="7.1" />
+        <environment name="MSVCDir"      value="d:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7" />
+        <environment name="VCINSTALLDIR"      value="d:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
+        <environment name="VS71COMNTOOLS"      value="d:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
+        <environment name="VSINSTALLDIR"      value="d:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE" />
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="D:\ACE\Intel90_32bit\" />
