@@ -14,6 +14,7 @@
         <environment name="CPU"      value="i386" />
         <environment name="APPVER"      value="5.01" />
         <environment name="TARGETOS"      value="WINNT" />
+        <environment name="MSVCVer"      value="7.1" />
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="D:\ACE\Intel90_32bit\" />
