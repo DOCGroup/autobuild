@@ -102,18 +102,27 @@ sub Run ($)
         return 0;
     }
 
-    my $basedir = getcwd();
     my $command = "$vctool $options";
 
-    print "Running: $command\n";
+    my $workspace = undef;
+    if ($options =~ /"([^"]+\.sln)"/) {
+      $workspace = $1;
+    }
+    elsif ($options =~ /([\w\\\/]+\.sln)/) {
+      $workspace = $1;
+    }
 
-    my $ret = system ($command);
+    if (defined $workspace && ! -r $workspace) {
+      print "Skipping: $workspace not found\n";
+    }
+    else {
+      print "Running: $command\n";
 
-    if( $ret != 0  )
-    {
-        my $working_dir = getcwd();
+      my $ret = system ($command);
 
-        print "[BUILD ERROR detected in $working_dir]\n ";
+      if ($ret != 0) {
+        print "[BUILD ERROR detected in ", getcwd(), "]\n";
+      }
     }
 
     chdir $current_dir;

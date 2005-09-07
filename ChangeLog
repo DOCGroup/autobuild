@@ -1,3 +1,20 @@
+Wed Sep  7 09:31:38 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/make.pm:
+
+          Added a missing -f when passing a makefile to the make command
+          when using the find option.
+
+        * command/vc6make.pm:
+        * command/vc7make.pm:
+        * command/wincemake.pm:
+
+          Check for the corresponding workspace.  If we locate one in the
+          options, check for the existence of that file.  If it does not
+          exist skip it printing why.  This allows the use of generic xml
+          build files with minimum_corba enabled (which causes some
+          workspace files not to be built by MPC).
+
 Tue Aug 30 08:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
@@ -8,17 +25,17 @@ Mon Aug 29 15:18:46 2005  Justin Michel  <michel_j@ociweb.com>
 
         * command/cvs.pm:
 
-	  Revert the previous change, because it doesn't clean up .disable
-	files in case of failure.
+          Revert the previous change, because it doesn't clean up .disable
+        files in case of failure.
 
 Mon Aug 29 14:13:00 2005  Justin Michel  <michel_j@ociweb.com>
 
         * scoreboard.pl:
 
-	  Add a new -l command line option that lets us use local
-	time in 12 hour format on OCI's scoreboard.
-	  Add a new -title option for specifying the title of the
-	scoreboard.
+          Add a new -l command line option that lets us use local
+        time in 12 hour format on OCI's scoreboard.
+          Add a new -title option for specifying the title of the
+        scoreboard.
 
 Mon Aug 29 13:58:56 2005  Chad Elliott  <elliott_c@ociweb.com>
 

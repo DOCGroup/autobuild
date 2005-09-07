@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -53,7 +53,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -70,30 +70,35 @@ sub Run ($)
     main::PrintStatus ('Compile', 'vc6make');
 
     my $current_dir = getcwd ();
-    
+
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
     }
 
-    my $basedir = getcwd();
     my $command = "msdev.com /y3 $options";
 
-    print "Running: $command\n";
+    my $workspace = undef;
+    if ($options =~ /"([^"]+\.dsw)"/) {
+      $workspace = $1;
+    }
+    elsif ($options =~ /([\w\\\/]+\.dsw)/) {
+      $workspace = $1;
+    }
 
-    my $ret = system ($command);
+    if (defined $workspace && ! -r $workspace) {
+      print "Skipping: $workspace not found\n";
+    }
+    else {
+      print "Running: $command\n";
 
-    if( $ret != 0  )
-    {
-        my $working_dir = getcwd();
+      my $ret = system ($command);
 
-        if( $command =~ /\-C\s+([\w\/]+)/  )
-        {
-            $working_dir = "$working_dir/$1"; 
-        }
-
-        print "[BUILD ERROR detected in $working_dir]\n ";
-    } 
+      if ($ret != 0)
+      {
+        print "[BUILD ERROR detected in ", getcwd(), "]\n";
+      }
+    }
 
     chdir $current_dir;
 

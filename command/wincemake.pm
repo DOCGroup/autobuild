@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -53,7 +53,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -70,7 +70,7 @@ sub Run ($)
     main::PrintStatus ('Compile', 'wincemake');
 
     my $current_dir = getcwd ();
-    
+
     my @dirs;
     my $dir='';
     if ($options =~ m/search='([^']*)'/) {
@@ -100,16 +100,26 @@ sub Run ($)
     my $basedir = getcwd();
     my $command = "evc $options";
 
-    print "Running: $command\n";
+    my $workspace = undef;
+    if ($options =~ /"([^"]+\.vcw)"/) {
+      $workspace = $1;
+    }
+    elsif ($options =~ /([\w\\\/]+\.vcw)/) {
+      $workspace = $1;
+    }
 
-    my $ret = system ($command);
+    if (defined $workspace && ! -r $workspace) {
+      print "Skipping: $command\n";
+    }
+    else {
+      print "Running: $command\n";
 
-    if( $ret != 0  )
-    {
-        my $working_dir = getcwd();
+      my $ret = system ($command);
 
-        print "[BUILD ERROR detected in $working_dir]\n ";
-    } 
+      if ($ret != 0) {
+        print "[BUILD ERROR detected in ", getcwd(), "]\n";
+      }
+    }
 
     chdir $current_dir;
 

@@ -118,7 +118,7 @@ sub Run ($)
         my $makefile;
         $options =~ s/'/"/g;
         foreach $makefile (@makes) {
-            $command = "$make_program $makefile $options";
+            $command = "$make_program -f $makefile $options";
             print "Running: $command\n";
             $ret = system ($command);
         }
