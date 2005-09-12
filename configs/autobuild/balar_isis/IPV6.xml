@@ -13,7 +13,7 @@
         <variable name="root"     value="/build/isisbuilds/IPV6" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_IPV6" />
-        <variable name="configs"  value="Linux SSL" />
+        <variable name="configs"  value="Linux SSL IPV6" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -28,9 +28,9 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_MINIMUM_IOSTREAMH_INCLUSION 1\n#define ACE_HAS_IPV6\n#define ACE_USES_IPV4_IPV6_MIGRATION\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_MINIMUM_IOSTREAMH_INCLUSION 1\n#define ACE_USES_IPV4_IPV6_MIGRATION\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nexceptions=1\noptimize=0\ndebug=0\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -Wwrite-strings -Wcast-align\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" /> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\nipv6=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
