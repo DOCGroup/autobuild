@@ -1,3 +1,8 @@
+Mon Sep 12 13:16:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added new 'Win2003_VC71_IPV6' build.
+
 Mon Sep 12 13:01:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/autobuild/balar_isis/IPV6.xml:
