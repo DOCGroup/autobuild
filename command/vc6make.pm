@@ -82,7 +82,7 @@ sub Run ($)
     if ($options =~ /"([^"]+\.dsw)"/) {
       $workspace = $1;
     }
-    elsif ($options =~ /([\w\\\/]+\.dsw)/) {
+    elsif ($options =~ /([\w\-\\\/]+\.dsw)/) {
       $workspace = $1;
     }
 

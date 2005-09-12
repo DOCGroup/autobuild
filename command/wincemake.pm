@@ -104,7 +104,7 @@ sub Run ($)
     if ($options =~ /"([^"]+\.vcw)"/) {
       $workspace = $1;
     }
-    elsif ($options =~ /([\w\\\/]+\.vcw)/) {
+    elsif ($options =~ /([\w\-\\\/]+\.vcw)/) {
       $workspace = $1;
     }
 
