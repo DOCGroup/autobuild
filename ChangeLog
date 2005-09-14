@@ -1,3 +1,8 @@
+Wed Sep 14 14:10:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+          Updated version of GCC under LynxOS4 being built.
+
 Mon Sep 12 13:16:12 UTC 2005  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
