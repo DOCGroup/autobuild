@@ -1,3 +1,13 @@
+Thu Sep 15 08:55:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
+
+        * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup_POST_ONLY.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC322_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC322_Standard_Full_DocGroup_POST_ONLY.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC322_Standard_Full_PRETTIFY_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_GCC322_Standard_Full_Tests_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS8_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+          Updated version of GCC under LynxOS4 being built.
+
 Wed Sep 14 14:10:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
 
         * configs/scoreboard/tao.xml:
