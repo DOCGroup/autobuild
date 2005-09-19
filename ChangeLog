@@ -1,3 +1,10 @@
+Mon Sep 19 10:30:23 CST 2005  William Otte <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/merengue/merengue_vc71.xml
+	
+	Added BOOST_CFG to the environemtn in an attempt to fix 
+	Boost related build errors. 
+
 Thu Sep 15 08:55:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_GCC295_Standard_Full_DocGroup.xml:
