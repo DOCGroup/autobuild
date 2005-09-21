@@ -1,3 +1,9 @@
+Wed Sep 21 15:45:23 CST 2005  William Otte <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/merengue/merengue_vc71.xml
+	
+	Corrected BOOST_CFG.
+
 Wed Sep 21 11:29:35 2005  Gary Maxey <gary.maxey@hp.com>
 
         * configs/scoreboard/tao.xml:
