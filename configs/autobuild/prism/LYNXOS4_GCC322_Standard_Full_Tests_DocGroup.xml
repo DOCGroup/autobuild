@@ -6,7 +6,7 @@
         <environment name="CVSROOT" value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH" value="ssh" />
         <environment name="PATH" value="/usr/i386-coff-lynxos/usr/bin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
-        <environment name="ENV_PREFIX" value="/usr/local/lynx/4.0.0/x86" />
+        <environment name="ENV_PREFIX" value="/usr/local/lynx/4.0.0/x86-322" />
 
         <variable name="root" value="/home/tao/doc_scoreboard/lynxos_gcc322/standard" />
         <variable name="sam_root" value="/home/tao/doc_scoreboard/lynxos_gcc322/standard/ACE_wrappers/samwise" />
