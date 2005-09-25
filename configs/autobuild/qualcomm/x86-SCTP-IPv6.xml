@@ -12,7 +12,7 @@
         <variable name="root"     value="/opt/data/acebuild" />
         <variable name="log_file" value="build-x86-sctp.txt" />
         <variable name="log_root" value="/opt/data/acebuild/buildlog.x86-sctp" />
-        <variable name="configs"  value="Linux x86" />
+        <variable name="configs"  value="Linux x86 IPV6" />
 
     </configuration>
 
@@ -33,11 +33,11 @@
     <command name="shell"             options="find ACE_wrappers/build/linux-x86-sctp -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86-sctp/bin/MakeProjectCreator/config/default.features" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86-sctp/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define ACE_HAS_IPV6\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86-sctp/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86-sctp/include/makeinclude/platform_macros.GNU output='sctp=lksctp\noptimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nPLATFORM_SCTP_CPPFLAGS=-I/opt/data/acebuild/lksctp-tools/src/include/\nPLATFORM_SCTP_LDFLAGS=-L/opt/data/acebuild/lksctp-tools/src/lib/.libs\n'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86-sctp/bin/MakeProjectCreator/config/default.features output='ssl=1\nqos=0\ncidl=0\nrwho=0\nsctp=1\n'" />
-    
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86-sctp/bin/MakeProjectCreator/config/default.features output='ipv6=1\nssl=1\nqos=0\ncidl=0\nrwho=0\nsctp=1\n'" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
