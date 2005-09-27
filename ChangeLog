@@ -1,3 +1,9 @@
+Tue Sep 27 09:38:02 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml
+
+	Added a MacOS CIDLC build.
+
 Mon Sep 26 10:52:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml

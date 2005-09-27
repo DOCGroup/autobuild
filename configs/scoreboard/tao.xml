@@ -379,4 +379,14 @@ all the OS/platform combinations TAO is tested everyday.
    </build>
 </group>
 
+<group>
+  <name>MacOS</name>
+  <build>
+    <name>Tiger_GCC4_CIDLC</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_CIDLC</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
+
 </scoreboard>
