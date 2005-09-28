@@ -186,7 +186,7 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>WinXP_VisualStudio8_Beta_2</name>
+      <name>WinXP_VisualStudio8_RC</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
