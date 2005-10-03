@@ -17,7 +17,6 @@ California,Irvine</a>,
 <a href="http://www.atl.external.lmco.com">LMCO-ATL</a>,
 <a href="http://www.ociweb.com/">Object Computing Inc</A>,
 <a href="http://www.qualcomm.com/">Qualcomm</A>,
-<a href="http://www.hp.com/">Hewlett-Packard</a>,
 <a href="http://www.atdesk.com/">Automated Trading Desk</a>,
 <a href="http://www.coryan.net/">Carlos O'Ryan</a>,
 <a href="http://www.dresystems.com/">DRE Systems</a>,
@@ -70,6 +69,10 @@ Statistics</a>
 <li>
   <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CVS_Report/ACE_wrappers.html">
     CVS usage report</a>
+</li>
+<li>
+  <a href="teststats.html">
+    Text based test statistics</a>
 </li>
 </ul>
 The <i>Code Coverage</i> pages illustrate which areas of
