@@ -1,3 +1,11 @@
+Mon Oct  3 09:48:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/win32make.pm:
+          When the options contain REALCLEAN also just continue if we can't
+          chdir to project_root, this is the case when starting a new build
+          with nmake without that project_root exists. The cvs checkout after
+          this command will create the projet root
+
 Mon Oct  3 08:44:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/index.xml:
