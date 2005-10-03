@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -53,7 +53,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -78,11 +78,11 @@ sub Run ($)
 
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
-        if ($options =~ m/\-clean/) {
-            # in the 'clean' step just ignore the $project_root is not there
-            # checkout will follow and probably rebuild all
-            chdir $current_dir;
-            return 1;
+        if ($options =~ m/(\-clean|REALCLEAN)/) {
+          # in the 'clean' step just ignore the $project_root is not there
+          # checkout will follow and probably rebuild all
+          chdir $current_dir;
+          return 1;
         }
         else {
             return 0;
