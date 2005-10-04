@@ -149,8 +149,8 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-      <name>FC3_x86_SCTP_IPv6</name>
-      <url>http://www.dre.vanderbilt.edu/~qualcomm/FC3_x86_SCTP_IPv6</url>
+      <name>FC3_x86_SCTP</name>
+      <url>http://www.dre.vanderbilt.edu/~qualcomm/FC3_x86_SCTP</url>
       <build_sponsor>Qualcomm</build_sponsor>
       <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
      </build>
