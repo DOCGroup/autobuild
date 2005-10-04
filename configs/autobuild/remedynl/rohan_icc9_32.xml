@@ -52,7 +52,7 @@
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
-    <command name="auto_run_tests"    options="-a -o -t -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"    options="-a -o -t" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
