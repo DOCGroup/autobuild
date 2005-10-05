@@ -13,3 +13,4 @@ cd $HOME/ACE/autobuild
 cvs -z9 up -P -d
 
 $HOME/ACE/autobuild/configs/autobuild/remedynl/merin_valgrind.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/merin_icc.sh
