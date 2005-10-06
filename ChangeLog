@@ -1,3 +1,12 @@
+Thu Oct  6 17:58:33 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/lily_dev_vc8_debug.xml:
+	* configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
+	* configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
+	  New configs for Microsoft Visual Studio 2005 desktop and Win CE.
+
+	* configs/scoreboard/ace.xml: Added the above new builds.
+
 Thu Oct  6 09:38:36 2005  Rich Seibel <seibel_r@ociweb.com>
 
         * configs/scoreboard/tao.xml:
