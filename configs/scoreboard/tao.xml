@@ -269,13 +269,13 @@ all the OS/platform combinations TAO is tested everyday.
         </build>
         <build>
             <name>Win2003_VC6_Release</name>
-            <url>http://internal.ociweb.com/OCIscoreboard/doc_wasp_win2003_vc6_d0o1</url>
+            <url>http://scoreboard.ociweb.com/doc_wasp_win2003_vc6_d0o1</url>
             <build_sponsor>OCI</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.com/</build_sponsor_url>
         </build>
         <build>
             <name>Win2003_VC71_Debug</name>
-            <url>http://internal.ociweb.com/OCIscoreboard/doc_weevil_win2003_vc71_d1o0</url>
+            <url>http://scoreboard.ociweb.com/doc_weevil_win2003_vc71_d1o0</url>
             <build_sponsor>OCI</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
         </build>

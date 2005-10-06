@@ -1,3 +1,9 @@
+Thu Oct  6 09:38:36 2005  Rich Seibel <seibel_r@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+          URLs changed, which caused the data to be inaccessible.
+          Fixed URLs.
+
 Tue Oct  4 11:55:01 PDT 2005 Meghana Haridev <mharidev@qualcomm.com>
 
 	* configs/autobuild/qualcomm/x86-SCTP.xml
