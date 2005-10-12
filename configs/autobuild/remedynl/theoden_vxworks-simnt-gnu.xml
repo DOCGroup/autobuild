@@ -37,7 +37,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='repo=1\nexceptions=1\ndebug=1\ninline=0\nprobe=1\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = SIMNT\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\nrepo=1\ndebug=1\ninline=0\nprobe=1\nfl_reactor=0\noptimize=0\nCPU = SIMNT\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
 
     <command name="print_os_version" />
@@ -55,7 +55,7 @@
     <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-k -C ace" />
-    <!-- command name="make"              options="-k -C Kokyu" / -->
+    <command name="make"              options="-k -C Kokyu" />
     <command name="make"              options="-k -C ACEXML" />
     <!-- command name="make"              options="-k -C examples" / -->
     <!-- command name="make"              options="-k -C netsvcs" / -->
@@ -64,10 +64,10 @@
     <!-- command name="make"              options="-k -C websvcs" / -->
     <!-- command name="make"              options="-k -C TAO/TAO_IDL" / -->
     <!-- command name="make"              options="-k -C TAO idl_stubs" / -->
-    <!-- command name="make"              options="-k -C TAO/tao" / -->
-    <!-- command name="make"              options="-k -C TAO/tests" / -->
+    <command name="make"              options="-k -C TAO/tao" />
+    <command name="make"              options="-k -C TAO/tests" />
 
-    <command name="auto_run_tests"    options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22 -ExeSubDir Release" />
+    <!-- command name="auto_run_tests"    options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22 -ExeSubDir Release" / -->
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
