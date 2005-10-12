@@ -1,3 +1,12 @@
+Wed Oct 12 08:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed VxWorks no exceptions build, the doc NoIntNoEx
+          is now just a NoInt build
+
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+          Reconfigured to be just NoInterceptors
+
 Thu Oct  6 17:58:33 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/lily_dev_vc8_debug.xml:
@@ -19,7 +28,7 @@ Tue Oct  4 11:55:01 PDT 2005 Meghana Haridev <mharidev@qualcomm.com>
 	  Added build for FC3_x86_SCTP (no IPv6)
 
 	* configs/autobuild/qualcomm/x86-SCTP-IPv6.xml
-	  Removed build with SCTP and IPv6 together because SCTP doesn't 
+	  Removed build with SCTP and IPv6 together because SCTP doesn't
 	  support IPv6 in TAO yet.
 
 	* configs/scoreboard/tao.xml
