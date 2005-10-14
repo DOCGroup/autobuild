@@ -1,7 +1,7 @@
 <autobuild>
     <configuration>
-
         <environment name="ACE_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/gcc295/standard/static/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/gcc295/standard/static/ACE_wrappers/TAO" />
         <environment name="MPC_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/gcc295/standard/static/MPC" />
         <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-2.95.3/lib:/usr/users/tao/ultra5/doc_scoreboard/gcc295/standard/static/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />

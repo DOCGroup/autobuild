@@ -1,7 +1,8 @@
 <autobuild>
     <configuration>
-
         <environment name="ACE_ROOT" value="/home/tao/doc_scoreboard/lynxos_gcc322/standard/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/home/tao/doc_scoreboard/lynxos_gcc322/standard/ACE_wrappers/TAO" />
+        <environment name="MPC_ROOT" value="/home/tao/doc_scoreboard/lynxos_gcc322/standard/MPC" />
         <environment name="LD_LIBRARY_PATH" value="/home/tao/doc_scoreboard/lynxos_gcc322/standard/ACE_wrappers/ace" />
         <environment name="CVSROOT" value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH" value="ssh" />

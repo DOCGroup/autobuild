@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"  value="F:\Overnight_Builds\DOC_group\CL60\debug\ACE_wrappers" />
         <environment name="TAO_ROOT"  value="F:\Overnight_Builds\DOC_group\CL60\debug\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT" value="F:\Overnight_Builds\DOC_group\CL60\debug\ACE_wrappers\TAO\CIAO"/>
+        <environment name="MPC_ROOT"  value="F:\Overnight_Builds\DOC_group\CL60\debug\MPC" />
         <environment name="Path"      value="F:\Overnight_Builds\DOC_group\CL60\debug\ACE_wrappers\bin;F:\Overnight_Builds\DOC_group\CL60\debug\ACE_wrappers\lib;C:\Perl\bin;C:\cygwin\bin" type="prefix" />
         <environment name="CVSROOT"   value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"   value="C:\cygwin\bin\ssh" />
