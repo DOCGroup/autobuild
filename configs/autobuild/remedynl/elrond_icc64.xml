@@ -45,10 +45,10 @@
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />
 
-    <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO" />
-    <command name="make"              options="-k -C TAO/CIAO" />
+    <command name="make"              options="-k -j 3" />
+    <command name="make"              options="-k -j 3 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 3 -C TAO" />
+    <command name="make"              options="-k -j 3 -C TAO/CIAO" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
