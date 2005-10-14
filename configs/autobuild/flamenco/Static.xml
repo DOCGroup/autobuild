@@ -11,7 +11,7 @@
         <variable name="root"     value="/project/builds/isisbuilds/Static" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/flamenco_Static" />
-        <variable name="configs"  value="Linux STATIC SSL" />
+        <variable name="configs"  value="Linux STATIC SSL Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -25,7 +25,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\noptimize=1\ndebug=0\nexceptions=0\n#ssl=1\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\noptimize=1\ndebug=0\n#ssl=1\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
@@ -42,9 +42,9 @@
     <command name="make"              options="-j 4 -k -C TAO" />
 
     <!-- Forces a sync to clean state -->
-    <command name="shell"             options="/bin/sync" /> 
-    <command name="shell"             options="sleep 10" /> 
-    <command name="shell"             options="/bin/sync" /> 
+    <command name="shell"             options="/bin/sync" />
+    <command name="shell"             options="sleep 10" />
+    <command name="shell"             options="/bin/sync" />
     <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/footprint_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats" />
     <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/performance_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats" />
     <command name="shell"              options="/project/builds/isisbuilds/Static/ACE_wrappers/bin/topinfo_simple_stats.sh /project/builds/isisbuilds/Static/ACE_wrappers /web/users/isisbuilds/Stats isisbuil" />
