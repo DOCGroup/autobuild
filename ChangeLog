@@ -1,3 +1,8 @@
+Sun Oct 16 12:31:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+          Enable native C++ exceptions
+
 Fri Oct 14 18:42:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Full_Reactors.xml:
