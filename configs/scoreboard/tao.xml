@@ -302,12 +302,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>SunOS_GCC_2_95</name>
-      <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/tango_SUNOS_GCC_2_95</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   <build>
       <name>SunOS_SunCC55</name>
       <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC55</url>
       <build_sponsor>Washington University</build_sponsor>
