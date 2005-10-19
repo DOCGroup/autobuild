@@ -49,7 +49,7 @@
     <!-- Clean workspace -->
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO relclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />

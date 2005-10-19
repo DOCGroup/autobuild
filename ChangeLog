@@ -1,3 +1,9 @@
+Tue Oct 18 20:19:37 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
+
+	  Fixed typo.  relclean -> realclean
+
 Mon Oct 17 12:19:52 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
