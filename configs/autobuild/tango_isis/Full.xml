@@ -24,7 +24,7 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" />
 
