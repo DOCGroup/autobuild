@@ -89,7 +89,7 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_93_GCC3.3.5_x86_64_IPV6</name>
+      <name>SuSE_10_0_GCC4.0.2_x86_64_IPV6</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_gcc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -137,13 +137,7 @@ all the OS/platform combinations TAO is tested everyday.
 	 <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
       </build>
      <build>
-       <name>SuSE_92_GCC3.3.4_Debug_Valgrind</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_Valgrind</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
-     </build>
-     <build>
-       <name>SuSE_93_GCC3.3.5_x86_64_Valgrind</name>
+       <name>SuSE_10_0_GCC4.0.2_x86_64_Valgrind</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_Valgrind</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
