@@ -4,4 +4,4 @@
 #
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                             $HOME/autobuild/configs/autobuild/abbarach/gcc4.xml
+                             $HOME/autobuild/configs/autobuild/abbarach/Mac_OSX_Tiger.xml
