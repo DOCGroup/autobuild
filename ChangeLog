@@ -1,3 +1,10 @@
+Fri Oct 21 07:46:00 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * testmatrix/test-list-extract.pl:
+
+          Added code to allow this script to locate common::scoreparser from
+          where ever it is run.
+
 Thu Oct 20 13:01:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Full.xml:
@@ -6,16 +13,16 @@ Thu Oct 20 13:01:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Oct 18 20:19:37 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
 
-	  Fixed typo.  relclean -> realclean
+          Fixed typo.  relclean -> realclean
 
 Mon Oct 17 12:19:52 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
-	* configs/scoreboard/tao.xml
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/scoreboard/tao.xml
 
-	Added GCC4 autobuild for full ACE/TAO/CIAO.
+        Added GCC4 autobuild for full ACE/TAO/CIAO.
 
 Mon Oct 17 07:09:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -49,10 +56,10 @@ Fri Oct 14 09:14:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Oct 13 21:30:34 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/pantera_isis/gcc-4.0.xml:
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
 
-	  Disable ISO C99 variadic macro warnings.  They aren't useful for
-	  us.
+          Disable ISO C99 variadic macro warnings.  They aren't useful for
+          us.
 
 Wed Oct 12 08:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -65,12 +72,12 @@ Wed Oct 12 08:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Oct  6 17:58:33 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/lily_dev_vc8_debug.xml:
-	* configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
-	* configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
-	  New configs for Microsoft Visual Studio 2005 desktop and Win CE.
+        * configs/autobuild/riverace/lily_dev_vc8_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
+          New configs for Microsoft Visual Studio 2005 desktop and Win CE.
 
-	* configs/scoreboard/ace.xml: Added the above new builds.
+        * configs/scoreboard/ace.xml: Added the above new builds.
 
 Thu Oct  6 09:38:36 2005  Rich Seibel <seibel_r@ociweb.com>
 
@@ -80,16 +87,16 @@ Thu Oct  6 09:38:36 2005  Rich Seibel <seibel_r@ociweb.com>
 
 Tue Oct  4 11:55:01 PDT 2005 Meghana Haridev <mharidev@qualcomm.com>
 
-	* configs/autobuild/qualcomm/x86-SCTP.xml
-	  Added build for FC3_x86_SCTP (no IPv6)
+        * configs/autobuild/qualcomm/x86-SCTP.xml
+          Added build for FC3_x86_SCTP (no IPv6)
 
-	* configs/autobuild/qualcomm/x86-SCTP-IPv6.xml
-	  Removed build with SCTP and IPv6 together because SCTP doesn't
-	  support IPv6 in TAO yet.
+        * configs/autobuild/qualcomm/x86-SCTP-IPv6.xml
+          Removed build with SCTP and IPv6 together because SCTP doesn't
+          support IPv6 in TAO yet.
 
-	* configs/scoreboard/tao.xml
-	  Modified FC3_x86_SCTP_IPv6 build to FC3_x86_SCTP for
-	  Linux scoreboard.
+        * configs/scoreboard/tao.xml
+          Modified FC3_x86_SCTP_IPv6 build to FC3_x86_SCTP for
+          Linux scoreboard.
 
 Mon Oct  3 09:48:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -122,15 +129,15 @@ Wed Sep 28 07:13:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Sep 27 09:38:02 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	Added a MacOS CIDLC build.
+        Added a MacOS CIDLC build.
 
 Mon Sep 26 10:52:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	Brought a couple build descriptions more in line with reality.
+        Brought a couple build descriptions more in line with reality.
 
 Sun Sep 25 17:31:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -140,9 +147,9 @@ Sun Sep 25 17:31:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Sep 21 15:45:23 CST 2005  William Otte <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/merengue/merengue_vc71.xml
+        * configs/autobuild/merengue/merengue_vc71.xml
 
-	Corrected BOOST_CFG.
+        Corrected BOOST_CFG.
 
 Wed Sep 21 11:29:35 2005  Gary Maxey <gary.maxey@hp.com>
 
@@ -151,10 +158,10 @@ Wed Sep 21 11:29:35 2005  Gary Maxey <gary.maxey@hp.com>
 
 Mon Sep 19 10:30:23 CST 2005  William Otte <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/merengue/merengue_vc71.xml
+        * configs/autobuild/merengue/merengue_vc71.xml
 
-	Added BOOST_CFG to the environemtn in an attempt to fix
-	Boost related build errors.
+        Added BOOST_CFG to the environemtn in an attempt to fix
+        Boost related build errors.
 
 Thu Sep 15 08:55:00 UTC 2005  Simon Massey  <simon.massey@prismtech.com>
 
