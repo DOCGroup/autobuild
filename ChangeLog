@@ -1,3 +1,8 @@
+Mon Oct 24 10:38:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added icc32 release windows build
+
 Mon Oct 24 07:26:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml

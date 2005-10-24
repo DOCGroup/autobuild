@@ -2,16 +2,16 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO"/>
-        <environment name="HOST_ROOT"       value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
-        <environment name="PATH"            value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
-        <environment name="WIND_BASE"       value="C:/Tornado2.2"/>
-        <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
-        <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="C:\cygwin\bin\ssh" />
-        <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
-        <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
+        <environment name="ACE_ROOT"                value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
+        <environment name="TAO_ROOT"                value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO"/>
+        <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
+        <environment name="PATH"                    value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
+        <environment name="WIND_BASE"               value="C:/Tornado2.2"/>
+        <environment name="WIND_HOST_TYPE"          value="x86-win32"/>
+        <environment name="CVSROOT"                 value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"                 value="C:\cygwin\bin\ssh" />
+        <environment name="RSYNC_RSH"               value="C:\cygwin\bin\ssh" />
+        <environment name="ACE_MKDIR"               value="C:\tools\nixtools\mkdir -p" />
         <environment name="ACE_RUN_VX_TGTSVR"       value="P4" />
         <environment name="ACE_RUN_VX_TGTSVR_ROOT"  value="/tgtsvr/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
         <environment name="ACE_RUN_VX_TGTSVR_DEFGW" value="10.2.128.1" />
@@ -38,12 +38,16 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\nexceptions=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\ncidl=1\n'" />
+
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="ccpentium" />
     <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
@@ -51,9 +55,12 @@
     <command name="generate_workspace" options="-exclude TAO,tests/HTBP" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
+    <!-- Uses CIAO -->
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="make"              options="-k -C ace" />
     <command name="make"              options="-k -C Kokyu" />
@@ -69,6 +76,7 @@
     <command name="make"              options="-k -C TAO/tao" />
     <command name="make"              options="-k -C TAO/tests" />
     <command name="make"              options="-k -C TAO/orbsvcs" />
+    <command name="make"              options="-k -C TAO/CIAO" />
 
     <command name="auto_run_tests" options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" />
 
