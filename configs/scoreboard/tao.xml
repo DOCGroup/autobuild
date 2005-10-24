@@ -238,6 +238,12 @@ all the OS/platform combinations TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
+            <name>WinXP64_Intel90_32bit_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/ICC90_32bit_r/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP64_Intel90_64bit</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/ICC90_64bit/</url>
             <build_sponsor>Remedy IT</build_sponsor>
