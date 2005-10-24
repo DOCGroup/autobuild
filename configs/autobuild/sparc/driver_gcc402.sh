@@ -10,4 +10,4 @@ export PATH
 # Entropy Gathering Daemon perl script fulfills that requirement.
 
 exec $HOME/autobuild/autobuild.pl \
-     $HOME/autobuild/configs/autobuild/corona/SunOS10_GCC402.xml 2>&1
+     $HOME/autobuild/configs/autobuild/sparc/SunOS10_GCC402.xml 2>&1
