@@ -2,14 +2,14 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/Studio/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/Studio/ACE_wrappers/TAO" />
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:" />
+        <environment name="ACE_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers/TAO" />
+        <environment name="LD_LIBRARY_PATH" value="/project/builds/bczar/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="PATH"            value="/usr/local/bin" type="prefix" />
 
-        <variable name="root"     value="/build/isisbuilds/Studio/" />
+        <variable name="root"     value="/project/builds/bczar/Studio/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9" />
         <variable name="configs"  value="SSL Exceptions" />
