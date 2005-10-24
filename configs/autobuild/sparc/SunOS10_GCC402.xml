@@ -2,16 +2,16 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/GCC34/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/GCC34/ACE_wrappers/TAO" />
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/GCC34/ACE_wrappers/lib:/opt/csw/gcc3/lib:" />
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/GCC402/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/GCC402/ACE_wrappers/TAO" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/GCC402/ACE_wrappers/lib:/opt/csw/gcc3/lib:" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="PATH"            value="/usr/local/bin" type="prefix" />
 
         <variable name="root"     value="/build/isisbuilds/GCC34/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/corona_Solaris10_X86_GCC34" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/sparc_Solaris10_GCC" />
         <variable name="configs"  value="SSL Exceptions" />
         <variable name="make_program" value="gmake" />
 

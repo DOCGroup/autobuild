@@ -11,7 +11,7 @@
 
         <variable name="root"     value="/build/isisbuilds/Studio/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/sparc_Solaris10_X86_STUDIO9" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9" />
         <variable name="configs"  value="SSL Exceptions" />
         <variable name="make_program" value="gmake" />
 
