@@ -39,7 +39,7 @@
 
     <command name="generate_workspace" options="-exclude TAO" />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -recurse -exclude CIAOTAO.mwc" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
