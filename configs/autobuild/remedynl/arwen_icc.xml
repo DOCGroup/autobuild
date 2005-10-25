@@ -3,8 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/ICC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/ICC/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/opt/intel_cc_80/lib:/home/build/ACE/ICC/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/intel_cc_80/bin" type="prefix" />
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel_cc/9.0/lib:/home/build/ACE/ICC/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/intel/cc/9.0/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="RSYNC_RSH"       value="ssh" />
@@ -36,14 +36,10 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-recurse -exclude TAO" />
-    <command name="generate_workspace" options="dirs=TAO -recurse -exclude TAOACE.mwc,CIAO" />
 
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
