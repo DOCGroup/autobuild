@@ -29,7 +29,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC CIDLC.mwc" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC CIDLC.mwc -type vc71" />
 
     <command name="win32make"         options="msvc_cidlc -vc7 -s -clean" />
     <command name="win32make"         options="msvc_cidlc -vc7 -s" />
