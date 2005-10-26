@@ -28,9 +28,12 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninterface_repo=1\nssl=1\ncidl=1\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1'" />
 
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
@@ -43,7 +46,6 @@
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k -j 4 -C ace" />
     <command name="make"              options="-k -j 4 -C apps/gperf/src" />
     <command name="make"              options="-k -j 4 -C protocols" />
