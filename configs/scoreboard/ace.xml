@@ -69,6 +69,12 @@ all the OS/platform combinations ACE is tested everyday.
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>RHEL4_IA64</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_GCC</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 
 <group>

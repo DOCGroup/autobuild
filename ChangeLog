@@ -1,3 +1,8 @@
+Wed Oct 26 09:28:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Added new RH4 IA64 build
+
 Mon Oct 24 10:38:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:

@@ -13,3 +13,4 @@ cd $HOME/ACE/autobuild
 cvs -z9 up -P -d
 
 $HOME/ACE/autobuild/configs/autobuild/remedynl/arwen_icc.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/arwen_gcc.sh
