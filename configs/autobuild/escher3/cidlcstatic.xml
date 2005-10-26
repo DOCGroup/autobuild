@@ -24,7 +24,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.vcproj*' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers -name '*.sln*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\ncidl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
