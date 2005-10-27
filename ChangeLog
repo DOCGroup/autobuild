@@ -1,3 +1,8 @@
+Thu Oct 27 07:23:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added RHEL IA64 ICC 9 build
+
 Wed Oct 26 13:58:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/Debian_Core.xml:
