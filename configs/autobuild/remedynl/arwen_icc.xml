@@ -26,7 +26,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CFLAGS+=-Wp64 CFLAGS+=-O0\ncidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CFLAGS+=-Wp64 -O0\ncidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
 
     <command name="print_os_version" />
