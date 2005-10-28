@@ -81,6 +81,11 @@ sub Run ($)
 	system("cat /proc/version");
     }
 
+    if(-r "/usr/sbin/prtdiag"){
+        print "<h3>Sun System Information (/usr/sbin/prtdiag)</h3>\n";
+        system("/usr/sbin/prtdiag");
+    }
+
     if(lc $useuname eq "useuname"){
         print "<h3>OS version (uname -a)</h3>\n";
         system("uname -a");
