@@ -268,6 +268,12 @@ all the OS/platform combinations TAO is tested everyday.
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
+            <name>WinXP_VC8</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>Win2003_VC6_Debug</name>
             <url>http://tao.prismtech.com/doc-scoreboard/windows/MSVC6_Debug</url>
             <build_sponsor>PrismTech</build_sponsor>
