@@ -1,3 +1,8 @@
+Mon Oct 31 14:18:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/escher3/*:
+          Removed these files, cidlc is build on merengue
+
 Fri Oct 28 12:06:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_os_version.pm:
