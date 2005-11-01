@@ -1,3 +1,8 @@
+Tue Nov  1 14:36:00 MST 2005  Trevor Fields  <fields_t@ociweb.com>
+
+        * configs/scoreboard/tao_future.xml:
+          Updated location of MAC OSX gcc build.
+
 Mon Oct 31 14:18:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/escher3/*:

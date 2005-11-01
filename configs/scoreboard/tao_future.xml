@@ -18,7 +18,7 @@ decide the migration paths and strategies.
    </build>
    <build>
       <name>MACOSX_gcc33</name>
-      <url>http://www.theaceorb.com/scoreboard/doc_nightly/doc_g5_MACOSX_gcc33_d0o1</url>
+      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_g5_MACOSX_gcc33_d0o1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
    </build>
