@@ -1,3 +1,8 @@
+Wed Nov  2 11:32:47 MST 2005  Trevor Fields  <fields_t@ociweb.com>
+
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
+          Removed the ssl configuration from the build.
+
 Tue Nov  1 14:36:00 MST 2005  Trevor Fields  <fields_t@ociweb.com>
 
         * configs/scoreboard/tao_future.xml:
