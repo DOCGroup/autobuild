@@ -12,21 +12,21 @@ all the OS/platform combinations ACE is tested everyday.
   <name>AIX </name>
      <build>
      <name>AIX_5.2_gcc3_Debug</name>
-     <url>http://www.riverace.com/build_logs/cuddy/dev/gcc3_debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/cuddy/dev/gcc3_debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
      <name>AIX_5.2_VA6_Debug</name>
-     <url>http://www.riverace.com/build_logs/cuddy/dev/va6_debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/cuddy/dev/va6_debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
      <name>AIX_5.2_VA6-64_Debug</name>
-     <url>http://www.riverace.com/build_logs/cuddy/dev/va6-64_debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/cuddy/dev/va6-64_debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
@@ -37,28 +37,28 @@ all the OS/platform combinations ACE is tested everyday.
   <name>Linux</name>
      <build>
      <name>Redhat_Enterprise_Linux_3_Debug</name>
-     <url>http://www.riverace.com/build_logs/jane/dev/debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/jane/dev/debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
      <name>Redhat_Enterprise_Linux_3_Debug_WChar</name>
-     <url>http://www.riverace.com/build_logs/jane/dev/debug_wchar</url>
+     <url>http://acebuilds.riverace.com/build_logs/jane/dev/debug_wchar</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
      <name>Redhat_Enterprise_Linux_3_Static_Release</name>
-     <url>http://www.riverace.com/build_logs/jane/dev/static_release</url>
+     <url>http://acebuilds.riverace.com/build_logs/jane/dev/static_release</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
      <name>Redhat_Enterprise_Linux_4_Debug</name>
-     <url>http://www.riverace.com/build_logs/timmy/dev/debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/timmy/dev/debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
@@ -81,14 +81,14 @@ all the OS/platform combinations ACE is tested everyday.
   <name>HP-UX</name>
      <build>
       <name>HP-UX_11.00_aC++_Debug</name>
-      <url>http://www.riverace.com/build_logs/bumbles/dev/acc_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/bumbles/dev/acc_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
       <name>HP-UX_11.00_aC++_Static_Release</name>
-      <url>http://www.riverace.com/build_logs/bumbles/dev/acc_static_release</url>
+      <url>http://acebuilds.riverace.com/build_logs/bumbles/dev/acc_static_release</url>
       <orange>168</orange>
       <red>192</red>
       <build_sponsor>Riverace</build_sponsor>
@@ -96,7 +96,7 @@ all the OS/platform combinations ACE is tested everyday.
      </build>
      <build>
         <name>HP-UX_11.00_gcc3_Debug</name>
-        <url>http://www.riverace.com/build_logs/bumbles/dev/gcc3_debug</url>
+        <url>http://acebuilds.riverace.com/build_logs/bumbles/dev/gcc3_debug</url>
         <red>36</red>
         <build_sponsor>Riverace</build_sponsor>
         <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
@@ -107,28 +107,28 @@ all the OS/platform combinations ACE is tested everyday.
 <name>Solaris</name>
    <build>
      <name>Solaris_8_gcc3_Debug</name>
-     <url>http://www.riverace.com/build_logs/heidi/dev/gcc3_debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/heidi/dev/gcc3_debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
      <name>Solaris_8_Forte6_Debug(IPv6,instances=explicit)</name>
-     <url>http://www.riverace.com/build_logs/heidi/dev/forte6_debug</url>
+     <url>http://acebuilds.riverace.com/build_logs/heidi/dev/forte6_debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
       <name>Solaris_9_gcc3_Debug</name>
-      <url>http://www.riverace.com/build_logs/essie/dev/gcc3_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/essie/dev/gcc3_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
       <name>Solaris_9_Forte7_64bit_Debug(instances=explicit)</name>
-      <url>http://www.riverace.com/build_logs/essie/dev/forte7-64_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/essie/dev/forte7-64_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
@@ -142,7 +142,7 @@ all the OS/platform combinations ACE is tested everyday.
    </build>
    <build>
       <name>Solaris_10_x86_Studio10(64bit)_Debug</name>
-      <url>http://www.riverace.com/build_logs/billy/dev/studio10-64_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/billy/dev/studio10-64_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
@@ -160,7 +160,7 @@ all the OS/platform combinations ACE is tested everyday.
 <name>Windows</name>
    <build>
       <name>Windows2000_MSVC6_Debug</name>
-      <url>http://www.riverace.com/build_logs/beebee/dev/msvc6_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/beebee/dev/msvc6_debug</url>
       <orange>24</orange>
       <red>96</red>
       <build_sponsor>Riverace</build_sponsor>
@@ -168,7 +168,7 @@ all the OS/platform combinations ACE is tested everyday.
    </build>
    <build>
       <name>WindowsXP_VC.NET_Debug(IPv6)</name>
-      <url>http://www.riverace.com/build_logs/hope/dev/vc7_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/hope/dev/vc7_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
@@ -193,21 +193,21 @@ all the OS/platform combinations ACE is tested everyday.
     </build>
    <build>
       <name>WindowsXP_VC8_Debug</name>
-      <url>http://www.riverace.com/build_logs/lily/dev/vc8_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/lily/dev/vc8_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
    <build>
       <name>WinCE4_PocketPC2003_VC8_Debug</name>
-      <url>http://www.riverace.com/build_logs/lily/dev/vc8_ppc2003_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/lily/dev/vc8_ppc2003_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
    <build>
       <name>Winmobile5_PocketPC_VC8_Debug</name>
-      <url>http://www.riverace.com/build_logs/lily/dev/vc8_winmobile5_debug</url>
+      <url>http://acebuilds.riverace.com/build_logs/lily/dev/vc8_winmobile5_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
