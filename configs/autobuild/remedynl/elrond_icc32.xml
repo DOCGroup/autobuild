@@ -10,6 +10,7 @@
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="BOOST_ROOT"      value="/usr/local" />
         <environment name="BOOST_VERSION"   value="boost-1_33" />
+        <environment name="BOOST_CFG"       value="-gcc-mt" />
 
         <variable name="root"     value="/home/build/ACE/icc32/" />
         <variable name="log_file" value="build.txt" />
