@@ -1,3 +1,11 @@
+Tue Nov  8 16:34:38 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml
+	* configs/scoreboard/tao_future.xml
+
+	Moved the OCI OS X build to the main scoreboard, with the ISIS
+	builds. 
+	
 Tue Nov  8 15:44:22 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml

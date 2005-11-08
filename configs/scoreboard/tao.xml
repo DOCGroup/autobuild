@@ -459,6 +459,12 @@ all the OS/platform combinations TAO is tested everyday.
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
+   <build>
+      <name>Panther_GCC33</name>
+      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_g5_MACOSX_gcc33_d0o1</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
+   </build>
 </group>
 
 </scoreboard>
