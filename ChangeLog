@@ -1,3 +1,8 @@
+Tue Nov  8 15:52:39 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml:
+	* configs/scoreboard/ace_future.xml: Corrected URL for Riverace builds.
+
 Tue Nov  8 14:21:20 2005  Build Czar  <root@cosmic.dre.vanderbilt.edu>
 
 	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
