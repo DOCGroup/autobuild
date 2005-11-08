@@ -1,3 +1,11 @@
+Tue Nov  8 14:21:20 2005  Build Czar  <root@cosmic.dre.vanderbilt.edu>
+
+	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+	* configs/autobuild/cosmic/gcc3.3.sh
+	* configs/scoreboard/tao.xml
+
+	Added Mac Tiger GCC 3.3 build. 
+	
 Tue Nov  8 09:40:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
