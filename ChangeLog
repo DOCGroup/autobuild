@@ -1,3 +1,16 @@
+Tue Nov  8 09:40:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+
+	  Addressed MPC checkout conflicts.
+
+	* configs/autobuild/isislab/blade12/ace_for_tao.xml:
+
+	  Added missing "ace_for_tao=1" to generated platform_macros.GNU
+	  file.
+
+	  Addressed MPC checkout conflicts.
+
 Mon Nov  7 22:12:49 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade12/ace_for_tao.sh:
