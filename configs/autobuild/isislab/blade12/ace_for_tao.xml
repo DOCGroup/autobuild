@@ -3,8 +3,8 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/home/bczar/builds/ace_for_tao/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="$ACE_ROOT/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="$ACE_ROOT/lib" />
+        <environment name="TAO_ROOT"        value="/home/bczar/builds/ace_for_tao/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/bczar/builds/ace_for_tao/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
@@ -30,8 +30,8 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers ACE_MPC" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\nace_for_tao=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\nace_for_tao=1\n\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
