@@ -1,3 +1,10 @@
+Tue Nov  8 15:44:22 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+
+	Set SSL_ROOT to silence some warnings in the build. 
+	
 Tue Nov  8 15:52:39 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml:
