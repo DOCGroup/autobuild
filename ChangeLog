@@ -1,3 +1,11 @@
+Wed Nov  9 17:14:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/abbarach/CIDLC.xml
+	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+
+	Updated for merged platform_macros file.
+	
 Tue Nov  8 16:34:38 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml
