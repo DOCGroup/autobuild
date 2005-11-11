@@ -1,3 +1,10 @@
+Fri Nov 11 13:20:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade11/ace_for_tao.bat:
+	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+
+	  Corrected paths.
+
 Wed Nov  9 17:14:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/CIDLC.xml

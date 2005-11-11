@@ -3,14 +3,14 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\Docume~1\bczar\builds\ace_for_tao\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="%ACE_ROOT%\bczar\builds\ace_for_tao\ACE_wrappers\TAO"/>
+        <environment name="TAO_ROOT"     value="%ACE_ROOT%\TAO"/>
         <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink" />
         <environment name="PATH"         value="%ACE_ROOT%\bin;%ACE_ROOT%\lib" type="prefix" />
         <variable name="configs"  value="Win32 Exceptions" />
-        <variable name="root"     value="C:\Docume~1\\bczar\builds\ace_for_tao\" />
+        <variable name="root"     value="C:\Docume~1\bczar\builds\ace_for_tao\" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\Docume~1\\bczar\builds\ace_for_tao\" />
+        <variable name="log_root" value="C:\Docume~1\bczar\builds\ace_for_tao\" />
         <variable name="name"     value="Win2003 ACE_FOR_TAO" />
     </configuration>
 
