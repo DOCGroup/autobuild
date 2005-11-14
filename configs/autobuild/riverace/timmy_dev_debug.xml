@@ -12,7 +12,7 @@
         <variable name="build_name"   value="debug" />
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/debug" />
         <variable name="log_file"     value="debug.txt" />
-        <variable name="log_root"     value="/jane/acebuilds/logs/timmy/dev/debug" />
+        <variable name="log_root"     value="/cinny/acebuilds/logs/timmy/dev/debug" />
         <variable name="configs"      value="Exceptions" />
 
     </configuration>
