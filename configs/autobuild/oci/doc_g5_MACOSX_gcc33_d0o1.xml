@@ -39,8 +39,8 @@
 	<command name="cvs" options="-z 9 -q checkout -P ACE_wrappers" />
 	<command name="clone_build_tree" />
 	<command name="file_manipulation" options="type=update file=ACE_wrappers/build/gcc33_d0o1/ace/config.h output='\n#include \x22ace/config-macosx-panther.h\x22\n\n'" />
-	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/include/makeinclude/platform_macros.GNU output='ciao=0\ncidl=0\nexceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nssl=0\nstatic_libs_only=1\ndebug=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_panther.GNU\n'" />
-	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/bin/MakeProjectCreator/config/default.features output='ciao=0\ncidl=0\nexceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nssl=0\nstatic_libs_only=1\ndebug=0\noptimize=1\n'" />
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/include/makeinclude/platform_macros.GNU output='ciao=0\ncidl=0\nexceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nssl=0\nshared_libs_only=1\ndebug=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_panther.GNU\n'" />
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/bin/MakeProjectCreator/config/default.features output='ciao=0\ncidl=0\nexceptions=1\ninline=1\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\nrmcast=1\nprobe=0\nprofile=0\nfakesvcconf=0\nssl=0\nshared_libs_only=1\ndebug=0\noptimize=1\n'" />
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc33_d0o1/setupenv.sh output='umask 002\nACE_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc33_d0o1; export ACE_ROOT\nTAO_ROOT=$ACE_ROOT/TAO; export TAO_ROOT\nLD_LIBRARY_PATH=$ACE_ROOT/lib:; export LD_LIBRARY_PATH\nDYLD_LIBRARY_PATH=$LD_LIBRARY_PATH; export DYLD_LIBRARY_PATH\nSHLIB_PATH=$LD_LIBRARY_PATH; export SHLIB_PATH\nLIBPATH=$LD_LIBRARY_PATH; export SHLIB_PATH\nTAO_ORBSVCS=; export TAO_ORBSVCS\nSELECTION_CRITERIA=\x22\x22; export SELECTION_CRITERIA\nPATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin; export PATH\nLM_LICENSE_FILE=; export LM_LICENSE_FILE\nMPC_ROOT=/home/taoadmin/mpc/ocitao-14a/MPC; export MPC_ROOT\nDYLD_BIND_AT_LAUNCH=1 export DYLD_BIND_AT_LAUNCH\nMACOSX_DEPLOYMENT_TARGET=10.2\nACE_RUNTEST_DELAY=2 export ACE_RUNTEST_DELAY\nUTILITY_ROOT=/tao_builds/taoadmin/Utility-1.2.2\nexport UTILITY_ROOT\n'" />
 	<command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO" />
 <!--	<command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC -type gnuace -value_project includes+=/usr/local/include/boost-1_32 -value_project libpaths+=/usr/local/lib CIDLC.mwc" /> -->
@@ -73,7 +73,7 @@
 <!--	<command name="make" options=" -k -C TAO/CIAO" /> -->
 	<command name="make" options=" -k -C TAO/DevGuideExamples" />
 	<command name="shell" options="$ACE_ROOT/bin/clean_sems.sh" />
-	<command name="auto_run_tests" options="-Config STATIC -Config SLOW" />
+	<command name="auto_run_tests" options="-Config SLOW" />
 	<command name="log" options="off" />
 	<command name="process_logs" options="clean move prettify index" />
 	<command name="status" options="off" />
