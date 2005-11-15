@@ -1,3 +1,10 @@
+Tue Nov 15 11:50:10 2005  Don Busch  <busch_d@ociweb.com>
+
+	* configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml
+
+	Added "boost=1" to the default.features file to build CIAO.
+        Fixes a build error.
+
 Tue Nov 15 11:40:10 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml
