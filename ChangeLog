@@ -1,3 +1,9 @@
+Tue Nov 15 10:48:33 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/hope_dev_vc7_debug.xml: Select IPv6 using
+	  the MPC ipv6 feature, which adds ACE_HAS_IPV6 to the generated
+	  compile options, rather than adding it to config.h.
+
 Tue Nov 15 08:24:10 2005  Rich Seibel <seibel_r@ociweb.com>
 
         * configs/autobuild/oci/doc_g5_MACOSX_gcc33_d0o1.xml
