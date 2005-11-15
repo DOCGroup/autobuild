@@ -1,3 +1,9 @@
+Tue Nov 15 08:24:10 2005  Rich Seibel <seibel_r@ociweb.com>
+
+        * configs/autobuild/oci/doc_g5_MACOSX_gcc33_d0o1.xml
+        * configs/scoreboard/tao_future.xml
+          Removed MACOSX build.
+
 Fri Nov 11 13:20:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/ace_for_tao.bat:
