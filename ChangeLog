@@ -1,15 +1,20 @@
+Wed Nov 16 09:08:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/sparc/CIDLC.xml:
+          Added path to get gnu tools
+
 Tue Nov 15 15:43:02 2005  William Otte <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/sparc/CIDLC.xml
 	* configs/autobuild/sparc/driver_cidlc.sh
 
-	Adding the config/driver for the sparc CIDLC build. 
-	
+	Adding the config/driver for the sparc CIDLC build.
+
 Tue Nov 15 14:48:50 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml
 
-	Added the Solaris CIDLC build. 
+	Added the Solaris CIDLC build.
 
 Tue Nov 15 11:50:10 2005  Don Busch  <busch_d@ociweb.com>
 
@@ -50,22 +55,22 @@ Wed Nov  9 17:14:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
 	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
 
 	Updated for merged platform_macros file.
-	
+
 Tue Nov  8 16:34:38 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml
 	* configs/scoreboard/tao_future.xml
 
 	Moved the OCI OS X build to the main scoreboard, with the ISIS
-	builds. 
-	
+	builds.
+
 Tue Nov  8 15:44:22 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
 	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
 
-	Set SSL_ROOT to silence some warnings in the build. 
-	
+	Set SSL_ROOT to silence some warnings in the build.
+
 Tue Nov  8 15:52:39 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml:
@@ -77,8 +82,8 @@ Tue Nov  8 14:21:20 2005  Build Czar  <root@cosmic.dre.vanderbilt.edu>
 	* configs/autobuild/cosmic/gcc3.3.sh
 	* configs/scoreboard/tao.xml
 
-	Added Mac Tiger GCC 3.3 build. 
-	
+	Added Mac Tiger GCC 3.3 build.
+
 Tue Nov  8 09:40:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
