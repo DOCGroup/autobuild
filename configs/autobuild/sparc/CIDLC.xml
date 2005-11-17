@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"          value="/build/builds/bczar/CIDLC/ACE_wrappers" />
         <environment name="TAO_ROOT"          value="/build/builds/bczar/CIDLC/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"         value="/build/builds/bczar/CIDLC/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DYLD_LIBRARY_PATH" value="/build/builds/bczar/CIDLC/ACE_wrappers/ace;/build/builds/bczar/CIDLC/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/build/builds/bczar/CIDLC/ACE_wrappers/ace;/build/builds/bczar/CIDLC/ACE_wrappers/lib" />
         <environment name="BOOST_ROOT"        value="/usr/local" />
         <environment name="BOOST_VERSION"     value="boost-1_33" />
         <environment name="UTILITY_ROOT"      value="/usr/local/include/Utility" />
