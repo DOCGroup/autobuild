@@ -1,3 +1,15 @@
+Thu Nov 17 12:00:37 2005  William Otte	<wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/corona/CIDLC.xml
+	* configs/autobuild/corona/driver_cidlc.sh
+	* configs/scoreboard/tao.xml
+
+	Added a Solaris x86 CIDLC build.
+	
+	* configs/autobuild/sparc/CIDLC.xml
+
+	Further corrections to this autobuild file.
+
 Thu Nov 17 09:57:10 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/sparc/CIDLC.xml

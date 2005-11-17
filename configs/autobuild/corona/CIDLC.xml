@@ -1,21 +1,20 @@
 <!-- $Id$ -->
-
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"          value="/build/builds/bczar/CIDLC/ACE_wrappers" />
-        <environment name="TAO_ROOT"          value="/build/builds/bczar/CIDLC/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"         value="/build/builds/bczar/CIDLC/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH"   value="/build/builds/bczar/CIDLC/ACE_wrappers/ace:/build/builds/bczar/CIDLC/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"          value="/build/isisbuilds/CIDLC/ACE_wrappers" />
+        <environment name="TAO_ROOT"          value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"         value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH"   value="/build/isisbuilds/CIDLC/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="BOOST_ROOT"        value="/usr/local" />
-        <environment name="BOOST_VERSION"     value="boost-1_33" />
+        <environment name="BOOST_VERSION"     value="boost-1_32" />
+        <environment name="BOOST_CFG"         value="-gcc-1_32" />
         <environment name="UTILITY_ROOT"      value="/usr/local/include/Utility" />
         <environment name="CVSROOT"           value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"           value="ssh" />
-        <environment name="PATH"              value="/usr/local/bin:/usr/sfw/bin" type="prefix" />
 
-        <variable name="root"         value="/build/builds/bczar/CIDLC/" />
+        <variable name="root"         value="/build/isisbuilds/CIDLC/" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="/web/users/isisbuilds/auto_compile_logs/sparc_CIDLC" />
+        <variable name="log_root"     value="/web/users/isisbuilds/auto_compile_logs/solaris_x86_CIDLC" />
         <variable name="configs"      value="SSL Exceptions" />
         <variable name="make_program" value="gmake" />
     </configuration>
@@ -49,9 +48,8 @@
     <command name="process_logs"       options="clean move prettify index" />
     <command name="file_manipulation"  options="type=delete file=.disable" />
     <command name="status"             options="off" />
-
+    
     <command name="shell"              options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
-    <command name="shell"              options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc.bz2 /web/users/isisbuilds/CIDLC/Solaris/SPARC" />
-    <command name="shell"              options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc /web/users/isisbuilds/CIDLC/Solaris/SPARC" />
+    <command name="shell"              options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc.bz2 /web/users/isisbuilds/CIDLC/Solaris/x86" />
+    <command name="shell"              options="/bin/mv ACE_wrappers/TAO/CIAO/CIDLC/cidlc /web/users/isisbuilds/CIDLC/Solaris/x86" />
 </autobuild>
-
