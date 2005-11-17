@@ -20,9 +20,8 @@
 	<command name="cvs" options="-z 9 -q checkout -P ACE_wrappers" />
 	<command name="clone_build_tree" />
 	<command name="file_manipulation" options="type=update file=ACE_wrappers/build/vc6_d0o1/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace\config-win32.h\x22\n'" />
-	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/vc6_d0o1/bin/MakeProjectCreator/config/default.features output='ciao=1\nboost=1\nssl=0\nrmcast=1\nqos=1\nmfc=1\n'" />
+	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/vc6_d0o1/bin/MakeProjectCreator/config/default.features output='ssl=0\nrmcast=1\nqos=1\nmfc=1\n'" />
 	<command name="generate_workspace" options="-type vc6 -recurse -exclude TAO/CIAO" />
-	<command name="generate_workspace" options="dirs=TAO/CIAO -type vc6 -value_project includes+=D:/tao_builds/taoadmin/boost-1.30.2 -value_project libpaths+=D:/tao_builds/taoadmin/boost-1.30.2/lib CIAO.mwc CIDLC/CIDLC.mwc" />
 	<command name="print_ace_config" />
 	<command name="print_status" options="Compile:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
@@ -36,8 +35,6 @@
 	<command name="vc6make" options="TAO/orbsvcs/tests/tests.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="TAO/orbsvcs/examples/examples.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="TAO/orbsvcs/performance-tests/perf.dsw /make \x22all - win32 release\x22" />
-	<command name="vc6make" options="TAO/CIAO/CIDLC/CIDLC.dsw /make \x22all - win32 release\x22" />
-	<command name="vc6make" options="TAO/CIAO/CIAO.dsw /make \x22all - win32 release\x22" />
 	<command name="print_status" options="Test:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
 	<command name="auto_run_tests" options="-s \x22d:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG -Config SSL -ExeSubDir Release" />
