@@ -1,3 +1,9 @@
+Mon Nov 21 17:48:22 2005  Christopher Allen  <allen@gump.mro.riverace.com>
+
+	* configs/scoreboard/ace.xml
+
+	Added HP-UX 11iv2 IA64 build.
+
 Fri Nov 18 10:20:36 2005  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
 
 	* configs/autobuild/sparc/driver_cidlc.sh

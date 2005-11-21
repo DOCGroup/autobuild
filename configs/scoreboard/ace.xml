@@ -80,6 +80,10 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
   <name>HP-UX</name>
      <build>
+	 <name>HP-UX_11iv2_ia64_aC++_Debug</name>
+	 <url>http://acebuilds.riverace.com/gump/dev/acc_debug</url>
+     </build>
+     <build>
       <name>HP-UX_11.00_aC++_Debug</name>
       <url>http://acebuilds.riverace.com/bumbles/dev/acc_debug</url>
       <red>36</red>
