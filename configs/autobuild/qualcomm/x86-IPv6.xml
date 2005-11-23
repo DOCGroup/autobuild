@@ -34,7 +34,7 @@
     <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features" />
 
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/include/makeinclude/platform_macros.GNU output='optimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features output='ipv6=1\nssl=1\nqos=0\ncidl=0\nrwho=0\nsctp=0\n'" />
