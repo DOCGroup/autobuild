@@ -2,7 +2,7 @@ REM $Id$
 
 call "C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Tools\vsvars32.bat"
 
-cd C:\Documents and Settings\bczar\autobuild
+cd "C:\Documents and Settings\bczar\autobuild"
 
 cvs -z3 -q up -d -P
 
