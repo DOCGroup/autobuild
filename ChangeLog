@@ -1,3 +1,10 @@
+Tue Nov 29 12:01:33 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade12/versioned_namespace.sh:
+	* configs/autobuild/isislab/blade12/versioned_namespace.xml:
+
+	  New FC4 g++ 4.0 versioned namespace build.
+
 Tue Nov 29 12:01:33 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/sunv210_studio10-64_debug.xml:
