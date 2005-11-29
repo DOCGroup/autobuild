@@ -19,6 +19,8 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
+    <command name="log"               options="on" />
+
     <!-- Clean out the workspace before regenerating the Makefiles. -->
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
@@ -26,8 +28,6 @@
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
-    <command name="log"               options="on" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
