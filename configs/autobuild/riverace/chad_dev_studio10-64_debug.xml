@@ -2,17 +2,18 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/users/shuston/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/users/shuston/acebuilds/ACE_wrappers-repository/build/studio10-64_debug/lib:/usr/lib" />
+        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug/lib:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-        <environment name="MPC_ROOT"        value="/users/shuston/acebuilds/MPC" />
+        <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
 
-        <variable name="root"         value="/users/shuston/acebuilds" />
+        <variable name="root"         value="/acebuilds" />
         <variable name="build_name"   value="studio10-64_debug" />
-        <variable name="project_root" value="/users/shuston/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
+        <variable name="make_program" value="gmake" />
+        <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/studio10-64_debug.txt" />
-        <variable name="log_root"     value="/users/shuston/acebuilds/logs/dev/studio10-64_debug" />
+        <variable name="log_root"     value="/cinny/acebuilds/logs/chad/dev/studio10-64_debug" />
         <variable name="configs"      value="Exceptions" />
 
     </configuration>
@@ -32,8 +33,8 @@
     <command name="create_ace_build"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/.disable output='RUNNING'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='qos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /users/shuston/acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/users/shuston/acebuilds/ACE_wrappers-repository/build/studio10-64_debug -type gnuace -exclude build,Kokyu" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='qos=1\nipv6=1\n'" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/studio10-64_debug -type gnuace -exclude build,Kokyu" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/ace/config.h output='#include \x22ace/config-sunos5.10.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nCCFLAGS += -xport64\nLDFLAGS += -xport64\n'" />
