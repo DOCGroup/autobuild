@@ -1,3 +1,10 @@
+Tue Nov 29 10:41:16 2005  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/make.pm:
+
+          When declaring $ret, assign zero to it to avoid undefined value
+          warnings from perl.
+
 Thu Nov 24 15:21:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
@@ -5,10 +12,10 @@ Thu Nov 24 15:21:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Nov 23 21:17:52 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.bat:
+        * configs/autobuild/isislab/blade11/ace_for_tao.bat:
 
-	  Place directory being changed to in quotes since the path has a
-	  space in it.
+          Place directory being changed to in quotes since the path has a
+          space in it.
 
 Wed Nov 23 09:30:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -18,33 +25,33 @@ Wed Nov 23 09:30:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Mon Nov 21 17:48:22 2005  Christopher Allen  <allen@gump.mro.riverace.com>
 
-	* configs/scoreboard/ace.xml
+        * configs/scoreboard/ace.xml
 
-	Added HP-UX 11iv2 IA64 build.
+        Added HP-UX 11iv2 IA64 build.
 
 Fri Nov 18 10:20:36 2005  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
 
-	* configs/autobuild/sparc/driver_cidlc.sh
+        * configs/autobuild/sparc/driver_cidlc.sh
 
-	Added ar onto the PATH environment.
+        Added ar onto the PATH environment.
 
-Thu Nov 17 12:00:37 2005  William Otte	<wotte@dre.vanderbilt.edu>
+Thu Nov 17 12:00:37 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/corona/CIDLC.xml
-	* configs/autobuild/corona/driver_cidlc.sh
-	* configs/scoreboard/tao.xml
+        * configs/autobuild/corona/CIDLC.xml
+        * configs/autobuild/corona/driver_cidlc.sh
+        * configs/scoreboard/tao.xml
 
-	Added a Solaris x86 CIDLC build.
+        Added a Solaris x86 CIDLC build.
 
-	* configs/autobuild/sparc/CIDLC.xml
+        * configs/autobuild/sparc/CIDLC.xml
 
-	Further corrections to this autobuild file.
+        Further corrections to this autobuild file.
 
 Thu Nov 17 09:57:10 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/sparc/CIDLC.xml
+        * configs/autobuild/sparc/CIDLC.xml
 
-	Corrected the LD_LIBRARY_PATH.
+        Corrected the LD_LIBRARY_PATH.
 
 Wed Nov 16 18:06:18 2005  Steve Totten  <totten_s@ociweb.com>
 
@@ -59,35 +66,35 @@ Wed Nov 16 09:08:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Nov 15 15:43:02 2005  William Otte <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/sparc/CIDLC.xml
-	* configs/autobuild/sparc/driver_cidlc.sh
+        * configs/autobuild/sparc/CIDLC.xml
+        * configs/autobuild/sparc/driver_cidlc.sh
 
-	Adding the config/driver for the sparc CIDLC build.
+        Adding the config/driver for the sparc CIDLC build.
 
 Tue Nov 15 14:48:50 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	Added the Solaris CIDLC build.
+        Added the Solaris CIDLC build.
 
 Tue Nov 15 11:50:10 2005  Don Busch  <busch_d@ociweb.com>
 
-	* configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml
 
-	Added "boost=1" to the default.features file to build CIAO.
+        Added "boost=1" to the default.features file to build CIAO.
         Fixes a build error.
 
 Tue Nov 15 11:40:10 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	Removed the OCI Panther Build, as they are no longer supporting it.
+        Removed the OCI Panther Build, as they are no longer supporting it.
 
 Tue Nov 15 10:48:33 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/hope_dev_vc7_debug.xml: Select IPv6 using
-	  the MPC ipv6 feature, which adds ACE_HAS_IPV6 to the generated
-	  compile options, rather than adding it to config.h.
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Select IPv6 using
+          the MPC ipv6 feature, which adds ACE_HAS_IPV6 to the generated
+          compile options, rather than adding it to config.h.
 
 Tue Nov 15 08:24:10 2005  Rich Seibel <seibel_r@ociweb.com>
 
@@ -97,81 +104,81 @@ Tue Nov 15 08:24:10 2005  Rich Seibel <seibel_r@ociweb.com>
 
 Fri Nov 11 13:20:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.bat:
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.bat:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
 
-	  Corrected paths.
+          Corrected paths.
 
 Wed Nov  9 17:14:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/CIDLC.xml
-	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
-	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+        * configs/autobuild/abbarach/CIDLC.xml
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml
 
-	Updated for merged platform_macros file.
+        Updated for merged platform_macros file.
 
 Tue Nov  8 16:34:38 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
-	* configs/scoreboard/tao_future.xml
+        * configs/scoreboard/tao.xml
+        * configs/scoreboard/tao_future.xml
 
-	Moved the OCI OS X build to the main scoreboard, with the ISIS
-	builds.
+        Moved the OCI OS X build to the main scoreboard, with the ISIS
+        builds.
 
 Tue Nov  8 15:44:22 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
-	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml
 
-	Set SSL_ROOT to silence some warnings in the build.
+        Set SSL_ROOT to silence some warnings in the build.
 
 Tue Nov  8 15:52:39 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml:
-	* configs/scoreboard/ace_future.xml: Corrected URL for Riverace builds.
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml: Corrected URL for Riverace builds.
 
 Tue Nov  8 14:21:20 2005  Build Czar  <root@cosmic.dre.vanderbilt.edu>
 
-	* configs/autobuild/cosmic/Mac_OSX_Tiger.xml
-	* configs/autobuild/cosmic/gcc3.3.sh
-	* configs/scoreboard/tao.xml
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+        * configs/autobuild/cosmic/gcc3.3.sh
+        * configs/scoreboard/tao.xml
 
-	Added Mac Tiger GCC 3.3 build.
+        Added Mac Tiger GCC 3.3 build.
 
 Tue Nov  8 09:40:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
 
-	  Addressed MPC checkout conflicts.
+          Addressed MPC checkout conflicts.
 
-	* configs/autobuild/isislab/blade12/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml:
 
-	  Added missing "ace_for_tao=1" to generated platform_macros.GNU
-	  file.
+          Added missing "ace_for_tao=1" to generated platform_macros.GNU
+          file.
 
-	  Addressed MPC checkout conflicts.
+          Addressed MPC checkout conflicts.
 
 Mon Nov  7 22:12:49 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade12/ace_for_tao.sh:
-	* configs/autobuild/isislab/blade12/ace_for_tao.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/autobuild/isislab/blade12/ace_for_tao.sh:
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added Linux g++ 4.0.x ACE_FOR_TAO build.
+          Added Linux g++ 4.0.x ACE_FOR_TAO build.
 
 Mon Nov  7 22:23:54 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.bat:
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.bat:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/scoreboard/tao.xml:
 
-	  Added Windows 2003 VC++ 7.1 ACE_FOR_TAO build.
+          Added Windows 2003 VC++ 7.1 ACE_FOR_TAO build.
 
 Mon Nov  7 11:46:33 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml:
-	* configs/scoreboard/ace_future.xml: Riverace build data is now located
-	  at acebuilds.riverace.com, not www.riverace.com.
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml: Riverace build data is now located
+          at acebuilds.riverace.com, not www.riverace.com.
 
 Wed Nov  2 11:32:47 MST 2005  Trevor Fields  <fields_t@ociweb.com>
 
@@ -221,13 +228,13 @@ Mon Oct 24 07:26:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Fri Oct 21 17:11:06 2005  Build Czar  <root@abbarach.dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
 
-	Added CIAO_ROOT, XERCESCROOT env variables to address errors/warnings.
+        Added CIAO_ROOT, XERCESCROOT env variables to address errors/warnings.
 
-	* configs/autobuild/abbarach/gcc4.sh
+        * configs/autobuild/abbarach/gcc4.sh
 
-	minor fix.
+        minor fix.
 
 Fri Oct 21 07:46:00 2005  Chad Elliott  <elliott_c@ociweb.com>
 

@@ -108,7 +108,7 @@ sub Run ($)
 
     my $command;
     my $pattern;
-    my $ret;
+    my $ret = 0;
  
     if ($options =~ m/find=([^\s]*)/) {
         $pattern = $1;
