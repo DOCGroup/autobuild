@@ -7,6 +7,8 @@
         <environment name="CIAO_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO/CIAO"/>
         <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/CIDLC/ACE_wrappers/ace;/build/isisbuilds/CIDLC/ACE_wrappers/lib" />
         <environment name="BOOST_ROOT"        value="/build/isisbuilds/CIDLC/boost" />
+        <environment name="BOOST_VERSION"        value="boost-1_32" />
+        <environment name="BOOST_ROOT"        value="-gcc" />
         <environment name="UTILITY_ROOT"      value="/build/isisbuilds/Utility" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />

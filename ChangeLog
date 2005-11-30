@@ -1,3 +1,9 @@
+Wed Nov 30 13:34:09 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/abbarach/CIDLC.xml
+
+	Updated to make this build consistent with new boost MPC semantics.
+	
 Tue Nov 29 12:01:33 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade12/versioned_namespace.sh:
