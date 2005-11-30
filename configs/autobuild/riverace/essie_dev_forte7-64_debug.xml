@@ -36,8 +36,8 @@
     <command name="shell"             options="find ACE_wrappers-repository/build/forte7-64_debug -name 'Makefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers-repository/build/forte7-64_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n" />
-    <command name="generate_workspace" options="-feature_file /space/ace/builds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/space/ace/builds/ACE_wrappers-repository/build/forte7-64_debug -type gnuace -exclude Kokyu" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
+    <command name="generate_workspace" options="-feature_file /space/ace/builds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/space/ace/builds/ACE_wrappers-repository/build/forte7-64_debug -type gnuace -exclude build,Kokyu" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/forte7-64_debug/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/forte7-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ntemplates=explicit\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
