@@ -2,17 +2,17 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/home/bczar/builds/versioned_namespace/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/bczar/builds/versioned_namespace/ACE_wrappers/TAO"/>
+        <environment name="ACE_ROOT"        value="/home/bczar/builds/gcc4_static/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/bczar/builds/gcc4_static/ACE_wrappers/TAO"/>
         <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/versioned_namespace/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/gcc4_static/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
 
-        <variable name="root"     value="/home/bczar/builds/versioned_namespace/" />
+        <variable name="root"     value="/home/bczar/builds/gcc4_static/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/bczar/builds/versioned_namespace/" />
-        <variable name="configs"  value="Linux SSL" />
+        <variable name="log_root" value="/home/bczar/builds/gcc4_static/" />
+        <variable name="configs"  value="Linux STATIC SSL" />
 
     </configuration>
 
@@ -34,8 +34,8 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\nversioned_namespace=1\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\nstatic_libs_only=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\n\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -60,5 +60,6 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/versioned_namespace"/>
+    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/gcc4_static"/>
+    <command name="shell"             options="rm *.txt *.html" />
 </autobuild>

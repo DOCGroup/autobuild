@@ -1,3 +1,15 @@
+Fri Dec  2 00:53:57 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade12/ace_for_tao.xml:
+	* configs/autobuild/isislab/blade12/versioned_namespace.xml:
+
+	  Added appropriate Xerces related environment variables/values.
+
+	* configs/autobuild/isislab/blade12/gcc4_static.sh:
+	* configs/autobuild/isislab/blade12/gcc4_static.xml:
+
+	  New g++ 4 static library build.
+
 Wed Nov 30 13:34:09 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/CIDLC.xml
