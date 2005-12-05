@@ -30,7 +30,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nCFLAGS+=-Wp64\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nboost=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
@@ -43,18 +43,15 @@
 
     <command name="generate_workspace" options="-exclude TAO" />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="make"              options="-k -j 3" />
     <command name="make"              options="-k -j 3 -C TAO/TAO_IDL" />
     <command name="make"              options="-k -j 3 -C TAO" />
-    <command name="make"              options="-k -j 3 -C TAO/CIAO" />
 
-    <command name="auto_run_tests"    options=" -a -o -t -C" />
+    <command name="auto_run_tests"    options=" -a -o -t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
