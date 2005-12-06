@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers" />
         <environment name="TAO_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\ACE\VC71sd\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
