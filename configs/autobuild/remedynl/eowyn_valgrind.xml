@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT"              value="/home/build/ACE/valgrind/ACE_wrappers" />
         <environment name="TAO_ROOT"              value="/home/build/ACE/valgrind/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/IPv6wchar/ACE_wrappers/TAO/CIAO"/>
+        <environment name="CIAO_ROOT"             value="/home/build/ACE/valgrind/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH"       value="/home/build/ACE/valgrind/ACE_wrappers/lib" />
         <environment name="CVSROOT"               value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="PATH"                  value="/usr/local/bin" type="prefix" />
