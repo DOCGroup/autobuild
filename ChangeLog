@@ -1,3 +1,10 @@
+Wed Dec  7 14:08:57 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+
+	  Set Xerces related environment variables.  Addresses a number of
+	  build errors.
+
 Wed Dec  7 13:17:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/corona/SunOS10_x86_GCC34.xml
