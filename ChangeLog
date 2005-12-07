@@ -1,3 +1,9 @@
+Wed Dec  7 12:59:44 2005  William Otte <wotte@dre.vanderbilt.edu>
+
+	* configs/scoreboard/misc.xml
+
+	Fixed errors in this file. 
+
 Wed Dec  7 12:10:55 2005  Build Czar  <root@abbarach.dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/CIDLC.xml
