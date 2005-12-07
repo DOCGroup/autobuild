@@ -4,6 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Full/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Full/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/build/isisbuilds/Full/ACE_wrappers/TAO/CIAO"/>
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Full/ACE_wrappers/lib" />

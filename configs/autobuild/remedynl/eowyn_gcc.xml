@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/usr/local/lib64:/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
