@@ -1,3 +1,9 @@
+Wed Dec  7 10:42:54 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/scoreboard/misc.xml
+
+	Added Subversion test conversions.
+
 Wed Dec  7 10:10:30 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml: Don't try make
@@ -11,6 +17,27 @@ Tue Dec  6 22:55:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	  Expanded nested environment variable references.  MPC can't
 	  handle them.
+
+Tue Dec  6 10:48:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace_isis/RH8_NoInline.xml
+	* configs/autobuild/balar_isis/DynamicHash.xml
+	* configs/autobuild/remedynl/elrond_icc64.xml
+	* configs/autobuild/remedynl/eowyn_ipv6wchar.xml
+	* configs/autobuild/remedynl/eowyn_valgrind.xml
+	* configs/autobuild/remedynl/gandalf_cbxsr.xml
+	* configs/autobuild/remedynl/gandalf_cygwin.xml
+	* configs/autobuild/remedynl/gandalf_vc71.xml
+	* configs/autobuild/remedynl/gandalf_vc71dr.xml
+	* configs/autobuild/remedynl/gandalf_vc71sd.xml
+	* configs/autobuild/remedynl/scarab_bcb6dd.xml
+	* configs/autobuild/remedynl/scarab_bcb6ddu.xml
+	* configs/autobuild/remedynl/scarab_bcb6dr.xml
+	* configs/autobuild/remedynl/scarab_bcb6dru.xml
+	* configs/autobuild/sparc/SunOS10_GCC402.xml
+	* configs/autobuild/tango_isis/SingleThreaded.xml
+
+	Added CIAO_ROOT environment variable. 
 
 Mon Dec  5 12:18:21 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 

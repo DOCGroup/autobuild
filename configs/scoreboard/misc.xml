@@ -8,18 +8,45 @@ This is a miscellaneous scoreboard for ACE+TAO.
 </preamble>
  
 <group>
- <name>Utility Builds</name>
-    <build>
-       <name>Doxygen</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_TAO_doxygen/</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-       <name>Linux_Fuzz</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_Fuzz</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    </group>
+  <name>Utility Builds</name>
+  <build>
+    <name>Doxygen</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_TAO_doxygen/</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
+    <name>Linux_Fuzz</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_Fuzz</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
+<group>
+  <name>Subversion Test Builds</name>
+  <build>
+    <name>ACE Conversion</name>
+    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/ACE</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
+    <name>Autobuild Conversion</name>
+    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/Autobuild</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
+    <name>MPC Conversion</name>
+    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/MPC</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
+    <name>XSC Conversion</name>
+    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/XSC</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
 </scoreboard>
