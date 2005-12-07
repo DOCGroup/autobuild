@@ -1,3 +1,9 @@
+Wed Dec  7 15:53:28 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml
+
+	Removed the Solaris build sponsored by ATL.
+
 Wed Dec  7 14:08:57 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
