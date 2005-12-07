@@ -1,3 +1,10 @@
+Wed Dec  7 10:10:30 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml: Don't try make
+	  -j2 - when building shared libraries, all use a shr.o file name and
+	  when multiple builds run, they can get confused. The ACE tests were
+	  particularly problematic here.
+
 Tue Dec  6 22:55:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/ace_for_tao.xml:

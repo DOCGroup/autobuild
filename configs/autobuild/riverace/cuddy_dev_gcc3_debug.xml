@@ -47,7 +47,7 @@
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options="-a" />
 
