@@ -8,6 +8,7 @@
         <environment name="LD_LIBRARY_PATH"   value="/build/builds/bczar/CIDLC/ACE_wrappers/ace:/build/builds/bczar/CIDLC/ACE_wrappers/lib" />
         <environment name="BOOST_ROOT"        value="/usr/local" />
         <environment name="BOOST_VERSION"     value="boost-1_33" />
+        <environment name="BOOST_CFG"     value="-gcc" />
         <environment name="UTILITY_ROOT"      value="/usr/local/include/Utility" />
         <environment name="CVSROOT"           value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"           value="ssh" />

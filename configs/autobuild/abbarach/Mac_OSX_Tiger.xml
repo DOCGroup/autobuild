@@ -8,7 +8,7 @@
         <environment name="XERCESCROOT"       value="/project/abbarachtmp/wotte/utils/xerces" />
         <environment name="CVSROOT"         value=":pserver:anonymous@anoncvs.ociweb.com:/cvs" />  
         <environment name="SSL_ROOT"         value="/usr" />
-<!--        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />  -->
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" /> 
         <environment name="CVS_RSH"         value="/usr/bin/ssh" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.4" />
 
