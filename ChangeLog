@@ -1,3 +1,10 @@
+Thu Dec  8 07:07:36 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade11/versioned_namespace.bat:
+	* configs/autobuild/isislab/blade11/versioned_namespace.xml:
+
+	  New VC++ 7.1 versioned namespace build.
+
 Thu Dec  8 06:34:41 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
