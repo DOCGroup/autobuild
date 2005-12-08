@@ -71,12 +71,6 @@ all the OS/platform combinations TAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-        <name>RH71_No_AMI_Messaging</name>
-        <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/beguine_Redhat_7.1_No_AMI</url>
-        <build_sponsor>Washington University</build_sponsor>
-        <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-     </build>
-     <build>
         <name>RHAS_Implicit_Templates</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
       <build_sponsor>ISIS</build_sponsor>
@@ -337,18 +331,6 @@ all the OS/platform combinations TAO is tested everyday.
       <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-      <name>SunOS_SunCC55</name>
-      <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_SUNOS_SUNCC55</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
-   </build>
-   <build>
-      <name>CROSS_COMPILE_TAO_IDL</name>
-      <url>http://www.cs.wustl.edu/~bugzilla/auto_compile_logs/danzon_CROSS_COMPILE_TAO_IDL</url>
-      <build_sponsor>Washington University</build_sponsor>
-      <build_sponsor_url>http://deuce.doc.wustl.edu</build_sponsor_url>
    </build>
    <build>
       <name>Solaris10-x86-Studio9</name>

@@ -1,3 +1,10 @@
+Thu Dec  8 09:55:12 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/scoreboard/tao.xml
+
+	Removed builds sponsored by WashU that have not run in
+	two months+.
+
 Wed Dec  7 15:53:28 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml
