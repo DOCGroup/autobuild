@@ -1,3 +1,9 @@
+Thu Dec  8 06:34:41 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+
+	  Corrected Xerces path.
+
 Thu Dec  8 09:55:12 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/tao.xml
