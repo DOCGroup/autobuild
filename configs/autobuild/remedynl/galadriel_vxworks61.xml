@@ -23,7 +23,7 @@
         <environment name="WRSD_LICENSE_FILE"         value="/home/build/WindRiver/license"/>
         <environment name="WIND_SAMPLES"         value="/home/build/WindRiver/vxworks-6.1/target/usr/apps/samples:/home/build/WindRiver/vxworks-6.1/target/src/demo:/home/build/WindRiver/workbench-2.3/samples"/>
         <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.1/host/resource/tcl"/>
-        <environment name="WIND_PLATFORM value="vxworks-6.1"/>
+        <environment name="WIND_PLATFORM" value="vxworks-6.1"/>
 
         <variable name="root"     value="/home/build/ACE/VxWorks61/" />
         <variable name="log_file" value="build.txt" />
