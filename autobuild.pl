@@ -261,7 +261,7 @@ require command::generate_workspace;
 require command::vc6make;
 require command::vc7make;
 require command::wincemake;
-
+require command::svn;
 #
 # Parse, CheckReqs, and Run
 #
