@@ -4,8 +4,8 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/VxWorks61/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/VxWorks61/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/VxWorks61/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cc/9.0/lib:/home/build/ACE/VxWorks61/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.1/host/x86-linux2/lib:/home/build/WindRiver/workbench-2.3/x86-linux2/lib:/home/build/WindRiver/workbench-2.3/foundation/4.0.6/x86-linux2/lib:/usr/local/lib" />
-        <environment name="PATH"            value="/opt/intel/cc/9.0/bin" type="prefix" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks61/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.1/host/x86-linux2/lib:/home/build/WindRiver/workbench-2.3/x86-linux2/lib:/home/build/WindRiver/workbench-2.3/foundation/4.0.6/x86-linux2/lib:/usr/local/lib" />
+        <environment name="PATH"            value="" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="WIND_HOME"        value="/home/build/WindRiver"/>
@@ -40,8 +40,6 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
-
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc.exe\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.1.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc.exe\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.1.GNU\n'" />
