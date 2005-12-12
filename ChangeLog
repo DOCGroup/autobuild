@@ -1,3 +1,8 @@
+Mon Dec 12 13:16:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          New host build for VxWorks
+
 Thu Dec  8 07:07:36 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade11/versioned_namespace.bat:
@@ -40,27 +45,27 @@ Wed Dec  7 13:17:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
 	* configs/autobuild/sparc/SunOS10_Studio9.xml
 
 	Disabled running on CIAO tests as CIAO is not built on these
-	platforms. 
-	
+	platforms.
+
 	* configs/autobuild/remedynl/eowyn_gcc.xml
 	* configs/autobuild/tango_isis/Full.xml
 	* configs/autobuild/tao_win2003/tao_vc8.xml
 
-	Added CIAO_ROOT environment variable. 
-	
+	Added CIAO_ROOT environment variable.
+
 Wed Dec  7 12:59:44 2005  William Otte <wotte@dre.vanderbilt.edu>
 
 	* configs/scoreboard/misc.xml
 
-	Fixed errors in this file. 
+	Fixed errors in this file.
 
 Wed Dec  7 12:10:55 2005  Build Czar  <root@abbarach.dre.vanderbilt.edu>
 
 	* configs/autobuild/abbarach/CIDLC.xml
 	* configs/autobuild/sparc/CIDLC.xml
 
-	Fixed boost configuration problem. 
-	
+	Fixed boost configuration problem.
+
 	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
 
 	Fixed CVSROOT.
@@ -104,7 +109,7 @@ Tue Dec  6 10:48:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 	* configs/autobuild/sparc/SunOS10_GCC402.xml
 	* configs/autobuild/tango_isis/SingleThreaded.xml
 
-	Added CIAO_ROOT environment variable. 
+	Added CIAO_ROOT environment variable.
 
 Mon Dec  5 12:18:21 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
@@ -133,7 +138,7 @@ Wed Nov 30 13:34:09 2005  William Otte  <wotte@dre.vanderbilt.edu>
 	* configs/autobuild/abbarach/CIDLC.xml
 
 	Updated to make this build consistent with new boost MPC semantics.
-	
+
 Tue Nov 29 12:01:33 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade12/versioned_namespace.sh:
