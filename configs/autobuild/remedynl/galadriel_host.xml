@@ -27,7 +27,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ndebug=1\ninline=0\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
