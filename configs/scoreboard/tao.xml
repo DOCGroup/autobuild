@@ -426,7 +426,13 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
-           <build>
+   <build>
+      <name>SuSE_10_Host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/linuxhost/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
       <name>VxWorks5.5.1_PPC603_GCC2.96</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PPC603_GNU</url>
       <build_sponsor>Remedy IT</build_sponsor>
