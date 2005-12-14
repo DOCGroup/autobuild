@@ -1,3 +1,8 @@
+Wed Dec 14 11:25:26 2005  William Otte  <wotte@@dre.vanderbilt.edu>
+
+	* configs/autobuild/sparc/SunOS10_GCC402.xml
+	Added path to GCC libraries to the LDFLAGS.
+
 Mon Dec 12 13:16:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
