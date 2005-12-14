@@ -1,3 +1,9 @@
+Wed Dec 14 14:53:54 2005    William Otte <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/isislab/blade6/Full.xml
+
+	Test subversion repo test build. 
+
 Wed Dec 14 11:25:26 2005  William Otte  <wotte@@dre.vanderbilt.edu>
 
 	* configs/autobuild/sparc/SunOS10_GCC402.xml

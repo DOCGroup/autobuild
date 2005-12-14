@@ -1,0 +1,60 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/home/bczar/Full/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/bczar/Full/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/bczar/Full/ACE_wrappers/TAO/CIAO"/>
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="LD_LIBRARY_PATH" value="/home/bczar/Full/ACE_wrappers/lib" />
+
+        <variable name="root"     value="/home/bczar/Full/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/bczar/Full/" />
+        <variable name="configs"  value="Linux SSL Exceptions" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="svn"               options="co svn://hogfish.isislab.vanderbilt.edu/svn/ACE_wrappers/trunk ACE_wrappers" />
+    <command name="svn"               options="co svn://hogfish.isislab.vanderbilt.edu/svn/MPC/trunk ACE_wrappers/MPC" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="g++" />
+    <command name="print_ace_config" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,build.mwc " />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO " />
+
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIDLC,CCF " />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+    <command name="anonymous_shell"   options="scp bczar@abbarach.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="make"              options="-k -j 4" />
+    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 4 -C TAO" />
+    <command name="make"              options="-k -j 4 -C TAO/CIAO" />
+    <command name="auto_run_tests"    options="-a -o -t -C" />
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+
+    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade6/"/>
+
+</autobuild>
