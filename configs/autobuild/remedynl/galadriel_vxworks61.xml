@@ -57,7 +57,7 @@
 
     <command name="make"              options="-k realclean" />
 
-    <command name="make"              options="-k -j 5" />
+    <command name="make"              options="-k" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
