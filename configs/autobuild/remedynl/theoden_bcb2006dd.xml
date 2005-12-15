@@ -1,0 +1,58 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\ACE\BCB2006dd\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\BCB2006dd\ACE_wrappers\TAO"/>
+        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"      value="c:\cygwin\bin\ssh" />
+        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
+        <environment name="PATH"         value="C:\Perl\Bin;C:\ACE\BCB2006dd\ACE_wrappers\lib;C:\ACE\BCB2006dd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+
+        <environment name="BCBVER"   value="8" />
+        <environment name="DEBUG"   value="1" />
+	<environment name="DYNAMIC"  value="1" />
+
+        <variable name="configs"      value="Win32 Borland SExceptions" />
+        <variable name="root"         value="C:\ACE\BCB2006dd\" />
+        <variable name="log_file"     value="log.txt" />
+        <variable name="log_root"     value="C:\ACE\BCB2006dd\" />
+        <variable name="name"         value="WinXP CBX Static Release" />
+        <variable name="cvs_program"  value="c:\cygwin\bin\cvs" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="make"              options=" -i -f Makefile.bor realclean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
+
+    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="borland" />
+    <command name="check_linker" options="ilink32" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO/CIAO -type borland" />
+
+    <command name="make"              options=" -i -f Makefile.bor" />
+
+    <command name="auto_run_tests"    options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2006/dd" />
+</autobuild>
+
