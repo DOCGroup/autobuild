@@ -6,7 +6,7 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="c:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Perl\Bin;C:\ACE\BCB2006dd\ACE_wrappers\lib;C:\ACE\BCB2006dd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Borland\BDS\4.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006dd\ACE_wrappers\lib;C:\ACE\BCB2006dd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
         <environment name="BCBVER"   value="8" />
         <environment name="DEBUG"   value="1" />

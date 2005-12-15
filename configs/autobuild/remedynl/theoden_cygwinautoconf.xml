@@ -1,13 +1,13 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"    value="C:/ACE/Cygwin/ACE_wrappers/TAO/CIAO"/>
+        <environment name="ACE_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers-repository" />
+        <environment name="TAO_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers-repository/TAO"/>
+        <environment name="CIAO_ROOT"    value="C:/ACE/Cygwin/ACE_wrappers-repository/TAO/CIAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\perl\bin;c:\cygwin\bin;" type="prefix" />
+        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers-repository\bin;C:\ACE\Cygwin\ACE_wrappers-repository\lib;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
@@ -24,14 +24,11 @@
 
     <command name="log"               options="ON" />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="anonymous_shell"   options="find ACE_wrappers -iname 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="cvs"               options="-z 9 -q checkout -P ACE" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nssl=1\nfl_reactor=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/include/makeinclude/platform_macros.GNU output='inline=0\nssl=1\nfl_reactor=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
 
     <command name="print_os_version" options="useuname" />
     <command name="check_compiler" options="gcc" />
@@ -39,10 +36,10 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="shell"             options="cd ACE_wrappers; autoreconf --install --force -I m4" />
-    <command name="shell"             options="rm -rf ACE_wrappers/build" />
-    <command name="shell"             options="mkdir ACE_wrappers/build" />
-    <command name="shell"             options="cd ACE_wrappers/build; ../configure" />
+    <command name="shell"             options="cd ACE_wrappers-repository; /usr/bin/autoreconf --install --force -I m4" />
+    <command name="shell"             options="rm -rf ACE_wrappers-repository/build" />
+    <command name="shell"             options="mkdir ACE_wrappers-repository/build" />
+    <command name="shell"             options="cd ACE_wrappers-repository/build; ../configure" />
 
     <command name="make"              options="-k realclean" />
 
@@ -52,6 +49,6 @@
     <command name="process_logs"      options="move prettify clean=7 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/CygwinAutoconf" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers-repository/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/CygwinAutoconf" />
 </autobuild>
 
