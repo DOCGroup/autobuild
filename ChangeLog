@@ -1,3 +1,8 @@
+Thu Dec 15 13:27:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Made the VxWorks 6.1 results public, port is still in progress
+
 Thu Dec 15 10:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
