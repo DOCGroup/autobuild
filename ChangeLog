@@ -1,9 +1,16 @@
+Thu Dec 15 10:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Added new BCB2006 builds
+
 Wed Dec 14 14:53:54 2005    William Otte <wotte@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade6/Full.xml
 	* configs/scoreboard/misc.xml
 
-	Test subversion repo test build. 
+	Test subversion repo test build.
 
 Wed Dec 14 11:25:26 2005  William Otte <wotte@@dre.vanderbilt.edu>
 
