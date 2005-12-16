@@ -14,3 +14,4 @@ cvs -z9 up -P -d
 
 $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_host.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks61.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks61_pthread.sh
