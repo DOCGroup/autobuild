@@ -1,4 +1,9 @@
-Thu Dec 15 14:09:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+Fri Dec 16 14:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added VxWorks 6.1 PPC603 build
+
+Fri Dec 16 14:09:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
           Added vxworks 6.1 build with pthread support
