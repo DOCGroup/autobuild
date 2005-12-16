@@ -39,7 +39,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl.exe\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc.exe\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\ncidl=1\nxerces=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
     <command name="anonymous_shell"   options="c:\cygwin\bin\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="c:\cygwin\bin\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
