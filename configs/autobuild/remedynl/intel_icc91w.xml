@@ -38,7 +38,7 @@
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="msvc" />
+    <command name="check_compiler" options="icl" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
