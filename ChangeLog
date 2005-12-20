@@ -1,3 +1,10 @@
+Tue Dec 20 12:45:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+          Added VC8 and Intel 91 builds, setting these up, results will be
+          online today or tomorrow
+
 Fri Dec 16 14:29:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
