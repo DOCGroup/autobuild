@@ -1,4 +1,9 @@
-Wed Dec 21 18:54:43 2005  Christopher Allen  <allen@gump.mro.riverace.com>
+Wed Dec 21 20:33:41 2005  Steve Huston  <shuston@riverace.com>
+
+	* configs/scoreboard/ace.xml: Added HP-UX 11iv2 on PA-RISC and
+	  AIX 5.3 with XL C++ 7 builds at Riverace.
+
+Wed Dec 21 18:54:43 2005  Christopher Allen  <christopherallen@riverace.com>
 
 	* configs/autobuild/riverace/gump_dev_acc_debug.xml
 	  Added for HP 11iv2 build.
