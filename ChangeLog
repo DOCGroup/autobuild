@@ -1,3 +1,8 @@
+Fri Dec 23 14:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Flag "command not found" during compilation as error
+
 Wed Dec 21 20:33:41 2005  Steve Huston  <shuston@riverace.com>
 
 	* configs/scoreboard/ace.xml: Added HP-UX 11iv2 on PA-RISC and
