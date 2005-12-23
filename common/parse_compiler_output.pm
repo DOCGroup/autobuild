@@ -100,6 +100,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/command not found/) {
+    # Means we can't find something to execute
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/(BUILD ERROR detected in [\w\/]+)/ ) {
     # If we see "BUILD ERROR detected in" then increment the build counter
     # but don't print it in the report.
