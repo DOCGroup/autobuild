@@ -4,6 +4,7 @@
 
         <environment name="ACE_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO"/>
+	<environment name="CIAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO/CIAO"/>
         <environment name="CVSROOT"  value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"  value="/usr/bin/ssh" />
 
@@ -34,11 +35,13 @@
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-exclude TAO " />
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO " />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIAO.mwc,CIDLC,CCF " />
 
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
@@ -51,6 +54,7 @@
 
     <command name="make"              options="-j 2 -k -C Kokyu" />
     <command name="make"              options="-j 2 -k -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify clean index" />

@@ -4,6 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/home/bczar/builds/ace_for_tao/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/bczar/builds/ace_for_tao/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/bczar/builds/ace_for_tao/ACE_wrappers/TAO/CIAO"/>
         <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
         <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/ace_for_tao/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
@@ -48,6 +49,8 @@
     <command name="generate_workspace" options="-exclude TAO" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CCF,CIDLC" />
+
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="make"              options="-j 2 -k" />

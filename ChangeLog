@@ -1,3 +1,20 @@
+Tue Dec 27 19:14:18 2005  William Otte  <wotte@dre.vanderbilt.edu>
+
+	* configs/autobuild/ace_isis/RH8_Static_Core.xml
+	* configs/autobuild/corona/SunOS10_x86_GCC34.xml
+	* configs/autobuild/corona/SunOS10_x86_Studio9.xml
+	* configs/autobuild/doc_isis/NoInt_NoEx.xml
+	* configs/autobuild/isislab/blade11/ace_for_tao.xml
+	* configs/autobuild/isislab/blade11/versioned_namespace.xml
+	* configs/autobuild/isislab/blade12/ace_for_tao.xml
+	* configs/autobuild/isislab/blade12/gcc4_static.xml
+	* configs/autobuild/isislab/blade12/versioned_namespace.xml
+	* configs/autobuild/pantera_isis/gcc-4.0.xml
+	* configs/autobuild/sparc/SunOS10_GCC402.xml
+	* configs/autobuild/sparc/SunOS10_Studio9.xml
+
+	Added CIAO compilation + tests. 
+	
 Fri Dec 23 14:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:

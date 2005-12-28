@@ -42,13 +42,16 @@
     <command name="generate_workspace" options="-exclude TAO" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
-
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIAO.mwc,CIDLC,CCF" />
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Solaris/SPARC/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
     <command name="make"              options="-j 2 -k" />
     <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
-    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
