@@ -42,7 +42,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_PTHREADS\n#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.1.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.1.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=0\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.1.GNU\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
