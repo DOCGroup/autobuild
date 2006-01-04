@@ -1,10 +1,10 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/VxWorks/ppc603/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/VxWorks/ppc603/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/VxWorks/ppc603/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks/ppc603/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.2/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.4/x86-linux2/lib:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/lib:/usr/local/lib" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/VxWorks/simlinux/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/build/ACE/VxWorks/simlinux/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/build/ACE/VxWorks/simlinux/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks/simlinux/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.2/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.4/x86-linux2/lib:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/lib:/usr/local/lib" />
         <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.2/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.4/x86-linux2/bin:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/bin:/home/build/WindRiver/gnu/3.3.2-vxworks-6.2/x86-linux2/bin:/home/build/WindRiver/diab/5.3.1.0/LINUX386/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
@@ -28,9 +28,9 @@
         <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.2/host/resource/tcl"/>
         <environment name="WIND_PLATFORM" value="vxworks-6.2"/>
 
-        <variable name="root"     value="/home/build/ACE/VxWorks/ppc603" />
+        <variable name="root"     value="/home/build/ACE/VxWorks/simlinux" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/VxWorks/ppc603" />
+        <variable name="log_root" value="/home/build/ACE/VxWorks/simlinux" />
         <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
@@ -45,7 +45,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.2.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PPC603\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.2.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='pthread=0\nrtp=0\nHOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=0\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = SIMLINUX\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.2.GNU\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
@@ -56,7 +56,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO" />
+    <command name="generate_workspace" options="-exclude TAO" />
 
     <command name="make"              options="-k realclean" />
 
@@ -66,5 +66,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/PPC603" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/simlinux" />
 </autobuild>
