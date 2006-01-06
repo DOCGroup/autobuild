@@ -1,3 +1,8 @@
+Fri Jan  6 22:01:56 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
+
+        * configs/scoreboard/tao.xml:
+          Changed names of Qualcomm builds to FC4.
+
 Tue Jan  3 14:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
