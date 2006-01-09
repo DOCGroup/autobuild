@@ -7,7 +7,7 @@
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers-repository\bin;C:\ACE\Cygwin\ACE_wrappers-repository\lib;c:\cygwin\bin;" type="prefix" />
+        <environment name="Path"         value="C:\Perl\bin;C:\ACE\Cygwin\ACE_wrappers-repository\bin;C:\ACE\Cygwin\ACE_wrappers-repository\lib;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
