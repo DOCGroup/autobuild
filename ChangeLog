@@ -1,3 +1,9 @@
+Tue Jan 10 20:38:25 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
+
+        * configs/autobuild/qualcomm/x86-IPv6.xml:
+        * configs/autobuild/qualcomm/x86-SCTP.xml:
+          Removed touch of Svc_Conf_l.cpp since this file no longer exists.
+
 Fri Jan  6 22:01:56 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
 
         * configs/scoreboard/tao.xml:

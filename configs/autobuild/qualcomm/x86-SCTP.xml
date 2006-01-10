@@ -27,9 +27,6 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
     <command name="cvs"               options="-z 3 -q checkout -P autobuild" />
 
-    <!-- Make sure lex doesn't regenerate the files -->
-    <command name="shell"             options="touch ACE_wrappers/ace/Svc_Conf_l.cpp" />
-
     <command name="shell"             options="find ACE_wrappers/build/linux-x86-sctp -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86-sctp/bin/MakeProjectCreator/config/default.features" />
 
