@@ -1,3 +1,8 @@
+Thu Jan 12 14:36:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed vxworks 6.2 with pthread, this is the default
+
 Thu Jan 12 10:55:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/slytherin/OpenBSD_Full.xml:
