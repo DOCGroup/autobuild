@@ -8,8 +8,8 @@
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-        <environment name="PATH"            value="/usr/local/bin" type="prefix" />
-
+        <environment name="PATH"            value="/usr/local/bin:/build/isisbuilds/utils/xerces/lib" type="prefix" />
+        <environment name="XERCESCROOT"     value="/build/isisbuilds/utils/xerces" />
         <variable name="root"     value="/build/isisbuilds/Studio/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9" />
@@ -43,7 +43,7 @@
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO -feature_file ../local.features" />
     <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAOTAO.mwc,CIAO.mwc,CCF,CIDLC -feature_file ../../local.features" />
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Solaris/SPARC/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Solaris/x86/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />
