@@ -4,8 +4,8 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/icc32/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/icc32/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/icc32/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cc/9.1.017/lib:/home/build/ACE/icc32/ACE_wrappers/lib:/usr/local/lib" />
-        <environment name="PATH"            value="/opt/intel/cc/9.1.017/bin" type="prefix" />
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cc/9.1.020/lib:/home/build/ACE/icc32/ACE_wrappers/lib:/usr/local/lib" />
+        <environment name="PATH"            value="/opt/intel/cc/9.1.020/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="BOOST_ROOT"      value="/usr/local" />
