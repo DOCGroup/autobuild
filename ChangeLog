@@ -1,20 +1,49 @@
+Sun Jan 22 06:36:39 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
+
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+
+        * configs/autobuild/lindy_isis/Static.xml:
+
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
+
+        * configs/autobuild/sparc/SunOS10_GCC402.xml:
+        * configs/autobuild/sparc/SunOS10_Studio9.xml:
+
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+
+          Modified the config files above to add ZLIB and ZZIP
+          environmental variables and to enable their respective
+          base projects in MPC.
+
 Fri Jan 13 11:23:14 2006  William Otte <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/corona/SunOS10_x86_Studio9.xml
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml
 
-	Added Xerces onto the path to fix linking errors.
+        Added Xerces onto the path to fix linking errors.
 
 Thu Jan 12 10:28:40 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/corona/SunOS10_x86_GCC34.xml
-	* configs/autobuild/corona/SunOS10_x86_Studio9.xml
-	* configs/autobuild/sparc/CIDLC.xml
-	* configs/autobuild/sparc/SunOS10_GCC402.xml
-	* configs/autobuild/sparc/SunOS10_Studio9.xml
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml
+        * configs/autobuild/sparc/CIDLC.xml
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        * configs/autobuild/sparc/SunOS10_Studio9.xml
 
-	Checking in some changes that have been sitting in 
-	bczar's working copy. 
-	
+        Checking in some changes that have been sitting in
+        bczar's working copy.
+
 Thu Jan 12 14:36:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
@@ -43,20 +72,20 @@ Tue Jan  3 14:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Tue Dec 27 19:14:18 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace_isis/RH8_Static_Core.xml
-	* configs/autobuild/corona/SunOS10_x86_GCC34.xml
-	* configs/autobuild/corona/SunOS10_x86_Studio9.xml
-	* configs/autobuild/doc_isis/NoInt_NoEx.xml
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml
-	* configs/autobuild/isislab/blade11/versioned_namespace.xml
-	* configs/autobuild/isislab/blade12/ace_for_tao.xml
-	* configs/autobuild/isislab/blade12/gcc4_static.xml
-	* configs/autobuild/isislab/blade12/versioned_namespace.xml
-	* configs/autobuild/pantera_isis/gcc-4.0.xml
-	* configs/autobuild/sparc/SunOS10_GCC402.xml
-	* configs/autobuild/sparc/SunOS10_Studio9.xml
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml
+        * configs/autobuild/isislab/blade12/gcc4_static.xml
+        * configs/autobuild/isislab/blade12/versioned_namespace.xml
+        * configs/autobuild/pantera_isis/gcc-4.0.xml
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        * configs/autobuild/sparc/SunOS10_Studio9.xml
 
-	Added CIAO compilation + tests.
+        Added CIAO compilation + tests.
 
 Fri Dec 23 14:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -65,13 +94,13 @@ Fri Dec 23 14:15:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Dec 21 20:33:41 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/scoreboard/ace.xml: Added HP-UX 11iv2 on PA-RISC and
-	  AIX 5.3 with XL C++ 7 builds at Riverace.
+        * configs/scoreboard/ace.xml: Added HP-UX 11iv2 on PA-RISC and
+          AIX 5.3 with XL C++ 7 builds at Riverace.
 
 Wed Dec 21 18:54:43 2005  Christopher Allen  <christopherallen@riverace.com>
 
-	* configs/autobuild/riverace/gump_dev_acc_debug.xml
-	  Added for HP 11iv2 build.
+        * configs/autobuild/riverace/gump_dev_acc_debug.xml
+          Added for HP 11iv2 build.
 
 Tue Dec 20 12:45:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -109,15 +138,15 @@ Thu Dec 15 10:19:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Wed Dec 14 14:53:54 2005    William Otte <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade6/Full.xml
-	* configs/scoreboard/misc.xml
+        * configs/autobuild/isislab/blade6/Full.xml
+        * configs/scoreboard/misc.xml
 
-	Test subversion repo test build.
+        Test subversion repo test build.
 
 Wed Dec 14 11:25:26 2005  William Otte <wotte@@dre.vanderbilt.edu>
 
-	* configs/autobuild/sparc/SunOS10_GCC402.xml
-	Added path to GCC libraries to the LDFLAGS.
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        Added path to GCC libraries to the LDFLAGS.
 
 Mon Dec 12 13:16:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
@@ -126,155 +155,155 @@ Mon Dec 12 13:16:12 UTC 2005  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Thu Dec  8 07:07:36 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/versioned_namespace.bat:
-	* configs/autobuild/isislab/blade11/versioned_namespace.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/autobuild/isislab/blade11/versioned_namespace.bat:
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml:
+        * configs/scoreboard/tao.xml:
 
-	  New VC++ 7.1 versioned namespace build.
+          New VC++ 7.1 versioned namespace build.
 
 Thu Dec  8 06:34:41 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
 
-	  Corrected Xerces path.
+          Corrected Xerces path.
 
 Thu Dec  8 09:55:12 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	Removed builds sponsored by WashU that have not run in
-	two months+.
+        Removed builds sponsored by WashU that have not run in
+        two months+.
 
 Wed Dec  7 15:53:28 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/tao.xml
+        * configs/scoreboard/tao.xml
 
-	Removed the Solaris build sponsored by ATL.
+        Removed the Solaris build sponsored by ATL.
 
 Wed Dec  7 14:08:57 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
 
-	  Set Xerces related environment variables.  Addresses a number of
-	  build errors.
+          Set Xerces related environment variables.  Addresses a number of
+          build errors.
 
 Wed Dec  7 13:17:55 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/corona/SunOS10_x86_GCC34.xml
-	* configs/autobuild/corona/SunOS10_x86_Studio9.xml
-	* configs/autobuild/sparc/SunOS10_GCC402.xml
-	* configs/autobuild/sparc/SunOS10_Studio9.xml
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        * configs/autobuild/sparc/SunOS10_Studio9.xml
 
-	Disabled running on CIAO tests as CIAO is not built on these
-	platforms.
+        Disabled running on CIAO tests as CIAO is not built on these
+        platforms.
 
-	* configs/autobuild/remedynl/eowyn_gcc.xml
-	* configs/autobuild/tango_isis/Full.xml
-	* configs/autobuild/tao_win2003/tao_vc8.xml
+        * configs/autobuild/remedynl/eowyn_gcc.xml
+        * configs/autobuild/tango_isis/Full.xml
+        * configs/autobuild/tao_win2003/tao_vc8.xml
 
-	Added CIAO_ROOT environment variable.
+        Added CIAO_ROOT environment variable.
 
 Wed Dec  7 12:59:44 2005  William Otte <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/misc.xml
+        * configs/scoreboard/misc.xml
 
-	Fixed errors in this file.
+        Fixed errors in this file.
 
 Wed Dec  7 12:10:55 2005  Build Czar  <root@abbarach.dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/CIDLC.xml
-	* configs/autobuild/sparc/CIDLC.xml
+        * configs/autobuild/abbarach/CIDLC.xml
+        * configs/autobuild/sparc/CIDLC.xml
 
-	Fixed boost configuration problem.
+        Fixed boost configuration problem.
 
-	* configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
 
-	Fixed CVSROOT.
+        Fixed CVSROOT.
 
 Wed Dec  7 10:42:54 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/scoreboard/misc.xml
+        * configs/scoreboard/misc.xml
 
-	Added Subversion test conversions.
+        Added Subversion test conversions.
 
 Wed Dec  7 10:10:30 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml: Don't try make
-	  -j2 - when building shared libraries, all use a shr.o file name and
-	  when multiple builds run, they can get confused. The ACE tests were
-	  particularly problematic here.
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml: Don't try make
+          -j2 - when building shared libraries, all use a shr.o file name and
+          when multiple builds run, they can get confused. The ACE tests were
+          particularly problematic here.
 
 Tue Dec  6 22:55:11 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
 
-	  Expanded nested environment variable references.  MPC can't
-	  handle them.
+          Expanded nested environment variable references.  MPC can't
+          handle them.
 
 Tue Dec  6 10:48:20 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/ace_isis/RH8_NoInline.xml
-	* configs/autobuild/balar_isis/DynamicHash.xml
-	* configs/autobuild/remedynl/elrond_icc64.xml
-	* configs/autobuild/remedynl/eowyn_ipv6wchar.xml
-	* configs/autobuild/remedynl/eowyn_valgrind.xml
-	* configs/autobuild/remedynl/gandalf_cbxsr.xml
-	* configs/autobuild/remedynl/gandalf_cygwin.xml
-	* configs/autobuild/remedynl/gandalf_vc71.xml
-	* configs/autobuild/remedynl/gandalf_vc71dr.xml
-	* configs/autobuild/remedynl/gandalf_vc71sd.xml
-	* configs/autobuild/remedynl/scarab_bcb6dd.xml
-	* configs/autobuild/remedynl/scarab_bcb6ddu.xml
-	* configs/autobuild/remedynl/scarab_bcb6dr.xml
-	* configs/autobuild/remedynl/scarab_bcb6dru.xml
-	* configs/autobuild/sparc/SunOS10_GCC402.xml
-	* configs/autobuild/tango_isis/SingleThreaded.xml
+        * configs/autobuild/ace_isis/RH8_NoInline.xml
+        * configs/autobuild/balar_isis/DynamicHash.xml
+        * configs/autobuild/remedynl/elrond_icc64.xml
+        * configs/autobuild/remedynl/eowyn_ipv6wchar.xml
+        * configs/autobuild/remedynl/eowyn_valgrind.xml
+        * configs/autobuild/remedynl/gandalf_cbxsr.xml
+        * configs/autobuild/remedynl/gandalf_cygwin.xml
+        * configs/autobuild/remedynl/gandalf_vc71.xml
+        * configs/autobuild/remedynl/gandalf_vc71dr.xml
+        * configs/autobuild/remedynl/gandalf_vc71sd.xml
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml
+        * configs/autobuild/remedynl/scarab_bcb6ddu.xml
+        * configs/autobuild/remedynl/scarab_bcb6dr.xml
+        * configs/autobuild/remedynl/scarab_bcb6dru.xml
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        * configs/autobuild/tango_isis/SingleThreaded.xml
 
-	Added CIAO_ROOT environment variable.
+        Added CIAO_ROOT environment variable.
 
 Mon Dec  5 12:18:21 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade12/ace_for_tao.sh:
-	* configs/autobuild/isislab/blade12/gcc4_static.sh:
-	* configs/autobuild/isislab/blade12/versioned_namespace.sh:
+        * configs/autobuild/isislab/blade12/ace_for_tao.sh:
+        * configs/autobuild/isislab/blade12/gcc4_static.sh:
+        * configs/autobuild/isislab/blade12/versioned_namespace.sh:
 
-	  Make sure CVS_RSH is set in the environment prior to updating
-	  the autobuild directory.
+          Make sure CVS_RSH is set in the environment prior to updating
+          the autobuild directory.
 
 Fri Dec  2 00:53:57 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade12/ace_for_tao.xml:
-	* configs/autobuild/isislab/blade12/versioned_namespace.xml:
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade12/versioned_namespace.xml:
 
-	  Added appropriate Xerces related environment variables/values.
+          Added appropriate Xerces related environment variables/values.
 
-	* configs/autobuild/isislab/blade12/gcc4_static.sh:
-	* configs/autobuild/isislab/blade12/gcc4_static.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/autobuild/isislab/blade12/gcc4_static.sh:
+        * configs/autobuild/isislab/blade12/gcc4_static.xml:
+        * configs/scoreboard/tao.xml:
 
-	  New g++ 4 static library build.
+          New g++ 4 static library build.
 
 Wed Nov 30 13:34:09 2005  William Otte  <wotte@dre.vanderbilt.edu>
 
-	* configs/autobuild/abbarach/CIDLC.xml
+        * configs/autobuild/abbarach/CIDLC.xml
 
-	Updated to make this build consistent with new boost MPC semantics.
+        Updated to make this build consistent with new boost MPC semantics.
 
 Tue Nov 29 12:01:33 2005  Ossama Othman  <ossama@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade12/versioned_namespace.sh:
-	* configs/autobuild/isislab/blade12/versioned_namespace.xml:
-	* configs/scoreboard/tao.xml:
+        * configs/autobuild/isislab/blade12/versioned_namespace.sh:
+        * configs/autobuild/isislab/blade12/versioned_namespace.xml:
+        * configs/scoreboard/tao.xml:
 
-	  New FC4 g++ 4.0 versioned namespace build.
+          New FC4 g++ 4.0 versioned namespace build.
 
 Tue Nov 29 12:01:33 2005  Steve Huston  <shuston@riverace.com>
 
-	* configs/autobuild/riverace/sunv210_studio10-64_debug.xml:
-	* configs/autobuild/riverace/chad_dev_studio10-64_debug.xml: Replaced
-	  the former with the latter; Solaris 10 SPARC builds are in-house now.
+        * configs/autobuild/riverace/sunv210_studio10-64_debug.xml:
+        * configs/autobuild/riverace/chad_dev_studio10-64_debug.xml: Replaced
+          the former with the latter; Solaris 10 SPARC builds are in-house now.
 
-	* configs/scoreboard/ace.xml: Reflect above machine swap.
+        * configs/scoreboard/ace.xml: Reflect above machine swap.
 
 Tue Nov 29 10:41:16 2005  Chad Elliott  <elliott_c@ociweb.com>
 

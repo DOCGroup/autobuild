@@ -8,8 +8,10 @@
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/build/bczar/Code_Coverage/ACE_wrappers/lib" />
-	<!-- Debian specific QTDIR -->
+        <!-- Debian specific QTDIR -->
         <environment name="QTDIR"           value="/usr/share/qt3"/>
+        <environment name="ZLIB_ROOT"       value="/usr/" />
+        <environment name="ZZIP_ROOT"       value="/usr/" />
 
         <variable name="root"     value="/build/bczar/Code_Coverage" />
         <variable name="log_file" value="build.txt" />
@@ -30,7 +32,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n\n#define ACE_HAS_WCHAR 1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CXX=g++-3.4\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\nxt_reactor=0\nfl_reactor=0\ntk_reactor=0\nqt_reactor=0\ngtk_reactor=0\noptimize=0\ndebug=0\ninline=0\nqt=0\ncidl=0\n\n# Perform some stricter C/C++ checking using the -pedantic flag, but\n# disable the long long warnings since we need to support that type\n# in ACE/TAO.\nCCFLAGS += -Wno-long-long -Wwrite-strings -Wcast-align\n\n# Enable code coverage support\nCCFLAGS += -fprofile-arcs -ftest-coverage\n\n# For QT headers\n#PLATFORM_QT_CPPFLAGS = -I/usr/include/qt3\n\n# For TK headers\nPLATFORM_TK_CPPFLAGS = -I/usr/include/tcl8.4\n\n# For TCL library\n#PLATFORM_TK_LIBS += -ltk8.4 -ltcl8.4\n\n# Additional XtReactor flags\n#PLATFORM_XT_LIBS += -lXm\n\n# Override default ACE settings.  Debian deprecates the single threaded Qt library.\n#PLATFORM_QT_LIBS=-lqt-mt\n\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqt=0\nxt_reactor=0\nssl=1\ncidl=0\nexceptions=1\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqt=0\nxt_reactor=0\nssl=1\ncidl=0\nexceptions=1\nzlib=1\nzzip=1\n\n'" />
 
     <command name="print_os_version" />
 <!--    <command name="check_compiler" options="g++" /> -->
