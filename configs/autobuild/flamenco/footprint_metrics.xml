@@ -26,13 +26,16 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nzlib=1\nzzip=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO " />
+    <command name="generate_workspace" options="" />
+
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k realclean" />
@@ -57,6 +60,8 @@
     <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metrics/targets" />
 
     <command name="make"              options="-k -j4 -C TAO/tao" />
     <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />
@@ -64,6 +69,8 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -j4 -C TAO/CIAO/ciao" />
+    <command name="make"              options="-k -j4 -C TAO/CIAO/DAnCE" />
 
     <command name="log"               options="off" />
 
