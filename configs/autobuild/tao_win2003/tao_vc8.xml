@@ -7,7 +7,10 @@
         <environment name="CVSROOT"      value=":ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="C:\bin\plink.exe" />
         <environment name="PATH"         value="c:\xerces-vc8\lib;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib" type="prefix" />
-        <environment name="XERCESCROOT"  value="C:\xerces-vc8" /> 
+        <environment name="XERCESCROOT"  value="C:\xerces-vc8" />
+        <environment name="ZLIB_ROOT"       value="C:\zlib123" />
+        <environment name="ZZIP_ROOT"       value="C:\zziplib-0.10.82-msvc6-lib" />
+
         <variable name="configs"  value="Win32 VC8 Exceptions" />
         <variable name="root"     value="C:\ACE\VC8\" />
         <variable name="log_file" value="log.txt" />
@@ -27,7 +30,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nzlib=1\nzzip=1\n'" />
     <command name="anonymous_shell"   options="pscp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />

@@ -11,6 +11,9 @@
         <environment name="BOOST_ROOT"    value="C:\Boost"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
         <environment name="BOOST_CFG"     value="-vc71-mt" />
+        <environment name="ZLIB_ROOT"       value="C:\zlib123" />
+        <environment name="ZZIP_ROOT"       value="C:\zziplib-0.10.82-msvc6-lib" />
+
         <variable name="configs"  value="Win32 VC71 Exceptions" />
         <variable name="root"     value="C:\ACE\VC71\" />
         <variable name="log_file" value="log.txt" />
@@ -30,7 +33,7 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nboost=1\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nboost=1\ncidl=1\nzlib=1\nzzip=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
