@@ -9,9 +9,9 @@
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/footprint/ACE_wrappers/lib" />
 
-        <variable name="root"     value="/home/build/ACE/VxWorks/footprint/" />
+        <variable name="root"     value="/home/build/ACE/footprint/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/VxWorks/footprint/" />
+        <variable name="log_root" value="/home/build/ACE/footprint/" />
         <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
