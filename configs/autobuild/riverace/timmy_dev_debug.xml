@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/debug" />
         <variable name="log_file"     value="debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/timmy/dev/debug" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>
 

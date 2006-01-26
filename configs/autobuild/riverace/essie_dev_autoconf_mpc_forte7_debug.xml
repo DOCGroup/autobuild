@@ -15,7 +15,7 @@
         <variable name="project_root" value="/space/ace/builds/ACE_wrappers-repository" />
         <variable name="log_file"     value="autoconf_mpc_forte7_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/essie/dev/autoconf_mpc_forte7_debug" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
         <variable name="automake_build" value="yes" />
 
     </configuration>

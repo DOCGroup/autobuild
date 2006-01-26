@@ -1,3 +1,34 @@
+Thu Jan 26 10:49:11 2006  Steve Huston  <shuston@riverace.com>
+
+	* configs/autobuild/riverace/billy_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/billy_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_autoconf_dev_gcc_debug.xml:
+	* configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
+	* configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
+	* configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/chad_dev_studio10-64_debug.xml:
+	* configs/autobuild/riverace/charlie_dev_xlc7_debug.xml:
+	* configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+	* configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+	* configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
+	* configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+	* configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/gump_dev_acc_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
+	* configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+	* configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+	* configs/autobuild/riverace/jane_dev_debug.xml:
+	* configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+	* configs/autobuild/riverace/jane_dev_static_release.xml:
+	* configs/autobuild/riverace/timmy_dev_debug.xml:
+	  Added CHECK_RESOURCES to "configs" variable to check for
+	  leaking resources.
+
 Tue Jan 24 22:59:36 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml:

@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/forte6_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/forte6_debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/heidi/dev/forte6_debug" />
-
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
     </configuration>
 
     <command name="status"            options="on" />

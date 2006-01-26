@@ -13,7 +13,7 @@
         <variable name="project_root" value="/space/ace/builds/ACE_wrappers-repository/build/forte7-64_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/forte7-64_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/essie/dev/forte7-64_debug" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>
 

@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/debug_wchar" />
         <variable name="log_file"     value="ACE_wrappers-repository/debug_wchar.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/debug_wchar" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>
 

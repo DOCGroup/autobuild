@@ -14,7 +14,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/studio10-64_debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/chad/dev/studio10-64_debug" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>
 

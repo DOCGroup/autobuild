@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository" />
         <variable name="log_file"     value="ACE_wrappers-repository/autoconf_acc_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/bumbles/dev/autoconf_acc_debug" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
         <variable name="automake_build" value="yes" />
 
     </configuration>

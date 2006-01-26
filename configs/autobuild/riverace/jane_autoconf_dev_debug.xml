@@ -13,6 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository" />
         <variable name="log_file"     value="ACE_wrappers-repository/autoconf_debug.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/autoconf_debug" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
         <variable name="automake_build" value="yes" />
 
     </configuration>

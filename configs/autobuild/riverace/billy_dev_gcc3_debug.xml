@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/gcc3_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/gcc3_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/billy/dev/gcc3_debug" />
-        <variable name="configs"      value="Exceptions" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>
 
