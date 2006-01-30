@@ -6,7 +6,7 @@
         <environment name="CIAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVSROOT"      value=":ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="C:\bin\plink.exe" />
-        <environment name="PATH"         value="c:\xerces-vc8\lib;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib" type="prefix" />
+        <environment name="PATH"         value="c:\xerces-vc8\lib;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\zzip\lib;c:\zlib\lib" type="prefix" />
         <environment name="XERCESCROOT"  value="C:\xerces-vc8" />
         <environment name="ZLIB_ROOT"       value="C:\zlib123" />
         <environment name="ZZIP_ROOT"       value="C:\zziplib-0.10.82-msvc6-lib" />
