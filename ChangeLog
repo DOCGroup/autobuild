@@ -1,3 +1,10 @@
+Mon Jan 30 14:34:23 2006  william R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/merengue/cidlcstatic.xml
+        * configs/autobuild/merengue/merengue_vc71.xml
+
+          Checking in some old changes and updating for new version of zzip/zlib.
+
 Mon Jan 30 14:23:23 2006  william R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tao_win2003/tao_vc8.xml
