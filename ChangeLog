@@ -1,3 +1,25 @@
+Mon Jan 30 14:13:18 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml
+        * configs/autobuild/prism/Win2003_MSVC6_Debug.xml
+        * configs/autobuild/qualcomm/x86-IPv6.xml
+        * configs/autobuild/qualcomm/x86-SCTP.xml
+        
+        Turned off CIAO tests, as these platforms don't build CIAO.
+        
+        * configs/autobuild/remedynl/elrond_icc32.xml
+        * configs/autobuild/remedynl/elrond_icc64.xml
+        
+        Set cidl=0 in default.features, to prevent the buggy intel
+        built version from overwriting the good DOC group version.
+        
+        * configs/autobuild/remedynl/scarab_MingWTAO.xml
+        
+        Added a NOXERCES config to prevent it from running the
+        CIAO tests that require Xerces, as it is not installed on this
+        system. 
+        
 Mon Jan 30 14:34:23 2006  william R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/cidlcstatic.xml

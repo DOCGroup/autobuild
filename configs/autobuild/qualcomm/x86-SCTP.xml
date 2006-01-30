@@ -49,7 +49,7 @@
     <command name="make"              options="-k -j 2 debug=0 " />
     <command name="make"              options="-k -C TAO -j 2 debug=0" />
 
-    <command name="auto_run_tests" />
+    <command name="auto_run_tests"    options="-a -o -t" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
