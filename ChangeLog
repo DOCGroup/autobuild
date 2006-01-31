@@ -1,3 +1,9 @@
+Tue Jan 31 15:37:57 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml
+        
+          Added xerces onto the LD_LIBRARY_PATH.
+
 Tue Jan 31 14:08:50 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         *  configs/autobuild/tao_win2003/tao_vc8.xml
