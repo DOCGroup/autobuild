@@ -1,3 +1,9 @@
+Tue Jan 31 14:08:50 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        *  configs/autobuild/tao_win2003/tao_vc8.xml
+        
+           Fixed ZZIP_ROOT and ZLIB_ROOT.
+
 Tue Jan 31 10:57:38 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade11/ace_for_tao.xml
