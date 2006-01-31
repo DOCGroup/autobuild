@@ -1,3 +1,9 @@
+Tue Jan 31 15:47:39 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml
+        
+          Disabled CIAO tests, as CIAO is not built on this platform.
+
 Tue Jan 31 15:37:57 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml
