@@ -1,3 +1,10 @@
+Tue Jan 31 10:57:38 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml
+        
+          Added an ACE_FOR_TAO config qualifier.
+
 Mon Jan 30 14:13:18 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml

@@ -13,7 +13,7 @@
         <variable name="root"     value="/home/bczar/builds/ace_for_tao/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bczar/builds/ace_for_tao/" />
-        <variable name="configs"  value="Linux SSL" />
+        <variable name="configs"  value="Linux SSL ACE_FOR_TAO" />
 
     </configuration>
 
