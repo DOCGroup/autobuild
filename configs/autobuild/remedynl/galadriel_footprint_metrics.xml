@@ -60,6 +60,7 @@
     <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $ACE_ROOT/../.metrics/targets" />
@@ -70,6 +71,7 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -j4 -C TAO/CIAO/tools" />
     <command name="make"              options="-k -j4 -C TAO/CIAO/ciao" />
     <command name="make"              options="-k -j4 -C TAO/CIAO/DAnCE" />
     <command name="make"              options="-k -j4 -C TAO/CIAO/tests/Minimum" />
