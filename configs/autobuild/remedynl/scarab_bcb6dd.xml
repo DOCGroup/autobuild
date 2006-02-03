@@ -5,10 +5,10 @@
         <environment name="TAO_ROOT"     value="C:\ACE\BCB6dd\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\ACE\BCB6dd\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="XERCESCROOT"  value="C:\xerces-c_2_5_0-windows_nt-bcb6" />
+        <environment name="XERCESCROOT"  value="C:\xerces-c-src_2_7_0" />
         <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="Path"         value="C:\progra~1\borland\cbuild~1\bin;C:\progra~1\borland\cbuild~1\lib;C:\progra~1\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dd\ACE_wrappers\bin;C:\ACE\BCB6dd\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin;C:\xerces-c_2_5_0-windows_nt-bcb6\lib" type="prefix" />
+        <environment name="Path"         value="C:\progra~1\borland\cbuild~1\bin;C:\progra~1\borland\cbuild~1\lib;C:\progra~1\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dd\ACE_wrappers\bin;C:\ACE\BCB6dd\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin;C:\xerces-c-src_2_7_0\lib" type="prefix" />
 
 	<environment name="DEBUG"    value="1" />
 	<environment name="DYNAMIC"  value="1" />
