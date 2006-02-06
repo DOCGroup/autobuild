@@ -28,12 +28,6 @@ decide the migration paths and strategies.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
-        <build>
-            <name>Win2003_ICC91</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/icc91i/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
    <name>BSD</name>
    <build>
       <name>OpenBSD_Full</name>
