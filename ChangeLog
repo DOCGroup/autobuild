@@ -1,3 +1,9 @@
+Mon Feb  6 15:40:39 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Removed cygwin autoconf build, don't get it running, no idea
+          why
+
 Mon Feb  6 15:11:39 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
