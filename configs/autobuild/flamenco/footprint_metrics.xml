@@ -37,8 +37,13 @@
 
     <command name="generate_workspace" options="" />
 
-    <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
+    <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C ACEXML     --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C apps/gperf --dry-run >> $ACE_ROOT/../.metrics/targets" />
@@ -47,13 +52,12 @@
     <command name="make"              options="-k -j4 -C ACEXML" />
     <command name="make"              options="-k -j4 -C apps/gperf" />
 
-
-    <!-- TAO: only build the minimum, tao -->
-    <command name="make"              options="-k -C TAO realclean" />
     <!-- Build the TAO_IDL compiler first and gen the idl_stubs, so that --dry-run will create a list of all targets. -->
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO/tests idl_stubs" />
+    <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
 
+    <!-- TAO: only build the minimum, tao -->
     <command name="make"              options="-k -C TAO/tao                --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/ORB_init     --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/ORB_destroy  --dry-run >> $ACE_ROOT/../.metrics/targets" />
@@ -71,10 +75,6 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
-
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
-
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="make"              options="-k -j4 -C TAO/CIAO/tools" />
     <command name="make"              options="-k -j4 -C TAO/CIAO/ciao" />
