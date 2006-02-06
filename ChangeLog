@@ -1,30 +1,36 @@
+Mon Feb  6 15:11:39 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml
+          Moved win2003 icc build from future to normal scoreboard part
+
 Tue Jan 31 15:47:39 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml
-        
+
           Disabled CIAO tests, as CIAO is not built on this platform.
 
 Tue Jan 31 15:37:57 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml
-        
+
           Added xerces onto the LD_LIBRARY_PATH.
-        
+
         * configs/autobuild/remedynl/elrond_icc32.xml
-        
-          Went to greater lengths to prevent CIDLC from being built. 
+
+          Went to greater lengths to prevent CIDLC from being built.
 
 Tue Jan 31 14:08:50 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         *  configs/autobuild/tao_win2003/tao_vc8.xml
-        
+
            Fixed ZZIP_ROOT and ZLIB_ROOT.
 
 Tue Jan 31 10:57:38 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade11/ace_for_tao.xml
         * configs/autobuild/isislab/blade12/ace_for_tao.xml
-        
+
           Added an ACE_FOR_TAO config qualifier.
 
 Mon Jan 30 14:13:18 2006  William Otte  <wotte@dre.vanderbilt.edu>
@@ -34,21 +40,21 @@ Mon Jan 30 14:13:18 2006  William Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/prism/Win2003_MSVC6_Debug.xml
         * configs/autobuild/qualcomm/x86-IPv6.xml
         * configs/autobuild/qualcomm/x86-SCTP.xml
-        
+
         Turned off CIAO tests, as these platforms don't build CIAO.
-        
+
         * configs/autobuild/remedynl/elrond_icc32.xml
         * configs/autobuild/remedynl/elrond_icc64.xml
-        
+
         Set cidl=0 in default.features, to prevent the buggy intel
         built version from overwriting the good DOC group version.
-        
+
         * configs/autobuild/remedynl/scarab_MingWTAO.xml
-        
+
         Added a NOXERCES config to prevent it from running the
         CIAO tests that require Xerces, as it is not installed on this
-        system. 
-        
+        system.
+
 Mon Jan 30 14:34:23 2006  william R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/cidlcstatic.xml
@@ -60,7 +66,7 @@ Mon Jan 30 14:23:23 2006  william R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tao_win2003/tao_vc8.xml
 
-          Updated for new zzip/zlib version. 
+          Updated for new zzip/zlib version.
 
 Mon Jan 30 13:36:57 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
