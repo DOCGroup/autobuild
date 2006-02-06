@@ -37,8 +37,6 @@
 
     <command name="generate_workspace" options="" />
 
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
-
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
@@ -73,6 +71,11 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
+
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
     <command name="make"              options="-k -j4 -C TAO/CIAO/tools" />
     <command name="make"              options="-k -j4 -C TAO/CIAO/ciao" />
     <command name="make"              options="-k -j4 -C TAO/CIAO/DAnCE" />
