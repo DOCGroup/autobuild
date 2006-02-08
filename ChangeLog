@@ -1,3 +1,15 @@
+Wed Feb 08 16:23:40 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+	* ChangeLog
+	
+          Changed "Local Variables" section "add-log-time-format"
+          so that it formats timestamps in UTC correctly in windows
+	  too.
+	
+        * configs/scoreboard/tao.xml
+
+	  Added entry for WinXP_VC71_CIAO_CORE
+
 Mon Feb  6 15:40:39 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
@@ -10875,5 +10887,7 @@ Fri Dec  7 15:21:57 2001  Carlos O'Ryan  <coryan@uci.edu>
           that great.
 
 Local Variables:
-add-log-time-format: current-time-string
+mode: change-log
+add-log-time-format: (lambda () (progn (setq tz (getenv "TZ")) (set-time-zone-rule "UTC") (setq time (format-time-string "%a %b %e %H:%M:%S %Z %Y" (current-time))) (set-time-zone-rule tz) time))
+indent-tabs-mode: nil
 End:

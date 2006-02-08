@@ -275,6 +275,13 @@ all the OS/platform combinations TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
+        <build>
+            <name>WinXP_VC71_NET_CIAOCore_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP_MinGW_GCC_3_2_3</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWTAO/</url>
             <build_sponsor>Remedy IT</build_sponsor>
