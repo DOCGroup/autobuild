@@ -1,3 +1,10 @@
+Thu Feb  9 18:46:27 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/pantera_isis/gcc-4.0.xml
+        
+          Changed compiler to use system default, which is a new version
+          of GCC4.
+        
 Thu Feb  9 17:22:42 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao.xml:
