@@ -1,3 +1,10 @@
+Thu Feb  9 17:22:42 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+
+          Move NetBSD builds from tao_future.xml to tao.xml.
+
 Thu Feb  9 17:11:11 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/autobuild/acorn/netbsd_amd64.xml:
