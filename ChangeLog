@@ -1,7 +1,16 @@
+Thu Feb  9 17:11:11 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
+
+          These configs don't build CIAO, so don't run the CIAO tests.
+
 Thu Feb  9 06:00:46 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/tao.xml
-        
+
           Added entry for Win2003_VC8_CIAOCore build
 
         * configs/autobuild/isislab/blade46/ciaocore_vc8.bat
@@ -27,11 +36,11 @@ Wed Feb  8 22:45:08 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 Wed Feb 08 16:23:40 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
 	* ChangeLog
-	
+
           Changed "Local Variables" section "add-log-time-format"
           so that it formats timestamps in UTC correctly in windows
 	  too.
-	
+
         * configs/scoreboard/tao.xml
 
 	  Added entry for WinXP_VC71_CIAO_CORE
