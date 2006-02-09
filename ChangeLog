@@ -1,3 +1,14 @@
+Thu Feb  9 06:00:46 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/scoreboard/tao.xml
+        
+          Added entry for Win2003_VC8_CIAOCore build
+
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.bat
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
+
+          Added Win2003_VC8_CIAOCore build on blade46
+
 Thu Feb  9 00:00:04 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/tao.xml
