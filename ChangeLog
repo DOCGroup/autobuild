@@ -1,3 +1,19 @@
+Thu Feb  9 18:55:30 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml
+        * configs/autobuild/merengue/merengue_vc71.xml
+        * configs/autobuild/tao_win2003/tao_vc8.xml
+        
+          Removed '-recurse' from workspace generation in an attempt to
+          reduce the amount of time spent checking dependancies while
+          compiling.
+        
+        * configs/autobuild/isislab/blade17/blade17_vc71.xml
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
+        
+          Updated to use the bczar username when copying the cidlc binary.
+        
 Thu Feb  9 18:46:27 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/pantera_isis/gcc-4.0.xml

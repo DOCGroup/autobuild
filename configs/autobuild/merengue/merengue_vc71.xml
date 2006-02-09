@@ -40,7 +40,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc71 -recurse"/>
+    <command name="generate_workspace" options="-type vc71"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir TAO\CIAO\CIDLC -Debug -k" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ALL -Debug -k" />

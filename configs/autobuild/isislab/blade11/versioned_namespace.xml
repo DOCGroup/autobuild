@@ -37,7 +37,7 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/CCF -type vc71 -recurse"/>
+    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/CCF -type vc71"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc71 -ALL -Debug -k" />
 
