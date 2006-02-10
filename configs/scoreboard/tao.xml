@@ -126,7 +126,7 @@ all the OS/platform combinations TAO is tested everyday.
      </build>
       <build>
          <name>NoInterceptors_Core</name>
-         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/doc_NoInt</url>
+         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47</url>
          <build_sponsor>ISIS</build_sponsor>
          <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
       </build>

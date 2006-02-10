@@ -1,3 +1,17 @@
+Fri Feb 10 22:51:58 UTC 2006   Ming Xiong <ming.xiong@vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade47
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml
+        * configs/autobuild/isislab/blade47/driver.sh
+        
+        Added a new NoInterceptors Core
+        
+        * configs/scoreboard/tao.xml
+
+        Redirect NoInterceptors Core build to blade47
+        
+
+
 Fri Feb 10 16:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:
