@@ -1,8 +1,10 @@
-Fri Feb 10 16:20:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+Fri Feb 10 16:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
+        * configs/scoreboard/tao.xml:
         * configs/autobuild/configs/autobuild/prism/Win2003_MSVC6_Debug.xml:
 
-          Switched on TAO_HAS_EXTENDED_FT_INTERCEPTORS for our windows build.
+          Switched on TAO_HAS_EXTENDED_FT_INTERCEPTORS for our windows build
+          and modified the name on the scoreboard to state such.
 
 Thu Feb  9 18:55:30 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
 

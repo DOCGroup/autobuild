@@ -335,7 +335,7 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2003_VC6_Debug</name>
+            <name>Win2003_VC6_Debug_Extened_FT_Interceptors</name>
             <url>http://tao.prismtech.com/doc-scoreboard/windows/MSVC6_Debug</url>
             <build_sponsor>PrismTech</build_sponsor>
             <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
