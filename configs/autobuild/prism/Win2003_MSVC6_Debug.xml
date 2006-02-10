@@ -14,7 +14,7 @@
         <variable name="log_file"     value="log.txt" />
         <variable name="log_root"     value="T:\doc-scoreboard\windows\MSVC6_Debug" />
         <variable name="name"         value="WinXP DLL Debug" />
-        <variable name="configs"      value="Win32 SANDBOX" />
+        <variable name="configs"      value="Win32 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -29,7 +29,7 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=1\nssl=0\n'" />
 
     <command name="print_os_version" />
