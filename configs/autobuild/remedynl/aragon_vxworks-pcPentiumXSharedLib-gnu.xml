@@ -51,7 +51,7 @@
 
     <command name="generate_workspace" options="-exclude TAO,ASNMP,tests/HTBP,examples.netsvcs,websvcs,performance-tests" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO,examples,performance-tests,docs,interop-tests" />
+    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc,CIAO,examples,performance-tests,docs,interop-tests" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
