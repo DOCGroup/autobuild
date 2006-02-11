@@ -1,15 +1,28 @@
+Sat Feb 11 02:33:56 UTC 2006  NilabjaR  <nilabjar@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus.bat:
+        * configs/autobuild/equus/equus_driver.bat:
+        * configs/autobuild/equus/equus_vc71.bat:
+        * configs/autobuild/equus/equus_vc71.xml:
+          The files required to create auto-build for CoSMIC
+
+        * configs/scoreboard/cosmic.xml:
+        * configs/scoreboard/index.xml:
+        * configs/scoreboard/tao_dre.sh:
+          The files changed to introduce CoSMIC section in the scoreboard
+
 Fri Feb 10 22:51:58 UTC 2006   Ming Xiong <ming.xiong@vanderbilt.edu>
 
         * configs/autobuild/isislab/blade47
         * configs/autobuild/isislab/blade47/NoInt_NoEx.xml
         * configs/autobuild/isislab/blade47/driver.sh
-        
+
         Added a new NoInterceptors Core
-        
+
         * configs/scoreboard/tao.xml
 
         Redirect NoInterceptors Core build to blade47
-        
+
 
 
 Fri Feb 10 16:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
@@ -26,23 +39,23 @@ Thu Feb  9 18:55:30 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/blade11/versioned_namespace.xml
         * configs/autobuild/merengue/merengue_vc71.xml
         * configs/autobuild/tao_win2003/tao_vc8.xml
-        
+
           Removed '-recurse' from workspace generation in an attempt to
           reduce the amount of time spent checking dependancies while
           compiling.
-        
+
         * configs/autobuild/isislab/blade17/blade17_vc71.xml
         * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
-        
+
           Updated to use the bczar username when copying the cidlc binary.
-        
+
 Thu Feb  9 18:46:27 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/pantera_isis/gcc-4.0.xml
-        
+
           Changed compiler to use system default, which is a new version
           of GCC4.
-        
+
 Thu Feb  9 17:22:42 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao.xml:
@@ -87,15 +100,15 @@ Wed Feb  8 22:45:08 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
 Wed Feb 08 16:23:40 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
-	* ChangeLog
+        * ChangeLog
 
           Changed "Local Variables" section "add-log-time-format"
           so that it formats timestamps in UTC correctly in windows
-	  too.
+          too.
 
         * configs/scoreboard/tao.xml
 
-	  Added entry for WinXP_VC71_CIAO_CORE
+          Added entry for WinXP_VC71_CIAO_CORE
 
 Mon Feb  6 15:40:39 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
