@@ -1,3 +1,8 @@
+Sun Feb 12 13:10:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configigs/autobuild/*.xml:
+          Use *.mwc to exclude mwc files instead of listing an explicit file
+
 Sat Feb 11 23:30:25 UTC 2006  Krishnakumar B  <kitty@nospam.invalid.domain>
 
         * configs/autobuild/equus/equus_vc71.xml:  Fixed a comment left over
