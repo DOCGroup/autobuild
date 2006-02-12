@@ -61,8 +61,8 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-tandem-nsk-mips-v3.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_nsk.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='srl=1\nnscorba=1\nami=0\nrt_corba=0\n'" /> 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/srl_component.mpb output='feature(srl) {\n  staticflags += _SRL\n  libout = $(NSC_ROOT)/nscsrl\n  verbatim(gnuace, macros) {\n    CODE_GEN=-Wsrl\n  }\n}\n'" /> 
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='srl=1\nnscorba=1\nami=0\nrt_corba=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/srl_component.mpb output='feature(srl) {\n  staticflags += _SRL\n  libout = $(NSC_ROOT)/nscsrl\n  verbatim(gnuace, macros) {\n    CODE_GEN=-Wsrl\n  }\n}\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="c89" />
@@ -73,7 +73,7 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-static -exclude TAO,Kokyu,examples,ASNMP,performance-tests,apps,APG,netsvcs,websvcs,tests,protocol" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -static -exclude TAOACE.mwc,CIAO,examples,interop-tests,performance-tests,tests,orbsvcs,docs,tao/BiDir_GIOP.mpc,tao/Domain.mpc,tao/ImR_Client.mpc,tao/SmartProxies.mpc,tao/Strategies.mpc" />
+    <command name="generate_workspace" options="dirs=TAO -static -exclude *.mwc,CIAO,examples,interop-tests,performance-tests,tests,orbsvcs,docs,tao/BiDir_GIOP.mpc,tao/Domain.mpc,tao/ImR_Client.mpc,tao/SmartProxies.mpc,tao/Strategies.mpc" />
     <!-- TAO tests, exclude those inappopriate for the platform -->
     <command name="generate_workspace" options="dirs=TAO/tests -exclude AMH_Exceptions,AMH_Oneway,BiDirectional,BiDirectional_MultipleORB,BiDirectional_NestedUpcall,Bug_1476_Regression,Bug_1495_Regression,Bug_1639_Regression,Bug_1904_Regression,Bug_2183_Regression,CodeSets,Collocation,Connection_Purging,DLL_ORB,Leader_Followers,MT_BiDir,Nested_Event_Loop,Object_Loader,Smart_Proxies,Strategies,UNKNOWN_Exception" />
     <!-- For NSK shared runtime library (SRL) -->

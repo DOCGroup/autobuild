@@ -34,7 +34,7 @@
  <!-- ACE -->
  <command name="generate_workspace" options="-exclude TAO,build.mwc" />
  <!-- TAO -->
- <command name="generate_workspace" options="dirs=TAO -exclude CIAO,TAOACE.mwc" />
+ <command name="generate_workspace" options="dirs=TAO -exclude CIAO,*.mwc" />
 
  <!-- ACE -->
  <command name="make"                  options="-k realclean" />

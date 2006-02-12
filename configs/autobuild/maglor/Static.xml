@@ -12,7 +12,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/maglor_Static" />
         <variable name="configs"  value="Linux STATIC SSL" />
-        <variable name="MAIL_ADMIN"  value="bugzilla@cs.wustl.edu" /> 
+        <variable name="MAIL_ADMIN"  value="bugzilla@cs.wustl.edu" />
 
     </configuration>
 
@@ -35,7 +35,7 @@
     <!-- ACE -->
     <command name="generate_workspace" options="-exclude TAO" />
     <!-- TAO -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
+    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc,CIAO" />
 
     <command name="make"              options="realclean" />
     <command name="make"              options="-C TAO realclean" />
@@ -45,9 +45,9 @@
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <!-- Forces a sync to clean state -->
-    <command name="shell"             options="/bin/sync" /> 
-    <command name="shell"             options="sleep 10" /> 
-    <command name="shell"             options="/bin/sync" /> 
+    <command name="shell"             options="/bin/sync" />
+    <command name="shell"             options="sleep 10" />
+    <command name="shell"             options="/bin/sync" />
     <command name="shell"              options="/project/maglor/bugzilla/Static/ACE_wrappers/bin/performance_stats.sh /project/maglor/bugzilla/Static/ACE_wrappers /project/doctmp/Stats" />
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

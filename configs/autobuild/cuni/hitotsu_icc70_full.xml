@@ -42,13 +42,13 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO,build.mwc" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAOACE.mwc,CIAO" />
+    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc,CIAO" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-j 4 -k" />
     <command name="make"              options="-j 4 -k -C TAO" />
-    
+
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="off" />
