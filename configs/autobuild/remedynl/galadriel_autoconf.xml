@@ -18,8 +18,6 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"              options="-k realclean" />
-
     <command name="log"               options="ON" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
@@ -37,9 +35,8 @@
     <command name="shell"             options="rm -rf ACE_wrappers/build" />
     <command name="shell"             options="mkdir ACE_wrappers/build" />
     <command name="shell"             options="cd ACE_wrappers/build; ../configure --without-tao" />
-
-    <command name="make"              options="-k" />
-
+    <command name="configure"         options="--preclean"/>
+    <command name="make"              options="dir=ACE_wrappers/build -k"/>
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
