@@ -34,7 +34,7 @@
     <command name="shell"             options="rm -rf ACE_wrappers/build" />
     <command name="shell"             options="mkdir ACE_wrappers/build" />
     <command name="shell"             options="cd ACE_wrappers/build; ../configure --without-tao" />
-    <command name="make"              options="-k"/>
+    <command name="make"              options="-C ACE_wrappers/build -k"/>
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
