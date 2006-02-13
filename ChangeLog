@@ -1,3 +1,12 @@
+Mon Feb 13 18:29:50 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml
+        * configs/scoreboard/index.xml
+        * configs/scoreboard/tao.xml
+        * configs/scoreboard/tao_dre.sh
+
+          Added a seperate page for displaying CIAO-related builds
+
 Mon Feb 13 10:55:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:

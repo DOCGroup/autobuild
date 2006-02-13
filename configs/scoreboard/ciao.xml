@@ -1,0 +1,37 @@
+<!-- $Id$ -->
+<scoreboard>
+<preamble>
+<center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
+<hr/>
+This is the CIAO virtual scoreboard for the beta or release. It shows
+all the OS/platform combinations CIAO is tested everyday.
+<hr/>
+</preamble>
+
+<group>
+<name>Linux</name>
+     <build>
+        <name>FC4_CIAO_Core</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade49</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+     </build>
+</group>
+
+<group>
+   <name>Windows</name>
+        <build>
+            <name>WinXP_VC71_CIAOCore_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>Win2003_VC8_CIAOCore_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade46</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+</group>
+
+</scoreboard>

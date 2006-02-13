@@ -15,23 +15,24 @@ California,Irvine</a>,
 <a href="http://www.riverace.com/">Riverace Corporation</a>,
 <a href="http://www.prismtech.com/">PrismTech</a>, and
 <a href="http://www.atl.external.lmco.com">LMCO-ATL</a>,
-<a href="http://www.ociweb.com/">Object Computing Inc</A>,
-<a href="http://www.qualcomm.com/">Qualcomm</A>,
+<a href="http://www.ociweb.com/">Object Computing Inc</a>,
+<a href="http://www.qualcomm.com/">Qualcomm</a>,
 <a href="http://www.atdesk.com/">Automated Trading Desk</a>,
 <a href="http://www.coryan.net/">Carlos O'Ryan</a>,
 <a href="http://www.dresystems.com/">DRE Systems</a>,
 <a href="http://www.makexs.com/~zorko/">John Zorko</a>,
 <a href="http://www.hunleth.com/~acebuild/">Hunleth.com</a>,
-<a href="http://www.acorntoolworks.com/">J.T. Conklin</A>,
+<a href="http://www.acorntoolworks.com/">J.T. Conklin</a>,
 <A HREF="http://www.vrac.iastate.edu/">Virtual Reality Applications Center</A>
 <p>
 The distributed scoreboard is divided into following five
 categories: 
-<li>ACE Builds for Beta/Release [<a href="./ace.html">regular</A>|<A href="ace_detailed.matrix.html">detailed</A>]</li>
-<li>ACE Builds for Future Beta/Release [<a href="./ace_future.html">regular</A>|<A href="ace_future_detailed.matrix.html">detailed</A>]</li>
-<li>TAO Builds for Beta/Release [<a href="./tao.html">regular</A>|<A href="tao_detailed.matrix.html">detailed</A>]</li>
-<li>TAO Builds for Future Beta/Release [<a href="./tao_future.html">regular</A>|<A href="tao_future_detailed.matrix.html">detailed</A>]</li>
-<li>CoSMIC Builds for Beta/Release [<a href="./cosmic.html">regular</A></li>
+<li>ACE Builds for Beta/Release [<a href="./ace.html">regular</a>|<A href="ace_detailed.matrix.html">detailed</A>]</li>
+<li>ACE Builds for Future Beta/Release [<a href="./ace_future.html">regular</a>|<A href="ace_future_detailed.matrix.html">detailed</A>]</li>
+<li>TAO Builds for Beta/Release [<a href="./tao.html">regular</a>|<A href="tao_detailed.matrix.html">detailed</A>]</li>
+<li>TAO Builds for Future Beta/Release [<a href="./tao_future.html">regular</a>|<A href="tao_future_detailed.matrix.html">detailed</A>]</li>
+<li>CIAO Builds for Beta/Release [<a href="./ciao.html">regular</a>]</li>
+<li>CoSMIC Builds for Beta/Release [<a href="./cosmic.html">regular</a>]</li>
 <li><a href="./misc.html">Miscellaneous</a> Builds</li>
 <li><a href="./integrated.html">Integrated</a> page having all the
     above in a single page for folks who like it! </li>
@@ -51,7 +52,7 @@ scoreboard are available
 <p> We use the daily builds as a basis to collect important metrics
 like compilation time, footprint and performance details. Please 
 refer to <a href="http://www.dre.vanderbilt.edu/Stats/"> this 
-page </A> for more details.
+page </a> for more details.
 </p>
 
 <h3>Additional Development Process Related Pages</h3>

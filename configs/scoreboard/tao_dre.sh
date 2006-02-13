@@ -20,6 +20,7 @@ cvs up
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/ace_future.xml -o ace_future.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/tao.xml -o tao.html 2>&1  &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/tao_future.xml -o tao_future.html 2>&1 &
+/usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/ciao.xml -o ciao.html 2>&1  &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/subset.xml -o subset.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/cosmic.xml -o cosmic.html 2>&1 &

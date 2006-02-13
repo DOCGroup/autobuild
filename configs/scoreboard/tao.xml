@@ -178,12 +178,6 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
-     <build>
-        <name>FC4_CIAO_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade49</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
 </group>
 
 <group>
@@ -280,12 +274,6 @@ all the OS/platform combinations TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC71_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_MinGW_GCC_3_2_3</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWTAO/</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -356,12 +344,6 @@ all the OS/platform combinations TAO is tested everyday.
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC8_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade46</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
             <name>Win2003_VC6_Release</name>
