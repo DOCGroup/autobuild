@@ -1,3 +1,9 @@
+Mon Feb 13 10:55:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ace.xml:
+          Added linux autoconf build. This way we know check whether autoconf
+          still works.
+
 Sun Feb 12 13:10:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configigs/autobuild/*.xml:
