@@ -20,7 +20,6 @@
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
