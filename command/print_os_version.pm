@@ -109,6 +109,13 @@ sub Run ($)
     print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
           $self->delay_factor(), "\n";
 
+    print "<h3>Environment:</h3>\n";
+    my $name;
+    foreach $name (sort keys %ENV) {
+        print "$name = $ENV{$name}\n";
+    }
+    print "\n";
+
     return 1;
 }
 

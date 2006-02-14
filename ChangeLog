@@ -1,3 +1,7 @@
+Tue Feb 14 22:04:09 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * command/print_os_version.pm: Print the current environment.
+
 Mon Feb 13 18:29:50 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml
@@ -15,7 +19,7 @@ Mon Feb 13 10:55:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 Sun Feb 12 13:10:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-        * configigs/autobuild/*.xml:
+        * configs/autobuild/*.xml:
           Use *.mwc to exclude mwc files instead of listing an explicit file
 
 Sat Feb 11 23:30:25 UTC 2006  Krishnakumar B  <kitty@nospam.invalid.domain>
