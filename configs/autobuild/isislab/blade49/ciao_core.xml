@@ -43,7 +43,7 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO CIAOTAO.mwc" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc" />
 
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 

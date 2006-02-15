@@ -1,3 +1,16 @@
+Wed Feb 15 19:56:08 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+        * configs/autobuild/isislab/blade17/blade17_vc71.xml
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml
+        * configs/autobuild/isislab/blade49/ciao_core.xml
+        * configs/autobuild/isislab/blade51/ciao_core.xml
+        * configs/autobuild/isislab/blade6/Full.xml
+        
+          Updated to reflect the change from CIAOTAO.mwc to CIAO_TAO.mwc.
+
 Wed Feb 15 11:01:30 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/tao.xml
