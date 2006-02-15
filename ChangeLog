@@ -1,3 +1,11 @@
+Wed Feb 15 23:11:08 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/remedynl/intel_icc91w.xml:
+        * configs/autobuild/remedynl/rohan_icc9_64.xml: Change WinX86_64
+          platform name to x64 to match corresponding MPC change to nmake
+          generation. Left the WinX86_64 REALCLEAN in there to facilitate
+          cleaning builds previous to this change.
+
 Wed Feb 15 23:11:10 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml

@@ -47,6 +47,7 @@
 
 
     <command name="win32make"         options="nmake /I CFG=\x22WinX86_64 Debug\x22 REALCLEAN" />
+    <command name="win32make"         options="nmake /I CFG=\x22x64 Debug\x22 REALCLEAN" />
 
 
 
@@ -86,11 +87,11 @@
 
 
 
-    <command name="generate_workspace" options="-value_template add_compile+=/Qwr1736 -value_template add_compile+=/Qwr1684 -value_template add_compile+=/Qwr1740 -value_template add_compile+=/Qwr1744 -value_template add_compile+=/Qwr1738 -value_template add_compile+=/Qwr1478 -type nmake -exclude TAO/CIAO -value_template machine=AMD64 -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=WinX86_64"/>
+    <command name="generate_workspace" options="-value_template add_compile+=/Qwr1736 -value_template add_compile+=/Qwr1684 -value_template add_compile+=/Qwr1740 -value_template add_compile+=/Qwr1744 -value_template add_compile+=/Qwr1738 -value_template add_compile+=/Qwr1478 -type nmake -exclude TAO/CIAO -value_template machine=AMD64 -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=x64"/>
 
 
 
-    <command name="win32make"         options="nmake /I CFG=\x22WinX86_64 Debug\x22 NO_EXTERNAL_DEPS=1" />
+    <command name="win32make"         options="nmake /I CFG=\x22x64 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="auto_run_tests"    options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
