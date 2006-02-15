@@ -884,8 +884,12 @@ sub Test_Handler ($)
         || $s =~ m/Invalid read of size/
         || $s =~ m/Source and destination overlap/
         || $s =~ m/pure virtual /i)
+        || $s =~ m/exists but should be cleaned up/
     {
         $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/the ACE tests _may_ have leaked OS resources!/) {
+        $self->Output_Warning ($s);
     }
     else {
         $self->Output_Normal ($s);

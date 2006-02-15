@@ -6,6 +6,11 @@ Wed Feb 15 23:11:08 UTC 2006  Steve Huston  <shuston@riverace.com>
           generation. Left the WinX86_64 REALCLEAN in there to facilitate
           cleaning builds previous to this change.
 
+        * common/prettify.pm (Test_Handler): Flag "the ACE tests _may_ have
+          leaked OS resources!" as a warning and "File ... exists but should
+          be cleaned up" as an error. Both signify there may be a resource
+          leak, such as SysV semaphores.
+
 Wed Feb 15 23:11:10 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml
