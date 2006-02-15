@@ -882,6 +882,7 @@ sub Test_Handler ($)
         || $s =~ m/: parse error/
         || $s =~ m/Invalid write of size/
         || $s =~ m/Invalid read of size/
+        || $s =~ m/Source and destination overlap/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);

@@ -1,3 +1,9 @@
+Wed Feb 15 07:45:15 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Flag "Source and destination overlap" as error, this is given
+          by valgrind
+
 Wed Feb 15 03:38:15 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/autobuild/isislab/blade51/ciao_core.sh
