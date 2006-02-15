@@ -1,3 +1,9 @@
+Wed Feb 15 11:01:30 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/scoreboard/tao.xml
+
+        Changed FC4_CIAO_Core entry so that it points to blade51
+
 Wed Feb 15 07:45:15 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
