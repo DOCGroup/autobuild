@@ -1,3 +1,10 @@
+Tue Feb 14 23:56:14 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/lily_dev_vc8_64_debug.xml: New build
+          for Win64 VC8 in 64-bit mode.
+        * configs/autobuild/riverace/lily_dev_vc8_debug.xml: Changed to use
+          devenv instead of vcbuild. vcbuild is badly broken, apparantly.
+
 Tue Feb 14 22:04:09 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * command/print_os_version.pm: Print the current environment.
