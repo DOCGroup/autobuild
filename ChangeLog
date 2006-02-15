@@ -1,3 +1,11 @@
+Wed Feb 15 03:38:15 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade51/ciao_core.sh
+        * configs/autobuild/isislab/blade51/ciao_core.xml
+
+        Added a new FC4 CIAO core build
+
+
 Tue Feb 14 23:56:14 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/lily_dev_vc8_64_debug.xml: New build
