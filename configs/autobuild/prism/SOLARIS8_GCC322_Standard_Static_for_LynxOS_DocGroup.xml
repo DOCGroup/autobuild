@@ -39,7 +39,7 @@
     <!-- Uses ace.mwc -->
     <command name="generate_workspace" options="-exclude TAO,build.mwc" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc,CIAO,oldCIAO" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO" />
 
     <command name="shell"             options="ACE_wrappers/bin/ace_components --orbsvcs --set Naming,ImplRepo,IFRService" />
     <command name="make"              options="-k -C ace realclean" />

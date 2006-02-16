@@ -73,7 +73,7 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-static -exclude TAO,Kokyu,examples,ASNMP,performance-tests,apps,APG,netsvcs,websvcs,tests,protocol" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -static -exclude *.mwc,CIAO,examples,interop-tests,performance-tests,tests,orbsvcs,docs,tao/BiDir_GIOP.mpc,tao/Domain.mpc,tao/ImR_Client.mpc,tao/SmartProxies.mpc,tao/Strategies.mpc" />
+    <command name="generate_workspace" options="dirs=TAO -static -exclude TAO_*.mwc,CIAO,examples,interop-tests,performance-tests,tests,orbsvcs,docs,tao/BiDir_GIOP.mpc,tao/Domain.mpc,tao/ImR_Client.mpc,tao/SmartProxies.mpc,tao/Strategies.mpc" />
     <!-- TAO tests, exclude those inappopriate for the platform -->
     <command name="generate_workspace" options="dirs=TAO/tests -exclude AMH_Exceptions,AMH_Oneway,BiDirectional,BiDirectional_MultipleORB,BiDirectional_NestedUpcall,Bug_1476_Regression,Bug_1495_Regression,Bug_1639_Regression,Bug_1904_Regression,Bug_2183_Regression,CodeSets,Collocation,Connection_Purging,DLL_ORB,Leader_Followers,MT_BiDir,Nested_Event_Loop,Object_Loader,Smart_Proxies,Strategies,UNKNOWN_Exception" />
     <!-- For NSK shared runtime library (SRL) -->

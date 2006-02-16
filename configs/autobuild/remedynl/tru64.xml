@@ -78,7 +78,7 @@
 
     <!-- Uses TAO/TAO.mwc -->
 
-    <command name="generate_workspace" options="dirs=TAO -recurse -exclude *.mwc,CIAO" />
+    <command name="generate_workspace" options="dirs=TAO -recurse -exclude TAO_*.mwc,CIAO" />
 
 
 

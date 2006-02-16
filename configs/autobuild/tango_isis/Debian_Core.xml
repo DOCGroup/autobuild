@@ -42,8 +42,8 @@
     <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options="-exclude TAO " />
     <!-- This builds TAO... -->
-    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc " />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude *.mwc,CIDLC,tests,examples,CCF" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc " />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,tests,examples,CCF" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

@@ -50,7 +50,7 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-exclude TAO,ASNMP,examples" />
-    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc,CIAO,examples" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,examples" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

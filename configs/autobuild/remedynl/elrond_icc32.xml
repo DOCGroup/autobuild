@@ -47,8 +47,8 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-exclude TAO" />
-    <command name="generate_workspace" options="dirs=TAO -exclude *.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude *.mwc,CIDLC,CCF" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF" />
 
     <command name="make"              options="-k -j 3" />
     <command name="make"              options="-k -j 3 -C TAO/TAO_IDL" />

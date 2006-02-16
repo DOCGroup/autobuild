@@ -40,7 +40,7 @@
  <!-- Uses ACE.mwc -->
  <command name="generate_workspace"   options="-exclude TAO" />
  <!-- Uses TAO/TAO.mwc -->
- <command name="generate_workspace"   options="dirs=TAO -exclude *.mwc,CIAO" />
+ <command name="generate_workspace"   options="dirs=TAO -exclude TAO_*.mwc,CIAO" />
 
  <command name="make"                 options="-j 2 -k realclean" />
  <command name="make"                 options="-j 2 -k -C TAO realclean" />

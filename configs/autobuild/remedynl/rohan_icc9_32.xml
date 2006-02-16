@@ -48,7 +48,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-value_template add_compile+=/Qvc7.1 -value_template add_compile+=/Qwr1684 -type nmake -exclude *.mwc,TAO/CIAO,TAO/orbsvcs/examples/ImR -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=Win32"/>
+    <command name="generate_workspace" options="-value_template add_compile+=/Qvc7.1 -value_template add_compile+=/Qwr1684 -type nmake -exclude TAO_*.mwc,TAO/CIAO,TAO/orbsvcs/examples/ImR -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=Win32"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
