@@ -947,8 +947,8 @@ sub build_integrated_page ($)
                      "ace_future",
                      "tao",
                      "tao_future",
-                     "ciao",
-                     "misc");
+                     "misc",
+                     "ciao");
 
     my $newfile = new FileHandle;
 
