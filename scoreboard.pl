@@ -119,11 +119,11 @@ sub build_index_page ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO's Distributed Scoreboard</title>\n</head>\n";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO's Distributed Scoreboard</title>\n</head>\n";
 
     ### Start body
 
-    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO's Distributed Scoreboard\n</h1></center>\n<hr>\n";
+    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO+CIAO's Distributed Scoreboard\n</h1></center>\n<hr>\n";
     my $parser = new IndexParser;
     $parser->Parse ($index, \%builds);
     print $indexhtml "$preamble\n";
@@ -928,7 +928,7 @@ sub GetVariable ($)
 #
 # Reads lists of builds from different XML files and develops a
 # integrated scoreboard. This is in adition to the individual
-# scoreboards for ACE and TAO seperately.  The names of xml files have
+# scoreboards for ACE and TAO and CIAO seperately.  The names of xml files have
 # been hardcoded.
 #
 # Arguments:  $ - Output directory
@@ -947,6 +947,7 @@ sub build_integrated_page ($)
                      "ace_future",
                      "tao",
                      "tao_future",
+                     "ciao",
                      "misc");
 
     my $newfile = new FileHandle;
@@ -963,6 +964,8 @@ sub build_integrated_page ($)
             print $newfile "<build_ace>\n";
         } elsif ($file_list eq 'tao') {
             print $newfile "<build_tao> \n";
+        } elsif ($file_list eq 'ciao') {
+            print $newfile "<build_ciao> \n";
         }
 
         $file_handle->open ("<configs/scoreboard/$file_list.xml");
