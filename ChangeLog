@@ -1,3 +1,8 @@
+Thu Feb 16 09:26:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * *.xml:
+          Changed exluce of *.mwc to TAO_*.mwc and CIAO_*.mwc
+
 Thu Feb 16 08:14:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
