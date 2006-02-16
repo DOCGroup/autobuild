@@ -1,3 +1,8 @@
+Thu Feb 16 09:46:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * scoreboard.pl:
+          Also use CIAO
+
 Thu Feb 16 09:26:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * *.xml:
