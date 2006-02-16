@@ -36,7 +36,7 @@
     <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
-    <command name="generate_workspace" options="" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k" />
     <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
