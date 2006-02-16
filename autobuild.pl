@@ -228,6 +228,7 @@ require command::auto_run_tests;
 require command::check_compiler;
 require command::check_linker;
 require command::print_os_version;
+require command::print_autotools_version;
 require command::print_perl_version;
 require command::print_valgrind_version;
 require command::print_make_version;

@@ -28,6 +28,7 @@
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
+    <command name="print_autotools_version" />
 
     <command name="shell"             options="cd ACE_wrappers; autoreconf --install --force -I m4" />
 
