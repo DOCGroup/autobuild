@@ -25,7 +25,7 @@
 	<command name="print_ace_config" />
 	<command name="print_status" options="Compile:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin d:\tao_builds\taoadmin\logs\doc_vc6_d0o1\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_wasp_win2003_vc6_d0o1" />
-	<command name="vc6make" options="TAO/TAOACE.dsw /make \x22all - win32 release\x22" />
+	<command name="vc6make" options="TAO/TAO_ACE.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="tests/tests.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="examples/examples.dsw /make \x22all - win32 release\x22" />
 	<command name="vc6make" options="performance-tests/perf.dsw /make \x22all - win32 release\x22" />

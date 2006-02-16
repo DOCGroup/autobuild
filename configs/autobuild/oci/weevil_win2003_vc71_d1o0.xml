@@ -26,7 +26,7 @@
 	<command name="print_ace_config" />
 	<command name="print_status" options="Compile:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
-	<command name="vc7make" options="/build release TAO/TAOACE.sln" />
+	<command name="vc7make" options="/build release TAO/TAO_ACE.sln" />
 	<command name="vc7make" options="/build release tests/tests.sln" />
 	<command name="vc7make" options="/build release examples/examples.sln" />
 	<command name="vc7make" options="/build release performance-tests/perf.sln" />

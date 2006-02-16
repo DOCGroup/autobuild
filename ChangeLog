@@ -1,3 +1,15 @@
+Thu Feb 16 12:51:22 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml:
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml:
+        * configs/autobuild/isislab/blade6/Full.xml:
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+
+          TAOACE.mwc was changed to TAO_ACE.mwc.  Modified these to reflect
+          the name change.
+
 Thu Feb 16 09:46:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl:
