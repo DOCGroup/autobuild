@@ -1,3 +1,14 @@
+Thu Feb 16 08:14:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Fixed error in this script
+
+        * command/print_autotools_version.pm:
+          Added
+
+        * autobuild.pl:
+          Added print_autotools_version
+
 Wed Feb 15 23:57:43 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/lily_dev_vc8_debug.xml: Add
@@ -20,7 +31,7 @@ Wed Feb 15 23:11:08 UTC 2006  Steve Huston  <shuston@riverace.com>
 Wed Feb 15 23:11:10 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml
-        
+
           Generate worksapce for CIDLC specifically to pick up on static.
 
 Wed Feb 15 19:56:08 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
@@ -33,7 +44,7 @@ Wed Feb 15 19:56:08 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/blade49/ciao_core.xml
         * configs/autobuild/isislab/blade51/ciao_core.xml
         * configs/autobuild/isislab/blade6/Full.xml
-        
+
           Updated to reflect the change from CIAOTAO.mwc to CIAO_TAO.mwc.
 
 Wed Feb 15 11:01:30 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
