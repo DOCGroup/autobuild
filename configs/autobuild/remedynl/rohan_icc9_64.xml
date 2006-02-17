@@ -34,7 +34,6 @@
 
     <command name="log"               options="ON" />
 
-    <command name="win32make"         options="nmake /I CFG=\x22WinX86_64 Debug\x22 REALCLEAN" />
     <command name="win32make"         options="nmake /I CFG=\x22x64 Debug\x22 REALCLEAN" />
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
