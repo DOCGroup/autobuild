@@ -1,3 +1,23 @@
+Fri Feb 17 00:37:23 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade49/blade49.bat:
+        * configs/autobuild/isislab/blade49/blade49_driver.bat:
+        * configs/autobuild/isislab/blade49/blade49_vc71.bat:
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml:
+
+          Added the full Windows XP compile-only build for VC71.
+
+        * configs/autobuild/isislab/blade50/blade50.bat:
+        * configs/autobuild/isislab/blade50/blade50_driver.bat:
+        * configs/autobuild/isislab/blade50/blade50_vc8.bat:
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml:
+
+          Added the full Windows XP compile-only build for VC8.
+
+        * configs/scoreboard/tao.xml:
+
+          Reflected the two builds above in the scoreboard summary configuration.
+
 Thu Feb 16 12:51:22 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
