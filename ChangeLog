@@ -1,3 +1,10 @@
+Fri Feb 17 22:43:12 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.bat
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
+
+          Updated configuration to use bugzilla to checkout repository
+
 Fri Feb 17 21:42:24 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/autobuild/isislab/blade17/blade17_vc71.xml

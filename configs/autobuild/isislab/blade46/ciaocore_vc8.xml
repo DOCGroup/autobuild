@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\ACE\VC8\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO\CIAO"/>
-        <environment name="CVSROOT"      value=":ext:mxiong@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVSROOT"      value=":ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="C:\putty\plink.exe" />
         <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib"  type="prefix" />
         <environment name="XERCESCROOT"   value="C:\xerces"/>
