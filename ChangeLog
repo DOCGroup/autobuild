@@ -1,3 +1,10 @@
+Fri Feb 17 21:34:30 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade49/blade49_driver.bat:
+        * configs/autobuild/isislab/blade50/blade50_driver.bat:
+
+          Minor chdir change.
+
 Fri Feb 17 12:49:12 UTC 2006  Johnny Willemsen   <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
