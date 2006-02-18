@@ -31,7 +31,7 @@ categories:
 <li>ACE Builds for Future Beta/Release [<a href="./ace_future.html">regular</a>|<A href="ace_future_detailed.matrix.html">detailed</A>]</li>
 <li>TAO Builds for Beta/Release [<a href="./tao.html">regular</a>|<A href="tao_detailed.matrix.html">detailed</A>]</li>
 <li>TAO Builds for Future Beta/Release [<a href="./tao_future.html">regular</a>|<A href="tao_future_detailed.matrix.html">detailed</A>]</li>
-<!-- <li>CIAO Builds for Beta/Release [<a href="./ciao.html">regular</a>]</li> -->
+<li>CIAO Builds for Beta/Release [<a href="./ciao.html">regular</a>]</li>
 <li>CoSMIC Builds for Beta/Release [<a href="./cosmic.html">regular</a>]</li>
 <li><a href="./misc.html">Miscellaneous</a> Builds</li>
 <li><a href="./integrated.html">Integrated</a> page having all the
