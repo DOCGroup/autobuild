@@ -1,12 +1,18 @@
+Sat Feb 18 00:43:41 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade49/blade49_driver.bat:
+
+          a small fix for the blade49_driver.
+
 Sat Feb 18 00:15:14 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
 
         * configs/autobuild/shiva_64/driver_minimum.sh:
         * configs/autobuild/shiva_64/x86-64bit-linux.xml:
-	  Added a full CIAO build on a x86, 64bit, Redhat Enterprise Linux 4 machine (shiva.dre.vanderbilt.edu)
+          Added a full CIAO build on a x86, 64bit, Redhat Enterprise Linux 4 machine (shiva.dre.vanderbilt.edu)
 
         * configs/scoreboard/ciao.xml:
         * configs/scoreboard/index.xml:
-	  Added the link to the build page on the main scoreboard page.
+          Added the link to the build page on the main scoreboard page.
 
 Fri Feb 17 22:43:12 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
