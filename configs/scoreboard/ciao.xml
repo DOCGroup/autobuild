@@ -38,6 +38,18 @@ all the OS/platform combinations CIAO is tested everyday.
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
+        <build>
+            <name>WinXP_VC71_FULL</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/blade49_vc71_full</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_VC8_FULL</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/blade50_vc8_full</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
 </group>
 
 </scoreboard>
