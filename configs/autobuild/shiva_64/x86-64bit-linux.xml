@@ -33,6 +33,7 @@
     
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" /> 
+    <command name="cvs"               options="-z 3 -q checkout -P autobuild" /> 
 
     <!-- <command name="create_ace_build"  /> -->
 
@@ -62,7 +63,7 @@
     <command name="process_logs"      options="move prettify clean index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/shiva_64"/>
+    <command name="anonymous_shell"   options="scp buildlog/*.txt buildlog/*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/shiva_64"/>
 
 </autobuild>
 
