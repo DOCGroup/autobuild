@@ -1,3 +1,10 @@
+Sat Feb 18 22:33:50 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml:
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml:
+
+          changed mpc generation step so that it uses the CIAO_TAO.mwc
+
 Sat Feb 18 22:20:53 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
