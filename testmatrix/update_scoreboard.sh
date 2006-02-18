@@ -73,6 +73,11 @@ function update_local_scoreboard()
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao_future.xml > $BUILD_LIST
   ./buildMatrix 0 $BUILD_LIST $TEST_MATRIX
 
+  
+  BUILD_LIST=$TEST_MATRIX_DIR/ciao-list
+  TEST_MATRIX=ciao_detailed
+  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ciao.xml > $BUILD_LIST
+  ./buildMatrix 0 $BUILD_LIST $TEST_MATRIX
 
   cp -f matrix.css $LOG_DIR/matrix.css
 

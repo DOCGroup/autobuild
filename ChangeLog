@@ -1,3 +1,11 @@
+Sat Feb 18 01:36:03 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
+
+        * configs/scoreboard/index.xml:
+          Added 'detailed' link to the ciao builds.
+
+        * testmatrix/update_scoreboard.sh:
+          Edited the script to generate detailed test matrix for the CIAO tests.
+
 Sat Feb 18 00:52:18 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
 
         * configs/autobuild/shiva_64/x86-64bit-linux.xml:
