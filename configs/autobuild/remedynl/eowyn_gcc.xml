@@ -37,18 +37,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF" />
-
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
 
     <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO" />
-    <command name="make"              options="-k -C TAO/CIAO" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
