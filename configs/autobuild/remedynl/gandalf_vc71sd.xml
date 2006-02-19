@@ -38,7 +38,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type vc71 -recurse -static -name_modifier *_Static -apply_project"/>
+    <command name="generate_workspace" options="-exclude TAO/CIAO -type vc71 -recurse -static -name_modifier *_Static -apply_project -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc"/>
 
     <command name="win32make"         options="msvc_static_compile -vc7 -Debug -CORE -k -name_modifier *_Static" />
     <command name="win32make"         options="msvc_static_compile -vc7 -Debug -ACE -k -name_modifier *_Static" />

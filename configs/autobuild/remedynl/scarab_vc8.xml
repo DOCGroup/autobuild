@@ -42,7 +42,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -value_template add_compile+=/EHa -value_template compile_flags-=/EHs"/>
+    <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
