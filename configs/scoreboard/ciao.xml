@@ -50,6 +50,12 @@ all the OS/platform combinations CIAO is tested everyday.
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
+        <build>
+            <name>WinXP_VC71_CIAO_NoInline_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade10</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
 </group>
 
 </scoreboard>
