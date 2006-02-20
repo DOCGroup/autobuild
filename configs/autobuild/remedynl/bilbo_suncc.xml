@@ -1,0 +1,62 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"        value="/home/build/ACE/SunCC/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/build/ACE/SunCC/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/SunCC/ACE_wrappers/lib:/usr/local/ssl/lib"/>
+        <environment name="CVSROOT"         value="jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="SSL_ROOT"        value="/usr/local/ssl" />
+
+        <variable name="root"     value="/home/build/ACE/SunCC" />
+	<variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="/home/build/ACE/SunCC" />
+        <variable name="configs"  value="Exceptions SSL" />
+        <variable name="name"     value="Sun Forte" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="log"               options="ON" />
+
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ninline=0\nexceptions=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nCCFLAGS += -V -fast -xarch=v9\nCFLAGS += -fast -xarch=v9\nSOFLAGS += -fast -xarch=v9\nLDFLAGS += -fast -xarch=v9 -L/usr/lib/sparcv9\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\nssl=1\nopenssl=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="sun_cc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO" />
+
+    <command name="auto_run_tests"    options=" -a -o -t" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean=4 index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="ssh johnnyw@naboo.dre.vanderbilt.edu rm /web/users/remedynl/Solaris/* -f" />
+    <command name="shell"             options="scp *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Solaris" />
+</autobuild>
+
+
