@@ -1,8 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-
-        <environment name="ACE_ROOT"        value="/home/bczar/builds/ACE_wrappers" />
+        <environment name="ACE_ROOT"        value="/home/bczar/builds/ACE_wrappers" />    
         <environment name="TAO_ROOT"        value="/home/bczar/builds/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/bczar/builds/ACE_wrappers/TAO/CIAO"/>
         <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
@@ -22,17 +21,12 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
     <command name="log"               options="on" />
-
-    <!-- Clean out the workspace before regenerating the Makefiles. -->
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
-
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define ACE_NTRACE 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define ACE_NTRACE 0\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\ncidl=0\n\n'" />
 
@@ -44,16 +38,14 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc" />
-
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
-
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="auto_run_tests" options="-C -envmod LD_ASSUME_KERNEL=2.4.19" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=2 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"	      options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade56"/>
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade56"/>
 </autobuild>
