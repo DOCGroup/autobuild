@@ -1,3 +1,8 @@
+Mon Feb 20 01:10:12 UTC 2006  Krishnakumar B  <kitty@nospam.invalid.domain>
+
+        * configs/autobuild/equus/equus_vc71.xml:  Updated the file to reflect
+          moving CoSMIC builds to a different directory.
+
 Sun Feb 19 14:59:02 UTC 2006  James H. Hill  <hillj@isis.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade10/ciao_no_inline.bat:

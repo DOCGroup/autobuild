@@ -1,23 +1,23 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\Build\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\Build\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"     value="C:\Build\ACE_wrappers\TAO\CIAO"/>
+        <environment name="ACE_ROOT"     value="C:\Build\CoSMIC_VC71_Debug\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\Build\CoSMIC_VC71_Debug\ACE_wrappers\TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\Build\CoSMIC_VC71_Debug\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="PATH"         value= "C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Perl\bin\;C:\Tools\putty;C:\Tools\bin;C:\Tools\putty;C:\Software\Boost\lib;C:\Software\wxWindows\lib;C:\Build\ACE_wrappers\lib;C:\Build\CoSMIC\bin;C:\Software\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin" />
+        <environment name="PATH"         value= "C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Perl\bin\;C:\Tools\putty;C:\Tools\bin;C:\Tools\putty;C:\Software\Boost\lib;C:\Software\wxWindows\lib;C:\Build\CoSMIC_VC71_Debug\ACE_wrappers\lib;C:\Build\CoSMIC_VC71_Debug\CoSMIC\bin;C:\Software\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin" />
         <environment name="XERCESCROOT"   value="C:\Software\xerces-c-2_7_0-win32-vc7"/>
         <environment name="BOOST_ROOT"    value="C:\Software\Boost"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
         <environment name="BOOST_CFG"     value="-vc71-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="WXWINDOWS_ROOT"  value="C:\Software\wxWindows" />
-		<environment name="COSMIC_ROOT"  value="C:\Build\CoSMIC" />
+		<environment name="COSMIC_ROOT"  value="C:\Build\CoSMIC_VC71_Debug\CoSMIC" />
         <variable name="configs"  value="Win32 VC71 Exceptions" />
-        <variable name="root"     value="C:\Build" />
+        <variable name="root"     value="C:\Build\CoSMIC_VC71_Debug" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\VC71_Debug" />
-        <variable name="name"     value="WinXP VS.NET 2003" />
+        <variable name="log_root" value="C:\Build\CoSMIC_VC71_Debug" />
+        <variable name="name"     value="CoSMIC VC71 WinXP" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
@@ -49,6 +49,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C C:\VC71_Debug\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\VC71_Debug\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\Build\CoSMIC_VC71_Debug\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\Build\CoSMIC_VC71_Debug\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
 </autobuild>
