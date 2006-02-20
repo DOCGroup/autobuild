@@ -1,3 +1,10 @@
+Mon Feb 20 15:10:12 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml:
+
+          changed FC4_CIAO_Core since it's moved to blade51
+
+
 Mon Feb 20 13:19:31 UTC 2006  Nishanth Shankaran  <nshankar@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade56/ACE_TRACE.xml: 
