@@ -13,5 +13,5 @@ export PATH
 
 cvs -z9 up -P -d
 
-exec /usr/local/bin/perl $HOME/ACE/autobuild/autobuild.pl \
+exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
                              $HOME/ACE/autobuild/configs/autobuild/remedynl/bilbo_suncc.xml

@@ -1,16 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/SunCC/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/build/ACE/SunCC/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/SunCC/ACE_wrappers/lib:/usr/local/ssl/lib"/>
+        <environment name="ACE_ROOT"        value="/export/home/build/ACE/SunCC/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/export/home/build/ACE/SunCC/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/export/home/build/ACE/SunCC/ACE_wrappers/lib:/usr/local/ssl/lib"/>
         <environment name="CVSROOT"         value="jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="SSL_ROOT"        value="/usr/local/ssl" />
 
-        <variable name="root"     value="/home/build/ACE/SunCC" />
+        <variable name="root"     value="/export/home/build/ACE/SunCC" />
 	<variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="/home/build/ACE/SunCC" />
+        <variable name="log_root" value="/export/home/build/ACE/SunCC" />
         <variable name="configs"  value="Exceptions SSL" />
         <variable name="name"     value="Sun Forte" />
     </configuration>
