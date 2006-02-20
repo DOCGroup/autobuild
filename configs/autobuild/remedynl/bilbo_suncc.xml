@@ -9,7 +9,7 @@
         <environment name="SSL_ROOT"        value="/usr/local/ssl" />
 
         <variable name="root"     value="/export/home/build/ACE/SunCC" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/export/home/build/ACE/SunCC" />
         <variable name="configs"  value="Exceptions SSL" />
         <variable name="name"     value="Sun Forte" />
