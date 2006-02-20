@@ -14,3 +14,5 @@ cvs -z9 up -P -d
 
 $HOME/ACE/autobuild/configs/autobuild/remedynl/intel_icc64.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/intel_icc32.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/intel_icc64.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/intel_icc32.sh
