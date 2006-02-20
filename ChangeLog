@@ -1,3 +1,9 @@
+Mon Feb 20 13:19:31 UTC 2006  Nishanth Shankaran  <nshankar@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade56/ACE_TRACE.xml: 
+        
+        Fixed config settings.
+
 Mon Feb 20 11:35:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml:
