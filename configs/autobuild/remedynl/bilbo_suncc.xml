@@ -56,7 +56,7 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="ssh johnnyw@naboo.dre.vanderbilt.edu rm /web/users/remedynl/Solaris/* -f" />
-    <command name="shell"             options="scp *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Solaris" />
+    <command name="shell"             options="scp *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Solaris9" />
 </autobuild>
 
 

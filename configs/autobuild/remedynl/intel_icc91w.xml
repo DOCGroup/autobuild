@@ -13,7 +13,7 @@
 
         <variable name="configs"  value="Win32 icc91 Exceptions" />
         <variable name="root"     value="C:\ACE\icc91\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\icc91\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
     </configuration>

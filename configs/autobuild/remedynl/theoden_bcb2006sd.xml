@@ -15,7 +15,7 @@
 
         <variable name="configs"      value="Win32 Borland STATIC Exceptions" />
         <variable name="root"         value="C:\ACE\BCB2006sd\" />
-        <variable name="log_file"     value="log.txt" />
+        <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2006sd\" />
         <variable name="name"         value="WinXP CBX Static Release" />
         <variable name="cvs_program"  value="c:\cygwin\bin\cvs" />

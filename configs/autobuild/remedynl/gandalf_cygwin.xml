@@ -12,7 +12,7 @@
         <environment name="lib"          value="" />
 
         <variable name="root"     value="C:\ACE\Cygwin\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\Cygwin\" />
         <variable name="name"     value="Cygwin ACE" />
         <variable name="configs"  value="Cygwin" />

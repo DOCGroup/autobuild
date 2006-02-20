@@ -12,7 +12,7 @@
 
         <variable name="configs"  value="Win32 VC71 Exceptions SSL" />
         <variable name="root"     value="C:\ACE\VC71dr\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VC71dr\" />
         <variable name="name"     value="WinXP VS.NET 2003" />
     </configuration>

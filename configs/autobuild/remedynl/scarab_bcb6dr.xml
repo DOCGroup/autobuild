@@ -15,7 +15,7 @@
 
         <variable name="configs"  value="Win32 Borland Exceptions" />
         <variable name="root"     value="C:\ACE\BCB6dr\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\BCB6dr\" />
         <variable name="name"     value="Win2K BCB6 Release" />
     </configuration>

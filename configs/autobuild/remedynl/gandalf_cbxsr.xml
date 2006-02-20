@@ -16,7 +16,7 @@
         <variable name="make_program" value="bmake" />
         <variable name="configs"  value="Win32 Borland STATIC Release Exceptions" />
         <variable name="root"     value="C:\ACE\CBXsr\" />
-        <variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\CBXsr\" />
         <variable name="name"     value="WinXP CBX Static Release" />
     </configuration>

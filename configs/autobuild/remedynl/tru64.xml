@@ -18,7 +18,7 @@
 
         <variable name="root"     value="/usr/users/build/ACE/nightly" />
 
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
 
         <variable name="log_root" value="/usr/users/build/ACE/nightly" />
 

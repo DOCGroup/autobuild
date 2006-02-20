@@ -11,7 +11,7 @@
         <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="root"     value="/build/ACE/nightly" />
-        <variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/build/ACE/nightly" />
         <variable name="configs"  value="Exceptions" />
         <variable name="name"     value="HPUX" />

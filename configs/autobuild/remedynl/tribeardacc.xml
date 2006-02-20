@@ -11,7 +11,7 @@
 
         <variable name="make_program"       value="gmake" />
         <variable name="root"               value="/build/ACE/aCC" />
-        <variable name="log_file"           value="log.txt" />
+        <variable name="log_file"           value="build.txt" />
         <variable name="log_root"           value="/build/ACE/aCC" />
         <variable name="configs"            value="Exceptions" />
         <variable name="name"               value="HPUX" />

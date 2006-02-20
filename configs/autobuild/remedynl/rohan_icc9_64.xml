@@ -22,7 +22,7 @@
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="C:\ACE\Intel90_64bit\" />
-        <variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\Intel90_64bit\" />
         <variable name="name"     value="Intel 90 64bit" />
         <variable name="cvs_program"     value="C:\cygwin\bin\cvs" />

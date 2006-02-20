@@ -12,7 +12,7 @@
 
         <variable name="configs"  value="Win32 VC8p Exceptions" />
         <variable name="root"     value="C:\ACE\VC8p\" />
-	<variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VC8p\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
     </configuration>

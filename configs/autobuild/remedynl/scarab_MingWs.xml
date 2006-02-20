@@ -11,7 +11,7 @@
         <environment name="lib"          value="" />
 
         <variable name="root"     value="C:\ACE\MingWStatic\" />
-        <variable name="log_file" value="log.txt" />
+        <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\MingWStatic\" />
         <variable name="name"     value="MingW Static" />
         <variable name="configs"  value="Win32 STATIC" />
