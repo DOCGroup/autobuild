@@ -113,12 +113,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>ATD_Build</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ATD_Build</url>
-      <build_sponsor>ATD</build_sponsor>
-      <build_sponsor_url>http://www.atdesk.com</build_sponsor_url>
-     </build>
-     <build>
       <name>RHAS_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
       <build_sponsor>ISIS</build_sponsor>
