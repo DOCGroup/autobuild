@@ -404,13 +404,13 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
-      <name>SunOS_8_Studio8_Debug</name>
+      <name>Solaris8_Studio8_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>SunOS_10_Studio11_Debug</name>
+      <name>Solaris10_Studio11_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris9</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
