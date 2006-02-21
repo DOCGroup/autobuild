@@ -1,3 +1,8 @@
+Tue Feb 21 15:23:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added Solaris 10 Studio 11 build
+
 Mon Feb 20 22:54:02 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Added WinXP-64 w/ VC8-64-bit build.
@@ -11,8 +16,8 @@ Mon Feb 20 15:10:12 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
 Mon Feb 20 13:19:31 UTC 2006  Nishanth Shankaran  <nshankar@dre.vanderbilt.edu>
 
-        * configs/autobuild/isislab/blade56/ACE_TRACE.xml: 
-        
+        * configs/autobuild/isislab/blade56/ACE_TRACE.xml:
+
         Fixed config settings.
 
 Mon Feb 20 11:35:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
@@ -131,12 +136,12 @@ Fri Feb 17 00:37:23 UTC 2006  Stoyan Paunov  <spaunov@isis.vanderbilt.edu>
 
 Thu Feb 16 22:41:16 UTC 2006  Nishanth Shankaran  <nshankar@dre.vanderbilt.edu>
 
-        * configs/autobuild/isislab/blade56/ACE_TRACE.xml: 
-        * configs/autobuild/isislab/blade56/ACE_TRACE.sh: 
-        * configs/scoreboard/tao.xml: 
-        
+        * configs/autobuild/isislab/blade56/ACE_TRACE.xml:
+        * configs/autobuild/isislab/blade56/ACE_TRACE.sh:
+        * configs/scoreboard/tao.xml:
+
         Added ACE_TRACE build on blade56 at isislab.
-        
+
 Thu Feb 16 12:51:22 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
