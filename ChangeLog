@@ -1,3 +1,7 @@
+Mon Feb 20 22:54:02 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml: Added WinXP-64 w/ VC8-64-bit build.
+
 Mon Feb 20 15:10:12 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
