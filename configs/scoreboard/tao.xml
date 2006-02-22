@@ -184,6 +184,12 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
+     <build>
+        <name>RHEL4_NoInline</name>
+        <url>http://tao.prismtech.com/doc-scoreboard/rhel4</url>
+        <build_sponsor>PrismTech</build_sponsor>
+        <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+     </build>
 </group>
 
 <group>
@@ -399,6 +405,7 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
+
 </group>
 
 <group>
