@@ -48,9 +48,43 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
+    my %changelogs = ('AUTOBUILD' => 'ChangeLog',
+                      'MPC'       => 'ChangeLog',
+                      'ACE'       => 'ChangeLog',
+                      'TAO'       => 'ChangeLog',
+                      'CIAO'      => 'ChangeLog',
+                     );
+    my $defurl = 'http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*';
+    my %urls = ('XML_URL'       => "$defurl/<file>?cvsroot=autobuild",
+                'AUTOBUILD_URL' => "$defurl/<file>?cvsroot=autobuild",
+                'MPC_URL'       => "$defurl/<file>?cvsroot=MPC",
+                'ACE_URL'       => "$defurl/<file>",
+                'TAO_URL'       => "$defurl/TAO/<file>",
+                'CIAO_URL'      => "$defurl/TAO/CIAO/<file>",
+               );
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
+
+    foreach my $option (split(/\s+/, $options)) {
+      if ($option =~ /([^=]+)=(.*)/) {
+        my($name)  = uc($1);
+        my($value) = $2;
+        ## First, check for a ChangeLog setting
+        if (defined $changelogs{$name}) {
+          $changelogs{$name} = $value;
+        }
+        ## Next, check for a URL setting
+        elsif (defined $urls{$name}) {
+          $value .= '/<file>' if ($value !~ /\/<file>/);
+          $urls{$name} = $value;
+        }
+        ## We did not recognize this setting
+        else {
+          print "WARNING: $name not recognized.\n";
+        }
+      }
+    }
 
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
@@ -69,11 +103,16 @@ sub Run ($)
         $root = $1;
     }
 
+    my $url = undef;
     main::PrintStatus ('Config', 'PrintACEConfig');
 
-    print "XML Config file: <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/${config_file}/?cvsroot=autobuild\">${config_file}</a>\n";
+    $url = $urls{XML_URL};
+    $url =~ s/<file>/$config_file/;
+    print "XML Config file: <a href=\"$url\">${config_file}</a>\n";
 
-    print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/ChangeLog/?cvsroot=autobuild\">Autobuild ChangeLog</a> ================\n";
+    $url = $urls{AUTOBUILD_URL};
+    $url =~ s/<file>/$changelogs{AUTOBUILD}/;
+    print "================ <a href=\"$url\">Autobuild $changelogs{AUTOBUILD}</a> ================\n";
 
     my $current_dir = getcwd ();
 
@@ -94,27 +133,33 @@ sub Run ($)
     # last ACE Changelog Entry
     #
 
-    if (-r "ChangeLog") {
-        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/ChangeLog\">ACE ChangeLog</a> ================\n";
-        print_file ("ChangeLog", 0);
+    if (-r $changelogs{ACE}) {
+        $url = $urls{ACE_URL};
+        $url =~ s/<file>/$changelogs{ACE}/;
+        print "================ <a href=\"$url\">ACE $changelogs{ACE}</a> ================\n";
+        print_file ($changelogs{ACE}, 0);
     }
 
     #
     # last TAO Changelog Entry
     #
 
-    if (-r "TAO/ChangeLog") {
-        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/TAO/ChangeLog\">TAO ChangeLog</a> ================\n";
-        print_file ("TAO/ChangeLog", 0);
+    if (-r "TAO/$changelogs{TAO}") {
+        $url = $urls{TAO_URL};
+        $url =~ s/<file>/$changelogs{TAO}/;
+        print "================ <a href=\"$url\">TAO $changelogs{TAO}</a> ================\n";
+        print_file ("TAO/$changelogs{TAO}", 0);
     }
 
     #
     # last CIAO Changelog Entry
     #
 
-    if (-r "TAO/CIAO/ChangeLog") {
-        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/TAO/CIAO/ChangeLog\">CIAO ChangeLog</a> ================\n";
-        print_file ("TAO/CIAO/ChangeLog", 0);
+    if (-r "TAO/CIAO/$changelogs{CIAO}") {
+        $url = $urls{CIAO_URL};
+        $url =~ s/<file>/$changelogs{CIAO}/;
+        print "================ <a href=\"$url\">CIAO $changelogs{CIAO}</a> ================\n";
+        print_file ("TAO/CIAO/$changelogs{CIAO}", 0);
     }
 
     #
@@ -123,12 +168,13 @@ sub Run ($)
 
     # Look if MPC_ROOT is set, if this is set, then we take MPC_ROOT, else we take MPC/ChangeLog
     my($mpcroot) = $ENV{MPC_ROOT};
-    my($mpcpath) = (defined $mpcroot ? $mpcroot :
-                                        'MPC');
+    my($mpcpath) = (defined $mpcroot ? $mpcroot : 'MPC');
 
-    if (-r "$mpcpath/ChangeLog") {
-        print "================ <a href=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/ChangeLog?cvsroot=MPC\">MPC ChangeLog</a> ================\n";
-        print_file ("$mpcpath/ChangeLog", 0);
+    if (-r "$mpcpath/$changelogs{MPC}") {
+        $url = $urls{MPC_URL};
+        $url =~ s/<file>/$changelogs{MPC}/;
+        print "================ <a href=\"$url\">MPC $changelogs{MPC}</a> ================\n";
+        print_file ("$mpcpath/$changelogs{MPC}", 0);
     }
 
     #

@@ -1,3 +1,10 @@
+Wed Feb 22 15:46:12 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/printaceconfig.pm:
+
+          Allow configuration of ChangeLog file names and URL's through the
+          'options' setting.
+
 Wed Feb 22 15:40:00 UTC 2006  Simon Massey  <sma@prismtech.com>
         * configs/autobuild/prism/LYNXOS4_GCC322_Standard_Full_Tests_DocGroup.xml:
           Changed LYNXos configuration
