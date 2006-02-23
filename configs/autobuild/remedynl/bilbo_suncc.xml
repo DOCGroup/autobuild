@@ -55,8 +55,7 @@
     <command name="process_logs"      options="move prettify clean=4 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="ssh johnnyw@naboo.dre.vanderbilt.edu rm /web/users/remedynl/Solaris/* -f" />
-    <command name="shell"             options="scp *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Solaris9" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Solaris10" />
 </autobuild>
 
 
