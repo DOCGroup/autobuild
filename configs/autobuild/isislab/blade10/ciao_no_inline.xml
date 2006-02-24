@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"     value="C:\bczar\builds\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\bczar\builds\ACE_wrappers\TAO" />
         <environment name="CIAO_ROOT"    value="C:\bczar\builds\ACE_wrappers\TAO\CIAO" />
-        <environment name="CVSROOT"      value=":ext:hillj@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="plink.exe" />
         <environment name="XERCESCROOT"  value="C:\etc\xerces-c" />
         <environment name="PATH"         value="C:\bczar\builds\ACE_wrappers\bin;C:\bczar\builds\ACE_wrappers\lib;C:\bczar\builds\ACE_wrappers\TAO\CIAO\bin"
@@ -33,7 +33,7 @@
 
     <!-- create the config.h file and download cidlc -->
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="anonymous_shell"   options="pscp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="pscp -C hillj@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
 
     <!-- print some useful configuration information -->
     <command name="print_os_version" />
@@ -50,5 +50,5 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade10" />
+    <command name="anonymous_shell"   options="pscp -p -C *.txt *.html hillj@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade10" />
 </autobuild>
