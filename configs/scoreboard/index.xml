@@ -76,6 +76,10 @@ Statistics</a>
   <a href="teststats.html">
     Text based test statistics</a>
 </li>
+<li>
+  <a href="http://www.dre.vanderbilt.edu/~remedynl/Stats/">
+    Footprint statistics with GCC 4.0.2</a>
+</li>
 </ul>
 The <i>Code Coverage</i> pages illustrate which areas of
 ACE+TAO+CIAO code are used, and how frequently.  The <i>Compile- and
