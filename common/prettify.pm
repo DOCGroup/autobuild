@@ -801,6 +801,7 @@ sub Setup_Handler ($)
     if ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
         $s =~ m/nothing known about/ ||
+        $s =~ m/syntax error near unexpected token/ ||
         $s =~ m/^ERROR/ ||
         $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i)
