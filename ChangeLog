@@ -1,3 +1,8 @@
+Fri Feb 24 13:44:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/index.xml:
+          Added link to our new gcc 4.0.2 footprint statistics
+
 Fri Feb 24 07:58:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
