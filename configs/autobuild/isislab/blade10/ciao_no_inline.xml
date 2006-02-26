@@ -40,6 +40,7 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />
+    <command name="print_make_version" />
     <command name="print_perl_version" />
 
     <!-- Insert the compile_flag that controls inline expansion (disabled) and build -->
