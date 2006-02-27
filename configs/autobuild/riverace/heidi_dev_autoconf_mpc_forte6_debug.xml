@@ -41,7 +41,7 @@
     <!-- command name="generate_workspace" options="-type automake -exclude TAO,build.mwc" / -->
 
     <command name="shell"             options="(cd ACE_wrappers-repository; ./bin/bootstrap)" />
-    <command name="configure"         options="CXX=CC --preclean" />
+    <command name="configure"         options="CXX=CC --with-openssl=/usr/local/ssl --preclean" />
     <command name="make"              options="dir=build/autoconf_mpc_forte6_debug -j 2 -k" />
 
     <command name="auto_run_tests"    options="dir=build/autoconf_mpc_forte6_debug" />
