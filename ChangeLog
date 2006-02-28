@@ -1,3 +1,11 @@
+Tue Feb 28 03:24:12 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
+
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml:
+          Changed CVSROOT login from bugzilla to isisbuilds.
+          cvschroot.pl script was used to change the login information 
+          in the existing CVS sandbox. (See http://cvs.doc.wustl.edu/conversion.html)
+          Changed scp to rsync to copy scoreboard files.
+
 Mon Feb 27 22:37:59 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
