@@ -1,15 +1,20 @@
+Tue Feb 28 16:58:34 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
+
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml:
+          Fixed a minor typo.
+
 Tue Feb 28 15:28:35 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/cidlcstatic.xml
         * configs/autobuild/merengue/merengue_vc71.xml
-        
+
           Updated to use rsync instead of rsync.
 
 Tue Feb 28 03:24:12 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
 
         * configs/autobuild/shiva_64/x86-64bit-linux.xml:
           Changed CVSROOT login from bugzilla to isisbuilds.
-          cvschroot.pl script was used to change the login information 
+          cvschroot.pl script was used to change the login information
           in the existing CVS sandbox. (See http://cvs.doc.wustl.edu/conversion.html)
           Changed scp to rsync to copy scoreboard files.
 
