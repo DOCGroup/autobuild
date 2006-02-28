@@ -1,8 +1,14 @@
+Tue Feb 28 20:21:59 UTC 2006    <bczar@blade47.isislab.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml
+
+        Disabled zzip and zlib to let the build running
+
 Tue Feb 28 19:45:32 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         *  configs/autobuild/remedynl/elrond_icc32.xml
         
-           Added NOXERCES to the configs section.
+        Added NOXERCES to the configs section.
 
 Tue Feb 28 18:20:11 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 

@@ -32,7 +32,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC=gcc32\nCXX=g++32\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\nACE_COMPONENTS=FOR_TAO\n\nTAO_ORBSVCS=Notify Naming AV Log RTEvent CosEvent RTSchedEvent RTCORBAEvent \n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='interceptors=0\nzlib=1\nzzip=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='interceptors=0\nzlib=0\nzzip=0\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
