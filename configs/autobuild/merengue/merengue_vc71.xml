@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\ACE\VC71\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO\CIAO"/>
-        <environment name="CVSROOT"      value=":ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="C:\bin\plink.exe" />
         <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71\ACE_wrappers\bin;C:\ACE\VC71\ACE_wrappers\lib;c:\xerces-c-2_5_0-win32-vc7\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib" type="prefix" />
         <environment name="XERCESCROOT"   value="C:\xerces-c-2_5_0-win32-vc7"/>
@@ -52,6 +52,5 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/merengue_full"/>
-    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/merengue_full"/>
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu://web/users/isisbuilds/auto_compile_logs/tao_win2003_full" />
 </autobuild>
