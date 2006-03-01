@@ -1,3 +1,11 @@
+Wed Mar  1 16:26:14 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+          Added BAD_AIO for these builds. RHEL3 can't hack it.
+
 Wed Mar  1 15:57:50 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade49/blade49_vc71.xml

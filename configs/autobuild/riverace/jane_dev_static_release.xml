@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/static_release" />
         <variable name="log_file"     value="ACE_wrappers-repository/static_release.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/static_release" />
-        <variable name="configs"      value="Exceptions CHECK_RESOURCES STATIC" />
+        <variable name="configs"      value="BAD_AIO Exceptions CHECK_RESOURCES STATIC" />
 
     </configuration>
 

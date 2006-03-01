@@ -13,7 +13,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/debug.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/debug" />
-        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
+        <variable name="configs"      value="BAD_AIO Exceptions CHECK_RESOURCES" />
 
     </configuration>
 
