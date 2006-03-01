@@ -1,4 +1,10 @@
-Wed Mar  1 03:49:37 UTC 2006  ACE+TAO+CIAO Build Czar  <bczar@dre.vanderbilt.edu>
+Wed Mar  1 14:41:38 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml
+        
+          Fixed rsync command. 
+
+Wed Mar  1 03:49:37 UTC 2006  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade49/blade49_vc71.xml
         
