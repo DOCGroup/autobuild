@@ -1,3 +1,16 @@
+Wed Mar  1 15:57:50 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml
+        
+          Updated these builds to build all of ACE+TAO+CIAO. 
+          Also changed to use isislab account to checkout sources.
+        
+        * configs/autobuild/isislab/blade49/ciao_core.sh
+        * configs/autobuild/isislab/blade49/ciao_core.xml
+        
+          Removed.
+        
 Wed Mar  1 14:41:38 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/shiva_64/x86-64bit-linux.xml
