@@ -3,5 +3,5 @@
 # $Id$
 #
 
-exec /usr/bin/perl /build/x86-64bit/autobuild/autobuild.pl \
-  /build/x86-64bit/autobuild/configs/autobuild/shiva_64/x86-64bit-linux.xml
+exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
+    $HOME/autobuild/configs/autobuild/shiva_64/x86-64bit-linux.xml

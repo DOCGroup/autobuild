@@ -1,3 +1,14 @@
+Wed Mar  1 03:49:37 UTC 2006  ACE+TAO+CIAO Build Czar  <bczar@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml
+        
+          Changed to use isisbuild account.
+        
+        * configs/autobuild/shiva_64/driver_minimum.sh
+        
+          Changed to execute using autobuild in bczar home, and
+          autobuild file in bczar home.
+
 Tue Feb 28 23:47:53 UTC 2006    <ming.xiong@vanderbilt.edu>
 
         * configs/autobuild/isislab/blade47/NoInt_NoEx.xml
