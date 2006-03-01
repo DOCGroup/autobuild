@@ -3,13 +3,13 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
         <environment name="PATH"         value="C:\ace\ACE_wrappers-repository\lib" type="prefix" />
-        <environment name="CVSROOT"  value=":ext:shuston@cvs.doc:/project/cvs-repository" />
+        <environment name="CVSROOT"  value=":ssh;key='C:\Documents and Settings\Steve\My Documents\identity':shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="MPC_ROOT" value="C:\ace\MPC" />
 
         <variable name="root"            value="C:\ace" />
         <variable name="project_root"    value="C:\ace\ACE_wrappers-repository" />
 	<variable name="log_file"        value="vc8_debug.log" />
-        <variable name="log_root"        value="k:\build_logs\dev\vc8_debug" />
+        <variable name="log_root"        value="M:\dev\vc8_debug" />
         <variable name="name"            value="WinXP VC.NET 2005 Debug" />
         <variable name="configs"         value="Win32 Exceptions" />
     </configuration>
@@ -33,7 +33,7 @@
     <command name="print_ace_config" />
 
     <command name="generate_workspace" options="-type vc8 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -feature_file c:\ace\ACE_wrappers-repository\local.features" />
-    <command name="vc7make"           options="ACE.sln /build \x22Debug|Win32\x22" />
+    <command name="vc7make"           options="ACE.sln /build \x22Debug|Win32\x22 /useenv" />
 
     <command name="auto_run_tests"    options="-a" />
 

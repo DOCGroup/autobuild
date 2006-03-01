@@ -3,21 +3,22 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
         <environment name="PATH"         value="C:\ace\ACE_wrappers-repository\lib" type="prefix" />
-        <environment name="CVSROOT"  value=":ext:shuston@cvs.doc:/project/cvs-repository" />
+        <environment name="CVSROOT"  value=":ssh;key='C:\Documents and Settings\Steve\My Documents\identity':shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="MPC_ROOT" value="C:\ace\MPC" />
 
         <variable name="root"            value="C:\ace" />
         <variable name="project_root"    value="C:\ace\ACE_wrappers-repository" />
 	<variable name="log_file"        value="vc8_ppc2003_debug.log" />
-        <variable name="log_root"        value="k:\build_logs\dev\vc8_ppc2003_debug" />
-        <variable name="name"            value="WinXP VC.NET 2005 Debug" />
+        <variable name="log_root"        value="M:\dev\vc8_ppc2003_debug" />
+        <variable name="name"            value="WinCE4 VC.NET 2005 Debug" />
         <variable name="configs"         value="Win32 Exceptions" />
-        <variable name="vctool"          value="vcbuild" />
     </configuration>
 
     <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/.disable" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
+
+    <command name="vc7make"           options="/clean \x22Debug|Pocket PC 2003 (ARMV4)\x22 ACE_WinCE.sln" />
 
     <command name="log"               options="ON" />
 
@@ -28,14 +29,14 @@
 
     <!-- Turning on uses_wchar will prevent generation of projects that
          CE can't do since it always uses wchar. -->
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nuses_wchar = 1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nuses_wchar = 1\nwince=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
     <command name="generate_workspace" options="-type vc8 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -feature_file c:\ace\ACE_wrappers-repository\local.features -value_template platforms='\x22Pocket PC 2003 (ARMV4)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -name_modifier *_WinCE" />
-    <command name="vc7make"           options="/rebuild ACE_WinCE.sln \x22Debug|Pocket PC 2003 (ARMV4)\x22" />
+    <command name="vc7make"           options="ACE_WinCE.sln /build \x22Debug|Pocket PC 2003 (ARMV4)\x22" />
 
     <!-- command name="auto_run_tests"    options="-a" / -->
 

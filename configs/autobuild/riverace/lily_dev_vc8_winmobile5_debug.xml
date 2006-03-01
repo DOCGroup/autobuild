@@ -29,7 +29,7 @@
 
     <!-- Turning on uses_wchar will prevent generation of projects that
          CE can't do since it always uses wchar. -->
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nuses_wchar = 1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nuses_wchar = 1\nwince=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
