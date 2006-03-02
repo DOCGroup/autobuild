@@ -37,12 +37,12 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -dirs TAO -vc7 -Debug -k" />
 
-    <command name="auto_run_tests"    options="-C -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22"/> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27"/>
-    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\ACE\VC71\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\ACE\VC71\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27"/>
 </autobuild>
