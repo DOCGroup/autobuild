@@ -2,6 +2,7 @@ Wed Mar  1 21:39:28 UTC 2006  Gan Deng  <gan.deng@vanderbilt.edu>
 
         * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.bat
         * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml
+        * configs/scoreboard/tao.xml
         
           Added Minimum_CORBA enabled VC71 build.
 
