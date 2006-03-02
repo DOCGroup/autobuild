@@ -42,11 +42,27 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc" />
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO" />
+    
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CCF,CIDLC" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+
+    <command name="auto_run_tests" options=" -a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
+
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
-    <command name="auto_run_tests" options="-a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
+    <command name="auto_run_tests" options=" -a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />
