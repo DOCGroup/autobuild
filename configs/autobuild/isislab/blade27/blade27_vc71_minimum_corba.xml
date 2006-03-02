@@ -37,7 +37,7 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -dirs TAO -vc7 -Debug -k" />
 
-    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22"/> 
+    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -a -o 5400000\x22"/> 
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
