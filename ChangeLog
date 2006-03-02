@@ -1,3 +1,9 @@
+Thu Mar  2 22:11:55 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/payslee_dev_debug.xml:
+        * configs/scoreboard/ace.xml: New build, Red Hat Enterprise Linux
+          4 on x64 (amd64, in this case) 64-bit mode build.
+
 Thu Mar  2 18:47:37 UTC 2006  Gan Deng  <dengg@dre.vanderbilt.edu>
 
 	* configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml
