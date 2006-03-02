@@ -65,7 +65,7 @@
     <command name="status"            options="off" />
     <!--- scp is inefficient, use rsync -->
     <!-- <command name="anonymous_shell"   options="scp buildlog/*.txt buildlog/*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/shiva_64"/> -->
-    <command name="anonymous_shell"   options="rsync --progress --delete -z --include *.txt --include *.html --exclude ** . bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/shiva_64" />
+    <command name="anonymous_shell"   options="rsync -av --delete -z buildlog/ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/shiva_64" />
 
 </autobuild>
 
