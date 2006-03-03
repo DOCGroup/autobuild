@@ -12,7 +12,7 @@
         <variable name="build_name" value="linux-x86-64bit" />
         <variable name="root"     value="/build/x86-64bit" />
         <variable name="log_file" value="build-log.txt" />
-        <variable name="log_root" value="/build/x86-64bit" />
+        <variable name="log_root" value="/build/x86-64bit/buildlog" />
         <variable name="configs"  value="Linux 64bit x86 CIAO" />
 
     </configuration>
@@ -22,7 +22,6 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="ON" />
 
- 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" /> 
     <command name="make"              options="-k -C TAO/CIAO realclean" /> 

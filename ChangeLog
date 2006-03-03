@@ -1,3 +1,8 @@
+Fri Mar  3 19:20:50 UTC 2006  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
+
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml:
+          Changed to put the formatted buildlogs in the buildlog directory.
+
 Thu Mar  2 22:11:55 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/payslee_dev_debug.xml:
@@ -6,10 +11,10 @@ Thu Mar  2 22:11:55 UTC 2006  Steve Huston  <shuston@riverace.com>
 
 Thu Mar  2 18:47:37 UTC 2006  Gan Deng  <dengg@dre.vanderbilt.edu>
 
-	* configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml
+        * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml
 
-	  Modified by adding directory path to find log files. Also
-	  disabled all CIAO tests since this is only a minimum CORBA build.
+          Modified by adding directory path to find log files. Also
+          disabled all CIAO tests since this is only a minimum CORBA build.
 
 Thu Mar  2 16:47:37 UTC 2006  Nishanth Shankaran  <nshankar@dre.vanderbilt.edu>
 
