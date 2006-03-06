@@ -1,6 +1,6 @@
 <autobuild>
     <configuration>
-
+        <environment name="MPC_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/MPC" />
         <environment name="ACE_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/TAO"/>
         <environment name="INSLIB"          value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
