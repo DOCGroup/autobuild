@@ -11,22 +11,10 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
 <name>Linux</name>
    <build>
-   <name>CIDLC</name>
-   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_CIDLC/</url>
-   <build_sponsor>ISIS</build_sponsor>
-   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
    <name>ACE_TRACE</name>
-   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/</url>
-   <build_sponsor>ISIS</build_sponsor>
-   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-   <name>Debian_Core</name>
-   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_Core/</url>
-   <build_sponsor>ISIS</build_sponsor>
-   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
    <name>Debian_ORB_Core</name>
@@ -37,12 +25,6 @@ all the OS/platform combinations TAO is tested everyday.
    <build>
    <name>Debian_Full_Reactor</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Full_Reactors/</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-   <name>Debian_Full</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_Full/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
@@ -125,12 +107,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
       <build>
-         <name>NoInterceptors_Core</name>
-         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47</url>
-         <build_sponsor>ISIS</build_sponsor>
-         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-      </build>
-      <build>
          <name>RHEL_Static_GCC-3.4.2</name>
    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
    <build_sponsor>ISIS</build_sponsor>
@@ -175,12 +151,6 @@ all the OS/platform combinations TAO is tested everyday.
      <build>
         <name>FC4_Versioned_Namespace</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/versioned_namespace</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC4_CIAO_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade51</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
@@ -322,12 +292,6 @@ all the OS/platform combinations TAO is tested everyday.
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC71_CIDLC</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Win32_CIDLC</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_VC8</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -350,18 +314,6 @@ all the OS/platform combinations TAO is tested everyday.
             <url>http://tao.prismtech.com/doc-scoreboard/windows/MSVC6_Debug</url>
             <build_sponsor>PrismTech</build_sponsor>
             <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC71_Full</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/merengue_full</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC8_Full</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
             <name>Win2003_VC6_Release</name>
@@ -392,18 +344,6 @@ all the OS/platform combinations TAO is tested everyday.
             <url>http://www.dre.vanderbilt.edu/~remedynl/icc91i/</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC71_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC8_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade46</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
             <name>Win2003_VC71_Minimum_CORBA</name>
@@ -442,24 +382,6 @@ all the OS/platform combinations TAO is tested everyday.
    <build>
       <name>Solaris10-GCC_4_0_2</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_GCC</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris10-Studio9</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris10-CIDLC</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_CIDLC</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris10-x86-CIDLC</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/solaris_x86_CIDLC</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
@@ -555,12 +477,6 @@ all the OS/platform combinations TAO is tested everyday.
 
 <group>
   <name>MacOS</name>
-  <build>
-    <name>Tiger_GCC4_CIDLC</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_CIDLC</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
   <build>
     <name>Tiger_GCC4_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>

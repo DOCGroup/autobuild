@@ -22,7 +22,66 @@ all the OS/platform combinations CIAO is tested everyday.
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
+     <build>
+       <name>CIDLC</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_CIDLC/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+         <name>NoInterceptors_Core</name>
+         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47</url>
+         <build_sponsor>ISIS</build_sponsor>
+         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+        <name>Debian_Core</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_Core/</url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+     <name>Debian_Full</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_Full/</url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
 </group>
+
+
+<group>
+   <name>Solaris</name>
+   <build>
+      <name>Solaris10-Studio9</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+      <name>Solaris10-CIDLC</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_CIDLC</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+      <name>Solaris10-x86-CIDLC</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/solaris_x86_CIDLC</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+</group>
+
+
+<group>
+  <name>MacOS</name>
+  <build>
+    <name>Tiger_GCC4_CIDLC</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_CIDLC</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
+
 
 <group>
    <name>Windows</name>
@@ -56,6 +115,23 @@ all the OS/platform combinations CIAO is tested everyday.
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
+        <build>
+            <name>WinXP_VC71_CIDLC</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Win32_CIDLC</url>
+            <build_sponsor>ISIS</build_sponsor>
+           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>Win2003_VC71_Full</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/merengue_full</url>
+            <build_sponsor>ISIS</build_sponsor>
+            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>Win2003_VC8_Full</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
+            <build_sponsor>ISIS</build_sponsor>
+            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
 </group>
-
 </scoreboard>
