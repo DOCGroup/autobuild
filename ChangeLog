@@ -1,3 +1,8 @@
+Tue Mar  7 10:15:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Ignore warnings due to working on a NFS share
+
 Tue Mar  7 03:26:46 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * common/parse_compiler_output.pm:
