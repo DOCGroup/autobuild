@@ -68,6 +68,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/possibly used unsafely, use/) {
+    # Similar warnings on NetBSD
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/possibly used unsafely[;,] consider using/) {
     # Similar warnings on OpenBSD
     $self->Output_Normal ($s);
