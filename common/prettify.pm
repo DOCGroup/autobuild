@@ -852,10 +852,12 @@ sub Autoconf_Handler ($)
     my $self = shift;
     my $s = shift;
 
-    # For now, everything goes to the normal output. If we figure out
-    # something that should be an error or warning, then add processing
-    # like is done in the compile section.
-    $self->Output_Normal ($s);
+    if ($s =~ m/syntax error near unexpected token/) {
+        $self->Output_Error ($s);
+    }
+    else {
+        $self->Output_Normal ($s);
+    }
 }
 
 sub Test_Handler ($)
