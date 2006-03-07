@@ -1,120 +1,53 @@
 <!-- $Id$ -->
-
 <autobuild>
-
     <configuration>
-
         <environment name="ACE_ROOT"     value="C:\ACE\VC71\ACE_wrappers" />
-
         <environment name="TAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO"/>
-
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-
         <environment name="CVS_RSH"      value="c:\cygwin\bin\ssh" />
-
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\tools\nixtools;C:\ACE\VC71\ACE_wrappers\bin;C:\ACE\VC71\ACE_wrappers\lib" type="prefix" />
 
-
-
         <variable name="configs"  value="Win32 VC71 Exceptions IPV6" />
-
         <variable name="root"     value="C:\ACE\VC71\" />
-
         <variable name="log_file" value="build.txt" />
-
         <variable name="log_root" value="C:\ACE\VC71\" />
-
         <variable name="name"     value="WinXP VS.NET 2003 IPv6" />
-
         <variable name="cvs_program"    value="c:\cygwin\bin\cvs" />
-
     </configuration>
 
-
-
     <command name="status"            options="on" />
-
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-
-
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ACE -Debug -k -clean" />
-
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -TAO -Debug -k -clean" />
-
-
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
     <command name="log"               options="ON" />
 
-
-
-    <command name="shell"             options="find ACE_wrappers -name *.vcproj -exec \x22rm {}\x22 \x22;\x22" />
-
-    <command name="shell"             options="find ACE_wrappers -name *.sln -exec \x22rm {}\x22 \x22;\x22" />
-
-
+    <command name="shell"             options="find ACE_wrappers -name '*.mak' -exec rm '{}' ';'" />
 
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
-
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
-
-
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\nrwho=0\nqos=0\nipv6=1\n'" />
 
-
-
     <command name="print_os_version" />
-
     <command name="check_compiler" options="msvc" />
-
     <command name="print_ace_config" />
-
     <command name="print_cidlc_version" />
-
     <command name="print_perl_version" />
 
+    <command name="generate_workspace" options="-type nmake -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc"/>
 
-
-    <command name="generate_workspace" options="dirs=ace -exclude SSL,QoS,RMCast,TMCast -type vc71 -recurse"/>
-
-    <command name="generate_workspace" options="dirs=protocols -type vc71 -recurse"/>
-
-    <command name="generate_workspace" options="dirs=tests -type vc71 -recurse"/>
-
-    <command name="generate_workspace" options="dirs=apps -exclude gperf/tests,drwho,FaCE,Gateway,JAWS,JAWS2,JAWS3,mkcsregdb,soreduce -type vc71 -recurse"/>
-
-    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,examples,interop-tests,performance-tests,utils -type vc71 -recurse"/>
-
-
-
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ACE -Debug -k" />
-
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -TAO -Debug -k" />
-
-
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="auto_run_tests"    options="-a -o -t -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
-
-
     <command name="log"               options="OFF" />
-
     <command name="process_logs"      options="move prettify clean index" />
-
     <command name="file_manipulation" options="type=delete file=.disable" />
-
     <command name="status"            options="off" />
-
-
-
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VC71_IPV6" />
-
 </autobuild>
 
