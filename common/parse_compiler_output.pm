@@ -61,6 +61,18 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/Clock skew detected/) {
+    # Can be given when building on NFS volumes, just ignore
+    $self->Output_Normal ($s);
+    return;
+  }
+
+  if ($s =~ m/has modification time/) {
+    # Can be given when building on NFS volumes, just ignore
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/is dangerous, better use/) {
     # Linux has this annoying mktemp, mkstemp stuff. Ignore that
     # for the timebeing
