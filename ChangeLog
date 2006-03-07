@@ -1,3 +1,8 @@
+Tue Mar  7 11:54:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Added autoconf special error
+
 Tue Mar  7 10:15:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:
