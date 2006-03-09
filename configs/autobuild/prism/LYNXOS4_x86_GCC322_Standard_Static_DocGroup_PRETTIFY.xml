@@ -1,0 +1,14 @@
+<autobuild>
+    <configuration>
+
+        <variable name="root" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/static" />
+        <variable name="log_file" value="DOC_Group_test_results_run_on_lynxosx86.txt" />
+        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos_x86/tests_on_lynxos" />
+        <variable name="project_root" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/static/ACE_wrappers" />
+
+    </configuration>
+
+    <command name="process_logs"      options="clean" />
+    <command name="process_logs"      options="clean move prettify index" />
+
+</autobuild>
