@@ -1,9 +1,14 @@
+Thu Mar  9 09:35:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Added autoconf special error
+
 Tue Mar  7 14:25:57 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/jmz/Mac_OSX_Panther.xml
-        
+
         Updated to also build TAO/run TAO tests.
-        
+
 Tue Mar  7 11:54:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
