@@ -852,7 +852,8 @@ sub Autoconf_Handler ($)
     my $self = shift;
     my $s = shift;
 
-    if ($s =~ m/syntax error near unexpected token/) {
+    if ($s =~ m/syntax error near unexpected token/
+        || $s =~ m/Syntax error at line/) {
         $self->Output_Error ($s);
     }
     else {
