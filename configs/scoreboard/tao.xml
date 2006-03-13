@@ -119,6 +119,12 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
      </build>
      <build>
+       <name>ISIS_GCC4.0.2_x86_64_Valgrind</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/blade55/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+     </build>
+     <build>
       <name>FC4_x86_IPv6</name>
       <url>http://www.dre.vanderbilt.edu/~qualcomm/FC4_x86_IPv6</url>
       <build_sponsor>Qualcomm</build_sponsor>
