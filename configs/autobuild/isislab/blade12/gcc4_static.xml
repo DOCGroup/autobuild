@@ -62,6 +62,6 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/gcc4_static"/>
-    <command name="shell"             options="rm *.txt *.html" />
+<!--     <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/gcc4_static"/> -->
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z -exclude /ACE_wrappers/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/gcc4_static"/>
 </autobuild>
