@@ -1,3 +1,11 @@
+Tue Mar 14 21:53:25 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.xml
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.bat
+
+        Added a VC71 building for warning level 4
+        
+
 Mon Mar 13 20:30:14 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade12/ace_for_tao.xml
