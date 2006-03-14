@@ -5,7 +5,7 @@
         <environment name="MPC_ROOT" value="/usr/users/tao/doc_scoreboard/lynxos_pcc_gcc322/standard/dynamic/ACE_wrappers/MPC" />
         <environment name="LD_LIBRARY_PATH" value="/usr/users/tao/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/ace:/usr/users/tao/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/lib:/usr/lib:/lib:." />
         <variable name="configs"  value="LynxOS" />
-        <environment name="PATH" value="/usr/ppc-elf-lynxos/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/bin:." />
+        <environment name="PATH" value="/usr/ppc-elf-lynxos/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:." />
         <environment name="ENV_PREFIX" value="/usr/local/lynx/4.0.0/ppc-322" />
 
         <variable name="root" value="/usr/users/tao/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic" />
