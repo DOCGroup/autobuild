@@ -1,3 +1,12 @@
+Wed Mar 15 17:10:49 UTC 2006  Simon McQueen  <sm@prismtech.com>
+
+        * scoreboard.pl:
+
+          Add a -c option that allows you to enable / disable local caching of
+          copies of the logs. Default has been left as 'on' although I can't
+          see any point to doing this as the copies don't seem to ever get
+          referenced in the generated html. Mine is not to reason why.
+
 Wed Mar 15 10:24:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao.xml

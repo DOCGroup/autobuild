@@ -63,6 +63,7 @@ our $preamble = "";
 our $verbose = 0;
 our $scoreboard_title = 'Scoreboard';
 our $use_local = 0;
+our $cache_locally = 1;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
@@ -188,14 +189,14 @@ sub query_latest ()
     foreach my $buildname (keys %builds) {
         my $latest = load_web_latest ($builds{$buildname}{URL});
 
-	if (defined $latest && $latest =~ m/(...._.._.._.._..) /)
-	{
-       	    $builds{$buildname}{BASENAME} = $1;
-	}
-	else {
-		print STDERR "    Error: Could not find latest.txt for $buildname\n";
-        	next;
-	}
+        if (defined $latest && $latest =~ m/(...._.._.._.._..) /)
+        {
+            $builds{$buildname}{BASENAME} = $1;
+        }
+        else {
+                print STDERR "    Error: Could not find latest.txt for $buildname\n";
+                next;
+        }
 
         if ($latest =~ m/Config: (\d+)/) {
             $builds{$buildname}{CONFIG_SECTION} = $1;
@@ -344,8 +345,8 @@ sub decode_timestamp ($)
 
     if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
 
-	my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
-	$description = format_time($buildtime);
+        my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
+        $description = format_time($buildtime);
     }
     else {
         warn 'Unable to decode time';
@@ -369,6 +370,11 @@ sub decode_timestamp ($)
 sub update_cache ($)
 {
     my $directory = shift;
+
+    if (! $cache_locally) {
+      print "Local Caching Disabled.\n" if ($verbose);
+      return;
+    }
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -426,6 +432,10 @@ sub clean_cache ($)
 {
     my $directory = shift;
     my $keep = 5;
+
+    if (! $cache_locally) {
+      return;
+    }
 
     print "Cleaning Local Cache\n" if ($verbose);
 
@@ -660,18 +670,18 @@ sub update_html_table ($$@)
         if (defined $builds{$buildname}->{MANUAL_LINK}) {
             $havemanual = 1;
         }
-	if (defined $builds{$buildname}->{PDF}) {
-	    $havepdf = 1;
-	}
-	if (defined $builds{$buildname}->{PS}) {
-	    $haveps = 1;
-	}
-	if (defined $builds{$buildname}->{HTML}) {
-	    $havehtml = 1;
-	}
-	if (defined $builds{$buildname}->{SNAPSHOT}) {
-	    $havesnapshot = 1;
-	}
+        if (defined $builds{$buildname}->{PDF}) {
+            $havepdf = 1;
+        }
+        if (defined $builds{$buildname}->{PS}) {
+            $haveps = 1;
+        }
+        if (defined $builds{$buildname}->{HTML}) {
+            $havehtml = 1;
+        }
+        if (defined $builds{$buildname}->{SNAPSHOT}) {
+            $havesnapshot = 1;
+        }
     }
 
     print $indexhtml "<table border=1>\n";
@@ -852,50 +862,50 @@ sub update_html_table ($$@)
             }
         }
 
-	if ($havepdf) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{PDF}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
-			print $indexhtml "pdf</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
-	}
+        if ($havepdf) {
+                print $indexhtml "<td>";
+                if (defined $builds{$buildname}->{PDF}) {
+                        print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
+                        print $indexhtml "pdf</a>";
+                }
+                else {
+                        print $indexhtml "&nbsp;";
+                }
+        }
 
-	if ($haveps) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{PS}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
-			print $indexhtml "ps</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
-	}
+        if ($haveps) {
+                print $indexhtml "<td>";
+                if (defined $builds{$buildname}->{PS}) {
+                        print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
+                        print $indexhtml "ps</a>";
+                }
+                else {
+                        print $indexhtml "&nbsp;";
+                }
+        }
 
-	if ($havehtml) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{HTML}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
-			print $indexhtml "html</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
+        if ($havehtml) {
+                print $indexhtml "<td>";
+                if (defined $builds{$buildname}->{HTML}) {
+                        print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
+                        print $indexhtml "html</a>";
+                }
+                else {
+                        print $indexhtml "&nbsp;";
+                }
 
-	}
+        }
 
-	if ($havesnapshot) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{SNAPSHOT}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
-			print $indexhtml "snapshot</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
-	}
+        if ($havesnapshot) {
+                print $indexhtml "<td>";
+                if (defined $builds{$buildname}->{SNAPSHOT}) {
+                        print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
+                        print $indexhtml "snapshot</a>";
+                }
+                else {
+                        print $indexhtml "&nbsp;";
+                }
+        }
 
         print $indexhtml "<td>";
         print $indexhtml "<a href=\"";
@@ -910,7 +920,7 @@ sub update_html_table ($$@)
 
         print $indexhtml "</td>";
 
-	print $indexhtml "</tr>\n";
+        print $indexhtml "</tr>\n";
     }
     print $indexhtml "</table>\n";
 }
@@ -1002,24 +1012,24 @@ sub format_time
     my $use_long_format = shift;
 
     if ($use_local) {
-	my @tmp = localtime($time_in_secs);
+        my @tmp = localtime($time_in_secs);
         my $hour = int($tmp[2]);
         my $ampm = ($hour >= 12 ? 'pm' : 'am');
         if ($hour > 12) {
           $hour -= 12;
-	}
-	elsif ($hour == 0) {
-	  $hour = 12;
-	}
+        }
+        elsif ($hour == 0) {
+          $hour = 12;
+        }
         my $year = int($tmp[5]) + 1900;
-	if (defined $use_long_format && $use_long_format) {
-	    return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
-			   int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
-	} else {
-	    return sprintf("%02d/%02d %02d:%02d %s",
-			   int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
+        if (defined $use_long_format && $use_long_format) {
+            return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
+                           int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
+        } else {
+            return sprintf("%02d/%02d %02d:%02d %s",
+                           int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
 
-	}
+        }
     }
     return scalar(gmtime($time_in_secs)) . " UTC";
 }
@@ -1078,14 +1088,15 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l/;
+use vars qw/$opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l/;
 
-if (!getopts ('d:f:hi:o:t:vzl')
+if (!getopts ('c:d:f:hi:o:t:vzl')
     || !defined $opt_d
     || defined $opt_h) {
-    print "scoreboard.pl -f file [-h] [-i file] -o file [-m script] [-s dir] [-r] [-z] [-l]\n",
+    print "scoreboard.pl -c [0|1] -f file [-h] [-i file] -o file [-m script] [-s dir] [-r] [-z] [-l]\n",
           "              [-t title]\n";
     print "\n";
+    print "    -c [0|1]   disable/enable local caching of logs (default is enabled)\n";
     print "    -d         directory where the output files are placed \n";
     print "    -h         display this help\n";
     print "    -f         file for which html should be generated \n";
@@ -1109,6 +1120,8 @@ $index = $opt_i;
 
 # Just generate Index page alone
 $dir = $opt_d;
+
+$cache_locally = $opt_c;
 
 if (defined $opt_v) {
     print "Using verbose output\n";
