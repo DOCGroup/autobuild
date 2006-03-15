@@ -1,12 +1,12 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\VC71\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO\CIAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\VC71_W4\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\VC71_W4\ACE_wrappers\TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\ACE\VC71_W4\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"      value="C:\putty\plink.exe" />
-        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71\ACE_wrappers\bin;C:\ACE\VC71\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib"  type="prefix" />
+        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71_W4\ACE_wrappers\bin;C:\ACE\VC71_W4\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib"  type="prefix" />
         <environment name="XERCESCROOT"   value="C:\xerces"/>
         <environment name="BOOST_ROOT"    value="C:\Boost-1.32"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
@@ -14,10 +14,10 @@
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="ZLIB_ROOT"       value="C:\zlib" />
         <environment name="ZZIP_ROOT"       value="C:\zzip" />
-        <variable name="configs"  value="Win32 VC71 Exceptions" />
-        <variable name="root"     value="C:\ACE\VC71\" />
+        <variable name="configs"  value="Win32 VC71_W4 Exceptions" />
+        <variable name="root"     value="C:\ACE\VC71_W4\" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\ACE\VC71\" />
+        <variable name="log_root" value="C:\ACE\VC71_W4\" />
         <variable name="name"     value="WinXP VS.NET 2003" />
     </configuration>
 
@@ -53,6 +53,6 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade17"/>
-    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade17"/>
+    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade17/vc71_w4"/>
+    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade17/vc71_w4"/>
 </autobuild>
