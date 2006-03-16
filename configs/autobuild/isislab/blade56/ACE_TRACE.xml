@@ -62,7 +62,7 @@
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
-    <command name="auto_run_tests" options=" -a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
+    <command name="auto_run_tests" options=" -a -envmod LD_ASSUME_KERNEL=2.4.19" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />

@@ -1,3 +1,9 @@
+Thu Mar 16 13:56:48 UTC 2006  Nishanth Shankaran  <nshankar@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade56/ACE_TRACE.xml:
+
+        Modified the build to run ace tests only.
+
 Thu Mar 16 08:54:21 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
         * scoreboard.pl:
