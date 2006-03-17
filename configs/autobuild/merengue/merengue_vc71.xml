@@ -52,5 +52,5 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu://web/users/isisbuilds/auto_compile_logs/tao_win2003_full" />
+    <command name="shell"             options="unison -batch -auto -force . -ignore \x22Name ACE_wrappers\x22 -ignore \x22Name log.txt\x22 -ignore \x22Name .disable\x22 . ssh://bczar@naboo.dre.vanderbilt.edu//web/users/isisbuilds/auto_compile_logs/merengue_full" />
 </autobuild>
