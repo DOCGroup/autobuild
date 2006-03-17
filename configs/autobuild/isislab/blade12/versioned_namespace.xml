@@ -50,7 +50,7 @@
     <command name="auto_run_tests" options=" -a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=3 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/versioned_namespace"/>
