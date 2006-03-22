@@ -8,7 +8,7 @@
         <environment name="RSYNC_RSH"    value="c:\Cygwin\bin\ssh" />
         <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\ACE\VC71\Minimum\ACE_wrappers\bin;C:\ACE\VC71\Minimum\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib:c:\cygwin\bin"  type="prefix" />
 
-        <variable name="configs"  value="Win32 VC71 Exceptions" />
+        <variable name="configs"  value="Win32 VC71 Exceptions MINIMUM" />
         <variable name="root"     value="C:\ACE\VC71\Minimum" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\VC71\Minimum" />
@@ -16,8 +16,8 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -dirs TAO -vc7 -Debug -k -clean" />
 
@@ -44,8 +44,8 @@
     <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -a -o 5400000\x22"/>
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=5 index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
+
+    <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27" />
 </autobuild>
