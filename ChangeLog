@@ -1,7 +1,22 @@
 Wed Mar 22 11:22:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/rtlogic/*
-          Removed these files, rtlogic doesn't have daily builds anymore
+        * configs/autobuild/chipper/*
+        * configs/autobuild/curufin/*
+        * configs/autobuild/danzon/*
+        * configs/autobuild/guajira/*
+        * configs/autobuild/maedhros/*
+        * configs/autobuild/ringil/*
+        * configs/autobuild/rumba/*
+        * configs/autobuild/toutatis/*
+        * configs/autobuild/valinor/*
+        * configs/autobuild/sirion/*
+        * configs/autobuild/doc/*
+          Removed these files, all are very old and not on the scoreboard
+          anymore
+
+        * configs/scoreboard/index.xml:
+          Updated the list of places where builds are running
 
 Wed Mar 22 08:36:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
