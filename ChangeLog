@@ -1,3 +1,8 @@
+Wed Mar 22 14:18:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml:
+          Converted to nmake
+
 Wed Mar 22 12:18:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/doc.sh:
