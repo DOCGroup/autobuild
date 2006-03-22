@@ -1,3 +1,8 @@
+Wed Mar 22 12:18:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/doc.sh:
+          zapped
+
 Wed Mar 22 12:13:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/maglor/*
