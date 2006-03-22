@@ -1,3 +1,18 @@
+Wed Mar 22 17:02:50 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
+        * configs/autobuild/riverace/beebee_dev_wince4_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_ipv6_debug.xml:
+        * configs/autobuild/riverace/benjamin_dev_optimize.xml:
+        * configs/autobuild/riverace/kitty-puss_dev_sdk_debug.xml:
+          Removed these build configs - the systems are no longer supported.
+
+        * configs/scoreboard/ace_future.xml: Removed Riverace's Solaris 8
+          Sun Forte 6 autoconf build. Not about to add options for explicit
+          templates to autoconf when about to remove explicit templates
+          from ACE entirely.
+
 Wed Mar 22 15:49:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/dresystems/*
