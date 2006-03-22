@@ -1,3 +1,10 @@
+Wed Mar 22 12:13:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/maglor/*
+        * configs/autobuild/balar/*
+          Removed these files, all are very old and not on the scoreboard
+          anymore
+
 Wed Mar 22 11:22:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace/*
