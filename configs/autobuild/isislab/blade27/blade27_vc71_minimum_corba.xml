@@ -36,7 +36,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="dirs=TAO -type vc71 TAO_ACE.mwc" />
+    <command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/TAO_*.mwc,TAO/CIAO"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -dirs TAO -vc7 -Debug -k" />
 
