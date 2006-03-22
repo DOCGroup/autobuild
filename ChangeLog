@@ -1,10 +1,15 @@
+Wed Mar 22 08:36:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml:
+          Updated this to hopefully get a correct build
+
 Fri Mar 17 10:56:13 UTC 2006  William Otte <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/cidlcstatic.xml
         * configs/autobuild/merengue/merengue_vc71.xml
 
           Checked in some fixes that have been hanging around in the
-          builds working copy for some time. 
+          builds working copy for some time.
 
 Fri Mar 17 09:49:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
