@@ -2,10 +2,10 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"              value="/home/bczar/valgrind/ACE_wrappers" />
-        <environment name="TAO_ROOT"              value="/home/bczar/valgrind/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"             value="/home/bczar/valgrind/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH"       value="/home/bczar/valgrind/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"              value="/home/bczar/valgrindb/ACE_wrappers" />
+        <environment name="TAO_ROOT"              value="/home/bczar/valgrindb/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"             value="/home/bczar/valgrindb/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH"       value="/home/bczar/valgrindb/ACE_wrappers/lib" />
         <environment name="XERCESROOT"            value="/home/bczar/xerces" />
         <environment name="CVSROOT"               value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="PATH"                  value="/usr/local/bin" type="prefix" />
@@ -14,9 +14,9 @@
         <environment name="VALGRIND_OPTS"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --show-reachable=yes" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
 
-        <variable name="root"     value="/home/bczar/" />
+        <variable name="root"     value="/home/bczar/valgrindb/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/bczar/" />
+        <variable name="log_root" value="/home/bczar/valgrindb/" />
         <variable name="configs"  value="Linux Exceptions SSL" />
     </configuration>
 
