@@ -4,9 +4,10 @@
 
         <environment name="ACE_ROOT"        value="/home/bczar/Full/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/bczar/Full/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/bczar/Full/ACE_wrappers/TAO/CIAO"/>
+        <environment name="CIAO_ROOT"       value="/home/bczar/Full/ACE_wrappers/TAO/CIAO"/>
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
+        <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/home/bczar/Full/ACE_wrappers/lib" />
 
         <variable name="root"     value="/home/bczar/Full/" />
@@ -57,6 +58,6 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 
-    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade6/"/>
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade6/" />
 
 </autobuild>
