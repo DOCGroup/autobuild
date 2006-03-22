@@ -39,7 +39,7 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,build.mwc" />
+    <command name="generate_workspace" options="-exclude TAO,build.mwc,prism" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO" />
     <!-- And the prism extras -->
