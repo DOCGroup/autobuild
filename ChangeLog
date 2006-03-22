@@ -1,6 +1,10 @@
 Wed Mar 22 11:22:13 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace/*
+        * configs/autobuild/amrod/*
+        * configs/autobuild/gmx/*
+        * configs/autobuild/pokey/*
+        * configs/autobuild/tango/*
         * configs/autobuild/rtlogic/*
         * configs/autobuild/chipper/*
         * configs/autobuild/curufin/*
