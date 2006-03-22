@@ -1,9 +1,0 @@
-<!-- $Id$ -->
-<autobuild>
-    <configuration>
-	<environment name="HOME"    value="C:\DOCUME~1\ucibuilds" />
-        <environment name="LIB"     value="C:\PROGRA~1\MICROS~4\VC98\LIB;C:\PROGRA~1\MICROS~4\VC98\MFC\LIB;C:\openssl-0.9.6c\out32dll" />
-        <environment name="INCLUDE" value="INCLUDE=C:\PROGRA~1\MICROS~4\VC98\ATL\INCLUDE;C:\PROGRA~1\MICROS~4\VC98\INCLUDE;C:\PROGRA~1\MICROS~4\VC98\MFC\INCLUDE;C:\openssl-0.9.6c\inc32" />
-	<environment name="Path"    value="C:\PROGRA~1\MICROS~4\Common\msdev98\BIN;C:\PROGRA~1\MICROS~4\VC98\BIN;C:\PROGRA~1\MICROS~4\Common\TOOLS\WINNT;C:\PROGRA~1\MICROS~4\Common\TOOLS;C:\DOCUME~1\ucibuilds\builds\LIB_Debug\bin;C:\Perl\bin\;C:\WINNT\system32;C:\WINNT;C:\WINNT\System32\Wbem;C:\DOCUME~1\ucibuilds\bin" />
-    </configuration>
-</autobuild>
