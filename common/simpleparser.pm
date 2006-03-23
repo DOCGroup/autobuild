@@ -62,7 +62,44 @@ sub Parse ($\%)
         $line =~ s/^\s+//;
         next if (length($line) == 0);
 
-        if ($state eq 'none') {
+        if ($line =~ s/^\s*<\s*include\s*name\s*=\s*"([^"]*)"\s*\/\s*>//i) {
+            # <include name="some_file" /> tag - include the file.
+            
+            my $include_file = $1;
+
+            # Test for the file as is
+            my $included_file_handle = new FileHandle ($file, 'r');
+            if (!defined $included_file_handle) {
+                # If not found try prefixing the path from current file
+                if ($^O eq "MSWin32") {
+                    $include_file =~ s/\//\\/g;
+                }
+                
+                if ($include_file !~ m!/!) {
+                    my $dir = '';
+
+                    ($dir) = ($file =~ m!(.*)/[^/]+$!);
+                    if (length($dir) != 0) {
+                        $include_file = $dir . '/' . $include_file;
+                    }
+                }
+                
+                if ($^O eq "MSWin32") {
+                    $include_file =~ s/\\/\//g;
+                }
+            }
+            
+            # Save current state and set to zero
+            my $oldstate = $state;
+            $state = 'none';
+
+            # Process the included file
+            $self->Parse($include_file, $data);
+            
+            # Put the state back how we found it
+            $state = $oldstate;
+        }
+        elsif ($state eq 'none') {
             if ($line =~ s/^<\s*autobuild\s*>//i) {
                 $state = 'autobuild';
             }

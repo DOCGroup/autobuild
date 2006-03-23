@@ -391,7 +391,7 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>HP-UX</name>
    <build>
-      <name>HPUX11i_aCC339_Full</name>
+      <name>HPUX11i_aCC331_Full</name>
       <url>http://tao.prismtech.com/doc-scoreboard/hp1</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>

@@ -41,7 +41,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -78,12 +78,12 @@ sub Run ($)
     }
 
     # Collect the options
-    
+
     my $type;
     my $filename;
     my $output;
     my $target;
-    
+
     if ($options =~ m/type='([^']*)'/) {
         $type = $1;
     }
@@ -94,7 +94,7 @@ sub Run ($)
         print STDERR __FILE__, ": No type specified in command options\n";
         return 0;
     }
-    
+
     if ($options =~ m/file='([^']*)'/) {
         $filename = $1;
     }
@@ -120,7 +120,7 @@ sub Run ($)
     # Act on the type
     if ($type eq "append") {
         if (!defined $output) {
-            print STDERR __FILE__, ": No output specified for \"append\" type\n"; 
+            print STDERR __FILE__, ": No output specified for \"append\" type\n";
             return 0;
         }
 
@@ -148,12 +148,12 @@ sub Run ($)
             print STDERR __FILE__, ": No output specified for \"create\" type\n";
             return 0;
         }
-        
+
         # Expand some codes
-        
+
         $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
-        
+
         my $file_handle = new FileHandle ($root . '/' . $filename, 'w');
 
         if (!defined $file_handle) {
@@ -206,11 +206,15 @@ sub Run ($)
         }
     }
     elsif ($type eq "delete") {
-        
+
         unlink $filename;
     }
+    elsif ($type eq "rmtree") {
+
+        rmtree ($filename, 0, 1);
+    }
     elsif ($type eq "mustnotexist") {
-        
+
         if (-e $filename) {
             print STDERR "\"$root/$filename\" exists!\n";
             return 0;

@@ -1,3 +1,20 @@
+Thu Mar 23 13:19:23 UTC 2006  Simon McQueen  <sm@prismtech.com>
+
+        * command/file_manipulation.pm:
+        * common/simpleparser.pm:
+
+          Add 'rmtree' file manipulation type and <include /> tag.
+
+          This fixes bug #2470.
+
+        * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
+
+          Add a new build config file for our new build.
+
+        * configs/scoreboard/tao.xml:
+
+          Replace the aCC 3.3.9 build with the new aCC 3.3.1 build.
+
 Wed Mar 22 17:02:50 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/beebee_dev_pocketpc2002_debug.xml:
