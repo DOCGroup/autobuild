@@ -1,3 +1,9 @@
+Mon Mar 27 15:46:43 UTC 2006  Simon McQueen  <sm@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
+
+          Add ACE_LACKS_MEMBER_TEMPLATES to work around poor template support.
+
 Thu Mar 23 13:19:23 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
         * command/file_manipulation.pm:
