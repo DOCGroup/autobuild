@@ -1,3 +1,8 @@
+Tue Mar 28 10:05:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/cuni:
+          Zapped the files in this directory
+
 Mon Mar 27 15:46:43 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
