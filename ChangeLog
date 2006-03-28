@@ -1,3 +1,11 @@
+Tue Mar 28 12:30:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/ace_future.xml:
+          Removed icc91 and vc8 ide builds that ran at intel, they are not
+          stable, removed 3 linux builds that ran on eowyn, system had too
+          much instability problems.
+
 Tue Mar 28 10:54:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
