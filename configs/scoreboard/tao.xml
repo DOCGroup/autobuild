@@ -71,12 +71,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_10_0_GCC4.0.2_x86_64_IPV6</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_gcc/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>SuSE_10_1_ICC90_x86_64_32bit</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc32/</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -106,17 +100,11 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
-      <build>
-         <name>RHEL_Static_GCC-3.4.2</name>
-   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
-   <build_sponsor>ISIS</build_sponsor>
-   <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-      </build>
      <build>
-       <name>SuSE_10_0_GCC4.0.2_x86_64_Valgrind</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_Valgrind</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl/</build_sponsor_url>
+      <name>RHEL_Static_GCC-3.4.2</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
        <name>ISIS_GCC4.0.2_x86_64_Valgrind</name>
@@ -304,12 +292,6 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2003_VC8_ide</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC8pi</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>Win2003_VC6_Debug_Extened_FT_Interceptors</name>
             <url>http://tao.prismtech.com/doc-scoreboard/windows/MSVC6_Debug</url>
             <build_sponsor>PrismTech</build_sponsor>
@@ -338,12 +320,6 @@ all the OS/platform combinations TAO is tested everyday.
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade11/versioned_namespace</url>
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_ICC91</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/icc91i/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>Win2003_VC71_Minimum_CORBA</name>
