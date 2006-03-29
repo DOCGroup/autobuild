@@ -17,7 +17,7 @@ continuously at
 <A HREF="http://www.vrac.iastate.edu/">Virtual Reality Applications Center</A>
 <p>
 The distributed scoreboard is divided into following five
-categories: 
+categories:
 <li>ACE Builds for Beta/Release [<a href="./ace.html">regular</a>|<A href="ace_detailed.matrix.html">detailed</A>]</li>
 <li>ACE Builds for Future Beta/Release [<a href="./ace_future.html">regular</a>|<A href="ace_future_detailed.matrix.html">detailed</A>]</li>
 <li>TAO Builds for Beta/Release [<a href="./tao.html">regular</a>|<A href="tao_detailed.matrix.html">detailed</A>]</li>
@@ -41,8 +41,8 @@ scoreboard are available
 </p>
 
 <p> We use the daily builds as a basis to collect important metrics
-like compilation time, footprint and performance details. Please 
-refer to <a href="http://www.dre.vanderbilt.edu/Stats/"> this 
+like compilation time, footprint and performance details. Please
+refer to <a href="http://www.dre.vanderbilt.edu/Stats/"> this
 page </a> for more details.
 </p>
 
@@ -61,7 +61,11 @@ Statistics</a>
 </li>
 <li>
   <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CVS_Report/ACE_wrappers.html">
-    CVS usage report</a>
+    CVS usage report ACE_wrappers archive</a>
+</li>
+<li>
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CVS_Report/ACE_MPC.html">
+    CVS usage report ACE_MPC archive</a>
 </li>
 <li>
   <a href="teststats.html">
