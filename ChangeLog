@@ -5,14 +5,21 @@ Thu Mar 30 08:02:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
           Removed
 
         * configs/scoreboard/subset.xml:
-          Removed subset build
+          Removed
 
         * configs/scoreboard/tao_future.xml:
           Removed Intel C++ 9.1 builds, that beta is taking too long and we
           don't have time to keep the system running
 
         * configs/scoreboard/tao.xml:
-          Removed vc8 nmake build that was running at an Intel site
+          Removed vc8 nmake build that was running at an Intel site. Also
+          removed Irix build, it has not ran for a few months
+
+        * configs/scoreboard/index.xml:
+          Removed VRAC as build sponsor, removed subset page
+
+        * configs/scoreboard/tao_dre.sh:
+          Removed subset generation
 
 Wed Mar 29 14:36:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
