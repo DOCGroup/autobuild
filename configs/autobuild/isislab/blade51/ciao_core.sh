@@ -6,7 +6,7 @@
 cd $HOME/autobuild
 CVS_RSH=ssh
 export CVS_RSH
-cvs up
+cvs up -P -d
 
 # Run the build.
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
