@@ -1,3 +1,19 @@
+Thu Mar 30 08:02:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/tango_isis/driver_subset.sh:
+        * configs/autobuild/tango_isis/subset.xml:
+          Removed
+
+        * configs/scoreboard/subset.xml:
+          Removed subset build
+
+        * configs/scoreboard/tao_future.xml:
+          Removed Intel C++ 9.1 builds, that beta is taking too long and we
+          don't have time to keep the system running
+
+        * configs/scoreboard/tao.xml:
+          Removed vc8 nmake build that was running at an Intel site
+
 Wed Mar 29 14:36:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/isislab/blade55/isis_valgrind.xml:
