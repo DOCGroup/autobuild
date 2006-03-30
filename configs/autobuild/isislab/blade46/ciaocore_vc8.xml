@@ -28,8 +28,8 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -Debug -k -clean" />
 
-    <command name="shell"             options="find ACE_wrappers -name '*.vcproj*' -exec rm '{}' ';'" />
-    <command name="shell"             options="find ACE_wrappers -name '*.sln*' -exec rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.vcproj*' -exec c:\cygwin\bin\rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln*' -exec c:\cygwin\bin\rm '{}' ';'" />
 
     <command name="log"               options="ON" />
 
