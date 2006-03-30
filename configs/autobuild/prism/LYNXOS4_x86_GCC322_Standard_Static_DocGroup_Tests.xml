@@ -26,7 +26,10 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="auto_run_tests"    options=" -a -o -t" />
+    <!-- The following auto_run_tests were split up due to resourcing issues -->
+    <command name="auto_run_tests"    options=" -a" />
+    <command name="auto_run_tests"    options=" -o" />
+    <command name="auto_run_tests"    options=" -t" />
 
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
