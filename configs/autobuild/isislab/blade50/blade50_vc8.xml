@@ -22,8 +22,8 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
@@ -53,7 +53,7 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
+
     <command name="status"            options="off" />
 
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/blade50_vc8_full" />
