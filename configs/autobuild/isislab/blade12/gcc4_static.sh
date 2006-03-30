@@ -5,6 +5,7 @@
 # Make sure autobuild directory is up to date.
 cd $HOME/autobuild
 CVS_RSH=ssh
+export CVS_RSH
 cvs up
 
 # Run the build.

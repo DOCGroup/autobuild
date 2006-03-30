@@ -4,7 +4,8 @@
 
 # Make sure autobuild directory is up to date.
 cd $HOME/autobuild
-export CVS_RSH=ssh
+CVS_RSH=ssh
+export CVS_RSH
 cvs up
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
