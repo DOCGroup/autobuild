@@ -1,12 +1,13 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\VC8\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"      value="C:\ACE\VC8\ACE_wrappers" />
+        <environment name="TAO_ROOT"      value="C:\ACE\VC8\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO\CIAO"/>
-        <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"      value="C:\putty\plink.exe" />
-        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib"  type="prefix" />
+        <environment name="CVSROOT"       value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"       value="C:\cygwin\bin\ssh" />
+        <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
+        <environment name="PATH"          value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib;c:\cygwin\bin"  type="prefix" />
         <environment name="XERCESCROOT"   value="C:\xerces"/>
         <environment name="BOOST_ROOT"    value="C:\Boost-1.32"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
@@ -32,18 +33,19 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nboost=0\ncidl=0\nzlib=0\nzzip=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=0\ncidl=0\nzlib=0\nzzip=0\n'" />
 
-    <command name="anonymous_shell" options="pscp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin"/>
+    <command name="anonymous_shell"   options="scp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
+    <command name="print_cidlc_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type vc8"/>
-
 
     <command name="win32make"         options="msvc_mpc_auto_compile -dirs TAO/CIAO -vc8 -Debug -k" />
 
@@ -53,6 +55,5 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C *.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade46"/>
-    <command name="anonymous_shell"   options="pscp -p -C *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade46"/>
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade46" />
 </autobuild>
