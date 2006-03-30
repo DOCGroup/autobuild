@@ -21,8 +21,9 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
     <command name="log"               options="on" />
 
     <command name="make"              options="-k realclean" />
@@ -54,7 +55,8 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=3 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
+
     <command name="status"            options="off" />
+
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/blade55/" />
 </autobuild>

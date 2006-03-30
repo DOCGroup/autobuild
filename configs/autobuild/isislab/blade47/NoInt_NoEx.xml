@@ -4,8 +4,8 @@
 
         <environment name="ACE_ROOT"        value="/home/bczar/builds/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/bczar/builds/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/bczar/builds/ACE_wrappers/TAO/CIAO"/>
-        <environment name="XERCESCROOT"        value="/home/bczar/xerces"/>
+        <environment name="CIAO_ROOT"       value="/home/bczar/builds/ACE_wrappers/TAO/CIAO"/>
+        <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
         <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
@@ -15,55 +15,43 @@
         <variable name="root"     value="/home/bczar/builds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bczar/builds/" />
-        <variable name="configs"  value="Linux NoInterceptorCore" />
+        <variable name="configs"  value="Linux NoInterceptor" />
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
     <command name="log"               options="on" />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
-
-    <!-- Now, delete them again to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC=gcc32\nCXX=g++32\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\nACE_COMPONENTS=FOR_TAO\n\nTAO_ORBSVCS=Notify Naming AV Log RTEvent CosEvent RTSchedEvent RTCORBAEvent \n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='interceptors=0\nzlib=0\nzzip=0\n'" />
 
+    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
-
-    <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="-exclude TAO" />
-    <!-- This builds TAO... -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF " />
+    <command name="print_make_version" />
+    <command name="print_cidlc_version" />
+    <command name="print_perl_version" />
 
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
-    <command name="make"              options="-j 2 -C ace" />
-    <command name="make"              options="-j 2 -C apps/gperf/src" />
-    <command name="make"              options="-j 1 -C TAO/tao" />
-    <command name="make"              options="-j 1 -C TAO/TAO_IDL" />
-    <command name="make"              options="-j 1 -C Kokyu" />
-    <command name="make"              options="-j 1 -C TAO/orbsvcs" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
 
-    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+    <command name="make"              options="-j 5" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
+
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="scp *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade47"/>
-    <command name="shell"             options="rm *.txt *.html" />
+
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade47"/>
 </autobuild>

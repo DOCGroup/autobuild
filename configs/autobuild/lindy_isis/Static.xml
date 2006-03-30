@@ -19,12 +19,13 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="process_listener"  options="localhost:32002" />
     <command name="log"               options="on" />
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+
+    <command name="make"              options="realclean" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nexceptions=1\noptimize=0\ninline=0\nssl=1\ndebug=0\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wwrite-strings -Wcast-align -Wformat=2\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
@@ -38,23 +39,13 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="-exclude TAO" />
-    <!-- This builds TAO... -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO " />
-
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF " />
-
-    <command name="make"              options="realclean" />
-    <command name="make"              options="-C TAO realclean" />
-    <command name="make"              options="-C TAO/CIAO realclean" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
 
     <command name="make"              options="-j 4 -k" />
-    <command name="make"              options="-j 4 -k -C TAO" />
-    <command name="make"              options="-j 4 -k -C TAO/CIAO" />
+
     <command name="auto_run_tests"    options="-envmod LD_ASSUME_KERNEL=2.4.21 -a -o -t -C" />
+
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
