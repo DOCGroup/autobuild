@@ -199,6 +199,32 @@ SCOREBOARD NOTES
     a snapshot of the CVS repository ready for a user to download
     and run "./configure".
 
+USING Cygwin on Windows
+=======================
+
+On Windows we need to have access to several unix like tools, the
+easiest is to use Cygwin. The following steps describe how to obtain
+Cygwin and install it.
+
+* Go to www.cygwin.com and download the setup.exe from the page and
+  install it on the desktop
+
+* Start setup.exe from the desktop, press next, another time next, root
+  directory is ok by default, change local package directory to
+  c:\cygwin\download, select how to connect to the internet, select a
+  download site in your area. Now the package selection is shown, press
+  the view button once, besides the default packages also select cvs,
+  openssh, rsync and svn and then press next to install everything.
+  Let the installer create the desktop icon.
+
+* Start cygwin using the desktop icon and do a ssh to another server and
+  close the cygwin shell again. Then copy the ssh keys from another system
+  to c:\cygwin\home\<user>\.ssh.
+
+* For perl we prefer active state perl from www.activestate.com
+
+* Then have a look at other build files how to setup a config file.
+
 MISCELLANEOUS NOTES
 ===================
 
