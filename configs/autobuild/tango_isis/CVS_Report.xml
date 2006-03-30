@@ -28,7 +28,6 @@
     <command name="shell"    options="cd ${ACE_ROOT}; perl ${HOME}/cvschangelogbuilder-2.2/cvschangelogbuilder.pl -ssh -output=buildhtmlreport >ACE_wrappers.html" />
 
     <command name="shell"    options="cp ${ACE_ROOT}/ACE_wrappers.html /web/users/isisbuilds/auto_compile_logs/CVS_Report" />
-    <command name="shell"    options="cp ${ACE_ROOT}/ACE_MPC.html /web/users/isisbuilds/auto_compile_logs/CVS_Report" />
     <command name="shell"    options="cp ${ACE_ROOT}/*.png /web/users/isisbuilds/auto_compile_logs/CVS_Report" />
 
     <command name="log"               options="off" />
