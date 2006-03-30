@@ -1,3 +1,12 @@
+Thu Mar 30 09:11:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/isislab/*:
+          Made several changes:
+          - do a cvs update of the autobuild archive
+          - converted things to use cygwin and changed the upload to use rsync
+          - corrected several errors
+          - converted vc8 builds to use nmake
+
 Thu Mar 30 08:02:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/tango_isis/driver_subset.sh:
