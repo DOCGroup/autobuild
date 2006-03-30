@@ -10,19 +10,6 @@ decide the migration paths and strategies.
 </preamble>
 
 <group>
-   <name>Test Builds for TAO</name>
-     <build>
-      <name>SLES_9_ICC91_x86_64_32bit</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/intel91_icc32/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>SLES_9_ICC91_x86_64_64bit</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/intel91_icc64/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
    <name>BSD</name>
    <build>
       <name>OpenBSD_Full</name>
