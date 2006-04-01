@@ -134,13 +134,6 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
-     <build>
-        <name>HP-UX_11.00_gcc3_Debug</name>
-        <url>http://acebuilds.riverace.com/bumbles/dev/gcc3_debug</url>
-        <red>36</red>
-        <build_sponsor>Riverace</build_sponsor>
-        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
 </group>
 
 <group>

@@ -23,13 +23,6 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
     </build>
     <build>
-      <name>HP-UX_11.00_gcc3_Debug(autoconf)</name>
-      <url>http://acebuilds.riverace.com/bumbles/dev/autoconf_gcc_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-    </build>
-    <build>
       <name>Redhat_Enterprise_Linux_3_Debug(autoconf)</name>
       <url>http://acebuilds.riverace.com/jane/dev/autoconf_debug</url>
       <red>36</red>
