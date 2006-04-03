@@ -7,7 +7,9 @@
         <environment name="CVSROOT"       value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"          value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib;c:\cygwin\bin"  type="prefix" />
+        <environment name="PATH"          value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\vcpackages;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\Program Files\Microsoft Visual Studio 8\VC\vcpackages;C:\bin;C:\zlib\lib;C:\zzip\lib;c:\xerces-vc8\lib;C:\Perl\bin;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;c:\xerces\bin;C:\Perl\bin;c:\zzip\lib;c:\zlib\lib;c:\putty:c:\xerces\lib;c:\cygwin\bin" type="prefix" />
+        <environment name="INCLUDE"       value="c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\INCLUDE;c:\Program Files\Microsoft Visual Studio 8\VC\INCLUDE;c:\Program Files\Microsoft Visual Studio 8\VC\PlatformSDK\include;c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\include;" type="prefix" />
+        <environment name="LIB"           value="c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\LIB;c:\Program Files\Microsoft Visual Studio 8\VC\LIB;c:\Program Files\Microsoft Visual Studio 8\VC\PlatformSDK\lib;c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\lib;LIBPATH=c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\LIB" type="prefix" />
         <environment name="XERCESCROOT"   value="C:\xerces"/>
         <environment name="BOOST_ROOT"    value="C:\Boost-1.32"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
