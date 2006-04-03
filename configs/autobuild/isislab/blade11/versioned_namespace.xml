@@ -7,8 +7,9 @@
         <environment name="CIAO_ROOT"     value="C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\TAO\CIAO"/>
         <environment name="XERCESCROOT"  value="C:\Docume~1\bczar\xerces"/>
         <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"      value="plink" />
-        <environment name="PATH"         value="C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\bin;C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\lib;C:\Docume~1\bczar\xerces\lib" type="prefix" />
+        <environment name="CVS_RSH"      value="c:\Cygwin\bin\ssh" />
+        <environment name="RSYNC_RSH"    value="c:\Cygwin\bin\ssh" />
+        <environment name="PATH"         value="C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\bin;C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\lib;C:\Docume~1\bczar\xerces\lib;c:\cygwin\bin" type="prefix" />
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="C:\Docume~1\bczar\builds\versioned_namespace\" />
         <variable name="log_file" value="log.txt" />
@@ -27,9 +28,11 @@
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nversioned_namespace=1\n'" />
-    <command name="anonymous_shell"   options="pscp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='versioned_namespace=1\n'" />
+
+    <command name="anonymous_shell"   options="scp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
@@ -46,5 +49,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C *.txt *.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade11/versioned_namespace"/>
+
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade11/versioned_namespace" />
 </autobuild>
