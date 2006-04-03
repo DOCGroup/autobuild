@@ -30,8 +30,8 @@
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
-    <command name="shell"             options="find ACE_wrappers -name '*.mak' -exec rm '{}' ';'" />
-    <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.mak' -exec c:\cygwin\bin\rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.manifest' -exec c:\cygwin\bin\rm '{}' ';'" />
 
     <command name="log"               options="ON" />
 
