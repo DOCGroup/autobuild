@@ -28,7 +28,7 @@
 
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="win32make"         options="nmake /I /f TAO/CIAO/Makefile CFG=\x22Win32 Debug\x22 REALCLEAN" />
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.mak' -exec c:\cygwin\bin\rm '{}' ';'" />
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.manifest' -exec c:\cygwin\bin\rm '{}' ';'" />
@@ -52,7 +52,7 @@
 
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type nmake -base vc8nmake"/>
 
-    <command name="win32make"         options="nmake /I /f TAO/CIAO/Makefile CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="auto_run_tests"    options="-C -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
