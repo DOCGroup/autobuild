@@ -1,3 +1,9 @@
+Wed Apr  5 18:34:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ciao.xml:
+        * configs/scoreboard/tao.xml:
+          Moved several builds from tao to ciao part
+
 Sat Apr  1 22:01:40 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Removed HP-UX 11.00 gcc3 build.
