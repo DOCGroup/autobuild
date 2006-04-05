@@ -10,6 +10,12 @@ all the OS/platform combinations CIAO is tested everyday.
 
 <group>
 <name>Linux</name>
+   <build>
+   <name>Debian_Full_Reactor</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Full_Reactors/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
      <build>
         <name>FC4_CIAO_Core</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade51</url>
