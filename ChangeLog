@@ -1,3 +1,12 @@
+Wed Apr  5 20:48:14 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml:
+        * configs/scoreboard/tao.xml:
+
+        Moved more stuff that happend to build ciao to ciao beta/release,
+        otherwise its too hard trying to distinguish them from tao builds.
+        
+
 Wed Apr  5 18:34:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ciao.xml:

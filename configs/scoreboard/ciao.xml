@@ -79,8 +79,44 @@ all the OS/platform combinations CIAO is tested everyday.
 </group>
 
 
+
+<group>
+<name>Stats Builds</name>
+   <build>
+   <name>SuSE_FP_Stats</name>
+   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/FP_Metrics</url>
+   <build_sponsor>ISIS</build_sponsor>
+   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+   <name>SuSE_CP_Static</name>
+   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CP_Metrics</url>
+   <build_sponsor>ISIS</build_sponsor>
+   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+      <name>SuSE_FP_GCC4</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/Statcompile/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+</group>
+
+
 <group>
    <name>Solaris</name>
+   <build>
+      <name>Solaris10-x86-Studio9</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+      <name>Solaris10-x86-GCC_3_4_3</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_GCC34</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
    <build>
       <name>Solaris10-Studio9</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9</url>
@@ -196,6 +232,12 @@ all the OS/platform combinations CIAO is tested everyday.
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+        </build>
+        <build>
+            <name>Win2003_VC71_Versioned_Namespace</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade11/versioned_namespace</url>
+            <build_sponsor>ISIS</build_sponsor>
+            <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
         </build>
 </group>
 </scoreboard>
