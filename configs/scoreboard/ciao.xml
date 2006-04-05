@@ -46,6 +46,30 @@ all the OS/platform combinations CIAO is tested everyday.
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
+     <build>
+      <name>SuSE_10_1_ICC90_x86_64_32bit</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc32/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+      <name>SuSE_10_1_ICC90_x86_64_64bit</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc64/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+        <name>RHEL3_NoInline</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+        <name>FC4_GCC4</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/gcc4_static</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+     </build>
 </group>
 
 
@@ -69,6 +93,12 @@ all the OS/platform combinations CIAO is tested everyday.
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
+   <build>
+      <name>Solaris10-GCC_4_0_2</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_GCC</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
 </group>
 
 
@@ -82,9 +112,31 @@ all the OS/platform combinations CIAO is tested everyday.
   </build>
 </group>
 
+<group>
+  <name>VxWorks</name>
+   <build>
+      <name>VxWorks5.5.1_x86_GCC2.96_Exceptions</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PentiumX_GNU</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+     <name>VxWorks6.2_x86</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks61/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+</group>
+
 
 <group>
    <name>Windows</name>
+        <build>
+            <name>WinXP_BCB6_Pro_Dynamic_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/BCB6dd</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
         <build>
             <name>WinXP_VC71_CIAOCore_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17</url>
