@@ -1,3 +1,9 @@
+Wed Apr  5 22:58:40 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * configs/autobuild/flamenco/compiletime_metrics.xml
+
+        Changed to use bczar to fetch cidlc
+
 Wed Apr  5 20:48:14 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
