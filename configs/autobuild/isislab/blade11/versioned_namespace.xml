@@ -19,7 +19,7 @@
 
     <command name="status"            options="on" />
 
-    <command name="process_listener"  options="localhost:32001" />
+    <command name="process_listener"  options="localhost:32002" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc71 -ALL -Debug -k -clean" />
 
