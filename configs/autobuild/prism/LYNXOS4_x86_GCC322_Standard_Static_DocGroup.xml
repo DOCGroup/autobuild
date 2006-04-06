@@ -43,7 +43,7 @@
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO" />
     <!-- And the prism extras (tao84 needs carry forward, tao193 needs V4 equivelant) -->
-    <command name="generate_workspace" options="dirs=prism/tests -exclude tao84_regression tao193_regression" />
+    <command name="generate_workspace" options="dirs=prism/tests -exclude tao84_regression,tao193_regression" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
