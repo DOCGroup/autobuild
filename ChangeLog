@@ -1,3 +1,8 @@
+Thu Apr  6 09:39:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
+          Don't run SSL tests when ssl is not build
+
 Wed Apr  5 22:58:40 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/autobuild/flamenco/compiletime_metrics.xml
@@ -11,7 +16,6 @@ Wed Apr  5 20:48:14 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         Moved more stuff that happend to build ciao to ciao beta/release,
         otherwise its too hard trying to distinguish them from tao builds.
-        
 
 Wed Apr  5 18:34:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
