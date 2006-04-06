@@ -31,6 +31,8 @@
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
 
     <!-- ACE -->
     <command name="generate_workspace" options="-exclude TAO " />
