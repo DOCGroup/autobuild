@@ -1,3 +1,11 @@
+Fri Apr  7 19:44:27 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        *  configs/scoreboard/ciao.xml
+        *  configs/scoreboard/tao.xml
+
+        Moved debian_singlethreaded from tao.xml to ciao.xml since it
+        builds ciao.
+
 Thu Apr  6 09:39:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
