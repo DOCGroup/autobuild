@@ -22,8 +22,9 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
     <command name="log"               options="on" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
@@ -48,7 +49,6 @@
 
     <command name="log"                options="off" />
     <command name="process_logs"       options="clean=5 move prettify index" />
-    <command name="file_manipulation"  options="type=delete file=.disable" />
     <command name="status"             options="off" />
 
     <command name="shell"              options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
