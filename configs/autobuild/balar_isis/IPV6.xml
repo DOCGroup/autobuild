@@ -19,8 +19,9 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32003" />
+
     <command name="log"               options="on" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
@@ -55,6 +56,5 @@
     <command name="auto_run_tests"    options="-envmod LD_ASSUME_KERNEL=2.4.19 -a -o -t -C" />
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
