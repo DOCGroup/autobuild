@@ -1,3 +1,5 @@
+<!-- $Id$ -->
+
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/static/ACE_wrappers" />

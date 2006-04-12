@@ -1,3 +1,21 @@
+Wed Apr 12 13:51:03 UTC 2006  Simon McQueen  <sm@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_PRETTIFY.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_POST_ONLY.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_PRETTIFY.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+
+          Removed duplicate macro def from aCC 3.31 build. Added id tags and
+          replaced references to 'Makefile' with 'GNUmakefile'.
+
 Fri Apr  7 19:44:27 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         *  configs/scoreboard/ciao.xml
