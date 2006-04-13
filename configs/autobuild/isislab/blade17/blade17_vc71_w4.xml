@@ -16,9 +16,9 @@
         <environment name="ZLIB_ROOT"       value="C:\zlib" />
         <environment name="ZZIP_ROOT"       value="C:\zzip" />
         <variable name="configs"  value="Win32 VC71_W4 Exceptions" />
-        <variable name="root"     value="C:\ACE\VC71_W4\" />
+        <variable name="root"     value="C:\ACE\VC71_W4" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\ACE\VC71_W4\" />
+        <variable name="log_root" value="C:\ACE\VC71_W4" />
         <variable name="name"     value="WinXP VS.NET 2003" />
     </configuration>
 
