@@ -3,15 +3,16 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
         <environment name="PATH"         value="C:\ace\ACE_wrappers-repository\lib" type="prefix" />
-        <environment name="CVSROOT"  value=":ext:shuston@cvs.doc:/project/cvs-repository" />
-        <environment name="MPC_ROOT" value="C:\ace\MPC" />
+        <environment name="CVSROOT"      value=":ext:shuston@cvs.doc:/project/cvs-repository" />
+        <environment name="MPC_ROOT"     value="C:\ace\MPC" />
+        <environment name="SSL_ROOT"     value="C:\opt\openssl-0.9.8a" />
 
         <variable name="root"            value="C:\ace" />
         <variable name="project_root"    value="C:\ace\ACE_wrappers-repository" />
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root"        value="g:\build_logs\dev\vc7_debug" />
         <variable name="name"            value="WinXP VC.NET 2003 Debug" />
-        <variable name="configs"         value="Win32 Exceptions" />
+        <variable name="configs"         value="Win32 SSL Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -24,7 +25,7 @@
     <command name="cvs"               options="checkout -P ACE" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nipv6 = 1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nssl=1\nqos=1\nipv6 = 1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
