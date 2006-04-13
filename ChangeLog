@@ -1,3 +1,10 @@
+Thu Apr 13 13:46:44 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+
+          Added a step to build tao_idl3_to_idl2 and moved when idl_stubs is
+          built for CIAO.
+
 Wed Apr 12 13:51:03 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full.xml:

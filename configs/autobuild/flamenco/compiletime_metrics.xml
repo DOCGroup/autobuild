@@ -52,11 +52,13 @@
     <command name="make"              options="-k CXX=$ACE_ROOT/bin/g++_metric.sh" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO/CIAO/tools/IDL3_to_IDL2" />
+    <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
     <command name="make"              options="-k -C TAO --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/TAO_IDL realclean" />
     <command name="make"              options="-k -C TAO CXX=$ACE_ROOT/bin/g++_metric.sh" />
-    <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
     <command name="make"              options="-k -C TAO/CIAO --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/tools/IDL3_to_IDL2 realclean" />
     <command name="make"              options="-k -C TAO/CIAO CXX=$ACE_ROOT/bin/g++_metric.sh" />
 
     <command name="log"               options="off" />
