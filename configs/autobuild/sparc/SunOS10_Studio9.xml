@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers/TAO/CIAO" />
-        <environment name="LD_LIBRARY_PATH" value="/project/builds/bczar/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:/usr/local/lib:/build/builds/bczar/utils/xerces-studio/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/project/builds/bczar/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:/usr/local/lib:/build/builds/bczar/utils/xerces-studio/lib:/usr/sfw/lib" />
         <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="PATH"            value="/usr/local/bin:/usr/sfw/bin:/build/builds/bczar/utils/xerces-studio/lib" type="prefix" />
