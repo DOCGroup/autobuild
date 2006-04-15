@@ -12,7 +12,6 @@ cd $HOME/ACE/autobuild
 
 cvs -z9 up -P -d
 
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/elrond_sequence.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/elrond_icc64.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/elrond_icc32.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/elrond_gcc.sh
