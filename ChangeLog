@@ -1,3 +1,10 @@
+Tue Apr 18 13:18:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+
+          Corrected config.h generated include file from ace/config-sunos5.8.h to
+          ace/config-sunos5.9.h to match the SOLARIS9 system.
+
 Thu Apr 13 13:46:44 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/flamenco/compiletime_metrics.xml:

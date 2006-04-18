@@ -31,7 +31,7 @@
     <!-- Now, delete all the Makefiles to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=1\nexceptions=1\ndebug=0\nthreads=1\nstatic_libs_only=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\ninline=0\n'" />
 
     <command name="print_os_version" />
