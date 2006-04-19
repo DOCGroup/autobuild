@@ -1,3 +1,9 @@
+Wed Apr 19 20:30:59 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml:
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml: The Riverace
+          MSVC6 build is removed from the development stream.
+
 Wed Apr 19 13:24:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:

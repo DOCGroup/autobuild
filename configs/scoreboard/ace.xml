@@ -192,14 +192,6 @@ all the OS/platform combinations ACE is tested everyday.
 <group>
 <name>Windows</name>
    <build>
-      <name>Windows2000_MSVC6_Debug</name>
-      <url>http://acebuilds.riverace.com/beebee/dev/msvc6_debug</url>
-      <orange>24</orange>
-      <red>96</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-   </build>
-   <build>
       <name>WindowsXP_VC.NET_Debug(IPv6)</name>
       <url>http://acebuilds.riverace.com/hope/dev/vc7_debug</url>
       <red>36</red>
