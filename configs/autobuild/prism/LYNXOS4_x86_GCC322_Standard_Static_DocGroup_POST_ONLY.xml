@@ -8,7 +8,7 @@
         <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-        <environment name="PATH" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin:/usr/local/lynx/4.0.0/x86/cdk/sunos-elf-x86/bin:/usr/local/lynx/4.0.0/x86/cdk/sunos-elf-x86/usr/bin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
+        <environment name="PATH" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin:/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/bin:/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/usr/bin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
         <environment name="ENV_PREFIX" value="/usr/local/lynx/4.0.0/x86-322" />
         <environment name="TAO_IDL" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/tao_idl" />
 
