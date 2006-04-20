@@ -25,6 +25,13 @@ all the OS/platform combinations ACE is tested everyday.
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
+     <name>AIX_5.2_VA6_Debug(autoconf)</name>
+     <url>http://acebuilds.riverace.com/cuddy/dev/autoconf_va6_debug</url>
+     <red>36</red>
+     <build_sponsor>Riverace</build_sponsor>
+     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
+     <build>
      <name>AIX_5.2_VA6-64_Debug</name>
      <url>http://acebuilds.riverace.com/cuddy/dev/va6-64_debug</url>
      <red>36</red>
@@ -152,14 +159,14 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris_10_sparc_Studio10(64bit)_Debug</name>
+      <name>Solaris_10_sparc_Studio10_Debug(64bit)</name>
       <url>http://acebuilds.riverace.com/chad/dev/studio10-64_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris_10_x86_Studio10(64bit)_Debug</name>
+      <name>Solaris_10_x64_Studio10_Debug(64bit)</name>
       <url>http://acebuilds.riverace.com/billy/dev/studio10-64_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
