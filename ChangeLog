@@ -1,3 +1,8 @@
+Thu Apr 20 14:51:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ciao.xml:
+          The Studio9 builds where really Studio 10 builds
+
 Thu Apr 20 13:21:03 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
