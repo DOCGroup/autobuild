@@ -47,28 +47,10 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-        <name>Dynamic_Hash_Op_Lookup</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Dynamic_Hash</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
       <name>RHEL4_ICC90_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_ICC/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHAS_Static</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHAS_IPV6</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_IPV6</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
       <name>RHEL_Static_GCC-3.4.2</name>
@@ -87,12 +69,6 @@ all the OS/platform combinations TAO is tested everyday.
       <url>http://www.dre.vanderbilt.edu/~qualcomm/FC4_x86_IPv6</url>
       <build_sponsor>Qualcomm</build_sponsor>
       <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
-     </build>
-     <build>
-      <name>Debian_GCC_4.0</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/pantera-gcc-4.0/</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
       <name>FC4_x86_SCTP</name>

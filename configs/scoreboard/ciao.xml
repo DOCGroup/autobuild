@@ -10,6 +10,30 @@ all the OS/platform combinations CIAO is tested everyday.
 
 <group>
 <name>Linux</name>
+     <build>
+      <name>RHAS_Static</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+      <name>RHAS_IPV6</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_IPV6</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+        <name>Dynamic_Hash_Op_Lookup</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Dynamic_Hash</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+      <name>Debian_GCC_4.0</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/pantera-gcc-4.0/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+     </build>
    <build>
    <name>Debian_SingleThreaded</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_SingleThreaded/</url>
