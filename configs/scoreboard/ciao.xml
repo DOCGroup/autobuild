@@ -112,7 +112,7 @@ all the OS/platform combinations CIAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
-      <name>Solaris10-x86-Studio9</name>
+      <name>Solaris10-x86-Studio10</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
@@ -124,7 +124,7 @@ all the OS/platform combinations CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris10-Studio9</name>
+      <name>Solaris10-Studio10</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
