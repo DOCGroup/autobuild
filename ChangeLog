@@ -13,9 +13,10 @@ Thu Apr 20 13:21:03 UTC 2006  Steve Huston  <shuston@riverace.com>
         * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml: New
           Solaris 9 g++ autoconf build.
 
-        * configs/scoreboard/ace.xml: Removed Solaris 9 Forte7 build; added
-          gcc3 Debug autoconf build. Moved Red Hat Enterprise Linux 3 autoconf
-          build from "future" scoreboard to here.
+        * configs/scoreboard/ace.xml: Removed Solaris 9 Forte7 and Solaris 8
+          Forte 6 builds; added gcc3 Debug autoconf build. Moved Red Hat
+          Enterprise Linux 3 autoconf build from "future" scoreboard to here.
+          Removed HP-UX 11.00 builds.
 
         * configs/scoreboard/ace_future.xml: Removed HP-UX 11.00 autoconf,
           Solaris 9 Forte7 autoconf builds.
