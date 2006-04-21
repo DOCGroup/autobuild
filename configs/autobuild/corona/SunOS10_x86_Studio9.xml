@@ -22,8 +22,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="process_listener"  options="localhost:32001" />
     <command name="log"               options="on" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
@@ -33,7 +32,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef TAO_IDL_PREPROCESSOR \n#define TAO_IDL_PREPROCESSOR \x22cc\x22\n#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_DEV_POLL 1\n#include \x22ace/config-sunos5.9.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ndebug=0\nssl=1\nPLATFORM_SSL_CPPFLAGS+= -I/usr/sfw/include\nPLATFORM_SSL_LDFLAGS+=-L/usr/sfw/lib\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='ssl=1\nzlib=1\nzzip=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nzlib=1\nzzip=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="sun_cc" />
@@ -42,10 +41,10 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -feature_file local.features " />
+    <command name="generate_workspace" options="-exclude TAO" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -feature_file ../local.features" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIAO.mwc,CCF,CIDLC -feature_file ../../local.features" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIAO.mwc,CCF,CIDLC" />
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Solaris/x86/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
@@ -59,6 +58,5 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
