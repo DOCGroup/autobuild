@@ -1,17 +1,28 @@
+Fri Apr 21 10:20:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup.xml:
+
+          Corrected Major/Minor LynxOS version macros in config.h.
+
 Fri Apr 21 08:50:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:
+
           Changed prismtech lynxosx86 from static to dynamic build.
 
 Thu Apr 20 16:57:56 UTC 2006  Steve Huston  <shuston@riverace.com>
 
-        * configs/scoreboard/ace.xml: Added AIX 5.2 VA6 autoconf build;
-          adjusted naming on other Riverace builds to be consistent and
-          easier to read.
+        * configs/scoreboard/ace.xml:
+
+          Added AIX 5.2 VA6 autoconf build; adjusted naming on other Riverace
+          builds to be consistent and easier to read.
 
 Thu Apr 20 14:51:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ciao.xml:
+
           The Studio9 builds where really Studio 10 builds
 
 Thu Apr 20 13:21:03 UTC 2006  Steve Huston  <shuston@riverace.com>
@@ -21,30 +32,39 @@ Thu Apr 20 13:21:03 UTC 2006  Steve Huston  <shuston@riverace.com>
         * configs/autobuild/riverace/bumbles_dev_acc_debug.xml:
         * configs/autobuild/riverace/bumbles_dev_acc_static_release.xml:
         * configs/autobuild/riverace/bumbles_dev_gcc3_debug.xml:
+
           Removed; HP-UX 11.00 is out of the development stream.
 
         * configs/autobuild/riverace/heidi_dev_autoconf_mpc_forte6_debug.xml:
         * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
         * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
-        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml: Removed the
-          Forte 6 and 7 builds as these compilers are no longer supported in
-          the development stream.
+        * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
+        
+          Removed the Forte 6 and 7 builds as these compilers are no longer
+          supported in the development stream.
 
-        * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml: New
-          Solaris 9 g++ autoconf build.
+        * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml:
+        
+          New Solaris 9 g++ autoconf build.
 
-        * configs/scoreboard/ace.xml: Removed Solaris 9 Forte7 and Solaris 8
-          Forte 6 builds; added gcc3 Debug autoconf build. Moved Red Hat
-          Enterprise Linux 3 autoconf build from "future" scoreboard to here.
+        * configs/scoreboard/ace.xml:
+
+          Removed Solaris 9 Forte7 and Solaris 8 Forte 6 builds; added gcc3
+          Debug autoconf build. Moved Red Hat Enterprise Linux 3 autoconf
+          build from "future" scoreboard to here.
           Removed HP-UX 11.00 builds.
 
-        * configs/scoreboard/ace_future.xml: Removed HP-UX 11.00 autoconf,
+        * configs/scoreboard/ace_future.xml:
+
+          Removed HP-UX 11.00 autoconf,
           Solaris 9 Forte7 autoconf builds.
 
 Wed Apr 19 20:30:59 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml:
-        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml: The Riverace
+        * configs/autobuild/riverace/beebee_dev_msvc6_debug.xml:
+
+          The Riverace
           MSVC6 build is removed from the development stream.
 
 Wed Apr 19 13:24:00 UTC 2006  Simon Massey  <sma@prismtech.com>

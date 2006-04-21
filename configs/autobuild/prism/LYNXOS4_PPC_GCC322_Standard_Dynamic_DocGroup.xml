@@ -33,7 +33,7 @@
     <!-- Now, delete all the Makefiles to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LYNXOS_MAJOR=4\n#define ACE_LYNXOS_MINOR=0\n\n#include \x22ace/config-lynxos.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OBJSFORMAT=elf\noptimize=0\nexceptions=1\ndebug=0\nthreads=1\nshared_libs_only=1\nstatic_libs_only=0\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\nCXX=c++\nCFLAGS+=-fsigned-char -fPIC\nSOFLAGS+= -fPIC\nLDFLAGS+= -fPIC\nLDFLAGS+= -Wl,-rpath-link,/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/ace\nLDFLAGS+= -Wl,-rpath-link,/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/lib\nLDFLAGS+= -L/usr/local/lynx/4.0.0/ppc-322/cdk/sunos-elf-ppc/usr/ppc-lynx-lynxos/lib/thread/shlib -lstdc++\nTAO_IDL:=/usr/users/tao/ultra4/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/tao_idl\nTAO_IDLFLAGS+=-g /usr/users/tao/ultra4/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/gperf\nGPERF:=/usr/users/tao/ultra4/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/gperf\n'" />
 
     <command name="print_os_version" />
