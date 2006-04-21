@@ -1,3 +1,8 @@
+Fri Apr 21 08:50:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+          Changed prismtech lynxosx86 from static to dynamic build.
+
 Thu Apr 20 16:57:56 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Added AIX 5.2 VA6 autoconf build;
