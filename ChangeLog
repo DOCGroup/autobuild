@@ -1,3 +1,9 @@
+Mon Apr 24 14:49:06 UTC 2006  Wallace Zhang  <zhangw@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Added four wchar builds to scoreboard.
+
 Fri Apr 21 10:20:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml:
@@ -39,12 +45,12 @@ Thu Apr 20 13:21:03 UTC 2006  Steve Huston  <shuston@riverace.com>
         * configs/autobuild/riverace/heidi_dev_forte6_debug.xml:
         * configs/autobuild/riverace/essie_dev_autoconf_mpc_forte7_debug.xml:
         * configs/autobuild/riverace/essie_dev_forte7-64_debug.xml:
-        
+
           Removed the Forte 6 and 7 builds as these compilers are no longer
           supported in the development stream.
 
         * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml:
-        
+
           New Solaris 9 g++ autoconf build.
 
         * configs/scoreboard/ace.xml:
