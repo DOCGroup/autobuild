@@ -1,3 +1,9 @@
+Tue Apr 25 17:17:14 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
+
+        * autobuild_rss.py
+        
+          Add a missing "/" to the guid link, otherwise the link is broken
+
 Tue Apr 25 05:47:11 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py

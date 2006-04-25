@@ -202,7 +202,7 @@ def main ():
         item = RSSItem ()
         item.title = build[0]
         item.link = build[1] + "/index.html"
-        item.guid = build[1] + build[2][0:16] + "_Totals.html"
+        item.guid = build[1] + "/" + build[2][0:16] + "_Totals.html"
         item.description = build[2]
         item.pubDate = datetime (int (build[2][0:4]), # Year
                                  int (build[2][5:7]),
