@@ -1,3 +1,9 @@
+Tue Apr 25 04:11:34 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * autobuild_rss.py
+        
+          Fixed #! and a memory leak.
+
 Tue Apr 25 03:59:48 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py
