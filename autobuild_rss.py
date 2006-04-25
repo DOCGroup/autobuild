@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/python
 
 from optparse import OptionParser
 import sys, string
@@ -20,6 +20,8 @@ def parse_args ():
                        help="Number of recent builds to include")
     parser.add_option ("--uri-regex", dest="uri_regex", default="", nargs=2,
                        help="Regular expression used to transform URIs.  Must be two strings, separated by a space, ie: --uri-regex search replace")
+    parser.add_option ("-a", dest="name", default="DOC Group Scoreboard"
+                       help="Feed name")
     return parser.parse_args ()
 
 (opts, args) = parse_args ()
@@ -68,21 +70,6 @@ class RSSItem :
         self.description = ""
         self.pubDate = datetime.utcnow ()
         self.guid = ""
-
-    def title (self, title):
-        self.title = title
-
-    def link (self, link):
-        self.link = link
-
-    def desc (self, desc):
-        self.description = desc
-
-    def pubDate (self, pubDate):
-        self.pubDate = pubDate
-
-    def guid (self, guid):
-        self.guid = guid
 
     def to_xml (self, parent, doc):
         item = doc.createElement ("item")
@@ -148,6 +135,9 @@ class RSS :
         outfile = file (opts.output, 'w')
         outfile.write (rssdoc.toprettyxml ("  "))
         outfile.close
+
+        # Clean up
+        rssdoc.unlink ()
         
 def parse (filename):
     handler = ScoreboardHandler ()
@@ -205,7 +195,7 @@ def main ():
     latest = latest[0:int (opts.number)]
 
     chan = RSSChannel ()
-    chan.title = "Build RSS"
+    chan.title = opts.name
     chan.desc = "Build results"
     chan.link = "http://www.dre.vanderbilt.edu/scoreboard"
     for build in latest:
