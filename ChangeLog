@@ -1,3 +1,9 @@
+Tue Apr 25 03:59:48 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * autobuild_rss.py
+        
+          RSS feed generator for scorboards.
+
 Mon Apr 24 14:49:06 UTC 2006  Wallace Zhang  <zhangw@ociweb.com>
 
         * configs/scoreboard/tao.xml:
