@@ -572,10 +572,11 @@ sub found_section ($$)
 # Returns:    Nothing
 #
 ###############################################################################
-sub update_html ($$)
+sub update_html ($$$)
 {
     my $dir = shift;
     my $out_file = shift;
+    my $rss_file = shift;
 
     my $indexhtml = new FileHandle;
 
@@ -588,8 +589,13 @@ sub update_html ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
-    print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n</head>\n";
+    print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n";
 
+    if ($rss_file ne "") {
+	print $indexhtml "<link rel=\"alternate\" title=\"$scoreboard_title RSS\" href=\"$rss_file\" type=\"application/rss+xml\">\n";
+    }
+
+    print $indexhtml "</head>\n";
 
     ### Start body
     print $indexhtml "<body bgcolor=white>\n";
@@ -986,7 +992,7 @@ sub build_integrated_page ($)
     update_cache ($dir);
     clean_cache ($dir);
     query_status ();
-    update_html ($dir,"$dir/integrated.html");
+    update_html ($dir,"$dir/integrated.html", "");
     unlink ("$dir/temp.xml");
 }
 
@@ -1078,9 +1084,9 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l/;
+use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r/;
 
-if (!getopts ('d:f:hi:o:t:vzl')
+if (!getopts ('d:f:hi:o:t:vzlr:')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl -f file [-h] [-i file] -o file [-m script] [-s dir] [-r] [-z] [-l]\n",
@@ -1095,6 +1101,7 @@ if (!getopts ('d:f:hi:o:t:vzl')
     print "    -v         enable verbose debugging [def: only print errors]\n";
     print "    -z         Integrated page. Only the output directory is valid\n";
     print "    -l         Use local instead of UTC time\n";
+    print "    -r         Specify name of RSS file\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1102,7 +1109,7 @@ if (!getopts ('d:f:hi:o:t:vzl')
 my $index = "configs/scoreboard/index.xml";
 my $inp_file = "configs/scoreboard/ace.xml";
 my $out_file = "ace.html";
-
+my $rss_file = "";
 my $dir = "html";
 
 $index = $opt_i;
@@ -1143,13 +1150,18 @@ if (defined $opt_o) {
     $out_file = $opt_o;
 }
 
+if (defined $opt_r) {
+    print "Using RSS file\n";
+    $rss_file = $opt_r;
+}
+
 load_build_list ($inp_file);
 build_group_hash ();
 query_latest ();
 update_cache ($dir);
 clean_cache ($dir);
 query_status ();
-update_html ($dir,"$dir/$out_file");
+update_html ($dir,"$dir/$out_file",$rss_file);
 
 print 'Finished Scoreboard Update at ' . get_time_str() . "\n" if ($verbose);
 

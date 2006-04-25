@@ -1,3 +1,15 @@
+Tue Apr 25 05:47:11 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
+
+        * autobuild_rss.py
+        
+          Fixed run time error. 
+        
+        * scoreboard.pl
+        * configs/scoreboard/index.xml
+        * configs/scoreboard/tao_dre.sh
+        
+          Changes to support integrating RSS feeds into the scoreboard.
+        
 Tue Apr 25 04:11:34 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py
