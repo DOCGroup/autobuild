@@ -2,21 +2,21 @@
 
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers" />
-        <environment name="TAO_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/TAO" />
-        <environment name="MPC_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/MPC" />
-        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT" value="/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/TAO" />
+        <environment name="MPC_ROOT" value="/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/MPC" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
-        <environment name="PATH" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin:/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/bin:/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
+        <environment name="PATH" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin:/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/bin:/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
         <environment name="ENV_PREFIX" value="/usr/local/lynx/4.0.0/x86-322" />
-        <environment name="TAO_IDL" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/tao_idl" />
+        <environment name="TAO_IDL" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/tao_idl" />
 
-        <variable name="root" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic" />
-        <variable name="sam_root" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/samwise" />
+        <variable name="root" value="/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic" />
+        <variable name="sam_root" value="/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos_x86/cross_compile_build" />
-        <variable name="project_root" value="/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers" />
+        <variable name="project_root" value="/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers" />
 
     </configuration>
 
@@ -34,7 +34,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LYNXOS_MAJOR 4\n#define ACE_LYNXOS_MINOR 0\n\n#include \x22ace/config-lynxos.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OBJSFORMAT=elf\noptimize=0\nexceptions=1\ninline=0\ndebug=0\nthreads=1\nshared_libs_only=1\nstatic_libs_only=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\nCXX=c++\nCFLAGS+=-fsigned-char -fPIC\nSOFLAGS+= -fPIC\nLDFLAGS+= -fPIC\nLDFLAGS+= -Wl,-rpath-link,/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/ace\nLDFLAGS+= -Wl,-rpath-link,/usr/users/tao/ultra5/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/lib\nLDFLAGS+= -L/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/usr/i386-lynx-lynxos/lib/thread/shlib -lstdc++\nTAO_IDL:=/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/tao_idl\nTAO_IDLFLAGS+=-g /usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/gperf\nGPERF:=/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/gperf\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OBJSFORMAT=elf\noptimize=0\nexceptions=1\ninline=0\ndebug=0\nthreads=1\nshared_libs_only=1\nstatic_libs_only=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\nCXX=c++\nCFLAGS+=-fsigned-char -fPIC\nSOFLAGS+= -fPIC\nLDFLAGS+= -fPIC\nLDFLAGS+= -Wl,-rpath-link,/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/ace\nLDFLAGS+= -Wl,-rpath-link,/usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers/lib\nLDFLAGS+= -L/usr/local/lynx/4.0.0/x86-322/cdk/sunos-elf-x86/usr/i386-lynx-lynxos/lib/thread/shlib -lstdc++\nTAO_IDL:=/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/tao_idl\nTAO_IDLFLAGS+=-g /usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/gperf\nGPERF:=/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/bin/gperf\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -46,13 +46,19 @@
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO" />
     <!-- And the prism extras (tao84 needs carry forward, tao193 needs V4 equivelant) -->
     <command name="generate_workspace" options="dirs=prism/tests -exclude tao84_regression,tao193_regression" />
+    <command name="generate_workspace" options="dirs=prism/distrib/idl" />
+    <command name="generate_workspace" options="dirs=prism/distrib/examples -include ../.." />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C prism/tests realclean" />
+    <command name="make"              options="-k -C prism/distrib/idl realclean" />
+    <command name="make"              options="-k -C prism/distrib/examples realclean" />
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO" />
     <command name="make"              options="-k -C prism/tests" />
+    <command name="make"              options="-k -C prism/distrib/idl" />
+    <command name="make"              options="-k -C prism/distrib/examples" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
