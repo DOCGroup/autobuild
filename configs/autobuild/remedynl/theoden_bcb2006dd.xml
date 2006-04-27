@@ -3,16 +3,18 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ACE\BCB2006dd\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\ACE\BCB2006dd\ACE_wrappers\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\ACE\BCB2006dd\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="XERCESCROOT"  value="C:\xerces-c-src_2_7_0" />
         <environment name="CVS_RSH"      value="c:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Borland\BDS\4.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006dd\ACE_wrappers\lib;C:\ACE\BCB2006dd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Borland\BDS\4.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006dd\ACE_wrappers\lib;C:\ACE\BCB2006dd\ACE_wrappers\bin;C:\cygwin\bin;C:\xerces-c-src_2_7_0\lib" type="prefix" />
 
         <environment name="BCBVER"   value="8" />
         <environment name="DEBUG"   value="1" />
 	<environment name="DYNAMIC"  value="1" />
 
-        <variable name="configs"      value="Win32 Borland SExceptions" />
+        <variable name="configs"      value="Win32 Borland Static Exceptions" />
         <variable name="root"         value="C:\ACE\BCB2006dd\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2006dd\" />
@@ -34,16 +36,20 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
+
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="borland" />
     <command name="check_linker" options="ilink32" />
     <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type borland" />
+    <command name="generate_workspace" options="-type borland -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
