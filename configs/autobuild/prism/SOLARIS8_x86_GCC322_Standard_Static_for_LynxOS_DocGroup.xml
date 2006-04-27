@@ -2,19 +2,19 @@
 
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers" />
-        <environment name="TAO_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/TAO" />
-        <environment name="MPC_ROOT" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/MPC" />
-        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/TAO" />
+        <environment name="MPC_ROOT" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/MPC" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/ace" />
         <environment name="CVSROOT"         value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="PATH" value="/usr/local/gcc-3.2.2/bin:/usr/local/bin:/usr/bin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
 
-        <variable name="root" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static" />
-        <variable name="sam_root" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/samwise" />
+        <variable name="root" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static" />
+        <variable name="sam_root" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/samwise" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/var/tao1/taoperf/htdocs/scoreboard/ultra5/native_gcc322/standard/static" />
-        <variable name="project_root" value="/usr/users/tao/ultra5/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers" />
+        <variable name="log_root" value="/var/tao1/taoperf/htdocs/scoreboard/ultra6/native_gcc322/standard/static" />
+        <variable name="project_root" value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers" />
 
     </configuration>
 
