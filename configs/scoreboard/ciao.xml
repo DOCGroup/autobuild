@@ -204,6 +204,12 @@ all the OS/platform combinations CIAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
+            <name>WinXP_BCB2006_Dynamic_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2006/dd/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP_VC8</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
             <build_sponsor>Remedy IT</build_sponsor>
