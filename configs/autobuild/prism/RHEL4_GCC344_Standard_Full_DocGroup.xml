@@ -2,6 +2,7 @@
 
 <autobuild>
     <configuration>
+        <environment name="make_program"    value="gmake" />
         <environment name="MPC_ROOT"        value="/home/tao/rhel4/doc_scoreboard/Full/ACE_wrappers/MPC" />
         <environment name="ACE_ROOT"        value="/home/tao/rhel4/doc_scoreboard/Full/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/tao/rhel4/doc_scoreboard/Full/ACE_wrappers/TAO"/>

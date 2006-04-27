@@ -2,6 +2,7 @@
 
 <autobuild>
     <configuration>
+        <environment name="make_program" value="gmake" />
         <environment name="ACE_ROOT" value="/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/TAO" />
         <environment name="MPC_ROOT" value="/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/MPC" />
