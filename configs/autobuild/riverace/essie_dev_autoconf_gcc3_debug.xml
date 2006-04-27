@@ -3,7 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/space/ace/builds/ACE_wrappers-repository" />
-        <environment name="LD_LIBRARY_PATH" value="/space/ace/builds/ACE_wrappers-repository/build/autoconf_gcc3_debug/lib:/usr/local/ssl/lib:/usr/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/space/ace/builds/ACE_wrappers-repository/build/autoconf_gcc3_debug/lib:/usr/local/lib:/usr/local/ssl/lib:/usr/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <!-- autom4te uses M4 or /usr/ccs/bin/m4, which isn't GNU. -->
