@@ -3,7 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug/lib:/usr/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug/lib:/usr/lib:/usr/sfw/lib" />
         <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
@@ -14,7 +14,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/studio10-64_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/studio10-64_debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/chad/dev/studio10-64_debug" />
-        <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES SSL" />
 
     </configuration>
 
@@ -33,11 +33,11 @@
     <command name="create_ace_build"  options="-a -v" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/.disable output='RUNNING'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='qos=1\nipv6=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='qos=1\nipv6=1\nssl=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/studio10-64_debug -type gnuace -exclude build,Kokyu" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/ace/config.h output='#include \x22ace/config-sunos5.10.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nCCFLAGS += -xport64\nLDFLAGS += -xport64\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/studio10-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\nssl=1\nSSL_ROOT=/usr/sfw\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nCCFLAGS += -xport64\nLDFLAGS += -xport64\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="sun_cc" />
