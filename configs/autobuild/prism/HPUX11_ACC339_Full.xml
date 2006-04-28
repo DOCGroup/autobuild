@@ -2,23 +2,22 @@
 
 <autobuild>
     <configuration>
-        <environment name="make_program"    value="gmake" />
-        <environment name="MPC_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/MPC" />
-        <environment name="ACE_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/TAO"/>
-        <environment name="INSLIB"          value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
-        <environment name="LD_LIBRARY_PATH" value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
-        <environment name="SHLIB_PATH"      value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib:/usr/local/opt/aCC/lib" />
-        <environment name="CVSROOT"         value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
-        <environment name="PATH"            value="/usr/local/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
+        <environment name="MPC_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/MPC" />
+        <environment name="ACE_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/TAO"/>
+        <environment name="INSLIB"           value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH"  value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
+        <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib:/usr/local/opt/aCC/lib" />
+        <environment name="CVSROOT"          value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"          value="ssh" />
+        <environment name="PATH"             value="/usr/local/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
 
-        <variable name="root"     value="/usr/users/tao/hp1/doc_scoreboard/Full" />
-        <variable name="sam_root" value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/samwise" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/var/tao1/taoperf/htdocs/doc-scoreboard/hp1" />
-        <variable name="configs"  value="HPUX aCC 3.39" />
-
+        <variable name="make_program"        value="gmake" />
+        <variable name="root"                value="/usr/users/tao/hp1/doc_scoreboard/Full" />
+        <variable name="sam_root"            value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/samwise" />
+        <variable name="log_file"            value="build.txt" />
+        <variable name="log_root"            value="/var/tao1/taoperf/htdocs/doc-scoreboard/hp1" />
+        <variable name="configs"             value="HPUX aCC 3.39" />
     </configuration>
 
     <command name="status"            options="on" />
