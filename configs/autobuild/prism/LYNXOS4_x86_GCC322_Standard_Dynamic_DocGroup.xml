@@ -54,6 +54,7 @@
     <command name="make"              options="-k -C prism/tests realclean" />
     <command name="make"              options="-k -C prism/distrib/idl realclean" />
     <command name="make"              options="-k -C prism/distrib/examples realclean" />
+
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO" />
     <command name="make"              options="-k -C prism/tests" />
