@@ -1,15 +1,15 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/home/build/ACE/ACE_wrappers/lib" type="prefix" />
+        <environment name="ACE_ROOT"        value="/dka0/home/build/ACE/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/dka0/home/build/ACE/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/dka0/home/build/ACE/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/dka0/home/build/ACE/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/dka0/home/build/ACE/ACE_wrappers/lib" type="prefix" />
 
-        <variable name="root"     value="/home/build/ACE/ACE_wrappers/" />
+        <variable name="root"     value="/dka0/home/build/ACE/ACE_wrappers/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/" />
+        <variable name="log_root" value="/dka0/home/build/ACE/" />
         <variable name="configs"  value="Exceptions" />
 
     </configuration>
@@ -18,9 +18,6 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-openvms.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_openvms.GNU\n'" />
