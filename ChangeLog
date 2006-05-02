@@ -1,3 +1,11 @@
+Tue May 2 15:41:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/scoreboard/tao.xml:
+
+          Publish the native TAO_IDL mini build that the cross builds are using.
+
 Tue May 2 09:55:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
