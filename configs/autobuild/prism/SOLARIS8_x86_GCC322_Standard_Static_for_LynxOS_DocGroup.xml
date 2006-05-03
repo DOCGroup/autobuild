@@ -14,7 +14,7 @@
         <variable name="root"                value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static" />
         <variable name="sam_root"            value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/samwise" />
         <variable name="log_file"            value="build.txt" />
-        <variable name="log_root"            value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos_x86/native_tao_idl_build/standard/static" />
+        <variable name="log_root"            value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos_x86/native_tao_idl_build" />
         <variable name="project_root"        value="/usr/users/tao/ultra6/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers" />
     </configuration>
 

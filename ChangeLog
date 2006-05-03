@@ -1,3 +1,10 @@
+Wed May 3 08:18:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+
+          Remove standard/static from the log path to correct the scoreboard paths.
+
 Tue May 2 15:41:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
