@@ -1,3 +1,13 @@
+Thu May  4 20:20:32 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/chad_dev_studio10-64_debug.xml: Removed
+        * configs/autobuild/riverace/chad_dev_studio10_debug.xml:
+        * configs/autobuild/riverace/chad_dev_studio10-64_release.xml: Added
+          these - getting a combination of debug/release as well as static,
+          wide-char, SSL, 32/64-bit.
+
+        * configs/scoreboard/ace.xml: Adjusted for the above build changes.
+
 Wed May 3 08:18:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
