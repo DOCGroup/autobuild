@@ -14,7 +14,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/studio10_static_debug" />
         <variable name="log_file"     value="ACE_wrappers-repository/studio10_static_debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/chad/dev/studio10_static_debug" />
-        <variable name="configs"      value="Exceptions CHECK_RESOURCES SSL" />
+        <variable name="configs"      value="Exceptions CHECK_RESOURCES STATIC SSL" />
 
     </configuration>
 
