@@ -687,6 +687,7 @@ sub update_html_table ($$@)
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
     print $indexhtml "<th>Build <br>Sponsor</th>";
+    print $indexhtml "<th>History</th>";
     # New entries
     print $indexhtml "<th>PDF</th>" if ($havepdf);
     print $indexhtml "<th>PS</th>" if ($haveps);
@@ -906,12 +907,25 @@ sub update_html_table ($$@)
         print $indexhtml "<td>";
         print $indexhtml "<a href=\"";
         if (defined $builds{$buildname}->{BUILD_SPONSOR_URL}) {
-               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."\n";
+               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."";
         }
         print $indexhtml "\" target=\"_blank\">";
         if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
-               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."\n";
+               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."";
         }
+        print $indexhtml "</a>";
+
+        print $indexhtml "<td>";
+        print $indexhtml "<a href=\"";
+        print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".log";
+        print $indexhtml "\" target=\"_blank\">";
+        print $indexhtml F "\n";
+        print $indexhtml "</a>";
+        print $indexhtml "<td>";
+        print $indexhtml "<a href=\"";
+        print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".log";
+        print $indexhtml "\" target=\"_blank\">";
+        print $indexhtml C"\n";
         print $indexhtml "</a>";
 
         print $indexhtml "</td>";
