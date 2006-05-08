@@ -307,7 +307,7 @@ sub query_history ()
             my $response = $ua->request($request);
 
             if ($response->is_success ()) {
-                $builds{$buildname}{FULL_HISTORY} = $1;
+                $builds{$buildname}{FULL_HISTORY} = 1;
             }
 
         }
@@ -324,7 +324,7 @@ sub query_history ()
             my $response = $ua->request($request);
 
             if (!$response->is_success ()) {
-                $builds{$buildname}{CLEAN_HISTORY} = $1;
+                $builds{$buildname}{CLEAN_HISTORY} = 1;
             }
 
         }
