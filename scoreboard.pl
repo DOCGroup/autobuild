@@ -306,12 +306,10 @@ sub query_history ()
             my $request = HTTP::Request->new('GET', $full_link);
             my $response = $ua->request($request);
 
-            if (!$response->is_success ()) {
-                print "        No history for $buildname\n" if ($verbose);
-                next;
+            if ($response->is_success ()) {
+                $builds{$buildname}{FULL_HISTORY} = $1;
             }
 
-            $builds{$buildname}{FULL_HISTORY} = $1;
         }
         if (defined $clean_link) {
             print "    Clean history [$buildname] from $full_link\n" if ($verbose);
@@ -326,11 +324,9 @@ sub query_history ()
             my $response = $ua->request($request);
 
             if (!$response->is_success ()) {
-                print "        No history for $buildname\n" if ($verbose);
-                next;
+                $builds{$buildname}{CLEAN_HISTORY} = $1;
             }
 
-            $builds{$buildname}{CLEAN_HISTORY} = $1;
         }
     }
 }
