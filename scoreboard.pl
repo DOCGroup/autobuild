@@ -43,6 +43,8 @@ use Time::Local;
 #                 ->{TEST_ERRORS}      <- Number of Test Errors
 #                 ->{TEST_WARNINGS}    <- Number of Test Warnings
 #                 ->{SECTION_ERROR_SUBSECTIONS} <- Number of subsections with errors
+#                 ->{FULL_HISTORY}     <- Link with full history information
+#                 ->{CLEAN_HISTORY}    <- Link with clean history information
 
 my %builds;
 
@@ -225,7 +227,6 @@ sub query_latest ()
     }
 }
 
-
 ###############################################################################
 #
 # query_status
@@ -269,6 +270,68 @@ sub query_status ()
                 if ($line =~ m/SCOREBOARD_STATUS\:(.*)$/) {
                     $builds{$buildname}{STATUS} = $1;
                 }
+            }
+        }
+    }
+}
+
+###############################################################################
+#
+# query_history
+#
+# Queries the history information and store it in
+# FULL_HISTORY and CLEAN_HISTORY
+#
+# Arguments:  Nothing
+#
+# Returns:    Nothing
+#
+###############################################################################
+sub query_history ()
+{
+    print "Getting history inforamtin\n" if ($verbose);
+
+    foreach my $buildname (keys %builds) {
+        my $full_link = 'http://www.dre.vanderbilt.edu/~remedynl/teststat/builds/' . $builds{$buildname} . '.log';
+        my $clean_link = 'http://www.dre.vanderbilt.edu/~remedynl/teststat/builds/clean_' . $builds{$buildname} . '.log';
+        if (defined $full_link) {
+            print "    Full history [$buildname] from $full_link\n" if ($verbose);
+
+            my $ua = LWP::UserAgent->new;
+
+            ### We are impatient, so don't wait more than 20 seconds for a
+            ### response (the default was 180 seconds)
+            $ua->timeout(20);
+
+            my $request = HTTP::Request->new('GET', $full_link);
+            my $response = $ua->request($request);
+
+            if (!$response->is_success ()) {
+                print "        No history for $buildname\n" if ($verbose);
+                next;
+            }
+
+            $builds{$buildname}{FULL_HISTORY} = $1;
+            }
+        }
+        if (defined $clean_link) {
+            print "    Clean history [$buildname] from $full_link\n" if ($verbose);
+
+            my $ua = LWP::UserAgent->new;
+
+            ### We are impatient, so don't wait more than 20 seconds for a
+            ### response (the default was 180 seconds)
+            $ua->timeout(20);
+
+            my $request = HTTP::Request->new('GET', $clean_link);
+            my $response = $ua->request($request);
+
+            if (!$response->is_success ()) {
+                print "        No history for $buildname\n" if ($verbose);
+                next;
+            }
+
+            $builds{$buildname}{CLEAN_HISTORY} = $1;
             }
         }
     }
@@ -916,18 +979,21 @@ sub update_html_table ($$@)
         print $indexhtml "</a>";
 
         print $indexhtml "<td>";
-        print $indexhtml "<a href=\"";
-        print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".log";
-        print $indexhtml "\">";
-        print $indexhtml "Full";
-        print $indexhtml "</a>";
-        print $indexhtml " ";
-        print $indexhtml "<a href=\"";
-        print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".log";
-        print $indexhtml "\">";
-        print $indexhtml "Clean";
-        print $indexhtml "</a>";
-
+        if (defined $builds{$buildname}->{FULL_HISTORY}) {
+            print $indexhtml "<a href=\"";
+            print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".log";
+            print $indexhtml "\">";
+            print $indexhtml "Full";
+            print $indexhtml "</a>";
+            print $indexhtml " ";
+        }
+        if (defined $builds{$buildname}->{CLEAN_HISTORY}) {
+            print $indexhtml "<a href=\"";
+            print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".log";
+            print $indexhtml "\">";
+            print $indexhtml "Clean";
+            print $indexhtml "</a>";
+        }
         print $indexhtml "</td>";
 
 	print $indexhtml "</tr>\n";
@@ -1006,6 +1072,7 @@ sub build_integrated_page ($)
     update_cache ($dir);
     clean_cache ($dir);
     query_status ();
+    query_history ();
     update_html ($dir,"$dir/integrated.html", "");
     unlink ("$dir/temp.xml");
 }
@@ -1175,6 +1242,7 @@ query_latest ();
 update_cache ($dir);
 clean_cache ($dir);
 query_status ();
+query_history ();
 update_html ($dir,"$dir/$out_file",$rss_file);
 
 print 'Finished Scoreboard Update at ' . get_time_str() . "\n" if ($verbose);
