@@ -919,13 +919,13 @@ sub update_html_table ($$@)
         print $indexhtml "<a href=\"";
         print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".log";
         print $indexhtml "\">";
-        print $indexhtml "F";
+        print $indexhtml "Full";
         print $indexhtml "</a>";
-        print $indexhtml "   ";
+        print $indexhtml " ";
         print $indexhtml "<a href=\"";
         print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".log";
         print $indexhtml "\">";
-        print $indexhtml "C";
+        print $indexhtml "Clean";
         print $indexhtml "</a>";
 
         print $indexhtml "</td>";
