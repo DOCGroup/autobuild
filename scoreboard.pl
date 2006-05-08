@@ -323,7 +323,7 @@ sub query_history ()
             my $request = HTTP::Request->new('GET', $clean_link);
             my $response = $ua->request($request);
 
-            if (!$response->is_success ()) {
+            if ($response->is_success ()) {
                 $builds{$buildname}{CLEAN_HISTORY} = 1;
             }
 
