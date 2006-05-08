@@ -1,3 +1,15 @@
+Mon May  9 12:44:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * scoreboard.pl:
+          Added an history column to the build stat table. From the database
+          with test statistics we have we generate each two hours informatin
+          for each build with the number of test failures. We have one file
+          with all builds done, and one with just the builds without compile
+          errors. When for a build these files exists, we do generate a link
+          to them. We generate these files only for the builds that do have
+          run yesterday to safe CPU cycles at our side, there are a lot of
+          builds in the database that don't run anymore
+
 Thu May  4 20:20:32 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/chad_dev_studio10-64_debug.xml: Removed
@@ -89,31 +101,31 @@ Wed Apr 26 15:00:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 Tue Apr 25 17:17:14 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * autobuild_rss.py
-        
+
           Add a missing "/" to the guid link, otherwise the link is broken
 
 Tue Apr 25 05:47:11 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py
-        
-          Fixed run time error. 
-        
+
+          Fixed run time error.
+
         * scoreboard.pl
         * configs/scoreboard/index.xml
         * configs/scoreboard/tao_dre.sh
-        
+
           Changes to support integrating RSS feeds into the scoreboard.
-        
+
 Tue Apr 25 04:11:34 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py
-        
+
           Fixed #! and a memory leak.
 
 Tue Apr 25 03:59:48 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py
-        
+
           RSS feed generator for scorboards.
 
 Mon Apr 24 14:49:06 UTC 2006  Wallace Zhang  <zhangw@ociweb.com>
