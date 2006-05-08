@@ -312,7 +312,6 @@ sub query_history ()
             }
 
             $builds{$buildname}{FULL_HISTORY} = $1;
-            }
         }
         if (defined $clean_link) {
             print "    Clean history [$buildname] from $full_link\n" if ($verbose);
@@ -332,7 +331,6 @@ sub query_history ()
             }
 
             $builds{$buildname}{CLEAN_HISTORY} = $1;
-            }
         }
     }
 }
