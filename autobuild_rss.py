@@ -20,7 +20,7 @@ def parse_args ():
                        help="Number of recent builds to include")
     parser.add_option ("--uri-regex", dest="uri_regex", default="", nargs=2,
                        help="Regular expression used to transform URIs.  Must be two strings, separated by a space, ie: --uri-regex search replace")
-    parser.add_option ("-a", dest="name", default="DOC Group Scoreboard"
+    parser.add_option ("-a", dest="name", default="DOC Group Scoreboard",
                        help="Feed name")
     return parser.parse_args ()
 
