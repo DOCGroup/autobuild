@@ -918,13 +918,14 @@ sub update_html_table ($$@)
         print $indexhtml "<td>";
         print $indexhtml "<a href=\"";
         print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".log";
-        print $indexhtml "\" target=\"_blank\">";
-        print $indexhtml "F ";
+        print $indexhtml "\">";
+        print $indexhtml "F";
         print $indexhtml "</a>";
+        print $indexhtml "   ";
         print $indexhtml "<a href=\"";
         print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".log";
-        print $indexhtml "\" target=\"_blank\">";
-        print $indexhtml "C ";
+        print $indexhtml "\">";
+        print $indexhtml "C";
         print $indexhtml "</a>";
 
         print $indexhtml "</td>";
