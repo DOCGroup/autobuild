@@ -1,3 +1,10 @@
+Wed May 10 14:45:24 UTC 2006  Wallace Zhang  <zhangw@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+
+          Moved OCI wchar builds from current tao to future tao scoreboard.
+
 Wed May 10 12:45:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl:

@@ -34,12 +34,6 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-     <build>
-       <name>Debian_WChar</name>
-       <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_oci1323_linux_gcc4.0.2_d0o1w1/</url>
-       <build_sponsor>OCI</build_sponsor>
-       <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
-    </build>
     <build>
         <name>RHEL3_Static_Core</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
@@ -213,12 +207,6 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
-        <build>
-            <name>Win2003_VC71_WChar</name>
-            <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_weevil_win2003_vc71_d0o1w1/</url>
-            <build_sponsor>OCI</build_sponsor>
-            <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
-        </build>
 
 </group>
 
@@ -280,13 +268,6 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
-   <build>
-      <name>LynxOS_CDR_Customized_WChar</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_mole_LynxOS_gcc3.2.1_d0o0c1/</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
-   </build>
-
 </group>
 
 <group>
@@ -326,12 +307,6 @@ all the OS/platform combinations TAO is tested everyday.
      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/PPC603/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks_CDR_Customized_WChar</name>
-     <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_fly_VxWorks-Tor2.2.1-ppc_gcc_d0o1c1/</url>
-     <build_sponsor>OCI</build_sponsor>
-     <build_sponsor_url>http://www.ociweb.com</build_sponsor_url>
    </build>
 
 </group>
