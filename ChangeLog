@@ -1,4 +1,10 @@
-Mon May  9 12:44:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+Wed May 10 12:45:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * scoreboard.pl:
+          The history pages are now html with links with test fails per build
+          run
+
+Mon May  8 12:44:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl:
           Added an history column to the build stat table. From the database
