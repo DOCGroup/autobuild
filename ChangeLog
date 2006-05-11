@@ -1,3 +1,8 @@
+Thu May 11 10:02:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Removed vc6 build, it just isn't supported anymore
+
 Wed May 10 14:45:24 UTC 2006  Wallace Zhang  <zhangw@ociweb.com>
 
         * configs/scoreboard/tao.xml:
