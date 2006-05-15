@@ -23,7 +23,7 @@
     <command name="cvs"               options="-z 9 -q checkout -r sendfile -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -r sendfile -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DEFAULT_CDR_BUFSIZE 16\n#define TAO_USE_OUTPUT_CDR_MMAP_MEMORY_POOL 1\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_USE_OUTPUT_CDR_MMAP_MEMORY_POOL 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\ninline=0\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
