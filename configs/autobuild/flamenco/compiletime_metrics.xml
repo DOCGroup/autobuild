@@ -18,8 +18,9 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
     <command name="log"               options="on" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
@@ -66,6 +67,5 @@
     <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /web/users/isisbuilds/auto_compile_logs/CP_Metrics/metrics $ACE_ROOT/../.metrics/targets Compilation" />
 
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
