@@ -111,6 +111,18 @@ sub handle_compiler_output_line($) {
     $self->Output_Warning ($s);
     return;
   }
+  
+  if ($s =~ m/This project will not be built due to the following missing/) {
+    # Indicates that something is not properly configured - ie,
+    # incorrect depenancies in the mpc files, default.featres setting,
+    # etc.
+      $self->Output_Warning ($s);
+      return;
+  }
+  
+  if ($s =~ m/multiple definitions of symbol/) {
+      $self->Output_Error ($s);
+  }
 
   if ($s =~ m/Rule line too long/) {
     # Can be given by Borland make
