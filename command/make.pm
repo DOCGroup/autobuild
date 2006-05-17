@@ -75,18 +75,24 @@ sub Run ($)
     }
 
     my($conditional) = undef;
-    if ($options =~ s/conditional='([^']*)'//) {
-      $conditional = $1;
+    my($cond_unlink) = undef;
+    if ($options =~ s/conditional(_rm)?='([^']*)'//) {
+      $cond_unlink = $1;
+      $conditional = $2;
     }
-    elsif ($options =~ s/conditional=([^\s]*)//) {
-      $conditional = $1;
+    elsif ($options =~ s/conditional(_rm)?=([^\s]*)//) {
+      $cond_unlink = $1;
+      $conditional = $2;
     }
 
     ## If a conditional file was supplied...
     if (defined $conditional) {
       if (-e $conditional) {
-        ## Just remove the file and continue on
-        unlink($conditional);
+        ## Should we remove the file...
+        if ($cond_unlink) {
+          ## Just remove the file and continue on
+          unlink($conditional);
+        }
       }
       else {
         ## The file does not exist, so we must not run the make command

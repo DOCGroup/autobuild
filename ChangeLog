@@ -1,3 +1,10 @@
+Wed May 17 13:24:01 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/make.pm:
+
+          Added the ability to configure when the conditional file gets
+          removed (pertaining to my previous checkin).
+
 Wed May 17 12:51:11 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/make.pm:
