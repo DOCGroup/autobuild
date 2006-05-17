@@ -1,3 +1,11 @@
+Wed May 17 12:51:11 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/make.pm:
+
+          Added the ability to conditionally run the make command based on
+          the existence of a file.  The file is passed as 'conditional' in
+          the options parameter.
+
 Thu May 11 14:21:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/atc/*

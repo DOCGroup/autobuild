@@ -74,6 +74,26 @@ sub Run ($)
         $options =~ s/dir=$dir//;
     }
 
+    my($conditional) = undef;
+    if ($options =~ s/conditional='([^']*)'//) {
+      $conditional = $1;
+    }
+    elsif ($options =~ s/conditional=([^\s]*)//) {
+      $conditional = $1;
+    }
+
+    ## If a conditional file was supplied...
+    if (defined $conditional) {
+      if (-e $conditional) {
+        ## Just remove the file and continue on
+        unlink($conditional);
+      }
+      else {
+        ## The file does not exist, so we must not run the make command
+        return 1;
+      }
+    }
+
     my $make_program = main::GetVariable ('make_program');
     if (! defined $make_program) {
         # The "make_program" variable was not defined in the
