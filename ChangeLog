@@ -1,7 +1,14 @@
+Thu May 18 15:13:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/flamenco/flamenco.sh:
+          Added one shell script that invokes all builds. This way we invoke
+          all builds after each other and this is the only script in the
+          crontab. Prevents that we run multiple builds at the same time
+
 Wed May 17 18:29:44 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
-        
+
           Added a warning for projects not built due to missing
           dependancies, and an error for a common linking error on OS X.
 
