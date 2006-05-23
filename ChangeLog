@@ -1,3 +1,8 @@
+Tue May 23 15:34:03 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * common/prettify.pm: Change "file exists but should be cleaned up"
+          from an error to a warning, same as other leaked OS resources.
+
 Thu May 18 15:13:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/flamenco/flamenco.sh:
@@ -284,6 +289,10 @@ Thu Apr 13 13:46:44 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
           Added a step to build tao_idl3_to_idl2 and moved when idl_stubs is
           built for CIAO.
+
+Wed Apr 12 20:09:50 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Added ssl support.
 
 Wed Apr 12 13:51:03 UTC 2006  Simon McQueen  <sm@prismtech.com>
 

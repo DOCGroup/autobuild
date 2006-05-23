@@ -887,12 +887,12 @@ sub Test_Handler ($)
         || $s =~ m/Invalid write of size/
         || $s =~ m/Invalid read of size/
         || $s =~ m/Source and destination overlap/
-        || $s =~ m/exists but should be cleaned up/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
     }
-    elsif ($s =~ m/the ACE tests _may_ have leaked OS resources!/) {
+    elsif ($s =~ m/the ACE tests _may_ have leaked OS resources!/
+           || $s =~ m/exists but should be cleaned up/) {
         $self->Output_Warning ($s);
     }
     else {
