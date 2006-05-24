@@ -1,3 +1,9 @@
+Wed May 24 20:58:35 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml: Removed
+          SSL from this test run - SSL on this system is 32-bit and it can't
+          link with the 64-bit object files produced in this test.
+
 Tue May 23 15:34:03 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * common/prettify.pm: Change "file exists but should be cleaned up"
