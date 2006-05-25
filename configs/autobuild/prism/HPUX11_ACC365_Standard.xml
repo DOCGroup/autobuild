@@ -1,0 +1,69 @@
+<!-- $Id$ -->
+
+<autobuild>
+    <configuration>
+        <environment name="MPC_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/MPC" />
+        <environment name="ACE_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/TAO"/>
+        <environment name="INSLIB"           value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH"  value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
+        <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib:/usr/local/aCC3.65/opt/aCC/lib" />
+        <environment name="CVSROOT"          value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"          value="ssh" />
+        <environment name="PATH"             value="/usr/local/aCC3.65/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
+
+        <variable name="make_program"        value="gmake" />
+        <variable name="root"                value="/usr/users/tao/hp1/doc_scoreboard/Full" />
+        <variable name="sam_root"            value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/samwise" />
+        <variable name="log_file"            value="build.txt" />
+        <variable name="log_root"            value="/var/tao1/taoperf/htdocs/doc-scoreboard/hp1" />
+        <variable name="configs"             value="HPUX aCC" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+
+    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC" />
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ndebug=0\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\ninline=0\n'" />
+    <command name="print_os_version" />
+    <command name="check_compiler" options="aCC" />
+    <command name="print_ace_config" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,build.mwc,prism" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO" />
+    <!-- And the prism extras (tao84 needs carry forward, tao193 needs V4 equivelant) -->
+    <!-- command name="generate_workspace" options="dirs=prism/tests -exclude tao84_regression,tao193_regression" / -->
+    <!-- command name="generate_workspace" options="dirs=prism/distrib/idl" / -->
+    <!-- command name="generate_workspace" options="dirs=prism/distrib/examples -include ../.." / -->
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <!-- command name="make"              options="-k -C prism/tests realclean" / -->
+    <!-- command name="make"              options="-k -C prism/distrib/idl realclean" / -->
+    <!-- command name="make"              options="-k -C prism/distrib/examples realclean" / -->
+
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
+    <!-- command name="make"              options="-k -C prism/tests" / -->
+    <!-- command name="make"              options="-k -C prism/distrib/idl" / -->
+    <!-- command name="make"              options="-k -C prism/distrib/examples" / -->
+
+    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+
+</autobuild>
