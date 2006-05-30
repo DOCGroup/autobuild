@@ -1,3 +1,8 @@
+Tue May 30 09:15:00 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/printaceconfig.pm:
+          Extended to also print out the DDS info is available on the system
+
 Fri May 26 08:58:00 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/flamenco/Static.xml:
