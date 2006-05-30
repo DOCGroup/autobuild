@@ -184,7 +184,7 @@ sub Run ($)
     #
 
     # Look if DDS_ROOT is set, if this is set, then we take DDS_ROOT, else we take TAO/DDS/ChangeLog
-    my($ddsroot) = $ENV{TAO_ROOT};
+    my($ddsroot) = $ENV{DDS_ROOT};
     my($ddspath) = (defined $ddsroot ? $ddsroot : 'TAO/DDS');
 
     if (-r "$ddspath/$changelogs{DDS}") {
