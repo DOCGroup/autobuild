@@ -41,20 +41,14 @@ sub Run ($)
 
     main::PrintStatus ('Config', "Print Autotools Version" );
 
-    if(-x "/usr/bin/automake"){
-        print "<h3>Automake version (automake --version)</h3>\n";
-        system("/usr/bin/automake --version");
-    }
+    print "<h3>Automake version (automake --version)</h3>\n";
+    system("automake --version");
 
-    if(-x "/usr/bin/autoconf"){
-        print "<h3>Autoconf version (autocont --version)</h3>\n";
-        system("/usr/bin/autoconf --version");
-    }
+    print "<h3>Autoconf version (autocont --version)</h3>\n";
+    system("autoconf --version");
 
-    if(-x "/usr/bin/libtool"){
-        print "<h3>Libtool version (libtool --version)</h3>\n";
-        system("/usr/bin/libtool --version");
-    }
+    print "<h3>Libtool version (libtool --version)</h3>\n";
+    system("libtool --version");
 
     print "\n";
 

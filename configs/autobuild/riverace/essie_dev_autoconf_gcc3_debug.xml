@@ -34,6 +34,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/autoconf_gcc3_debug/.disable output='RUNNING'" />
 
     <command name="print_os_version" />
+    <command name="print_autotools_version" />
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
 

@@ -27,6 +27,7 @@
     <command name="cvs"               options="checkout -P ACE" />
 
     <command name="print_os_version" />
+    <command name="print_autotools_version" />
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
 

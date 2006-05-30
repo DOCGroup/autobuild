@@ -31,6 +31,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/autoconf_va6_debug/.disable" />
 
     <command name="print_os_version" />
+    <command name="print_autotools_version" />
     <command name="check_compiler"    options="vacpp" />
     <command name="print_ace_config" />
 

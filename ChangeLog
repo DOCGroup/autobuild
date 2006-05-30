@@ -1,3 +1,14 @@
+Tue May 30 15:42:44 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * command/print_autotools_version.pm: Don't insist on the tools being
+          available in /usr/bin - they could be anywhere as long as PATH
+          can find them.
+
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml: Added
+          the print_autotools_version command.
+
 Tue May 30 09:15:00 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/printaceconfig.pm:
