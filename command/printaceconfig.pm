@@ -53,6 +53,7 @@ sub Run ($)
                       'ACE'       => 'ChangeLog',
                       'TAO'       => 'ChangeLog',
                       'CIAO'      => 'ChangeLog',
+                      'DDS'       => 'ChangeLog',
                      );
     my $defurl = 'http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*';
     my %urls = ('XML_URL'       => "$defurl/<file>?cvsroot=autobuild",
@@ -61,6 +62,7 @@ sub Run ($)
                 'ACE_URL'       => "$defurl/<file>",
                 'TAO_URL'       => "$defurl/TAO/<file>",
                 'CIAO_URL'      => "$defurl/TAO/CIAO/<file>",
+                'DDS_URL'       => "$defurl/TAO/DDS/<file>",
                );
 
     # replace all '\x22' with '"'
@@ -178,6 +180,21 @@ sub Run ($)
     }
 
     #
+    # last DDS Changelog Entry
+    #
+
+    # Look if DDS_ROOT is set, if this is set, then we take DDS_ROOT, else we take TAO/DDS/ChangeLog
+    my($ddsroot) = $ENV{TAO_ROOT};
+    my($ddspath) = (defined $ddsroot ? $ddsroot : 'TAO/DDS');
+
+    if (-r "$ddspath/$changelogs{DDS}") {
+        $url = $urls{DDS_URL};
+        $url =~ s/<file>/$changelogs{DDS}/;
+        print "================ <a href=\"$url\">DDS $changelogs{DDS}</a> ================\n";
+        print_file ("$ddspath/$changelogs{DDS}", 0);
+    }
+
+    #
     # config.h, if it exists
     #
 
@@ -220,6 +237,12 @@ sub Run ($)
         print "================ CIAO VERSION ================\n";
 
         print_file ("TAO/CIAO/VERSION", 0);
+    }
+
+    if ( -r "TAO/DDS/VERSION" ) {
+        print "================ DDS VERSION ================\n";
+
+        print_file ("TAO/DDS/VERSION", 0);
     }
 
     chdir $current_dir;
