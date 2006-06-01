@@ -3,8 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/ICC91/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/ICC91/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cc/9.1.038/lib:/home/build/ACE/ICC91/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/intel/cc/9.1.038/bin" type="prefix" />
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cc/9.1.039/lib:/home/build/ACE/ICC91/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/intel/cc/9.1.039/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="RSYNC_RSH"       value="ssh" />
