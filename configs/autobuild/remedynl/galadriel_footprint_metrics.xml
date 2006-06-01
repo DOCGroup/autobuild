@@ -56,6 +56,7 @@
     <!-- Build the TAO_IDL compiler first and gen the idl_stubs, so that --dry-run will create a list of all targets. -->
     <command name="make"              options="-k -C TAO/TAO_IDL" />
     <command name="make"              options="-k -C TAO/tests idl_stubs" />
+    <command name="make"              options="-k -C TAO/ciao idl_stubs" />
 
     <command name="make"              options="-k -C TAO/tao                --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/ORB_init     --dry-run >> $ACE_ROOT/../.metrics/targets" />
