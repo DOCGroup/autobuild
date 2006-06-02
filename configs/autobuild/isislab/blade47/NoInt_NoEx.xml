@@ -46,6 +46,8 @@
 
     <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
 
+    <command name="make"              options=" depend" />
+
     <command name="make"              options="-k" />
 
     <command name="log"               options="off" />
