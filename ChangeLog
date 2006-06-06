@@ -1,3 +1,11 @@
+Tue Jun  6 12:36:53 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/make.pm:
+
+          Fixed a bug where find=*akefile wouldn't be removed from the
+          options.  This didn't cause a problem with GNU make (as it just
+          accepted it as a macro assignment), but it just wasn't right.
+
 Fri Jun  2 12:08:47 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml
@@ -5,7 +13,7 @@ Fri Jun  2 12:08:47 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
 
          Moved some CIAO builds to ciao.xml
-        
+
 
 Tue May 30 15:42:44 UTC 2006  Steve Huston  <shuston@riverace.com>
 

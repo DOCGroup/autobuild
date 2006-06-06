@@ -65,13 +65,11 @@ sub Run ($)
     
     my $dir;
  
-    if ($options =~ m/dir='([^']*)'/) {
+    if ($options =~ s/dir='([^']*)'//) {
         $dir = $1;
-        $options =~ s/dir='$dir'//;
     }
-    elsif ($options =~ m/dir=([^\s]*)/) {
+    elsif ($options =~ s/dir=([^\s]*)//) {
         $dir = $1;
-        $options =~ s/dir=$dir//;
     }
 
     my($conditional) = undef;
@@ -136,9 +134,8 @@ sub Run ($)
     my $pattern;
     my $ret = 0;
  
-    if ($options =~ m/find=([^\s]*)/) {
+    if ($options =~ s/find=([^\s]*)//) {
         $pattern = $1;
-        $options =~ s/find=$pattern//;
         print "Pattern: $pattern\n";
         my @makes = glob $pattern;
         my $makefile;
