@@ -16,7 +16,7 @@
         <variable name="root"                value="/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic" />
         <variable name="sam_root"            value="/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers/samwise" />
         <variable name="log_file"            value="build.txt" />
-        <variable name="log_root"            value="/var/tao1/taoperf/htdocs/doc-scoreboard/lynxos_ppc/cross_compile_build" />
+        <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/lynxos_ppc/cross_compile_build" />
         <variable name="project_root"        value="/usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers" />
     </configuration>
 
