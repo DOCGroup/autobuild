@@ -76,6 +76,7 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
+
     <command name="make"              options="-k -j4 -C TAO/CIAO" />
 
     <command name="log"               options="off" />
