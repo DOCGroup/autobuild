@@ -112,7 +112,7 @@ sub handle_compiler_output_line($) {
     return;
   }
   
-  if ($s =~ m/This project will not be built due to the following missing/) {
+  if ($s =~ m/not be built due to the following missing/) {
     # Indicates that something is not properly configured - ie,
     # incorrect depenancies in the mpc files, default.featres setting,
     # etc.

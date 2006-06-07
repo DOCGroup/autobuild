@@ -1,3 +1,10 @@
+Wed Jun  7 07:04:45 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * common/parse_compiler_output.pm
+
+          Updated the search string for warning when a project
+          is skipped due to missing dependencies.
+
 Tue Jun  6 12:36:53 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/make.pm:
