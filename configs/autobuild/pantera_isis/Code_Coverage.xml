@@ -22,11 +22,11 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32002" />
+
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers " />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
 
@@ -34,23 +34,23 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CXX=g++-3.4\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\nxt_reactor=0\nfl_reactor=0\ntk_reactor=0\nqt_reactor=0\ngtk_reactor=0\noptimize=0\ndebug=0\ninline=0\nqt=0\ncidl=0\n\n# Perform some stricter C/C++ checking using the -pedantic flag, but\n# disable the long long warnings since we need to support that type\n# in ACE/TAO.\nCCFLAGS += -Wno-long-long -Wwrite-strings -Wcast-align\n\n# Enable code coverage support\nCCFLAGS += -fprofile-arcs -ftest-coverage\n\n# For QT headers\n#PLATFORM_QT_CPPFLAGS = -I/usr/include/qt3\n\n# For TK headers\nPLATFORM_TK_CPPFLAGS = -I/usr/include/tcl8.4\n\n# For TCL library\n#PLATFORM_TK_LIBS += -ltk8.4 -ltcl8.4\n\n# Additional XtReactor flags\n#PLATFORM_XT_LIBS += -lXm\n\n# Override default ACE settings.  Debian deprecates the single threaded Qt library.\n#PLATFORM_QT_LIBS=-lqt-mt\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqt=0\nxt_reactor=0\nssl=1\ncidl=0\nexceptions=1\nzlib=1\nzzip=1\n\n'" />
 
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
+
     <command name="print_os_version" />
 <!--    <command name="check_compiler" options="g++" /> -->
     <command name="print_ace_config" />
-
-    <command name="generate_workspace" options="-exclude TAO " />
-    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,*.mwc " />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF " />
+    <command name="print_make_version" />
+    <command name="print_cidlc_version" />
+    <command name="print_perl_version" />
 
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="make"              options="-j 2 -k" />
-    <command name="make"              options="-j 2 -k -C TAO" />
-    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
+
+    <command name="make"              options="-k -j 2" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
 

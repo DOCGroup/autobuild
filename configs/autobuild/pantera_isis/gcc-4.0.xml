@@ -19,17 +19,19 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
     <command name="log"               options="on" />
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\n\nCXX=g++\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\nzlib=1\nzzip=1\n'" />
+
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -38,24 +40,17 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO" />
-    <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CCF,CIDLC" />
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
-    <command name="make"              options="-j 2 -k" />
-    <command name="make"              options="-j 2 -k -C TAO" />
-    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
+
+    <command name="make"              options="-k -j 2" />
 
     <command name="auto_run_tests" options=" -a -o -t -C -envmod LD_ASSUME_KERNEL=2.4.19" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
