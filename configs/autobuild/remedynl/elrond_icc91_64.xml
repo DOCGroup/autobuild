@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/icc91_64/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/icc91_64/ACE_wrappers/TAO"/>
+        <environment name="DDS_ROOT"        value="/home/build/ACE/icc91_64/ACE_wrappers/TAO/DDS"/>
         <environment name="CIAO_ROOT"       value="/home/build/ACE/icc91_64/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/opt/intel/cce/9.1.039/lib:/home/build/ACE/icc91_64/ACE_wrappers/lib" />
         <environment name="PATH"            value="/opt/intel/cce/9.1.039/bin" type="prefix" />
@@ -23,6 +24,7 @@
 
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="cvs"               options="-z 9 -q checkout -P TAO_DDS"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\ninline=0\nCFLAGS+=-Wp64\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
