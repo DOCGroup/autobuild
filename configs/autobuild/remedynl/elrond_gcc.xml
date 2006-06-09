@@ -37,10 +37,13 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
+    <command name="make"              options="-k" />
+
     <command name="generate_workspace" options="-exclude TAO" />
 
-    <command name="make"              options="-k realclean" />
     <command name="make"              options="-k" />
+
+    <command name="auto_run_tests"    options=" -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
