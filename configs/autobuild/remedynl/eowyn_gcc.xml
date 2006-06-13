@@ -3,7 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO/CIAO"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/GCC/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DDS_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO/DDS"/>
         <environment name="LD_LIBRARY_PATH" value="/usr/local/lib64:/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
@@ -22,6 +23,7 @@
 
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="cvs"               options="-z 9 -q checkout -P TAO_DDS"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#define ACE_HAS_LINUX_NPTL\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='no_hidden_visibility=1\nbuildbits=64\noptimize=0\ncidl=1\nssl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -40,11 +42,9 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -include $DDS_ROOT" />
 
     <command name="make"              options="-k" />
-
-    <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
