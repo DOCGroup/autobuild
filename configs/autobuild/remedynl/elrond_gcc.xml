@@ -20,8 +20,6 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
@@ -37,7 +35,9 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k realclean" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-exclude TAO" />
 
