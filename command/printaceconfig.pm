@@ -62,7 +62,7 @@ sub Run ($)
                 'ACE_URL'       => "$defurl/<file>",
                 'TAO_URL'       => "$defurl/TAO/<file>",
                 'CIAO_URL'      => "$defurl/TAO/CIAO/<file>",
-                'DDS_URL'       => "$defurl/TAO/DDS/<file>",
+                'DDS_URL'       => "$defurl/<file>?cvsroot=DDS",
                );
 
     # replace all '\x22' with '"'
