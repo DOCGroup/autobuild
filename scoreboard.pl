@@ -1028,7 +1028,6 @@ sub build_integrated_page ($)
                      "tao",
                      "tao_future",
                      "misc",
-                     "dds",
                      "ciao");
 
     my $newfile = new FileHandle;
@@ -1044,11 +1043,11 @@ sub build_integrated_page ($)
         if ($file_list eq 'ace') {
             print $newfile "<build_ace>\n";
         } elsif ($file_list eq 'tao') {
-            print $newfile "<build_tao> \n";
+            print $newfile "<build_tao>\n";
         } elsif ($file_list eq 'ciao') {
-            print $newfile "<build_ciao> \n";
+            print $newfile "<build_ciao>\n";
         } elsif ($file_list eq 'dds') {
-            print $newfile "<build_dds> \n";
+            print $newfile "<build_dds>\n";
         }
 
         $file_handle->open ("<configs/scoreboard/$file_list.xml");
