@@ -1,7 +1,13 @@
+Mon Jun 19 10:08:17 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/index.html:
+        * configs/scoreboard/dds.html:
+          Added DDS specific page with builds that also build DDS
+
 Fri Jun  9 10:14:21 UTC 2006  Wallace Zhang  <zhangw@ociweb.com>
 
         * configs/scoreboard/tao_future.xml:
-          
+
           Removed Wchar builds from the scoreboard.
 
 Wed Jun  7 09:00:00 UTC 2006  Simon Massey  <sma@prismtech.com>

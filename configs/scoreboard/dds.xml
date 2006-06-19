@@ -1,0 +1,21 @@
+<!-- $Id$ -->
+<scoreboard>
+<preamble>
+<center><h1>DDS Beta/Release Candidate Scoreboard</h1></center>
+<hr/>
+This is the DDS virtual scoreboard for the beta or release. It shows
+all the OS/platform combinations DDS is tested everyday.
+<hr/>
+</preamble>
+
+<group>
+<name>Linux</name>
+   <build>
+       <name>SuSE_10_1_GCC4.1</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_gcc</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+</group>
+
+</scoreboard>

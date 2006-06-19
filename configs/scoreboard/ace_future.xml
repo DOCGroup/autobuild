@@ -18,7 +18,8 @@ all the OS/platform combinations ACE is tested everyday.
     <build>
       <name>SuSE_x86_64_gccwarn</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_gccwarn</url>
-      <build_sponsor>John Zorko</build_sponsor>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
 </group>
 </scoreboard>
