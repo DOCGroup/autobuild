@@ -15,5 +15,10 @@ all the OS/platform combinations ACE is tested everyday.
       <url>http://www.makexs.com/~zorko/Panther</url>
       <build_sponsor>John Zorko</build_sponsor>
     </build>
+    <build>
+      <name>SuSE_x86_64_gccwarn</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_gccwarn</url>
+      <build_sponsor>John Zorko</build_sponsor>
+    </build>
 </group>
 </scoreboard>
