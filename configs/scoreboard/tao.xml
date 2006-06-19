@@ -270,10 +270,6 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
-  <name>MacOS</name>
-</group>
-
-<group>
    <name>NetBSD</name>
    <build>
       <name>NetBSD_amd64</name>
