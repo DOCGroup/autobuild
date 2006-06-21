@@ -120,10 +120,6 @@ sub handle_compiler_output_line($) {
       return;
   }
   
-  if ($s =~ m/multiple definitions of symbol/) {
-      $self->Output_Error ($s);
-  }
-
   if ($s =~ m/Rule line too long/) {
     # Can be given by Borland make
     $self->Output_Error ($s);

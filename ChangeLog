@@ -1,3 +1,12 @@
+Wed Jun 21 12:44:29 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/parse_compiler_output.pm:
+
+          Removed the code that marked 'multiple definitions of symbol' as
+          an error.  With static builds on MacOS X, this is "ok" as it may
+          happen due to a system library but everything still links and runs
+          properly.
+
 Mon Jun 19 10:08:17 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/index.html:
