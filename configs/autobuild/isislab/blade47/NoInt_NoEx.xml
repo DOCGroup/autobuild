@@ -51,8 +51,8 @@
 
     <command name="make"              options="-j 2 -C ace" />
     <command name="make"              options="-j 2 -C apps/gperf/src" />
-    <command name="make"              options="-j 1 -C TAO/tao" />
     <command name="make"              options="-j 1 -C TAO/TAO_IDL" />
+    <command name="make"              options="-j 1 -C TAO/tao" />
     <command name="make"              options="-j 1 -C Kokyu" />
     <command name="make"              options="-j 1 -C TAO/orbsvcs" />
 
