@@ -276,6 +276,17 @@ all the OS/platform combinations TAO is tested everyday.
 </group>
 
 <group>
+  <name>OpenVMS</name>
+  <build>
+    <name>OpenVMS82_Alpha</name>
+    <url>http://www.dre.vanderbilt.edu/~remedynl/OpenVMS</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+
+</group>
+
+<group>
    <name>NetBSD</name>
    <build>
       <name>NetBSD_amd64</name>
