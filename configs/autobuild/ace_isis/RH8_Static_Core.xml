@@ -4,7 +4,7 @@
 
         <environment name="ACE_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO"/>
-  <environment name="CIAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO/CIAO"/>
+        <environment name="CIAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO/CIAO"/>
         <environment name="CVSROOT"  value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"  value="/usr/bin/ssh" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
@@ -18,8 +18,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="process_listener"  options="localhost:32003" />
     <command name="log"               options="on" />
 
 
@@ -51,8 +50,8 @@
     <command name="make"              options="-j 2 -k -C apps/gperf/src" />
     <command name="make"              options="-j 2 -k -C ACEXML" />
     <command name="make"              options="-j 2 -k -C protocols" />
-    <command name="make"              options="-j 2 -k -C TAO/tao" />
     <command name="make"              options="-j 2 -k -C TAO/TAO_IDL" />
+    <command name="make"              options="-j 2 -k -C TAO/tao" />
 
     <command name="make"              options="-j 2 -k -C Kokyu" />
     <command name="make"              options="-j 2 -k -C TAO/orbsvcs/orbsvcs" />
@@ -60,6 +59,5 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify clean index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
