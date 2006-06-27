@@ -20,4 +20,21 @@ decide the migration paths and strategies.
       <red>192</red>
    </build>
 </group>
+
+<group>
+   <name>Linux</name>
+   <build>
+      <name>CORBA_e_micro</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_micro</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
+      <name>CORBA_e_compact</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_compact</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+</group>
+
 </scoreboard>
