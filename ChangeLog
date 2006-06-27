@@ -1,3 +1,8 @@
+Tue Jun 27 09:31:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+          Added CORBA/e builds
+
 Mon Jun 26 15:12:17 UTC 2006  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml:
