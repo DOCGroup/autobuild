@@ -22,7 +22,7 @@ decide the migration paths and strategies.
 </group>
 
 <group>
-   <name>Linux</name>
+  <name>Test Builds for TAO</name>
    <build>
       <name>CORBA_e_micro</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_micro</url>
