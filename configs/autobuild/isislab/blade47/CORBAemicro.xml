@@ -12,9 +12,9 @@
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
 
-        <variable name="root"     value="/home/bczar/builds/" />
+        <variable name="root"     value="/home/bczar/builds/CORBAemicro/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/bczar/builds/" />
+        <variable name="log_root" value="/home/bczar/builds/CORBAemicro/" />
         <variable name="configs"  value="Linux NoInterceptor Core" />
     </configuration>
 
