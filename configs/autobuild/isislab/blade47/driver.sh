@@ -13,3 +13,5 @@ exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
   $HOME/autobuild/configs/autobuild/isislab/blade47/NoInt_NoEx.xml
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
   $HOME/autobuild/configs/autobuild/isislab/blade47/CORBAemicro.xml
+exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
+  $HOME/autobuild/configs/autobuild/isislab/blade47/CORBAecompact.xml
