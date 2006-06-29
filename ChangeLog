@@ -1,3 +1,9 @@
+Tue Jun 27 10:16:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/make.pm:
+          When we can't change to $dir, report an error and return 1 so
+          that the autobuild itself continues
+
 Tue Jun 27 09:31:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
