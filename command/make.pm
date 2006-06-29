@@ -120,14 +120,13 @@ sub Run ($)
 
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
-        return 0;
     }
 
     if( defined $dir )
     {
         if(!chdir $dir) {
           print STDERR __FILE__, ": Cannot change to $dir\n";
-          return 0;
+          return 1;
         }
     }
 
