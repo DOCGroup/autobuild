@@ -34,7 +34,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -62,9 +62,9 @@ sub Run ($)
     main::PrintStatus ('Compile', 'make');
 
     my $current_dir = getcwd ();
-    
+
     my $dir;
- 
+
     if ($options =~ s/dir='([^']*)'//) {
         $dir = $1;
     }
@@ -104,7 +104,7 @@ sub Run ($)
         # XML config file.  Default to using a program called "make".
         $make_program = "make"
     }
-    
+
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
@@ -113,27 +113,28 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
 
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
+        return 0;
     }
 
     if( defined $dir )
     {
         if(!chdir $dir) {
           print STDERR __FILE__, ": Cannot change to $dir\n";
-          return 0; 
+          return 0;
         }
     }
 
     my $command;
     my $pattern;
     my $ret = 0;
- 
+
     if ($options =~ s/find=([^\s]*)//) {
         $pattern = $1;
         print "Pattern: $pattern\n";
@@ -162,11 +163,11 @@ sub Run ($)
         ## a more accurate error message.
         if( $command =~ /\-C\s+([\w\/]+)/  )
         {
-            $working_dir = "$working_dir/$1"; 
+            $working_dir = "$working_dir/$1";
         }
 
         print "[BUILD ERROR detected in $working_dir]\n ";
-    } 
+    }
 
     chdir $current_dir;
 
