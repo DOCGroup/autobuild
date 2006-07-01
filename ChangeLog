@@ -1,3 +1,8 @@
+Sat Jul  1 12:14:53 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/autobuild/remedynl/theoden_bcb2006sd.xml:
+          Fixed spelling of TAO_HAS_OPTIMIZED_VALUETYPE_MARSHALING
+
 Tue Jun 27 10:16:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/make.pm:
