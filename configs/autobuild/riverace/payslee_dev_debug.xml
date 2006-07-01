@@ -41,7 +41,7 @@
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/debug -type gnuace" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define ACE_HAS_EVENT_POLL\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCFLAGS += -m64\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
