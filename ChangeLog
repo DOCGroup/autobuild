@@ -1,10 +1,16 @@
+Mon Jul  3 21:48:11 UTC 2006  Ciju John  <john_c@ociweb.com>
+
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+
+          Replaced all 'Release' flags with 'Debug' ones.
+
 Mon Jul  3 04:53:31 UTC 2006  Krishnakumar B  <kitty@isis.vanderbilt.edu>
 
         * equus.bat:
         * equus_driver.bat:
         * equus_vc71.bat:
-        * equus_vc71.xml:  
-         
+        * equus_vc71.xml:
+
           Updated files to reflect resurrection of equus.dre.vanderbilt.edu
 
 Sat Jul  1 12:14:53 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>

@@ -26,19 +26,19 @@
 	<command name="print_ace_config" />
 	<command name="print_status" options="Compile:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
-	<command name="vc7make" options="/build release TAO/TAO_ACE.sln" />
-	<command name="vc7make" options="/build release tests/tests.sln" />
-	<command name="vc7make" options="/build release examples/examples.sln" />
-	<command name="vc7make" options="/build release performance-tests/perf.sln" />
-	<command name="vc7make" options="/build release TAO/tests/tests.sln" />
-	<command name="vc7make" options="/build release TAO/examples/examples.sln" />
-	<command name="vc7make" options="/build release TAO/performance-tests/perf.sln" />
-	<command name="vc7make" options="/build release TAO/orbsvcs/tests/tests.sln" />
-	<command name="vc7make" options="/build release TAO/orbsvcs/examples/examples.sln" />
-	<command name="vc7make" options="/build release TAO/orbsvcs/performance-tests/perf.sln" />
+	<command name="vc7make" options="/build debug TAO/TAO_ACE.sln" />
+	<command name="vc7make" options="/build debug tests/tests.sln" />
+	<command name="vc7make" options="/build debug examples/examples.sln" />
+	<command name="vc7make" options="/build debug performance-tests/perf.sln" />
+	<command name="vc7make" options="/build debug TAO/tests/tests.sln" />
+	<command name="vc7make" options="/build debug TAO/examples/examples.sln" />
+	<command name="vc7make" options="/build debug TAO/performance-tests/perf.sln" />
+	<command name="vc7make" options="/build debug TAO/orbsvcs/tests/tests.sln" />
+	<command name="vc7make" options="/build debug TAO/orbsvcs/examples/examples.sln" />
+	<command name="vc7make" options="/build debug TAO/orbsvcs/performance-tests/perf.sln" />
 	<command name="print_status" options="Test:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
-	<command name="auto_run_tests" options="-a -t -o -s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG -ExeSubDir Release" />
+	<command name="auto_run_tests" options="-a -t -o -s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG" />
 	<command name="log" options="OFF" />
 	<command name="process_logs" options="clean move prettify index" />
 	<command name="status" options="off" />
