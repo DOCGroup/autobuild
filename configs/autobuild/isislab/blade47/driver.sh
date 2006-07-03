@@ -9,6 +9,6 @@ export CVS_RSH
 cvs up -P -d
 
 # Run the build.
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/NoInt.sh
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/CORBAemicro.sh
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/CORBAecompact.sh
+sh $HOME/ACE/autobuild/configs/autobuild/isislab/blade47/NoInt.sh
+sh $HOME/ACE/autobuild/configs/autobuild/isislab/blade47/CORBAemicro.sh
+sh $HOME/ACE/autobuild/configs/autobuild/isislab/blade47/CORBAecompact.sh
