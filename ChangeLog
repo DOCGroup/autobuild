@@ -1,3 +1,12 @@
+Mon Jul  3 04:53:31 UTC 2006  Krishnakumar B  <kitty@isis.vanderbilt.edu>
+
+        * equus.bat:
+        * equus_driver.bat:
+        * equus_vc71.bat:
+        * equus_vc71.xml:  
+         
+          Updated files to reflect resurrection of equus.dre.vanderbilt.edu
+
 Sat Jul  1 12:14:53 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/autobuild/remedynl/theoden_bcb2006sd.xml:

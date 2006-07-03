@@ -1,35 +1,36 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\Build\CoSMIC_VC71_Debug\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\Build\CoSMIC_VC71_Debug\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"     value="C:\Build\CoSMIC_VC71_Debug\ACE_wrappers\TAO\CIAO"/>
+        <environment name="ACE_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\TAO\CIAO"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="PATH"         value= "C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Perl\bin\;C:\Tools\putty;C:\Tools\bin;C:\Tools\putty;C:\Software\Boost\lib;C:\Software\wxWindows\lib;C:\Build\CoSMIC_VC71_Debug\ACE_wrappers\lib;C:\Build\CoSMIC_VC71_Debug\CoSMIC\bin;C:\Software\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin" />
-        <environment name="XERCESCROOT"   value="C:\Software\xerces-c-2_7_0-win32-vc7"/>
-        <environment name="BOOST_ROOT"    value="C:\Software\Boost"/>
+        <environment name="XERCESCROOT"   value="C:\Tools\xerces-c-2_7_0-win32-vc7"/>
+        <environment name="BOOST_ROOT"    value="C:\Tools\Boost"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
         <environment name="BOOST_CFG"     value="-vc71-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
-        <environment name="WXWINDOWS_ROOT"  value="C:\Software\wxWindows" />
-		<environment name="COSMIC_ROOT"  value="C:\Build\CoSMIC_VC71_Debug\CoSMIC" />
+        <environment name="UDM_PATH" 	  value="C:\Program Files\ISIS\UDM" />  
+	<environment name="COSMIC_ROOT"  value="C:\bczar\CoSMIC_VC71_Debug\CoSMIC" />
+	<environment name="CUTS_ROOT"  value="C:\bczar\CoSMIC_VC71_Debug\CoSMIC\CUTS" />
+        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Tools\Boost\lib;C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\lib;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\bin;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\CUTS\bin;C:\Tools\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\Putty;C:\Tools\bin;C:\Tools\Perl\bin;C:\Program Files\Subversion\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin" />
         <variable name="configs"  value="Win32 VC71 Exceptions" />
-        <variable name="root"     value="C:\Build\CoSMIC_VC71_Debug" />
+        <variable name="root"     value="C:\bczar\CoSMIC_VC71_Debug" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\Build\CoSMIC_VC71_Debug" />
+        <variable name="log_root" value="C:\bczar\CoSMIC_VC71_Debug" />
         <variable name="name"     value="CoSMIC VC71 WinXP" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
     
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %ACE_ROOT% -Debug -k -clean" />
-	<command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k -clean" />
-
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k -clean" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %CUTS_ROOT% -Debug -k -clean" />
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-d :ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository -z3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-d :ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository -z3 -q checkout -P ACE_MPC"/>
-    <command name="cvs"               options="-d :ext:bczar@cvs.dre.vanderbilt.edu:/cvsroot -z3 -q checkout -P CoSMIC" />
+    <command name="cvs"               options="-d :ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository -z3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-d :ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository -z3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\n'" />
@@ -40,15 +41,17 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\cosmic.mwc"/>
+    <command name="generate_workspace" options="-type vc71 -features gme=1,udm=1,mfc=1,boost=1 %CUTS_ROOT%\CUTS_CoSMIC.mwc"/>
     <command name="generate_workspace" options="-type vc71 %ACE_ROOT%\ace\ace.mwc"/>
     <command name="generate_workspace" options="-type vc71 %ACE_ROOT%\TAO\TAO_IDL\TAO_IDL.mwc"/>
      
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %ACE_ROOT% -Debug -k" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %CUTS_ROOT% -Debug -k" />
     
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C C:\Build\CoSMIC_VC71_Debug\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\Build\CoSMIC_VC71_Debug\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Debug\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Debug\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
 </autobuild>
