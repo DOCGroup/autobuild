@@ -9,5 +9,5 @@ export CVS_RSH
 cvs up -P -d
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                             $HOME/autobuild/configs/autobuild/remedynl/CORBAecompact.xml
+                             $HOME/autobuild/configs/autobuild/isislab/blade47/CORBAecompact.xml
 
