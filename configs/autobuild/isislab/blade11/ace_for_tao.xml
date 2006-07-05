@@ -47,7 +47,7 @@
     <command name="auto_run_tests"    options="-s \x22C:\Docume~1\bczar\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=5 index" />
+    <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
 
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade11/ace_for_tao" />
