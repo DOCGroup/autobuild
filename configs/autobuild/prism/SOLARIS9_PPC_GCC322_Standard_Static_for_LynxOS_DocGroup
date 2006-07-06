@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+CVSROOT=:ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository;export CVSROOT
+CVS_RSH=ssh;export CVS_RSH
+PATH=/usr/local/bin:$PATH;export PATH
+#
+# Update the doc_autobuild scripts.
+echo "Updating doc_autobuild"
+cd $HOME/doc_autobuild
+/usr/local/bin/cvs -z9 update autobuild
+cd autobuild
+#
+# build ACE, tao_idl and gperf statically on ultra4 with gcc 3.2.2
+echo "Building ACE, tao_idl and gperf native statically on ultra4 with gcc 3.2.2"
+/usr/bin/perl autobuild.pl configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml
+#
+echo "Triggering Build of ACE and TAO on ultra4 with LynxOS PPC gcc 3.2.2 cross compiler"
+configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup
+exit

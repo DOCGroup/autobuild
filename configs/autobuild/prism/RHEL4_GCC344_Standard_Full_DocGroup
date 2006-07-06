@@ -1,0 +1,13 @@
+#!/bin/sh
+# $Id$
+CVSROOT=:ext:sma@cvs.doc.wustl.edu:/project/cvs-repository
+CVS_RSH=ssh
+export CVSROOT CVS_RSH
+#
+cd $HOME/doc_autobuild
+PATH=/usr/local/bin:$PATH
+#
+cvs update autobuild
+cd autobuild
+#
+perl autobuild.pl configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml

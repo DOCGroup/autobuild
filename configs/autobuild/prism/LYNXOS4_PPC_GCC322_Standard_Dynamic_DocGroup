@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+CVSROOT=:ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository;export CVSROOT
+CVS_RSH=ssh;export CVS_RSH
+PATH=/usr/local/bin:$PATH;export PATH
+#
+# Update the doc_autobuild scripts.
+echo "Updating doc_autobuild"
+cd $HOME/doc_autobuild
+/usr/local/bin/cvs -z9 update autobuild
+cd autobuild
+#
+# build ACE and TAO on ultra4 with LynxOS PPC gcc 3.2.2 cross compiler
+# Sets ENV_PREFIX=/usr/local/lynx/4.0.0/ppc-322
+echo `/usr/bin/date`: "Building ACE and TAO on ultra4 with LynxOS PPC gcc 3.2.2 cross compiler"
+/usr/bin/perl autobuild.pl configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml
+#
+echo "`/usr/bin/date`: Finished part1"
+echo "`/usr/bin/date`: Triggering rad1 to run part2"
+/usr/bin/nohup /usr/bin/ssh rad1 /bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests_Trigger
+echo "`/usr/bin/date`: Back on ultra4, finished"

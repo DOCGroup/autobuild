@@ -1,0 +1,15 @@
+#!/bin/sh
+CVSROOT=:ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository;export CVSROOT
+CVS_RSH=ssh;export CVS_RSH
+PATH=/usr/local/bin:$PATH; export PATH
+#
+# build ACE and TAO on ultra6 with LynxOS x86 gcc 3.2.2 cross compiler
+# Sets ENV_PREFIX=/usr/local/lynx/4.0.0/x86-322
+echo "`/usr/bin/date`: Building ACE and TAO on ultra6 with LynxOS x86 gcc 3.2.2 cross compiler"
+/usr/local/bin/perl /usr/users/tao/doc_autobuild/autobuild/autobuild.pl /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup.xml
+#
+echo "`date` Finished part1"
+echo "`/usr/bin/date`: Triggering lynxosx86 to run tests"
+/usr/bin/nohup /usr/local/bin/ssh lynxosx86 /bin/nohup /var/lynxos1/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests_Trigger
+echo "`/usr/bin/date`: Back on ultra6, finished"
+exit

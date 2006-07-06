@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+PATH=/usr/local/bin:$PATH:.; export PATH
+#
+echo `/bin/date`: Copying ACE_wrappers ultra6 cross build
+cd /home/tao/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic
+/bin/rcp -r ultra6:ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic/ACE_wrappers .
+#
+# run TAO tests
+echo `/bin/date`: Running tao tests
+/usr/local/bin/perl /var/lynxos1/tao/doc_autobuild/autobuild/autobuild.pl /var/lynxos1/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests.xml
+#
+# copy test results back to ultra6 so they can be posted to the doc group scoreboard
+echo `/bin/date`: rcp test results back to ultra6 for posting
+/bin/rcp DOC_Group_test_results_run_on_lynxosx86.txt ultra6:
+/bin/mv DOC_Group_test_results_run_on_lynxosx86.txt DOC_Group_test_results_run_on_lynxosx86_`/bin/date +%y%m%d`.txt
+#
+echo `/bin/date`: Clean up
+# attempt to kill off lingering processes
+ps -u tao|grep Conn_Test|awk '{print $1}'|xargs kill -9
+ps -u tao|grep Process_Strategy_Test|awk '{print $1}'|xargs kill -9
+ps -u tao|grep MEM_Stream_Test|awk '{print $1}'|xargs kill -9
+ps -u tao|grep MT_SOCK_Test|awk '{print $1}'|xargs kill -9
+ps -u tao | grep -i naming_service | sed -n -e 's/^ *\([0-9][0-9]*\)  *1 .*$/\1/p' | xargs kill -9 
+rm -rf ACE_wrappers ACE_wrappers_for_lynxosx86.tar.gz *.cpp *.h *.conf *.mpc *.pl *.bor *.o *.xml *.dsw
+#
+# processes still running prevent the deletion of the ACE_wrappers directory
+# so move it temporarily
+if [ -d ACE_wrappers ]; then mv ACE_wrappers ACE_wrappers_`/bin/date +%y%m%d`; fi
+echo `/bin/date`: Finished part2
+echo `/bin/date`: Triggering ultra6 to run part3
+/bin/nohup /usr/local/bin/ssh ultra6 /usr/bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_PRETTIFY
+echo `/bin/date`: Back on lynxosx86, finished
+exit

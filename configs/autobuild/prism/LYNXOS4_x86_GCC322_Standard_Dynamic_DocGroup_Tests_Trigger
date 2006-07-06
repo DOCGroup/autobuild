@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+echo `/bin/date`: Triggering detached test run
+/bin/nohup /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests > /home/tao/log/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests.log 2>&0 < /dev/null &
+echo `/bin/date`: Ok, bye for now.
+exit
