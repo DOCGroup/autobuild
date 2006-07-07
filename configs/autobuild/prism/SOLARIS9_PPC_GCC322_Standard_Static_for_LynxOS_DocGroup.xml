@@ -37,6 +37,8 @@
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" /> 
 
     <!-- Uses ace.mwc -->
     <command name="generate_workspace" options="-exclude TAO,build.mwc,prism" />

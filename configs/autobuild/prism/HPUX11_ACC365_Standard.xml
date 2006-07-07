@@ -34,9 +34,12 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ndebug=0\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\ninline=0\n'" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="aCC" />
     <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" /> 
 
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO,build.mwc,prism" />
