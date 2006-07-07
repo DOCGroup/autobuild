@@ -30,7 +30,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='use_dep_libs=0\ncidl=1\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_compact=1\cidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_compact=1\ncidl=1\n'" />
 
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
