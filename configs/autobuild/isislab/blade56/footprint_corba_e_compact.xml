@@ -48,9 +48,9 @@
     <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
-    <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C ACEXML     --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C apps/gperf --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
+    <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C ACEXML     --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C apps/gperf --dry-run >> $ACE_ROOT/../.metrics/targets" />
 
     <command name="make"              options="-k -j4 -C ace" />
     <command name="make"              options="-k -j4 -C ACEXML" />
@@ -64,17 +64,17 @@
     <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
 
     <!-- TAO: only build the minimum, tao -->
-    <command name="make"              options="-k -C TAO/tao                --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/tests/ORB_init     --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/tests/ORB_destroy  --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciaosvcs      --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $ACE_ROOT/../.metricscorbaecompact/targets" />
+    <command name="make"              options="-k -C TAO/tao                --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/ORB_init     --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/ORB_destroy  --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/ciaosvcs      --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $ACE_ROOT/../.metrics/targets" />
 
     <command name="make"              options="-k -j4 -C TAO/tao" />
     <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />
@@ -87,7 +87,7 @@
 
     <command name="log"               options="off" />
 
-    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /home/bczar/metrics/corbaecompact $ACE_ROOT/../.metricscorbaecompact/targets Footprint" />
+    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $ACE_ROOT/../build.txt /home/bczar/metrics/corbaecompact $ACE_ROOT/../.metrics/targets Footprint" />
 
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
