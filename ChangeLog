@@ -1,3 +1,36 @@
+Fri Jul 14 01:55:09 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade17/blade17_vc71.bat
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.bat
+        * configs/autobuild/isislab/blade27/blade27_driver.bat
+        * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.bat
+        * configs/autobuild/isislab/blade46/blade46_driver.bat
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.bat
+        * configs/autobuild/isislab/blade55/isis_valgrind.sh
+        * configs/autobuild/isislab/blade47/NoInt.sh
+        * configs/autobuild/isislab/blade47/driver.sh
+        * configs/autobuild/isislab/blade47/NoIIOP.sh
+        * configs/autobuild/isislab/blade47/CORBAecompact.sh
+        * configs/autobuild/isislab/blade47/CORBAemicro.sh
+        * configs/autobuild/isislab/blade56/driver_corba_e_compact.sh
+        * configs/autobuild/isislab/blade56/driver_regular.sh
+        * configs/autobuild/isislab/blade56/driver_corba_e_micro.sh
+        * configs/autobuild/isislab/blade49/blade49_driver.bat
+        * configs/autobuild/isislab/blade10/ciao_no_inline.bat
+        * configs/autobuild/isislab/blade11/versioned_namespace.bat
+        * configs/autobuild/isislab/blade11/ace_for_tao.bat
+        * configs/autobuild/isislab/blade11/blade11_driver.bat
+        * configs/autobuild/isislab/blade12/gcc4_static.sh
+        * configs/autobuild/isislab/blade12/versioned_namespace.sh
+        * configs/autobuild/isislab/blade12/ace_for_tao.sh
+        * configs/autobuild/isislab/blade50/blade50_driver.bat
+        * configs/autobuild/isislab/blade51/ciao_core.sh
+        * configs/autobuild/isislab/blade6/Full.sh
+        * configs/autobuild/tao_win2003/tao_driver.bat
+        * configs/autobuild/merengue/merengue_driver.bat
+        
+          Updated to use subversion to update the autobuild directory.          
+
 Fri Jul 14 01:37:51 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/tao_dre.sh
@@ -506,8 +539,8 @@ Wed Apr 12 13:51:03 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
 Fri Apr  7 19:44:27 UTC 2006  xiong,ming  <ming.xiong@vanderbilt.edu>
 
-        *  configs/scoreboard/ciao.xml
-        *  configs/scoreboard/tao.xml
+        * configs/scoreboard/ciao.xml
+        * configs/scoreboard/tao.xml
 
         Moved debian_singlethreaded from tao.xml to ciao.xml since it
         builds ciao.
@@ -890,7 +923,7 @@ Tue Feb 28 20:21:59 UTC 2006   Ming Xiong <ming.xiong@vanderbilt.edu>
 
 Tue Feb 28 19:45:32 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
-        *  configs/autobuild/remedynl/elrond_icc32.xml
+        * configs/autobuild/remedynl/elrond_icc32.xml
 
         Added NOXERCES to the configs section.
 
@@ -1417,7 +1450,7 @@ Tue Jan 31 15:37:57 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
 Tue Jan 31 14:08:50 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
-        *  configs/autobuild/tao_win2003/tao_vc8.xml
+        * configs/autobuild/tao_win2003/tao_vc8.xml
 
            Fixed ZZIP_ROOT and ZLIB_ROOT.
 
