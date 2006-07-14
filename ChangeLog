@@ -1,3 +1,9 @@
+Fri Jul 14 01:37:51 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/scoreboard/tao_dre.sh
+        
+        Updated to use subversion instead of CVS.
+
 Thu Jul 13 17:48:41 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
 
         * Subversion conversion complete, at revision 3808
