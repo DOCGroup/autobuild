@@ -1,3 +1,10 @@
+Fri Jul 14 12:21:19 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/printaceconfig.pm:
+
+          Reworked the code to deal with ChangeLog's to avoid a large amount
+          of duplicate code.
+
 Fri Jul 14 01:55:09 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade17/blade17_vc71.bat
@@ -28,13 +35,13 @@ Fri Jul 14 01:55:09 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/blade6/Full.sh
         * configs/autobuild/tao_win2003/tao_driver.bat
         * configs/autobuild/merengue/merengue_driver.bat
-        
-          Updated to use subversion to update the autobuild directory.          
+
+          Updated to use subversion to update the autobuild directory.
 
 Fri Jul 14 01:37:51 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/tao_dre.sh
-        
+
         Updated to use subversion instead of CVS.
 
 Thu Jul 13 17:48:41 UTC 2006  William Otte  <wotte@dre.vanderbilt.edu>
