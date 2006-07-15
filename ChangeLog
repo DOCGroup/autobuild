@@ -1,3 +1,9 @@
+Sat Jul 15 12:54:19 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/printaceconfig.pm:
+          Updated autobuild link to the svn archive, makes it now also easy
+          to see which systems are converted and which not to svn
+
 Fri Jul 14 12:21:19 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/printaceconfig.pm:
