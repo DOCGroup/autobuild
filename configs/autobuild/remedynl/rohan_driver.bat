@@ -1,5 +1,5 @@
 cd ..\..\..\
-c:\cygwin\bin\svn up
+svn up
 cd configs\autobuild\remedynl
 perl C:\ACE\autobuild\autobuild.pl rohan_icc9_64.xml
 perl C:\ACE\autobuild\autobuild.pl rohan_icc9_32.xml
