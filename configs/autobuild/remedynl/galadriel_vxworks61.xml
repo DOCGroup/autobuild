@@ -4,29 +4,28 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/VxWorks61/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/VxWorks61/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/VxWorks61/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks61/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.2/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.4/x86-linux2/lib:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/lib:/usr/local/lib" />
-        <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.2/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.4/x86-linux2/bin:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/bin:/home/build/WindRiver/gnu/3.3.2-vxworks-6.2/x86-linux2/bin:/home/build/WindRiver/diab/5.3.1.0/LINUX386/bin" type="prefix" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks61/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.3/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.5/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.5/x86-linux2/lib:/home/build/WindRiver/workbench-2.5/foundation/4.0.9/x86-linux2/lib:/usr/local/lib" />
+        <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.3/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.5/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.5/x86-linux2/bin:/home/build/WindRiver/workbench-2.5/foundation/4.0.9/x86-linux2/bin:/home/build/WindRiver/gnu/3.4.4-vxworks-6.3/x86-linux2/bin" type="prefix" />
         <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="CVS_RSH"         value="ssh" />
         <environment name="WIND_HOME"         value="/home/build/WindRiver" />
-        <environment name="WIND_BASE"         value="/home/build/WindRiver/vxworks-6.2"/>
-        <environment name="WIND_DFW_PATH" value="/home/build/WindRiver/workbench-2.4/dfw/0128"/>
-        <environment name="WIND_DIAB_PATH" value="/home/build/WindRiver/diab/5.3.1.0"/>
-        <environment name="WIND_USR"         value="/home/build/WindRiver/vxworks-6.2/target/usr"/>
-        <environment name="WIND_FOUNDATION_PATH"         value="/home/build/WindRiver/workbench-2.4/foundation/4.0.6"/>
-        <environment name="WIND_GNU_PATH"         value="/home/build/WindRiver/gnu/3.3.2-vxworks-6.2"/>
+        <environment name="WIND_BASE"         value="/home/build/WindRiver/vxworks-6.3"/>
+        <environment name="WIND_DFW_PATH" value="/home/build/WindRiver/workbench-2.5/dfw/0128"/>
+        <environment name="WIND_USR"         value="/home/build/WindRiver/vxworks-6.3/target/usr"/>
+        <environment name="WIND_FOUNDATION_PATH"         value="/home/build/WindRiver/workbench-2.5/foundation/4.0.9"/>
+        <environment name="WIND_GNU_PATH"         value="/home/build/WindRiver/gnu/3.4.4-vxworks-6.3"/>
         <environment name="WIND_HOST_TYPE"         value="x86-linux2"/>
         <environment name="WIND_HOME"        value="/home/build/WindRiver"/>
-        <environment name="WIND_TOOLS"         value="/home/build/WindRiver/workbench-2.4"/>
+        <environment name="WIND_TOOLS"         value="/home/build/WindRiver/workbench-2.5"/>
         <environment name="WIND_DOCS"         value="/home/build/WindRiver/docs"/>
-        <environment name="WIND_DFW_PATH"         value="/home/build/WindRiver/workbench-2.4/dfw/0109h"/>
+        <environment name="WIND_DFW_PATH"         value="/home/build/WindRiver/workbench-2.5/dfw/0109h"/>
         <environment name="WIND_JRE_HOME"         value="/home/build/WindRiver/jre/1.4.2/x86-linux2"/>
-        <environment name="WIND_WRWB_PATH"         value="/home/build/WindRiver/workbench-2.4/wrwb/2.4"/>
-        <environment name="WIND_WRSV_PATH"         value="/home/build/WindRiver/workbench-2.4/wrsv/4.7"/>
+        <environment name="WIND_WRWB_PATH"         value="/home/build/WindRiver/workbench-2.5/wrwb/platform/eclipse"/>
+        <environment name="WIND_WRSV_PATH"         value="/home/build/WindRiver/workbench-2.5/wrsv/4.8"/>
         <environment name="WRSD_LICENSE_FILE"         value="/home/build/WindRiver/license"/>
-        <environment name="WIND_SAMPLES"         value="/home/build/WindRiver/vxworks-6.2/target/usr/apps/samples:/home/build/WindRiver/vxworks-6.2/target/src/demo:/home/build/WindRiver/workbench-2.4/samples"/>
-        <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.2/host/resource/tcl"/>
-        <environment name="WIND_PLATFORM" value="vxworks-6.2"/>
+        <environment name="WIND_SAMPLES"         value="/home/build/WindRiver/vxworks-6.3/target/usr/apps/samples:/home/build/WindRiver/vxworks-6.3/target/src/demo:/home/build/WindRiver/workbench-2.5/samples"/>
+        <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.3/host/resource/tcl"/>
+        <environment name="WIND_PLATFORM" value="vxworks-6.3"/>
 
         <variable name="root"     value="/home/build/ACE/VxWorks61/" />
         <variable name="log_file" value="build.txt" />
@@ -43,8 +42,8 @@
     <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.2.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.2.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
