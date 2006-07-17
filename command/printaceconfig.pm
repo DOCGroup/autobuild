@@ -78,9 +78,9 @@ sub Run ($)
           $information{$name}->[0] = $value;
         }
         ## Next, check for a URL setting
-        elsif (defined $information{$name . '_URL'}) {
+        elsif ($name =~ s/_URL$// && defined $information{$name}) {
           $value .= '/<file>' if ($value !~ /\/<file>/);
-          $information{$name . '_URL'}->[2] = $value;
+          $information{$name}->[2] = $value;
         }
         ## We did not recognize this setting
         else {
