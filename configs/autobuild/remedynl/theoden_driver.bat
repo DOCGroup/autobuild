@@ -1,6 +1,5 @@
 cd ..\..\..\
-set CVS_RSH=c:\cygwin\bin\ssh
-c:\cygwin\bin\cvs -d :ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
+svn up
 cd configs\autobuild\remedynl
 
 perl C:\ACE\autobuild\autobuild.pl theoden_bcb2006dr.xml
