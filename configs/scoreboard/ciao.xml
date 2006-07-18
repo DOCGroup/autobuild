@@ -229,7 +229,7 @@ all the OS/platform combinations CIAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks6.2_x86</name>
+     <name>VxWorks6.3_x86</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks61/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
