@@ -1,5 +1,4 @@
 cd ..\..\..\
-set CVS_RSH=c:\cygwin\bin\ssh
-c:\cygwin\bin\cvs -d :ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository -z9 up -P -d
+c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
 call legolas_vxworks-ppc603-gnu_run.bat
