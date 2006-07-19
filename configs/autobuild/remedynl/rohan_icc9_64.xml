@@ -39,8 +39,8 @@
     <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
 
-    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.mak' -exec c:\cygwin\bin\rm '{}' ';'" />
-    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name 'Makefile' -exec c:\cygwin\bin\rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.mak' -exec c:\tools\rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name 'Makefile' -exec c:\tools\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_USES_OLD_IOSTREAMS\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
