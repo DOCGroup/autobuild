@@ -49,11 +49,11 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
     my $defurl = 'http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*';
-    my $svnurl = 'https://svn.dre.vanderbilt.edu/ACE/';
+    my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc/';
     my %information = ('XML'       => ['', '',
                                        "$defurl/<file>?cvsroot=autobuild"],
                        'AUTOBUILD' => ['ChangeLog', '',
-                                       "$svnurl/autobuild/trunk/<file>"],
+                                       "$svnurl/ACE_autobuild/trunk/<file>?revision=HEAD"],
                        'MPC'       => ['ChangeLog', 'MPC/',
                                        "$defurl/<file>?cvsroot=MPC"],
                        'ACE'       => ['ChangeLog', '', "$defurl/<file>"],
