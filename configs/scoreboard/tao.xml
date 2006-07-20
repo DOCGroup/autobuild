@@ -59,6 +59,12 @@ all the OS/platform combinations TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
+        <name>FC4_NO_IIOP</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/no_iiop</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+     </build>
+     <build>
         <name>RHEL4_NoInline</name>
         <url>http://tao.prismtech.com/doc-scoreboard/rhel4</url>
         <build_sponsor>PrismTech</build_sponsor>
