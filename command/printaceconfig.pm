@@ -51,7 +51,7 @@ sub Run ($)
     my $defurl = 'http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*';
     my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc/';
     my %information = ('XML'       => ['', '',
-                                       "$defurl/<file>?cvsroot=autobuild"],
+                                       "$svnurl/ACE_autobuild/trunk/<file>?revision=HEAD"],
                        'AUTOBUILD' => ['ChangeLog', '',
                                        "$svnurl/ACE_autobuild/trunk/<file>?revision=HEAD"],
                        'MPC'       => ['ChangeLog', 'MPC/',
