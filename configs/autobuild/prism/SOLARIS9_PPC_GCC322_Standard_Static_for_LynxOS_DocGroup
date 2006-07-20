@@ -1,13 +1,9 @@
 #!/bin/sh
+# $Id$
 #
-CVSROOT=:ext:bugzilla@cvs.doc.wustl.edu:/project/cvs-repository;export CVSROOT
-CVS_RSH=ssh;export CVS_RSH
-PATH=/usr/local/bin:$PATH;export PATH
-#
-# Update the doc_autobuild scripts.
 echo "Updating doc_autobuild"
 cd $HOME/doc_autobuild
-/usr/local/bin/cvs -z9 update autobuild
+svn update autobuild
 cd autobuild
 #
 # build ACE, tao_idl and gperf statically on ultra4 with gcc 3.2.2

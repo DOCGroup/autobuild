@@ -1,3 +1,12 @@
+Thu Jul 20 15:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup
+        * configs/autobuild/prism/HPUX11_ACC331_Full
+        * configs/autobuild/prism/HPUX11_ACC339_Full
+
+          ULTRA6/HP1 Move autobuild checkout from CVS to SVN.
+
 Thu Jul 20 15:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup
