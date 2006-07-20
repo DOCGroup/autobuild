@@ -1,0 +1,56 @@
+<!-- $Id: no_iiop.xml 3579 2006-04-11 09:07:35Z jwillemsen $ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/home/bczar/builds/no_iiop/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/bczar/builds/no_iiop/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/bczar/builds/no_iiop/ACE_wrappers/TAO/CIAO"/>
+        <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/no_iiop/ACE_wrappers/lib" />
+        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
+        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="RSYNC_RSH"       value="ssh" />
+
+        <variable name="root"     value="/home/bczar/builds/no_iiop/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/bczar/builds/no_iiop/" />
+        <variable name="configs"  value="Linux SSL no_iiop" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="log"               options="on" />
+
+    <command name="make"              options="-k realclean" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
+    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#defined TAO_HAS_IIOP 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\ntao_no_iiop=1\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_NO_IIOP.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
+
+    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_cidlc_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="TAO_NO_IIOP.mwc" />
+
+    <command name="make"              options="-j 2 -k" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=3 move prettify index" />
+    <command name="status"            options="off" />
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/no_iiop"/>
+</autobuild>
