@@ -23,7 +23,6 @@
 
     <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
     <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
-    <command name="cvs"               options="-z 3 -q checkout -P autobuild" />
 
     <command name="create_ace_build"  />
 
