@@ -4,8 +4,6 @@
         <environment name="ACE_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers" />
         <environment name="TAO_ROOT"     value="c:/ACE/Cygwin/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"    value="C:/ACE/Cygwin/ACE_wrappers/TAO/CIAO"/>
-        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"      value="ssh" />
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
         <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\perl\bin;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
@@ -25,8 +23,8 @@
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="anonymous_shell"   options="find ACE_wrappers -iname 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-cygwin32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nssl=1\nfl_reactor=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
