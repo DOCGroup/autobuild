@@ -58,16 +58,21 @@ pages we use are the following:
 Statistics</a>
 </li>
 <li>
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CVS_Report/ACE_wrappers.html">
-    CVS usage report ACE_wrappers archive</a>
-</li>
-<li>
   <a href="teststats.html">
     Text based test statistics</a>
 </li>
 <li>
   <a href="http://www.dre.vanderbilt.edu/~remedynl/Stats/">
     Footprint statistics with GCC 4.0.2</a>
+</li>
+<li>
+  Footprint statistics with GCC 4.0.2 on FC4:
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/regular/">
+    Regular</a>,
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/corbaecompact/">
+    CORBA e/compact</a>,
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/corbaemicro/">
+    CORBA e/micro</a>
 </li>
 </ul>
 The <i>Code Coverage</i> pages illustrate which areas of
