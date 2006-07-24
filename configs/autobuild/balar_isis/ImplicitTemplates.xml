@@ -6,8 +6,6 @@
         <environment name="TAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/xerces/lib:/build/isisbuilds/ImplicitTemplates/ACE_wrappers/lib:/usr/local/lib" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
         <environment name="XERCESCROOT"         value="/build/isisbuilds/utils/xerces" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
@@ -27,8 +25,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=1\nIMPLICIT_TEMPLATES_FLAG=-fimplicit-templates\noptimize=1\nexceptions=1\nrtti=1\ninline=1\nTAO_IDLFLAGS += -Gd -Gp \ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
