@@ -6,10 +6,8 @@
         <environment name="TAO_ROOT"              value="/home/bczar/valgrindb/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"             value="/home/bczar/valgrindb/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH"       value="/home/bczar/valgrindb/ACE_wrappers/lib" />
-        <environment name="CVSROOT"               value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
         <environment name="XERCESCROOT"           value="/home/bczar/xerces" />
         <environment name="PATH"                  value="/usr/local/bin" type="prefix" />
-        <environment name="CVS_RSH"               value="ssh" />
         <environment name="RSYNC_RSH"             value="ssh" />
         <environment name="VALGRIND_OPTS"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --show-reachable=yes" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
@@ -30,8 +28,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_VALGRIND\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\nssl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />

@@ -7,8 +7,6 @@
         <environment name="CIAO_ROOT"       value="/home/bczar/builds/CORBAemicro/ACE_wrappers/TAO/CIAO"/>
         <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
         <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/CORBAemicro/ACE_wrappers/lib" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
 
@@ -22,8 +20,7 @@
     <command name="process_listener"  options="localhost:32000" />
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC=gcc32\nCXX=g++32\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\n\n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" />

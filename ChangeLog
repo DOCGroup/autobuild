@@ -1,3 +1,32 @@
+Mon Jul 24 18:27:05 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.xml
+        * configs/autobuild/isislab/blade17/blade17_vc71.xml
+        * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
+        * configs/autobuild/isislab/blade55/isis_valgrind.xml
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml
+        * configs/autobuild/isislab/blade47/CORBAecompact.xml
+        * configs/autobuild/isislab/blade47/CORBAemicro.xml
+        * configs/autobuild/isislab/blade47/NoIIOP.xml
+        * configs/autobuild/isislab/blade56/footprint_corba_e_compact.xml
+        * configs/autobuild/isislab/blade56/footprint_regular.xml
+        * configs/autobuild/isislab/blade56/footprint_corba_e_micro.xml
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml
+        * configs/autobuild/isislab/blade10/ciao_no_inline.xml
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml
+        * configs/autobuild/isislab/blade12/gcc4_static.xml
+        * configs/autobuild/isislab/blade12/versioned_namespace.xml
+        * configs/autobuild/isislab/blade12/no_iiop.xml
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml
+        * configs/autobuild/isislab/blade51/ciao_core.xml
+        * configs/autobuild/isislab/blade6/Full.xml
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml
+        
+          Converted ISISLab builds
+
 Mon Jul 24 17:50:22 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tao_win2003/tao_vc8.xml

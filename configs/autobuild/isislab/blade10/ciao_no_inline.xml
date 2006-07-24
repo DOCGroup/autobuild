@@ -5,8 +5,6 @@
         <environment name="ACE_ROOT"     value="C:\bczar\builds\noinline\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\bczar\builds\noinline\ACE_wrappers\TAO" />
         <environment name="CIAO_ROOT"    value="C:\bczar\builds\noinline\ACE_wrappers\TAO\CIAO" />
-        <environment name="CVSROOT"      value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"      value="c:\Cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"    value="c:\Cygwin\bin\ssh" />
         <environment name="XERCESCROOT"  value="C:\etc\xerces-c" />
         <environment name="PATH"         value="C:\bczar\builds\noinline\ACE_wrappers\bin;C:\bczar\builds\noinline\ACE_wrappers\lib;C:\bczar\builds\noinline\ACE_wrappers\TAO\CIAO\bin;c:\cygwin\bin"
@@ -28,8 +26,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <!-- create the config.h file and download cidlc -->
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
