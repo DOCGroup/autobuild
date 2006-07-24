@@ -1,4 +1,11 @@
+Mon Jul 24 22:26:47 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * command/svn.pm: Added the ability to include "dir=dir-to-run-in"
+          to the options specified for this command. This allows one to
+          run an svn command somewhere other than the $root location.
+
 Mon Jul 24 21:24:40 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
+
         * configs/autobuild/qualcomm/x86-IPv6.xml
         * configs/autobuild/qualcomm/x86-SCTP.xml
         

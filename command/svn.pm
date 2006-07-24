@@ -63,8 +63,20 @@ sub Run ($)
 
     my $current_dir = getcwd ();
 
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
+    # If dir= is given, extract the dir name, then remove the option from
+    # the options string. If no dir is given, just run the command with
+    # specified options in $root.
+    my $dir;
+    if ($options =~ m/dir=([^\s]*)/) {
+        $dir = $1;
+        $options =~ s/dir=$dir//;
+    }
+    else {
+        $dir = $root;
+    }
+
+    if (!chdir $dir) {
+        print STDERR __FILE__, ": Cannot change to $dir\n";
         return 0;
     }
 
