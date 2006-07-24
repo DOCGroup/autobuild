@@ -6,8 +6,6 @@
         <environment name="TAO_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/CIDLC/ACE_wrappers/ace;/build/isisbuilds/CIDLC/ACE_wrappers/lib" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="root"     value="/build/isisbuilds/CIDLC/" />
         <variable name="log_file" value="build.txt" />
@@ -20,8 +18,7 @@
     <command name="log"               options="on" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 

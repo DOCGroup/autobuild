@@ -4,8 +4,6 @@
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Full_Reactors/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Full_Reactors/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/build/isisbuilds/Full_Reactors/ACE_wrappers/TAO/CIAO"/>
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Full_Reactors/ACE_wrappers/lib" />
 	<!-- Debian specific QTDIR -->
         <environment name="QTDIR"           value="/usr/share/qt3"/>
@@ -23,8 +21,8 @@
     <command name="log"               options="ON" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers " />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_WCHAR 1\n\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\nxt_reactor=1\nfl_reactor=0\ntk_reactor=1\nqt_reactor=1\ngtk_reactor=1\noptimize=1\ndebug=0\ninline=0\nqt=1\ncidl=1\n# Override -Wno-uninitiialized to verify that uninitialized variable\n# warnings actually work properly when exception handling is\n# enabled in g++ 3.3.\n\nCCFLAGS += -Wuninitialized\n\n# Perform some stricter C/C++ checking using the -pedantic flag, but\n# disable the long long warnings since we need to support that type\n# in ACE/TAO.\nCCFLAGS += -Wno-long-long -Wwrite-strings -Wcast-align\n\nOCFLAGS=-O\n\n\n# For QT headers\nPLATFORM_QT_CPPFLAGS = -I/usr/include/qt3\n\n# For TK headers\nPLATFORM_TK_CPPFLAGS = -I/usr/include/tcl8.4\n\n# For TCL library\nPLATFORM_TK_LIBS += -ltk8.4 -ltcl8.4\n\n# Additional XtReactor flags\nPLATFORM_XT_LIBS += -lXm\n\n# Override default ACE settings.  Debian deprecates the single threaded Qt library.\nPLATFORM_QT_LIBS=-lqt-mt\n\n'" />

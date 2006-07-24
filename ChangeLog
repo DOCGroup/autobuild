@@ -1,3 +1,13 @@
+Mon Jul 24 16:31:46 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/tango_isis/Full.xml
+        * configs/autobuild/tango_isis/SingleThreaded.xml
+        * configs/autobuild/tango_isis/Full_Reactors.xml
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml
+        * configs/autobuild/tango_isis/CIDLC.xml
+        
+          Converted Tango builds.
+
 Mon Jul 24 16:02:22 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/Debian_Core.xml
