@@ -1,3 +1,11 @@
+Mon Jul 24 17:18:03 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml
+        * configs/autobuild/lindy_isis/Static.xml
+        * configs/autobuild/sparc/SunOS10_Studio9.xml
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        * configs/autobuild/sparc/CIDLC.xml
+
 Mon Jul 24 16:56:39 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml

@@ -6,8 +6,6 @@
         <environment name="TAO_ROOT"           value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"          value="/build/isisbuilds/Static/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH"    value="/build/isisbuilds/Static/ACE_wrappers/lib:/usr/lib/gcc/i686-pc-linux-gnu/3.4.1:/usr/local/lib:.:$LD_LIBRARY_PATH" />
-        <environment name="CVSROOT"            value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"            value="ssh" />
         <environment name="XERCESCROOT"        value="/usr/local" />
         <environment name="ZLIB_ROOT"          value="/usr/" />
         <environment name="ZZIP_ROOT"          value="/usr/" />
@@ -22,8 +20,7 @@
     <command name="process_listener"  options="localhost:32002" />
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="make"              options="realclean" />
 

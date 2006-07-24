@@ -5,8 +5,6 @@
         <environment name="TAO_ROOT"        value="/build/x86-64bit/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"       value="/build/x86-64bit/ACE_wrappers/TAO/CIAO" />
         <environment name="LD_LIBRARY_PATH" value="/build/x86-64bit/ACE_wrappers/lib:/build/x86-64bit/ACE_wrappers/ace:" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="/usr/bin/ssh" />
 
         <variable name="project_root" value="/build/x86-64bit/ACE_wrappers" />
         <variable name="build_name" value="linux-x86-64bit" />
@@ -25,9 +23,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
-    <command name="cvs"               options="-z 3 -q checkout -P autobuild" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <!-- <command name="create_ace_build"  /> -->
 

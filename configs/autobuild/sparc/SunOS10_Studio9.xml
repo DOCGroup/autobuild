@@ -6,8 +6,6 @@
         <environment name="TAO_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"        value="/project/builds/bczar/Studio/ACE_wrappers/TAO/CIAO" />
         <environment name="LD_LIBRARY_PATH" value="/project/builds/bczar/Studio/ACE_wrappers/lib:/opt/SUNWspro/lib:/usr/local/lib:/build/builds/bczar/utils/xerces-studio/lib:/usr/sfw/lib" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
         <environment name="PATH"            value="/usr/local/bin:/usr/sfw/bin:/build/builds/bczar/utils/xerces-studio/lib" type="prefix" />
         <environment name="XERCESCROOT"     value="/build/builds/bczar/utils/xerces-studio" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
@@ -25,8 +23,7 @@
     <command name="process_listener"  options="localhost:32003" />
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef TAO_IDL_PREPROCESSOR \n#define TAO_IDL_PREPROCESSOR \x22cc\x22\n#define ACE_ONLY_LATEST_AND_GREATEST\n#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define ACE_HAS_DEV_POLL 1\n#include \x22ace/config-sunos5.10.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nexceptions=1\ndebug=0\nssl=1\natomic_ops_sparc=1\nPLATFORM_SSL_CPPFLAGS+= -I/usr/sfw/include\nPLATFORM_SSL_LDFLAGS+=-L/usr/sfw/lib\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n\nCFLAGS  += -xarch=v8plusa\nLDFLAGS += -xarch=v8plusa\n'" />
