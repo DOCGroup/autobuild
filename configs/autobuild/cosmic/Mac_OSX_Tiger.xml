@@ -9,8 +9,6 @@
         <environment name="BOOST_ROOT"        value="/build/isisbuilds/utils/boost" />
         <environment name="UTILITY_ROOT"      value="/build/isisbuilds/utils/Utility" />
         <environment name="SSL_ROOT"          value="/usr" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="/usr/bin/ssh" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.4" />
 
         <variable name="root"     value="/build/isisbuilds/gcc3.3/" />
@@ -29,8 +27,7 @@
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <!-- Now, delete them again to insure a clean slate. -->
 
