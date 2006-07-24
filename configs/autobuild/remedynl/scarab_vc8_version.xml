@@ -24,8 +24,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="shell"             options="find ACE_wrappers -name '*.mak' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
