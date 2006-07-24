@@ -5,8 +5,6 @@
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Minimum/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Minimum/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Minimum/ACE_wrappers/lib" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="root"     value="/build/isisbuilds/Minimum" />
         <variable name="log_file" value="build.txt" />
@@ -21,8 +19,7 @@
 
     <command name="log"               options="on" />
 
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nminimum_corba=1\nec_typed_events=0\ncidl=1\n'" />
