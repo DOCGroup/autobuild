@@ -31,7 +31,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\nboost=0\ncidl=0\nzlib=0\nzzip=0\n'" />
