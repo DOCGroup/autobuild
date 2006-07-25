@@ -1,3 +1,7 @@
+Mon Jul 24 23:58:10 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Switch to svn.
+
 Mon Jul 24 22:26:47 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * command/svn.pm: Added the ability to include "dir=dir-to-run-in"
