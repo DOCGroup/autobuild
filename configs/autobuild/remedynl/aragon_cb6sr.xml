@@ -14,7 +14,7 @@
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\VxWorks\CB6sr\" />
         <variable name="name"         value="WinXP CBX Static Release" />
-        <variable name="cvs_program"  value="c:\cygwin\bin\cvs" />
+        <variable name="svn_program"  value="c:\cygwin\bin\svn" />
     </configuration>
 
     <command name="status"            options="on" />

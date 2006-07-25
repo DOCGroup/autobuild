@@ -25,7 +25,7 @@
     <!-- command name="file_manipulation" options="type=mustnotexist file=.disable" / -->
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
+
     <command name="shell"             options="find ACE_wrappers -name GNUmakefile* -exec \x22rm {}\x22 \x22;\x22" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />

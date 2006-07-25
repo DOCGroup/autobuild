@@ -4,8 +4,6 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/nightly/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/nightly/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/nightly/ACE_wrappers/lib:/usr/local/ssl/lib"/>
-        <environment name="CVSROOT"         value="jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
         <environment name="SSL_ROOT"        value="/usr/local/ssl" />
 
         <variable name="root"     value="/home/build/ACE/nightly" />
@@ -21,10 +19,9 @@
 
     <command name="log"               options="ON" />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.8.h\x22\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ninline=0\nexceptions=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
