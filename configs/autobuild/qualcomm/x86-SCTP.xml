@@ -21,7 +21,7 @@
 
     <command name="create_ace_build"  />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="shell"             options="find ACE_wrappers/build/linux-x86-sctp -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86-sctp/bin/MakeProjectCreator/config/default.features" />

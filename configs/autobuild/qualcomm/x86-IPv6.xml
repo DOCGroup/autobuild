@@ -19,7 +19,7 @@
     <command name="file_manipulation" options="type=create file=.disable-x86 output='RUNNING'" />
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/ACE/sets-anon/ACE+TAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="create_ace_build"  />
 

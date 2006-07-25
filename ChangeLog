@@ -1,3 +1,9 @@
+Tue Jul 25 00:34:42 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
+        * configs/autobuild/qualcomm/x86-IPv6.xml
+        * configs/autobuild/qualcomm/x86-SCTP.xml
+        
+          Switched repository name in svn co command to Middleware.
+
 Mon Jul 24 23:58:10 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/hope_dev_vc7_debug.xml: Switch to svn.
