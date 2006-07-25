@@ -23,7 +23,6 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\Intel90_64bit\" />
         <variable name="name"     value="Intel 90 64bit" />
-        <variable name="svn_program"     value="C:\cygwin\bin\svn" />
     </configuration>
 
     <command name="status"            options="on" />
