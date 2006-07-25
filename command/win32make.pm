@@ -73,7 +73,6 @@ sub Run ($)
 
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
     }
 
     if (!chdir $project_root) {
