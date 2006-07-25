@@ -1,0 +1,26 @@
+<!-- $Id: Fuzz.xml 3898 2006-07-25 16:54:56Z wotte $ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"         value="/web/www/isisbuilds/Fuzz_py/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/web/www/isisbuilds/Fuzz_py/ACE_wrappers/TAO"/>
+        <variable name="root"     value="/web/www/isisbuilds/Fuzz_py" />
+	<variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/tao_Fuzz_py" />
+        <variable name="name"     value="Linux Fuzz" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32005" />
+
+    <command name="log"               options="ON" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="print_os_version" />
+    <command name="print_ace_config" />
+
+    <command name="fuzz_py"         options="--exclude-dir=\x22PythonACE\x22 ." />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+</autobuild>

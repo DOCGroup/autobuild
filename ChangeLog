@@ -1,3 +1,11 @@
+Tue Jul 25 20:37:09 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/tao_isis/Fuzz_py.xml
+        * configs/autobuild/tao_isis/driver_fuzz_py.sh
+        * command/fuzz_py.pm
+        
+          Added a command and build to test the Python fuzz facility.
+
 Tue Jul 25 18:16:33 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
