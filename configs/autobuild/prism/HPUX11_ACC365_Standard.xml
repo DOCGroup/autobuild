@@ -8,8 +8,6 @@
         <environment name="INSLIB"           value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
         <environment name="LD_LIBRARY_PATH"  value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib" />
         <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/Full/ACE_wrappers/lib:/usr/local/aCC3.65/opt/aCC/lib" />
-        <environment name="CVSROOT"          value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"          value="ssh" />
         <environment name="PATH"             value="/usr/local/aCC3.65/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
 
         <variable name="make_program"        value="gmake" />
@@ -27,8 +25,7 @@
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
     <!-- Now, delete them again to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
@@ -45,22 +42,12 @@
     <command name="generate_workspace" options="-exclude TAO,build.mwc,prism" />
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO" />
-    <!-- And the prism extras (tao84 needs carry forward, tao193 needs V4 equivelant) -->
-    <!-- command name="generate_workspace" options="dirs=prism/tests -exclude tao84_regression,tao193_regression" / -->
-    <!-- command name="generate_workspace" options="dirs=prism/distrib/idl" / -->
-    <!-- command name="generate_workspace" options="dirs=prism/distrib/examples -include ../.." / -->
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <!-- command name="make"              options="-k -C prism/tests realclean" / -->
-    <!-- command name="make"              options="-k -C prism/distrib/idl realclean" / -->
-    <!-- command name="make"              options="-k -C prism/distrib/examples realclean" / -->
 
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO" />
-    <!-- command name="make"              options="-k -C prism/tests" / -->
-    <!-- command name="make"              options="-k -C prism/distrib/idl" / -->
-    <!-- command name="make"              options="-k -C prism/distrib/examples" / -->
 
     <command name="auto_run_tests"    options=" -a -o -t" />
     <command name="process_logs"      options="clean" />
