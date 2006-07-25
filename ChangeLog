@@ -1,7 +1,14 @@
+Tue Jul 25 10:36:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify:
+          Handle "is already a working copy for a different URL" as a setup
+          error
+
 Tue Jul 25 00:34:42 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
+
         * configs/autobuild/qualcomm/x86-IPv6.xml
         * configs/autobuild/qualcomm/x86-SCTP.xml
-        
+
           Switched repository name in svn co command to Middleware.
 
 Mon Jul 24 23:58:10 UTC 2006  Steve Huston  <shuston@riverace.com>
@@ -18,8 +25,8 @@ Mon Jul 24 21:24:40 UTC 2006  Brian Buesker  <bbuesker@qualcomm.com>
 
         * configs/autobuild/qualcomm/x86-IPv6.xml
         * configs/autobuild/qualcomm/x86-SCTP.xml
-        
-          Converted to subversion. 
+
+          Converted to subversion.
 
 Mon Jul 24 18:27:05 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
@@ -47,7 +54,7 @@ Mon Jul 24 18:27:05 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/blade51/ciao_core.xml
         * configs/autobuild/isislab/blade6/Full.xml
         * configs/autobuild/doc_isis/NoInt_NoEx.xml
-        
+
           Converted ISISLab builds
 
 Mon Jul 24 17:50:22 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
@@ -59,7 +66,7 @@ Mon Jul 24 17:50:22 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/cosmic/Mac_OSX_Tiger.xml
         * configs/autobuild/tao_isis/Doxygen.xml
         * configs/autobuild/tao_isis/Fuzz.xml
-        
+
           Converted to subversion.
 
 Mon Jul 24 17:18:03 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
@@ -70,8 +77,8 @@ Mon Jul 24 17:18:03 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/sparc/SunOS10_GCC402.xml
         * configs/autobuild/sparc/CIDLC.xml
 
-          Converted to subversion. 
-        
+          Converted to subversion.
+
 Mon Jul 24 16:56:39 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml
@@ -87,17 +94,17 @@ Mon Jul 24 16:56:39 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/balar_isis/Static.xml
         * configs/autobuild/balar_isis/DynamicHash.xml
         * configs/autobuild/balar_isis/ImplicitTemplates.xml
-        
+
          Converted to subversion.
-        
+
 Mon Jul 24 16:34:06 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/ace_isis/RH8_Static_Core.xml
         * configs/autobuild/ace_isis/RH8_Minimum.xml
         * configs/autobuild/ace_isis/RH8_NoInline.xml
-        
+
           Converted ace.dre builds.
-        
+
 Mon Jul 24 16:31:46 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/Full.xml
@@ -105,13 +112,13 @@ Mon Jul 24 16:31:46 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/tango_isis/Full_Reactors.xml
         * configs/autobuild/tango_isis/Debian_ORB_Core.xml
         * configs/autobuild/tango_isis/CIDLC.xml
-        
+
           Converted Tango builds.
 
 Mon Jul 24 16:02:22 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/Debian_Core.xml
-        
+
           Converted to subversion.
 
 Mon Jul 24 08:07:19 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
