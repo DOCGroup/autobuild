@@ -77,15 +77,7 @@ sub Run ($)
 
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
-        if ($options =~ m/(\-clean|REALCLEAN)/) {
-          # in the 'clean' step just ignore the $project_root is not there
-          # checkout will follow and probably rebuild all
-          chdir $current_dir;
-          return 1;
-        }
-        else {
-            return 0;
-        }
+        return 1;
     }
 
     my $command = "perl bin/pippen.pl $options";
