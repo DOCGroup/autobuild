@@ -1,3 +1,43 @@
+Tue Jul 25 16:54:29 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * ace_isis/RH8_Static_Core.xml
+        * ace_isis/RH8_Minimum.xml
+        * ace_isis/RH8_NoInline.xml
+        * pantera_isis/Code_Coverage.xml
+        * pantera_isis/gcc-4.0.xml
+        * corona/SunOS10_x86_GCC34.xml
+        * corona/SunOS10_x86_Studio9.xml
+        * corona/CIDLC.xml
+        * shiva_64/x86-64bit-linux.xml
+        * abbarach/Mac_OSX_Tiger.xml
+        * flamenco/Static.xml
+        * flamenco/footprint_metrics.xml
+        * flamenco/compiletime_metrics.xml
+        * doc_isis/NoInt_NoEx.xml
+        * tango_isis/Full.xml
+        * tango_isis/SingleThreaded.xml
+        * tango_isis/Full_Reactors.xml
+        * tango_isis/Debian_Core.xml
+        * tango_isis/Debian_ORB_Core.xml
+        * tango_isis/CIDLC.xml
+        * tao_win2003/tao_vc8.xml
+        * lindy_isis/Static.xml
+        * merengue/cidlcstatic.xml
+        * merengue/merengue_vc71.xml
+        * balar_isis/IPV6.xml
+        * balar_isis/wchar.xml
+        * balar_isis/Static.xml
+        * balar_isis/DynamicHash.xml
+        * balar_isis/ImplicitTemplates.xml
+        * sparc/SunOS10_Studio9.xml
+        * sparc/SunOS10_GCC402.xml
+        * sparc/CIDLC.xml
+        * tao_isis/Doxygen.xml
+        * tao_isis/Fuzz.xml
+        * cosmic/Mac_OSX_Tiger.xml
+        
+          Updated to use Middleware instead of ACE.
+
 Tue Jul 25 13:50:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
