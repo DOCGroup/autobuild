@@ -1,3 +1,9 @@
+Tue Jul 25 13:50:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+
+          Update from CVS to SVN on REHL4 (MPC/ACE+TAO)
+
 Tue Jul 25 13:10:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
