@@ -1,14 +1,13 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers-repository" />
-        <environment name="PATH"         value="C:\ace\ACE_wrappers-repository\lib" type="prefix" />
-        <environment name="CVSROOT"      value=":ext:shuston@cvs.doc:/project/cvs-repository" />
+        <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers" />
+        <environment name="PATH"         value="C:\ace\ACE_wrappers\lib" type="prefix" />
         <environment name="MPC_ROOT"     value="C:\ace\MPC" />
         <environment name="SSL_ROOT"     value="C:\opt\openssl-0.9.8a" />
 
         <variable name="root"            value="C:\ace" />
-        <variable name="project_root"    value="C:\ace\ACE_wrappers-repository" />
+        <variable name="project_root"    value="C:\ace\ACE_wrappers" />
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root"        value="g:\build_logs\dev\vc7_debug" />
         <variable name="name"            value="WinXP VC.NET 2003 Debug" />
@@ -16,28 +15,28 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/.disable" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers/.disable" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/.disable output='RUNNING'" />
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="checkout -P MPC" />
-    <command name="cvs"               options="checkout -P ACE" />
+    <command name="svn"               options="update --non-interactive MPC" />
+    <command name="svn"               options="update --non-interactive ACE_wrappers" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='rwho = 0\nmfc = 1\nssl=1\nqos=1\nipv6 = 1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='rwho = 0\nmfc = 1\nssl=1\nqos=1\nipv6 = 1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type vc71 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers-repository -feature_file c:\ace\ACE_wrappers-repository\local.features" />
+    <command name="generate_workspace" options="-type vc71 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers -feature_file c:\ace\ACE_wrappers\local.features" />
     <command name="vc7make"           options="/rebuild debug ACE.sln" />
 
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
-    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
+    <command name="file_manipulation" options="type=delete file=ACE_wrappers/.disable" />
     <command name="status"            options="off" />
 </autobuild>
