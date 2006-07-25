@@ -1,3 +1,11 @@
+Tue Jul 25 18:16:33 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+
+          Committing the conversion from CVS to SVN for Rich Seibel
+          <seibel_r@ociweb.com>.
+
 Tue Jul 25 17:09:04 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade17/blade17_vc71_w4.xml
@@ -23,7 +31,7 @@ Tue Jul 25 17:09:04 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/blade50/blade50_vc8.xml
         * configs/autobuild/isislab/blade51/ciao_core.xml
         * configs/autobuild/isislab/blade6/Full.xml
-        
+
           Converted to use /Middleware instead of /ACE
 
 Tue Jul 25 16:54:29 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
@@ -63,7 +71,7 @@ Tue Jul 25 16:54:29 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * tao_isis/Doxygen.xml
         * tao_isis/Fuzz.xml
         * cosmic/Mac_OSX_Tiger.xml
-        
+
           Updated to use Middleware instead of ACE.
 
 Tue Jul 25 13:50:00 UTC 2006  Simon Massey  <sma@prismtech.com>

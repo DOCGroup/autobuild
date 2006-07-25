@@ -18,7 +18,7 @@
 	<command name="print_status" options="Setup:Windows Build" />
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
 	<command name="log" options="ON" />
-	<command name="cvs" options="-z 9 -q checkout -P ACE_wrappers" />
+	<command name="svn" options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 	<command name="clone_build_tree" />
 	<command name="file_manipulation" options="type=update file=ACE_wrappers/build/doc_vc71_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace\config-win32.h\x22\n'" />
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/doc_vc71_d1o0/bin/MakeProjectCreator/config/default.features output='ssl=0\nrmcast=1\nqos=1\n'" />
