@@ -3,8 +3,6 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ACE\VxWorks\Host\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\ACE\VxWorks\Host\ACE_wrappers\TAO"/>
-        <environment name="CVSROOT"      value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"      value="c:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\tools\nixtools;C:\ACE\VxWorks\Host\ACE_wrappers\bin;C:\ACE\VxWorks\Host\ACE_wrappers\lib" type="prefix" />
 
@@ -14,7 +12,7 @@
         <variable name="log_root" value="C:\ACE\VxWorks\Host\" />
         <variable name="name"     value="WinXP VS.NET 2003 Crossbuild Host" />
 
-        <variable name="cvs_program"  value="c:/cygwin/bin/cvs" />
+        <variable name="svn_program"  value="c:/cygwin/bin/svn" />
 
     </configuration>
 
@@ -27,8 +25,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-z9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z9 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="anonymous_shell"   options="find ACE_wrappers -name *.vcproj -exec \x22rm {}\x22 \x22;\x22" />
     <command name="anonymous_shell"   options="find ACE_wrappers -name *.sln -exec \x22rm {}\x22 \x22;\x22" />

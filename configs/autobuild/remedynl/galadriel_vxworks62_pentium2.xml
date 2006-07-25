@@ -6,8 +6,6 @@
         <environment name="CIAO_ROOT"               value="/nfs/vxworks/ACE/VxWorks62/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/nfs/vxworks/ACE/VxWorks62/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.2/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.4/x86-linux2/lib:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/lib:/usr/local/lib" />
         <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.2/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.4/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.4/x86-linux2/bin:/home/build/WindRiver/workbench-2.4/foundation/4.0.7/x86-linux2/bin:/home/build/WindRiver/gnu/3.3.2-vxworks-6.2/x86-linux2/bin:/home/build/WindRiver/diab/5.3.1.0/LINUX386/bin" type="prefix" />
-        <environment name="CVSROOT"                 value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"                 value="ssh" />
         <environment name="WIND_HOME"               value="/home/build/WindRiver" />
         <environment name="WIND_BASE"               value="/home/build/WindRiver/vxworks-6.2"/>
         <environment name="WIND_DFW_PATH"           value="/home/build/WindRiver/workbench-2.4/dfw/0128"/>

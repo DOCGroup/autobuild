@@ -6,8 +6,6 @@
         <environment name="CIAO_ROOT"        value="/home/build/ACE/VxWorks/ppc603/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks/ppc603/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.3/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.5/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.5/x86-linux2/lib:/home/build/WindRiver/workbench-2.5/foundation/4.0.9/x86-linux2/lib:/usr/local/lib" />
         <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.3/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.5/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.5/x86-linux2/bin:/home/build/WindRiver/workbench-2.5/foundation/4.0.9/x86-linux2/bin:/home/build/WindRiver/gnu/3.4.4-vxworks-6.3/x86-linux2/bin" type="prefix" />
-        <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
         <environment name="WIND_HOME"         value="/home/build/WindRiver" />
         <environment name="WIND_BASE"         value="/home/build/WindRiver/vxworks-6.3"/>
         <environment name="WIND_DFW_PATH" value="/home/build/WindRiver/workbench-2.5/dfw/0128"/>
@@ -40,8 +38,8 @@
     <command name="log"               options="on" />
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PPC32\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC_IDL)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />

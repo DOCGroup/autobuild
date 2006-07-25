@@ -6,8 +6,6 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/footprint/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/home/build/ACE/footprint/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/footprint/ACE_wrappers/lib" />
-        <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="root"     value="/home/build/ACE/footprint/" />
         <variable name="log_file" value="build.txt" />
@@ -23,8 +21,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='use_dep_libs=0\ncidl=1\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />

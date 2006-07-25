@@ -9,8 +9,6 @@
         <environment name="PATH"            value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\Host\ACE_wrappers\lib;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE" type="prefix" />
         <environment name="WIND_BASE"       value="C:/Tornado2.2"/>
         <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
-        <environment name="CVSROOT"         value=":ext:jwillemsen@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="C:\cygwin\bin\ssh" />
         <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="ACE_MKDIR"       value="C:\tools\nixtools\mkdir -p" />
         <environment name="ACE_RUN_VX_TGTSVR"        value="RLM"/>
@@ -23,7 +21,7 @@
         <variable name="log_root" value="C:\ACE\VxWorks\PPC603GNU\" />
         <variable name="configs"  value="VxWorks STATIC VX_TGT_REBOOT" />
 
-        <variable name="cvs_program"  value="c:/cygwin/bin/cvs" />
+        <variable name="svn_program"  value="c:/cygwin/bin/svn" />
 
     </configuration>
 
