@@ -117,6 +117,7 @@ Wed Jul 26 19:12:25 UTC 2006  Steve Huston  <shuston@riverace.com>
         * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
         * configs/autobuild/riverace/jane_dev_debug.xml:
         * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/riverace/timmy_dev_debug.xml:
           Switch to SVN.
 
 Wed Jul 26 18:53:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
