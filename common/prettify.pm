@@ -803,6 +803,7 @@ sub Setup_Handler ($)
         $s =~ m/nothing known about/ ||
         $s =~ m/is already a working copy for a different URL/ ||
         $s =~ m/syntax error near unexpected token/ ||
+        $s =~ m/is not a working copy/ ||
         $s =~ m/^ERROR/ ||
         $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i)
