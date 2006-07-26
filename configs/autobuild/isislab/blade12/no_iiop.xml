@@ -42,7 +42,7 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="TAO_NO_IIOP.mwc" />
+    <command name="generate_workspace" options="TAO_NO_IIOP.mwc -type gnuace" />
 
     <command name="make"              options="-j 2 -k" />
 

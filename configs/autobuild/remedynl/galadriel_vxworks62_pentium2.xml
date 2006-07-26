@@ -62,7 +62,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
 
     <command name="make"              options="-k -C ace" />
     <command name="make"              options="-k -C tests" />

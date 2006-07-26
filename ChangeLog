@@ -1,3 +1,111 @@
+Wed Jul 26 21:53:01 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/abbarach/CIDLC.xml:
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/ace_isis/RH8_NoInline.xml:
+        * configs/autobuild/ace_isis/RH8_Static_Core.xml:
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/atl/2.6.0.test7-lksctp.xml:
+        * configs/autobuild/atl/2.6.0.test7.xml:
+        * configs/autobuild/atl/RH9-2.4.20-19.9.xml:
+        * configs/autobuild/atl/Solaris10-x86.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/balar_isis/wchar.xml:
+        * configs/autobuild/beguine/Redhat_7.1_No_AMI_Messaging.xml:
+        * configs/autobuild/beguine/Redhat_Explicit_Templates.xml:
+        * configs/autobuild/charanga/Debian_Minimum_Static.xml:
+        * configs/autobuild/charanga/Debian_NoInterceptors.xml:
+        * configs/autobuild/corona/CIDLC.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml:
+        * configs/autobuild/doc_isis/NoInt_NoEx.xml:
+        * configs/autobuild/flamenco/Static.xml:
+        * configs/autobuild/flamenco/compiletime_metrics.xml:
+        * configs/autobuild/flamenco/footprint_metrics.xml:
+        * configs/autobuild/hp/gmaxey_dev.xml:
+        * configs/autobuild/isislab/blade12/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade12/gcc4_static.xml:
+        * configs/autobuild/isislab/blade12/no_iiop.xml:
+        * configs/autobuild/isislab/blade12/versioned_namespace.xml:
+        * configs/autobuild/isislab/blade47/CORBAecompact.xml:
+        * configs/autobuild/isislab/blade47/CORBAemicro.xml:
+        * configs/autobuild/isislab/blade47/NoIIOP.xml:
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml:
+        * configs/autobuild/isislab/blade51/ciao_core.xml:
+        * configs/autobuild/isislab/blade55/isis_valgrind.xml:
+        * configs/autobuild/isislab/blade56/footprint_corba_e_compact.xml:
+        * configs/autobuild/isislab/blade56/footprint_corba_e_micro.xml:
+        * configs/autobuild/isislab/blade56/footprint_regular.xml:
+        * configs/autobuild/isislab/blade6/Full.xml:
+        * configs/autobuild/jmz/Mac_OSX_Jaguar.xml:
+        * configs/autobuild/jmz/Mac_OSX_Panther.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
+        * configs/autobuild/prism/HPUX11_ACC331_Full.xml:
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml:
+        * configs/autobuild/prism/HPUX11_ACC365_Standard.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/qualcomm/x86-IPv6.xml:
+        * configs/autobuild/qualcomm/x86-SCTP.xml:
+        * configs/autobuild/remedynl/aragon_vxworks-pcPentiumX-gnu.xml:
+        * configs/autobuild/remedynl/aragon_vxworks-pcPentiumXSharedLib-gnu.xml:
+        * configs/autobuild/remedynl/arwen_gcc.xml:
+        * configs/autobuild/remedynl/arwen_icc.xml:
+        * configs/autobuild/remedynl/arwen_icc91.xml:
+        * configs/autobuild/remedynl/bilbo_suncc.xml:
+        * configs/autobuild/remedynl/elrond_gcc.xml:
+        * configs/autobuild/remedynl/elrond_icc32.xml:
+        * configs/autobuild/remedynl/elrond_icc64.xml:
+        * configs/autobuild/remedynl/elrond_icc91_64.xml:
+        * configs/autobuild/remedynl/galadriel_footprint_metrics.xml:
+        * configs/autobuild/remedynl/galadriel_host.xml:
+        * configs/autobuild/remedynl/galadriel_vxworks61.xml:
+        * configs/autobuild/remedynl/galadriel_vxworks61_ppc603.xml:
+        * configs/autobuild/remedynl/galadriel_vxworks61_simlinux.xml:
+        * configs/autobuild/remedynl/galadriel_vxworks62_pentium2.xml:
+        * configs/autobuild/remedynl/gandalf_cygwin.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-pentium-gnu.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-pentium-pthread-gnu.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-ppc603-gnu-sharedlib.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-ppc603-gnu.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-ppc604-gnu.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-ppc85xx-diab.xml:
+        * configs/autobuild/remedynl/legolas_vxworks-ppc85xx-gnu.xml:
+        * configs/autobuild/remedynl/scarab_MingWs.xml:
+        * configs/autobuild/remedynl/solaris_forte.xml:
+        * configs/autobuild/remedynl/theoden_vxworks-simnt-gnu.xml:
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml:
+        * configs/autobuild/slytherin/OpenBSD_Core.xml:
+        * configs/autobuild/slytherin/OpenBSD_Full.xml:
+        * configs/autobuild/slytherin/OpenBSD_Single_Threaded.xml:
+        * configs/autobuild/sparc/CIDLC.xml:
+        * configs/autobuild/sparc/SunOS10_GCC402.xml:
+        * configs/autobuild/sparc/SunOS10_Studio9.xml:
+        * configs/autobuild/tango_isis/CIDLC.xml:
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+        * configs/autobuild/tango_isis/Full.xml:
+        * configs/autobuild/tango_isis/Full_Reactors.xml:
+        * configs/autobuild/tango_isis/SingleThreaded.xml:
+
+          For each xml file that used generate_workspace without a -type
+          option, I added "-type gnuace" to the options.  Eventually, MPC
+          will not have a default project type.
+
 Wed Jul 26 19:12:25 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:

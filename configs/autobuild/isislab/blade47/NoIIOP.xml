@@ -39,7 +39,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-include TAO/tao,TAO/TAO_IDL -exclude TAO" />
+    <command name="generate_workspace" options="-include TAO/tao,TAO/TAO_IDL -exclude TAO -type gnuace" />
 
     <command name="make"              options="-k" />
 

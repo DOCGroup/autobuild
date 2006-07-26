@@ -40,8 +40,8 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO" />
-    <command name="generate_workspace" options="dirs=TAO -exclude CIAO" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO -type gnuace" />
 
 
     <command name="make"              options="-j 2 -k" />

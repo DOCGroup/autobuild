@@ -44,7 +44,7 @@
     <command name="print_perl_version" />
     <command name="print_valgrind_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuace" />
 
     <command name="make"              options="-k -j 5" />
 

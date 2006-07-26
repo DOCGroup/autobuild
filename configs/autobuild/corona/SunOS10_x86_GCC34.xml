@@ -38,10 +38,10 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIAO.mwc,CIDLC,CCF" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIAO.mwc,CIDLC,CCF -type gnuace" />
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Solaris/x86/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="make"              options="-k realclean" />

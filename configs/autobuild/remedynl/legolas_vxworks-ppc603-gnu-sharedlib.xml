@@ -45,8 +45,8 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO,ASNMP,examples" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,examples" />
+    <command name="generate_workspace" options="-exclude TAO,ASNMP,examples -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,examples -type gnuace" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

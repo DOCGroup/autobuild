@@ -33,9 +33,9 @@
     <command name="print_perl_version" />
 
     <!-- ACE -->
-    <command name="generate_workspace" options="-exclude TAO " />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
     <!-- TAO -->
-    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,*.mwc " />
+    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,*.mwc -type gnuace" />
 
     <command name="make"              options="realclean" />
     <command name="make"              options="-C TAO realclean" />

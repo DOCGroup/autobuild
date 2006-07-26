@@ -30,7 +30,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO" />
+    <command name="generate_workspace" options="-exclude apps/gperf/tests,TAO -type gnuace" />
 
     <command name="print_os_version" options="useuname" />
     <command name="check_compiler" options="gcc" />

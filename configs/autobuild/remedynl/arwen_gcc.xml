@@ -33,7 +33,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k" />

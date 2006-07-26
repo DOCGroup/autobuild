@@ -34,11 +34,11 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,build.mwc " />
+    <command name="generate_workspace" options="-exclude TAO,build.mwc -type gnuace" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO " />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO -type gnuace" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF " />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF -type gnuace" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />

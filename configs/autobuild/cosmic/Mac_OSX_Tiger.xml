@@ -40,11 +40,11 @@
     <command name="print_ace_config" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO " />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO -type gnuace" />
     <!--  Uses TAO/CIAO -->
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF -type gnuace" />
 
     <!-- Clean workspace -->
     <command name="make"              options="-k realclean" />
