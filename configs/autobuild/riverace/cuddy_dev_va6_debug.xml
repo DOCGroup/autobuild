@@ -22,7 +22,7 @@
 
     <command name="make"              options="-k realclean" />
 
-    <command name="svn"               options="dir=/acebuild/MPC update --non-interactive" />
+    <command name="svn"               options="dir=/acebuilds/MPC update --non-interactive" />
     <command name="svn"               options="update --non-interactive" />
 
     <command name="file_manipulation" options="type=delete file=.disable" />
