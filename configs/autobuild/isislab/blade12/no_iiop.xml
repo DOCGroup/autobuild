@@ -49,5 +49,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=3 move prettify index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/no_iiop"/>
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/no_iiop"/>
 </autobuild>

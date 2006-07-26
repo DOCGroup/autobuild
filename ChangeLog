@@ -1,3 +1,9 @@
+Wed Jul 26 12:55:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * *.xml:
+          Changed --exclude /ACE_wrappers/ to --exclude /ACE_wrappers*/ so that the
+          ACE_wrappers.OLD isn't rsynced when it appears again in the future
+
 Wed Jul 26 09:15:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml:
@@ -17,7 +23,7 @@ Tue Jul 25 20:37:09 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/tao_isis/Fuzz_py.xml
         * configs/autobuild/tao_isis/driver_fuzz_py.sh
         * command/fuzz_py.pm
-        
+
           Added a command and build to test the Python fuzz facility.
 
 Tue Jul 25 18:16:33 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>

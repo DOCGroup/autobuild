@@ -45,5 +45,5 @@
 
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade27" />
 </autobuild>

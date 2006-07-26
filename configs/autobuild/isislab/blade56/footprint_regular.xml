@@ -91,5 +91,5 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --delete -z --recursive /home/bczar/metrics/regular/* bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade56/stats/regular" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade56/regular" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade56/regular" />
 </autobuild>
