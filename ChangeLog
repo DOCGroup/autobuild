@@ -1,3 +1,8 @@
+Wed Jul 26 18:53:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify:
+          Handle "is not a working copy" as a svn error
+
 Wed Jul 26 17:52:45 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/charlie_dev_xlc7_debug.xml: Switch to SVN.
