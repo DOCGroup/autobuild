@@ -1,3 +1,7 @@
+Wed Jul 26 17:52:45 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/charlie_dev_xlc7_debug.xml: Switch to SVN.
+
 Wed Jul 26 12:55:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * *.xml:
