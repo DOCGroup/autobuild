@@ -1,3 +1,17 @@
+Wed Jul 26 09:15:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml:
+        * configs/autobuild/prism/Win2003_MSVC6_Debug.bat:
+        * configs/autobuild/prism/Win2003_MSVC6_Debug.xml:
+
+          Update from CVS to SVN (the rest + templates + sligh bug fixes to machine dependant
+          locations of SVN)
+
 Tue Jul 25 20:37:09 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tao_isis/Fuzz_py.xml

@@ -6,8 +6,6 @@
         <environment name="TAO_ROOT"         value="/usr/users/tao/ultra4/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/TAO" />
         <environment name="MPC_ROOT"         value="/usr/users/tao/ultra4/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/MPC" />
         <environment name="LD_LIBRARY_PATH"  value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/ultra4/doc_scoreboard/native_gcc322/standard/static/ACE_wrappers/ace" />
-        <environment name="CVSROOT"          value=":ext:sma@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"          value="ssh" />
         <environment name="PATH"             value="/usr/local/gcc-3.2.2/bin:/usr/local/bin:/usr/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
 
         <variable name="make_program"        value="gmake" />
@@ -25,8 +23,7 @@
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 3 -q checkout -P ACE_MPC" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <!-- Now, delete all the Makefiles to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
