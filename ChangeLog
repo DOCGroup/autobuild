@@ -5,6 +5,10 @@ Wed Jul 26 19:12:25 UTC 2006  Steve Huston  <shuston@riverace.com>
         * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
         * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
         * configs/autobuild/riverace/gump_dev_acc_debug.xml:
+        * configs/autobuild/riverace/jane_autoconf_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
           Switch to SVN.
 
 Wed Jul 26 18:53:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>

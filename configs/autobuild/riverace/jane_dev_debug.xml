@@ -2,47 +2,44 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers-repository/build/debug" />
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers-repository/build/debug/lib:/usr/lib" />
-        <environment name="CVSROOT"         value=":ext:shuston@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
+        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers/build/debug" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers/build/debug/lib:/usr/lib" />
         <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
 
-        <variable name="root"         value="/acebuilds" />
+        <variable name="root"         value="/acebuilds/ACE_wrappers" />
         <variable name="build_name"   value="debug" />
-        <variable name="project_root" value="/acebuilds/ACE_wrappers-repository/build/debug" />
-        <variable name="log_file"     value="ACE_wrappers-repository/debug.txt" />
+        <variable name="project_root" value="/acebuilds/ACE_wrappers/build/debug" />
+        <variable name="log_file"     value="debug.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/debug" />
-        <variable name="configs"      value="BAD_AIO Exceptions CHECK_RESOURCES" />
+        <variable name="configs"      value="BAD_AIO Exceptions SSL CHECK_RESOURCES" />
 
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/.disable" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
     <command name="make"              options="-k realclean" />
 
-    <command name="cvs"               options="checkout -P MPC" />
-    <command name="cvs"               options="checkout -P ACE" />
+    <command name="svn"               options="dir=/acebuilds/MPC update --non-interactive" />
+    <command name="svn"               options="update --non-interactive" />
 
-    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/.disable" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
 
-    <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers-repository/build/debug/.disable" />
+    <command name="file_manipulation" options="type=mustnotexist file=build/debug/.disable" />
 
     <command name="create_ace_build"  options="-a -v" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=build/debug/.disable output='RUNNING'" />
 
     <!-- Delete the build's Makefiles before regenerating them. -->
-    <command name="shell"             options="find ACE_wrappers-repository/build/debug -name 'Makefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers-repository/build/debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers-repository/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers-repository/build/debug -type gnuace" />
+    <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\n'" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/debug -type gnuace" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
@@ -54,6 +51,6 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=ACE_wrappers-repository/build/debug/.disable" />
+    <command name="file_manipulation" options="type=delete file=build/debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>
