@@ -1,3 +1,10 @@
+Thu Jul 27 05:37:43 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * command/svn.pm
+        
+          Made it execute 'svn cleanup' before executing the command. Some
+          workspaces were becoming wedged and interrupting autobuilds.
+
 Wed Jul 26 21:53:01 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/abbarach/CIDLC.xml:

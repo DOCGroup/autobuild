@@ -86,7 +86,7 @@ sub Run ($)
         # XML config file.  Default to using a program called "svn".
         $svn_program = "svn"
     }
-
+    system ("$svn_program cleanup");
     system ("$svn_program $options");
 
     chdir $current_dir;
