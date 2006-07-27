@@ -1,13 +1,18 @@
+Thu Jul 27 07:31:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm
+          Handle "svn help cleanup" as error
+
 Thu Jul 27 06:04:22 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py
-        
+
           Set the executable flag on this file.
 
 Thu Jul 27 05:37:43 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * command/svn.pm
-        
+
           Made it execute 'svn cleanup' before executing the command. Some
           workspaces were becoming wedged and interrupting autobuilds.
 
