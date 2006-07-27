@@ -2,8 +2,12 @@
 # $Id$
 #
 PATH=/usr/local/bin:$PATH; export PATH
-cd $HOME/doc_autobuild
+#
+# Update the doc_autobuild scripts.
+echo "Updating doc_autobuild"
+cd /usr/users/tao/doc_autobuild
 svn update autobuild
+svn status autobuild
 cd autobuild
 #
 # build ACE, tao_idl and gperf statically on ultra6 with gcc 3.2.2

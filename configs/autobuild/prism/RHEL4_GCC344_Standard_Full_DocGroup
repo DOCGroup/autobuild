@@ -1,11 +1,12 @@
 #!/bin/sh
 # $Id$
 #
-cd $HOME/doc_autobuild
-PATH=/usr/local/bin:$PATH
-export PATH
+PATH=/usr/local/bin:$PATH;export PATH
 #
+echo "Updating doc_autobuild"
+cd $HOME/doc_autobuild
 svn update autobuild
+svn status autobuild
 cd autobuild
 #
 perl autobuild.pl configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml

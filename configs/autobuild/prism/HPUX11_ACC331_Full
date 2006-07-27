@@ -1,10 +1,13 @@
 #!/bin/sh
 # $Id$
 #
-cd $HOME/doc_autobuild
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:$PATH;export PATH
 #
+# Update the doc_autobuild scripts.
+echo "Updating doc_autobuild"
+cd /var/mounts/sun16/users/tao/doc_autobuild
 svn update autobuild
+svn status autobuild
 cd autobuild
 #
 perl autobuild.pl configs/autobuild/prism/HPUX11_ACC331_Full.xml

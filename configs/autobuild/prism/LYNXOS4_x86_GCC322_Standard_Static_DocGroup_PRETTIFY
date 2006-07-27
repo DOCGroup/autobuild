@@ -1,16 +1,15 @@
+# $Id$
+#
 # At this stage, the TAO tests should have run on lynxosx86 and
 # the build.txt file ftp'd back across to /usr/users/tao.
 # Simply place the results on the scoreboard. This can't be done
 # from lynxosx86 because it can't see the scoreboard.
-
-CVSROOT=:ext:sma@cvs.doc.wustl.edu:/project/cvs-repository;export CVSROOT
-CVS_RSH=ssh;export CVS_RSH
-
+#
 echo "Moving test results from lynxosx86 to /usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/static"
 cd /usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/static
 mv /usr/users/tao/DOC_Group_test_results_run_on_lynxosx86.txt .
-
+#
 echo "Posting test results to the scoreboard"
 /usr/local/bin/perl /usr/users/tao/doc_autobuild/autobuild/autobuild.pl /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_PRETTIFY.xml
-
+#
 echo "Finished part3"

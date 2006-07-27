@@ -4,6 +4,7 @@
 echo "Updating doc_autobuild"
 cd $HOME/doc_autobuild
 /usr/local/bin/svn update autobuild
+/usr/local/bin/svn status autobuild
 cd autobuild
 #
 # build ACE, tao_idl and gperf statically on ultra4 with gcc 3.2.2

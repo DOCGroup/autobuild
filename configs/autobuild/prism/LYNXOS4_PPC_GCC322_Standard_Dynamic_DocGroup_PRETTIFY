@@ -1,3 +1,5 @@
+# $Id$
+#
 # At this stage, the TAO tests should have run on rad1 and
 # the build.txt file ftp'd back across to /usr/users/tao.
 # Simply place the results on the scoreboard. This can't be done
