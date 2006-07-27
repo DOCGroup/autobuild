@@ -804,7 +804,7 @@ sub Setup_Handler ($)
         $s =~ m/is already a working copy for a different URL/ ||
         $s =~ m/syntax error near unexpected token/ ||
         $s =~ m/is not a working copy/ ||
-        $s =~ m/svn cleanup/ ||
+        $s =~ m/svn help cleanup/ ||
         $s =~ m/^ERROR/ ||
         $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i)
