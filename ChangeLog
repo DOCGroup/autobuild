@@ -1,3 +1,10 @@
+Thu Jul 27 17:42:19 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.x
+        
+          Removed print_cidlc_version, as this command was bombing for
+          some reason and causing the build to silently fail.
+
 Thu Jul 27 12:05:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full:
