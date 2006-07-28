@@ -803,6 +803,7 @@ sub Setup_Handler ($)
         $s =~ m/nothing known about/ ||
         $s =~ m/is already a working copy for a different URL/ ||
         $s =~ m/syntax error near unexpected token/ ||
+        $s =~ m/Error processing command/ ||
         $s =~ m/is not a working copy/ ||
         $s =~ m/svn help cleanup/ ||
         $s =~ m/^ERROR/ ||
