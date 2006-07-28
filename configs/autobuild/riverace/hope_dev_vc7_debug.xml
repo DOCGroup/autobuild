@@ -20,8 +20,8 @@
 
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="update --non-interactive MPC" />
-    <command name="svn"               options="update --non-interactive ACE_wrappers" />
+    <command name="svn"               options="dir=/ace/MPC update --non-interactive" />
+    <command name="svn"               options="dir=/ace/ACE_wrappers update --non-interactive" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/local.features output='rwho = 0\nmfc = 1\nssl=1\nqos=1\nipv6 = 1\n'" />
