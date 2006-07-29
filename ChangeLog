@@ -1,3 +1,9 @@
+Sat Jul 29 20:04:39 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/payslee_dev_debug.xml:
+        * configs/autobuild/riverace/chad_dev_studio10_debug.xml:
+        * configs/autobuild/riverace/chad_dev_studio10-64_release.xml:
+
 Sat Jul 29 11:29:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ciao.xml
