@@ -1,8 +1,10 @@
 Sat Jul 29 20:04:39 UTC 2006  Steve Huston  <shuston@riverace.com>
 
-        * configs/autobuild/riverace/payslee_dev_debug.xml:
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
         * configs/autobuild/riverace/chad_dev_studio10_debug.xml:
         * configs/autobuild/riverace/chad_dev_studio10-64_release.xml:
+        * configs/autobuild/riverace/payslee_dev_debug.xml:
+          Converted to Subversion.
 
 Sat Jul 29 11:29:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
