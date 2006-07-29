@@ -35,6 +35,12 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
+      <name>RHEL4_ICC91_IA64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_ICC91/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
       <name>RHEL_Static_GCC-3.4.2</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
       <build_sponsor>ISIS</build_sponsor>
