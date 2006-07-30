@@ -88,6 +88,7 @@ sub Run ($)
     }
     system ("$svn_program cleanup");
     system ("$svn_program $options");
+    system ("$svn_program status");
 
     chdir $current_dir;
 
