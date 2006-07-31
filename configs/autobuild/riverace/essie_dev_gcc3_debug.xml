@@ -30,7 +30,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=build/gcc3_debug/.disable" />
 
     <command name="create_ace_build"  options="-a -v" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/.disable output='RUNNING'" />
+    <command name="file_manipulation" options="type=create file=build/gcc3_debug/.disable output='RUNNING'" />
 
     <!-- Delete the build's Makefiles before regenerating them. -->
     <command name="shell"             options="find build/gcc3_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
