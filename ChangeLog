@@ -1,3 +1,9 @@
+Mon Jul 31 16:46:03 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+          Converted to Subversion.
+
 Sun Jul 30 17:57:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/svn.pm:
