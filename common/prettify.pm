@@ -806,6 +806,7 @@ sub Setup_Handler ($)
         $s =~ m/Error processing command/ ||
         $s =~ m/is not a working copy/ ||
         $s =~ m/svn help cleanup/ ||
+        $s =~ m/t connect to host/ ||
         $s =~ m/^ERROR/ ||
         $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i)
