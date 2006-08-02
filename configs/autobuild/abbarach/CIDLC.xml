@@ -10,8 +10,6 @@
         <environment name="BOOST_VERSION"        value="boost-1_32" />
         <environment name="BOOST_CFG"        value="-gcc" />
         <environment name="UTILITY_ROOT"      value="/build/isisbuilds/Utility" />
-        <environment name="CVSROOT"         value=":ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository" />
-        <environment name="CVS_RSH"         value="ssh" />
 
         <variable name="root"     value="/build/isisbuilds/CIDLC/" />
         <variable name="log_file" value="build.txt" />
@@ -25,8 +23,7 @@
     <command name="log"               options="on" />
 
     <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-z 9 -q checkout -P ACE_MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
