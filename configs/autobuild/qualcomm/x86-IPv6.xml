@@ -23,7 +23,6 @@
 
     <command name="create_ace_build"  />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers/build/linux-x86 -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features" />
 

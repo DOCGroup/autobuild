@@ -24,7 +24,6 @@
     <!-- Clean out the workspace before regenerating the Makefiles. -->
     <command name="make"              options="-k -C TAO/CIAO realclean" />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />

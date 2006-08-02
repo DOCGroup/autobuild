@@ -21,7 +21,6 @@
     <command name="process_listener"  options="localhost:32003" />
     <command name="log"               options="on" />
 
-    <!-- Delete all the Makefiles so the cvs checkout won't complain. -->
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
