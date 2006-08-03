@@ -1,16 +1,16 @@
 <!-- $Id: Win2003_MSVC6_Debug.xml 3921 2006-07-27 12:02:37Z sma $ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC\ACE_wrappers" />
-        <environment name="TAO_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC\ACE_wrappers\TAO"/>
-        <environment name="MPC_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC\ACE_wrappers\MPC" />
-        <environment name="PATH"      value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC\ACE_wrappers\bin;C:\Overnight_Builds\DOC_Group\vc71\debugMFC\ACE_wrappers\lib;C:\openssl-0.9.7i\out32dll;C:\Perl\bin;C:\cygwin\bin" type="prefix" />
+        <environment name="ACE_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers" />
+        <environment name="TAO_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\TAO"/>
+        <environment name="MPC_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\MPC" />
+        <environment name="PATH"      value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\bin;C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\lib;C:\openssl-0.9.7i\out32dll;C:\Perl\bin;C:\cygwin\bin" type="prefix" />
         <environment name="RSYNC_RSH" value="C:\cygwin\bin\ssh" />
         <environment name="SSL_ROOT"  value="C:\openssl-0.9.7i" />
 
-        <variable name="root"         value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC" />
+        <variable name="root"         value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC" />
         <variable name="log_file"     value="log.txt" />
-        <variable name="log_root"     value="T:\doc-scoreboard\windows\VC71_DebugMFC" />
+        <variable name="log_root"     value="T:\doc-scoreboard\windows\VC71_InlineMFC" />
         <variable name="name"         value="WinXP VS.NET 2003 DLL Debug" />
         <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS MFC" />
     </configuration>

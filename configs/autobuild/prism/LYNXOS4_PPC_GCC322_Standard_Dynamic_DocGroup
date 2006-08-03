@@ -8,12 +8,12 @@ echo "Updating doc_autobuild"
 cd /usr/users/tao/doc_autobuild
 svn update autobuild
 svn status autobuild
-cd autobuild
+cd /usr/users/tao/ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic
 #
 # build ACE and TAO on ultra4 with LynxOS PPC gcc 3.2.2 cross compiler
 # Sets ENV_PREFIX=/usr/local/lynx/4.0.0/ppc-322
 echo `/usr/bin/date`: "Building ACE and TAO on ultra4 with LynxOS PPC gcc 3.2.2 cross compiler"
-/usr/bin/perl autobuild.pl configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml
+/usr/bin/perl /usr/users/tao/doc_autobuild/autobuild/autobuild.pl /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml
 #
 echo "`/usr/bin/date`: Finished part1"
 echo "`/usr/bin/date`: Triggering rad1 to run part2"

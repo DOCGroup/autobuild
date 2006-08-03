@@ -8,7 +8,7 @@ echo "Updating doc_autobuild"
 cd /usr/users/tao/doc_autobuild
 svn update autobuild
 svn status autobuild
-cd autobuild
+cd /usr/users/tao/ultra6/doc_scoreboard/lynxos_x86_gcc322/standard/dynamic
 #
 # build ACE and TAO on ultra6 with LynxOS x86 gcc 3.2.2 cross compiler
 # Sets ENV_PREFIX=/usr/local/lynx/4.0.0/x86-322
