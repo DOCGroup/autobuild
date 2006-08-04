@@ -1,3 +1,14 @@
+Fri Aug  4 09:15:03 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/autobuild/charanga:
+        * configs/autobuild/hokey:
+        * configs/autobuild/hp:
+        * configs/autobuild/atl:
+          Removed these directories, these don't seem to be used, the builds
+          are not on the scoreboard and they are using cvs so they won't
+          get any new code after the mode to subversion. If someone uses these
+          we can easily get them again back from svn.
+
 Thu Aug  3 09:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full:
@@ -41,7 +52,7 @@ Thu Aug  3 09:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 Wed Aug  2 21:13:45 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/CIDLC.xml
-        
+
           Converted to subversion.
 
 Mon Jul 31 16:46:03 UTC 2006  Steve Huston  <shuston@riverace.com>
