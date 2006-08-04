@@ -21,22 +21,9 @@ SOFTWARE REQUIREMENTS
 QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 ==========================================
 
-(1) Check out the latest build scripts from CVS.
+(1) Check out the latest build scripts from subversion using:
 
-    If you are checking out of anonymous CVS, set your CVSROOT to:
-
-       :pserver:anonymous@anoncvs.ociweb.com/cvs
-    then:
-       cvs login
-       (hit enter for password)
-       cvs co autobuild
-
-    If you are checking out of the DOC group CVS and have an account there,
-    set your CVSROOT to:
-       :ext:[username]@cvs.doc.wustl.edu:/project/cvs-repository
-
-    then:
-       cvs co autobuild
+       svn co svn://svn.dre.vanderbilt.edu/ACE/autobuild/trunk autobuild
 
 (2) Look at the existing XML configuration files in
     autobuild/configs/autobuild/*.  Create a new XML configuration
