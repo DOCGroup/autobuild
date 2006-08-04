@@ -6,7 +6,6 @@
         <environment name="CIAO_ROOT"          value="/build/isisbuilds/gcc4/ACE_wrappers/TAO/CIAO" />
         <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/gcc4/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib" />
         <environment name="XERCESCROOT"       value="/project/abbarachtmp/wotte/utils/xerces" />
-        <environment name="CVSROOT"         value=":pserver:anonymous@anoncvs.ociweb.com:/cvs" />
         <environment name="SSL_ROOT"         value="/usr" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.4" />
 
