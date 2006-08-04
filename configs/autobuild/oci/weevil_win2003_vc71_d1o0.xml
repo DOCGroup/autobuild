@@ -1,6 +1,5 @@
 <autobuild>
 	<configuration>
-		<environment name="MPC_ROOT" value="c:\tao_builds\taoadmin\doc\MPC" />
 		<environment name="ACE_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0" />
 		<environment name="TAO_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\TAO" />
 		<environment name="SSL_ROOT" value="" />
