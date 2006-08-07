@@ -35,7 +35,7 @@
     <!-- Delete the build's Makefiles before regenerating them. -->
     <command name="shell"             options="find build/xlc7_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\n'" />
+    <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\nipv6=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/xlc7_debug -type gnuace -exclude build,Kokyu" />
 
     <command name="file_manipulation" options="type=create file=build/xlc7_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix-5.x.h\x22\n'" />

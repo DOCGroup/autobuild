@@ -1,3 +1,9 @@
+Mon Aug  7 16:12:34 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_xlc7_debug.xml: Added
+          ipv6 to the local.features file to build and test with IPv6 support.
+
 Fri Aug  4 09:15:03 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/charanga:
