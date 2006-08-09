@@ -2,6 +2,7 @@
 	<configuration>
 		<environment name="ACE_ROOT" value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc6_d0o1" />
 		<environment name="TAO_ROOT" value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc6_d0o1\TAO" />
+		<environment name="MPC_ROOT" value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc6_d0o1\MPC" />
 		<environment name="Path" value="G:\Program Files\VS6\Common\MSDev98\Bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc6_d0o1\bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc6_d0o1\lib;" type="prefix" />
 		<variable name="root" value="d:\tao_builds\taoadmin\doc" />
 		<variable name="project_root" value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc6_d0o1" />
