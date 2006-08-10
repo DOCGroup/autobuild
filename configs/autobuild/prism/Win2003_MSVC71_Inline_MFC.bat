@@ -1,9 +1,25 @@
+@echo off
 rem $Id: Win2003_MSVC6_Debug.bat 3921 2006-07-27 12:02:37Z sma $
+echo ==============================================================================
+echo                          DOC_Group MSVC71 Inline MFC
+echo ==============================================================================
 call "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin\VCVARS32.BAT"
-c:
+mkdir C:\temp > nul: 2>&1
+mkdir C:\temp\DOC_Group > nul: 2>&1
+mkdir C:\temp\DOC_Group\inlineMFC > nul: 2>&1
+set TEMP=C:\temp\DOC_Group\inlineMFC
+set TMP=%TEMP%
+echo.
+echo Updating autobuild
+C:
 cd \Overnight_Builds\DOC_Group
 svn up autobuild
+echo.
+echo status autobuild
 svn status autobuild
+echo.
+echo For status, notepad C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\log.txt
 cd \Overnight_Builds\DOC_Group\vc71\inlineMFC
-perl C:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl c:\Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism\Win2003_MSVC71_Inline_MFC.xml
-c:\cygwin\bin\chmod o+r /cygdrive/T/doc-scoreboard/windows/VC71_InlineMFC/*
+perl C:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl C:\Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism\Win2003_MSVC71_Inline_MFC.xml > nul: 2>&1
+cd \Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism
+echo Finished !!

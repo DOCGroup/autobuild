@@ -4,14 +4,14 @@
         <environment name="ACE_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers" />
         <environment name="TAO_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\TAO"/>
         <environment name="MPC_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\MPC" />
-        <environment name="PATH"      value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\bin;C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\lib;C:\openssl-0.9.7i\out32dll;C:\Perl\bin;C:\cygwin\bin" type="prefix" />
+        <environment name="PATH"      value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\bin;C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\ACE_wrappers\lib;C:\openssl-0.9.7i\out32dll;C:\Perl\bin;C:\Program Files\Subversion\bin" type="prefix" />
         <environment name="RSYNC_RSH" value="C:\cygwin\bin\ssh" />
         <environment name="SSL_ROOT"  value="C:\openssl-0.9.7i" />
 
         <variable name="root"         value="C:\Overnight_Builds\DOC_Group\vc71\inlineMFC" />
         <variable name="log_file"     value="log.txt" />
         <variable name="log_root"     value="T:\doc-scoreboard\windows\VC71_InlineMFC" />
-        <variable name="name"         value="WinXP VS.NET 2003 DLL Debug" />
+        <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Debug" />
         <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS MFC" />
     </configuration>
 
@@ -19,15 +19,14 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ALL -Debug -k -clean" />
-
     <command name="log"               options="ON" />
 
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ALL -Debug -k -clean" />
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.vcproj*' -exec c:\cygwin\bin\rm '{}' ';'" />
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln*' -exec c:\cygwin\bin\rm '{}' ';'" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#define ACE_HAS_MFC 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#define ACE_HAS_MFC 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=1\nssl=0\n'" />
 
     <command name="print_os_version" />
@@ -39,6 +38,8 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ALL -Debug -k" />
 
+    <!-- We are about to start our tests we can kick the next build off -->
+    <command name="win32make"         options="..\start_next_build.bat" />
     <command name="auto_run_tests"    options="-a -o -t -s \x22C:\Overnight_Builds\DOC_Group\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
