@@ -1,3 +1,12 @@
+Fri Aug 11 13:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+
+          Remove default.features mfc=1 as we are not actually
+          building MFC utilities but console apps.
+
 Fri Aug 11 12:55:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
