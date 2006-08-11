@@ -1,3 +1,11 @@
+Fri Aug 11 12:55:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.bat:
+
+          Added .disable warning & pause to scripts.
+
 Thu Aug 10 11:27:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
