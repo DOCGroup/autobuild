@@ -48,7 +48,6 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
-    my $defurl = 'http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*';
     my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc/';
     my %information = ('XML'       => ['', '',
                                        "$svnurl/ACE_autobuild/trunk/<file>?revision=HEAD"],
@@ -62,8 +61,8 @@ sub Run ($)
                                        "$svnurl/Middleware/trunk/TAO/<file>?revision=HEAD"],
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
                                        "$svnurl/Middleware/trunk/CIAO/<file>?revision=HEAD"],
-                       'DDS'       => ['ChangeLog', 'TAO/DDS/',
-                                       "$defurl/<file>?cvsroot=DDS"],
+                       'DDS'       => ['ChangeLog', 'DDS/',
+                                       "$svnurl/Middleware/trunk/DDS/<file>?revision=HEAD"],
                       );
     my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DDS');
 

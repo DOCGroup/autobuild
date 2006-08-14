@@ -1,3 +1,8 @@
+Mon Aug 14 08:42:00 UTC 2006  Johnny Willemsen  <jwillemsen@remeyd.nl>
+
+        * command/printaceconfig.pm:
+          Updated link to DDS Changelog file
+
 Fri Aug 11 13:30:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
