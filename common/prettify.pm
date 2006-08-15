@@ -892,6 +892,7 @@ sub Test_Handler ($)
         || $s =~ m/Invalid write of size/
         || $s =~ m/Invalid read of size/
         || $s =~ m/Source and destination overlap/
+        || $s =~ m/error while loading shared libraries/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
