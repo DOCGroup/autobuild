@@ -1,3 +1,12 @@
+Wed Aug 16 19:40:56 UTC 2006  Ciju John  <john_c@ociweb.com>
+
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+        MPC_ROOT needs to point at the original checked out
+        workspace. Else cloen_build_tree.pl will fail.
+
+        * configs/autobuild/oci/wasp_win2003_vc6_d0o1.xml:
+          Cleaning the VC6 build.
+
 Mon Aug 14 08:42:00 UTC 2006  Johnny Willemsen  <jwillemsen@remeyd.nl>
 
         * command/printaceconfig.pm:
