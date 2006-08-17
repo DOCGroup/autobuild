@@ -1,3 +1,9 @@
+Thu Aug 17 02:27:14 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/pantera_isis/gcc-4.0.xml
+         
+          Removed -Wno-variadic-macros.
+        
 Wed Aug 16 19:40:56 UTC 2006  Ciju John  <john_c@ociweb.com>
 
         * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
