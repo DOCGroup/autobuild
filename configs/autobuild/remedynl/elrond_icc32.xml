@@ -22,8 +22,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='xerces=0\nCFLAGS+=-Wp64\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nxerces=0\nCFLAGS+=-Wp64\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\ncidl=1\nxerces=0\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="icc" />
