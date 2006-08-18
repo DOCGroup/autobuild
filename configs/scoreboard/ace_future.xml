@@ -8,12 +8,4 @@ all the OS/platform combinations ACE is tested everyday.
 <hr>
 </preamble>
 
-<group>
-  <name>Test Builds for ACE</name>
-    <build>
-      <name>MACOS_X_Panther</name>
-      <url>http://www.makexs.com/~zorko/Panther</url>
-      <build_sponsor>John Zorko</build_sponsor>
-    </build>
-</group>
 </scoreboard>
