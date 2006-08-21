@@ -862,6 +862,9 @@ sub Autoconf_Handler ($)
         || $s =~ m/Syntax error at line/) {
         $self->Output_Error ($s);
     }
+    elsif ($s =~ m/configure: WARNING:/) {
+        $self->Output_Warning ($s);
+    }
     else {
         $self->Output_Normal ($s);
     }

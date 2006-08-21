@@ -1,3 +1,8 @@
+Mon Aug 21 20:54:38 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * common/prettify.pm (Autoconf_Handler): If there is "configure:
+          WARNING:" in the output, flag it as a warning in the scoreboard.
+
 Mon Aug 21 14:50:32 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/autobuild/sparc/SunOS10_GCC402.xml:
