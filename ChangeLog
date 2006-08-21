@@ -1,3 +1,8 @@
+Mon Aug 21 14:50:32 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/autobuild/sparc/SunOS10_GCC402.xml:
+          Set debug=1 in platform_macros.GNU.
+
 Fri Aug 18 17:05:39 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC365_Standard.xml:
