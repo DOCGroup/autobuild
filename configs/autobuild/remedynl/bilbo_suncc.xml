@@ -8,7 +8,7 @@
         <variable name="root"     value="/export/home/build/ACE/SunCC" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/export/home/build/ACE/SunCC" />
-        <variable name="configs"  value="Exceptions" />
+        <variable name="configs"  value="Exceptions IPV6" />
         <variable name="name"     value="Sun Forte" />
     </configuration>
 
@@ -22,7 +22,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.10.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nec_typed_events=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="sun_cc" />
