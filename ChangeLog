@@ -1,3 +1,9 @@
+Tue Aug 22 18:50:26 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/sparc/SunOS10_GCC402.xml:
+          Added ipv6=1 to default.features
+
 Mon Aug 21 20:54:38 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * common/prettify.pm (Autoconf_Handler): If there is "configure:
