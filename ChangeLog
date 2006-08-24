@@ -1,3 +1,9 @@
+Thu Aug 24 19:24:33 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+          Removed print_status commands to enable stats collection (per
+          Johnny Willemsen <jwillemsen@remedy.nl>)
+
 Tue Aug 22 18:50:26 UTC 2006  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
