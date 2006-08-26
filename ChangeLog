@@ -1,3 +1,8 @@
+Sat Aug 26 21:55:10 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/configs/riverace/lucky_dev_acc_debug.xml: Use
+          SHLIB_PATH instead of LD_LIBRARY_PATH for 32-bit PA-RISC runs.
+
 Fri Aug 25 10:56:33 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ciao.xml
