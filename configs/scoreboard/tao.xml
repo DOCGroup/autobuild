@@ -17,13 +17,13 @@ all the OS/platform combinations TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
     <build>
-       <name>RHEL3_Minimum</name>
+       <name>RHEL4_Minimum</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_Minimum/</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-        <name>RHEL3_Static_Core</name>
+        <name>RHEL4_Static_Core</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
