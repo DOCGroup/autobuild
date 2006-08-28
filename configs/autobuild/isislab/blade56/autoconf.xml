@@ -31,7 +31,7 @@
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
-    <command name="print_autotools_config" />
+    <command name="print_autotools_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
