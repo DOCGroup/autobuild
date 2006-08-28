@@ -20,12 +20,17 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="ON" />
 
+    <command name="make"              options="-k realclean" />
+
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" />
+
+    <command name="anonymous_shell"   options="scp bczar@abbarach.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
@@ -33,24 +38,14 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,build.mwc -type gnuace" />
-    <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuace" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF -type gnuace" />
-
-    <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
-    <command name="anonymous_shell"   options="scp bczar@abbarach.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k -j 4" />
-    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -j 4 -C TAO" />
-    <command name="make"              options="-k -j 4 -C TAO/CIAO" />
+
     <command name="auto_run_tests"    options="-a -o -t -C" />
-    <command name="process_logs"      options="clean" />
+
     <command name="log"               options="OFF" />
+
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
