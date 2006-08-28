@@ -164,6 +164,15 @@ sub Run ($)
         print_file ("bin/MakeProjectCreator/config/default.features", 1);
     }
 
+    my $local_features = main::GetVariable ('local_features');
+    if (defined $local_features) {
+      # local features was set, so print it
+      if (-r "$local_features") {
+          print "================ local.features ($local_features) =============\n";
+          print_file ("$local_features", 1);
+      }
+    }
+
     #
     # platform_macros.GNU, if it exists
     #

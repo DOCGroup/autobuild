@@ -1,3 +1,10 @@
+Mon Aug 28 11:01:33 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/printaceconfig.pm:
+          Added support to print the contents of a local.features (or
+          other file) to the config page by setting the variable
+          $local_features
+
 Sat Aug 26 21:55:10 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/configs/riverace/lucky_dev_acc_debug.xml: Use
