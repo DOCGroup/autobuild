@@ -6,7 +6,7 @@
 This is a miscellaneous scoreboard for ACE+TAO.
 <hr>
 </preamble>
- 
+
 <group>
   <name>Utility Builds</name>
   <build>
@@ -18,39 +18,6 @@ This is a miscellaneous scoreboard for ACE+TAO.
   <build>
     <name>Linux_Fuzz</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_Fuzz</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-</group>
-<group>
-  <name>Subversion Test Builds</name>
-  <build>
-    <name>ACE_Conversion</name>
-    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/ACE</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>Autobuild_Conversion</name>
-    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/Autobuild</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>MPC_Conversion</name>
-    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/MPC</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>XSC_Conversion</name>
-    <url>http://hogfish.isislab.vanderbilt.edu/test_conversions/XSC</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>Repo_Test_Build</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade6/</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>

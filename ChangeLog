@@ -1,3 +1,8 @@
+Tue Aug 29 14:01:33 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/misc.xml:
+          Removed the subversion test builds
+
 Mon Aug 28 11:01:33 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/printaceconfig.pm:
