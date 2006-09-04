@@ -1,4 +1,4 @@
-<!-- $Id: Win2003_MSVC6_Debug.xml 3921 2006-07-27 12:02:37Z sma $ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"  value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC\ACE_wrappers" />
@@ -9,7 +9,7 @@
         <environment name="SSL_ROOT"  value="C:\openssl-0.9.7i" />
 
         <variable name="root"         value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC" />
-        <variable name="log_file"     value="log.txt" />
+        <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="T:\doc-scoreboard\windows\VC71_DebugMFC" />
         <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Debug" />
         <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS" />
@@ -26,7 +26,7 @@
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln*' -exec c:\cygwin\bin\rm '{}' ';'" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#define ACE_HAS_MFC 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=0\nssl=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=1\nssl=0\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
