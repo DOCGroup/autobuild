@@ -1,3 +1,9 @@
+Wed Sep  6 15:53:17 UTC 2006  Ciju John  <john_c@ociweb.com>
+
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+          Yesterdays changes didn't force a rebuild. Modified VC options
+          to do rebuild.
+
 Tue Sep  5 18:43:48 UTC 2006  Ciju John  <john_c@ociweb.com>
 
         * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:

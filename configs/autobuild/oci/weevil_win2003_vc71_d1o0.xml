@@ -19,9 +19,6 @@
 	<command name="log" options="ON" />
 	<command name="svn" options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-	<command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.vcproj*' -exec c:\cygwin\bin\rm '{}' ';'" />
-	<command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln*' -exec c:\cygwin\bin\rm '{}' ';'" />
-
 	<command name="clone_build_tree" />
 	<command name="file_manipulation" options="type=update file=ACE_wrappers/build/doc_vc71_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace\config-win32.h\x22\n'" />
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/doc_vc71_d1o0/bin/MakeProjectCreator/config/default.features output='ssl=0\nrmcast=1\nqos=1\n'" />
@@ -29,16 +26,16 @@
 	<command name="print_ace_config" />
 	<!-- <command name="print_status" options="Compile:Windows Build" /> -->
 	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
-	<command name="vc7make" options="/build debug TAO/TAO_ACE.sln" />
-	<command name="vc7make" options="/build debug tests/tests.sln" />
-	<command name="vc7make" options="/build debug examples/examples.sln" />
-	<command name="vc7make" options="/build debug performance-tests/perf.sln" />
-	<command name="vc7make" options="/build debug TAO/tests/tests.sln" />
-	<command name="vc7make" options="/build debug TAO/examples/examples.sln" />
-	<command name="vc7make" options="/build debug TAO/performance-tests/perf.sln" />
-	<command name="vc7make" options="/build debug TAO/orbsvcs/tests/tests.sln" />
-	<command name="vc7make" options="/build debug TAO/orbsvcs/examples/examples.sln" />
-	<command name="vc7make" options="/build debug TAO/orbsvcs/performance-tests/perf.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/TAO_ACE.sln" />
+	<command name="vc7make" options="/rebuild debug tests/tests.sln" />
+	<command name="vc7make" options="/rebuild debug examples/examples.sln" />
+	<command name="vc7make" options="/rebuild debug performance-tests/perf.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/tests/tests.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/examples/examples.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/performance-tests/perf.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/tests/tests.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/examples/examples.sln" />
+	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/performance-tests/perf.sln" />
 	<!-- <command name="print_status" options="Test:Windows Build" /> -->
         <!-- <command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" /> -->
 	<command name="auto_run_tests" options="-a -t -o -s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG" />
