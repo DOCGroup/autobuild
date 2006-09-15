@@ -1,3 +1,10 @@
+Fri Sep 15 15:56:27 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/balar_isis/driver.sh
+        
+          Reverted Johnny's change to make all balar builds run
+          separately.
+
 Wed Sep  6 15:53:17 UTC 2006  Ciju John  <john_c@ociweb.com>
 
         * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
