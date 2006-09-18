@@ -4,7 +4,8 @@
         <environment name="ACE_ROOT"        value="/build/x86-64bit/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/x86-64bit/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"       value="/build/x86-64bit/ACE_wrappers/TAO/CIAO" />
-        <environment name="LD_LIBRARY_PATH" value="/build/x86-64bit/ACE_wrappers/lib:/build/x86-64bit/ACE_wrappers/ace:" />
+        <environment name="LD_LIBRARY_PATH" value="/build/x86-64bit/ACE_wrappers/lib:/build/x86-64bit/ACE_wrappers/ace:/build/x86-64bit/utils:/lib" />
+        <environment name="XERCESCROOT"     value="/build/x86-64bit/utils" />
 
         <variable name="project_root" value="/build/x86-64bit/ACE_wrappers" />
         <variable name="build_name" value="linux-x86-64bit" />

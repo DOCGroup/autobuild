@@ -6,7 +6,8 @@
         <environment name="TAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT" value="/build/isisbuilds/Static_Core/ACE_wrappers/TAO/CIAO"/>
         <environment name="ZLIB_ROOT"       value="/usr/" />
-        <environment name="ZZIP_ROOT"       value="/usr/" />
+        <environment name="ZZIP_ROOT"       value="/build/isisbuilds/utils" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/lib" />
 
         <variable name="root"     value="/build/isisbuilds/Static_Core" />
         <variable name="name"     value="Core" />

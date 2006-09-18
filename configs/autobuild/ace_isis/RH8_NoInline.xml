@@ -5,9 +5,9 @@
         <environment name="ACE_ROOT"        value="/build/isisbuilds/NoInline/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/NoInline/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/build/isisbuilds/NoInline/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/NoInline/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/NoInline/ACE_wrappers/lib:/build/isisbuilds/util/lib" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
-        <environment name="ZZIP_ROOT"       value="/usr/" />
+        <environment name="ZZIP_ROOT"       value="/build/isisbuilds/util" />
 
         <variable name="root"     value="/build/isisbuilds/NoInline" />
         <variable name="log_file" value="build.txt" />
