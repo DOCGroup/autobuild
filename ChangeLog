@@ -1,3 +1,13 @@
+Mon Sep 25 20:32:39 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml: Moved Riverace's
+          Solaris_10_sparc_Studio10_Release_WChar(64bit) build from the
+          ace.xml scoreboard to ace_future.xml - there are tons of 64-bit
+          warnings that aren't getting any real attention until someone has
+          lots of free time or someone sponsors the fixes. This should lighten
+          the load on build czars scanning a bazillion warnings.
+
 Mon Sep 18 19:47:59 UTC 2006  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/ace_isis/RH8_Static_Core.xml
