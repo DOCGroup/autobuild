@@ -50,9 +50,9 @@ sub Run ($)
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
     my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc/';
     my %information = ('XML'       => ['', '',
-                                       "$svnurl/ACE_autobuild/trunk/<file>?revision=HEAD"],
+                                       "$svnurl/autobuild/trunk/<file>?revision=HEAD"],
                        'AUTOBUILD' => ['ChangeLog', '',
-                                       "$svnurl/ACE_autobuild/trunk/<file>?revision=HEAD"],
+                                       "$svnurl/autobuild/trunk/<file>?revision=HEAD"],
                        'MPC'       => ['ChangeLog', 'MPC/',
                                        "$svnurl/MPC/trunk/<file>?revision=HEAD"],
                        'ACE'       => ['ChangeLog', '',
