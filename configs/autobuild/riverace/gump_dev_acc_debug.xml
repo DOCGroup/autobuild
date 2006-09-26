@@ -12,6 +12,7 @@
         <variable name="log_file"     value="acc_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/gump/dev/acc_debug" />
         <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES" />
+        <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
         <variable name="make_program" value="gmake" />
 
     </configuration>

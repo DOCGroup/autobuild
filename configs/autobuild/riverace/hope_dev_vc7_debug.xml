@@ -11,6 +11,7 @@
 	<variable name="log_file"        value="vc7_debug.log" />
         <variable name="log_root"        value="g:\build_logs\dev\vc7_debug" />
         <variable name="name"            value="WinXP VC.NET 2003 Debug" />
+        <variable name="local_features"  value="c:\ace\ACE_wrappers\local.features" />
         <variable name="configs"         value="Win32 SSL Exceptions" />
     </configuration>
 

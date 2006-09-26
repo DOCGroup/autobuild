@@ -11,6 +11,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers/build/gcc3_debug" />
         <variable name="log_file"     value="gcc3_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/cuddy/dev/gcc3_debug" />
+        <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
         <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES" />
 
     </configuration>

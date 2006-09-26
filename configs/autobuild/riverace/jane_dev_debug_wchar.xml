@@ -11,6 +11,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers/build/debug_wchar" />
         <variable name="log_file"     value="debug_wchar.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/debug_wchar" />
+        <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
         <variable name="configs"      value="BAD_AIO Exceptions SSL CHECK_RESOURCES" />
 
     </configuration>

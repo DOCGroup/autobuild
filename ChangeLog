@@ -1,3 +1,29 @@
+Tue Sep 26 15:56:18 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+        * configs/autobuild/riverace/chad_dev_studio10-64_release.xml:
+        * configs/autobuild/riverace/chad_dev_studio10_debug.xml:
+        * configs/autobuild/riverace/charlie_dev_xlc7_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/essie_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/gump_dev_acc_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_64_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
+        * configs/autobuild/riverace/lucky_dev_acc_debug.xml:
+        * configs/autobuild/riverace/payslee_dev_debug.xml:
+        * configs/autobuild/riverace/timmy_dev_debug.xml:
+          Added "local_features" variable to show MPC local.features file
+          in ACE configuration displayed in build output.
+
 Mon Sep 25 20:32:39 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml:

@@ -12,6 +12,7 @@
         <variable name="log_file"     value="xlc7_debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/charlie/dev/xlc7_debug" />
         <variable name="make_program" value="gmake" />
+        <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
         <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>

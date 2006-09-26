@@ -12,6 +12,7 @@
         <variable name="project_root" value="/acebuilds/ACE_wrappers/build/studio10-64_release_wchar" />
         <variable name="log_file"     value="studio10-64_release_wchar.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/chad/dev/studio10-64_release_wchar" />
+        <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
         <variable name="configs"      value="Exceptions CHECK_RESOURCES" />
 
     </configuration>

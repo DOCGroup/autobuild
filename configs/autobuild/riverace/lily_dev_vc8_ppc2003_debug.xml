@@ -10,6 +10,7 @@
 	<variable name="log_file"        value="vc8_ppc2003_debug.log" />
         <variable name="log_root"        value="M:\dev\vc8_ppc2003_debug" />
         <variable name="name"            value="WinCE4 VC.NET 2005 Debug" />
+        <variable name="local_features"  value="c:\ace\ACE_wrappers\local.features" />
         <variable name="configs"         value="Win32 Exceptions" />
     </configuration>
 
