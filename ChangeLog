@@ -1,3 +1,17 @@
+Tue Sep 26 21:18:44 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ace_future.xml: Restated the purpose of the
+          ace_future.xml scoreboard as the place where builds are that don't
+          factor into the readiness evaluation for releases for one reason
+          or another. Moved Riverace's AIX_5.2_VA6_Debug(autoconf),
+          WinCE4_PocketPC2003_VC8_Debug, and Winmobile5_PocketPC_VC8_Debug
+          builds from the ace.xml board to ace_future.xml. The AIX build
+          has a tough problem with how to specify through autoconf that the
+          templaterepository needs a project-specific piece in the name, and
+          the WinCE builds are out of the current Riverace supported set
+          due to lack of sponsorship.
+
 Tue Sep 26 15:56:18 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
