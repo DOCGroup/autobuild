@@ -44,7 +44,7 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO/CIAO,TAO/TAO_*.mwc"/>
+    <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO/CIAO_*.mwc,TAO/TAO_*.mwc"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
