@@ -39,6 +39,7 @@
     <command name="shell"             options="rm -rf ACE_wrappers/build" />
     <command name="shell"             options="mkdir ACE_wrappers/build" />
     <command name="shell"             options="cd ACE_wrappers/build; ../configure" />
+    <command name="configure"         options="--preclean" />
     <command name="make"              options="dir=build -j 2 -k" />
 
     <command name="log"               options="off" />
