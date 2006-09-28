@@ -11,6 +11,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/GCC/" />
         <variable name="configs"  value="Linux Exceptions" />
+        <variable name="make_program"  value="gmake" />
 
     </configuration>
 
