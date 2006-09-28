@@ -5,6 +5,6 @@
 
 cd $HOME/ACE/autobuild
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
+exec /opt/perl/bin/perl $HOME/ACE/autobuild/autobuild.pl \
                              $HOME/ACE/autobuild/configs/autobuild/remedynl/arwen_hpux_gcc.xml
 
