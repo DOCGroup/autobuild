@@ -123,6 +123,16 @@ all the OS/platform combinations ACE is tested everyday.
 </group>
 
 <group>
+  <name>VxWorks</name>
+   <build>
+     <name>VxWorks6.3_PPC603_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks63r/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+</group>
+
+<group>
 <name>Solaris</name>
    <build>
      <name>Solaris_8_gcc3_Debug</name>
