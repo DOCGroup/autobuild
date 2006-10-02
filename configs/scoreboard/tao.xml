@@ -106,6 +106,24 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
+           <name>Win2003_VC71_Debug_MFC</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_DebugMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+        </build>
+        <build>
+           <name>Win2003_VC71_Inline_MFC</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_InlineMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+        </build>
+        <build>
+           <name>Win2003_VC71_NoInline_MFC</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_StandardMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP_BCB2006_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2006/dd/</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -195,7 +213,6 @@ all the OS/platform combinations TAO is tested everyday.
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
-
 </group>
 
 <group>

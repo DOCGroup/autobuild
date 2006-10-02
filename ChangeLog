@@ -1,3 +1,8 @@
+Mon Oct 02 09:46:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+          Added the 3 Prismtech sponsored MFC windows builds
+
 Tue Sep 26 21:18:44 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml:
