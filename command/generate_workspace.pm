@@ -47,12 +47,13 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
+    my $base = main::GetVariable ('base') || 'ACE_wrappers';
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
 
     if (!defined $project_root) {
-        $project_root = $root . '/ACE_wrappers';
+        $project_root = $root . '/' . $base;
     }
     
     if (!-r $project_root || !-d $project_root) {
@@ -77,9 +78,9 @@ sub Run ($)
           return 0;
     }
 
-    if (!chdir $ENV{'ACE_ROOT'} )
+    if (!chdir $project_root )
     {
-        if (!chdir $project_root) {
+        if (!chdir $ENV{'ACE_ROOT'}) {
             print STDERR __FILE__, ": Cannot change to $project_root or $ENV{'ACE_ROOT'}\n";
             return 0;
         }
@@ -94,7 +95,15 @@ sub Run ($)
         $options =~ s/dirs=$dirs//;
     }
 
-    my $command = "perl $project_root/bin/mwc.pl $options";
+    ## Get the location of the mwc.pl script
+    my $mwc = "$project_root/bin/mwc.pl";
+    my($mpcroot) = $ENV{MPC_ROOT};
+    if (!-r $mwc && defined $mpcroot) {
+      $mwc = "$mpcroot/mwc.pl";
+    }
+
+    ## Create the MPC command line
+    my $command = "perl $mwc $options";
 
     if ($dirs) {
         my $dir;

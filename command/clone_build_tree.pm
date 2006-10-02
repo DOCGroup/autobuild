@@ -55,6 +55,7 @@ sub Run ($)
     my $root     = main::GetVariable ('root');
     my $wrappers = main::GetVariable ('project_root');
     my $build    = main::GetVariable ('build_name');
+    my $base     = main::GetVariable ('base') || 'ACE_wrappers';
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
@@ -67,12 +68,12 @@ sub Run ($)
     my $current_dir = getcwd ();
 
     my $dir = $root;
-    # strip off ACE_wrappers if it's there (sometimes it is, sometimes it
+    # strip off the base if it's there (sometimes it is, sometimes it
     # isn't) and then re-add it.
-    if ($dir =~ m/^(.*)\/ACE_wrappers/) {
+    if ($dir =~ m/^(.*)\/$base/) {
         $dir = $1;
     }
-    $dir = "$dir/ACE_wrappers";
+    $dir = "$dir/$base";
 
     chdir ($dir);
 
@@ -80,7 +81,7 @@ sub Run ($)
         mkpath ($wrappers);
     }
 
-    main::PrintStatus ('Setup', 'Create MPC Specific ACE Build');
+    main::PrintStatus ('Setup', 'Create MPC Specific Build');
 
     my($mpcroot) = $ENV{MPC_ROOT};
     my($mpcpath) = (defined $mpcroot ? $mpcroot : 'MPC');
