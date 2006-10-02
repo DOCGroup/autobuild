@@ -137,22 +137,28 @@ all the OS/platform combinations CIAO is tested everyday.
 <group>
 <name>Stats Builds</name>
    <build>
-   <name>SuSE_FP_Stats</name>
-   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/FP_Metrics</url>
-   <build_sponsor>ISIS</build_sponsor>
-   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+      <name>SuSE_FP_Stats</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/FP_Metrics</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
-   <name>SuSE_CP_Static</name>
-   <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CP_Metrics</url>
-   <build_sponsor>ISIS</build_sponsor>
-   <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+      <name>SuSE_CP_Static</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/CP_Metrics</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
       <name>SuSE_FP_GCC4</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/Statcompile/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC4_Stats_Regular</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/regular</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
 </group>
 
