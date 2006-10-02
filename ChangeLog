@@ -1,3 +1,10 @@
+Mon Oct 02 16:00:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.bat:
+          Fixed the ever growing path, inc, lib environment chaining.
+
 Mon Oct 02 09:46:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:

@@ -1,5 +1,5 @@
 @echo off
-rem $Id: Win2003_MSVC6_Debug.bat 3921 2006-07-27 12:02:37Z sma $
+rem $Id$
 set THIS_BUILD=C:\Overnight_Builds\DOC_Group\vc71\inlineMFC\
 echo ==============================================================================
 echo                          DOC_Group MSVC71 Inline MFC
@@ -12,6 +12,27 @@ if not exist %THIS_BUILD%.disable goto doBuild
   pause
   if exist %THIS_BUILD%.disable goto :eof
 :doBuild
+rem  ==============================================================================
+rem  The following fixes a problem with chaining builds on after one another where
+rem  the PATH continues to grow with all previous ACE_ROOT etc. being listed in it.
+rem  Later builds can "confuse" previously built ace.dll etc. with their own if
+rem  these are not removed.
+rem  ==============================================================================
+if "%ORIGINAL_PATH%" == "" (
+   set ORIGINAL_PATH=%PATH%
+) else (
+   set PATH=%ORIGINAL_PATH%
+)
+if "%ORIGINAL_INCLUDE%" == "" (
+   set ORIGINAL_INCLUDE=%INCLUDE%
+) else (
+   set INCLUDE=%ORIGINAL_INCLUDE%
+)
+if "%ORIGINAL_LIB%" == "" (
+   set ORIGINAL_LIB=%LIB%
+) else (
+   set LIB=%ORIGINAL_LIB%
+)
 call "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin\VCVARS32.BAT"
 mkdir C:\temp > nul: 2>&1
 mkdir C:\temp\DOC_Group > nul: 2>&1
