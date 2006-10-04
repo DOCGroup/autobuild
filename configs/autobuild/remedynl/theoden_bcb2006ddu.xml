@@ -23,7 +23,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
 
-    <command name="make"              options=" -i realclean" />
+    <command name="make"              options=" -i -f Makefile.bmak realclean" />
 
     <command name="log"               options="ON" />
 
@@ -43,7 +43,7 @@
 
     <command name="generate_workspace" options="-exclude TAO -type bmake -make_coexistence" />
 
-    <command name="make"              options=" -i" />
+    <command name="make"              options=" -i -f Makefile.bmak" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
