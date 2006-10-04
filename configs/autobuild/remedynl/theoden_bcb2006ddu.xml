@@ -22,11 +22,11 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="make"              options=" -i -f ACE_wrappers.bmake realclean" />
+    <command name="make"              options=" -i -f Makefile.bor realclean" />
 
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bmak*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
@@ -42,7 +42,7 @@
 
     <command name="generate_workspace" options="-exclude TAO -type bmake -make_coexistence" />
 
-    <command name="make"              options=" -i -f ACE_wrappers.bmake" />
+    <command name="make"              options=" -i -f Makefile.bor" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
