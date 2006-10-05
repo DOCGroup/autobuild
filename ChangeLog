@@ -1,3 +1,23 @@
+Thu Oct  5 18:21:18 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5-static_gcc4.1.1_d0o0i0s1.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d1o0i0d1.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5_gcc4.1.1_d0o0i0.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+        * configs/autobuild/oci/oci_doc_transport_current_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+
+          Adding builds that excersise the forthcomming bug2612 fix and
+          transport current features.
+
+        * configs/scoreboard/tao.xml:
+
+          Moving the FC5_Debug_GCC-4.1.1 build to the "future" scoreboard
+          page.
+
+        * configs/scoreboard/tao_future.xml:
+
+          Added the builds to the "future" scoreboard.
+
 Tue Oct  3 16:16:54 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/scoreboard/tao.xml:
