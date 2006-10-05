@@ -1,6 +1,7 @@
 <!-- $Id$ -->
 <intropage>
     <preamble>
+<P>
 You have reached the logically existing, virtual ACE+TAO+CIAO
 scoreboard.  It shows all the OS/compiler combinations ACE+TAO+CIAO are
 tested against everyday, all over the world.  We have builds running
@@ -14,8 +15,7 @@ continuously at
 <a href="http://www.makexs.com/~zorko/">John Zorko</a>,
 <a href="http://www.acorntoolworks.com/">J.T. Conklin</a>.
 <p>
-The distributed scoreboard is divided into following five
-categories:
+The distributed scoreboard is divided into following categories:
 <li>ACE Builds for Beta/Release [<a href="./ace.html">regular</a>|<A href="ace_detailed.matrix.html">detailed</A>|<a href="ace.rss">rss</a>]</li>
 <li>ACE Builds for Future Beta/Release [<a href="./ace_future.html">regular</a>|<A href="ace_future_detailed.matrix.html">detailed</A>]</li>
 <li>TAO Builds for Beta/Release [<a href="./tao.html">regular</a>|<A href="tao_detailed.matrix.html">detailed</A>|<a href="tao.rss">rss</a>]</li>
