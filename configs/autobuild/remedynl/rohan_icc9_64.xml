@@ -5,18 +5,18 @@
         <environment name="TAO_ROOT"      value="C:\ACE\Intel90_64bit\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files (x86)\Common Files\Intel\Licenses" />
-        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Bin;C:\Program Files\Microsoft Platform SDK\Include\;C:\ACE\Intel90_64bit\ACE_wrappers\bin;C:\ACE\Intel90_64bit\ACE_wrappers\lib;C:\Program Files\Microsoft Platform SDK\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK\Bin;C:\Program Files\Microsoft Platform SDK\Bin\WinNT;C:\Program Files\Microsoft Platform SDK\NoRedist\Win64\AMD64;C:\Cygwin\bin;C:\ACE\Intel90_64bit\ACE_wrappers\bin;C:\ACE\Intel90_64bit\ACE_wrappers\lib" type="prefix" />
-        <environment name="INCLUDE"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Include;C:\Program Files\Microsoft Platform SDK\Include\;C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include" type="prefix" />
-        <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Lib;C:\Program Files\Microsoft Platform SDK\Lib\AMD64;C:\Program Files\Microsoft Platform SDK\Lib\AMD64\atlmfc" type="prefix" />
-        <environment name="Include"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Include;C:\Program Files\Microsoft Platform SDK\Include;C:\Program Files\Microsoft Platform SDK\Include\crt;C:\Program Files\Microsoft Platform SDK\Include\crt\sys;C:\Program Files\Microsoft Platform SDK\Include\mfc;C:\Program Files\Microsoft Platform SDK\Include\atl" type="prefix" />
+        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Bin;C:\ACE\Intel90_64bit\ACE_wrappers\bin;C:\ACE\Intel90_64bit\ACE_wrappers\lib;C:\Program Files\Microsoft Visual Studio 8\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Visual Studio 8\Bin;C:\Program Files\Microsoft Visual Studio 8\Bin\WinNT;C:\Program Files\Microsoft Visual Studio 8\NoRedist\Win64\AMD64;C:\Cygwin\bin;C:\ACE\Intel90_64bit\ACE_wrappers\bin;C:\ACE\Intel90_64bit\ACE_wrappers\lib" type="prefix" />
+        <environment name="INCLUDE"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Include;C:\Program Files\Microsoft Visual Studio 8\Include\;C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include" type="prefix" />
+        <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Lib;C:\Program Files\Microsoft Visual Studio 8\Lib\AMD64;C:\Program Files\Microsoft Visual Studio 8\Lib\AMD64\atlmfc" type="prefix" />
+        <environment name="Include"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Include;C:\Program Files\Microsoft Visual Studio 8\Include;C:\Program Files\Microsoft Visual Studio 8\Include\crt;C:\Program Files\Microsoft Visual Studio 8\Include\crt\sys;C:\Program Files\Microsoft Visual Studio 8\Include\mfc;C:\Program Files\Microsoft Visual Studio 8\Include\atl" type="prefix" />
         <environment name="CPU"           value="AMD64" />
         <environment name="APPVER"        value="5.02" />
         <environment name="TARGETOS"      value="WINNT" />
         <environment name="MSVCVer"       value="7.1" />
-        <environment name="MSVCDir"       value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7" />
-        <environment name="VCINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
-        <environment name="VS71COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
-        <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE" />
+        <environment name="MSVCDir"       value="C:\Program Files (x86)\Microsoft Visual Studio 8\VC7" />
+        <environment name="VCINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio 8" />
+        <environment name="VS71COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 8" />
+        <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE" />
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="C:\ACE\Intel90_64bit\" />
@@ -26,8 +26,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="process_listener"  options="localhost:32001" />
 
     <command name="log"               options="ON" />
 
@@ -55,7 +54,6 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
     <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ICC90_64bit" />
 </autobuild>
