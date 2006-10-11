@@ -1,3 +1,10 @@
+Wed Oct 11 20:27:51 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/scoreboard/tao_future.xml:
+
+          Fixed a typo in the the FC5-Static* build. Grouped the feature
+          builds together.
+
 Wed Oct 11 08:38:00 UTC 2006  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/releases.xml:
