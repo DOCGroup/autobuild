@@ -1,3 +1,10 @@
+Wed Oct 11 08:38:00 UTC 2006  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/releases.xml:
+
+          Added new config file to support 'since last beta'/'since last major release'
+          history views on new scoreboard.
+
 Thu Oct  5 18:21:18 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/autobuild/oci/doc_head_oci1179_linux-fc5-static_gcc4.1.1_d0o0i0s1.xml:
