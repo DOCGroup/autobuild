@@ -44,7 +44,7 @@
 
     <command name="generate_workspace" options="TAO_COIOP.mwc -type gnuace" />
 
-    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 5 -k" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=3 move prettify index" />
