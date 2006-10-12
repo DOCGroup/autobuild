@@ -67,14 +67,20 @@ all the OS/platform combinations TAO is tested everyday.
      <build>
         <name>FC4_ACE_FOR_TAO</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/ace_for_tao</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
         <name>FC4_NO_IIOP</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/no_iiop</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+        <build_sponsor>ISIS</build_sponsor>
+        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+     </build>
+     <build>
+        <name>SuSE_10_1_GCC41_COIOP</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/COIOP/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
         <name>RHEL4_NoInline</name>
