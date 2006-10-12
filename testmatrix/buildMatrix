@@ -24,7 +24,10 @@ if [ -z "$othtml" ]; then
   othtml=test_complex
 fi
 
+logdir=$4
+if [ -z $logdir ]; then
 logdir="/export/web/www/scoreboard"
+fi
 
 otraw=test_spread.raw
 filelist=`cat $buildlist`
@@ -43,5 +46,6 @@ done
 
 python GenerateTestMatrix.py $operation $otraw $logdir $othtml
 
+rm -f $otraw
 exit 0
 

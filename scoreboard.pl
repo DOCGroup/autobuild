@@ -701,6 +701,7 @@ sub update_html_table ($$@)
     my $haveps = 0;
     my $havehtml = 0;
     my $havesnapshot = 0;
+    my $havehistory = 0;
     my @builds;
 
     ### Table
@@ -735,6 +736,10 @@ sub update_html_table ($$@)
 	if (defined $builds{$buildname}->{SNAPSHOT}) {
 	    $havesnapshot = 1;
 	}
+        if (defined $builds{$buildname}->{FULL_HISTORY} ||
+            defined $builds{$buildname}->{CLEAN_HISTORY}) {
+            $havehistory = 1;
+        }
     }
 
     print $indexhtml "<table border=1>\n";
@@ -744,7 +749,7 @@ sub update_html_table ($$@)
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
     print $indexhtml "<th>Build <br>Sponsor</th>";
-    print $indexhtml "<th>History</th>";
+    print $indexhtml "<th>History</th>" if ($havehistory);
     # New entries
     print $indexhtml "<th>PDF</th>" if ($havepdf);
     print $indexhtml "<th>PS</th>" if ($haveps);
@@ -972,23 +977,25 @@ sub update_html_table ($$@)
         }
         print $indexhtml "</a>";
 
-        print $indexhtml "<td>";
-        if (defined $builds{$buildname}->{FULL_HISTORY}) {
-            print $indexhtml "<a href=\"";
-            print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".html";
-            print $indexhtml "\">";
-            print $indexhtml "Full";
-            print $indexhtml "</a>";
-            print $indexhtml " ";
+        if ($havehistory) {
+            print $indexhtml "<td>";
+            if (defined $builds{$buildname}->{FULL_HISTORY}) {
+                print $indexhtml "<a href=\"";
+                print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/", $buildname, ".html";
+                print $indexhtml "\">";
+                print $indexhtml "Full";
+                print $indexhtml "</a>";
+                print $indexhtml " ";
+            }
+            if (defined $builds{$buildname}->{CLEAN_HISTORY}) {
+                print $indexhtml "<a href=\"";
+                print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".html";
+                print $indexhtml "\">";
+                print $indexhtml "Clean";
+                print $indexhtml "</a>";
+            }
+            print $indexhtml "</td>";
         }
-        if (defined $builds{$buildname}->{CLEAN_HISTORY}) {
-            print $indexhtml "<a href=\"";
-            print $indexhtml "http:\/\/www.dre.vanderbilt.edu\/~remedynl\/teststat\/builds\/clean_", $buildname, ".html";
-            print $indexhtml "\">";
-            print $indexhtml "Clean";
-            print $indexhtml "</a>";
-        }
-        print $indexhtml "</td>";
 
 	print $indexhtml "</tr>\n";
     }

@@ -1,3 +1,14 @@
+Thu Oct 12 14:10:00 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * scoreboard.pl:
+
+          Only provide the 'History' column if there is history for any one
+          build.
+
+        * testmatrix/buildMatrix:
+
+          Make the logdir variable configurable via the command line.
+
 Wed Oct 11 20:27:51 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/scoreboard/tao_future.xml:
