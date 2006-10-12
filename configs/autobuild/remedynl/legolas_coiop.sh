@@ -3,7 +3,7 @@
 # $Id$
 
 # Make sure autobuild directory is up to date.
-cd $HOME/autobuild
+cd $HOME/ACE/autobuild
 svn up
 
 # Run the build.
