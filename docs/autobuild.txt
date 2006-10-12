@@ -1,0 +1,106 @@
+The autobuild directory contains perl modules and scripts that are used to
+process the build XML files.  The code for the various commands that are
+accepted in the build XML files is contained in the command directory.
+
+Each build XML file has a <configuration> section which contains elements to
+set up environment variables and build variables.  After the configuration
+section, there are a set of commands, executed sequentially, that perform
+various functions to complete a nightly build.
+
+In the <configuration> section, the "root" variable specifies the top-level
+directory for the source code to be compiled.  The "base" variable must be set
+to the basename of the "root" variable value if you are not setting up and
+ACE, TAO or CIAO nightly build.  If you are using the "clone_build_tree"
+command, the "project_root" variable must be set to the "root" value +
+"/build/" + the "build_name" value.
+
+In the text below, words in double quotes refer to build variables specified
+in the <configuration> section.
+
+Autobuild commands:
+
+anonymous_shell - Run arbitrary commands in the user shell.  Setup status is
+  not indicated in the log file.
+auto_run_tests - Run the auto_run_tests.pl script from $ACE_ROOT/bin.
+check_compiler - Output information about the compiler, specified in the
+  options section for this command.
+check_linker - Output information about the linker, specified in the
+  options section for this command.
+clone_build_tree - Clones the source tree structure of the "root" directory
+  into a directory specified by the "build_name" under a 'build' directory
+  directly in the "root" directory.
+configure - Run the 'configure' command in the "project_root" directory.
+cvsgrab - Run cvsgrab sub-commands.
+cvs - Run cvs sub-commands.
+file_manipulation - This command provides the ability to append, create,
+  update, delete, and copy files.  It also allows the recursive removal of
+  directories (rmtree) and can be used to ensure that a particular file not
+  exist (mustnotexist).
+generate_workspace - Runs MPC in the "project_root" directory with the
+  options provided.  It attempts to run bin/mwc.pl from the "project_root"
+  directory.  If that fails, it uses $MPC_ROOT/mwc.pl.
+log - Logging pertains to the redirection of all stdout and stderr to the
+  autobuild log file.  When logging is turned 'on', the redirection begins.
+  When logging is turned 'off', stdout and stderr are closed and redirection
+  stops.  Logging can be paused with the 'pause' option to temporarily stop
+  logging.  Run the log 'pause' command again to start logging again.
+make - Runs the make program, optionally specified by the "make_program"
+  variable, with the specified options.  The make command can also specify
+  a makefile name to use by using the 'find' sub-command.  The 'find'
+  sub-command uses the name or wild-card specification to locate the
+  makefile.
+print_ace_config - Puts ACE, TAO, CIAO, DDS, MPC and autobuild information
+  into the log file.
+print_autotools_version - Puts version information about automake, autoconf,
+  and libtool into the log file.
+print_cidlc_version - Puts cidlc version information into the log file.
+print_make_verison - Puts make version information into the log file.
+print_os_version - Puts the hostname, operating system information,
+approximate BogoMIPS, and all environment variables into the log file.
+print_perl_version - Puts perl version information into the log file.
+print_status - Puts arbitrary status information into the log file.  The
+  option for this command is a text string of the form 'SECTION:DESCRIPTION'.
+print_valgrind_version - Puts valgrind version information into the log
+  file.
+process_listener - Sets up a socket on the specified address and port to
+  exclude other nightly builds from running simultaneously.
+process_logs - Process the build log and convert it to html.  Build warnings
+  and errors are marked as yellow and red respectively.  Test errors are
+  marked as red.  For a list of keywords that trigger a test to be marked as
+  an error, see the Error Keywords section below.
+rem_sems - Run the ACE_wrappers/bin/clean_sems.sh shell script from the
+  "root" directory.
+shell - This is similar to anonymous_shell except that the status of 'Setup'
+  is placed in the log file.
+status - Modifies the build status.  The effects of this command are seen as
+  the 'Status' column on the nightly scoreboard.  When status is 'off', the
+  scoreboard build status is seen as 'Inactive'.
+svn - Executes an svn sub-command, such as co or revert.  As part of each
+  'svn' command, a 'cleanup' sub-command is run before and a 'status' is run
+  afterward.
+vc6make, vc7make, vmsmake, win32make, wincemake - These all correspond to
+  building the source code for various platforms with different
+  compilers/IDEs.
+
+Error Keywords:
+
+The following keywords or phrases cause a test to be marked as an error when
+the logs are processed into html.  They are all case-sensitive except when
+indicated.
+
+Error
+ERROR
+fatal
+FAIL:
+FAILED
+EXCEPTION
+ACE_ASSERT
+Assertion
+Mismatched free
+are definitely lost in loss record
+: parse error
+Invalid write of size
+Invalid read of size
+Source and destination overlap
+error while loading shared libraries
+pure virtual (**case-insensitive**)

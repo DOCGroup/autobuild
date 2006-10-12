@@ -1,0 +1,14 @@
+The autobuild directory contains perl modules and scripts that are used to
+process the scoreboard XML files.  The scoreboard.pl script creates the html
+output that makes up the virtual scoreboard.
+
+Each scoreboard XML file has a <preamble> section that can be used to set up
+static information at the top of the scoreboard page.
+
+The <group> section is used to display a set of builds adjacently on the
+page.  The group is named via the <name> element.
+
+Within each group, there can be an unlimited number of builds.  Each build
+is defined with the <build> element which contains a <name>, a <url>, and an
+optional <build_sponsor> and <build_sponsor_url>.  The <url> specifies where
+the log files, from the autobuild.pl script, are located.

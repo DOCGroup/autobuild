@@ -1,3 +1,21 @@
+Thu Oct 12 15:32:43 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * autobuild.pl:
+        * command/file_manipulation.pm:
+        * command/rem_sems.pm:
+
+          Removed references to the "sam" command.
+
+        * docs:
+        * docs/autobuild.txt:
+        * docs/scoreboard.txt:
+
+          Added documentation about the autobuild and scoreboard XML files.
+
+        * command/sam.pm:
+
+          Removed this file.  It is no longer useful.
+
 Thu Oct 12 14:10:00 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * scoreboard.pl:

@@ -252,7 +252,6 @@ else {
 require command::printaceconfig;
 require command::print_status;
 require command::process_logs;
-require command::sam;
 require command::shell;
 require command::status;
 require command::win32make;
