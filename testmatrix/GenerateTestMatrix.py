@@ -119,7 +119,7 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
 	fh=open(file,"w")
 	str = "# of tests passed: %d\n" % (TAOtotal+ACEtotal)
 	fh.write (str)
-	str = "# of tests failed: %d\n" % (TAOfail+TAOfail)
+	str = "# of tests failed: %d\n" % (TAOfail+ACEfail)
 	fh.write (str)
 	percent='%\n'
 	str = "Overall percentage: %.0f" % overall 

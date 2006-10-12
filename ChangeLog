@@ -1,3 +1,18 @@
+Thu Oct 12 17:55:51 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * testmatrix/GenerateTestMatrix.py:
+
+          Fixed a bug where instead of printing the total TAO and ACE
+          failures, it would print double the TAO failures.  This only
+          affected the raw file and not the HTML matrix.
+
+        * testmatrix/HTMLScoreboard.py:
+
+          Removed trailing whitespace, added a title, put the last updated
+          time at the bottom in UTC, fixed a bug in the html relating to an
+          end <th> tag, and finally only print the ACE and TAO percentage
+          summaries if the matrix has at least 1 TAO test.
+
 Thu Oct 12 15:32:43 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * autobuild.pl:
