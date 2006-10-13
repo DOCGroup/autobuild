@@ -243,6 +243,7 @@ require command::cvsgrab;
 require command::file_manipulation;
 require command::fuzz;
 require command::log;
+require command::notify;
 if ( $^O eq 'VMS' ) {
   require command::vmsmake;
 } 

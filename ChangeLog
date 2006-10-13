@@ -1,3 +1,12 @@
+Fri Oct 13 18:03:57 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * autobuild.pl:
+        * command/notify.pm:
+        * docs/autobuild.txt:
+
+          Added a new command, notify, that can be used to scan a log file
+          and send email notification about compile errors.
+
 Thu Oct 12 17:55:51 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * testmatrix/GenerateTestMatrix.py:
