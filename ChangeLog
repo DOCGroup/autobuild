@@ -1,3 +1,9 @@
+Mon Oct 16 06:35:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/tao.xml:
+	  Removed NetBSD builds, part of them where offline for months, the
+	  other where running from cvs
+
 Fri Oct 13 18:03:57 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * autobuild.pl:
