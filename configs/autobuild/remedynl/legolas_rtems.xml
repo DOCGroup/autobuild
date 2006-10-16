@@ -6,7 +6,7 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/rtems/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/rtems/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/rtems/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/rtems-4.6/bin" />
+        <environment name="PATH"            value="/opt/rtems-4.6/bin" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="RTEMS_MAKEFILE_PATH" value="/home/build/rtems/i386/i386-rtems/pc586" />
 
