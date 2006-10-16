@@ -49,7 +49,7 @@
     <command name="auto_run_tests"    options="-l $ACE_ROOT/TAO/tests/COIOP/COIOP.lst" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=3 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/COIOP" />
 </autobuild>
