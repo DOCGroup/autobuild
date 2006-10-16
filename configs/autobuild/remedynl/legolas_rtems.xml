@@ -33,7 +33,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\ncidl=0\n\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="gcc" />
+    <command name="check_compiler" options="i386-rtems-g++" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
