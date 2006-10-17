@@ -1,0 +1,48 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="/home/build/ACE/host/ACE_wrappers"/>
+        <environment name="TAO_ROOT"     value="/home/build/ACE/host/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"    value="/home/build/ACE/host/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib" />
+
+        <variable name="root"     value="/home/build/ACE/host/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/build/ACE/host/" />
+        <variable name="configs"  value="Linux Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="make"              options="-k realclean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="status . " />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ndebug=1\ninline=0\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/CIAO/tools/IDL3_to_IDL2\n}\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="ACE_Host.mwc -type gnuace" />
+
+    <command name="make"              options="-k" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/rtemshost" />
+</autobuild>
+
