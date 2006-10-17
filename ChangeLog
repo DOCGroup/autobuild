@@ -1,3 +1,9 @@
+Tue Oct 17 14:56:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+	* configs/scoreboard/ace.xml:
+	  Removed mingw build, it doesn't work with make 3.81 correctly and
+	  we don't have any resources to sort this out
+
 Mon Oct 16 06:35:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
 	* configs/scoreboard/tao.xml:
