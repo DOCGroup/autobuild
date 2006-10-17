@@ -199,12 +199,6 @@ all the OS/platform combinations ACE is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>WinXP_MingW_GCC_3_2_3_Static</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/MinGWStatic</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-   <build>
       <name>WindowsXP_VC8_Debug</name>
       <url>http://acebuilds.riverace.com/lily/dev/vc8_debug</url>
       <red>36</red>
