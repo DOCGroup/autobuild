@@ -46,19 +46,16 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO,ASNMP -type gnuace" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude ASNMP,TAO/TAO_*.mwc,TAO/CIAO -type gnuace" />
 
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
 
     <command name="make"              options="-k" />
-    <command name="make"              options="-k -C TAO" />
 
     <!-- command name="auto_run_tests" options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" / -->
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PPC603_GNU" />
 </autobuild>
