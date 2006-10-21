@@ -24,11 +24,16 @@
         <environment name="WIND_SAMPLES"         value="/home/build/WindRiver/vxworks-6.3/target/usr/apps/samples:/home/build/WindRiver/vxworks-6.3/target/src/demo:/home/build/WindRiver/workbench-2.5/samples"/>
         <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.3/host/resource/tcl"/>
         <environment name="WIND_PLATFORM" value="vxworks-6.3"/>
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.128.67"/>
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/home/build/ACE/VxWorks61/ACE_wrappers"/>
+        <environment name="ACE_TEST_VERBOSE" value="1"/>
+        <environment name="ACE_RUN_VX_REBOOT_CMD" value="sysToMonitor 2"/>
+        <!-- environment name="ACE_RUN_VX_NO_INITIAL_REBOOT" value="1"/ -->
 
         <variable name="root"     value="/home/build/ACE/VxWorks61/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/VxWorks61/" />
-        <variable name="configs"  value="Linux Exceptions" />
+        <variable name="configs"  value="VxWorks_RTP Exceptions STATIC" />
 
     </configuration>
 
@@ -39,8 +44,8 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM4\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n#undef ACE_HAS_SVR4_DYNAMIC_LINKING\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM2\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
@@ -59,6 +64,8 @@
     <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuace" />
 
     <command name="make"              options="-k" />
+
+    <command name="auto_run_tests" options="-a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
