@@ -86,9 +86,15 @@ sub Run ($)
         # XML config file.  Default to using a program called "svn".
         $svn_program = "svn"
     }
-    system ("$svn_program cleanup");
+
+    ## We should only perform a cleanup and status below if there
+    ## is already an svn checkout in the current directory.
+    my $cleanup_and_status =
+         ((defined $ENV{SVN_ASP_DOT_NET_HACK} && -d '_svn') || -d '.svn');
+
+    system ("$svn_program cleanup") if ($cleanup_and_status);
     system ("$svn_program $options");
-    system ("$svn_program status");
+    system ("$svn_program status") if ($cleanup_and_status);
 
     chdir $current_dir;
 
