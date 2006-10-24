@@ -32,7 +32,7 @@
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Solaris/SPARC/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
-    <command name="check_compiler"    options="sun_cc" />
+    <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />
     <command name="print_make_version" />

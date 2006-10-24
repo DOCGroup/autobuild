@@ -1,14 +1,20 @@
+Tue Oct 24 11:30:13 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/sparc/SunOS10_GCC402.xml:
+
+          Check g++ instead of sun_cc.
+
 Tue Oct 17 14:56:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/ace.xml:
-	  Removed mingw build, it doesn't work with make 3.81 correctly and
-	  we don't have any resources to sort this out
+        * configs/scoreboard/ace.xml:
+          Removed mingw build, it doesn't work with make 3.81 correctly and
+          we don't have any resources to sort this out
 
 Mon Oct 16 06:35:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
-	* configs/scoreboard/tao.xml:
-	  Removed NetBSD builds, part of them where offline for months, the
-	  other where running from cvs
+        * configs/scoreboard/tao.xml:
+          Removed NetBSD builds, part of them where offline for months, the
+          other where running from cvs
 
 Fri Oct 13 18:03:57 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
