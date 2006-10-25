@@ -32,6 +32,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-rtems.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ace_for_tao=1\nHOST_ROOT:=/home/build/ACE/host/ACE_wrappers\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_rtems.x_g++.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1\nssl=0\ncidl=0\nrwho=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/rtems.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="i386-rtems-g++" />
@@ -39,7 +40,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="rtems.mwc -type gnuace" />
 
     <command name="make"              options="-k" />
 
