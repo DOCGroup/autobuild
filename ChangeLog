@@ -1,7 +1,24 @@
+Thu Oct 26 20:46:01 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+          Adding three new builds to OCI's scoreboard that cover the
+          future Transport::Current feature.
+
+        * configs/autobuild/oci/oci_doc-transport-current_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+
+          Dynamic, threaded, non-optimized, non-inlined build.
+
+        * configs/autobuild/oci/oci_doc-transport-current_oci1179_linux-fc5_gcc4.1.1_d1o0i0t0.xml:
+
+          Dynamic, non-threaded, non-optimized, non-inlined build.
+
+        * configs/autobuild/oci/oci_doc-transport-current_oci1179_linux-fc5_gcc4.1.1_d1o0i0t1s1.xml:
+
+          Static, threaded, non-optimized, non-inlined build
+
 Tue Oct 24 19:23:12 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/tao_future.xml:
-	  Added RTEMS builds
+          Added RTEMS builds
 
 Tue Oct 24 12:11:57 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
