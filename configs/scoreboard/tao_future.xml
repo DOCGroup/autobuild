@@ -61,33 +61,15 @@ decide the migration paths and strategies.
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
     </build>
-     <build>
-         <name>FC5_Debug_GCC-4.1.1_Bugzilla_2612_Fix</name>
-         <url>http://scoreboard.ociweb.com/doc_head_oci1179_linux-fc5_gcc4.1.1_d1o0i0</url>
-         <build_sponsor>OCI</build_sponsor>
-         <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-     </build>
     <build>
-      <name>FC5_Release_GCC-4.1.1_Bugzilla_2612_Fix</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_head_oci1179_linux-fc5_gcc4.1.1_d0o0i0</url>
+      <name>FC5_Debug_GCC-4.1.1_TransportCurrent-Static</name>
+      <url>http://scoreboard.ociweb.com/OCIscoreboard/oci_doc_transport_current_oci1179_linux-fc5_gcc4.1.1_d1o0i0t1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
     </build>
     <build>
-      <name>FC5_Static_GCC-4.1.1_Bugzilla_2612_Fix</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_head_oci1179_linux-fc5-static_gcc4.1.1_d0o0i0s1</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC5_XML_GCC-4.1.1_Bugzilla_2612_Fix</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d1o0i0d1</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
-    </build>
-    <build>
-      <name>Win2003_Debug_VC71_Bugzilla_2612_Fix</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_weevil_win2003_vc71_d1o0</url>
+      <name>FC5_Debug_GCC-4.1.1_TransportCurrent-NoThreads</name>
+      <url>http://scoreboard.ociweb.com/OCIscoreboard/oci_doc_transport_current_oci1179_linux-fc5_gcc4.1.1_d1o0i0t0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.ociweb.com/</build_sponsor_url>
     </build>
