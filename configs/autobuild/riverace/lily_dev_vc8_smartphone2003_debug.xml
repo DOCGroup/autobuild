@@ -7,9 +7,9 @@
 
         <variable name="root"            value="C:\ace" />
         <variable name="project_root"    value="C:\ace\ACE_wrappers" />
-	<variable name="log_file"        value="vc8_winmobile5_debug.log" />
-        <variable name="log_root"        value="m:\dev\vc8_winmobile5_debug" />
-        <variable name="name"            value="WinMobile5 VC.NET 2005 Debug" />
+	<variable name="log_file"        value="vc8_smartphone2003_debug.log" />
+        <variable name="log_root"        value="M:\dev\vc8_smartphone2003_debug" />
+        <variable name="name"            value="WinCE4 VC.NET 2005 Debug" />
         <variable name="local_features"  value="c:\ace\ACE_wrappers\local.features" />
         <variable name="configs"         value="Win32 WinCE Exceptions" />
     </configuration>
@@ -18,7 +18,7 @@
     <command name="file_manipulation" options="type=mustnotexist file=ACE_wrappers/.disable" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/.disable output='RUNNING'" />
 
-    <command name="vc7make"           options="/clean \x22Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22 ACE_WinCE.sln" />
+    <command name="vc7make"           options="/clean \x22Debug|Smartphone 2003 (ARMV4)\x22 ACE_WinCE.sln" />
 
     <command name="log"               options="ON" />
 
@@ -36,7 +36,7 @@
     <command name="print_ace_config" />
 
     <command name="generate_workspace" options="-type vc8 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers -feature_file c:\ace\ACE_wrappers\local.features -value_template platforms='\x22Pocket PC 2003 (ARMV4)\x22' -value_template platforms+='\x22Smartphone 2003 (ARMV4)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Smartphone SDK (ARMV4I)\x22' -name_modifier *_WinCE" />
-    <command name="vc7make"           options="ACE_WinCE.sln /build \x22Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22" />
+    <command name="vc7make"           options="ACE_WinCE.sln /build \x22Debug|Smartphone 2003 (ARMV4)\x22" />
 
     <!-- command name="auto_run_tests"    options="-a" / -->
 
