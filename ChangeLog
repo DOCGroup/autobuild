@@ -1,3 +1,13 @@
+Sat Oct 28 21:09:46 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
+          Added WinCE to the test configurations variable.
+
+        * configs/autobuild/riverace/lily_dev_vc8_smartphone2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_smartphone_debug.xml:
+          New build descriptions for building with the Smartphone SDK.
+
 Thu Oct 26 20:59:25 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/scoreboard/tao_future.xml:
