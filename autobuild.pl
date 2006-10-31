@@ -39,7 +39,8 @@ while ($#ARGV >= 0)
 	shift;
     }
     elsif ($ARGV[0] =~ m/^-/) {
-        print "Error: Unknown option $ARGV[0]\n";
+        print "Error: Unknown option $ARGV[0]\n",
+              "Usage: ", basename ($0), " [-v] <XML Files>\n";
         exit 1;
     }
     else {
