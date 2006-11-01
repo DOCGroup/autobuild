@@ -1,3 +1,11 @@
+Wed Nov  1 15:49:56 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/auto_run_tests.pm:
+
+          Save the location of the autorun script prior to changing
+          directory when the 'dir' option is used.  Use the saved directory
+          name in the perl command to correctly locate the script.
+
 Tue Oct 31 12:38:49 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * autobuild.pl:
