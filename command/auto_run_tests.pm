@@ -119,8 +119,6 @@ sub Run ($)
         return 0;
     }
 
-    my $autorun_dir = getcwd();
-
     my $dir;
     if ($options =~ m/dir='([^']*)'/) {
         $dir = $1;
@@ -144,7 +142,7 @@ sub Run ($)
           $options .= " -Config " . join (" -Config ", split (' ', $configs));
       }
 
-      $command = "perl $autorun_dir/bin/auto_run_tests.pl $options";
+      $command = "perl bin/auto_run_tests.pl $options";
     }
 
     if (defined $dir) {

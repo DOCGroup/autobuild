@@ -1,3 +1,10 @@
+Thu Nov  2 13:48:09 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/auto_run_tests.pm:
+
+          Reverted my change from Wed Nov  1 15:49:56 UTC 2006.  I didn't
+          fully understand what the dir option was to do.
+
 Thu Nov  2 13:12:56 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/scoreparser.pm:
