@@ -40,8 +40,9 @@ sub Parse ($\@)
     }
 
     my $state = 'none';
-
+    my $lineno = 0;
     while (<$file_handle>) {
+        ++$lineno;
         chomp;
 
         # Strip out a single-line comment
@@ -52,13 +53,14 @@ sub Parse ($\@)
         if(m/<!--/) {
            # After we find the opening tag, keep reading each character
            # until we hit the end tag -->
-           $self->parse_comment($file_handle);
+           $self->parse_comment($file_handle, \$lineno);
            next;
         }
         next if (m/^\s*$/);
 
         if(m/<preamble>/) {
-            $main::preamble = $self->parse_preamble($file_handle);
+            $main::preamble = $self->parse_preamble($file_handle,
+                                                    \$lineno);
             next;
         }
 
@@ -70,7 +72,7 @@ sub Parse ($\@)
                 # ignore
             }
             else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
+                print STDERR "Error: $lineno: Unexpected in state <$state>: $_\n";
                 return 0;
             }
         }
@@ -82,7 +84,7 @@ sub Parse ($\@)
                 $state = 'group';
             }
             else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
+                print STDERR "Error: $lineno: Unexpected in state <$state>: $_\n";
                 return 0;
             }
         }
@@ -98,14 +100,14 @@ sub Parse ($\@)
                 $state = 'build';
             }
             else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
+                print STDERR "Error: $lineno: Unexpected in state <$state>: $_\n";
                 return 0;
             }
         }
         elsif ($state eq 'build') {
             if (m/^\s*<\/build>\s*$/i) {
                 if (!defined $build_info{NAME}) {
-                    print STDERR "Error: All builds must have a name\n";
+                    print STDERR "Error: $lineno: All builds must have a name\n";
                     return 0;
                 }
 
@@ -117,12 +119,13 @@ sub Parse ($\@)
                 $state = 'group';
             }
             elsif (m/^\s*<name>(.*)<\/name>\s*$/i) {
-                my $name = $1;
+                my $orig = $1;
+                my $name = $orig;
                 if ($name =~ s/\s//g) {
-                    print "Warning: Found whitespace in build name, shrinking \"$1\" to \"$name\"\n";
+                    print "Warning: $lineno: Found whitespace in build name, shrinking \"$orig\" to \"$name\"\n";
                 }
 
-                $build_info{NAME} = $1;
+                $build_info{NAME} = $name;
             }
             elsif (m/^\s*<url>(.*)<\/url>\s*$/i) {
                 $build_info{URL} = $1;
@@ -158,12 +161,12 @@ sub Parse ($\@)
 	 	$build_info{HTML} = $1;
 	    }
             else {
-                print STDERR "Error: Unexpected in state <$state>: $_\n";
+                print STDERR "Error: $lineno: Unexpected in state <$state>: $_\n";
                 return 0;
             }
         }
         else {
-            print STDERR "Error: Parser reached unknown state <$state>\n";
+            print STDERR "Error: $lineno: Parser reached unknown state <$state>\n";
             return 0;
         }
     }
@@ -179,25 +182,29 @@ sub Parse ($\@)
 # the comment: --> , and returns when it finds it.
 #
 # Arguments:  An open file stream.
+#             An integer reference.
 #
 # Returns:    Nothing
 #
 ###############################################################################
-sub parse_comment($\@)
+sub parse_comment($\@$)
 {
    my $self = shift;
-   my $result = shift;
+   my $file_handle = shift;
+   my $lineno = shift;
    my @c;
    my $i=0;
    my $ch;
 
    while(1){
-     $ch = $result->getc();
+     $ch = $file_handle->getc();
 
      # determine if we have hit an EOF or not
      if( ! defined $ch) {
         last; # break out of the whlie loop
      }
+
+     ++$$lineno if ($ch eq "\n");
 
      $c[$i] = $ch;
 
@@ -227,26 +234,30 @@ sub parse_comment($\@)
 # the comment: --> , and returns when it finds it.
 #
 # Arguments:  An open file stream.
+#             An integer reference.
 #
 # Returns:    All the text that is between the tags: <preamble> </preamble>
 #
 ###############################################################################
-sub parse_preamble($\@)
+sub parse_preamble($\@$)
 {
    my $self = shift;
-   my $result = shift;
+   my $file_handle = shift;
+   my $lineno = shift;
    my @c;
    my @buf;
    my $i=0;
    my $ch;
 
    while(1){
-     $ch = $result->getc();
+     $ch = $file_handle->getc();
 
      # determine if we have hit an EOF or not
      if( ! defined $ch) {
         last; # break out of the whlie loop
      }
+
+     ++$$lineno if ($ch eq "\n");
 
      $c[$i] = $ch;
      push(@buf, $ch);

@@ -1,3 +1,10 @@
+Thu Nov  2 13:12:56 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/scoreparser.pm:
+
+          Fixed a bug in handling build names with spaces.  The build name
+          was lost due to the misuse of $1.
+
 Wed Nov  1 15:49:56 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/auto_run_tests.pm:
