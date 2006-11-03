@@ -1,3 +1,11 @@
+Fri Nov  3 09:13:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+
+          Add MFC to build name and correct Inline name (from debug).
+
 Thu Nov  2 13:48:09 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/auto_run_tests.pm:

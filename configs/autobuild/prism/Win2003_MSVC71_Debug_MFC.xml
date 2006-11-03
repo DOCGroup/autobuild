@@ -11,7 +11,7 @@
         <variable name="root"         value="C:\Overnight_Builds\DOC_Group\vc71\debugMFC" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="T:\doc-scoreboard\windows\VC71_DebugMFC" />
-        <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Debug" />
+        <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Debug MFC" />
         <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS" />
     </configuration>
 
