@@ -1,4 +1,4 @@
-<!-- $Id: no_iiop.xml 3579 2006-04-11 09:07:35Z jwillemsen $ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
 
@@ -47,7 +47,7 @@
     <command name="make"              options="-j 2 -k" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=3 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
     <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade12/no_iiop"/>
 </autobuild>
