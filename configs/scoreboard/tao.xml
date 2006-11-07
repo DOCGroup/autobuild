@@ -330,7 +330,28 @@ all the OS/platform combinations TAO is tested everyday.
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+</group>
 
+<group>
+  <name>RTEMS</name>
+   <build>
+      <name>RTEMS_4_6_6</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/rtems/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>RTEMS_4_6_6_NoNetwork</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/rtemsnonet/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>RTEMS_4_6_6_Host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/rtemshost/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 </group>
 
 </scoreboard>
