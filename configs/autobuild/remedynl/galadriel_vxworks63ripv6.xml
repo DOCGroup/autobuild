@@ -56,7 +56,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO,examples/APG/Timers -type gnuace" />
 
     <command name="make"              options="-k" />
 
