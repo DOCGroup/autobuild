@@ -1,6 +1,6 @@
 #!/bin/sh
 #
 echo `/bin/date`: Triggering detached LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests
-/bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests > /usr/users/tao/log/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.log 2>&0 < /dev/null &
+/bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests > /usr/users/tao/log/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.log 2>&1 < /dev/null &
 echo `/bin/date`: Ok, bye for now.
 exit
