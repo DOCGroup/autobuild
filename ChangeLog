@@ -1,3 +1,13 @@
+Tue Nov  7 20:05:00 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/tao.xml:
+          Moved rtems from future to regular scoreboard now they are error
+          free in compilation
+
+        * configs/scoreboard/ace.xml:
+          Added vxworks 6.3 ipv6 build
+
 Tue Nov  7 15:35:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests_Trigger:
