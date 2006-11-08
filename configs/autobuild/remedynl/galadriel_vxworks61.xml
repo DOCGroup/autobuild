@@ -4,6 +4,7 @@
       <environment name="ACE_ROOT"        value="/nfs/galadriel/VxWorks62/ACE_wrappers"/>
       <environment name="TAO_ROOT"        value="/nfs/galadriel/VxWorks62/ACE_wrappers/TAO"/>
       <environment name="CIAO_ROOT"        value="/nfs/galadriel/VxWorks62/ACE_wrappers/TAO/CIAO"/>
+      <environment name="HOST_ROOT"        value="/home/build/ACE/VxWorks/host/ACE_wrappers"/>
       <environment name="LD_LIBRARY_PATH" value="/nfs/galadriel/VxWorks62/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.3/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.5/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.5/x86-linux2/lib:/home/build/WindRiver/workbench-2.5/foundation/4.0.9/x86-linux2/lib:/usr/local/lib" />
         <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.3/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.5/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.5/x86-linux2/bin:/home/build/WindRiver/workbench-2.5/foundation/4.0.9/x86-linux2/bin:/home/build/WindRiver/gnu/3.4.4-vxworks-6.3/x86-linux2/bin" type="prefix" />
         <environment name="WIND_HOME"         value="/home/build/WindRiver" />
@@ -45,7 +46,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n#undef ACE_HAS_SVR4_DYNAMIC_LINKING\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/VxWorks/host/ACE_wrappers\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM2\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PENTIUM2\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
