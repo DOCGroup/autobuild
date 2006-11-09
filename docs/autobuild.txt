@@ -11,8 +11,10 @@ In the <configuration> section, the "root" variable specifies the top-level
 directory for the source code to be compiled.  The "base" variable must be set
 to the basename of the "root" variable value if you are not setting up and
 ACE, TAO or CIAO nightly build.  If you are using the "clone_build_tree"
-command, the "project_root" variable must be set to the "root" value +
-"/build/" + the "build_name" value.
+command with the default options, the "project_root" variable must be set to
+the "root" value + "/build/" + the "build_name" value.  However, by passing
+"-b <full path>" in the "options" portion of the "clone_build_tree" command,
+the "project_root" can be set to "<full path>/" + the "build_name" value.
 
 In the text below, words in double quotes refer to build variables specified
 in the <configuration> section.
