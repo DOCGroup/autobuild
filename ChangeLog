@@ -1,3 +1,17 @@
+Fri Nov 10 00:54:03 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/autobuild/acorn/netbsd_amd64_static.xml:
+        * configs/autobuild/acorn/netbsd_i386_static.xml:
+
+          New files, configs for static builds.
+
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
+
+          Move autobuild checkout from CVS to SVN.
+
 Thu Nov  9 12:59:03 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * docs/autobuild.txt:

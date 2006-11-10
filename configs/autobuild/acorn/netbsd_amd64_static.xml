@@ -2,15 +2,15 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_i386/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_i386/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/jtc/ACE/acebuilds/netbsd_i386/ACE_wrappers/lib" />
-        <environment name="MPC_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_i386/ACE_wrappers/MPC" />
+        <environment name="ACE_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_amd64_static/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_amd64_static/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/jtc/ACE/acebuilds/netbsd_amd64_static/ACE_wrappers/lib" />
+        <environment name="MPC_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_amd64_static/ACE_wrappers/MPC" />
 
 	<variable name="make_program" value = "gmake" />
-        <variable name="root"     value="/home/jtc/ACE/acebuilds/netbsd_i386/" />
+        <variable name="root"     value="/home/jtc/ACE/acebuilds/netbsd_amd64_static/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/jtc/ACE/acebuilds/netbsd_i386/" />
+        <variable name="log_root" value="/home/jtc/ACE/acebuilds/netbsd_amd64_static/" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -21,7 +21,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-netbsd.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_netbsd.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nstatic=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_netbsd.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
 
     <command name="print_os_version" />
@@ -49,5 +49,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync -avz --delete *.txt *.html jtc@orac.acorntoolworks.com:public_html/auto_compile_logs/netbsd_i386/" />
+    <command name="shell"             options="rsync -avz --delete *.txt *.html jtc@orac.acorntoolworks.com:public_html/auto_compile_logs/netbsd_amd64_static/" />
 </autobuild>
