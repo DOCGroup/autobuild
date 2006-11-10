@@ -1,3 +1,10 @@
+Fri Nov 10 02:10:30 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/autobuild/acorn/netbsd_amd64_automake.xml:
+        * configs/autobuild/acorn/netbsd_i386_automake.xml:
+
+          New files, configs for automake builds.
+
 Fri Nov 10 00:54:03 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/autobuild/acorn/netbsd_amd64_static.xml:
