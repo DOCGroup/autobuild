@@ -66,7 +66,7 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests" options="-a -o" />
+    <!-- command name="auto_run_tests" options="-a -o" / -->
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
