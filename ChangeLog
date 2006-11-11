@@ -1,3 +1,9 @@
+Sat Nov 11 07:50:21 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Restore NetBSD configurations.
+
 Fri Nov 10 02:10:30 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/autobuild/acorn/netbsd_amd64_automake.xml:
