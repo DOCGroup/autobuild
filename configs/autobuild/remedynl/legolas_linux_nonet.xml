@@ -30,7 +30,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_NETWORKING\n#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n#undef ACE_HAS_WCHAR\n#define ACE_LACKS_UNIX_SIGNALS\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ace_for_tao=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nace_for_tao=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1\nssl=0\ncidl=0\nrwho=0\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/linuxnonet.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests/COIOP\n}\n'" />
 
