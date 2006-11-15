@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"     value="/cygdrive/c/ACE/Cygwin/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"    value="/cygdrive/c/ACE/Cygwin/ACE_wrappers/TAO/CIAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\perl\bin;c:\cygwin\bin;" type="prefix" />
+        <environment name="Path"         value="C:\ACE\Cygwin\ACE_wrappers\bin;C:\ACE\Cygwin\ACE_wrappers\lib;c:\cygwin\bin;" type="prefix" />
         <environment name="include"      value="" />
         <environment name="lib"          value="" />
 
