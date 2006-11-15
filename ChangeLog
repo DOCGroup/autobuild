@@ -1,3 +1,15 @@
+Wed Nov 15 11:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests:
+
+          Since these remote testing machines can't see the scoreboard directly
+          stop creating a dummy status file.
+
 Sat Nov 11 07:50:21 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao.xml:

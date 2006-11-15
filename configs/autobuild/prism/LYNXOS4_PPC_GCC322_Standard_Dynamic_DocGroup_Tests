@@ -13,7 +13,10 @@ echo `date`: Running tao tests
 # copy test results back to ultra4 so they can be posted to the doc group scoreboard
 echo `date`: rcp test results back to ultra4 for posting
 rcp DOC_Group_test_results_run_on_rad1.txt ultra4:
-mv DOC_Group_test_results_run_on_rad1.txt DOC_Group_test_results_run_on_rad1_`date +%y%m%d`.txt
+#
+# Only enable one of the following (rm or mv) to delete or save old log files locally.
+rm DOC_Group_test_results_run_on_rad1.txt
+#mv DOC_Group_test_results_run_on_rad1.txt DOC_Group_test_results_run_on_rad1_`date +%y%m%d`.txt
 #
 echo `date`: Clean up
 # attempt to kill off lingering processes

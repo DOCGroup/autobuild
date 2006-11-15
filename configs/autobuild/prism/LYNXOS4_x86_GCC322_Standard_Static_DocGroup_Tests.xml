@@ -12,14 +12,10 @@
         <environment name="ACE_RUNTEST_DELAY" value="2" />
 
         <variable name="root" value="/home/tao/doc_scoreboard/lynxos_x86_gcc322/standard/static" />
-        <variable name="sam_root" value="/home/tao/doc_scoreboard/lynxos_x86_gcc322/standard/static/ACE_wrappers/samwise" />
         <variable name="log_file" value="DOC_Group_test_results_run_on_lynxosx86.txt" />
-        <variable name="log_root" value="/home/tao/doc_scoreboard/lynxos_x86_gcc322/standard/static/scoreboard" />
         <variable name="project_root" value="/home/tao/doc_scoreboard/lynxos_x86_gcc322/standard/static/ACE_wrappers" />
-
     </configuration>
 
-    <command name="status"            options="on" />
     <command name="file_manipulation" options="type=mustnotexist file=.disable" />
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="ON" />
@@ -34,6 +30,4 @@
     <command name="auto_run_tests"    options=" -t" />
 
     <command name="file_manipulation" options="type=delete file=.disable" />
-    <command name="status"            options="off" />
-
 </autobuild>

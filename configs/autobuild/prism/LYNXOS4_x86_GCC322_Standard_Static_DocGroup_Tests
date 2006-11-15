@@ -13,7 +13,10 @@ echo `/bin/date`: Running tao tests
 # copy test results back to ultra6 so they can be posted to the doc group scoreboard
 echo `/bin/date`: rcp test results back to ultra6 for posting
 /bin/rcp DOC_Group_test_results_run_on_lynxosx86.txt ultra6:
-/bin/mv DOC_Group_test_results_run_on_lynxosx86.txt DOC_Group_test_results_run_on_lynxosx86_`/bin/date +%y%m%d`.txt
+#
+# Only enable one of the following (rm or mv) to delete or save old log files locally.
+/bin/rm DOC_Group_test_results_run_on_lynxosx86.txt
+# /bin/mv DOC_Group_test_results_run_on_lynxosx86.txt DOC_Group_test_results_run_on_lynxosx86_`/bin/date +%y%m%d`.txt
 #
 echo `/bin/date`: Clean up
 # attempt to kill off lingering processes
