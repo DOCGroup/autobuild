@@ -7,6 +7,7 @@ package Notify;
 use strict;
 use warnings;
 
+use Cwd;
 use FileHandle;
 use File::Basename;
 use Sys::Hostname;
@@ -111,6 +112,7 @@ sub getEmail ($)
   my $domain   = shift;
   my $mail_map = shift;
   my $email    = undef;
+  my $pwd      = getcwd();
 
   if (chdir(dirname($file))) {
     my($version)  = undef;
@@ -156,16 +158,34 @@ sub getEmail ($)
       }
     }
     else {
-      print STDERR __FILE__,
+      print STDERR __FILE__, ": WARNING: ",
                    "Unable to determine the last user to modify $file\n";
     }
+    chdir($pwd);
   }
   else {
-    print STDERR __FILE__,
+    print STDERR __FILE__, ": WARNING: ",
                  "Unable to chdir to ", dirname($file), "\n";
   }
   
   return $email;
+}
+
+sub resolveLinks {
+  my $self = shift;
+  my $file = shift;
+
+  if (-l $file) {
+    my($contents) = readlink($file);
+    if (index($contents, '../') == 0) {
+      $file = dirname($file) . '/' . $contents;
+    }
+    else {
+      $file = $contents;
+    }
+  }
+
+  return $file;
 }
 
 ##############################################################################
@@ -224,7 +244,7 @@ sub Run ($)
       }
       else {
         print STDERR __FILE__,
-                     "ERROR: Unable to open the email map: $mail_map\n";
+                     ": ERROR: Unable to open the email map: $mail_map\n";
         return 0;
       }
     }
@@ -312,7 +332,8 @@ sub Run ($)
       close($fh);
 
       foreach my $file (sort keys %files) {
-        my $email = $self->getEmail($revctrl, $file, $domain, \%mail_map);
+        my $email = $self->getEmail($revctrl, $self->resolveLinks($file),
+                                    $domain, \%mail_map);
         if (defined $email) {
           my $msg  = undef;
           if (scalar(@{$files{$file}}) == 0) {
@@ -333,14 +354,14 @@ sub Run ($)
             close($mh);
           }
           else {
-            print STDERR __FILE__, "Unable to run $mail_prog\n";
+            print STDERR __FILE__, ": ERROR: Unable to run $mail_prog\n";
             return 0;
           }
         }
       }
     }
     else {
-      print STDERR __FILE__, "Unable to read $log_file\n";
+      print STDERR __FILE__, ": ERROR: Unable to read $log_file\n";
       return 0;
     }
 

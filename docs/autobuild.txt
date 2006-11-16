@@ -55,7 +55,10 @@ notify - Scans the log file for compile errors and notifies the user via
   email.  This command uses two variables 'mail_prog' (which defaults to
   /bin/mail) to send email and 'mail_map'.  The 'mail_map' variable, if
   used, should point to a file that contains a username and email address
-  per line.
+  per line.  If a 'mail_map' is not provided, it will create email addresses
+  in the form of <username>@<domain> where <username> is obtained from the
+  revision control system and <domain> is obtained in a system dependent
+  manor.
   The options to the notify command can contain 'compiler' (to specify a
   compiler other than the default g++), 'revctrl' (to specify a revision
   control program other than the default svn), and 'subject' (to specify an
@@ -67,7 +70,7 @@ print_autotools_version - Puts version information about automake, autoconf,
 print_cidlc_version - Puts cidlc version information into the log file.
 print_make_verison - Puts make version information into the log file.
 print_os_version - Puts the hostname, operating system information,
-approximate BogoMIPS, and all environment variables into the log file.
+  approximate BogoMIPS, and all environment variables into the log file.
 print_perl_version - Puts perl version information into the log file.
 print_status - Puts arbitrary status information into the log file.  The
   option for this command is a text string of the form 'SECTION:DESCRIPTION'.

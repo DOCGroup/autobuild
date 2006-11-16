@@ -1,3 +1,16 @@
+Thu Nov 16 19:30:29 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/notify.pm:
+
+          Fixed a bug where cloned builds were not taken into account.  The
+          modification works with symbolic links.  If hard links are used to
+          clone the build then this command will not work.
+
+        * docs/autobuild.txt:
+
+          Updated information about email addresses created by the notify
+          command.
+
 Wed Nov 15 11:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests:
