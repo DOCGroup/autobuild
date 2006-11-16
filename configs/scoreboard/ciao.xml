@@ -246,6 +246,12 @@ all the OS/platform combinations CIAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
+          <name>Win2003_VC71_IPV6</name>
+          <url>http://www.dre.vanderbilt.edu/~remedynl/VC71_IPV6/</url>
+          <build_sponsor>Remedy IT</build_sponsor>
+          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>Win2003_VC71_ACE_FOR_TAO</name>
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade11/ace_for_tao</url>
             <build_sponsor>ISIS</build_sponsor>
