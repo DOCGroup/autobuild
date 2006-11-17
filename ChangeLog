@@ -1,3 +1,9 @@
+Fri Nov 17 13:24:48 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/notify.pm:
+
+          Added more information from the build log to each email message.
+
 Thu Nov 16 19:30:29 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/notify.pm:

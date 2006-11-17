@@ -256,6 +256,9 @@ sub Run ($)
       my $cfile   = undef;
       my $dir     = '.';
       my $proceed = undef;
+      my $current = undef;
+      my @lines   = ();
+
       while(<$fh>) {
         if (/^#################### (.*)$/) {
           my $section = $1;
@@ -267,30 +270,38 @@ sub Run ($)
           }
         }
         if ($proceed) {
+          push(@lines, $_);
           if (/Entering\s+directory\s+\`(.*)\'$/) {
             $dir = $1;
           }
+          elsif (/Leaving\s+directory\s+/) {
+            push(@{$files{$current}}, join('', @lines)) if (defined $current);
+            $current = undef;
+            @lines   = ();
+          }
           elsif (index($_, $compiler) == 0) {
+            push(@{$files{$current}}, join('', @lines)) if (defined $current);
             $started = 1;
-            $class = undef;
+            $class   = undef;
+            $current = undef;
+            @lines   = ($_);
           }
           elsif ($started) {
             if (/no\s+rule\s+to\s+make\s+target\s+`(.*)'/) {
-              my $file = "$dir/$1";
-              $files{$file} = [];
+              $current = "$dir/$1";
+              $files{$current} = ["$current is missing"];
               $started = undef;
             }
             elsif (/^([^:]+):(\d+):\d+:\s*error:\s+(.*):\s*no\s+such\s+file/i ||
                    /^"([^"]+)",\s+line\s+(\d+):\s*error:\s*could\s+not\s+open\s+include\s+file\s+"([^"]+)"/i) {
-              my $ref    = "$dir/$1";
+              $current   = "$dir/$1";
               my $number = $2;
               my $file   = $3;
               $file = "$dir/$file" if ($file !~ /\//);
                 
-              $files{$ref}  = [] if (!defined $files{$ref});
-              push(@{$files{$ref}}, $number);
+              $files{$current}  = [] if (!defined $files{$current});
 
-              $files{$file} = [];
+              $files{$file} = [] if (!defined $files{$file});
               $started = undef;
             }
             elsif (/^[^:]+:\d+:\s*error:\s*prototype\s+for\s+'.*'\s+does\s+not\s+match\s+any\s+in\s+class\s+'(.*)'/i) {
@@ -298,20 +309,16 @@ sub Run ($)
             }
             elsif ($class) {
               if (/^([^:]+):(\d+):\s*error:\s*candidate[s]?\s+(are|is):/i) {
-                my $file = $1;
-                my $number = $2;
-                $file = "$dir/$file" if ($file !~ /\//);
-                $cfile = $file;
-                $files{$file} = [] if (!defined $files{$file});
-                push(@{$files{$file}}, $number);
+                $current = $1;
+                $current = "$dir/$current" if ($current !~ /\//);
+                $cfile = $current;
+                $files{$current} = [] if (!defined $files{$current});
               }
               elsif (/^([^:]+):(\d+):\s*error:/i) {
-                my $file = $1;
-                my $number = $2;
-                $file = "$dir/$file" if ($file !~ /\//);
-                if (defined $cfile && $file eq $cfile) {
-                  $files{$file} = [] if (!defined $files{$file});
-                  push(@{$files{$file}}, $number);
+                $current = $1;
+                $current = "$dir/$current" if ($current !~ /\//);
+                if (defined $cfile && $current eq $cfile) {
+                  $files{$current} = [] if (!defined $files{$current});
                 }
                 else {
                   $cfile = undef;
@@ -320,10 +327,8 @@ sub Run ($)
             }
             elsif (/^([^:]+):(\d+):\s*error:/i ||
                    /^"([^"]+)",\s+line\s+(\d+):\s*error:/i) {
-              my $file   = "$dir/$1";
-              my $number = $2;
-              $files{$file} = [] if (!defined $files{$file});
-              push(@{$files{$file}}, $number);
+              $current = "$dir/$1";
+              $files{$current} = [] if (!defined $files{$current});
               $started = undef;
             }
           }
@@ -335,14 +340,13 @@ sub Run ($)
         my $email = $self->getEmail($revctrl, $self->resolveLinks($file),
                                     $domain, \%mail_map);
         if (defined $email) {
-          my $msg  = undef;
+          my $msg = '';
           if (scalar(@{$files{$file}}) == 0) {
-            $msg = "$file is missing";
+            $msg = "$file may be missing";
           }
           else {
-            $msg = "$file:";
-            foreach my $line (sort {$a <=> $b} @{$files{$file}}) {
-              $msg .= " $line";
+            foreach my $line (@{$files{$file}}) {
+              $msg .= $line;
             }
           }
 
