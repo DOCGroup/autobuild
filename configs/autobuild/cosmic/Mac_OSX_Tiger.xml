@@ -19,8 +19,8 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+
+    <command name="process_listener"  options="localhost:32001" />
 
     <command name="log"               options="on" />
 
@@ -57,12 +57,9 @@
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Darwin/PowerPC/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k -j 4 -C TAO/CIAO" />
 
-    <command name="file_manipulation" options="type=create file=.disable output='TESTING'" />
-
     <command name="auto_run_tests"    options="-a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
