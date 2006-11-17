@@ -43,7 +43,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type borland -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" />
+    <command name="generate_workspace" options="-type borland -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc,examples/Bounded_Packet_Relay" />
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
