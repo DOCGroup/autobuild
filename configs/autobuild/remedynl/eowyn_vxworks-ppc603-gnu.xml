@@ -15,7 +15,7 @@
         <environment name="ACE_RUN_VX_TGTSVR_ROOT"   value="/tgtsvr/ACE/VxWorks/PPC603GNU/ACE_wrappers"/>
         <!-- environment name="ACE_RUN_VX_TGTSVR_DEFGW"  value="10.2.128.1" / -->
         <!-- environment name="ACE_RUN_VX_REBOOT_TOOL"   value="perl C:/ACE/VxWorks/RLM_reboot.pl" / -->
-        <environment name="ACE_RUN_VX_REBOOT_TOOL"   value="perl C:/ACE/VxWorks/PPC603GNU/PPC603_reboot.pl" />
+        <environment name="ACE_RUN_VX_REBOOT_CMD"   value="WRPCOCFG_Reboot 2" />
         <environment name="ACE_RUN_VX_REBOOT_TIME"   value="40"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"    value="1"/>
         <environment name="ACE_RUN_VX_TGT_HOST"      value="10.2.128.61"/>
@@ -52,7 +52,7 @@
 
     <command name="make"              options="-k" />
 
-    <!-- command name="auto_run_tests" options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" / -->
+    <command name="auto_run_tests" options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
