@@ -1,3 +1,14 @@
+Mon Nov 20 23:32:59 UTC 2006  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/charlie_dev_xlc7_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+          Added ACE_HAS_POSIX_SEM_TIMEOUT_EMULATION to the config.h files;
+          needed for Proactor_Timer_Test to work - ACE_POSIX_CB_Proactor
+          relies on a semaphore timed wait if a timeout value is given to
+          run the event loop.
+
 Fri Nov 17 13:24:48 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/notify.pm:
