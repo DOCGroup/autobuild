@@ -17,7 +17,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32001" />
+    <command name="process_listener"  options="localhost:32002" />
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
