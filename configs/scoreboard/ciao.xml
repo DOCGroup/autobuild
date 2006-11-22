@@ -119,6 +119,12 @@ all the OS/platform combinations CIAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
+      <name>SuSE_10_1_GCC_ACE_FOR_TAO</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/acefortao/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
         <name>RHEL4_NoInline</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
         <build_sponsor>ISIS</build_sponsor>
