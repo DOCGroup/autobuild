@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers" />
-        <environment name="PATH"         value="C:\ace\ACE_wrappers\lib\win64" type="prefix" />
+        <environment name="PATH"         value="C:\ace\ACE_wrappers\lib" type="prefix" />
         <environment name="MPC_ROOT" value="C:\ace\MPC" />
 
         <variable name="root"            value="C:\ace" />
