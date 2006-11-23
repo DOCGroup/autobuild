@@ -23,9 +23,9 @@
 
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="make"              options=" -i -f Makefile.bor realclean" />
-
     <command name="log"               options="ON" />
+
+    <command name="make"              options=" -i -f Makefile.bor realclean" />
 
     <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
 
