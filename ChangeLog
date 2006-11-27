@@ -1,3 +1,11 @@
+Mon Nov 27 11:53:14 UTC 2006  Simon McQueen  <sm@prismtech.com>
+
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests.xml:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests.xml:
+
+          Switch off logging.
+
 Mon Nov 20 23:32:59 UTC 2006  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/charlie_dev_xlc7_debug.xml:

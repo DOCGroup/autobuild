@@ -29,5 +29,6 @@
     <command name="auto_run_tests"    options=" -o" />
     <command name="auto_run_tests"    options=" -t" />
 
+    <command name="log"               options="OFF" />
     <command name="file_manipulation" options="type=delete file=.disable" />
 </autobuild>
