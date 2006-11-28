@@ -318,6 +318,13 @@ Summary</th>
 		fname = os.path.normpath(fname)
 		print "Writing html to '" + fname + "'"
 
+		if not self.build_summary_html:
+			self.build_summary_html = ""
+		if not self.matrix_html:
+			self.matrix_html = ""
+		if not self.matrix_header:
+			self.matrix_header = ""
+
 		f = open(fname, "w", 1)
 		try:
 			f.write(self.html_start)

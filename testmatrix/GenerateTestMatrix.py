@@ -102,6 +102,11 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
 	TAOtotal = 0
 	ACEfail = 0
 	TAOfail = 0
+        ACEpass = 0
+        TAOpass = 0
+        ACEperc = 0
+        TAOperc = 0
+        overall = 0
 	for n in range (0, len(builds)):
 		print "\tPlatform: ", builds[n].name, builds[n].ACEtotal, builds[n].ACEfail, builds[n].TAOtotal, builds[n].TAOfail
 		ACEtotal = ACEtotal+builds[n].ACEtotal

@@ -1,3 +1,16 @@
+Tue Nov 28 13:49:49 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * matrix_database/TestPlatform.py:
+
+          Sync up the error detection keywords between prettify.pm and this
+          python module.
+
+        * testmatrix/GenerateTestMatrix.py:
+        * testmatrix/HTMLScoreboard.py:
+
+          Initialize some variables to empty in case there are no tests
+          found.
+
 Mon Nov 27 11:53:14 UTC 2006  Simon McQueen  <sm@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.xml:
