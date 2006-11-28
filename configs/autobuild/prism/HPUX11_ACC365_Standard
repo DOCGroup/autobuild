@@ -8,6 +8,6 @@ echo "Updating doc_autobuild"
 cd /var/mounts/sun16/users/tao/doc_autobuild
 svn update autobuild
 svn status autobuild
-cd /usr/users/tao/hp1/doc_scoreboard/Full
+cd /usr/users/tao/hp1/doc_scoreboard/standard
 #
 perl /var/mounts/sun16/users/tao/doc_autobuild/autobuild/autobuild.pl /var/mounts/sun16/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/HPUX11_ACC365_Standard.xml

@@ -1,3 +1,13 @@
+Tue Nov 28 14:24:00 UTC 2006  Simon Massey   <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Standard:
+        * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Inline:
+        * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Inline.xml:
+
+          Add inline build and move standard build to segregate.
+
 Tue Nov 28 13:49:49 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * matrix_database/TestPlatform.py:

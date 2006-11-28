@@ -235,7 +235,14 @@ all the OS/platform combinations TAO is tested everyday.
    <name>HP-UX</name>
    <build>
       <name>HPUX11i_aCC365_NoInline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1</url>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc365/standard</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+   </build>
+   <name>HP-UX</name>
+   <build>
+      <name>HPUX11i_aCC365_Inline</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc365/inline</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
