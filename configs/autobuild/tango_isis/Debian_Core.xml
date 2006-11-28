@@ -45,6 +45,7 @@
     <command name="make"              options="-k -C TAO/CIAO realclean" />
     <command name="make"              options="-k -j 4 -C ace" />
     <command name="make"              options="-k -j 4 -C apps/gperf/src" />
+    <command name="make"              options="-k -j 4 -C tests" />
     <command name="make"              options="-k -j 4 -C protocols" />
     <command name="make"              options="-k -j 4 -C ACEXML" />
     <command name="make"              options="-k -j 4 -C Kokyu" />
