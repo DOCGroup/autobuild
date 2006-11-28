@@ -40,8 +40,8 @@
     <command name="make"              options="-k -C TAO realclean" />
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k -j 4 -C ace" />
-    <command name="make"              options="-k -j 4 -C protocols" />
     <command name="make"              options="-k -j 4 -C tests" />
+    <command name="make"              options="-k -j 4 -C protocols" />
     <command name="make"              options="-k -j 4 -C apps/gperf/src" />
     <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
     <command name="make"              options="-k -j 4 -C TAO/tao" />
