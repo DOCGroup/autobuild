@@ -1,3 +1,9 @@
+Wed Nov 29 11:45:00 UTC 2006  Simon Massey   <sma@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Inline.xml:
+
+          Correct SSL_ROOT and configs.
+
 Tue Nov 28 14:24:00 UTC 2006  Simon Massey   <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:
