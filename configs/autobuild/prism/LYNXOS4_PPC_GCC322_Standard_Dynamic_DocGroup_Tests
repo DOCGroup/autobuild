@@ -33,5 +33,11 @@ if [ -d ACE_wrappers ]; then mv ACE_wrappers ACE_wrappers_`date +%y%m%d`; fi
 echo `date`: Finished part2
 echo `date`: Triggering ultra4 to run part3
 /bin/nohup /usr/local/bin/ssh ultra4 /usr/bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_PRETTIFY
-echo `date`: Back on rad1, finished
+echo `date`: Back on rad1, rebooting...
+/bin/sync
+/bin/sleep 1
+/bin/sync
+/bin/sleep 4
+/bin/sync
+/bin/reboot -a
 exit

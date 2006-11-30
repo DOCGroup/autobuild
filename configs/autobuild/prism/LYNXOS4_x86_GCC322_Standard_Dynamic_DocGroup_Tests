@@ -33,5 +33,11 @@ if [ -d ACE_wrappers ]; then mv ACE_wrappers ACE_wrappers_`/bin/date +%y%m%d`; f
 echo `/bin/date`: Finished part2
 echo `/bin/date`: Triggering ultra6 to run part3
 /bin/nohup /usr/local/bin/ssh ultra6 /usr/bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_PRETTIFY
-echo `/bin/date`: Back on lynxosx86, finished
+echo `/bin/date`: Back on lynxosx86, rebooting...
+/bin/sync
+/bin/sleep 1
+/bin/sync
+/bin/sleep 4
+/bin/sync
+/bin/reboot -a
 exit
