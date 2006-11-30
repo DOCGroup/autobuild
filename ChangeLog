@@ -1,10 +1,20 @@
-Thu Nov 30 10:05:00 UTC 2006  Simon Massey   <sma@prismtech.com>
+Thu Nov 30 14:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.xml:
+
+          Upgrading to aCC 3.70. See if that fixes template compiler bug.
+
+Thu Nov 30 10:05:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC365_Standard.xml:
 
           Optimize the standard build and enable ssl.
 
-Thu Nov 30 10:05:00 UTC 2006  Simon Massey   <sma@prismtech.com>
+Thu Nov 30 10:05:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests:
         * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
@@ -12,13 +22,13 @@ Thu Nov 30 10:05:00 UTC 2006  Simon Massey   <sma@prismtech.com>
 
           Automatically reboot the box after the tests complete.
 
-Wed Nov 29 11:45:00 UTC 2006  Simon Massey   <sma@prismtech.com>
+Wed Nov 29 11:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Inline.xml:
 
           Correct SSL_ROOT and configs.
 
-Tue Nov 28 14:24:00 UTC 2006  Simon Massey   <sma@prismtech.com>
+Tue Nov 28 14:24:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:
         * configs/autobuild/prism/HPUX11_ACC365_Inline HPUX11_ACC365_Standard:
