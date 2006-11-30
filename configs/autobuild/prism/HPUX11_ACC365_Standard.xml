@@ -9,12 +9,13 @@
         <environment name="LD_LIBRARY_PATH"  value="/usr/users/tao/hp1/doc_scoreboard/standard/ACE_wrappers/lib" />
         <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/standard/ACE_wrappers/lib:/usr/local/aCC3.65/opt/aCC/lib" />
         <environment name="PATH"             value="/usr/local/aCC3.65/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
+        <environment name="SSL_ROOT"         value="/usr/local/ssl" />
 
         <variable name="make_program"        value="gmake" />
         <variable name="root"                value="/usr/users/tao/hp1/doc_scoreboard/standard" />
         <variable name="log_file"            value="build.txt" />
         <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/hp1/acc365/standard" />
-        <variable name="configs"             value="HPUX aCC" />
+        <variable name="configs"             value="HPUX aCC SSL" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -29,7 +30,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ndebug=0\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\ninline=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ndebug=0\ninline=0\noptimize=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="aCC" />
