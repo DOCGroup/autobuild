@@ -1,3 +1,17 @@
+Fri Dec 01 11:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Inline:
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.xml:
+
+          Trying out aCC 3.67 & 3.73. See if that fixes template compiler bug.
+
 Thu Nov 30 14:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:

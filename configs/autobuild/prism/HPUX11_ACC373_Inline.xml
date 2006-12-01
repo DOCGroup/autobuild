@@ -1,0 +1,59 @@
+<!-- $Id$ -->
+
+<autobuild>
+    <configuration>
+        <environment name="MPC_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/MPC" />
+        <environment name="ACE_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/TAO"/>
+        <environment name="INSLIB"           value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH"  value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib" />
+        <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib:/usr/local/aCC3.73/opt/aCC/lib" />
+        <environment name="PATH"             value="/usr/local/aCC3.73/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
+        <environment name="SSL_ROOT"         value="/usr/local/ssl" />
+
+        <variable name="make_program"        value="gmake" />
+        <variable name="root"                value="/usr/users/tao/hp1/doc_scoreboard/inline" />
+        <variable name="sam_root"            value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/samwise" />
+        <variable name="log_file"            value="build.txt" />
+        <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/hp1/acc373/inline" />
+        <variable name="configs"             value="HPUX aCC SSL" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <!-- Now, delete them again to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtti=1\ndebug=0\ninline=1\noptimize=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="aCC" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,build.mwc,prism -type gnuace" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO -type gnuace" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
+
+    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
