@@ -60,9 +60,11 @@ notify - Scans the log file for compile errors and notifies the user via
   revision control system and <domain> is obtained in a system dependent
   manor.
   The options to the notify command can contain 'compiler' (to specify a
-  compiler other than the default g++), 'revctrl' (to specify a revision
-  control program other than the default svn), and 'subject' (to specify an
-  email subject other than the default 'Compile Errors'.
+  compiler other than the default g++), 'lead_email' (to specify a set of
+  space separated email addresses that will always be emailed for every
+  compile error), 'revctrl' (to specify a revision control program other
+  than the default svn), and 'subject' (to specify an email subject other
+  than the default 'Compile Errors'.
 print_ace_config - Puts ACE, TAO, CIAO, DDS, MPC and autobuild information
   into the log file.
 print_autotools_version - Puts version information about automake, autoconf,

@@ -192,16 +192,17 @@ sub resolveLinks {
 
 sub Run ($)
 {
-    my $self      = shift;
-    my $options   = shift;
-    my $log_file  = main::GetVariable('log_file');
-    my $root      = main::GetVariable('root');
-    my $mail_prog = main::GetVariable('mail_prog') || '/bin/mail';
-    my $mail_map  = main::GetVariable('mail_map');
-    my $domain    = $self->getDomain();
-    my $revctrl   = 'svn';
-    my $compiler  = 'g++';
-    my $subject   = 'Compile Errors';
+    my $self       = shift;
+    my $options    = shift;
+    my $log_file   = main::GetVariable('log_file');
+    my $root       = main::GetVariable('root');
+    my $mail_prog  = main::GetVariable('mail_prog') || '/bin/mail';
+    my $mail_map   = main::GetVariable('mail_map');
+    my $domain     = $self->getDomain();
+    my $revctrl    = 'svn';
+    my $compiler   = 'g++';
+    my $subject    = 'Compile Errors';
+    my $lead_email = '';
 
     # replace all '\x22' with '"'
     $options =~ s/\\x22/"/g;
@@ -225,6 +226,13 @@ sub Run ($)
     }
     elsif ($options =~ s/subject=([^\s]+)//) {
       $subject = $1;
+    }
+
+    if ($options =~ s/lead_email='([^']+)'//) {
+      $lead_email = $1;
+    }
+    elsif ($options =~ s/lead_email=([^\s]+)//) {
+      $lead_email = $1;
     }
 
     if (!-r $root || !-d $root) {
@@ -352,7 +360,7 @@ sub Run ($)
 
           my $mh = new FileHandle();
           my $sopt = ($^O eq 'linux' ? "-s '$subject'" : '');
-          if (open($mh, "| $mail_prog $sopt $email")) {
+          if (open($mh, "| $mail_prog $sopt $lead_email $email")) {
             print $mh "Subject:$subject\n" if ($sopt eq '');
             print $mh "$msg\n";
             close($mh);

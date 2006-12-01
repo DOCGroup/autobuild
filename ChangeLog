@@ -1,3 +1,12 @@
+Fri Dec  1 16:32:56 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/notify.pm:
+        * docs/autobuild.txt:
+
+          Added an option setting, 'lead_email', that can be used to specify
+          a set of space separated email addresses to be emailed for each
+          compile error.
+
 Fri Dec 01 11:45:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:
