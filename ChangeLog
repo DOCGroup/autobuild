@@ -1,3 +1,10 @@
+Mon Dec  4 13:36:37 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/prettify.pm:
+
+          Avoid perl warnings if no description string is passed into the
+          Descrption() methods.
+
 Fri Dec  1 16:32:56 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/notify.pm:

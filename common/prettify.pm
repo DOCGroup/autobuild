@@ -68,7 +68,7 @@ sub Section ($)
 sub Description ($)
 {
     my $self = shift;
-    my $s = shift;
+    my $s = shift || '';
 
     # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
@@ -1111,7 +1111,7 @@ sub Subsection ($)
 sub Description ($)
 {
     my $self = shift;
-    my $s = shift;
+    my $s = shift || '';
     my $state = shift;
     $state = lc $state;
 
