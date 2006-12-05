@@ -61,11 +61,11 @@
     <command name="make"              options="-k -C ace" />
     <command name="make"              options="-k -C Kokyu" />
     <command name="make"              options="-k -C ACEXML" />
+    <command name="make"              options="-k -C tests" />
     <command name="make"              options="-k -C protocols" />
     <!-- command name="make"              options="-k -C examples" / -->
     <!-- command name="make"              options="-k -C netsvcs" / -->
     <!-- command name="make"              options="-k -C performance-tests" / -->
-    <command name="make"              options="-k -C tests" />
     <!-- command name="make"              options="-k -C websvcs" / -->
     <!-- command name="make"              options="-k -C TAO/TAO_IDL" / -->
     <!-- command name="make"              options="-k -C TAO idl_stubs" / -->
