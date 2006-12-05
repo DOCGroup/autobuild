@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\ACE\VC71\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\ACE\VC71\ACE_wrappers\TAO\CIAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\tools\nixtools;C:\ACE\VC71\ACE_wrappers\bin;C:\ACE\VC71\ACE_wrappers\lib" type="prefix" />
 
