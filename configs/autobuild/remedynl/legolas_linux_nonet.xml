@@ -42,7 +42,9 @@
 
     <command name="generate_workspace" options="linuxnonet.mwc -type gnuace" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-j 5 -k" />
+
+    <command name="auto_run_tests"    options="-l $ACE_ROOT/TAO/tests/COIOP/COIOP.lst" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
