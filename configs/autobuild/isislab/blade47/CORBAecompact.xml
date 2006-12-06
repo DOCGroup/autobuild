@@ -13,7 +13,7 @@
         <variable name="root"     value="/home/bczar/builds/CORBAecompact/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bczar/builds/CORBAecompact/" />
-        <variable name="configs"  value="Linux NoInterceptor Core" />
+        <variable name="configs"  value="Linux CORBA_E_COMPACT" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -42,6 +42,8 @@
     <command name="generate_workspace" options="-exclude TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuace" />
 
     <command name="make"              options="-k" />
+
+    <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
