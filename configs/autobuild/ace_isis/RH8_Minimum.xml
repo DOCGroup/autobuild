@@ -4,6 +4,7 @@
 
         <environment name="ACE_ROOT"        value="/build/isisbuilds/Minimum/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Minimum/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/build/isisbuilds/Minimum/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Minimum/ACE_wrappers/lib" />
 
         <variable name="root"     value="/build/isisbuilds/Minimum" />
