@@ -12,6 +12,11 @@ use FileHandle;
 use File::Basename;
 use Sys::Hostname;
 
+use common::prettify;
+
+use vars qw(@ISA);
+@ISA = qw(Prettify);
+
 ###############################################################################
 # Constructor
 
@@ -188,6 +193,143 @@ sub resolveLinks {
   return $file;
 }
 
+sub sendEmail {
+  my $self      = shift;
+  my $mail_prog = shift;
+  my $subject   = shift;
+  my $msg       = shift;
+  my @email     = @_;
+  my $mh        = new FileHandle();
+  my $sopt      = ($^O eq 'linux' ? "-s '$subject'" : '');
+
+  if (open($mh, "| $mail_prog $sopt @email")) {
+    print $mh "Subject:$subject\n" if ($sopt eq '');
+    print $mh "$msg\n";
+    close($mh);
+  }
+  else {
+    print STDERR __FILE__, ": ERROR: Unable to run $mail_prog\n";
+    return 0;
+  }
+}
+
+sub collectCompileErrors {
+  my $self  = shift;
+  my $line  = shift;
+  my $files = $self->{'parser'}->{'files'};
+
+  push(@{$self->{'parser'}->{'lines'}}, $line);
+  if ($line =~ /Entering\s+directory\s+\`(.*)\'$/) {
+    $self->{'parser'}->{'dir'} = $1;
+  }
+  elsif ($line =~ /Leaving\s+directory\s+/) {
+   if (defined $self->{'parser'}->{'current'}) {
+      push(@{$$files{$self->{'parser'}->{'current'}}},
+           join('', @{$self->{'parser'}->{'lines'}}));
+    }
+    $self->{'parser'}->{'current'}  = undef;
+    $self->{'parser'}->{'lines'} = [];
+  }
+  elsif (index($line, $self->{'parser'}->{'compiler'}) == 0) {
+    if (defined $self->{'parser'}->{'current'}) {
+      push(@{$$files{$self->{'parser'}->{'current'}}},
+           join('', @{$self->{'parser'}->{'lines'}}));
+    }
+    $self->{'parser'}->{'started'} = 1;
+    $self->{'parser'}->{'class'}   = undef;
+    $self->{'parser'}->{'current'} = undef;
+    $self->{'parser'}->{'lines'}   = [$line];
+  }
+  elsif ($self->{'parser'}->{'started'}) {
+    if ($line =~ /no\s+rule\s+to\s+make\s+target\s+`(.*)'/) {
+      $self->{'parser'}->{'current'} = "$self->{'parser'}->{'dir'}/$1";
+      $$files{$self->{'parser'}->{'current'}} =
+            ["$self->{'parser'}->{'current'} is missing"];
+      $self->{'parser'}->{'started'} = undef;
+    }
+    elsif ($line =~ /^([^:]+):(\d+):\d+:\s*error:\s+(.*):\s*no\s+such\s+file/i ||
+           $line =~ /^"([^"]+)",\s+line\s+(\d+):\s*error:\s*could\s+not\s+open\s+include\s+file\s+"([^"]+)"/i) {
+      my $number = $2;
+      my $file   = $3;
+      $self->{'parser'}->{'current'} = "$self->{'parser'}->{'dir'}/$1";
+      $file = "$self->{'parser'}->{'dir'}/$file" if ($file !~ /\//);
+
+      if (!defined $$files{$self->{'parser'}->{'current'}}) {
+        $$files{$self->{'parser'}->{'current'}} = [];
+      }
+
+      $$files{$file} = [] if (!defined $$files{$file});
+      $self->{'parser'}->{'started'} = undef;
+    }
+    elsif ($line =~ /^[^:]+:\d+:\s*error:\s*prototype\s+for\s+'.*'\s+does\s+not\s+match\s+any\s+in\s+class\s+'(.*)'/i) {
+      $self->{'parser'}->{'class'} = $1;
+    }
+    elsif ($self->{'parser'}->{'class'}) {
+      if ($line =~ /^([^:]+):(\d+):\s*error:\s*candidate[s]?\s+(are|is):/i) {
+        $self->{'parser'}->{'current'} = $1;
+        if ($self->{'parser'}->{'current'} !~ /\//) {
+          $self->{'parser'}->{'current'} =
+            "$self->{'parser'}->{'dir'}/$self->{'parser'}->{'current'}";
+        }
+        $self->{'parser'}->{'cfile'} = $self->{'parser'}->{'current'};
+        if (!defined $$files{$self->{'parser'}->{'current'}}) {
+          $$files{$self->{'parser'}->{'current'}} = [];
+        }
+      }
+      elsif ($line =~ /^([^:]+):(\d+):\s*error:/i) {
+        $self->{'parser'}->{'current'} = $1;
+        if ($self->{'parser'}->{'current'} !~ /\//) {
+          $self->{'parser'}->{'current'} =
+            "$self->{'parser'}->{'dir'}/$self->{'parser'}->{'current'}";
+        }
+        if (defined $self->{'parser'}->{'cfile'} &&
+            $self->{'parser'}->{'current'} eq $self->{'parser'}->{'cfile'}) {
+          if (!defined $$files{$self->{'parser'}->{'current'}}) {
+            $$files{$self->{'parser'}->{'current'}} = [];
+          }
+        }
+        else {
+          $self->{'parser'}->{'cfile'} = undef;
+        }
+      }
+    }
+    elsif ($line =~ /^([^:]+):(\d+):.*error/i ||
+           $line =~ /^"([^"]+)",\s+line\s+(\d+):.*error/i) {
+      $self->{'parser'}->{'current'} = "$self->{'parser'}->{'dir'}/$1";
+      if (!defined $$files{$self->{'parser'}->{'current'}}) {
+        $$files{$self->{'parser'}->{'current'}} = [];
+      }
+      $self->{'parser'}->{'started'} = undef;
+    }
+  }
+}
+
+sub collectTestErrors {
+  my $self = shift;
+  my $line = shift;
+  $self->Test_Handler($line);
+}
+
+sub Output_Subsection {
+  my $self = shift;
+  my $line = shift;
+  $self->{'parser'}->{'current'} = $line;
+  $self->{'parser'}->{'tests'}->{$line} = [];
+}
+
+sub Output_Error {
+  my $self = shift;
+  my $line = shift;
+  my $key  = $self->{'parser'}->{'current'} || '';
+  push(@{$self->{'parser'}->{'tests'}->{$key}}, $line);
+}
+
+sub Output_Warning {
+}
+
+sub Output_Normal {
+}
+
 ##############################################################################
 
 sub Run ($)
@@ -201,7 +343,8 @@ sub Run ($)
     my $domain     = $self->getDomain();
     my $revctrl    = 'svn';
     my $compiler   = 'g++';
-    my $subject    = 'Compile Errors';
+    my $csubject    = 'Compile Errors';
+    my $tsubject   = 'Test Errors';
     my $lead_email = '';
 
     # replace all '\x22' with '"'
@@ -221,11 +364,18 @@ sub Run ($)
       $revctrl = $1;
     }
 
-    if ($options =~ s/subject='([^']+)'//) {
-      $subject = $1;
+    if ($options =~ s/compile_subject='([^']+)'//) {
+      $csubject = $1;
     }
-    elsif ($options =~ s/subject=([^\s]+)//) {
-      $subject = $1;
+    elsif ($options =~ s/compile_subject=([^\s]+)//) {
+      $csubject = $1;
+    }
+
+    if ($options =~ s/test_subject='([^']+)'//) {
+      $tsubject = $1;
+    }
+    elsif ($options =~ s/test_subject=([^\s]+)//) {
+      $tsubject = $1;
     }
 
     if ($options =~ s/lead_email='([^']+)'//) {
@@ -259,86 +409,40 @@ sub Run ($)
 
     if (open($fh, "$root/$log_file")) {
       my %files   = ();
-      my $started = undef;
-      my $class   = undef;
-      my $cfile   = undef;
-      my $dir     = '.';
+      my %tests   = ();
       my $proceed = undef;
-      my $current = undef;
-      my @lines   = ();
+      my %collectors = ('compile' => \&collectCompileErrors,
+                        'test'    => \&collectTestErrors,
+                       );
 
       while(<$fh>) {
         if (/^#################### (.*)$/) {
           my $section = $1;
-          if ($section =~ /^compile\s/i) {
-            $proceed = 1;
+          if ($section =~ /^(compile)\s/i) {
+            $proceed = lc($1);
+          }
+          elsif ($section =~ /^(test)\s/i) {
+            $proceed = lc($1);
           }
           elsif ($proceed) {
             $proceed = undef;
           }
-        }
-        if ($proceed) {
-          push(@lines, $_);
-          if (/Entering\s+directory\s+\`(.*)\'$/) {
-            $dir = $1;
-          }
-          elsif (/Leaving\s+directory\s+/) {
-            push(@{$files{$current}}, join('', @lines)) if (defined $current);
-            $current = undef;
-            @lines   = ();
-          }
-          elsif (index($_, $compiler) == 0) {
-            push(@{$files{$current}}, join('', @lines)) if (defined $current);
-            $started = 1;
-            $class   = undef;
-            $current = undef;
-            @lines   = ($_);
-          }
-          elsif ($started) {
-            if (/no\s+rule\s+to\s+make\s+target\s+`(.*)'/) {
-              $current = "$dir/$1";
-              $files{$current} = ["$current is missing"];
-              $started = undef;
-            }
-            elsif (/^([^:]+):(\d+):\d+:\s*error:\s+(.*):\s*no\s+such\s+file/i ||
-                   /^"([^"]+)",\s+line\s+(\d+):\s*error:\s*could\s+not\s+open\s+include\s+file\s+"([^"]+)"/i) {
-              $current   = "$dir/$1";
-              my $number = $2;
-              my $file   = $3;
-              $file = "$dir/$file" if ($file !~ /\//);
-                
-              $files{$current}  = [] if (!defined $files{$current});
 
-              $files{$file} = [] if (!defined $files{$file});
-              $started = undef;
-            }
-            elsif (/^[^:]+:\d+:\s*error:\s*prototype\s+for\s+'.*'\s+does\s+not\s+match\s+any\s+in\s+class\s+'(.*)'/i) {
-              $class = $1;
-            }
-            elsif ($class) {
-              if (/^([^:]+):(\d+):\s*error:\s*candidate[s]?\s+(are|is):/i) {
-                $current = $1;
-                $current = "$dir/$current" if ($current !~ /\//);
-                $cfile = $current;
-                $files{$current} = [] if (!defined $files{$current});
-              }
-              elsif (/^([^:]+):(\d+):\s*error:/i) {
-                $current = $1;
-                $current = "$dir/$current" if ($current !~ /\//);
-                if (defined $cfile && $current eq $cfile) {
-                  $files{$current} = [] if (!defined $files{$current});
-                }
-                else {
-                  $cfile = undef;
-                }
-              }
-            }
-            elsif (/^([^:]+):(\d+):\s*error:/i ||
-                   /^"([^"]+)",\s+line\s+(\d+):\s*error:/i) {
-              $current = "$dir/$1";
-              $files{$current} = [] if (!defined $files{$current});
-              $started = undef;
-            }
+          $self->{'parser'} = {'started'  => undef,
+                               'class'    => undef,
+                               'cfile'    => undef,
+                               'dir'      => '.',
+                               'current'  => undef,
+                               'compiler' => $compiler,
+                               'lines'    => [],
+                               'files'    => \%files,
+                               'tests'    => \%tests,
+                              };
+        }
+        if (defined $proceed) {
+          my $func = $collectors{$proceed};
+          if (defined $func) {
+            $self->$func($_);
           }
         }
       }
@@ -357,17 +461,18 @@ sub Run ($)
               $msg .= $line;
             }
           }
+          $self->sendEmail($mail_prog, $csubject, $msg, $lead_email, $email);
+        }
+      }
 
-          my $mh = new FileHandle();
-          my $sopt = ($^O eq 'linux' ? "-s '$subject'" : '');
-          if (open($mh, "| $mail_prog $sopt $lead_email $email")) {
-            print $mh "Subject:$subject\n" if ($sopt eq '');
-            print $mh "$msg\n";
-            close($mh);
-          }
-          else {
-            print STDERR __FILE__, ": ERROR: Unable to run $mail_prog\n";
-            return 0;
+      if ($lead_email ne '') {
+        foreach my $test (sort keys %tests) {
+          if (defined $tests{$test}->[0]) {
+            my $msg = "$test\n";
+            foreach my $line (@{$tests{$test}}) {
+              $msg .= $line;
+            }
+            $self->sendEmail($mail_prog, $tsubject, $msg, $lead_email);
           }
         }
       }

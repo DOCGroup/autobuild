@@ -51,20 +51,21 @@ make - Runs the make program, optionally specified by the "make_program"
   a makefile name to use by using the 'find' sub-command.  The 'find'
   sub-command uses the name or wild-card specification to locate the
   makefile.
-notify - Scans the log file for compile errors and notifies the user via
-  email.  This command uses two variables 'mail_prog' (which defaults to
-  /bin/mail) to send email and 'mail_map'.  The 'mail_map' variable, if
-  used, should point to a file that contains a username and email address
-  per line.  If a 'mail_map' is not provided, it will create email addresses
-  in the form of <username>@<domain> where <username> is obtained from the
-  revision control system and <domain> is obtained in a system dependent
-  manor.
+notify - Scans the log file for compile amd test errors and notifies the
+  user via email.  This command uses two variables 'mail_prog' (which
+  defaults to /bin/mail) to send email and 'mail_map'.  The 'mail_map'
+  variable, if used, should point to a file that contains a username and
+  email address per line.  If a 'mail_map' is not provided, it will create
+  email addresses in the form of <username>@<domain> where <username> is
+  obtained from the revision control system and <domain> is obtained in a
+  system dependent manor.
   The options to the notify command can contain 'compiler' (to specify a
   compiler other than the default g++), 'lead_email' (to specify a set of
   space separated email addresses that will always be emailed for every
-  compile error), 'revctrl' (to specify a revision control program other
-  than the default svn), and 'subject' (to specify an email subject other
-  than the default 'Compile Errors'.
+  compile error and test error), 'revctrl' (to specify a revision control
+  program other than the default svn), 'compile_subject' (to specify an
+  email subject other than the default 'Compile Errors', and 'test_subject'
+  (to specify an email subject other than the default 'Test Errors').
 print_ace_config - Puts ACE, TAO, CIAO, DDS, MPC and autobuild information
   into the log file.
 print_autotools_version - Puts version information about automake, autoconf,

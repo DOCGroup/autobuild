@@ -1,3 +1,13 @@
+Wed Dec  6 19:58:10 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/notify.pm:
+        * docs/autobuild.txt:
+
+          Updated the notify command to scan for test failures too.
+          The subject option was replaced by compile_subject and
+          test_subject.  All test failures go to the email address specified
+          by the lead_email option.
+
 Mon Dec  4 13:36:37 UTC 2006  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/prettify.pm:
