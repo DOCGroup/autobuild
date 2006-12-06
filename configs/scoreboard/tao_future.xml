@@ -23,12 +23,6 @@ decide the migration paths and strategies.
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
-   <build>
-      <name>Stats_CORBA_e_compact</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/corbaecompact</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
 </group>
 
 <group>
