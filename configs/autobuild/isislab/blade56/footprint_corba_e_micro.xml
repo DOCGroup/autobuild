@@ -70,7 +70,6 @@
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciaosvcs      --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/examples/Null_Component --dry-run >> $ACE_ROOT/../.metrics/targets" />
