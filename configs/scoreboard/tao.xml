@@ -234,15 +234,15 @@ all the OS/platform combinations TAO is tested everyday.
 <group>
    <name>HP-UX</name>
    <build>
-      <name>HPUX11i_aCC373_NoInline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc373/standard</url>
+      <name>HPUX11i_aCC367_NoInline</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc367/standard</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
    <name>HP-UX</name>
    <build>
-      <name>HPUX11i_aCC373_Inline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc373/inline</url>
+      <name>HPUX11i_aCC367_Inline</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc367/inline</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
