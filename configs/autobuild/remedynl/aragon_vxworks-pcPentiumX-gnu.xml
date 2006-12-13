@@ -4,6 +4,7 @@
 
         <environment name="ACE_ROOT"                value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
         <environment name="TAO_ROOT"                value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"               value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO/CIAO"/>
         <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
         <environment name="PATH"                    value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
         <environment name="WIND_BASE"               value="C:/Tornado2.2"/>
