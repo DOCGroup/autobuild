@@ -43,7 +43,6 @@
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
@@ -54,12 +53,9 @@
     <command name="make"              options="-k -j4 -C ACEXML" />
     <command name="make"              options="-k -j4 -C apps/gperf" />
 
-    <!-- Build the TAO_IDL compiler first and gen the idl_stubs, so that --dry-run will create a list of all targets. -->
     <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO/CIAO/tools/IDL3_to_IDL2" />
     <command name="make"              options="-k -C TAO/tao idl_stubs" />
     <command name="make"              options="-k -C TAO/tests idl_stubs" />
-    <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
 
     <!-- TAO: only build the minimum, tao -->
     <command name="make"              options="-k -C TAO/tao                --dry-run >> $ACE_ROOT/../.metrics/targets" />
@@ -68,11 +64,6 @@
     <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $ACE_ROOT/../.metrics/targets" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/examples/Null_Component --dry-run >> $ACE_ROOT/../.metrics/targets" />
 
     <command name="make"              options="-k -j4 -C TAO/tao" />
     <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />
@@ -80,8 +71,6 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
-
-    <command name="make"              options="-k -j4 -C TAO/CIAO" />
 
     <command name="log"               options="off" />
 
