@@ -19,6 +19,10 @@ if !(test -e ${RUNCHECK}); then
     $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_autoconf.sh
     $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks63r.sh
     $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks63ripv6.sh
+    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks64r.sh
+    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks64ripv6.sh
+    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks64rk.sh
+    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks64rdiab.sh
 
     rm -f ${RUNCHECK}
 fi
