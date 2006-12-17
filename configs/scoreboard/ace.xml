@@ -136,6 +136,24 @@ all the OS/platform combinations ACE is tested everyday.
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
+   <build>
+     <name>VxWorks6.4_PPC603_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64r/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+     <name>VxWorks6.4_PPC603_IPv6_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64ripv6/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+     <name>VxWorks6.4_PPC603_Kernel_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64rk/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 </group>
 
 <group>
