@@ -46,7 +46,7 @@
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="ccpentium" />
+    <command name="check_compiler" options="dplus" />
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />
     <command name="print_make_version" />
