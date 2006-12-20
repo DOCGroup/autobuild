@@ -17,6 +17,12 @@ all the OS/platform combinations CIAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
+       <name>FC4_CORBA_e_micro</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_micro</url>
+          <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
       <name>FC5_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
       <build_sponsor>ISIS</build_sponsor>

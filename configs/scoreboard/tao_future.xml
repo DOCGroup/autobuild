@@ -10,16 +10,6 @@ decide the migration paths and strategies.
 </preamble>
 
 <group>
-  <name>Test Builds for TAO</name>
-   <build>
-      <name>CORBA_e_micro</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_micro</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-</group>
-
-<group>
     <name>Builds for features and bugfixes comming up in the next beta</name>
     <build>
       <name>FC5_Debug_GCC-4.1.1_TransportCurrent</name>
