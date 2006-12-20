@@ -1,3 +1,18 @@
+Wed Dec 20 19:55:14 UTC 2006  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/scoreboard/tao_future.xml:
+
+          Removing the Transport::Current builds from the experimental
+          scoreboard since the feature has been integrated in the
+          mainstream.
+
+        * configs/autobuild/oci/oci_doc-transport-current_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+        * configs/autobuild/oci/oci_doc-transport-current_oci1179_linux-fc5_gcc4.1.1_d1o0i0t0.xml:
+        * configs/autobuild/oci/oci_doc-transport-current_oci1179_linux-fc5_gcc4.1.1_d1o0i0t1s1.xml:
+        * configs/autobuild/oci/oci_doc_transport_current_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+
+          Removed these files.
+
 Tue Dec 12 10:40:00 UTC 2006  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:
