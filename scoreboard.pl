@@ -68,7 +68,7 @@ our $use_local = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
-<A HREF=\"http://cvs.doc.wustl.edu/viewcvs.cgi/*checkout*/README?cvsroot=autobuild\">
+<A HREF=\"https://svn.dre.vanderbilt.edu/viewvc/ACE_autobuild/trunk/README?revision=HEAD\">
 here</A>.\n";
 
 ###############################################################################
