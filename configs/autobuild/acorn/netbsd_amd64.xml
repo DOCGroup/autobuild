@@ -38,10 +38,10 @@
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
 
-    <command name="make"              options="-j 4 -k" />
-    <command name="make"              options="-j 4 -k -C TAO/TAO_IDL" />
-    <command name="make"              options="-j 4 -k -C TAO idl_stubs" />
-    <command name="make"              options="-j 4 -k -C TAO" />
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
+    <command name="make"              options="-k -C TAO" />
 
     <command name="auto_run_tests" options=" -a -o -t" />
 
@@ -49,5 +49,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync -avz --delete *.txt *.html jtc@orac.acorntoolworks.com:public_html/auto_compile_logs/netbsd_amd64/" />
+    <command name="shell"             options="rsync --dirs --verbose --delete --include '*.txt' --include '*.html' --exclude '*' ./ jtc@orac.acorntoolworks.com:public_html/auto_compile_logs/netbsd_amd64/" />
 </autobuild>

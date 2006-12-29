@@ -1,3 +1,21 @@
+Fri Dec 29 22:59:36 UTC 2006  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/autobuild/acorn/netbsd_amd64.xml:
+        * configs/autobuild/acorn/netbsd_amd64_automake.xml:
+        * configs/autobuild/acorn/netbsd_amd64_noinline.xml:
+        * configs/autobuild/acorn/netbsd_amd64_static.xml:
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_automake.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386_static.xml:
+
+          Remove -j 4, parallelism makes debugging scoreboard build issues
+          too difficult.
+
+          Fix rsync command line so that old '*.txt' and '*.html' files
+          are actually deleted.  This explains where all my disk space
+          went.
+
 Wed Dec 27 13:06:14 UTC 2006  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl:
