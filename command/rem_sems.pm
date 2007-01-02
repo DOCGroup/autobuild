@@ -29,11 +29,9 @@ sub new
 ##############################################################################
 sub CheckRequirements ()
 {
-    my $self = shift;
-    my $root = main::GetVariable ('root');
-
-    if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
+    if (!defined $ENV{ACE_ROOT}) {
+        print STDERR __FILE__,
+                    ": Requires \"ACE_ROOT\" environment variable\n";
         return 0;
     }
     
@@ -43,29 +41,13 @@ sub CheckRequirements ()
 ##############################################################################
 sub Run ($)
 {
-    my $root = main::GetVariable ('root');
-    
-    if (!-r $root || !-d $root) {
-        print STDERR __FILE__, ": Cannot access \"root\" directory: $root\n";
-        return 0;
-    }
-
-    my $current_dir = getcwd ();
-
-    if (!chdir $root) {
-      print STDERR __FILE__, ": Cannot change to $root\n";
+    my $script = "$ENV{ACE_ROOT}/bin/clean_sems.sh";
+    if (! -x $script) {
+      print STDERR __FILE__, ": Cannot run $script\n";
       return 0;
     }
 
-    my $location = "ACE_wrappers/bin/";
-    if (!chdir $location) {
-      print STDERR __FILE__, ": Cannot change to $location\n";
-      return 0;
-    }
-
-    my $status = system ("./clean_sems.sh");
-
-    chdir $current_dir;
+    my $status = system ($script);
 
     return 1;
 }

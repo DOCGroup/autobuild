@@ -96,10 +96,17 @@ sub Run ($)
     }
 
     ## Get the location of the mwc.pl script
-    my $mwc = "$project_root/bin/mwc.pl";
-    my($mpcroot) = $ENV{MPC_ROOT};
-    if (!-r $mwc && defined $mpcroot) {
-      $mwc = "$mpcroot/mwc.pl";
+    my $mwc = undef;
+
+    foreach my $mwcdir ("$project_root/bin", "$ENV{ACE_ROOT}/bin", $ENV{MPC_ROOT}) {
+      if (defined $mwcdir && -r "$mwcdir/mwc.pl") {
+        $mwc = "$mwcdir/mwc.pl";
+        last;
+      }
+    }
+    if (!defined $mwc) {
+      print STDERR __FILE__, ": Cannot find mwc.pl\n";
+      return 0;
     }
 
     ## Create the MPC command line
