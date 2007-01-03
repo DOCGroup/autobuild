@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"                value="/cygdrive/c/ACE/LynxOS/pcPentiumX/ACE_wrappers" />
         <environment name="TAO_ROOT"                value="/cygdrive/c/ACE/LynxOS/pcPentiumX/ACE_wrappers/TAO"/>
         <environment name="HOST_ROOT"               value="/cygdrive/c/ACE/LynxOS/host/ACE_wrappers"/>
-        <environment name="PATH"                    value="C:\LynuxWorks\4p2p0\bin;C:\LynuxWorks\4p2p0\usr\lynx\4.2.0\x86\cdk\win32-elf-x86\usr\bin;C:\LynuxWorks\4p2p0\usr\lynx\4.2.0\x86\usr\bin;C:\ACE\LynxOS\host\ACE_wrappers\lib;" type="prefix" />
+        <environment name="PATH"                    value="c:\perl\bin;C:\LynuxWorks\4p2p0\bin;C:\LynuxWorks\4p2p0\usr\lynx\4.2.0\x86\cdk\win32-elf-x86\usr\bin;C:\LynuxWorks\4p2p0\usr\lynx\4.2.0\x86\usr\bin;C:\ACE\LynxOS\host\ACE_wrappers\lib;" type="prefix" />
         <environment name="RSYNC_RSH"               value="C:\LynuxWorks\4p2p0\bin\ssh" />
 
         <variable name="root"     	 value="C:\ACE\LynxOS\pcPentiumX\" />
