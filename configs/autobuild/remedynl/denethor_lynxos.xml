@@ -35,7 +35,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -type gnuace -include c:\ace\LynxOS\pcPentiumX\ACE_wrappers\bin\MakeProjectCreator\config -include c:\ace\LynxOS\pcPentiumX\ACE_wrappers\bin\MakeProjectCreator\templates" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuace -include c:\ace\LynxOS\pcPentiumX\ACE_wrappers\bin\MakeProjectCreator\config -include c:\ace\LynxOS\pcPentiumX\ACE_wrappers\bin\MakeProjectCreator\templates -include c:\ace\LynxOS\pcPentiumX\ACE_wrappers\bin\MakeProjectCreator\modules" />
 
     <command name="make"              options="-k realclean" />
 
