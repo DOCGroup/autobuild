@@ -1,3 +1,9 @@
+Wed Jan  3 19:23:49 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/tango_isis/Debian_Core.xml:
+
+          Build contrib/minizip since zlib now enabled by default.
+
 Wed Jan  3 15:36:56 UTC 2007  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/scoreboard/ace.xml:
