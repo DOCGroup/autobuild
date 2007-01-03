@@ -13,7 +13,7 @@
         <variable name="root"     value="/build/isisbuilds/ImplicitTemplates" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates" />
-        <variable name="configs"  value="SSL Linux Exceptions" />
+        <variable name="configs"  value="SSL Linux Exceptions ZLIB" />
 
     </configuration>
 

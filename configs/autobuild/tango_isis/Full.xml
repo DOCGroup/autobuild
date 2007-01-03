@@ -12,7 +12,7 @@
         <variable name="root"     value="/build/isisbuilds/Full" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/tango_Full" />
-        <variable name="configs"  value="Linux SSL Exceptions" />
+        <variable name="configs"  value="Linux SSL Exceptions ZLIB" />
 
     </configuration>
 
@@ -21,7 +21,7 @@
     <command name="log"               options="ON" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    
+
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />

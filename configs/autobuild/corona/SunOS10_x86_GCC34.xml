@@ -14,7 +14,7 @@
         <variable name="root"     value="/build/isisbuilds/GCC34/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/corona_Solaris10_X86_GCC34" />
-        <variable name="configs"  value="SSL Exceptions" />
+        <variable name="configs"  value="SSL Exceptions ZLIB" />
         <variable name="make_program" value="gmake" />
 
     </configuration>

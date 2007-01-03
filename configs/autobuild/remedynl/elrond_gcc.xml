@@ -9,7 +9,7 @@
         <variable name="root"     value="/home/build/ACE/gcc41/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/gcc41/" />
-        <variable name="configs"  value="Linux Exceptions" />
+        <variable name="configs"  value="Linux Exceptions ZLIB" />
 
     </configuration>
 

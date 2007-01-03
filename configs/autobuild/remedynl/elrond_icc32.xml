@@ -10,7 +10,7 @@
         <variable name="root"     value="/home/build/ACE/icc32/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/icc32/" />
-        <variable name="configs"  value="Linux Exceptions NOXERCES" />
+        <variable name="configs"  value="Linux Exceptions NOXERCES ZLIB" />
 
     </configuration>
 
