@@ -13,7 +13,6 @@
         <variable name="log_root" 	 value="C:\ACE\LynxOS\pcPentiumX\" />
         <variable name="configs"  	 value="LynxOS STATIC" />
         <variable name="svn_program" value="c:\Progra~1\Subversion\bin\svn" />
-        <variable name="make_program" value="C:\LynuxWorks\4p2p0\bin\make" />
 
     </configuration>
 
