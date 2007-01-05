@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/aCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/aCC/ACE_wrappers/TAO"/>
-        <environment name="SHLIB_PATH"      value="/home/build/ACE/aCC/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/aCC/ACE_wrappers/lib" />
         <environment name="PATH"            value="/usr/local/bin" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
 
