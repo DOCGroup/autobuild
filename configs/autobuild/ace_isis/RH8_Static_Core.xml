@@ -49,6 +49,7 @@
     <command name="make"              options="-j 2 -k -C ACEXML" />
     <command name="make"              options="-j 2 -k -C tests" />
     <command name="make"              options="-j 2 -k -C protocols" />
+    <command name="make"              options="-j 2 -k -C contrib" />
     <command name="make"              options="-j 2 -k -C TAO/TAO_IDL" />
     <command name="make"              options="-j 2 -k -C TAO/tao" />
 
