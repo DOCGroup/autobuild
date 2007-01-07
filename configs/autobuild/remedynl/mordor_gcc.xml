@@ -4,7 +4,6 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/lib" />
-        <environment name="SHLIB_PATH"      value="/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="PATH"            value="/opt/hp-gcc-4.0.3/bin:/usr/local/bin" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
 
