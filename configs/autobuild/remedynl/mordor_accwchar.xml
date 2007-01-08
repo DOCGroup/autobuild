@@ -25,7 +25,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_WCHAR\n#include \x22ace/config-hpux-11.00.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='uses_wchar=1\nipv6=1\ncidl=1\n'" />
 
@@ -40,7 +40,7 @@
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="auto_run_tests"    options=" -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
