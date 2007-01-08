@@ -1,0 +1,59 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/build/isisbuilds/ImplicitTemplates/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/xerces/lib:/build/isisbuilds/ImplicitTemplates/ACE_wrappers/lib:/usr/local/lib" />
+        <environment name="XERCESCROOT"         value="/build/isisbuilds/utils/xerces" />
+        <environment name="ZLIB_ROOT"       value="/usr/" />
+        <environment name="ZZIP_ROOT"       value="/usr/" />
+
+        <variable name="root"     value="/build/isisbuilds/ImplicitTemplates" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates" />
+        <variable name="configs"  value="SSL Linux Exceptions ZLIB" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32002" />
+
+    <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=1\nIMPLICIT_TEMPLATES_FLAG=-fimplicit-templates\noptimize=1\nexceptions=1\nrtti=1\ninline=1\nTAO_IDLFLAGS += -Gd -Gp \ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\nzlib=1\nzzip=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF -type gnuace" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+    <command name="shell"             options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
+    <command name="make"              options="-j 4 -k" />
+    <command name="make"              options="-j 4 -k -C TAO" />
+    <command name="make"              options="-j 4 -k -C TAO/CIAO" />
+
+    <command name="auto_run_tests"    options="-a -o -t -C" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+</autobuild>

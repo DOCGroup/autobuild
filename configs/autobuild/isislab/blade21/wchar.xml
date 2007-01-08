@@ -1,0 +1,55 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/wchar/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/wchar/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/build/isisbuilds/wchar/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/xerces/lib:/build/isisbuilds/wchar/ACE_wrappers/lib:/usr/local/lib" />
+        <environment name="XERCESCROOT"         value="/build/isisbuilds/utils/xerces" />
+
+        <variable name="root"     value="/build/isisbuilds/wchar" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_wchar" />
+        <variable name="configs"  value="Linux SSL Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32005" />
+
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_WCHAR\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\ndebug=0\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" />
+
+    <command name="print_os_version" options="gcc" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+
+
+    <command name="generate_workspace" options="-exclude TAO,build.mwc -type gnuace" />
+
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
+
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF -type gnuace" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="make"              options="-j 2 -k" />
+    <command name="make"              options="-j 2 -k -C TAO" />
+    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+
+    <command name="auto_run_tests"    options="-a -o -t -C" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+</autobuild>
