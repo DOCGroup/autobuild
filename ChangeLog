@@ -1,3 +1,10 @@
+Mon Jan  8 12:23:02 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.xml:
+
+          Excplicitly enable the ACE, TAO and orbsvcs tests so that CIAO
+          tests aren't added automatically.
+
 Wed Jan  3 19:59:56 UTC 2007  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/ace_isis/RH8_NoInline.xml

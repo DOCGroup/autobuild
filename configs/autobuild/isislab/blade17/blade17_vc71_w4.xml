@@ -48,7 +48,8 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc71 -ALL -Debug -k" />
 
-    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <!-- Explicitly enable ACE, TAO and orbsvcs tests so that CIAO tests aren't added automatically -->
+    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22 -a -o -t" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
