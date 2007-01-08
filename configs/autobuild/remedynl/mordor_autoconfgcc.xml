@@ -26,7 +26,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="gcc" />
+    <command name="check_compiler" options="aCC" />
     <command name="print_ace_config" />
     <command name="print_autotools_version" />
     <command name="print_make_version" />
