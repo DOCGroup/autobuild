@@ -2,17 +2,16 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/build/isisbuilds/Static/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/xerces/lib:/build/isisbuilds/Static/ACE_wrappers/lib:/usr/local/lib:." />
-        <environment name="XERCESCROOT"         value="/build/isisbuilds/utils/xerces" />
+        <environment name="ACE_ROOT"        value="/home/bczar/builds/Static/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/bczar/builds/Static/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/bczar/builds/Static/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/bczar/builds/Static/ACE_wrappers/lib:/usr/local/lib:." />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
 
-        <variable name="root"     value="/build/isisbuilds/Static" />
+        <variable name="root"     value="/home/bczar/builds/Static" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_Static" />
+        <variable name="log_root" value="/home/bczar/builds/Static" />
         <variable name="configs"  value="Linux STATIC SSL ZLIB" />
     </configuration>
 
@@ -52,4 +51,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade21/static"/>
 </autobuild>
