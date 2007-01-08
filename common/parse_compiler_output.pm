@@ -152,6 +152,12 @@ sub handle_compiler_output_line($) {
       $self->Output_Warning ($s);
       return;
     }
+    # It could also be part of a split line warning relating to
+    # mktemp/mkstemp
+    if (/mkstemp/) {
+      $self->Output_Normal ($s);
+      return;
+    }
     # Definately an error
     $self->Output_Error ($s);
     return;
