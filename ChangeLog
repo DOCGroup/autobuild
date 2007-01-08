@@ -1,3 +1,11 @@
+Mon Jan  8 18:30:01 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/prettify.pm:
+        * docs/autobuild.txt:
+        * matrix_database/TestPlatform.py:
+
+          Recognize invalid pointer free detected by glibc as an error.
+
 Mon Jan  8 13:03:18 UTC 2007  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/autobuild/isislab/blade12/gcc4_static.xml:

@@ -120,4 +120,5 @@ Invalid write of size
 Invalid read of size
 Source and destination overlap
 error while loading shared libraries
+free(): invalid pointer:
 pure virtual (**case-insensitive**)
