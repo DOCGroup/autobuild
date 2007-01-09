@@ -1,3 +1,11 @@
+Tue Jan  9 13:46:57 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
+
+          This xml file did not build CIAO but was attempting to run the
+          CIAO tests.  I have removed the -C from the auto_run_tests
+          command.
+
 Tue Jan  9 10:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC365_Standard.xml:
