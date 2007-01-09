@@ -1,3 +1,11 @@
+Tue Jan  9 14:13:43 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/remedynl/galadriel_host.xml:
+
+          The HTBP tests won't build without the ACE tests Test_Output
+          library, so exclude protocols/tests/HTBP during project
+          generation.
+
 Tue Jan  9 13:46:57 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/pantera_isis/Code_Coverage.xml:
