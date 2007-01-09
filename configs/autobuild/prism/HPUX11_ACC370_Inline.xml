@@ -7,7 +7,7 @@
         <environment name="TAO_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/TAO"/>
         <environment name="INSLIB"           value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib" />
         <environment name="LD_LIBRARY_PATH"  value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib" />
-        <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib:/usr/local/aCC3.70/opt/aCC/lib" />
+        <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/inline/ACE_wrappers/lib:/usr/local/aCC3.70/opt/aCC/lib:/usr/local/ssl/lib" />
         <environment name="PATH"             value="/usr/local/aCC3.70/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
         <environment name="SSL_ROOT"         value="/usr/local/ssl" />
 

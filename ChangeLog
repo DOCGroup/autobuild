@@ -1,3 +1,16 @@
+Tue Jan  9 10:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC365_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC365_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.xml:
+
+          Add SSL/lib to run-time testing SHLIB.
+
 Mon Jan  8 18:30:01 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/prettify.pm:
