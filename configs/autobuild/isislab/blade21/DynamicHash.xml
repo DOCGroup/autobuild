@@ -23,7 +23,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nTAO_IDLFLAGS += -H dynamic_hash\ncidl=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\n\n'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1'" />
