@@ -18,7 +18,7 @@
         <environment name="VS71COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 8" />
         <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE" />
 
-        <variable name="configs"  value="Win32 Exceptions" />
+        <variable name="configs"  value="Win32 Exceptions NO_LOADAVG" />
         <variable name="root"     value="C:\ACE\Intel91_64bit\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\Intel91_64bit\" />

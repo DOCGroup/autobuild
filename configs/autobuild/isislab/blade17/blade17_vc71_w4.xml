@@ -13,7 +13,7 @@
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="ZLIB_ROOT"       value="C:\zlib" />
         <environment name="ZZIP_ROOT"       value="C:\zzip" />
-        <variable name="configs"  value="Win32 VC71_W4 Exceptions" />
+        <variable name="configs"  value="Win32 VC71_W4 Exceptions NO_LOADAVG" />
         <variable name="root"     value="C:\ACE\VC71_W4\" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\VC71_W4\" />

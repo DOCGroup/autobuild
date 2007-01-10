@@ -12,7 +12,7 @@
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="T:\doc-scoreboard\windows\VC71_InlineMFC" />
         <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Inline MFC" />
-        <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS MFC" />
+        <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS MFC NO_LOADAVG" />
     </configuration>
 
     <command name="status"            options="on" />

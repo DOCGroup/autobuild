@@ -9,7 +9,7 @@
         <environment name="STATIC"   value="1" />
         <environment name="BCBVER"   value="6" />
 
-        <variable name="configs"      value="Win32 Borland STATIC Release Exceptions" />
+        <variable name="configs"      value="Win32 Borland STATIC Release Exceptions NO_LOADAVG" />
         <variable name="root"         value="C:\ACE\VxWorks\CB6sr\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\VxWorks\CB6sr\" />

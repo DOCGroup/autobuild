@@ -1,3 +1,38 @@
+Wed Jan 10 16:57:03 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml:
+        * configs/autobuild/isislab/blade17/blade17_vc71.xml:
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.xml:
+        * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml:
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml:
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml:
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml:
+        * configs/autobuild/merengue/merengue_vc71.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+        * configs/autobuild/remedynl/frodo_vc71_ipv6_debug.xml:
+        * configs/autobuild/remedynl/gandalf_vc71.xml:
+        * configs/autobuild/remedynl/gandalf_vc71sd.xml:
+        * configs/autobuild/remedynl/rohan_icc91_64.xml:
+        * configs/autobuild/remedynl/rohan_icc9_64.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml:
+        * configs/autobuild/remedynl/scarab_bcb6ddu.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dr.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dru.xml:
+        * configs/autobuild/remedynl/scarab_vc8.xml:
+        * configs/autobuild/remedynl/theoden_bcb2006dd.xml:
+        * configs/autobuild/remedynl/theoden_bcb2006dd_ipv6.xml:
+        * configs/autobuild/remedynl/theoden_bcb2006ddu.xml:
+        * configs/autobuild/remedynl/theoden_bcb2006dr.xml:
+        * configs/autobuild/remedynl/theoden_bcb2006sd.xml:
+        * configs/autobuild/remedynl/theoden_bcb2006sr.xml:
+        * configs/autobuild/remedynl/theoden_cb6sr.xml:
+
+          Added the NO_LOADAVG config for Windows builds that run the TAO
+          tests.
+
 Wed Jan 10 13:50:16 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * common/parse_compiler_output.pm:

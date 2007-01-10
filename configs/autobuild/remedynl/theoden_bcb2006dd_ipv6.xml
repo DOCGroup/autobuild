@@ -10,7 +10,7 @@
         <environment name="DEBUG"    value="1" />
 	<environment name="DYNAMIC"  value="1" />
 
-        <variable name="configs"      value="Win32 Borland SExceptions" />
+        <variable name="configs"      value="Win32 Borland Exceptions NO_LOADAVG" />
         <variable name="root"         value="C:\ACE\BCB2006ddipv6\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2006ddipv6\" />

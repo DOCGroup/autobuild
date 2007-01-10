@@ -9,7 +9,7 @@
         <environment name="SSL_ROOT"     value="C:\opensslvc71\openssl-0.9.7d" />
         <environment name="XERCESCROOT"  value="C:\xerces-c_2_5_0-windows_nt-msvc_71" />
 
-        <variable name="configs"  value="Win32 VC71 Exceptions SSL" />
+        <variable name="configs"  value="Win32 VC71 Exceptions SSL NO_LOADAVG" />
         <variable name="root"     value="C:\ACE\VC71\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VC71\" />

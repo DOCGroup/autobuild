@@ -11,7 +11,7 @@
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
 
-        <variable name="configs"  value="Win32 Borland Exceptions" />
+        <variable name="configs"  value="Win32 Borland Exceptions NO_LOADAVG" />
         <variable name="root"     value="C:\ACE\BCB6dr\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\BCB6dr\" />

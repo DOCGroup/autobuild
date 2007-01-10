@@ -12,7 +12,7 @@
         <environment name="DEBUG"   value="1" />
 	<environment name="DYNAMIC"  value="1" />
 
-        <variable name="configs"      value="Win32 Borland Static Exceptions" />
+        <variable name="configs"      value="Win32 Borland Static Exceptions NO_LOADAVG" />
         <variable name="root"         value="C:\ACE\BCB2006dd\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2006dd\" />
