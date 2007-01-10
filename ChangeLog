@@ -1,3 +1,10 @@
+Wed Jan 10 12:25:16 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+
+          At some point, a make depend was run in this build.  I have added
+          .depend.* to the find command to remove the dependency files.
+
 Tue Jan  9 14:13:43 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/remedynl/galadriel_host.xml:

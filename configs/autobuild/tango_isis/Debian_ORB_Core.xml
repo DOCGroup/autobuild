@@ -17,7 +17,7 @@
     <command name="process_listener"  options="localhost:32004" />
     <command name="log"               options="on" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers '(' -name 'GNUmakefile*' -o -name '.depend.*' ')' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
