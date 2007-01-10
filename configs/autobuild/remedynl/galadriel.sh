@@ -13,7 +13,7 @@ if !(test -e ${RUNCHECK}); then
     svn up
 
     $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_host.sh
-    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks61.sh
+    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks64.sh
     $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_vxworks61_ppc603.sh
 #    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_footprint.sh
 #    $HOME/ACE/autobuild/configs/autobuild/remedynl/galadriel_autoconf.sh

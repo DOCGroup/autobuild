@@ -20,8 +20,8 @@
         <environment name="WIND_JRE_HOME"         value="/home/build/WindRiver/jre/1.5.0_08/x86-linux2"/>
         <environment name="WIND_WRWB_PATH"         value="/home/build/WindRiver/workbench-2.6/wrwb/platform/eclipse"/>
         <environment name="WIND_WRSV_PATH"         value="/home/build/WindRiver/workbench-2.6/wrsv/4.9"/>
-        <environment name="WRSD_LICENSE_FILE"         value="/home/build/WindRiver/license"/>
         <environment name="WIND_SAMPLES"         value="/home/build/WindRiver/vxworks-6.4/target/usr/apps/samples:/home/build/WindRiver/vxworks-6.4/target/src/demo:/home/build/WindRiver/workbench-2.6/samples"/>
+        <environment name="WRSD_LICENSE_FILE"         value="/home/build/WindRiver/license"/>
         <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.4/host/resource/tcl"/>
         <environment name="WIND_PLATFORM" value="vxworks-6.4"/>
 
