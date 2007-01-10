@@ -304,6 +304,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/ defined in discarded section //) {
+    # Debion GCC compiler bug with templates/inline bits
+    $self->Output_Error ($s);
+    return;
+  }
+
   # Must be normal
   $self->Output_Normal ($s);
 }

@@ -1,3 +1,10 @@
+Wed Jan 10 13:50:16 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * common/parse_compiler_output.pm:
+
+          We currently have invisiable broken debian gcc builds.
+          Force error indication for the corresponding compiler output.
+
 Wed Jan 10 12:25:16 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
