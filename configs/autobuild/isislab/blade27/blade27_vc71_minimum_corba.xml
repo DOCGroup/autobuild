@@ -11,7 +11,6 @@
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\VC71\Minimum" />
         <variable name="name"     value="WinXP VS.NET 2003" />
-        <variable name="configs"  value="NO_LOADAVG" />
     </configuration>
 
     <command name="status"            options="on" />
