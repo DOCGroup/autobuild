@@ -11,7 +11,7 @@
         <environment name="STATIC"   value="1" />
 
 
-        <variable name="configs"      value="Win32 Borland STATIC Exceptions NO_LOADAVG" />
+        <variable name="configs"      value="Win32 Borland STATIC Exceptions" />
         <variable name="root"         value="C:\ACE\BCB2006sd\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2006sd\" />

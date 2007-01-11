@@ -8,7 +8,7 @@
         <environment name="XERCESCROOT"  value="C:\Docume~1\bczar\xerces"/>
         <environment name="RSYNC_RSH"    value="c:\Cygwin\bin\ssh" />
         <environment name="PATH"         value="C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\bin;C:\Docume~1\bczar\builds\versioned_namespace\ACE_wrappers\lib;C:\Docume~1\bczar\xerces\lib;c:\cygwin\bin" type="prefix" />
-        <variable name="configs"  value="Win32 Exceptions NO_LOADAVG" />
+        <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="C:\Docume~1\bczar\builds\versioned_namespace\" />
         <variable name="log_file" value="build.txt.txt" />
         <variable name="log_root" value="C:\Docume~1\bczar\builds\versioned_namespace\" />
