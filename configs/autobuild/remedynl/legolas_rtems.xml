@@ -13,7 +13,7 @@
         <variable name="root"     value="/nfs/legolas/ACE/rtems/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/nfs/legolas/ACE/rtems/" />
-        <variable name="configs"  value="Linux SSL rtems" />
+        <variable name="configs"  value="Linux SSL rtems ACE_FOR_TAO" />
 
     </configuration>
 
@@ -30,8 +30,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Starting %s test at %D\x22), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Ending %s test t %D\x22), program));\n#define TAO_HAS_COIOP 1\n#include \x22ace/config-rtems.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='HOST_ROOT:=/home/build/ACE/host/ACE_wrappers\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_rtems.x_g++.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ace_for_tao=1\nHOST_ROOT:=/home/build/ACE/host/ACE_wrappers\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_rtems.x_g++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1\nssl=0\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="i386-rtems-g++" />
