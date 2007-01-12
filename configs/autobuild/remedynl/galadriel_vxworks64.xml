@@ -1,11 +1,11 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-      <environment name="ACE_ROOT"        value="/nfs/galadriel/VxWorks62/ACE_wrappers"/>
-      <environment name="TAO_ROOT"        value="/nfs/galadriel/VxWorks62/ACE_wrappers/TAO"/>
-      <environment name="CIAO_ROOT"        value="/nfs/galadriel/VxWorks62/ACE_wrappers/TAO/CIAO"/>
+      <environment name="ACE_ROOT"        value="/nfs/galadriel/VxWorks64_x86/ACE_wrappers"/>
+      <environment name="TAO_ROOT"        value="/nfs/galadriel/VxWorks64_x86/ACE_wrappers/TAO"/>
+      <environment name="CIAO_ROOT"        value="/nfs/galadriel/VxWorks64_x86/ACE_wrappers/TAO/CIAO"/>
       <environment name="HOST_ROOT"        value="/home/build/ACE/VxWorks/host/ACE_wrappers"/>
-      <environment name="LD_LIBRARY_PATH" value="/nfs/galadriel/VxWorks62/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.4/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.6/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.6/x86-linux2/lib:/home/build/WindRiver/workbench-2.6/foundation/4.0.11/x86-linux2/lib:/usr/local/lib" />
+      <environment name="LD_LIBRARY_PATH" value="/nfs/galadriel/VxWorks64_x86/ACE_wrappers/lib:/home/build/WindRiver/vxworks-6.4/host/x86-linux2/lib:/home/build/WindRiver/scopetools-5.6/host/bin/x86-linux2:/home/build/WindRiver/workbench-2.6/x86-linux2/lib:/home/build/WindRiver/workbench-2.6/foundation/4.0.11/x86-linux2/lib:/usr/local/lib" />
         <environment name="PATH"            value="/home/build/WindRiver/vxworks-6.4/host/x86-linux2/bin:/home/build/WindRiver/scopetools-5.6/host/bin/x86-linux2:/home/build/WindRiver:/home/build/WindRiver/workbench-2.6/x86-linux2/bin:/home/build/WindRiver/workbench-2.6/foundation/4.0.11/x86-linux2/bin:/home/build/WindRiver/gnu/3.4.4-vxworks-6.4/x86-linux2/bin" type="prefix" />
         <environment name="WIND_HOME"         value="/home/build/WindRiver" />
         <environment name="WIND_BASE"         value="/home/build/WindRiver/vxworks-6.4"/>
@@ -25,14 +25,14 @@
         <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.4/host/resource/tcl"/>
         <environment name="WIND_PLATFORM" value="vxworks-6.4"/>
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.67"/>
-        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks62/ACE_wrappers"/>
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks64_x86/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_REBOOT_CMD" value="sysToMonitor 2"/>
         <!-- environment name="ACE_RUN_VX_NO_INITIAL_REBOOT" value="1"/ -->
 
-        <variable name="root"     value="/nfs/galadriel/VxWorks62/" />
+        <variable name="root"     value="/nfs/galadriel/VxWorks64_x86/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/nfs/galadriel/VxWorks62/" />
+        <variable name="log_root" value="/nfs/galadriel/VxWorks64_x86/" />
         <variable name="configs"  value="VxWorks_RTP Exceptions STATIC" />
 
     </configuration>
