@@ -7,6 +7,8 @@
         <environment name="CIAO_ROOT"        value="/home/bczar/builds/wchar/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/bczar/builds/utils/xerces/lib:/home/bczar/builds/wchar/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="XERCESCROOT"         value="/home/bczar/builds/utils/xerces" />
+        <environment name="ZLIB_ROOT"       value="/usr/" />
+        <environment name="ZZIP_ROOT"       value="/usr/" />
 
         <variable name="root"     value="/home/bczar/builds/wchar" />
         <variable name="log_file" value="build.txt" />
