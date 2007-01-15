@@ -144,7 +144,7 @@ all the OS/platform combinations CIAO is tested everyday.
      </build>
      <build>
         <name>FC4_GCC4</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/gcc4_static</url>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/gcc4</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
