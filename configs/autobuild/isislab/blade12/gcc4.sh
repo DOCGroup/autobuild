@@ -8,4 +8,4 @@ svn up
 
 # Run the build.
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-  $HOME/autobuild/configs/autobuild/isislab/blade12/gcc4_static.xml
+  $HOME/autobuild/configs/autobuild/isislab/blade12/gcc4.xml
