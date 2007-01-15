@@ -75,8 +75,6 @@
     <command name="make"              options="-k -C TAO/orbsvcs" />
     <command name="make"              options="-k -C TAO/CIAO" />
 
-    <command name="auto_run_tests" options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 21600000\x22" />
-
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
