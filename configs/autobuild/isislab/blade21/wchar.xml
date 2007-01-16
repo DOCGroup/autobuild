@@ -9,6 +9,7 @@
         <environment name="XERCESCROOT"         value="/home/bczar/builds/utils/xerces" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
+        <environment name="XERCESCROOT"     value="/usr/" />
 
         <variable name="root"     value="/home/bczar/builds/wchar" />
         <variable name="log_file" value="build.txt" />

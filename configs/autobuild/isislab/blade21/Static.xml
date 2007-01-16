@@ -8,6 +8,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/bczar/builds/Static/ACE_wrappers/lib:/usr/local/lib:." />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
+        <environment name="XERCESCROOT"     value="/usr/" />
 
         <variable name="root"     value="/home/bczar/builds/Static" />
         <variable name="log_file" value="build.txt" />

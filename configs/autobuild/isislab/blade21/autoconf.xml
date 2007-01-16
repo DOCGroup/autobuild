@@ -9,7 +9,7 @@
         <environment name="PATH"            value="/usr/local/bin" type="prefix" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
-
+        <environment name="XERCESCROOT"     value="/usr/" />
         <variable name="root"     value="/home/bczar/builds/autoconf" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bczar/builds/autoconf" />
