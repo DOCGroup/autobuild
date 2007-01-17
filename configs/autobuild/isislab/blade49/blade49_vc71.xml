@@ -11,7 +11,7 @@
         <environment name="ZZIP_ROOT"     value="C:\zzip" />
 
 
-        <variable name="configs"    value="Win32 VC71 ZLIB NO_TRANSPORT_CURRENT" />
+        <variable name="configs"    value="Win32 VC71 ZLIB DISABLE_TRANSPORT_CURRENT" />
         <variable name="root"       value="C:\ACE\VC71\" />
         <variable name="log_file"   value="log.txt" />
         <variable name="log_root"   value="C:\ACE\VC71\" />

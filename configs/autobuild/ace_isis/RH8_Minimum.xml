@@ -10,7 +10,7 @@
         <variable name="root"     value="/build/isisbuilds/Minimum" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/ace_Minimum" />
-        <variable name="configs"  value="Linux MINIMUM Exceptions NO_TRANSPORT_CURRENT" />
+        <variable name="configs"  value="Linux MINIMUM Exceptions DISABLE_TRANSPORT_CURRENT" />
 
     </configuration>
 
