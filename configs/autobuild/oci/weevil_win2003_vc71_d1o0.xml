@@ -4,7 +4,7 @@
 		<environment name="TAO_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\TAO" />
 		<environment name="MPC_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC" />
 		<environment name="SSL_ROOT" value="" />
-		<environment name="Path" value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\lib;" type="prefix" />
+		<environment name="Path" value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\lib;" type="prefix" />
 		<variable name="root" value="c:\tao_builds\taoadmin\doc" />
 		<variable name="project_root" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0" />
 		<variable name="log_file" value="doc_vc71_d1o0.txt" />
