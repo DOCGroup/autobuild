@@ -13,7 +13,7 @@
         <variable name="root"     value="/home/bczar/builds/ImplicitTemplates" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bczar/builds/ImplicitTemplates" />
-        <variable name="configs"  value="SSL Linux Exceptions ZLIB" />
+        <variable name="configs"  value="SSL Linux Exceptions ZLIB NO_TRANSPORT_CURRENT" />
 
     </configuration>
 

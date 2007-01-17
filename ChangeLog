@@ -1,3 +1,14 @@
+Wed Jan 17 15:47:25 UTC 2007  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/isislab/blade21/ImplicitTemplates.xml:
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml:
+
+          Added a NO_TRANSPORT_CURRENT to the list of test configurations
+          so that Transport::Current functionality can be disabled in
+          tests by modifying the corresponding test line in
+          tao_orb_tests.lst.
+
 Wed Jan 17 15:16:24 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
