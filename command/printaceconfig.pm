@@ -62,7 +62,7 @@ sub Run ($)
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
                                        "$svnurl/Middleware/trunk/CIAO/<file>?revision=HEAD"],
                        'DDS'       => ['ChangeLog', 'DDS/',
-                                       "$svnurl/Middleware/trunk/DDS/<file>?revision=HEAD"],
+                                       "$svnurl/DDS/trunk/<file>?revision=HEAD"],
                       );
     my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DDS');
 

@@ -1,3 +1,14 @@
+Wed Jan 17 22:40:00 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * command/printaceconfig.pm:
+        
+        Updated the default URL for the online repo browsing of DDS.  DDS is a
+        separate repo now in SVN (like MPC, unlike CIAO).  If someone who knows
+        more about the autobuild system than I reads this, the file I modified
+        also currently assumes that TAO lives at $ACE_ROOT/TAO, etc. when
+        attempting to find the VERSION file for TAO, CIAO, and DDS.  This
+        needs to be changed.
+
 Wed Jan 17 15:47:25 UTC 2007  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/autobuild/ace_isis/RH8_Minimum.xml:
