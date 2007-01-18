@@ -1,7 +1,17 @@
+Thu Jan 18 00:57:45 UTC 2007  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/autobuild/ace_isis/RH8_Minimum.xml:
+        * configs/autobuild/isislab/blade21/ImplicitTemplates.xml:
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml:
+
+          Added a "transport_current=0" to the contents of the
+          default.features file to disable the Transport::Current
+          functionality.
+
 Wed Jan 17 22:40:00 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * command/printaceconfig.pm:
-        
+
         Updated the default URL for the online repo browsing of DDS.  DDS is a
         separate repo now in SVN (like MPC, unlike CIAO).  If someone who knows
         more about the autobuild system than I reads this, the file I modified

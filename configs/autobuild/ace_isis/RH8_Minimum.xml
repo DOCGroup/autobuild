@@ -24,7 +24,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_TRANSPORT_CURRENT 0\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\nminimum_corba=1\nec_typed_events=0\ncidl=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='debug=0\nminimum_corba=1\nec_typed_events=0\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='debug=0\nminimum_corba=1\nec_typed_events=0\ncidl=1\ntransport_current=0\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
