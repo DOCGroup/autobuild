@@ -188,22 +188,31 @@ sub Run ($)
         print_file ("VERSION", 0);
     }
 
-    if ( -r "TAO/VERSION" ) {
+    foreach my $dir ("TAO", $ENV{TAO_ROOT}) {
+      if (defined $dir && -r "$dir/VERSION") {
         print "================ TAO VERSION ================\n";
 
-        print_file ("TAO/VERSION", 0);
+        print_file ("$dir/VERSION", 0);
+        last;
+      }
     }
 
-    if ( -r "TAO/CIAO/VERSION" ) {
+    foreach my $dir ("TAO/CIAO", $ENV{CIAO_ROOT}) {
+      if (defined $dir && -r "$dir/VERSION") {
         print "================ CIAO VERSION ================\n";
 
-        print_file ("TAO/CIAO/VERSION", 0);
+        print_file ("$dir/VERSION", 0);
+        last;
+      }
     }
 
-    if ( -r "TAO/DDS/VERSION" ) {
+    foreach my $dir ("TAO/DDS", $ENV{DDS_ROOT}) {
+      if (defined $dir && -r "$dir/VERSION") {
         print "================ DDS VERSION ================\n";
 
-        print_file ("TAO/DDS/VERSION", 0);
+        print_file ("$dir/VERSION", 0);
+        last;
+      }
     }
 
     chdir $current_dir;

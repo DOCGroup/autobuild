@@ -1,3 +1,12 @@
+Fri Jan 19 17:34:50 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/printaceconfig.pm:
+
+          Updated to search the default directories for the TAO, CIAO and
+          DDS VERSION files.  If those do not exist, use TAO_ROOT, CIAO_ROOT
+          and DDS_ROOT environment variables respectively to find the
+          VERSION files.
+
 Thu Jan 18 00:57:45 UTC 2007  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/autobuild/ace_isis/RH8_Minimum.xml:
