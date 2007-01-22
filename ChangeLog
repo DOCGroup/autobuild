@@ -1,3 +1,11 @@
+Mon Jan 22 18:28:14 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * matrix_database/TestPlatform.py:
+
+          Fixed a bug in the matrix generation where if a test failed and
+          auto_run_tests_finished wasn't found, the test would show up as a
+          blank test name.
+
 Fri Jan 19 17:34:50 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/printaceconfig.pm:

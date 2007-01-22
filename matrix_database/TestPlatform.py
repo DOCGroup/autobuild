@@ -320,10 +320,14 @@ class TestPlatform:
 				if compile_error.match(line) and self.compile == PASS:
 					self.compile = FAIL
 			if state==1 and test_start.match(line):
-		   		testname = (line.split())[1] 
+		   		testname = (line.split())[1]
+		   		orig_testname = testname
 				stop_strings = ["auto_run_tests:"]
 				test_type = self.ACEorTAOTest (testname)
 				line, fail, time, testname = self.scanForTestFailure (file, stop_strings)
+				if testname == "":
+					testname = orig_testname
+					fail = 1
 				self.addtest (testname, 0, time, fail)
 				if test_type == TAO_TEST:
 					self.TAOtotal = self.TAOtotal + 1
