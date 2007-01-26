@@ -4,7 +4,7 @@ PATH=/usr/local/bin:$PATH:.; export PATH
 #
 echo `date`: Copying ACE_wrappers ultra4 cross build
 cd $HOME/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic
-if [ -e .disable ]; then echo ".disable exists!"; exit; fi
+if [ -e .disable ]; then echo ".disable exists"; exit; fi
 rcp -r ultra4:ultra4/doc_scoreboard/lynxos_ppc_gcc322/standard/dynamic/ACE_wrappers .
 #
 # run TAO tests
