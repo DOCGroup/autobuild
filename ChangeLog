@@ -1,3 +1,11 @@
+Fri Jan 26 09:55:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests:
+
+          explicit check for local test .disable before rcp from build host
+
 Mon Jan 22 18:28:14 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * matrix_database/TestPlatform.py:
