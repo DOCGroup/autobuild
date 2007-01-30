@@ -1,3 +1,10 @@
+Tue Jan 30 20:15:55 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * autobuild_vars.py
+        
+          Utility that extracts environment variables from autobuild files
+          and prints them out in a manner appropriate for windows or *nix.
+
 Fri Jan 26 09:55:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
