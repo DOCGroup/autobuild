@@ -2,17 +2,15 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/nfs/legolas/ACE/QNXACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/nfs/legolas/ACE/QNXACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/nfs/legolas/ACE/QNXACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/nfs/legolas/ACE/QNXACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/rtems-4.6/bin" type="prefix" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/QNX/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/build/ACE/QNX/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/build/ACE/QNX/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/QNX/ACE_wrappers/lib" />
         <environment name="RSYNC_RSH"       value="ssh" />
-        <environment name="RTEMS_MAKEFILE_PATH" value="/home/build/QNXi386/i386-rtems/pc586" />
 
-        <variable name="root"     value="/nfs/legolas/ACE/QNX" />
+        <variable name="root"     value="/home/build/ACE/QNX" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/nfs/legolas/ACE/QNX" />
+        <variable name="log_root" value="/home/build/ACE/QNX" />
         <variable name="configs"  value="Linux SSL rtems ACE_FOR_TAO" />
 
     </configuration>
