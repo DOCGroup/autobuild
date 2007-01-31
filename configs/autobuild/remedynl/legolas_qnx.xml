@@ -30,7 +30,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-qnx-rtp-62x.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CCFLAGS += -V3.3.5,gcc_ntox86\nLDFLAGS += -V3.3.5,gcc_ntox86\nCC=qcc\nCXX=qcc\ninclude $(ACE_ROOT)/include/makeinclude/platform_qnx_rtp_gcc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC = ntox86-gcc-3.3.5\nCXX = ntox86-gcc-3.3.5\nLD = ntox86-gcc-3.3.5\ninclude $(ACE_ROOT)/include/makeinclude/platform_qnx_rtp_gcc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1\nssl=0\n'" />
 
     <command name="print_os_version" />
