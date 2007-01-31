@@ -1,0 +1,50 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/nfs/legolas/ACE/QNXACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/nfs/legolas/ACE/QNXACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/nfs/legolas/ACE/QNXACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/nfs/legolas/ACE/QNXACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/rtems-4.6/bin" type="prefix" />
+        <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="RTEMS_MAKEFILE_PATH" value="/home/build/QNXi386/i386-rtems/pc586" />
+
+        <variable name="root"     value="/nfs/legolas/ACE/QNX" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/nfs/legolas/ACE/QNX" />
+        <variable name="configs"  value="Linux SSL rtems ACE_FOR_TAO" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="log"               options="on" />
+
+    <command name="make"              options="-k realclean" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-qnx-rtp-62x.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CCFLAGS += -V3.3.5,gcc_ntox86\nLDFLAGS += -V3.3.5,gcc_ntox86\nCC=qcc\nCXX=qcc\ninclude $(ACE_ROOT)/include/makeinclude/platform_qnx_rtp_gcc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1\nssl=0\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="qcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+
+    <command name="make"              options="-k" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/qnx" />
+</autobuild>
