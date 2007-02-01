@@ -1,7 +1,13 @@
+Thu Feb  1 20:16:15 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/scoreboard/dds.xml:
+
+          Added five DDS builds hosted by OCI.
+
 Tue Jan 30 20:15:55 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_vars.py
-        
+
           Utility that extracts environment variables from autobuild files
           and prints them out in a manner appropriate for windows or *nix.
 
