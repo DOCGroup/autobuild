@@ -47,8 +47,8 @@ all the OS/platform combinations DDS is tested everyday.
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_sydney.phx_sunos59_gcc3.3.2_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_sydney.phx_sunos59_gcc3.3.2_d1o0</url>
+    <name>dds_beta_oslo.phx_linux_gcc3.4.4_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_beta_oslo.phx_linux_gcc3.4.4_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
