@@ -52,4 +52,5 @@ all the OS/platform combinations DDS is tested everyday.
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
+</group>
 </scoreboard>
