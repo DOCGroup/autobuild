@@ -4,9 +4,10 @@
 
         <environment name="ACE_ROOT"        value="/home/build/ACE/QNX/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/QNX/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/QNX/ACE_wrappers/TAO/CIAO"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/QNX/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/QNX/ACE_wrappers/lib" />
         <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="PATH"            value="/opt/qnx630/host/linux/x86/usr/bin:/opt/qnx630/host/linux/x86/bin:/opt/qnx630/host/linux/x86/sbin:/opt/qnx630/host/linux/x86/usr/sbin:/opt/qnx630/host/linux/x86/usr/photon/appbuilder:/home/build/bin:/usr/local/bin:/usr/bin:/usr/X11R6/bin:/bin:/usr/games:/opt/gnome/bin:/opt/kde3/bin:/usr/lib/jvm/jre/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/usr/lib/qt3/bin:/etc/qnx/bin" />
 
         <variable name="root"     value="/home/build/ACE/QNX" />
         <variable name="log_file" value="build.txt" />
@@ -28,7 +29,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-qnx-rtp-62x.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nCC = ntox86-gcc-3.3.5\nCXX = ntox86-gcc-3.3.5\nLD = ntox86-gcc-3.3.5\ninclude $(ACE_ROOT)/include/makeinclude/platform_qnx_rtp_gcc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='nto_version=630\ninline=0\nCC = ntox86-gcc-3.3.5\nCXX = ntox86-gcc-3.3.5\nLD = ntox86-gcc-3.3.5\ninclude $(ACE_ROOT)/include/makeinclude/platform_qnx_rtp_gcc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
     <command name="print_os_version" />
