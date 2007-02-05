@@ -9,6 +9,11 @@
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="PATH"            value="/opt/qnx630/host/linux/x86/usr/bin:/opt/qnx630/host/linux/x86/bin:/opt/qnx630/host/linux/x86/sbin:/opt/qnx630/host/linux/x86/usr/sbin:/opt/qnx630/host/linux/x86/usr/photon/appbuilder:/home/build/bin:/usr/local/bin:/usr/bin:/usr/X11R6/bin:/bin:/usr/games:/opt/gnome/bin:/opt/kde3/bin:/usr/lib/jvm/jre/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/usr/lib/qt3/bin:/etc/qnx/bin" />
 
+        <environment name="QNX_CONFIGURATION"            value="/etc/qnx" />
+        <environment name="QNX_HOST"            value="/opt/qnx630/host/linux/x86" />
+        <environment name="QNX_JAVAHOME"            value="/opt/qnx630/_jvm" />
+        <environment name="QNX_TARGET"            value="/opt/qnx630/target/qnx6" />
+
         <variable name="root"     value="/home/build/ACE/QNX" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/QNX" />
