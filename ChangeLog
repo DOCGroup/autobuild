@@ -1,3 +1,12 @@
+Tue Feb  6 21:17:05 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/ciao_refactor.xml:
+        * configs/autobuild/abbarach/ciao_refactor.sh:
+        * configs/autobuild/isislab/blade46/ciao_refactor.xml:
+        * configs/autobuild/isislab/blade46/ciao_refactor.bat:
+        
+          Added builds for ciao refactoring.
+
 Thu Feb  1 20:16:15 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/scoreboard/dds.xml:

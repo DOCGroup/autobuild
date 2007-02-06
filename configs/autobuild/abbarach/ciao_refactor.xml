@@ -1,0 +1,49 @@
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"          value="/build/isisbuilds/ciao_refactor/ACE_wrappers" />
+        <environment name="TAO_ROOT"          value="/build/isisbuilds/ciao_refactor/ACE_wrappers/TAO" />
+        <environment name="CIAO_ROOT"          value="/build/isisbuilds/ciao_refactor/ACE_wrappers/TAO/CIAO" />
+        <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/ciao_refactor/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib" />
+        <environment name="XERCESCROOT"       value="/project/abbarachtmp/wotte/utils/xerces" />
+        <environment name="SSL_ROOT"         value="/usr" />
+        <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.4" />
+
+        <variable name="root"     value="/build/isisbuilds/ciao_refactor/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/abbarach_ciao_refactor" />
+        <variable name="project_root" value="/build/isisbuilds/ciao_refactor/ACE_wrappers" />
+        <variable name="configs"  value="Darwin" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32003" />
+
+    <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/ciao_refactoring_branches/build_set ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-tiger.h\x22\n\n '" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_tiger.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\n\n '" />
+    <command name="print_os_version" />
+    <command name="check_compiler"    options="gcc" />
+    <command name="print_ace_config" />
+
+    <command name="generate_workspace" options="-type gnuace TAO/CIAO/CIAO_TAO.mwc" />
+
+    <command name="make"              options="-k realclean -C TAO/CIAO" />
+
+    <!-- Build CIAO -->
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Darwin/PowerPC/cidlc TAO/CIAO/bin" />
+    <command name="make"              options="-j 4 -k -C TAO/CIAO" />
+
+    <command name="auto_run_tests"    options="-C" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+
+    <command name="status"            options="off" />
+</autobuild>
