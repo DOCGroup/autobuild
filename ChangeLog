@@ -1,3 +1,10 @@
+Thu Feb  8 11:50:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Changed RHEL4_NoInline build name to non-conflicting
+          RHEL4-NoInline (the above was an ACE build by ISIS).
+
 Tue Feb  6 21:17:05 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/ciao_refactor.xml:
