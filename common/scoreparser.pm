@@ -28,6 +28,7 @@ sub Parse ($\@)
     my $self = shift;
     my $file = shift;
     my $data = shift;
+    my $order = shift;
 
     my $group_name;
     my %build_info;
@@ -110,6 +111,8 @@ sub Parse ($\@)
                     print STDERR "Error: $lineno: All builds must have a name\n";
                     return 0;
                 }
+
+                push(@$order, $build_info{NAME}) if(defined $order);
 
                 $build_info{GROUP} = $group_name;
 

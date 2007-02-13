@@ -52,6 +52,8 @@ my %builds;
 
 my %groups;
 
+my @ordered;
+
 my @nogroup;
 
 my $orange_default = 24;
@@ -89,7 +91,7 @@ sub load_build_list ($)
     print "Loading Build List\n" if ($verbose);
 
     my $parser = new ScoreboardParser;
-    $parser->Parse ($file, \%builds);
+    $parser->Parse ($file, \%builds, \@ordered);
 }
 
 ###############################################################################
@@ -709,7 +711,13 @@ sub update_html_table ($$@)
     # check to see if we are doing the "NONE" group
     if (!defined $name) {
         print "    Building table for ungrouped\n" if ($verbose);
-        @builds = sort @{$groups{$name}};
+        my %temp;
+        @temp{@nogroup} = ();
+        foreach my $build (@ordered) {
+            if(exists $temp{$build}) {
+                push(@builds, $build);
+            }
+        }
     }
     else {
         print "    Building table for group $name\n" if ($verbose);
