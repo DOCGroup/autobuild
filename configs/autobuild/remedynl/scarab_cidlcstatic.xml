@@ -17,7 +17,7 @@
       <variable name="project_root" value="C:\ACE\CIDLC\ACE_wrappers"/>
       <variable name="log_file" value="log.txt"/>
       <variable name="log_root" value="C:\ACE\CIDLC\"/>
-      <variable name="name" value="WinXP VS.NET 2003 - CIDLC Build" />
+      <variable name="name" value="WinXP VS.NET 2005 - CIDLC Build" />
    </configuration>
 
    <command name="status" options="on" />
@@ -41,6 +41,7 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
+    <command name="shell"             options="c:\cygwin\bin\scp ACE_wrappers\TAO\CIAO\bin\cidlc.exe bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32_vc8/cidlc.exe" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/CIDLC" />
 </autobuild>
