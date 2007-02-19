@@ -42,7 +42,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nstatic_libs=1\ninline=0\noptimize=0\nTOOL = gnu\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nCPU = PPC32\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.4.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
-    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="c++ppc" />

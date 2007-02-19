@@ -25,7 +25,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='zlib=1\nxerces=0\nboost=1\ninline=0\nCFLAGS+=-Wp64 -i-dynamic\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nboost=1\nxerces=0\nzlib=1\n'" />
 
-    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="icc" />

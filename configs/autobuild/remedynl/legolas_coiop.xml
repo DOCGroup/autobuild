@@ -33,7 +33,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_COIOP.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests/COIOP\n}\n'" />
 
-    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
