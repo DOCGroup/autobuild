@@ -1,3 +1,9 @@
+Mon Feb 19 21:54:02 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/tango_isis/CIDLC.xml
+        
+          Fixed environment setting.
+
 Thu Feb  8 11:50:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:

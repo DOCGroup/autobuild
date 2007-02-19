@@ -7,7 +7,7 @@
         <environment name="CIAO_ROOT"        value="/build/isisbuilds/CIDLC/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/CIDLC/ACE_wrappers/ace;/build/isisbuilds/CIDLC/ACE_wrappers/lib" />
         <environment name="BOOST_ROOT" value="/build/isisbuilds/boost" />
-        <environment name="BOOST_VERSION" value="1_33_1" />
+        <environment name="BOOST_VERSION" value="boost-1_33_1" />
         <environment name="BOOST_CFG" value="-gcc-1_33_1" />
 
         <variable name="root"     value="/build/isisbuilds/CIDLC/" />
