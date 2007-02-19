@@ -5,6 +5,7 @@
         <environment name="TAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\ACE\VC8\ACE_wrappers\TAO\CIAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
+        <environment name="SSL_ROOT"     value="c:\OpenSSL" />
         <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\vcpackages;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\Program Files\Microsoft Visual Studio 8\VC\vcpackages;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;C:\Perl\bin;c:\Cygwin\bin" type="prefix" />
         <environment name="INCLUDE"      value="c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\INCLUDE;c:\Program Files\Microsoft Visual Studio 8\VC\INCLUDE;c:\Program Files\Microsoft Visual Studio 8\VC\PlatformSDK\include;c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\include;" type="prefix" />
         <environment name="LIB"          value="c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\LIB;c:\Program Files\Microsoft Visual Studio 8\VC\LIB;c:\Program Files\Microsoft Visual Studio 8\VC\PlatformSDK\lib;c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\lib;LIBPATH=c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\LIB" type="prefix" />
@@ -13,7 +14,7 @@
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
 
-        <variable name="configs"  value="Win32 VC8 Exceptions" />
+        <variable name="configs"  value="Win32 VC8 Exceptions SSL" />
         <variable name="root"     value="C:\ACE\VC8\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VC8\" />
@@ -33,7 +34,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\ncidl=1\nipv6=1\nxerces=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\ncidl=1\nipv6=1\nxerces=0\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />

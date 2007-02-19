@@ -5,6 +5,7 @@
         <environment name="TAO_ROOT"     value="C:\ACE\BCB6ddu\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\ACE\BCB6ddu\ACE_wrappers\TAO\CIAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
+        <environment name="SSL_ROOT"     value="c:\OpenSSL" />
         <environment name="PATH"         value="C:\progra~1\borland\cbuild~1\bin;C:\progra~1\borland\cbuild~1\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6ddu\ACE_wrappers\bin;C:\ACE\BCB6ddu\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin" type="prefix" />
 
 	<environment name="DEBUG"    value="1" />
@@ -12,7 +13,7 @@
 	<environment name="BCBVER"   value="6" />
 	<environment name="UNICODE"  value="1" />
 
-        <variable name="configs"  value="Win32 Borland Exceptions" />
+        <variable name="configs"  value="Win32 Borland Exceptions SSL" />
         <variable name="root"     value="C:\ACE\BCB6ddu\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\BCB6ddu\" />
@@ -31,7 +32,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_USES_WCHAR\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='uses_wchar=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='uses_wchar=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="borland" />
