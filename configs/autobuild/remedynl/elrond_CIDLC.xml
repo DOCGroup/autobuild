@@ -39,7 +39,7 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
-    <command name="shell"             options="scp ACE_wrappers/TAO/CIAO/bin/cidlc bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite" />
+    <command name="shell"             options="scp -C ACE_wrappers/TAO/CIAO/bin/cidlc bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite" />
     <command name="shell"             options="scp ACE_wrappers/TAO/CIAO/bin/cidlc.bz2 bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/linux_CIDLC" />
 </autobuild>
