@@ -9,7 +9,7 @@
 
         <variable name="root"     value="/home/build/ACE/CIDLC/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="root"     value="/home/build/ACE/CIDLC/" />
+        <variable name="log_root" value="/home/build/ACE/CIDLC/" />
         <variable name="configs"  value="Linux Exceptions" />
     </configuration>
 
