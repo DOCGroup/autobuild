@@ -5,11 +5,12 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/gcc41/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/gcc41/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gcc41/ACE_wrappers/lib:/usr/local/lib" />
+        <environment name="SSL_ROOT"        value="/usr"/>
 
         <variable name="root"     value="/home/build/ACE/gcc41/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/gcc41/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL" />
 
     </configuration>
 
@@ -22,7 +23,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_DUMP\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='zlib=1\nboost=1\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nboost=1\nzlib=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nboost=1\nzlib=1\nssl=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-rite/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
