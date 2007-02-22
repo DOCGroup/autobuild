@@ -1,3 +1,11 @@
+Thu Feb 22 16:32:01 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml
+        * configs/autobuild/abbarach/CIDLC.xml
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml
+        
+          Explicitly set PATH to resolve svn binary.
+
 Mon Feb 19 21:54:02 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/CIDLC.xml

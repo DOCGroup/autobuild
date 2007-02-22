@@ -4,7 +4,8 @@
         <environment name="ACE_ROOT"          value="/build/isisbuilds/gcc4/ACE_wrappers" />
         <environment name="TAO_ROOT"          value="/build/isisbuilds/gcc4/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"          value="/build/isisbuilds/gcc4/ACE_wrappers/TAO/CIAO" />
-        <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/gcc4/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib" />
+        <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/gcc4/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib:/opt/local/lib" />
+        <environment name="PATH"              value="/opt/local/bin:/usr/bin/:/bin" />
         <environment name="XERCESCROOT"       value="/project/abbarachtmp/wotte/utils/xerces" />
         <environment name="SSL_ROOT"         value="/usr" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.4" />
