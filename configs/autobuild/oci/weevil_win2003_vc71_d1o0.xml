@@ -8,14 +8,12 @@
 		<variable name="root" value="c:\tao_builds\taoadmin\doc" />
 		<variable name="project_root" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0" />
 		<variable name="log_file" value="doc_vc71_d1o0.txt" />
-		<variable name="log_root" value="c:\tao_builds\taoadmin\logs\doc_vc71_d1o0" />
+		<variable name="log_root" value="w:\autobuild_logs\weevil_win2003_vc71_d1o0" />
 		<variable name="build_name" value="doc_vc71_d1o0" />
 	</configuration>
 	<command name="process_listener" options="localhost:32001" />
-	<command name="shell" options="plink -batch -2 -l taoadmin xi.ociweb.com mkdir -p /home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
 	<command name="status" options="on" />
 	<!-- <command name="print_status" options="Setup:Windows Build" /> -->
-	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
 	<command name="log" options="ON" />
 	<command name="svn" options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
@@ -25,7 +23,6 @@
 	<command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO" />
 	<command name="print_ace_config" />
 	<!-- <command name="print_status" options="Compile:Windows Build" /> -->
-	<command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
 	<command name="vc7make" options="/rebuild debug TAO/TAO_ACE.sln" />
 	<command name="vc7make" options="/rebuild debug tests/tests.sln" />
 	<command name="vc7make" options="/rebuild debug examples/examples.sln" />
@@ -37,10 +34,8 @@
 	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/examples/examples.sln" />
 	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/performance-tests/perf.sln" />
 	<!-- <command name="print_status" options="Test:Windows Build" /> -->
-        <!-- <command name="anonymous_shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" /> -->
 	<command name="auto_run_tests" options="-a -t -o -s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG" />
 	<command name="log" options="OFF" />
 	<command name="process_logs" options="clean move prettify index" />
 	<command name="status" options="off" />
-	<command name="shell" options="pscp -2 -l taoadmin c:\tao_builds\taoadmin\logs\doc_vc71_d1o0\*.* xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_weevil_win2003_vc71_d1o0" />
 </autobuild>
