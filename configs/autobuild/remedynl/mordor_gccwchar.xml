@@ -1,17 +1,17 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/aCCwchar/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/aCCwchar/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/aCCwchar/ACE_wrappers/lib" />
-        <environment name="SHLIB_PATH"      value="/home/build/ACE/aCCwchar/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/usr/local/bin:/opt/aCC/bin/" type="prefix" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/gccwchar/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/build/ACE/gccwchar/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gccwchar/ACE_wrappers/lib" />
+        <environment name="SHLIB_PATH"      value="/home/build/ACE/gccwchar/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/hp-gcc/bin:/usr/local/bin" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>
         <environment name="RSYNC_RSH"       value="ssh" />
 
-        <variable name="root"     value="/home/build/ACE/aCCwchar/" />
+        <variable name="root"     value="/home/build/ACE/gccwchar/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/aCCwchar/" />
+        <variable name="log_root" value="/home/build/ACE/gccwchar/" />
         <variable name="configs"  value="Exceptions SSL" />
         <variable name="make_program"  value="gmake" />
 
@@ -27,8 +27,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_WCHAR\n#include \x22ace/config-hpux-11.00.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nuses_wchar=1\nipv6=1\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_gcc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nuses_wchar=1\nipv6=1\ncidl=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="aCC" />
@@ -46,5 +46,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="scp -C *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/HPUX_IA64_aCCwchar" />
+    <command name="shell"             options="scp -C *.txt *.html johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/HPUX_IA64_gccwchar" />
 </autobuild>
