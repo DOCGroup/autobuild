@@ -1,3 +1,10 @@
+Wed Feb 28 23:26:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/xsc.sh
+        * configs/autobuild/abbarach/XSC.xml
+        
+          Static build for XSC.
+
 Thu Feb 22 16:32:01 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/Mac_OSX_Tiger.xml

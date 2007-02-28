@@ -1,0 +1,45 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="XSC_ROOT"        value="/build/isisbuilds/XSC/XSC" />
+        <environment name="MPC_ROOT"        value="/build/isisbuilds/XSC/MPC"/>
+        <environment name="DYLD_LIBRARY_PATH" value="/opt/local/lib" />
+        <environment name="PATH"              value="/opt/local/bin:/usr/bin/:/bin" />
+        <environment name="BOOST_ROOT"        value="/build/isisbuilds/XSC/boost" />
+        <environment name="BOOST_VERSION"        value="boost-1_33_1" />
+        <environment name="BOOST_CFG"        value="" />
+
+        <variable name="root"     value="/build/isisbuilds/XSC/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/abbarach_XSC" />
+        <variable name="configs"  value="Darwin/PowerPC Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32001" />
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/XSC/trunk XSC" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC" />
+
+    <command name="shell"             options="find XSC -name 'Makefile*' -exec rm '{}' ';'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+
+    <!-- This builds everthing exclude TAO directory-->
+    <command name="generate_workspace" options="-type make -features boost=1,xerces=1,xsc=1 XSC.mwc -value_template xerceslib=xerces-static -value_template pure_libs+=-framework\ CoreServices" />
+
+    <command name="make"              options="-k realclean " />
+    <command name="make"              options="-k -j 4 " />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+
+    <command name="shell"             options="bzip2 -k -f XSC/bin/xsc-binary" />
+    <command name="shell"             options="/bin/mv XSC/bin/xsc-binary.bz2 /web/users/isisbuilds/XSC/darwin/" />
+    <command name="shell"             options="/bin/mv XSC/bin/xsc-binary /web/users/isisbuilds/XSC/darwin/" />
+
+</autobuild>
