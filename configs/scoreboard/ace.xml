@@ -132,6 +132,12 @@ all the OS/platform combinations ACE is tested everyday.
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>HP-UX_11iv2_IA64_gcc_wchar</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_gccwchar/</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 
 <group>
