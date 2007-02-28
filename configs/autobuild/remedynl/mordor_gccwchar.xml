@@ -31,7 +31,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nuses_wchar=1\nipv6=1\ncidl=1\nssl=1\n'" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="aCC" />
+    <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
