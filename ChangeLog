@@ -1,3 +1,13 @@
+Wed Feb 28 23:47:22 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/XSC.xml:
+
+          Corrected project_root, workspace generation. 
+        
+        * configs/autobuild/abbarach/CIDLC.xml:
+        
+          Corrected boost settings.
+        
 Wed Feb 28 23:26:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/xsc.sh

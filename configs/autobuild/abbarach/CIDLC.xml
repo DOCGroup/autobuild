@@ -8,8 +8,8 @@
         <environment name="DYLD_LIBRARY_PATH" value="/build/isisbuilds/CIDLC/ACE_wrappers/ace;/build/isisbuilds/CIDLC/ACE_wrappers/lib:/opt/local/lib" />
         <environment name="PATH"              value="/opt/local/bin:/usr/bin/:/bin" />
         <environment name="BOOST_ROOT"        value="/build/isisbuilds/CIDLC/boost" />
-        <environment name="BOOST_VERSION"        value="boost-1_32" />
-        <environment name="BOOST_CFG"        value="-gcc" />
+        <environment name="BOOST_VERSION"        value="boost-1_33_1" />
+        <environment name="BOOST_CFG"        value="" />
         <environment name="UTILITY_ROOT"      value="/build/isisbuilds/Utility" />
 
         <variable name="root"     value="/build/isisbuilds/CIDLC/" />

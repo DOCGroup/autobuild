@@ -10,6 +10,7 @@
         <environment name="BOOST_VERSION"        value="boost-1_33_1" />
         <environment name="BOOST_CFG"        value="" />
 
+        <variable name="project_root" value="/build/isisbuilds/XSC/XSC" />
         <variable name="root"     value="/build/isisbuilds/XSC/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/abbarach_XSC" />
@@ -23,13 +24,13 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/XSC/trunk XSC" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC" />
 
-    <command name="shell"             options="find XSC -name 'Makefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find XSC -not -path '*svn*' -name 'Makefile*' -exec rm '{}' ';'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
 
     <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="-type make -features boost=1,xerces=1,xsc=1 XSC.mwc -value_template xerceslib=xerces-static -value_template pure_libs+=-framework\ CoreServices" />
+    <command name="generate_workspace" options=" -type make -features boost=1,xerces=1,xsc=1 XSC.mwc -value_template xerceslib=xerces-static -value_project pure_libs+=-framework\ CoreServices" />
 
     <command name="make"              options="-k realclean " />
     <command name="make"              options="-k -j 4 " />
