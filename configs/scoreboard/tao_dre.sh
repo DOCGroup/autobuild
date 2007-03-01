@@ -21,7 +21,7 @@ svn up
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/dds.xml -o dds.html -r dds.rss 2>&1  &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/cosmic.xml -o cosmic.html 2>&1 &
-
+/usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/xsc.xml -o xsc.html -r xsc.rss 2>&1  &
 # Generate the test matrices!
 testmatrix/update_scoreboard.sh 2>&1 &
 

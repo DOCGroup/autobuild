@@ -1,0 +1,31 @@
+<!-- $Id$ -->
+<scoreboard>
+<preamble>
+<center><h1>XSC Beta/Release Candidate Scoreboard</h1></center>
+<hr/>
+This is the XSC virtual scoreboard for the beta or release. It shows
+all the OS/platform combinations CIAO is tested everyday.
+<hr/>
+</preamble>
+
+<group>
+  <name>Linux</name>
+  <build>
+    <name>FC6_XSC</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_XSC</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+  <name>MacOS</name>
+  <build>
+    <name>Tiger_GCC4_XSC</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_XSC</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
+
+</scoreboard>

@@ -1,0 +1,43 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="XSC_ROOT"        value="/build/isisbuilds/XSC/XSC" />
+        <environment name="MPC_ROOT"        value="/build/isisbuilds/XSC/MPC"/>
+        <environment name="BOOST_ROOT"        value="/build/isisbuilds/boost" />
+        <environment name="BOOST_VERSION"        value="boost-1_33_1" />
+        <environment name="BOOST_CFG"        value="-gcc" />
+
+        <variable name="project_root" value="/build/isisbuilds/XSC/XSC" />
+        <variable name="root"     value="/build/isisbuilds/XSC/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_XSC" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32001" />
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/XSC/trunk XSC" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC" />
+
+    <command name="shell"             options="find XSC -not -path '*svn*' -name 'Makefile*' -exec rm '{}' ';'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+
+    <!-- This builds everthing exclude TAO directory-->
+    <command name="generate_workspace" options=" -type make -features boost=1,xerces=1,xsc=1 XSC.mwc -value_template xerceslib=xerces-static " />
+
+    <command name="make"              options="-k realclean " />
+    <command name="make"              options="-k -j 4 " />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+
+    <command name="shell"             options="bzip2 -k -f XSC/bin/xsc-binary" />
+    <command name="shell"             options="/bin/mv XSC/bin/xsc-binary.bz2 /web/users/isisbuilds/XSC/gnu-linux/" />
+    <command name="shell"             options="/bin/mv XSC/bin/xsc-binary /web/users/isisbuilds/XSC/gnu-linux/" />
+
+</autobuild>
