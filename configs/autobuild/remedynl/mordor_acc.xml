@@ -6,13 +6,12 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/aCC/ACE_wrappers/lib" />
         <environment name="SHLIB_PATH"      value="/home/build/ACE/aCC/ACE_wrappers/lib" />
         <environment name="PATH"            value="/usr/local/bin:/opt/aCC/bin/" type="prefix" />
-        <environment name="SSL_ROOT"        value="/usr"/>
         <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/home/build/ACE/aCC/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/aCC/" />
-        <variable name="configs"  value="Exceptions SSL" />
+        <variable name="configs"  value="Exceptions" />
         <variable name="make_program"  value="gmake" />
 
     </configuration>
@@ -27,8 +26,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#include \x22ace/config-hpux-11.00.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nipv6=1\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\ncidl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="aCC" />
