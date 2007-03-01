@@ -1,3 +1,12 @@
+Thu Mar  1 03:25:04 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/blade21/driver.sh
+        * configs/autobuild/isislab/blade21/driver_implicittemplates.sh
+        
+          Renamed driver.sh to driver_implicittemplates.sh, and added
+          a new driver.sh to run all builds sequentially, to avoid
+          resource exhaustion on the blade.
+
 Thu Mar  1 00:50:20 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/tao_dre.sh
