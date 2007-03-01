@@ -1,3 +1,11 @@
+Thu Mar  1 18:40:00 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
+        * configs/scoreboard/dds.xml:
+
+          Added a DDS build that uses CORBA/e Compact and built_in_topics=0 in
+          an attempt to minimize footprint.
+
 Thu Mar  1 16:13:31 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * command/svn.pm:
@@ -9,7 +17,7 @@ Thu Mar  1 03:25:04 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/blade21/driver.sh
         * configs/autobuild/isislab/blade21/driver_implicittemplates.sh
-        
+
           Renamed driver.sh to driver_implicittemplates.sh, and added
           a new driver.sh to run all builds sequentially, to avoid
           resource exhaustion on the blade.
@@ -19,29 +27,29 @@ Thu Mar  1 00:50:20 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/scoreboard/tao_dre.sh
         * configs/scoreboard/xsc.xml
         * configs/scoreboard/index.xml
-        
-          Created XSC scoreboard. 
-        
+
+          Created XSC scoreboard.
+
         * configs/autobuild/balar_isis/driver_xsc.sh
         * configs/autobuild/balar_isis/XSC.xml
 
           Linux XSC build.
-        
+
 Wed Feb 28 23:47:22 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/XSC.xml:
 
-          Corrected project_root, workspace generation. 
-        
+          Corrected project_root, workspace generation.
+
         * configs/autobuild/abbarach/CIDLC.xml:
-        
+
           Corrected boost settings.
-        
+
 Wed Feb 28 23:26:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/xsc.sh
         * configs/autobuild/abbarach/XSC.xml
-        
+
           Static build for XSC.
 
 Thu Feb 22 16:32:01 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>

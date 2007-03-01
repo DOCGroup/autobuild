@@ -26,6 +26,12 @@ all the OS/platform combinations DDS is tested everyday.
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
+  <build>
+    <name>dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
+    <build_sponsor>OCI</build_sponsor>
+    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+  </build>
 </group>
 
 <group>
