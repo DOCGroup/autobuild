@@ -4,7 +4,7 @@
 <center><h1>TAO Test Scoreboard</h1></center>
 <hr>
 This is the TAO scoreboard where the test builds are placed. It shows
-all the OS/platform combinations in which TAO is tested everyday to
+all the OS/platform combinations on which TAO is tested everyday to
 decide the migration paths and strategies.
 <hr>
 </preamble>

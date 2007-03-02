@@ -1,3 +1,19 @@
+Fri Mar  2 19:46:04 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/scoreboard/ace.xml:
+        * configs/scoreboard/ciao.xml:
+        * configs/scoreboard/cosmic.xml:
+        * configs/scoreboard/dds.xml:
+        * configs/scoreboard/facet-cvs.xml:
+        * configs/scoreboard/facet-oep.xml:
+        * configs/scoreboard/jRate.xml:
+        * configs/scoreboard/javart.xml:
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+        * configs/scoreboard/xsc.xml:
+
+          Minor grammar correction.
+
 Thu Mar  1 18:40:00 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:

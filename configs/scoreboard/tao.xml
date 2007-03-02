@@ -4,7 +4,7 @@
 <center><h1>TAO Beta/Release Candidate Scoreboard</h1></center>
 <hr/>
 This is the TAO virtual scoreboard for the beta or release. It shows
-all the OS/platform combinations TAO is tested everyday.
+all the OS/platform combinations on which TAO is tested everyday.
 <hr/>
 </preamble>
 
@@ -235,6 +235,12 @@ all the OS/platform combinations TAO is tested everyday.
 
 <group>
    <name>Solaris</name>
+   <build>
+      <name>Solaris9_Studio11_Debug</name>
+      <url>http://scoreboard.ociweb.com/OCIscoreboard/oci_doc_fly_sunos59_suncc58_d1o0</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
    <build>
       <name>Solaris10_Studio11_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10</url>
