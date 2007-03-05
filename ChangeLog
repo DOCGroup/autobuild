@@ -1,3 +1,12 @@
+Mon Mar  5 10:30:04 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.bat:
+
+          Display start/finish time/date in cmd window for ease of
+          build stall detection.
+
 Fri Mar  2 19:46:04 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/scoreboard/ace.xml:
