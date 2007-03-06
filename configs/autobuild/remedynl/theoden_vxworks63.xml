@@ -1,0 +1,57 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="C:/ACE/VxWorks/Vx63rtp/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="C:/ACE/VxWorks/Vx63rtp/ACE_wrappers/TAO"/>
+        <environment name="HOST_ROOT"       value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
+        <environment name="PATH"            value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
+        <environment name="WIND_BASE"       value="C:/Tornado2.2"/>
+        <environment name="WIND_HOST_TYPE"  value="x86-win32"/>
+        <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
+        <environment name="WIND_BASE"       value="C:\WindRiver\vxworks-6.3" />
+        <environment name="WIND_GNU_PATH"       value="C:\WindRiver\gnu\3.4.4-vxworks-6.3" />
+        <environment name="WIND_HOME"       value="C:\WindRiver" />
+        <environment name="WIND_HOST_TYPE"       value="x86-win32" />
+        <environment name="WIND_JRE_HOME"       value="C:\WindRiver\jre\1.4.2\x86-win32" />
+        <environment name="WIND_PLATFORM"       value="vxworks-6.3" />
+        <environment name="WIND_TOOLS"       value="C:\WindRiver\workbench-2.5" />
+        <environment name="WIND_USR"       value="C:\WindRiver\vxworks-6.3\target\usr" />
+
+        <variable name="root"     value="C:\ACE\VxWorks\Vx63rtp\" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="C:\ACE\VxWorks\Vx63rtp\" />
+        <variable name="configs"  value="VxWorks STATIC" />
+        <variable name="svn_program"    value="c:\cygwin\bin\svn" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32011" />
+    <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name GNUmakefile* -exec \x22rm {}\x22 \x22;\x22" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CPU=PENTIUM\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="c++pentium" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C ace" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/63win" />
+</autobuild>
