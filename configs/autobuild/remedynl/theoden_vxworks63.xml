@@ -2,9 +2,9 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="C:/ACE/VxWorks/Vx63rtp/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="C:/ACE/VxWorks/Vx63rtp/ACE_wrappers/TAO"/>
-        <environment name="HOST_ROOT"       value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
+        <environment name="ACE_ROOT"        value="\ACE\VxWorks\Vx63rtp\ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="\ACE\VxWorks\Vx63rtp\ACE_wrappers\TAO"/>
+        <environment name="HOST_ROOT"       value="\ACE\VxWorks\CB6sr\ACE_wrappers"/>
         <environment name="PATH"            value="C:\WindRiver\workbench-2.5\x86-win32\bin;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
         <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="WIND_BASE"       value="C:\WindRiver\vxworks-6.3" />
@@ -32,7 +32,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ACE_ROOT:=$(subst \\,/,$(ACE_ROOT))\nPWD=$(subst \\,/,$(shell pwd))\nstatic_libs_only=1\nmingw32=1\nvxworks_ntbuild=0\nCPU=PENTIUM\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ACE_ROOT:=$(subst \,/,$(ACE_ROOT))\nPWD=$(subst \,/,$(shell pwd))\nstatic_libs_only=1\nmingw32=1\nvxworks_ntbuild=0\nCPU=PENTIUM\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
 
     <command name="print_os_version" />
