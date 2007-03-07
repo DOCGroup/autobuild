@@ -31,6 +31,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/CIAO/tools/IDL3_to_IDL2\n}\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="borland" />
@@ -39,16 +40,14 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude tests,examples,ASNMP,Kokyu,netsvcs,protocols,performance-tests,websvcs,apps/JAWS,apps/JAWS2,apps/JAWS3,TAO/CIAO,TAO/examples,TAO/orbsvcs,TAO/performance-tests,TAO/interop-tests,TAO/docs,TAO/utils -type borland" />
+    <command name="generate_workspace" options="TAO_Host.mwc  -type borland" />
 
     <command name="make"              options=" -i -f Makefile.bor" />
-
-    <!-- command name="auto_run_tests"    options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" / -->
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_SimPC_Host" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/cb6sr_host" />
 </autobuild>
 
