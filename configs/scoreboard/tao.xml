@@ -22,12 +22,6 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-    <build>
-        <name>RHEL4_Static_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
      <build>
       <name>RHEL4_ICC90_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_ICC/</url>
