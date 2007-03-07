@@ -1,3 +1,10 @@
+Wed Mar  7 14:56:46 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/scoreboard/dds.xml:
+
+          Fixed a copy-paste error that had one build referring to the URL for
+          a different build.
+
 Tue Mar  6 09:10:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
