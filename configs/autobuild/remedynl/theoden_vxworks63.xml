@@ -44,9 +44,9 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_DAnCE.mwc -type gnuace" />
 
-    <command name="make"              options="-k -C ace" />
+    <command name="make"              options="-k" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
