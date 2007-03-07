@@ -35,7 +35,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.3.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ACE_ROOT:=$(subst \,/,$(ACE_ROOT))\nPWD=$(subst \,/,$(shell pwd))\nstatic_libs_only=1\nmingw32=1\nvxworks_ntbuild=0\nCPU=PENTIUM\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nCPU=PENTIUM\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDL_DEP := $(TAO_IDL)\nTAO_IDL3_TO_IDL2 := $(HOST_ROOT)/bin/tao_idl3_to_idl2\nTAO_IDL3_TO_IDL2_DEP := $(TAO_IDL3_TO_IDL2)\nCIDLC := $(ACE_ROOT)/TAO/CIAO/bin/cidlc\nCIDLC_DEP := $(CIDLC)\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.3.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='fl_reactor=0\ntk_reactor=1\n'" />
 
     <command name="print_os_version" />
