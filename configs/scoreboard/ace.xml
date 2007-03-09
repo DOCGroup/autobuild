@@ -188,12 +188,6 @@ all the OS/platform combinations on which ACE is tested everyday.
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
-   <build>
-     <name>VxWorks6.4_PENTIUM2_Diab_Shared_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64shdiab/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
 </group>
 
 <group>
