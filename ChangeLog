@@ -1,3 +1,14 @@
+Fri Mar  9 21:01:40 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
+
+          Renamed this file to:
+        * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_d1o0.xml:
+
+        * configs/scoreboard/tao.xml:
+
+          Updated scoreboard XML to match.
+
 Wed Mar  7 14:56:46 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/scoreboard/dds.xml:

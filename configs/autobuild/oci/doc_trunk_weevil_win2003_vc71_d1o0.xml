@@ -8,7 +8,7 @@
 		<variable name="root" value="c:\tao_builds\taoadmin\doc" />
 		<variable name="project_root" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0" />
 		<variable name="log_file" value="doc_vc71_d1o0.txt" />
-		<variable name="log_root" value="w:\autobuild_logs\weevil_win2003_vc71_d1o0" />
+		<variable name="log_root" value="w:\autobuild_logs\doc_trunk_weevil_win2003_vc71_d1o0" />
 		<variable name="build_name" value="doc_vc71_d1o0" />
 	</configuration>
 	<command name="process_listener" options="localhost:32001" />
