@@ -37,8 +37,8 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Solaris</name>
   <build>
-    <name>dds_doc_sydney.phx_sunos59_gcc3.3.2_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_sydney.phx_sunos59_gcc3.3.2_d1o0</url>
+    <name>dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>

@@ -1,3 +1,18 @@
+Fri Mar  9 22:23:07 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+
+          Updated config.h with a setting needed for the DDS build below...
+
+        * configs/autobuild/oci/dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+
+          New-style DDS build -- this build is only responsible for DDS, it
+          uses the ACE+TAO build above for ACE_ROOT and TAO_ROOT.
+
+        * configs/scoreboard/dds.xml:
+
+          Updated scoreboard to include the above DDS build.
+
 Fri Mar  9 21:01:40 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/weevil_win2003_vc71_d1o0.xml:
