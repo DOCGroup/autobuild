@@ -1,3 +1,9 @@
+Sat Mar 10 16:41:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/corona/driver_gcc34.sh
+        
+          Reset the svn:executable bit.
+
 Fri Mar  9 22:23:07 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
