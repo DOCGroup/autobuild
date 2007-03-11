@@ -35,12 +35,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL_Static_GCC-3.4.2</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
       <name>FC4_x86_IPv6</name>
       <url>http://www.dre.vanderbilt.edu/~qualcomm/FC4_x86_IPv6</url>
       <build_sponsor>Qualcomm</build_sponsor>
