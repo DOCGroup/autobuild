@@ -35,7 +35,7 @@ sub handle_compiler_output_line($) {
 
 
   # Check for the subsection indicator
-  if ($s =~ m/^Auto_compiling (.*)/ || $s =~ /Entering directory (.*)/) {
+  if ($s =~ m/^------ Build started: Project: (.*), Config.*/ || $s =~ /Entering directory (.*)/ || $s =~ /nmake.exe\" \/f Makefile.(.*) CFG.*/) {
     $self->Output_Subsection ($1);
     return;
   }
