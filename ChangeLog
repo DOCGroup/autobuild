@@ -1,3 +1,11 @@
+Mon Mar 12 23:29:43 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * common/parse_compiler_output.pm
+        
+          Take into account spaces and tabs at the beginning of cl.exe invocations
+          supporting:
+          Mon Mar 12 16:57:20 UTC 2007  Steve Huston  <shuston@riverace.com>
+
 Mon Mar 12 20:52:13 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:

@@ -46,7 +46,7 @@ sub handle_compiler_output_line($) {
   # The NMAKE output on Windows includes the complete command line; if there
   # are options with the word "warning" or "error" these get flagged as
   # errors. So if it's the command line, just output as normal.
-  if ($s =~ m/^cl.exe/) {
+  if ($s =~ m/^[ \t]*cl.exe/) {
     $self->Output_Normal ($s);
     return;
   }
