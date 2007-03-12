@@ -43,6 +43,14 @@ sub handle_compiler_output_line($) {
 
   # Check out the line to figure out whether it is an error or not
 
+  # The NMAKE output on Windows includes the complete command line; if there
+  # are options with the word "warning" or "error" these get flagged as
+  # errors. So if it's the command line, just output as normal.
+  if ($s =~ m/^cl.exe/) {
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/^Error scanning file .* for dependencies/) {
     # EVC 4 complains about non-existent files during dependency
     # generation.  This is not an actual error.

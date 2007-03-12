@@ -1,3 +1,9 @@
+Mon Mar 12 16:57:20 UTC 2007  Steve Huston  <shuston@riverace.com>
+
+        * common/parse_compiler_output.pm: Add logic to look for NMAKE command
+          line display and output it as normal. Else, command line options that
+          include "error" or "warning" get flagged as scoreboard problems.
+
 Mon Mar 12 16:14:24 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
