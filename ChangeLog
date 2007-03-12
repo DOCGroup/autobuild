@@ -1,3 +1,9 @@
+Mon Mar 12 16:14:24 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * common/parse_compiler_output.pm
+        
+          Added logic for borland subsections.
+
 Mon Mar 12 13:43:31 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
