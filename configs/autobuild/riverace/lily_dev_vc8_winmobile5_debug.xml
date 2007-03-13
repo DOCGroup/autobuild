@@ -35,7 +35,7 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type vc8 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers -feature_file c:\ace\ACE_wrappers\local.features -value_template platforms='\x22Pocket PC 2003 (ARMV4)\x22' -value_template platforms+='\x22Smartphone 2003 (ARMV4)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Smartphone SDK (ARMV4I)\x22' -name_modifier *_WinCE" />
+    <command name="generate_workspace" options="-type vc8 -recurse -exclude Kokyu -relative ACE_ROOT=C:\ace\ACE_wrappers -feature_file c:\ace\ACE_wrappers\local.features -value_template platforms='\x22Pocket PC 2003 (ARMV4)\x22' -value_template platforms+='\x22Smartphone 2003 (ARMV4)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_template platforms+='\x22Windows Mobile 5.0 Smartphone SDK (ARMV4I)\x22' -name_modifier *_WinCE -value_template BufferSecurityCheck=\x22false\x22" />
     <command name="vc7make"           options="ACE_WinCE.sln /build \x22Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22" />
 
     <!-- command name="auto_run_tests"    options="-a" / -->
