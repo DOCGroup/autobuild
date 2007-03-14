@@ -1,18 +1,15 @@
 <autobuild>
   <!-- The command used to create this file (on sydney) was -->
-  <!-- nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler gcc -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -logdir /www-docs/autobuild_logs -outdir . -->
-  <!-- Changes made after this file was generated: -->
-  <!-- 1. Added #define ACE_HAS_SOCK_BUF_SIZE_MAX\n to config.h, this was from the DDS build that will now be based on this build. -->
-  <!-- 2. Added /usr/local/gcc-3.3.2/lib to LD_LIBRARY_PATH for svn. -->
+  <!-- nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler gcc -configh "#define ACE_HAS_SOCK_BUF_SIZE_MAX" -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -outdir mitza -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/CIAO"/>
     <environment name="CVSROOT"         value=":pserver:taoadmin@cvs.ociweb.com:/cvs"/>
     <environment name="CVS_RSH"         value="ssh"/>
     <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/DDS"/>
-    <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.3.2/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/lib"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/local/gcc-3.3.2/lib:/usr/sfw/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/lib"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
-    <environment name="PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin"/>
+    <environment name="PATH"            value="/usr/local/gcc-3.3.2/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO"/>
     <variable    name="build_name"      value="gcc_d1o0"/>
     <variable    name="creator"         value="mitza@ociweb.com"/>
@@ -29,9 +26,9 @@
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
-  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc_d1o0/ace/config.h output='#define ACE_HAS_SOCK_BUF_SIZE_MAX\n#include \x22ace/config-sunos5.9.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc_d1o0/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n#define ACE_HAS_SOCK_BUF_SIZE_MAX\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/local/gcc-3.3.2/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/lib\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/local/gcc-3.3.2/lib:/usr/sfw/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/lib\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/usr/local/gcc-3.3.2/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
