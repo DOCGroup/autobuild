@@ -120,7 +120,7 @@ sub handle_compiler_output_line($) {
     $self->Output_Warning ($s);
     return;
   }
-  
+
   if ($s =~ m/not be built due to the following missing/) {
     # Indicates that something is not properly configured - ie,
     # incorrect depenancies in the mpc files, default.featres setting,
@@ -128,9 +128,15 @@ sub handle_compiler_output_line($) {
       $self->Output_Warning ($s);
       return;
   }
-  
+
   if ($s =~ m/Rule line too long/) {
     # Can be given by Borland make
+    $self->Output_Error ($s);
+    return;
+  }
+
+  if ($s =~ m/is not recognized as an internal or external command/) {
+    # Something can't be found that needs to get executed
     $self->Output_Error ($s);
     return;
   }
