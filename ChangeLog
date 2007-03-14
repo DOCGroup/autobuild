@@ -1,3 +1,9 @@
+Wed Mar 14 16:03:17 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * command/vc7make.pm:
+
+          Allow '.' as a character in the relative path to the solution file.
+
 Wed Mar 14 16:21:32 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/isislab/blade47/CORBAecompact.xml:
@@ -14,7 +20,7 @@ Wed Mar 14 15:10:44 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/tango_isis/Debian_Core.xml
         * configs/autobuild/tango_isis/Debian_ORB_Core.xml
         * configs/autobuild/tango_isis/CIDLC.xml
-        
+
           Added appropriate environment for new xerces installation.
 
 Tue Mar 13 16:20:43 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
