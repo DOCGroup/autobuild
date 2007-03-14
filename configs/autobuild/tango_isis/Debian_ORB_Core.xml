@@ -5,7 +5,8 @@
         <environment name="ACE_ROOT"        value="/build/isisbuilds/ORB_Core/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/isisbuilds/ORB_Core/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/build/isisbuilds/ORB_Core/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/ORB_Core/ACE_wrappers/lib" />
+        <environment name="XERCESCROOT"        value="/build/isisbuilds/xerces"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/ORB_Core/ACE_wrappers/lib:$XERCESCROOT/lib" />
 
         <variable name="root"     value="/build/isisbuilds/ORB_Core/" />
         <variable name="log_file" value="build.txt" />
