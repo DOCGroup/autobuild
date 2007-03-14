@@ -13,7 +13,7 @@
         <variable name="root"     value="/home/bczar/builds/CORBAecompact/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/bczar/builds/CORBAecompact/" />
-        <variable name="configs"  value="Linux CORBA_E_COMPACT" />
+        <variable name="configs"  value="Linux CORBA_E_COMPACT DISABLE_INTERCEPTORS" />
     </configuration>
 
     <command name="status"            options="on" />

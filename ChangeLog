@@ -1,3 +1,11 @@
+Wed Mar 14 16:21:32 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/isislab/blade47/CORBAecompact.xml:
+        * configs/autobuild/isislab/blade47/CORBAemicro.xml:
+
+          These builds disable interceptors, so add the DISABLE_INTERCEPTORS
+          config to the configs variable.
+
 Wed Mar 14 15:10:44 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/Full.xml
