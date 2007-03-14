@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/gccwchar/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gccwchar/ACE_wrappers/lib" />
         <environment name="SHLIB_PATH"      value="/home/build/ACE/gccwchar/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/hp-gcc/bin:/usr/local/bin" type="prefix" />
+        <environment name="PATH"            value="/usr/local/bin" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>
         <environment name="RSYNC_RSH"       value="ssh" />
 
