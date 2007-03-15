@@ -1,3 +1,8 @@
+Thu Mar 15 07:58:17 UTC 2007  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * scoreboard.pl:
+          Don't add a sponsor column when no sponsor is defined
+
 Wed Mar 14 16:03:17 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * command/vc7make.pm:

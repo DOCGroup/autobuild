@@ -704,6 +704,7 @@ sub update_html_table ($$@)
     my $havehtml = 0;
     my $havesnapshot = 0;
     my $havehistory = 0;
+    my $havesponsor = 0;
     my @builds;
 
     ### Table
@@ -741,6 +742,9 @@ sub update_html_table ($$@)
 	if (defined $builds{$buildname}->{HTML}) {
 	    $havehtml = 1;
 	}
+	if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
+	    $havesponsor = 1;
+	}
 	if (defined $builds{$buildname}->{SNAPSHOT}) {
 	    $havesnapshot = 1;
 	}
@@ -756,7 +760,7 @@ sub update_html_table ($$@)
     print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th><th>Failures</th>";
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
-    print $indexhtml "<th>Build <br>Sponsor</th>";
+    print $indexhtml "<th>Build <br>Sponsor</th>" if ($havesponsor);
     print $indexhtml "<th>History</th>" if ($havehistory);
     # New entries
     print $indexhtml "<th>PDF</th>" if ($havepdf);
@@ -974,16 +978,18 @@ sub update_html_table ($$@)
 		}
 	}
 
-        print $indexhtml "<td>";
-        print $indexhtml "<a href=\"";
-        if (defined $builds{$buildname}->{BUILD_SPONSOR_URL}) {
-               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."";
-        }
-        print $indexhtml "\" target=\"_blank\">";
-        if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
-               print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."";
-        }
-        print $indexhtml "</a>";
+	if ($havesponsor) {
+		print $indexhtml "<td>";
+		print $indexhtml "<a href=\"";
+		if (defined $builds{$buildname}->{BUILD_SPONSOR_URL}) {
+			print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."";
+		}
+		print $indexhtml "\" target=\"_blank\">";
+		if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
+			print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."";
+		}
+		print $indexhtml "</a>";
+	}
 
         if ($havehistory) {
             print $indexhtml "<td>";
