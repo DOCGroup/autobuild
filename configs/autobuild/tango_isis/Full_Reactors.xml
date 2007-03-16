@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"        value="/build/isisbuilds/Full_Reactors/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/build/isisbuilds/Full_Reactors/ACE_wrappers/TAO/CIAO"/>
         <environment name="XERCESCROOT"        value="/build/isisbuilds/xerces"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Full_Reactors/ACE_wrappers/lib:$XERCESCROOT/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/Full_Reactors/ACE_wrappers/lib:/build/isisbuilds/xerces/lib" />
 	<!-- Debian specific QTDIR -->
         <environment name="QTDIR"           value="/usr/share/qt3"/>
 

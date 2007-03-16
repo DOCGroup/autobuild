@@ -10,7 +10,7 @@
         <environment name="PATH"         value="C:\bczar\builds\noinline\ACE_wrappers\bin;C:\bczar\builds\noinline\ACE_wrappers\lib;C:\bczar\builds\noinline\ACE_wrappers\TAO\CIAO\bin;c:\cygwin\bin"
                                          type="prefix" />
 
-        <variable name="configs"         value="Win32 VC71 No Inline" />
+        <variable name="configs"         value="Win32 VC71 No Inline RT_CAPABLE" />
         <variable name="name"            value="WinXP CIAO No Inline" />
         <variable name="root"            value="C:\bczar\builds\noinline\" />
         <variable name="project_root"    value="C:\bczar\builds\noinline\ACE_wrappers" />

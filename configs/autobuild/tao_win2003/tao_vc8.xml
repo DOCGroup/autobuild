@@ -12,7 +12,7 @@
         <environment name="ZLIB_ROOT"       value="C:\zlib" />
         <environment name="ZZIP_ROOT"       value="C:\zzip" />
 
-        <variable name="configs"  value="Win32 VC8 Exceptions ZLIB" />
+        <variable name="configs"  value="Win32 VC8 Exceptions ZLIB RT_CAPABLE" />
         <variable name="root"     value="C:\ACE\VC8\" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\ACE\VC8\" />

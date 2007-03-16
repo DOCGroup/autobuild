@@ -1,3 +1,24 @@
+Fri Mar 16 16:21:05 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/tango_isis/Full.xml
+        * configs/autobuild/tango_isis/SingleThreaded.xml
+        * configs/autobuild/tango_isis/Full_Reactors.xml
+        * configs/autobuild/tango_isis/Debian_Core.xml
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml
+        
+          Fully expanded ld_library_path.
+        
+        * configs/autobuild/isislab/blade17/blade17_vc71.xml
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml
+        * configs/autobuild/isislab/blade10/ciao_no_inline.xml
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml
+        * configs/autobuild/tao_win2003/tao_vc8.xml
+        * configs/autobuild/merengue/merengue_vc71.xml
+        
+          Added RT_CAPABLE to the configs.
+
 Fri Mar 16 14:01:42 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
