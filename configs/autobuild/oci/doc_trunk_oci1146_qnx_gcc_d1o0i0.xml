@@ -50,7 +50,6 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/.clean_binaries clean_binaries"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
@@ -68,7 +67,6 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
@@ -83,7 +81,6 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
 
   <!-- Post build -->
   <command name="auto_run_tests"  options="-a"/>
