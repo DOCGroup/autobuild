@@ -1,3 +1,9 @@
+Sat Mar 17 07:06:53 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/scoreboard/tao.xml
+        
+          Removed spaces from the QNX build name.
+
 Fri Mar 16 19:38:25 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/oci_doc_fly_sunos59_suncc58_d1o0.xml:

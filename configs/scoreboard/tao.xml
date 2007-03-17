@@ -445,7 +445,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>QNX</name>
    <build>
-      <name>QNX 6.3.0 x86 - gcc 3.3.5</name>
+      <name>QNX_6.3.0_x86-gcc_3.3.5</name>
       <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_trunk_oci1146_qnx_gcc_d1o0i0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
