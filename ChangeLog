@@ -1,3 +1,9 @@
+Mon Mar 19 19:50:55 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/oci_doc_fly_sunos59_suncc58_d1o0.xml:
+
+          Added missing directories to be built.
+
 Mon Mar 19 18:59:06 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_d1o0.xml:
