@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on fly) was -->
-  <!-- ./buildxml.pl -base /tao_builds/taoadmin/doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler suncc58 -creator elliottc -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=/home/taoadmin/mpc/doc/MPC -outdir . -->
+  <!-- ./buildxml.pl -base /tao_builds/taoadmin/doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler suncc58 -creator elliottc -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=/home/taoadmin/mpc/doc/MPC -outdir /home/taoadmin/autobuild/configs/autobuild/oci -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/TAO/CIAO"/>
