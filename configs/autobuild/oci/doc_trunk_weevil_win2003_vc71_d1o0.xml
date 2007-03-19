@@ -1,10 +1,15 @@
 <autobuild>
+        <!-- The command that could be used to create this file (on weevil) is -->
+        <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." -compiler vc71 -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -->
+        <!-- It would then require the following modifications -->
+        <!--   Replace vc71_d1o0 with doc_vc71_d1o0 -->
+        <!--   Replace /build debug with /rebuild debug -->
 	<configuration>
 		<environment name="ACE_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0" />
 		<environment name="TAO_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\TAO" />
 		<environment name="MPC_ROOT" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC" />
 		<environment name="SSL_ROOT" value="" />
-		<environment name="Path" value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\lib;" type="prefix" />
+		<environment name="PATH" value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\lib;" type="prefix" />
 		<variable name="root" value="c:\tao_builds\taoadmin\doc" />
 		<variable name="project_root" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0" />
 		<variable name="log_file" value="doc_vc71_d1o0.txt" />
@@ -13,18 +18,23 @@
 	</configuration>
 	<command name="process_listener" options="localhost:32001" />
 	<command name="status" options="on" />
-	<!-- <command name="print_status" options="Setup:Windows Build" /> -->
+
 	<command name="log" options="ON" />
 	<command name="svn" options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
 	<command name="clone_build_tree" />
 	<command name="file_manipulation" options="type=update file=ACE_wrappers/build/doc_vc71_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace\config-win32.h\x22\n'" />
 	<command name="file_manipulation" options="type=create file=ACE_wrappers/build/doc_vc71_d1o0/bin/MakeProjectCreator/config/default.features output='ssl=0\nrmcast=1\nqos=1\n'" />
-	<command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO" />
+        <command name="file_manipulation" options="type=create file=ACE_wrappers/build/doc_vc71_d1o0/setenv.cmd output='set ACE_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\nset CIAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs.ociweb.com:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\TAO\DDS\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\lib;%PATH%\nset TAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\doc_vc71_d1o0\TAO\n'"/>
+        <command name="print_os_version"/>
 	<command name="print_ace_config" />
-	<!-- <command name="print_status" options="Compile:Windows Build" /> -->
+        <command name="check_compiler"     options="msvc"/>
+	<command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO" />
+
 	<command name="vc7make" options="/rebuild debug TAO/TAO_ACE.sln" />
 	<command name="vc7make" options="/rebuild debug tests/tests.sln" />
+        <command name="vc7make" options="/rebuild debug protocols/protocols.sln"/>
+        <command name="vc7make" options="/rebuild debug protocols/tests/tests.sln"/>
 	<command name="vc7make" options="/rebuild debug examples/examples.sln" />
 	<command name="vc7make" options="/rebuild debug performance-tests/perf.sln" />
 	<command name="vc7make" options="/rebuild debug TAO/tests/tests.sln" />
@@ -33,7 +43,7 @@
 	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/tests/tests.sln" />
 	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/examples/examples.sln" />
 	<command name="vc7make" options="/rebuild debug TAO/orbsvcs/performance-tests/perf.sln" />
-	<!-- <command name="print_status" options="Test:Windows Build" /> -->
+
 	<command name="auto_run_tests" options="-a -t -o -s \x22c:\tao_builds\taoadmin\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG" />
 	<command name="log" options="OFF" />
 	<command name="process_logs" options="clean move prettify index" />
