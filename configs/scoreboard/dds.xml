@@ -45,6 +45,16 @@ all the OS/platform combinations on which DDS is tested everyday.
 </group>
 
 <group>
+  <name>QNX</name>
+  <build>
+    <name>dds_doc_trunk_oci1146_qnx_gcc_d1o0i0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1146_qnx_gcc_d1o0i0</url>
+    <build_sponsor>OCI</build_sponsor>
+    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+  </build>
+</group>
+
+<group>
   <name>ACE+TAO From Latest Bug-Fix-Only Beta (x.5.1)</name>
   <build>
     <name>dds_beta_chico.phx_winxp_vc71_d1o0</name>
