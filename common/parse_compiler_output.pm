@@ -36,7 +36,7 @@ sub handle_compiler_output_line($) {
 
   # Check for the subsection indicator
   # VC71 || GNU make || nmake || borland make
-  if ($s =~ m/^------ Build started: Project: (.*), Config.*/ || $s =~ /Entering directory (.*)/ || $s =~ /nmake.exe\" \/f Makefile.(.*) CFG.*/ || $s =~ /make .* -f (.*).bor .*/) {
+  if ($s =~ m/^------ Build started: Project: (.*), Config.*/ || $s =~ /GNUmakefile: (.*) MAKEFLAGS.*/ || $s =~ /nmake.exe\" \/f Makefile.(.*) CFG.*/ || $s =~ /make .* -f (.*).bor .*/) {
     $self->Output_Subsection ($1);
     return;
   }
