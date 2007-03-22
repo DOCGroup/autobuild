@@ -1,7 +1,13 @@
+Thu Mar 22 18:16:14 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Added a limited WinCE 5.0 build.
+
 Thu Mar 22 15:39:41 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
-        
+
           Changed logic for gnu make to detect subsections for more version
           of make.
 
