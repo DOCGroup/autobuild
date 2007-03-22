@@ -1,3 +1,50 @@
+Thu Mar 22 20:12:12 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * pantera_isis/Code_Coverage.xml
+        * pantera_isis/gcc-4.0.xml
+        * corona/SunOS10_x86_GCC34.xml
+        * corona/SunOS10_x86_Studio9.xml
+        * corona/CIDLC.xml
+        * abbarach/ciao_refactor.xml
+        * abbarach/Mac_OSX_Tiger.xml
+        * abbarach/CIDLC.xml
+        * isislab/blade55/isis_valgrind.xml
+        * isislab/blade47/NoInt_NoEx.xml
+        * isislab/blade47/CORBAecompact.xml
+        * isislab/blade47/CORBAemicro.xml
+        * isislab/blade47/NoIIOP.xml
+        * isislab/blade56/footprint_corba_e_compact.xml
+        * isislab/blade56/footprint_regular.xml
+        * isislab/blade56/footprint_corba_e_micro.xml
+        * isislab/blade12/gcc4.xml
+        * isislab/blade12/ace_for_tao.xml
+        * isislab/blade12/versioned_namespace.xml
+        * isislab/blade12/no_iiop.xml
+        * isislab/blade21/IPV6.xml
+        * isislab/blade21/wchar.xml
+        * isislab/blade21/Static.xml
+        * isislab/blade21/DynamicHash.xml
+        * isislab/blade21/ImplicitTemplates.xml
+        * isislab/blade51/ciao_core.xml
+        * tango_isis/Full.xml
+        * tango_isis/SingleThreaded.xml
+        * tango_isis/Full_Reactors.xml
+        * tango_isis/Debian_Core.xml
+        * tango_isis/Debian_ORB_Core.xml
+        * tango_isis/CIDLC.xml
+        * balar_isis/IPV6.xml
+        * balar_isis/wchar.xml
+        * balar_isis/Static.xml
+        * balar_isis/DynamicHash.xml
+        * balar_isis/ImplicitTemplates.xml
+        * sparc/SunOS10_Studio9.xml
+        * sparc/SunOS10_GCC402.xml
+        * sparc/CIDLC.xml
+        * cosmic/Mac_OSX_Tiger.xml
+        
+          Changed gnuace workspace type to gnuautobuild to collate
+          compilation output.
+
 Thu Mar 22 18:16:14 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/scoreboard/tao.xml:

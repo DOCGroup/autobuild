@@ -32,7 +32,7 @@
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type gnuace TAO/CIAO/CIAO_TAO.mwc" />
+    <command name="generate_workspace" options="-type gnuautobuild TAO/CIAO/CIAO_TAO.mwc" />
 
     <command name="make"              options="-k realclean -C TAO/CIAO" />
 

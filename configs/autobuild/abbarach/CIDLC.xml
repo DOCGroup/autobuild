@@ -35,7 +35,7 @@
     <command name="print_ace_config" />
 
     <!-- This builds everthing exclude TAO directory-->
-    <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC -type gnuace CIDLC.mwc" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC -type gnuautobuild CIDLC.mwc" />
 
     <command name="make"              options="-k realclean -C TAO/CIAO/CIDLC" />
     <command name="make"              options="-k -j 4 -C TAO/CIAO/CIDLC" />

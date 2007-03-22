@@ -31,9 +31,9 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO,build.mwc -type gnuace" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO,build.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuautobuild" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,CCF -type gnuautobuild" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -C TAO realclean" />
     <command name="make"              options="-k -C TAO/CIAO realclean" />

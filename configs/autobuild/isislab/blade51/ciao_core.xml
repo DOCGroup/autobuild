@@ -41,7 +41,7 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type gnuautobuild" />
 
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 

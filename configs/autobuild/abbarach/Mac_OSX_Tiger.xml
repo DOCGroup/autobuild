@@ -33,7 +33,7 @@
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k realclean" />
 
