@@ -45,8 +45,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=."/>
 
   <!-- Post build -->
-<!-- One of the tests kills the machine -->
-<!--  <command name="auto_run_tests"  options="dir=."/> -->
+  <command name="auto_run_tests"  options="dir=."/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="clean move prettify index"/>
   <command name="status"          options="off"/>
