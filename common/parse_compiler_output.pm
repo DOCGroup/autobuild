@@ -110,6 +110,12 @@ sub handle_compiler_output_line($) {
     $self->Output_Normal ($s);
     return;
   }
+  
+  if ($s =~ m/qt.\/include\/private\/qucom/) {
+      # We don't particularly care about warnings in QT code.
+      $self->Output_Normal ($s);
+      return;
+  }
 
   if ($s =~ m/ is deprecated. use /) {
     # Among these are glibc warnings to stop using the deprecated
