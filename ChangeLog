@@ -1,7 +1,13 @@
+Fri Mar 23 19:58:59 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/oci_doc_fly_sunos59_suncc58_d1o0.xml:
+
+          Fixed an invalid log_root.
+
 Fri Mar 23 17:03:17 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
-         
+
           Disable warnings coming from QT code.
 
 Thu Mar 22 20:12:12 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
@@ -47,7 +53,7 @@ Thu Mar 22 20:12:12 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
         * sparc/SunOS10_GCC402.xml
         * sparc/CIDLC.xml
         * cosmic/Mac_OSX_Tiger.xml
-        
+
           Changed gnuace workspace type to gnuautobuild to collate
           compilation output.
 

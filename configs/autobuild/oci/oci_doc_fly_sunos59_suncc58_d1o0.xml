@@ -14,7 +14,7 @@
     <variable    name="build_name"      value="suncc58_d1o0"/>
     <variable    name="creator"         value="elliottc"/>
     <variable    name="log_file"        value="suncc58_d1o0.log"/>
-    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_fly_sunos59_suncc58_d1o0"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/oci_doc_fly_sunos59_suncc58_d1o0"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0"/>
     <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
   </configuration>
