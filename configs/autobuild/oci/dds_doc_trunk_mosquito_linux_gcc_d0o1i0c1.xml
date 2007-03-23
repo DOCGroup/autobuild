@@ -41,7 +41,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=."/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config Linux CORBA_E_COMPACT"/>
+  <command name="auto_run_tests"  options="dir=. -Config Linux -Config CORBA_E_COMPACT"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="clean move prettify index"/>
   <command name="status"          options="off"/>
