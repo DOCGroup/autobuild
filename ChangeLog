@@ -1,3 +1,15 @@
+Mon Mar 26 01:44:40 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml
+        * configs/autobuild/corona/CIDLC.xml
+        * configs/autobuild/sparc/SunOS10_Studio9.xml
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        * configs/autobuild/sparc/CIDLC.xml
+        
+          Reverted back to gnuace, solaris gmake can't handle the
+          gnuautobuild files.
+
 Fri Mar 23 19:58:59 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/oci_doc_fly_sunos59_suncc58_d1o0.xml:
