@@ -50,11 +50,17 @@ sub handle_compiler_output_line($) {
     $self->Output_Normal ($s);
     return;
   }
+
   if ($s =~ m/^[ \t]*icl.exe/) {
     $self->Output_Normal ($s);
     return;
   }
-
+  
+  if ($s =~ m/^[ \t]*rc.exe/) {
+    $self->Output_Normal ($s);
+    return;
+  }
+  
   if ($s =~ m/^Error scanning file .* for dependencies/) {
     # EVC 4 complains about non-existent files during dependency
     # generation.  This is not an actual error.

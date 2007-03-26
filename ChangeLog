@@ -1,3 +1,10 @@
+Mon Mar 26 19:24:07 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * common/parse_compiler_output.pm
+        
+          Added rc.exe to list of nmake output exclusions, removed special
+          case for EM3, since we don't support that compiler any more.
+
 Mon Mar 26 01:44:40 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml
