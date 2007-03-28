@@ -9,7 +9,6 @@
         <environment name="BOOST_ROOT"        value="/usr/local" />
         <environment name="BOOST_VERSION"     value="boost-1_33" />
         <environment name="BOOST_CFG"     value="-gcc" />
-        <environment name="UTILITY_ROOT"      value="/usr/local/include/Utility" />
         <environment name="PATH"              value="/usr/local/bin:/usr/sfw/bin" type="prefix" />
 
         <variable name="root"         value="/build/builds/bczar/CIDLC/" />

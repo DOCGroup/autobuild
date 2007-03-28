@@ -8,7 +8,6 @@
         <environment name="BOOST_ROOT"        value="/usr/local" />
         <environment name="BOOST_VERSION"     value="boost-1_32" />
         <environment name="BOOST_CFG"         value="-gcc-1_32" />
-        <environment name="UTILITY_ROOT"      value="/usr/local/include/Utility" />
 
         <variable name="root"         value="/build/isisbuilds/CIDLC/" />
         <variable name="log_file"     value="build.txt" />

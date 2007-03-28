@@ -1,3 +1,11 @@
+Wed Mar 28 04:10:46 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/corona/CIDLC.xml
+        * configs/autobuild/sparc/CIDLC.xml
+        
+          Removed utility environment, so the build will use the version
+          of utility distributed with ACE.
+
 Mon Mar 26 19:24:07 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
