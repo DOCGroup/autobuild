@@ -1,15 +1,21 @@
+Wed Mar 28 18:56:32 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/doc_head_hornet_wince5_vc8_d1o0.xml:
+
+          Added the WinCE 5 build.
+
 Wed Mar 28 04:10:46 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/CIDLC.xml
         * configs/autobuild/sparc/CIDLC.xml
-        
+
           Removed utility environment, so the build will use the version
           of utility distributed with ACE.
 
 Mon Mar 26 19:24:07 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * common/parse_compiler_output.pm
-        
+
           Added rc.exe to list of nmake output exclusions, removed special
           case for EM3, since we don't support that compiler any more.
 
@@ -21,7 +27,7 @@ Mon Mar 26 01:44:40 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/sparc/SunOS10_Studio9.xml
         * configs/autobuild/sparc/SunOS10_GCC402.xml
         * configs/autobuild/sparc/CIDLC.xml
-        
+
           Reverted back to gnuace, solaris gmake can't handle the
           gnuautobuild files.
 
