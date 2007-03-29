@@ -799,11 +799,18 @@ sub update_html_table ($$@)
                 $red = $builds{$buildname}->{RED_TIME};
             }
 
-            print $indexhtml '<td bgcolor=';
-            print $indexhtml timestamp_color ($basename, $orange, $red);
-            print $indexhtml '>',decode_timestamp ($basename);
-
             my $color;
+
+            if (defined $builds{$buildname}->{STATUS} &&
+                $builds{$buildname}->{STATUS} =~ /Disabled\r?/) {
+                $color = 'Gray';
+            }
+            else {
+                $color = timestamp_color ($basename, $orange, $red);
+            }
+            print $indexhtml '<td bgcolor=';
+            print $indexhtml $color;
+            print $indexhtml '>',decode_timestamp ($basename);
 
             print $indexhtml '<td>';
             if (defined $builds{$buildname}->{CONFIG_SECTION}) {

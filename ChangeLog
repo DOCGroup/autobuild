@@ -1,3 +1,10 @@
+Thu Mar 29 14:53:20 UTC 2007  Rich Seibel <seibel_r@ociweb.com>
+
+        * scoreboard.pl:
+
+          Changed the color of the "Last Finished" date to gray
+          if the status is "Disabled".
+
 Wed Mar 28 18:56:32 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/doc_head_hornet_wince5_vc8_d1o0.xml:
