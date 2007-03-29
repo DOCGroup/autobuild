@@ -1,3 +1,8 @@
+Thu Mar 29 23:22:10 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml: Don't checkout the whole
+          MPC repository; checkout just the trunk.
+
 Thu Mar 29 23:01:28 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml:
