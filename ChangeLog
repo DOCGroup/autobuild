@@ -1,3 +1,10 @@
+Thu Mar 29 23:01:28 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml:
+        * configs/autobuild/equus/equus_driver.bat:
+
+          Updated the CoSMIC nightly build to use SVN.
+
 Thu Mar 29 15:49:47 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * command/svn.pm:

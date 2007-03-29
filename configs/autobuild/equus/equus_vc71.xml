@@ -1,20 +1,20 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\TAO\CIAO"/>
+        <environment name="ACE_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\ACE" />
+        <environment name="TAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\TAO"/>
+        <environment name="MPC_ROOT"     value="C:\bczar\CoSMIC_VC71_Debug\MPC"/>
         <environment name="CVS_RSH"      value="plink.exe" />
         <environment name="XERCESCROOT"   value="C:\Tools\xerces-c-2_7_0-win32-vc7"/>
         <environment name="BOOST_ROOT"    value="C:\Tools\Boost"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
         <environment name="BOOST_CFG"     value="-vc71-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
-        <environment name="UDM_PATH" 	  value="C:\Program Files\ISIS\UDM" />  
-	<environment name="COSMIC_ROOT"  value="C:\bczar\CoSMIC_VC71_Debug\CoSMIC" />
-	<environment name="CUTS_ROOT"  value="C:\bczar\CoSMIC_VC71_Debug\CoSMIC\CUTS" />
-        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Tools\Boost\lib;C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\lib;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\bin;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\CUTS\bin;C:\Tools\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\Putty;C:\Tools\bin;C:\Tools\Perl\bin;C:\Program Files\Subversion\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin" />
-        <variable name="configs"  value="Win32 VC71 Exceptions" />
+        <environment name="UDM_PATH" 	  value="C:\Program Files\ISIS\UDM" />
+        <environment name="COSMIC_ROOT"  value="C:\bczar\CoSMIC_VC71_Debug\CoSMIC" />
+        <environment name="ZLIB_ROOT" value="C:\Tools\GnuWin32" />
+        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Tools\Boost\lib;C:\bczar\CoSMIC_VC71_Debug\ACE_wrappers\lib;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\bin;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\CUTS\bin;C:\Tools\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\Putty;C:\Tools\bin;C:\Tools\Perl\bin;C:\Program Files\Subversion\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Tools\GnuWin32\bin" />
+        <variable name="configs"  value="Win32 VC71 ZLIB Exceptions" />
         <variable name="root"     value="C:\bczar\CoSMIC_VC71_Debug" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\bczar\CoSMIC_VC71_Debug" />
@@ -22,18 +22,19 @@
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
-    
+
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %ACE_ROOT% -Debug -k -clean" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k -clean" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %CUTS_ROOT% -Debug -k -clean" />
     <command name="log"               options="ON" />
 
-    <command name="cvs"               options="-d :ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository -z3 -q checkout -P ACE_wrappers" />
-    <command name="cvs"               options="-d :ext:isisbuilds@cvs.doc.wustl.edu:/project/cvs-repository -z3 -q checkout -P ACE_MPC"/>
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO TAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC MPC"/>
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk CoSMIC" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
@@ -41,14 +42,13 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\cosmic.mwc"/>
-    <command name="generate_workspace" options="-type vc71 -features gme=1,udm=1,mfc=1,boost=1 %CUTS_ROOT%\CUTS_CoSMIC.mwc"/>
     <command name="generate_workspace" options="-type vc71 %ACE_ROOT%\ace\ace.mwc"/>
-    <command name="generate_workspace" options="-type vc71 %ACE_ROOT%\TAO\TAO_IDL\TAO_IDL.mwc"/>
-     
+    <command name="generate_workspace" options="-type vc71 %TAO_ROOT\TAO_IDL\TAO_IDL.mwc"/>
+
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %ACE_ROOT% -Debug -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %TAO_ROOT% -Debug -k" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k" />
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %CUTS_ROOT% -Debug -k" />
-    
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
