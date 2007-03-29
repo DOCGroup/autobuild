@@ -1,3 +1,10 @@
+Thu Mar 29 15:49:47 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * command/svn.pm:
+
+          The scoreboard will now show an error if the SVN command returns a
+          nonzero value.
+
 Thu Mar 29 14:53:20 UTC 2007  Rich Seibel <seibel_r@ociweb.com>
 
         * scoreboard.pl:

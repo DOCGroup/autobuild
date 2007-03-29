@@ -89,7 +89,7 @@ sub Run ($)
     if (! defined $svn_program) {
         # The "svn_program" variable was not defined in the
         # XML config file.  Default to using a program called "svn".
-        $svn_program = "svn"
+        $svn_program = "svn";
     }
 
     ## We should only perform a cleanup and status below if there
@@ -98,7 +98,10 @@ sub Run ($)
          ((defined $ENV{SVN_ASP_DOT_NET_HACK} && -d '_svn') || -d '.svn');
 
     system ("$svn_program cleanup") if ($cleanup_and_status);
-    system ("$svn_program $options");
+    my $ret = system ("$svn_program $options");
+    if ($ret != 0) {
+        print STDERR __FILE__, " ERROR: $svn_program $options returned $ret\n";
+    }
     system ("$svn_program status") if ($cleanup_and_status);
 
     chdir $current_dir;
