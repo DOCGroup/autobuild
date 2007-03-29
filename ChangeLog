@@ -1,3 +1,8 @@
+Thu Mar 29 23:31:30 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml: More fixes to get it to
+          work.  Remove CUTS_ROOT and make sure to clean TAO_ROOT.
+
 Thu Mar 29 23:22:10 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml: Don't checkout the whole
