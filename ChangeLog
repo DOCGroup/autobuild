@@ -1,3 +1,9 @@
+Thu Mar 29 14:06:42 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/oci/doc_head_hornet_wince5_vc8_d1o0.xml:
+
+          Remove double quotes from setenv.cmd output.
+
 Fri Mar 30 13:38:17 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * common/parse_compiler_output.pm:
