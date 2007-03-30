@@ -1,3 +1,10 @@
+Fri Mar 30 00:51:31 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml: Set project_root to
+          point to ACE instead of the top-level directory since the
+          autobuild scripts seem to hardcode the location of
+          msvc_mpc_auto_compile.pl.
+
 Fri Mar 30 00:46:00 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml: Set the project_root to
