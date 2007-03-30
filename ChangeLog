@@ -1,3 +1,8 @@
+Fri Mar 30 00:43:56 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml: Fixed the COSMIC_ROOT
+          environment variable to point to the right locations.
+
 Fri Mar 30 00:32:34 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml: Create the config.h and
