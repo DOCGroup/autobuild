@@ -1,3 +1,11 @@
+Fri Mar 30 13:38:17 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * common/parse_compiler_output.pm:
+
+          Extended the change from:
+          Mon Mar 12 16:57:20 UTC 2007  Steve Huston  <shuston@riverace.com>
+          to treat depgen.pl command lines just like cl.exe.
+
 Fri Mar 30 03:03:58 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml: Updated the definition
