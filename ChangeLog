@@ -1,3 +1,12 @@
+Fri Mar 30 01:20:40 UTC 2007  Krishnakumar B  <kitty@nospam.invalid.domain>
+
+        * command/check_compiler.pm:  Don't use /V to get the compiler
+          version of Microsoft compilers.  Just use cl.exe.
+
+        * configs/autobuild/equus/equus_vc71.xml: Fixed the PATH
+          environment variable to point to the right location of
+          ACE_ROOT/lib.
+
 Fri Mar 30 00:51:31 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml: Set project_root to
