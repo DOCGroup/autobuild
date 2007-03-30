@@ -1,3 +1,8 @@
+Fri Mar 30 00:32:34 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml: Create the config.h and
+          default.features inside ACE_ROOT instead of ACE_wrappers.
+
 Fri Mar 30 00:30:25 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_Latest_BFO_chico.phx_winxp_vc71_d1o0.xml:

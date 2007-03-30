@@ -33,8 +33,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk CoSMIC" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
