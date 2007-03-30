@@ -12,8 +12,8 @@
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="UDM_PATH" 	  value="C:\Program Files\ISIS\UDM" />
         <environment name="COSMIC_ROOT"  value="C:\bczar\CoSMIC_VC71_Debug\CoSMIC" />
-        <environment name="ZLIB_ROOT" value="C:\Tools\GnuWin32" />
-        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Tools\Boost\lib;C:\bczar\CoSMIC_VC71_Debug\ACE\lib;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\bin;C:\Tools\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\Putty;C:\Tools\bin;C:\Tools\Perl\bin;C:\Program Files\Subversion\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Tools\GnuWin32\bin" />
+        <environment name="ZLIB_ROOT" value="C:\Tools\zlib" />
+        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Tools\Boost\lib;C:\bczar\CoSMIC_VC71_Debug\ACE\lib;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\bin;C:\Tools\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\Putty;C:\Tools\bin;C:\Tools\Perl\bin;C:\Program Files\Subversion\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Tools\zlib\bin" />
         <variable name="configs"  value="Win32 VC71 ZLIB Exceptions" />
         <variable name="root"     value="C:\bczar\CoSMIC_VC71_Debug" />
         <variable name="log_file" value="log.txt" />

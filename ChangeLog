@@ -1,3 +1,8 @@
+Fri Mar 30 03:03:58 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71.xml: Updated the definition
+          of ZLIB_ROOT and PATH to fix errors in compilation.
+
 Fri Mar 30 01:20:40 UTC 2007  Krishnakumar B  <kitty@nospam.invalid.domain>
 
         * command/check_compiler.pm:  Don't use /V to get the compiler
