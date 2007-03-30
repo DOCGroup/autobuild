@@ -1,0 +1,43 @@
+<autobuild>
+  <!-- The command used to create this file (on chico) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\DDS -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler vc71 -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -hostname chico.phx -piggyback d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0 -testopt "-s \x22u:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX" -->
+  <configuration>
+    <environment name="ACE_ROOT"          value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0"/>
+    <environment name="CIAO_ROOT"         value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\CIAO"/>
+    <environment name="CVSROOT"           value=":pserver:taoadmin@cvs.ociweb.com:/cvs"/>
+    <environment name="CVS_RSH"           value="ssh"/>
+    <environment name="DDS_ROOT"          value="d:\tao_builds\taoadmin\DDS\build\vc71_d1o0"/>
+    <environment name="MPC_ROOT"          value="u:\MPC"/>
+    <environment name="PATH"              value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\lib;" type="prefix"/>
+    <environment name="TAO_DCPS_TS_FLAGS" value=" "/>
+    <environment name="TAO_ROOT"          value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO"/>
+    <variable    name="base"              value="DDS"/>
+    <variable    name="build_name"        value="vc71_d1o0"/>
+    <variable    name="creator"           value="mitza@ociweb.com"/>
+    <variable    name="log_file"          value="vc71_d1o0.log"/>
+    <variable    name="log_root"          value="w:\autobuild_logs\dds_doc_trunk_chico.phx_winxp_vc71_d1o0"/>
+    <variable    name="project_root"      value="d:\tao_builds\taoadmin\DDS\build\vc71_d1o0"/>
+    <variable    name="root"              value="d:\tao_builds\taoadmin\DDS"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
+  <command name="clone_build_tree"/>
+  <command name="file_manipulation"  options="type=create file=build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\nset CIAO_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs.ociweb.com:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\lib;%PATH%\nset TAO_DCPS_TS_FLAGS= \nset TAO_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_ace_config"/>
+  <command name="check_compiler"     options="msvc"/>
+  <command name="generate_workspace" options="-type vc71 DDS.mwc"/>
+
+  <!-- Build targets -->
+  <command name="vc7make" options="/build debug ./DDS.sln"/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="dir=. -s \x22u:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="clean move prettify index"/>
+  <command name="status"          options="off"/>
+</autobuild>

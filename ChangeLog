@@ -1,3 +1,15 @@
+Fri Mar 30 00:30:25 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_BFO_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_chico.phx_winxp_vc71_d1o0.xml:
+
+          Added build XML files for these DDS-related builds to the repository.
+
+        * configs/scoreboard/dds.xml:
+
+          Changed names of chico builds to match the above.
+
 Thu Mar 29 23:31:30 UTC 2007  Krishnakumar B  <kitty@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71.xml: More fixes to get it to
