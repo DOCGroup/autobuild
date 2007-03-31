@@ -4,6 +4,7 @@
   <!-- Changes made to generated file: -->
   <!-- 1. Renamed the file from dds_doc_trunk_chico.phx_winxp_vc71_d1o0.xml to dds_doc_Latest_BFO_chico.phx_winxp_vc71_d1o0.xml -->
   <!-- 2. Changed the log_root to reflect this new name -->
+  <!-- 3. Added the anonymous_shell command to create the DDS directory prior to svn checkout. -->
   <configuration>
     <environment name="ACE_ROOT"          value="d:\tao_builds\taoadmin\doc_bfo\ACE_wrappers\build\vc71_d1o0"/>
     <environment name="CIAO_ROOT"         value="d:\tao_builds\taoadmin\doc_bfo\ACE_wrappers\build\vc71_d1o0\TAO\CIAO"/>
@@ -27,6 +28,7 @@
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_BFO ."/>
+  <command name="anonymous_shell"    options="mkdir -p D:\tao_builds\taoadmin\doc_bfo\ACE_wrappers\TAO\DDS" />
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS"/>
   <command name="clone_build_tree"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/vc71_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
