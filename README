@@ -186,6 +186,17 @@ SCOREBOARD NOTES
     a snapshot of the CVS repository ready for a user to download
     and run "./configure".
 
+(5) A schedule file is available for less than daily builds.  This
+    file has an .ini format.  Build names are specified in square
+    brackets and parameters follow.  The one the scoreboard uses
+    is "runon" with a list of days (date abbrevs).  For example,
+      [build_xyz]
+      runon Mon Thu
+    thus, build_xyz will not be considered late until the times
+    pass the next build by the amount specified in orange and red.
+    This feature is activated by the presence of the -s <file>
+    switch.
+
 USING Cygwin on Windows
 =======================
 

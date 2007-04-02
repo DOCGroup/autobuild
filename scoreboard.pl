@@ -58,6 +58,8 @@ my @nogroup;
 
 my $orange_default = 24;
 my $red_default = 48;
+my $sched_file = "";
+my @days = ( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" );
 
 # Do not set the value of this variable here.  Instead, edit the
 # XML file for the scoreboard, and put the text in between the
@@ -547,20 +549,77 @@ sub clean_cache ($)
 # Arguments:  $ - encoded timestamp
 #             $ - orange hours
 #             $ - red hours
+#             $ - build name
 #
 # Returns:    $ - color
 #
 ###############################################################################
-sub timestamp_color ($$$)
+sub timestamp_color ($$$$)
 {
     my $timestamp = shift;
     my $orange = shift;
     my $red = shift;
+    my $buildname = shift;
 
     if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
         my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
 
         my $nowtime = timegm (gmtime());
+
+        if ($sched_file ne "") {
+            my $file_handle = new FileHandle ($sched_file, 'r');
+            if (!defined $file_handle) {
+                print STDERR "Error: Could not open file <$sched_file>: $!\n";
+                return 0;
+            }
+
+            my @daylist;
+            my $acceptit=0;
+            while (<$file_handle>) {
+                if ( $_ =~ /\[$buildname\]/ ) {
+                    $acceptit = 1;
+                    next;
+                }
+                if ( $_ =~ /^\s*\[/ ) {
+                    $acceptit = 0;
+                }
+                if ( $acceptit ) {
+                    my @cmd = split;
+                    my $len = @cmd;
+                    if ( $len > 0 && $cmd[0] eq "runon" ) {
+                        my $arg;
+                        my $day;
+                        foreach $arg (@cmd[1..($len-1)]) {
+                            foreach $day (0..6) {
+                                if ( $arg eq $days[$day] ) {
+                                    push (@daylist, $day);
+                                    push (@daylist, $day + 7);
+                                    push (@daylist, $day + 14);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            sub numerically { $a <=> $b }
+            @daylist = sort numerically @daylist;
+
+            if ( @daylist > 0 ) {
+                my $dow;
+                $dow = (gmtime($buildtime))[6] + 7;
+                my $next_day;
+                my $prev_day;
+                my $i;
+                foreach $i (@daylist) {
+                    $next_day = $i;
+                    if ( $next_day > $dow ) { last; }
+                    $prev_day = $next_day;
+                }
+                my $addhours = ($next_day - $prev_day - 1) * 24;
+                $red += $addhours;
+                $orange += $addhours;
+            }
+        }
 
         if ($nowtime - $buildtime > (60 * 60 * $red)) {
             return 'red';
@@ -806,7 +865,7 @@ sub update_html_table ($$@)
                 $color = 'Gray';
             }
             else {
-                $color = timestamp_color ($basename, $orange, $red);
+                $color = timestamp_color ($basename, $orange, $red, $buildname);
             }
             print $indexhtml '<td bgcolor=';
             print $indexhtml $color;
@@ -1189,9 +1248,9 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r/;
+use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s/;
 
-if (!getopts ('d:f:hi:o:t:vzlr:')
+if (!getopts ('d:f:hi:o:t:vzlr:s:')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl -f file [-h] [-i file] -o file [-m script] [-s dir] [-r] [-z] [-l]\n",
@@ -1207,6 +1266,7 @@ if (!getopts ('d:f:hi:o:t:vzlr:')
     print "    -z         Integrated page. Only the output directory is valid\n";
     print "    -l         Use local instead of UTC time\n";
     print "    -r         Specify name of RSS file\n";
+    print "    -s         name of file where build schedule can be found\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1258,6 +1318,11 @@ if (defined $opt_o) {
 if (defined $opt_r) {
     print "Using RSS file\n";
     $rss_file = $opt_r;
+}
+
+if (defined $opt_s) {
+    print "Using schedule file\n";
+    $sched_file = $opt_s;
 }
 
 load_build_list ($inp_file);

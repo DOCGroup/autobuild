@@ -1,3 +1,14 @@
+Mon Apr  2 17:58:59 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
+
+        * README:
+        * scoreboard.pl:
+
+          Added the capability for those that use this for daily
+          builds to have less than daily runs and correctly display
+          the build color for lateness.  See the README for how
+          to construct the file.  If the file is not specified
+          then the program works exactly as before.
+
 Mon Apr  2 11:37:53 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_oci1146_qnx_gcc_d1o0i0.xml:
