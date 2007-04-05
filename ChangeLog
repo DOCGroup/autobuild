@@ -1,3 +1,11 @@
+Thu Apr  5 15:24:19 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * command/svn.pm:
+
+          Extended my change from...
+          Thu Mar  1 16:13:31 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+          ...so that the dir= directory is now created if it doesn't exist yet.
+
 Mon Apr  2 17:58:59 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
 
         * README:

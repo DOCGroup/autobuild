@@ -81,8 +81,11 @@ sub Run ($)
     }
 
     if (!chdir $dir) {
-        print STDERR __FILE__, ": Cannot change to $dir\n";
-        return 0;
+        mkpath($dir);
+        if(!chdir $dir) {
+            print STDERR __FILE__, ": Cannot change to $dir\n";
+            return 0;
+        }
     }
 
     my $svn_program = main::GetVariable ('svn_program');
