@@ -186,16 +186,56 @@ SCOREBOARD NOTES
     a snapshot of the CVS repository ready for a user to download
     and run "./configure".
 
-(5) A schedule file is available for less than daily builds.  This
+(5) The time of last build on the scoreboard is colored to show
+    when a build is late. Non-late builds are white, late builds
+    are orange, and very late builds are red.  The defaults for
+    orange and red are 24 and 48 hours respectively.  These are
+    based on the assumption that builds will run daily or less, 
+    perhaps continuously.  The values for orange and red can be
+    changed for individual builds with the parameters <orange>
+    hours </orange> and <red> hours </red>.
+
+(6) A schedule file is available for less than daily builds.  This
     file has an .ini format.  Build names are specified in square
     brackets and parameters follow.  The one the scoreboard uses
     is "runon" with a list of days (date abbrevs).  For example,
       [build_xyz]
       runon Mon Thu
-    thus, build_xyz will not be considered late until the times
-    pass the next build by the amount specified in orange and red.
+    thus, build_xyz will not be considered late until the current 
+    time passes the next build by the amount specified in orange and 
+    red plus the number of days between the last and next builds.
     This feature is activated by the presence of the -s <file>
     switch.
+
+(7) There are situations where you may have a number of system that
+    share a single data store, via NFS and/or SMB.  In this case you
+    may wish to have the machine running scoreboard.pl do some of the
+    function normally done by autobuild.pl, speciffically the
+    maintenance of the output logs.  This can be accomplished with
+    the -c option.  When this option is specified the directory 
+    specified in the required -d option is maintained by the 
+    scoreboard program.  This allows, for example, the autobuild to
+    specify only "process_logs move" and the remainder, "prettify,
+    clean, and index" will be done by the scoreboard.  It also allows
+    the faster relative refs to be used as url or skipped entirely, 
+    if the name of the build matches the name of the sub-directory.
+
+(8) To retain the full capabilites of autobuild.pl in the situation
+    above(7).  The KEEP parameter was added to the scoreboard.  The
+    value for keep can be specified globally with the -k switch to
+    scoreboard.pl or for individual builds with the <keep> number
+    </keep>.  
+
+    This parameter also works with the existing (no -c) mode and 
+    applies to the number of items kept in the cache.  
+
+    The default for keep is 5.
+
+(9) To help identify builds on the scoreboard there is a "Build
+    Sponsor" column.  This consists of two parts the name of the
+    sponsor defined by <build_sponsor> name </build_sponsor> and
+    a url defined by <build_sponsor_url> url </build_sponsor_url> 
+    that would be displayed when the name is clicked.
 
 USING Cygwin on Windows
 =======================

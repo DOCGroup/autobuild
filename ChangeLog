@@ -1,3 +1,31 @@
+Mon Apr  9 13:21:02 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
+
+        * README:
+        * scoreboard.pl:
+        * common/scoreparser.pm
+        * common/utility.pm
+        * command/process_logs.pm
+
+          Added an option (-c) to allow the scoreboard to be 
+          run on local data only.  When this option is used
+          builds can post their log file only to a local or
+          mounted directory (NFS or SMB) using the process_
+          logs option "move" instead of "clean move prettify index".
+          The scoreboard.pl will do the "clean prettify index"
+          operations.  This reduces the load on the build 
+          machines a little bit.  If the option is not specified
+          then the program works exactly as before.
+
+          As part of the above, an option (-k) was added to
+          the scoreboard program and <keep> in the scoreboard
+          .xml files.   The -k option provided a user default
+          for all locally cached files.  The previous default
+          of 5 was retained if the option is not specified.
+          In addition, the number of generations kept for
+          specific builds can be overridded with the <keep>
+          options in a .xml file.  This option works whether
+          the -c option above is used or not.
+
 Thu Apr  5 15:24:19 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * command/svn.pm:

@@ -154,6 +154,9 @@ sub Parse ($\@)
             elsif (m/^\s*<red>(.*)<\/red>\s*$/i) {
                 $build_info{RED_TIME} = $1;
             }
+            elsif (m/^\s*<keep>(.*)<\/keep>\s*$/i) {
+                $build_info{KEEP} = $1;
+            }
 	    elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
 		$build_info{PDF} = $1;
 	    }

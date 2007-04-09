@@ -14,6 +14,7 @@ use common::prettify;
 use common::scoreparser;
 use common::indexparser;
 use common::integratedparser;
+use common::utility;
 use DirHandle;
 use English;
 use FileHandle;
@@ -58,6 +59,7 @@ my @nogroup;
 
 my $orange_default = 24;
 my $red_default = 48;
+my $keep_default = 5;
 my $sched_file = "";
 my @days = ( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" );
 
@@ -281,6 +283,48 @@ sub query_status ()
 
 ###############################################################################
 #
+# local_query_status
+#
+# Queries the status links to figure out the latest status and stores in
+# STATUS
+#
+# Arguments:  Nothing
+#
+# Returns:    Nothing
+#
+###############################################################################
+sub local_query_status ($)
+{
+    my $directory = shift;
+
+    print "Getting status messages\n" if ($verbose);
+
+    if (!-w $directory) {
+        warn "Cannot write to $directory";
+        return;
+    }
+
+    foreach my $buildname (keys %builds) {
+        my $file_name = "$directory/$buildname/status.txt";
+        my $file_handle = new FileHandle ($file_name, 'r');
+        if (defined $file_handle) {
+
+            print "    Status [$buildname] from $file_name\n" if ($verbose);
+
+            while (<$file_handle>) {
+                if ($_ =~ m/SCOREBOARD_STATUS\:(.*)$/) {
+                    $builds{$buildname}{STATUS} = $1;
+                }
+            }
+        } 
+else {
+print STDERR "Error: Could not open file <$file_name>: $!\n";
+}
+    }
+}
+
+###############################################################################
+#
 # query_history
 #
 # Queries the history information and store it in
@@ -471,6 +515,151 @@ sub update_cache ($)
     }
 }
 
+###############################################################################
+#
+# local_update_cache
+#
+# Updates the local cache
+#
+# Arguments:  $ - directory to place files in
+#
+# Returns:    Nothing
+#
+###############################################################################
+sub local_update_cache ($)
+{
+    my $directory = shift;
+
+    print "Updating Local Cache\n" if ($verbose);
+
+    if (!-w $directory) {
+        warn "Cannot write to $directory";
+        return;
+    }
+
+    foreach my $buildname (keys %builds) {
+        my $keep = $keep_default;
+        my @existing;
+
+        print "    Looking at $buildname\n" if ($verbose);
+
+        # Check for new logs
+
+        my $cache_dir = $directory . "/" . $buildname;
+        my $dh = new DirHandle ($cache_dir);
+
+        # Load the directory contents into the @existing array
+
+        if (!defined $dh) {
+            print STDERR "Error: Could not read $directory\n";
+            return 0;
+        }
+
+        while (defined($_ = $dh->read)) {
+            if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
+                push @existing, "$cache_dir/$1";
+            }
+        }
+        undef $dh;
+
+        # Find any new logs to make pretty
+        # We do this in oldest to newest order since the
+        # Prettify Process will update the latest.txt file
+        @existing = sort @existing;
+        my $updated = 0;
+
+        foreach my $file (@existing) {
+            if ( -e $file . "_Totals.html" ) {next;}
+            print "        Prettifying $file.txt\n" if($verbose);
+            Prettify::Process ("$file.txt");
+            $updated++;
+        }
+
+        # Remove the latest $keep logs from the list
+        @existing = reverse sort @existing;
+        if (defined $builds{$buildname}->{KEEP}) {
+            $keep = $builds{$buildname}->{KEEP};
+        }
+
+        for (my $i = 0; $i < $keep; ++$i) {
+            shift @existing;
+        }
+
+        # Delete anything left in the list
+
+        foreach my $file (@existing) {
+            print "        Removing $file files\n" if ($verbose);
+            unlink $file . ".txt";
+            unlink $file . "_Full.html";
+            unlink $file . "_Brief.html";
+            unlink $file . "_Totals.html";
+            unlink $file . "_Config.html";
+            $updated++;
+        }
+
+        # Update the index file, since it may have changed
+        if ($updated) {
+            print "        Creating new index\n" if ($verbose);
+            utility::index_logs ("$directory/$buildname", $buildname);
+        }
+
+        # Get info from the latest build
+        my $file_name = "$directory/$buildname/latest.txt";
+        my $file_handle = new FileHandle ($file_name, 'r');
+
+        my $latest;
+        if (defined $file_handle) {
+
+            print "        Loading latest from $file_name\n" if ($verbose);
+
+            while (<$file_handle>) {
+                if ($_ =~ m/(...._.._.._.._..) /) {
+       	            $builds{$buildname}{BASENAME} = $1;
+                    $latest = $_;
+                }
+            }
+        } 
+        undef $file_handle;
+
+	if (!defined $latest) {
+	    print STDERR "    Error: Could not find latest.txt for $buildname\n";
+       	    next;
+	}
+
+        if ($latest =~ m/Config: (\d+)/) {
+            $builds{$buildname}{CONFIG_SECTION} = $1;
+        }
+
+        if ($latest =~ m/Setup: (\d+)-(\d+)-(\d+)/) {
+            $builds{$buildname}{SETUP_SECTION} = $1;
+            $builds{$buildname}{SETUP_ERRORS} = $2;
+            $builds{$buildname}{SETUP_WARNINGS} = $3;
+        }
+
+        if ($latest =~ m/Compile: (\d+)-(\d+)-(\d+)/) {
+            $builds{$buildname}{COMPILE_SECTION} = $1;
+            $builds{$buildname}{COMPILE_ERRORS} = $2;
+            $builds{$buildname}{COMPILE_WARNINGS} = $3;
+        }
+
+        if ($latest =~ m/Test: (\d+)-(\d+)-(\d+)/) {
+            $builds{$buildname}{TEST_SECTION} = $1;
+            $builds{$buildname}{TEST_ERRORS} = $2;
+            $builds{$buildname}{TEST_WARNINGS} = $3;
+        }
+
+        if ($latest =~ m/Failures: (\d+)/) {
+            $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
+        }
+
+        # Check if URL was given
+        if ( ! defined $builds{$buildname}->{URL}) {
+            $builds{$buildname}{URL} = $buildname;
+        }
+
+    }
+}
+
 
 ###############################################################################
 #
@@ -486,7 +675,6 @@ sub update_cache ($)
 sub clean_cache ($)
 {
     my $directory = shift;
-    my $keep = 5;
 
     print "Cleaning Local Cache\n" if ($verbose);
 
@@ -496,6 +684,7 @@ sub clean_cache ($)
     }
 
     foreach my $buildname (keys %builds) {
+        my $keep = $keep_default;
         my @existing;
 
         print "    Looking at $buildname\n" if ($verbose);
@@ -520,6 +709,9 @@ sub clean_cache ($)
         @existing = reverse sort @existing;
 
         # Remove the latest $keep logs from the list
+        if (defined $builds{$buildname}->{KEEP}) {
+            $keep = $builds{$buildname}->{KEEP};
+        }
 
         for (my $i = 0; $i < $keep; ++$i) {
             shift @existing;
@@ -835,7 +1027,7 @@ sub update_html_table ($$@)
         print $indexhtml '<tr><td>';
 
         if (defined $builds{$buildname}->{URL}) {
-            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/\">" ;
+            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/index.html\">" ;
             print $indexhtml $buildname;
             print $indexhtml "</a> ";
         }
@@ -1248,25 +1440,27 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s/;
+use vars qw/$opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k/;
 
-if (!getopts ('d:f:hi:o:t:vzlr:s:')
+if (!getopts ('cd:f:hi:o:t:vzlr:s:k:')
     || !defined $opt_d
     || defined $opt_h) {
-    print "scoreboard.pl -f file [-h] [-i file] -o file [-m script] [-s dir] [-r] [-z] [-l]\n",
-          "              [-t title]\n";
+    print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
+          "              [-t title] [-z] [-l] [-r file] [-s file] [-c]\n";
     print "\n";
-    print "    -d         directory where the output files are placed \n";
     print "    -h         display this help\n";
+    print "    -d         directory where the output files are placed \n";
+    print "    -v         enable verbose debugging [def: only print errors]\n";
     print "    -f         file for which html should be generated \n";
     print "    -i         use <file> as the index file to generate Index page only\n";
     print "    -o         name of file where the output HTML files are placed\n";
     print "    -t         the title for the scoreboard (default Scoreboard)\n";
-    print "    -v         enable verbose debugging [def: only print errors]\n";
     print "    -z         Integrated page. Only the output directory is valid\n";
     print "    -l         Use local instead of UTC time\n";
     print "    -r         Specify name of RSS file\n";
     print "    -s         name of file where build schedule can be found\n";
+    print "    -c         co-located directory, all files local in -d \n";
+    print "    -k         number of logs to keep, default is 5\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1325,13 +1519,22 @@ if (defined $opt_s) {
     $sched_file = $opt_s;
 }
 
+if (defined $opt_k) {
+    $keep_default = $opt_k;
+}
+
 load_build_list ($inp_file);
 build_group_hash ();
-query_latest ();
-update_cache ($dir);
-clean_cache ($dir);
-query_status ();
-query_history ();
+if (defined $opt_c) {
+  local_update_cache ($dir);
+  local_query_status ($dir);
+} else {
+  query_latest ();
+  update_cache ($dir);
+  clean_cache ($dir);
+  query_status ();
+  query_history ();
+}
 update_html ($dir,"$dir/$out_file",$rss_file);
 
 print 'Finished Scoreboard Update at ' . get_time_str() . "\n" if ($verbose);
