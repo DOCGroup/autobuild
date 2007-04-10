@@ -543,6 +543,11 @@ sub local_update_cache ($)
 
         print "    Looking at $buildname\n" if ($verbose);
 
+        # Check if URL was given
+        if ( ! defined $builds{$buildname}->{URL}) {
+            $builds{$buildname}{URL} = $buildname;
+        }
+
         # Check for new logs
 
         my $cache_dir = $directory . "/" . $buildname;
@@ -551,8 +556,8 @@ sub local_update_cache ($)
         # Load the directory contents into the @existing array
 
         if (!defined $dh) {
-            print STDERR "Error: Could not read $directory\n";
-            return 0;
+            print STDERR "Error: Could not read $cache_dir\n";
+            next;
         }
 
         while (defined($_ = $dh->read)) {
@@ -650,11 +655,6 @@ sub local_update_cache ($)
 
         if ($latest =~ m/Failures: (\d+)/) {
             $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
-        }
-
-        # Check if URL was given
-        if ( ! defined $builds{$buildname}->{URL}) {
-            $builds{$buildname}{URL} = $buildname;
         }
 
     }
