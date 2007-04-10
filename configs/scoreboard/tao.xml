@@ -274,24 +274,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>LynxOS</name>
    <build>
-      <name>LynxOS4_x86_GCC322_Dynamic_Solaris8_Native_tao_idl</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/lynxos_x86/native_tao_idl_build</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-   </build>
-   <build>
-      <name>LynxOS4_x86_GCC322_Dynamic_Solaris8_XBuild</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/lynxos_x86/cross_compile_build</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-   </build>
-   <build>
-      <name>LynxOS4_x86_GCC322_Dynamic_Tests</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/lynxos_x86/tests_on_lynxos</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-   </build>
-   <build>
       <name>LynxOS4_PPC_GCC322_Dynamic_Solaris9_Native_tao_idl</name>
       <url>http://tao.prismtech.com/doc-scoreboard/lynxos_ppc/native_tao_idl_build</url>
       <build_sponsor>PrismTech</build_sponsor>
