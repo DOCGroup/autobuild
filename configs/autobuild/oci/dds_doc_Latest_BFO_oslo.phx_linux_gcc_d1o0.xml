@@ -1,0 +1,59 @@
+<autobuild>
+  <!-- The command used to create this file (on oslo) was -->
+  <!-- BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc_bfo -branchname Latest_BFO -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_BFO ." -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS" -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -mpcopt "-include %DDS_ROOT%\MPC\config-legacy" -outdir /distcomp/mitza/ -supporting 0 -->
+  <configuration>
+    <environment name="ACE_ROOT"          value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0"/>
+    <environment name="CIAO_ROOT"         value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/CIAO"/>
+    <environment name="CVSROOT"           value=":pserver:taoadmin@cvs.ociweb.com:/cvs"/>
+    <environment name="CVS_RSH"           value="ssh"/>
+    <environment name="DDS_ROOT"          value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/DDS"/>
+    <environment name="LD_LIBRARY_PATH"   value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/lib/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/DDS/lib:"/>
+    <environment name="MPC_ROOT"          value="/home/taoadmin/MPC"/>
+    <environment name="PATH"              value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/DDS/bin:"/>
+    <environment name="TAO_DCPS_TS_FLAGS" value=" "/>
+    <environment name="TAO_ROOT"          value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO"/>
+    <variable    name="build_name"        value="gcc_d1o0"/>
+    <variable    name="creator"           value="mitza@ociweb.com"/>
+    <variable    name="log_file"          value="gcc_d1o0.log"/>
+    <variable    name="log_root"          value="/www-docs/autobuild_logs/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0"/>
+    <variable    name="project_root"      value="/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0"/>
+    <variable    name="root"              value="/tao_builds/taoadmin/doc_bfo"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_BFO ."/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS"/>
+  <command name="clone_build_tree"/>
+  <command name="rem_sems"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc_d1o0/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/lib/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/DDS/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO/DDS/bin:\x22; export PATH\nTAO_DCPS_TS_FLAGS=\x22 \x22; export TAO_DCPS_TS_FLAGS\nTAO_ROOT=\x22/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="gcc"/>
+
+  <!-- Conditionally clean binaries -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DDS conditional_rm=/tao_builds/taoadmin/doc_bfo/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
+
+  <!-- Finish build preparation -->
+  <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc -include %DDS_ROOT%\MPC\config-legacy"/>
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DDS depend"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DDS"/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="dir=TAO/DDS -Config Linux"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="clean move prettify index"/>
+  <command name="status"          options="off"/>
+</autobuild>

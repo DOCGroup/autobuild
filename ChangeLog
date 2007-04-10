@@ -1,10 +1,19 @@
+Tue Apr 10 18:24:29 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_oslo.phx_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_oslo.phx_linux_gcc_d1o0.xml:
+        * configs/scoreboard/dds.xml:
+
+          Added XML config files for the DDS builds on oslo.
+
 Tue Apr 10 10:30:15 CDT 2007  Rich Seibel <seibel_r@ociweb.com>
 
         * scoreboard.pl
 
-	  Fixed a bug that occured when a directory didn't exist.
-	  It skipped setting the URL and skipped the rest of the
-	  builds too.
+          Fixed a bug that occured when a directory didn't exist.
+          It skipped setting the URL and skipped the rest of the
+          builds too.
 
 Tue Apr 10 10:52:00 GMT 2007  Simon Massey <sma@prismtech.com>
 
@@ -20,13 +29,13 @@ Mon Apr  9 13:21:02 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
         * common/utility.pm
         * command/process_logs.pm
 
-          Added an option (-c) to allow the scoreboard to be 
+          Added an option (-c) to allow the scoreboard to be
           run on local data only.  When this option is used
           builds can post their log file only to a local or
           mounted directory (NFS or SMB) using the process_
           logs option "move" instead of "clean move prettify index".
           The scoreboard.pl will do the "clean prettify index"
-          operations.  This reduces the load on the build 
+          operations.  This reduces the load on the build
           machines a little bit.  If the option is not specified
           then the program works exactly as before.
 
