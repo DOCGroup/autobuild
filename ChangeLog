@@ -1,3 +1,18 @@
+Wed Apr 11 15:00:47 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/dds_doc_trunk_oslo.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_trunk_oslo.phx_linux_gcc_d1o0n1.xml:
+
+          This machine has a gcc 4.0.x series compiler which requires
+          no_hidden_visibility=1 to work correctly.
+
+        * configs/autobuild/oci/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_oslo.phx_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_oslo.phx_linux_gcc_d1o0.xml:
+
+          Renamed these files to the names shown above.
+
 Tue Apr 10 18:24:29 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0.xml:
