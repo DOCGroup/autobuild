@@ -21,8 +21,8 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Linux</name>
   <build>
-    <name>dds_doc_trunk_oslo.phx_linux_gcc_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oslo.phx_linux_gcc_d1o0</url>
+    <name>dds_doc_trunk_oslo.phx_linux_gcc_d1o0n1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oslo.phx_linux_gcc_d1o0n1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
@@ -63,8 +63,8 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0</url>
+    <name>dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0n1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0n1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
