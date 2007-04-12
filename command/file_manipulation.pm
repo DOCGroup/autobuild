@@ -51,9 +51,6 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     my $root = main::GetVariable ('root');
 
     if (!-r $root || !-d $root) {
@@ -126,7 +123,6 @@ sub Run ($)
         if (-e $filename) {
             # Expand some codes
             $output =~ s/\\n/\n/g;
-            $output =~ s/\\x27/'/g;
 
             my $file_handle = new FileHandle ($root . '/' . $filename, 'a');
 
@@ -151,7 +147,6 @@ sub Run ($)
         # Expand some codes
 
         $output =~ s/\\n/\n/g;
-        $output =~ s/\\x27/'/g;
 
         my $file_handle = new FileHandle ($root . '/' . $filename, 'w');
 
@@ -172,7 +167,6 @@ sub Run ($)
         # Expand some codes
 
         $output =~ s/\\n/\n/g;
-        $output =~ s/\\x27/'/g;
 
         my $full_path = $root . '/' . $filename;
         my $tmp_path  = $full_path . ".$$";

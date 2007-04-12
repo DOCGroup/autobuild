@@ -66,9 +66,6 @@ sub Run ($)
                       );
     my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DDS');
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     foreach my $option (split(/\s+/, $options)) {
       if ($option =~ /([^=]+)=(.*)/) {
         my($name)  = uc($1);

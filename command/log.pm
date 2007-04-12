@@ -55,9 +55,6 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     if (uc $options eq "ON") {
         my $root = main::GetVariable ('root');
 

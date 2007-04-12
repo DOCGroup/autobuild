@@ -117,6 +117,9 @@ sub Parse ($\%)
             elsif ($line =~ s/^<\s*command\s+name\s*=\s*"([^"]*)"(\s+options\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
                 my %value = (NAME    => $1,
                              OPTIONS => (defined $3 ? $3 : ''));
+                $value{OPTIONS} =~ s/\\x20/ /g;
+                $value{OPTIONS} =~ s/\\x22/"/g;
+                $value{OPTIONS} =~ s/\\x27/'/g;
                 push @{$data->{COMMANDS}}, \%value;
             }
         }

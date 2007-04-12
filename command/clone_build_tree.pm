@@ -57,9 +57,6 @@ sub Run ($)
     my $build    = main::GetVariable ('build_name');
     my $base     = main::GetVariable ('base') || 'ACE_wrappers';
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     # chop off trailing slash
     if ($wrappers =~ m/^(.*)\/$/) {
         $wrappers = $1;

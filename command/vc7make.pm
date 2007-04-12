@@ -48,9 +48,6 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $vctool = main::GetVariable ('vctool');
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     if (!defined $project_root) {
         $project_root = 'ACE_wrappers';
     }

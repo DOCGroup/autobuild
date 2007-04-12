@@ -53,9 +53,6 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $automake_build = main::GetVariable ('automake_build');
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     # Pull out options meant for this module
     my($next) = undef;
     my($remainder) = '';

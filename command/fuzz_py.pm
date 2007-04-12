@@ -1,5 +1,5 @@
 #
-# $Id: fuzz.pm 991 2003-08-07 18:57:37Z oci $
+# $Id$
 #
 
 package Fuzz_py;
@@ -46,9 +46,6 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
-
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
 
     if (!-r $root || !-d $root) {
         mkpath($root);

@@ -49,9 +49,6 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $base = main::GetVariable ('base') || 'ACE_wrappers';
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     if (!defined $project_root) {
         $project_root = $root . '/' . $base;
     }

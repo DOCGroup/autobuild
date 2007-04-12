@@ -347,9 +347,6 @@ sub Run ($)
     my $tsubject   = 'Test Errors';
     my $lead_email = '';
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     if ($options =~ s/compiler='([^']+)'//) {
       $compiler = $1;
     }

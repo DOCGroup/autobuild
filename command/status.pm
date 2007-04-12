@@ -49,9 +49,6 @@ sub Run ($)
     my $options = shift;
     my $log_root = main::GetVariable ('log_root');
 
-    # replace all '\x22' with '"'
-    $options =~ s/\\x22/"/g;
-
     if (!-r $log_root || !-d $log_root) {
         mkpath($log_root);
     }

@@ -1,3 +1,43 @@
+Thu Apr 12 15:29:42 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * common/simpleparser.pm:
+
+          All conversion of \xNN to a special character now happens here
+          instead of duplicating the code in the various commands.  The only
+          place in the XML that this is done is in the options="..." string.
+          Currently, three control characters are converted: \x22 becomes ",
+          \x27 becomes ', and \x20 becomes a space.
+
+        * command/anonymous_shell.pm:
+        * command/auto_run_tests.pm:
+        * command/clone_build_tree.pm:
+        * command/create_ace_build.pm:
+        * command/cvs.pm:
+        * command/cvsgrab.pm:
+        * command/file_manipulation.pm:
+        * command/fuzz.pm:
+        * command/fuzz_py.pm:
+        * command/generate_makefile.pm:
+        * command/generate_workspace.pm:
+        * command/log.pm:
+        * command/make.pm:
+        * command/notify.pm:
+        * command/print_cidlc_version.pm:
+        * command/printaceconfig.pm:
+        * command/process_listener.pm:
+        * command/process_logs.pm:
+        * command/shell.pm:
+        * command/status.pm:
+        * command/svn.pm:
+        * command/vc6make.pm:
+        * command/vc7make.pm:
+        * command/vmsmake.pm:
+        * command/win32make.pm:
+        * command/wincemake.pm:
+
+          Removed handling of \xNN conversions.  This is now done by
+          simpleparser.pm.
+
 Wed Apr 11 19:30:50 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/scoreboard/dds.xml:

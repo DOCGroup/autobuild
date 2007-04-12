@@ -48,11 +48,6 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
 
-    if (defined $options) {
-      # replace all '\x22' with '"'
-      $options =~ s/\\x22/"/g
-    }
-
     if ($main::verbose == 1) {
         main::PrintStatus ('Setup', 'Process_Listener');
     }
