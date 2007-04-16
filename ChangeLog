@@ -1,3 +1,9 @@
+Mon Apr 16 21:19:22 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Added the build "Solaris9_i386_gcc_Debug".
+
 Mon Apr 16 19:58:09 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
