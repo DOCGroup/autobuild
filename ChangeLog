@@ -1,3 +1,14 @@
+Mon Apr 16 13:46:04 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/isislab/blade21/DynamicHash.xml:
+        * configs/autobuild/isislab/blade21/IPV6.xml:
+        * configs/autobuild/isislab/blade21/ImplicitTemplates.xml:
+        * configs/autobuild/isislab/blade21/Static.xml:
+        * configs/autobuild/isislab/blade21/autoconf.xml:
+        * configs/autobuild/isislab/blade21/wchar.xml:
+
+          Added rem_sems command to clean up left over semaphores.
+
 Thu Apr 12 15:29:42 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * common/simpleparser.pm:

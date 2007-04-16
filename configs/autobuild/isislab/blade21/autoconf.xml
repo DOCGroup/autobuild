@@ -24,7 +24,7 @@
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
-
+    <command name="rem_sems"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
     <command name="print_os_version" />
