@@ -1,3 +1,15 @@
+Mon Apr 16 19:58:09 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
+
+          This is a build of ACE+TAO upon which DDS is built.  It uses CORBA/e
+          compact and some other settings to attempt to minimize footprint.
+
+        * configs/scoreboard/tao_future.xml:
+
+          Added this build to the TAO future scoreboard (test failures here
+          should not necessarily hold up a release).
+
 Mon Apr 16 13:46:04 UTC 2007  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/isislab/blade21/DynamicHash.xml:
