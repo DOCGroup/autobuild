@@ -1,3 +1,12 @@
+Thu Apr 19 16:50:24 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/merengue/merengue_vc71.xml:
+        * configs/autobuild/remedynl/elrond_gcc.xml:
+        * configs/autobuild/remedynl/elrond_icc64.xml:
+
+          Added "BOOST" as a test config for those builds that have the boost=1
+          MPC feature and also run tests.
+
 Mon Apr 16 21:19:22 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/scoreboard/tao.xml:
