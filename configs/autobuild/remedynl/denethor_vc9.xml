@@ -34,13 +34,9 @@
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces=0\nssl=1\n'" />
-
-    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
-    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces=0\n'" />
 
     <command name="print_os_version" />
-    <command name="print_cidlc_version" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
