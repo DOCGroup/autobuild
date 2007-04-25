@@ -7,6 +7,7 @@
         <environment name="LD_LIBRARY_PATH" value="/opt/intel/cce/9.1.047/lib:/home/build/ACE/icc64/ACE_wrappers/lib" />
         <environment name="PATH"            value="/opt/intel/cce/9.1.047/bin" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>
+        <environment name="BOOST_CFG"       value="-il91-mt-d"/>
 
         <variable name="root"     value="/home/build/ACE/icc64/" />
         <variable name="log_file" value="build.txt" />

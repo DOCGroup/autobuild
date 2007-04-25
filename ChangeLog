@@ -1,3 +1,10 @@
+Wed Apr 25 16:14:48 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/remedynl/elrond_icc64.xml:
+
+          Attempted to configure this build to link against the debug versions
+          of the boost libraries.
+
 Thu Apr 19 16:50:24 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/merengue/merengue_vc71.xml:
