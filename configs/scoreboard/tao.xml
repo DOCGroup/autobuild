@@ -302,12 +302,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>VxWorks</name>
    <build>
-      <name>Windows_XP_VC71_Host</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_Host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
       <name>Windows_XP_BCB6_Host</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_BCB_Host</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -316,12 +310,6 @@ all the OS/platform combinations on which TAO is tested everyday.
    <build>
       <name>SuSE_10_Host</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/linuxhost/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-      <name>VxWorks5.5.2_PPC603_GCC2.96</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PPC603_GNU</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
