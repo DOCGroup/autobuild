@@ -13,14 +13,4 @@ decide the migration paths and strategies.
     <name>Builds for features and bugfixes comming up in the next beta</name>
 </group>
 
-<group>
-    <name>Builds for DDS</name>
-    <build>
-        <name>doc_trunk_mosquito_linux_gcc_d0o1i0c1</name>
-        <url>http://scoreboard.ociweb.com/doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
-        <build_sponsor>OCI</build_sponsor>
-        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-    </build>
-</group>
-
 </scoreboard>
