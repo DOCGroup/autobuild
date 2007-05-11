@@ -55,12 +55,12 @@ sub handle_compiler_output_line($) {
     $self->Output_Normal ($s);
     return;
   }
-  
+
   if ($s =~ m/^[ \t]*rc.exe/) {
     $self->Output_Normal ($s);
     return;
   }
-  
+
   if ($s =~ m/^Error scanning file .* for dependencies/) {
     # EVC 4 complains about non-existent files during dependency
     # generation.  This is not an actual error.
@@ -116,7 +116,7 @@ sub handle_compiler_output_line($) {
     $self->Output_Normal ($s);
     return;
   }
-  
+
   if ($s =~ m/qt.\/include\/private\/qucom/) {
       # We don't particularly care about warnings in QT code.
       $self->Output_Normal ($s);
@@ -190,6 +190,12 @@ sub handle_compiler_output_line($) {
       return;
     }
     # Definately an error
+    $self->Output_Error ($s);
+    return;
+  }
+
+
+  if ($s =~ m/ld: Can't find dependent library/) {
     $self->Output_Error ($s);
     return;
   }
