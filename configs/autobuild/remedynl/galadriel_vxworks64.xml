@@ -24,7 +24,7 @@
         <environment name="WRSD_LICENSE_FILE"         value="/home/build/WindRiver/license"/>
         <environment name="TCLLIBPATH"         value="/home/build/WindRiver/vxworks-6.4/host/resource/tcl"/>
         <environment name="WIND_PLATFORM" value="vxworks-6.4"/>
-        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.67"/>
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.65"/>
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks64_x86/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_REBOOT_CMD" value="sysToMonitor 2"/>
