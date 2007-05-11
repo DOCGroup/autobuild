@@ -1,3 +1,11 @@
+Fri May 11 17:58:52 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * autobuild.pl:
+        * command/doxygen.pm:
+
+          Added a new command that runs doxygen.  It requires at least a dest=X
+          option where X is the path for doxygen-generated files.
+
 Fri May 11 16:06:03 UTC 2007  Ciju John  <johnc at ociweb dot com>
 
         * configs/autobuild/oci/doc_trunk_oci1146_qnx_gcc_d1o0i0.xml:
