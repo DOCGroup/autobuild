@@ -1,3 +1,8 @@
+Fri May 11 18:33:51 UTC 2007  Ciju John  <johnc at ociweb dot com>
+
+        * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
+          Regenerate the configuration file with additional auto_run_tests flags.
+
 Fri May 11 17:58:52 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * autobuild.pl:
