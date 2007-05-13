@@ -27,7 +27,7 @@
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.65"/>
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks64_x86/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
-        <environment name="ACE_RUN_VX_REBOOT_CMD" value="sysToMonitor 2"/>
+        <environment name="ACE_RUN_VX_REBOOT_CMD" value="reboot"/>
         <!-- environment name="ACE_RUN_VX_NO_INITIAL_REBOOT" value="1"/ -->
 
         <variable name="root"     value="/nfs/galadriel/VxWorks64_x86/" />
