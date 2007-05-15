@@ -884,7 +884,11 @@ sub Test_Handler ($)
         return;
     }
 
-    if ($s =~ m/Error/
+    if ($s =~ m/gethostbyname: getaddrinfo returned ERROR/)
+    {
+      $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/Error/
         || $s =~ m/ERROR/
 	|| $s =~ m/fatal/
         || $s =~ m/FAIL:/
@@ -905,10 +909,12 @@ sub Test_Handler ($)
         $self->Output_Error ($s);
     }
     elsif ($s =~ m/the ACE tests _may_ have leaked OS resources!/
-           || $s =~ m/exists but should be cleaned up/) {
+           || $s =~ m/exists but should be cleaned up/)
+    {
         $self->Output_Warning ($s);
     }
-    else {
+    else
+    {
         $self->Output_Normal ($s);
     }
 }
