@@ -1,3 +1,11 @@
+Thu May 17 14:48:14 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d1o0s1.xml:
+        * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d1o0s1.xml:
+        * configs/scoreboard/dds.xml:
+
+          Added a static build of DDS on Linux (FC6).
+
 Wed May 15 06:30:51 UTC 2007  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:

@@ -1,0 +1,50 @@
+<autobuild>
+  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- ./BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO" -compiler gcc -configh "#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1" -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -outdir /distcomp/mitza -peerlayout 1 -supporting 0 -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE"/>
+    <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/CIAO"/>
+    <environment name="CVSROOT"         value=":pserver:taoadmin@cvs.ociweb.com:/cvs"/>
+    <environment name="CVS_RSH"         value="ssh"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE/lib:"/>
+    <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="PATH"            value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
+    <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/TAO"/>
+    <variable    name="base"            value="doc"/>
+    <variable    name="build_name"      value="gcc_d1o0s1"/>
+    <variable    name="creator"         value="mitza@ociweb.com"/>
+    <variable    name="log_file"        value="gcc_d1o0s1.log"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_mosquito_linux_gcc_d1o0s1"/>
+    <variable    name="project_root"    value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1"/>
+    <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO"/>
+  <command name="clone_build_tree"/>
+  <command name="rem_sems"/>
+  <command name="file_manipulation"  options="type=update file=build/gcc_d1o0s1/ACE/ace/config.h output='#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1\n#include \x22ace/config-linux.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/gcc_d1o0s1/ACE/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\nstatic_libs_only=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/gcc_d1o0s1/ACE/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d1o0s1/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d1o0s1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d1o0s1/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="gcc"/>
+  <command name="generate_workspace" options="-type gnuace -static -recurse -exclude CIAO,DDS,ACE/ACE.mwc,TAO/TAO.mwc"/>
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO depend"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
+
+  <!-- Post build -->
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="clean move prettify index"/>
+  <command name="status"          options="off"/>
+</autobuild>
