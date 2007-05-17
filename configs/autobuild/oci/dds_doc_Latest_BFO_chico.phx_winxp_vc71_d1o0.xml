@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on oci1329xp) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc_bfo -branchname Latest_BFO -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_BFO ." -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS" -compiler vc71 -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -hostname chico.phx -mpcopt "-include %DDS_ROOT%\MPC\config-legacy" -outdir . -supporting 0 -testopt "-s \x22u:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX" -->
+  <!-- D:\tao_builds\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc_bfo -branchname Latest_BFO -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_BFO ." -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS" -compiler vc71 -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -hostname chico.phx -outdir . -supporting 0 -testopt "-s \x22u:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX" -->
   <configuration>
     <environment name="ACE_ROOT"          value="d:\tao_builds\taoadmin\doc_bfo\ACE_wrappers\build\vc71_d1o0"/>
     <environment name="CIAO_ROOT"         value="d:\tao_builds\taoadmin\doc_bfo\ACE_wrappers\build\vc71_d1o0\TAO\CIAO"/>
@@ -30,7 +30,7 @@
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc -include %DDS_ROOT%\MPC\config-legacy"/>
+  <command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build debug TAO/TAO_ACE.sln"/>
