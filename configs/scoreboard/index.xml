@@ -37,7 +37,7 @@ scoreboard <a href="mailto:devo-group@list.isis.vanderbilt.edu">please
 contact us</a> and let us know which platform combinations you can
 contribute.  Instructions for setting up your own daily build and
 scoreboard are available
-<a href="https://svn.dre.vanderbilt.edu/viewvc/ACE_autobuild/trunk/README?revision=HEAD">here</a>.
+<a href="https://svn.dre.vanderbilt.edu/viewvc/autobuild/trunk/README?revision=HEAD">here</a>.
 </p>
 
 <p> We use the daily builds as a basis to collect important metrics
