@@ -121,12 +121,6 @@ all the OS/platform combinations on which ACE is tested everyday.
          <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-       <name>HP-UX_11iv2_IA64_aCC_autoconf</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_autoconf/</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
        <name>HP-UX_11iv2_IA64_aCC_wchar</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_aCCwchar/</url>
        <build_sponsor>Remedy IT</build_sponsor>

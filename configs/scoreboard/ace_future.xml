@@ -52,5 +52,11 @@ sponsorship is received.
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
+     <build>
+       <name>HP-UX_11iv2_IA64_aCC_autoconf</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_autoconf/</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 </scoreboard>
