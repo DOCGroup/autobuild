@@ -1,3 +1,8 @@
+Tue May 22 09:52:14 UTC 2007  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/tao.xml:
+          Added OpenVMS 8.3 IA64
+
 Thu May 17 14:48:14 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d1o0s1.xml:

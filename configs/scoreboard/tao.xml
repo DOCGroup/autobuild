@@ -348,6 +348,12 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>OpenVMS83_IA64</name>
+    <url>http://www.dre.vanderbilt.edu/~remedynl/openvmsia64</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
 </group>
 
 <group>
