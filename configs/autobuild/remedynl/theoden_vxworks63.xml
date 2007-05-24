@@ -6,7 +6,7 @@
         <environment name="TAO_ROOT"        value="\ACE\VxWorks\Vx63rtp\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"        value="\ACE\VxWorks\Vx63rtp\ACE_wrappers\TAO\CIAO"/>
         <environment name="HOST_ROOT"       value="\ACE\VxWorks\CB6sr\ACE_wrappers"/>
-        <environment name="PATH"            value="C:\WindRiver\vxworks-6.3\host\x86-win32\bin;;C:\WindRiver\workbench-2.5\x86-win32\bin;C:\WindRiver\gnu\3.4.4-vxworks-6.3\x86-win32\bin;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
+        <environment name="PATH"            value="C:\WindRiver\gnu\3.4.4-vxworks-6.3\x86-win32\bin;C:\WindRiver\vxworks-6.3\host\x86-win32\bin;C:\WindRiver\workbench-2.5\x86-win32\bin;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
         <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
         <environment name="WIND_BASE"       value="C:\WindRiver\vxworks-6.3" />
         <environment name="WIND_GNU_PATH"       value="C:\WindRiver\gnu\3.4.4-vxworks-6.3" />
