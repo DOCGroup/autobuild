@@ -60,6 +60,7 @@ all the OS/platform combinations on which DDS is tested everyday.
   </build>
 </group>
 
+<!-- Disabling this group since DDS trunk will no longer build with x.5.1
 <group>
   <name>ACE+TAO From Latest Bug-Fix-Only Beta (x.5.1)</name>
   <build>
@@ -75,4 +76,5 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
   </build>
 </group>
+-->
 </scoreboard>
