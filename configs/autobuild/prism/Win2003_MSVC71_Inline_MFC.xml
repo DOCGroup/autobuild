@@ -27,7 +27,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#define ACE_HAS_MFC 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=1\nssl=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />

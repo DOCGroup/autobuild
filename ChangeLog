@@ -1,3 +1,11 @@
+Fri Jun 08 10:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml
+ 
+          Turned on SSL for these builds.
+
 Fri June 1 13:54:14 UTC 2007  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/ace.xml:
