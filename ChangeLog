@@ -1,3 +1,17 @@
+Fri Jun  8 13:34:36 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
+
+        * scoreboard.pl:
+        * command/process_logs.pm:
+
+          Fixed a race condition and added a local copy of
+          log files.  I had noticed that with NFS over VPN
+          sometimes the logs got lost without the autobuild
+          knowing.  It is also sometimes convenient to have
+          logs to look at.  These changes will have no impact
+          unless the scoreboard uses the -c option or the
+          xxx.xml file uses the new "copy" subcommand in
+          process_logs.
+
 Fri Jun 08 10:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml

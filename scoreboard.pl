@@ -573,11 +573,32 @@ sub local_update_cache ($)
         @existing = sort @existing;
         my $updated = 0;
 
+        # A trigger file to tells the scoreboard that the log is complete
+        # The reason for this that that there is a race condition where the
+        # .txt file exist but not be competely copied.  There is a new
+        # copy subcommand to process_logs that creates this trigger file
+        # after the copy is complete, but doing it here works even if
+        # the autobuild uses move, just delayed one iteration.
+        my $triggerfile = "$directory/$buildname/post";
+        my $post = 0;
+        if ( -e $triggerfile ) {
+            $post = 1;
+            unlink $triggerfile;
+        }
+print "in local_update_cache, post=$post\n";
+
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" ) {next;}
-            print "        Prettifying $file.txt\n" if($verbose);
-            Prettify::Process ("$file.txt");
-            $updated++;
+            if ( $post == 1 ) {
+                print "        Prettifying $file.txt\n" if($verbose);
+                Prettify::Process ("$file.txt");
+                $updated++;
+            } else {
+                # Create the triggerfile for the next time we run
+                open(FH, ">$triggerfile");
+                close(FH);
+                last;
+            }
         }
 
         # Remove the latest $keep logs from the list
