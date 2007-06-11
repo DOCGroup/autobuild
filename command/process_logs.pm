@@ -307,7 +307,7 @@ sub copy_log ()
 
     # Create name of save directory ( = name of build )
     if ($log_root =~ m/.*\/(.*)$/) {
-        $save_root = $1;
+        $save_root = $root . "/" . $1;
     }
 
     if (!-r $save_root || !-d $save_root) {

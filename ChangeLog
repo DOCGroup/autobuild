@@ -1,3 +1,9 @@
+Mon Jun 11 13:51:51 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
+
+        * command/process_logs.pm:
+
+          Fixed an error in the path for the local directory.
+
 Fri Jun  8 13:34:36 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
 
         * scoreboard.pl:
