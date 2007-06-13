@@ -352,11 +352,20 @@ sub copy_log ()
         print "Saving $oldlog_file as $newlogfile\n";
     }
 
-    $ret = move ($oldlog_file, $savelogfile);
+    # This should be a simple move, however, we  use copy/unlink instead 
+    # of move since on Windows the move fails if the file is open (like 
+    # a test that doesn't finish) whereas the copy and unlink succeed.
+    $ret = copy ($oldlog_file, $savelogfile);
     if ( $ret < 1 ) {
-        print STDERR __FILE__, "Problem moving $oldlog_file to $savelogfile: $!\n";
+        print STDERR __FILE__, "Problem copying $oldlog_file to $savelogfile: $!\n";
         return 0;
     } 
+    $ret = unlink ($oldlog_file);
+    if ( $ret < 1 ) {
+        print STDERR __FILE__, "Problem removing $oldlog_file: $!\n";
+        return 0;
+    } 
+    chmod (0644, $savelogfile);
 
     # Clean up old saved files
     my $dh = new DirHandle ($save_root);
