@@ -363,7 +363,6 @@ sub copy_log ()
     $ret = unlink ($oldlog_file);
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem removing $oldlog_file: $!\n";
-        return 0;
     } 
     chmod (0644, $savelogfile);
 
