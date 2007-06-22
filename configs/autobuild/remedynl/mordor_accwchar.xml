@@ -41,7 +41,7 @@
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -a -s \x22/home/build/ACE/autobuild/posixsandbox/sandbox -t 5400000\x22" />
+    <command name="auto_run_tests"    options=" -a " />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
