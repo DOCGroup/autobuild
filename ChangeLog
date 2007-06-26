@@ -1,8 +1,13 @@
+Tue Jun 26 22:03:08 UTC 2007  Ciju John  <johnc at ociweb dot com>
+
+        * configs/scoreboard/releases.xml:
+          Updated to reflect revision x.5.9
+
 Thu Jun 21 14:55:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml
         * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml
- 
+
           These are NON-Debug builds!
 
 Mon Jun 11 13:51:51 GMT 2007  Rich Seibel <seibel_r@ociweb.com>
@@ -30,7 +35,7 @@ Fri Jun 08 10:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml
         * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml
         * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml
- 
+
           Turned on SSL for these builds.
 
 Fri June 1 13:54:14 UTC 2007  Martin Corino  <mcorino@remedy.nl>
