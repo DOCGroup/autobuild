@@ -38,7 +38,7 @@
     <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/gcc3_debug -type gnuace" />
 
-    <command name="file_manipulation" options="type=create file=build/gcc3_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n// ACE_HAS_POSIX_SEM_TIMEOUT_EMULATION needed for Proactor_Timer_Test.\n#define ACE_HAS_POSIX_SEM_TIMEOUT_EMULATION\n#include \x22ace/config-aix-5.x.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/gcc3_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix-5.x.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=build/gcc3_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nrtti=1\nssl=1\nSSL_ROOT=/opt/freeware\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_g++.GNU\n'" />
 
     <command name="print_os_version" />
