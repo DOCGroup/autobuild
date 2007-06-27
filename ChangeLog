@@ -1,3 +1,20 @@
+Wed Jun 27 15:21:48 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_Release_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_Latest_Release_oslo.phx_linux_gcc_d1o0n1.xml:
+
+        * configs/scoreboard/dds.xml:
+
+          Added back builds of DDS against released versions of ACE+TAO, now
+          using the latest release (x.5.9 as of today) instead of the latest
+          BFO beta (x.5.1).
+
+        * configs/autobuild/oci/dds_doc_Latest_BFO_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_Latest_BFO_oslo.phx_linux_gcc_d1o0n1.xml:
+
+          Removed these files.  They have been renmaed to "Latest_Release", see
+          above.
+
 Tue Jun 26 22:03:08 UTC 2007  Ciju John  <johnc at ociweb dot com>
 
         * configs/scoreboard/releases.xml:
