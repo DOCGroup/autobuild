@@ -320,12 +320,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks5.5.1_x86_GCC2.96_SharedLib</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PentiumXSharedLib_GNU</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
      <name>VxWorks6.4_PPC603</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/PPC603/</url>
      <build_sponsor>Remedy IT</build_sponsor>
