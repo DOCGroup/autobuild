@@ -1,3 +1,30 @@
+Fri Jun 29 21:26:29 UTC 2007  Trevor fields  <fields_t@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_Release_oslo.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_head_hornet_wince5_vc8_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
+        * configs/autobuild/oci/doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_Latest_Release_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_oslo.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d1o0i0d1.xml:
+        * configs/autobuild/oci/dds_doc_trunk_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5-static_gcc4.1.1_d0o0i0s1.xml:
+        * configs/autobuild/oci/doc_trunk_oslo.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_trunk_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d1o0s1.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5_gcc4.1.1_d0o0i0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_oci1146_qnx_gcc_d1o0i0.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+        * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_d1o0.xml:
+        * configs/autobuild/oci/oci_doc_fly_sunos59_suncc58_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d1o0s1.xml:
+        * configs/autobuild/oci/doc_trunk_oci1146_qnx_gcc_d1o0i0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
+        * configs/autobuild/oci/dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+
+          Changed the builds to not process the logs themselves.  Our
+          scoreboard machine will perform the processing.
+
 Wed Jun 27 15:21:48 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_Latest_Release_chico.phx_winxp_vc71_d1o0.xml:

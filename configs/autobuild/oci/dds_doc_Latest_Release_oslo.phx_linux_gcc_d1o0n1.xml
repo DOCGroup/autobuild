@@ -55,6 +55,6 @@
   <!-- Post build -->
   <command name="auto_run_tests"  options="dir=TAO/DDS -Config Linux"/>
   <command name="log"             options="off"/>
-  <command name="process_logs"    options="clean move prettify index"/>
+  <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
 </autobuild>

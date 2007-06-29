@@ -83,6 +83,6 @@
   <!-- Post build -->
   <command name="auto_run_tests"  options="dir=ACE -a -t -o -Config CORBA_E_COMPACT -Config NO_CODECS -Config NO_OTHER -Config NO_UUID -Config NO_MESSAGING -Config DISABLE_INTERCEPTORS -Config Linux"/>
   <command name="log"             options="off"/>
-  <command name="process_logs"    options="clean move prettify index"/>
+  <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
 </autobuild>

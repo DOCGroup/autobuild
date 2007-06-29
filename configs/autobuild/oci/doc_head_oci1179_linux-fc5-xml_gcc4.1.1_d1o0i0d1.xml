@@ -86,7 +86,7 @@
   <command name="anonymous_shell"    options="scp /home/taoadmin/.www-docs/autobuild_logs/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d0o0i0d1/status.txt xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d0o0i0d1"/>
   <command name="auto_run_tests"     options="-Config SSL -Config Linux"/>
   <command name="log"                options="off"/>
-  <command name="process_logs"       options="clean move prettify index"/>
+  <command name="process_logs"       options="copy"/>
   <command name="status"             options="off"/>
   <command name="shell"              options="scp /home/taoadmin/.www-docs/autobuild_logs/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d0o0i0d1/* xi.ociweb.com:/home/taoadmin/.www-docs/autobuild_logs/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d0o0i0d1"/>
 </autobuild>
