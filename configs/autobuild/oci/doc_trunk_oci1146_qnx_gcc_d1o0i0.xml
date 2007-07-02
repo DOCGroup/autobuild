@@ -26,7 +26,7 @@
   <command name="process_listener"   options="localhost:32001"/>
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
-  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
+  <!--  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/> -->
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc_d1o0i0/ace/config.h output='#include \x22ace/config-qnx-rtp.h\x22\n'"/>

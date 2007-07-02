@@ -59,12 +59,6 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-       <name>FC6_Compact_NoInline</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
-       <build_sponsor>OCI</build_sponsor>
-       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-     </build>
-     <build>
         <name>FC4_ACE_FOR_TAO</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/ace_for_tao</url>
         <build_sponsor>ISIS</build_sponsor>
@@ -236,12 +230,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris9_i386_gcc_Debug</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_trunk_sydney.phx_sunos59_gcc_d1o0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>
-   <build>
       <name>Solaris10_Studio11_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -394,16 +382,6 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor>J.T. Conklin</build_sponsor>
     <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
   </build>
-</group>
-
-<group>
-   <name>QNX</name>
-   <build>
-      <name>QNX_6.3.0_x86-gcc_3.3.5</name>
-      <url>http://scoreboard.ociweb.com/OCIscoreboard/doc_trunk_oci1146_qnx_gcc_d1o0i0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>
 </group>
 
 </scoreboard>
