@@ -7,7 +7,7 @@
     <environment name="DDS_ROOT"          value="d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS"/>
     <environment name="MPC_ROOT"          value="u:\MPC"/>
     <environment name="PATH"              value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\lib;" type="prefix"/>
-    <environment name="TAO_DCPS_TS_FLAGS" value=" "/>
+    <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
     <environment name="TAO_ROOT"          value="d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO"/>
     <variable    name="build_name"        value="vc71_d1o0"/>
     <variable    name="creator"           value="mitza@ociweb.com"/>
@@ -26,7 +26,7 @@
   <command name="clone_build_tree"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/vc71_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_d1o0/bin/MakeProjectCreator/config/default.features output='qos=1\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\nset CIAO_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\CIAO\nset DDS_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\lib;%PATH%\nset TAO_DCPS_TS_FLAGS= \nset TAO_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\nset CIAO_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\CIAO\nset DDS_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\bin;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\DDS\lib;%PATH%\nset OPENDDS_DCPS_TS_FLAGS= \nset TAO_ROOT=d:\tao_builds\taoadmin\doc_rel\ACE_wrappers\build\vc71_d1o0\TAO\n'"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>

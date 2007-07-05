@@ -9,7 +9,7 @@
     <environment name="DDS_ROOT"          value="d:\tao_builds\taoadmin\DDS\build\vc71_d1o0"/>
     <environment name="MPC_ROOT"          value="u:\MPC"/>
     <environment name="PATH"              value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\lib;" type="prefix"/>
-    <environment name="TAO_DCPS_TS_FLAGS" value=" "/>
+    <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
     <environment name="TAO_ROOT"          value="d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO"/>
     <variable    name="base"              value="DDS"/>
     <variable    name="build_name"        value="vc71_d1o0"/>
@@ -26,7 +26,7 @@
   <command name="log"                options="on"/>
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
   <command name="clone_build_tree"/>
-  <command name="file_manipulation"  options="type=create file=build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\nset CIAO_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs.ociweb.com:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\lib;%PATH%\nset TAO_DCPS_TS_FLAGS= \nset TAO_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\nset CIAO_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs.ociweb.com:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\bin;d:\tao_builds\taoadmin\DDS\build\vc71_d1o0\lib;d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\lib;%PATH%\nset OPENDDS_DCPS_TS_FLAGS= \nset TAO_ROOT=d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_d1o0\TAO\n'"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>

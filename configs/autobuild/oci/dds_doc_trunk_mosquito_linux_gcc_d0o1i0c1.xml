@@ -11,7 +11,7 @@
     <environment name="MAKEFLAGS"         value="built_in_topics=0"/>
     <environment name="MPC_ROOT"          value="/home/taoadmin/MPC"/>
     <environment name="PATH"              value="/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1/bin:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
-    <environment name="TAO_DCPS_TS_FLAGS" value=" "/>
+    <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
     <environment name="TAO_ROOT"          value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/TAO"/>
     <variable    name="base"              value="DDS"/>
     <variable    name="build_name"        value="gcc_d0o1i0c1"/>
@@ -29,7 +29,7 @@
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
-  <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1/lib:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/lib:\x22; export LD_LIBRARY_PATH\nMAKEFLAGS=\x22built_in_topics=0\x22; export MAKEFLAGS\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1/bin:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_DCPS_TS_FLAGS=\x22 \x22; export TAO_DCPS_TS_FLAGS\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1/lib:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/lib:\x22; export LD_LIBRARY_PATH\nMAKEFLAGS=\x22built_in_topics=0\x22; export MAKEFLAGS\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/DDS/build/gcc_d0o1i0c1/bin:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nOPENDDS_DCPS_TS_FLAGS=\x22 \x22; export OPENDDS_DCPS_TS_FLAGS\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
