@@ -24,8 +24,8 @@
   <command name="process_listener"   options="localhost:32001"/>
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
-  <!--  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE"/> -->
-  <!--  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO"/> -->
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO"/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=build/gcc_d1o0s1/ACE/ace/config.h output='#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1\n#include \x22ace/config-linux.h\x22\n'"/>
