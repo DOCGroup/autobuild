@@ -33,6 +33,18 @@ sponsorship is received.
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
+     <name>SuSE_10_1_ICC10.0_32bit</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc10_32/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+     <name>SuSE_10_1_ICC10.0_64bit</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc10_64/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
      <name>WinCE4_PocketPC2003_VC8_Debug</name>
      <url>http://acebuilds.riverace.com/lily/dev/vc8_ppc2003_debug</url>
      <red>36</red>
