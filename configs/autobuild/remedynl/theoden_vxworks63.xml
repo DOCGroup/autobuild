@@ -47,8 +47,6 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_DAnCE.mwc -type gnuace" />
 
-    <command name="make"              options="-k -C TAO/CIAO" />
-
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
