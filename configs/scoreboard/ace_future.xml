@@ -38,6 +38,12 @@ sponsorship is received.
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
+    <build>
+        <name>WinXP_BCB2006_Single_Threaded</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2006/dds/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
    <build>
      <name>SuSE_10_1_ICC10.0_64bit</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc10_64/</url>
