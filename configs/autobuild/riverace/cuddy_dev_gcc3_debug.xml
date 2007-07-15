@@ -12,7 +12,9 @@
         <variable name="log_file"     value="gcc3_debug.txt" />
         <variable name="log_root"     value="/jane/acebuilds/logs/cuddy/dev/gcc3_debug" />
         <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
-        <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES" />
+
+<!-- BAD_AIO config disables Bug_2912_Regression which wedges the box 7/15/07 -->
+        <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES BAD_AIO" />
 
     </configuration>
 
