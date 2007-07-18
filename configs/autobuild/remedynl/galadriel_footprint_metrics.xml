@@ -84,7 +84,7 @@
 
     <command name="process_logs"      options="clean move prettify index" />
 
-    <command name="shell"             options="rsync --progress --delete -z --recursive /home/build/ACE/footprint/metrics/* johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Stats" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z  /home/build/ACE/footprint/metrics/* johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Stats" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --exclude /metrics/ --exclude /.metrics/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Statcompile" />
 
     <command name="status"            options="off" />
