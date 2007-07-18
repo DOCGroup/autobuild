@@ -1,3 +1,17 @@
+Wed Jul 18 14:40:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_PRETTIFY.xml:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml
+        * configs/scoreboard/tao.xml:
+
+          Adjust ALL of the prismtech log file retensions, (and the red/orange
+          times for the HP builds).
+
 Mon Jul  9 13:39:38 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:

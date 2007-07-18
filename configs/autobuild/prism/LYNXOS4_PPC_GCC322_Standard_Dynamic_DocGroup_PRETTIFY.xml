@@ -10,7 +10,7 @@
 
     </configuration>
 
-    <command name="process_logs"      options="clean" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=60" />
+    <command name="process_logs"      options="clean=60 move prettify index" />
 
 </autobuild>

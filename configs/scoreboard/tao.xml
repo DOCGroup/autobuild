@@ -256,12 +256,16 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc367/standard</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+      <orange>72</orange> <!-- 3x24 hours -->
+      <red>96</red>       <!-- 4x24 hours -->
    </build>
    <build>
       <name>HPUX11i_aCC367_Inline</name>
       <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc367/inline</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+      <orange>48</orange> <!-- 2x24 hours -->
+      <red>72</red>       <!-- 3x24 hours -->
    </build>
    <build>
      <name>HP-UX_11iv2_IA64_GCC</name>
