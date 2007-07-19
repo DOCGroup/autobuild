@@ -14,7 +14,7 @@ all the OS/platform combinations on which DDS is tested everyday.
     <name>dds_doc_trunk_chico.phx_winxp_vc71_d1o0</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_chico.phx_winxp_vc71_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 </group>
 
@@ -24,19 +24,19 @@ all the OS/platform combinations on which DDS is tested everyday.
     <name>dds_doc_trunk_oslo.phx_linux_gcc_d1o0n1</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_oslo.phx_linux_gcc_d1o0n1</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
     <name>dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
     <name>dds_doc_trunk_mosquito_linux_gcc_d1o0s1</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_mosquito_linux_gcc_d1o0s1</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 </group>
 
@@ -46,7 +46,7 @@ all the OS/platform combinations on which DDS is tested everyday.
     <name>dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_sydney.phx_sunos59_gcc_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 </group>
 
@@ -56,23 +56,23 @@ all the OS/platform combinations on which DDS is tested everyday.
     <name>dds_doc_trunk_oci1146_qnx_gcc_d1o0i0</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1146_qnx_gcc_d1o0i0</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 </group>
 
 <group>
-  <name>ACE+TAO From Latest Release</name>
+  <name>ACE+TAO From Latest Beta</name>
   <build>
-    <name>dds_doc_Latest_Release_chico.phx_winxp_vc71_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_Latest_Release_chico.phx_winxp_vc71_d1o0</url>
+    <name>dds_doc_Latest_Beta_chico.phx_winxp_vc71_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_Latest_Beta_chico.phx_winxp_vc71_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_Latest_Release_oslo.phx_linux_gcc_d1o0n1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_Latest_Release_oslo.phx_linux_gcc_d1o0n1</url>
+    <name>dds_doc_Latest_Beta_oslo.phx_linux_gcc_d1o0n1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_Latest_Beta_oslo.phx_linux_gcc_d1o0n1</url>
     <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.ociweb.com/products/dds</build_sponsor_url>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 </group>
 
