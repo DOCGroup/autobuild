@@ -1,3 +1,11 @@
+Thu Jul 19 20:22:28 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_earwig_winxp-x64_nmake_d1o0.xml
+        * configs/scoreboard/tao.xml:
+
+          Added WinXP64_VC8_64bit_Debug, which uses the Platform SDK 64-bit
+          compiler (a distinct form of vc8).
+
 Wed Jul 18 14:40:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:

@@ -1,0 +1,72 @@
+<autobuild>
+  <!-- The command used to create this file (on earwig) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler nmake -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -environment "INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt\sys" -environment "LIB=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib\AMD64" -environment "prefix PATH=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\NoRedist\Win64\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\WinNT;" -mpcopt "-value_template systemlibs+=bufferoverflowU.lib" -outdir U:\mitza -->
+  <configuration>
+    <environment name="ACE_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0"/>
+    <environment name="CIAO_ROOT"    value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO\CIAO"/>
+    <environment name="DDS_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO\DDS"/>
+    <environment name="INCLUDE"      value="C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt\sys"/>
+    <environment name="LIB"          value="C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib\AMD64"/>
+    <environment name="MPC_ROOT"     value="u:\MPC"/>
+    <environment name="PATH"         value="C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\NoRedist\Win64\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\WinNT;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\lib;" type="prefix"/>
+    <environment name="TAO_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO"/>
+    <variable    name="build_name"   value="_nmake_d1o0"/>
+    <variable    name="creator"      value="mitza@ociweb.com"/>
+    <variable    name="log_file"     value="_nmake_d1o0.log"/>
+    <variable    name="log_root"     value="w:\autobuild_logs\doc_trunk_earwig_winxp-x64_nmake_d1o0"/>
+    <variable    name="make_program" value="nmake"/>
+    <variable    name="project_root" value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0"/>
+    <variable    name="root"         value="c:\tao_builds\taoadmin\doc"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
+  <command name="clone_build_tree"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/_nmake_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/_nmake_d1o0/bin/MakeProjectCreator/config/default.features output='qos=1\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/_nmake_d1o0/setenv.cmd output='set ACE_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\nset CIAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO\CIAO\nset DDS_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO\DDS\nset INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt\sys\nset LIB=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib\AMD64\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\NoRedist\Win64\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\WinNT;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\lib;%PATH%\nset TAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="msvc"/>
+  <command name="generate_workspace" options="-type nmake -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template systemlibs+=bufferoverflowU.lib -value_template platforms=x64"/>
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO depend"/>
+  <command name="make" options="   -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=bin depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=protocols depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=protocols/tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=examples depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=performance-tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/examples depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/performance-tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/examples depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO"/>
+  <command name="make" options="   -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=bin"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=protocols"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=protocols/tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=examples"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=performance-tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/examples"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/performance-tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/examples"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="-a -t -o -Config Win32 -Config NO_LOADAVG"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>
