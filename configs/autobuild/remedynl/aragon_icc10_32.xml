@@ -1,0 +1,45 @@
+<!-- $IC: rijes-d-9818_icc9_64.xml,v 1.33 2005/08/31 12:23:07 jwillemsen Exp $ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"      value="C:\ACE\Intel100_32bit\ACE_wrappers" />
+        <environment name="TAO_ROOT"      value="C:\ACE\Intel100_32bit\ACE_wrappers\TAO"/>
+        <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
+        <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files (x86)\Common Files\Intel\Licenses" />
+        <environment name="PATH"          value="C:\Cygwin\bin;C:\ACE\Intel100_32bit\ACE_wrappers\bin;C:\ACE\Intel100_32bit\ACE_wrappers\lib" type="prefix" />
+
+        <variable name="configs"         value="Win32 Exceptions" />
+        <variable name="root"            value="C:\ACE\Intel100_32bit\" />
+        <variable name="log_file"        value="build.txt" />
+        <variable name="log_root"        value="C:\ACE\Intel100_32bit\" />
+        <variable name="name"            value="Intel 10.0 32bit" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
+
+    <command name="log"               options="ON" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.mak' -exec c:\tools\rm '{}' ';'" />
+    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name 'Makefile' -exec c:\tools\rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="icl" />
+    <command name="print_ace_config" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-value_template add_compile+=/Qwr1684 -type nmake -exclude TAO -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=Win32"/>
+
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ICC100_32bit" />
+</autobuild>
