@@ -32,10 +32,14 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\nTAO/CIAO/tools/IDL3_to_IDL2\n}\n'" />
 
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32_vc8/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="borland" />
     <command name="check_linker" options="ilink32" />
     <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
