@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\ACE\BCB2006ddu\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\ACE\BCB2006ddu\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Borland\BDS\4.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006ddu\ACE_wrappers\lib;C:\ACE\BCB2006ddu\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Codegear\RAD Studio\5.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006ddu\ACE_wrappers\lib;C:\ACE\BCB2006ddu\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
         <environment name="BCBVER"   value="8" />
         <environment name="DEBUG"    value="1" />
