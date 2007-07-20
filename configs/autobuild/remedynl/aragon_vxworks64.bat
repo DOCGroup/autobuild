@@ -1,4 +1,4 @@
 cd ..\..\..\
 c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
-perl C:\ACE\autobuild\autobuild.pl theoden_vxworks64.xml
+perl C:\ACE\autobuild\autobuild.pl aragon_vxworks64.xml
