@@ -70,5 +70,11 @@ sponsorship is received.
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+        <build>
+            <name>WinXP_Intel100_32bit</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/ICC100_32bit/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
 </group>
 </scoreboard>
