@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"      value="C:\ACE\Intel100_32bit\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files\Common Files\Intel\Licenses" />
-        <environment name="PATH"          value="C:\Cygwin\bin;C:\Program Files\Microsoft Visual Studio 8\VC\bin;C:\ACE\Intel100_32bit\ACE_wrappers\bin;C:\ACE\Intel100_32bit\ACE_wrappers\lib" type="prefix" />
+        <environment name="PATH"          value="C:\Program Files\Microsoft Visual Studio 8\VC\bin;C:\ACE\Intel100_32bit\ACE_wrappers\bin;C:\ACE\Intel100_32bit\ACE_wrappers\lib;C:\Cygwin\bin;" type="prefix" />
 
         <variable name="configs"         value="Win32 Exceptions" />
         <variable name="root"            value="C:\ACE\Intel100_32bit\" />
