@@ -1,3 +1,7 @@
+cd ..\..\..\
+c:\cygwin\bin\svn up
+cd configs\autobuild\remedynl
+
 perl C:\ACE\autobuild\autobuild.pl scarab_cygwin.xml
 perl C:\ACE\autobuild\autobuild.pl scarab_cidlcstatic.xml
 perl C:\ACE\autobuild\autobuild.pl scarab_vc8_version.xml
