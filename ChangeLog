@@ -1,3 +1,10 @@
+Tue Jul 24 15:45:48 UTC 2007  Wallace Zhang  <zhang_w@ociweb.com>
+
+        * configs/autobuild/oci/doc_head_hornet_wince5_vc8_d1o0.xml:
+
+          Cleaned workspace before rebuilding to make sure the any warning
+          will be showed up in each build.
+
 Thu Jul 19 22:05:53 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_Latest_Beta_chico.phx_winxp_vc71_d1o0.xml:
@@ -5,7 +12,7 @@ Thu Jul 19 22:05:53 UTC 2007  Adam Mitz  <mitza@ociweb.com>
         * configs/scoreboard/dds.xml:
 
           Renamed the "Latest_Release" builds to "Latest_Beta".
-        
+
         * configs/autobuild/oci/dds_doc_Latest_Release_chico.phx_winxp_vc71_d1o0.xml:
         * configs/autobuild/oci/dds_doc_Latest_Release_oslo.phx_linux_gcc_d1o0n1.xml:
 

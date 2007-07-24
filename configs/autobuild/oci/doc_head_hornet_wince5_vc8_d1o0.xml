@@ -39,6 +39,7 @@
 
   <!-- Build targets -->
   <command name="print_status"       options="Compile:Build Status"/>
+  <command name="vc7make" options="/clean debug TAO/wm5_WinCE.sln"/>
   <command name="vc7make" options="/build debug TAO/wm5_WinCE.sln"/>
 
   <!-- Post build -->
