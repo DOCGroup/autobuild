@@ -6,5 +6,5 @@
 cd $HOME/ACE/autobuild
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/elrond_icc10_32.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_icc10_64.xml
 

@@ -16,8 +16,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="process_listener"  options="localhost:32001" />
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
@@ -39,15 +38,14 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="-type gnuace" />
 
-    <command name="make"              options="-k -j 3" />
+    <command name="make"              options="-k -j 9" />
 
     <command name="auto_run_tests"    options=" -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/SuSE_x86_64_icc10_64" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RHEL5_icc10_64" />
 </autobuild>
