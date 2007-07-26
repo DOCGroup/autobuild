@@ -7,7 +7,7 @@
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/x86-64bit/ACE_wrappers/lib:/build/isisbuilds/x86-64bit/ACE_wrappers/ace:/build/isisbuilds/x86-64bit/utils:/lib" />
         <environment name="XERCESCROOT"     value="/build/isisbuilds/x86-64bit/utils" />
 
-        <variable name="root"     value="/build/x86-64bit" />
+        <variable name="root"     value="/build/isisbuilds/x86-64bit" />
         <variable name="log_file" value="build-log.txt" />
         <variable name="log_root" value="/build/isisbuilds/x86-64bit/buildlog" />
         <variable name="configs"  value="Linux 64bit x86 CIAO" />
