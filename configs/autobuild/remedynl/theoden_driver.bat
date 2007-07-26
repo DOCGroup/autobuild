@@ -2,8 +2,6 @@ cd ..\..\..\
 c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
 
-perl C:\ACE\autobuild\autobuild.pl theoden_cb6sr.xml
-perl C:\ACE\autobuild\autobuild.pl theoden_vxworks63.xml
 perl C:\ACE\autobuild\autobuild.pl theoden_bcb2007dr.xml
 perl C:\ACE\autobuild\autobuild.pl theoden_bcb2006sr.xml
 perl C:\ACE\autobuild\autobuild.pl theoden_bcb2006dd.xml
