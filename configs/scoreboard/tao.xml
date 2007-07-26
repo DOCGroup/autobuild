@@ -83,14 +83,14 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-        <name>SuSE_10_1_GCC41_COIOP</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/COIOP/</url>
+        <name>RHEL5_COIOP</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_COIOP/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-        <name>SuSE_10_1_GCC41_COIOP_No_Networking</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/linuxnonet/</url>
+        <name>RHEL5_COIOP_No_Networking</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_linuxnonet/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>

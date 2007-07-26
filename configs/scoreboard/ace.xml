@@ -123,16 +123,6 @@ all the OS/platform combinations on which ACE is tested everyday.
 </group>
 
 <group>
-  <name>QNX</name>
-   <build>
-     <name>QNX6.3-SP3</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/qnx/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-</group>
-
-<group>
   <name>VxWorks</name>
    <build>
      <name>VxWorks6.3_PPC603_Release</name>

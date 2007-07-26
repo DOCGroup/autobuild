@@ -131,20 +131,20 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_10_1_ICC91_x86_64_32bit</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc32/</url>
+      <name>RHEL5_ICC91_32bit</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc91_32/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_10_1_ICC91_x86_64_64bit</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc64/</url>
+      <name>RHEL5_ICC91_64bit</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc91_64/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_10_1_GCC_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/acefortao/</url>
+      <name>RHEL5_ACE_FOR_TAO</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
