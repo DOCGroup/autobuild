@@ -131,12 +131,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>SuSE_10_1_CIDLC</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/linux_CIDLC/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>SuSE_10_1_ICC91_x86_64_32bit</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/SuSE_x86_64_icc32/</url>
       <build_sponsor>Remedy IT</build_sponsor>
