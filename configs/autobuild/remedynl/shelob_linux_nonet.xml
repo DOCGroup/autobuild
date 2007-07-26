@@ -6,9 +6,7 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/linuxnonet/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/linuxnonet/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/linuxnonet/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/rtems-4.6/bin" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
-        <environment name="RTEMS_MAKEFILE_PATH" value="/home/build/rtems/i386-nonet/i386-rtems/pc586" />
 
         <variable name="root"     value="/home/build/ACE/linuxnonet/" />
         <variable name="log_file" value="build.txt" />
@@ -49,5 +47,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/linuxnonet" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RHEL5_linuxnonet" />
 </autobuild>

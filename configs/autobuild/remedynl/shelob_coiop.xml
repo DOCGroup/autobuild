@@ -5,8 +5,7 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/COIOP/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/COIOP/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/COIOP/ACE_wrappers/TAO/CIAO"/>
-        <environment name="XERCESCROOT"     value="/home/build/xerces"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/xerces/lib:/home/build/ACE/COIOP/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/COIOP/ACE_wrappers/lib" />
         <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/home/build/ACE/COIOP/" />
@@ -51,5 +50,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/COIOP" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RHEL5_COIOP" />
 </autobuild>

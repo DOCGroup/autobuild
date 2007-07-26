@@ -8,4 +8,4 @@ svn up
 
 # Run the build.
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/legolas_acefortao.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_linux_nonet.xml
