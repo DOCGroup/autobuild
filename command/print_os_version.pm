@@ -92,6 +92,20 @@ sub Run ($)
         print "\n";
     }
 
+    if(-r "/proc/cpuinfo"){
+        my $systeminfo = `cat /proc/cpuinfo` ;
+
+        print "<h3>Processor info</h3>\n";
+        print filter_info($systeminfo, "model name") . "\n";
+    }
+
+    if(-r "/proc/meminfo"){
+        my $systeminfo = `cat /proc/meminfo` ;
+
+        print "<h3>Memory info</h3>\n";
+        print filter_info($systeminfo, "MemTotal") . "\n";
+    }
+
     if($^O eq "MSWin32"){
         my $systeminfo = `systeminfo` ;
 
