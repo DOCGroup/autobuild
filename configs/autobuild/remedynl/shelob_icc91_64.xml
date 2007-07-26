@@ -1,16 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/icc64/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/icc64/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/build/ACE/icc64/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cce/9.1.049/lib:/home/build/ACE/icc64/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/intel/cce/9.1.049/bin" type="prefix" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/icc91_64/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/build/ACE/icc91_64/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/icc91_64/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cce/9.1.051/lib:/home/build/ACE/icc91_64/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/intel/cce/9.1.051/bin" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>
 
-        <variable name="root"     value="/home/build/ACE/icc64/" />
+        <variable name="root"     value="/home/build/ACE/icc91_64/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/icc64/" />
+        <variable name="log_root" value="/home/build/ACE/icc91_64/" />
         <variable name="configs"  value="Linux Exceptions NOXERCES ZLIB SSL BOOST" />
 
     </configuration>
@@ -40,12 +40,12 @@
 
     <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuace" />
 
-    <command name="make"              options="-k -j 3" />
+    <command name="make"              options="-k -j 9" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/SuSE_x86_64_icc64" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RHEL5_icc91_64" />
 </autobuild>
