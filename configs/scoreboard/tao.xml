@@ -12,7 +12,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
      <build>
        <name>RHEL5_GCC4.1.1</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_x86_64_gcc41</url>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_gcc41</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
