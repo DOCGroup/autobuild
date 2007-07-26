@@ -280,13 +280,13 @@ all the OS/platform combinations on which TAO is tested everyday.
       <red>72</red>       <!-- 3x24 hours -->
    </build>
    <build>
-     <name>HP-UX_11iv2_IA64_GCC</name>
+     <name>HPUX_11iv2_IA64_GCC</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_GCC/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>HP-UX_11iv2_IA64_aCC</name>
+     <name>HPUX_11iv2_IA64_aCC</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_aCC/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
