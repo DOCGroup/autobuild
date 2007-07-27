@@ -190,13 +190,13 @@ all the OS/platform combinations on which TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2003_64bit_Intel100_32_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/Win2003_ICC100_32r/</url>
+            <name>Win2003_64bit_Intel100_64_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/Win2003_ICC100_64r/</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2003_64bit_Intel100_64bit</name>
+            <name>Win2003_64bit_Intel100_64</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/Win2003_ICC100_64/</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
