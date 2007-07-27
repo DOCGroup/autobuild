@@ -5,24 +5,18 @@
         <environment name="TAO_ROOT"      value="D:\ACE\Intel100_64\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files (x86)\Common Files\Intel\Licenses" />
-        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Bin;C:\Program Files\Microsoft Platform SDK\Include\;D:\ACE\Intel100_64\ACE_wrappers\bin;D:\ACE\Intel100_64\ACE_wrappers\lib;C:\Program Files\Microsoft Platform SDK\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK\Bin;C:\Program Files\Microsoft Platform SDK\Bin\WinNT;C:\Program Files\Microsoft Platform SDK\NoRedist\Win64\AMD64;C:\Cygwin\bin;D:\ACE\Intel100_64\ACE_wrappers\bin;D:\ACE\Intel100_64\ACE_wrappers\lib" type="prefix" />
-        <environment name="INCLUDE"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Include;C:\Program Files\Microsoft Platform SDK\Include\;C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include" type="prefix" />
-        <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Lib;C:\Program Files\Microsoft Platform SDK\Lib\AMD64;C:\Program Files\Microsoft Platform SDK\Lib\AMD64\atlmfc" type="prefix" />
-        <environment name="Include"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Include;C:\Program Files\Microsoft Platform SDK\Include;C:\Program Files\Microsoft Platform SDK\Include\crt;C:\Program Files\Microsoft Platform SDK\Include\crt\sys;C:\Program Files\Microsoft Platform SDK\Include\mfc;C:\Program Files\Microsoft Platform SDK\Include\atl" type="prefix" />
-        <environment name="CPU"           value="AMD64" />
-        <environment name="APPVER"        value="5.02" />
-        <environment name="TARGETOS"      value="WINNT" />
-        <environment name="MSVCVer"       value="7.1" />
-        <environment name="MSVCDir"       value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7" />
+        <environment name="PATH"          value="C:\Cygwin\bin;D:\ACE\Intel100_64\ACE_wrappers\bin;D:\ACE\Intel100_64\ACE_wrappers\lib;" type="prefix" />
+        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\10.0.25\EM64T\Bin;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\BIN\amd64;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\bin\win64\amd64;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\bin;c:\WINDOWS\Microsoft.NET\Framework64\v2.0.50727;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\VCPackages;c:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE;c:\Program Files (x86)\Microsoft Visual Studio 8\Common7\Tools;c:\Program Files (x86)\Microsoft Visual Studio 8\Common7\Tools\bin;c:\Program Files (x86)\Microsoft Visual Studio 8\SDK\v2.0\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;D:\ACE\Intel100_64\ACE_wrappers\bin;D:\ACE\Intel100_64\ACE_wrappers\lib;C:\Program Files\Microsoft Platform SDK\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK\Bin;C:\Program Files\Microsoft Platform SDK\Bin\WinNT;C:\Program Files\Microsoft Platform SDK\NoRedist\Win64\AMD64;" type="prefix" />
+        <environment name="INCLUDE"       value="C:\Program Files (x86)\Intel\Compiler\C++\10.0.25\EM64T\include;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\ATLMFC\INCLUDE;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\INCLUDE;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include;c:\Program Files (x86)\Microsoft Visual Studio 8\SDK\v2.0\include;" type="prefix" />
+        <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\10.0.25\EM64T\lib;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\ATLMFC\LIB\amd64;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\LIB\amd64;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\lib\amd64;c:\Program Files (x86)\Microsoft Visual Studio 8\SDK\v2.0\LIB\AMD64;" type="prefix" />
+        <environment name="LIBPATH"           value="c:\Program Files (x86)\Microsoft Visual Studio 8\VC\ATLMFC\LIB\amd64;" />
         <environment name="VCINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
-        <environment name="VS71COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
-        <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE" />
 
         <variable name="configs"  value="Win32 Exceptions" />
         <variable name="root"     value="D:\ACE\Intel100_64\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="D:\ACE\Intel100_64\" />
-        <variable name="name"     value="Intel 90 64bit" />
+        <variable name="name"     value="Intel 100 64bit" />
     </configuration>
 
     <command name="status"            options="on" />
