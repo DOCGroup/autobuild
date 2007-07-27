@@ -26,10 +26,17 @@ ps -u tao|grep Process_Strategy_Test|awk '{print $1}'|xargs kill -9
 ps -u tao|grep MEM_Stream_Test|awk '{print $1}'|xargs kill -9
 ps -u tao|grep MT_SOCK_Test|awk '{print $1}'|xargs kill -9
 ps -u tao | grep -i naming_service | sed -n -e 's/^ *\([0-9][0-9]*\)  *1 .*$/\1/p' | xargs kill -9 
-rm -rf ACE_wrappers ACE_wrappers_for_rad1.tar.gz *.cpp *.h *.conf *.mpc *.pl *.bor *.o *.xml *.dsw
+#
+# Note that we are deliberatly NOT deleting the current ACE_wrappers here, just the previous one(s)
+# that were renamed with the last build date postfixed. This means that we can run any built tests
+# manually the next day if required.
+#
+rm -rf ACE_wrappers_* ACE_wrappers_for_lynxosx86.tar.gz *.cpp *.h *.conf *.mpc *.pl *.bor *.o *.xml *.dsw
 #
 # processes still running prevent the deletion of the ACE_wrappers directory
-# so move it temporarily
+# so move it temporarily. Note that due to the modification above, this will now ALWAYS occur
+# as we are now saving a single "Previous build" for manual testing the next day.
+#
 if [ -d ACE_wrappers ]; then mv ACE_wrappers ACE_wrappers_`date +%y%m%d`; fi
 echo `date`: Finished part2
 echo `date`: Triggering ultra4 to run part3
