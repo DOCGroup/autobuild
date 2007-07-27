@@ -1,7 +1,7 @@
 Fri Jul 27 08:22:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
-        * configs/autobuild/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
-        * configs/autobuild/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests:
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests:
 
           Save a single "previous run" copy for manual test running the next morning.
 
