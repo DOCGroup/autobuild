@@ -1,11 +1,11 @@
 <!-- $IC: rijes-d-9818_icc9_64.xml,v 1.33 2005/08/31 12:23:07 jwillemsen Exp $ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"      value="C:\ACE\Intel90_64bit\ACE_wrappers" />
-        <environment name="TAO_ROOT"      value="C:\ACE\Intel90_64bit\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"      value="D:\ACE\Intel100_64\ACE_wrappers" />
+        <environment name="TAO_ROOT"      value="D:\ACE\Intel100_64\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files (x86)\Common Files\Intel\Licenses" />
-        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Bin;C:\Program Files\Microsoft Platform SDK\Include\;C:\ACE\Intel90_64bit\ACE_wrappers\bin;C:\ACE\Intel90_64bit\ACE_wrappers\lib;C:\Program Files\Microsoft Platform SDK\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK\Bin;C:\Program Files\Microsoft Platform SDK\Bin\WinNT;C:\Program Files\Microsoft Platform SDK\NoRedist\Win64\AMD64;C:\Cygwin\bin;C:\ACE\Intel90_64bit\ACE_wrappers\bin;C:\ACE\Intel90_64bit\ACE_wrappers\lib" type="prefix" />
+        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Bin;C:\Program Files\Microsoft Platform SDK\Include\;D:\ACE\Intel100_64\ACE_wrappers\bin;D:\ACE\Intel100_64\ACE_wrappers\lib;C:\Program Files\Microsoft Platform SDK\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK\Bin;C:\Program Files\Microsoft Platform SDK\Bin\WinNT;C:\Program Files\Microsoft Platform SDK\NoRedist\Win64\AMD64;C:\Cygwin\bin;D:\ACE\Intel100_64\ACE_wrappers\bin;D:\ACE\Intel100_64\ACE_wrappers\lib" type="prefix" />
         <environment name="INCLUDE"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Include;C:\Program Files\Microsoft Platform SDK\Include\;C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\include" type="prefix" />
         <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Lib;C:\Program Files\Microsoft Platform SDK\Lib\AMD64;C:\Program Files\Microsoft Platform SDK\Lib\AMD64\atlmfc" type="prefix" />
         <environment name="Include"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\EM64T\Include;C:\Program Files\Microsoft Platform SDK\Include;C:\Program Files\Microsoft Platform SDK\Include\crt;C:\Program Files\Microsoft Platform SDK\Include\crt\sys;C:\Program Files\Microsoft Platform SDK\Include\mfc;C:\Program Files\Microsoft Platform SDK\Include\atl" type="prefix" />
@@ -19,9 +19,9 @@
         <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE" />
 
         <variable name="configs"  value="Win32 Exceptions" />
-        <variable name="root"     value="C:\ACE\Intel90_64bit\" />
+        <variable name="root"     value="D:\ACE\Intel100_64\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\ACE\Intel90_64bit\" />
+        <variable name="log_root" value="D:\ACE\Intel100_64\" />
         <variable name="name"     value="Intel 90 64bit" />
     </configuration>
 
@@ -54,5 +54,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ICC90_64bit" />
+    <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Win2003_ICC100_64" />
 </autobuild>

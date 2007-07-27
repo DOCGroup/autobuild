@@ -1,11 +1,11 @@
 <!-- $IC: rijes-d-9818_icc9_64.xml,v 1.33 2005/08/31 12:23:07 jwillemsen Exp $ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"      value="C:\ACE\Intel90_32bit\ACE_wrappers" />
-        <environment name="TAO_ROOT"      value="C:\ACE\Intel90_32bit\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"      value="D:\ACE\Intel100_32r_r\ACE_wrappers" />
+        <environment name="TAO_ROOT"      value="D:\ACE\Intel100_32r_r\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files (x86)\Common Files\Intel\Licenses" />
-        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Bin;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files (x86)\Microsoft Visual C++ 2003\bin;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Vc7\lib;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Program Files (x86)\Microsoft Visual C++ 2003\include;C:\Cygwin\bin;C:\ACE\Intel90_32bit\ACE_wrappers\bin;C:\ACE\Intel90_32bit\ACE_wrappers\lib" type="prefix" />
+        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Bin;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files (x86)\Microsoft Visual C++ 2003\bin;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Vc7\lib;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Program Files (x86)\Microsoft Visual C++ 2003\include;C:\Cygwin\bin;D:\ACE\Intel100_32r_r\ACE_wrappers\bin;D:\ACE\Intel100_32r_r\ACE_wrappers\lib" type="prefix" />
         <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Lib;C:\Program Files (x86)\Microsoft Visual C++ 2003\bin;C:\Program Files (x86)\Microsoft Visual C++ 2003\include;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\Lib;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Vc7\lib" type="prefix" />
         <environment name="Include"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.0\IA32\Include;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\ATLMFC\INCLUDE;C:\Program Files(x86)\Microsoft Visual Studio .NET 2003\VC7\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\PlatformSDK\include\prerelease;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\PlatformSDK\include;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\SDK\v1.1\include;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\ATLMFC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\PlatformSDK\include\prerelease;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\VC7\PlatformSDK\include;d:\Program Files (x86)\Microsoft Visual Studio .NET 2003\SDK\v1.1\include;" type="prefix" />
 
@@ -16,17 +16,17 @@
         <environment name="VS71COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003" />
         <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\Common7\IDE" />
 
-        <variable name="configs"         value="Win32 Exceptions" />
-        <variable name="root"            value="C:\ACE\Intel90_32bit\" />
+        <variable name="configs"         value="Win32 Exceptions Release" />
+        <variable name="root"            value="D:\ACE\Intel100_32r_r\" />
         <variable name="log_file"        value="build.txt" />
-        <variable name="log_root"        value="C:\ACE\Intel90_32bit\" />
-        <variable name="name"            value="Intel 90 32bit" />
+        <variable name="log_root"        value="D:\ACE\Intel100_32r_r\" />
+        <variable name="name"            value="Intel 90 32bit Release" />
     </configuration>
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Release\x22 REALCLEAN" />
 
     <command name="log"               options="ON" />
 
@@ -43,12 +43,12 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-value_template add_compile+=/Qvc7.1 -value_template add_compile+=/Qwr1684 -type nmake -exclude TAO_*.mwc,TAO/CIAO -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=Win32"/>
+    <command name="generate_workspace" options="-value_template add_compile+=/Qvc7.1 -value_template add_compile+=/Qwr1684 -type nmake -exclude TAO_*.mwc,TAO/CIAO -value_template cc=icl.exe -value_template link=xilink.exe -value_template platforms=Win32 -value_template debug_flags+=/Od"/>
 
-    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Release\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ICC90_32bit" />
+    <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/Win2003_ICC100_32r" />
 </autobuild>
