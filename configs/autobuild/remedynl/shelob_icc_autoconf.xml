@@ -1,0 +1,42 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="/home/build/ACE/icc_autoconf/ACE_wrappers"/>
+        <environment name="TAO_ROOT"     value="/home/build/ACE/icc_autoconf/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"    value="/home/build/ACE/icc_autoconf/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel/cce/10.0.025/lib:/home/build/ACE/icc_autoconf/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/intel/cce/10.0.025/bin" type="prefix" />
+
+        <variable name="root"     value="/home/build/ACE/icc_autoconf/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/build/ACE/icc_autoconf/" />
+        <variable name="configs"  value="Linux Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32003" />
+
+    <command name="log"               options="ON" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+    <command name="print_autotools_version" />
+
+    <command name="shell"             options="cd ACE_wrappers; autoreconf --install --force -I m4" />
+
+    <command name="shell"             options="rm -rf ACE_wrappers/build" />
+    <command name="shell"             options="mkdir ACE_wrappers/build" />
+    <command name="shell"             options="cd ACE_wrappers/build; ../configure --without-tao --enable-ssl=no --CC=icc --link=icc --LD=icc" />
+    <command name="make"              options="-C /home/build/ACE/icc_autoconf/ACE_wrappers/build -k -j 9"/>
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RHEL5_icc_autoconf" />
+</autobuild>
+
+
