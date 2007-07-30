@@ -44,7 +44,7 @@ sub Run ($)
     print "<h3>Automake version (automake --version)</h3>\n";
     system("automake --version");
 
-    print "<h3>Autoconf version (autocont --version)</h3>\n";
+    print "<h3>Autoconf version (autoconf --version)</h3>\n";
     system("autoconf --version");
 
     print "<h3>Libtool version (libtool --version)</h3>\n";
