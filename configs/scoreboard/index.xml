@@ -75,6 +75,8 @@ Statistics</a>
     CORBA e/compact</a>,
   <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/corbaemicro/">
     CORBA e/micro</a>
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/minimum_corba/">
+    Minimum CORBA</a>
 </li>
 </ul>
 The <i>Code Coverage</i> pages illustrate which areas of
