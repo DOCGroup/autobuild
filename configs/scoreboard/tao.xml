@@ -126,6 +126,12 @@ all the OS/platform combinations on which TAO is tested everyday.
      <build_sponsor>ISIS</build_sponsor>
      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
+   <build>
+     <name>Stats_Minimum_Corba</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/minimum_corba</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
 </group>
 <group>
    <name>Windows</name>
