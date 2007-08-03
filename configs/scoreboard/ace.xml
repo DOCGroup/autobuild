@@ -85,8 +85,14 @@ all the OS/platform combinations on which ACE is tested everyday.
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-       <name>RHEL4_IA64</name>
+       <name>RHEL4_GCC_IA64</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_GCC</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+       <name>RHEL4_ICC100_IA64</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_ICC100</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -97,7 +103,7 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>RHEL5_ICC_autoconf</name>
+       <name>RHEL5_ICC100_autoconf</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc_autoconf</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
