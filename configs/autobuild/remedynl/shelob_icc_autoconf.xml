@@ -31,7 +31,7 @@
 
     <command name="shell"             options="rm -rf ACE_wrappers/build" />
     <command name="shell"             options="mkdir ACE_wrappers/build" />
-    <command name="shell"             options="cd ACE_wrappers/build; ../configure --without-tao --enable-ssl=no CXX=icpc CC=icc link=icpc LD=icpc" />
+    <command name="shell"             options="cd ACE_wrappers/build; ../configure --without-tao --enable-ssl=no CXX=icpc CC=icc link=icpc LD=xild" />
     <command name="make"              options="-C /home/build/ACE/icc_autoconf/ACE_wrappers/build -k -j 9"/>
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
