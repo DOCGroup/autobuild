@@ -1,3 +1,8 @@
+Sun Aug  5 19:37:50 UTC 2007  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+          Temporarily enable debug builds.
+
 Fri Jul 27 08:22:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests:
