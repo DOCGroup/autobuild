@@ -40,7 +40,7 @@
 
     <command name="make"              options="-k -j 9" />
 
-    <command name="auto_run_tests"    options=" -a" />
+    <command name="auto_run_tests"    options=" -a -o -t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
