@@ -1,4 +1,4 @@
 cd ..\..\..\
 svn up
 cd configs\autobuild\remedynl
-perl C:\ACE\autobuild\autobuild.pl gandalf_vc71sd.xml
+perl C:\ACE\autobuild\autobuild.pl theoden_vc71sd.xml
