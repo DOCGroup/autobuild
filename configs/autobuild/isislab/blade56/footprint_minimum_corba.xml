@@ -26,9 +26,9 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n#undef TAO_HAS_SENDFILE\n#undef ACE_HAS_IP_MULTICAST\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='use_dep_libs=0\ncidl=1\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='minimum_corba=1\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='minimum_corba=1\ncidl=1\ntransport_current=0\n'" />
 
     <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
