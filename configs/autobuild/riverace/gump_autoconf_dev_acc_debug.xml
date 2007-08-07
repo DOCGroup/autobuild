@@ -1,0 +1,52 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"  value="/acebuilds/ACE_wrappers" />
+        <environment name="LIBPATH"   value="/acebuilds/ACE_wrappers/build/autoconf_acc_debug/lib:.:/usr/lib" />
+        <environment name="MPC_ROOT"  value="/acebuilds/MPC" />
+
+        <variable name="root"         value="/acebuilds/ACE_wrappers" />
+        <variable name="build_name"   value="autoconf_acc_debug" />
+        <variable name="project_root" value="/acebuilds/ACE_wrappers" />
+        <variable name="log_file"     value="autoconf_acc_debug.txt" />
+        <variable name="log_root"     value="/jane/acebuilds/logs/gump/dev/autoconf_acc_debug" />
+        <variable name="automake_build" value="yes" />
+        <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="dir=/acebuilds/MPC update --non-interactive" />
+    <command name="svn"               options="update --non-interactive" />
+
+    <command name="file_manipulation" options="type=delete file=.disable" />
+
+    <command name="file_manipulation" options="type=mustnotexist file=build/autoconf_acc_debug/.disable" />
+
+    <command name="print_os_version" />
+    <command name="print_autotools_version" />
+    <command name="check_compiler"    options="aCC" />
+    <command name="print_ace_config" />
+
+    <!-- command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\n'" -->
+    <!-- command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers -type automake -exclude build,Kokyu" -->
+
+    <command name="shell"             options="./bin/bootstrap" />
+
+    <command name="configure"         options="CXX=aCC CC=cc --preclean" />
+    <command name="file_manipulation" options="type=create file=build/autoconf_acc_debug/.disable output='RUNNING'" />
+
+    <command name="make"              options="dir=build/autoconf_acc_debug -k" />
+
+    <command name="auto_run_tests"    options="dir=build/autoconf_acc_debug" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="file_manipulation" options="type=delete file=build/autoconf_acc_debug/.disable" />
+    <command name="status"            options="off" />
+</autobuild>
