@@ -369,30 +369,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
   <name>NetBSD</name>
   <build>
-    <name>NetBSD_amd64</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_amd64</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-  <build>
-    <name>NetBSD_amd64_NoInline</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_amd64_noinline</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-  <build>
-    <name>NetBSD_amd64_Static</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_amd64_static</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-  <build>
-    <name>NetBSD_amd64_Automake</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_amd64_automake</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-  <build>
     <name>NetBSD_i386</name>
     <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_i386</url>
     <build_sponsor>J.T. Conklin</build_sponsor>
