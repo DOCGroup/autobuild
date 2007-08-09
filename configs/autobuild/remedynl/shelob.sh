@@ -14,4 +14,3 @@ sh $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_icc91_64.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_acefortao.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_coiop.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_autoconf.sh
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/shelob_icc_autoconf.sh
