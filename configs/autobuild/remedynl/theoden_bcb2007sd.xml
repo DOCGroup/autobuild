@@ -1,19 +1,20 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\BCB2006ddipv6\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\BCB2006ddipv6\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\BCB2007sd\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\BCB2007sd\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Borland\BDS\4.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006ddipv6\ACE_wrappers\lib;C:\ACE\BCB2006ddipv6\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Codegear\RAD Studio\5.0\Bin;C:\Perl\Bin;C:\ACE\BCB2007sd\ACE_wrappers\lib;C:\ACE\BCB2007sd\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
         <environment name="BCBVER"   value="8" />
         <environment name="DEBUG"    value="1" />
-	<environment name="DYNAMIC"  value="1" />
+        <environment name="STATIC"   value="1" />
 
-        <variable name="configs"      value="Win32 Borland Exceptions" />
-        <variable name="root"         value="C:\ACE\BCB2006ddipv6\" />
+
+        <variable name="configs"      value="Win32 Borland STATIC Exceptions" />
+        <variable name="root"         value="C:\ACE\BCB2007sd\" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="C:\ACE\BCB2006ddipv6\" />
+        <variable name="log_root"     value="C:\ACE\BCB2007sd\" />
         <variable name="name"         value="WinXP CBX Static Release" />
         <variable name="svn_program"  value="c:\cygwin\bin\svn" />
     </configuration>
@@ -29,8 +30,8 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_NO_COPY_OCTET_SEQUENCES 0\n#define TAO_HAS_OPTIMIZED_VALUETYPE_MARSHALING\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="borland" />
@@ -48,6 +49,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2006/ddipv6" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2007/sd" />
 </autobuild>
-

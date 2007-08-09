@@ -1,10 +1,10 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\BCB2006dds\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\BCB2006dds\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\BCB2007dds\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\BCB2007dds\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Borland\BDS\4.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006dds\ACE_wrappers\lib;C:\ACE\BCB2006dds\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Codegear\RAD Studio\5.0\Bin;C:\Perl\Bin;C:\ACE\BCB2007dds\ACE_wrappers\lib;C:\ACE\BCB2007dds\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
         <environment name="BCBVER"   value="8" />
         <environment name="DEBUG"    value="1" />
@@ -12,9 +12,9 @@
 	<environment name="UNICODE"  value="1" />
 
         <variable name="configs"      value="Win32 Borland Exceptions" />
-        <variable name="root"         value="C:\ACE\BCB2006dds\" />
+        <variable name="root"         value="C:\ACE\BCB2007dds\" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="C:\ACE\BCB2006dds\" />
+        <variable name="log_root"     value="C:\ACE\BCB2007dds\" />
         <variable name="name"         value="WinXP CBX Static Release ST" />
         <variable name="svn_program"  value="c:\cygwin\bin\svn" />
     </configuration>
@@ -47,6 +47,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2006/dds" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2007//dds" />
 </autobuild>
 
