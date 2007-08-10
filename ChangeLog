@@ -1,3 +1,8 @@
+Fri Aug 10 13:50:57 UTC 2007  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
+          Reverted debug build status.
+
 Tue Aug  7 15:44:31 UTC 2007  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: New HP-UX 11iv2 Integrity autoconf build.
