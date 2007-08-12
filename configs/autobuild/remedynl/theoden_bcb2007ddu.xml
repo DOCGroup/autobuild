@@ -15,8 +15,7 @@
         <variable name="root"         value="C:\ACE\BCB2007ddu\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2007ddu\" />
-        <variable name="name"         value="WinXP CBX Static Release" />
-        <variable name="svn_program"  value="c:\cygwin\bin\svn" />
+        <variable name="name"         value="WinXP CodeGear C++ Builder 2007 Static Release" />
     </configuration>
 
     <command name="status"            options="on" />
