@@ -166,24 +166,6 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_BCB2007_Static_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2007/sd/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_BCB2007_Static_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2007/sr/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC71_NET_Static_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71sd</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>Win2003_64bit_Intel100_32</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/Win2003_ICC100_32/</url>
             <build_sponsor>Remedy IT</build_sponsor>
