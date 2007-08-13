@@ -13,7 +13,6 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VC71dr\" />
         <variable name="name"     value="WinXP VS.NET 2003" />
-        <variable name="svn_program"  value="c:\cygwin\bin\svn" />
     </configuration>
 
     <command name="status"            options="on" />
