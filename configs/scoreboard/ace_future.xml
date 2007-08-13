@@ -26,12 +26,6 @@ sponsorship is received.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
-    <build>
-        <name>WinXP_BCB2006_Single_Threaded</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2006/dds/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
    <build>
      <name>WinCE4_PocketPC2003_VC8_Debug</name>
      <url>http://acebuilds.riverace.com/lily/dev/vc8_ppc2003_debug</url>
