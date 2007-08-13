@@ -1,19 +1,19 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\BCB2006dr\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\BCB2006dr\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\BCB2007dr\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\BCB2007dr\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Codegear\RAD Studio\5.0\Bin;C:\Perl\Bin;C:\ACE\BCB2006dr\ACE_wrappers\lib;C:\ACE\BCB2006dr\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Program Files\Codegear\RAD Studio\5.0\Bin;C:\Perl\Bin;C:\ACE\BCB2007dr\ACE_wrappers\lib;C:\ACE\BCB2007dr\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
         <environment name="BCBVER"    value="8" />
         <environment name="DYNAMIC"   value="1" />
         <environment name="CPU_FLAG"  value="-6" />
 
         <variable name="configs"      value="Win32 Borland Exceptions" />
-        <variable name="root"         value="C:\ACE\BCB2006dr\" />
+        <variable name="root"         value="C:\ACE\BCB2007dr\" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="C:\ACE\BCB2006dr\" />
+        <variable name="log_root"     value="C:\ACE\BCB2007dr\" />
         <variable name="name"         value="WinXP CodeGear C++ Builder 2007 Static Release" />
     </configuration>
 
