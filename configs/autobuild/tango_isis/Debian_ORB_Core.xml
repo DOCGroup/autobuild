@@ -49,7 +49,7 @@
     <command name="make"              options="-k -j 4 -C TAO/tao" />
     <command name="make"              options="-k -j 4 -C TAO/tests idl_stubs" />
     <command name="make"              options="-k -j 4 -C TAO/tests" />
-    <command name="auto_run_tests"    options="-a -o -envmod LD_ASSUME_KERNEL=2.4.19" />
+    <command name="auto_run_tests"    options="-a -o" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

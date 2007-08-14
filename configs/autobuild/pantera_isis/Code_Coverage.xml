@@ -49,7 +49,7 @@
 
     <command name="make"              options="-k -j 2" />
 
-    <command name="auto_run_tests"    options=" -a -o -t -envmod LD_ASSUME_KERNEL=2.4.19" />
+    <command name="auto_run_tests"    options=" -a -o -t " />
 
     <!-- <command name="shell"             options="$HOME/autobuild/configs/autobuild/pantera_isis/gen_code_coverage_results.sh" /> -->
 
