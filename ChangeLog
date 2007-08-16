@@ -1,3 +1,8 @@
+Thu Aug 16 18:56:04 UTC 2007  ciju john  <john_c@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
+          Turn on crossPlatform test.
+
 Thu Aug 16 10:30:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
