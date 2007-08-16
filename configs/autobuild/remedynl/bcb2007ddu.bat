@@ -1,4 +1,4 @@
 cd ..\..\..\
-c:\cygwin\bin\svn up
+svn up
 cd configs\autobuild\remedynl
-perl C:\ACE\autobuild\autobuild.pl theoden_bcb2007ddu.xml
+perl C:\ACE\autobuild\autobuild.pl bcb2007ddu.xml
