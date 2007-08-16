@@ -49,9 +49,9 @@
     <command name="make"              options="-k -C TAO" />
 
     <command name="auto_run_tests"    options=" -a -o -t" />
-    <command name="process_logs"      options="clean" />
+    <command name="process_logs"      options="clean=60" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=60 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 

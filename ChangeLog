@@ -1,3 +1,9 @@
+Thu Aug 16 10:30:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+
+          Missed Adjusting this build's prismtech log file retensions.
+
 Fri Aug 10 13:50:57 UTC 2007  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/autobuild/tango_isis/Debian_ORB_Core.xml:
