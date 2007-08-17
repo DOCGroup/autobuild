@@ -1,3 +1,9 @@
+Fri Aug 17 09:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Resourcing limitations force drop of Win2003_VC71_NoInline_MFC build.
+
 Thu Aug 16 18:56:04 UTC 2007  ciju john  <john_c@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1.xml:
