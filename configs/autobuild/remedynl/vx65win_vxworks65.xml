@@ -21,7 +21,6 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VxWorks\Vx65rtp\" />
         <variable name="configs"  value="VxWorks STATIC" />
-        <variable name="svn_program"    value="c:\cygwin\bin\svn" />
 
     </configuration>
 
