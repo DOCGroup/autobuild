@@ -49,6 +49,8 @@
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
+    <command name="auto_run_tests"     options="-a -o -t -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
