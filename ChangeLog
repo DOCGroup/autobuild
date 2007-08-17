@@ -1,3 +1,10 @@
+Fri Aug 17 13:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * common/parse_compiler_output.pm:
+
+          Stop hp future error for "export" keyword being reported as
+          a warning for idl pre-compilations.
+
 Fri Aug 17 09:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/scoreboard/tao.xml:

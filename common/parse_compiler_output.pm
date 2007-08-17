@@ -43,6 +43,19 @@ sub handle_compiler_output_line($) {
 
   # Check out the line to figure out whether it is an error or not
 
+  if ($s =~ m/^error\W\(future\)\W908\:\W\".*\.idl\".*\'export\'/i) {
+    # HP1 aCC complains about "future errors" but these particular ones are
+    # for IDL compilations not c++.
+    $self->Output_Normal ($s);
+    return;
+  }
+
+  if ($s =~ m/^warning\:\W[0-9]+\Wfuture errors were detected and ignored/i) {
+    # HP1 aCC complains about "future errors" but the summary line is just redundant.
+    $self->Output_Normal ($s);
+    return;
+  }
+
   # The NMAKE output on Windows includes the complete command line; if there
   # are options with the word "warning" or "error" these get flagged as
   # errors. So if it's the command line, just output as normal.
