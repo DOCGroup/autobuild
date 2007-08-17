@@ -336,6 +336,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
+   <build>
+     <name>VxWorks6.5_x86_winhost_host</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/vx65win_host/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 </group>
 
 
