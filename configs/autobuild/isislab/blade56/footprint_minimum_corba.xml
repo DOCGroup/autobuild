@@ -22,6 +22,9 @@
 
     <command name="log"               options="on" />
 
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
@@ -40,9 +43,6 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-type gnuautobuild" />
-
-    <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k -C ace        --dry-run > $ACE_ROOT/../.metrics/targets" />
