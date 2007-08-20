@@ -24,7 +24,7 @@
 
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="win32make"         options="msvc_static_compile -dirs TAO/CIAO -vc7 -Debug -k -clean -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -TAO -vc7 -Debug -k -clean -name_modifier *_Static" />
 
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.vcproj*' -exec c:\cygwin\bin\rm '{}' ';'" />
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln*' -exec c:\cygwin\bin\rm '{}' ';'" />
@@ -48,7 +48,7 @@
 
     <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type vc71 -static -name_modifier *_Static "/>
 
-    <command name="win32make"         options="msvc_static_compile -dirs TAO/CIAO -vc7 -Debug -k -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -TAO -vc7 -Debug -k -name_modifier *_Static" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
