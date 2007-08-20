@@ -1,0 +1,36 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:/ACE/release/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:/ACE/release/ACE_wrappers/TAO"/>
+        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
+        <environment name="Path"         value="c:\msys\1.0\bin;C:\MingW\bin;C:\ACE\release\ACE_wrappers\bin;C:\ACE\release\ACE_wrappers\lib;" type="prefix" />
+
+        <variable name="configs"  value="Win32" />
+        <variable name="root"     value="C:\ACE\release\" />
+        <variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\ACE\release\" />
+        <variable name="name"     value="release" />
+    </configuration>
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32011" />
+    <command name="log"               options="ON" />
+    <command name="make"              options="-k realclean" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qos=1\n'" />
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+    <command name="generate_workspace" options="-type gnuace" />
+    <command name="make"              options="-k" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/MinGW" />
+</autobuild>
+
