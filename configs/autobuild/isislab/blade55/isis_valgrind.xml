@@ -6,7 +6,6 @@
         <environment name="TAO_ROOT"              value="/home/bczar/valgrindb/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"             value="/home/bczar/valgrindb/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH"       value="/home/bczar/valgrindb/ACE_wrappers/lib:/home/bczar/xerces/lib" />
-        <environment name="XERCESCROOT"           value="/home/bczar/xerces" />
         <environment name="PATH"                  value="/usr/local/bin" type="prefix" />
         <environment name="RSYNC_RSH"             value="ssh" />
         <environment name="VALGRIND_OPTS"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --show-reachable=yes" />
