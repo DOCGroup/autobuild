@@ -237,7 +237,7 @@ all the OS/platform combinations on which ACE is tested everyday.
     </build>
     <build>
         <name>WinXP_BCB2007_Dynamic_Debug_Unicode</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2006/ddu/</url>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/BCB2007/ddu/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
