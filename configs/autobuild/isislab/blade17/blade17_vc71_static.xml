@@ -48,7 +48,7 @@
 
     <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type vc71 -static -name_modifier *_Static "/>
 
-    <command name="win32make"         options="msvc_static_compile -TAO -vc7 -Debug -k -name_modifier *_Static" />
+    <command name="win32make"         options="msvc_static_compile -CORE -vc7 -Debug -k -name_modifier *_Static" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
