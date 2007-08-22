@@ -1,1 +1,1 @@
-echo "build_mingw.bat" | C:\msys\1.0\bin\sh --login -i
+echo "mingw_build.bat" | C:\msys\1.0\bin\sh --login -i
