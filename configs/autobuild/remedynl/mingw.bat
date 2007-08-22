@@ -1,1 +1,1 @@
-echo "mingw_build.bat" | C:\msys\1.0\bin\sh --login -i
+echo "/c/ACE/autobuild/configs/autobuild/remedynl/mingw_build.bat" | C:\msys\1.0\bin\sh --login -i
