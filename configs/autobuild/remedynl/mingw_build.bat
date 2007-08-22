@@ -1,4 +1,4 @@
-cd ../../../
+cd /c/ACE/autobuild
 svn up
-cd configs/autobuild/remedynl
+cd /c/ACE/autobuild/configs/autobuild/remedynl
 perl /c/ACE/autobuild/autobuild.pl mingw.xml
