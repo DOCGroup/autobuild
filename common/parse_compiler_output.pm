@@ -355,7 +355,12 @@ sub handle_compiler_output_line($) {
   }
 
   if ($s =~ m/ defined in discarded section /) {
-    # Debion GCC compiler bug with templates/inline bits
+    # Debian GCC compiler bug with templates/inline bits
+    $self->Output_Error ($s);
+    return;
+  }
+
+  if ($s =~ m/mangled name collision for template function/) {
     $self->Output_Error ($s);
     return;
   }
