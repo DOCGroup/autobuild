@@ -904,6 +904,7 @@ sub Test_Handler ($)
         || $s =~ m/Source and destination overlap/
         || $s =~ m/error while loading shared libraries/
         || $s =~ m/free\(\): invalid pointer:/
+        || $s =~ m/Can't call method/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
