@@ -30,7 +30,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\nrwho=0\nqos=0\nipv6=1\nxerces=0\n'" />
 
-    <command name="anonymous_shell"   options="c:\cygwin\bin\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32_vc8/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="c:\cygwin\bin\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="c:\cygwin\bin\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
