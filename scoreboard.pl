@@ -1461,13 +1461,13 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k/;
+use vars qw/$opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_n/;
 
-if (!getopts ('cd:f:hi:o:t:vzlr:s:k:')
+if (!getopts ('cd:f:hi:o:t:vzlr:s:k:n')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
-          "              [-t title] [-z] [-l] [-r file] [-s file] [-c]\n";
+          "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-n]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1482,6 +1482,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:')
     print "    -s         name of file where build schedule can be found\n";
     print "    -c         co-located directory, all files local in -d \n";
     print "    -k         number of logs to keep, default is 5\n";
+    print "    -n         No 'history' links generated\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1554,7 +1555,7 @@ if (defined $opt_c) {
   update_cache ($dir);
   clean_cache ($dir);
   query_status ();
-  query_history ();
+  query_history () unless $opt_n;
 }
 update_html ($dir,"$dir/$out_file",$rss_file);
 

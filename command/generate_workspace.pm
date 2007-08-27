@@ -94,8 +94,9 @@ sub Run ($)
 
     ## Get the location of the mwc.pl script
     my $mwc = undef;
-
-    foreach my $mwcdir ("$project_root/bin", "$ENV{ACE_ROOT}/bin", $ENV{MPC_ROOT}) {
+    my @mwcdirs = ("$project_root/bin", $ENV{MPC_ROOT});
+    splice @mwcdirs, 1, 0, "$ENV{ACE_ROOT}/bin" if defined $ENV{ACE_ROOT};
+    foreach my $mwcdir (@mwcdirs) {
       if (defined $mwcdir && -r "$mwcdir/mwc.pl") {
         $mwc = "$mwcdir/mwc.pl";
         last;
