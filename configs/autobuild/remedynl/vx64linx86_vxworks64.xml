@@ -62,7 +62,7 @@
 
     <command name="generate_workspace" options="-exclude TAO -type gnuace" />
 
-    <command name="make"              options="-k -j 3" />
+    <command name="make"              options="-k" />
 
     <command name="auto_run_tests" options="-a" />
 
