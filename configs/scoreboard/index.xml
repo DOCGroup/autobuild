@@ -64,10 +64,6 @@ Statistics</a>
     Text based test statistics</a>
 </li>
 <li>
-  <a href="http://www.dre.vanderbilt.edu/~remedynl/Stats/">
-    Footprint statistics with GCC 4.1.0 on SuSE 10.1</a>
-</li>
-<li>
   Footprint statistics with GCC 4.0.2 on FC4:
   <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/regular/">
     Regular</a>,
