@@ -26,7 +26,7 @@
     <command name="svn"               options="status . " />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='no_hidden_visibility=1\ndebug=1\ninline=0\ncidl=1\nboost=0\nxerces=1\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\nno_hidden_visibility=1\ndebug=1\ninline=0\ncidl=1\nboost=0\nxerces=1\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\nTAO/orbsvcs/orbsvcs\nACEXML\nprotocols\nKokyu\ntests\nTAO/CIAO\n}\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=0\ncidl=1\nxerces=1\n'" />
 
