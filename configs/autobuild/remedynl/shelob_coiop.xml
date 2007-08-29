@@ -27,7 +27,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1\n#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=0\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=0\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_COIOP.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests/COIOP\n}\n'" />
