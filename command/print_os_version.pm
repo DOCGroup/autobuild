@@ -61,6 +61,11 @@ sub Run ($)
         system("/usr/bin/oslevel");
     }
 
+    if(-x "/usr/bin/lsb_release"){
+        print "<h3>Linux Standard Base and Distribution information (lsb_release -a)</h3>\n";
+        system("/usr/bin/lsb_release -a");
+    }
+
     if(-r "/etc/redhat-release"){
         print "<h3>RedHat Linux Version (/etc/redhat-release)</h3>\n";
 	system("cat /etc/redhat-release");
