@@ -1,7 +1,7 @@
 <releases>
 	<major>
-		<version>x.5</version>
-		<date>2006-04-05</date>
+    <version>x.6</version>
+    <date>2007-09-03</date>
 	</major>
 	<beta>
                 <version>x.5.10</version>
