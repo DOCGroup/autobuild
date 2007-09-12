@@ -1,3 +1,8 @@
+Wed Sep 12 23:02:29 UTC 2007  Sumant Tambe  <sutambe@nospam>
+
+        * configs/scoreboard/cosmic.xml:
+        Added WinXP VC 7.1 CoSMIC Release build.
+
 Wed Sep 12 08:42:53 UTC 2007  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
 
         * configs/autobuild/equus/equus_vc71_release.xml:
