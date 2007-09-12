@@ -1,3 +1,8 @@
+Wed Sep 12 08:42:53 UTC 2007  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
+
+        * configs/autobuild/equus/equus_vc71_release.xml:
+        Fixed typo and isisbuild destination copy directory.
+
 Thu Sep  11 21:15:03 UTC 2007  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
 
         * configs\autobuild\equus\equus_vc71_release.xml

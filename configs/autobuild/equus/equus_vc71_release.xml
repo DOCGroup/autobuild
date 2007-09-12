@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\bczar\CoSMIC_VC71_Release\ACE" />
         <environment name="TAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Release\TAO"/>
         <environment name="MPC_ROOT"     value="C:\bczar\CoSMIC_VC71_Release\MPC"/>
+        <environment name="WIX_ROOT"     value="C:\Program Files\Windows Installer XML v3"/>
         <environment name="CVS_RSH"      value="plink.exe" />
         <environment name="XERCESCROOT"   value="C:\Tools\xerces-c-2_7_0-win32-vc7"/>
         <environment name="BOOST_ROOT"    value="C:\Tools\Boost"/>
@@ -43,7 +44,7 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Release.mwc"/>
-    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Release_idl_to_picml_release.mwc"/>
+    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Release_idl_to_picml.mwc"/>
     <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Installer\CoSMIC_Installer\CoSMIC_Installer.mwc"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Release -k" />
@@ -52,6 +53,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic_release"/>
 </autobuild>
