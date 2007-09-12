@@ -1,3 +1,8 @@
+Wed Sep 12 23:06:22 UTC 2007  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_driver.bat:
+        CoSMIC Release build is active.
+
 Wed Sep 12 23:02:29 UTC 2007  Sumant Tambe  <sutambe@nospam>
 
         * configs/scoreboard/cosmic.xml:
