@@ -154,6 +154,18 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
+            <name>WinXP_RAD_Studio_2007_Dynamic_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dd/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_RAD_Studio_2007_Dynamic_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dr/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>Win2003_64bit_Intel100_32</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/Win2003_ICC100_32/</url>
             <build_sponsor>Remedy IT</build_sponsor>
