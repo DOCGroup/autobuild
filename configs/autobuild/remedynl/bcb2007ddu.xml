@@ -11,11 +11,11 @@
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="UNICODE"  value="1" />
 
-        <variable name="configs"      value="Win32 Borland SExceptions" />
+        <variable name="configs"      value="Win32 Borland Exceptions" />
         <variable name="root"         value="C:\ACE\BCB2007ddu\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\ACE\BCB2007ddu\" />
-        <variable name="name"         value="WinXP CodeGear C++ Builder 2007 Static Release" />
+        <variable name="name"         value="WinXP CodeGear C++ Builder 2007 Dynamic Debug Unicode" />
     </configuration>
 
     <command name="status"            options="on" />
