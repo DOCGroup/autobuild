@@ -1,3 +1,11 @@
+Thu Sep  11 21:15:03 UTC 2007  Sumant Tambe  <sutambe@dre.vanderbilt.edu>
+
+        * configs\autobuild\equus\equus_vc71_release.xml
+        * configs\autobuild\equus\equus_driver.bat
+        * configs\autobuild\equus\equus_vc71_release.bat
+
+        New release nightly build of CoSMIC on equus.
+
 Thu Sep  6 22:16:03 UTC 2007  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace_future.xml: Removed WinCE 4 build.
