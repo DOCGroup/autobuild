@@ -49,8 +49,11 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Release -k" />
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\Installer\CoSMIC_Installer -Release -k" />
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71/CoSMIC_Installer.msi"/>
+    <command name="anonymous_shell"   options="md5sum C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC_Installer.msi > C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC-VC71-nightly-md5sum.txt"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC-VC71-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
 
+ CoSMIC-VC71-nightly-md5sum.txt
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
