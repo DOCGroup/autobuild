@@ -1,9 +1,15 @@
+Sat Sep 15 03:47:54 UTC 2007  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc71_release.xml:
+        Added a command to copy CoSMIC_Installer.msi to 
+        CoSMIC download page.
+
 Thu Sep 13 05:08:36 UTC 2007  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71.xml:
         * configs/autobuild/equus/equus_vc71_release.xml:
         Does not delete old CoSMIC tree.
-        
+
 Thu Sep 13 04:56:41 UTC 2007  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71.xml:
