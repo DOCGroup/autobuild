@@ -1,3 +1,13 @@
+Thu Sep 27 16:24:20 UTC 2007  Steve Huston  <shuston@riverace.com>
+
+        * autobuild.pl:
+        * command/setup_lvrt.pm: New module that sets up a LabVIEW RT target
+          for test execution. At this point, it simply copies all the DLLs
+          from $project_root/lib to the target.
+
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml: Added
+          command setup_lvrt.
+
 Tue Sep 18 21:47:06 UTC 2007  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml:

@@ -265,6 +265,8 @@ require command::vc6make;
 require command::vc7make;
 require command::wincemake;
 require command::svn;
+require command::setup_lvrt;
+
 #
 # Parse, CheckReqs, and Run
 #

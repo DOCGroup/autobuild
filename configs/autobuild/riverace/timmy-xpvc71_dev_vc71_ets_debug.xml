@@ -54,6 +54,7 @@
     <!-- will pick up the ACEd.dll built for ETS while invoking TAO_IDL. -->
     <command name="vc7make"           options="/useenv /build \x22ETS Debug\x22 TAO/TAO_ETS.sln" />
 
+    <command name="setup_lvrt" />
     <command name="auto_run_tests"    options="-ExeSubDir ETS_Debug -a" />
 
     <command name="log"               options="OFF" />
