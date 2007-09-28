@@ -1,3 +1,9 @@
+Fri Sep 28 14:41:13 UTC 2007  Steve Huston  <shuston@riverace.com>
+
+        * command/setup_lvrt.pm: Don't abort if Net::FTP is not installed.
+          Most builds don't use Setup_LVRT so it's not a big deal if this
+          module ends up unuseable. Thanks to Chad Elliott for this Perl trick.
+
 Thu Sep 27 16:24:20 UTC 2007  Steve Huston  <shuston@riverace.com>
 
         * autobuild.pl:

@@ -12,7 +12,14 @@ use warnings;
 use Cwd;
 use FileHandle;
 use File::Path;
-use Net::FTP;
+# Net::FTP is required for this module, but is not always installed.
+# If the build doesn't use this module, it won't have any real affect
+# so don't abort over it.
+eval { require Net::FTP; };
+if ($@ ne '') {
+  print "Unable to load Net::FTP. Ignore this unless you need Setup_LVRT\n";
+}
+#use Net::FTP;
 
 ###############################################################################
 # Constructor
