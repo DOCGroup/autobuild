@@ -1,3 +1,20 @@
+Tue Oct  2 19:44:13 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_trunk_qnx_qnx_gcc_d1o0i0.xml:
+        * configs/autobuild/oci/doc_trunk_qnx_qnx_gcc_d1o0i0.xml:
+        * configs/scoreboard/dds.xml:
+        * configs/scoreboard/tao.xml:
+
+          The QNX machine is back on-line but it has been renamed.  The new
+          name is just "qnx" so that's a little confusing in the build names
+          (the hostname and OS are the same) but we'll stick with the
+          convention.
+
+        * configs/autobuild/oci/dds_doc_trunk_oci1146_qnx_gcc_d1o0i0.xml:
+        * configs/autobuild/oci/doc_trunk_oci1146_qnx_gcc_d1o0i0.xml:
+
+          Removed these files.  They have been renamed.
+
 Fri Sep 28 14:41:13 UTC 2007  Steve Huston  <shuston@riverace.com>
 
         * command/setup_lvrt.pm: Don't abort if Net::FTP is not installed.

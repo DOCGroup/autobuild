@@ -53,8 +53,8 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>QNX</name>
   <build>
-    <name>dds_doc_trunk_oci1146_qnx_gcc_d1o0i0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1146_qnx_gcc_d1o0i0</url>
+    <name>dds_doc_trunk_qnx_qnx_gcc_d1o0i0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_trunk_qnx_qnx_gcc_d1o0i0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
