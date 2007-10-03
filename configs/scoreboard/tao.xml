@@ -96,7 +96,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
      <build>
         <name>RHEL4-NoInline</name>
-        <url>http://tao.prismtech.com/doc-scoreboard/rhel4</url>
+        <url>http://tao.prismtech.com/doc-scoreboard/rhel4/gcc344/standard</url>
         <build_sponsor>PrismTech</build_sponsor>
         <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
      </build>
@@ -283,7 +283,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>HP-UX</name>
    <build>
       <name>HPUX11i_aCC367_NoInline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc367/standard</url>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/aCC367/standard</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
       <orange>72</orange> <!-- 3x24 hours -->
@@ -291,7 +291,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
    <build>
       <name>HPUX11i_aCC367_Inline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1/acc367/inline</url>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/aCC367/inline</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
       <orange>48</orange> <!-- 2x24 hours -->
@@ -314,19 +314,19 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>LynxOS</name>
    <build>
-      <name>LynxOS4_PPC_GCC322_Dynamic_Solaris9_Native_tao_idl</name>
+      <name>LynxOS42_PPC_GCC322_RHEL4_Native_TAO_IDL</name>
       <url>http://tao.prismtech.com/doc-scoreboard/lynxos_ppc/native_tao_idl_build</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
    <build>
-      <name>LynxOS4_PPC_GCC322_Dynamic_Solaris9_XBuild</name>
+      <name>LynxOS42_PPC_GCC322_RHEL4_XBuild</name>
       <url>http://tao.prismtech.com/doc-scoreboard/lynxos_ppc/cross_compile_build</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
    <build>
-      <name>LynxOS4_PPC_GCC322_Dynamic_Tests</name>
+      <name>LynxOS42_PPC_GCC322_Tests</name>
       <url>http://tao.prismtech.com/doc-scoreboard/lynxos_ppc/tests_on_lynxos</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>

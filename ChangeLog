@@ -1,3 +1,47 @@
+Tue Oct  3 13:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC331_Full
+        * configs/autobuild/prism/HPUX11_ACC331_Full.xml
+        * configs/autobuild/prism/HPUX11_ACC339_Full
+        * configs/autobuild/prism/HPUX11_ACC339_Full.xml
+        * configs/autobuild/prism/HPUX11_ACC365_Inline
+        * configs/autobuild/prism/HPUX11_ACC365_Inline.xml
+        * configs/autobuild/prism/HPUX11_ACC365_Standard
+        * configs/autobuild/prism/HPUX11_ACC365_Standard.xml
+
+          Delete very old builds.
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.sh:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.sh:
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.sh:
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.sh:
+
+          Rename shell files (add .sh postfix)
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+
+          Re-scoreboard root prismtech builds.
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests_Trigger.sh:
+        * configs/scoreboard/tao.xml:
+
+          Add these control files.
+
 Tue Oct  2 19:44:13 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_trunk_qnx_qnx_gcc_d1o0i0.xml:
