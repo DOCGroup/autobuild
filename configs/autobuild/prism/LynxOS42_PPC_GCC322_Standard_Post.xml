@@ -1,0 +1,13 @@
+<!-- $Id$ -->
+
+<autobuild>
+    <configuration>
+        <variable name="root" value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard" />
+        <variable name="log_file" value="LynxOS42_test_results_run_on_rad1.txt" />
+        <variable name="log_root" value="/var/tao1/tao/htdocs/doc-scoreboard/lynxos_ppc/tests_on_lynxos" />
+        <variable name="project_root" value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers" />
+    </configuration>
+
+    <command name="process_logs"      options="clean=60" />
+    <command name="process_logs"      options="clean=60 move prettify index" />
+</autobuild>

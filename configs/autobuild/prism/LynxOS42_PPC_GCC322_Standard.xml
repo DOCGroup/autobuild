@@ -1,0 +1,58 @@
+<!-- $Id$ -->
+
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"         value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/TAO" />
+        <environment name="MPC_ROOT"         value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/MPC" />
+        <environment name="LD_LIBRARY_PATH"  value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/ace" />
+        <environment name="PATH"             value="/usr/users/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin:/usr/local/lynx/4.2.0/ppc/cdk/sunos-elf-ppc/bin:/usr/local/lynx/4.2.0/ppc/cdk/sunos-elf-ppc/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
+        <environment name="ENV_PREFIX"       value="/usr/local/lynx/4.2.0/ppc" />
+        <environment name="TAO_IDL"          value="/usr/users/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/tao_idl" />
+
+        <variable name="make_program"        value="gmake" />
+        <variable name="root"                value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard" />
+        <variable name="log_file"            value="build.txt" />
+        <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/lynxos_ppc/cross_compile_build" />
+        <variable name="project_root"        value="/usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="ON" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
+
+    <!-- Now, delete all the Makefiles to insure a clean slate. -->
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=0\ndebug=0\ninline=0\n\nVERSION=4.2.0\nOBJSFORMAT=elf\nLYNXTARGET=ppc\nHOST_OS=linux\n\nexceptions=1\nthreads=1\ninterceptors=1\nstdcpplib=1\nshared_libs_only=1\nstatic_libs_only=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\n\nTAO_IDL:=/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/tao_idl\nTAO_IDLFLAGS+=-g /usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/gperf\nTAO_IDL_DEP:=$(TAO_IDL)$(EXEEXT)\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\ncidl=0\n'" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <!-- Uses ACE.mwc -->
+    <command name="generate_workspace" options="-exclude TAO,build.mwc,prism -type gnuace" />
+    <!-- Uses TAO/TAO.mwc -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO -type gnuace" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+
+    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C TAO" />
+    <command name="tar"               options="-chf cross_tests.tar ACE_wrappers --format=oldgnu --exclude \x22*.o\x22 --exclude \x22*.obj\x22 --exclude \x22*.c\x22 --exclude \x22*.cpp\x22 --exclude \x22*.h\x22 --exclude \x22*.hpp\x22 --exclude \x22*.i\x22 --exclude \x22*.inl\x22 --exclude \x22*.idl\x22 --exclude \x22*.mpc\x22 --exclude \x22*.mwc\x22 --exclude \x22*akefile*\x22 --exclude \x22*.sln\x22 --exclude \x22*.vcproj\x22 --exclude CVS --exclude .cvsignore" />
+
+    <command name="process_logs"      options="clean" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
