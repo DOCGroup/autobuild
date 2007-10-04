@@ -48,7 +48,6 @@
 
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO" />
-    <command name="tar"               options="-chf cross_tests.tar ACE_wrappers --format=oldgnu --exclude \x22*.o\x22 --exclude \x22*.obj\x22 --exclude \x22*.c\x22 --exclude \x22*.cpp\x22 --exclude \x22*.h\x22 --exclude \x22*.hpp\x22 --exclude \x22*.i\x22 --exclude \x22*.inl\x22 --exclude \x22*.idl\x22 --exclude \x22*.mpc\x22 --exclude \x22*.mwc\x22 --exclude \x22*akefile*\x22 --exclude \x22*.sln\x22 --exclude \x22*.vcproj\x22 --exclude CVS --exclude .cvsignore" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
