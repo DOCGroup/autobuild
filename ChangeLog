@@ -1,3 +1,16 @@
+Tue Oct  4 11:08:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:
+
+          Tidy-up
+
 Tue Oct  4 09:12:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:

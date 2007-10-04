@@ -4,7 +4,7 @@
 PATH=/usr/local/bin:$PATH:.; export PATH
 #
 echo [`/bin/date`]: Copying ACE_wrappers ultra4 cross build
-cd /usr/users/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard
+cd /home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard
 if [ -e .disable ]; then echo ".disable exists"; exit; fi
 if scp rhel4:rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/cross_tests.tar .
 then

@@ -2,17 +2,17 @@
 
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers" />
-        <environment name="TAO_ROOT"         value="/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/TAO" />
-        <environment name="MPC_ROOT"         value="/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/MPC" />
-        <environment name="LD_LIBRARY_PATH"  value="/usr/local/gcc-3.2.2/lib:/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/ace" />
+        <environment name="ACE_ROOT"         value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers" />
+        <environment name="TAO_ROOT"         value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/TAO" />
+        <environment name="MPC_ROOT"         value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/MPC" />
+        <environment name="LD_LIBRARY_PATH"  value="/usr/local/gcc-3.2.2/lib:/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/ace" />
         <environment name="PATH"             value="/usr/local/gcc-3.2.2/bin:/usr/local/bin:/usr/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
 
         <variable name="make_program"        value="gmake" />
-        <variable name="root"                value="/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard" />
+        <variable name="root"                value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard" />
         <variable name="log_file"            value="build.txt" />
         <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/lynxos_ppc/native_tao_idl_build" />
-        <variable name="project_root"        value="/usr/users/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers" />
+        <variable name="project_root"        value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers" />
     </configuration>
 
     <command name="status"            options="on" />

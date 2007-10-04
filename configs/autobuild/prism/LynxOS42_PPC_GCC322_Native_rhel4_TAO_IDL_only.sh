@@ -6,14 +6,14 @@ if /usr/bin/test -f /home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/.
 #
 echo [`/bin/date`]: Updating doc_autobuild
 . /home/tao/cvsnew
-cd /usr/users/tao/doc_autobuild
+cd /home/tao/doc_autobuild
 /usr/local/bin/svn update autobuild
-cd /usr/users/tao/rad1/doc_scoreboard/native_gcc322/standard
+cd /home/tao/rad1/doc_scoreboard/native_gcc322/standard
 #
 # build ACE, tao_idl and gperf statically on rhel4 with gcc 3.2.2
 echo [`/bin/date`]: Building ACE, tao_idl and gperf native statically on rhel4 with gcc 3.2.2
-/usr/bin/perl /usr/users/tao/doc_autobuild/autobuild/autobuild.pl /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml
+/usr/bin/perl /home/tao/doc_autobuild/autobuild/autobuild.pl /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml
 #
 echo [`/bin/date`]: Triggering Build of ACE and TAO on rhel4 with LynxOS4.2 PPC gcc 3.2.2 cross compiler
-/usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh
+/home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh
 exit
