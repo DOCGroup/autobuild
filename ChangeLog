@@ -1,3 +1,19 @@
+Tue Oct  4 09:12:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.sh:
+
+          Tidy-up
+
 Tue Oct  3 13:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full
