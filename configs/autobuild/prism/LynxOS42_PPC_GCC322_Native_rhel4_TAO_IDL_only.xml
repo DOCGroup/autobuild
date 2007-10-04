@@ -6,7 +6,7 @@
         <environment name="TAO_ROOT"         value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/TAO" />
         <environment name="MPC_ROOT"         value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/MPC" />
         <environment name="LD_LIBRARY_PATH"  value="/usr/local/gcc-3.2.2/lib:/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/ace" />
-        <environment name="PATH"             value="/usr/local/gcc-3.2.2/bin:/usr/local/bin:/usr/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
+        <environment name="PATH"             value="/usr/local/gcc-3.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
 
         <variable name="make_program"        value="gmake" />
         <variable name="root"                value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard" />

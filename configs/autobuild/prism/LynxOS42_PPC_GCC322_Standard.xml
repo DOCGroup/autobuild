@@ -6,7 +6,7 @@
         <environment name="TAO_ROOT"         value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/TAO" />
         <environment name="MPC_ROOT"         value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/MPC" />
         <environment name="LD_LIBRARY_PATH"  value="/usr/local/gcc-3.2.2/lib:/home/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/ace" />
-        <environment name="PATH"             value="/home/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin:/usr/local/lynx/4.2.0/ppc/cdk/sunos-elf-ppc/bin:/usr/local/lynx/4.2.0/ppc/cdk/sunos-elf-ppc/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
+        <environment name="PATH"             value="/home/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin:/usr/local/lynx/4.2.0/ppc/cdk/sunos-elf-ppc/bin:/usr/local/lynx/4.2.0/ppc/cdk/sunos-elf-ppc/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/opt/bin:/usr/openwin/bin:/usr/X/bin:/usr/ccs/bin:/usr/ucb:." />
         <environment name="ENV_PREFIX"       value="/usr/local/lynx/4.2.0/ppc" />
         <environment name="TAO_IDL"          value="/home/tao/rad1/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/tao_idl" />
 
