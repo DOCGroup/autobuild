@@ -1,4 +1,11 @@
-Tue Oct  4 13:05:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+Fri Oct  5 12:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
+
+          Build process complete.
+
+Thu Oct  4 13:05:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
@@ -6,7 +13,7 @@ Tue Oct  4 13:05:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
           Tidy-up
 
-Tue Oct  4 11:08:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+Thu Oct  4 11:08:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.sh:
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
@@ -19,7 +26,7 @@ Tue Oct  4 11:08:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
           Tidy-up
 
-Tue Oct  4 09:12:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+Thu Oct  4 09:12:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:
         * configs/autobuild/prism/HPUX11_ACC367_Standard.sh:
@@ -35,7 +42,7 @@ Tue Oct  4 09:12:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
           Tidy-up
 
-Tue Oct  3 13:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+Wed Oct  3 13:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC331_Full
         * configs/autobuild/prism/HPUX11_ACC331_Full.xml

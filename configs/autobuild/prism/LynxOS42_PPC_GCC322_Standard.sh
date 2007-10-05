@@ -14,6 +14,7 @@ echo [`/bin/date`]: Building ACE and TAO on rhel4 with LynxOS4.2 PPC gcc 3.2.2 c
 /usr/bin/perl /home/tao/doc_autobuild/autobuild/autobuild.pl /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml
 #
 echo [`/bin/date`]: Package up the build for the target
+/bin/rm -f cross_tests.tar
 /bin/tar -chf cross_tests.tar ACE_wrappers --format=oldgnu --exclude "*.o" --exclude "*.obj" --exclude "*.c" --exclude "*.cpp" --exclude "*.h" --exclude "*.hpp" --exclude "*.i" --exclude "*.inl" --exclude "*.idl" --exclude "*.mpc" --exclude "*.mwc" --exclude "*akefile*" --exclude "*.sln" --exclude "*.vcproj" --exclude CVS --exclude .cvsignore
 #
 echo [`/bin/date`]: Triggering rad1 to run tests
