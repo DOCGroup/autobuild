@@ -1,3 +1,16 @@
+Mon Oct  8 09:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.sh:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.sh:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_and_Cross.sh:
+
+          Add finishing timestamp to log.
+
 Fri Oct  5 12:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:

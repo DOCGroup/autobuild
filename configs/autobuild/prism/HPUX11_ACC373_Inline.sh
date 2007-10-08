@@ -11,3 +11,4 @@ cd /usr/users/tao/hp1/doc_scoreboard/aCC373/inline
 #
 echo [`/usr/bin/date`]: Starting HPUX11_ACC373_Inline build
 perl /var/mounts/sun16/users/tao/doc_autobuild/autobuild/autobuild.pl /var/mounts/sun16/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/HPUX11_ACC373_Inline.xml
+echo [`/usr/bin/date`]: Finished

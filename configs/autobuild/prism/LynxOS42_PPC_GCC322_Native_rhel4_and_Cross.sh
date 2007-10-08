@@ -16,4 +16,5 @@ echo [`/bin/date`]: Building ACE, tao_idl and gperf native statically on rhel4 w
 #
 echo [`/bin/date`]: Triggering Build of ACE and TAO on rhel4 with LynxOS4.2 PPC gcc 3.2.2 cross compiler
 /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh
+echo [`/bin/date`]: Finished
 exit
