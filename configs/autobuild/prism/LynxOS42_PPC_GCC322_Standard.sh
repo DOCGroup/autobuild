@@ -18,6 +18,6 @@ echo [`/bin/date`]: Package up the build for the target
 /bin/tar -chf cross_tests.tar ACE_wrappers --format=oldgnu --exclude "*.o" --exclude "*.obj" --exclude "*.c" --exclude "*.cpp" --exclude "*.h" --exclude "*.hpp" --exclude "*.i" --exclude "*.inl" --exclude "*.idl" --exclude "*.mpc" --exclude "*.mwc" --exclude "*akefile*" --exclude "*.sln" --exclude "*.vcproj" --exclude CVS --exclude .cvsignore
 #
 echo [`/bin/date`]: Triggering rad1 to run tests
-/usr/bin/nohup /usr/bin/ssh rad1 /bin/nohup /usr/users/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests_Trigger.sh
+/usr/bin/nohup /usr/bin/ssh rad1 /bin/nohup /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests_Trigger.sh
 echo [`/bin/date`]: Back on rhel4, finished
 exit

@@ -1,3 +1,11 @@
+Thu Oct 11 13:50:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests_Trigger.sh:
+
+          New user root for RAD1 run-time with LynxOS4.2.
+
 Mon Oct  8 09:20:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:
