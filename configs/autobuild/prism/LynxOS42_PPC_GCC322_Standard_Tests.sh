@@ -13,7 +13,7 @@ then
   rm -f cross_tests.tar
   if test -e ACE_wrappers/TAO/tests/Portable_Interceptors/Processing_Mode_Policy/Collocated/PI_ProcMode_Collocated_Tes
   then
-    echo [`/bin/date`]: TAR truncated the problem filename again (tao151/TAO/tests/Portable_Interceptors/Processing_Mode_Policy/Collocated/PI_ProcMode_Collocated_Test)
+    echo [`/bin/date`]: TAR truncated the problem filename again. tao151/TAO/tests/Portable_Interceptors/Processing_Mode_Policy/Collocated/PI_ProcMode_Collocated_Test
     mv ACE_wrappers/TAO/tests/Portable_Interceptors/Processing_Mode_Policy/Collocated/PI_ProcMode_Collocated_Tes ACE_wrappers/TAO/tests/Portable_Interceptors/Processing_Mode_Policy/Collocated/PI_ProcMode_Collocated_Test
   fi
 else
