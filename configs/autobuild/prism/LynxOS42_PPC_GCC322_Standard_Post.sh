@@ -8,6 +8,6 @@
 cd /home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard
 #
 echo [`/bin/date`]: Posting test results to the scoreboard
-/usr/bin/perl /home/tao/doc_autobuild/autobuild/autobuild.pl /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS4_PPC_GCC322_Standard_Post.xml
+/usr/bin/perl /home/tao/doc_autobuild/autobuild/autobuild.pl /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.xml
 #
 echo [`/bin/date`]: Finished posting results.
