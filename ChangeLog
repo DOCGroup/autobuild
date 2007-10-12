@@ -1,3 +1,16 @@
+Fri Oct 12 22:02:38 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_fly_sunos59_suncc58_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml:
+        * configs/scoreboard/tao.xml:
+
+          Re-generated autobuild XML files and made names consistent.
+
+        * configs/autobuild/oci/doc_head_hornet_wince5_vc8_d1o0.xml:
+        * configs/autobuild/oci/oci_doc_fly_sunos59_suncc58_d1o0.xml:
+
+          Removed these files.  They have been renamed.
+
 Thu Oct 11 13:50:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:

@@ -215,7 +215,7 @@ all the OS/platform combinations on which TAO is tested everyday.
         </build>
         <build>
             <name>WinCE_5_VC8_Debug</name>
-            <url>http://scoreboard.ociweb.com/doc_head_hornet_wince5_vc8_d1o0</url>
+            <url>http://scoreboard.ociweb.com/doc_trunk_hornet_wince5_vc8_d1o0</url>
             <build_sponsor>OCI</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
         </build>
@@ -261,7 +261,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>Solaris</name>
    <build>
       <name>Solaris9_Studio11_Debug</name>
-      <url>http://scoreboard.ociweb.com/oci_doc_fly_sunos59_suncc58_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_trunk_fly_sunos59_suncc58_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
