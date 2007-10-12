@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on hornet) was -->
-  <!-- Y:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc8 -create "TAO/wm5.mwc=workspace {\n../ace/ace.mpc\ntao/tao.mpc\ntao/IORTable.mpc\ntao/PortableServer.mpc\ntao/Strategies.mpc\ntao/Messaging.mpc\ntao/Codeset.mpc\ntao/Valuetype.mpc\ntao/DynamicAny.mpc\n}" -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -mpcopt "-name_modifier *_WinCE -value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi TAO/wm5.mwc" -noace 1 -notaoace 1 -outdir \autobuild\configs\autobuild\oci -platform wince5 -prependws TAO/wm5_WinCE.mwc -supporting 0 -->
+  <!-- Y:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc8 -create "TAO/wm5.mwc=workspace {\n../ace/ace.mpc\ntao/tao.mpc\ntao/IORTable.mpc\ntao/PortableServer.mpc\ntao/Strategies.mpc\ntao/CodecFactory.mpc\ntao/PI.mpc\ntao/Messaging.mpc\ntao/Codeset.mpc\ntao/AnyTypeCode.mpc\ntao/Valuetype.mpc\ntao/DynamicAny.mpc\n}" -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -mpcopt "-name_modifier *_WinCE -value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi TAO/wm5.mwc" -noace 1 -notaoace 1 -outdir \autobuild\configs\autobuild\oci -platform wince5 -prependws TAO/wm5.mwc -supporting 0 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\TAO\CIAO"/>
@@ -27,7 +27,7 @@
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/wm5_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/bin/MakeProjectCreator/config/default.features output='wince=1\nuses_wchar=1\nqos=1\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/setenv.cmd output='set ACE_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\nset CIAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\TAO\DDS\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\VC\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\lib;%PATH%\nset TAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\wm5_d1o0\TAO\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/TAO/wm5.mwc output='workspace {\n../ace/ace.mpc\ntao/tao.mpc\ntao/IORTable.mpc\ntao/PortableServer.mpc\ntao/Strategies.mpc\ntao/Messaging.mpc\ntao/Codeset.mpc\ntao/Valuetype.mpc\ntao/DynamicAny.mpc\n}'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/TAO/wm5.mwc output='workspace {\n../ace/ace.mpc\ntao/tao.mpc\ntao/IORTable.mpc\ntao/PortableServer.mpc\ntao/Strategies.mpc\ntao/CodecFactory.mpc\ntao/PI.mpc\ntao/Messaging.mpc\ntao/Codeset.mpc\ntao/AnyTypeCode.mpc\ntao/Valuetype.mpc\ntao/DynamicAny.mpc\n}'"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
@@ -36,8 +36,8 @@
   <command name="anonymous_shell"    options="copy /y c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1\bin\tao_idl.exe ACE_wrappers\build\wm5_d1o0\bin"/>
 
   <!-- Build targets -->
-  <command name="vc7make" options="/clean debug TAO/wm5_WinCE.sln"/>
-  <command name="vc7make" options="/build debug TAO/wm5_WinCE.sln"/>
+  <command name="vc7make" options="/clean debug TAO/wm5.sln"/>
+  <command name="vc7make" options="/build debug TAO/wm5.sln"/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
