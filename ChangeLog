@@ -1,3 +1,9 @@
+Mon Oct 15 15:49:25 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * command/vc6make.pm:
+
+          '.' is a legal character in filesystem paths.
+
 Fri Oct 12 22:02:38 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_fly_sunos59_suncc58_d1o0.xml:
