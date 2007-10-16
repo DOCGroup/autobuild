@@ -4,7 +4,7 @@
 #
 
 $HOME/autobuild/configs/autobuild/isislab/blade56/driver_corba_e_micro.sh
-$HOME/autobuild/configs/autobuild/isislab/blade56/driver_corba_e_micros.sh
+$HOME/autobuild/configs/autobuild/isislab/blade56/driver_corba_e_micro_s.sh
 $HOME/autobuild/configs/autobuild/isislab/blade56/driver_corba_e_compact.sh
 $HOME/autobuild/configs/autobuild/isislab/blade56/driver_minimum_corba.sh
 $HOME/autobuild/configs/autobuild/isislab/blade56/driver_regular.sh
