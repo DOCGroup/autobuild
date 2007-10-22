@@ -47,6 +47,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.4.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = sfgnu\nCPU = PPC32\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.4.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\ntests\n}\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
@@ -58,7 +59,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="ACE_Host.mwc -type gnuace" />
 
     <command name="make"              options="-k realclean" />
 
