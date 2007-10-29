@@ -1,6 +1,7 @@
 #!/bin/sh
 # $Id$
 #
+. /home/tao/.bash_profile
 PATH=/usr/local/bin:$PATH:.; export PATH
 #
 echo [`/bin/date`]: Copying ACE_wrappers ultra4 cross build

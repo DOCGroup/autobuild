@@ -1,3 +1,9 @@
+Mon Oct 29 11:30:00 UTC 2007  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.sh:
+
+          Need .bash_profile for correct system time settings.
+
 Wed Oct 17 12:00:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:
