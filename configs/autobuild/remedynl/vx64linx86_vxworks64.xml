@@ -33,7 +33,7 @@
         <variable name="root"     value="/nfs/galadriel/VxWorks64lin_x86/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/nfs/galadriel/VxWorks64lin_x86/" />
-        <variable name="configs"  value="VxWorks Exceptions STATIC" />
+        <variable name="configs"  value="VxWorks Exceptions STATIC VxWorks64" />
 
     </configuration>
 
