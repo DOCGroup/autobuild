@@ -16,11 +16,15 @@
         <environment name="WIND_PLATFORM"       value="vxworks-6.4" />
         <environment name="WIND_TOOLS"       value="C:\WindRiver\workbench-2.6" />
         <environment name="WIND_USR"       value="C:\WindRiver\vxworks-6.4\target\usr" />
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.72"/>
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks/ppc604/ACE_wrappers"/>
+        <environment name="ACE_TEST_VERBOSE" value="1"/>
+        <environment name="ACE_RUN_VX_REBOOT_CMD" value="reboot"/>
 
         <variable name="root"     value="Z:\galadriel\VxWorks\ppc604\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="Z:\galadriel\VxWorks\ppc604\" />
-        <variable name="configs"  value="VxWorks STATIC" />
+        <variable name="configs"  value="VxWorks Exceptions STATIC VxWorks64" />
 
     </configuration>
 
@@ -35,6 +39,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.4.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtp=0\nstatic_libs=1\nCPU=PPC604\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.4.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\ntests\n}\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
 
     <command name="print_os_version" />
@@ -44,9 +49,11 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="ACE_Host.mwc -type gnuace" />
 
     <command name="make"              options="-k" />
+
+    <command name="auto_run_tests" options="-a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
