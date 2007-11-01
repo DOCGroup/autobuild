@@ -71,31 +71,31 @@ all the OS/platform combinations on which CIAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-      <name>FC5_Static</name>
+      <name>Ubuntu_710_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>FC5_IPV6</name>
+      <name>Ubuntu_710_IPV6</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_IPV6</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>FC5_Dynamic_Hash_Op_Lookup</name>
+      <name>Ubuntu_710_Dynamic_Hash_Op_Lookup</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Dynamic_Hash</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
     <build>
-       <name>FC5_WChar</name>
+       <name>Ubuntu_710_WChar</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_wchar/</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
      <build>
-        <name>FC5_Implicit_Templates</name>
+        <name>Ubuntu_710_Implicit_Templates</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
