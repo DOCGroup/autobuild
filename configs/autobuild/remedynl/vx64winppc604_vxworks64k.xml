@@ -53,6 +53,8 @@
 
     <command name="make"              options="-k" />
 
+    <command name="shell"             options="c:\cygwin\bin\ssh root@galadriel chown -hR build /nfs/galadriel/VxWorks/ppc604" />
+
     <command name="auto_run_tests" options="-a" />
 
     <command name="log"               options="off" />
