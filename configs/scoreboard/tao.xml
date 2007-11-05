@@ -100,6 +100,12 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor>PrismTech</build_sponsor>
         <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
      </build>
+     <build>
+        <name>OpenSUSE_10_3_GCC_4_2</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/suse103_gcc42/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 
 <group>
