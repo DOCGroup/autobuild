@@ -213,6 +213,60 @@ sub sendEmail {
   }
 }
 
+sub sendSMTP_Email {
+  my $self      = shift;
+  my $subject   = shift;
+  my $msg       = shift;
+  my @email     = @_;
+
+  ## Net::SMTP is included with ActiveState Perl, but not with other Perl
+  ## distributions.  For this reason, use 'require Net::SMTP' inside this
+  ## function instead of 'use Net::SMTP' at the top of this file.
+  require Net::SMTP;
+  require Win32;
+  require Sys::Hostname;
+
+  my $smtphost = main::GetVariable('mail_host' ) || 'localhost';
+
+  my $mailname = Win32::LoginName()."\@". Sys::Hostname::hostname();
+
+  my $smtp = Net::SMTP->new( $smtphost, Debug=>1);
+
+  # Send the SMTP MAIL command
+  if (!$smtp->mail($mailname))
+  {
+    print STDERR __FILE__, ": ERROR: ",
+                 "Unable to send Email to SMTP host ", $smtphost, "\n";
+    return -1;
+  }
+
+  # Start the mail
+  $smtp->data();
+
+  $smtp->to( @email );
+ 
+  # Start the mail
+  $smtp->data();
+ 
+  # Send the header
+  # This address will appear in the message
+  $smtp->datasend("To: ".join(',',@email)."\n");
+  $smtp->datasend("Subject: $subject\n");
+  $smtp->datasend("\n");
+
+  # Send the body
+  $smtp->datasend($msg);
+  $smtp->datasend("\n");
+
+  # Send the termination string
+  $smtp->dataend();
+ 
+  # Close the connection
+  $smtp->quit();
+
+  return 0; 
+}
+
 sub collectCompileErrors {
   my $self  = shift;
   my $line  = shift;
@@ -458,7 +512,15 @@ sub Run ($)
               $msg .= $line;
             }
           }
-          $self->sendEmail($mail_prog, $csubject, $msg, $lead_email, $email);
+          ## If we are on Windows, use the Net::SMTP package instead to send e-mail
+          if ($^O =~ /MSWin32/)
+          {
+            $self->sendSMTP_Email($csubject, $msg, split(/ +/,$lead_email), $email);
+          }
+          else
+          {
+            $self->sendEmail($mail_prog, $csubject, $msg, $lead_email, $email);
+          }
         }
       }
 
@@ -469,7 +531,15 @@ sub Run ($)
             foreach my $line (@{$tests{$test}}) {
               $msg .= $line;
             }
-            $self->sendEmail($mail_prog, $tsubject, $msg, $lead_email);
+            ## If we are on Windows, use the Net::SMTP package instead to send e-mail
+            if ($^O =~ /MSWin32/)
+            {
+              $self->sendSMTP_Email($csubject, $msg, split(/ +/,$lead_email));
+            }
+            else
+            {
+              $self->sendEmail($mail_prog, $tsubject, $msg, $lead_email);
+            }
           }
         }
       }

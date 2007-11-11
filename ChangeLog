@@ -1,3 +1,11 @@
+Sun Nov 11 14:05:10 UTC 2007  Martin Corino  <mcorino@remedy.nl>
+
+        * command/notify.pm:
+        * docs/autobuild.txt:
+
+          Updated the notify command to enable it for Windows using
+          the Net::SMTP package which is standard included in ActivePerl.
+
 Mon Oct 29 11:30:00 UTC 2007  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.sh:
