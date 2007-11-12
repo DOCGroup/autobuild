@@ -1,3 +1,9 @@
+Mon Nov 12 23:08:10 UTC 2007  Martin Corino  <mcorino@remedy.nl>
+
+        * command/notify.pm:
+
+          Fixed minor issues with email notifications.
+
 Sun Nov 11 14:05:10 UTC 2007  Martin Corino  <mcorino@remedy.nl>
 
         * command/notify.pm:

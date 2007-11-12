@@ -295,7 +295,7 @@ sub collectCompileErrors {
     $self->{'parser'}->{'lines'}   = [$line];
   }
   elsif ($self->{'parser'}->{'started'}) {
-    if ($line =~ /no\s+rule\s+to\s+make\s+target\s+`(.*)'/) {
+    if ($line =~ /no\s+rule\s+to\s+make\s+target\s+`(.*)'/i) {
       $self->{'parser'}->{'current'} = "$self->{'parser'}->{'dir'}/$1";
       $$files{$self->{'parser'}->{'current'}} =
             ["$self->{'parser'}->{'current'} is missing"];
@@ -502,7 +502,7 @@ sub Run ($)
       foreach my $file (sort keys %files) {
         my $email = $self->getEmail($revctrl, $self->resolveLinks($file),
                                     $domain, \%mail_map);
-        if (defined $email) {
+        if (defined $email || $lead_email ne '') {
           my $msg = '';
           if (scalar(@{$files{$file}}) == 0) {
             $msg = "$file may be missing";
@@ -512,14 +512,18 @@ sub Run ($)
               $msg .= $line;
             }
           }
+          my @addr_list = split(/ +/,$lead_email);
+          if (defined $email) {
+            push @addr_list, $email;
+          }
           ## If we are on Windows, use the Net::SMTP package instead to send e-mail
           if ($^O =~ /MSWin32/)
           {
-            $self->sendSMTP_Email($csubject, $msg, split(/ +/,$lead_email), $email);
+            $self->sendSMTP_Email($csubject, $msg, @addr_list);
           }
           else
           {
-            $self->sendEmail($mail_prog, $csubject, $msg, $lead_email, $email);
+            $self->sendEmail($mail_prog, $csubject, $msg, @addr_list);
           }
         }
       }
