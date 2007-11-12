@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on earwig) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler nmake -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -environment "INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt\sys" -environment "LIB=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib\AMD64" -environment "prefix PATH=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\NoRedist\Win64\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\WinNT;" -mpcopt "-value_template systemlibs+=bufferoverflowU.lib" -outdir U:\mitza -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler nmake -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -environment "INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include\crt\sys" -environment "LIB=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib\AMD64" -environment "prefix PATH=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\NoRedist\Win64\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\Win64\x86\AMD64;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin;C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin\WinNT;" -mpcopt "-value_template systemlibs+=bufferoverflowU.lib" -outdir U:\mitza -testopt "-s \x22u:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX" -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\_nmake_d1o0\TAO\CIAO"/>
@@ -65,7 +65,7 @@
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="-a -t -o -s \x22u:\autobuild\win32sandbox\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
