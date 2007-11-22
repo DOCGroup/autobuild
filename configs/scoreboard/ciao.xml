@@ -384,6 +384,18 @@ all the OS/platform combinations on which CIAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
+            <name>WinXP_VC71_Dynamic_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71dr</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_VC9_Dynamic_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC9dr</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP_VC8</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
             <build_sponsor>Remedy IT</build_sponsor>
