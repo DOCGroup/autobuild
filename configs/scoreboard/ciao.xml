@@ -361,7 +361,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
         </build>
         <build>
           <name>Win2003_VC9_IPV6</name>
-          <url>http://www.dre.vanderbilt.edu/~remedynl/VC9_IPV6/</url>
+          <url>http://www.dre.vanderbilt.edu/~remedynl/VC90_IPV6/</url>
           <build_sponsor>Remedy IT</build_sponsor>
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -391,7 +391,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
         </build>
         <build>
             <name>WinXP_VC9_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC9dr</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC90dr</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -403,7 +403,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
         </build>
         <build>
             <name>WinXP_VC9</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC9</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/VC90</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
