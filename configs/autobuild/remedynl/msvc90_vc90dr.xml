@@ -5,10 +5,9 @@
         <environment name="TAO_ROOT"     value="C:\ACE\VC90dr\ACE_wrappers\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\ACE\VC90dr\ACE_wrappers\TAO\CIAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;C:\Program Files\Microsoft Visual Studio 9.0\VC\bin;;C:\ACE\VC90dr\ACE_wrappers\bin;C:\opensslvc71\openssl-0.9.7d\out32dll" type="prefix" />
-        <environment name="SSL_ROOT"     value="C:\opensslvc71\openssl-0.9.7d" />
+        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;C:\Program Files\Microsoft Visual Studio 9.0\VC\bin;;C:\ACE\VC90dr\ACE_wrappers\bin;" type="prefix" />
 
-        <variable name="configs"  value="Win32 VC71 Exceptions SSL" />
+        <variable name="configs"  value="Win32 VC71 Exceptions" />
         <variable name="root"     value="C:\ACE\VC90dr\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\ACE\VC90dr\" />
@@ -28,7 +27,7 @@
     <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln' -exec c:\cygwin\bin\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nxerces=0\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces=0\ncidl=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
