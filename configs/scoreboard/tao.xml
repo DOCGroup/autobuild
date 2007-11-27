@@ -11,7 +11,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Linux</name>
      <build>
-       <name>RHEL5_GCC4.1.1</name>
+       <name>RHEL50_GCC4.1.1</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_gcc41</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -29,13 +29,13 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
      <build>
-       <name>RHEL5_ICC100_IA64</name>
+       <name>RHEL51_ICC100_IA64</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC100</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL5_ICC101_IA64</name>
+      <name>RHEL51_ICC101_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC101/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -89,7 +89,7 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-        <name>RHEL5_COIOP</name>
+        <name>RHEL50_COIOP</name>
         <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_COIOP/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
