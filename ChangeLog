@@ -1,3 +1,14 @@
+Wed Nov 28 15:56:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml:
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
+        * configs/autobuild/abbarach/CIDLC.xml:
+        * configs/autobuild/cosmic/Mac_OSX_Tiger.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        
+          Updated OS X builds to use Leopard, Lindy build to refelect change to 
+          Debian Etch.
+
 Mon Nov 12 23:08:10 UTC 2007  Martin Corino  <mcorino@remedy.nl>
 
         * command/notify.pm:

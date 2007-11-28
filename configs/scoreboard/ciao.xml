@@ -11,7 +11,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
 <name>Linux</name>
      <build>
-      <name>RHEL4_Static_GCC-3.4.2</name>
+      <name>Debian_Etch_Static_GCC-4.1.2</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
@@ -285,19 +285,19 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
   <name>MacOS</name>
   <build>
-    <name>Tiger_GCC4_CIDLC</name>
+    <name>Leopard_GCC4_CIDLC</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_CIDLC</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>Tiger_GCC4_Full</name>
+    <name>Leopard_GCC4_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>Tiger_GCC3.3_Full</name>
+    <name>Leopard_GCC3.3_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cosmic_gcc3.3</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
