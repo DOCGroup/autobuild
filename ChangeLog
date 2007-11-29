@@ -1,3 +1,9 @@
+Thu Nov 29 09:58:11 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/lindy_isis/Static.xml:
+        
+          Corrected boost configuration.
+
 Wed Nov 28 15:56:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:

@@ -9,7 +9,7 @@
         <environment name="XERCESCROOT"        value="/build/isisbuilds/utils" />
         <environment name="BOOST_ROOT"         value="/build/isisbuilds/utils" />
         <environment name="BOOST_VERSION"      value="boost-1_34_1" />
-        <environment name="BOOST_CFG"          value="-gcc4" />
+        <environment name="BOOST_CFG"          value="-gcc41" />
         <environment name="ZLIB_ROOT"          value="/usr/" />
         <environment name="ZZIP_ROOT"          value="/usr/" />
 
