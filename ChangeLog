@@ -1,7 +1,14 @@
+Fri Nov 30 15:50:22 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_earwig_winxp-x64_nmake_d1o0.xml:
+
+          Set environment variable MPC_MAX_WIN_FILE_LENGTH so that depgen works
+          with paths longer than 128 characters.
+
 Thu Nov 29 09:58:11 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/lindy_isis/Static.xml:
-        
+
           Corrected boost configuration.
 
 Wed Nov 28 15:56:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
@@ -11,8 +18,8 @@ Wed Nov 28 15:56:35 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/abbarach/CIDLC.xml:
         * configs/autobuild/cosmic/Mac_OSX_Tiger.xml:
         * configs/autobuild/lindy_isis/Static.xml:
-        
-          Updated OS X builds to use Leopard, Lindy build to refelect change to 
+
+          Updated OS X builds to use Leopard, Lindy build to refelect change to
           Debian Etch.
 
 Mon Nov 12 23:08:10 UTC 2007  Martin Corino  <mcorino@remedy.nl>
