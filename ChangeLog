@@ -1,3 +1,10 @@
+Wed Dec  5 14:50:33 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_qnx_qnx_gcc_d1o0i0.xml:
+
+          Moved the build to a different filesystem (over NFS).  QNX's native
+          file system can't handle the stress of a TAO build.
+ 
 Fri Nov 30 15:50:22 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_earwig_winxp-x64_nmake_d1o0.xml:
