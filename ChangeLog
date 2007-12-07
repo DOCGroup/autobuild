@@ -1,3 +1,9 @@
+Fri Dec  7 17:19:34 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/shiva_64/x86-64bit-linux.xml
+        
+          Converted to gnuautobuild project type.
+
 Thu Dec  6 18:30:02 UTC 2007  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_vc71.xml
