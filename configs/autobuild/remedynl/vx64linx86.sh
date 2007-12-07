@@ -9,3 +9,4 @@ svn up
 
 $HOME/ACE/autobuild/configs/autobuild/remedynl/vx64linx86_host.sh
 $HOME/ACE/autobuild/configs/autobuild/remedynl/vx64linx86_vxworks64.sh
+$HOME/ACE/autobuild/configs/autobuild/remedynl/vx64linx86_vxworks64p.sh
