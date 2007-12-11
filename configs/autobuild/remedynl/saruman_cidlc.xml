@@ -42,7 +42,7 @@
 
     <command name="shell"             options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
     <command name="shell"             options="scp ACE_wrappers/TAO/CIAO/CIDLC/cidlc.bz2 bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-ia64" />
-    <command name="shell"             options="scp ACE_wrappers/TAO/CIAO/CIDLC/cidlc bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-ia64" />
+    <command name="shell"             options="scp -C ACE_wrappers/TAO/CIAO/CIDLC/cidlc bczar@www.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-ia64" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
