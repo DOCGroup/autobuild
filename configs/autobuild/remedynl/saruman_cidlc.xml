@@ -8,7 +8,6 @@
         <environment name="PATH"            value="" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="BOOST_VERSION" value="boost-1_33_1" />
-        <environment name="BOOST_CFG" value="-gcc-1_33_1" />
 
         <variable name="root"     value="/home/build/ACE/CIDLC/" />
         <variable name="log_file" value="build.txt" />
