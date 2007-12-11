@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="PATH"            value="" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
@@ -19,7 +20,6 @@
     <command name="process_listener"  options="localhost:32001" />
 
     <command name="log"               options="on" />
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
@@ -27,13 +27,19 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ncidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\ncidl=1\n'" />
 
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux-ia64/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="make"              options="-k realclean" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="generate_workspace" options="-type gnuace" />
 
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -j 8" />
