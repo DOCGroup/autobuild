@@ -27,10 +27,9 @@
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.73"/>
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
-        <environment name="ACE_RUN_VX_REBOOT_CMD" value="reboot"/>
-        <!-- environment name="ACE_RUN_VX_NO_INITIAL_REBOOT" value="1"/ -->
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.132:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="45"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
+        <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
 
         <variable name="root"     value="/nfs/galadriel/VxWorks64lin_x86/" />
         <variable name="log_file" value="build.txt" />

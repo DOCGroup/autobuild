@@ -20,7 +20,8 @@
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks/ppc604/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.130:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="30"/>
+        <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
 
         <variable name="root"     value="Z:\galadriel\VxWorks\ppc604\" />
         <variable name="log_file" value="build.txt" />
