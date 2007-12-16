@@ -185,7 +185,7 @@ all the OS/platform combinations on which TAO is tested everyday.
         </build>
         <build>
             <name>WinXP_64bit_Intel101_32</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC100_32/</url>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC101_32/</url>
             <build_sponsor>Remedy IT</build_sponsor>
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
