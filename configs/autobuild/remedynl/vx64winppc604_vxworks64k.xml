@@ -40,9 +40,9 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_LOG2\n#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks6.4.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nrtp=0\nstatic_libs=1\nCPU=PPC604\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.4.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='gen_ostream=1\ninline=0\nrtp=0\nstatic_libs=1\nCPU=PPC604\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.4.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\ntests\nTAO/tao\nTAO/tests\nTAO/orbsvcs/orbsvcs/CosNaming.mpc\nTAO/tests\nTAO/orbsvcs/orbsvcs/CosNaming_Serv.mpc\nTAO/tests\nTAO/orbsvcs/orbsvcs/CosNaming_Skel.mpc\nTAO/orbsvcs/orbsvcs/Svc_Utils.mpc\nTAO/orbsvcs/Naming_Service\n}\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\ngen_ostream=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="ccppc" />
@@ -51,7 +51,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="ACE_Host.mwc -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
 
     <command name="make"              options="-k" />
 
