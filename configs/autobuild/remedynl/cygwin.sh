@@ -3,8 +3,8 @@
 # $Id$
 #
 
-cd $HOME/ACE/autobuild
+cd /cygdrive/c/ACE/ACE/autobuild
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/cygwin.xml
+exec /usr/bin/perl /cygdrive/c/ACE/autobuild/autobuild.pl \
+                             /cygdrive/c/ACE/autobuild/configs/autobuild/remedynl/cygwin.xml
 
