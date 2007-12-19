@@ -1,4 +1,4 @@
 cd ..\..\..\
-svn up
+c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
-sh cygwin.sh
+c:\cygwin\bin\sh cygwin.sh
