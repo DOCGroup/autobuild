@@ -29,7 +29,7 @@
         <environment name="ACE_TEST_VERBOSE"      value="1"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.131:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="30"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
 
         <variable name="root"     value="/nfs/galadriel/VxWorks/ppc603" />
         <variable name="log_file" value="build.txt" />
