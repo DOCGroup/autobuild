@@ -383,7 +383,12 @@ all the OS/platform combinations on which TAO is tested everyday.
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
-
+   <build>
+     <name>VxWorks6.6_Solaris_PPC604</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks66sol_ppc604/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 
 </group>
 
