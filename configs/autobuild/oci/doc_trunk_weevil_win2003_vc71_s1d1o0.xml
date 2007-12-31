@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on weevil) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc71 -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -environment SSL_ROOT=C:\OpenSSL -featureflags ssl=1 -outdir u:\mitza -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc71 -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -environment SSL_ROOT=C:\OpenSSL -environment "prefix PATH=C:\OpenSSL\bin;" -featureflags ssl=1 -outdir u:\mitza -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\CIAO"/>
@@ -8,7 +8,7 @@
     <environment name="CVS_RSH"      value="ssh"/>
     <environment name="DDS_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\DDS"/>
     <environment name="MPC_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC"/>
-    <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\lib;" type="prefix"/>
+    <environment name="PATH"         value="C:\OpenSSL\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\lib;" type="prefix"/>
     <environment name="SSL_ROOT"     value="C:\OpenSSL"/>
     <environment name="TAO_ROOT"     value="c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO"/>
     <variable    name="build_name"   value="vc71_s1d1o0"/>
@@ -27,7 +27,7 @@
   <command name="clone_build_tree"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/vc71_s1d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_s1d1o0/bin/MakeProjectCreator/config/default.features output='ssl=1\nqos=1\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_s1d1o0/setenv.cmd output='set ACE_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\nset CIAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs.ociweb.com:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\DDS\nset MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\lib;%PATH%\nset SSL_ROOT=C:\OpenSSL\nset TAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_s1d1o0/setenv.cmd output='set ACE_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\nset CIAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\CIAO\nset CVSROOT=:pserver:taoadmin@cvs.ociweb.com:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\DDS\nset MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC\nset PATH=C:\OpenSSL\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\VC7\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\bin;c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\lib;%PATH%\nset SSL_ROOT=C:\OpenSSL\nset TAO_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0\TAO\n'"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
