@@ -234,6 +234,7 @@ require command::print_autotools_version;
 require command::print_perl_version;
 require command::print_valgrind_version;
 require command::print_make_version;
+require command::print_openssl_version;
 require command::print_cidlc_version;
 require command::process_listener;
 require command::configure;

@@ -1,3 +1,23 @@
+Mon Dec 31 21:51:16 UTC 2007  Adam Mitz  <mitza@ociweb.com>
+
+        * autobuild.pl:
+        * command/print_openssl_version.pm:
+
+          Added a new command for showing the OpenSSL version number.
+
+        * configs/autobuild/oci/doc_trunk_chico.phx_winxp_vc71_s1d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_s1d1o0.xml:
+
+          Added <command name="print_openssl_version"/>.  Maintainers of other
+          builds that use OpenSSL are encouraged to do the same.
+
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5-static_gcc4.1.1_d0o0i0s1.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5-xml_gcc4.1.1_d1o0i0d1.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5_gcc4.1.1_d0o0i0.xml:
+        * configs/autobuild/oci/doc_head_oci1179_linux-fc5_gcc4.1.1_d1o0i0.xml:
+
+          Removed these files.  They are no longer used.
+
 Fri Dec 28 21:31:59 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_s1d1o0.xml:
