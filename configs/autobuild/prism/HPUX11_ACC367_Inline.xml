@@ -37,6 +37,7 @@
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
+    <command name="print_openssl_version"/>
 
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO,build.mwc,prism -type gnuace" />

@@ -1,3 +1,13 @@
+Wed Jan 02 16:20:00 UTC 2007  Simon Massey  <simon.massey@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml
+
+          Added <command name="print_openssl_version"/>.
+
 Mon Dec 31 21:51:16 UTC 2007  Adam Mitz  <mitza@ociweb.com>
 
         * autobuild.pl:

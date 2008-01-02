@@ -33,6 +33,7 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
+    <command name="print_openssl_version"/>
 
     <command name="generate_workspace" options="-exclude prism,TAO/CIAO,TAO/oldCIAO,TAO/TAO_*.mwc -recurse -type vc71" />
 
