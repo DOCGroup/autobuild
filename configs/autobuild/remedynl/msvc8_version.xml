@@ -36,6 +36,7 @@
     <command name="print_os_version" />
     <command name="print_cidlc_version" />
     <command name="check_compiler" options="msvc" />
+    <command name="print_openssl_version"/>
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
