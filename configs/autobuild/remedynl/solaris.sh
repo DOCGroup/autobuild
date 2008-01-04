@@ -7,5 +7,5 @@ cd /home/build/ACE/autobuild
 
 /usr/local/bin/svn up
 
-sh solaris_host.sh
-sh solaris_vxworks.sh
+sh configs/autobuild/remedynl/solaris_host.sh
+sh configs/autobuild/remedynl/solaris_vxworks.sh
