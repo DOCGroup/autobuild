@@ -16,9 +16,9 @@
 
     <command name="process_listener"  options="localhost:32002" />
 
-    <command name="make"              options="-k realclean" />
-
     <command name="log"               options="ON" />
+
+    <command name="make"              options="-k realclean" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
