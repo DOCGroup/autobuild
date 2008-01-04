@@ -5,7 +5,7 @@
 
 cd /home/build/ACE/autobuild
 
-svn up
+/usr/local/bin/svn up
 
 sh solaris_host.sh
 sh solaris_vxworks.sh
