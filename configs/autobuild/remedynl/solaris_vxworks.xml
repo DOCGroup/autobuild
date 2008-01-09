@@ -7,7 +7,7 @@
         <environment name="HOST_ROOT"             value="/nfs/solaris/host/ACE_wrappers"/>
         <environment name="LD_LIBRARY_PATH"       value="/nfs/solaris/host/ACE_wrappers/lib:/usr/local/lib" type="prefix"/>
         <environment name="LD_LIBRARY_PATH"       value="/home/build/WindRiver/vxworks-6.6/host/sun4-solaris2/lib:/home/build/WindRiver/workbench-3.0/wrwb/platform/eclipse/sun4-solaris2/bin:/home/build/WindRiver/workbench-3.0/sun4-solaris2/lib:/home/build/WindRiver/workbench-3.0/foundation/4.1.1/sun4-solaris2/lib:" type="prefix"/>
-        <environment name="PATH"                  value="/home/build/WindRiver/components/ip_net2-6.6/host/sun4-solaris2/bin:/home/build/WindRiver/vxworks-6.6/host/sun4-solaris2/bin:/home/build/WindRiver/vxworks-6.6/vxtest/src/scripts:/home/build/WindRiver:/home/build/WindRiver/workbench-3.0/sun4-solaris2/bin:/home/build/WindRiver/workbench-3.0/foundation/4.1.1/sun4-solaris2/bin:/home/build/WindRiver/gnu/4.1.2-vxworks-6.6/sun4-solaris2/bin:/home/build/WindRiver/diab/5.6.0.0/SUNS/bin" type="prefix" />
+        <environment name="PATH"                  value="/home/build/WindRiver/components/ip_net2-6.6/host/sun4-solaris2/bin:/home/build/WindRiver/vxworks-6.6/host/sun4-solaris2/bin:/home/build/WindRiver/vxworks-6.6/vxtest/src/scripts:/home/build/WindRiver:/home/build/WindRiver/workbench-3.0/sun4-solaris2/bin:/home/build/WindRiver/workbench-3.0/foundation/4.1.1/sun4-solaris2/bin:/home/build/WindRiver/gnu/4.1.2-vxworks-6.6/sun4-solaris2/bin:/home/build/WindRiver/diab/5.6.0.0/SUNS/bin:/usr/local/bin:" type="prefix" />
         <environment name="WIND_HOME"             value="/home/build/WindRiver" />
         <environment name="WIND_BASE"             value="/home/build/WindRiver/vxworks-6.6"/>
         <environment name="WIND_DFW_PATH"         value="/home/build/WindRiver/workbench-3.0/dfw/0199_1"/>
@@ -59,6 +59,6 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks66sol_ppc604" />
+    <command name="shell"             options="/usr/local/bin/rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks66sol_ppc604" />
 
 </autobuild>
