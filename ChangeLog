@@ -1,3 +1,11 @@
+Wed Jan  9 14:02:59 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
+
+        * command/auto_run_tests.pm:
+
+          Explicitly qualify the path of auto_run_tests.pl relative to $ACE_ROOT
+          environment variable. This allows the test framework to work on non
+          ACE/TAO/CIAO software.
+
 Wed Jan 02 16:20:00 UTC 2007  Simon Massey  <simon.massey@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
