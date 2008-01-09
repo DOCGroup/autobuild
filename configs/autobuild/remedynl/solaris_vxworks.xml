@@ -29,6 +29,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/nfs/solaris/VxWorks66PPC604" />
         <variable name="configs"  value="VxWorks Exceptions STATIC MINIMUM" />
+        <variable name="svn_program"  value="/usr/local/bin/svn" />
 
     </configuration>
 

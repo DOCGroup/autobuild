@@ -11,6 +11,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/nfs/solaris/host/" />
         <variable name="configs"  value="Exceptions STATIC" />
+        <variable name="svn_program"  value="/usr/local/bin/svn" />
     </configuration>
 
     <command name="status"            options="on" />
