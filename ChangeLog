@@ -1,3 +1,20 @@
+Thu Jan 10 23:38:37 UTC 2008  Will Otte  <otte_w@dre.Vanderbilt.Edu>
+
+        * configs/autobuild/lindy_isis/Static.xml:
+          Fixes to work with Debian Etch.
+        
+        * configs/autobuild/lindy_isis/driver_arm.sh:
+        * configs/autobuild/lindy_isis/host.xml:
+        * configs/autobuild/lindy_isis/target.xml:
+        * configs/scoreboard/ciao.xml:
+
+          New autobuild for a ARM cross compile.
+          
+        * configs/autobuild/pantera_isis/gcc-4.0.xml:
+        
+          Fixes for setup errors.
+
+
 Wed Jan  9 14:02:59 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
 
         * command/auto_run_tests.pm:

@@ -4,9 +4,10 @@
 
         <environment name="XSC_ROOT"        value="/build/isisbuilds/XSC/XSC" />
         <environment name="MPC_ROOT"        value="/build/isisbuilds/XSC/MPC"/>
-        <environment name="BOOST_ROOT"        value="/build/isisbuilds/boost" />
+        <environment name="BOOST_ROOT"        value="/build/isisbuilds/utils/boost" />
         <environment name="BOOST_VERSION"        value="boost-1_33_1" />
         <environment name="BOOST_CFG"        value="-gcc" />
+        <environment name="XERCESCROOT"        value="/build/isisbuilds/utils/xerces" />
 
         <variable name="project_root" value="/build/isisbuilds/XSC/XSC" />
         <variable name="root"     value="/build/isisbuilds/XSC/" />

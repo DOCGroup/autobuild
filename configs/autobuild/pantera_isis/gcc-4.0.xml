@@ -5,9 +5,10 @@
         <environment name="ACE_ROOT"        value="/build/bczar/gcc-4.0/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/build/bczar/gcc-4.0/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/build/bczar/gcc-4.0/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/bczar/gcc-4.0/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/build/bczar/gcc-4.0/ACE_wrappers/lib:/build/bczar/util/lib" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
+        <environment name="XERCESCROOT_ROOT"       value="/build/bczar/util" />
 	<variable name="project_root"  value="/build/bczar/gcc-4.0/ACE_wrappers" />
         <variable name="root"     value="/build/bczar/gcc-4.0/" />
         <variable name="log_file" value="build.txt" />
