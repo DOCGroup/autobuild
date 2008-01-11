@@ -139,7 +139,7 @@ sub Run ($)
           $options .= " -Config " . join (" -Config ", split (' ', $configs));
       }
 
-      $command = "perl $ENV{'ACE_ROOT'}/bin/auto_run_tests.pl $options";
+      $command = "perl bin/auto_run_tests.pl $options";
     }
 
     if (defined $dir) {
