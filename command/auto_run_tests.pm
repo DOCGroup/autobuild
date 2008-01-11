@@ -139,7 +139,22 @@ sub Run ($)
           $options .= " -Config " . join (" -Config ", split (' ', $configs));
       }
 
-      $command = "perl bin/auto_run_tests.pl $options";
+      my $script_path;
+      if ($options =~ m/script_path='([^']*)'/) {
+          $script_path = $1;
+          $options =~ s/script_path='$script_path'//;
+      }
+      elsif ($options =~ m/script_path=([^\s]*)/) {
+          $script_path = $1;
+          $options =~ s/script_path=$script_path//;
+      }
+
+      if(defined $script_path) {
+         $command = "perl $script_path/auto_run_tests.pl $options";
+      }
+      else {
+         $command = "perl bin/auto_run_tests.pl $options";
+      }
     }
 
     if (defined $dir) {

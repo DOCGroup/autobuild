@@ -1,7 +1,21 @@
+Fri Jan 11 20:51:25 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
+
+        * command/auto_run_tests.pm:
+
+          Added 'script_path' as an acceptable parameter to be passed in the 
+          options segment. One can specify the location of the auto_run_tests.pl
+          in 'script_path'.
+
+          Below is an example:
+          <command name="auto_run_tests" options="-l tests.lst script_path=D:/ACE/bin" />
+
+          This addresses the problem mentioned in the ChangeLog entry below. Thanks to
+          Adam Mitz for suggesting this fix.
+
 Fri Jan 11 16:05:19 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
 
         * command/auto_run_tests.pm:
-       
+
           Reverted changes made in:
           Wed Jan  9 14:02:59 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
 
