@@ -318,11 +318,27 @@ progress.  Unix supported only for now, NT support on the way.
      showing an abbreviated list of errors, and referring the recipient to
      look at SCOREBOARD_URL for a full list of the errors.
 
+
+     Alternatively, if you would like the build errors to be sent to a group of 
+     people, use the following line instead of MAIL_ADMIN above:
+
+     <variable name="MAIL_ADMIN_FILE"  value="C:/foo/mail_map.txt" />
+
+     The MAIL_ADMIN_FILE variables point to a file that contains the email addresses
+     of people who should notified by email when an error occurs. Note that file 
+     should have one email address per line.
+
 (2)  For Windows NT only, you also need to add the domain name of the SMTP
      server used to send outgoing mail.  You do not need to add this line on
      UNIX platforms:
 
      <variable name="MAIL_ADMIN_SMTP_HOST"  value="smtphostame.mydomain.com" />
+
+NOTE:
+If you'd like to change the email address of autobuild displayed to users who
+recieve email notification, add and modifiy the line below:
+
+<variable name="MAIL_SENDER_ADDRESS"  value="autobuild@mydomain.com" />
 
 
 <CODE>$Id$</CODE>

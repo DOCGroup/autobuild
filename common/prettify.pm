@@ -954,7 +954,8 @@ sub Process ($)
 
     my @errors = $processor->BuildErrors();
     my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
-    if ( (scalar( @errors ) > 0) && (defined $mail_admin) )
+    my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
+    if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
     {
         $processor->SendEmailNotification();
     }
@@ -1021,13 +1022,29 @@ sub SendEmailNotification($)
        $scoreboard_url = "";
     }
 
-    Mail::send_message($mail_admin,
-                       "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors" ,
-                       "Errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
-                       "Please check the scoreboard for details.\n$scoreboard_url\n\n".
-                        $errors_string
-                      );
-
+    my $subject = "[AUTOBUILD] ".main::GetVariable('BUILD_CONFIG_FILE')." has build errors";
+    my $message = "Errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
+                  "Please check the scoreboard for details.\n$scoreboard_url\n\n".
+                  $errors_string;
+                  
+    if (defined $mail_admin) {
+       Mail::send_message($mail_admin, $subject, $message);
+    }                  
+                      
+    my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
+  
+    if (defined $mail_admin_file) {
+       if (open(MAIL_ADDRESS, "<$mail_admin_file")) {
+          while(<MAIL_ADDRESS>) {                  
+             Mail::send_message($_, $subject, $message);                              
+          }
+       }
+       else {
+          print STDERR __FILE__,
+                       ": ERROR: Unable to open the MAIL_ADMIN_FILE: $mail_admin_file\n";
+          return 0;
+       }
+    }                        
 }
 
 ###############################################################################

@@ -90,16 +90,25 @@ sub send_message_Net_SMTP($$$)
 
   my $mailname = "";
   require Sys::Hostname;
-
-  if ( $OSNAME eq "MSWin32" )
+  
+  my $mail_sender_address = main::GetVariable ( 'MAIL_SENDER_ADDRESS' );
+  
+  if (defined $mail_sender_address)
   {
-     require Win32;
-     $mailname = Win32::LoginName()."\@". Sys::Hostname::hostname();
+     $mailname = $mail_sender_address
   }
   else
   {
-     require POSIX;
-     $mailname = POSIX::cuserid()."\@". Sys::Hostname::hostname();
+     if ( $OSNAME eq "MSWin32" )
+     {
+        require Win32;
+        $mailname = Win32::LoginName()."\@". Sys::Hostname::hostname();
+     }
+     else
+     {
+        require POSIX;
+        $mailname = POSIX::cuserid()."\@". Sys::Hostname::hostname();
+     }  
   }
 
   # Send the SMTP MAIL command
@@ -114,9 +123,8 @@ sub send_message_Net_SMTP($$$)
   $smtp->data();
  
   # Send the header
-  # This address will appear in the message
-  $smtp->datasend("To: $to\n");
   $smtp->datasend("Subject: $subject\n");
+
   $smtp->datasend("\n");
 
   # Send the body

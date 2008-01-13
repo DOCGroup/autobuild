@@ -1,8 +1,25 @@
+Sun Jan 13 17:26:37 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
+
+        * common/mail.pm:
+        * common/prettify.pm:
+
+          Added MAIL_ADMIN_FILE variable to autobuild. Use this variable to specify
+          a file that contains email addresses (one per-line) of people who should
+          be notified of a build error.
+
+          Added MAIL_SENDER_ADDRESS variable to autobuild. Use this variable to
+          customize the email address of autobuild that is displayed to users
+          who recieve emails.
+
+        * README:
+
+          Documented the variables mentioned above.
+
 Fri Jan 11 20:51:25 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
 
         * command/auto_run_tests.pm:
 
-          Added 'script_path' as an acceptable parameter to be passed in the 
+          Added 'script_path' as an acceptable parameter to be passed in the
           options segment. One can specify the location of the auto_run_tests.pl
           in 'script_path'.
 
