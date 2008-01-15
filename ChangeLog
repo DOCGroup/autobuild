@@ -1,3 +1,9 @@
+Tue Jan 15 21:18:40 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/lindy_isis/ts-target.xml:
+          Added autobuild using Technologic Systems ARM cross compiler
+          for the TS-72xx series SBC.
+
 Tue Jan 15 16:37:24 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
