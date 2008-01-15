@@ -34,16 +34,18 @@
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/apps/gperf/src/gperf ACE_wrappers/bin" />
     <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/TAO/TAO_IDL/tao_idl ACE_wrappers/bin" />
+    <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/TAO/CIAO/tools/IDL3_to_IDL2/tao_idl3_to_idl2 ACE_wrappers/bin" />
     <command name="print_os_version" />
     <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc,examples,TAO/tests,TAO/examples,TAO/orbsvcs/tests,TAO/orbsvcs/examples -type gnuautobuild" />
 
     <command name="make"              options="-j 4 -k" />
-
+    <command name="anonymous_shell"   options="/usr/bin/rsync -rve /usr/bin/ssh --exclude="*.svn*" --exclude "*.o" --exclude "*.cpp" --exclude "*.h" --exclude "*.depend*" --exclude "GNUmakefile*" --exclude "*.inl" -l ACE_wrappers 129.59.129.118:/build/isisbuilds" />
+    <command name="anonymous_shell"   options="/usr/bin/ssh 129.59.129.118 "touch /build/isisbuilds/.enable" />
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />

@@ -1,8 +1,15 @@
-Tue Jan 15 15:43:26 UTC 2008    <@vanderbilt.edu.>
+Tue Jan 15 15:51:22 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/lindy_isis/host.xml:
+        * configs/autobuild/lindy_isis/target.xml:
+        
+          Updates to ARM cross build to invoke testing on slug build below.
+
+Tue Jan 15 15:43:26 UTC 2008  William R. Otte  <wotte@vanderbilt.edu.>
 
         * configs/autobuild/slug01/driver.sh:
         * configs/autobuild/slug01/slug01.xml:
-	  New build to test the Debian_Etch_ARM_Cross_Target build.
+          New build to test the Debian_Etch_ARM_Cross_Target build.
 
 Sun Jan 13 17:26:37 UTC 2008  Abdullah Sowayan  <abdullah.sowayan@lmco.com>
 
