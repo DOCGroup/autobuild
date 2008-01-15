@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"           value="/build/isisbuilds/arm/ts-target/ACE_wrappers" />
         <environment name="TAO_ROOT"           value="/build/isisbuilds/arm/ts-target/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"          value="/build/isisbuilds/arm/ts-target/ACE_wrappers/TAO/CIAO"/>
-        <environment name="PATH"               value="/opt/crosstool/gcc-4.0.1-glibc-2.3.5/arm-unknown-linux-gnu:$PATH" />
+        <environment name="PATH"               value="/opt/crosstool/gcc-4.0.1-glibc-2.3.5/arm-unknown-linux-gnu" type="prefix" />
         <environment name="LD_LIBRARY_PATH"    value="/build/isisbuilds/arm/ts-target/ACE_wrappers/lib:/usr/lib/gcc/i686-pc-linux-gnu/3.4.1:/usr/local/lib:.:$LD_LIBRARY_PATH" />
         <environment name="XERCESCROOT"        value="/build/isisbuilds/arm/utils" />
         <environment name="BOOST_ROOT"         value="/build/isisbuilds/arm/utils" />
