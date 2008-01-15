@@ -232,6 +232,24 @@ all the OS/platform combinations on which CIAO is tested everyday.
      <build_sponsor>ISIS</build_sponsor>
      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
    </build>
+   <build>
+     <name>Debian_Etch_ARM_Cross_Test</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/slug01_arm_test/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+   <build>
+     <name>Debian_Etch_TS-GCC_4.0.1_ARM_Cross_Target</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_ts-target/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+   <build>
+     <name>Debian_Etch_TS-GCC_4.0.1_ARM_Cross_Test</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/brick01_arm_test/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
 </group>
 
 

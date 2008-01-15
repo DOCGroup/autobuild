@@ -1,3 +1,8 @@
+Tue Jan 15 16:37:24 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml:
+          Include new ARM builds on scoreboard.
+
 Tue Jan 15 15:51:22 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/lindy_isis/host.xml:
