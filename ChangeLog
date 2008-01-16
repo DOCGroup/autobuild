@@ -1,3 +1,11 @@
+Wed Jan 16 20:40:56 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_Bug_3193_fly_sunos59_suncc55_d1o0.xml:
+        * configs/autobuild/oci/doc_Bug_3193_mantis_win2003_vc8_d1o0.xml:
+        * configs/autobuild/oci/doc_Bug_3193_spider_linux_gcc_d1o0.xml:
+
+        * configs/scoreboard/tao_future.xml:
+
 Wed Jan 16 14:56:09 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
@@ -17,7 +25,7 @@ Wed Jan 16 04:57:06 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
         * configs/scoreboard/ciao.xml:
 
           Migrated builds from blade47 to cumbia.vuse
-        
+
         * configs/autobuild/isislab/blade47/CORBAecompact.sh:
         * configs/autobuild/isislab/blade47/CORBAecompact.xml:
         * configs/autobuild/isislab/blade47/CORBAemicro.sh:
