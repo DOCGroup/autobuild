@@ -29,14 +29,14 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-       <name>FC4_CORBA_e_compact</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_compact</url>
+       <name>Debian_Etch_CORBA_e_compact</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cumbia_CORBA_e_compact</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-       <name>FC4_CORBA_e_micro</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_micro</url>
+       <name>Debian_Etch_CORBA_e_micro</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cumbia_CORBA_e_micro</url>
           <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
@@ -125,8 +125,14 @@ all the OS/platform combinations on which CIAO is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-         <name>FC4_NoInterceptors_Core</name>
-         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade47/NoInt</url>
+         <name>Debian_Etch_NoInterceptors_Core</name>
+         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cumbia_NoInt</url>
+         <build_sponsor>ISIS</build_sponsor>
+         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     </build>
+     <build>
+         <name>Debian_Etch_NoIIOP</name>
+         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cumbia_NoIIOP</url>
          <build_sponsor>ISIS</build_sponsor>
          <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>

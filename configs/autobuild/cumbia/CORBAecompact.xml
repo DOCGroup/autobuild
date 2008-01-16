@@ -2,22 +2,22 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/home/bczar/builds/CORBAecompact/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/bczar/builds/CORBAecompact/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/bczar/builds/CORBAecompact/ACE_wrappers/TAO/CIAO"/>
-        <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/CORBAecompact/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/CORBAecompact/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/CORBAecompact/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/build/isisbuilds/CORBAecompact/ACE_wrappers/TAO/CIAO"/>
+        <environment name="XERCESCROOT"     value="/build/isisbuilds/utils/xerces"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/xerces/lib:/build/isisbuilds/CORBAecompact/ACE_wrappers/lib" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
 
-        <variable name="root"     value="/home/bczar/builds/CORBAecompact/" />
+        <variable name="root"     value="/build/isisbuilds/CORBAecompact/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/bczar/builds/CORBAecompact/" />
+        <variable name="log_root" value="/build/isisbuilds/CORBAecompact/" />
         <variable name="configs"  value="Linux CORBA_E_COMPACT DISABLE_INTERCEPTORS" />
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32003" />
+    <command name="process_listener"  options="localhost:32001" />
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
@@ -49,5 +49,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade47/CORBA_e_compact"/>
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/cumbia_CORBA_e_compact"/>
 </autobuild>

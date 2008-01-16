@@ -7,5 +7,5 @@ cd $HOME/autobuild
 svn up
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                             $HOME/autobuild/configs/autobuild/isislab/blade47/CORBAemicro.xml
+                             $HOME/autobuild/configs/autobuild/cumbia/NoInt_NoEx.xml
 

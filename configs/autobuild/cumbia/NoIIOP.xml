@@ -2,17 +2,17 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/home/bczar/builds/NoInt/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/bczar/builds/NoInt/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/bczar/builds/NoInt/ACE_wrappers/TAO/CIAO"/>
-        <environment name="XERCESCROOT"     value="/home/bczar/xerces"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/bczar/xerces/lib:/home/bczar/builds/NoInt/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"        value="/build/isisbuilds/NoIIOP/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/build/isisbuilds/NoIIOP/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/build/isisbuilds/NoIIOP/ACE_wrappers/TAO/CIAO"/>
+        <environment name="XERCESCROOT"     value="/build/isisbuilds/utils/xerces"/>
+        <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/xerces/lib:/build/isisbuilds/NoIIOP/ACE_wrappers/lib" />
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/usr/" />
 
-        <variable name="root"     value="/home/bczar/builds/NoInt/" />
+        <variable name="root"     value="/build/isisbuilds/NoIIOP/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/bczar/builds/NoInt/" />
+        <variable name="log_root" value="/build/isisbuilds/NoIIOP/" />
         <variable name="configs"  value="Linux NoInterceptor Core" />
     </configuration>
 
@@ -22,7 +22,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_IIOP 0\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\n\n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='interceptors=0\n'" />
 
@@ -39,12 +39,12 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-include TAO/tao,TAO/TAO_IDL -exclude TAO -type gnuautobuild" />
 
     <command name="make"              options="-k" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade47/NoInt"/>
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/cumbia_NoIIOP"/>
 </autobuild>

@@ -1,3 +1,30 @@
+Wed Jan 16 04:57:06 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/cumbia/CORBAecompact.sh:
+        * configs/autobuild/cumbia/CORBAecompact.xml:
+        * configs/autobuild/cumbia/CORBAemicro.sh:
+        * configs/autobuild/cumbia/CORBAemicro.xml:
+        * configs/autobuild/cumbia/NoIIOP.sh:
+        * configs/autobuild/cumbia/NoIIOP.xml:
+        * configs/autobuild/cumbia/NoInt.sh:
+        * configs/autobuild/cumbia/NoInt_NoEx.xml:
+        * configs/autobuild/cumbia/driver.sh:
+        * configs/scoreboard/ciao.xml:
+
+          Migrated builds from blade47 to cumbia.vuse
+        
+        * configs/autobuild/isislab/blade47/CORBAecompact.sh:
+        * configs/autobuild/isislab/blade47/CORBAecompact.xml:
+        * configs/autobuild/isislab/blade47/CORBAemicro.sh:
+        * configs/autobuild/isislab/blade47/CORBAemicro.xml:
+        * configs/autobuild/isislab/blade47/NoIIOP.sh:
+        * configs/autobuild/isislab/blade47/NoIIOP.xml:
+        * configs/autobuild/isislab/blade47/NoInt.sh:
+        * configs/autobuild/isislab/blade47/NoInt_NoEx.xml:
+        * configs/autobuild/isislab/blade47/driver.sh:
+
+          Removed these files.
+
 Tue Jan 15 21:18:40 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/lindy_isis/ts-target.xml:
@@ -13,7 +40,7 @@ Tue Jan 15 15:51:22 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/lindy_isis/host.xml:
         * configs/autobuild/lindy_isis/target.xml:
-        
+
           Updates to ARM cross build to invoke testing on slug build below.
 
 Tue Jan 15 15:43:26 UTC 2008  William R. Otte  <wotte@vanderbilt.edu.>
