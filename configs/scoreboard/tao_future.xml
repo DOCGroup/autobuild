@@ -33,8 +33,8 @@ decide the migration paths and strategies.
     <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
   </build>
   <build>
-    <name>doc_Bug_3193_fly_sunos59_suncc55_d1o0</name>
-    <url>http://scoreboard.ociweb.com/doc_Bug_3193_fly_sunos59_suncc55_d1o0</url>
+    <name>doc_Bug_3193_fly_sunos59_suncc57_d1o0</name>
+    <url>http://scoreboard.ociweb.com/doc_Bug_3193_fly_sunos59_suncc57_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
   </build>
