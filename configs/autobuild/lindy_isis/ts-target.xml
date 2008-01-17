@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"           value="/build/isisbuilds/arm/ts-target/ACE_wrappers" />
         <environment name="TAO_ROOT"           value="/build/isisbuilds/arm/ts-target/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"          value="/build/isisbuilds/arm/ts-target/ACE_wrappers/TAO/CIAO"/>
-        <environment name="PATH"               value="/opt/crosstool/gcc-4.0.1-glibc-2.3.5/arm-unknown-linux-gnu/bin" type="prefix" />
+        <environment name="PATH"               value="/opt/crosstool/gcc-4.1.1-glibc-2.3.2/arm-unknown-linux-gnu/bin" type="prefix" />
         <environment name="LD_LIBRARY_PATH"    value="/build/isisbuilds/arm/ts-target/ACE_wrappers/lib:/usr/lib/gcc/i686-pc-linux-gnu/3.4.1:/usr/local/lib:.:$LD_LIBRARY_PATH" />
         <environment name="XERCESCROOT"        value="/build/isisbuilds/arm/utils" />
         <environment name="BOOST_ROOT"         value="/build/isisbuilds/arm/utils" />
@@ -45,8 +45,8 @@
     <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc,examples,TAO/tests,TAO/examples,TAO/orbsvcs/tests,TAO/orbsvcs/examples -type gnuautobuild" />
 
     <command name="make"              options="-j 4 -k" />
-    <command name="anonymous_shell"   options="/usr/bin/rsync -rve /usr/bin/ssh --exclude='*.svn*' --exclude '*.o' --exclude '*.cpp' --exclude '*.h' --exclude '*.depend*' --exclude 'GNUmakefile*' --exclude '*.inl' -l ACE_wrappers 129.59.129.22:/build/isisbuilds" />
-    <command name="anonymous_shell"   options="/usr/bin/ssh 129.59.129.22 'touch /build/isisbuilds/.enable'" />
+    <command name="anonymous_shell"   options="/usr/bin/rsync -rve /usr/bin/ssh --exclude='*.svn*' --exclude '*.o' --exclude '*.cpp' --exclude '*.h' --exclude '*.depend*' --exclude 'GNUmakefile*' --exclude '*.inl' -l ACE_wrappers 129.59.129.22:/data/isisbuilds" />
+    <command name="anonymous_shell"   options="/usr/bin/ssh 129.59.129.22 'touch /data/isisbuilds/.enable'" />
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
