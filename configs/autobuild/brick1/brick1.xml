@@ -1,0 +1,30 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"           value="/data/isisbuilds/ACE_wrappers" />
+        <environment name="TAO_ROOT"           value="/data/isisbuilds/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"          value="/data/isisbuilds/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH"    value="/data/isisbuilds/ACE_wrappers/lib:/usr/lib/gcc/i686-pc-linux-gnu/3.4.1:/usr/local/lib:.:$LD_LIBRARY_PATH" />
+
+        <variable name="root"     value="/data/isisbuilds/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/data/isisbuilds/" />
+        <variable name="configs"  value="Linux " />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32002" />
+    <command name="log"               options="on" />
+
+    <command name="print_os_version" />
+    <command name="print_ace_config" />
+    <command name="print_perl_version" />
+
+    <command name="auto_run_tests"    options=" -a -C" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/brick1_arm_test/" />
+</autobuild>

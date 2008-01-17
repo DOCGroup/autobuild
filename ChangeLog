@@ -1,3 +1,9 @@
+Thu Jan 17 05:42:36 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/brick1/brick1.xml:
+        * configs/autobuild/brick1/driver.sh:
+	  Test build for TS-GCC ARM cross build. 
+          
 Wed Jan 16 20:40:56 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_Bug_3193_fly_sunos59_suncc55_d1o0.xml:
