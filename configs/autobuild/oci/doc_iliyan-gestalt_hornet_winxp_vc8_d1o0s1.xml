@@ -1,0 +1,57 @@
+<autobuild>
+  <!-- The command used to create this file (on hornet) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\iliyan-gestalt -buildflags "debug=1 optimize=0 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/TAO . dir=TAO" -compiler vc8 -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -outdir u:\mitza -peerlayout 1 -->
+  <configuration>
+    <environment name="ACE_ROOT"     value="c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\ACE"/>
+    <environment name="CIAO_ROOT"    value="c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\CIAO"/>
+    <environment name="CVSROOT"      value=":pserver:taoadmin@cvs:/cvs"/>
+    <environment name="CVS_RSH"      value="ssh"/>
+    <environment name="DDS_ROOT"     value="c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1"/>
+    <environment name="MPC_ROOT"     value="u:\MPC"/>
+    <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\VC\bin;c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\ACE\bin;c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\ACE\lib;" type="prefix"/>
+    <environment name="TAO_ROOT"     value="c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\TAO"/>
+    <variable    name="base"         value="iliyan-gestalt"/>
+    <variable    name="build_name"   value="vc8_d1o0s1"/>
+    <variable    name="creator"      value="mitza"/>
+    <variable    name="log_file"     value="vc8_d1o0s1.log"/>
+    <variable    name="log_root"     value="w:\autobuild_logs\doc_iliyan-gestalt_hornet_winxp_vc8_d1o0s1"/>
+    <variable    name="project_root" value="c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1"/>
+    <variable    name="root"         value="c:\tao_builds\taoadmin\iliyan-gestalt"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/ACE . dir=ACE"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/TAO . dir=TAO"/>
+  <command name="clone_build_tree"/>
+  <command name="file_manipulation"  options="type=update file=build/vc8_d1o0s1/ACE/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/vc8_d1o0s1/ACE/bin/MakeProjectCreator/config/default.features output='qos=1\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/vc8_d1o0s1/ACE/setenv.cmd output='set ACE_ROOT=c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\ACE\nset CIAO_ROOT=c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\CIAO\nset CVSROOT=:pserver:taoadmin@cvs:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\nset MPC_ROOT=u:\MPC\nset PATH=C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\VC\bin;c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\ACE\bin;c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\ACE\lib;%PATH%\nset TAO_ROOT=c:\tao_builds\taoadmin\iliyan-gestalt\build\vc8_d1o0s1\TAO\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_ace_config"/>
+  <command name="check_compiler"     options="msvc"/>
+  <command name="generate_workspace" options="-type vc8 -static -recurse -exclude CIAO,DDS,ACE/ACE.mwc,TAO/TAO.mwc"/>
+
+  <!-- Build targets -->
+  <command name="vc7make" options="/build debug TAO/TAO_ACE.sln"/>
+  <command name="vc7make" options="/build debug ACE/bin/bin.sln"/>
+  <command name="vc7make" options="/build debug ACE/tests/tests.sln"/>
+  <command name="vc7make" options="/build debug ACE/protocols/protocols.sln"/>
+  <command name="vc7make" options="/build debug ACE/protocols/tests/tests.sln"/>
+  <command name="vc7make" options="/build debug ACE/examples/examples.sln"/>
+  <command name="vc7make" options="/build debug ACE/performance-tests/perf.sln"/>
+  <command name="vc7make" options="/build debug TAO/tests/tests.sln"/>
+  <command name="vc7make" options="/build debug TAO/examples/examples.sln"/>
+  <command name="vc7make" options="/build debug TAO/performance-tests/perf.sln"/>
+  <command name="vc7make" options="/build debug TAO/orbsvcs/tests/tests.sln"/>
+  <command name="vc7make" options="/build debug TAO/orbsvcs/examples/examples.sln"/>
+  <command name="vc7make" options="/build debug TAO/orbsvcs/performance-tests/perf.sln"/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="dir=ACE -a -t -o -ExeSubDir Static_Debug -Config STATIC -Config Win32 -Config NO_LOADAVG"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>
