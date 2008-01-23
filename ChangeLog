@@ -1,3 +1,23 @@
+Wed Jan 23 14:36:46 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_iliyan-gestalt_oci1179_linux_gcc_d1o0s1.xml:
+          New home for the Linux static build of the iliyan-gestalt branch.
+
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml:
+
+          This build had a typo that prevented any of the code being built for
+          WinCE and there was also no scoreboard error.
+
+        * configs/scoreboard/tao_future.xml:
+
+          Updated listed of builds.
+
+        * configs/autobuild/oci/doc_iliyan-gestalt_hornet_winxp_vc8_d1o0s1.xml:
+        * configs/autobuild/oci/doc_iliyan-gestalt_mosquito_linux_gcc_d1o0s1.xml:
+
+          Removed these builds.  Neither of these machines had enough disk
+          space for static debug builds (needs roughly 50 GB).
+
 Mon Jan 21 22:37:12 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_iliyan-gestalt_mosquito_linux_gcc_d1o0.xml:

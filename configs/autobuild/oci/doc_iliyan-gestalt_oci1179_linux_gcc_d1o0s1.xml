@@ -1,5 +1,5 @@
 <autobuild>
-  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- The command used to create this file (on oci1179.ociweb.com) was -->
   <!-- BuildXML/buildxml.pl -base /tao_builds/taoadmin/iliyan-gestalt -buildflags "debug=1 optimize=0 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/TAO . dir=TAO" -compiler gcc -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -outdir /home/taoadmin/mitza -peerlayout 1 -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/iliyan-gestalt/build/gcc_d1o0s1/ACE"/>
@@ -15,7 +15,7 @@
     <variable    name="build_name"      value="gcc_d1o0s1"/>
     <variable    name="creator"         value="mitza"/>
     <variable    name="log_file"        value="gcc_d1o0s1.log"/>
-    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_iliyan-gestalt_mosquito_linux_gcc_d1o0s1"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_iliyan-gestalt_oci1179_linux_gcc_d1o0s1"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/iliyan-gestalt/build/gcc_d1o0s1"/>
     <variable    name="root"            value="/tao_builds/taoadmin/iliyan-gestalt"/>
   </configuration>
