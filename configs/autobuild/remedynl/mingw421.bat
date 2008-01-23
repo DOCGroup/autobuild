@@ -1,0 +1,1 @@
+echo "/c/ACE/autobuild/configs/autobuild/remedynl/mingw421_build.bat" | C:\msys\1.0\bin\sh --login -i
