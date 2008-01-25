@@ -414,13 +414,13 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
-          <name>Win2003_VC71_IPV6</name>
+          <name>WinXP_VC71_IPV6</name>
           <url>http://www.dre.vanderbilt.edu/~remedynl/VC71_IPV6/</url>
           <build_sponsor>Remedy IT</build_sponsor>
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-          <name>Win2003_VC9_IPV6</name>
+          <name>WinXP_VC9_IPV6</name>
           <url>http://www.dre.vanderbilt.edu/~remedynl/VC90_IPV6/</url>
           <build_sponsor>Remedy IT</build_sponsor>
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
