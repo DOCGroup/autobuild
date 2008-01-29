@@ -1,9 +1,21 @@
+Tue Jan 29 15:11:23 UTC 2008  Simon McQueen  <sm@prismtech.com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC370_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC373_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+
+          Tidied some paths up.
+
 Sat Jan 26 00:14:08 UTC 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/essie_dev_autoconf_gcc3_debug.xml:
         * configs/autobuild/riverace/essie_dev_gcc3_debug.xml: essie is
           gone... These Solaris 9 builds moved to...
-        
+
         * configs/autobuild/riverace/heidi_dev_autoconf_gcc3_debug.xml:
         * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml: New builds for
           Solaris 9 that replace the Solaris 8 builds.
