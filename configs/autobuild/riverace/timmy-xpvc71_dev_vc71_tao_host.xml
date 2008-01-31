@@ -25,6 +25,7 @@
 
     <command name="svn"               options="dir=/ace/MPC update --non-interactive" />
     <command name="svn"               options="dir=/ace/ACE_wrappers update --non-interactive" />
+    <command name="svn"               options="dir=/ace/ACE_wrappers/TAO update --non-interactive" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
