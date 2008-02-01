@@ -1,4 +1,4 @@
 cd ..\..\..\
 c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
-perl C:\ACE\autobuild\autobuild.pl aragon_cb6sr.xml
+c:\perl\bin\perl C:\ACE\autobuild\autobuild.pl vx551_win_x86_host.xml

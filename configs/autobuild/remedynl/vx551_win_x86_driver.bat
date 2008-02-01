@@ -1,5 +1,5 @@
 cd \ace\autobuild
 c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
-perl c:\ACE\autobuild\autobuild.pl aragon_cb6sr.xml
-perl C:\ACE\autobuild\autobuild.pl aragon_vxworks-pcPentiumX-gnu.xml
+c:\perl\bin\perl c:\ACE\autobuild\autobuild.pl vx551_win_x86_host.xml
+c:\perl\bin\perl C:\ACE\autobuild\autobuild.pl vx551_win_x86_build.xml
