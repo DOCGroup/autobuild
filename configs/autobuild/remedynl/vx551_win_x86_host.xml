@@ -1,19 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\VxWorks\CB6sr\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\VxWorks\CB6sr\ACE_wrappers\TAO"/>
+        <environment name="ACE_ROOT"     value="C:\ACE\VxWorks\Host\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\ACE\VxWorks\Host\ACE_wrappers\TAO"/>
         <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Perl\Bin;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\ACE\VxWorks\CB6sr\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\Perl\Bin;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;C:\ACE\VxWorks\Host\ACE_wrappers\lib;C:\ACE\VxWorks\Host\ACE_wrappers\bin;C:\cygwin\bin;" type="prefix" />
 
-        <environment name="STATIC"   value="1" />
-        <environment name="BCBVER"   value="6" />
-
-        <variable name="configs"      value="Win32 Borland STATIC Release Exceptions" />
-        <variable name="root"         value="C:\ACE\VxWorks\CB6sr\" />
+        <variable name="configs"      value="Win32 " />
+        <variable name="root"         value="C:\ACE\VxWorks\Host\" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="C:\ACE\VxWorks\CB6sr\" />
-        <variable name="name"         value="WinXP CBX Static Release" />
+        <variable name="log_root"     value="C:\ACE\VxWorks\Host\" />
+        <variable name="name"         value="WinXP" />
         <variable name="svn_program"  value="c:\cygwin\bin\svn" />
     </configuration>
 
@@ -21,11 +18,9 @@
 
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="make"              options=" -i -f Makefile.bor realclean" />
-
     <command name="log"               options="ON" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
+    <command name="vc8make" options="/clean Debug TAO_Host.sln"/>
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
@@ -36,20 +31,19 @@
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
-    <command name="check_compiler" options="borland" />
-    <command name="check_linker" options="ilink32" />
+    <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="TAO_Host.mwc -type borland" />
+    <command name="generate_workspace" options="TAO_Host.mwc -type vc8" />
 
-    <command name="make"              options=" -i -f Makefile.bor" />
+    <command name="vc8make" options="/build Debug TAO_Host.sln"/>
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_BCB_Host" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks551x86_host" />
 </autobuild>
 
