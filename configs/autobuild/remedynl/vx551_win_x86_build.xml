@@ -2,11 +2,11 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"                value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
-        <environment name="TAO_ROOT"                value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"               value="C:/ACE/VxWorks/pcPentiumX/ACE_wrappers/TAO/CIAO"/>
-        <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/CB6sr/ACE_wrappers"/>
-        <environment name="PATH"                    value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\CB6sr\ACE_wrappers\lib;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
+        <environment name="ACE_ROOT"                value="Z:/VxWorks/vx551_win_x86/ACE_wrappers" />
+        <environment name="TAO_ROOT"                value="Z:/VxWorks/vx551_win_x86/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"               value="Z:/VxWorks/vx551_win_x86/ACE_wrappers/TAO/CIAO"/>
+        <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/Host/ACE_wrappers"/>
+        <environment name="PATH"                    value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\Host\ACE_wrappers\lib;C:\ACE\VxWorks\Host\ACE_wrappers\bin;" type="prefix" />
         <environment name="WIND_BASE"               value="C:/Tornado2.2"/>
         <environment name="WIND_HOST_TYPE"          value="x86-win32"/>
         <environment name="RSYNC_RSH"               value="C:\cygwin\bin\ssh" />
@@ -19,9 +19,9 @@
         <environment name="ACE_RUN_VX_TGT_REBOOT"   value="1" />
         <environment name="ACE_RUN_VX_TGT_HOST"     value="10.2.128.65" />
 
-        <variable name="root"     	value="C:\ACE\VxWorks\pcPentiumX\" />
+        <variable name="root"       value="Z:/VxWorks/vx551_win_x86/" />
         <variable name="log_file" 	value="build.txt" />
-        <variable name="log_root" 	value="C:\ACE\VxWorks\pcPentiumX\" />
+        <variable name="log_root"   value="Z:/VxWorks/vx551_win_x86/" />
         <variable name="configs"  	value="VxWorks STATIC" />
         <variable name="svn_program"       value="c:\cygwin\bin\svn" />
 
@@ -58,5 +58,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks_PentiumX_GNU" />
+    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/vx551_win_x86" />
 </autobuild>
