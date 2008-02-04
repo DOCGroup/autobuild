@@ -385,13 +385,13 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
    <build>
      <name>VxWorks5.5_Win_P4</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_PentiumX_GNU/</url>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/vx551_win_x86/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
      <name>VxWorks5.5_Win_Host</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks_BCB_Host/</url>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks551x86_host/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
