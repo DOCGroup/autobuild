@@ -1,7 +1,14 @@
+Tue Feb  5 12:55:27 UTC 2008  Simon McQueen  <sm@prismtech.com>
+
+        * command/generate_workspace.pm:
+        
+          Added some escaping. This task was having a paddy when confronted
+          with the likes of: options="dirs=foo/c++"
+
 Wed Jan 30 17:06:14 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71_release.xml:
-        Fixed a build problem related to missing ACE.lib. 
+        Fixed a build problem related to missing ACE.lib.
 
 Tue Jan 29 15:11:23 UTC 2008  Simon McQueen  <sm@prismtech.com>
 

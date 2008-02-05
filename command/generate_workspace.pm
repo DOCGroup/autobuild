@@ -89,7 +89,7 @@ sub Run ($)
     my $dirs;
     if ($options =~ m/dirs=([^\s]*)/) {
         $dirs = $1;
-        $options =~ s/dirs=$dirs//;
+        $options =~ s/\Qdirs=$dirs\E//;
     }
 
     ## Get the location of the mwc.pl script
