@@ -903,6 +903,7 @@ sub Test_Handler ($)
         || $s =~ m/Invalid read of size/
         || $s =~ m/Source and destination overlap/
         || $s =~ m/error while loading shared libraries/
+        || $s =~ m/Compilation failed in require at/
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Can't call method/
         || $s =~ m/pure virtual /i)
@@ -1026,17 +1027,17 @@ sub SendEmailNotification($)
     my $message = "Errors detected while executing the build specified in ".main::GetVariable('BUILD_CONFIG_FILE').".\n".
                   "Please check the scoreboard for details.\n$scoreboard_url\n\n".
                   $errors_string;
-                  
+
     if (defined $mail_admin) {
        Mail::send_message($mail_admin, $subject, $message);
-    }                  
-                      
+    }
+
     my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
-  
+
     if (defined $mail_admin_file) {
        if (open(MAIL_ADDRESS, "<$mail_admin_file")) {
-          while(<MAIL_ADDRESS>) {                  
-             Mail::send_message($_, $subject, $message);                              
+          while(<MAIL_ADDRESS>) {
+             Mail::send_message($_, $subject, $message);
           }
        }
        else {
@@ -1044,7 +1045,7 @@ sub SendEmailNotification($)
                        ": ERROR: Unable to open the MAIL_ADMIN_FILE: $mail_admin_file\n";
           return 0;
        }
-    }                        
+    }
 }
 
 ###############################################################################
