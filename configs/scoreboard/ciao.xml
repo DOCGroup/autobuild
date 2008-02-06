@@ -161,7 +161,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL50_ACE_FOR_TAO</name>
+      <name>RHEL51_ACE_FOR_TAO_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
