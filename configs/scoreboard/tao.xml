@@ -29,13 +29,7 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
      <build>
-       <name>RHEL50_ICC100_IA64</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC100</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL50_ICC101_IA64</name>
+      <name>RHEL51_ICC101_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC101/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
