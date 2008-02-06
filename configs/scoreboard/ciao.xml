@@ -209,20 +209,8 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
    <build>
-     <name>RHEL50_ICC10.0_32bit</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc10_32/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
      <name>RHEL50_ICC10.1_32bit</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc101_32/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>RHEL50_ICC10.0_64bit</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc10_64/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
