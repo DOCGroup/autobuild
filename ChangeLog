@@ -1,7 +1,14 @@
+Thu Feb  7 17:57:35 UTC 2008  Ciju John  <johnc at ociweb dot com>
+
+        * configs/autobuild/oci/doc_Bug_3193_fly_sunos59_suncc57_d1o0.xml:
+        * configs/autobuild/oci/doc_Bug_3193_mantis_win2003_vc8_d1o0.xml:
+        * configs/autobuild/oci/doc_Bug_3193_spider_linux_gcc_d1o0.xml:
+          Turn on SSLIOP build and tests.
+
 Tue Feb  5 12:55:27 UTC 2008  Simon McQueen  <sm@prismtech.com>
 
         * command/generate_workspace.pm:
-        
+
           Added some escaping. This task was having a paddy when confronted
           with the likes of: options="dirs=foo/c++"
 
