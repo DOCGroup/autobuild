@@ -1,3 +1,8 @@
+Fri Feb  8 15:33:04 UTC 2008  Ciju John  <johnc at ociweb dot com>
+
+        * configs/autobuild/oci/doc_Bug_3193_mantis_win2003_vc8_d1o0.xml:
+          Add SSL_ROOT env var.
+
 Thu Feb  7 17:57:35 UTC 2008  Ciju John  <johnc at ociweb dot com>
 
         * configs/autobuild/oci/doc_Bug_3193_fly_sunos59_suncc57_d1o0.xml:
