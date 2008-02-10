@@ -58,4 +58,6 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ara_vx551_win_ppc603" />
+
+    <command name="anonymous_shell"   options="c:\cygwin\bin\rsync /cygdrive/c/VxWorks/vx551_win_ppc/ /cygdrive/z/aragon/vx551_win_ppc --recursive --progress" />
 </autobuild>
