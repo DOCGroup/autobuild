@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on fly) was -->
-  <!-- /home/taoadmin/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/Bug_3193 -buildfile doc_Bug_3193_fly_sunos59_suncc57_d1o0 -buildflags "debug=1 optimize=0 ssl=1" -buildname suncc57_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/Bug_3193/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/Bug_3193/TAO . dir=TAO" -compiler suncc57 -creator ciju -devguide 0 -docbuild 1 -docrepo 1 -featureflags "debug=1 optimize=0 ssl=1" -outdir ./ -peerlayout 1 -->
+  <!-- nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/Bug_3193 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/Bug_3193/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/Bug_3193/TAO . dir=TAO" -compiler suncc57 -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -outdir /home/taoadmin/mitza -peerlayout 1 -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/ACE"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/CIAO"/>
@@ -13,7 +13,7 @@
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/TAO"/>
     <variable    name="base"            value="Bug_3193"/>
     <variable    name="build_name"      value="suncc57_d1o0"/>
-    <variable    name="creator"         value="ciju"/>
+    <variable    name="creator"         value="mitza"/>
     <variable    name="log_file"        value="suncc57_d1o0.log"/>
     <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_Bug_3193_fly_sunos59_suncc57_d1o0"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0"/>
@@ -29,11 +29,9 @@
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=build/suncc57_d1o0/ACE/ace/config.h output='#include \x22ace/config-sunos5.9.h\x22\n'"/>
-  <command name="file_manipulation"  options="type=create file=build/suncc57_d1o0/ACE/bin/MakeProjectCreator/config/default.features output='debug=1\noptimize=0\nssl=1\n'"/>
-  <command name="file_manipulation"  options="type=create file=build/suncc57_d1o0/ACE/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\nssl=1\nssl=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nCFLAGS  += -xtarget=generic\nCCFLAGS += -xtarget=generic\nLDFLAGS += -xtarget=generic\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/suncc57_d1o0/ACE/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\nCFLAGS  += -xtarget=generic\nCCFLAGS += -xtarget=generic\nLDFLAGS += -xtarget=generic\n'"/>
   <command name="file_manipulation"  options="type=create file=build/suncc57_d1o0/ACE/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/opt/compilers/suncc5.7/lib:/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/ACE/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/opt/compilers/suncc5.7/bin:/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/Bug_3193/build/suncc57_d1o0/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
-  <command name="print_openssl_version"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="sun_cc"/>
@@ -87,7 +85,7 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=ACE -a -t -o -Config SSL"/>
+  <command name="auto_run_tests"  options="dir=ACE -a -t -o"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>

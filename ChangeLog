@@ -1,3 +1,8 @@
+Tue Feb 12 19:03:56 UTC 2008  Ciju John  <johnc at ociweb dot com>
+
+        * configs/autobuild/oci/doc_Bug_3193_fly_sunos59_suncc57_d1o0.xml:
+          Turn off SSL build. Host doesn't have OpenSSL installed.
+
 Fri Feb  8 15:33:04 UTC 2008  Ciju John  <johnc at ociweb dot com>
 
         * configs/autobuild/oci/doc_Bug_3193_mantis_win2003_vc8_d1o0.xml:
