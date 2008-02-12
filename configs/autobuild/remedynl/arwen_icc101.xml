@@ -8,9 +8,9 @@
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="/opt/intel/licenses" />
 
-        <variable name="root"     value="/home/build/ACE/ICC100/" />
+        <variable name="root"     value="/home/build/ACE/ICC101/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/ICC100/" />
+        <variable name="log_root" value="/home/build/ACE/ICC101/" />
         <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
