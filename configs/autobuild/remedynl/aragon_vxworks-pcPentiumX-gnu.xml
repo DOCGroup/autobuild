@@ -11,10 +11,10 @@
         <environment name="WIND_HOST_TYPE"          value="x86-win32"/>
         <environment name="RSYNC_RSH"               value="C:\cygwin\bin\ssh" />
 
-        <variable name="root"     	value="C:\ACE\VxWorks\pcPentiumX\" />
+        <variable name="root"     	value="C:/ACE/VxWorks/pcPentiumX/" />
         <variable name="log_file" 	value="build.txt" />
-        <variable name="log_root" 	value="C:\ACE\VxWorks\pcPentiumX\" />
-        <variable name="configs"  	value="VxWorks STATIC" />
+        <variable name="log_root" 	value="C:/ACE/VxWorks/pcPentiumX/" />
+        <variable name="configs"    value="VxWorks STATIC MINIMUM" />
         <variable name="svn_program"       value="c:\cygwin\bin\svn" />
 
     </configuration>
@@ -28,7 +28,8 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_Host.mwc output='workspace {\nace\ntests\nTAO/tao\nTAO/tests\n}\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks5.x.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='minimum_corba=1\nACE_MKDIR=c:/tools/nixtools/mkdir -p\nstatic_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nTOOL = gnu\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='minimum_corba=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="ccpentium" />
