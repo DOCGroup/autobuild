@@ -1,3 +1,8 @@
+Mon Feb 18 16:14:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/print_os_version.pm:
+          Added support for OpenVMS
+
 Mon Feb 18 16:09:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/auto_run_tests.pm:

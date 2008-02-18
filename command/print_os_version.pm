@@ -130,8 +130,15 @@ sub Run ($)
 
     print "<h3>Environment:</h3>\n";
     my $name;
-    foreach $name (sort keys %ENV) {
-        print "$name = $ENV{$name}\n";
+    if ($^O eq 'VMS') {
+      foreach my $envvar (main::GetEnvironment ()) {
+        print "$envvar->{NAME} = $ENV{$envvar->{NAME}}\n";
+      }
+    }
+    else {
+      foreach $name (sort keys %ENV) {
+          print "$name = $ENV{$name}\n";
+      }
     }
     print "\n";
 
