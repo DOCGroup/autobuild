@@ -8,7 +8,6 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 
 
 if ( $^O eq 'VMS' ) {
-  unshift(@INC, getExecutePath($0));
 } else  {
   use FindBin;
   use lib $FindBin::Bin;
@@ -95,53 +94,6 @@ sub which {
 }
 
 
-sub getExecutePath {
-  my($prog) = shift;
-  my($loc)  = '';
-
-  if ( $^O eq 'VMS' ) {
-    if ($prog ne basename($prog)) {
-      my($dir) = unixpath( dirname($prog) );
-      if ($prog =~ /^[\/\\]/) {
-        $loc = $dir;
-      }
-      else {
-        $loc = unixpath(getcwd()) . $dir;
-      }
-    }
-    else {
-      $loc = unixpath( dirname(which($prog)) );
-    }
-
-    if ($loc eq '.') {
-      $loc = unixpath( getcwd() );
-    }
-  } else {
-    if ($prog ne basename($prog)) {
-      if ($prog =~ /^[\/\\]/ ||
-          $prog =~ /^[A-Za-z]:[\/\\]?/) {
-        $loc = dirname($prog);
-      }
-      else {
-        $loc = getcwd() . '/' . dirname($prog);
-      }
-    }
-    else {
-      $loc = dirname(which($prog));
-    }
-
-    if ($loc eq '.') {
-      $loc = getcwd();
-    }
-
-    if ($loc ne '') {
-      $loc .= '/';
-    }
-  }
-
-  return $loc;
-}
-
 #
 # Callbacks for commands
 #
@@ -160,6 +112,11 @@ sub GetVariable ($)
         $value =~ s'\$\{(\w+)\}'$ENV{$1}'ge;
     }
     return $value;
+}
+
+sub GetEnvironment ()
+{
+  return @{$data{ENVIRONMENT}};
 }
 
 sub RegisterCommand ($$)
