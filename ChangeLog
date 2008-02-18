@@ -1,3 +1,8 @@
+Mon Feb 18 18:40:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/vmsmake.pm:
+          Updated for VMS
+
 Mon Feb 18 16:16:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:

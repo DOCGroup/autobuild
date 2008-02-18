@@ -71,13 +71,22 @@ sub Run ($)
         $options =~ s/dir=$dir//;
     }
 
-    ##my $make_program = main::GetVariable ('make_program');
-    ##if (! defined $make_program) {
-    ##    # The "make_program" variable was not defined in the
-    ##    # XML config file.  Default to using a program called "make".
-    ##}
-    my $make_program = "bash -c \"make ";
-    
+    # setup a temporary initializationfile for bash environment
+    my $rcfh;
+    my $rctemp;
+    ($rcfh, $rctemp) = tempfile ("rctmpXXXXX", DIR => $root, UNLINK => 1);
+    foreach my $envvar (main::GetEnvironment ()) {
+      if ($envvar->{NAME} eq 'PATH') {
+        print $rcfh "export PATH=\$PATH:" . $ENV{$envvar->{NAME}} . "\n";
+      }
+      else {
+        print $rcfh "export ". $envvar->{NAME} . "=" . $ENV{$envvar->{NAME}} . "\n";
+      }
+    }
+    close ($rcfh);
+
+    my $make_program = "bash --rcfile " . unixpath($rctemp) . " -c \"make ";
+
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
