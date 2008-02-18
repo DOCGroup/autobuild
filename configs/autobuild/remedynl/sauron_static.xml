@@ -17,8 +17,7 @@
         <variable name="root"     value="/aceroot/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/aceroot/" />
-        <!-- variable name="configs"  value="Exceptions OpenVMS OpenVMS_IA64Crash" / -->
-        <variable name="configs"  value="Exceptions OpenVMS" />
+        <variable name="configs"  value="Exceptions OpenVMS OpenVMS_IA64Crash STATIC" />
         <variable name="test_excludes" value="TAO/examples TAO/utils" />
 
     </configuration>
@@ -35,12 +34,12 @@
 
     <command name="make"              options="-k realclean" />
 
-    <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/v82ia64 && ./setup_ace_vms.sh\x22" />
+    <command name="shell"             options="rsh galadriel \x22cd /nfs/openvms/v82ia64 && ./setup_ace_vms.sh\x22" />
     <command name="shell"             options="bash -c \x22cp /dnfs1/openvms/v82ia64/ace_vms_update.tar .\x22" />
     <command name="shell"             options="bash -c \x22gnutar -xf ace_vms_update.tar -g /dev/null\x22" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-openvms.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\ninline=0\nssl=1\nTAO_IDLFLAGS += -t /aceroot\ninclude $(ACE_ROOT)/include/makeinclude/platform_openvms.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\ninline=0\nstatic_libs=1\nssl=1\nTAO_IDLFLAGS += -t /aceroot\ninclude $(ACE_ROOT)/include/makeinclude/platform_openvms.GNU\n'" />
     
     <command name="make"              options="-k" />
 
@@ -54,5 +53,5 @@
     <command name="status"            options="off" />
     <command name="shell"             options="bash -c \x22rm -f /dnfs1/openvms/v82ia64/*.html /dnfs1/openvms/v82ia64/*.txt\x22" />
     <command name="shell"             options="bash -c \x22cp *.html *.txt /dnfs1/openvms/v82ia64/\x22" />
-    <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/v82ia64 && ./copy_buildresult_vms.sh\x22" />
+    <command name="shell"             options="rsh galadriel \x22cd /nfs/openvms/v82ia64 && ./copy_buildresult_vms.sh\x22" />
 </autobuild>

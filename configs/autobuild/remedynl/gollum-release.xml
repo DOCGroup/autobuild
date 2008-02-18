@@ -6,7 +6,6 @@
         <environment name="CIAO_ROOT"       value="/aceroot/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/aceroot/ACE_wrappers/lib" />
         <environment name="PATH"            value="/gnu/bin:/aceroot/ACE_wrappers/lib" type="prefix" />
-        <environment name="TMPDIR"          value="/aceroot"/>
         <environment name="GNV_CC_INCLUDE_LENGTH_MAX" value="4096"/>
         <environment name="GNV_CC_DEFINE_LENGTH_MAX" value="4096"/>
         <environment name="GNV_LINK_RELATIVE_NAMES" value="1"/>
@@ -17,7 +16,6 @@
         <variable name="root"     value="/aceroot/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/aceroot/" />
-        <!-- variable name="configs"  value="Exceptions OpenVMS OpenVMS_IA64Crash" / -->
         <variable name="configs"  value="Exceptions OpenVMS" />
         <variable name="test_excludes" value="TAO/examples TAO/utils" />
 
@@ -33,18 +31,30 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k realclean" />
-
-    <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/v82ia64 && ./setup_ace_vms.sh\x22" />
-    <command name="shell"             options="bash -c \x22cp /dnfs1/openvms/v82ia64/ace_vms_update.tar .\x22" />
-    <command name="shell"             options="bash -c \x22gnutar -xf ace_vms_update.tar -g /dev/null\x22" />
+    <command name="make"              options="-k -C ace realclean" />
+    <command name="make"              options="-k -C ACEXML realclean" />
+    <command name="make"              options="-k -C Kokyu realclean" />
+    <command name="make"              options="-k -C protocols realclean" />
+    <command name="make"              options="-k -C tests realclean" />
+    <command name="make"              options="-k -C apps/gperf realclean" />
+    <command name="make"              options="-k -C TAO/TAO_IDL realclean" />
+    <command name="make"              options="-k -C TAO/tao realclean" />
+    <command name="make"              options="-k -C TAO/orbsvcs realclean" />
+    <command name="make"              options="-k -C TAO/tests realclean" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-openvms.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\ninline=0\nssl=1\nTAO_IDLFLAGS += -t /aceroot\ninclude $(ACE_ROOT)/include/makeinclude/platform_openvms.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninline=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_openvms.GNU\n'" />
     
-    <command name="make"              options="-k" />
-
-    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="make"              options="-k -C ace" />
+    <command name="make"              options="-k -C ACEXML" />
+    <command name="make"              options="-k -C Kokyu" />
+    <command name="make"              options="-k -C protocols" />
+    <command name="make"              options="-k -C tests" />
+    <command name="make"              options="-k -C apps/gperf" />
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO/tao" />
+    <command name="make"              options="-k -C TAO/orbsvcs" />
+    <command name="make"              options="-k -C TAO/tests" />
 
     <command name="log"               options="off" />
 
@@ -52,7 +62,4 @@
     <command name="file_manipulation" options="type=delete file=.disable" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="bash -c \x22rm -f /dnfs1/openvms/v82ia64/*.html /dnfs1/openvms/v82ia64/*.txt\x22" />
-    <command name="shell"             options="bash -c \x22cp *.html *.txt /dnfs1/openvms/v82ia64/\x22" />
-    <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/v82ia64 && ./copy_buildresult_vms.sh\x22" />
 </autobuild>

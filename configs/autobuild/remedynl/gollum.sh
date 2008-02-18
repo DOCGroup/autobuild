@@ -3,8 +3,7 @@
 # $Id$
 #
 
-cd $HOME/ACE/autobuild
+cd /aceroot
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/gollum.xml
+perl -X -I/aceroot/autobuild /aceroot/autobuild/autobuild.pl /aceroot/autobuild/configs/autobuild/remedynl/gollum.xml
 
