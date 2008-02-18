@@ -332,6 +332,33 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if (($^O eq "VMS" ) && ($s =~ m/CXX\-W\-/)) {
+      $self->Output_Warning ($s);
+      return;
+  }
+
+  if (($^O eq "VMS" ) && ($s =~ m/CXX\-E\-/)) {
+      $self->Output_Error ($s);
+      return;
+  }
+
+  if (($^O eq "VMS" ) && ($s =~ m/LINK\-E\-/)) {
+      $self->Output_Error ($s);
+      return;
+  }
+
+  if (($^O eq "VMS" ) && ($s =~ m/LINK\-W\-REXPORT/
+                          || $s =~ m/LINK\-W\-COMPWARN/
+                          || $s =~ m/LINK\-W\-SHRWRNERS/)) {
+      $self->Output_Normal ($s);
+      return;
+  }
+
+  if (($^O eq "VMS" ) && ($s =~ m/LINK\-W\-/)) {
+      $self->Output_Warning ($s);
+      return;
+  }
+
   if (($s =~ m/warning/i
        && ($s !~ m/ warning\(s\)/ && $s !~ m/\-undefined warning/))
       || $s =~ m/info: /i

@@ -1,3 +1,8 @@
+Mon Feb 18 16:16:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Integrated VMS specific checks
+
 Mon Feb 18 16:14:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_os_version.pm:
