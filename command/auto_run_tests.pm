@@ -49,6 +49,7 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $configs = main::GetVariable ('configs');
+    my $excludes = main::GetVariable ('test_excludes');
     my $sandbox = main::GetVariable ('sandbox');
     my $project_root = main::GetVariable ('project_root');
     my $automake_build = main::GetVariable ('automake_build');
@@ -137,6 +138,10 @@ sub Run ($)
 
       if (defined $configs) {
           $options .= " -Config " . join (" -Config ", split (' ', $configs));
+      }
+
+      if (defined $excludes) {
+          $options .= " -Exclude " . join (" -Exclude ", split (' ', $excludes));
       }
 
       my $script_path;
