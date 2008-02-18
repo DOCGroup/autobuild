@@ -1,3 +1,8 @@
+Mon Feb 18 21:28:28 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml: Removed Riverace's Solaris 8 build and
+          adjusted the Solaris 9 entries to read from the correct place.
+
 Mon Feb 18 18:57:56 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:
