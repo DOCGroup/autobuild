@@ -5,5 +5,5 @@
 
 cd /aceroot
 
-perl -X -I/aceroot/autobuild /aceroot/autobuild/autobuild.pl /aceroot/autobuild/configs/autobuild/remedynl/sauron.xml
+perl -X -I/dnfs1/openvms/autobuild /dnfs1/openvms/autobuild/autobuild.pl /dnfs1/openvms/autobuild/configs/autobuild/remedynl/sauron.xml
 
