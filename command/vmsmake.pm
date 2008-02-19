@@ -9,6 +9,10 @@ use warnings;
 
 use Cwd;
 use File::Path;
+use File::Temp qw/ tempfile  /;
+
+require VMS::Filespec;
+import VMS::Filespec qw(unixpath);
 
 ###############################################################################
 # Constructor
