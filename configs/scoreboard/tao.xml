@@ -467,7 +467,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-  <name>iliyan's service config work</name>
+  <name>iliyan service config work</name>
   <build>
     <name>doc_iliyan-gestalt_hornet_winxp_vc8_d1o0</name>
     <url>http://scoreboard.ociweb.com/doc_iliyan-gestalt_hornet_winxp_vc8_d1o0</url>
