@@ -1,10 +1,18 @@
+Wed Feb 20 17:11:24 UTC 2008  Iliyan Jeliazkov  <iliyan@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+
+        Moved the service config refactoring builds from "future" to the
+        "release" scoreboard.
+
 Mon Feb 18 22:45:25 UTC 2008  William Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab:
         * configs/autobuild/isislab/emulab/ciao_core.xml:
-        
+
           Added first emulab test build.
-        
+
 Mon Feb 18 21:28:28 UTC 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Removed Riverace's Solaris 8 build and

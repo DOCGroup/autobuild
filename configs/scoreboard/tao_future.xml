@@ -46,26 +46,5 @@ decide the migration paths and strategies.
   </build>
 </group>
 
-<group>
-  <name>Iliyan Gestalt</name>
-  <build>
-    <name>doc_iliyan-gestalt_hornet_winxp_vc8_d1o0</name>
-    <url>http://scoreboard.ociweb.com/doc_iliyan-gestalt_hornet_winxp_vc8_d1o0</url>
-    <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>doc_iliyan-gestalt_mosquito_linux_gcc_d1o0</name>
-    <url>http://scoreboard.ociweb.com/doc_iliyan-gestalt_mosquito_linux_gcc_d1o0</url>
-    <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>doc_iliyan-gestalt_oci1179_linux_gcc_d1o0s1</name>
-    <url>http://scoreboard.ociweb.com/doc_iliyan-gestalt_oci1179_linux_gcc_d1o0s1</url>
-    <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-  </build>
-</group>
 
 </scoreboard>
