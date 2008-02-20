@@ -7,7 +7,7 @@
         <environment name="HOST_ROOT"             value="/nfs/solaris/host55ppc603/ACE_wrappers"/>
         <environment name="LD_LIBRARY_PATH"       value="/nfs/solaris/host55ppc603/ACE_wrappers/lib:/usr/local/lib" type="prefix"/>
         <environment name="LD_LIBRARY_PATH"       value="/usr/Tornado2.2/host/sun4-solaris2/lib:" type="prefix"/>
-        <environment name="PATH"                  value="/usr/Tornado2.2/host/sun4-solaris2/bin:/usr/local/bin:" type="prefix" />
+        <environment name="PATH"                  value="/usr/local/bin:/usr/Tornado2.2/host/sun4-solaris2/bin:" type="prefix" />
         <environment name="WIND_BASE"             value="/usr/Tornado2.2"/>
         <environment name="WIND_HOST_TYPE"        value="sun4-solaris2"/>
         <environment name="LM_LICENSE_FILE"       value="27000@vxlicense"/>
