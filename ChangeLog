@@ -1,3 +1,9 @@
+Fri Feb 22 19:11:24 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Removed VMS checks, just parse the contents, that way the
+          parsing also works on another system
+
 Wed Feb 20 17:11:24 UTC 2008  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/scoreboard/tao.xml:
