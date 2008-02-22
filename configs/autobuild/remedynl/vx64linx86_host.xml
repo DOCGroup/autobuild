@@ -16,9 +16,9 @@
 
     <command name="process_listener"  options="localhost:32002" />
 
-    <command name="make"              options="-k realclean" />
-
     <command name="log"               options="ON" />
+
+    <command name="make"              options="-k realclean" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
