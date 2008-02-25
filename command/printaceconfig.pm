@@ -48,7 +48,7 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
-    my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc/';
+    my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc';
     my %information = ('XML'       => ['', '',
                                        "$svnurl/autobuild/trunk/<file>?revision=HEAD"],
                        'AUTOBUILD' => ['ChangeLog', '',
