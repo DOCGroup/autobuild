@@ -1,3 +1,10 @@
+Mon Feb 25 13:11:24 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/printaceconfig.pm:
+          Use ACE_ROOT and try also the other environment variables first,
+          this then prints the needed information on the config page of the
+          OpenVMS builds
+
 Fri Feb 22 19:11:24 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:
