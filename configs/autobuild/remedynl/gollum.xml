@@ -17,8 +17,6 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/aceroot/" />
         <variable name="configs"  value="Exceptions OpenVMS" />
-        <variable name="test_excludes" value="TAO/examples TAO/utils" />
-
     </configuration>
 
     <command name="status"            options="on" />
