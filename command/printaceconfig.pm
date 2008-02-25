@@ -185,7 +185,7 @@ sub Run ($)
         print_file ("$ENV{ACE_ROOT}/VERSION", 0);
     }
 
-    foreach my $dir ("TAO", $ENV{TAO_ROOT}) {
+    foreach my $dir ($ENV{TAO_ROOT}, "TAO") {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ TAO VERSION ================\n";
 
@@ -194,7 +194,7 @@ sub Run ($)
       }
     }
 
-    foreach my $dir ("TAO/CIAO", $ENV{CIAO_ROOT}) {
+    foreach my $dir ($ENV{CIAO_ROOT}, "TAO/CIAO") {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ CIAO VERSION ================\n";
 
@@ -203,7 +203,7 @@ sub Run ($)
       }
     }
 
-    foreach my $dir ("TAO/DDS", $ENV{DDS_ROOT}) {
+    foreach my $dir ($ENV{DDS_ROOT}, "TAO/DDS") {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ DDS VERSION ================\n";
 
