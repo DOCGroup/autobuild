@@ -149,7 +149,7 @@ sub Run ($)
 
     if (-r "$ENV{ACE_ROOT}/ace/config.h") {
         print "================ config.h ================\n";
-        print_file ("ace/config.h", 1);
+        print_file ("$ENV{ACE_ROOT}/ace/config.h", 1);
     }
 
     #
@@ -158,7 +158,7 @@ sub Run ($)
 
     if (-r "$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features") {
         print "================ default.features ================\n";
-        print_file ("bin/MakeProjectCreator/config/default.features", 1);
+        print_file ("$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features", 1);
     }
 
     my $local_features = main::GetVariable ('local_features');
@@ -176,13 +176,13 @@ sub Run ($)
 
     if (-r "$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU") {
         print "================ platform_macros.GNU ================\n";
-        print_file ("include/makeinclude/platform_macros.GNU", 1);
+        print_file ("$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU", 1);
     }
 
     if ( -r "$ENV{ACE_ROOT}/VERSION" ) {
         print "================ ACE VERSION ================\n";
 
-        print_file ("VERSION", 0);
+        print_file ("$ENV{ACE_ROOT}/VERSION", 0);
     }
 
     foreach my $dir ("TAO", $ENV{TAO_ROOT}) {
