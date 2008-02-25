@@ -147,7 +147,7 @@ sub Run ($)
     # config.h, if it exists
     #
 
-    if (-r "ace/config.h") {
+    if (-r "$ENV{ACE_ROOT}/ace/config.h") {
         print "================ config.h ================\n";
         print_file ("ace/config.h", 1);
     }
@@ -156,7 +156,7 @@ sub Run ($)
     # default.features, if it exists
     #
 
-    if (-r "bin/MakeProjectCreator/config/default.features") {
+    if (-r "$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features") {
         print "================ default.features ================\n";
         print_file ("bin/MakeProjectCreator/config/default.features", 1);
     }
@@ -174,12 +174,12 @@ sub Run ($)
     # platform_macros.GNU, if it exists
     #
 
-    if (-r "include/makeinclude/platform_macros.GNU") {
+    if (-r "$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU") {
         print "================ platform_macros.GNU ================\n";
         print_file ("include/makeinclude/platform_macros.GNU", 1);
     }
 
-    if ( -r "VERSION" ) {
+    if ( -r "$ENV{ACE_ROOT}/VERSION" ) {
         print "================ ACE VERSION ================\n";
 
         print_file ("VERSION", 0);
