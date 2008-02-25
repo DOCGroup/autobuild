@@ -24,27 +24,4 @@ decide the migration paths and strategies.
 </group>
 
 
-<group>
-  <name>Bug 3193</name>
-  <build>
-    <name>doc_Bug_3193_mantis_win2003_vc8_d1o0</name>
-    <url>http://scoreboard.ociweb.com/doc_Bug_3193_mantis_win2003_vc8_d1o0</url>
-    <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>doc_Bug_3193_fly_sunos59_suncc57_d1o0</name>
-    <url>http://scoreboard.ociweb.com/doc_Bug_3193_fly_sunos59_suncc57_d1o0</url>
-    <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>doc_Bug_3193_spider_linux_gcc_d1o0</name>
-    <url>http://scoreboard.ociweb.com/doc_Bug_3193_spider_linux_gcc_d1o0</url>
-    <build_sponsor>OCI</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-  </build>
-</group>
-
-
 </scoreboard>
