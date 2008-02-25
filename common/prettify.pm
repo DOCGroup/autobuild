@@ -907,6 +907,7 @@ sub Test_Handler ($)
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Can't call method/
         || $s =~ m/aborted due to compilation errors/
+        || $s =~ m/memPartFree: invalid block/
         || $s =~ m/pure virtual /i)
     {
         $self->Output_Error ($s);
