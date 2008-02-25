@@ -6,6 +6,7 @@
         <environment name="CIAO_ROOT"       value="/aceroot/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/aceroot/ACE_wrappers/lib" />
         <environment name="PATH"            value="/gnu/bin:/aceroot/ACE_wrappers/lib" type="prefix" />
+        <environment name="TMPDIR"          value="/aceroot"/>
         <environment name="GNV_CC_INCLUDE_LENGTH_MAX" value="4096"/>
         <environment name="GNV_CC_DEFINE_LENGTH_MAX" value="4096"/>
         <environment name="GNV_LINK_RELATIVE_NAMES" value="1"/>
