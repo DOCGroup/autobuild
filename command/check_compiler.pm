@@ -38,6 +38,10 @@ sub Run ($)
     my $self = shift;
     my $compiler = shift;
 
+    if (!defined $compiler || $compiler eq "") {
+      $compiler = main::GetVariable ('the_compiler');
+    }
+
     main::PrintStatus ('Config', "check compiler $compiler" );
 
     print "================ Compiler version ================\n";
@@ -55,28 +59,34 @@ sub Run ($)
           }
       }
     }
-    elsif(lc $compiler eq "sun_cc"){
+    elsif(lc $compiler =~ m/^(sun_cc|studio)/) {
         system("CC -V");
     }
     elsif(lc $compiler eq "mingwcygwin"){
         system("g++ -v -mno-cygwin");
     }
+    elsif(lc $compiler eq "ppc_85xx-gcc"){
+        system("ppc_85xx-g++ -v");
+        my $linker = `ppc_85xx-g++ -print-prog-name=ld`;
+        chomp $linker;
+        system("$linker -v 2>&1");
+    }
     elsif(lc $compiler eq "borland"){
         system("bcc32 --version");
     }
     elsif(lc $compiler eq "cbx"){
-	system("bccx --version");
+        system("bccx --version");
     }
     elsif(lc $compiler eq "kylix"){
-	system("bc++ -V");
+        system("bc++ -V");
     }
     elsif($compiler =~ m/^(dcc|dplus)/){
-	system($compiler . " -V");
+        system($compiler . " -V");
     }
     elsif(lc $compiler eq "dm"){
-	system("scppn");
+        system("scppn");
     }
-    elsif(lc $compiler eq "msvc"){
+    elsif(lc $compiler =~ m/^(msvc|vc)/){
         system("cl");
     }
     elsif(lc $compiler eq "deccxx"){

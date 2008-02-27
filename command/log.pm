@@ -55,7 +55,13 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
 
-    if (uc $options eq "ON") {
+    my $mute = 0;
+    if ($options =~ /\w+\s+(.*)/)
+    {
+        $mute = (uc $1 eq "MUTE");
+    }
+    
+    if ((uc $options eq "ON") or (uc $options eq "APPEND")) {
         my $root = main::GetVariable ('root');
 
         if (!-r $root || !-d $root) {
@@ -83,7 +89,12 @@ sub Run ($)
 
         # Redirect to the logfile
 
-        if (!open (STDOUT, '>', "$logpath")) {
+        my $outmode = '>';
+        if (uc $options eq "APPEND") {
+          $outmode = '>>';
+        }
+
+        if (!open (STDOUT, $outmode, "$logpath")) {
             print STDERR __FILE__, ": Can't redirect stdout: $!\n";
             return 0;
         }
@@ -94,10 +105,10 @@ sub Run ($)
         select(STDERR); $| = 1;    # make unbuffered
         select(STDOUT); $| = 1;    # make unbuffered
 
-        main::PrintStatus ('Begin', '');
+        main::PrintStatus ('Begin', '') if (!$mute);
     }
     elsif (uc $options eq "OFF") {
-        main::PrintStatus ('End', '');
+        main::PrintStatus ('End', '') if (!$mute);
 
         # Close the logging filehandles
 

@@ -62,10 +62,6 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $build_name = main::GetVariable ('build_name');
 
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
-    }
-
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
@@ -91,6 +87,10 @@ sub Run ($)
         return 0;
     }
     
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
+    }
+
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;

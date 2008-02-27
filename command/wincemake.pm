@@ -47,14 +47,6 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
 
-    if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
-    }
-
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
-    }
-
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
@@ -87,6 +79,14 @@ sub Run ($)
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
+    }
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
     }
 
     if (!chdir $project_root) {

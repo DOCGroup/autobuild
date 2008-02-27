@@ -18,7 +18,7 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $self = {'substitute_vars_in_options' => 1};
 
     bless ($self, $class);
     return $self;

@@ -1,3 +1,31 @@
+Wed Feb 27 16:15:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * command/auto_run_tests.pm:
+        * command/cvs.pm:
+        * command/generate_workspace.pm:
+        * command/shell.pm:
+        * command/svn.pm:
+        * command/win32make.pm:
+          Add 'substitute_vars_in_options' property to command, to allow
+          for compatiablility with future commit to autobuild.pl,
+          simpleparser.pm and file_manipulation.pm.
+
+        * command/check_compiler.pm:
+          Add some other compiler checks and the facility to use the
+          variable 'the_compiler'.
+
+        * command/configure.pm:
+        * command/generate_makefile.pm:
+        * command/print_cidlc_version.pm:
+        * command/printaceconfig.pm:
+        * command/vc6make.pm:
+        * command/vc7make.pm:
+        * command/wincemake.pm:
+          Rationalization to project_root use toi match other commands.
+
+        * command/log.pm:
+          Add "mute" and "append".
+
 Mon Feb 25 15:23:44 UTC 2008  Ciju John  <johnc at ociweb dot com>
 
         * configs/scoreboard/tao_future.xml:

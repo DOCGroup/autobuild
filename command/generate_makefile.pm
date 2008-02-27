@@ -42,22 +42,31 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
 
-    if (!defined $project_root) {
-        $project_root = $root . '/ACE_wrappers';
-    }
-    
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
+    if (!-r $root || !-d $root) {
+        mkpath($root);
     }
 
     # chop off trailing slash
-    if ($project_root =~ m/^(.*)\/$/) {
-        $project_root = $1;
+    if ($root =~ m/^(.*)\/$/) {
+        $root = $1;
     }
 
     main::PrintStatus ('Setup', 'Generate Makefiles');
 
     my $current_dir = getcwd ();
+
+    if (!chdir $root) {
+          print STDERR __FILE__, ": Cannot change to $root\n";
+          return 0;
+    }
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+    
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
+    }
 
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
@@ -78,14 +87,15 @@ sub Run ($)
     if ($dirs) {
         my $dir;
         my @dirlist = split(/,/, $dirs);
+        my $this_dir = getcwd ();
         foreach $dir (@dirlist) {
             if (!chdir $dir) {
-                print STDERR __FILE__, ": Cannot change to $project_root/$dir\n";
+                print STDERR __FILE__, ": Cannot change to $this_dir/$dir\n";
                 return 0;
             }
             print "Running: $command in $dir\n";
             system ($command);
-            chdir $project_root;
+            chdir $this_dir;
         }
     }
     else {

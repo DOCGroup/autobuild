@@ -20,6 +20,7 @@ sub new
     my $class = ref ($proto) || $proto;
     my $self = {'internal_options' => {'-envmod' => \&Handle_Envmod,
                                       },
+                'substitute_vars_in_options' => 1,
                };
 
     bless ($self, $class);

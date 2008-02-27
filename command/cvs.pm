@@ -18,7 +18,7 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $self = {'substitute_vars_in_options' => 1};
 
     bless ($self, $class);
     return $self;
@@ -71,6 +71,8 @@ sub Run ($)
         # XML config file.  Default to using a program called "cvs".
         $cvs_program = "cvs"
     }
+
+    print "Executing: $cvs_program $options\n";
 
     system ("$cvs_program $options");
 

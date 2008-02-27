@@ -48,14 +48,6 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $vctool = main::GetVariable ('vctool');
 
-    if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
-    }
-
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
-    }
-
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
@@ -90,13 +82,17 @@ sub Run ($)
         $project_root = 'ACE_wrappers';
     }
 
-    if (!defined $vctool) {
-        $vctool = 'devenv.com';
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
     }
 
     if (!chdir $project_root) {
         print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
+    }
+
+    if (!defined $vctool) {
+        $vctool = 'devenv.com';
     }
 
     my $command = "$vctool $options";

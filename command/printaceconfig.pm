@@ -86,14 +86,6 @@ sub Run ($)
       }
     }
 
-    if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
-    }
-
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
-    }
-
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
@@ -120,6 +112,14 @@ sub Run ($)
     if (!chdir $root) {
           print STDERR __FILE__, ": Cannot change to $root or $ENV{'ROOT'}\n";
           return 0;
+    }
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
     }
 
     if (!chdir $ENV{'ACE_ROOT'} )

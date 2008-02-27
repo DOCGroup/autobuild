@@ -18,7 +18,7 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $self = {'substitute_vars_in_options' => 1};
 
     bless ($self, $class);
     return $self;
@@ -49,14 +49,6 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $base = main::GetVariable ('base') || 'ACE_wrappers';
 
-    if (!defined $project_root) {
-        $project_root = $root . '/' . $base;
-    }
-    
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
-    }
-
     if (!-r $root || !-d $root) {
         mkpath($root);
     }
@@ -75,6 +67,14 @@ sub Run ($)
           return 0;
     }
 
+    if (!defined $project_root) {
+        $project_root = $base;
+    }
+    
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
+    }
+
     if (!chdir $project_root )
     {
         if (!chdir $ENV{'ACE_ROOT'}) {
@@ -82,6 +82,8 @@ sub Run ($)
             return 0;
         }
     }
+
+    my $this_dir = getcwd ();
 
     # If dirs=a[,b...] given, extract the dirs, then remove them from
     # the options string. If no dirs given, just run the command with
@@ -94,7 +96,7 @@ sub Run ($)
 
     ## Get the location of the mwc.pl script
     my $mwc = undef;
-    my @mwcdirs = ("$project_root/bin", $ENV{MPC_ROOT});
+    my @mwcdirs = ("$this_dir/bin", $ENV{MPC_ROOT});
     splice @mwcdirs, 1, 0, "$ENV{ACE_ROOT}/bin" if defined $ENV{ACE_ROOT};
     foreach my $mwcdir (@mwcdirs) {
       if (defined $mwcdir && -r "$mwcdir/mwc.pl") {
@@ -115,12 +117,12 @@ sub Run ($)
         my @dirlist = split(/,/, $dirs);
         foreach $dir (@dirlist) {
             if (!chdir $dir) {
-                print STDERR __FILE__, ": Cannot change to $project_root/$dir\n";
+                print STDERR __FILE__, ": Cannot change to $this_dir/$dir\n";
                 return 0;
             }
-            print "Running: $command in $dir\n";
+            print "Running: $command in $this_dir/$dir\n";
             system ($command);
-            chdir $project_root;
+            chdir $this_dir;
         }
     }
     else {

@@ -17,7 +17,7 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $self = { 'substitute_vars_in_options' => 1 };
 
     bless ($self, $class);
     return $self;
@@ -46,13 +46,17 @@ sub Run ($)
     my $options = shift;
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
+    my $dir;
 
-    if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
+    if ($options =~ s/dir='([^']*)'//) {
+        $dir = $1;
+    }
+    elsif ($options =~ s/dir=([^\s]*)//) {
+        $dir = $1;
     }
 
-    if (!-r $project_root || !-d $project_root) {
-        mkpath($project_root);
+    if (defined $dir) {
+        $project_root = $dir;       
     }
 
     if (!-r $root || !-d $root) {
@@ -70,6 +74,15 @@ sub Run ($)
 
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
+        return 0;
+    }
+
+    if (!defined $project_root) {
+        $project_root = 'ACE_wrappers';
+    }
+
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
     }
 
     if (!chdir $project_root) {
