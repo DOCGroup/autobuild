@@ -5,6 +5,8 @@
         <environment name="ACE_ROOT"        value="/web/www/Doxygen/staging_area/Current/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/web/www/Doxygen/staging_area/Current/ACE_wrappers/TAO"/>
 
+        <environment name="PATH"            value="/usr/local/bin:" type="prefix" />
+
         <variable name="root"     value="/web/www/Doxygen/staging_area/Current" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/tao_TAO_doxygen" />
