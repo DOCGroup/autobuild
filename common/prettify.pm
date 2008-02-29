@@ -901,6 +901,7 @@ sub Test_Handler ($)
         || $s =~ m/: parse error/
         || $s =~ m/Invalid write of size/
         || $s =~ m/Invalid read of size/
+        || $s =~ m/invalid string:/
         || $s =~ m/Source and destination overlap/
         || $s =~ m/error while loading shared libraries/
         || $s =~ m/Compilation failed in require at/
