@@ -332,6 +332,11 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/CXX\-I\-/) {
+      $self->Output_Warning ($s);
+      return;
+  }
+
   if ($s =~ m/CXX\-W\-/) {
       $self->Output_Warning ($s);
       return;
