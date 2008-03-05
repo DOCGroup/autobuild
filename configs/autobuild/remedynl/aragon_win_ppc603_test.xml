@@ -20,7 +20,7 @@
         <variable name="root"       value="Z:/aragon/vx551_win_ppc/" />
         <variable name="log_file" 	value="build.txt" />
         <variable name="log_root"   value="Z:/aragon/vx551_win_ppc/" />
-        <variable name="configs"    value="VxWorks STATIC MINIMUM" />
+        <variable name="configs"    value="VxWorks STATIC MINIMUM VxWorks55" />
         <variable name="svn_program"       value="c:\cygwin\bin\svn" />
 
     </configuration>
