@@ -1107,6 +1107,10 @@ sub Normal ($)
     $state = lc $state;
 
     if( defined $state && $state eq 'config' ) {
+      # Escape any '<' or '>' signs
+      $s =~ s/</&lt;/g;
+      $s =~ s/>/&gt;/g;
+
       print {$self->{FH}} "$s\n";
     }
 }

@@ -1,3 +1,8 @@
+Thu Mar 6 11:32:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+          Change angled brackets into &lt; and  &gt; during config section output.
+
 Thu Mar 6 10:51:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
