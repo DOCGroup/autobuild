@@ -52,7 +52,7 @@ if exist c:\cygwin\bin\date.exe echo This build started:
 if exist c:\cygwin\bin\date.exe c:\cygwin\bin\date +"%%X on %%a %%d-%%b-%%Y"
 echo For status, notepad %THIS_BUILD%build.txt
 cd %THIS_BUILD%
-perl C:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl C:\Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism\Win2003_MSVC71_Debug_MFC.xml > nul: 2>&1
+perl C:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl C:\Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism\Win2003_MSVC71_Debug_MFC.xml
 cd \Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism
 echo Finished !!
 if exist c:\cygwin\bin\date.exe c:\cygwin\bin\date +"%%X on %%a %%d-%%b-%%Y"

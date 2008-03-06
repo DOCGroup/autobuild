@@ -1,3 +1,22 @@
+Thu Mar 6 10:51:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.bat:
+          Removed redirection sending non-logged output to nul device.
+
+        * command/Process/Process.pm:
+        * command/Process/ProcessUnix.pm:
+        * command/Process/ProcessWin32.pm:
+        * command/file_manipulation.pm:
+        * command/run_perl_script.pm:
+        * command/run_process.pm:
+        * command/tar.pm:
+        * command/test.pm:
+        * command/unzip.pm:
+        * command/zip.pm:
+          Added new commands used by prismtech. (Ready for new autobuild.pl)
+
 Wed Feb 27 16:15:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * command/auto_run_tests.pm:
