@@ -1,3 +1,11 @@
+Fri Mar 7 15:10:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+        * common/betterparser.pm:
+        * common/simpleparser.pm:
+          Stop any environment group code working on VMS system. Need
+          to revisit this.
+
 Fri Mar 7 14:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:

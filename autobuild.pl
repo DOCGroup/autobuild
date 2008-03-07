@@ -10,7 +10,7 @@ use diagnostics;
 use Time::Local;
 use File::Basename;
 use FindBin;
-use lib $FindBin::Bin;
+use lib $FindBin::Bin if ($^O ne "VMS");
 use Cwd;
 
 if ( $^O eq 'VMS' ) {
@@ -595,7 +595,7 @@ INPFILE: foreach my $file (@files) {
       #
       if ($GROUP ne $currentENV) {
         $currentENV = $GROUP;
-        %ENV = %{$data{GROUPS}->{$GROUP}};
+        %ENV = %{$data{GROUPS}->{$GROUP}} if ($^O ne "VMS");
       }
 
       # Always subsitute any <variables> in the command's directory string.
@@ -635,7 +635,7 @@ INPFILE: foreach my $file (@files) {
   if (!$keep_going && $errors_found) {
     print STDERR "\nNo commands are being executed (due to the errors above)\n";
     chdir ($starting_dir);
-    %ENV = %originalENV;
+    %ENV = %originalENV if ($^O ne "VMS");
     next;
   }
 
@@ -690,7 +690,7 @@ INPFILE: foreach my $file (@files) {
     }
     if ($GROUP ne $currentENV) {
       $currentENV = $GROUP;
-      %ENV = %{$data{GROUPS}->{$GROUP}};
+      %ENV = %{$data{GROUPS}->{$GROUP}} if ($^O ne "VMS");
     }
 
     print "===== $CMD2\n" if (1 < $verbose);
@@ -742,7 +742,7 @@ INPFILE: foreach my $file (@files) {
         if (!$keep_going) {
           print STDERR ", exiting.\n";
           chdir ($starting_dir);
-          %ENV = %originalENV;
+          %ENV = %originalENV if ($^O ne "VMS");
           next INPFILE;
         }
         print STDERR "!\n";
@@ -759,5 +759,5 @@ INPFILE: foreach my $file (@files) {
   } ## end of execute commands
   print "\nFinished Commands\n" if ($verbose);
   chdir ($starting_dir);
-  %ENV = %originalENV;
+  %ENV = %originalENV if ($^O ne "VMS");
 } ## next input file
