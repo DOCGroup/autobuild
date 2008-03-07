@@ -1,3 +1,9 @@
+Fri Mar 7 13:01:24 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/print_os_version.pm:
+          Print the output of uname only once when the uname utility
+          is available under /bin and /usr/bin (like solaris)
+
 Thu Mar 6 11:32:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:

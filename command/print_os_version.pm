@@ -49,11 +49,11 @@ sub Run ($)
     if(-x "/bin/uname"){
         print "<h3>OS version (uname -a)</h3>\n";
         system("/bin/uname -a");
-    }
-
-    if(-x "/usr/bin/uname"){
-        print "<h3>OS version (uname -a)</h3>\n";
-        system("/usr/bin/uname -a");
+    } else {
+      if(-x "/usr/bin/uname"){
+          print "<h3>OS version (uname -a)</h3>\n";
+          system("/usr/bin/uname -a");
+      }
     }
 
     if(-x "/usr/bin/oslevel"){
