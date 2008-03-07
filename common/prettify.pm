@@ -26,7 +26,9 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{BUFFER_NON_ERRORS} = 0;
 
+    @{ $self->{BUFFERED_NON_ERRORS} } = ();
     @{ $self->{ERROR_TEXT} }= ();
     @{ $self->{BUILD_ERROR_COUNTER} }= ();
 
@@ -63,6 +65,12 @@ sub Section ($)
 
     print {$self->{FH}} "<a name=\"section_$counter\"></a>\n";
     print {$self->{FH}} "<hr><h2>$s</h2>\n";
+
+    @{ $self->{BUFFERED_NON_ERRORS} } = ();
+    if (defined $ENV{"VALGRIND_ERRORS_ONLY"})
+    {
+       $self->{BUFFER_NON_ERRORS} = 1;
+    }
 }
 
 sub Description ($)
@@ -103,6 +111,12 @@ sub Subsection ($)
     print {$self->{FH}} "<a name=\"subsection_$counter\"></a>\n";
 
     print {$self->{FH}} "<br><b>$s</b><br><br><br>\n";
+
+    @{ $self->{BUFFERED_NON_ERRORS} } = ();
+    if (defined $ENV{"VALGRIND_ERRORS_ONLY"})
+    {
+       $self->{BUFFER_NON_ERRORS} = 1;
+    }
 }
 
 sub Error ($)
@@ -116,6 +130,15 @@ sub Error ($)
 
     my $counter = ++$self->{ERROR_COUNTER};
     push( @{$self->{ERROR_TEXT}}, $s );
+
+    if ($self->{BUFFER_NON_ERRORS})
+    {
+       foreach my $output (@{$self->{BUFFERED_NON_ERRORS}}) {
+           print {$self->{FH}} $output;
+       }
+       $self->{BUFFER_NON_ERRORS} = 0;
+       @{ $self->{BUFFERED_NON_ERRORS} } = ();
+    }
 
     print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
     print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
@@ -132,8 +155,16 @@ sub Warning ($)
 
     my $counter = ++$self->{WARNING_COUNTER};
 
-    print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
-    print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+    if ($self->{BUFFER_NON_ERRORS})
+    {
+        push( @{$self->{BUFFERED_NON_ERRORS}}, "<a name=\"warning_$counter\"></a>\n" );
+        push( @{$self->{BUFFERED_NON_ERRORS}}, "<font color=\"FF7700\"><tt>$s</tt></font><br>\n" );
+    }
+    else
+    {
+        print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
+        print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+    }
 }
 
 sub Normal ($)
@@ -145,7 +176,14 @@ sub Normal ($)
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
 
-    print {$self->{FH}} "<tt>$s</tt><br>\n";
+    if ($self->{BUFFER_NON_ERRORS})
+    {
+        push( @{$self->{BUFFERED_NON_ERRORS}}, "<tt>$s</tt><br>\n" );
+    }
+    else
+    {
+        print {$self->{FH}} "<tt>$s</tt><br>\n";
+    }
 }
 
 
@@ -477,6 +515,7 @@ sub Section_Totals ()
 
     $self->{SECTION_SUBSECTIONS} = 0;
     $self->{SECTION_ERRORS} = 0;
+    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
     $self->{SECTION_WARNINGS} = 0;
     $self->{SECTION_WARNING_SUBSECTIONS} = 0;
 }
@@ -812,7 +851,12 @@ sub Setup_Handler ($)
         $s =~ m/Failed to add directory/ ||
         $s =~ m/^ERROR/ ||
         $s =~ m/[^\w]+ERROR/ ||
-        $s =~ m/no such file/i)
+        $s =~ m/no such file/i ||
+        $s =~ m/BUILD FAILED/ ||
+        $s =~ m/The following error occurred while executing this line/ ||
+        $s =~ m/No commands are being checked/ ||
+        $s =~ m/When Checking \"/ ||
+        $s =~ m/No commands are being executed/ )
     {
         $self->Output_Error ($s);
     }
@@ -820,7 +864,9 @@ sub Setup_Handler ($)
         $self->Output_Error ($s);
     }
     elsif ($s =~ /^M / ||
-           $s =~ m/WARNING/)
+           $s =~ m/WARNING/ ||
+           $s =~ m/IGNORING/ ||
+           $s =~ m/has not been defined/ )
     {
         $self->Output_Warning ($s);
     }
@@ -851,7 +897,8 @@ sub Config_Handler ($)
     my @outputs = @{$self->{OUTPUT}};
     my $state = $self->{STATE};
 
-    # We only want to output config stuff to the Config_HTML class
+    # We only want to output config stuff to the Config_HTML class (and FULL)
+    $outputs[0]->Normal($s, $state);
     $outputs[3]->Normal($s, $state);
 }
 
@@ -888,33 +935,37 @@ sub Test_Handler ($)
     {
       $self->Output_Normal ($s);
     }
-    elsif ($s =~ m/Error/
-        || $s =~ m/ERROR/
-	|| $s =~ m/fatal/
-        || $s =~ m/FAIL:/
-        || $s =~ m/FAILED/
-        || ($s =~ m/EXCEPTION/ && $s !~ m/NO_EXCEPTIONS/)
-	|| $s =~ m/ACE_ASSERT/
-	|| $s =~ m/Assertion/
-        || $s =~ m/Mismatched free/
+    elsif ($s =~ m/Mismatched free/
         || $s =~ m/are definitely lost in loss record/
+        || $s =~ m/: UNIMPLEMENTED FUNCTION:/
         || $s =~ m/: parse error/
         || $s =~ m/Invalid write of size/
         || $s =~ m/Invalid read of size/
         || $s =~ m/invalid string:/
-        || $s =~ m/Source and destination overlap/
-        || $s =~ m/error while loading shared libraries/
-        || $s =~ m/Compilation failed in require at/
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Can't call method/
         || $s =~ m/aborted due to compilation errors/
-        || $s =~ m/memPartFree: invalid block/
-        || $s =~ m/pure virtual /i)
+        || $s =~ m/memPartFree: invalid block/ )
     {
         $self->Output_Error ($s);
     }
-    elsif ($s =~ m/the ACE tests _may_ have leaked OS resources!/
-           || $s =~ m/exists but should be cleaned up/)
+    elsif (!defined $ENV{"VALGRIND_ERRORS_ONLY"} &&
+            ($s =~ m/Error/
+          || $s =~ m/ERROR/
+          || $s =~ m/fatal/
+          || $s =~ m/FAIL:/
+          || $s =~ m/FAILED/
+          || ($s =~ m/EXCEPTION/ && $s !~ m/NO_EXCEPTIONS/)
+          || $s =~ m/ACE_ASSERT/
+          || $s =~ m/Assertion/
+          || $s =~ m/Source and destination overlap/
+          || $s =~ m/error while loading shared libraries/
+          || $s =~ m/Compilation failed in require at/
+          || $s =~ m/pure virtual /i) )
+    {
+        $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/the ACE tests _may_ have leaked OS resources!/)
     {
         $self->Output_Warning ($s);
     }
@@ -1107,10 +1158,6 @@ sub Normal ($)
     $state = lc $state;
 
     if( defined $state && $state eq 'config' ) {
-      # Escape any '<' or '>' signs
-      $s =~ s/</&lt;/g;
-      $s =~ s/>/&gt;/g;
-
       print {$self->{FH}} "$s\n";
     }
 }

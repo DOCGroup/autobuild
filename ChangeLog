@@ -1,3 +1,27 @@
+Fri Mar 7 13:32:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * command/print_os_version.pm:
+        * common/prettify.pm:
+          Reverse change of yesterday for changing angled brackets into
+          &lt; and  &gt; during config section output. Place this instead
+          into print environment inside print_os_version.pm.
+          Update prettify for other errors/warning.
+          
+        * autobuild.pl:
+        * autobuild.txt:
+        * common/betterparser.pm:
+        * common/simplencoder.pm:
+        * common/simpleparser.pm:
+          Update autobuild for environment groups and betterparser.
+          The autobuild.txt file documents the workings of autobuild and the
+          new features, it will however default to mainly working as before.
+          If you want to use the newer features provided by betterparser
+          first ensure that any window style directory paths inside of
+          any double quoted strings are fully escaped (i.e.
+          "c:\ACE_wrappers\TAO" would need to be
+          "c:\\ACE_wrappers\\TAO") inside of the control XML file tags.
+          Then use -b on the command line to autobuild.pl
+
 Fri Mar 7 13:01:24 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/print_os_version.pm:

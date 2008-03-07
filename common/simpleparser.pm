@@ -4,6 +4,10 @@ package SimpleParser;
 
 use strict;
 use FileHandle;
+use File::Basename;
+use FindBin;
+use lib $FindBin::Bin;
+use POSIX qw(strftime);
 
 ###############################################################################
 # Constructor
@@ -18,14 +22,20 @@ sub new
     return $self;
 }
 
+my $nested_level = 0;
+
 ###############################################################################
 # Methods
 
 sub Parse ($\%)
 {
-    my $self = shift;
-    my $file = shift;
-    my $data = shift;
+    my ($self, $file, $data) = @_;
+
+    my $nested_spaces = '  'x$nested_level;
+    print "Parsing file:$nested_spaces$file\n" if ($main::verbose);
+
+    my $date_string = strftime "%y%m%d", localtime;
+    $data->{VARS}->{'date_string'} = $date_string;
 
     my $file_handle = new FileHandle ($file, 'r');
 
@@ -37,7 +47,9 @@ sub Parse ($\%)
     my $line  = '';
     my $state = 'none';
 
+    my $lineNumberCurrent = 0;    ## Will be incremented after each line is read
     while (<$file_handle>) {
+        ++$lineNumberCurrent;
         # Remove leading and trailing spaces
         $_ =~ s/^\s+//;
         $_ =~ s/\s+$//;
@@ -64,38 +76,31 @@ sub Parse ($\%)
 
         if ($line =~ s/^\s*<\s*include\s*name\s*=\s*"([^"]*)"\s*\/\s*>//i) {
             # <include name="some_file" /> tag - include the file.
-            
+
             my $include_file = $1;
 
-            # Test for the file as is
-            my $included_file_handle = new FileHandle ($file, 'r');
-            if (!defined $included_file_handle) {
-                # If not found try prefixing the path from current file
-                if ($^O eq "MSWin32") {
-                    $include_file =~ s/\//\\/g;
-                }
-                
-                if ($include_file !~ m!/!) {
-                    my $dir = '';
-
-                    ($dir) = ($file =~ m!(.*)/[^/]+$!);
-                    if (length($dir) != 0) {
-                        $include_file = $dir . '/' . $include_file;
-                    }
-                }
-                
-                if ($^O eq "MSWin32") {
-                    $include_file =~ s/\\/\//g;
-                }
+            # Test for the file as is, and if not found try prefixing
+            # the path from current file.
+            #
+            if (!-e $include_file) {
+              my $path= File::Spec->file_name_is_absolute ($file) ?
+                        $file : File::Spec->rel2abs ($file);
+              $path= File::Basename::dirname ($path);
+              $include_file =
+                $path .
+                (($^O eq "MSWin32")? '\\' : '/') .
+                $include_file;
             }
-            
+
             # Save current state and set to zero
             my $oldstate = $state;
             $state = 'none';
 
             # Process the included file
+            $nested_level++;
             $self->Parse($include_file, $data);
-            
+            $nested_level--;
+
             # Put the state back how we found it
             $state = $oldstate;
         }
@@ -114,12 +119,16 @@ sub Parse ($\%)
             elsif ($line =~ s/^<\s*configuration\s*>//i) {
                 $state = 'configuration';
             }
-            elsif ($line =~ s/^<\s*command\s+name\s*=\s*"([^"]*)"(\s+options\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
+            elsif ($line =~ s/^<\s*command\s+name\s*=\s*"([^"]*)"(\s+options\s*=\s*"([^"]*)")?(\s+directory\s*=\s*"([^"]*)")?(\s+if\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
                 my %value = (NAME    => $1,
-                             OPTIONS => (defined $3 ? $3 : ''));
+                             OPTIONS => (defined $3 ? $3 : ''),
+                             DIRECTORY => (defined $5 ? $5 : ''),
+                             IF_TEXT => (defined $7 ? $7 : ''),
+                             FILE => $file,
+                             LINE_FROM => $lineNumberCurrent,
+                             );
                 $value{OPTIONS} =~ s/\\x20/ /g;
                 $value{OPTIONS} =~ s/\\x22/"/g;
-                $value{OPTIONS} =~ s/\\x27/'/g;
                 push @{$data->{COMMANDS}}, \%value;
             }
         }
@@ -127,21 +136,85 @@ sub Parse ($\%)
             if ($line =~ s/^<\s*\/\s*configuration\s*>//i) {
                 $state = 'autobuild';
             }
-            elsif ($line =~ s/^<\s*variable\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"\s*\/\s*>//i) {
+            elsif ($line =~ s/^<\s*variable\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"\s*\/\s*>//i) {                
                 $data->{VARS}->{$1} = $2;
+                print "$1 = $2\n" if $main::verbose;
+            }
+            elsif ($line =~ s/^<\s*variable\s+name\s*=\s*"([^"]*)"\s+default\s*=\s*"([^"]*)"\s*\/\s*>//i) {                
+                if (not defined $data->{VARS}->{$1}) {               
+                    $data->{VARS}->{$1} = $2;
+                }
+                print "$1 = $2\n" if $main::verbose;
+            }
+            elsif ($line =~ s/^<\s*variable\s+name\s*=\s*"([^"]*)"\s+relative_value\s*=\s*"([^"]*)"(\s+eval\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
+                my $res = main::subsituteVars($2);
+                if (defined $3 and (uc $4 eq 'TRUE')) {
+                    $res = eval $res;
+                }
+                $data->{VARS}->{$1} = $res;
+                print "$1 = $data->{VARS}->{$1}\n" if $main::verbose;
+            }
+            elsif ($line =~ s/^<\s*variable\s+name\s*=\s*"([^"]*)"\s+environment\s*=\s*"([^"]*)"\s*\/\s*>//i) {                
+                # If environment variable is not defined, set it to empty string value.
+                my $val = $ENV{$2};
+                if (!defined $val) {
+                  $val = "";                  
+                } 
+                $data->{VARS}->{$1} = $val;
+                print "$1 = $val\n" if $main::verbose;
             }
             elsif ($line =~ s/^<\s*environment\s+name\s*=\s*"([^"]*)"\s+value\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
                 my($type) = (defined $4 ? $4 : 'replace');
-                if ($type ne 'replace' && $type ne 'prefix' && $type ne 'suffix') {
-                    print STDERR "Error: environment type must be 'replace', 'prefix', or 'suffix'\n";
+                if ($type ne 'replace' && $type ne 'ifundefined' && $type ne 'prefix' && $type ne 'suffix') {
+                    print STDERR "Error: environment type must be 'replace', 'ifundefined', 'prefix', or 'suffix'\n";
                     return 0;
                 }
+
+                print "Env: $1 = $2\n" if $main::verbose;
 
                 my %value = (NAME  => $1,
                              VALUE => $2,
                              TYPE  => $type);
 
                 push @{$data->{ENVIRONMENT}}, \%value;
+            }
+            elsif ($line =~ s/^<\s*relative_env\s+name\s*=\s*"([^"]*)"\s+base_var\s*=\s*"([^"]*)"\s+suffix_var\s*=\s*"([^"]*)"\s+join\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
+                my($type) = (defined $6 ? $6 : 'replace');
+
+                if (! defined $data->{VARS}->{$2}) {
+                    print STDERR "Error: Variable $2 is not defined at line: \n" . $_ . "\n";
+                    return 0;
+                }
+
+                if (! defined $data->{VARS}->{$3}) {
+                    print STDERR "Error: Variable $3 is not defined at line: \n" . $_ . "\n";
+                    return 0;
+                }
+
+                my($propval) = $data->{VARS}->{$2} . $4 . $data->{VARS}->{$3};
+
+                my %value = (NAME  => $1,
+                             VALUE => $propval,
+                             TYPE  => $type );
+
+                push @{$data->{ENVIRONMENT}}, \%value;
+            }
+            elsif ($line =~ s/^<\s*relative_var\s+name\s*=\s*"([^"]*)"\s+base_var\s*=\s*"([^"]*)"\s+suffix_var\s*=\s*"([^"]*)"(\s+join\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
+                my($join) = (defined $5 ? $5 : "");
+
+                if (! defined $data->{VARS}->{$2}) {
+                    print STDERR "Error: Variable $2 is not defined at line: \n" . $_ . "\n";
+                    return 0;
+                }
+
+                if (! defined $data->{VARS}->{$3}) {
+                    print STDERR "Error: Variable $3 is not defined at line: \n" . $_ . "\n";
+                    return 0;
+                }
+
+                my($varval) = $data->{VARS}->{$2} . $join . $data->{VARS}->{$3};
+
+                $data->{VARS}->{$1} = $varval;
             }
         }
         else {
