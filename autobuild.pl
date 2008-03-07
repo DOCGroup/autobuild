@@ -480,7 +480,7 @@ INPFILE: foreach my $file (@files) {
 
     my $onlyDefault = (1 == scalar @$GROUPS);
     foreach my $thisGroup (@$GROUPS) {
-      my $thisENV = $data{GROUPS}->{$thisGroup};
+      my $thisENV = ( $^O eq 'VMS' ) ? \%ENV : $data{GROUPS}->{$thisGroup};
       my $TYPE = $variable->{TYPE};
       if ($TYPE =~ m/^(?:delete|remove|unset)$/i) {
         delete $thisENV->{$NAME} if (defined $thisENV->{$NAME});
