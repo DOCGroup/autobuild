@@ -10,12 +10,14 @@ use diagnostics;
 use Time::Local;
 use File::Basename;
 use FindBin;
-use lib $FindBin::Bin if ($^O ne "VMS");
 use Cwd;
 
 if ( $^O eq 'VMS' ) {
   require VMS::Filespec;
   import VMS::Filespec qw(unixpath);
+}
+else {
+  use lib $FindBin::Bin;
 }
 
 ## Use 'our' to make visible outside this file
