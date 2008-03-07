@@ -24,8 +24,8 @@ else {
 #
 our $verbose = 0;
 our $deprecated = 0;
-our $pathsep = (($^O eq "MSWin32" || $^O eq "VMS") ? ';' : ':');
-our $dirsep =  (($^O eq "MSWin32") ? '\\' : (($^O eq "VMS") ? '.' : '/'));
+our $pathsep = (($^O eq "MSWin32") ? ';' : ':');
+our $dirsep =  (($^O eq "MSWin32") ? '\\' : '/');
 my $keep_going = 0;
 my $parse_only = 0;
 my $check_only = 0;
