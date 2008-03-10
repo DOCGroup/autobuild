@@ -99,7 +99,7 @@ require command::setup_lvrt;
 while ($#ARGV >= 0)
 {
   if ($ARGV[0] =~ m/^-v(\d*)$/i) {
-    if ("" ne $1) {
+    if (defined $1 && "" ne $1) {
       $verbose = $1;
     }
     elsif ($ARGV[1] =~ m/^(\d+)$/) {
@@ -367,6 +367,36 @@ sub subsituteVars ($;$$$)
 }
 
 ##############################################################################
+# Due to a problem with VMS systems being unable to directly assign complete
+# new hashes to the %ENV environment, we need to check and if necessary
+# perform the changes one by one.
+#
+sub ChangeENV (\%)
+{
+  my $newENV = shift;
+  if ($^O ne "VMS") {
+    %ENV = %$newENV;
+    return;
+  }
+
+  # Check if any environment variables are to be removed, and if so delete
+  # them from the current environment.
+  #
+  my $thisKey;
+  foreach $thisKey (keys %ENV) {
+    if (!defined $newENV->{$thisKey}) {
+       delete $ENV{$thisKey};
+    }
+  }
+
+  # Now set any new or changed values into the current environment
+  #
+  foreach $thisKey (keys %$newENV) {
+    $ENV{$thisKey} = $newENV->{$thisKey};
+  }
+}
+
+##############################################################################
 # Parse, CheckReqs, and Run every inputfile passed in.
 #
 INPFILE: foreach my $file (@files) {
@@ -384,6 +414,33 @@ INPFILE: foreach my $file (@files) {
   my %copyENV = %ENV;
   $data{GROUPS}->{default} = \%copyENV;
   push @{$data{UNUSED_GROUPS}}, "default";
+
+######################################################################
+######################################################################
+####
+#this is debug only
+  if (defined $ENV{PATH}) {
+    print "orig PATH = \"$ENV{PATH}\"\n\n";
+  }
+  else {
+    print "orig PATH = undefined\n\n";
+  }
+  if (defined $copyENV{PATH}) {
+    print "copy PATH = \"$copyENV{PATH}\"\n\n";
+  }
+  else {
+    print "copy PATH = undefined\n\n";
+  }
+  if (defined $data{GROUPS}->{default}->{PATH}) {
+    print "list PATH = \"$data{GROUPS}->{default}->{PATH}\"\n\n";
+  }
+  else {
+    print "list PATH = undefined\n\n";
+  }
+#end of debug
+####
+######################################################################
+######################################################################
 
   # Put the name of the file we are parsing into a global variable
   # named BUILD_CONFIG_FILE, and its path into BUILD_CONFIG_PATH.
@@ -478,16 +535,32 @@ INPFILE: foreach my $file (@files) {
       $GROUPS = \@allKeys;
     }
 
-    my $onlyDefault = (1 == scalar @$GROUPS);
+    my $onlyDefault = (1 == scalar keys %{$data{GROUPS}});
     foreach my $thisGroup (@$GROUPS) {
-      my $thisENV = ( $^O eq 'VMS' ) ? \%ENV : $data{GROUPS}->{$thisGroup};
+      my $thisENV = $data{GROUPS}->{$thisGroup};
       my $TYPE = $variable->{TYPE};
       if ($TYPE =~ m/^(?:delete|remove|unset)$/i) {
         delete $thisENV->{$NAME} if (defined $thisENV->{$NAME});
         print "  Deleted $NAME" .
-              ($onlyDefault ? "\n" : " <$thisGroup\n") if (1 < $verbose);
+              ($onlyDefault ? "\n" : " <-$thisGroup\n") if (1 < $verbose);
       }
       else {
+######################################################################
+######################################################################
+#####
+# debug only
+  if ("PATH" eq $NAME) {
+    if (defined $thisENV->{$NAME}) {
+      print "prior \"$thisGroup\" PATH=\"$thisENV->{$NAME}\"\n Now \"$thisGroup\"";
+    }
+    else {
+      print "prior \"$thisGroup\" PATH= is undefined\n Now \"$thisGroup\"";
+    }
+  }
+# end of debug
+#####
+######################################################################
+######################################################################
         if (!defined $thisENV->{$NAME} || $TYPE =~ m/^(?:replace|set)$/i) {
           $thisENV->{$NAME} = $VALUE;
         }
@@ -505,7 +578,7 @@ INPFILE: foreach my $file (@files) {
         }
 
         print "  $NAME=\"" . $thisENV->{$NAME} . "\"" .
-              ($onlyDefault ? "\n" : " <$thisGroup\n") if (1 < $verbose);
+              ($onlyDefault ? "\n" : " <-$thisGroup\n") if (1 < $verbose);
       }
     } ## foreach environment group to modify
   } ## End of setting environment variables loop
@@ -597,7 +670,7 @@ INPFILE: foreach my $file (@files) {
       #
       if ($GROUP ne $currentENV) {
         $currentENV = $GROUP;
-        %ENV = %{$data{GROUPS}->{$GROUP}} if ($^O ne "VMS");
+        ChangeENV (%{$data{GROUPS}->{$GROUP}});
       }
 
       # Always subsitute any <variables> in the command's directory string.
@@ -637,7 +710,7 @@ INPFILE: foreach my $file (@files) {
   if (!$keep_going && $errors_found) {
     print STDERR "\nNo commands are being executed (due to the errors above)\n";
     chdir ($starting_dir);
-    %ENV = %originalENV if ($^O ne "VMS");
+    ChangeENV (%originalENV);
     next;
   }
 
@@ -692,7 +765,7 @@ INPFILE: foreach my $file (@files) {
     }
     if ($GROUP ne $currentENV) {
       $currentENV = $GROUP;
-      %ENV = %{$data{GROUPS}->{$GROUP}} if ($^O ne "VMS");
+      ChangeENV (%{$data{GROUPS}->{$GROUP}});
     }
 
     print "===== $CMD2\n" if (1 < $verbose);
@@ -744,7 +817,7 @@ INPFILE: foreach my $file (@files) {
         if (!$keep_going) {
           print STDERR ", exiting.\n";
           chdir ($starting_dir);
-          %ENV = %originalENV if ($^O ne "VMS");
+          ChangeENV (%originalENV);
           next INPFILE;
         }
         print STDERR "!\n";
@@ -761,5 +834,5 @@ INPFILE: foreach my $file (@files) {
   } ## end of execute commands
   print "\nFinished Commands\n" if ($verbose);
   chdir ($starting_dir);
-  %ENV = %originalENV if ($^O ne "VMS");
+  ChangeENV (%originalENV);
 } ## next input file

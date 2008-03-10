@@ -1,3 +1,15 @@
+Mon Mar 10 13:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+          Perform environment changes one by one on VMS system to
+          overcome the limitations of not being able to directly set
+          the ENV hash to another complete hash value. This should
+          re-enable the environment groups concept on VMS systems.
+          
+          Also added some extra DEBUG prints for any change to PATH
+          environment variables as some systems are showing problems
+          prefixing/suffixing original values.
+
 Mon Mar 10 10:10:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
