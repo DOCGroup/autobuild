@@ -515,7 +515,6 @@ sub Section_Totals ()
 
     $self->{SECTION_SUBSECTIONS} = 0;
     $self->{SECTION_ERRORS} = 0;
-    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
     $self->{SECTION_WARNINGS} = 0;
     $self->{SECTION_WARNING_SUBSECTIONS} = 0;
 }

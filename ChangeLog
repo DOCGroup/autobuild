@@ -1,3 +1,10 @@
+Mon Mar 10 10:10:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+          This seems to be the only way the zero failures bug could have
+          been produced. Try this fix to determine if the problem still
+          exists.
+
 Fri Mar 7 15:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:
