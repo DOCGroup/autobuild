@@ -524,10 +524,18 @@ INPFILE: foreach my $file (@files) {
           $thisENV->{$NAME} = $VALUE;
         }
         elsif ($TYPE =~ m/^prefix$/i) {
-          $thisENV->{$NAME} = $VALUE . $pathsep . $thisENV->{$NAME};
+          $VALUE =~ s/^$pathsep*//;
+          $VALUE =~ s/$pathsep*$//;
+          $thisENV->{$NAME} =~ s/^$pathsep*//;
+          $thisENV->{$NAME} =~ s/$pathsep*$//;
+          $thisENV->{$NAME} = $VALUE . $pathsep . $thisENV->{$NAME} if ("" ne $VALUE);
         }
         elsif ($TYPE =~ m/^(?:postfix|suffix)$/i) {
-          $thisENV->{$NAME} .= $pathsep . $VALUE;
+          $VALUE =~ s/^$pathsep*//;
+          $VALUE =~ s/$pathsep*$//;
+          $thisENV->{$NAME} =~ s/^$pathsep*//;
+          $thisENV->{$NAME} =~ s/$pathsep*$//;
+          $thisENV->{$NAME} .= $pathsep . $VALUE if ("" ne $VALUE);
         }
         elsif ($TYPE !~ m/^(?:default(?:_(?:only|value)?)?|ifundefined)$/i) {
           print STDERR "IGNORING Don't know type \"$TYPE\"\n",

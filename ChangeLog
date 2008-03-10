@@ -1,3 +1,9 @@
+Mon Mar 10 15:29:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+        * common/simpleparser.pm
+          Avoid null paths when suffix and prefix paths.
+
 Mon Mar 10 14:57:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:

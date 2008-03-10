@@ -182,6 +182,10 @@ sub Parse ($\%)
             }
             elsif ($line =~ s/^<\s*relative_env\s+name\s*=\s*"([^"]*)"\s+base_var\s*=\s*"([^"]*)"\s+suffix_var\s*=\s*"([^"]*)"\s+join\s*=\s*"([^"]*)"(\s+type\s*=\s*"([^"]*)")?\s*\/\s*>//i) {
                 my($type) = (defined $6 ? $6 : 'replace');
+                if ($type ne 'replace' && $type ne 'ifundefined' && $type ne 'prefix' && $type ne 'suffix') {
+                    print STDERR "Error: environment type must be 'replace', 'ifundefined', 'prefix', or 'suffix'\n";
+                    return 0;
+                }
 
                 if (! defined $data->{VARS}->{$2}) {
                     print STDERR "Error: Variable $2 is not defined at line: \n" . $_ . "\n";
