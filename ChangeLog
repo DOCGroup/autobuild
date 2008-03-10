@@ -1,3 +1,14 @@
+Mon Mar 10 14:57:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+          On windows systems environment variable names are matched
+          case insensitivly so "path", "Path" and "PATH" all match.
+          Whenever the ENV hash is copied, ALL names are capitalised,
+          and ALL other hashes match names with strict reguard to the
+          case. Thus on windows type systems every environment name
+          we try and set/change/delete should be matched with all
+          uppercase names.
+
 Mon Mar 10 13:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:

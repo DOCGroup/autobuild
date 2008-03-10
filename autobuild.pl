@@ -98,17 +98,18 @@ require command::setup_lvrt;
 #
 while ($#ARGV >= 0)
 {
-  if ($ARGV[0] =~ m/^-v(\d*)$/i) {
-    if (defined $1 && "" ne $1) {
-      $verbose = $1;
-    }
-    elsif ($ARGV[1] =~ m/^(\d+)$/) {
+  if ($ARGV[0] =~ m/^-v$/i) {
+    if (defined $ARGV[1] && $ARGV[1] =~ m/^(\d+)$/) {
       shift;
       $verbose = $1;
     }
     else {
       ++$verbose;
     }
+    shift;
+  }
+  elsif ($ARGV[0] =~ m/^-v(\d+)$/i) {
+    $verbose = $1;
     shift;
   }
   elsif ($ARGV[0] =~ m/^-b$/i) {
@@ -415,33 +416,6 @@ INPFILE: foreach my $file (@files) {
   $data{GROUPS}->{default} = \%copyENV;
   push @{$data{UNUSED_GROUPS}}, "default";
 
-######################################################################
-######################################################################
-####
-#this is debug only
-  if (defined $ENV{PATH}) {
-    print "orig PATH = \"$ENV{PATH}\"\n\n";
-  }
-  else {
-    print "orig PATH = undefined\n\n";
-  }
-  if (defined $copyENV{PATH}) {
-    print "copy PATH = \"$copyENV{PATH}\"\n\n";
-  }
-  else {
-    print "copy PATH = undefined\n\n";
-  }
-  if (defined $data{GROUPS}->{default}->{PATH}) {
-    print "list PATH = \"$data{GROUPS}->{default}->{PATH}\"\n\n";
-  }
-  else {
-    print "list PATH = undefined\n\n";
-  }
-#end of debug
-####
-######################################################################
-######################################################################
-
   # Put the name of the file we are parsing into a global variable
   # named BUILD_CONFIG_FILE, and its path into BUILD_CONFIG_PATH.
   #
@@ -524,8 +498,9 @@ INPFILE: foreach my $file (@files) {
   print "\nSetting Enviroment variables\n" if ($verbose);
   my %originalENV = %ENV;
   foreach my $variable (@{$data{ENVIRONMENT}}) {
-    my $NAME  = $variable->{NAME};
     my $VALUE = $variable->{VALUE};
+    my $NAME  = $variable->{NAME};
+    $NAME = uc $NAME if ($^O eq 'MSWin32');
 
     # Find in which environment groups this setting must take effect
     #
@@ -545,22 +520,6 @@ INPFILE: foreach my $file (@files) {
               ($onlyDefault ? "\n" : " <-$thisGroup\n") if (1 < $verbose);
       }
       else {
-######################################################################
-######################################################################
-#####
-# debug only
-  if ("PATH" eq $NAME) {
-    if (defined $thisENV->{$NAME}) {
-      print "prior \"$thisGroup\" PATH=\"$thisENV->{$NAME}\"\n Now \"$thisGroup\"";
-    }
-    else {
-      print "prior \"$thisGroup\" PATH= is undefined\n Now \"$thisGroup\"";
-    }
-  }
-# end of debug
-#####
-######################################################################
-######################################################################
         if (!defined $thisENV->{$NAME} || $TYPE =~ m/^(?:replace|set)$/i) {
           $thisENV->{$NAME} = $VALUE;
         }
