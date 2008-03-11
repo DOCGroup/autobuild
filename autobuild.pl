@@ -11,33 +11,9 @@ use Time::Local;
 use File::Basename;
 use Cwd;
 
-##############################################################################
-##############################################################################
-##############################################################################
-####
-my $thisKey;
-####
-##############################################################################
-##############################################################################
-##############################################################################
-
 if ( $^O eq 'VMS' ) {
   require VMS::Filespec;
   import VMS::Filespec qw(unixpath);
-
-##############################################################################
-##############################################################################
-##############################################################################
-####
-  print "VMS_DEBUG Original ENV:\n";
-  foreach $thisKey (keys %ENV) {
-    print "VMS_DEBUG   $thisKey=\"$ENV{$thisKey}\"\n";
-  }
-  print "\n";
-####
-##############################################################################
-##############################################################################
-##############################################################################
 }
 else {
   use FindBin;
@@ -403,34 +379,21 @@ sub ChangeENV (\%)
     %ENV = %$newENV;
     return;
   }
-
+return; # The following code although it does work, VMS still refuses to deal with ENV changes correctly it looks like the path is not being set, but the following code does set it
   # Check if any environment variables are to be removed, and if so delete
   # them from the current environment.
   #
   my $thisKey;
-##############################################################################
-##############################################################################
-##############################################################################
-####
-print "VMS_DEBUG Checking for ENV removal:\n";
   foreach $thisKey (keys %ENV) {
     if (!defined $newENV->{$thisKey}) {
-print "VMS_DEBUG  -$thisKey=\"$ENV{$thisKey}\"\n";
        delete $ENV{$thisKey};
     }
   }
 
   # Now set any new or changed values into the current environment
   #
-print "VMS_DEBUG Changing ENV:\n";
   foreach $thisKey (keys %$newENV) {
-print "VMS_DEBUG  -$thisKey=\"$ENV{$thisKey}\"\n";
     $ENV{$thisKey} = $newENV->{$thisKey};
-print "VMS_DEBUG  +$thisKey=\"$ENV{$thisKey}\"\n";
-####
-##############################################################################
-##############################################################################
-##############################################################################
   }
 }
 
@@ -450,21 +413,6 @@ INPFILE: foreach my $file (@files) {
   # environment (so these can be modified seporatly from the default).
   #
   my %copyENV = %ENV;
-##############################################################################
-##############################################################################
-##############################################################################
-####
-if ( $^O eq 'VMS' ) {
-  print "VMS_DEBUG copy ENV:\n";
-  foreach $thisKey (keys %copyENV) {
-    print "VMS_DEBUG   $thisKey=\"$copyENV{$thisKey}\"\n";
-  }
-  print "\n";
-}
-####
-##############################################################################
-##############################################################################
-##############################################################################
   $data{GROUPS}->{default} = \%copyENV;
   push @{$data{UNUSED_GROUPS}}, "default";
 
@@ -564,7 +512,8 @@ if ( $^O eq 'VMS' ) {
 
     my $onlyDefault = (1 == scalar keys %{$data{GROUPS}});
     foreach my $thisGroup (@$GROUPS) {
-      my $thisENV = $data{GROUPS}->{$thisGroup};
+#### This check for VMS forces this system to only use the one environment (groups are disabled)
+      my $thisENV = ($^O ne "VMS") ? $data{GROUPS}->{$thisGroup} : \@ENV;
       my $TYPE = $variable->{TYPE};
       if ($TYPE =~ m/^(?:delete|remove|unset)$/i) {
         delete $thisENV->{$NAME} if (defined $thisENV->{$NAME});

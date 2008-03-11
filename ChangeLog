@@ -1,3 +1,13 @@
+Tue Mar 11 12:20:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+          VMS Still not setting environment for system() and chdir() commands
+          I have no idea why this is the case, all of the debug statements
+          show that the ENV is being set correctly, and is valid. I have
+          re-enabled the disables to the environment group changes and forced
+          the use of ENV directly when making any changes whatsoever.
+          Enviroment groups are thus disabled on VMS systems.
+
 Tue Mar 11 10:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:
