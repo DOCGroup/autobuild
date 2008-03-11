@@ -1,3 +1,11 @@
+Tue Mar 11 13:05:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+        * common/betterparser.pm:
+        * common/simpleparser.pm:
+          Added ($FindBin::Bin || '.') guards.
+          Try only changing only MODIFIED env values.
+
 Tue Mar 11 12:20:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:

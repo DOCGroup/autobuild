@@ -17,7 +17,7 @@ if ( $^O eq 'VMS' ) {
 }
 else {
   use FindBin;
-  use lib $FindBin::Bin;
+  use lib ($FindBin::Bin || '.');
 }
 
 ## Use 'our' to make visible outside this file
@@ -379,7 +379,7 @@ sub ChangeENV (\%)
     %ENV = %$newENV;
     return;
   }
-return; # The following code although it does work, VMS still refuses to deal with ENV changes correctly it looks like the path is not being set, but the following code does set it
+
   # Check if any environment variables are to be removed, and if so delete
   # them from the current environment.
   #
@@ -393,7 +393,9 @@ return; # The following code although it does work, VMS still refuses to deal wi
   # Now set any new or changed values into the current environment
   #
   foreach $thisKey (keys %$newENV) {
-    $ENV{$thisKey} = $newENV->{$thisKey};
+    if (!defined $ENV{$thisKey} || $ENV{$thisKey} .ne. $newENV->{$thisKey}) {
+      $ENV{$thisKey} = $newENV->{$thisKey};
+    }
   }
 }
 
@@ -512,8 +514,7 @@ INPFILE: foreach my $file (@files) {
 
     my $onlyDefault = (1 == scalar keys %{$data{GROUPS}});
     foreach my $thisGroup (@$GROUPS) {
-#### This check for VMS forces this system to only use the one environment (groups are disabled)
-      my $thisENV = ($^O ne "VMS") ? $data{GROUPS}->{$thisGroup} : \%ENV;
+      my $thisENV = $data{GROUPS}->{$thisGroup};
       my $TYPE = $variable->{TYPE};
       if ($TYPE =~ m/^(?:delete|remove|unset)$/i) {
         delete $thisENV->{$NAME} if (defined $thisENV->{$NAME});

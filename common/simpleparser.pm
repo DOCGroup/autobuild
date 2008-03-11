@@ -7,7 +7,7 @@ use FileHandle;
 use File::Basename;
 if ($^O ne "VMS") {
   use FindBin;
-  use lib $FindBin::Bin;
+  use lib ($FindBin::Bin || '.');
 }
 use POSIX qw(strftime);
 
