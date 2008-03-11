@@ -13,3 +13,5 @@ svn up
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
                              $HOME/ACE/autobuild/configs/autobuild/remedynl/isengard_suncc.xml
+exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/isengard_host.xml
