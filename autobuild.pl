@@ -390,11 +390,14 @@ sub ChangeENV (\%)
     }
   }
 
-  # Now set any new or changed values into the current environment
+  # Now set any new or changed values into the current environment.
+  # Only change the ENV values if they have actually changed, some
+  # seem to be READONLY (and even if they are set back to the same
+  # value it causes problems).
   #
   foreach $thisKey (keys %$newENV) {
+    next if ($thisKey eq "DEFAULT"); # Special value that seems to change
     if (!defined $ENV{$thisKey} || $ENV{$thisKey} ne $newENV->{$thisKey}) {
-print "VMS_DEBUG $thisKey updated\n";
       $ENV{$thisKey} = $newENV->{$thisKey};
     }
   }

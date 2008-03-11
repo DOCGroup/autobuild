@@ -1,3 +1,11 @@
+Tue Mar 11 13:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+        * common/betterparser.pm:
+        * common/simpleparser.pm:
+          Removed use $findBin from better/simple parser
+          Only change MODIFIED env values. This seems to fix VMS groups.
+
 Tue Mar 11 13:05:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:
