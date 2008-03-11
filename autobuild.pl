@@ -513,7 +513,7 @@ INPFILE: foreach my $file (@files) {
     my $onlyDefault = (1 == scalar keys %{$data{GROUPS}});
     foreach my $thisGroup (@$GROUPS) {
 #### This check for VMS forces this system to only use the one environment (groups are disabled)
-      my $thisENV = ($^O ne "VMS") ? $data{GROUPS}->{$thisGroup} : \@ENV;
+      my $thisENV = ($^O ne "VMS") ? $data{GROUPS}->{$thisGroup} : \%ENV;
       my $TYPE = $variable->{TYPE};
       if ($TYPE =~ m/^(?:delete|remove|unset)$/i) {
         delete $thisENV->{$NAME} if (defined $thisENV->{$NAME});
