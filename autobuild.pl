@@ -393,7 +393,8 @@ sub ChangeENV (\%)
   # Now set any new or changed values into the current environment
   #
   foreach $thisKey (keys %$newENV) {
-    if (!defined $ENV{$thisKey} || $ENV{$thisKey} .ne. $newENV->{$thisKey}) {
+    if (!defined $ENV{$thisKey} || $ENV{$thisKey} ne $newENV->{$thisKey}) {
+print "VMS_DEBUG $thisKey updated\n";
       $ENV{$thisKey} = $newENV->{$thisKey};
     }
   }
