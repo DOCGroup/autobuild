@@ -1,3 +1,15 @@
+Tue Mar 11 15:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * make_pretty.pl:
+          Add highlighting of no such file or directory and any remaining
+          ACE_ASSERTS. 
+        * scoreboard.pl:
+          Only keep one version of the build on the scoreboard machine.
+          Since this is a copy of the original build (and this can keep
+          any number of older versions independantly as mapped to the
+          index displayed by the scoreboard) don't waste the space on the
+          public scoreboard for any older versions.
+
 Tue Mar 11 13:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:

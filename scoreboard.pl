@@ -696,6 +696,7 @@ print "in local_update_cache, post=$post\n";
 sub clean_cache ($)
 {
     my $directory = shift;
+    my $keep = 1; # Since the scoreboard is a cached copy of the actual machine's copy where we store multiple builds.
 
     print "Cleaning Local Cache\n" if ($verbose);
 

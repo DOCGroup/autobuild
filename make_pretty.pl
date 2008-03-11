@@ -593,10 +593,11 @@ sub tests_output (@)
             $first_problem = 1;
         }
         elsif (m/Error/
+               || m/No such file or directory/
                || m/ERROR/
                || m/FAILED/
                || m/EXCEPTION/
-	       || m/ACE_ASSERT/
+               || m/ACE_ASSERT/
                || m/pure virtual /i) {
             if (!$opt_t) {
                 print_build_header ($run_test, "") if ($first_problem && $opt_b);
