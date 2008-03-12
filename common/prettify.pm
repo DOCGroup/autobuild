@@ -402,6 +402,7 @@ sub new ($)
     $self->{COMPILE_WARNINGS} = 0;
     $self->{TEST_ERRORS} = 0;
     $self->{TEST_WARNINGS} = 0;
+    $self->{TOTAL_ERROR_SUBSECTIONS} = 0;
 
     bless ($self, $class);
     return $self;
@@ -515,6 +516,8 @@ sub Section_Totals ()
 
     $self->{SECTION_SUBSECTIONS} = 0;
     $self->{SECTION_ERRORS} = 0;
+    $self->{TOTAL_ERROR_SUBSECTIONS} += $self->{SECTION_ERROR_SUBSECTIONS};
+    $self->{SECTION_ERROR_SUBSECTIONS} = 0;
     $self->{SECTION_WARNINGS} = 0;
     $self->{SECTION_WARNING_SUBSECTIONS} = 0;
 }
@@ -546,7 +549,7 @@ sub Footer ()
         $totals .= " Test: $self->{TEST_SECTION}-$self->{TEST_ERRORS}-$self->{TEST_WARNINGS}";
     }
 
-    $totals .= " Failures: $self->{SECTION_ERROR_SUBSECTIONS}";
+    $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
 
     $totals .= "\n";
 

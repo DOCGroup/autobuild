@@ -381,24 +381,35 @@ sub ChangeENV (\%)
   }
 
   # Check if any environment variables are to be removed, and if so delete
-  # them from the current environment.
+  # them from the current environment. Only do this if the name is one we
+  # have actually been told to modify.
   #
   my $thisKey;
   foreach $thisKey (keys %ENV) {
     if (!defined $newENV->{$thisKey}) {
-       delete $ENV{$thisKey};
+      foreach my $variable (@{$data{ENVIRONMENT}}) {
+        if ($variable->{NAME} eq $thisKey) {
+          delete $ENV{$thisKey};
+          last;
+        }
+      }
     }
   }
 
   # Now set any new or changed values into the current environment.
   # Only change the ENV values if they have actually changed, some
   # seem to be READONLY (and even if they are set back to the same
-  # value it causes problems).
+  # value it causes problems). Only do this if the name is one we
+  # have actually been told to modify.
   #
   foreach $thisKey (keys %$newENV) {
-    next if ($thisKey eq "DEFAULT"); # Special value that seems to change
     if (!defined $ENV{$thisKey} || $ENV{$thisKey} ne $newENV->{$thisKey}) {
-      $ENV{$thisKey} = $newENV->{$thisKey};
+      foreach my $variable (@{$data{ENVIRONMENT}}) {
+        if ($variable->{NAME} eq $thisKey) {
+          $ENV{$thisKey} = $newENV->{$thisKey};
+          last;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,16 @@
+Wed Mar 12 14:53:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+          Fortified the changes to VMS environment, only change MODIFIED
+          env values that we have included in the configuration settings.
+        * common/prettify.pm:
+          The previous (backed out) fix that caused the zero failures main
+          scoreboard bug was introduced to fix a problem with the non-zeroing
+          "Subsections with Errors" in the prettified totals view. I've added
+          a new TOTAL_ERROR_SUBSECTIONS counter that sums the original (now
+          correctly zeroing) SECTION_ERROR_SUBSECTIONS counter and have caused
+          this to be outputted to the main scoreboard "Subsections with Errors".
+
 Tue Mar 11 15:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * make_pretty.pl:
