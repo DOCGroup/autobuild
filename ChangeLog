@@ -1,3 +1,10 @@
+Thu Mar 13 12:16:10 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/parse_compiler_output.pm:
+
+          Recognize the "command not found" warning from Doxygen as a
+          warning.
+
 Wed Mar 12 14:53:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:
@@ -15,7 +22,7 @@ Tue Mar 11 15:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * make_pretty.pl:
           Add highlighting of no such file or directory and any remaining
-          ACE_ASSERTS. 
+          ACE_ASSERTS.
         * scoreboard.pl:
           Only keep one version of the build on the scoreboard machine.
           Since this is a copy of the original build (and this can keep
@@ -80,7 +87,7 @@ Mon Mar 10 13:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
           overcome the limitations of not being able to directly set
           the ENV hash to another complete hash value. This should
           re-enable the environment groups concept on VMS systems.
-          
+
           Also added some extra DEBUG prints for any change to PATH
           environment variables as some systems are showing problems
           prefixing/suffixing original values.
@@ -128,7 +135,7 @@ Fri Mar 7 13:32:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
           &lt; and  &gt; during config section output. Place this instead
           into print environment inside print_os_version.pm.
           Update prettify for other errors/warning.
-          
+
         * autobuild.pl:
         * autobuild.txt:
         * common/betterparser.pm:

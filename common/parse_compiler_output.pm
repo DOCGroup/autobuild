@@ -170,6 +170,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/Warning:.+command not found/) {
+    # This is a warning from Doxygen and not an error
+    $self->Output_Warning ($s);
+    return;
+  }
+
   if ($s =~ m/command not found/) {
     # Means we can't find something to execute
     $self->Output_Error ($s);
