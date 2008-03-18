@@ -1,23 +1,23 @@
-<!-- $IC: rijes-d-9818_icc9_64.xml,v 1.33 2005/08/31 12:23:07 jwillemsen Exp $ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"      value="C:\ACE\Intel91_64\ACE_wrappers" />
-        <environment name="TAO_ROOT"      value="C:\ACE\Intel91_64\ACE_wrappers\TAO"/>
-        <environment name="RSYNC_RSH"     value="C:\cygwin\bin\ssh" />
-        <environment name="INTEL_LICENSE_FILE"      value="C:\Program Files (x86)\Common Files\Intel\Licenses" />
-        <environment name="PATH"          value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Bin;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\BIN\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\BIN;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\Tools;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\Tools\bin;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\bin;;C:\ACE\Intel91_64\ACE_wrappers\lib;C:\Cygwin\bin;C:\ACE\Intel91_64\ACE_wrappers\bin;C:\ACE\Intel91_64\ACE_wrappers\lib;C:\Cygwin\bin;" type="prefix" />
-        <environment name="INCLUDE"       value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Include;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include;C:\Program Files (x86)\MicrosoftVisual Studio 8\SDK\v2.0\include;C:\Program Files (x86)\Microsoft Visual Studio.NET 2003\SDK\v1.1\include\" type="prefix" />
-        <environment name="LIB"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.1\EM64T\Lib;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\ATLMFC\LIB\amd64;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\LIB\amd64;C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 8\SDK\v2.0\LIB\AMD64;C:\Program Files (x86)\Microsoft Visual Studio .NET 2003\SDK\v1.1\Lib\;" type="prefix" />
-        <environment name="LIBPATH"       value="C:\Program Files (x86)\Microsoft Visual Studio 8\VC\ATLMFC\LIB\amd64" />
-        <environment name="ICPP_COMPILER91"           value="C:\Program Files (x86)\Intel\Compiler\C++\9.1" />
-        <environment name="VCINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio 8\VC" />
-        <environment name="VS80COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\Tools" />
-        <environment name="VSINSTALLDIR"  value="C:\Program Files (x86)\Microsoft Visual Studio 8\VC" />
+        <environment name="ACE_ROOT"      value="C:\\ACE\\Intel91_64\\ACE_wrappers" />
+        <environment name="TAO_ROOT"      value="C:\\ACE\\Intel91_64\\ACE_wrappers\\TAO"/>
+        <environment name="RSYNC_RSH"     value="C:\\cygwin\\bin\\ssh" />
+        <environment name="INTEL_LICENSE_FILE"      value="C:\\Program Files (x86)\\Common Files\\Intel\\Licenses" />
+        <environment name="PATH"          value="C:\\Program Files (x86)\\Intel\\Compiler\\C++\\9.1\\EM64T\\Bin;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\BIN\\x86_amd64;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\BIN;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\Common7\\Tools;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\Common7\\Tools\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\bin;C:\\ACE\\Intel91_64\\ACE_wrappers\\lib;C:\\Cygwin\\bin;C:\\ACE\\Intel91_64\\ACE_wrappers\\bin;C:\\ACE\\Intel91_64\\ACE_wrappers\\lib;C:\\Cygwin\\bin;" type="prefix" />
+        <environment name="INCLUDE"       value="C:\\Program Files (x86)\\Intel\\Compiler\\C++\\9.1\\EM64T\\Include;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;C:\\Program Files (x86)\\MicrosoftVisual Studio 8\\SDK\\v2.0\\include;C:\\Program Files (x86)\\Microsoft Visual Studio.NET 2003\\SDK\\v1.1\\include\\" type="prefix" />
+        <environment name="LIB"           value="C:\\Program Files (x86)\\Intel\\Compiler\\C++\\9.1\\EM64T\\Lib;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB\\amd64;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\LIB\\amd64;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\lib\\amd64;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\SDK\\v2.0\\LIB\\AMD64;C:\\Program Files (x86)\\Microsoft Visual Studio .NET 2003\\SDK\\v1.1\\Lib\\" type="prefix" />
+        <environment name="LIBPATH"       value="C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB\\amd64" />
+        <environment name="ICPP_COMPILER91"           value="C:\\Program Files (x86)\\Intel\\Compiler\\C++\\9.1" />
+        <environment name="VCINSTALLDIR"  value="C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC" />
+        <environment name="VS80COMNTOOLS" value="C:\\Program Files (x86)\\Microsoft Visual Studio 8\\Common7\\Tools" />
+        <environment name="VSINSTALLDIR"  value="C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC" />
 
         <variable name="configs"  value="Win32 Exceptions" />
-        <variable name="root"     value="C:\ACE\Intel91_64\" />
+        <variable name="root"     value="C:\\ACE\\Intel91_64\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\ACE\Intel91_64\" />
+        <variable name="log_root" value="C:\\ACE\\Intel91_64\\" />
         <variable name="name"     value="Intel 90 64bit" />
     </configuration>
 
@@ -30,8 +30,8 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.mak' -exec c:\cygwin\bin\rm '{}' ';'" />
-    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name 'Makefile' -exec c:\cygwin\bin\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.mak' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name 'Makefile' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=1\n'" />
@@ -45,11 +45,11 @@
 
     <command name="win32make"         options="nmake /I CFG=\x22x64 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
-    <!-- command name="auto_run_tests"    options="-a -o -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" / -->
+    <!-- command name="auto_run_tests"    options="-a -o -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" / -->
     <command name="auto_run_tests"    options="-a -o" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="C:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/WinXP_ICC91_64" />
+    <command name="shell"             options="C:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/WinXP_ICC91_64" />
 </autobuild>

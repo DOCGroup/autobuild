@@ -1,15 +1,15 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ace\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ace\ACE_wrappers\TAO" />
-        <environment name="PATH"         value="C:\ace\ACE_wrappers\lib" type="prefix" />
-        <environment name="MPC_ROOT"     value="C:\ace\MPC" />
+        <environment name="ACE_ROOT"     value="C:\\ace\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ace\\ACE_wrappers\\TAO" />
+        <environment name="PATH"         value="C:\\ace\\ACE_wrappers\\lib" type="prefix" />
+        <environment name="MPC_ROOT"     value="C:\\ace\\MPC" />
 
-        <variable name="root"            value="C:\ace\ACE_wrappers" />
-        <variable name="project_root"    value="C:\ace\ACE_wrappers" />
+        <variable name="root"            value="C:\\ace\\ACE_wrappers" />
+        <variable name="project_root"    value="C:\\ace\\ACE_wrappers" />
 	<variable name="log_file"        value="vc71_tao_host.log" />
-        <variable name="log_root"        value="g:\build_logs\dev\vc71_tao_host" />
+        <variable name="log_root"        value="g:\\build_logs\\dev\\vc71_tao_host" />
         <variable name="name"            value="Win32 TAO Host" />
         <variable name="configs"         value="Win32 Exceptions" />
     </configuration>

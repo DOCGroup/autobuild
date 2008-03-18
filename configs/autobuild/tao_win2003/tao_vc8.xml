@@ -1,21 +1,21 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\VC8\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\VC8\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\ACE\VC8\ACE_wrappers\TAO\CIAO"/>
-        <environment name="RSYNC_RSH"    value="c:\Cygwin\bin\ssh" />
-        <environment name="XERCESCROOT"  value="C:\xerces-vc8" />
-        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\vcpackages;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\Program Files\Microsoft Visual Studio 8\VC\vcpackages;C:\bin;C:\zlib\lib;C:\zzip\lib;c:\xerces-vc8\lib;C:\Perl\bin;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\ACE\VC8\ACE_wrappers\bin;C:\ACE\VC8\ACE_wrappers\lib;C:\ACE\VC8\ACE_wrappers\TAO\CIAO\bin;c:\cygwin\bin;c:\zzip\lib;c:\zlib\lib" type="prefix" />
-        <environment name="INCLUDE"      value="c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\INCLUDE;c:\Program Files\Microsoft Visual Studio 8\VC\INCLUDE;c:\Program Files\Microsoft Visual Studio 8\VC\PlatformSDK\include;c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\include;" type="prefix" />
-        <environment name="LIB"          value="c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\LIB;c:\Program Files\Microsoft Visual Studio 8\VC\LIB;c:\Program Files\Microsoft Visual Studio 8\VC\PlatformSDK\lib;c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\lib;LIBPATH=c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;c:\Program Files\Microsoft Visual Studio 8\VC\ATLMFC\LIB" type="prefix" />
-        <environment name="ZLIB_ROOT"       value="C:\zlib" />
-        <environment name="ZZIP_ROOT"       value="C:\zzip" />
+        <environment name="ACE_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
+        <environment name="XERCESCROOT"  value="C:\\xerces-vc8" />
+        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\bin;C:\\zlib\\lib;C:\\zzip\\lib;c:\\xerces-vc8\\lib;C:\\Perl\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO\\bin;c:\\cygwin\\bin;c:\\zzip\\lib;c:\\zlib\\lib" type="prefix" />
+        <environment name="INCLUDE"      value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\include;" type="prefix" />
+        <environment name="LIB"          value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\LIB;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\lib;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\lib;LIBPATH=c:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB" type="prefix" />
+        <environment name="ZLIB_ROOT"       value="C:\\zlib" />
+        <environment name="ZZIP_ROOT"       value="C:\\zzip" />
 
         <variable name="configs"  value="Win32 VC8 Exceptions ZLIB RT_CAPABLE" />
-        <variable name="root"     value="C:\ACE\VC8\" />
+        <variable name="root"     value="C:\\ACE\\VC8\\" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\ACE\VC8\" />
+        <variable name="log_root" value="C:\\ACE\\VC8\\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
     </configuration>
 
@@ -54,5 +54,5 @@
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/tao_win2003_full" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/tao_win2003_full" />
 </autobuild>

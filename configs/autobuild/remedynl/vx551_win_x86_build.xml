@@ -6,10 +6,10 @@
         <environment name="TAO_ROOT"                value="Z:/VxWorks/vx551_win_x86/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"               value="Z:/VxWorks/vx551_win_x86/ACE_wrappers/TAO/CIAO"/>
         <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/Host/ACE_wrappers"/>
-        <environment name="PATH"                    value="C:\Tornado2.2\host\x86-win32\bin;C:\tools\nixtools;C:\ACE\VxWorks\Host\ACE_wrappers\lib;C:\ACE\VxWorks\Host\ACE_wrappers\bin;c:\perl\bin;C:\Program Files\Microsoft Visual Studio 8\Vc\bin;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;" type="prefix" />
+        <environment name="PATH"                    value="C:\\Tornado2.2\\host\\x86-win32\\bin;C:\\tools\\nixtools;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\lib;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\bin;c:\\perl\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;" type="prefix" />
         <environment name="WIND_BASE"               value="C:/Tornado2.2"/>
         <environment name="WIND_HOST_TYPE"          value="x86-win32"/>
-        <environment name="RSYNC_RSH"               value="C:\cygwin\bin\ssh" />
+        <environment name="RSYNC_RSH"               value="C:\\cygwin\\bin\\ssh" />
         <environment name="ACE_RUN_VX_TGTSVR"       value="P4" />
         <environment name="ACE_RUN_VX_TGTSVR_ROOT"  value="/tgtsvr/ACE/VxWorks/pcPentiumX/ACE_wrappers" />
         <environment name="ACE_RUN_VX_TGTSVR_DEFGW" value="10.2.128.1" />
@@ -22,7 +22,7 @@
         <variable name="log_file" 	value="build.txt" />
         <variable name="log_root"   value="Z:/VxWorks/vx551_win_x86/" />
         <variable name="configs"  	value="VxWorks STATIC" />
-        <variable name="svn_program"       value="c:\cygwin\bin\svn" />
+        <variable name="svn_program"       value="c:\\cygwin\\bin\\svn" />
 
     </configuration>
 
@@ -37,8 +37,8 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ACE_MKDIR=c:/tools/nixtools/mkdir -p\nstatic_libs=1\ndebug=1\ninline=0\nfl_reactor=0\noptimize=0\noverride RM:=C:/tools/nixtools/rm -f\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks5.5.x.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces=0\n'" />
 
-    <command name="anonymous_shell"   options="c:\cygwin\bin\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32_vc8/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
-    <command name="anonymous_shell"   options="c:\cygwin\bin\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
+    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32_vc8/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="ccpentium" />
@@ -57,5 +57,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/vx551_win_x86" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/vx551_win_x86" />
 </autobuild>

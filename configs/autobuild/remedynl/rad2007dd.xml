@@ -1,21 +1,21 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\BCB2007dd\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\BCB2007dd\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\ACE\BCB2007dd\ACE_wrappers\TAO\CIAO"/>
-        <environment name="XERCESCROOT"  value="C:\xerces-c-src_2_7_0" />
-        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Codegear\RAD Studio\5.0\Bin;C:\Perl\Bin;C:\ACE\BCB2007dd\ACE_wrappers\lib;C:\ACE\BCB2007dd\ACE_wrappers\bin;C:\cygwin\bin;C:\xerces-c-src_2_7_0\lib" type="prefix" />
+        <environment name="ACE_ROOT"     value="C:\\ACE\\BCB2007dd\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="XERCESCROOT"  value="C:\\xerces-c-src_2_7_0" />
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="PATH"         value="C:\\Program Files\\Codegear\\RAD Studio\\5.0\\Bin;C:\\Perl\\Bin;C:\\ACE\\BCB2007dd\\ACE_wrappers\\lib;C:\\ACE\\BCB2007dd\\ACE_wrappers\\bin;C:\\cygwin\\bin;C:\\xerces-c-src_2_7_0\\lib" type="prefix" />
 
         <environment name="BCBVER"   value="8" />
         <environment name="DEBUG"   value="1" />
         <environment name="DYNAMIC"  value="1" />
 
         <variable name="configs"      value="Win32 Borland Exceptions" />
-        <variable name="root"         value="C:\ACE\BCB2007dd\" />
+        <variable name="root"         value="C:\\ACE\\BCB2007dd\\" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="C:\ACE\BCB2007dd\" />
+        <variable name="log_root"     value="C:\\ACE\\BCB2007dd\\" />
         <variable name="name"         value="WinXP CodeGear Studio 2007 Dynamic Debug" />
     </configuration>
 
@@ -49,11 +49,11 @@
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
-    <command name="auto_run_tests"     options="-a -o -t -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"     options="-a -o -t -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RAD2007dd" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/RAD2007dd" />
 </autobuild>
 

@@ -1,25 +1,25 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\bczar\CoSMIC_VC71_Release\ACE" />
-        <environment name="TAO_ROOT"     value="C:\bczar\CoSMIC_VC71_Release\TAO"/>
-        <environment name="MPC_ROOT"     value="C:\bczar\CoSMIC_VC71_Release\MPC"/>
-        <environment name="WIX_ROOT"     value="C:\Program Files\Windows Installer XML v3"/>
+        <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\ACE" />
+        <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\TAO"/>
+        <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\MPC"/>
+        <environment name="WIX_ROOT"     value="C:\\Program Files\\Windows Installer XML v3"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="XERCESCROOT"   value="C:\Tools\xerces-c-2_7_0-win32-vc7"/>
-        <environment name="BOOST_ROOT"    value="C:\Tools\Boost"/>
+        <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-2_7_0-win32-vc7"/>
+        <environment name="BOOST_ROOT"    value="C:\\Tools\\Boost"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
         <environment name="BOOST_CFG"     value="-vc71-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
-        <environment name="UDM_PATH" 	  value="C:\Program Files\ISIS\UDM" />
-        <environment name="COSMIC_ROOT"  value="C:\bczar\CoSMIC_VC71_Release\CoSMIC" />
-        <environment name="ZLIB_ROOT" value="C:\Tools\zlib" />
-        <environment name="PATH"         value="C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Tools\Boost\lib;C:\bczar\CoSMIC_VC71_Debug\ACE\lib;C:\bczar\CoSMIC_VC71_Debug\CoSMIC\bin;C:\Tools\xerces-c-2_7_0-win32-vc7\bin;C:\Program Files\ISIS\UDM\bin;C:\Program Files\ISIS\UDM\etc;C:\Program Files\ISIS\UDM\3rdparty\xalan-c_1_8_0\bin;C:\Program Files\ISIS\UDM\3rdparty\xerces-c_2_5_0\bin;C:\Program Files\Putty;C:\Tools\bin;C:\Tools\Perl\bin;C:\Program Files\Subversion\bin;C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE;C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\bin;C:\Tools\zlib\bin" />
+        <environment name="UDM_PATH" 	  value="C:\\Program Files\\ISIS\\UDM" />
+        <environment name="COSMIC_ROOT"  value="C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC" />
+        <environment name="ZLIB_ROOT" value="C:\\Tools\\zlib" />
+        <environment name="PATH"         value="C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\Tools\\Boost\\lib;C:\\bczar\\CoSMIC_VC71_Debug\\ACE\\lib;C:\\bczar\\CoSMIC_VC71_Debug\\CoSMIC\\bin;C:\\Tools\\xerces-c-2_7_0-win32-vc7\\bin;C:\\Program Files\\ISIS\\UDM\\bin;C:\\Program Files\\ISIS\\UDM\\etc;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xalan-c_1_8_0\\bin;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xerces-c_2_5_0\\bin;C:\\Program Files\\Putty;C:\\Tools\\bin;C:\\Tools\\Perl\\bin;C:\\Program Files\\Subversion\\bin;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Vc7\\bin;C:\\Tools\\zlib\\bin" />
         <variable name="configs"  value="Win32 VC71 ZLIB Exceptions" />
-        <variable name="root"     value="C:\bczar\CoSMIC_VC71_Release" />
+        <variable name="root"     value="C:\\bczar\\CoSMIC_VC71_Release" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\bczar\CoSMIC_VC71_Release" />
-        <variable name="project_root" value="C:\bczar\CoSMIC_VC71_Release\ACE" />
+        <variable name="log_root" value="C:\\bczar\\CoSMIC_VC71_Release" />
+        <variable name="project_root" value="C:\\bczar\\CoSMIC_VC71_Release\\ACE" />
         <variable name="name"     value="CoSMIC VC71 WinXP Release" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
@@ -43,22 +43,22 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Release.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\Release.sln -Release -k" />
+    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release.mwc"/>
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\\Release.sln -Release -k" />
 
-    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Release_idl_to_picml.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\Release_idl_to_picml.sln -Release -k" />
+    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release_idl_to_picml.mwc"/>
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\\Release_idl_to_picml.sln -Release -k" />
 
-    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\Installer\CoSMIC_Installer\CoSMIC_Installer.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\Installer\CoSMIC_Installer -Release -k" />
+    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.mwc"/>
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer -Release -k" />
 
-    <command name="anonymous_shell"   options="md5sum C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC_Installer.msi > C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC-VC71-nightly-md5sum.txt"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\CoSMIC\Installer\CoSMIC_Installer\CoSMIC-VC71-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
+    <command name="anonymous_shell"   options="md5sum C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC71-nightly-md5sum.txt"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC71-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic_release"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\bczar\CoSMIC_VC71_Release\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC71_Release\\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC71_Release\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/equus_cosmic_release"/>
 </autobuild>

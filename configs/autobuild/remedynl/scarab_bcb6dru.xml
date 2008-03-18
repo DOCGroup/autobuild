@@ -1,12 +1,12 @@
-<!-- $IC: BCB6DynamicReleaseUnicodeMbg.xml,v 1.21 2004/08/06 09:54:12 jwillemsen Exp $ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\BCB6dru\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\BCB6dru\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\ACE\BCB6dru\ACE_wrappers\TAO\CIAO"/>
-        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="SSL_ROOT"     value="c:\OpenSSL" />
-        <environment name="PATH"         value="C:\progra~1\borland\cbuild~1\bin;C:\progra~1\borland\cbuild~1\lib;C:\progra~\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dru\ACE_wrappers\bin;C:\ACE\BCB6dru\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin" type="prefix" />
+        <environment name="ACE_ROOT"     value="C:\\ACE\\BCB6dru\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\BCB6dru\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\BCB6dru\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="SSL_ROOT"     value="c:\\OpenSSL" />
+        <environment name="PATH"         value="C:\\progra~1\\borland\\cbuild~1\\bin;C:\\progra~1\\borland\\cbuild~1\\lib;C:\\progra~\\borland\\cbuild~1\\projects\\bpl;C:\\ACE\\BCB6dru\\ACE_wrappers\\bin;C:\\ACE\\BCB6dru\\ACE_wrappers\\lib;C:\\perl\\bin;C:\\cygwin\\bin" type="prefix" />
 
 	<environment name="BUILD"    value="all" />
 	<environment name="DYNAMIC"  value="1" />
@@ -14,9 +14,9 @@
 	<environment name="UNICODE"  value="1" />
 
         <variable name="configs"  value="Win32 Borland Exceptions SSL" />
-        <variable name="root"     value="C:\ACE\BCB6dru\" />
+        <variable name="root"     value="C:\\ACE\\BCB6dru\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\ACE\BCB6dru\" />
+        <variable name="log_root" value="C:\\ACE\\BCB6dru\\" />
         <variable name="name"     value="Win2K BCB6 Release Unicode" />
     </configuration>
 
@@ -46,13 +46,13 @@
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
-    <command name="auto_run_tests"    options="-a -s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"    options="-a -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB6dru" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB6dru" />
 </autobuild>
 
 

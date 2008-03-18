@@ -1,16 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\VC90dr\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\VC90dr\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\ACE\VC90dr\ACE_wrappers\TAO\CIAO"/>
-        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="PATH"         value="C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;C:\Program Files\Microsoft Visual Studio 9.0\VC\bin;;C:\ACE\VC90dr\ACE_wrappers\bin;" type="prefix" />
+        <environment name="ACE_ROOT"     value="C:\\ACE\\VC90dr\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\VC90dr\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\VC90dr\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90dr\\ACE_wrappers\\bin;" type="prefix" />
 
         <variable name="configs"  value="Win32 VC71 Exceptions" />
-        <variable name="root"     value="C:\ACE\VC90dr\" />
+        <variable name="root"     value="C:\\ACE\\VC90dr\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\ACE\VC90dr\" />
+        <variable name="log_root" value="C:\\ACE\\VC90dr\\" />
         <variable name="name"     value="WinXP VS.NET 2003" />
     </configuration>
 
@@ -23,14 +23,14 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.vcproj' -exec c:\cygwin\bin\rm '{}' ';'" />
-    <command name="shell"             options="c:\cygwin\bin\find ACE_wrappers -name '*.sln' -exec c:\cygwin\bin\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.vcproj' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.sln' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces=0\ncidl=1\n'" />
 
-    <command name="anonymous_shell"   options="c:\cygwin\bin\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
-    <command name="anonymous_shell"   options="c:\cygwin\bin\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
+    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="msvc" />
@@ -45,5 +45,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VC90dr" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VC90dr" />
 </autobuild>

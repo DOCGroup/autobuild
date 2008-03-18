@@ -1,21 +1,21 @@
-<!-- $IC: BCB6DynamicRelease.xml,v 1.29 2004/08/06 09:54:12 jwillemsen Exp $ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ACE\BCB6dr\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ACE\BCB6dr\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\ACE\BCB6dr\ACE_wrappers\TAO\CIAO"/>
-        <environment name="XERCESCROOT"  value="C:\xerces-c_2_5_0-windows_nt-bcb6" />
-        <environment name="RSYNC_RSH"    value="C:\cygwin\bin\ssh" />
-        <environment name="SSL_ROOT"     value="c:\OpenSSL" />
-        <environment name="Path"         value="C:\progra~1\borland\cbuild~1\bin;C:\progra~1\borland\cbuild~1\lib;C:\progra~1\borland\cbuild~1\projects\bpl;C:\ACE\BCB6dr\ACE_wrappers\bin;C:\ACE\BCB6dr\ACE_wrappers\lib;C:\perl\bin;C:\cygwin\bin" type="prefix" />
+        <environment name="ACE_ROOT"     value="C:\\ACE\\BCB6dr\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\BCB6dr\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\BCB6dr\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="XERCESCROOT"  value="C:\\xerces-c_2_5_0-windows_nt-bcb6" />
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="SSL_ROOT"     value="c:\\OpenSSL" />
+        <environment name="Path"         value="C:\\progra~1\\borland\\cbuild~1\\bin;C:\\progra~1\\borland\\cbuild~1\\lib;C:\\progra~1\\borland\\cbuild~1\\projects\\bpl;C:\\ACE\\BCB6dr\\ACE_wrappers\\bin;C:\\ACE\\BCB6dr\\ACE_wrappers\\lib;C:\\perl\\bin;C:\\cygwin\\bin" type="prefix" />
 
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
 
         <variable name="configs"  value="Win32 Borland Exceptions SSL" />
-        <variable name="root"     value="C:\ACE\BCB6dr\" />
+        <variable name="root"     value="C:\\ACE\\BCB6dr\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\ACE\BCB6dr\" />
+        <variable name="log_root" value="C:\\ACE\\BCB6dr\\" />
         <variable name="name"     value="Win2K BCB6 Release" />
     </configuration>
 
@@ -49,12 +49,12 @@
 
     <command name="make"              options=" -i -f Makefile.bor" />
 
-    <command name="auto_run_tests"    options="-s \x22C:\ACE\autobuild\win32sandbox\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"    options="-s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB6dr" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB6dr" />
 </autobuild>
 

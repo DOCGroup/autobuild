@@ -5,26 +5,26 @@
 
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\ace\target_ets\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\ace\target_ets\ACE_wrappers\TAO" />
-        <environment name="HOST_TAO_IDL"      value="C:\ace\ACE_wrappers\bin\tao_idl.exe" />
-        <environment name="PATH"         value="C:\ace\ACE_wrappers\lib" type="prefix" />
-        <environment name="INCLUDE"      value="C:\pharemb\include" type="suffix" />
-        <environment name="LIB"          value="C:\pharemb\lib" type="suffix" />
-        <environment name="MPC_ROOT"     value="C:\ace\MPC" />
-        <environment name="PHARDIR"      value="C:\pharemb" />
-        <environment name="ACE_RUN_LVRT_FSROOT" value="\ni-rt\system" />
+        <environment name="ACE_ROOT"     value="C:\\ace\\target_ets\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ace\\target_ets\\ACE_wrappers\\TAO" />
+        <environment name="HOST_TAO_IDL"      value="C:\\ace\\ACE_wrappers\\bin\\tao_idl.exe" />
+        <environment name="PATH"         value="C:\\ace\\ACE_wrappers\\lib" type="prefix" />
+        <environment name="INCLUDE"      value="C:\\pharemb\\include" type="suffix" />
+        <environment name="LIB"          value="C:\\pharemb\\lib" type="suffix" />
+        <environment name="MPC_ROOT"     value="C:\\ace\\MPC" />
+        <environment name="PHARDIR"      value="C:\\pharemb" />
+        <environment name="ACE_RUN_LVRT_FSROOT" value="\\ni-rt\\system" />
         <environment name="ACE_RUN_LVRT_TGTHOST" value="192.168.10.50" />
-        <environment name="ACE_REBOOT_LVRT_CMD" value="C:\ace\ACE_wrappers\bin\LabVIEW_RT\PXI_Reset.exe" />
+        <environment name="ACE_REBOOT_LVRT_CMD" value="C:\\ace\\ACE_wrappers\\bin\\LabVIEW_RT\\PXI_Reset.exe" />
         <environment name="ACE_LVRT_REBOOT_TIME" value="120" />
-        <environment name="PHARDIR"      value="C:\pharemb" />
+        <environment name="PHARDIR"      value="C:\\pharemb" />
 
-        <variable name="root"            value="C:\ace\target_ets" />
-        <variable name="project_root"    value="C:\ace\target_ets\ACE_wrappers" />
+        <variable name="root"            value="C:\\ace\\target_ets" />
+        <variable name="project_root"    value="C:\\ace\\target_ets\\ACE_wrappers" />
 	<variable name="log_file"        value="vc71_ets_debug.log" />
-        <variable name="log_root"        value="g:\build_logs\dev\vc71_ets_debug" />
+        <variable name="log_root"        value="g:\\build_logs\\dev\\vc71_ets_debug" />
         <variable name="name"            value="Win32 ETS Debug" />
-        <variable name="local_features"  value="c:\ace\target_ets\ACE_wrappers\local.features" />
+        <variable name="local_features"  value="c:\\ace\\target_ets\\ACE_wrappers\\local.features" />
         <variable name="configs"         value="Win32 Exceptions PHARLAP LabVIEW_RT" />
     </configuration>
 
@@ -48,7 +48,7 @@
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type vc71 -recurse -relative ACE_ROOT=C:/ace/target_ets/ACE_wrappers -relative TAO_ROOT=C:/ace/target_ets/ACE_wrappers/TAO -exclude ASNMP,apps/gperf,TAO/TAO_IDL,TAO/orbsvcs/IFR_Service -feature_file c:\ace\target_ets\ACE_wrappers\local.features -value_template tao_idl=$(HOST_TAO_IDL) -value_template configurations='\x22ETS Debug\x22' -value_template configurations+='\x22ETS Release\x22' -name_modifier *_ETS -base labviewrt_dll" />
+    <command name="generate_workspace" options="-type vc71 -recurse -relative ACE_ROOT=C:/ace/target_ets/ACE_wrappers -relative TAO_ROOT=C:/ace/target_ets/ACE_wrappers/TAO -exclude ASNMP,apps/gperf,TAO/TAO_IDL,TAO/orbsvcs/IFR_Service -feature_file c:\\ace\\target_ets\\ACE_wrappers\\local.features -value_template tao_idl=$(HOST_TAO_IDL) -value_template configurations='\x22ETS Debug\x22' -value_template configurations+='\x22ETS Release\x22' -name_modifier *_ETS -base labviewrt_dll" />
     <command name="vc7make"           options="/build \x22ETS Debug\x22 ACE_ETS.sln" />
     <!-- Need /useenv to make it pick up PATH from environment, else it  -->
     <!-- will pick up the ACEd.dll built for ETS while invoking TAO_IDL. -->

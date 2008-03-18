@@ -1,3 +1,108 @@
+Tue Mar 18 12:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+          Changed the default parser from simpleparser.pm to betterparser.pm.
+
+        * configs/autobuild/abbarach/XSC.xml:
+        * configs/autobuild/equus/equus_vc71.xml:
+        * configs/autobuild/equus/equus_vc71_release.xml:
+        * configs/autobuild/.xml:
+        * configs/autobuild/isislab/blade10/ciao_no_inline.xml:
+        * configs/autobuild/isislab/blade11/ace_for_tao.xml:
+        * configs/autobuild/isislab/blade11/versioned_namespace.xml:
+        * configs/autobuild/isislab/blade17/blade17_vc71.xml:
+        * configs/autobuild/isislab/blade17/blade17_vc71_static.xml:
+        * configs/autobuild/isislab/blade17/blade17_vc71_w4.xml:
+        * configs/autobuild/isislab/blade27/blade27_vc71_minimum_corba.xml:
+        * configs/autobuild/isislab/blade46/ciao_refactor.xml:
+        * configs/autobuild/isislab/blade46/ciaocore_vc8.xml:
+        * configs/autobuild/isislab/blade49/blade49_vc71.xml:
+        * configs/autobuild/isislab/blade50/blade50_vc8.xml:
+        * configs/autobuild/isislab/blade56/footprint_corba_e_compact.xml:
+        * configs/autobuild/isislab/blade56/footprint_corba_e_micro.xml:
+        * configs/autobuild/isislab/blade56/footprint_corba_e_micro_s.xml:
+        * configs/autobuild/isislab/blade56/footprint_minimum_corba.xml:
+        * configs/autobuild/isislab/blade56/footprint_regular.xml:
+        * configs/autobuild/merengue/cidlcstatic.xml:
+        * configs/autobuild/merengue/merengue_vc71.xml:
+        * configs/autobuild/oci/dds_doc_Latest_Beta_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_trunk_chico.phx_winxp_vc71_s1d1o0.xml:
+        * configs/autobuild/oci/doc_iliyan-gestalt_hornet_winxp_vc8_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_chico.phx_winxp_vc71_s1d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_earwig_winxp-x86_nmake_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_s1d1o0.xml:
+        * configs/autobuild/remedynl/aragon_cb6sr.xml:
+        * configs/autobuild/remedynl/aragon_vxworks-pcPentiumX-gnu.xml:
+        * configs/autobuild/remedynl/aragon_vxworks-pcPentiumXSharedLib-gnu.xml:
+        * configs/autobuild/remedynl/aragon_win_ppc603_host.xml:
+        * configs/autobuild/remedynl/aragon_win_ppc603_build.xml:
+        * configs/autobuild/remedynl/aragon_win_ppc603_test.xml:
+        * configs/autobuild/remedynl/aragon_win_x86_test.xml:
+        * configs/autobuild/remedynl/bcb2007dd.xml:
+        * configs/autobuild/remedynl/bcb2007dd_ipv6.xml:
+        * configs/autobuild/remedynl/bcb2007ddu.xml:
+        * configs/autobuild/remedynl/bcb2007dr.xml:
+        * configs/autobuild/remedynl/icc100_win_64.xml:
+        * configs/autobuild/remedynl/icc100_win_64r.xml:
+        * configs/autobuild/remedynl/icc101_win_32.xml:
+        * configs/autobuild/remedynl/icc101_win_64.xml:
+        * configs/autobuild/remedynl/icc91_win_64.xml:
+        * configs/autobuild/remedynl/mingw.xml:
+        * configs/autobuild/remedynl/mingw421.xml:
+        * configs/autobuild/remedynl/msvc71_cidlc.xml:
+        * configs/autobuild/remedynl/msvc71_d.xml:
+        * configs/autobuild/remedynl/msvc71_ipv6_debug.xml:
+        * configs/autobuild/remedynl/msvc71_vc71dr.xml:
+        * configs/autobuild/remedynl/msvc8_cidlc.xml:
+        * configs/autobuild/remedynl/msvc8_d.xml:
+        * configs/autobuild/remedynl/msvc8_r.xml:
+        * configs/autobuild/remedynl/msvc8_version.xml:
+        * configs/autobuild/remedynl/msvc90_d.xml:
+        * configs/autobuild/remedynl/msvc90_ipv6_debug.xml:
+        * configs/autobuild/remedynl/msvc90_vc90dr.xml:
+        * configs/autobuild/remedynl/rad2007dd.xml:
+        * configs/autobuild/remedynl/rad2007dd_ipv6.xml:
+        * configs/autobuild/remedynl/rad2007ddu.xml:
+        * configs/autobuild/remedynl/rad2007dr.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dd.xml:
+        * configs/autobuild/remedynl/scarab_bcb6ddu.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dr.xml:
+        * configs/autobuild/remedynl/scarab_bcb6dru.xml:
+        * configs/autobuild/remedynl/BCB6DynamicDebugUnicodeMbg.xml:
+        * configs/autobuild/remedynl/BCB6DynamicRelease.xml:
+        * configs/autobuild/remedynl/BCB6DynamicReleaseUnicodeMbg.xml:
+        * configs/autobuild/remedynl/vx551_win_ppc603_build.xml:
+        * configs/autobuild/remedynl/vx551_win_ppc603_host.xml:
+        * configs/autobuild/remedynl/vx551_win_ppc603_test.xml:
+        * configs/autobuild/remedynl/vx551_win_x86_build.xml:
+        * configs/autobuild/remedynl/vx551_win_x86_host.xml:
+        * configs/autobuild/remedynl/vx64win_cb6sr.xml:
+        * configs/autobuild/remedynl/vx64win_vxworks64.xml:
+        * configs/autobuild/remedynl/vx64win_vxworks64k.xml:
+        * configs/autobuild/remedynl/vx64winppc604_cb6sr.xml:
+        * configs/autobuild/remedynl/vx64winppc604_vxworks64k.xml:
+        * configs/autobuild/remedynl/vx65win_cb6sr.xml:
+        * configs/autobuild/remedynl/vx65win_vxworks65.xml:
+        * configs/autobuild/remedynl/vx65win_vxworks65k.xml:
+        * configs/autobuild/remedynl/vx66win_k.xml:
+        * configs/autobuild/remedynl/vx66win_kp.xml:
+        * configs/autobuild/remedynl/vx66win_r.xml:
+        * configs/autobuild/reverace/hope_dev_vc7_debug.xml.xml:
+        * configs/autobuild/reverace/lily_dev_vc8_64_debug.xml:
+        * configs/autobuild/reverace/lily_dev_vc8_debug.xml:
+        * configs/autobuild/reverace/lily_dev_vc8_ppc2003_debug.xml:
+        * configs/autobuild/reverace/lily_dev_vc8_smartphone2003_debug.xml:
+        * configs/autobuild/reverace/lily_dev_vc8_winmobile5_debug.xml:
+        * configs/autobuild/reverace/lily_dev_vc8_winmobile5_smartphone_debug.xml:
+        * configs/autobuild/reverace/timmy-xpvc71_dev_vc71_ets_debug.xml.xml:
+        * configs/autobuild/reverace/timmy-xpvc71_dev_vc71_tao_host.xml:
+        * configs/autobuild/tao_win2003/tao_vc8.xml:
+          Fully escaped the windows directory slashes in these control
+          files. (BetterParser.pm understands more escape codes and to ensure
+          none of the existing directory roots are missinterpreted they
+          should be fully escaped.)
+
 Thu Mar 13 12:16:10 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * common/parse_compiler_output.pm:

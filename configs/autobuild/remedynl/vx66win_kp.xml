@@ -2,24 +2,24 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="\ACE\VxWorks\Vx66kp\ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="\ACE\VxWorks\Vx66kp\ACE_wrappers\TAO"/>
-        <environment name="CIAO_ROOT"        value="\ACE\VxWorks\Vx66kp\ACE_wrappers\TAO\CIAO"/>
-        <environment name="HOST_ROOT"       value="\ACE\VxWorks\CB6sr\ACE_wrappers"/>
-        <environment name="PATH"            value="C:\WindRiver\workbench-3.0\foundation\4.1.1\x86-win32\bin;C:\WindRiver\vxworks-6.6\host\x86-win32\bin;C:\WindRiver\gnu\4.1.2-vxworks-6.6\x86-win32\bin;C:\WindRiver\workbench-3.0\x86-win32\bin;C:\PROGRA~1\Borland\CBUILD~1\Bin;C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;" type="prefix" />
-        <environment name="RSYNC_RSH"       value="C:\cygwin\bin\ssh" />
-        <environment name="WIND_BASE"       value="C:\WindRiver\vxworks-6.6" />
-        <environment name="WIND_GNU_PATH"       value="C:\WindRiver\gnu\4.1.2-vxworks-6.6" />
-        <environment name="WIND_HOME"       value="C:\WindRiver" />
+        <environment name="ACE_ROOT"        value="\\ACE\\VxWorks\\Vx66kp\\ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="\\ACE\\VxWorks\\Vx66kp\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"        value="\\ACE\\VxWorks\\Vx66kp\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="HOST_ROOT"       value="\\ACE\\VxWorks\\CB6sr\\ACE_wrappers"/>
+        <environment name="PATH"            value="C:\\WindRiver\\workbench-3.0\\foundation\\4.1.1\\x86-win32\\bin;C:\\WindRiver\\vxworks-6.6\\host\\x86-win32\\bin;C:\\WindRiver\\gnu\\4.1.2-vxworks-6.6\\x86-win32\\bin;C:\\WindRiver\\workbench-3.0\\x86-win32\\bin;C:\\PROGRA~1\\Borland\\CBUILD~1\\Bin;C:\\PROGRA~1\\Borland\\CBUILD~1\\Projects\\Bpl;" type="prefix" />
+        <environment name="RSYNC_RSH"       value="C:\\cygwin\\bin\\ssh" />
+        <environment name="WIND_BASE"       value="C:\\WindRiver\\vxworks-6.6" />
+        <environment name="WIND_GNU_PATH"       value="C:\\WindRiver\\gnu\\4.1.2-vxworks-6.6" />
+        <environment name="WIND_HOME"       value="C:\\WindRiver" />
         <environment name="WIND_HOST_TYPE"       value="x86-win32" />
-        <environment name="WIND_JRE_HOME"       value="C:\WindRiver\jre\1.5.0_11\x86-win32" />
+        <environment name="WIND_JRE_HOME"       value="C:\\WindRiver\\jre\\1.5.0_11\\x86-win32" />
         <environment name="WIND_PLATFORM"       value="vxworks-6.6" />
-        <environment name="WIND_TOOLS"       value="C:\WindRiver\workbench-3.0" />
-        <environment name="WIND_USR"       value="C:\WindRiver\vxworks-6.6\target\usr" />
+        <environment name="WIND_TOOLS"       value="C:\\WindRiver\\workbench-3.0" />
+        <environment name="WIND_USR"       value="C:\\WindRiver\\vxworks-6.6\\target\\usr" />
 
-        <variable name="root"     value="C:\ACE\VxWorks\Vx66kp\" />
+        <variable name="root"     value="C:\\ACE\\VxWorks\\Vx66kp\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\ACE\VxWorks\Vx66kp\" />
+        <variable name="log_root" value="C:\\ACE\\VxWorks\\Vx66kp\\" />
         <variable name="configs"  value="VxWorks STATIC" />
 
     </configuration>
@@ -52,5 +52,5 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\cygwin\bin\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/66winkp" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/66winkp" />
 </autobuild>
