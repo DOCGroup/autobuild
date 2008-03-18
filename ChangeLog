@@ -1,3 +1,12 @@
+Tue Mar 18 20:59:57 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_tao_host.xml: Build
+          all needed to run TAO clients locally, in addition to TAO_IDL.
+
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml: Use
+          HOST_ROOT to tell test running where to get the host-parts from,
+          and re-enable TAO ORB tests for run_tests.
+
 Tue Mar 18 12:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.pl:
@@ -88,15 +97,15 @@ Tue Mar 18 12:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
         * configs/autobuild/remedynl/vx66win_k.xml:
         * configs/autobuild/remedynl/vx66win_kp.xml:
         * configs/autobuild/remedynl/vx66win_r.xml:
-        * configs/autobuild/reverace/hope_dev_vc7_debug.xml.xml:
-        * configs/autobuild/reverace/lily_dev_vc8_64_debug.xml:
-        * configs/autobuild/reverace/lily_dev_vc8_debug.xml:
-        * configs/autobuild/reverace/lily_dev_vc8_ppc2003_debug.xml:
-        * configs/autobuild/reverace/lily_dev_vc8_smartphone2003_debug.xml:
-        * configs/autobuild/reverace/lily_dev_vc8_winmobile5_debug.xml:
-        * configs/autobuild/reverace/lily_dev_vc8_winmobile5_smartphone_debug.xml:
-        * configs/autobuild/reverace/timmy-xpvc71_dev_vc71_ets_debug.xml.xml:
-        * configs/autobuild/reverace/timmy-xpvc71_dev_vc71_tao_host.xml:
+        * configs/autobuild/riverace/hope_dev_vc7_debug.xml.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_64_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_smartphone2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_smartphone_debug.xml:
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml.xml:
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_tao_host.xml:
         * configs/autobuild/tao_win2003/tao_vc8.xml:
           Fully escaped the windows directory slashes in these control
           files. (BetterParser.pm understands more escape codes and to ensure
