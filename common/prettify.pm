@@ -172,9 +172,10 @@ sub Normal ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs
+    # Escape any '<' or '>' signs that are not html heading and referances
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
+    $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
 
     if ($self->{BUFFER_NON_ERRORS})
     {
