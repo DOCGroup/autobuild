@@ -1,7 +1,6 @@
-<!-- $Id$ -->
 <autobuild>
-  <!-- The command used to create this file (on weevil) was -->
-  <!-- X:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc71 -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -environment SSL_ROOT=C:\OpenSSL -environment "prefix PATH=C:\\OpenSSL\\bin;" -featureflags ssl=1 -outdir u:\mitza -->
+  <!-- The command used to create this file (on oci1329xp) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc71 -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -environment SSL_ROOT=C:\OpenSSL -environment "prefix PATH=C:\OpenSSL\bin;" -featureflags ssl=1 -hostname weevil -outdir . -platform win2003 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO\\CIAO"/>

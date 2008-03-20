@@ -1,7 +1,6 @@
-<!-- $Id$ -->
 <autobuild>
-  <!-- The command used to create this file (on hornet) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\iliyan-gestalt -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/TAO . dir=TAO" -compiler vc8 -creator mitza -devguide 0 -docbuild 1 -docrepo 1 -outdir u:\mitza -peerlayout 1 -->
+  <!-- The command used to create this file (on oci1329xp) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\iliyan-gestalt -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/iliyan-gestalt/TAO . dir=TAO" -compiler vc8 -devguide 0 -docbuild 1 -docrepo 1 -hostname hornet -outdir . -peerlayout 1 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\iliyan-gestalt\\build\\vc8_d1o0\\ACE"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\iliyan-gestalt\\build\\vc8_d1o0\\CIAO"/>

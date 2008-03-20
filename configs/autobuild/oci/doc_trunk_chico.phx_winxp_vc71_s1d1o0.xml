@@ -1,7 +1,6 @@
-<!-- $Id$ -->
 <autobuild>
-  <!-- The command used to create this file (on chico) was -->
-  <!-- Z:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc71 -devguide 0 -docbuild 1 -docrepo 1 -environment SSL_ROOT=c:\openssl\openssl-0.9.8d -featureflags "ssl=1 debug=1 optimize=0" -outdir ..\.. -testopt "-s \x22u:\\autobuild\\win32sandbox\\sandbox.exe -t 1200000\x22 -Config SANDBOX" -->
+  <!-- The command used to create this file (on oci1329xp) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc71 -devguide 0 -docbuild 1 -docrepo 1 -environment SSL_ROOT=c:\openssl\openssl-0.9.8d -featureflags "ssl=1 debug=1 optimize=0" -hostname chico.phx -outdir . -testopt "-s \x22u:\\autobuild\\win32sandbox\\sandbox.exe -t 1200000\x22 -Config SANDBOX" -->
   <configuration>
     <environment name="ACE_ROOT"     value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0"/>
     <environment name="CIAO_ROOT"    value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO\\CIAO"/>
@@ -13,7 +12,7 @@
     <environment name="SSL_ROOT"     value="c:\\openssl\\openssl-0.9.8d"/>
     <environment name="TAO_ROOT"     value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO"/>
     <variable    name="build_name"   value="vc71_s1d1o0"/>
-    <variable    name="creator"      value="taoadmin"/>
+    <variable    name="creator"      value="mitza"/>
     <variable    name="log_file"     value="vc71_s1d1o0.log"/>
     <variable    name="log_root"     value="w:\\autobuild_logs\\doc_trunk_chico.phx_winxp_vc71_s1d1o0"/>
     <variable    name="project_root" value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0"/>
