@@ -1,3 +1,8 @@
+Thu Mar 20 07:34:00 UTC 2008  Johnny WIllemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Ignore the word warning when it is used in a -I or -L compiler flag
+
 Wed Mar 19 14:20:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
