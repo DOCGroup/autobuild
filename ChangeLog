@@ -1,3 +1,16 @@
+Thu Mar 20 16:16:44 UTC 2008  ISIS Build Czar  <bczar@blade52.isislab.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/ciao_core.xml:
+        * configs/autobuild/isislab/emulab/fc6-env.xml:
+        * configs/autobuild/isislab/emulab/prism_integration.xml:
+        * configs/scoreboard/ciao.xml:
+        
+          Added first emulab builds. 
+        
+        * configs/autobuild/isislab/blade51:
+        
+          Made obsolete by the ciao_core build in emulab.
+        
 Thu Mar 20 07:34:00 UTC 2008  Johnny WIllemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:

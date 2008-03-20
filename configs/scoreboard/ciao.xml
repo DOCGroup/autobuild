@@ -65,8 +65,8 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
      <build>
-        <name>FC4_CIAO_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade51</url>
+        <name>FC6_CIAO_Core</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core_linux/</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>

@@ -1,18 +1,11 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-
-        <environment name="ACE_ROOT"        value="/build/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/build/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/build/ACE_wrappers/TAO/CIAO"/>
-        <environment name="XERCESCROOT"     value="/build/utils/xerces"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/build/ACE_wrappers/lib" />
-
-        <variable name="root"     value="/build/" />
+        <include name="fc6-env.xml" />
+        <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/build/" />
+        <variable name="log_root" value="/proj/autobuilds/logs/ciao_core/" />
         <variable name="configs"  value="Linux CIAO Core" />
-
     </configuration>
 
     <command name="status"            options="on" />
@@ -47,5 +40,4 @@
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
 
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --exclude /utils*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/isislab/blade51"/>
 </autobuild>
