@@ -1,3 +1,9 @@
+Tue Mar 25 11:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * autobuild.pl:
+        * common/simpleparser.pm:
+          Remove simpleparser.pm, always use betterparser.pm.
+
 Thu Mar 20 18:09:49 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * config/scoreboard/ciao.xml

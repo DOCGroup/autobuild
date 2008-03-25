@@ -29,7 +29,6 @@ our $dirsep =  (($^O eq "MSWin32") ? '\\' : '/');
 my $keep_going = 0;
 my $parse_only = 0;
 my $check_only = 0;
-my $better_parser = 1;  ## default
 my $xml_dump = 0;
 my $status_file = '';
 my $build_start_time = scalar gmtime(time());
@@ -112,10 +111,6 @@ while ($#ARGV >= 0)
     $verbose = $1;
     shift;
   }
-  elsif ($ARGV[0] =~ m/^-b$/i) {
-    $better_parser = 1;
-    shift;
-  }
   elsif ($ARGV[0] =~ m/^-c$/i) {
     $check_only = 1;
     shift;
@@ -130,10 +125,6 @@ while ($#ARGV >= 0)
   }
   elsif ($ARGV[0] =~ m/^-p$/i) {
     $parse_only = 1;
-    shift;
-  }
-  elsif ($ARGV[0] =~ m/^-s$/i) {
-    $better_parser = 0;
     shift;
   }
   elsif ($ARGV[0] =~ m/^-cvs_tag$/i) {
@@ -152,15 +143,13 @@ while ($#ARGV >= 0)
   elsif ($ARGV[0] =~ m!^(-|/\?)!) {
     print "Error: Unknown option $ARGV[0]\n" if ($ARGV[0] !~ m!^(-|/)\?!);
     print
-      "Useage: $0 [-k][-d][-v][-cvs_tag <tag>] files_to_process.xml [...]\n",
+      "Useage: $0 [-c][-cvs_tag <tag>][-d][-k][-p][-v][-xml] files_to_process.xml [...]\n",
       "where:\n",
-      "  -b    Use \"BetterParser\"", ($better_parser ? " (the default)\n" : "\n"),
       "  -c    Parse and Check each command but don't execute any\n",
       "  -cvs_tag <tag>  Checkout operations use <tag> instead of HEAD\n",
       "  -d    Deprecated features issue warning messages\n",
       "  -k    Keep going if errors encountered\n",
       "  -p    Parse only, don't check or execute commands\n",
-      "  -s    Use \"SimpleParser\"", ($better_parser ? "\n" : " (the default)\n"),
       "  -v    Verbose parsing messages displayed (more for each -v given)\n",
       "  -v0   Verbose off (default)\n",
       "  -v1   Verbose level 1\n",
@@ -179,18 +168,8 @@ if (scalar @files == 0) {
   exit 1;
 }
 
-##############################################################################
-# Choose which parser we are going to use to process the xml input files.
-#
-my $parser;
-if ($better_parser) {
-  require common::betterparser;
-  $parser = new BetterParser;
-}
-else {
-  require common::simpleparser;
-  $parser = new SimpleParser;
-}
+require common::betterparser;
+my $parser = new BetterParser;
 
 ##############################################################################
 # Subroutines to get execution path into @INC (nicked  from MPC:-)
@@ -477,8 +456,7 @@ INPFILE: foreach my $file (@files) {
   # Parse the actual xml input file
   #
   my $errors_found = !$parser->Parse ($file, \%data);
-  if ($better_parser                &&
-      scalar @{$data{ENVIRONMENT}}  &&
+  if (scalar @{$data{ENVIRONMENT}}  &&
       scalar @{$data{COMMANDS}}     &&       
       scalar @{$data{UNUSED_GROUPS}}  ) {
     print STDERR "WARNING: $file:\n",
