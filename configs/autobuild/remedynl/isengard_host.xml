@@ -37,7 +37,7 @@
 
     <command name="generate_workspace" options="ACE_Host.mwc -type gnuace" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k -j 5" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
