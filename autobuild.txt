@@ -2,20 +2,16 @@ Autorun.pl:
 ===========
 
 Option
--b Use "BetterParser" (This is the improved parser used by PrismTech and described bellow).
-
 -c Parse and Check each command but don't execute any. Causes autorun.pl to perform stages 1, 2 and 3 but not 4 (see below).
 
 -cvs_tag <tag>
 This sets the autobuild variable "cvs_tag" to the value given with the attribute. Checkout operations can use this variable instead of "HEAD" which is the default value if this attribute if not given.
 
--d Any use of Deprecated Prism Tech features issues a warning message and an equivalent format using the new features of "BetterParser". (Only useful when using "BetterParser")
+-d Any use of Deprecated Prism Tech features issues a warning message and an equivalent format using the new features of "BetterParser".
 
 -k Keep going if any errors are encountered. Similar to make -k, this attribute causes command errors during execution to be ignored so that all commands in the controlling xml file will be attempted if possible. Commands that fail the requirements checking step will be ignored during the execution phase.
 
 -p Parse only, don't check or execute commands. Causes autorun.pl to perform stage 1 only. Stage 2, 3 and 4 are not undertaken (see below).
-
--s Use "SimpleParser" (This is the, slightly modified, original parser as used by the Doc Group; It was originally updated by Prism Tech to add some extra xml tags and attributes but was eventually replaced by "BetterParser".)
 
 -v0 Verbose Mode (level 0) i.e. OFF. Does not output any trace messages during execution. This does not stop warning and error messages being displayed.
 -v1 Verbose Mode (level 1) Displays a small amount of detail as to what operation autobuild.pl is currently performing.
@@ -26,22 +22,22 @@ This sets the autobuild variable "cvs_tag" to the value given with the attribute
 
 --------------------
 
-Autorun.pl performs its operations on during 4 distinct stages on each input file (one file at a time from the list provided) being processed:
+Autorun.pl performs its operations during 4 distinct stages on each input file (one file at a time from the list provided) being processed:
 
 Stage 1 "Parsing"
 =================
 
-This uses simpleparser.pm or betterparser.pm as selected via -s or -b (or the current default). During the parsing stage, all variable definitions in the input file are acted upon immediately and stored in the autobuild variables list. This DOES NOT happen with Environment variables, where only a list of actions to perform later in stage 2 are stored. Any use of an environment variables in setting the value of an autobuild variable using the various variable tags will see the ORIGINAL environment value as when the program started until stage 2 has completed. If you want an autobuild variable to reflect the current environment variable value after stage 2 processing, you can place the ${environment_name} or %environment_name% strings anywhere inside the value of the autobuild variable, and these will be substituted with the current value of the environment variable at the time the autobuild variable is used (i.e. not when the autobuild variable is created). Command are also parsed and stored for later use.
+This uses betterparser.pm. During the parsing stage, all variable definitions in the input file are acted upon immediately and stored in the autobuild variables list. This DOES NOT happen with Environment variables, where only a list of actions to perform later in stage 2 are stored. Any use of an environment variables in setting the value of an autobuild variable using the various variable tags will see the ORIGINAL environment value as when the program started until stage 2 has completed. If you want an autobuild variable to reflect the current environment variable value after stage 2 processing, you can place the ${environment_name} or %environment_name% strings anywhere inside the value of the autobuild variable, and these will be substituted with the current value of the environment variable at the time the autobuild variable is used (i.e. not when the autobuild variable is created). Command are also parsed and stored for later use.
 
 Stage 2 "Environment Variables"
 ===============================
 
-Assuming no parsing errors, the change actions stored in stage 1 are acted upon. Now the environment variables will be set to the values actually desired. NOTE that Environment Variables are formed into collections called "Environment_Groups". (With "SimpleParser" only a single "default" group is valid and this cannot be changed; with the "BetterParser" any number of different groups can be created and the environment changes can be applied globally or restricted to certain groups only, see the description of "BetterParser" below.)
+Assuming no parsing errors, the change actions stored in stage 1 are acted upon. Now the environment variables will be set to the values actually desired. NOTE that Environment Variables are formed into collections called "Environment_Groups". (Any number of different groups can be created and the environment changes can be applied globally or restricted to certain groups only, see the description of "BetterParser" below.)
 
 Stage 3 "Command Requirements Checking"
 =======================================
 
-Before every command is checked, the default "root" / directory will be changed (if required for that command only) and the correct environment group will be selected before the Check_Requirements function of the command is called. With the "BetterParser" if the command tag has an associated IF attribute, it will be ignored during the check requirements stage, command tag IF attributes are only valid during stage 4.
+Before every command is checked, the default "root" / directory will be changed (if required for that command only) and the correct environment group will be selected before the Check_Requirements function of the command is called. If the command tag has an associated IF attribute, it will be ignored during the check requirements stage, command tag IF attributes are only valid during stage 4.
 
 Stage 4 "Command Execution"
 ===========================
@@ -50,28 +46,30 @@ Each command that has passed its Requirement checks will be executed in turn. Ag
 
 --------------------
 
-SimpleParser.pm:
-================
+BetterParser:
+=============
 
-This parser understands the following tags:
+This is an improvement on the "SimpleParser" and it allows more freedom. It IGNORES all text outside of <tags> but you should note however that "for correctness" and to avoid unintentional problems any windows directory paths given inside tags should be fully escaped, as the \ character inside double quotes acts as an escape character. (There are slightly more escape sequences from previous parsers, it understands \" \' \n \\ \t \b \r \x## \0x## and \0###.)
+<!-- comments --> and <? Comment ?> Tags are also allowed anywhere to denote comments. The contents of these tags are ignored and can not be nested.
 
-<!-- comments --> and <? Comment ?>
-These are allowed anywhere to denote comments. The contents of these tags are ignored and can not be nested.
+Only the <relative_env /> and <relative_var /> tags are "rigidly" defined (and are only supported for backward compatibility as they can now be performed better with <variable /> and <environment /> tags). All other tags can have any order of their attributes.
+<relative_var name="variable" base_var="variable" suffix_var="variable" join="text" />
+This command splices together two other named variables and stores the resultant string in variable being created. The join attribute is optional (defaulting to a null string) and if given its text will be spliced between the two other variable's text to form the result). All attributes must be in the order given above.
+<relative_env name="environment" base_var="variable" suffix_var="variable" join="text" type="" />
+All attributes must be in the order given above although both join and type are optional. This command splices together two other named autobuild variables and stores the resultant string in environment variable being created. The join attribute is optional (defaulting to a null string) and if given its text will be spliced between the two other variable's text to form the result). If the type is given it works just as for the environment tag above.
 
-<include name="file" />
+The <include name="filename" if="test" /> tag can now have an optional if attribute that will be evaluated immediatly during the parse stage.
 This can sit anywhere in the input file and causes the named file to be opened and parsed at the current point. This file must have it's own <autobuild> and optional <configuration> sections to be processed and any variables, environment and commands will be added to the current file's already processed tags.
 
 <autobuild> .. <autobuild/>
-This surrounds all of the command tags and any configuration section(s) that SimpleParser understands. It gets confused by anything outside of these tags (baring tagged comments and includes above).
-
+This surrounds all of the command tags and any configuration section(s) that the parser understands.
 <configuration> .. <configuration/>
 This section (if it exists) must sit within the <autobuild> section and contains the variable and environment definition tags.
+Both of the start section tags <autobuild if=""> and <configuration if=""> can have the optional if attribute. The text of this is substituted with autobuild variable and evaluated by the perl eval command to determine if the whole section will be acted on (the sections will always be parsed and errors reported even if not being acted on, <include /> tags will not work inside a dead section). For example multiple <autobuild> sections can be given, each controlled by the new built in autobuild variables isWin, isUnix etc.
 
-<command name="cmd" options="opt" directory="dir" if="test" />
-This tag can only exist with an <autobuild> section outside of a <configuarion> section. It details one of the registered commands (cmd) that will be executed in stage 4. All of the other attributes are optional but if specified MUST be in the order given above. The options if given will be passed to the command when it is executed as the arguments to that command; its format is dependant upon the individual command itself. The directory attribute specifies which directory the "root" autobuild variable will be changed to for this command (if this attribute is missing, the default "root" directory will be selected). The optional if attribute details a test that must be "true" for the command to actually execute at stage 4. The string provided will have autobuild variables substituted for any <variable> string given and the whole expression will be passed to the perl eval command for evaluation to determine the "true or false" outcome. (If the IF attribute is missing, the command will always be executed, unless it failed it's requirement checks at stage 3.)
+The <configuration>..</configuration> section records the definition of autobuild and environment variables.
 
-All other tags understood by "SimpleParser" are <configuration> section tags. This section records the definition of autobuild and environment variables.
-
+The "original" forms of the variable tag are:
 <variable name="variable" value="text" />
 <variable name="variable" default="text" />
 <variable name="variable" environment="env" />
@@ -80,42 +78,19 @@ Each of the above forms of the variable tag set the named variable to the text s
 Using "value" means the autobuild variable will always be set or changed to the text given.
 Using "default" means the autobuild variable will only set the variable if it has not already been defined a value.
 Using "environment" means setting the autobuild variable to the value of the "original" environment variable's value. Since this is looked up at the point the autobuild variable is being parsed, it will ALWAYS be the original value, if any. (If you want the current value AFTER any environment variable changes have been actions, use the ${environment_name} or %environment_name% strings within a normal value="" form.)
-Using "relative_value" means that the text will be scanned for other variable names (enclosed in <>) and the current value of such variables will be substituted into the text before the variable is stored. The eval attribute is optional (defaulting to false) but if given as eval="true" will cause the relative_value text to be evaluated by perl's eval statement after substitution and this result will be stored in the named variable. NOTE that the eval string itself does NOT get any variables substituted and only the exact string "true" will trigger this evaluation step. This form of the variable command allows complex expressions to be formed and evaluated for later use with command IF attributes, but note that the evaluation is performed BEFORE any commands are executed and is static after stage 1.
+Using "relative_value" means that the text will be scanned for other variable names (enclosed in <>) and the current value of such variables will be substituted into the text before the variable is stored. The eval attribute is optional (defaulting to false) but if given as eval="true" will cause the relative_value text to be evaluated by perl's eval statement after substitution and this result will be stored in the named variable. This form of the variable command allows complex expressions to be formed and evaluated for later use with command IF attributes, but note that the evaluation is performed BEFORE any commands are executed and is static after stage 1.
 
-
-<relative_var name="variable" base_var="variable" suffix_var="variable" join="text" />
-This command splices together two other named variables and stores the resultant string in variable being created. This unfortunately "looks up" the two other variables to determine their value and so any ${name} or %name% text within them will get substituted at this point, and the result stored. The join attribute is optional (defaulting to a null string) and if given its text will be spliced between the two other variable's text to form the result). All attributes must be in the order given above.
-
+The original form of the environment tag is:
 <environment name="env_name" value="text" type="type") />
-All attributes must be in the order given above although type is optional. This simply RECORDS the change of value to the named environment variable (that will be acted upon in stage 2). The type attribute is optional (defaulting to "replace"). SimpleParser understands only the following types:
-"replace" which simply resets or creates the environment variable with the value given,
-"prefix" which appends the original value of the environement variable to the end of the string, joind with a "path" separating character as defined by the platform autobuild.pl is running on,
-"suffix" which appends the value given to the end of the current value of the environment variable again seporated by a "path" character or
-"ifundefined" which will only create a new environment variable with the given value if it does not already exist.
+The attribute type is optional. This simply RECORDS the change of value to the named environment variable (that will be acted upon in stage 2). The type attribute is optional (defaulting to "replace").
 
-<relative_env name="environment" base_var="variable" suffix_var="variable" join="text" type="" />
-All attributes must be in the order given above although both join and type are optional. This command splices together two other named autobuild variables and stores the resultant string in environment variable being created. Again this unfortunately "looks up" the two other variables to determine their value and so any ${name} or %name% text within them will get substituted at this point, and the result stored. The join attribute is optional (defaulting to a null string) and if given its text will be spliced between the two other variable's text to form the result). If the type is given it works just as for the environment tag above.
-
---------------------
-
-BetterParser:
-=============
-
-This is an improvement on the "SimpleParser" and it allows more freedom. It IGNORES all text outside of <tags> but you should note however that "for correctness" and to avoid unintentional problems any windows directory paths given inside tags should be fully escaped, as the \ character inside double quotes acts as an escape character. (This is similar to SimpleParser but there are slightly more escape sequences in BetterParser which understands \" \' \n \\ \t \b \r \x## \0x## and \0###.)
-
-Only the <relative_env /> and <relative_var /> tags are "rigidly" defined (and are only supported for backward compatibility as they can now be performed better with <variable /> and <environment /> tags). All other tags can have any order of their attributes.
-
-The <include name="filename" if="test" /> tag can now have an optional if attribute that will be evaluated immediatly during the parse stage.
-
-Both of the start section tags <autobuild if=""> and <configuration if=""> can have the optional if attribute. The text of this is substituted with autobuild variable and evaluated by the perl eval command to determine if the whole section will be acted on (the sections will always be parsed and errors reported even if not being acted on, <include /> tags will not work inside a dead section). For example multiple <autobuild> sections can be given, each controlled by the new built in autobuild variables isWin, isUnix etc.
-
-The <variable /> and <environment /> tags have been enhanced, all of the attributes are optional as long as the variable has been named. The default value defaults to a null string, and multiple values can be specified and they will be spliced together to form the actual value. Both tags understand the following attributes:
+The <variable /> and <environment /> tags have been enhanced with betterparser, all of the attributes are optional as long as the variable has been named. The default value defaults to a null string, and multiple values can be specified and they will be spliced together to form the actual value. Both tags understand the following attributes:
 
 If="text" defaults to true, but otherwise the text given will have autobuild variables substituted into the string and then perl eval to determine IF the variable or environment variable instruction will be acted upon. This is tested immediately during the parse stage.
 
 name="name" This simply names the variable being defined.
 
-value="text" This gives a textual value to the variable being defined. Multile values will be spliced together in the order specified.
+value="text" This gives a textual value to the variable being defined. Multiple values will be spliced together in the order specified.
 
 default="text" If default is given (with or without ="text" anywhere in the tag, it makes the type of the variable default, and the value will then only be set if it has not already been defined.)
 
@@ -130,6 +105,11 @@ Substitute_variables="text" If the text is not given or is given as "true" will 
 eval="text" If "text" is not given or is given as "true", means that the whole resultant value once complete will be passed to the perl eval command and the result will be stored.
 
 type="text" If the type is not given it is assumed to be "replace" unless the "default" attribute is seen. It can take any of "replace", "set", "unset", "delete", "remove", "ifundefined", "default", "prefix", "suffix", "postfix". The various types can also appear as attributes (which mean the same thing as type="text") with any value given being used to created the value of the resultant variable. Autobuild variables can have a type as well as environment variables, however prefix, suffix and postfix variable types do not have any joining characters between the original value and the newly defined value; environment variables do still get treated to the platform's path separating character.
+replace/set which simply resets or creates the environment variable with the value given,
+prefix which appends the original value of the environement variable to the end of the string, joind with a "path" separating character as defined by the platform autobuild.pl is running on,
+suffix/postfix which appends the value given to the end of the current value of the environment variable again seporated by a "path" character or
+ifundefined/default which will only create a new environment variable with the given value if it does not already exist.
+unset/delete/remove which will remove the variable.
 
 groups="group1,group2,group3" This is only valid inside <environment /> tags, if not specified, ALL groups will have the environment modifications applied. If given, only each of the groups named in the groups=list will have the environment modifications applied. (This allows different paths or other environment variables to be setup only for certain commands). Simply adding a group name to the <environment /> tag creates that group if it doesn't already exist, each group gets a copy of the original environment before any environment variables have been modified.
 
@@ -139,7 +119,8 @@ For example:
 <variable name="jim" value="hello" value="this is" join=dir value="simon" variable="fred" />
 Would result in the variable simon being set to the string "hello this is/simon/fredvalue" with fredvalue being the actual value of the "fred" variable. Note you can use join="" to join multiple values without any joining characters.
 
-The <command /> tag also has been enhanced in a similar way to the <variable /> and <environment /> tags, so it will allow it's attributes in any order. It allows the following attributes:
+The <command /> tag also has been enhanced in a similar way to the <variable /> and <environment /> tags, so it will allow it's attributes in any order.
+This tag can only exist with an <autobuild> section outside of a <configuarion> section. It details one of the registered commands, via the name attribute, that will be executed in stage 4. All of the other attributes are optional. The options if given will be passed to the command when it is executed as the arguments to that command; its format is dependant upon the individual command itself. The directory attribute specifies which directory the "root" autobuild variable will be changed to for this command (if this attribute is missing, the default "root" directory will be selected). The optional if attribute details a test that must be "true" for the command to actually execute at stage 4. The string provided will have autobuild variables substituted for any <variable> string given and the whole expression will be passed to the perl eval command for evaluation to determine the "true or false" outcome. (If the IF attribute is missing, the command will always be executed, unless it failed it's requirement checks at stage 3.) It allows the following attributes:
 
 Name="name" Must be a registered command.
 
