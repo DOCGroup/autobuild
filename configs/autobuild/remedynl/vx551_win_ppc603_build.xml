@@ -2,8 +2,8 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"                value="F:/VxWorks/vx551_win_ppc/ACE_wrappers" />
-        <environment name="TAO_ROOT"                value="F:/VxWorks/vx551_win_ppc/ACE_wrappers/TAO"/>
+        <environment name="ACE_ROOT"                value="Z:/VxWorks/vx551_win_ppc/ACE_wrappers" />
+        <environment name="TAO_ROOT"                value="Z:/VxWorks/vx551_win_ppc/ACE_wrappers/TAO"/>
         <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/Host/ACE_wrappers"/>
         <environment name="PATH"                    value="C:\\Tornado2.2\\host\\x86-win32\\bin;C:\\tools\\nixtools;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\lib;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\bin;c:\\perl\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;" type="prefix" />
         <environment name="WIND_BASE"               value="C:/Tornado2.2"/>
@@ -16,9 +16,9 @@
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="45"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
 
-        <variable name="root"       value="F:/VxWorks/vx551_win_ppc/" />
+        <variable name="root"       value="Z:/VxWorks/vx551_win_ppc/" />
         <variable name="log_file" 	value="build.txt" />
-        <variable name="log_root"   value="F:/VxWorks/vx551_win_ppc/" />
+        <variable name="log_root"   value="Z:/VxWorks/vx551_win_ppc/" />
         <variable name="configs"    value="VxWorks STATIC MINIMUM" />
         <variable name="svn_program"       value="c:\\cygwin\\bin\\svn" />
 
@@ -47,6 +47,8 @@
     <command name="generate_workspace" options="TAO_Host.mwc -type gnuace" />
 
     <command name="make"              options="-k " />
+
+    <command name="auto_run_tests" options="-a -o" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
