@@ -1,3 +1,10 @@
+Thu Mar 27 09:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.bat:
+          Stop using the missing -b flag to autobuild.
+
 Wed Mar 26 12:15:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * autobuild.txt:
