@@ -27,6 +27,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="F:\\VxWorks\\ppc603\\" />
         <variable name="configs"  value="VxWorks Exceptions VxWorks63" />
+        <variable name="svn_program"  value="c:\\cygwin\\bin\\svn" />
 
     </configuration>
 
