@@ -1,3 +1,10 @@
+Thu Mar 27 14:17:54 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * configs/autobuild/pantera_isis/Code_Coverage.xml:
+
+          Added gcov options to LDFLAGS too.  This should correct the link
+          problems.
+
 Thu Mar 27 09:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
@@ -19,7 +26,7 @@ Tue Mar 25 11:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 Thu Mar 20 18:09:49 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * config/scoreboard/ciao.xml
-        
+
           Corrected url for ciao_core build.
 
 Thu Mar 20 16:16:44 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
@@ -28,13 +35,13 @@ Thu Mar 20 16:16:44 UTC 2008  William R. Otte <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/emulab/fc6-env.xml:
         * configs/autobuild/isislab/emulab/prism_integration.xml:
         * configs/scoreboard/ciao.xml:
-        
-          Added first emulab builds. 
-        
+
+          Added first emulab builds.
+
         * configs/autobuild/isislab/blade51:
-        
+
           Made obsolete by the ciao_core build in emulab.
-        
+
 Thu Mar 20 07:34:00 UTC 2008  Johnny WIllemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:
