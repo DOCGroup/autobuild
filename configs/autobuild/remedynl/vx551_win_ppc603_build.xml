@@ -16,9 +16,9 @@
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="45"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
 
-        <variable name="root"       value="Z:/VxWorks/vx551_win_ppc/" />
+        <variable name="root"       value="F:/VxWorks/vx551_win_ppc/" />
         <variable name="log_file" 	value="build.txt" />
-        <variable name="log_root"   value="Z:/VxWorks/vx551_win_ppc/" />
+        <variable name="log_root"   value="F:/VxWorks/vx551_win_ppc/" />
         <variable name="configs"    value="VxWorks STATIC MINIMUM" />
         <variable name="svn_program"       value="c:\\cygwin\\bin\\svn" />
 
