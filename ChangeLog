@@ -1,3 +1,8 @@
+Thu Apr 03 09:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/*.xml:
+          Add config item QUICK for quicker test run.
+
 Thu Mar 27 14:17:54 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * configs/autobuild/pantera_isis/Code_Coverage.xml:
