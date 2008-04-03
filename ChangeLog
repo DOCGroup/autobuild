@@ -1,3 +1,9 @@
+Thu Apr 03 12:05:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+          Add MFC VC8 Vista build.
+
 Thu Apr 03 09:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/*.xml:
