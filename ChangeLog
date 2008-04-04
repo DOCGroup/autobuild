@@ -1,3 +1,10 @@
+Fri Apr  4 19:40:22 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_earwig_winxp-x64_nmake_d1o0.xml:
+        * configs/scoreboard/tao.xml:
+
+          Upgraded to the latest Windows SDK 64-bit toolchain, based on VC9.
+
 Fri Apr 04 15:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
