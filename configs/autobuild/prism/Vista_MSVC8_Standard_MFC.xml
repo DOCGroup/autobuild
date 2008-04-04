@@ -8,10 +8,10 @@
         <environment name="RSYNC_RSH" value="C:\\cygwin\\bin\\ssh" />
         <environment name="SSL_ROOT"  value="C:\\openssl-0.9.7i" />
 
-        <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc71\\standardMFC" />
+        <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardMFC" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="T:\\doc-scoreboard\\windows\\VC8_StandardMFC" />
-        <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Standard MFC (Non-Inline, Non-Debug)" />
+        <variable name="name"         value="WinXP VC8 (VS.Net2005) DLL Standard MFC (Non-Inline, Non-Debug)" />
         <variable name="configs"      value="WIN32 Win32 MFC VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK" />
     </configuration>
 
@@ -35,7 +35,7 @@
     <command name="print_perl_version" />
     <command name="print_openssl_version"/>
 
-    <command name="generate_workspace" options="-exclude prism,TAO/CIAO,TAO/oldCIAO,TAO/TAO_*.mwc -recurse -type vc71" />
+    <command name="generate_workspace" options="-exclude prism,TAO/CIAO,TAO/oldCIAO,TAO/TAO_*.mwc -recurse -type vc8" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -ALL -k" />
 

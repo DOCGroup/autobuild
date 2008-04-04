@@ -1,3 +1,8 @@
+Fri Apr 04 15:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+          Cut'n'paste vc71 miss edits.
+
 Thu Apr 03 12:05:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
