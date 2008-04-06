@@ -11,6 +11,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Linux</name>
      <build>
+      <name>Fedora Rawhide i386</name>
+      <url>http://www.42tools.com/sites/default/files/downloads/tao_autobuild_logs/fedora_rawhide/index.html</url>
+      <build_sponsor>42tools</build_sponsor>
+      <build_sponsor_url>http://www.42tools.com/</build_sponsor_url>
+     </build>
+     <build>
        <name>RHEL50_GCC4.1.1</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_gcc41</url>
        <build_sponsor>Remedy IT</build_sponsor>
