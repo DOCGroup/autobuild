@@ -57,9 +57,10 @@ my @ordered;
 
 my @nogroup;
 
-my $orange_default = 24;
-my $red_default = 48;
-my $keep_default = 5;
+my $orange_default = 24; # 1 day old before orange coloured build.
+my $red_default = 48;    # 2 days old before red coloured build.
+my $keep_default = 1;    # Scoreboard only uses the most recent build anyway, for more
+                         # consult the actual build machine where we store multiple builds.
 my $sched_file = "";
 my @days = ( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" );
 
@@ -696,7 +697,6 @@ print "in local_update_cache, post=$post\n";
 sub clean_cache ($)
 {
     my $directory = shift;
-    my $keep = 1; # Since the scoreboard is a cached copy of the actual machine's copy where we store multiple builds.
 
     print "Cleaning Local Cache\n" if ($verbose);
 

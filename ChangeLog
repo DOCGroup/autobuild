@@ -1,3 +1,16 @@
+Mon Apr 07 08:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * scoreboard.pl:
+          Only keep one version of the build on the scoreboard machine.
+          Revistited, previous mod was ineffective due to another change
+          that I was unaware of.
+          Since this is a copy of the original build (and this can keep
+          any number of older versions independantly as mapped to the
+          index displayed by the scoreboard) don't waste the space on the
+          public scoreboard for any older versions. This can STILL be
+          over-ridden by a keep=# setting within the scoreboard's tao.xml
+          for any individual entry.
+
 Fri Apr  4 19:40:22 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_earwig_winxp-x64_nmake_d1o0.xml:
