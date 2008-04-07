@@ -12,7 +12,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
      <build>
       <name>Fedora_Rawhide_i386</name>
-      <url>http://www.42tools.com/sites/default/files/downloads/tao_autobuild_logs/fedora_rawhide/index.html</url>
+      <url>http://www.42tools.com/sites/default/files/downloads/tao_autobuild_logs/fedora_rawhide</url>
       <build_sponsor>42tools</build_sponsor>
       <build_sponsor_url>http://www.42tools.com</build_sponsor_url>
      </build>
