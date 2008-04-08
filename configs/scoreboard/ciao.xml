@@ -227,6 +227,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
+     <name>RHEL50_ICC10.1_64bit</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc101_64/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
      <name>Debian_Etch_ARM_Cross_Host</name>
      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_host/</url>
      <build_sponsor>ISIS</build_sponsor>
