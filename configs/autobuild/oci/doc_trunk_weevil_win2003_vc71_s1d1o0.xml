@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on oci1329xp) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc71 -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -environment SSL_ROOT=C:\OpenSSL -environment "prefix PATH=C:\OpenSSL\bin;" -featureflags ssl=1 -hostname weevil -outdir . -platform win2003 -->
+  <!-- The command used to create this file (on weevil) was -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler vc71 -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\doc\ACE_wrappers\MPC -environment SSL_ROOT=C:\OpenSSL -environment "prefix PATH=C:\OpenSSL\bin;" -featureflags ssl=1 -outdir \mitza -sandbox 1 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO\\CIAO"/>
@@ -12,7 +12,7 @@
     <environment name="SSL_ROOT"     value="C:\\OpenSSL"/>
     <environment name="TAO_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO"/>
     <variable    name="build_name"   value="vc71_s1d1o0"/>
-    <variable    name="creator"      value="mitza"/>
+    <variable    name="creator"      value="mitza@ociweb.com"/>
     <variable    name="log_file"     value="vc71_s1d1o0.log"/>
     <variable    name="log_root"     value="w:\\autobuild_logs\\doc_trunk_weevil_win2003_vc71_s1d1o0"/>
     <variable    name="project_root" value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0"/>
@@ -63,7 +63,7 @@
   <command name="vc7make" options="/build debug TAO/orbsvcs/performance-tests/perf.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -Config SSL -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 1200000\x22 -Config SSL -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
