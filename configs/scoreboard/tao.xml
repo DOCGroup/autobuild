@@ -154,6 +154,12 @@ all the OS/platform combinations on which TAO is tested everyday.
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
         </build>
         <build>
+           <name>Vista_VC8_Standard_MFC</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC8_StandardMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP_RAD_Studio_2007_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dd/</url>
             <build_sponsor>Remedy IT</build_sponsor>

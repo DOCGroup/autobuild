@@ -1,3 +1,8 @@
+Thu Apr 10 08:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/tao.xml:
+          Add VC8 MFC Vista build to scoreboard.
+
 Tue Apr  8 22:06:56 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71_release.xml:
