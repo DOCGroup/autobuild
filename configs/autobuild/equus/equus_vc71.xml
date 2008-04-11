@@ -19,7 +19,7 @@
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\\bczar\\CoSMIC_VC71_Debug" />
         <variable name="project_root" value="C:\\bczar\\CoSMIC_VC71_Debug\\ACE" />
-        <variable name="name"     value="CoSMIC VC71 WinXP" />
+        <variable name="name"     value="CoSMIC Debug VC71 GME-6.11.9 WinXP" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />

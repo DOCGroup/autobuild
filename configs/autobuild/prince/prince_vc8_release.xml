@@ -1,11 +1,11 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\\mySVN\\ACE_wrappers\\ACE" />
-        <environment name="TAO_ROOT"     value="C:\\mySVN\\ACE_wrappers\\TAO"/>
-        <environment name="MPC_ROOT"     value="C:\\mySVN\\ACE_wrappers\\MPC"/>
+        <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\ACE" />
+        <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\CIAO"/>
+        <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\\Program Files\\Windows Installer XML v3"/>
-        <environment name="CVS_RSH"      value="plink.exe" />
         <environment name="XERCESCROOT"   value="C:\\Libraries\\xerces-c-2_7_0-win32-vc8"/>
         <environment name="BOOST_ROOT"    value="C:\\Libraries\\Boost"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>
@@ -14,15 +14,15 @@
         <environment name="UDM_PATH" 	  value="C:\\Program Files\\ISIS\\UDM" />
         <environment name="UDM_VERSION"	  value="UDMDLL_3_1_2" />
         <environment name="GME_VERSION"	  value="7_6_29" />
-        <environment name="COSMIC_ROOT"  value="C:\\mySVN\\CoSMIC" />
+        <environment name="COSMIC_ROOT"  value="C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC" />
         <environment name="ZLIB_ROOT" value="C:\\Libraries\\zlib-1.2.3" />
-        <environment name="PATH"         value="C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\Libraries\\Boost\\lib;C:\\mySVN\\ACE_wrappers\\ACE\\lib;C:\\mySVN\\CoSMIC\\bin;C:\\Libraries\\xerces-c-2_7_0-win32-vc8\\bin;C:\\Program Files\\ISIS\\UDM\\bin;C:\\Program Files\\ISIS\\UDM\\etc;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xalan-c_1_8_0\\bin;C:\\Perl\\site\\bin;C:\\Perl\\bin;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xerces-c_2_5_0\\bin;C:\\Putty;C:\\putty\\bin;C:\\putty\\usr\\local\\wbin;C:\\Program Files\\Subversion\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\Tools\\Bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Libraries\\zlib-1.2.3\\bin" />
+        <environment name="PATH"         value="C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\Libraries\\Boost\\lib;C:\\bczar\\CoSMIC_VC8_Release\\ACE\\lib;C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC\\bin;C:\\Libraries\\xerces-c-2_7_0-win32-vc8\\bin;C:\\Program Files\\ISIS\\UDM\\bin;C:\\Program Files\\ISIS\\UDM\\etc;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xalan-c_1_8_0\\bin;C:\\Perl\\site\\bin;C:\\Perl\\bin;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xerces-c_2_5_0\\bin;C:\\Putty;C:\\putty\\bin;C:\\putty\\usr\\local\\wbin;C:\\Program Files\\Subversion\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\Tools\\Bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Libraries\\zlib-1.2.3\\bin" />
         <variable name="configs"  value="Win32 VC8 ZLIB Exceptions" />
-        <variable name="root"     value="C:\\mySVN" />
+        <variable name="root"     value="C:\\bczar\\CoSMIC_VC8_Release" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="C:\\mySVN\\VC8_Release_Log" />
-        <variable name="project_root" value="C:\\mySVN\\ACE_wrappers\\ACE" />
-        <variable name="name"     value="CoSMIC VC8 GME-7.6.29 WinXP Release" />
+        <variable name="log_root" value="C:\\bczar\\CoSMIC_VC8_Release" />
+        <variable name="project_root" value="C:\\bczar\\CoSMIC_VC8_Release\\ACE" />
+        <variable name="name"     value="CoSMIC Release VC8 GME-7.6.29 WinXP" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
@@ -34,6 +34,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO TAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/CIAO CIAO" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 
@@ -54,14 +55,14 @@
     <command name="generate_workspace" options="-type vc8 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.mwc"/>
     <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer -Release -k" />
 
-    <command name="anonymous_shell"   options="md5sum C:\\mySVN\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > C:\\mySVN\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC8-nightly-md5sum.txt"/>
-<!--    <command name="anonymous_shell"   options="pscp -p -C C:\\mySVN\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC8"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\\mySVN\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC8-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC8"/>
+    <command name="anonymous_shell"   options="md5sum C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC8-nightly-md5sum.txt"/>
+<!--    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC8"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC8-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC8"/>
 -->
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-<!--    <command name="anonymous_shell"   options="pscp -p -C C:\\mySVN\\VC8_Release_Log\\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/prince_cosmic_release"/>
-    <command name="anonymous_shell"   options="pscp -p -C C:\\mySVN\\VC8_Release_Log\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/prince_cosmic_release"/>
+<!--    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC8_Release\\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/prince_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC8_Release\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/prince_cosmic_release"/>
 -->
 </autobuild>

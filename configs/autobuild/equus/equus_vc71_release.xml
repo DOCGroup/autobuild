@@ -22,7 +22,7 @@
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\\bczar\\CoSMIC_VC71_Release" />
         <variable name="project_root" value="C:\\bczar\\CoSMIC_VC71_Release\\ACE" />
-        <variable name="name"     value="CoSMIC VC71 WinXP Release" />
+        <variable name="name"     value="CoSMIC Release VC71 GME-6.11.9 WinXP" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
