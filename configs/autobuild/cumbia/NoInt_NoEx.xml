@@ -12,7 +12,7 @@
 
         <variable name="root"     value="/build/isisbuilds/NoInt/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/build/isisbuilds/NoInt/" />
+        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/cumbia_NoInt"/>
         <variable name="configs"  value="Linux NoInterceptor Core" />
     </configuration>
 
@@ -41,10 +41,9 @@
 
     <command name="generate_workspace" options="-exclude TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k -j3" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/cumbia_NoInt"/>
 </autobuild>

@@ -1,3 +1,28 @@
+Tue Apr 15 19:36:24 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/XSC.xml:
+        
+          Fixed paths. 
+        
+        * configs/autobuild/cumbia/CORBAecompact.xml:
+        * configs/autobuild/cumbia/CORBAemicro.xml:
+        * configs/autobuild/cumbia/NoIIOP.xml:
+        * configs/autobuild/cumbia/NoInt.sh:
+        * configs/autobuild/cumbia/NoInt_NoEx.xml:
+        * configs/autobuild/cumbia/driver.sh:
+
+          Transfered builds from ISISlab. 
+        
+        * configs/autobuild/lindy_isis/host.xml:
+        * configs/autobuild/lindy_isis/target.xml:
+        * configs/autobuild/lindy_isis/ts-target.xml:
+
+          ARM cross-builds.
+        
+        * configs/scoreboard/ciao.xml:
+
+          Fixed path for TS-ARM autobuld.
+        
 Fri Apr 11 00:47:37 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71.xml:
