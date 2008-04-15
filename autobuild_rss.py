@@ -159,22 +159,25 @@ def fetch_latest (builds):
     valid_latest = re.compile ("\d\d\d\d_\d\d")
     
     for build in builds:
-        uri = build[1]
-        
-        if opts.uri_regex != "":
-            uri = re.sub (opts.uri_regex[0],
-                          opts.uri_regex[1],
-                          uri)
-
-        latest = urlopen (uri + "/latest.txt")
-
+        try:
+            uri = build[1]
+            
+            if opts.uri_regex != "":
+                uri = re.sub (opts.uri_regex[0],
+                              opts.uri_regex[1],
+                              uri)
+                
+            latest = urlopen (uri + "/latest.txt")
+                
         #Get the contents, and make sure it represents a valid latest file
-        string = latest.read ()
-        if valid_latest.match (string) != None:
-            latest_builds.append ((build[0],build[1],string))
-        else:
-            print "ERROR: " + build[0] + " returned an invalid latest file!"
-        latest.close ()
+            string = latest.read ()
+            if valid_latest.match (string) != None:
+                latest_builds.append ((build[0],build[1],string))
+            else:
+                print "ERROR: " + build[0] + " returned an invalid latest file!"
+            latest.close ()
+        except:
+            print "Error: Failed to open latest file for " + build[0]
 
     return latest_builds
 
