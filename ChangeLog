@@ -1,3 +1,9 @@
+Mon Apr 21 12:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+          Remove temporary directory redirection and fix VC8 build generation.
+
 Tue Apr 15 21:45:16 UTC 2008  Iliyan Jeliazkov  <iliyan@ociweb.com>
 
         * configs/scoreboard/tao.xml:

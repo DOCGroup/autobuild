@@ -2,7 +2,7 @@
 rem $Id$
 set THIS_BUILD=C:\Overnight_Builds\DOC_Group\vc8\standardMFC\
 echo ==============================================================================
-echo                          DOC_Group MSVC71 Standard MFC
+echo                          DOC_Group MSVC8 Standard MFC
 echo ==============================================================================
 if not exist %THIS_BUILD%.disable goto doBuild
   echo.
@@ -35,11 +35,11 @@ if "%ORIGINAL_LIB%" == "" (
    set LIB=%ORIGINAL_LIB%
 )
 call "C:\Program Files\Microsoft Visual Studio 8\Common7\Tools\vsvars32.bat"
-mkdir C:\temp > nul: 2>&1
-mkdir C:\temp\DOC_Group > nul: 2>&1
-mkdir C:\temp\DOC_Group\standardMFC > nul: 2>&1
-set TEMP=C:\temp\DOC_Group\standardMFC
-set TMP=%TEMP%
+rem mkdir C:\temp > nul: 2>&1
+rem mkdir C:\temp\DOC_Group > nul: 2>&1
+rem mkdir C:\temp\DOC_Group\standardMFC > nul: 2>&1
+rem set TEMP=C:\temp\DOC_Group\standardMFC
+rem set TMP=%TEMP%
 echo.
 echo Updating autobuild
 C:
