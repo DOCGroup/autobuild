@@ -433,6 +433,7 @@ INPFILE: foreach my $file (@files) {
     $this_file = File::Spec->rel2abs ($this_file);
   }
   $data{VARS}->{AUTOBUILD_PL_PATH} = $this_file;
+  $data{VARS}->{AUTOBUILD_ROOT} = File::Basename::dirname ($this_file);
 
   # Setup some other usefull variables before parsing the actual xml file.
   #

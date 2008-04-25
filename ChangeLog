@@ -1,3 +1,15 @@
+Fri Apr 25 21:09:38 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * autobuild.pl:
+
+          Added a predefined variable, AUTOBUILD_ROOT, which is the directory
+          containing autobuild.pl.
+
+        * win32sandbox/StdAfx.h:
+        * win32sandbox/sandbox64.exe:
+
+          Added a 64-bit (x64) version of the sandbox executable.
+
 Mon Apr 21 12:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
@@ -17,10 +29,10 @@ Tue Apr 15 21:45:16 UTC 2008  Iliyan Jeliazkov  <iliyan@ociweb.com>
 Tue Apr 15 19:51:31 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * autobuild_rss.py:
-        
+
           Fixed a bug which would cause this script to barf if it couldn't
-          find a particular latest file. 
-        
+          find a particular latest file.
+
 Tue Apr 15 19:36:24 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/XSC.xml:
