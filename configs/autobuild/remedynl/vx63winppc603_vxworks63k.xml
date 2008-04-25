@@ -2,9 +2,9 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="Z:\\VxWorks\\ppc603_shared\\ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="Z:\\VxWorks\\ppc603_shared\\ACE_wrappers\\TAO"/>
-        <environment name="CIAO_ROOT"        value="Z:\\VxWorks\\ppc603_shared\\ACE_wrappers\\CIAO"/>
+        <environment name="ACE_ROOT"        value="F:\\VxWorks\\ppc603\\ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="F:\\VxWorks\\ppc603\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"        value="F:\\VxWorks\\ppc603\\ACE_wrappers\\CIAO"/>
         <environment name="HOST_ROOT"     value="C:\\ACE\\VxWorks\\Host\\ACE_wrappers" />
         <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\bin;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\lib;C:\\Perl\\bin;c:\\Cygwin\\bin" type="prefix" />
         <environment name="PATH"            value="C:\\WindRiver\\workbench-2.5\\foundation\\4.0.9\\x86-win32\\bin;C:\\WindRiver\\vxworks-6.3\\host\\x86-win32\\bin;C:\\WindRiver\\gnu\\3.4.4-vxworks-6.3\\x86-win32\\bin;C:\\WindRiver\\workbench-2.5\\x86-win32\\bin;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\lib;" type="prefix" />
@@ -24,9 +24,9 @@
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.131:80"/>
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
 
-        <variable name="root"     value="Z:\\VxWorks\\ppc603_shared\\" />
+        <variable name="root"     value="F:\\VxWorks\\ppc603\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="Z:\\VxWorks\\ppc603_shared\\" />
+        <variable name="log_root" value="F:\\VxWorks\\ppc603\\" />
         <variable name="configs"  value="VxWorks Exceptions VxWorks63" />
         <variable name="svn_program"  value="c:\\cygwin\\bin\\svn" />
 
