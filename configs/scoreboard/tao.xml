@@ -354,6 +354,12 @@ all the OS/platform combinations on which TAO is tested everyday.
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
+     <name>VxWorks6.3_PPC603_Shared_Test</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/63winkppc603_test/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
      <name>VxWorks6.4_ppc_host</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64lin_ppc_host/</url>
      <build_sponsor>Remedy IT</build_sponsor>
