@@ -12,7 +12,7 @@
         <variable name="log_file"     value="debug_wchar.txt" />
         <variable name="log_root"     value="/acebuilds/logs/jane/dev/debug_wchar" />
         <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
-        <variable name="configs"      value="BAD_AIO Exceptions SSL CHECK_RESOURCES" />
+        <variable name="configs"      value="BAD_AIO Exceptions SSL CHECK_RESOURCES WCHAR" />
 
     </configuration>
 
@@ -40,7 +40,7 @@
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/debug_wchar -type gnuace" />
 
     <command name="file_manipulation" options="type=create file=build/debug_wchar/ace/config.h output='#define ACE_USES_WCHAR\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/debug_wchar/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/debug_wchar/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCFLAGS += -Wno-unused-parameter\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="g++" />
