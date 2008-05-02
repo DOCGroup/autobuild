@@ -948,6 +948,7 @@ sub Test_Handler ($)
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Can't call method/
         || $s =~ m/memPartAlloc: block too big/
+        || $s =~ m/C interp: token/
         || $s =~ m/ld error: error loading file/
         || $s =~ m/aborted due to compilation errors/
         || $s =~ m/memPartFree: invalid block/ )
