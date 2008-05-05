@@ -25,7 +25,7 @@
 
     <command name="vc7make" options="/clean Debug TAO_Host.sln"/>
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\n}\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_Host.mwc output='workspace {\nace\napps/gperf/src\nACEXML\nprotocols\nKokyu\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\nTAO/CIAO/tools/IDL3_to_IDL2\nTAO/examples\nTAO/orbsvcs\n}\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='minimum_corba=1\n'"/>
 
