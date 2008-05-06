@@ -12,10 +12,12 @@
         <environment name="RSYNC_RSH"               value="C:\\cygwin\\bin\\ssh" />
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.74"/>
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/aragon/vx551_win_ppc/ACE_wrappers"/>
-        <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.129:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="45"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="20"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.78"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="10001"/>
+        <environment name="ACE_TEST_VERBOSE" value="1"/>
 
         <variable name="root"       value="Z:/aragon/vx551_win_ppc/" />
         <variable name="log_file" 	value="build.txt" />
