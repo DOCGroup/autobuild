@@ -3,7 +3,7 @@
 # $Id$
 #
 
-cd /export/home/buid/ACE/autobuild
+cd /export/home/build/ACE/autobuild
 PATH=/usr/local/bin:/etc:/opt/SUNWspro/bin:/usr/ccs/bin:/usr/ucb:/opt/csw/bin:$PATH
 LD_LIBRRAY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export PATH
