@@ -1,3 +1,11 @@
+Tue May  6 13:12:24 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/test.pm:
+        * docs/autobuild.txt:
+
+          Changed the test command to execute from project_root instead of
+          root.
+
 Fri May 02 09:00:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:

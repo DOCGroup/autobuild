@@ -97,6 +97,8 @@ status - Modifies the build status.  The effects of this command are seen as
 svn - Executes an svn sub-command, such as co or revert.  As part of each
   'svn' command, a 'cleanup' sub-command is run before and a 'status' is run
   afterward.
+test - Run arbitrary commands in the user shell starting in the project_root
+  variable setting.  Test status is indicated in the log file.
 vc6make, vc7make, vmsmake, win32make, wincemake - These all correspond to
   building the source code for various platforms with different
   compilers/IDEs.

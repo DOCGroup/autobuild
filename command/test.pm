@@ -3,9 +3,9 @@
 #
 
 ###############################################################################
-# NOTE this is the same as "shell" as it executes it's options string, but
+# NOTE this is similar to "shell" as it executes it's options string, but
 # the execution is attributed to the "Test" stage instead of the "Setup"
-# stage of the build.
+# stage of the build and is executed from project_root instead of root.
 
 package Test;
 
@@ -33,10 +33,10 @@ sub new
 sub CheckRequirements ()
 {
     my $self = shift;
-    my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
-    if (!defined $root) {
-        print STDERR __FILE__, ": Requires \"root\" variable\n";
+    if (!defined $project_root) {
+        print STDERR __FILE__, ": Requires \"project_root\" variable\n";
         return 0;
     }
 
@@ -49,23 +49,23 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
-    if (!-r $root || !-d $root) {
-        mkpath($root);
+    if (!-r $project_root || !-d $project_root) {
+        mkpath($project_root);
     }
 
     # chop off trailing slash
-    if ($root =~ m/^(.*)\/$/) {
-        $root = $1;
+    if ($project_root =~ m/^(.*)\/$/) {
+        $project_root = $1;
     }
 
     main::PrintStatus ('Test', 'Shell');
 
     my $current_dir = getcwd ();
 
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
+    if (!chdir $project_root) {
+        print STDERR __FILE__, ": Cannot change to $project_root\n";
         return 0;
     }
 
