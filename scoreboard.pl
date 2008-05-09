@@ -1469,6 +1469,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:n')
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-n]\n";
+          "              [-k num_logs]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1482,7 +1483,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:n')
     print "    -r         Specify name of RSS file\n";
     print "    -s         name of file where build schedule can be found\n";
     print "    -c         co-located directory, all files local in -d \n";
-    print "    -k         number of logs to keep, default is 5\n";
+    print "    -k         number of logs to keep, default is 1\n";
     print "    -n         No 'history' links generated\n";
     print "    All other options will be ignored  \n";
     exit (1);

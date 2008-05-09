@@ -1,3 +1,16 @@
+Fri May  9 22:28:57 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/scoreboard/tao_future.xml:
+
+          Moved the QNX build back to regular TAO from its exile on TAO future,
+          since this build has been stable for the last few weeks.
+
+        * scoreboard.pl:
+
+          Updated the "usage" message to reflect the change to the number of
+          older logs kept by the scoreboard.  This change was made a while ago.
+
 Tue May  6 13:12:24 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/test.pm:

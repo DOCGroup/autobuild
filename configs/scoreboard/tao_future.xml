@@ -13,15 +13,6 @@ decide the migration paths and strategies.
     <name>Builds for features and bugfixes comming up in the next beta</name>
 </group>
 
-<group>
-   <name>QNX</name>
-   <build>
-      <name>QNX_6.3.2_x86-gcc_3.3.5</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_qnx_qnx_gcc_d1o0i0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>
-</group>
 
 
 </scoreboard>
