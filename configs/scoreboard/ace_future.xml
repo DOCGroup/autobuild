@@ -35,7 +35,7 @@ sponsorship is received.
    </build>
    <build>
      <name>RHEL50_ICC10.1_64bit_visibility</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc101_64v/index.html</url>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc101_64v</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
