@@ -1,3 +1,8 @@
+Wed May 14 12:59:57 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/check_compiler.pm:
+          Added icpc
+
 Wed May 14 10:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:

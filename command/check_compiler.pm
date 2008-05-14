@@ -107,7 +107,7 @@ sub Run ($)
     elsif(lc $compiler eq "doxygen"){
         system("doxygen --version");
     }
-    elsif($compiler =~ m/^(ecc|icc)/){
+    elsif($compiler =~ m/^(ecc|icc|icpc)/){
         system($compiler." -V 2>&1");
     }
     elsif(lc $compiler eq "icl"){
