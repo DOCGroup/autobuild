@@ -1,0 +1,46 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"        value="$HOME/ACE/icc101/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="$HOME/ACE/icc101/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="$HOME/ACE/icc101/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="$HOME/ACE/icc101/ACE_wrappers/lib:/usr/local/lib" />
+        <environment name="PATH"            value="" type="prefix" />
+
+        <variable name="root"     value="$HOME/ACE/icc101/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="$HOME/ACE/icc101/" />
+        <variable name="configs"  value="Exceptions NOXERCES ZLIB" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32003" />
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#include \x22ace/config-macos-panther.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_icc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="icc" />
+    <command name="print_ace_config" />
+    <command name="print_openssl_version"/>
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="make"              options="-k realclean" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+
+    <command name="make"              options="-k" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/macosx_icc101" />
+</autobuild>
