@@ -1,4 +1,12 @@
-Wed May 13 08:41:57 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+Wed May 14 10:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+          Need to manually add the build of orbsvcs.
+
+Wed May 14 08:41:57 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl:
           First check if we have a clean test stat, if yes, we assume
