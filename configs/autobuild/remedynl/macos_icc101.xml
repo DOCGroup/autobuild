@@ -1,15 +1,17 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="$HOME/ACE/icc101/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="$HOME/ACE/icc101/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="$HOME/ACE/icc101/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="$HOME/ACE/icc101/ACE_wrappers/lib:/usr/local/lib" />
+        <environment name="ACE_ROOT"        value="/Users/johnny/ACE/icc101/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/Users/johnny/ACE/icc101/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/Users/johnny/ACE/icc101/ACE_wrappers/TAO/CIAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/Users/johnny/ACE/icc101/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="PATH"            value="" type="prefix" />
+        <environment name="SSL_ROOT"         value="/usr" />
+        <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.5" />
 
-        <variable name="root"     value="$HOME/ACE/icc101/" />
+        <variable name="root"     value="/Users/johnny/ACE/icc101/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="$HOME/ACE/icc101/" />
+        <variable name="log_root" value="/Users/johnny/ACE/icc101/" />
         <variable name="configs"  value="Exceptions NOXERCES ZLIB" />
 
     </configuration>
@@ -21,8 +23,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n#include \x22ace/config-macos-panther.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_icc.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_icc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="icc" />
