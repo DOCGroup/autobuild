@@ -343,23 +343,6 @@ sub query_history ()
     foreach my $buildname (keys %builds) {
         my $full_link = 'http://download.theaceorb.nl/teststat/builds/' . $buildname . '.html';
         my $clean_link = 'http://download.theaceorb.nl/teststat/builds/clean_' . $buildname . '.html';
-        if (defined $full_link) {
-            print "    Full history [$buildname] from $full_link\n" if ($verbose);
-
-            my $ua = LWP::UserAgent->new;
-
-            ### We are impatient, so don't wait more than 20 seconds for a
-            ### response (the default was 180 seconds)
-            $ua->timeout(20);
-
-            my $request = HTTP::Request->new('GET', $full_link);
-            my $response = $ua->request($request);
-
-            if ($response->is_success ()) {
-                $builds{$buildname}{FULL_HISTORY} = 1;
-            }
-
-        }
         if (defined $clean_link) {
             print "    Clean history [$buildname] from $full_link\n" if ($verbose);
 
@@ -374,6 +357,24 @@ sub query_history ()
 
             if ($response->is_success ()) {
                 $builds{$buildname}{CLEAN_HISTORY} = 1;
+                # Assume we also have a full log when there is a clean one
+                $builds{$buildname}{FULL_HISTORY} = 1;
+            }
+        }
+        if (defined $full_link && !defined $builds{$buildname}{CLEAN_HISTORY}) {
+            print "    Full history [$buildname] from $full_link\n" if ($verbose);
+
+            my $ua = LWP::UserAgent->new;
+
+            ### We are impatient, so don't wait more than 20 seconds for a
+            ### response (the default was 180 seconds)
+            $ua->timeout(20);
+
+            my $request = HTTP::Request->new('GET', $full_link);
+            my $response = $ua->request($request);
+
+            if ($response->is_success ()) {
+                $builds{$buildname}{FULL_HISTORY} = 1;
             }
 
         }

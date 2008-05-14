@@ -1,3 +1,11 @@
+Wed May 13 08:41:57 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * scoreboard.pl:
+          First check if we have a clean test stat, if yes, we assume
+          we also have a full test stat. This speeds up the generation of
+          the scoreboard by reducing the number of calls to the test
+          stat website by around 50%
+
 Fri May  9 22:28:57 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * configs/scoreboard/tao.xml:
