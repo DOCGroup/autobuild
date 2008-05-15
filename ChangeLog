@@ -1,3 +1,11 @@
+Thu May 15 10:10:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+          Use the new -ORBSVCS option instead of giving the path.
+
 Wed May 14 12:59:57 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/check_compiler.pm:
