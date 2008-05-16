@@ -1469,7 +1469,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:n')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
-          "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-n]\n";
+          "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-n]\n",
           "              [-k num_logs]\n";
     print "\n";
     print "    -h         display this help\n";
