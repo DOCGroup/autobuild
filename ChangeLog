@@ -1,3 +1,20 @@
+Fri May 16 12:23:42 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * common/prettify.pm:
+        * matrix_database/TestPlatform.py:
+
+          Use a better regular expression than /Error/ to detect errors in
+          text output.  Things, such as options, were being recognized as an
+          error when in actuality they were not.
+
+        * docs/autobuild.txt:
+
+          Document the above change.  The regular expression is now
+          /Error[s]?[^A-Za-z]/ which means that the word Error (or Errors)
+          must be followed by something other than a letter.  In ACE and
+          TAO, I found Error followed by a space, colon, comma or
+          exclamation point.
+
 Fri May 16 08:27:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:

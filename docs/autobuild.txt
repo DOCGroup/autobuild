@@ -109,7 +109,8 @@ The following keywords or phrases cause a test to be marked as an error when
 the logs are processed into html.  They are all case-sensitive except when
 indicated.
 
-Error
+Error -- This may be optionally followed by an 's', but must not be followed
+         by another letter upper or lower case.
 ERROR
 fatal
 FAIL:

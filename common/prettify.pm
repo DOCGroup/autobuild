@@ -956,7 +956,10 @@ sub Test_Handler ($)
         $self->Output_Error ($s);
     }
     elsif (!defined $ENV{"VALGRIND_ERRORS_ONLY"} &&
-            ($s =~ m/Error/
+            ## We want to catch things like "Error:", "WSAGetLastError",
+            ## "Errors Detected" and "Error ", but not things like
+            ## -ORBAcceptErrorDelay.
+            ($s =~ m/Error[s]?[^A-Za-z]/
           || $s =~ m/ERROR/
           || $s =~ m/fatal/
           || $s =~ m/FAIL:/
