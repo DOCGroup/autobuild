@@ -36,9 +36,6 @@ testmatrix/update_scoreboard.sh 2>&1 &
 #Remove the obsolete db files and give the list of available db files.
 matrix_database/RemoveAndListCompilationDbFiles.sh
 
-#Copy the test stat index page to the webserver
-cp $HOME/autobuild/configs/autobuild/remedynl/teststats.html /export/web/www/scoreboard
-
 #
 wait
 
