@@ -146,12 +146,24 @@ all the OS/platform combinations on which TAO is tested everyday.
            <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_DebugMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+           <orange>30</orange>
+           <red>60</red>
         </build>
         <build>
            <name>Win2003_VC71_Inline_MFC</name>
            <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_InlineMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+           <orange>30</orange>
+           <red>60</red>
+        </build>
+        <build>
+           <name>Win2003_VC71_Standard_MFC</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_StandardMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+           <orange>30</orange>
+           <red>60</red>
         </build>
         <build>
            <name>Vista_VC8_Standard_MFC</name>

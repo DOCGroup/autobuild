@@ -1,3 +1,54 @@
+Mon May 19 09:51:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/HPUX_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX_ACC367_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+
+          Reduce the number of previous builds stored, we are running out
+          of local scoreboard disk space.
+
+        * configs/scoreboard/tao.xml:
+
+          Add back in the Win2003_MSVC71_Standard_MFC build.
+
+        * configs/autobuild/prism/HPUX_ACC365_Inline.xml:
+        * configs/autobuild/prism/HPUX_ACC365_Standard.xml:
+        * configs/autobuild/prism/HPUX_ACC370_Inline.xml:
+        * configs/autobuild/prism/HPUX_ACC370_Standard.xml:
+        * configs/autobuild/prism/HPUX_ACC373_Inline.xml:
+        * configs/autobuild/prism/HPUX_ACC373_Standard.xml:
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup.xml
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_PRETIFY
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_PRETIFY.xml
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests.xml
+        * configs/autobuild/prism/LYNXOS4_PPC_GCC322_Standard_Dynamic_DocGroup_Tests_Trigger
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup.xml
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_PRETIFY
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_PRETIFY.xml
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests.xml
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Dynamic_DocGroup_Tests_Trigger
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup.xml
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_PRETIFY
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_PRETIFY.xml
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests.xml
+        * configs/autobuild/prism/LYNXOS4_x86_GCC322_Standard_Static_DocGroup_Tests_Trigger
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.sh
+        * configs/autobuild/prism/SOLARIS8_x86_GCC322_Standard_Static_for_LynxOS_DocGroup.xml
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.sh
+        * configs/autobuild/prism/SOLARIS9_PPC_GCC322_Standard_Static_for_LynxOS_DocGroup.xml
+
+          Delete old non-active builds.
+
 Fri May 16 15:12:18 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * scoreboard.pl:
