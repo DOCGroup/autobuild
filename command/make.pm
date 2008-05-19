@@ -127,6 +127,13 @@ sub Run ($)
         }
     }
 
+    ## When we chdir() inside perl, the PWD environment variable is not
+    ## updated (unless all code that "uses" Cwd also imports chdir).  The
+    ## generated GNU makefiles rely on this variable to be set correctly
+    ## in order to know where the "installed" library symbolic links are
+    ## to be placed.
+    $ENV{PWD} = getcwd();
+
     my $command;
     my $pattern;
     my $ret = 0;
@@ -166,6 +173,9 @@ sub Run ($)
     }
 
     chdir $current_dir;
+
+    ## Return PWD to the correct setting
+    $ENV{PWD} = getcwd();
 
     return 1;
 }
