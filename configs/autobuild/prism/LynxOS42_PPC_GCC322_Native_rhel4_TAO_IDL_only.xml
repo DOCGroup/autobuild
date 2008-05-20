@@ -48,9 +48,9 @@
     <command name="make"              options="-k -C apps/gperf/src" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
 
-    <command name="process_logs"      options="clean=60" />
+    <command name="process_logs"      options="clean=40" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean=60 move prettify index" />
+    <command name="process_logs"      options="clean=40 move prettify index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>

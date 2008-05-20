@@ -1,3 +1,11 @@
+Tue May 20 11:17:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.xml:
+
+          Reduce the number of previous builds stored, we are running out
+          of local scoreboard disk space.
+
 Mon May 19 14:53:13 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/make.pm:

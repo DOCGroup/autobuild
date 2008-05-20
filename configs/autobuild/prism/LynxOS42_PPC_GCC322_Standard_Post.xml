@@ -8,6 +8,6 @@
         <variable name="project_root" value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers" />
     </configuration>
 
-    <command name="process_logs"      options="clean=60" />
-    <command name="process_logs"      options="clean=60 move prettify index" />
+    <command name="process_logs"      options="clean=40" />
+    <command name="process_logs"      options="clean=40 move prettify index" />
 </autobuild>
