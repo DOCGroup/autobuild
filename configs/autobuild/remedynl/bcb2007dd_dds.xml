@@ -21,7 +21,7 @@
   <command name="process_listener"   options="localhost:32001"/>
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
-  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk DDS"/>
   <command name="print_os_version"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
@@ -39,5 +39,5 @@
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
-    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2007/dd_dds" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DDS*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2007/dd_dds" />
 </autobuild>
