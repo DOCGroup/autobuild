@@ -1,6 +1,4 @@
 <autobuild>
-  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
-  <!-- /home/taoadmin/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=0 optimize=1 inline=0 corba_e_compact=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment MAKEFLAGS=built_in_topics=0 -mpcopt "-features built_in_topics=0" -outdir . -piggyback /tao_builds/taoadmin/doc/build/gcc_d0o1i0c1 -piggypeer 1 -->
   <configuration>
         <environment name="ACE_ROOT"     value="C:\\ACE\\BCB2007dd\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO"/>
@@ -11,6 +9,10 @@
         <environment name="PATH"         value="C:\\Program Files\\Codegear\\RAD Studio\\5.0\\Bin;C:\\Perl\\Bin;C:\\ACE\\BCB2007dd_DDS\\lib;C:\\ACE\\BCB2007dd\\ACE_wrappers\\lib;C:\\ACE\\BCB2007dd\\ACE_wrappers\\bin;C:\\cygwin\\bin;C:\\xerces-c-src_2_7_0\\lib" type="prefix" />
        <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
        <variable    name="base"                  value="DDS"/>
+        <environment name="BCBVER"   value="8" />
+        <environment name="DEBUG"   value="1" />
+        <environment name="DYNAMIC"  value="1" />
+
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\ACE\\BCB2007dd_DDS\\" />
         <variable name="root"         value="C:\\ACE\\BCB2007dd_DDS\\" />
