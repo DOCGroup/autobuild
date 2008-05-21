@@ -1,3 +1,11 @@
+Wed May 21 21:28:26 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * scoreboard.pl:
+
+          When using the local cache (-c) also allow remote URLs.  In these
+          cases the script will pull down the needed files into the local
+          cache and then treat them as local.
+
 Tue May 20 11:17:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:

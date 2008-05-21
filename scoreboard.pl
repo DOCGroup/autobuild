@@ -546,7 +546,40 @@ sub local_update_cache ($)
         print "    Looking at $buildname\n" if ($verbose);
 
         # Check if URL was given
-        if ( ! defined $builds{$buildname}->{URL}) {
+        if (defined $builds{$buildname}->{URL}) {
+            #Pull remote build into local cache
+            #This will only pull the "latest", under the assumption that
+            #scoreboard.pl is running often enough to pick up all the desired
+            #builds.
+            mkpath ("$directory/$buildname") unless -d "$directory/$buildname";
+            my $ua = LWP::UserAgent->new;
+            my $address = "$builds{$buildname}->{URL}/status.txt";
+            $ua->timeout(20);
+            my $request = HTTP::Request->new('GET', $address);
+            my $response = $ua->request($request,
+                                        "$directory/$buildname/status.txt");
+            if (!$response->is_success ()) {
+                print "        No status for $buildname\n" if ($verbose);
+                next;
+            }
+            my $latest = load_web_latest ($builds{$buildname}->{URL});
+            if (defined $latest && $latest =~ /^(...._.._.._.._..) /) {
+                my $basename = $1;
+                my $fn = "$directory/$buildname/$basename.txt";
+                if (! -r $fn) {
+                    print "        Downloading\n" if ($verbose);
+                    $address = "$builds{$buildname}->{URL}/$basename.txt";
+                    $request = HTTP::Request->new('GET', $address);
+                    $response = $ua->request($request, $fn);
+                    if (!$response->is_success ()) {
+                        warn "WARNING: Unable to download $address\n";
+                        next;
+                    }
+                    open (POST, ">$directory/$buildname/post");
+                    close POST;
+                }
+            }
+        } else {
             $builds{$buildname}{URL} = $buildname;
         }
 
