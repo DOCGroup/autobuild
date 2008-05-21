@@ -11,7 +11,6 @@
         <environment name="PATH"         value="C:\\Program Files\\Codegear\\RAD Studio\\5.0\\Bin;C:\\Perl\\Bin;C:\\ACE\\BCB2007dd_DDS\\lib;C:\\ACE\\BCB2007dd\\ACE_wrappers\\lib;C:\\ACE\\BCB2007dd\\ACE_wrappers\\bin;C:\\cygwin\\bin;C:\\xerces-c-src_2_7_0\\lib" type="prefix" />
        <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
        <variable    name="base"                  value="DDS"/>
-    <variable    name="build_name"            value="gcc_d0o1i0c1"/>
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\ACE\\BCB2007dd_DDS\\" />
         <variable name="root"         value="C:\\ACE\\BCB2007dd_DDS\\" />
@@ -37,7 +36,7 @@
 
   <!-- Post build -->
   <command name="log"             options="off"/>
-  <command name="process_logs"    options="copy"/>
+    <command name="process_logs"      options="clean move prettify index" />
   <command name="status"          options="off"/>
     <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DDS*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/BCB2007/dd_dds" />
 </autobuild>
