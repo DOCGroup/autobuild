@@ -12,6 +12,7 @@
        <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
        <variable    name="base"                  value="DDS"/>
     <variable    name="build_name"            value="gcc_d0o1i0c1"/>
+        <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\ACE\\BCB2007dd_DDS\\" />
         <variable name="root"         value="C:\\ACE\\BCB2007dd_DDS\\" />
   </configuration>
