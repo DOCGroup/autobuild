@@ -29,7 +29,7 @@
 
     <command name="make"              options=" -i -f Makefile.bor realclean" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
+    <command name="shell"             options="find DDS -iname '*.bor' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-type borland" />
 
