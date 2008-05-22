@@ -951,6 +951,8 @@ sub Test_Handler ($)
         || $s =~ m/C interp: token/
         || $s =~ m/ld error: error loading file/
         || $s =~ m/aborted due to compilation errors/
+        || $s =~ m/C interp: unable to open/
+        || $s =~ m/C interp: unknown symbol name/
         || $s =~ m/memPartFree: invalid block/ )
     {
         $self->Output_Error ($s);
