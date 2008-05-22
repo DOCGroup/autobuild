@@ -1,3 +1,10 @@
+Thu May 22 08:06:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
+
+          Match the number of previous builds stored, with the other
+          builds (missed this one).
+
 Wed May 21 21:28:26 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * scoreboard.pl:
