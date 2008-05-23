@@ -1,3 +1,10 @@
+Fri May 23 19:41:14 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc71_release.xml:
+        Added debug build as a part of release to build IDLGeneratord.dll
+        and Utilsd.dll. GME 6.11.9 has some issues with release version of
+        IDLGenerator.
+
 Thu May 22 08:06:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
