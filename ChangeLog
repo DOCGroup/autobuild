@@ -1,3 +1,13 @@
+Wed May 28 12:08:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
+          Restore the build specific temp directory for this build.
+
+        * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.bat:
+        * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.xml:
+          Add the provisional unicode/wide-char TAO build to discover
+          the problems with such a beast!
+
 Fri May 23 19:41:14 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71_release.xml:

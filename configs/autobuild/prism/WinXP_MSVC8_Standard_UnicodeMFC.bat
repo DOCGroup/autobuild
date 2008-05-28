@@ -1,8 +1,8 @@
 @echo off
 rem $Id$
-set THIS_BUILD=C:\Overnight_Builds\DOC_Group\vc8\standardMFC\
+set THIS_BUILD=C:\Overnight_Builds\DOC_Group\vc8\standardUniMFC\
 echo ==============================================================================
-echo                          DOC_Group MSVC8 Standard MFC
+echo                      DOC_Group MSVC8 Standard Unicode MFC
 echo ==============================================================================
 if not exist %THIS_BUILD%.disable goto doBuild
   echo.
@@ -53,7 +53,7 @@ if exist c:\cygwin\bin\date.exe echo This build started:
 if exist c:\cygwin\bin\date.exe c:\cygwin\bin\date +"%%X on %%a %%d-%%b-%%Y"
 echo For status, notepad %THIS_BUILD%build.txt
 cd %THIS_BUILD%
-perl C:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl C:\Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism\Vista_MSVC8_Standard_MFC.xml
+perl C:\Overnight_Builds\DOC_Group\autobuild\autobuild.pl C:\Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism\WinXP_MSVC8_Standard_UnicodeMFC.xml
 cd \Overnight_Builds\DOC_Group\autobuild\configs\autobuild\prism
 echo Finished !!
 if exist c:\cygwin\bin\date.exe c:\cygwin\bin\date +"%%X on %%a %%d-%%b-%%Y"
