@@ -1,3 +1,13 @@
+Wed May 28 14:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * scoreboard.pl:
+          Increase the number of current enteries to 2 versions so that
+          whilst the new scoreboard is being assembled (and the old enteries
+          that have been updated are cleared away), the old scoreboard
+          still points at valid entries. This reduces the common occurance
+          of "404 not found" errors when clicking through the main scoreboard
+          page at times close to the scoreboard hourly update period.
+
 Wed May 28 12:08:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:

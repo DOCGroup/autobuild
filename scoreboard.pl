@@ -59,7 +59,8 @@ my @nogroup;
 
 my $orange_default = 24; # 1 day old before orange coloured build.
 my $red_default = 48;    # 2 days old before red coloured build.
-my $keep_default = 1;    # Scoreboard only uses the most recent build anyway, for more
+my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possiably
+                         # the previous oldest copy during the scoreboard update time), for more
                          # consult the actual build machine where we store multiple builds.
 my $sched_file = "";
 my @days = ( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" );
@@ -1517,7 +1518,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:n')
     print "    -r         Specify name of RSS file\n";
     print "    -s         name of file where build schedule can be found\n";
     print "    -c         co-located directory, all files local in -d \n";
-    print "    -k         number of logs to keep, default is 1\n";
+    print "    -k         number of logs to keep, default is $keep_default\n";
     print "    -n         No 'history' links generated\n";
     print "    All other options will be ignored  \n";
     exit (1);
