@@ -1,3 +1,12 @@
+Fri May 30 13:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/tao.xml:
+          Add the non-release windows group and move the vc8 MFC builds
+          there. We are attempting to see what wide-character TAO builds
+          look like. I have a few wide-character TAO mods to go in over the
+          next week or so (not enough to remove all of the problems but
+          they should point the way foreward).
+
 Fri May 30 12:55:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.bat:
