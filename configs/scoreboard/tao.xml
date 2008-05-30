@@ -149,7 +149,7 @@ all the OS/platform combinations on which TAO is tested everyday.
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
         </build>
         <build>
-           <name>Vista_VC8_Standard_MFC_Unicode</name>
+           <name>WinXP_VC8_Standard_MFC_Unicode</name>
            <url>http://tao.prismtech.com/doc-scoreboard/windows/VC8_StandardUniMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
