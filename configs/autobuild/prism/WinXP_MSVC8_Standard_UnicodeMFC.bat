@@ -37,8 +37,8 @@ if "%ORIGINAL_LIB%" == "" (
 call "C:\Program Files\Microsoft Visual Studio 8\Common7\Tools\vsvars32.bat"
 mkdir C:\temp > nul: 2>&1
 mkdir C:\temp\DOC_Group > nul: 2>&1
-mkdir C:\temp\DOC_Group\standardMFC > nul: 2>&1
-set TEMP=C:\temp\DOC_Group\standardMFC
+mkdir C:\temp\DOC_Group\standardUniMFC > nul: 2>&1
+set TEMP=C:\temp\DOC_Group\standardUniMFC
 set TMP=%TEMP%
 echo.
 echo Updating autobuild
