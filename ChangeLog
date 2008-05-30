@@ -1,3 +1,11 @@
+Fri May 30 18:24:58 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * matrix_database/TestPlatform.py:
+
+          When adding a test result, return if the test exceeds the maximum.
+          The generation of the TAO matrix was failing without this
+          work-around.
+
 Fri May 30 15:20:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/tao.xml:

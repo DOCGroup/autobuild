@@ -70,6 +70,7 @@ class TestMatrix:
 	def addTestResult (self, build_num, name, result):
 		if len(self.testNames) >= self.max_tests:
 			print "Error: exceeded maximum number of tests"
+			return
 		if name not in self.testNames:
 			# test is not yet added, so add it
 			self.testNames.append(name)
