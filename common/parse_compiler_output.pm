@@ -196,10 +196,11 @@ sub handle_compiler_output_line($) {
   if ($s =~ m/^.*:[0-9]+: /) {
     # filename:linenumber is the typical format for an error
     if(# ... unless it is a warning
-       $s =~ m/^.*:[0-9]+: warning:/i
+       $s =~ m/^.*:[0-9]+:\s+warning:/i
        # ... or a template location where it could be either a
        # warning or an error, but the lines around it would show the
        # real reason ...
+       || $s =~ m/^.*:[0-9]+:\s+note:/i
        || $s =~ m/^.*:[0-9]+:\s+instantiated\sfrom\s/) {
       if (defined $main::verbose and $main::verbose == 1) {
         print STDERR "Possible ERROR $s\n";

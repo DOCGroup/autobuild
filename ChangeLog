@@ -1,3 +1,9 @@
+Mon May 2 11:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/parse_compiler_output.pm:
+          De-errorfi template "note" extentsions in the same way as
+          "instansiated here" extensions. (FC9 GCC430 builds)
+
 Sat May 31 16:28:26 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/tango_isis/Debian_Core.xml:
