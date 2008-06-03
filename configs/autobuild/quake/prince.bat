@@ -1,2 +1,2 @@
-cd C:\bczar\CoSMIC_VC8_Release\autobuild\configs\autobuild\prince
-call prince_driver.bat
+cd E:\bczar\CoSMIC_VC8_Release\autobuild\configs\autobuild\quake
+call quake_driver.bat
