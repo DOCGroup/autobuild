@@ -1,3 +1,18 @@
+Tue Jun  3 02:13:20 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/quake:
+
+        * configs/autobuild/prince:
+
+        * configs/autobuild/prince/prince.bat:
+        * configs/autobuild/prince/prince_driver.bat:
+        * configs/autobuild/prince/prince_vc8_release.bat:
+        * configs/autobuild/prince/prince_vc8_release.xml:
+
+          Removed these files.
+	  Changed prince to quake which is a Windows virtual machine in 
+	  prince linux host. Setup a CoSMIC build with GME version 7.6.29
+
 Mon May 2 11:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/parse_compiler_output.pm:
@@ -9,7 +24,7 @@ Sat May 31 16:28:26 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/tango_isis/Debian_Core.xml:
 
           Enabled use of the MCPP.
-        
+
 Fri May 30 18:24:58 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * matrix_database/TestPlatform.py:
