@@ -1,3 +1,8 @@
+Tue Jun  3 02:32:46 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/quake/quake_vc8_release.xml:
+	  Added XERCESC_VERSION = 2_7.
+
 Tue Jun  3 02:13:20 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/quake:
@@ -10,8 +15,8 @@ Tue Jun  3 02:13:20 UTC 2008  Sumant Tambe  <sutambe@nospam>
         * configs/autobuild/prince/prince_vc8_release.xml:
 
           Removed these files.
-	  Changed prince to quake which is a Windows virtual machine in 
-	  prince linux host. Setup a CoSMIC build with GME version 7.6.29
+          Changed prince to quake which is a Windows virtual machine in
+          prince linux host. Setup a CoSMIC build with GME version 7.6.29
 
 Mon May 2 11:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
