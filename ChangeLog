@@ -1,3 +1,11 @@
+Wed Jun  4 16:25:15 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * command/process_logs.pm:
+
+          Put an eval around the mkpath for the log directory.  If the path
+          is NFS mounted, it can exist but not be visible until we attempt
+          to create it.
+
 Wed Jun  4 13:45:13 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * scoreboard.pl:

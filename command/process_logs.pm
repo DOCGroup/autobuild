@@ -79,7 +79,11 @@ sub Run ($)
     my $root = main::GetVariable ('root');
 
     if (!-r $log_root || !-d $log_root) {
-        mkpath($log_root);
+        ## Due to weirdness from NFS, this directory may exist but not
+        ## show up until we attempt to create the directory.  If it
+        ## exists, we don't want to stop processing so catch the
+        ## Carp::croak with an eval.
+        eval { mkpath($log_root) };
     }
 
     if (!-r $root || !-d $root) {
