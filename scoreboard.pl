@@ -561,7 +561,6 @@ sub local_update_cache ($)
                                         "$directory/$buildname/status.txt");
             if (!$response->is_success ()) {
                 print "        No status for $buildname\n" if ($verbose);
-                next;
             }
             my $latest = load_web_latest ($builds{$buildname}->{URL});
             if (defined $latest && $latest =~ /^(...._.._.._.._..) /) {

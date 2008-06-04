@@ -1,7 +1,15 @@
+Wed Jun  4 13:45:13 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * scoreboard.pl:
+
+          Small update to my change from Wed May 21 21:28:26 UTC 2008.
+          If the status.txt file can't be retrieved from the web server,
+          continue processing instead immediately moving on to the next build.
+
 Tue Jun  3 02:32:46 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/quake/quake_vc8_release.xml:
-	  Added XERCESC_VERSION = 2_7.
+          Added XERCESC_VERSION = 2_7.
 
 Tue Jun  3 02:13:20 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
