@@ -8,9 +8,9 @@
         <environment name="WIX_ROOT"     value="C:\\Program Files\\Windows Installer XML v3"/>
         <environment name="XERCESCROOT"   value="E:\\Libraries\\xerces-c-2_7_0-win32-vc8"/>
         <environment name="XERCESC_VERSION"   value="2_7"/>
-        <environment name="BOOST_ROOT"    value="E:\\Libraries\\Boost"/>
-        <environment name="BOOST_VERSION" value="boost-1_32"/>
-        <environment name="BOOST_CFG"     value="-vc71-mt" />
+        <environment name="BOOST_ROOT"    value="E:\\Libraries\\boost_1_35_0"/>
+        <environment name="BOOST_VERSION" value="boost-1_35"/>
+        <environment name="BOOST_CFG"     value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="UDM_PATH" 	  value="C:\\Program Files\\ISIS\\UDM" />
         <environment name="UDM_VERSION"	  value="UDMDLL_3_1_2" />

@@ -1,3 +1,8 @@
+Sat Jun  7 00:19:10 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/quake/quake_vc8_release.xml:
+	  Updated configuration to use Boost version 1.35
+
 Wed Jun  4 16:25:15 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * command/process_logs.pm:
