@@ -15,11 +15,19 @@
         <environment name="LIB"          value="C:\\pharemb\\lib" type="suffix" />
         <environment name="MPC_ROOT"     value="C:\\ace\\MPC" />
         <environment name="PHARDIR"      value="C:\\pharemb" />
-        <environment name="ACE_RUN_LVRT_FSROOT" value="\\ni-rt\\system" />
-        <environment name="ACE_RUN_LVRT_TGTHOST" value="192.168.10.50" />
+        <!-- Target setups -->
+        <environment name="DOC_TEST_ACE" value="NIPXI" />
+        <environment name="DOC_TEST_CLIENT" value="HOST" />
+        <environment name="HOST_OS"      value="local" />
+        <environment name="HOST_ACE_ROOT"    value="C:\\ace\\ACE_wrappers" />
+        <environment name="DOC_TEST_SERVER" value="NIPXI" />
+        <environment name="NIPXI_IPNAME" value="192.168.10.50" />
+        <environment name="NIPXI_CTLPORT" value="8888" />
+        <environment name="NIPXI_OS"        value="LabVIEW_RT" />
+        <environment name="NIPXI_EXE_SUBDIR" value="ETS_Debug" />
+        <environment name="NIPXI_FSROOT" value="\\ni-rt\\system" />
         <environment name="ACE_REBOOT_LVRT_CMD" value="C:\\ace\\ACE_wrappers\\bin\\LabVIEW_RT\\PXI_Reset.exe" />
         <environment name="ACE_LVRT_REBOOT_TIME" value="120" />
-        <environment name="PHARDIR"      value="C:\\pharemb" />
 
         <variable name="root"            value="C:\\ace\\target_ets" />
         <variable name="project_root"    value="C:\\ace\\target_ets\\ACE_wrappers" />

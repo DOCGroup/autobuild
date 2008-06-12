@@ -1,3 +1,11 @@
+Thu Jun 12 16:55:59 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml:
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_tao_host.xml:
+          TAO-hosting build runs some tests to sanity-check; ETS debug build
+          now includes settings to redirect some testing to a LabVIEW RT
+          box. See ACE_wrappers/bin/PerlACE/README for details.
+
 Sat Jun  7 00:19:10 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/quake/quake_vc8_release.xml:
