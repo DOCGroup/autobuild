@@ -1,3 +1,16 @@
+Mon Jun 16 13:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/riverace/chad_dev_studio10_debug.xml:
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/sparc/SunOS10_Studio9.xml:
+        * configs/autobuild/remedynl/isengard_suncc.xml:
+        * configs/autobuild/oci/doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_fly_sunos59_suncc58_d1o0.xml:
+
+          Add "kstat=1\n" in platform_macros.GNU
+
 Thu Jun 12 16:55:59 UTC 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml:

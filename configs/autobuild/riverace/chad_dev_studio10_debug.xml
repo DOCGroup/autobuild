@@ -36,7 +36,7 @@
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/studio10_static_debug -type gnuace -exclude build,Kokyu" />
 
     <command name="file_manipulation" options="type=create file=build/studio10_static_debug/ace/config.h output='#include \x22ace/config-sunos5.10.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/studio10_static_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\noptimize=0\nstatic_libs_only=1\nssl=1\nbuildbits=32\nSSL_ROOT=/usr/sfw\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/studio10_static_debug/include/makeinclude/platform_macros.GNU output='kstat=1\nexceptions=1\ndebug=1\noptimize=0\nstatic_libs_only=1\nssl=1\nbuildbits=32\nSSL_ROOT=/usr/sfw\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler"    options="sun_cc" />
