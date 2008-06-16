@@ -1,3 +1,10 @@
+Mon Jun 16 16:23:47 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * autobuild.pl:
+
+          Added an option, -w, to only warn about non-fatal errors that
+          occur (within this script only) instead of issuing an error.
+
 Mon Jun 16 13:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
@@ -22,7 +29,7 @@ Thu Jun 12 16:55:59 UTC 2008  Steve Huston  <shuston@riverace.com>
 Sat Jun  7 00:19:10 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/quake/quake_vc8_release.xml:
-	  Updated configuration to use Boost version 1.35
+          Updated configuration to use Boost version 1.35
 
 Wed Jun  4 16:25:15 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 

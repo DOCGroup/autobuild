@@ -37,6 +37,7 @@ my %data = ();
 my %command_table = ();
 my $cvs_tag;
 my $starting_dir= getcwd ();
+my $warn_nonfatal;
 
 ##############################################################################
 # Load the commands allowed here
@@ -140,6 +141,10 @@ while ($#ARGV >= 0)
       shift;
       $xml_dump = 1;
   }
+  elsif ($ARGV[0] =~ m/^-w$/i) {
+    $warn_nonfatal = 1;
+    shift;
+  }
   elsif ($ARGV[0] =~ m!^(-|/\?)!) {
     print "Error: Unknown option $ARGV[0]\n" if ($ARGV[0] !~ m!^(-|/)\?!);
     print
@@ -155,6 +160,7 @@ while ($#ARGV >= 0)
       "  -v1   Verbose level 1\n",
       "  -v2   Verbose level 2\n",
       "  -xml  Dumps to <your_file>_dump.xml a newly processed input file\n",
+      "  -w    Non-fatal errors are only warnings\n",
       "\n";
     exit 1;
   }
@@ -263,7 +269,8 @@ sub ChangeStatus ($$)
 
     if (!defined $file_handle) {
       print STDERR __FILE__,
-        ": Error setting status to file ($status_file): $!\n";
+        ': ', ($warn_nonfatal ? 'Unable to set' : 'Error setting'),
+	"status to file ($status_file): $!\n";
 
       # Non fatal error, so just return.
       return;
