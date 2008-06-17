@@ -1,3 +1,18 @@
+Tue Jun 17 08:13:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/oci/doc_trunk_fly_sunos59_suncc58_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+        * configs/autobuild/remedynl/isengard_suncc.xml:
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+        * configs/autobuild/riverace/chad_dev_studio10_debug.xml:
+        * configs/autobuild/riverace/heidi_dev_gcc3_debug.xml:
+        * configs/autobuild/sparc/SunOS10_Studio9.xml:
+
+          Removed "kstat=1\n" from platform_macros.GNU at Johnny Willemsens
+          request. Reverting back to original method by adding this to
+          platform_sunos5_common.GNU
+
 Mon Jun 16 16:23:47 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * autobuild.pl:
