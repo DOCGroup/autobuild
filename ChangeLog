@@ -1,3 +1,9 @@
+Tue Jun 17 11:43:04 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
+
+        * autobuild.pl:
+
+          Fixed a typo in my previous commit.
+
 Tue Jun 17 08:13:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/corona/SunOS10_x86_Studio9.xml:

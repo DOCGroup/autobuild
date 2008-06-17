@@ -270,7 +270,7 @@ sub ChangeStatus ($$)
     if (!defined $file_handle) {
       print STDERR __FILE__,
         ': ', ($warn_nonfatal ? 'Unable to set' : 'Error setting'),
-	"status to file ($status_file): $!\n";
+	" status to file ($status_file)", ($warn_nonfatal ? '' : ": $!"), "\n";
 
       # Non fatal error, so just return.
       return;
