@@ -143,6 +143,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/ is deprecated and will be removed /) {
+    # Given by Intel C++
+    $self->Output_Warning ($s);
+    return;
+  }
+
   if ($s =~ m/Too many levels of symbolic links/) {
     # Indicates a broken file system. Must be fixed to prevent
     # other errors in the future
