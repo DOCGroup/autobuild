@@ -951,6 +951,7 @@ sub Test_Handler ($)
         || $s =~ m/C interp: token/
         || $s =~ m/ld error: error loading file/
         || $s =~ m/aborted due to compilation errors/
+        || $s =~ m/Can't open perl script/
         || $s =~ m/C interp: unable to open/
         || $s =~ m/unknown symbol name/
         || $s =~ m/can't open input/
