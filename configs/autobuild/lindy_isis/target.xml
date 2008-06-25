@@ -32,7 +32,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nzlib=1\nzzip=1\nboost=1\nxerces=1\n'" />
 
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
-    <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/apps/gperf/src/gperf ACE_wrappers/bin" />
+    <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/apps/gperf/src/ace_gperf ACE_wrappers/bin" />
     <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/TAO/TAO_IDL/tao_idl ACE_wrappers/bin" />
     <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/TAO/CIAO/tools/IDL3_to_IDL2/tao_idl3_to_idl2 ACE_wrappers/bin" />
     <command name="print_os_version" />

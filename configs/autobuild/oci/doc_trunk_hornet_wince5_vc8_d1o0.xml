@@ -32,7 +32,7 @@
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
   <command name="generate_workspace" options="-type vc8 -exclude TAO/CIAO,TAO/DDS,TAO/TAO_ACE.mwc,TAO/TAOACE.mwc -value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi TAO/wm5.mwc"/>
-  <command name="anonymous_shell"    options="copy /y c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc8_d1o0s1\\bin\\gperf.exe ACE_wrappers\\build\\wm5_d1o0\\bin"/>
+  <command name="anonymous_shell"    options="copy /y c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc8_d1o0s1\\bin\\ace_gperf.exe ACE_wrappers\\build\\wm5_d1o0\\bin"/>
   <command name="anonymous_shell"    options="copy /y c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc8_d1o0s1\\bin\\tao_idl.exe ACE_wrappers\\build\\wm5_d1o0\\bin"/>
 
   <!-- Build targets -->
