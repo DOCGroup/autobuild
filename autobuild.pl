@@ -92,6 +92,7 @@ require command::unzip;
 require command::run_perl_script;  ## This runs a perl command (like test).
 require command::run_process;      ## This Spawns/Kills a concurrent test.
 require command::setup_lvrt;
+require command::eval;
 
 ##############################################################################
 # Parse the arguments supplied when executed

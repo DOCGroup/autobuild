@@ -1,3 +1,21 @@
+Thu Jun 26 14:57:23 UTC 2008  Rich Seibel <seibel_r@ociweb.com>
+
+        * autobuild.pl
+        * command/eval.pm
+
+          Added a new command to allow an external program to 
+          provide environment variables.  VxWorks was the 
+          motivator for this addition, but we considered putting
+          knowledge of wrenv into autobuild was putting too much
+          domain knowledge into the build system.  Instead, the
+          name eval was chosen since it models one of the most
+          common uses of eval in scripts, that is, getting
+          environment variable from an external source. For
+          example, <command name="eval"  options="<location of
+          the VxWorks install>/wrenv.sh -p vxworks-6.5 -o print_env"/>.
+          This works on Windows also with appropriate adjustment
+          to the path and program name.
+
 Tue Jun 17 11:43:04 UTC 2008  Chad Elliott  <elliott_c@ociweb.com>
 
         * autobuild.pl:
