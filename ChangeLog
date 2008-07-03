@@ -1,3 +1,14 @@
+Thu Jul 03 10:14:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/remedynl/cygwin.xml:
+
+          Having fixed the problem with gperf not always prefixing strcmp
+          with ACE_OS:: in all cases (this cygwin build hi-lighted this)
+          this build now indicates that the cygwin "diff" command was
+          not pathed correctly. On my own cygwin diff is located in
+          "cygdrive/c/cygwin/usr" which I have added to the control file,
+          hopefully this will fix this build once and for all.
+
 Thu Jun 26 14:57:23 UTC 2008  Rich Seibel <seibel_r@ociweb.com>
 
         * autobuild.pl
