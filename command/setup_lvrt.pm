@@ -124,6 +124,23 @@ sub Run ($)
         print "$dll ...\n";
         $self->{FTP}->put($dll);
     }
+
+    if (!chdir "..\\tests") {
+        print STDERR __FILE__, ": Cannot change to $project_root tests\n";
+	chdir $current_dir;
+        return 0;
+    }
+    print "\nCopying $project_root/tests DLLs to ${targethost}\n";
+
+    opendir(LIBDIR, ".");
+    @dlls = grep { /\.dll$/i } readdir(LIBDIR);
+    closedir LIBDIR;
+    my $dll;
+    foreach $dll (@dlls) {
+        print "$dll ...\n";
+        $self->{FTP}->put($dll);
+    }
+
     $self->{FTP}->quit();
 
     chdir $current_dir;
