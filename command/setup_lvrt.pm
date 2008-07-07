@@ -135,7 +135,6 @@ sub Run ($)
     opendir(LIBDIR, ".");
     @dlls = grep { /\.dll$/i } readdir(LIBDIR);
     closedir LIBDIR;
-    my $dll;
     foreach $dll (@dlls) {
         print "$dll ...\n";
         $self->{FTP}->put($dll);
