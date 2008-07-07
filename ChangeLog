@@ -1,6 +1,21 @@
+Mon Jul 07 13:00:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/prism/Visa_MSVC8_Standard_UnicodeMFC.bat:
+        * configs/autobuild/prism/Visa_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+
+          Updated the scoreboard locations to segregate the build machines
+          based upon OS type.
+
 Mon Jul 07 08:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * command/setup_lvrt.pm:
+
           Fixed the A "my" or "our" variable has been redeclared in the
           current scope or statement warning issued by the update of
           Fri Jul  4 20:20:03 UTC 2008  Steve Huston.

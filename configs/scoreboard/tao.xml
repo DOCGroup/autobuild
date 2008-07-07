@@ -143,14 +143,8 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Windows (Non-Release Builds)</name>
         <build>
-           <name>Vista_VC8_Standard_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC8_StandardMFC</url>
-           <build_sponsor>PrismTech</build_sponsor>
-           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-        </build>
-        <build>
            <name>WinXP_VC8_Standard_MFC_Unicode</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC8_StandardUniMFC</url>
+           <url>http://tao.prismtech.com/doc-scoreboard/winXP/VC8_StandardUniMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
         </build>
@@ -159,8 +153,14 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
+           <name>Vista_VC8_Standard_MFC</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+        </build>
+        <build>
            <name>Win2003_VC71_Debug_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_DebugMFC</url>
+           <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_DebugMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
            <orange>30</orange>
@@ -168,7 +168,7 @@ all the OS/platform combinations on which TAO is tested everyday.
         </build>
         <build>
            <name>Win2003_VC71_Inline_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_InlineMFC</url>
+           <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_InlineMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
            <orange>30</orange>
@@ -176,7 +176,7 @@ all the OS/platform combinations on which TAO is tested everyday.
         </build>
         <build>
            <name>Win2003_VC71_Standard_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/windows/VC71_StandardMFC</url>
+           <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_StandardMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
            <orange>30</orange>

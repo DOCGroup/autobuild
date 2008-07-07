@@ -10,7 +10,7 @@
 
         <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="T:\\doc-scoreboard\\windows\\VC8_StandardUniMFC" />
+        <variable name="log_root"     value="T:\\doc-scoreboard\\winXP\\VC8_StandardUniMFC" />
         <variable name="name"         value="WinXP VC8 (VS.Net2005) DLL Standard Unicode MFC (Non-Inline, Non-Debug)" />
         <variable name="configs"      value="WIN32 Win32 MFC unicode VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK" />
     </configuration>

@@ -10,7 +10,7 @@
 
         <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc71\\inlineMFC" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="T:\\doc-scoreboard\\windows\\VC71_InlineMFC" />
+        <variable name="log_root"     value="T:\\doc-scoreboard\\win2003\\VC71_InlineMFC" />
         <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Inline MFC" />
         <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS SSL MFC QUICK" />
     </configuration>
