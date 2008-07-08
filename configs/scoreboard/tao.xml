@@ -147,6 +147,14 @@ all the OS/platform combinations on which TAO is tested everyday.
            <url>http://tao.prismtech.com/doc-scoreboard/winXP/VC8_StandardUniMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+           <orange>2147483647</orange> <!-- approx 244974 years -->
+           <red>2147483647</red>       <!-- approx 244974 years -->
+        </build>
+        <build>
+           <name>Vista_VC8_Standard_MFC_Unicode</name>
+           <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardUniMFC</url>
+           <build_sponsor>PrismTech</build_sponsor>
+           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
         </build>
 </group>
 

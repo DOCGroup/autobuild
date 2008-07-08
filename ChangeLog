@@ -1,8 +1,15 @@
+Tue Jul 08 08:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+
+          Corrected typo and replaced UnicodeMFC scoreboard WinXP->Vista.
+
 Mon Jul 07 13:00:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/tao.xml:
-        * configs/autobuild/prism/Visa_MSVC8_Standard_UnicodeMFC.bat:
-        * configs/autobuild/prism/Visa_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.bat:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
         * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.xml:
         * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
