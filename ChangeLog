@@ -1,3 +1,11 @@
+Wed Jul 09 10:57:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/tao.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+
+          Removed non-built win XP inline Unicode MFC. Correct description
+          of replacement vista build.
+
 Tue Jul 08 08:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/tao.xml:
