@@ -12,7 +12,7 @@
         <variable name="root"                value="/home/tao/rhel4/doc_scoreboard/gcc344/standard" />
         <variable name="log_file"            value="build.txt" />
         <variable name="log_root"            value="/home/tao/doc-scoreboard/rhel4/gcc344/standard" />
-        <variable name="configs"             value="Linux Exceptions QUICK" />
+        <variable name="configs"             value="Linux Exceptions QUICK FIXED_BUGS_ONLY" />
     </configuration>
 
     <command name="status"            options="on" />

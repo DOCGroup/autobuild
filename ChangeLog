@@ -1,3 +1,18 @@
+Thu Jul 24 08:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+        * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.xml:
+
+          Added config item FIXED_BUGS_ONLY to these builds.
+
 Wed Jul 09 10:57:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/tao.xml:
