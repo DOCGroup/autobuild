@@ -7,7 +7,7 @@
 	<environment name="ZLIB_ROOT"       value="/build/utils/zlib"/>
 	<environment name="BOOST_ROOT"      value="/build/utils/boost"/>
 	<environment name="BOOST_VERSION"   value="boost-1_34_1"/>
-	<environment name="BOOST_CFG"       value=""/>
+	<environment name="BOOST_CFG"       value="-gcc41"/>
         <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/isisbuilds/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
   </configuration>
 </autobuild>

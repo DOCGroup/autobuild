@@ -2,7 +2,7 @@
 <autobuild>
     <configuration>
         <include name="fc6-env.xml" />
-        <variable name="root"     value="/build/isisbuilds/CIDLC/" />
+        <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/cidlc/" />
         <variable name="configs"  value="Linux Exceptions" />

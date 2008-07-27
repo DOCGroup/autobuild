@@ -1,18 +1,30 @@
+Sun Jul 27 21:07:40 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/ciao_core.xml:
+        * configs/autobuild/isislab/emulab/fc6-env.xml:
+        
+          Changes pending from the emulab working copy. 
+        
+        * configs/scoreboard/ciao.xml:
+        * configs/autobuild/isislab/emulab/cidlc.xml:
+
+          Migrated the CIDLC build from tango to ISISLab. 
+        
 Sun Jul 27 19:37:09 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/cidlc.xml:
-        
+
           Convert tango CIDLC build to an emulab build
-        
+
         * configs/autobuild/lindy_isis/target.xml:
         * configs/autobuild/lindy_isis/ts-target.xml:
-        
-          Correct IP addresses for target devices. 
-        
+
+          Correct IP addresses for target devices.
+
         * configs/scoreboard/ciao.xml:
 
-          Corrected log desgination for ts-target. 
-        
+          Corrected log desgination for ts-target.
+
 Thu Jul 24 08:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
