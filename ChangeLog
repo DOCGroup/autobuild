@@ -1,3 +1,10 @@
+Sun Jul 27 21:53:02 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml:
+        * configs/scoreboard/tao.xml:
+
+          Migrated tango builds to ISISLab.
+        
 Sun Jul 27 21:35:31 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/Debian_Core.xml:
@@ -5,9 +12,9 @@ Sun Jul 27 21:35:31 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/isislab/emulab/Full.xml:
         * configs/autobuild/isislab/emulab/Full_Reactors.xml:
         * configs/autobuild/isislab/emulab/SingleThreaded.xml:
-        
+
           Pending migration of tango builds to emulab.
-        
+
 Sun Jul 27 21:07:40 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/ciao_core.xml:

@@ -23,8 +23,8 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
    <build>
-   <name>Debian_ORB_Core</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tango_ORB_Core/</url>
+   <name>FC6_ORB_Core</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Debian-ORB-Core/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
