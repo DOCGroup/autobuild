@@ -45,9 +45,9 @@
 
     <command name="make"              options="-j 4 -k" />
 
-    <command name="anonymous_shell"   options="/usr/bin/rsync -rve /usr/bin/ssh --exclude='*.svn*' --exclude '*.o' --exclude '*.cpp' --exclude '*.h' --exclude '*.depend*' --exclude 'GNUmakefile*' --exclude '*.inl' -l ACE_wrappers slug01.dre.vanderbilt.edu:/build/isisbuilds" />
+    <command name="anonymous_shell"   options="/usr/bin/rsync -rve /usr/bin/rsh --exclude='*.svn*' --exclude '*.o' --exclude '*.cpp' --exclude '*.h' --exclude '*.depend*' --exclude 'GNUmakefile*' --exclude '*.inl' -l ACE_wrappers 192.168.1.3:/build/isisbuilds" />
 
-    <command name="anonymous_shell"   options="/usr/bin/ssh slug01.dre.vanderbilt.edu 'touch /build/isisbuilds/.enable'" />
+    <command name="anonymous_shell"   options="/usr/bin/rsh 192.168.1.3 'touch /build/isisbuilds/.enable'" />
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
