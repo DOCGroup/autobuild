@@ -1,15 +1,25 @@
+Sun Jul 27 21:35:31 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/Debian_Core.xml:
+        * configs/autobuild/isislab/emulab/Debian_ORB_Core.xml:
+        * configs/autobuild/isislab/emulab/Full.xml:
+        * configs/autobuild/isislab/emulab/Full_Reactors.xml:
+        * configs/autobuild/isislab/emulab/SingleThreaded.xml:
+        
+          Pending migration of tango builds to emulab.
+        
 Sun Jul 27 21:07:40 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/ciao_core.xml:
         * configs/autobuild/isislab/emulab/fc6-env.xml:
-        
-          Changes pending from the emulab working copy. 
-        
+
+          Changes pending from the emulab working copy.
+
         * configs/scoreboard/ciao.xml:
         * configs/autobuild/isislab/emulab/cidlc.xml:
 
-          Migrated the CIDLC build from tango to ISISLab. 
-        
+          Migrated the CIDLC build from tango to ISISLab.
+
 Sun Jul 27 19:37:09 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/cidlc.xml:

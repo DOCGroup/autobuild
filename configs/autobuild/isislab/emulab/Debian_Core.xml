@@ -1,0 +1,55 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <include name="fc6-env.xml" />
+
+        <variable name="root"     value="/isisbuilds/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/proj/autobuilds/logs/Core" />
+        <variable name="configs"  value="Linux Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32003" />
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#define TAO_HAS_COIOP 1\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='mcpp=1\ndebug=0\ninterface_repo=1\nssl=1\ncidl=1\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='mcpp=1\nssl=1\ncidl=1\nzlib=1\nzzip=1\n'" />
+
+    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <!-- This builds everthing exclude TAO directory-->
+    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
+    <!-- This builds TAO... -->
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,tests,examples,CCF -type gnuautobuild" />
+
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k -C TAO/CIAO realclean" />
+    <command name="make"              options="-k -j 4 -C ace" />
+    <command name="make"              options="-k -j 4 -C contrib/minizip" />
+    <command name="make"              options="-k -j 4 -C apps/gperf/src" />
+    <command name="make"              options="-k -j 4 -C tests" />
+    <command name="make"              options="-k -j 4 -C protocols" />
+    <command name="make"              options="-k -j 4 -C ACEXML" />
+    <command name="make"              options="-k -j 4 -C Kokyu" />
+    <command name="make"              options="-k -j 4 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 4 -C TAO/tao" />
+    <command name="make"              options="-k -j 4 -C TAO/orbsvcs/orbsvcs" />
+    <command name="make"              options="-k -j 4 -C TAO/CIAO" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+</autobuild>
