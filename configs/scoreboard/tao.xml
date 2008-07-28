@@ -24,7 +24,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
    <build>
    <name>FC6_ORB_Core</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Debian-ORB-Core/</url>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ORB_Core/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
