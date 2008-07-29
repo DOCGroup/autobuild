@@ -267,12 +267,6 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_MinGW_GCC_421</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/MinGW421</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_VC7.1_LabVIEWRT_TAO_IDL_Host</name>
             <url>http://acebuilds.riverace.com/timmy-xpvc71/dev/vc71_tao_host</url>
             <build_sponsor>Riverace</build_sponsor>
