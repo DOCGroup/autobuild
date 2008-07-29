@@ -11,6 +11,7 @@ use strict;
 use warnings;
 
 use FileHandle;
+use Cwd;
 
 ###############################################################################
 
@@ -716,6 +717,31 @@ sub new ($)
         $output->Header ();
     }
 
+    %{$self->{UNFIXED_BUGS}} = ();
+    my $current_dir = Cwd::getcwd ();
+    my $root = main::GetVariable ('root');
+    chdir ($root) if (defined $root);
+    my $project = main::GetVariable ('project_root');
+    if (!defined $project) {
+        $project = 'ACE_wrappers';
+    }
+    chdir ($project);
+    foreach my $file ('tests/run_test.lst', 'bin/ace_tests.lst', 'bin/tao_orb_tests.lst', 'bin/tao_other_tests.lst', 'bin/ciao_tests.lst') {
+      if (-r $file) {
+        my $fileinput = new FileHandle ($file, 'r');
+        while (<$fileinput>) {
+          if (/\!FIXED_BUGS_ONLY/) {
+            if (/^\s*([^\:]*)/) {
+              my $TestName = $1;
+              $TestName =~ s/\s+$//;
+              $self->{UNFIXED_BUGS}{$TestName} = 1;
+            }
+          }
+        }
+      }
+    }
+    chdir ($current_dir);
+
     bless ($self, $class);
     return $self;
 }
@@ -929,8 +955,15 @@ sub Test_Handler ($)
 
     # Check for the subsection indicator
 
-    if ($s =~ m/auto_run_tests: (.*)/) {
-        $self->Output_Subsection ($1);
+    if ($s =~ m/auto_run_tests:\s*(.*)/) {
+        my $params = $1;
+        $params =~ s/\s+$//;
+        $params =~ s/^([^\s]*)\s*//;
+        my $testname = $1;
+        if (defined $self->{UNFIXED_BUGS}{$testname}) {
+          $params .= " (Bug UNFIXED, This test is expected to fail)";
+        }
+        $self->Output_Subsection ($testname . " " . $params);
         return;
     }
 
