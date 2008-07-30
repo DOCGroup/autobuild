@@ -956,14 +956,12 @@ sub Test_Handler ($)
     # Check for the subsection indicator
 
     if ($s =~ m/auto_run_tests:\s*(.*)/) {
-        my $params = $1;
-        $params =~ s/\s+$//;
-        $params =~ s/^([^\s]*)\s*//;
         my $testname = $1;
+        $testname =~ s/\s+$//;
         if (defined $self->{UNFIXED_BUGS}{$testname}) {
-          $params .= " (Bug UNFIXED, This test is expected to fail)";
+          $testname .= ' (Bug currently UNFIXED, This test may fail)';
         }
-        $self->Output_Subsection ($testname . " " . $params);
+        $self->Output_Subsection ($testname);
         return;
     }
 

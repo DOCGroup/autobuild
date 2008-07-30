@@ -1,3 +1,9 @@
+Wed Jul 30 09:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          Consider the test params also when detecting "Unfixed Bugs".
+
 Tue Jul 29 09:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
