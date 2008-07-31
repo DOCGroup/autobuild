@@ -173,8 +173,8 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL51_ACE_FOR_TAO_IA64</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_acefortao/</url>
+      <name>OpenSuSE110_ACE_FOR_TAO</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -229,18 +229,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
    <build>
      <name>RHEL50_ICC10.1_64bit</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc101_64/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>OpenSuSE110_ICC10.1_32bit</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_icc101_32/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>OpenSuSE110_ICC10.1_64bit</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_icc101_64/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
