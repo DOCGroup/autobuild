@@ -12,10 +12,12 @@ def parse_test_line (line)
     end
 
     if (line =~ /Error/ || line =~ /ERROR/ ||
-        line =~ /fatal/ || line =~ /FAILED/ ||
-        line =~ /EXCEPTION/ || line =~ /ACE_ASSERT/ ||
+        line =~ /fatal/ || line =~ /FAILED/ || line =~ /FAIL:/ ||
+        (line =~ /EXCEPTION/ && line !~ /NO_EXCEPTIONS/) || line =~ /ACE_ASSERT/ ||
         line =~ /Assertion/ || line =~ /Mismatched free/ ||
         line =~ /are definitely lost in loss record/ ||
+        line =~ /error while loading shared libraries/ ||
+        line =~ /Compilation failed in require at/ ||
         line =~ /Invalid write of size/ ||
         line =~ /Invalid read of size/ ||
         line =~ /aborted due to compilation errors/ ||
