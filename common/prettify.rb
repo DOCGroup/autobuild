@@ -6,10 +6,13 @@
 # send an email to Johnny. We will work on making this a seperate
 # function that is used by the scoreboard
 
-if (f_test_begin || o_test) &&
-        (line =~ /Error/ || line =~ /ERROR/ ||
-        line =~ /fatal/ || line =~ /FAILED/ ||
-        line =~ /EXCEPTION/ || line =~ /ACE_ASSERT/ ||
+def parse_test_line (line)
+  if (line =~ /gethostbyname: getaddrinfo returned ERROR/)
+    return true
+
+  if (line =~ /Error/ || line =~ /ERROR/ ||
+      line =~ /fatal/ || line =~ /FAILED/ ||
+      line =~ /EXCEPTION/ || line =~ /ACE_ASSERT/ ||
         line =~ /Assertion/ || line =~ /Mismatched free/ ||
         line =~ /are definitely lost in loss record/ ||
         line =~ /Invalid write of size/ ||
@@ -20,7 +23,9 @@ if (f_test_begin || o_test) &&
         line =~ /ld error: error loading file/ ||
         line =~ /C interp: unable to open/ ||
         line =~ /unknown symbol name/ ||
-        line =~ /pure virtual /i ) &&
-        (line !~ /gethostbyname: getaddrinfo returned ERROR/)
-f_test_result = false
+        line =~ /pure virtual /i )
+    return true
+  else
+    return false
+end
 
