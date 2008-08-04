@@ -948,6 +948,7 @@ sub Autoconf_Handler ($)
     }
 }
 
+# If you update this method also update prettify.rb in the same directory
 sub Test_Handler ($)
 {
     my $self = shift;
