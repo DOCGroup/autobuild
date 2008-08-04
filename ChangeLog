@@ -1,3 +1,11 @@
+MOn Aug  4 07:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.rb:
+          Prettify code we now use for the integrated scoreboard. This is
+          ruby code. If this is changed, send me an email directly. We
+          will see how we can integrate this file into the scoreboard
+          itself
+
 Wed Jul 30 09:50:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
@@ -15,8 +23,8 @@ Mon Jul 28 01:00:01 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/scoreboard/ciao.xml:
         * configs/scoreboard/tao.xml:
 
-          Corrected log file paths. 
-        
+          Corrected log file paths.
+
 Sun Jul 27 21:53:02 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
