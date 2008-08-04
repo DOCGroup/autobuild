@@ -1,4 +1,10 @@
-MOn Aug  4 07:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+Mon Aug  4 07:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.rb:
+          This is now a ruby function which is used by the scoreboard on
+          http://scoreboard.theaceorb.nl
+
+Mon Aug  4 07:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.rb:
           Prettify code we now use for the integrated scoreboard. This is
