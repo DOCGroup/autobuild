@@ -1,3 +1,10 @@
+Thu Aug 07 12:28:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          The ACE tests directory has embedded run_tests.lst so "tests/"
+          needs to be added to each test name for it to match at run-time.
+
 Mon Aug  4 07:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.rb:

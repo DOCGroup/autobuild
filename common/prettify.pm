@@ -726,7 +726,7 @@ sub new ($)
         $project = 'ACE_wrappers';
     }
     chdir ($project);
-    foreach my $file ('tests/run_test.lst', 'bin/ace_tests.lst', 'bin/tao_orb_tests.lst', 'bin/tao_other_tests.lst', 'bin/ciao_tests.lst') {
+    foreach my $file ('bin/ace_tests.lst', 'bin/tao_orb_tests.lst', 'bin/tao_other_tests.lst', 'bin/ciao_tests.lst') {
       if (-r $file) {
         my $fileinput = new FileHandle ($file, 'r');
         while (<$fileinput>) {
@@ -736,6 +736,18 @@ sub new ($)
               $TestName =~ s/\s+$//;
               $self->{UNFIXED_BUGS}{$TestName} = 1;
             }
+          }
+        }
+      }
+    }
+    if (-r 'tests/run_test.lst') {
+      my $fileinput = new FileHandle ('tests/run_test.lst', 'r');
+      while (<$fileinput>) {
+        if (/\!FIXED_BUGS_ONLY/) {
+          if (/^\s*([^\:]*)/) {
+            my $TestName = "tests/$1";
+            $TestName =~ s/\s+$//;
+            $self->{UNFIXED_BUGS}{$TestName} = 1;
           }
         }
       }
