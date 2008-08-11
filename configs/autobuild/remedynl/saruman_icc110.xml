@@ -4,8 +4,8 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/ICC110/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/ICC110/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/home/build/ACE/ICC110/ACE_wrappers/TAO/CIAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/opt/intel/Compiler/11.0/025/lib/ia64:/home/build/ACE/ICC110/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/opt/intel/Compiler/11.0/025/bin/ia64" type="prefix" />
+        <environment name="LD_LIBRARY_PATH" value="/opt/intel/Compiler/11.0/034/lib/ia64:/home/build/ACE/ICC110/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/opt/intel/Compiler/11.0/034/bin/ia64" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="INTEL_LICENSE_FILE"      value="/opt/intel/licenses" />
 
