@@ -50,19 +50,19 @@ sub Run ($)
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
     my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc';
     my %information = ('XML'       => ['', '',
-                                       "$svnurl/autobuild/trunk/<file>?view=markup"],
+                                       "$svnurl/autobuild/trunk/<file>?revision=HEAD"],
                        'AUTOBUILD' => ['ChangeLog', '',
-                                       "$svnurl/autobuild/trunk/<file>?view=markup"],
+                                       "$svnurl/autobuild/trunk/<file>?revision=HEAD"],
                        'MPC'       => ['ChangeLog', 'MPC/',
-                                       "$svnurl/MPC/trunk/<file>?view=markup"],
+                                       "$svnurl/MPC/trunk/<file>?revision=HEAD"],
                        'ACE'       => ['ChangeLog', '',
-                                       "$svnurl/Middleware/trunk/ACE/<file>?view=markup"],
+                                       "$svnurl/Middleware/trunk/ACE/<file>?revision=HEAD"],
                        'TAO'       => ['ChangeLog', 'TAO/',
-                                       "$svnurl/Middleware/trunk/TAO/<file>?view=markup"],
+                                       "$svnurl/Middleware/trunk/TAO/<file>?revision=HEAD"],
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
-                                       "$svnurl/Middleware/trunk/CIAO/<file>?view=markup"],
+                                       "$svnurl/Middleware/trunk/CIAO/<file>?revision=HEAD"],
                        'DDS'       => ['ChangeLog', 'DDS/',
-                                       "$svnurl/DDS/trunk/<file>?view=markup"],
+                                       "$svnurl/DDS/trunk/<file>?revision=HEAD"],
                       );
     my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DDS');
 
