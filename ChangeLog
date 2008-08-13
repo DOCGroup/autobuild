@@ -1,3 +1,9 @@
+Wed Aug 13 17:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+        * common/prettify.rb:
+          Handle "holds reference to undefined symbol" as error
+
 Thu Aug 07 12:28:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:

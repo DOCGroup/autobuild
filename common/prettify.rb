@@ -25,6 +25,7 @@ def parse_test_line (line)
         line =~ /memPartAlloc: block too big/ ||
         line =~ /ld error: error loading file/ ||
         line =~ /C interp: unable to open/ ||
+        line =~ /holds reference to undefined symbol/ ||
         line =~ /unknown symbol name/ ||
         line =~ /pure virtual /i )
         return false
