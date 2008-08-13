@@ -1,3 +1,10 @@
+Wed Aug 13 17:46:18 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * analyze_test_log.pl:
+
+          New script for producing a plaintext summary of the errors in a test
+          log, using the same criteria as the scoreboard.
+
 Wed Aug 13 17:43:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
