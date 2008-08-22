@@ -1,3 +1,10 @@
+Fri Aug 22 08:45:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/tao.xml:
+
+          Remove the Win2003_MSVC71_Standard_MFC build. Lack of resources
+          to maintain this build.
+
 Wed Aug 13 17:46:18 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * analyze_test_log.pl:
