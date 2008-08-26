@@ -21,6 +21,7 @@ def parse_test_line (line)
         line =~ /Invalid write of size/ ||
         line =~ /Invalid read of size/ ||
         line =~ /aborted due to compilation errors/ ||
+        line =~ /exception resulted in call to terminate/ ||
         line =~ /memPartFree: invalid block/ ||
         line =~ /memPartAlloc: block too big/ ||
         line =~ /ld error: error loading file/ ||

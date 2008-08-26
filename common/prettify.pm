@@ -994,6 +994,7 @@ sub Test_Handler ($)
         || $s =~ m/memPartAlloc: block too big/
         || $s =~ m/C interp: token/
         || $s =~ m/ld error: error loading file/
+        || $s =~ m/exception resulted in call to terminate/
         || $s =~ m/aborted due to compilation errors/
         || $s =~ m/Can't open perl script/
         || $s =~ m/C interp: unable to open/
