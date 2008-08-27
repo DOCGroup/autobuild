@@ -1,0 +1,53 @@
+<!-- $Id$ -->
+
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\\ACE\\ace_for_tao\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\ace_for_tao\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"     value="C:\\ACE\\ace_for_tao\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="XERCESCROOT"  value="C:\\utils" />
+        <environment name="BOOST_ROOT"  value="C:\\utils" />
+        <environment name="BOOST_VER"   value="boost-1_36" />
+        <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
+        <environment name="PATH"         value="C:\\ACE\\ace_for_tao\\ACE_wrappers\\bin;C:\\ACE\\ace_for_tao\\ACE_wrappers\\lib;C:\\utils\\lib;c:\\cygwin\\bin" type="prefix" />
+        <variable name="configs"  value="Win32 Exceptions ACE_FOR_TAO" />
+        <variable name="root"     value="C:\\ACE\\ace_for_tao\\" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="C:\\ACE\\ace_for_tao\\" />
+        <variable name="name"     value="Win2003 ACE_FOR_TAO" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -ALL -Debug -k -clean" />
+
+    <command name="log"               options="ON" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1,boost=1,cidl=1\n'" />
+
+    <command name="anonymous_shell"   options="scp -C bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
+
+    <command name="print_os_version" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO/CIAO/CIDLC,TAO/CIAO/CCF -type vc9"/>
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -ALL -Debug -k" />
+
+    <command name="auto_run_tests"    options="-s \x22C:\\Docume~1\\bczar\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_ace_for_tao" />
+</autobuild>

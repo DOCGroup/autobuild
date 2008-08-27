@@ -1,3 +1,12 @@
+Wed Aug 27 15:00:48 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/trian/ace_for_tao.bat:
+        * configs/autobuild/trian/ace_for_tao.xml:
+        * configs/autobuild/trian/versioned_namespace.bat:
+        * configs/autobuild/trian/versioned_namespace.xml:
+        
+          Converting ISISLab Windows builds to new hardware. 
+        
 Tue Aug 26 13:46:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
