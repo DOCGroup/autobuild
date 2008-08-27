@@ -6,4 +6,4 @@ cd "C:\ACE\autobuild"
 
 svn up
 
-perl autobuild.pl configs\autobuild\isislab\blade11\ace_for_tao.xml
+perl autobuild.pl configs\autobuild\trian\ace_for_tao.xml

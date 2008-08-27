@@ -6,4 +6,4 @@ cd "C:\ACE\autobuild"
 
 svn up
 
-perl autobuild.pl configs\autobuild\isislab\blade11\versioned_namespace.xml
+perl autobuild.pl configs\autobuild\trian\versioned_namespace.xml
