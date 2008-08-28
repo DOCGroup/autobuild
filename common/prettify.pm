@@ -406,6 +406,12 @@ sub new ($)
     $self->{TEST_WARNINGS} = 0;
     $self->{TOTAL_ERROR_SUBSECTIONS} = 0;
 
+    $self->{SUBVERSION_LAST_EXTERNAL}  = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_TAO} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_CIAO}= 'None';
+
     bless ($self, $class);
     return $self;
 }
@@ -552,7 +558,10 @@ sub Footer ()
     }
 
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
-
+    $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
+    $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
+    $totals .= " TAO: $self->{SUBVERSION_CHECKEDOUT_TAO}";
+    $totals .= " CIAO: $self->{SUBVERSION_CHECKEDOUT_CIAO}";
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -878,7 +887,36 @@ sub Setup_Handler ($)
     my $self = shift;
     my $s = shift;
 
-    if ($s =~ m/aborted/i ||
+    if ($s =~ m/Fetching external item into '([^']*)'/i)
+    {
+        $self->{SUBVERSION_LAST_EXTERNAL} = $1;
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision ([0-9]*)./i)
+    {
+        my $revision= $1;
+        my $external= $self->{SUBVERSION_LAST_EXTERNAL};
+        $self->{SUBVERSION_CHECKEDOUT_ACE} = $revision if ($external =~ m/ACE_wrappers$/);
+        $self->{SUBVERSION_CHECKEDOUT_MPC} = $revision if ($external =~ m/MPC$/);
+        $self->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
+        $self->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
+        $self->Output_Normal ($s);
+    }
+    elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision ([0-9]*)./i)
+    {
+        # Since we don't know what is being checked out or updated, we have to guess
+        # (unlike when sets are used, these are accuratly handled above).
+        if ($1 < 70000) {
+            $self->{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        }
+        else {
+            $self->{SUBVERSION_CHECKEDOUT_ACE} = $1;
+            $self->{SUBVERSION_CHECKEDOUT_TAO} = $1;
+            $self->{SUBVERSION_CHECKEDOUT_CIAO}= $1;
+        }
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
         $s =~ m/nothing known about/ ||
         $s =~ m/processing is incomplete/ ||
@@ -897,11 +935,9 @@ sub Setup_Handler ($)
         $s =~ m/The following error occurred while executing this line/ ||
         $s =~ m/No commands are being checked/ ||
         $s =~ m/When Checking \"/ ||
-        $s =~ m/No commands are being executed/ )
+        $s =~ m/No commands are being executed/ ||
+        $s =~ /^C / )
     {
-        $self->Output_Error ($s);
-    }
-    elsif ($s =~ /^C /) {
         $self->Output_Error ($s);
     }
     elsif ($s =~ /^M / ||

@@ -46,6 +46,10 @@ use Time::Local;
 #                 ->{SECTION_ERROR_SUBSECTIONS} <- Number of subsections with errors
 #                 ->{FULL_HISTORY}     <- Link with full history information
 #                 ->{CLEAN_HISTORY}    <- Link with clean history information
+#                 ->{SUBVERSION_CHECKEDOUT_ACE}  <- SVN Revision of ACE checked out
+#                 ->{SUBVERSION_CHECKEDOUT_MPC}  <- SVN Revision of MPC checked out
+#                 ->{SUBVERSION_CHECKEDOUT_TAO}  <- SVN Revision of TAO checked out
+#                 ->{SUBVERSION_CHECKEDOUT_CIAO} <- SVN Revision of CIAO checked out
 
 my %builds;
 
@@ -231,6 +235,19 @@ sub query_latest ()
 
         if ($latest =~ m/Failures: (\d+)/) {
             $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
+        }
+
+        if ($latest =~ m/ACE: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_ACE} = $1;
+        }
+        if ($latest =~ m/MPC: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        }
+        if ($latest =~ m/TAO: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_TAO} = $1;
+        }
+        if ($latest =~ m/CIAO: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_CIAO} = $1;
         }
     }
 }
@@ -713,6 +730,18 @@ print "in local_update_cache, post=$post\n";
             $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
         }
 
+        if ($latest =~ m/ACE: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_ACE} = $1;
+        }
+        if ($latest =~ m/MPC: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        }
+        if ($latest =~ m/TAO: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_TAO} = $1;
+        }
+        if ($latest =~ m/CIAO: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_CIAO} = $1;
+        }
     }
 }
 
@@ -1064,6 +1093,7 @@ sub update_html_table ($$@)
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
     print $indexhtml "<th>Build Name</th><th>Last Finished</th>";
+    print $indexhtml "<th>ACE</th><th>MPC</th><th>TAO</th><th>CIAO</th>";
     print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th><th>Failures</th>";
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
@@ -1119,6 +1149,34 @@ sub update_html_table ($$@)
             print $indexhtml $color;
             print $indexhtml '>',decode_timestamp ($basename);
 
+            print $indexhtml '<td>';
+            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
+                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+            print $indexhtml '<td>';
+            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_MPC}) {
+                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_MPC};
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+            print $indexhtml '<td>';
+            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_TAO}) {
+                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_TAO};
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+            print $indexhtml '<td>';
+            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_CIAO}) {
+                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_CIAO};
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
             print $indexhtml '<td>';
             if (defined $builds{$buildname}->{CONFIG_SECTION}) {
                 print $indexhtml "[<a href=\"".$webfile."_Config.html\">Config</a>] ";
@@ -1215,6 +1273,10 @@ sub update_html_table ($$@)
         }
         else {
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Time
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # ACE
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # MPC
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # TAO
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # CIAO
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Config
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # CVS
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Compiler

@@ -1,3 +1,12 @@
+Thu Aug 28 11:05:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+        * scoreboard.pl:
+
+          Add svn checkout revision number to every build. You can then see
+          what builds have your changes included without having to download
+          the config data of each individual build.
+
 Wed Aug 27 15:08:09 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/trian/ace_for_tao.bat:
