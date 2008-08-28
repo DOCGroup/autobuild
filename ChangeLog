@@ -1,3 +1,9 @@
+Thu Aug 28 16:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          Ordering problem with totals object.
+
 Thu Aug 28 15:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:

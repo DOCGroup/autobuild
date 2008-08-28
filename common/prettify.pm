@@ -364,13 +364,13 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($)
+sub new ($$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
     my $self = {};
-    my $parent = shift;
     my $basename = shift;
+    my $parent = shift;
     my $filename = $basename . '_Totals.html';
 
     if ($basename =~ s/^(.*)\///) {
