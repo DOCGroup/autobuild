@@ -1,3 +1,10 @@
+Thu Aug 28 15:25:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          Found why the pattern matching wasn't working, it was but it
+          wasn't storing the results in the correct object.
+
 Thu Aug 28 14:16:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
