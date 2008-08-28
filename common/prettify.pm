@@ -900,6 +900,7 @@ sub Setup_Handler ($)
         $self->{SUBVERSION_CHECKEDOUT_MPC} = $revision if ($external =~ m/MPC$/);
         $self->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
         $self->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
+        $self->{SUBVERSION_LAST_EXTERNAL} = 'None';
         $self->Output_Normal ($s);
     }
     elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision ([0-9]*)./i)
