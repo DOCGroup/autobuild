@@ -890,9 +890,9 @@ sub Setup_Handler ($)
     if ($s =~ m/Fetching external item into '([^']*)'/i)
     {
         $self->{SUBVERSION_LAST_EXTERNAL} = $1;
-        $self->Output_Normal ($s);
+        $self->Output_Normal ("... $s");
     }
-    elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision ([0-9]*)./i)
+    elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)./i)
     {
         my $revision= $1;
         my $external= $self->{SUBVERSION_LAST_EXTERNAL};
@@ -901,9 +901,9 @@ sub Setup_Handler ($)
         $self->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
         $self->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
         $self->{SUBVERSION_LAST_EXTERNAL} = 'None';
-        $self->Output_Normal ($s);
+        $self->Output_Normal ("... $s");
     }
-    elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision ([0-9]*)./i)
+    elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision (/d+)./i)
     {
         # Since we don't know what is being checked out or updated, we have to guess
         # (unlike when sets are used, these are accuratly handled above).
@@ -915,7 +915,7 @@ sub Setup_Handler ($)
             $self->{SUBVERSION_CHECKEDOUT_TAO} = $1;
             $self->{SUBVERSION_CHECKEDOUT_CIAO}= $1;
         }
-        $self->Output_Normal ($s);
+        $self->Output_Normal ("... $s");
     }
     elsif ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||

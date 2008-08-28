@@ -1093,7 +1093,7 @@ sub update_html_table ($$@)
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
     print $indexhtml "<th>Build Name</th><th>Last Finished</th>";
-    print $indexhtml "<th>ACE</th><th>MPC</th><th>TAO</th><th>CIAO</th>";
+    print $indexhtml "<th>ACE+TAO</th><th>MPC</th>";
     print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th><th>Failures</th>";
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
@@ -1159,20 +1159,6 @@ sub update_html_table ($$@)
             print $indexhtml '<td>';
             if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_MPC}) {
                 print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_MPC};
-            }
-            else {
-                print $indexhtml "&nbsp;";
-            }
-            print $indexhtml '<td>';
-            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_TAO}) {
-                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_TAO};
-            }
-            else {
-                print $indexhtml "&nbsp;";
-            }
-            print $indexhtml '<td>';
-            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_CIAO}) {
-                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_CIAO};
             }
             else {
                 print $indexhtml "&nbsp;";
@@ -1273,10 +1259,8 @@ sub update_html_table ($$@)
         }
         else {
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Time
-            print $indexhtml '<td bgcolor=gray>&nbsp;'; # ACE
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # ACE+TAO
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # MPC
-            print $indexhtml '<td bgcolor=gray>&nbsp;'; # TAO
-            print $indexhtml '<td bgcolor=gray>&nbsp;'; # CIAO
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Config
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # CVS
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Compiler

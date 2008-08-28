@@ -1,3 +1,11 @@
+Thu Aug 28 14:16:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+        * scoreboard.pl:
+
+          Remove the display of TAO and CIAO, combine with ACE.
+          Something is not pattern matching (enable some hints).
+
 Thu Aug 28 12:13:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
