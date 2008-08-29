@@ -368,11 +368,10 @@ sub new ($$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
     my $basename = shift;
-    my $parent = shift;
-    $self->{parent} = $parent;
     my $filename = $basename . '_Totals.html';
+    my $self = {};
+    $self->{PARENT} = shift;
 
     if ($basename =~ s/^(.*)\///) {
         $self->{LATEST_FILENAME} = $1 . '/latest.txt';
@@ -407,12 +406,6 @@ sub new ($$)
     $self->{TEST_ERRORS} = 0;
     $self->{TEST_WARNINGS} = 0;
     $self->{TOTAL_ERROR_SUBSECTIONS} = 0;
-
-    $parent->{SUBVERSION_LAST_EXTERNAL}  = 'None';
-    $parent->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
-    $parent->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
-    $parent->{SUBVERSION_CHECKEDOUT_TAO} = 'None';
-    $parent->{SUBVERSION_CHECKEDOUT_CIAO}= 'None';
 
     bless ($self, $class);
     return $self;
@@ -535,6 +528,7 @@ sub Section_Totals ()
 sub Footer ()
 {
     my $self = shift;
+    my $parent = $self->{PARENT};
 
     $self->Section_Totals ();
 
@@ -560,10 +554,10 @@ sub Footer ()
     }
 
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
-    $totals .= " ACE: $self->{parent}->{SUBVERSION_CHECKEDOUT_ACE}";
-    $totals .= " MPC: $self->{parent}->{SUBVERSION_CHECKEDOUT_MPC}";
-    $totals .= " TAO: $self->{parent}->{SUBVERSION_CHECKEDOUT_TAO}";
-    $totals .= " CIAO: $self->{parent}->{SUBVERSION_CHECKEDOUT_CIAO}";
+    $totals .= " ACE: $parent->{SUBVERSION_CHECKEDOUT_ACE}";
+    $totals .= " MPC: $parent->{SUBVERSION_CHECKEDOUT_MPC}";
+    $totals .= " TAO: $parent->{SUBVERSION_CHECKEDOUT_TAO}";
+    $totals .= " CIAO: $parent->{SUBVERSION_CHECKEDOUT_CIAO}";
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -698,6 +692,11 @@ sub new ($)
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
+    $self->{SUBVERSION_LAST_EXTERNAL}  = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_TAO} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_CIAO}= 'None';
 
     # Initialize the hash table of handlers for each section
 

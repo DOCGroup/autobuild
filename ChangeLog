@@ -1,3 +1,9 @@
+Fri Aug 29 08:38:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          Thanks Adam, {I really hate perl}. This is the correct version.
+
 Fri Aug 29 00:34:13 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * common/prettify.pm:
