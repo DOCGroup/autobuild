@@ -364,14 +364,13 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($$)
+sub new ($)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
     my $basename = shift;
     my $filename = $basename . '_Totals.html';
     my $self = {};
-    $self->{PARENT} = shift;
 
     if ($basename =~ s/^(.*)\///) {
         $self->{LATEST_FILENAME} = $1 . '/latest.txt';
@@ -406,6 +405,12 @@ sub new ($$)
     $self->{TEST_ERRORS} = 0;
     $self->{TEST_WARNINGS} = 0;
     $self->{TOTAL_ERROR_SUBSECTIONS} = 0;
+
+    $self->{SUBVERSION_LAST_EXTERNAL}  = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_TAO} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_CIAO}= 'None';
 
     bless ($self, $class);
     return $self;
@@ -528,7 +533,6 @@ sub Section_Totals ()
 sub Footer ()
 {
     my $self = shift;
-    my $parent = $self->{PARENT};
 
     $self->Section_Totals ();
 
@@ -554,10 +558,10 @@ sub Footer ()
     }
 
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
-    $totals .= " ACE: $parent->{SUBVERSION_CHECKEDOUT_ACE}";
-    $totals .= " MPC: $parent->{SUBVERSION_CHECKEDOUT_MPC}";
-    $totals .= " TAO: $parent->{SUBVERSION_CHECKEDOUT_TAO}";
-    $totals .= " CIAO: $parent->{SUBVERSION_CHECKEDOUT_CIAO}";
+    $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
+    $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
+    $totals .= " TAO: $self->{SUBVERSION_CHECKEDOUT_TAO}";
+    $totals .= " CIAO: $self->{SUBVERSION_CHECKEDOUT_CIAO}";
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -692,11 +696,6 @@ sub new ($)
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
-    $self->{SUBVERSION_LAST_EXTERNAL}  = 'None';
-    $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
-    $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
-    $self->{SUBVERSION_CHECKEDOUT_TAO} = 'None';
-    $self->{SUBVERSION_CHECKEDOUT_CIAO}= 'None';
 
     # Initialize the hash table of handlers for each section
 
@@ -715,10 +714,10 @@ sub new ($)
 
     @{$self->{OUTPUT}} =
         (
-            new Prettify::Full_HTML ($basename),
+            new Prettify::Full_HTML ($basename),   #Must be 0
             new Prettify::Brief_HTML ($basename),
-            new Prettify::Totals_HTML ($basename, $self),
-            new Prettify::Config_HTML ($basename),
+            new Prettify::Totals_HTML ($basename), #Must be 2
+            new Prettify::Config_HTML ($basename), #Must be 3
         );
 
     # Output the header for the files
@@ -887,36 +886,37 @@ sub Setup_Handler ($)
 {
     my $self = shift;
     my $s = shift;
+    my $totals= (@{$self->{OUTPUT}})[2];
+    my $external= $totals->{SUBVERSION_LAST_EXTERNAL};
 
     if ($s =~ m/Fetching external item into '([^']+)'/i)
     {
-        $self->{SUBVERSION_LAST_EXTERNAL} = $1;
         $self->Output_Normal ($s);
+        $totals->{SUBVERSION_LAST_EXTERNAL} = $1;
     }
     elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)\./i)
     {
-        my $revision = $1;
-        my $external = $self->{SUBVERSION_LAST_EXTERNAL};
-        $self->{SUBVERSION_CHECKEDOUT_ACE} = $revision if ($external =~ m/ACE_wrappers$/);
-        $self->{SUBVERSION_CHECKEDOUT_MPC} = $revision if ($external =~ m/MPC$/);
-        $self->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
-        $self->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
-        $self->{SUBVERSION_LAST_EXTERNAL} = 'None';
         $self->Output_Normal ($s);
+        my $revision = $1;
+        $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision if ($external =~ m/ACE_wrappers$/);
+        $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision if ($external =~ m/MPC$/);
+        $totals->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
+        $totals->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
+        $totals->{SUBVERSION_LAST_EXTERNAL}  = 'None';
     }
     elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision (\d+)\./i)
     {
+        $self->Output_Normal ($s);
         # Since we don't know what is being checked out or updated, we have to guess
         # (unlike when sets are used, these are accuratly handled above).
         if ($1 < 70000) {
-            $self->{SUBVERSION_CHECKEDOUT_MPC} = $1;
+            $totals->{SUBVERSION_CHECKEDOUT_MPC} = $1;
         }
         else {
-            $self->{SUBVERSION_CHECKEDOUT_ACE} = $1;
-            $self->{SUBVERSION_CHECKEDOUT_TAO} = $1;
-            $self->{SUBVERSION_CHECKEDOUT_CIAO}= $1;
+            $totals->{SUBVERSION_CHECKEDOUT_ACE} = $1;
+            $totals->{SUBVERSION_CHECKEDOUT_TAO} = $1;
+            $totals->{SUBVERSION_CHECKEDOUT_CIAO}= $1;
         }
-        $self->Output_Normal ($s);
     }
     elsif ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
