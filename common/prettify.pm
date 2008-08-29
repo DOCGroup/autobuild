@@ -371,6 +371,7 @@ sub new ($$)
     my $self = {};
     my $basename = shift;
     my $parent = shift;
+    $self->{parent} = $parent;
     my $filename = $basename . '_Totals.html';
 
     if ($basename =~ s/^(.*)\///) {
@@ -559,10 +560,10 @@ sub Footer ()
     }
 
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
-    $totals .= " ACE: $parent->{SUBVERSION_CHECKEDOUT_ACE}";
-    $totals .= " MPC: $parent->{SUBVERSION_CHECKEDOUT_MPC}";
-    $totals .= " TAO: $parent->{SUBVERSION_CHECKEDOUT_TAO}";
-    $totals .= " CIAO: $parent->{SUBVERSION_CHECKEDOUT_CIAO}";
+    $totals .= " ACE: $self->{parent}->{SUBVERSION_CHECKEDOUT_ACE}";
+    $totals .= " MPC: $self->{parent}->{SUBVERSION_CHECKEDOUT_MPC}";
+    $totals .= " TAO: $self->{parent}->{SUBVERSION_CHECKEDOUT_TAO}";
+    $totals .= " CIAO: $self->{parent}->{SUBVERSION_CHECKEDOUT_CIAO}";
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -888,15 +889,15 @@ sub Setup_Handler ($)
     my $self = shift;
     my $s = shift;
 
-    if ($s =~ m/Fetching external item into '([^']*)'/i)
+    if ($s =~ m/Fetching external item into '([^']+)'/i)
     {
         $self->{SUBVERSION_LAST_EXTERNAL} = $1;
         $self->Output_Normal ($s);
     }
-    elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)./i)
+    elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)\./i)
     {
-        my $revision= $1;
-        my $external= $self->{SUBVERSION_LAST_EXTERNAL};
+        my $revision = $1;
+        my $external = $self->{SUBVERSION_LAST_EXTERNAL};
         $self->{SUBVERSION_CHECKEDOUT_ACE} = $revision if ($external =~ m/ACE_wrappers$/);
         $self->{SUBVERSION_CHECKEDOUT_MPC} = $revision if ($external =~ m/MPC$/);
         $self->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
@@ -904,7 +905,7 @@ sub Setup_Handler ($)
         $self->{SUBVERSION_LAST_EXTERNAL} = 'None';
         $self->Output_Normal ($s);
     }
-    elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision (/d+)./i)
+    elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision (\d+)\./i)
     {
         # Since we don't know what is being checked out or updated, we have to guess
         # (unlike when sets are used, these are accuratly handled above).

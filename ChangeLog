@@ -1,3 +1,12 @@
+Fri Aug 29 00:34:13 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * common/prettify.pm:
+
+          Fixed perl syntax errors.  This is a quick hack to get the builds
+          going again.  This verison passes the "perl -wc" syntax check; Simon
+          will probably need to come back later to check if it actaully does
+          what he intended it to do.
+
 Thu Aug 28 16:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:
@@ -38,9 +47,9 @@ Wed Aug 27 15:08:09 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/trian/ace_for_tao.bat:
         * configs/autobuild/trian/versioned_namespace.bat:
-        
-          Corrected paths. 
-        
+
+          Corrected paths.
+
 Wed Aug 27 15:00:48 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/trian/ace_for_tao.bat:
