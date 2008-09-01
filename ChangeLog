@@ -1,3 +1,9 @@
+Mon Sep 01 12:15:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          Not using local cashed "external" for "generic" svn updates.
+
 Mon Sep 01 09:40:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:

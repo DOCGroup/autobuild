@@ -910,7 +910,7 @@ sub Setup_Handler ($)
         $totals->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
         $totals->{SUBVERSION_LAST_EXTERNAL}  = 'None';
     }
-    elsif ('None' eq $self->{SUBVERSION_LAST_EXTERNAL} && $s =~ m/(?:Checked out|At) revision (\d+)\./i)
+    elsif ('None' eq $external && $s =~ m/(?:Checked out|At) revision (\d+)\./i)
     {
         $self->Output_Normal ($s);
         # Since we don't know what is being checked out or updated, we have to guess
