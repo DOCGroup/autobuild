@@ -886,6 +886,12 @@ sub Setup_Handler ($)
 {
     my $self = shift;
     my $s = shift;
+    if (!defined $s)
+    {
+        $self->Output_Normal (" ");
+        return;
+    }
+
     my $totals= (@{$self->{OUTPUT}})[2];
     my $external= $totals->{SUBVERSION_LAST_EXTERNAL};
 
