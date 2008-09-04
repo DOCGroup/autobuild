@@ -406,11 +406,10 @@ sub new ($)
     $self->{TEST_WARNINGS} = 0;
     $self->{TOTAL_ERROR_SUBSECTIONS} = 0;
 
+    $self->{CVS_TIMESTAMP} = 'None'; ## Prismtech still use some CVS please leave
     $self->{SUBVERSION_LAST_EXTERNAL}  = 'None';
     $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
-    $self->{SUBVERSION_CHECKEDOUT_TAO} = 'None';
-    $self->{SUBVERSION_CHECKEDOUT_CIAO}= 'None';
 
     bless ($self, $class);
     return $self;
@@ -560,8 +559,7 @@ sub Footer ()
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
     $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
     $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
-    $totals .= " TAO: $self->{SUBVERSION_CHECKEDOUT_TAO}";
-    $totals .= " CIAO: $self->{SUBVERSION_CHECKEDOUT_CIAO}";
+    $totals .= " CVS: \"$self->{CVS_TIMESTAMP}\""; ## Prismtech still use some CVS please leave
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -607,7 +605,7 @@ sub Description ($)
 sub Timestamp ($)
 {
     my $self = shift;
-    # Ignore
+    $self->{CVS_TIMESTAMP} = shift if ($self->{CVS_TIMESTAMP} eq 'Yes'); ## Prismtech still use some CVS please leave
 }
 
 sub Subsection ($)
@@ -893,35 +891,78 @@ sub Setup_Handler ($)
     }
 
     my $totals= (@{$self->{OUTPUT}})[2];
-    my $external= $totals->{SUBVERSION_LAST_EXTERNAL};
 
-    if ($s =~ m/Fetching external item into '([^']+)'/i)
+    if ($s =~ m/Executing: (?:.*\/)?cvs(?:.exe)? /i) ## Prismtech still use some CVS please leave
+    {
+        $self->Output_Normal ($s);
+        $totals->{CVS_TIMESTAMP} = 'Yes';
+    }
+    elsif ($s =~ m/Fetching external item into '([^']+)'/i)
     {
         $self->Output_Normal ($s);
         $totals->{SUBVERSION_LAST_EXTERNAL} = $1;
     }
     elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)\./i)
     {
-        $self->Output_Normal ($s);
         my $revision = $1;
-        $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision if ($external =~ m/ACE_wrappers$/);
-        $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision if ($external =~ m/MPC$/);
-        $totals->{SUBVERSION_CHECKEDOUT_TAO} = $revision if ($external =~ m/TAO$/);
-        $totals->{SUBVERSION_CHECKEDOUT_CIAO}= $revision if ($external =~ m/CIAO$/);
-        $totals->{SUBVERSION_LAST_EXTERNAL}  = 'None';
-    }
-    elsif ('None' eq $external && $s =~ m/(?:Checked out|Updated to|At) revision (\d+)\./i)
-    {
+        my $external= $totals->{SUBVERSION_LAST_EXTERNAL};
+
         $self->Output_Normal ($s);
+        if ($external =~ m/MPC$/)
+        {
+            $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;
+        }
+        elsif ($external =~ m/ACE_wrappers(?:\/TAO(?:\/CIAO)?)?$/)
+        {
+            if ('None' eq $totals->{SUBVERSION_CHECKEDOUT_ACE})
+            {
+                $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
+            }
+            elsif ($revision != $totals->{SUBVERSION_CHECKEDOUT_ACE})
+            {
+                $totals->{SUBVERSION_CHECKEDOUT_ACE} = 'Mixed';
+            }
+
+            ## Prismtech still use some CVS please leave
+            if ($totals->{CVS_TIMESTAMP} =~ m/^None$|^SVN Rev/)
+            {
+                $totals->{CVS_TIMESTAMP} = "SVN Rev: $totals->{SUBVERSION_CHECKEDOUT_ACE}";
+            }
+        }
+    }
+    elsif ($s =~ m/(?:Checked out|Updated to|At) revision (\d+)\./i)
+    {
+        my $revision = $1;
+        my $external= $totals->{SUBVERSION_LAST_EXTERNAL};
+
+        $self->Output_Normal ($s);
+        if ('None' ne $external)
+        {
+            # This is the tail end of a set, it has already been dealt with.
+            $totals->{SUBVERSION_LAST_EXTERNAL}  = 'None';
+        }
         # Since we don't know what is being checked out or updated, we have to guess
         # (unlike when sets are used, these are accuratly handled above).
-        if ($1 < 70000) {
-            $totals->{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        elsif ($revision < 70000)
+        {
+            $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;
         }
-        else {
-            $totals->{SUBVERSION_CHECKEDOUT_ACE} = $1;
-            $totals->{SUBVERSION_CHECKEDOUT_TAO} = $1;
-            $totals->{SUBVERSION_CHECKEDOUT_CIAO}= $1;
+        else
+        {
+            if ('None' eq $totals->{SUBVERSION_CHECKEDOUT_ACE})
+            {
+                $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
+            }
+            elsif ($revision != $totals->{SUBVERSION_CHECKEDOUT_ACE})
+            {
+                $totals->{SUBVERSION_CHECKEDOUT_ACE} = 'Mixed';
+            }
+
+            ## Prismtech still use some CVS please leave
+            if ($totals->{CVS_TIMESTAMP} =~ m/^None$|^SVN Rev/)
+            {
+                $totals->{CVS_TIMESTAMP} = "SVN Rev: $totals->{SUBVERSION_CHECKEDOUT_ACE}";
+            }
         }
     }
     elsif ($s =~ m/aborted/i ||
@@ -955,7 +996,8 @@ sub Setup_Handler ($)
     {
         $self->Output_Warning ($s);
     }
-    else {
+    else
+     {
         $self->Output_Normal ($s);
     }
 }

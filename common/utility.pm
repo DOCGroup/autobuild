@@ -52,7 +52,7 @@ sub index_logs ($$)
     
     print $fh "<html>\n<head>\n<title>$title</title>\n</head>\n";
     print $fh "<body bgcolor=\"white\"><h1>$title</h1>\n<hr>\n";
-    print $fh "<table border=\"1\">\n<th>Timestamp</th><th>Setup</th><th>Compile</th><th>Test</th>\n";
+    print $fh "<table border=\"1\">\n<th>Last Finished</th><th>Rev</th><th>Setup</th><th>Compile</th><th>Test</th>\n";
     
     foreach my $file (@files) {
         my $totals_fh = new FileHandle ($dir . '/' . $file . '_Totals.html', 'r');
@@ -63,6 +63,13 @@ sub index_logs ($$)
             print $fh "<td><a href=\"${file}_Totals.html\">$file</a></td>";
             while (<$totals_fh>) {
                 if (m/^<!-- BUILD_TOTALS\:/) {
+                    if (m/ACE: ([^ ]+)/) {
+                        print $fh "<td>$1</td>";
+                    }
+                    else {
+                        print $fh '<td>&nbsp;</td>';
+                    }
+                    
                     if (m/Setup: (\d+)-(\d+)-(\d+)/) {
                         print $fh '<td>';
                         
@@ -131,7 +138,7 @@ sub index_logs ($$)
             }
         }
         else {
-            print $fh "<td>$file</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
+            print $fh "<td>$file</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
         }
         print $fh "</tr>\n";
     }

@@ -46,10 +46,9 @@ use Time::Local;
 #                 ->{SECTION_ERROR_SUBSECTIONS} <- Number of subsections with errors
 #                 ->{FULL_HISTORY}     <- Link with full history information
 #                 ->{CLEAN_HISTORY}    <- Link with clean history information
-#                 ->{SUBVERSION_CHECKEDOUT_ACE}  <- SVN Revision of ACE checked out
+#                 ->{SUBVERSION_CHECKEDOUT_ACE}  <- SVN Revision of ACE_wrappers checked out
 #                 ->{SUBVERSION_CHECKEDOUT_MPC}  <- SVN Revision of MPC checked out
-#                 ->{SUBVERSION_CHECKEDOUT_TAO}  <- SVN Revision of TAO checked out
-#                 ->{SUBVERSION_CHECKEDOUT_CIAO} <- SVN Revision of CIAO checked out
+#                 ->{CVS_TIMESTAMP}    <- The time AFTER the last cvs operation (PRISMTECH still use some cvs, please leave)
 
 my %builds;
 
@@ -243,11 +242,8 @@ sub query_latest ()
         if ($latest =~ m/MPC: ([^ ]+)/) {
             $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
         }
-        if ($latest =~ m/TAO: ([^ ]+)/) {
-            $builds{$buildname}{SUBVERSION_CHECKEDOUT_TAO} = $1;
-        }
-        if ($latest =~ m/CIAO: ([^ ]+)/) {
-            $builds{$buildname}{SUBVERSION_CHECKEDOUT_CIAO} = $1;
+        if ($latest =~ m/CVS: \"([^\"]+)\"/) {
+            $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
 }
@@ -736,11 +732,8 @@ print "in local_update_cache, post=$post\n";
         if ($latest =~ m/MPC: ([^ ]+)/) {
             $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
         }
-        if ($latest =~ m/TAO: ([^ ]+)/) {
-            $builds{$buildname}{SUBVERSION_CHECKEDOUT_TAO} = $1;
-        }
-        if ($latest =~ m/CIAO: ([^ ]+)/) {
-            $builds{$buildname}{SUBVERSION_CHECKEDOUT_CIAO} = $1;
+        if ($latest =~ m/CVS: \"([^\"]+)\"/) {
+            $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
 }
@@ -1093,7 +1086,7 @@ sub update_html_table ($$@)
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
     print $indexhtml "<th>Build Name</th><th>Last Finished</th>";
-    print $indexhtml "<th>ACE+TAO</th><th>MPC</th>";
+    print $indexhtml "<th>Rev</th>";
     print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th><th>Failures</th>";
     print $indexhtml "<th>Manual</th>" if ($havemanual);
     print $indexhtml "<th>Status</th>" if ($havestatus);
@@ -1156,13 +1149,7 @@ sub update_html_table ($$@)
             else {
                 print $indexhtml "&nbsp;";
             }
-            print $indexhtml '<td>';
-            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_MPC}) {
-                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_MPC};
-            }
-            else {
-                print $indexhtml "&nbsp;";
-            }
+
             print $indexhtml '<td>';
             if (defined $builds{$buildname}->{CONFIG_SECTION}) {
                 print $indexhtml "[<a href=\"".$webfile."_Config.html\">Config</a>] ";
@@ -1259,8 +1246,7 @@ sub update_html_table ($$@)
         }
         else {
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Time
-            print $indexhtml '<td bgcolor=gray>&nbsp;'; # ACE+TAO
-            print $indexhtml '<td bgcolor=gray>&nbsp;'; # MPC
+            print $indexhtml '<td bgcolor=gray>&nbsp;'; # Rev
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Config
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # CVS
             print $indexhtml '<td bgcolor=gray>&nbsp;'; # Compiler
