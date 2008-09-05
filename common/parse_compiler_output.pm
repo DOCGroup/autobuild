@@ -350,6 +350,11 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ( $s =~ m/No rule to make target/ ) {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/CXX\-I\-/) {
       $self->Output_Warning ($s);
       return;
