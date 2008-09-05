@@ -1,0 +1,54 @@
+<!-- $Id$ -->
+<autobuild>
+  <configuration>
+
+        <environment name="ACE_ROOT"        value="/home/colding/work/src/ACE/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/home/colding/work/src/ACE/ACE_wrappers/TAO" />
+        <environment name="CIAO_ROOT"       value="/home/colding/work/src/ACE/ACE_wrappers/TAO/CIAO" />
+        <environment name="LD_LIBRARY_PATH" value="/home/colding/work/src/ACE/ACE_wrappers/lib" />
+
+        <variable name="root"     value="/home/colding/work/src/ACE" />
+        <variable name="log_root" value="/home/colding/work/src/ACE/buildlog" />
+        <variable name="log_file" value="build-log.txt" />
+
+        <variable name="configs"  value="Linux Exceptions" />
+
+  </configuration>
+
+  <command name="status"            options="on" />
+  <command name="process_listener"  options="localhost:32001" />
+  <command name="log"               options="on" />
+
+  <command name="shell"             options="rm -rf ACE_wrappers" />
+  <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+  <command name="anonymous_shell"   options="curl http://www.dre.vanderbilt.edu/~isisbuilds/CIDLC/gnu-linux/cidlc -o ACE_wrappers/TAO/CIAO/bin/cidlc" />
+  <command name="anonymous_shell"   options="chmod 755 ACE_wrappers/TAO/CIAO/bin/cidlc" />
+
+  <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+  <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features" />
+
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ninline=0\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />  
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
+
+  <command name="print_os_version" />
+  <command name="check_compiler" options="g++" />
+  <command name="print_ace_config" />
+  <command name="print_make_version" />
+  <command name="print_perl_version" />
+
+  <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
+
+  <command name="make"              options="-k realclean" />
+  <command name="make"              options="-k -C TAO realclean" />
+  <command name="make"              options="-k -C TAO/CIAO realclean" />
+
+  <command name="make"              options="-k" />
+
+  <command name="auto_run_tests"    options="-a -o -t" />
+  <command name="log"               options="off" />
+  <command name="process_logs"      options="clean move prettify index" />
+  <command name="anonymous_shell"   options="scp -i /home/colding/.ssh/no_passphrase_id_rsa buildlog/* augustus:tao_autobuild_logs/fedora_rawhide/" />
+  <command name="status"            options="off" />
+
+</autobuild>

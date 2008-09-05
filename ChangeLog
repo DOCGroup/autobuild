@@ -1,3 +1,10 @@
+Fri Sep  5 11:57:21 UTC 2008  Simon Massey <sma at prismtech dot com> on behalf of Jules Colding  <colding@rawhide.42tools.com>
+
+        * configs/autobuild/42tools/:
+        * configs/autobuild/42tools/x86-32bit-fedora-rawhide.xml:
+
+          Added autobuild script and directory for 42tools.
+
 Fri Sep 05 07:55:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * common/parse_compiler_output.pm:
