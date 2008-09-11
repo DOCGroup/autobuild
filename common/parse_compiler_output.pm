@@ -237,6 +237,11 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/unknown user/) {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/^ld: \d+\-\d+/) {
     # AIX linking errors from ld
     if ($s =~ m/^ld: 0711\-345/) {
