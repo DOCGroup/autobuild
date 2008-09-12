@@ -1,3 +1,22 @@
+Fri Sep 12 19:53:05 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/xar:
+        * configs/autobuild/xar/autoconf.xml:
+        * configs/autobuild/xar/driver.sh:
+        * configs/autobuild/xar/driver_autoconf.sh:
+        * configs/autobuild/xar/driver_corba_e_compact.sh:
+        * configs/autobuild/xar/driver_corba_e_micro.sh:
+        * configs/autobuild/xar/driver_corba_e_micro_s.sh:
+        * configs/autobuild/xar/driver_minimum_corba.sh:
+        * configs/autobuild/xar/driver_regular.sh:
+        * configs/autobuild/xar/footprint_corba_e_compact.xml:
+        * configs/autobuild/xar/footprint_corba_e_micro.xml:
+        * configs/autobuild/xar/footprint_corba_e_micro_s.xml:
+        * configs/autobuild/xar/footprint_minimum_corba.xml:
+        * configs/autobuild/xar/footprint_regular.xml:
+
+          Migrated to new machine.  
+        
 Fri Sep  5 11:57:21 UTC 2008  Simon Massey <sma at prismtech dot com> on behalf of Jules Colding  <colding@42tools.com>
 
         * configs/autobuild/42tools/:
