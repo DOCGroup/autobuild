@@ -1,3 +1,14 @@
+Fri Sep 12 20:30:42 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/xar/autoconf.xml:
+        * configs/autobuild/xar/footprint_corba_e_compact.xml:
+        * configs/autobuild/xar/footprint_corba_e_micro.xml:
+        * configs/autobuild/xar/footprint_corba_e_micro_s.xml:
+        * configs/autobuild/xar/footprint_minimum_corba.xml:
+        * configs/autobuild/xar/footprint_regular.xml:
+
+          Fixed translation errors. 
+        
 Fri Sep 12 19:53:05 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/xar:
@@ -15,8 +26,8 @@ Fri Sep 12 19:53:05 UTC 2008  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/xar/footprint_minimum_corba.xml:
         * configs/autobuild/xar/footprint_regular.xml:
 
-          Migrated to new machine.  
-        
+          Migrated to new machine.
+
 Fri Sep  5 11:57:21 UTC 2008  Simon Massey <sma at prismtech dot com> on behalf of Jules Colding  <colding@42tools.com>
 
         * configs/autobuild/42tools/:
