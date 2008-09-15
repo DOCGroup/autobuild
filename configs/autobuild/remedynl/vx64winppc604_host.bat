@@ -1,4 +1,4 @@
 cd ..\..\..\
 c:\cygwin\bin\svn up
 cd configs\autobuild\remedynl
-perl C:\ACE\autobuild\autobuild.pl vx65win_host.xml
+perl C:\ACE\autobuild\autobuild.pl vx64winppc604_host.xml
