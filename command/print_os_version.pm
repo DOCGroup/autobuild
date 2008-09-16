@@ -87,7 +87,7 @@ sub Run ($)
     }
 
     if(-r "/etc/release"){
-        print "<h3>OS release (/etc/release)</h3>";
+        print "<h3>OS release (/etc/release)</h3>\n";
         system("cat /etc/release");
     }
 
