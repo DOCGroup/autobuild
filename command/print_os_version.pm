@@ -86,9 +86,32 @@ sub Run ($)
 	system("cat /proc/version");
     }
 
-    if(-r "/usr/sbin/prtdiag"){
+    if(-r "/etc/release"){
+        print "<h3>OS release (/etc/release)</h3>";
+        system("cat /etc/release");
+    }
+
+    if(-x "/usr/sbin/prtdiag"){
         print "<h3>Sun System Information (/usr/sbin/prtdiag)</h3>\n";
-        system("/usr/sbin/prtdiag");
+
+        # NOTE: prtdiag(1M) is not supported in non-global zones.
+        #       An administrator must redirect global prtdiag output to a
+        #       file in the non-global zone (i.e.: /etc/zones/prtdiag).
+        my $zoned;
+
+        if(-x "/usr/bin/zonename"){
+            my $zone = `/usr/bin/zonename`;
+            chomp($zone);
+
+            if("global" ne $zone){
+                system("cat /etc/zones/prtdiag");
+                $zoned = 1;
+            }
+        }
+
+        if(!$zoned){
+            system("/usr/sbin/prtdiag");
+        }
     }
 
     if(lc $useuname eq "useuname"){
