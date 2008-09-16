@@ -44,7 +44,7 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
-    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/vx64win_host" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks/vx64winppc604_host" />
     <command name="status"            options="off" />
 </autobuild>
 
