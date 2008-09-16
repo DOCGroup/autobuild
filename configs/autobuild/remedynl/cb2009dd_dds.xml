@@ -33,13 +33,13 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options=" -i -f Makefile.bor realclean" />
+    <command name="make"              options=" -i -f Makefile.bmak realclean" />
 
     <command name="shell"             options="find DDS -iname '*.bor' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-type borland" />
+    <command name="generate_workspace" options="-type bmake" />
 
-    <command name="make"              options=" -i -f Makefile.bor" />
+    <command name="make"              options=" -i -f Makefile.bmak" />
 
     <command name="auto_run_tests"  options="dir=. -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 1200000\x22 -Config SANDBOX -Config Win32 -Config NO_LOADAVG"/>
 

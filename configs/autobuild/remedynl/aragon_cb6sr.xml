@@ -21,7 +21,7 @@
 
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="make"              options=" -i -f Makefile.bor realclean" />
+    <command name="make"              options=" -i -f Makefile.bmak realclean" />
 
     <command name="log"               options="ON" />
 
@@ -43,9 +43,9 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="TAO_Host.mwc -type borland" />
+    <command name="generate_workspace" options="TAO_Host.mwc -type bmake" />
 
-    <command name="make"              options=" -i -f Makefile.bor" />
+    <command name="make"              options=" -i -f Makefile.bmak" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
