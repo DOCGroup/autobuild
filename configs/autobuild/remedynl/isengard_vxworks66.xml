@@ -28,7 +28,7 @@
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.123"/>
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/isengard/VxWorks66PPC604/ACE_wrappers"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.129:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="30"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="20"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
         <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.78"/>
         <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="10001"/>
