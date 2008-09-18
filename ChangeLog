@@ -1,3 +1,7 @@
+Thu Sep 18 22:30:45 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/tao.xml: Removed Windows-hosted LabVIEW RT builds.
+
 Tue Sep 16 15:08:28 UTC 2008  Steven Stallion  <stallions@ociweb.com>
 
         * command/print_os_version.pm:
