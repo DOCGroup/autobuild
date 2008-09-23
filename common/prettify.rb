@@ -28,6 +28,8 @@ def parse_test_line (line)
         line =~ /C interp: unable to open/ ||
         line =~ /holds reference to undefined symbol/ ||
         line =~ /unknown symbol name/ ||
+        line =~ /Can't open perl script/ ||
+        line =~ /Don't know how to make check/ ||
         line =~ /pure virtual /i )
         return false
     else
