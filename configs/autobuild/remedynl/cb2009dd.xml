@@ -27,7 +27,7 @@
 
     <command name="make"              options=" -i -f Makefile.bmak realclean" />
 
-    <command name="shell"             options="find ACE_wrappers -iname '*.bor' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -iname '*.bmak' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
@@ -45,11 +45,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type bmake -exclude TAO/CIAO" />
+    <command name="generate_workspace" options="-type bmake" />
 
     <command name="make"              options=" -i -f Makefile.bmak" />
 
-    <command name="auto_run_tests"     options="-a -o -t -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"     options="-s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
