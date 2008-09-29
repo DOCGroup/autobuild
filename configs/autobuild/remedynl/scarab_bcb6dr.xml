@@ -11,6 +11,7 @@
 
 	<environment name="DYNAMIC"  value="1" />
 	<environment name="BCBVER"   value="6" />
+  <environment name="RELEASE"   value="1" />
 
         <variable name="configs"  value="Win32 Borland Exceptions SSL" />
         <variable name="root"     value="C:\\ACE\\BCB6dr\\" />
