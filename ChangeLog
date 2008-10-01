@@ -1,3 +1,10 @@
+Wed Oct  1 19:30:12 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/mindy_autoconf_dev_acc_debug.xml:
+        * configs/autobuild/riverace/mindy_dev_acc_debug.xml:
+        * configs/scoreboard/ace.xml:
+          Added new HP-UX 11iv3 builds; removed AIX 5.2 autoconf and g++.
+
 Thu Sep 18 22:30:45 UTC 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/tao.xml: Removed Windows-hosted LabVIEW RT builds.

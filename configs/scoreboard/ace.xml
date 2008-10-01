@@ -11,13 +11,6 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
   <name>AIX </name>
      <build>
-     <name>AIX_5.2_gcc3_Debug</name>
-     <url>http://acebuilds.riverace.com/cuddy/dev/gcc3_debug</url>
-     <red>36</red>
-     <build_sponsor>Riverace</build_sponsor>
-     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
      <name>AIX_5.2_VA6_Debug</name>
      <url>http://acebuilds.riverace.com/cuddy/dev/va6_debug</url>
      <red>36</red>
@@ -106,6 +99,20 @@ all the OS/platform combinations on which ACE is tested everyday.
 
 <group>
   <name>HP-UX</name>
+     <build>
+	 <name>HP-UX_11iv3_ia64_aC++_Debug</name>
+	 <url>http://acebuilds.riverace.com/mindy/dev/acc_debug</url>
+         <red>36</red>
+	 <build_sponsor>Riverace</build_sponsor>
+	 <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
+     <build>
+	 <name>HP-UX_11iv3_ia64_aC++_Debug(autoconf)</name>
+	 <url>http://acebuilds.riverace.com/mindy/dev/autoconf_acc_debug</url>
+         <red>36</red>
+	 <build_sponsor>Riverace</build_sponsor>
+	 <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
      <build>
 	 <name>HP-UX_11iv2_ia64_aC++_Debug</name>
 	 <url>http://acebuilds.riverace.com/gump/dev/acc_debug</url>
