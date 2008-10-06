@@ -260,12 +260,6 @@ all the OS/platform combinations on which ACE is tested everyday.
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-        <name>WinXP_CodeGear_2009_Dynamic_Debug_Unicode</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/ddu/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>WindowsXP_VC8_Debug</name>
       <url>http://acebuilds.riverace.com/lily/dev/vc8_debug</url>
       <red>36</red>
