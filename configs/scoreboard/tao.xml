@@ -141,23 +141,19 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-<name>Windows (Non-Release Builds)</name>
+   <name>Windows</name>
         <build>
            <name>Vista_VC8_Standard_MFC_Unicode</name>
            <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardUniMFC</url>
            <build_sponsor>PrismTech</build_sponsor>
            <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
         </build>
-</group>
-
-<group>
-   <name>Windows</name>
-    <build>
-        <name>WinXP_CodeGear_2009_Dynamic_Debug_Unicode</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/ddu/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
+        <build>
+            <name>WinXP_CodeGear_2009_Dynamic_Debug_Unicode</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/ddu/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
         <build>
            <name>Vista_VC8_Standard_MFC</name>
            <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardMFC</url>
