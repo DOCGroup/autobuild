@@ -1,9 +1,11 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers\\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="ACE_ROOT"     value="C:\\ACE\\wince6\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\wince6\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\wince6\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="HOST_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers" />
+        <environment name="HOST_TAO_IDL" value="C:\\ACE\\VC8\\ACE_wrappers\\bin\\tao_idl.exe" />
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="SSL_ROOT"     value="c:\\OpenSSL" />
         <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;C:\\Perl\\bin;c:\\Cygwin\\bin" type="prefix" />
@@ -15,9 +17,9 @@
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
 
         <variable name="configs"  value="Win32 VC8 Exceptions SSL" />
-        <variable name="root"     value="C:\\ACE\\VC8\\" />
+        <variable name="root"     value="C:\\ACE\\wince6\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="C:\\ACE\\VC8\\" />
+        <variable name="log_root" value="C:\\ACE\\wince6\\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
         <variable name="svn_program"     value="c:\cygwin\bin\svn" />
     </configuration>
@@ -35,7 +37,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces=0\nssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nxerces=0\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
@@ -47,7 +49,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc"/>
+    <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -value_template platforms='\x22Windows Mobile 6 Standard SDK (ARMV4I)\x22' -value_template tao_idl=$(HOST_TAO_IDL)"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
@@ -56,5 +58,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VC8" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/msvc8ce6" />
 </autobuild>
