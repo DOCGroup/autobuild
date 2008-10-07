@@ -1,3 +1,9 @@
+Tue Oct 07 14:52:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          "Mixed" isn't numeric so must use ne instead of !=
+
 Wed Oct  1 19:30:12 UTC 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/mindy_autoconf_dev_acc_debug.xml:

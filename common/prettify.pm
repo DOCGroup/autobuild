@@ -918,7 +918,7 @@ sub Setup_Handler ($)
             {
                 $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
             }
-            elsif ($revision != $totals->{SUBVERSION_CHECKEDOUT_ACE})
+            elsif ($revision ne $totals->{SUBVERSION_CHECKEDOUT_ACE})
             {
                 $totals->{SUBVERSION_CHECKEDOUT_ACE} = 'Mixed';
             }
