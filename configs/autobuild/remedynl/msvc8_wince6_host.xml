@@ -19,7 +19,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\VC8\\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
-        <variable name="svn_program"     value="c:\cygwin\bin\svn" />
+        <variable name="svn_program"     value="c:\\cygwin\\bin\\svn" />
 
     </configuration>
 
