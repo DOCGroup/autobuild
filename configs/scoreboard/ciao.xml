@@ -106,12 +106,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
-    <build>
-       <name>Ubuntu_710_WChar</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_wchar/</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
      <build>
         <name>Ubuntu_710_Implicit_Templates</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
