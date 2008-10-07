@@ -38,7 +38,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nxerces=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nxerces=0\nuses_wchar=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
@@ -52,9 +52,7 @@
 
     <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO -value_template platforms='\x22Windows Mobile 6 Standard SDK (ARMV4I)\x22' -value_template tao_idl=$(HOST_TAO_IDL)"/>
 
-    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
-
-    <command name="auto_run_tests"    options="-s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
+    <command name="win32make"         options="nmake /I CFG=\x22Windows Mobile 6 Standard SDK (ARMV4I) Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
