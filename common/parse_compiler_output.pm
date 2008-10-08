@@ -360,6 +360,11 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ( $s =~ m/The project cannot be loaded./ ) {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/CXX\-I\-/) {
       $self->Output_Warning ($s);
       return;
