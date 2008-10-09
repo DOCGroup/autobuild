@@ -50,7 +50,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc8 -exclude TAO -value_template platforms=\x22'Windows Mobile 6 Standard SDK (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
+    <command name="generate_workspace" options="-type vc8 -exclude TAO -value_template platforms=\x22'Windows Mobile 6 Professional SDK (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
 
     <command name="vc7make"         options="/build debug ACE_wrappers.sln" />
 
