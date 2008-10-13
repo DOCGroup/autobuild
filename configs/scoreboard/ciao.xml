@@ -155,18 +155,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL50_ICC91_32bit</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc91_32/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL50_ICC91_64bit</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc91_64/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>OpenSuSE_11_0_ACE_FOR_TAO</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>

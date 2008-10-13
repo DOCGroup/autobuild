@@ -231,24 +231,6 @@ all the OS/platform combinations on which TAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_64bit_Intel100_64_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC100_64r/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_64bit_Intel100_64</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC100_64/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_64bit_Intel91_64bit</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC91_64/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP64_VC9_64bit_Debug</name>
             <url>http://scoreboard.ociweb.com/doc_trunk_earwig_winxp-x64_nmake_d1o0</url>
             <build_sponsor>OCI</build_sponsor>
