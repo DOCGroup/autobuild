@@ -151,24 +151,6 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
   <name>VxWorks</name>
    <build>
-     <name>VxWorks6.6_kernel_PPC604</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/66wink/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.6_kernel_pthread_PPC604</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/66winkp/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.6_rtp_PPC604</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks/66winr/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
      <name>VxWorks6.4_kernel_pthread_x86</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64lin_x86p/</url>
      <build_sponsor>Remedy IT</build_sponsor>
