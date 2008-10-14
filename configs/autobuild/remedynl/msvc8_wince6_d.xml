@@ -15,6 +15,7 @@
         <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
+        <environment name="CEVER" value="600" />
 
         <variable name="configs"  value="Win32 VC8 Exceptions SSL WCHAR" />
         <variable name="root"     value="C:\\ACE\\wince6\\" />
