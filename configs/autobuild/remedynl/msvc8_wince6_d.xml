@@ -15,7 +15,6 @@
         <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
-        <environment name="CEVER" value="600" />
         <environment name="ACE_RUN_VX_TGTHOST"    value="10.2.0.143"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
@@ -34,13 +33,13 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="win32make"         options="nmake /I CFG=\x22Windows Mobile 6 Professional SDK (ARMV4I) Debug\x22 REALCLEAN" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -u -vc8 -ALL -k -clean" />
 
     <command name="log"               options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="shell"             options="find ACE_wrappers -name '*.slm' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.sln' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers -name '*.vcproj' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
@@ -56,9 +55,9 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -exclude TAO/CIAO -value_template platforms=\x22'Windows Mobile 6 Professional SDK (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
+    <command name="generate_workspace" options="-type vc8 -exclude TAO/CIAO -value_template platforms=\x22'SuperSonic_CE6 (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
 
-    <command name="win32make"         options="nmake /I CFG=\x22Windows Mobile 6 Professional SDK (ARMV4I) Debug\x22 NO_EXTERNAL_DEPS=1" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -u -vc8 -ALL -k -clean" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
