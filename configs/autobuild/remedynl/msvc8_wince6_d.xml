@@ -16,6 +16,11 @@
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="CEVER" value="600" />
+        <environment name="ACE_RUN_VX_TGTHOST"    value="10.2.0.143"/>
+        <environment name="ACE_TEST_VERBOSE" value="1"/>
+        <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
+        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.142:80"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="15"/>
 
         <variable name="configs"  value="Win32 VC8 Exceptions SSL WCHAR" />
         <variable name="root"     value="C:\\ACE\\wince6\\" />
