@@ -53,7 +53,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc8 -exclude TAO/CIAO -value_template platforms=\x22'Windows Mobile 6 Professional SDK (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
+    <command name="generate_workspace" options="-type vc8 -exclude TAO/CIAO -value_template platforms=\x22'SuperSonic_CE6 (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -u -vc8 -ALL -k" />
 
