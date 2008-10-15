@@ -29,6 +29,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nrwho=0\nqos=1\nmfc=1\nssl=1\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />

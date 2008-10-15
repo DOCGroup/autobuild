@@ -22,6 +22,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='qos=1\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qos=1\n'" />
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />

@@ -21,6 +21,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />

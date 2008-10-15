@@ -1,4 +1,4 @@
-<!-- $Id: Fuzz.xml 3898 2006-07-25 16:54:56Z wotte $ -->
+<!-- $Id$ -->
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"         value="/web/www/isisbuilds/Fuzz_py/ACE_wrappers" />
@@ -16,6 +16,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="print_ace_config" />
 
     <command name="fuzz_py"         options="--exclude-dir=\x22PythonACE\x22 ." />

@@ -151,28 +151,6 @@ sub Run ($)
     print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
           $self->delay_factor(), "\n";
 
-    print "<h3>Environment:</h3>\n";
-    my $name;
-    if ($^O eq 'VMS') {
-      foreach my $envvar (main::GetEnvironment ()) {
-        my $VALUE= "$envvar->{NAME} = $ENV{$envvar->{NAME}}\n";
-        # Escape any '<' or '>' signs
-        $VALUE =~ s/</&lt;/sg;
-        $VALUE =~ s/>/&gt;/sg;
-        print $VALUE;
-      }
-    }
-    else {
-      foreach $name (sort keys %ENV) {
-          my $VALUE= "$name = $ENV{$name}\n";
-          # Escape any '<' or '>' signs
-          $VALUE =~ s/</&lt;/sg;
-          $VALUE =~ s/>/&gt;/sg;
-          print $VALUE;
-      }
-    }
-    print "\n";
-
     return 1;
 }
 

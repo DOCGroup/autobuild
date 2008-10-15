@@ -37,6 +37,7 @@
     <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/TAO/TAO_IDL/tao_idl ACE_wrappers/bin" />
     <command name="anonymous_shell"   options="/bin/cp /build/isisbuilds/arm/host/ACE_wrappers/TAO/CIAO/tools/IDL3_to_IDL2/tao_idl3_to_idl2 ACE_wrappers/bin" />
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="g++" />
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />

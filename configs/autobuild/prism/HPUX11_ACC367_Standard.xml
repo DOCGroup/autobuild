@@ -31,6 +31,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=1\ndebug=0\ninline=0\n\nssl=1\nrtti=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="aCC" />
     <command name="print_ace_config" />
     <command name="print_make_version" />

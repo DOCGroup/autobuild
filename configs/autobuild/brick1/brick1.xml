@@ -18,6 +18,7 @@
     <command name="log"               options="on" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 

@@ -33,6 +33,7 @@
   <command name="file_manipulation"  options="type=create file=build/aCC_d1o0/ACE/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'"/>
   <command name="file_manipulation"  options="type=create file=build/aCC_d1o0/ACE/setenv.sh output='ACE_ROOT=\x22/builds/pillbug/doc/build/aCC_d1o0/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/builds/pillbug/doc/build/aCC_d1o0/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/builds/pillbug/doc/build/aCC_d1o0\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/opt/aCC/lib:/opt/langtools/lib:/usr/sfw/lib:/usr/local/lib:/builds/pillbug/doc/build/aCC_d1o0/ACE/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/opt/aCC/bin:/opt/langtools/bin:/builds/pillbug/doc/build/aCC_d1o0/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nSHLIB_PATH=\x22/opt/aCC/lib:/opt/langtools/lib:/usr/sfw/lib:/usr/local/lib:/builds/pillbug/doc/build/aCC_d1o0/ACE/lib:\x22; export SHLIB_PATH\nTAO_ROOT=\x22/builds/pillbug/doc/build/aCC_d1o0/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
+  <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="acc"/>

@@ -30,6 +30,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=1\ndebug=0\ninline=0\n\nexceptions=1\nthreads=1\nshared_libs_only=1\nstdcpplib=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />

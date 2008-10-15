@@ -33,6 +33,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features output='ipv6=1\nssl=1\nqos=0\ncidl=0\nrwho=0\nsctp=0\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 

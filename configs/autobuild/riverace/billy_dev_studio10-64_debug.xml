@@ -43,6 +43,7 @@
     <command name="file_manipulation" options="type=create file=build/studio10-64_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler"    options="sun_cc" />
     <command name="print_ace_config" />
 

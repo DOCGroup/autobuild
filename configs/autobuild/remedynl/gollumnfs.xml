@@ -21,6 +21,7 @@
     <command name="log"               options="On" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler"    options="deccxx" />
     <command name="print_ace_config" />
     <command name="print_make_version" />

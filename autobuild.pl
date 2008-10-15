@@ -49,6 +49,7 @@ require command::check_compiler;
 require command::check_linker;
 require command::doxygen;
 require command::print_os_version;
+require command::print_env_vars;
 require command::print_autotools_version;
 require command::print_perl_version;
 require command::print_valgrind_version;

@@ -20,6 +20,7 @@
     <command name="log"               options="ON" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 

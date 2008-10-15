@@ -39,6 +39,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers-repository/build/gcc3_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_g++.GNU\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 

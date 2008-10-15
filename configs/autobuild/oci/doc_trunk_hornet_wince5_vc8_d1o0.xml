@@ -29,6 +29,7 @@
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/setenv.cmd output='set ACE_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\nset CIAO_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\CIAO\nset CVSROOT=:pserver:taoadmin@cvs:/cvs\nset CVS_RSH=ssh\nset DDS_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\DDS\nset MPC_ROOT=u:\\MPC\nset PATH=C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\lib;%PATH%\nset TAO_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/TAO/wm5.mwc output='workspace {\n../ace/ace.mpc\ntao/tao.mpc\ntao/IORTable.mpc\ntao/PortableServer.mpc\ntao/Strategies.mpc\ntao/CodecFactory.mpc\ntao/PI.mpc\ntao/Messaging.mpc\ntao/Codeset.mpc\ntao/AnyTypeCode.mpc\ntao/Valuetype.mpc\ntao/DynamicAny.mpc\n}'"/>
   <command name="print_os_version"/>
+  <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
   <command name="generate_workspace" options="-type vc8 -exclude TAO/CIAO,TAO/DDS,TAO/TAO_ACE.mwc,TAO/TAOACE.mwc -value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi TAO/wm5.mwc"/>

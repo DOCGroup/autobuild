@@ -44,6 +44,7 @@
     <command name="file_manipulation" options="type=create file=build/acc_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nSSL_ROOT=/usr/local\ninclude $(ACE_ROOT)/include/makeinclude/platform_hpux_aCC.GNU\n'" />
 
     <command name="print_os_version" />
+    <command name="print_env_vars" />
     <command name="check_compiler"    options="aCC" />
     <command name="print_ace_config" />
 

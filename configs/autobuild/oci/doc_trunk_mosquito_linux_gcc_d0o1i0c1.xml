@@ -31,6 +31,7 @@
   <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/ACE/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\ninline=0\ninterceptors=0\nami=0\nrt_corba=0\ncorba_messaging=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
   <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/ACE/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO\x22; export CIAO_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
+  <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="gcc"/>
