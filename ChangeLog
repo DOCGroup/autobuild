@@ -1,3 +1,9 @@
+Thu Oct 16 12:44:50 UTC 2008  Tim Pollock  <pollockt@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml
+
+          Generated new file to enable wince tests.
+
 Wed Oct 15 13:35:14 UTC 2008  Vladimir Zykov  <vzykov@prismtech.com>
 
         * configs/autobuild/ace_isis/RH8_Static_Core.xml:
