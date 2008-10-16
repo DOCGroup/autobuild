@@ -1,3 +1,9 @@
+Thu Oct 16 14:07:36 UTC 2008  Tim Pollock  <pollockt@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml
+
+          Generated with "-autotest 0" to not run tests.
+
 Thu Oct 16 12:44:50 UTC 2008  Tim Pollock  <pollockt@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml

@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on OCI1191) was -->
-  <!-- C:\Development\ocitao\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc8 -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -hostname hornet -mpcopt "-value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi" -outdir . -platform wince5 -->
+  <!-- C:\Development\ocitao\nightly\BuildXML\buildxml.pl -autotest 0 -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc8 -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -hostname hornet -mpcopt "-value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi" -outdir . -platform wince5 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\CIAO"/>
@@ -26,7 +26,6 @@
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/bin/MakeProjectCreator/config/default.features output='wince=1\nuses_wchar=1\nqos=1\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/wm5_d1o0/setenv.cmd output='set ACE_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\nset CIAO_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\CIAO\nset DDS_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\DDS\nset MPC_ROOT=u:\\MPC\nset PATH=C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\lib;%PATH%\nset TAO_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\n'"/>
   <command name="print_os_version"/>
-  <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
   <command name="generate_workspace" options="-type vc8 -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi"/>
@@ -49,7 +48,6 @@
   <command name="vc7make" options="/build debug TAO/orbsvcs/performance-tests/perf.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
