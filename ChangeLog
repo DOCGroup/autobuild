@@ -1,3 +1,9 @@
+Thu Oct 16 14:15:35 UTC 2008  Tim Pollock  <pollockt@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml
+
+          Manually added "print_env_vars", which is not added when running \nightly\BuildXML\buildxml.pl.
+
 Thu Oct 16 14:07:36 UTC 2008  Tim Pollock  <pollockt@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml
