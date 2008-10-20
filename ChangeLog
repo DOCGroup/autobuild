@@ -1,3 +1,10 @@
+Mon Oct 20 11:52:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+
+          Enable the running of the tests now the build compiles
+          without error.
+
 Thu Oct 16 14:15:35 UTC 2008  Tim Pollock  <pollockt@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml

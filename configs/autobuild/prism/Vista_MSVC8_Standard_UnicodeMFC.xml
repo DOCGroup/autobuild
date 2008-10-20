@@ -42,10 +42,8 @@
 
     <!-- We are about to start our tests we can kick the next build off -->
     <command name="win32make"         options="..\\start_next_build.bat" />
-<!--
-    Don't run tests just yet, there will be too many compilation problems to deal with first!
     <command name="auto_run_tests"    options="-a -o -t -ExeSubDir Release -s \"C:\\Overnight_Builds\\DOC_Group\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\"" />
--->
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=40 index" />
     <command name="file_manipulation" options="type=delete file=.disable" />
