@@ -1,3 +1,8 @@
+Mon Oct 20 14:20:25 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace_future.xml: Remove AIX 5.2 autoconf and
+          Windows Mobile 5 builds.
+
 Mon Oct 20 11:52:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
