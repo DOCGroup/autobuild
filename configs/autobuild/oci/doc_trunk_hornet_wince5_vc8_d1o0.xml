@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on OCI1191) was -->
-  <!-- C:\Development\ocitao\nightly\BuildXML\buildxml.pl -autotest 0 -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc8 -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -hostname hornet -mpcopt "-value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi" -outdir . -platform wince5 -->
+  <!-- The command used to create this file (on oci1329xp) was -->
+  <!-- D:\tao_builds\svn-nightly\BuildXML\buildxml.pl -autotest 0 -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc8 -creator pollockt -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -hostname hornet -mpcopt "-value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi" -outdir . -platform wince5 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\CIAO"/>
@@ -30,7 +30,7 @@
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
   <command name="generate_workspace" options="-type vc8 -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi"/>
-  <command name="anonymous_shell"    options="copy /y c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc8_d1o0s1\\bin\\gperf.exe ACE_wrappers\\build\\wm5_d1o0\\bin"/>
+  <command name="anonymous_shell"    options="copy /y c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc8_d1o0s1\\bin\\ace_gperf.exe ACE_wrappers\\build\\wm5_d1o0\\bin"/>
   <command name="anonymous_shell"    options="copy /y c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc8_d1o0s1\\bin\\tao_idl.exe ACE_wrappers\\build\\wm5_d1o0\\bin"/>
 
   <!-- Build targets -->
