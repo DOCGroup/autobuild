@@ -1,9 +1,9 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="Z:\\ACE\\wince6\\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="Z:\\ACE\\wince6\\ACE_wrappers\\TAO"/>
-        <environment name="CIAO_ROOT"    value="Z:\\ACE\\wince6\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="ACE_ROOT"     value="Z:\\ACE\\wince6test\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="Z:\\ACE\\wince6test\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="Z:\\ACE\\wince6test\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="HOST_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers" />
         <environment name="HOST_TAO_IDL" value="C:\\ACE\\VC8\\ACE_wrappers\\bin\\tao_idl.exe" />
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
@@ -21,9 +21,9 @@
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="15"/>
 
         <variable name="configs"  value="Win32 VC8 Exceptions WCHAR" />
-        <variable name="root"     value="Z:\\ACE\\wince6\\" />
+        <variable name="root"     value="Z:\\ACE\\wince6test\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="Z:\\ACE\\wince6\\" />
+        <variable name="log_root" value="Z:\\ACE\\wince6test\\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
         <variable name="svn_program"     value="c:\\cygwin\\bin\\svn" />
 
