@@ -33,6 +33,8 @@
         <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.78"/>
         <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="10001"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
+        <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
+        <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
 
         <variable name="root"     value="/nfs/isengard/VxWorks66PPC604" />
         <variable name="log_file" value="build.txt" />

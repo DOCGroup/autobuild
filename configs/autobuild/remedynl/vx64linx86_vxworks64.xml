@@ -30,6 +30,8 @@
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.132:80"/>
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
+        <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
+        <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
 
         <variable name="root"     value="/nfs/galadriel/VxWorks64lin_x86/" />
         <variable name="log_file" value="build.txt" />
