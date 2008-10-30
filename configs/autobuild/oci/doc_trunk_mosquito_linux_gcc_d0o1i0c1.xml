@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on oci1176) was -->
-  <!-- ./buildxml.pl -base /tao_builds/taoadmin/doc -buildfile doc_trunk_mosquito_linux_gcc_d0o1i0c1 -buildflags "debug=0 optimize=1 inline=0 interceptors=0 ami=0 rt_corba=0 corba_messaging=0" -buildname gcc_d0o1i0c1 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO" -compiler gcc -configh "#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1" -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -featureflags "corba_e_compact=1 rmcast=0 ace_codecs=0 ace_filecache=0 ace_other=0 ace_token=0 ace_uuid=0 ami=0 corba_messaging=0 ec_typed_events=0 interceptors=0 rt_corba=0 rwho=0 ssl=0" -hostname mosquito -outdir /home/cjohn/dev/autobuild/configs/autobuild/oci/ -peerlayout 1 -->
+  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- ../../../../oci/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildfile doc_trunk_mosquito_linux_gcc_d0o1i0c1 -buildflags "debug=0 optimize=1 inline=0 interceptors=0 ami=0 rt_corba=0 corba_messaging=0" -buildname gcc_d0o1i0c1 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO" -compiler gcc -configh "#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1" -creator johnc@ociweb.com -docbuild 1 -docrepo 1 -featureflags "corba_e_compact=1 rmcast=0 ace_codecs=0 ace_filecache=0 ace_other=0 ace_token=0 ace_uuid=0 ami=0 corba_messaging=0 ec_typed_events=0 interceptors=0 rt_corba=0 rwho=0 ssl=0" -outdir ./ -peerlayout 1 -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO"/>
@@ -11,7 +11,7 @@
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/TAO"/>
     <variable    name="base"            value="doc"/>
     <variable    name="build_name"      value="gcc_d0o1i0c1"/>
-    <variable    name="creator"         value="mitza@ociweb.com"/>
+    <variable    name="creator"         value="johnc@ociweb.com"/>
     <variable    name="log_file"        value="gcc_d0o1i0c1.log"/>
     <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_mosquito_linux_gcc_d0o1i0c1"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1"/>
@@ -38,6 +38,7 @@
 
   <!-- Conditionally clean binaries -->
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
+  <command name="make" options="   -k -j2 find=*akefile dir=ACE/bin conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/tests conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/protocols conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/protocols/tests conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
@@ -48,13 +49,16 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/performance-tests conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional_rm=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse -exclude CIAO,DDS,ACE/ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO depend"/>
+  <command name="make" options="   -k -j2 find=*akefile dir=ACE/bin depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/protocols depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/protocols/tests depend"/>
@@ -66,9 +70,12 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
+  <command name="make" options="   -k -j2 find=*akefile dir=ACE/bin"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/protocols"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=ACE/protocols/tests"/>
@@ -80,6 +87,8 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
   <command name="auto_run_tests"  options="dir=ACE -a -t -o -Config CORBA_E_COMPACT -Config NO_CODECS -Config NO_OTHER -Config NO_UUID -Config NO_MESSAGING -Config DISABLE_INTERCEPTORS -Config Linux"/>

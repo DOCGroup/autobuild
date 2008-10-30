@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on fly) was -->
-  <!-- ./buildxml.pl -base /tao_builds/taoadmin/doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler suncc58 -creator elliottc -devguide 0 -docbuild 1 -docrepo 1 -outdir /home/mitza/autobuild/configs/autobuild/oci -->
+  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- ../../../../oci/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler suncc58 -docbuild 1 -docrepo 1 -hostname fly -outdir ./ -platform sunos59 -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/TAO/CIAO"/>
@@ -10,7 +10,7 @@
     <environment name="PATH"            value="/opt/compilers/suncc5.8/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/TAO"/>
     <variable    name="build_name"      value="suncc58_d1o0"/>
-    <variable    name="creator"         value="elliottc"/>
+    <variable    name="creator"         value="johnc"/>
     <variable    name="log_file"        value="suncc58_d1o0.log"/>
     <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_fly_sunos59_suncc58_d1o0"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0"/>
@@ -46,7 +46,9 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
-  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/suncc58_d1o0/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
@@ -65,6 +67,8 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests depend"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples depend"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k  find=*akefile dir=TAO"/>
@@ -80,6 +84,8 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
   <command name="auto_run_tests"  options="-a -t -o"/>

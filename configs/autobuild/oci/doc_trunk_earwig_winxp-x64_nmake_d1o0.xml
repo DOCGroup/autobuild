@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on earwig) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler nmake -creator mitza@ociweb.com -devguide 0 -docbuild 1 -docrepo 1 -environment "INCLUDE=c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\include;c:\Program Files\Microsoft SDKs\Windows\v6.1\Include" -environment "LIB=c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\lib\amd64;c:\Program Files\Microsoft SDKs\Windows\v6.1\Lib\x64" -environment "prefix PATH=c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64;c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcpackages;c:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE;c:\Program Files\Microsoft SDKs\Windows\v6.1\Bin\x64;c:\Program Files\Microsoft SDKs\Windows\v6.1\Bin;" -mpcopt "-value_template add_compile-=/Wp64" -outdir u:\mitza -sandbox 1 -->
+  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- ../../../../oci/BuildXML/buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler nmake -creator johnc@ociweb.com -docbuild 1 -docrepo 1 -environment "INCLUDE=c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\include;c:\Program Files\Microsoft SDKs\Windows\v6.1\Include" -environment "LIB=c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\lib\amd64;c:\Program Files\Microsoft SDKs\Windows\v6.1\Lib\x64" -environment "prefix PATH=c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64;c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcpackages;c:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE;c:\Program Files\Microsoft SDKs\Windows\v6.1\Bin\x64;c:\Program Files\Microsoft SDKs\Windows\v6.1\Bin;" -hostname earwig -mpcopt "-value_template add_compile-=/Wp64" -outdir ./ -platform winxp-x64 -sandbox 1 -->
   <configuration>
     <environment name="ACE_ROOT"                value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\_nmake_d1o0"/>
     <environment name="CIAO_ROOT"               value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\_nmake_d1o0\\TAO\\CIAO"/>
@@ -12,7 +12,7 @@
     <environment name="PATH"                    value="c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin\\amd64;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\vcpackages;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;c:\\Program Files\\Microsoft SDKs\\Windows\\v6.1\\Bin\\x64;c:\\Program Files\\Microsoft SDKs\\Windows\\v6.1\\Bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\_nmake_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\_nmake_d1o0\\lib;" type="prefix"/>
     <environment name="TAO_ROOT"                value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\_nmake_d1o0\\TAO"/>
     <variable    name="build_name"              value="_nmake_d1o0"/>
-    <variable    name="creator"                 value="mitza@ociweb.com"/>
+    <variable    name="creator"                 value="johnc@ociweb.com"/>
     <variable    name="log_file"                value="_nmake_d1o0.log"/>
     <variable    name="log_root"                value="w:\\autobuild_logs\\doc_trunk_earwig_winxp-x64_nmake_d1o0"/>
     <variable    name="make_program"            value="nmake"/>
@@ -50,6 +50,8 @@
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/tests depend"/>
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/examples depend"/>
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO"/>
@@ -65,6 +67,8 @@
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k -nologo CFG=\x22x64 Debug\x22 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
   <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>

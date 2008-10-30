@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on mosquito.ociweb.com) was -->
-  <!-- ./buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 inline=0 CC=ntox86-gcc-3.3.5 CXX=ntox86-gcc-3.3.5 LD=ntox86-gcc-3.3.5" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler gcc -creator elliottc -devguide 0 -docbuild 1 -docrepo 1 -environment QNX_HOST=/usr/qnx630/host/qnx6/x86 -environment QNX_TARGET=/usr/qnx630/target/qnx6 -environment MAKEFLAGS=-I/usr/qnx630/target/qnx6/usr/include -environment "suffix PATH=:/usr/qnx630/host/qnx6/x86/usr/bin:/usr/qnx630/host/qnx6/x86/usr/sbin:/usr/qnx630/host/qnx6/x86/sbin:/usr/qnx630/host/qnx6/x86/bin:/usr/qnx630/host/qnx6/x86/usr/photon/appbuilder" -featureflags link_codecfactory=1 -hostname qnx -outdir /home/taoadmin/autobuild/configs/autobuild/oci -platform qnx -->
+  <!-- ../../../../oci/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 inline=0 CC=ntox86-gcc-3.3.5 CXX=ntox86-gcc-3.3.5 LD=ntox86-gcc-3.3.5" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -cleanall 1 -compiler gcc -docbuild 1 -docrepo 1 -environment QNX_HOST=/usr/qnx630/host/qnx6/x86 -environment QNX_TARGET=/usr/qnx630/target/qnx6 -environment MAKEFLAGS=-I/usr/qnx630/target/qnx6/usr/include -environment "suffix PATH=:/usr/qnx630/host/qnx6/x86/usr/bin:/usr/qnx630/host/qnx6/x86/usr/sbin:/usr/qnx630/host/qnx6/x86/sbin:/usr/qnx630/host/qnx6/x86/bin:/usr/qnx630/host/qnx6/x86/usr/photon/appbuilder" -featureflags link_codecfactory=1 -hostname qnx -outdir ./ -platform qnx -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/TAO/CIAO"/>
@@ -15,7 +15,7 @@
     <environment name="QNX_TARGET"      value="/usr/qnx630/target/qnx6"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/TAO"/>
     <variable    name="build_name"      value="gcc_d1o0i0"/>
-    <variable    name="creator"         value="elliottc"/>
+    <variable    name="creator"         value="johnc"/>
     <variable    name="log_file"        value="gcc_d1o0i0.log"/>
     <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_qnx_qnx_gcc_d1o0i0"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0"/>
@@ -42,6 +42,7 @@
 
   <!-- Build targets -->
   <command name="make" options="-s -k  realclean find=*akefile dir=TAO"/>
+  <command name="make" options="-s -k  realclean find=*akefile dir=bin"/>
   <command name="make" options="-s -k  realclean find=*akefile dir=tests"/>
   <command name="make" options="-s -k  realclean find=*akefile dir=protocols"/>
   <command name="make" options="-s -k  realclean find=*akefile dir=protocols/tests"/>
@@ -53,7 +54,10 @@
   <command name="make" options="-s -k  realclean find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k  realclean find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k  realclean find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k  realclean find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k  realclean find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO"/>
+  <command name="make" options="   -k  find=*akefile dir=bin"/>
   <command name="make" options="-s -k  find=*akefile dir=tests"/>
   <command name="make" options="-s -k  find=*akefile dir=protocols"/>
   <command name="make" options="-s -k  find=*akefile dir=protocols/tests"/>
@@ -65,6 +69,8 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
   <command name="auto_run_tests"  options="-a -o -Config QNX"/>

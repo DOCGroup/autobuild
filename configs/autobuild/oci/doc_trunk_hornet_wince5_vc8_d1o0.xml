@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on oci1329xp) was -->
-  <!-- D:\tao_builds\svn-nightly\BuildXML\buildxml.pl -autotest 0 -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc8 -creator pollockt -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -devguide 0 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -hostname hornet -mpcopt "-value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi" -outdir . -platform wince5 -->
+  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- ../../../../oci/BuildXML/buildxml.pl -autotest 0 -base c:\tao_builds\taoadmin\doc -buildname wm5_d1o0 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc8 -crosscopy c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc8_d1o0s1 -docbuild 1 -docrepo 1 -featureflags "wince=1 uses_wchar=1" -hostname hornet -mpcopt "-value_template platforms='\x22Windows Mobile 5.0 Pocket PC SDK (ARMV4I)\x22' -value_project lit_libs+=iphlpapi" -outdir ./ -platform wince5 -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO\\CIAO"/>
@@ -9,7 +9,7 @@
     <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\lib;" type="prefix"/>
     <environment name="TAO_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0\\TAO"/>
     <variable    name="build_name"   value="wm5_d1o0"/>
-    <variable    name="creator"      value="pollockt"/>
+    <variable    name="creator"      value="johnc"/>
     <variable    name="log_file"     value="wm5_d1o0.log"/>
     <variable    name="log_root"     value="w:\\autobuild_logs\\doc_trunk_hornet_wince5_vc8_d1o0"/>
     <variable    name="project_root" value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\wm5_d1o0"/>
@@ -47,6 +47,8 @@
   <command name="vc7make" options="/build debug TAO/orbsvcs/tests/tests.sln"/>
   <command name="vc7make" options="/build debug TAO/orbsvcs/examples/examples.sln"/>
   <command name="vc7make" options="/build debug TAO/orbsvcs/performance-tests/perf.sln"/>
+  <command name="vc7make" options="/build debug TAO/DevGuideExamples/DevGuideExamples.sln"/>
+  <command name="vc7make" options="/build debug TAO/orbsvcs/DevGuideExamples/DevGuideExamples.sln"/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
