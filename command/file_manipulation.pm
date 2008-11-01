@@ -230,7 +230,7 @@ $copyTreeFromTo= sub
         ### This destination already exists as a file
         #############################################
         print(
-            STDERR __FILE__, 
+            STDERR __FILE__,
             ":\n  Destination file is required to be a copy of directory\n",
             "  To:   $rootDest\n",
             "  From: $rootSrc\n" );
@@ -254,7 +254,7 @@ $copyTreeFromTo= sub
     my $absDest= &$tidyPath( abs_path( $rootDest ));
     if (substr( $absDest, 0, length( $absSrc )) eq $absSrc) {
         print(
-            STDERR __FILE__, 
+            STDERR __FILE__,
             ":\n  Destination directory is inside the original source tree\n",
             "  To:   $absDest\n",
             "  From: $absSrc\n" );
@@ -317,7 +317,7 @@ $copyTreeFromTo= sub
                     ####################################################
                     if (-d $fullPathDest) {
                         print(
-                            STDERR __FILE__, 
+                            STDERR __FILE__,
                             ":\n  Destination directory is required to be a",
                             " copy of file\n",
                             "  To:   $fullPathDest/\n",
@@ -348,7 +348,7 @@ $copyTreeFromTo= sub
                 ##################################################
                 elsif (! -l $fullPathSrc) {
                     print(
-                        STDERR __FILE__, 
+                        STDERR __FILE__,
                         "Failed to copy file\n",
                         "  From: $fullPathSrc\n",
                         "  To:   $fullPathDest\n");
@@ -858,7 +858,7 @@ sub Run ($)
 
     ### Now act on the type (always check for lowercase match)
     ##########################################################
-    
+
     ### type=  append
     #################
     if ($type eq "append") {
@@ -870,7 +870,6 @@ sub Run ($)
 
         if (-e $filename) {
             # Expand some codes
-            $output =~ s/\\n/\n/g;
             $output =~ s/\\x27/'/g;
 
             my $file_handle = new FileHandle ($filename, 'a');
@@ -901,7 +900,6 @@ sub Run ($)
 
         # Expand some codes
 
-        $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
 
         my $file_handle = new FileHandle ($filename, 'w');
@@ -925,7 +923,6 @@ sub Run ($)
 
         # Expand some codes
 
-        $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
 
         my $full_path = $root . '/' . $filename;
