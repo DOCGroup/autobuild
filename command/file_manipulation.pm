@@ -870,6 +870,7 @@ sub Run ($)
 
         if (-e $filename) {
             # Expand some codes
+            $output =~ s/\\n/\n/g;
             $output =~ s/\\x27/'/g;
 
             my $file_handle = new FileHandle ($filename, 'a');
@@ -900,6 +901,7 @@ sub Run ($)
 
         # Expand some codes
 
+        $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
 
         my $file_handle = new FileHandle ($filename, 'w');
@@ -923,6 +925,7 @@ sub Run ($)
 
         # Expand some codes
 
+        $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
 
         my $full_path = $root . '/' . $filename;
@@ -1126,3 +1129,4 @@ sub Run ($)
 #
 
 main::RegisterCommand ("file_manipulation", new File_Manipulation ());
+
