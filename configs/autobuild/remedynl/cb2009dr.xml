@@ -7,6 +7,8 @@
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\Program Files\\Codegear\\RAD Studio\\6.0\\Bin;C:\\Perl\\Bin;C:\\ACE\\CB2009dr\\ACE_wrappers\\lib;C:\\ACE\\CB2009dr\\ACE_wrappers\\bin;C:\\cygwin\\bin;C:\\xerces-c-3.0.0\\lib" type="prefix" />
         <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0" />
+        <environment name="BOOST_ROOT"    value="C:\\Program Files\\CodeGear\\RAD Studio\\6.0" />
+        <environment name="BOOST_VERSION" value="boost_1_35" />
 
         <environment name="DYNAMIC"   value="1" />
         <environment name="RELEASE"   value="1" />
@@ -30,7 +32,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces=0\ncidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces=0\ncidl=0\nboost=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />

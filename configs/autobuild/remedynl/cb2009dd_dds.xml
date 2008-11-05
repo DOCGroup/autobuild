@@ -12,6 +12,8 @@
         <environment name="BCBVER"   value="12" />
         <environment name="DEBUG"   value="1" />
         <environment name="DYNAMIC"  value="1" />
+        <environment name="BOOST_ROOT"    value="C:\\Program Files\\CodeGear\\RAD Studio\\6.0" />
+        <environment name="BOOST_VERSION" value="boost_1_35" />
 
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\ACE\\CB2009dd_DDS\\" />
