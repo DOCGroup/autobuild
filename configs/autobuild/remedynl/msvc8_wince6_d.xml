@@ -30,7 +30,7 @@
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
 
-        <variable name="configs"  value="Win32 VC8 Exceptions WCHAR" />
+        <variable name="configs"  value="WinCE VC8 Exceptions WCHAR" />
         <variable name="root"     value="Z:\\ACE\\wince6\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="Z:\\ACE\\wince6\\" />
