@@ -19,7 +19,7 @@
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.143" />
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
         <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
-        <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\thor\\temp" />
+        <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\\\\\thor\\temp" />
         <environment name="ACE_RUN_ACE_LD_SEARCH_PATH" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\lib" />
         <environment name="ACE_TEST_VERBOSE" value="1" />
         <environment name="ACE_TEST_WINCE" value="1" />
