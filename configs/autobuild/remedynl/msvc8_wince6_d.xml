@@ -14,11 +14,21 @@
         <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
-        <environment name="ACE_RUN_VX_TGTHOST"    value="10.2.0.143"/>
-        <environment name="ACE_TEST_VERBOSE" value="1"/>
-        <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
-        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.142:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="15"/>
+        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.142:80" />
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="30" />
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.143" />
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
+        <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
+        <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\thor\\temp" />
+        <environment name="ACE_RUN_ACE_LD_SEARCH_PATH" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\lib" />
+        <environment name="ACE_TEST_VERBOSE" value="1" />
+        <environment name="ACE_TEST_WINCE" value="1" />
+        <environment name="DOC_TEST_1" value="DOC_TEST_1" />
+        <environment name="DOC_TEST_1_OS" value="WinCE" />
+        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.143" />
+        <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\TAO" />
+        <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
 
         <variable name="configs"  value="Win32 VC8 Exceptions WCHAR" />
         <variable name="root"     value="Z:\\ACE\\wince6\\" />
