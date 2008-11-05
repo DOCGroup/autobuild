@@ -1,3 +1,9 @@
+Wed Nov  5 14:25:59 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Ignore the word warning at the moment there are characters
+          in front of it and after it.
+
 Mon Nov  3 11:40:31 UTC 2008  Simon McQueen  <sm@prismtech.com>
 
         * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
