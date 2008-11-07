@@ -70,6 +70,8 @@
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -k -Debug" />
 
+    <command name="auto_run_tests"    options="-a" />
+
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
