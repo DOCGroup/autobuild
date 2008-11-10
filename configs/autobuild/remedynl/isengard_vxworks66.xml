@@ -35,6 +35,16 @@
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
         <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
+        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.123" />
+        <environment name="DOC_TEST_1_ACE_ROOT" value="/nfsace/isengard/VxWorks66PPC604/ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT" value="/nfsace/isengard/VxWorks66PPC604/ACE_wrappers/TAO" />
+        <environment name="DOC_TEST_1_FS_ROOT" value="/nfsace/isengard/VxWorks66PPC604/ACE_wrappers" />
+        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.123" />
+        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.129:80" />
+        <environment name="DOC_TEST_1_REBOOT" value="1" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="20" />
+        <environment name="DOC_TEST_1_TELNET_HOST" value="10.2.0.78" />
+        <environment name="DOC_TEST_1_TELNET_PORT" value="10001" />
 
         <variable name="root"     value="/nfs/isengard/VxWorks66PPC604" />
         <variable name="log_file" value="build.txt" />

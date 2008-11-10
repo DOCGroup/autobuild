@@ -30,6 +30,11 @@
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="45" />
+        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.143" />
+        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.142:80" />
+        <environment name="DOC_TEST_1_REBOOT" value="1" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="0" />
+        <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp \\\\\\\\thor\\temp" />
 
         <variable name="configs"  value="WinCE VC8 Exceptions WCHAR" />
         <variable name="root"     value="Z:\\ACE\\wince6\\" />
