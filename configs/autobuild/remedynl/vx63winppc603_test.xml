@@ -25,6 +25,7 @@
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.131:80"/>
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="30"/>
         <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.75"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="10001"/>
         <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
         <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
         <environment name="DOC_TEST_1_IPNAME" value="10.2.0.71" />
