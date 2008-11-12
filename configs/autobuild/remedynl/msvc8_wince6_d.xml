@@ -34,8 +34,11 @@
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.143" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.142:80" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
-        <environment name="DOC_TEST_1_REBOOT_TIME" value="0" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp \\\\\\\\thor\\temp" />
+        <environment name="DOC_TEST_2" value="DOC_TEST_2" />
+        <environment name="DOC_TEST_2_OS" value="local" />
+        <environment name="DOC_TEST_2_ACE_ROOT" value="C:\\ACE\\VC8\\ACE_wrappers" />
 
         <variable name="configs"  value="WinCE VC8 Exceptions WCHAR" />
         <variable name="root"     value="Z:\\ACE\\wince6\\" />
