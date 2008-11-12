@@ -50,7 +50,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="ACE_Host.mwc -type vc8 -value_template use_lib_modifier=_d"/>
+    <command name="generate_workspace" options="ACE_Host.mwc -type vc8 -value_template lib_modifier=_d"/>
 
     <command name="vc7make"         options="/build debug ACE_Host.sln" />
 
