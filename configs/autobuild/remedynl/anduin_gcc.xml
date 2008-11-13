@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"        value="/export/home/build/ACE/GCC/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/export/home/build/ACE/GCC/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/export/home/build/ACE/GCC/ACE_wrappers/lib:/usr/local/lib:"/>
-        <environment name="PATH" value="/usr/local/bin:/opt/gcc/bin:" type="prefix"/>
+        <environment name="PATH" value="/usr/local/bin:/opt/csw/gcc4/bin:" type="prefix"/>
 
         <variable name="root"     value="/export/home/build/ACE/GCC" />
         <variable name="log_file" value="build.txt" />
