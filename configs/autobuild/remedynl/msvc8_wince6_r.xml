@@ -1,9 +1,9 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="Z:\\ACE\\wince6r\\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="Z:\\ACE\\wince6r\\ACE_wrappers\\TAO"/>
-        <environment name="CIAO_ROOT"    value="Z:\\ACE\\wince6r\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="ACE_ROOT"     value="C:\\ACE\\wince6r\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\wince6r\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\wince6r\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="HOST_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers" />
         <environment name="HOST_TAO_IDL" value="C:\\ACE\\VC8\\ACE_wrappers\\bin\\tao_idl.exe" />
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
@@ -29,7 +29,7 @@
         <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
-        <environment name="DOC_TEST_1_HOST_ROOT" value="Z:\\ACE\\wince6r\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="C:\\ACE\\wince6r\\ACE_wrappers" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="45" />
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.143" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.142:80" />
@@ -41,9 +41,9 @@
         <environment name="DOC_TEST_2_ACE_ROOT" value="C:\\ACE\\VC8\\ACE_wrappers" />
 
         <variable name="configs"  value="WinCE VC8 Exceptions WCHAR" />
-        <variable name="root"     value="Z:\\ACE\\wince6r\\" />
+        <variable name="root"     value="C:\\ACE\\wince6r\\" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="Z:\\ACE\\wince6r\\" />
+        <variable name="log_root" value="C:\\ACE\\wince6r\\" />
         <variable name="name"     value="WinXP VS.NET 2005" />
         <variable name="svn_program"     value="c:\\cygwin\\bin\\svn" />
 

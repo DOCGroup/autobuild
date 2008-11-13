@@ -217,6 +217,12 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
 <name>Windows</name>
         <build>
+            <name>WinCE6_VC8_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6r/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>WinXP_RAD_Studio_2007_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dd/</url>
             <build_sponsor>Remedy IT</build_sponsor>
