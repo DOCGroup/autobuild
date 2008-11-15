@@ -243,6 +243,12 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
         </build>
         <build>
+            <name>Win2003_VC71_Static_Release</name>
+            <url>http://scoreboard.ociweb.com/doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1</url>
+            <build_sponsor>OCI</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+        </build>
+        <build>
             <name>WinCE_5_VC8_Debug</name>
             <url>http://scoreboard.ociweb.com/doc_trunk_hornet_wince5_vc8_d1o0</url>
             <build_sponsor>OCI</build_sponsor>

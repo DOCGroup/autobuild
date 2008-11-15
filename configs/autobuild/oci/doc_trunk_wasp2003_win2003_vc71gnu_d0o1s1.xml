@@ -1,0 +1,77 @@
+<autobuild>
+  <!-- The command used to create this file (on wasp2003) was -->
+  <!-- T:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc -buildflags "debug=0 optimize=1 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc71gnu -creator mitza -docbuild 1 -docrepo 1 -environment "prefix PATH=f:\\msys\\bin;" -environment "INCLUDE=F:\\Program Files\\VS71\\VC7\\INCLUDE;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include" -environment "LIB=F:\\Program Files\\VS71\\VC7\\LIB;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib" -outdir \autobuild\configs\autobuild\oci -->
+  <configuration>
+    <environment name="ACE_ROOT"     value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1"/>
+    <environment name="CIAO_ROOT"    value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO\\CIAO"/>
+    <environment name="DDS_ROOT"     value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO\\DDS"/>
+    <environment name="INCLUDE"      value="F:\\Program Files\\VS71\\VC7\\INCLUDE;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include"/>
+    <environment name="LIB"          value="F:\\Program Files\\VS71\\VC7\\LIB;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib"/>
+    <environment name="MPC_ROOT"     value="u:\\MPC"/>
+    <environment name="PATH"         value="f:\\msys\\bin;F:\\Program Files\\VS71\\Common7\\IDE;F:\\Program Files\\VS71\\VC7\\bin;d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\bin;d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\lib;" type="prefix"/>
+    <environment name="TAO_ROOT"     value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO"/>
+    <variable    name="build_name"   value="vc71gnu_d0o1s1"/>
+    <variable    name="creator"      value="mitza"/>
+    <variable    name="log_file"     value="vc71gnu_d0o1s1.log"/>
+    <variable    name="log_root"     value="w:\\autobuild_logs\\doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1"/>
+    <variable    name="project_root" value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1"/>
+    <variable    name="root"         value="d:\\tao_builds\\taoadmin\\doc"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
+  <command name="clone_build_tree"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/vc71gnu_d0o1s1/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71gnu_d0o1s1/bin/MakeProjectCreator/config/default.features output='qos=1\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71gnu_d0o1s1/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\nstatic_libs_only=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_win32_msvc.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71gnu_d0o1s1/setenv.cmd output='set ACE_ROOT=d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\nset CIAO_ROOT=d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO\\CIAO\nset DDS_ROOT=d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO\\DDS\nset INCLUDE=F:\\Program Files\\VS71\\VC7\\INCLUDE;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include\nset LIB=F:\\Program Files\\VS71\\VC7\\LIB;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib\nset MPC_ROOT=u:\\MPC\nset PATH=f:\\msys\\bin;F:\\Program Files\\VS71\\Common7\\IDE;F:\\Program Files\\VS71\\VC7\\bin;d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\bin;d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\lib;%PATH%\nset TAO_ROOT=d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="msvc"/>
+  <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k  find=*akefile dir=TAO depend"/>
+  <command name="make" options="   -k  find=*akefile dir=bin depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k  find=*akefile dir=TAO"/>
+  <command name="make" options="   -k  find=*akefile dir=bin"/>
+  <command name="make" options="-s -k  find=*akefile dir=tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="-a -t -o -Config STATIC -Config Win32 -Config NO_LOADAVG"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>

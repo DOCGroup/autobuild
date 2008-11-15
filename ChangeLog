@@ -1,3 +1,11 @@
+Sat Nov 15 19:45:43 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1.xml:
+        * configs/scoreboard/tao.xml:
+
+          Added a new TAO build called "Win2003_VC71_Static_Release" which
+          also happens to use GNU make with platform_win32_msvc.GNU.
+
 Wed Nov  5 14:25:59 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:
