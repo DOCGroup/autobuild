@@ -41,15 +41,20 @@ sub Run ($)
 
     print "<h3>OpenSSL version (openssl version)</h3>\n";
     if (defined $ENV{SSL_ROOT}) {
-        system("$ENV{SSL_ROOT}/bin/openssl version");
-    } else {
-        #if no env var "SSL_ROOT" then we expect to find openssl on the PATH
-        system('openssl version');
+        if (-x "$ENV{SSL_ROOT}/bin/openssl") {
+            system ("$ENV{SSL_ROOT}/bin/openssl version");
+            return 1;
+        } elsif (-x "$ENV{SSL_ROOT}/out32dll/openssl.exe") {
+            system ("$ENV{SSL_ROOT}/out32dll/openssl.exe version");
+            return 1;
+        }
     }
 
+    #if no env var "SSL_ROOT" then we expect to find openssl on the PATH
+    system ('openssl version');
     return 1;
 }
 
 ##############################################################################
 
-main::RegisterCommand ("print_openssl_version", new print_openssl_version());
+main::RegisterCommand ("print_openssl_version", new print_openssl_version ());

@@ -1,3 +1,9 @@
+Tue Nov 18 09:55:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * command/print_openssl_version.pm:
+          Added the environment "path" to the openssl for windows systems
+          before just trying the openssl command via the general PATH.
+
 Sat Nov 15 19:45:43 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1.xml:
