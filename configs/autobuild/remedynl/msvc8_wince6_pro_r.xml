@@ -1,0 +1,85 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\\ACE\\wince6pror\\ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:\\ACE\\wince6pror\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"    value="C:\\ACE\\wince6pror\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="HOST_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers" />
+        <environment name="HOST_TAO_IDL" value="C:\\ACE\\VC8\\ACE_wrappers\\bin\\tao_idl.exe" />
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;C:\\Perl\\bin;c:\\Cygwin\\bin" type="prefix" />
+        <environment name="INCLUDE"      value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\include;" type="prefix" />
+        <environment name="LIB"          value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\LIB;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\lib;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\lib;LIBPATH=c:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB" type="prefix" />
+        <environment name="BOOST_ROOT"              value="C:\\Program Files\\boost\\boost_1_33_1"/>
+        <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
+        <environment name="BOOST_CFG"               value="-vc8-mt" />
+        <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
+        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.142:80" />
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="30" />
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.143" />
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
+        <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
+        <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\\\\\thor\\temp" />
+        <environment name="ACE_RUN_ACE_LD_SEARCH_PATH" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\lib" />
+        <environment name="ACE_TEST_VERBOSE" value="1" />
+        <environment name="ACE_TEST_WINCE" value="1" />
+        <environment name="DOC_TEST_1" value="DOC_TEST_1" />
+        <environment name="DOC_TEST_1_OS" value="WinCE" />
+        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.143" />
+        <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\TAO" />
+        <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="C:\\ACE\\wince6pror\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="45" />
+        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.143" />
+        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.142:80" />
+        <environment name="DOC_TEST_1_REBOOT" value="1" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
+        <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp \\\\\\\\thor\\temp" />
+        <environment name="DOC_TEST_2" value="DOC_TEST_2" />
+        <environment name="DOC_TEST_2_OS" value="local" />
+        <environment name="DOC_TEST_2_ACE_ROOT" value="C:\\ACE\\VC8\\ACE_wrappers" />
+
+        <variable name="configs"  value="WinCE VC8 Exceptions WCHAR" />
+        <variable name="root"     value="C:\\ACE\\wince6pror\\" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="C:\\ACE\\wince6pror\\" />
+        <variable name="name"     value="WinXP VS.NET 2005" />
+        <variable name="svn_program"     value="c:\\cygwin\\bin\\svn" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -k -clean -Release" />
+
+    <command name="log"               options="ON" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="shell"             options="find ACE_wrappers -name '*.sln' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.vcproj' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TEST_DIR ACE_TEXT (\x22/network/temp/ACE/wince6/ACE_wrappers/tests/\x22)\n#define ACE_DEFAULT_TEST_DIR ACE_TEXT (\x22/network/temp/ACE/wince6/ACE_wrappers/tests/\x22)\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nxerces=0\nuses_wchar=1\n'" />
+
+    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
+    <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="print_cidlc_version" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO -type vc8 -value_template platforms=\x22'Windows Mobile 6 Professional SDK (ARMV4I)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
+
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -k -Release" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/msvc8ce6pror" />
+</autobuild>
