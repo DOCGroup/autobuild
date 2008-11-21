@@ -16,7 +16,7 @@
 
     <command name="process_listener"  options="localhost:32002" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
 
     <command name="log"               options="ON" />
 

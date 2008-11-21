@@ -49,7 +49,7 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
 
     <command name="log"               options="on" />
 

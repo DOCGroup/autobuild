@@ -23,7 +23,7 @@
 
     <command name="log"               options="on" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 

@@ -35,7 +35,7 @@
 
     <command name="generate_workspace" options="-type gnuautobuild TAO/CIAO/CIAO_TAO.mwc" />
 
-    <command name="make"              options="-k realclean -C TAO/CIAO" />
+    <command name="make"              options="-k realclean find=*akefile -C TAO/CIAO" />
 
     <!-- Build CIAO -->
     <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Darwin/PowerPC/cidlc TAO/CIAO/bin" />

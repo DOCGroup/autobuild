@@ -25,7 +25,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="make"              options="realclean" />
+    <command name="make"              options="realclean find=*akefile" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS-COMPILE=1\ndebug=1\noptimize=0\nCC=arm-linux-gnu-gcc\nCXX=arm-linux-gnu-g++\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />

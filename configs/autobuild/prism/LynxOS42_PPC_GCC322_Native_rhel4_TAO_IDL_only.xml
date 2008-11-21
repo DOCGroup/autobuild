@@ -42,9 +42,9 @@
     <command name="generate_workspace" options="dirs=apps/gperf/src -type gnuace" />
     <command name="generate_workspace" options="dirs=TAO/TAO_IDL -type gnuace" />
 
-    <command name="make"              options="-k -C ace realclean" />
-    <command name="make"              options="-k -C apps/gperf/src realclean" />
-    <command name="make"              options="-k -C TAO/TAO_IDL realclean" />
+    <command name="make"              options="-k -C ace realclean find=*akefile" />
+    <command name="make"              options="-k -C apps/gperf/src realclean find=*akefile" />
+    <command name="make"              options="-k -C TAO/TAO_IDL realclean find=*akefile" />
     <command name="make"              options="-k -C ace" />
     <command name="make"              options="-k -C apps/gperf/src" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />

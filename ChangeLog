@@ -1,3 +1,11 @@
+Fri Nov 21 15:08:41 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/**/*.xml (most files):
+
+          Added "find=*akefile" to any "make realclean" lines so that
+          it is not an error if the makefiles do not exist at the time
+          the "make realclean" is attempted.
+
 Tue Nov 18 09:55:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * command/print_openssl_version.pm:

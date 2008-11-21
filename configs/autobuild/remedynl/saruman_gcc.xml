@@ -38,13 +38,13 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-type gnuace" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k -j 8" />
 
     <command name="auto_run_tests"    options=" -a -o" />

@@ -36,8 +36,8 @@
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
 
-    <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
+    <command name="make"              options="-k -C TAO realclean find=*akefile" />
 
     <command name="make"              options="-k" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />

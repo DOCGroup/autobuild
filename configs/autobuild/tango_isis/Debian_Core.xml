@@ -42,9 +42,9 @@
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc -type gnuautobuild" />
     <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,tests,examples,CCF -type gnuautobuild" />
 
-    <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -C TAO/CIAO realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
+    <command name="make"              options="-k -C TAO realclean find=*akefile" />
+    <command name="make"              options="-k -C TAO/CIAO realclean find=*akefile" />
     <command name="make"              options="-k -j 4 -C ace" />
     <command name="make"              options="-k -j 4 -C contrib/minizip" />
     <command name="make"              options="-k -j 4 -C apps/gperf/src" />

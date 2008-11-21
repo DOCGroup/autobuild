@@ -15,7 +15,7 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32011" />
     <command name="log"               options="ON" />
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />

@@ -33,7 +33,7 @@
     <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options=" -type make -features boost=1,xerces=1,xsc=1 XSC.mwc -value_template xerceslib=xerces-static -value_project pure_libs+=-framework\\ CoreServices" />
 
-    <command name="make"              options="-k realclean " />
+    <command name="make"              options="-k realclean find=*akefile " />
     <command name="make"              options="-k -j 4 " />
 
     <command name="log"               options="off" />

@@ -36,7 +36,7 @@
     <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC CIDLC.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-k realclean -C TAO/CIAO/CIDLC" />
+    <command name="make"              options="-k realclean find=*akefile -C TAO/CIAO/CIDLC" />
     <command name="make"              options="-k -C TAO/CIAO/CIDLC" />
 
     <command name="log"               options="off" />

@@ -21,7 +21,7 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="on" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
 
     <command name="svn"               options="dir=/acebuilds/MPC update --non-interactive" />
     <command name="svn"               options="update --non-interactive" />
@@ -47,7 +47,7 @@
     <command name="check_compiler"    options="g++" />
     <command name="print_ace_config" />
 
-    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-j 2 -k" />
 
     <command name="auto_run_tests"    options="-a" />
