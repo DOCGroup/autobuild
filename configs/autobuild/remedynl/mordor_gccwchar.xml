@@ -12,7 +12,7 @@
         <variable name="root"     value="/home/build/ACE/gccwchar/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/gccwchar/" />
-        <variable name="configs"  value="Exceptions SSL" />
+        <variable name="configs"  value="Exceptions SSL WCHAR" />
         <variable name="make_program"  value="gmake" />
 
     </configuration>
