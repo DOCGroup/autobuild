@@ -1,3 +1,9 @@
+Mon Nov 24 14:23:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * config/scoreboard/ciao.xml:
+          Removed FC9_CIAO_x86-64bit build as ISIS machine no longer has
+          64bit OS.
+
 Fri Nov 21 15:08:41 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/**/*.xml (most files):

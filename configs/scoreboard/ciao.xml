@@ -125,12 +125,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-        <name>FC9_CIAO_x86-64bit</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/shiva_64</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
        <name>FC6_CIDLC</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/cidlc</url>
        <build_sponsor>ISIS</build_sponsor>
