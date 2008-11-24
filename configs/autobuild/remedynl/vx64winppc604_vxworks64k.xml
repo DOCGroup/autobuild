@@ -38,6 +38,8 @@
         <environment name="DOC_TEST_1_REBOOT_TIME" value="20" />
         <environment name="DOC_TEST_1_TELNET_HOST" value="10.2.0.76" />
         <environment name="DOC_TEST_1_TELNET_PORT" value="10001" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="Z:\\galadriel\\VxWorks\\ppc604\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="20" />
 
         <variable name="root"     value="Z:\\galadriel\\VxWorks\\ppc604\\" />
         <variable name="log_file" value="build.txt" />

@@ -19,9 +19,11 @@
         <environment name="DOC_TEST_1_TAO_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers/TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers" />
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.73" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="/nfs/galadriel/VxWorks64lin_x86/ACE_wrappers" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.132:80" />
+        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="20" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
-        <environment name="DOC_TEST_1_REBOOT_TIME" value="35" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="20" />
 
         <variable name="root"     value="/nfs/galadriel/VxWorks64lin_x86/" />
         <variable name="log_file" value="build.txt" />
