@@ -1,3 +1,8 @@
+Tue Nov 25 08:11:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/parse_compiler_output.pm:
+          Don't make "0 warnings" as warning
+
 Tue Nov 25 07:54:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/vc7make.pm:

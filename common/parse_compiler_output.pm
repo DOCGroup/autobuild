@@ -398,7 +398,7 @@ sub handle_compiler_output_line($) {
   }
 
   if (($s =~ m/warning/i
-       && ($s !~ m/ warning\(s\)/ && $s !~ m/\-undefined warning/ && $s !~ m/-i[^\s]*warning/i && $s !~ m/-l[^\s]*warning/i && $s !~ m/[^\s]+warning+[^\s]/i))
+       && ($s !~ m/ warning\(s\)/ && $s !~ m/\-undefined warning/ && $s !~ m/-i[^\s]*warning/i && $s !~ m/-l[^\s]*warning/i && $s !~ m/[^\s]+warning+[^\s]/i) && $s !~ m/0 warnings/)
       || $s =~ m/info: /i
       || $s =~ m/^error \(future\)/i
       || $s =~ m/^.*\.(h|i|inl|hpp|ipp|cpp|java): /)
