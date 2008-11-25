@@ -1,3 +1,9 @@
+Tue Nov 25 07:54:00 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/vc7make.pm:
+          Register this command also as vc71make, vc8make, vc9make, and
+          vc10make
+
 Mon Nov 24 14:23:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * config/scoreboard/ciao.xml:

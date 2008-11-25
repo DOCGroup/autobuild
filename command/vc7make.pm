@@ -19,6 +19,8 @@ sub new
     my $class = ref ($proto) || $proto;
     my $self = {};
 
+    $self->{type} = shift;
+
     bless ($self, $class);
     return $self;
 }
@@ -57,7 +59,7 @@ sub Run ($)
         $root = $1;
     }
 
-    main::PrintStatus ('Compile', 'vc7make');
+    main::PrintStatus ('Compile', $self->{type});
 
     my $current_dir = getcwd ();
 
@@ -125,4 +127,8 @@ sub Run ($)
 
 ##############################################################################
 
-main::RegisterCommand ("vc7make", new VC7Make ());
+main::RegisterCommand ("vc7make", new VC7Make ('vc7make'));
+main::RegisterCommand ("vc71make", new VC7Make ('vc71make'));
+main::RegisterCommand ("vc8make", new VC7Make ('vc8make'));
+main::RegisterCommand ("vc9make", new VC7Make ('vc9make'));
+main::RegisterCommand ("vc10make", new VC7Make ('vc10make'));
