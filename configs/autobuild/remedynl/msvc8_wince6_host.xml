@@ -52,7 +52,7 @@
 
     <command name="generate_workspace" options="ACE_Host.mwc -type vc8 -value_template lib_modifier=_d"/>
 
-    <command name="vc7make"         options="/build debug ACE_Host.sln" />
+    <command name="vc8make"         options="/build debug ACE_Host.sln" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
