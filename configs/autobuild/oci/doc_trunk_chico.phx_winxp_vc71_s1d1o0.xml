@@ -34,8 +34,8 @@
   <command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build targets -->
-  <command name="vc7make" options="/build  TAO/TAO_ACE.sln"/>
-  <command name="vc7make" options="/build  bin/bin.sln"/>
+  <command name="vc7make" options="/build debug TAO/TAO_ACE.sln"/>
+  <command name="vc7make" options="/build debug bin/bin.sln"/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
