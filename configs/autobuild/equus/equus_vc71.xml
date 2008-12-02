@@ -5,28 +5,28 @@
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Debug\\TAO"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Debug\\MPC"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-2_7_0-win32-vc7"/>
-        <environment name="BOOST_ROOT"    value="C:\\Tools\\Boost"/>
-        <environment name="BOOST_VERSION" value="boost-1_32"/>
-        <environment name="BOOST_CFG"     value="-vc71-mt" />
+        <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-2_7_0-win32-vc8"/>
+        <environment name="BOOST_ROOT"    value="C:\\Tools\\boost_1_35_0"/>
+        <environment name="BOOST_VERSION" value="boost-1_35"/>
+        <environment name="BOOST_CFG"     value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="UDM_PATH" 	  value="C:\\Program Files\\ISIS\\UDM" />
         <environment name="COSMIC_ROOT"  value="C:\\bczar\\CoSMIC_VC71_Debug\\CoSMIC" />
-        <environment name="ZLIB_ROOT" value="C:\\Tools\\zlib" />
-        <environment name="PATH"         value="C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\Tools\\Boost\\lib;C:\\bczar\\CoSMIC_VC71_Debug\\ACE\\lib;C:\\bczar\\CoSMIC_VC71_Debug\\CoSMIC\\bin;C:\\Tools\\xerces-c-2_7_0-win32-vc7\\bin;C:\\Program Files\\ISIS\\UDM\\bin;C:\\Program Files\\ISIS\\UDM\\etc;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xalan-c_1_8_0\\bin;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xerces-c_2_5_0\\bin;C:\\Program Files\\Putty;C:\\Tools\\bin;C:\\Tools\\Perl\\bin;C:\\Program Files\\Subversion\\bin;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Vc7\\bin;C:\\Tools\\zlib\\bin" />
-        <variable name="configs"  value="Win32 VC71 ZLIB Exceptions" />
+        <environment name="ZLIB_ROOT" value="C:\\Tools\\zlib-1.2.3" />
+        <environment name="PATH"         value="C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\Tools\\Boost\\lib;C:\\bczar\\CoSMIC_VC71_Debug\\ACE\\lib;C:\\bczar\\CoSMIC_VC71_Debug\\CoSMIC\\bin;C:\\Tools\\xerces-c-2_7_0-win32-vc8\\bin;C:\\Program Files\\ISIS\\UDM\\bin;C:\\Program Files\\ISIS\\UDM\\etc;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xalan-c_1_8_0\\bin;C:\\Program Files\\ISIS\\UDM\\3rdparty\\xerces-c_2_5_0\\bin;C:\\Program Files\\Putty;C:\\Tools\\bin;C:\\Tools\\Perl\\bin;C:\\Program Files\\Subversion\\bin;C:\\Program Files\\Subversion\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\Tools\\Bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Tools\\zlib-1.2.3\\bin" />
+        <variable name="configs"  value="Win32 VC8 ZLIB Exceptions" />
         <variable name="root"     value="C:\\bczar\\CoSMIC_VC71_Debug" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\\bczar\\CoSMIC_VC71_Debug" />
         <variable name="project_root" value="C:\\bczar\\CoSMIC_VC71_Debug\\ACE" />
-        <variable name="name"     value="CoSMIC Debug VC71 GME-6.11.9 WinXP" />
+        <variable name="name"     value="CoSMIC Debug VC8 GME-7.6.29 WinXP" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
 
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %ACE_ROOT% -Debug -k -clean" />
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %TAO_ROOT% -Debug -k -clean" />
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k -clean" /> 
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %ACE_ROOT% -Debug -k -clean" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %TAO_ROOT% -Debug -k -clean" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT% -Debug -k -clean" /> 
     <command name="log"               options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
@@ -43,13 +43,13 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc71 -include %COSMIC_ROOT% %COSMIC_ROOT%\\cosmic.mwc"/>
-    <command name="generate_workspace" options="-type vc71 %ACE_ROOT%\\ace\\ace.mwc"/>
-    <command name="generate_workspace" options="-type vc71 %TAO_ROOT%\\TAO_IDL\\TAO_IDL.mwc"/>
+    <command name="generate_workspace" options="-type vc8 -include %COSMIC_ROOT% %COSMIC_ROOT%\\cosmic.mwc"/>
+    <command name="generate_workspace" options="-type vc8 %ACE_ROOT%\\ace\\ace.mwc"/>
+    <command name="generate_workspace" options="-type vc8 %TAO_ROOT%\\TAO_IDL\\TAO_IDL.mwc"/>
 
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %ACE_ROOT% -Debug -k" />
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %TAO_ROOT% -Debug -k" />
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc7 -dir %COSMIC_ROOT% -Debug -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %ACE_ROOT% -Debug -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %TAO_ROOT% -Debug -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT% -Debug -k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />

@@ -1,3 +1,12 @@
+Tue Dec  2 20:57:00 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc71.xml:
+        * configs/autobuild/equus/equus_vc71_release.xml:
+
+        * configs/autobuild/quake/quake_vc8_release.xml:
+
+          Updated autobuild configuration to use VS2005 and UDM 3.1.3
+
 Fri Nov 28 08:46:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/releases.xml:
