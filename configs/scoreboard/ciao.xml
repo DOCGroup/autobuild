@@ -89,12 +89,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
      <build>
-        <name>FC6_CIAO_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
         <name>FC4_Versioned_Namespace</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/versioned_namespace</url>
        <build_sponsor>ISIS</build_sponsor>
@@ -160,12 +154,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
-     <build>
-     <name>FC6_Full</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
+   
      <build>
       <name>OpenSuSE_11_0_ACE_FOR_TAO</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_acefortao/</url>
@@ -219,36 +208,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
      <url>http://www.dre.vanderbilt.edu/~remedynl/RHEL5_icc101_32/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>Debian_Etch_ARM_Cross_Host</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_host/</url>
-     <build_sponsor>ISIS</build_sponsor>
-     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-   </build>
-   <build>
-     <name>Debian_Etch_ARM_Cross_Target</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_target/</url>
-     <build_sponsor>ISIS</build_sponsor>
-     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-   </build>
-   <build>
-     <name>Debian_Etch_ARM_Cross_Test</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/slug01_arm_test/</url>
-     <build_sponsor>ISIS</build_sponsor>
-     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-   </build>
-   <build>
-     <name>Debian_Etch_ARM_TS-GCC_4.0.1_Cross_Target</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_ts-target/</url>
-     <build_sponsor>ISIS</build_sponsor>
-     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-   </build>
-   <build>
-     <name>Debian_Etch_ARM_TS-GCC_4.0.1_Cross_Test</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/brick01_arm_test/</url>
-     <build_sponsor>ISIS</build_sponsor>
-     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
    </build>
 </group>
 
@@ -426,12 +385,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC8_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_VC8_Release</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/VC8r</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -442,12 +395,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
             <url>http://www.dre.vanderbilt.edu/~remedynl/VC90</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC71_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17/vc71</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
             <name>WinXP_VC71_CIAOCore_Static_Debug</name>
@@ -515,5 +462,11 @@ all the OS/platform combinations on which CIAO is tested everyday.
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
         </build>
-</group>
+        <build>
+          <name>WinXP_VC8_Debug</name>
+          <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
+          <build_sponsor>Remedy IT</build_sponsor>
+          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+      </group>
 </scoreboard>

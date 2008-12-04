@@ -1,0 +1,70 @@
+<scoreboard>
+<preamble>
+<center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
+<hr/>
+This is the CIAO virtual scoreboard for future platforms/development. 
+<hr/>
+</preamble>
+
+<group>
+<name>Future Platforms</name>
+   <build>
+     <name>Debian_Etch_ARM_Cross_Host</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_host/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+   <build>
+     <name>Debian_Etch_ARM_Cross_Target</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_target/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+   <build>
+     <name>Debian_Etch_ARM_Cross_Test</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/slug01_arm_test/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+   <build>
+     <name>Debian_Etch_ARM_TS-GCC_4.0.1_Cross_Target</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_ts-target/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+   <build>
+     <name>Debian_Etch_ARM_TS-GCC_4.0.1_Cross_Test</name>
+     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/brick01_arm_test/</url>
+     <build_sponsor>ISIS</build_sponsor>
+     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+   </build>
+</group>
+
+<group>
+  <name>prism_import branch</name>
+  <build>
+    <name>FC6_Full</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
+    <name>FC6_CIAO_Core</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+  </build>
+  <build>
+    <name>WinXP_VC71_CIAOCore_Debug</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17/vc71</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
+    <name>Win2003_VC8_Full</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+</group>
+</scoreboard>
