@@ -24,7 +24,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="make"              options=" -i -f Makefile.bmak realclean find=*akefile" />
+    <command name="make"              options=" -i -f Makefile.bmak realclean" />
 
     <command name="shell"             options="find ACE_wrappers -iname '*.bmak' -exec rm '{}' ';'" />
 
