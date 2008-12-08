@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\ACE" />
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\TAO"/>
+		<environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\CIAO"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC71_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\\Program Files\\Windows Installer XML v3"/>
         <environment name="CVS_RSH"      value="plink.exe" />
@@ -36,6 +37,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO TAO" />
+	<command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/CIAO CIAO" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 
