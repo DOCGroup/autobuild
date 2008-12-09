@@ -1,9 +1,17 @@
+Tue Dec  9 06:17:14 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc71.xml:
+        * configs/autobuild/equus/equus_vc71_release.xml:
+
+          Added specific solution files instead of top level directories
+          for win32make command.
+
 Mon Dec  8 17:20:54 UTC 2008  Sumant Tambe  <sutambe@nosapm>
 
         * configs/autobuild/equus/equus_vc71_release.xml:
 
           Fixed a typo.
-           
+
 
 Mon Dec  8 17:09:30 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
