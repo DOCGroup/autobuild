@@ -331,7 +331,7 @@ sub local_query_status ($)
                     $builds{$buildname}{STATUS} = $1;
                 }
             }
-        } 
+        }
 else {
 print STDERR "Error: Could not open file <$file_name>: $!\n";
 }
@@ -692,7 +692,7 @@ print "in local_update_cache, post=$post\n";
                     $latest = $_;
                 }
             }
-        } 
+        }
         undef $file_handle;
 
 	if (!defined $latest) {
@@ -1395,7 +1395,8 @@ sub build_integrated_page ($)
                      "tao",
                      "tao_future",
                      "misc",
-                     "ciao");
+                     "ciao",
+                     "ciao_future");
 
     my $newfile = new FileHandle;
 
