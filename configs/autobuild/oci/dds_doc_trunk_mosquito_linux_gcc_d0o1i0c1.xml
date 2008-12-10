@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on oci1329xp) was -->
-  <!-- D:\tao_builds\svn-nightly\BuildXML\buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=0 optimize=1 inline=0 corba_e_compact=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment "MAKEFLAGS=built_in_topics=0 java=1" -environment JAVA_HOME=/usr/java/jdk1.6.0_07 -environment JAVA_PLATFORM=linux -hostname mosquito -mpcopt "-features built_in_topics=0,java=1" -outdir . -piggyback /tao_builds/taoadmin/doc/build/gcc_d0o1i0c1 -piggypeer 1 -platform linux -testopt "-a -l java/tests/dcps_java_tests.lst" -->
+  <!-- The command used to create this file (on mosquito.ociweb.com) was -->
+  <!-- /home/mitza/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=0 optimize=1 inline=0 corba_e_compact=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment "MAKEFLAGS=built_in_topics=0 java=1" -environment JAVA_HOME=/usr/java/jdk1.6.0_07 -environment JAVA_PLATFORM=linux -mpcopt "-features built_in_topics=0,java=1" -outdir . -piggyback /tao_builds/taoadmin/doc/build/gcc_d0o1i0c1 -piggypeer 1 -pretest "perl java/build_scripts/ant_wrapper.pl -d java/jms -- -q all" -testopt "-a -l java/tests/dcps_java_tests.lst" -->
   <configuration>
     <environment name="ACE_ROOT"              value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE"/>
     <environment name="CIAO_ROOT"             value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO"/>
@@ -44,6 +44,7 @@
   <command name="make" options="-s -k  find=*akefile dir=."/>
 
   <!-- Post build -->
+  <command name="anonymous_shell" options="perl java/build_scripts/ant_wrapper.pl -d java/jms -- -q all"/>
   <command name="auto_run_tests"  options="dir=. -a -l java/tests/dcps_java_tests.lst -Config CORBA_E_COMPACT -Config NO_BUILT_IN_TOPICS -Config Linux"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
