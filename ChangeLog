@@ -1,3 +1,11 @@
+Wed Dec 10 02:12:33 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/trian/trian_cosmic_driver.bat:
+        * configs/autobuild/trian/trian_cosmic_release.bat:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Setting up a fast CoSMIC build on trian.
+
 Wed Dec 10 01:33:02 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71_release.xml:
