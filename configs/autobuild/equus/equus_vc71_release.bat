@@ -1,4 +1,4 @@
 rem $Id$
 
-perl C:\bczar\autobuild\autobuild.pl equus_vc71_release.xml
+perl C:\bczar\autobuild\autobuild.pl equus_vc8_release.xml
 
