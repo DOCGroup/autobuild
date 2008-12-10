@@ -60,7 +60,7 @@
     <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Release.sln -Debug -k" />
 
     <command name="generate_workspace" options="-type vc8 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer.sln -Release -k" />
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.sln -Release -k" />
 
     <command name="anonymous_shell"   options="md5sum C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC-VC71-nightly-md5sum.txt"/>
     <command name="anonymous_shell"   options="pscp -p -C C:\\bczar\\CoSMIC_VC71_Release\\CoSMIC\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC71"/>
