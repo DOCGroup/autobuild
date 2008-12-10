@@ -1,3 +1,9 @@
+Wed Dec 10 00:47:37 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc71_release.xml:
+
+          Fixed path.
+
 Tue Dec  9 06:17:14 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc71.xml:
@@ -11,7 +17,6 @@ Mon Dec  8 17:20:54 UTC 2008  Sumant Tambe  <sutambe@nosapm>
         * configs/autobuild/equus/equus_vc71_release.xml:
 
           Fixed a typo.
-
 
 Mon Dec  8 17:09:30 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
