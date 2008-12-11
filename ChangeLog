@@ -1,3 +1,9 @@
+Thu Dec 11 05:42:45 UTC 2008  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc8_release.xml:
+ 
+          XERCESC version 2.7
+
 Wed Dec 10 17:11:49 UTC 2008  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc8.bat:
