@@ -1,4 +1,4 @@
-/users/bczar/runbuild.sh ace_for_tao
+/users/bczar/runbuild.sh FC6acefortao
 /users/bczar/runbuild.sh autoconf
 /users/bczar/runbuild.sh ciao_core
 /users/bczar/runbuild.sh cidlc
