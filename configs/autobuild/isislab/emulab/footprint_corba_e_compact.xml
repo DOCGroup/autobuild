@@ -6,7 +6,7 @@
 
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/proj/autobuilds/logs/footprintCORBAecompact" />
+        <variable name="log_root" value="/proj/autobuilds/logs/footprintCORBAecompact/" />
         <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
