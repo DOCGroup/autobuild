@@ -1,0 +1,8 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+set node [$ns node]
+tb-set-node-os $node winXP_vs2005pro
+tb-set-hardware $node pc8832
+
+$ns run

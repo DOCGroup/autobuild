@@ -1,0 +1,15 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+set node [$ns node]
+tb-set-node-os  $node FC6-STD
+tb-set-hardware $node pc8832
+
+# utils
+tb-set-node-rpms $node /proj/autobuilds/rpms/subversion-1.4.3-2.fc6.i386.rpm /proj/autobuilds/rpms/apr-util-1.2.8-1.fc6.i386.rpm /proj/autobuilds/rpms/apr-1.2.7-10.i386.rpm /proj/autobuilds/rpms/postgresql-libs-8.1.4-1.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libmng-1.0.9-5.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libjpeg-devel-6b-37.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXinerama-devel-1.0.1-2.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/xorg-x11-proto-devel-7.1-9.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXau-devel-1.0.1-3.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libICE-devel-1.0.1-2.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXt-devel-1.0.2-3.1.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXrender-devel-0.9.1-3.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libSM-devel-1.0.1-3.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXft-devel-2.1.10-1.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXdmcp-devel-1.0.1-2.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXext-devel-1.0.1-2.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/fontconfig-devel-2.4.1-3.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libmng-devel-1.0.9-5.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/lcms-1.15-1.2.2.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXcursor-devel-1.1.7-1.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libXrandr-devel-1.1.1-3.1.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/mesa-libGLU-6.5.1-9.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libX11-devel-1.0.3-7.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/qt-devel-3.3.8-2.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/freetype-2.2.1-17.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/qt-3.3.8-2.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/freetype-devel-2.2.1-17.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libpng-1.2.10-10.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/libpng-devel-1.2.10-10.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/mesa-libGL-devel-6.5.1-9.fc6.i386.rpm /proj/autobuilds/rpms/fc6-qt-dev/mesa-libGLU-devel-6.5.1-9.fc6.i386.rpm
+
+tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-2_8-fc6-gcc411.tar.gz
+
+tb-set-node-startcmd $node "/proj/autobuilds/data/run_autobuild.sh Full_Reactors"
+
+$ns run
