@@ -4,8 +4,8 @@
 /users/bczar/runbuild.sh cidlc
 /users/bczar/runbuild.sh CORBAecompact
 /users/bczar/runbuild.sh CORBAemicro
-/users/bczar/runbuild.sh Debian_Core
-/users/bczar/runbuild.sh Debian_ORB_Core
+/users/bczar/runbuild.sh DebianCore
+/users/bczar/runbuild.sh DebianORBCore
 /users/bczar/runbuild.sh DynamicHash
 /users/bczar/runbuild.sh fc6-env
 /users/bczar/runbuild.sh footprint_corba_e_compact
