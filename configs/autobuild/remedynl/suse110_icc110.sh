@@ -5,6 +5,8 @@
 
 cd $HOME/ACE/autobuild
 
+svn up
+
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/suse110_icc110_32.sh
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/suse110_icc110_64.sh
 
