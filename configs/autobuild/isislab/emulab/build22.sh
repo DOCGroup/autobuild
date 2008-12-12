@@ -1,5 +1,5 @@
 /users/bczar/runbuild.sh FC6acefortao
-/users/bczar/runbuild.sh autoconf
+/users/bczar/runbuild.sh FC6autoconf
 /users/bczar/runbuild.sh FC6ciaocore
 /users/bczar/runbuild.sh cidlc
 /users/bczar/runbuild.sh CORBAecompact
