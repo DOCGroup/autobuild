@@ -22,6 +22,6 @@
 /users/bczar/runbuild.sh prism_integration
 /users/bczar/runbuild.sh SingleThreaded
 /users/bczar/runbuild.sh Static
-/users/bczar/runbuild.sh valgrind
+/users/bczar/runbuild.sh FC6valgrind
 /users/bczar/runbuild.sh versioned_namespace
-/users/bczar/runbuild.sh wchar
+/users/bczar/runbuild.sh FC6wchar

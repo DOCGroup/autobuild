@@ -19,6 +19,7 @@ node-startcmd.
 .  Give the experiment an appropriate name
 .  specify the full path to the ns file you created in the previous  
 section, i.e. /proj/autobuilds/nsfiles/foo.ns
+/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab
 .  Uncheck idle-swap, listing reason as 'autobuild'
 .  Select 'Skip Linktest' in the Linktest combo box.
 .  Check the box for batch mode experiment
