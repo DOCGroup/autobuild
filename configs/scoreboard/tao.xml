@@ -60,7 +60,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
      <build>
        <name>FC6_autoconf</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade21/autoconf</url>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/autoconf</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
@@ -77,14 +77,14 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-        <name>FC4_ACE_FOR_TAO</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/ace_for_tao</url>
+        <name>FC6_ACE_FOR_TAO</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ace_for_tao</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-        <name>FC4_NO_IIOP</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade12/no_iiop</url>
+        <name>FC6_NO_IIOP</name>
+        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/no_iiop</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
