@@ -37,7 +37,7 @@
 
     <command name="generate_workspace" options="-type gnuautobuild" />
 
-    <command name="anonymous_shell"             options="mkdir $LOG_ROOT/metrics" />
+    <command name="anonymous_shell"    options="mkdir $LOG_ROOT/metrics" />
 
     <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
     <command name="make"              options="-k -C ace        --dry-run > $LOG_ROOT/metrics/targets" />
