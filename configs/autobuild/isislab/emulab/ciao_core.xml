@@ -14,7 +14,6 @@
 
     <command name="log"               options="on" />
 
-    <!-- Clean out the workspace before regenerating the Makefiles. -->
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/prism_import/sets ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
