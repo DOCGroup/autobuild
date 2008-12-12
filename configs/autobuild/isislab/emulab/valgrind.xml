@@ -8,7 +8,7 @@
 
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/proj/autobuilds/logs/valgrind/" />
+        <variable name="log_root" value="/proj/autobuilds/logs/valgrind//>
         <variable name="configs"  value="Linux Exceptions SSL Valgrind" />
     </configuration>
 
