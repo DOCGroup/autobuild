@@ -12,7 +12,7 @@
 /users/bczar/runbuild.sh FC6FullReactors
 /users/bczar/runbuild.sh gcc4
 /users/bczar/runbuild.sh FC6gcc4ssl
-/users/bczar/runbuild.sh ImplicitTemplate
+/users/bczar/runbuild.sh FC6ImplicitTemplate
 /users/bczar/runbuild.sh FC6IPv6
 /users/bczar/runbuild.sh FC6versioned
 /users/bczar/runbuild.sh FC6NoIIOP
