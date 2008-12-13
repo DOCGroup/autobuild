@@ -9,6 +9,6 @@ tb-set-hardware $node pc8832
 tb-set-node-rpms $node /proj/autobuilds/rpms/subversion-1.4.3-2.fc6.i386.rpm /proj/autobuilds/rpms/apr-util-1.2.8-1.fc6.i386.rpm /proj/autobuilds/rpms/apr-1.2.7-10.i386.rpm /proj/autobuilds/rpms/postgresql-libs-8.1.4-1.1.i386.rpm
 tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-2_8-gc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/zlib-1_2_3-fc6-gcc411.tar.gz
 
-tb-set-node-startcmd $node "/proj/autobuilds/data/run_autobuild.sh gcc4_ssl"
+tb-set-node-startcmd $node "/proj/autobuilds/data/run_autobuild.sh FC6gcc4ssl"
 
 $ns run
