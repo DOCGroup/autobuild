@@ -1,25 +1,21 @@
-Hi Johnny -
+This directory contains the builds running at emulab. For each 
+build create the xml directory and the .ns file and commit this
+to svn. Make sure the file name is not longer then 19 characters 
+(without extension).
 
-I have set up for CORBAecompact build, if you could follow the  
-instructions below to ensure that they are descriptive enough, I'd  
-appriciate it!
+Add the build to the build22.sh file. This gets executed at 22:00
+and triggers all daily builds
 
-thanks,
-/-Will
+. Log in to ops.isislab.vanderbilt.edu as bczar
+. Run ./svnup.sh to get the .ns/.xml file on the system
 
-.  Log in to ops.isislab.vanderbilt.edu as bczar
-.  change directory to /proj/autobuilds/nsfiles
-.  create a .ns file for your build (use an existing ns file for  
-reference), most importantly setting an appropriate value for tb-set- 
-node-startcmd.
-
-.  Go to www.isislab.vanderbilt.edu
-.  Log in as bczar@dre.vanderbilt.edu 
-.  Click 'Begin an Experiment' on the left hand side of the screen
-.  Give the experiment an appropriate name
-.  specify the full path to the ns file you created in the previous  
-section, i.e. /proj/autobuilds/nsfiles/foo.ns
-/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab
+. Go to www.isislab.vanderbilt.edu
+. Log in as bczar@dre.vanderbilt.edu 
+. Click 'Begin an Experiment' on the left hand side of the screen
+. Give the experiment an appropriate name
+. specify the full path to the ns file you created in the previous  
+section, i.e. 
+/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/...
 .  Uncheck idle-swap, listing reason as 'autobuild'
 .  Select 'Skip Linktest' in the Linktest combo box.
 .  Check the box for batch mode experiment
@@ -39,10 +35,4 @@ On this node, you can check two log files to monitor the progress of
 the build:
 /isisbuilds/build.txt
 /proj/autobuilds/logs/<autobuild file>.log
-
-To automatically schedule the experiment, from a shell on  
-ops.isislab.vanderbilt.edu as bczar:
-. crontab -e
-. Schedule a /users/bczar/runbuild.sh for the name of the build  
-created on www.isislab.vanderbilt.edu.
 
