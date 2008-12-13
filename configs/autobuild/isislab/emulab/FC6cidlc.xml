@@ -14,8 +14,6 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nexceptions=1\ncidl=1\nboost=1\nstatic_link=1\n# Perform some stricter C/C++ checking\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\n'" />
 
@@ -25,10 +23,8 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options="dirs=TAO/CIAO/CIDLC CIDLC.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-k realclean find=*akefile -C TAO/CIAO/CIDLC" />
     <command name="make"              options="-k -C TAO/CIAO/CIDLC" />
 
     <command name="log"               options="off" />
@@ -36,7 +32,7 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
-    
+
     <command name="shell"             options="/usr/bin/scp ACE_wrappers/TAO/CIAO/CIDLC/cidlc.bz2 naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux" />
     <command name="shell"             options="/usr/bin/scp ACE_wrappers/TAO/CIAO/CIDLC/cidlc naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux" />
 

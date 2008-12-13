@@ -30,7 +30,7 @@
 
     <command name="generate_workspace" options="-exclude TAO_*.mwc,TAO/CIAO -type gnuautobuild" />
 
-    <command name="make"              options="-k -j3" />
+    <command name="make"              options="-k -j 5" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 

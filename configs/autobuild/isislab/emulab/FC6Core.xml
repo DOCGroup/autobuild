@@ -27,17 +27,12 @@
     <command name="print_ace_config" />
     <command name="print_cidlc_version" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
     <!-- This builds everthing exclude TAO directory-->
     <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
     <!-- This builds TAO... -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc -type gnuautobuild" />
     <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc,CIDLC,tests,examples,CCF -type gnuautobuild" />
 
-    <command name="make"              options="-k realclean find=*akefile" />
-    <command name="make"              options="-k -C TAO realclean find=*akefile" />
-    <command name="make"              options="-k -C TAO/CIAO realclean find=*akefile" />
     <command name="make"              options="-k -j 4 -C ace" />
     <command name="make"              options="-k -j 4 -C contrib/minizip" />
     <command name="make"              options="-k -j 4 -C apps/gperf/src" />
