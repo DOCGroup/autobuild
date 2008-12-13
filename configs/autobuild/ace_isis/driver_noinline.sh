@@ -3,5 +3,5 @@
 #
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                   $HOME/autobuild/configs/autobuild/ace_isis/RH8_NoInline.xml
+                   $HOME/autobuild/configs/autobuild/ace_isis/FC9_NoInline.xml
 
