@@ -92,14 +92,13 @@ sub Run ($)
         $svn_program = "svn";
     }
 
-    $svn_program .= ' --non-interactive';
-
     ## We should only perform a cleanup and status below if there
     ## is already an svn checkout in the current directory.
     my $cleanup_and_status =
          ((defined $ENV{SVN_ASP_DOT_NET_HACK} && -d '_svn') || -d '.svn');
 
     system ("$svn_program cleanup") if ($cleanup_and_status);
+    $svn_program .= ' --non-interactive';
     my $ret = system ("$svn_program $options");
     if ($ret != 0) {
         print STDERR __FILE__, " ERROR: $svn_program $options returned $ret\n";
