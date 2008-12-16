@@ -92,6 +92,8 @@ sub Run ($)
         $svn_program = "svn";
     }
 
+    $svn_program .= ' --non-interactive';
+
     ## We should only perform a cleanup and status below if there
     ## is already an svn checkout in the current directory.
     my $cleanup_and_status =
