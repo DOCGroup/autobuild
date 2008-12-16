@@ -520,4 +520,14 @@ all the OS/platform combinations on which TAO is tested everyday.
   </build>
 </group>
 
+<group>
+   <name>AIX</name>
+   <build>
+      <name>AIX_5.3_VA8_Debug</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_viper_aix53_va8_d1o0</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+</group>
+
 </scoreboard>
