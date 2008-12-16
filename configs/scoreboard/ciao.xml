@@ -355,8 +355,8 @@ all the OS/platform combinations on which CIAO is tested everyday.
           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>Win2003_VC71_ACE_FOR_TAO</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade11/ace_for_tao</url>
+            <name>Win2003_VC9_ACE_FOR_TAO</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_ace_for_tao</url>
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
         </build>
@@ -398,19 +398,13 @@ all the OS/platform combinations on which CIAO is tested everyday.
         </build>
         <build>
             <name>Win2003_VC8_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade46</url>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_core</url>
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
-            <name>WinXP_VC71_FULL</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/blade49_vc71_full</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC8_FULL</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/blade50_vc8_full</url>
+            <name>Win2003_VC9_FULL</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_VC9_full</url>
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
@@ -451,8 +445,8 @@ all the OS/platform combinations on which CIAO is tested everyday.
             <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>
         <build>
-            <name>Win2003_VC71_Versioned_Namespace</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade11/versioned_namespace</url>
+            <name>Win2003_VC9_Versioned_Namespace</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_versioned_namespace</url>
             <build_sponsor>ISIS</build_sponsor>
             <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
         </build>
