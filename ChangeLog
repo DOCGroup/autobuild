@@ -1,3 +1,10 @@
+Tue Dec 16 15:28:49 UTC 2008  Adam Mitz  <mitza@ociweb.com>
+
+        * command/check_compiler.pm:
+
+          Made the regex pattern for gcc a little more forgiving so that
+          compilers with names like "prefix-gcc" are also recognized.
+
 Tue Dec 16 15:09:06 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * command/svn.pm:

@@ -46,9 +46,9 @@ sub Run ($)
 
     print "================ Compiler version ================\n";
 
-    if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc|ccpentium|ccppc|c\+\+ppc|c\+\+pentium)/){
+    if($compiler =~ m/^(\w*-)?(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc|ccpentium|ccppc|c\+\+ppc|c\+\+pentium)/){
         system($compiler." -v 2>&1");
-      if($compiler =~ m/^(gcc|g\+\+|g\+\+-?[0-9])/){
+      if($compiler =~ m/^(\w*-)?(gcc|g\+\+|g\+\+-?[0-9])/){
           my $linker = `$compiler -print-prog-name=ld`;
           chomp $linker;
           if($linker eq "ld"){
@@ -64,12 +64,6 @@ sub Run ($)
     }
     elsif(lc $compiler eq "mingwcygwin"){
         system("g++ -v -mno-cygwin");
-    }
-    elsif(lc $compiler eq "ppc_85xx-gcc"){
-        system("ppc_85xx-g++ -v");
-        my $linker = `ppc_85xx-g++ -print-prog-name=ld`;
-        chomp $linker;
-        system("$linker -v 2>&1");
     }
     elsif(lc $compiler eq "borland"){
         system("bcc32 --version");
