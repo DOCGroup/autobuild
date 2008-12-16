@@ -8,6 +8,7 @@
         <environment name="XERCESCROOT"  value="C:\\utils"/>
         <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\ACE\\versioned_namespace\\ACE_wrappers\\bin;C:\\ACE\\versioned_namespace\\ACE_wrappers\\lib;C:\\utils\\lib;c:\\cygwin\\bin" type="prefix" />
+        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
         <environment name="BOOST_ROOT"  value="C:\\utils" />
         <environment name="BOOST_VER"   value="boost-1_36" />
         <variable name="configs"  value="Win32 Exceptions" />

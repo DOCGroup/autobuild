@@ -10,6 +10,7 @@
         <environment name="BOOST_VER"   value="boost-1_36" />
         <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\ACE\\ace_for_tao\\ACE_wrappers\\bin;C:\\ACE\\ace_for_tao\\ACE_wrappers\\lib;C:\\utils\\lib;c:\\cygwin\\bin" type="prefix" />
+        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
         <variable name="configs"  value="Win32 Exceptions ACE_FOR_TAO" />
         <variable name="root"     value="C:\\ACE\\ace_for_tao\\" />
         <variable name="log_file" value="build.txt" />
