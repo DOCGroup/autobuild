@@ -44,7 +44,7 @@ sub Run ($)
     my $name;
     if ($^O eq 'VMS') {
       foreach my $envvar (main::GetEnvironment ()) {
-        my $VALUE= "$envvar->{NAME} = $ENV{$envvar->{NAME}}\n";
+        my $VALUE= "$envvar->{NAME}=$ENV{$envvar->{NAME}}\n";
         # Escape any '<' or '>' signs
         $VALUE =~ s/</&lt;/sg;
         $VALUE =~ s/>/&gt;/sg;
@@ -53,7 +53,7 @@ sub Run ($)
     }
     else {
       foreach $name (sort keys %ENV) {
-          my $VALUE= "$name = $ENV{$name}\n";
+          my $VALUE= "$name=$ENV{$name}\n";
           # Escape any '<' or '>' signs
           $VALUE =~ s/</&lt;/sg;
           $VALUE =~ s/>/&gt;/sg;
