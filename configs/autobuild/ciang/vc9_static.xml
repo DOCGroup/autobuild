@@ -6,7 +6,7 @@
         <environment name="CIAO_ROOT"     value="C:\\ACE\\VC71s\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="PATH"         value="C:\\ACE\\VC71s\\ACE_wrappers\\bin;C:\\ACE\\VC71s\\ACE_wrappers\\lib;c:\\xerces\\bin;C:\\Perl\\bin;c:\\zzip\\lib;c:\\zlib\\lib;c:\\putty;c:\\xerces\\lib;c:\\cygwin\\bin"  type="prefix" />
-        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
+        <environment name="PATH"          value="C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
         <environment name="XERCESCROOT"   value="C:\\xerces"/>
         <environment name="BOOST_ROOT"    value="C:\\Boost-1.32"/>
         <environment name="BOOST_VERSION" value="boost-1_32"/>

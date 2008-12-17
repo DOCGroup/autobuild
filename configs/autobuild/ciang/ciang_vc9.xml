@@ -6,7 +6,7 @@
         <environment name="CIAO_ROOT"     value="C:\\ACE\\VC9\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="RSYNC_RSH"     value="c:\\Cygwin\\bin\\ssh" />
         <environment name="PATH"          value="C:\\bin;C:\\zlib\\lib;C:\\zzip\\lib;c:\\xerces-vc8\\lib;C:\\Perl\\bin;C:\\ACE\\VC9\\ACE_wrappers\\bin;C:\\ACE\\VC9\\ACE_wrappers\\lib;C:\\ACE\\VC9\\ACE_wrappers\\TAO\\CIAO\\bin;c:\\cygwin\\bin" type="prefix" />
-        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
+        <environment name="PATH"         value="C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
         <environment name="XERCESCROOT"   value="C:\\xerces-vc8" />
         <environment name="ZLIB_ROOT"     value="C:\\zlib" />
         <environment name="ZZIP_ROOT"     value="C:\\zzip" />
