@@ -25,10 +25,7 @@
 
     <command name="process_listener"  options="localhost:32002" />
 
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -ALL -Debug -k -clean" />
-
-    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.vcproj' -exec c:\\cygwin\\bin\\rm -rf '{}' ';'" />
-    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.sln' -exec c:\\cygwin\\bin\\rm -rf '{}' ';'" />
+    <command name="make"              options="/I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
     <command name="log"               options="ON" />
 
@@ -46,11 +43,10 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-value_template warning_level=4 -type vc9 -exclude TAO/TAO_*.mwc,TAO/CIAO" />
+    <command name="generate_workspace" options="-value_template warning_level=4 -type nmake -exclude TAO/TAO_*.mwc,TAO/CIAO" />
 
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -ALL -Debug -k" />
+    <command name="make"              options="/I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
-    <!-- Explicitly enable ACE, TAO and orbsvcs tests so that CIAO tests aren't added automatically -->
     <command name="auto_run_tests"    options="-s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22 -a -o -t" />
 
     <command name="log"               options="OFF" />

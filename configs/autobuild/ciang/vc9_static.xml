@@ -25,7 +25,7 @@
 
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="win32make"         options="msvc_static_compile -TAO -vc9 -Debug -k -clean -name_modifier *_Static" />
+    <command name="make"              options="dir=TAO/CIAO /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.vcproj' -exec c:\\cygwin\\bin\\rm -rf '{}' ';'" />
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.sln' -exec c:\\cygwin\\bin\\rm -rf '{}' ';'" />
@@ -48,9 +48,9 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type vc9 -static -name_modifier *_Static "/>
+    <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type nmake -static"/>
 
-    <command name="win32make"         options="msvc_static_compile -CORE -vc9 -Debug -k -name_modifier *_Static" />
+    <command name="make"              options="dir=TAO/CIAO /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
