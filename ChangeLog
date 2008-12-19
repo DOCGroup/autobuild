@@ -1,3 +1,10 @@
+Fri Dec 19 22:52:01 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_debug.xml: VC7.1 ACE
+          build; replaces the one on hope.
+
+        * configs/scoreboard/ace.xml: Replace VC7.1 on hope with timmy-xpvc71.
+
 Fri Dec 19 22:28:37  2008  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml:
