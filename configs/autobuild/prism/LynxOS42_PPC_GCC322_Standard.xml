@@ -24,10 +24,9 @@
     <command name="log"               options="ON" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.o' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.a' -exec rm '{}' ';'" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
-
-    <!-- Now, delete all the Makefiles to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=0\ndebug=0\ninline=0\n\nVERSION=4.2.0\nOBJSFORMAT=elf\nLYNXTARGET=ppc\nHOST_OS=linux\n\nexceptions=1\nthreads=1\ninterceptors=1\nstdcpplib=1\nshared_libs_only=1\nstatic_libs_only=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\n\nTAO_IDL:=/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/tao_idl\nTAO_IDLFLAGS+=-g /home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/ace_gperf\nTAO_IDL_DEP:=$(TAO_IDL)$(EXEEXT)\n'" />

@@ -20,11 +20,11 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log"               options="ON" />
 
+    <!-- Now, delete all the Makefiles, objects and libraries to insure a clean slate. -->
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.o' -exec rm '{}' ';'" />
+    <command name="shell"             options="find ACE_wrappers -name '*.a' -exec rm '{}' ';'" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
-
-    <!-- Now, delete all the Makefiles to insure a clean slate. -->
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=1\ndebug=0\ninline=0\nstatic_libs_only=1\nstatic_link=1\nstdcpplib=1\n\nssl=0\nexceptions=1\nthreads=1\ntarget_platform=Red Hat Linux Enterprise Server release 4\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />

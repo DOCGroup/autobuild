@@ -1,3 +1,10 @@
+Fri Dec 19 14:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
+
+          Force the clean up of all .o and .a files before the build starts.
+
 Tue Dec 16 15:28:49 UTC 2008  Adam Mitz  <mitza@ociweb.com>
 
         * command/check_compiler.pm:
