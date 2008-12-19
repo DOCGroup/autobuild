@@ -19,6 +19,7 @@
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\\ACE\\VC71s\\" />
         <variable name="name"     value="WinXP VS.NET 2003" />
+        <variable name="make_program" value="nmake /K" />
     </configuration>
 
     <command name="status"            options="on" />
