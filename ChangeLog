@@ -1,3 +1,15 @@
+Fri Dec 19 23:05:17 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_smartphone_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_winmobile5_smartphone_debug.xml:
+          Win CE builds removed.
+
+        * configs/autobuild/riverace/lily_dev_vc9_debug.xml: New VC9 XP build.
+
+        * configs/scoreboard/ace.xml: Added new VC9 build.
+
 Fri Dec 19 22:52:01 UTC 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_debug.xml: VC7.1 ACE
