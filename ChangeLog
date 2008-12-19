@@ -1,3 +1,18 @@
+Fri Dec 19 22:28:37  2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_ets_debug.xml:
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_tao_host.xml:
+          Removed; replaced with...
+
+        * configs/autobuild/riverace/smokey-winxpsp2_dev_vc71_ets_debug.xml:
+        * configs/autobuild/riverace/smokey-winxpsp2_dev_vc71_tao_host.xml:
+          New TAO environment for LabVIEW RT. TAO_host is native Windows and
+          also acts as one end of the test suite. ets_debug is the cross build
+          for LabVIEW RT and runs TAO tests on the target.
+
+        * configs/scoreboard/tao.xml: Added LabVIEW RT build in a new LabVIEW_RT
+          build group.
+
 Fri Dec 19 14:30:00 UTC 2008  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:

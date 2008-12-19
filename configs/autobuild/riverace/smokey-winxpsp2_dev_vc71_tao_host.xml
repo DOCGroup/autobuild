@@ -33,7 +33,7 @@
     <command name="print_ace_config" />
 
     <!-- command name="file_manipulation" options="type=create file=TAO-HOST.mwc output='workspace {\n  ace\n  apps/gperf/src\n  TAO/TAO_IDL\n  TAO/tao\n  TAO/tests\n  TAO/orbsvcs/orbsvcs\n  ACEXML\n  protocols\n  Kokyu\n}\n'" / -->
-    <command name="file_manipulation" options="type=create file=TAO-HOST.mwc output='workspace {\n  ace\n  apps/gperf/src\n  tests\n   TAO/TAO_IDL\n  TAO/tao\n  TAO/tests\n  TAO/orbsvcs/orbsvcs\n  ACEXML\n  protocols\n  Kokyu\n}\n'" />
+    <command name="file_manipulation" options="type=create file=TAO-HOST.mwc output='workspace {\n  ace\n  examples\n  apps/gperf/src\n  tests\n   TAO/TAO_IDL\n  TAO/tao\n  TAO/tests\n  TAO/orbsvcs/orbsvcs\n  ACEXML\n  protocols\n  Kokyu\n}\n'" />
     <command name="generate_workspace" options="-type vc71 -relative ACE_ROOT=C:/ace/ACE_wrappers -relative TAO_ROOT=C:/ace/ACE_wrappers/TAO TAO-HOST.mwc" />
     <command name="vc7make"           options="/build Debug TAO_HOST.sln" />
 

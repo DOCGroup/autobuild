@@ -16,6 +16,7 @@
         <environment name="MPC_ROOT"     value="C:\\ace\\MPC" />
         <environment name="PHARDIR"      value="C:\\pharemb" />
         <!-- Target setups -->
+	<environment name="ACE_RUN_LVRT_TGTHOST" value="192.168.10.50" />
         <environment name="DOC_TEST_ACE" value="NIPXI" />
         <environment name="DOC_TEST_CLIENT" value="HOST" />
         <environment name="HOST_OS"      value="local" />
@@ -60,7 +61,7 @@
     <command name="print_ace_config" />
 
     <command name="generate_workspace" options="-type vc71 -recurse -relative ACE_ROOT=C:/ace/target_ets/ACE_wrappers -relative TAO_ROOT=C:/ace/target_ets/ACE_wrappers/TAO -exclude ASNMP,apps/gperf,TAO/TAO_IDL,TAO/orbsvcs/IFR_Service -feature_file c:\\ace\\target_ets\\ACE_wrappers\\local.features -value_template tao_idl=$(HOST_TAO_IDL) -value_template configurations='\x22ETS Debug\x22' -value_template configurations+='\x22ETS Release\x22' -name_modifier *_ETS -base labviewrt_dll" />
-    <command name="vc7make"           options="/build \x22ETS Debug\x22 ACE_ETS.sln" />
+    <command name="vc7make"           options="/useenv /build \x22ETS Debug\x22 ACE_ETS.sln" />
     <!-- Need /useenv to make it pick up PATH from environment, else it  -->
     <!-- will pick up the ACEd.dll built for ETS while invoking TAO_IDL. -->
     <command name="vc7make"           options="/useenv /build \x22ETS Debug\x22 TAO/TAO_ETS.sln" />
