@@ -91,6 +91,11 @@ sub Run ($)
         system("cat /etc/release");
     }
 
+    if(-r "/var/emulab/boot/nodeid"){
+        print "<h3>Emulab NodeId(/var/emulab/boot/nodeid)</h3>\n";
+        system("cat /var/emulab/boot/nodeid");
+    }
+
     if(-x "/usr/sbin/prtdiag"){
         print "<h3>Sun System Information (/usr/sbin/prtdiag)</h3>\n";
 
