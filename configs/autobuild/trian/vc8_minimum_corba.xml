@@ -5,9 +5,9 @@
         <environment name="TAO_ROOT"     value="C:\\ACE\\VC71\\Minimum\\ACE_wrappers\\TAO"/>
         <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\ACE\\VC71\\Minimum\\ACE_wrappers\\bin;C:\\ACE\\VC71\\Minimum\\ACE_wrappers\\lib;c:\\xerces\\bin;C:\\Perl\\bin;c:\\zzip\\lib;c:\\zlib\\lib;c:\\putty:c:\\xerces\\lib:c:\\cygwin\\bin"  type="prefix" />
-        <environment name="PATH"         value="C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin;" type="prefix" />
-        <environment name="INCLUDE"      value="c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\PlatformSDK\\include;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\SDK\\v2.0\\include;" type="prefix" />
-        <environment name="LIB"          value="c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\LIB;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\PlatformSDK\\lib;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\SDK\\v2.0\\lib;" type="prefix" />
+        <environment name="PATH"          value="C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin;c:\\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\bin" type="prefix" />
+        <environment name="INCLUDE"      value="c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\PlatformSDK\\include;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\SDK\\v2.0\\include;c:\\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\include" type="prefix" />
+        <environment name="LIB"          value="c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\LIB;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\PlatformSDK\\lib;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\SDK\\v2.0\\lib;C:\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\lib" type="prefix" />
 
         <variable name="configs"  value="Win32 VC71 Exceptions MINIMUM" />
         <variable name="root"     value="C:\\ACE\\VC71\\Minimum" />
