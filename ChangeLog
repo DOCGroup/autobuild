@@ -1,3 +1,10 @@
+Tue Dec 30 22:05:37 UTC 2008  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/ralphie_dev_xlc9_debug.xml: New build
+          for AIX 6.1, XL C++ 9.
+
+        * configs/scoreboard/ace.xml: Added AIX 6.1, XL C++ 9 build.
+
 Fri Dec 19 23:05:17 2008  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/lily_dev_vc8_ppc2003_debug.xml:

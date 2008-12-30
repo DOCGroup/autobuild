@@ -31,6 +31,13 @@ all the OS/platform combinations on which ACE is tested everyday.
         <build_sponsor>Riverace</build_sponsor>
         <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
+     <build>
+        <name>AIX_6.1_XLC9_Debug</name>
+        <url>http://acebuilds.riverace.com/ralphie/dev/xlc9_debug</url>
+        <red>36</red>
+        <build_sponsor>Riverace</build_sponsor>
+        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
 </group>
 
 <group>
