@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on viper) was -->
-  <!-- /home/mitza/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 templates=manual" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." -compiler va8 -creator mitza -docbuild 1 -docrepo 1 -outdir /home/taoadmin/mitza -sandbox 1 -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 templates=manual TAO_IDL_PREPROCESSOR=gcc" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." -compiler va8 -creator mitza -docbuild 1 -docrepo 1 -outdir /home/taoadmin/autobuild/configs/autobuild/oci/ -sandbox 1 -->
   <configuration>
     <environment name="ACE_ROOT"     value="/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0"/>
     <environment name="CIAO_ROOT"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0/TAO/CIAO"/>
@@ -27,7 +27,7 @@
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/va8_d1o0/ace/config.h output='#include \x22ace/config-aix-5.x.h\x22\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/va8_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\ntemplates=manual\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/va8_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\ntemplates=manual\nTAO_IDL_PREPROCESSOR=gcc\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/va8_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0/TAO/DDS\x22; export DDS_ROOT\nLIBPATH=\x22/opt/v8/usr/vacpp/lib:/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0/lib:\x22; export LIBPATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/opt/v8/usr/vacpp/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/va8_d1o0/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
@@ -98,7 +98,7 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
-  <!-- <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<project_root>/bin/sandbox 1200\x22 -Config NO_LOADAVG"/> -->
+  <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<project_root>/bin/sandbox 1200\x22 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
