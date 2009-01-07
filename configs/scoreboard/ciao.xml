@@ -10,6 +10,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
 
 <group>
 <name>Linux</name>
+    <build>
+       <name>FC6_XML_Config</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/XMLConfig</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
      <build>
       <name>Fedora_Rawhide_i386</name>
       <url>http://www.42tools.com/sites/default/files/downloads/tao_autobuild_logs/fedora_rawhide</url>
