@@ -1,3 +1,4 @@
+/users/bczar/runbuild.sh FC6xmlconfig
 /users/bczar/runbuild.sh FC6acefortao
 /users/bczar/runbuild.sh FC6autoconf
 /users/bczar/runbuild.sh FC6ciaocore
