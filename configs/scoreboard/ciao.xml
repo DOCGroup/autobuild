@@ -10,6 +10,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
 
 <group>
 <name>Linux</name>
+  <build>
+    <name>FC8_Full</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/FC8Full/</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
     <build>
        <name>FC6_XML_Config</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/XMLConfig</url>
