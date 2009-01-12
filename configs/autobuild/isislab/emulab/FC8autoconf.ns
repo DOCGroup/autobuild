@@ -10,6 +10,6 @@ tb-set-node-rpms $node /proj/autobuilds/rpms/xerces-c-2.7.0-6.fc7.i386.rpm /proj
 
 tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-2_8-fc6-gcc411.tar.gz
 
-tb-set-node-startcmd $node "/proj/autobuilds/data/run_autobuild.sh FC8autoconf"
+tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC8autoconf"
 
 $ns run
