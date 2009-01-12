@@ -1,0 +1,11 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+set node [$ns node]
+tb-set-node-os  $node FC4-STD
+tb-set-hardware $node pc8832
+
+# utils
+tb-set-node-startcmd $node "/proj/autobuilds/data/run_autobuild.sh FC4autoconf"
+
+$ns run
