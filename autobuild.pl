@@ -95,6 +95,7 @@ require command::run_process;      ## This Spawns/Kills a concurrent test.
 require command::setup_lvrt;
 require command::eval;
 require command::setenv;
+require command::setvariable;
 
 ##############################################################################
 # Parse the arguments supplied when executed
@@ -220,6 +221,16 @@ sub GetVariable ($)
     $value =~ s'\$\{(\w+)\}'$ENV{$1}'ge;
   }
   return $value;
+}
+
+##############################################################################
+#
+sub SetVariable ($$)
+{
+  my $variable = shift;
+  my $option = shift;
+
+  $data{VARS}->{$variable} = $option;
 }
 
 ##############################################################################
