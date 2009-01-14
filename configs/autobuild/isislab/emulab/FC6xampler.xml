@@ -54,6 +54,14 @@
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Xampler-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Avenger-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Bagatel-SVN.tar.bz2" />
+    <command name="anonymous_shell"   options="bunzip2 Xampler-SVN.tar.bz2" />
+    <command name="anonymous_shell"   options="bunzip2 Avenger-SVN.tar.bz2" />
+    <command name="anonymous_shell"   options="bunzip2 Bagatel-SVN.tar.bz2" />
+    <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar" />
+    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar" />
+    <command name="anonymous_shell"   options="tar xvf Bagatel-SVN.tar" />
+
+    <command name="make"              options="-C Bagatel/src" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
