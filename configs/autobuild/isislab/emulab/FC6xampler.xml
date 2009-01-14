@@ -1,15 +1,15 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/isisbuilds/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/isisbuilds/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/isisbuilds/ACE_wrappers/TAO/CIAO"/>
+        <environment name="ACE_ROOT"        value="/isisbuilds/regular/ACE_wrappers" />
+        <environment name="TAO_ROOT"        value="/isisbuilds/regular/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/isisbuilds/regular/ACE_wrappers/TAO/CIAO"/>
         <environment name="XERCESCROOT"     value="/build/utils/xerces"/>
         <environment name="ZLIB_ROOT"       value="/build/utils/zlib"/>
         <environment name="BOOST_ROOT"      value="/build/utils/boost"/>
         <environment name="BOOST_VERSION"   value="boost-1_34_1"/>
         <environment name="BOOST_CFG"       value="-gcc41"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/isisbuilds/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/isisbuilds/regular/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
 
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
