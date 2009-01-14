@@ -40,14 +40,14 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="regular/ACE_wrappers/build.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="ACE_wrappers/build.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k -j 4" />
 
     <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
 
-    <command name="generate_workspace" options="build.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="ACE_wrappers/build.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k -j 4" />
 
