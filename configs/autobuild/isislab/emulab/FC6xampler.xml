@@ -51,6 +51,9 @@
 
     <command name="make"              options="-k -j 4" />
 
+    <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Xampler-SVN.tar.bz2" />
+    <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Avenger-SVN.tar.bz2" />
+    <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Bagatel-SVN.tar.bz2" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
