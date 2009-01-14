@@ -1,6 +1,12 @@
+Wed Jan 14 14:40:37 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/setenv.pm:
+          Added setenv command to change the environment during the build steps.
+          Fixes bugzilla 3491
+
 Wed Jan 7  10:15:37 UTC 2008  Marcel Smit <msmit@remedy.nl>
 
-        * configs/scoreboard/ace.xml: 
+        * configs/scoreboard/ace.xml:
           Added SuSE 11.1 GCC build
 
 Tue Dec 30 22:05:37 UTC 2008  Steve Huston  <shuston@riverace.com>

@@ -94,6 +94,7 @@ require command::run_perl_script;  ## This runs a perl command (like test).
 require command::run_process;      ## This Spawns/Kills a concurrent test.
 require command::setup_lvrt;
 require command::eval;
+require command::setenv;
 
 ##############################################################################
 # Parse the arguments supplied when executed
@@ -467,7 +468,7 @@ INPFILE: foreach my $file (@files) {
   #
   my $errors_found = !$parser->Parse ($file, \%data);
   if (scalar @{$data{ENVIRONMENT}}  &&
-      scalar @{$data{COMMANDS}}     &&       
+      scalar @{$data{COMMANDS}}     &&
       scalar @{$data{UNUSED_GROUPS}}  ) {
     print STDERR "WARNING: $file:\n",
                  "  Environment group",
@@ -794,12 +795,12 @@ INPFILE: foreach my $file (@files) {
         }
         print STDERR "!\n";
       }
-      
+
       if ("" ne $DIRECTORY) {
         $data{VARS}->{root} = $oldRoot;
         chdir ($rootDir);
       }
-    } 
+    }
     else {
       print "===== Skipped because if=\"$IF_TEXT\" is false\n" if (1 < $verbose);
     }

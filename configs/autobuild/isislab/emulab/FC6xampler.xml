@@ -3,7 +3,6 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/isisbuilds/regular/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/isisbuilds/regular/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/isisbuilds/regular/ACE_wrappers/TAO/CIAO"/>
         <environment name="XERCESCROOT"     value="/build/utils/xerces"/>
         <environment name="ZLIB_ROOT"       value="/build/utils/zlib"/>
         <environment name="BOOST_ROOT"      value="/build/utils/boost"/>
@@ -49,6 +48,22 @@
     <command name="generate_workspace" options="build.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k -j 4" />
+
+    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAe/ACE_wrappers" />
+    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAe/ACE_wrappers/TAO"/>
+
+    <command name="generate_workspace" options="build.mwc -type gnuautobuild" />
+
+    <command name="make"              options="-k -j 4" />
+
+    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAestatic/ACE_wrappers" />
+    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAestatic/ACE_wrappers/TAO"/>
+
+    <command name="generate_workspace" options="build.mwc -type gnuautobuild" />
+
+    <command name="make"              options="-k -j 4" />
+
+
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
