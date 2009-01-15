@@ -47,6 +47,8 @@
     <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
     <command name="setenv"        options="/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
+    <command name="setenv"        options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
+
 
     <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
 
@@ -65,8 +67,6 @@
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Xampler/C++ | find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-
-    <command name="setenv"            options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
