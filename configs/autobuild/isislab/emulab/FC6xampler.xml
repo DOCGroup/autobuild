@@ -61,7 +61,7 @@
     <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar" />
     <command name="anonymous_shell"   options="tar xvf Bagatel-SVN.tar" />
 
-    <command name="make"              options="-C Bagatel/src" />
+    <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
