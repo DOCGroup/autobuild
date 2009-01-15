@@ -42,14 +42,14 @@
 
     <command name="generate_workspace" options="/isisbuilds/regular/ACE_wrappers/build.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-C /regular/ACE_wrappers -k -j 4" />
+    <command name="make"              options="-C /isisbuilds/regular/ACE_wrappers -k -j 4" />
 
     <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
 
     <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-C /CORBAemicrostatic/ACE_wrappers -k -j 4" />
+    <command name="make"              options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 4" />
 
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Xampler-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Avenger-SVN.tar.bz2" />
