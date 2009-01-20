@@ -1,3 +1,9 @@
+Tue Jan 20 10:08:24 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * autobuild.pl:
+        * command/incredibuild.pm:
+          Added support for incredibuild, see http://www.xoreax.com/
+
 Wed Jan 14 16:56:37 UTC 2008  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:
