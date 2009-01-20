@@ -71,7 +71,7 @@
     <command name="anonymous_shell"   options="cd /isisbuilds/Xampler/C++ ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Templt/Template-Execute/_Suites /isisbuilds/Xampler/C++/_Suites -s" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/Xampler/C++/_Suites /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/Avenger/_Ampler/Execute 1 localhost" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/_Result" />
 
