@@ -72,7 +72,7 @@
 
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Templt/Template-Execute/_Suites /isisbuilds/Xampler/C++/_Suites -s" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Execute/ | sh /isisbuilds/Avenger/_Ampler/Execute 1 localhost" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/Avenger/_Ampler/Execute 1 localhost" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/_Result" />
 
     <command name="process_logs"      options="clean" />
