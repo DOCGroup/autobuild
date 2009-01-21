@@ -67,13 +67,13 @@
 
     <command name="file_manipulation" options="type=create file=/isisbuilds/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
 
-    <command name="anonymous_shell"   options="cd `/isisbuilds/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
-    <command name="anonymous_shell"   options="cat /home/bczar/.profile" />
+    <command name="anonymous_shell"   options="cat /users/bczar/.profile" />
 
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/Xampler/C++/_Suites /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
