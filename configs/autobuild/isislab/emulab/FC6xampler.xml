@@ -23,6 +23,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
 
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -32,6 +33,10 @@
     <command name="file_manipulation" options="type=create file=CORBAemicrostatic/ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ncidl=1\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=CORBAemicrostatic/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\ncidl=1\nzlib=1\nzzip=1\n'" />
     <command name="file_manipulation" options="type=create file=CORBAemicrostatic/ACE_wrappers/build.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
+    <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\ncidl=1\nzlib=1\nzzip=1\n'" />
+    <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/build.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -47,12 +52,19 @@
     <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
     <command name="setenv"        options="/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="setenv"        options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"        options="AVENGER=/isisbuilds/Avenger" />
 
     <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
 
     <command name="make"              options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 4" />
+
+    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
+    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO"/>
+    <command name="setenv"        options="/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
+
+    <command name="generate_workspace" options="/isisbuilds/CORBAemicro/ACE_wrappers/build.mwc -type gnuautobuild" />
+
+    <command name="make"              options="-C /isisbuilds/CORBAemicro/ACE_wrappers -k -j 4" />
 
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Xampler-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="wget http://dsrg.mff.cuni.cz/~ceres/prj/CCPsuite/download/Avenger-SVN.tar.bz2" />
@@ -72,8 +84,14 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
 
+    <command name="setenv"        options="TAO_DIR=/isisbuilds/regular/ACE_wrappers" />
     <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+
+    <command name="setenv"        options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+
+    <command name="setenv"        options="TAO_DIR=/isisbuilds/CORBAemicro/ACE_wrappers" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
@@ -94,11 +112,19 @@
     <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 1 localhost" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
 
+    <command name="anonymous_shell"   options="cp /users/bczar/.profile_backup /users/bczar/.profile" />
+    <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/CORBAemicro/Avenger/_Ampler/Execute 1 localhost" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicro/_Result" />
+
     <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result/regular" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicro" />
 
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display/ ; ls -alR ; php -q ${AVENGER}/_Ampler/Display.php" />
 
