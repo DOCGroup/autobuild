@@ -48,6 +48,7 @@
     <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
     <command name="setenv"        options="/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
     <command name="setenv"        options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
+    <command name="setenv"        options="AVENGER=/isisbuilds/Avenger" />
 
     <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
 
@@ -63,6 +64,7 @@
     <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar -C /isisbuilds/regular" />
     <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/CORBAemicrostatic" />
     <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/regular" />
+    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/Avenger" />
     <command name="anonymous_shell"   options="tar xvf Bagatel-SVN.tar" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
@@ -91,6 +93,14 @@
 
     <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 1 localhost" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
+
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result/regular" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic" />
+
+    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
+
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display/ ; ls -alR ; php -q ${AVENGER}/_Ampler/Display.php" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
