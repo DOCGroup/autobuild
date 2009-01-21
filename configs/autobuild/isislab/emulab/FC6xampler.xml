@@ -59,26 +59,38 @@
     <command name="anonymous_shell"   options="bunzip2 Xampler-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="bunzip2 Avenger-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="bunzip2 Bagatel-SVN.tar.bz2" />
-    <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar" />
-    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar" />
+    <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar -C /isisbuilds/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar -C /isisbuilds/regular" />
+    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/regular" />
     <command name="anonymous_shell"   options="tar xvf Bagatel-SVN.tar" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 
-    <command name="file_manipulation" options="type=create file=/isisbuilds/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
+    <command name="anonymous_shell"   options="cp /users/bczar/.profile /users/bczar/.profile_backup" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
-    <command name="anonymous_shell"   options="cat /users/bczar/.profile" />
+    <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="rm -rf /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Xampler/C++/_Suites /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
 
-    <command name="anonymous_shell"   options="rm -rf /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="ln -s /isisbuilds/Xampler/C++/_Suites /isisbuilds/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/Avenger/_Ampler/Execute 1 localhost" />
-    <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/_Result" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicrostatic/_Result" />
+
+    <command name="anonymous_shell"   options="cp /users/bczar/.profile_backup /users/bczar/.profile" />
+    <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+
+    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 1 localhost" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
