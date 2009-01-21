@@ -71,7 +71,7 @@
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
-    <command name="file_manipulation" options="type=append file=/home/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+    <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
     <command name="anonymous_shell"   options="cat /home/bczar/.profile" />
 
