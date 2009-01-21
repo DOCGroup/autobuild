@@ -83,6 +83,7 @@
 
     <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicro/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\n'" />
 
     <command name="setenv"        options="TAO_DIR=/isisbuilds/regular/ACE_wrappers" />
     <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
