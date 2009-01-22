@@ -1,3 +1,9 @@
+Thu Jan 22 14:33:37 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/remedynl/msvc8_r.xml:
+
+          This machine doesn't use xerces so added NOXERCES to configs.
+
 Tue Jan 20 10:08:24 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:
