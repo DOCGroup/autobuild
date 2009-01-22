@@ -102,7 +102,9 @@
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Xampler/C++/_Suites /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Xampler/C++/_Suites /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
 
