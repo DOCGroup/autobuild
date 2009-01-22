@@ -73,10 +73,12 @@
     <command name="anonymous_shell"   options="bunzip2 Avenger-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="bunzip2 Bagatel-SVN.tar.bz2" />
     <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar -C /isisbuilds/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar -C /isisbuilds/CORBAemicro" />
     <command name="anonymous_shell"   options="tar xvf Xampler-SVN.tar -C /isisbuilds/regular" />
     <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/CORBAemicro" />
     <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/regular" />
-    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds/Avenger" />
+    <command name="anonymous_shell"   options="tar xvf Avenger-SVN.tar -C /isisbuilds" />
     <command name="anonymous_shell"   options="tar xvf Bagatel-SVN.tar" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
