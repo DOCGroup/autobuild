@@ -9,6 +9,9 @@
         <environment name="BOOST_VERSION"   value="boost-1_34_1"/>
         <environment name="BOOST_CFG"       value="-gcc41"/>
         <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/isisbuilds/regular/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
+        <environment name="BAGATEL_EXE"     value="/isisbuilds/Bagatel/src/bagatel" />
+        <environment name="REPORT_DIR"      value="/isisbuilds/Avenger/_Templt/Template-Display" />
+        <environment name="AVENGER_DIR"     value="/isisbuilds/Avenger" />
 
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
