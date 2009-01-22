@@ -134,6 +134,7 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display/ ; ls -alR ; php -q ${AVENGER}/_Ampler/Display.php" />
 
