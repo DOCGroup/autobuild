@@ -1,3 +1,10 @@
+Thu Jan 22 14:50:08 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/ciang/ciaocore_vc9.xml:
+        * configs/autobuild/ciang/vc9_w4.xml:
+
+          It looks like on ciang XERCESCROOT must point to C:\utils.
+
 Thu Jan 22 14:33:37 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * configs/autobuild/remedynl/msvc8_r.xml:
