@@ -133,6 +133,10 @@
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro" />
 
+    <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular" />
+    <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro" />
+
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
