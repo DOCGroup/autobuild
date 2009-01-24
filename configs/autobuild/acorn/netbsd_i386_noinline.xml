@@ -6,6 +6,7 @@
         <environment name="TAO_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_i386_noinline/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/jtc/ACE/acebuilds/netbsd_i386_noinline/ACE_wrappers/lib" />
         <environment name="MPC_ROOT"        value="/home/jtc/ACE/acebuilds/netbsd_i386_noinline/ACE_wrappers/MPC" />
+        <environment name="ACE_RUNTEST_DELAY" value = "4" />
 
 	<variable name="make_program" value = "gmake" />
         <variable name="root"     value="/home/jtc/ACE/acebuilds/netbsd_i386_noinline/" />

@@ -1,3 +1,12 @@
+Sat Jan 24 18:45:07 UTC 2009  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/autobuild/acorn/netbsd_i386.xml:
+        * configs/autobuild/acorn/netbsd_i386_automake.xml:
+        * configs/autobuild/acorn/netbsd_i386_noinline.xml:
+        * configs/autobuild/acorn/netbsd_i386_static.xml:
+
+          Increase ACE_RUNTEST_DELAY from 3 to 4.
+
 Thu Jan 22 14:50:08 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * configs/autobuild/ciang/ciaocore_vc9.xml:
