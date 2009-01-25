@@ -143,6 +143,8 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/flags.txt output='Report_Summary = TRUE\n'" />
 
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/ ; ls -alR" />
+
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display/ ; ls -alR ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display/ /proj/autobuilds/logs/FC6xampler/Template-Display" />
