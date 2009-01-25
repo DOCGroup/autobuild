@@ -103,12 +103,6 @@
     <command name="anonymous_shell"   options="cp /users/bczar/.profile /users/bczar/.profile_backup" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
-    <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Broker/TAO_1.6.X_Linux_GCC/Client.arg" />
-    <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Broker/TAO_1.6.X_Linux_GCC/Server.arg" />
-
-    <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Broker/TAO_1.6.X_Linux_GCC/Client.arg output=''" />
-    <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Broker/TAO_1.6.X_Linux_GCC/Server.arg output='-ORBListenEndpoints iiop://127.0.0.1:9999'" />
-
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
