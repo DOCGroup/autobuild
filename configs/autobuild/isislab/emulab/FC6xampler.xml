@@ -72,13 +72,13 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
 
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicrostatic/Xampler" />
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicro/Xampler" />
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/regular/Xampler" />
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicrostatic/Avenger" />
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicro/Avenger" />
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/regular/Avenger" />
-    <command name="svn"               options="svn co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /isisbuilds/Bagatel" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicrostatic/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicro/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/regular/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicrostatic/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicro/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/regular/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /isisbuilds/Bagatel" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 
