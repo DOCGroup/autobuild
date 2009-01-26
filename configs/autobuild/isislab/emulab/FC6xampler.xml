@@ -148,6 +148,16 @@
     <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicrostatic/_Result" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
 
+    <command name="anonymous_shell"   options="tar cvf /isisbuilds/CORBAemicro.tar /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="tar cvf /isisbuilds/CORBAemicrostatic.tar /isisbuilds/CORBAemicro/CORBAemicrostatic/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="tar cvf /isisbuilds/regular.tar /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="bzip2 /isisbuilds/CORBAemicro.tar" />
+    <command name="anonymous_shell"   options="bzip2 /isisbuilds/CORBAemicrostatic.tar" />
+    <command name="anonymous_shell"   options="bzip2 /isisbuilds/regular.tar" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/CORBAemicro.tar.bzip2 /proj/autobuilds/logs/FC6xampler" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/CORBAemicrostatic.tar.bzip2 /proj/autobuilds/logs/FC6xampler" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/regular.tar.bzip2 /proj/autobuilds/logs/FC6xampler" />
+
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
