@@ -111,19 +111,16 @@
     <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Xampler/C++/_Suites /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost" />
-    <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicrostatic/_Result" />
 
     <command name="anonymous_shell"   options="cp /users/bczar/.profile_backup /users/bczar/.profile" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 1 localhost" />
-    <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
 
     <command name="anonymous_shell"   options="cp /users/bczar/.profile_backup /users/bczar/.profile" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/CORBAemicro/Avenger/_Ampler/Execute 1 localhost" />
-    <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicro/_Result" />
 
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result" />
@@ -141,13 +138,15 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
-    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/flags.txt output='Report_Summary = TRUE\n'" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/ ; ls -alR" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display/ ; ls -alR ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display/ /proj/autobuilds/logs/FC6xampler/Template-Display" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicro/_Result" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicrostatic/_Result" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
