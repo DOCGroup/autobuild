@@ -57,7 +57,7 @@ sub Kill ()
     my $self = shift;    
     my ($pid) = @_;
 
-    kill 0, $pid;
+    kill 9, $pid;
 }
 
 1;

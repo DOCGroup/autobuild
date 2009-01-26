@@ -1,3 +1,10 @@
+Mon Jan 26 12:51:00 UTC 2009  Simon Massey  <sma@prismtech.com>
+
+        * command/Process/ProcessUnix.pm:
+
+          Wrong kill signal, signal 0 is check for existance but don't send signal.
+          (Was leaving processes alive and orphaned).
+
 Sat Jan 24 18:45:07 UTC 2009  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/autobuild/acorn/netbsd_i386.xml:
