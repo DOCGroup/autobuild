@@ -79,6 +79,7 @@
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicro/Avenger" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/regular/Avenger" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /isisbuilds/Bagatel" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/Avenger" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 
@@ -139,11 +140,9 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/ ; ls -alR" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; ls -alR ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display/ ; ls -alR ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
-
-    <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display/ /proj/autobuilds/logs/FC6xampler/Template-Display" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler/Template-Display" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicro/_Result" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicrostatic/_Result" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
