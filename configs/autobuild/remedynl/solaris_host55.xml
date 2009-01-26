@@ -10,7 +10,7 @@
         <variable name="root"     value="/nfs/solaris/host55ppc603/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/nfs/solaris/host55ppc603/" />
-        <variable name="configs"  value="Exceptions STATIC" />
+        <variable name="configs"  value="Exceptions STATIC NOXERCES" />
         <variable name="svn_program"  value="/usr/local/bin/svn" />
     </configuration>
 

@@ -10,7 +10,7 @@
         <variable name="root"     value="/export/home/build/ACE/host/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/export/home/build/ACE/host/" />
-        <variable name="configs"  value="Exceptions" />
+        <variable name="configs"  value="Exceptions NOXERCES" />
         <variable name="svn_program"  value="/usr/local/bin/svn" />
     </configuration>
 

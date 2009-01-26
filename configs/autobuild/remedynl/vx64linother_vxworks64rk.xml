@@ -10,7 +10,7 @@
         <variable name="root"     value="/home/build/ACE/VxWorks64rk/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/VxWorks64rk/" />
-        <variable name="configs"  value="Linux Exceptions" />
+        <variable name="configs"  value="Linux Exceptions NOXERCES" />
 
     </configuration>
     <command name="eval"              options="/home/build/WindRiver/wrenv.sh -p vxworks-6.4 -o print_env"/>

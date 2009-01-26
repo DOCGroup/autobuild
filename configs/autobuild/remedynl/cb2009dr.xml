@@ -13,7 +13,7 @@
         <environment name="DYNAMIC"   value="1" />
         <environment name="RELEASE"   value="1" />
 
-        <variable name="configs"      value="Win32 Borland Exceptions" />
+        <variable name="configs"      value="Win32 Borland Exceptions NOXERCES" />
         <variable name="root"         value="C:\\ACE\\CB2009dr\\" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\ACE\\CB2009dr\\" />

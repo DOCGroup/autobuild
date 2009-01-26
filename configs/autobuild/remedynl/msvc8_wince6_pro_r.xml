@@ -40,7 +40,7 @@
         <environment name="DOC_TEST_2_OS" value="local" />
         <environment name="DOC_TEST_2_ACE_ROOT" value="C:\\ACE\\VC8\\ACE_wrappers" />
 
-        <variable name="configs"  value="WinCE VC8 Exceptions WCHAR" />
+        <variable name="configs"  value="WinCE VC8 Exceptions WCHAR NOXERCES" />
         <variable name="root"     value="C:\\ACE\\wince6pror\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\wince6pror\\" />

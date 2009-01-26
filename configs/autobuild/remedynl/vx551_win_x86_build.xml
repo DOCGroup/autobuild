@@ -20,7 +20,7 @@
         <variable name="root"       value="Z:/VxWorks/vx551_win_x86/" />
         <variable name="log_file" 	value="build.txt" />
         <variable name="log_root"   value="Z:/VxWorks/vx551_win_x86/" />
-        <variable name="configs"  	value="VxWorks STATIC" />
+        <variable name="configs"  	value="VxWorks STATIC NOXERCES" />
         <variable name="svn_program"       value="c:\\cygwin\\bin\\svn" />
 
     </configuration>

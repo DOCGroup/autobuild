@@ -28,7 +28,7 @@
         <variable name="root"     value="/nfs/galadriel/VxWorks64lin_x86/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/nfs/galadriel/VxWorks64lin_x86/" />
-        <variable name="configs"  value="VxWorks_RTP Exceptions STATIC VxWorks64" />
+        <variable name="configs"  value="VxWorks_RTP Exceptions STATIC VxWorks64 NOXERCES" />
 
     </configuration>
 

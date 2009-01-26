@@ -1,3 +1,41 @@
+Mon Jan 26 17:02:35 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/remedynl/saruman_icc110.xml:
+        * configs/autobuild/remedynl/vx64linother_vxworks64rk.xml:
+        * configs/autobuild/remedynl/msvc71_ipv6_debug.xml:
+        * configs/autobuild/remedynl/msvc8_version.xml:
+        * configs/autobuild/remedynl/msvc90_ipv6_debug.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_r.xml:
+        * configs/autobuild/remedynl/vx64linx86_vxworks64.xml:
+        * configs/autobuild/remedynl/vx66linx86_vxworks66.xml:
+        * configs/autobuild/remedynl/solaris_host66.xml:
+        * configs/autobuild/remedynl/vx64linppc_vxworks64.xml:
+        * configs/autobuild/remedynl/vx64linx86_vxworks64p.xml:
+        * configs/autobuild/remedynl/msvc8_d.xml:
+        * configs/autobuild/remedynl/msvc71_vc71dr.xml:
+        * configs/autobuild/remedynl/vx64linother_vxworks64r.xml:
+        * configs/autobuild/remedynl/saruman_gcc.xml:
+        * configs/autobuild/remedynl/cb2009dd.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_host.xml:
+        * configs/autobuild/remedynl/vx64linother_vxworks64ripv6.xml:
+        * configs/autobuild/remedynl/isengard_host.xml:
+        * configs/autobuild/remedynl/vx551_win_x86_build.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_d.xml:
+        * configs/autobuild/remedynl/vx66linx86_host.xml:
+        * configs/autobuild/remedynl/msvc90_vc90dr.xml:
+        * configs/autobuild/remedynl/solaris_host55.xml:
+        * configs/autobuild/remedynl/saruman_icc100.xml:
+        * configs/autobuild/remedynl/vx64linother_vxworks64rkp.xml:
+        * configs/autobuild/remedynl/vx64linppc_host.xml:
+        * configs/autobuild/remedynl/vx64linx86_host.xml:
+        * configs/autobuild/remedynl/suse110_gcc_acefortao.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_pro_r.xml:
+        * configs/autobuild/remedynl/msvc90_d.xml:
+        * configs/autobuild/remedynl/cb2009dr.xml:
+        * configs/autobuild/remedynl/saruman_icc101.xml:
+
+          All these configurations don't have xerces. So, added NOXERCES to configs.
+
 Mon Jan 26 12:51:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
         * command/Process/ProcessUnix.pm:

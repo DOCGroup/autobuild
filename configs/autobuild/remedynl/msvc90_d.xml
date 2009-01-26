@@ -8,7 +8,7 @@
         <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90\\ACE_wrappers\\bin;C:\\ACE\\VC90\\ACE_wrappers\\lib;c:\\xerces-c_2_5_0-windows_nt-msvc_90\\lib" type="prefix" />
         <environment name="XERCESCROOT"  value="C:\\xerces-c_2_5_0-windows_nt-msvc_90" />
 
-        <variable name="configs"  value="Win32 VC90 Exceptions" />
+        <variable name="configs"  value="Win32 VC90 Exceptions NOXERCES" />
         <variable name="root"     value="C:\\ACE\\VC90\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\VC90\\" />
