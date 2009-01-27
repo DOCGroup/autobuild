@@ -154,9 +154,9 @@
     <command name="anonymous_shell"   options="bzip2 /isisbuilds/CORBAemicrostatic.tar" />
     <command name="anonymous_shell"   options="bzip2 /isisbuilds/regular.tar" />
     <command name="anonymous_shell"   options="mkdir -p /proj/autobuilds/logs/FC6xampler/results" />
-    <command name="anonymous_shell"   options="cp /isisbuilds/CORBAemicro.tar.bzip2 /proj/autobuilds/logs/FC6xampler/results" />
-    <command name="anonymous_shell"   options="cp /isisbuilds/CORBAemicrostatic.tar.bzip2 /proj/autobuilds/logs/FC6xampler/results" />
-    <command name="anonymous_shell"   options="cp /isisbuilds/regular.tar.bzip2 /proj/autobuilds/logs/FC6xampler/results" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/CORBAemicro.tar.bz2 /proj/autobuilds/logs/FC6xampler/results" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/CORBAemicrostatic.tar.bz2 /proj/autobuilds/logs/FC6xampler/results" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/regular.tar.bz2 /proj/autobuilds/logs/FC6xampler/results" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
