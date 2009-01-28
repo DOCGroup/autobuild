@@ -114,6 +114,7 @@
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Xampler/C++/_Suites /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Xampler/C++/_Suites /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="mkdir -p /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Report" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; ls -alR ; sh /isisbuilds/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost" />
 
@@ -136,17 +137,24 @@
     <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result/regular" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Docses /isisbuilds/Avenger/_Templt/Template-Display/_Docses" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Images /isisbuilds/Avenger/_Templt/Template-Display/_Images" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Styles /isisbuilds/Avenger/_Templt/Template-Display/_Styles" />
 
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular" />
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic" />
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro" />
+
+    <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/_Ported/Linux_GCC" />
+
+    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Ported/Linux_GCC/name.txt output='Linux with GCC\n'" />
 
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; ls -alR ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler/Template-Display" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicro/_Result" />
