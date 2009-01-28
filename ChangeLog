@@ -1,3 +1,10 @@
+Wed Jan 28 20:06:29 UTC 2009  Adam Mitz  <mitza@ociweb.com>
+
+        * common/prettify.pm:
+
+          Search for TAO and CIAO test list files (*.lst) using $TAO_ROOT and
+          $CIAO_ROOT if they are available.
+
 Mon Jan 26 17:02:35 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * configs/autobuild/remedynl/saruman_icc110.xml:

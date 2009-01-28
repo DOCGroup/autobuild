@@ -733,7 +733,16 @@ sub new ($)
         $project = 'ACE_wrappers';
     }
     chdir ($project);
-    foreach my $file ('bin/ace_tests.lst', 'bin/tao_orb_tests.lst', 'bin/tao_other_tests.lst', 'bin/ciao_tests.lst') {
+    my @files = ('bin/ace_tests.lst', 'bin/tao_orb_tests.lst',
+                 'bin/tao_other_tests.lst', 'bin/ciao_tests.lst');
+    if (defined $ENV{TAO_ROOT}) {
+        push @files, "$ENV{TAO_ROOT}/bin/tao_orb_tests.lst",
+                     "$ENV{TAO_ROOT}/bin/tao_other_tests.lst";
+    }
+    if (defined $ENV{CIAO_ROOT}) {
+        push @files, "$ENV{CIAO_ROOT}/bin/ciao_tests.lst";
+    }
+    foreach my $file (@files) {
       if (-r $file) {
         my $fileinput = new FileHandle ($file, 'r');
         while (<$fileinput>) {
