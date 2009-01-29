@@ -162,13 +162,14 @@
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
 
-    <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler/Template-Display" />
+    <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler" />
+    <command name="anonymous_shell"   options="chmod 755 /proj/autobuilds/logs/FC6xampler -R" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicro/_Result" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/CORBAemicrostatic/_Result" />
     <command name="anonymous_shell"   options="cp -R /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result /proj/autobuilds/logs/FC6xampler/regular/_Result" />
 
     <command name="anonymous_shell"   options="tar cvf /isisbuilds/CORBAemicro.tar /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result" />
-    <command name="anonymous_shell"   options="tar cvf /isisbuilds/CORBAemicrostatic.tar /isisbuilds/CORBAemicrostatic/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="tar cvf /isisbuilds/CORBAemicrostatic.tar /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result" />
     <command name="anonymous_shell"   options="tar cvf /isisbuilds/regular.tar /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result" />
     <command name="anonymous_shell"   options="bzip2 /isisbuilds/CORBAemicro.tar" />
     <command name="anonymous_shell"   options="bzip2 /isisbuilds/CORBAemicrostatic.tar" />
