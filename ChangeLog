@@ -1,3 +1,12 @@
+Thu Jan 29 13:15:25 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/ciang/ciang_vc9.xml:
+        * configs/autobuild/ciang/ciaocore_vc9.xml:
+        * configs/autobuild/ciang/vc9_static.xml:
+        * configs/autobuild/ciang/vc9_w4.xml:
+
+          Fixed PATH variable for XERCES libs.
+
 Wed Jan 28 20:06:29 UTC 2009  Adam Mitz  <mitza@ociweb.com>
 
         * common/prettify.pm:
