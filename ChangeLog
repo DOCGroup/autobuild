@@ -1,3 +1,10 @@
+Thu Jan 29 17:15:29 UTC 2009  Adam Mitz  <mitza@ociweb.com>
+
+        * testmatrix/GenerateTestMatrix.py:
+
+          Expanded the plaintext output to break out the ACE and TAO
+          summary results.
+
 Thu Jan 29 13:15:25 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * configs/autobuild/ciang/ciang_vc9.xml:

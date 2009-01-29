@@ -107,12 +107,14 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
         ACEperc = 0
         TAOperc = 0
         overall = 0
+	skip = 0
 	for n in range (0, len(builds)):
 		print "\tPlatform: ", builds[n].name, builds[n].ACEtotal, builds[n].ACEfail, builds[n].TAOtotal, builds[n].TAOfail
 		ACEtotal = ACEtotal+builds[n].ACEtotal
 		TAOtotal = TAOtotal+builds[n].TAOtotal
 		ACEfail = ACEfail+builds[n].ACEfail
 		TAOfail = TAOfail+builds[n].TAOfail
+		skip = skip+builds[n].nskip
 		ACEpass = ACEtotal-ACEfail
 		TAOpass = TAOtotal-TAOfail
 		ACEperc = ComputePercentage(ACEpass, ACEtotal)
@@ -122,11 +124,32 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
 	print "TAO tests ****", TAOtotal, TAOfail, TAOperc 
 	file = "/tmp/matrix_output." + fname + ".txt"
 	fh=open(file,"w")
+	percent='%\n'
+	str = "# of ACE tests passed: %d\n" % (ACEtotal)
+	fh.write (str)
+	str = "# of ACE tests failed: %d\n" % (ACEfail)
+	fh.write (str)
+	str = "ACE percentage: %.2f" % ACEperc
+	str = str+percent
+	fh.write (str)
+	fh.write("\n")
+
+	str = "# of TAO tests passed: %d\n" % (TAOtotal)
+	fh.write (str)
+	str = "# of TAO tests failed: %d\n" % (TAOfail)
+	fh.write (str)
+	str = "TAO percentage: %.2f" % TAOperc
+	str = str+percent
+	fh.write (str)
+	fh.write("\n")
+
 	str = "# of tests passed: %d\n" % (TAOtotal+ACEtotal)
 	fh.write (str)
 	str = "# of tests failed: %d\n" % (TAOfail+ACEfail)
 	fh.write (str)
-	percent='%\n'
+	str = "# of tests skipped: %d\n" % (skip)
+	fh.write (str)
+
 	str = "Overall percentage: %.0f" % overall 
 	str = str+percent
 	fh.write (str)
