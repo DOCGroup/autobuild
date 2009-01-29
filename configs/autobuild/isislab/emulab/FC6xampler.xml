@@ -140,9 +140,9 @@
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/Results-Three/_Result" />
 
-    <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result/regular" />
-    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic" />
-    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /isisbuilds/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro_Linux_GCC" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Docses /isisbuilds/Avenger/_Templt/Template-Display/_Docses" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Images /isisbuilds/Avenger/_Templt/Template-Display/_Images" />
     <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Styles /isisbuilds/Avenger/_Templt/Template-Display/_Styles" />
