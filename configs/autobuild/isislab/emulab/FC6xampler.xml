@@ -133,6 +133,7 @@
 
     <command name="anonymous_shell"   options="cp /users/bczar/.profile /users/bczar/.profile_backup" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+    <command name="file_manipulation" options="type=create file=/users/bczar/.xampler output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
 
     <command name="anonymous_shell"   options="rm -rf /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
@@ -147,12 +148,14 @@
 
     <command name="anonymous_shell"   options="cp /users/bczar/.profile_backup /users/bczar/.profile" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+    <command name="file_manipulation" options="type=create file=/users/bczar/.xampler output='export LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/regular/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 1 localhost" />
 
     <command name="anonymous_shell"   options="cp /users/bczar/.profile_backup /users/bczar/.profile" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+    <command name="file_manipulation" options="type=create file=/users/bczar/.xampler output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/CORBAemicro/Avenger/_Ampler/Execute 1 localhost" />
@@ -180,10 +183,11 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
+    <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
 
-    <command name="anonymous_shell"   options="touch /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php" />
+    <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Templt/Template-Display/index-front.php /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php" />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler" />
     <command name="anonymous_shell"   options="chmod 755 /proj/autobuilds/logs/FC6xampler -R" />
