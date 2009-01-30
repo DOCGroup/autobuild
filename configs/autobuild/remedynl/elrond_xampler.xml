@@ -43,30 +43,6 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="/isisbuilds/regular/ACE_wrappers/build.mwc -type gnuautobuild" />
-
-    <command name="make"              options="-C /isisbuilds/regular/ACE_wrappers -k -j 4" />
-
-    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
-    <command name="setenv"        options="/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-
-    <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
-
-    <command name="make"              options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 4" />
-
-    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO"/>
-    <command name="setenv"        options="/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-
-    <command name="generate_workspace" options="/isisbuilds/CORBAemicro/ACE_wrappers/build.mwc -type gnuautobuild" />
-
-    <command name="make"              options="-C /isisbuilds/CORBAemicro/ACE_wrappers -k -j 4" />
-
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
-
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicrostatic/Xampler" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicro/Xampler" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/regular/Xampler" />
@@ -76,31 +52,7 @@
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /isisbuilds/Bagatel" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/Avenger" />
 
-    <command name="make"              options="-C /isisbuilds/Bagatel/src" />
-
-    <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
-    <command name="file_manipulation" options="type=create file=/isisbuilds/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
-    <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicro/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\n'" />
-
-    <command name="setenv"            options="TAO_DIR=/isisbuilds/regular/ACE_wrappers" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/regular/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="setenv"            options="ACE_ROOT=/isisbuilds/regular/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/isisbuilds/regular/ACE_wrappers/TAO" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Invocation_Static ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-
-    <command name="setenv"            options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"            options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Invocation_Static ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-
-    <command name="setenv"            options="TAO_DIR=/isisbuilds/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"            options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Invocation_Static ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-
-    <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
+ssh exi    <command name="anonymous_shell"   options="$SHELL -c \x22ssh build@localhost -o StrictHostKeyChecking=no exit\x22" />
 
     <command name="anonymous_shell"   options="cp /home/build/.profile /home/build/.profile_backup" />
     <command name="file_manipulation" options="type=append file=/home/build/.profile output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
