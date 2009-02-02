@@ -91,43 +91,19 @@
     <command name="setenv"            options="ACE_ROOT=/isisbuilds/regular/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/isisbuilds/regular/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/regular/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Types_Single ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Invocation_Static ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Invocation_Initial ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Octet_Sequence ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Ping ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Void ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Delayed_Any ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites/Marshal_Delayed_Sequence ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="setenv"            options="TAO_DIR=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Types_Single ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Invocation_Static ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Invocation_Initial ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Octet_Sequence ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Ping ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Void ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Delayed_Any ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites/Marshal_Delayed_Sequence ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="setenv"            options="TAO_DIR=/isisbuilds/CORBAemicro/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Marshal_Types_Array ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Marshal_Types_Single ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Invocation_Static ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Invocation_Initial ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Marshal_Octet_Sequence ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Ping ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Void ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Marshal_Delayed_Any ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites/Marshal_Delayed_Sequence ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
