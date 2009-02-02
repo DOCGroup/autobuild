@@ -3,8 +3,8 @@
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"          value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers" />
-        <environment name="TAO_ROOT"          value="/home/tao/rad1/doc_scoreboard/lynxos42_pcc_gcc322/standard/ACE_wrappers/TAO" />
-        <environment name="MPC_ROOT"          value="/home/tao/rad1/doc_scoreboard/lynxos42_pcc_gcc322/standard/ACE_wrappers/MPC" />
+        <environment name="TAO_ROOT"          value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/TAO" />
+        <environment name="MPC_ROOT"          value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/MPC" />
         <environment name="LD_LIBRARY_PATH"   value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/ace:/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/lib:/usr/lib:/lib:." />
         <variable    name="configs"           value="LynxOS LynxOS42 NO_IFR DISABLE_ToFix_LynxOS_PPC PRISM_ONLY QUICK FIXED_BUGS_ONLY" />
         <environment name="PATH"              value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:." />

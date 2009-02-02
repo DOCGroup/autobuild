@@ -1,3 +1,9 @@
+Mon Feb 02 12:15:00 UTC 2009  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:
+
+          Typo pcc instead of ppc for TAO_ROOT.
+
 Thu Jan 29 17:15:29 UTC 2009  Adam Mitz  <mitza@ociweb.com>
 
         * testmatrix/GenerateTestMatrix.py:
