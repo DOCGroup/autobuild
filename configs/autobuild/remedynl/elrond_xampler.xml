@@ -149,7 +149,7 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -n -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
 
     <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Templt/Template-Display/index-front.php /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php" />
 
