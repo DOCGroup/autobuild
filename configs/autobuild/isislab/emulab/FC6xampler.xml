@@ -111,7 +111,7 @@
 
     <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost" />
 
-    <command name="anonymous_shell"   options="cp /isibuilds/.profile_backup /users/bczar/.profile" />
+    <command name="anonymous_shell"   options="cp /isisbuilds/.profile_backup /users/bczar/.profile" />
     <command name="file_manipulation" options="type=append file=/users/bczar/.profile output='export LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib" />
 
