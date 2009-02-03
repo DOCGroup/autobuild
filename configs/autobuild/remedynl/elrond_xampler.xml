@@ -25,6 +25,14 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicrostatic/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicro/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/regular/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicrostatic/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicro/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/regular/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /isisbuilds/Bagatel" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/Avenger" />
 
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/ace/config.h output='#define ACE_LACKS_DEPRECATED_MACROS\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ndebug=0\nexceptions=1\nrt_corba=1\nsmart_proxies=1\ninterface_repo=1\ninterceptors=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -46,38 +54,23 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
+    <command name="setenv"             options="ACE_ROOT=/isisbuilds/regular/ACE_wrappers" />
+    <command name="setenv"             options="TAO_ROOT=/isisbuilds/regular/ACE_wrappers/TAO"/>
+    <command name="setenv"             options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/regular/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
     <command name="generate_workspace" options="/isisbuilds/regular/ACE_wrappers/build.mwc -type gnuautobuild" />
+    <command name="make"               options="-C /isisbuilds/regular/ACE_wrappers -k -j 4" />
 
-    <command name="make"              options="-C /isisbuilds/regular/ACE_wrappers -k -j 4" />
-
-    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
-    <command name="setenv"        options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-
+    <command name="setenv"             options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
+    <command name="setenv"             options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
+    <command name="setenv"             options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
     <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
+    <command name="make"               options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 4" />
 
-    <command name="make"              options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 4" />
-
-    <command name="setenv"        options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"        options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO"/>
-    <command name="setenv"        options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
-
+    <command name="setenv"             options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
+    <command name="setenv"             options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO"/>
+    <command name="setenv"             options="LD_LIBRARY_PATH=/build/utils/xerces/lib:/isisbuilds/CORBAemicro/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
     <command name="generate_workspace" options="/isisbuilds/CORBAemicro/ACE_wrappers/build.mwc -type gnuautobuild" />
-
-    <command name="make"              options="-C /isisbuilds/CORBAemicro/ACE_wrappers -k -j 4" />
-
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
-
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicrostatic/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/CORBAemicro/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /isisbuilds/regular/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicrostatic/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/CORBAemicro/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/regular/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /isisbuilds/Bagatel" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /isisbuilds/Avenger" />
+    <command name="make"               options="-C /isisbuilds/CORBAemicro/ACE_wrappers -k -j 4" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 
