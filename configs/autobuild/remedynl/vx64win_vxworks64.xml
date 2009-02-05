@@ -30,7 +30,7 @@
 
     <command name="log"               options="on" />
 
-    <command name="make"              options="-C TAO/CIAO -k realclean find=*akefile" />
+    <command name="make"              options="-C TAO/CIAO -k realclean" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
