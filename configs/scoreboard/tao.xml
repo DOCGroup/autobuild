@@ -154,12 +154,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>Windows</name>
-    <build>
-        <name>WinXP_RAD_Studio_2007_Dynamic_Debug_Unicode</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007ddu/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
         <build>
             <name>WinCE6_VC8_Release</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6r/</url>
@@ -181,12 +175,6 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build>
             <name>WinCE6_VC8</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_RAD_Studio_2007_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dd/</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -225,18 +213,6 @@ all the OS/platform combinations on which TAO is tested everyday.
            <red>60</red>
         </build>
         <build>
-            <name>WinXP_RAD_Studio_2007_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dd/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_RAD_Studio_2007_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dr/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_CodeGear_2009_Dynamic_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dd/</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -247,18 +223,6 @@ all the OS/platform combinations on which TAO is tested everyday.
             <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dr/</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_64bit_Intel101_32</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC101_32/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_64bit_Intel101_64</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/WinXP_ICC101_64/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>WinXP64_VC9_64bit_Debug</name>
