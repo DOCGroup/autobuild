@@ -8,13 +8,9 @@ create_config_page ()
 {
   local ROOT=$1
   local DESC=$2
-  CFG_FILES=ROOT/ace/config.h
-  if [ -r ROOT/bin/MakeProjectCreator/config/default.features ]; then
-    CFG_FILES="$CFG_FILES ROOT/bin/MakeProjectCreator/config/default.features"
-  elif [ -r $MPC_ROOT/config/default.features ]; then
-    CFG_FILES="$CFG_FILES ROOT/config/default.features"
-  fi
-  CFG_FILES="$CFG_FILES ROOT/include/makeinclude/platform_macros.GNU"
+  CFG_FILES=$ROOT/ace/config.h
+  CFG_FILES="$CFG_FILES $ROOT/bin/MakeProjectCreator/config/default.features"
+  CFG_FILES="$CFG_FILES $ROOT/include/makeinclude/platform_macros.GNU"
 
   echo '<TABLE border="2"><TBODY>'
   for cfg_file in $CFG_FILES; do
@@ -129,6 +125,5 @@ FUDGE_FACTOR=0
 BASE_ROOT=$ACE_ROOT
 DEFAULT_TITLE=ACE+TAO
 BASE_TITLE=$DEFAULT_TITLE
-COMPILER="gcc"
 
 create_index_page > index-technology.php
