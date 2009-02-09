@@ -147,7 +147,7 @@
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
 
-    <command name="anonymous_shell"   options="ln -s /isisbuilds/Avenger/_Templt/Template-Display/index-front.php /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php" />
+    <command name="anonymous_shell"   options="echo These results were generated on $(date). > /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php" />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler" />
     <command name="anonymous_shell"   options="chmod 755 /proj/autobuilds/logs/FC6xampler -R" />
