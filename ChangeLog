@@ -1,3 +1,8 @@
+Mon Feb  9 17:01:09 UTC 2009  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml: Removed AIX 5.2 and Sol 10 x86 builds;
+          added RHEL 5 builds; renamed "Redhat_Enterprise_Linux" to RHEL.
+
 Mon Feb 02 12:15:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:

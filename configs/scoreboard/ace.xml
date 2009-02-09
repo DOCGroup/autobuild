@@ -11,20 +11,6 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
   <name>AIX </name>
      <build>
-     <name>AIX_5.2_VA6_Debug</name>
-     <url>http://acebuilds.riverace.com/cuddy/dev/va6_debug</url>
-     <red>36</red>
-     <build_sponsor>Riverace</build_sponsor>
-     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-     <name>AIX_5.2_VA6-64_Debug</name>
-     <url>http://acebuilds.riverace.com/cuddy/dev/va6-64_debug</url>
-     <red>36</red>
-     <build_sponsor>Riverace</build_sponsor>
-     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
         <name>AIX_5.3_XLC7_Debug</name>
         <url>http://acebuilds.riverace.com/charlie/dev/xlc7_debug</url>
         <red>36</red>
@@ -43,46 +29,60 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
   <name>Linux</name>
      <build>
-     <name>Redhat_Enterprise_Linux_3_Debug</name>
+     <name>RHEL_3_Debug</name>
      <url>http://acebuilds.riverace.com/jane/dev/debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-     <name>Redhat_Enterprise_Linux_3_Debug_WChar</name>
+     <name>RHEL_3_Debug_WChar</name>
      <url>http://acebuilds.riverace.com/jane/dev/debug_wchar</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-     <name>Redhat_Enterprise_Linux_3_Static_Release</name>
+     <name>RHEL_3_Static_Release</name>
      <url>http://acebuilds.riverace.com/jane/dev/static_release</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-      <name>Redhat_Enterprise_Linux_3_Debug(autoconf)</name>
+      <name>RHEL_3_Debug(autoconf)</name>
       <url>http://acebuilds.riverace.com/jane/dev/autoconf_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-     <name>Redhat_Enterprise_Linux_4_Debug(epoll)</name>
+     <name>RHEL_4_Debug(epoll)</name>
      <url>http://acebuilds.riverace.com/timmy/dev/debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-     <name>Redhat_Enterprise_Linux_4_x64_Debug</name>
+     <name>RHEL_4_x64_Debug</name>
      <url>http://acebuilds.riverace.com/payslee/dev/debug</url>
      <red>36</red>
      <build_sponsor>Riverace</build_sponsor>
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
+     <build>
+       <name>RHEL_5_x64_Debug(Intel)</name>
+       <url>http://acebuilds.riverace.com/smokey/dev/icc_debug</url>
+       <red>36</red>
+       <build_sponsor>Riverace</build_sponsor>
+       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
+     <build>
+       <name>RHEL_5_x64_Debug(gcc)</name>
+       <url>http://acebuilds.riverace.com/smokey/dev/gcc_debug</url>
+       <red>36</red>
+       <build_sponsor>Riverace</build_sponsor>
+       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
        <name>FC8_GCC_412</name>
@@ -238,13 +238,6 @@ all the OS/platform combinations on which ACE is tested everyday.
    <build>
       <name>Solaris_10_sparc_Studio10_Static_Debug(32bit)</name>
       <url>http://acebuilds.riverace.com/chad/dev/studio10_static_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris_10_x64_Studio10_Debug(64bit)</name>
-      <url>http://acebuilds.riverace.com/billy/dev/studio10-64_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
