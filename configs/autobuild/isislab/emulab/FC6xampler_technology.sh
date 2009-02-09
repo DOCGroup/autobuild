@@ -127,4 +127,4 @@ BASE_ROOT=$ACE_ROOT
 DEFAULT_TITLE=ACE+TAO
 BASE_TITLE=$DEFAULT_TITLE
 
-create_index_page > index-technology.php
+create_index_page > /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-technology.php
