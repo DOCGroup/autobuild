@@ -127,7 +127,7 @@ all the OS/platform combinations on which ACE is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>Redhat_Enterprise_Linux_51_x64_Debug</name>
+      <name>RHEL_51_x64_Debug(gcc)</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/rhel51_32_gcc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
