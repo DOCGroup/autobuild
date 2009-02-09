@@ -35,13 +35,13 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.42tools.com</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL52_ICC101_IA64</name>
+      <name>RHEL53_ICC101_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC101/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL52_ICC110_IA64</name>
+      <name>RHEL53_ICC110_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC110/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -59,7 +59,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>RHEL52_GCC_IA64</name>
+       <name>RHEL53_GCC_IA64</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_GCC</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -143,7 +143,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-       <name>RHEL52_CIDLC_IA64</name>
+       <name>RHEL53_CIDLC_IA64</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_CIDLC</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
