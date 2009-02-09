@@ -1,6 +1,5 @@
 #/users/bczar/runbuild.sh FC8autoconf
 #/users/bczar/runbuild.sh FC8Full
-/users/bczar/runbuild.sh FC6xampler
 /users/bczar/runbuild.sh FC6xmlconfig
 /users/bczar/runbuild.sh FC6acefortao
 /users/bczar/runbuild.sh FC6autoconf
@@ -24,6 +23,7 @@
 /users/bczar/runbuild.sh FC6prismintegration
 /users/bczar/runbuild.sh FC6SingleThreaded
 /users/bczar/runbuild.sh FC6Static
-/users/bczar/runbuild.sh FC6valgrind
 /users/bczar/runbuild.sh FC6versioned
 /users/bczar/runbuild.sh FC6wchar
+/users/bczar/runbuild.sh FC6xampler
+/users/bczar/runbuild.sh FC6valgrind
