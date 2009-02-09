@@ -12,7 +12,6 @@ create_config_page ()
   CFG_FILES="$CFG_FILES $ROOT/bin/MakeProjectCreator/config/default.features"
   CFG_FILES="$CFG_FILES $ROOT/include/makeinclude/platform_macros.GNU"
 
-  echo '<TABLE border="2"><TBODY>'
   for cfg_file in $CFG_FILES; do
     if [ -r $cfg_file ]; then
       echo "<TR><TD>ACE+TAO Configuration for $DESC</TD><TD>`basename $cfg_file`</TD></TR>"
@@ -62,6 +61,8 @@ create_index_page ()
   if [ -z "$MPC_ROOT" ]; then
     MPC_ROOT=$ACE_ROOT/MPC
   fi
+
+  echo '<TABLE border="2"><TBODY>'
 
   create_config_page "/isisbuilds/regular/ACE_wrappers/" "TAO Regular"
   create_config_page "/isisbuilds/CORBAemicro/ACE_wrappers/" "CORBA/e micro"
