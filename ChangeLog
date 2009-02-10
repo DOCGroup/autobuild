@@ -1,3 +1,8 @@
+Tue Feb 10 04:56:10 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/scoreboard/releases.xml: 
+          Bump revision number
+
 Mon Feb  9 17:01:09 UTC 2009  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Removed AIX 5.2 and Sol 10 x86 builds;
