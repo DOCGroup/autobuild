@@ -1,6 +1,12 @@
+Tue Feb 10 14:25:10 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * scoreboard.pl
+        * configs/scoreboard/tao_dre.sh:
+          If you want history on the scoreboard, use -n to enable that
+
 Tue Feb 10 04:56:10 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
 
-        * configs/scoreboard/releases.xml: 
+        * configs/scoreboard/releases.xml:
           Bump revision number
 
 Mon Feb  9 17:01:09 UTC 2009  Steve Huston  <shuston@riverace.com>

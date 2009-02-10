@@ -1551,7 +1551,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:n')
     print "    -s         name of file where build schedule can be found\n";
     print "    -c         co-located directory, all files local in -d \n";
     print "    -k         number of logs to keep, default is $keep_default\n";
-    print "    -n         No 'history' links generated\n";
+    print "    -n         'history' links generated\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1624,7 +1624,9 @@ if (defined $opt_c) {
   update_cache ($dir);
   clean_cache ($dir);
   query_status ();
-  query_history () unless $opt_n;
+  if (defined $opt_n) {
+    query_history ();
+  }
 }
 update_html ($dir,"$dir/$out_file",$rss_file);
 
