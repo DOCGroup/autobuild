@@ -1,3 +1,48 @@
+Tue Feb 10 23:27:12 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
+        * configs/autobuild/abbarach/ciao_refactor.xml:
+        * configs/autobuild/ace_isis/FC9_Minimum.xml:
+        * configs/autobuild/ace_isis/FC9_NoInline.xml:
+        * configs/autobuild/balar_isis/DynamicHash.xml:
+        * configs/autobuild/balar_isis/IPV6.xml:
+        * configs/autobuild/balar_isis/ImplicitTemplates.xml:
+        * configs/autobuild/balar_isis/Static.xml:
+        * configs/autobuild/ciang/ciao_refactor.xml:
+        * configs/autobuild/ciang/ciaocore_vc9.xml:
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        * configs/autobuild/isislab/emulab/FC6CORBAecompact.xml:
+        * configs/autobuild/isislab/emulab/FC6CORBAemicro.xml:
+        * configs/autobuild/isislab/emulab/FC6DynamicHash.xml:
+        * configs/autobuild/isislab/emulab/FC6Full.xml:
+        * configs/autobuild/isislab/emulab/FC6FullReactors.xml:
+        * configs/autobuild/isislab/emulab/FC6IPv6.xml:
+        * configs/autobuild/isislab/emulab/FC6ImplicitTemplate.xml:
+        * configs/autobuild/isislab/emulab/FC6SingleThreaded.xml:
+        * configs/autobuild/isislab/emulab/FC6Static.xml:
+        * configs/autobuild/isislab/emulab/FC6acefortao.xml:
+        * configs/autobuild/isislab/emulab/FC6ciaocore.xml:
+        * configs/autobuild/isislab/emulab/FC6gcc4.xml:
+        * configs/autobuild/isislab/emulab/FC6gcc4ssl.xml:
+        * configs/autobuild/isislab/emulab/FC6prismintegration.xml:
+        * configs/autobuild/isislab/emulab/FC6valgrind.xml:
+        * configs/autobuild/isislab/emulab/FC6versioned.xml:
+        * configs/autobuild/isislab/emulab/FC8Full.xml:
+        * configs/autobuild/isislab/emulab/versioned_namespace.xml:
+        * configs/autobuild/lindy_isis/Static.xml:
+        * configs/autobuild/remedynl/shelob_icc101_32.xml:
+        * configs/autobuild/remedynl/shelob_icc101_64.xml:
+        * configs/autobuild/remedynl/shelob_icc110_64.xml:
+        * configs/autobuild/remedynl/suse110_icc101_32.xml:
+        * configs/autobuild/remedynl/suse110_icc101_64.xml:
+        * configs/autobuild/remedynl/suse110_icc110.xml:
+        * configs/autobuild/remedynl/suse110_icc110_64.xml:
+        * configs/autobuild/sparc/SunOS10_GCC402.xml:
+        * configs/autobuild/sparc/SunOS10_Studio9.xml:
+
+          Added xerces2 to default.features and platform_macros, as appropriate.
+        
 Tue Feb 10 14:25:10 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl
