@@ -17,12 +17,6 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>Windows_XP_BCB_2007_DDS</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/RAD2007dd_dds</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>Windows_XP_CodeGear_2009_DDS</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dd_dds</url>
        <build_sponsor>Remedy IT</build_sponsor>
