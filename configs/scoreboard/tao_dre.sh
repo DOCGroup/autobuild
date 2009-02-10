@@ -20,7 +20,7 @@ svn up
 /usr/bin/perl ./scoreboard.pl -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/ciao.xml -o ciao.html -r ciao.rss 2>&1  &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/ciao_future.xml -o ciao_future.html  2>&1  &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/dds.xml -o dds.html -r dds.rss 2>&1  &
-/usr/bin/perl ./scoreboard.pl -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
+/usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/cosmic.xml -o cosmic.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/xsc.xml -o xsc.html -r xsc.rss 2>&1  &
 # Generate the test matrices!
