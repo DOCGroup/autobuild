@@ -108,17 +108,17 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicrostatic.sh output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/CORBAemicrostatic/Avenger/_Ampler/Execute 3 localhost /isisbuilds/CORBAemicrostatic.sh" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost /isisbuilds/CORBAemicrostatic.sh" />
 
     <command name="file_manipulation" options="type=create file=/isisbuilds/regular.sh output='export LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 3 localhost /isisbuilds/regular.sh" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/regular/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/regular/Avenger/_Ampler/Execute 1 localhost /isisbuilds/regular.sh" />
 
     <command name="file_manipulation" options="type=create file=/isisbuilds/CORBAemicro.sh output='export LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/CORBAemicro/Avenger/_Ampler/Execute 3 localhost /isisbuilds/CORBAemicro.sh" />
+    <command name="anonymous_shell"   options="cd /isisbuilds/CORBAemicro/Avenger/_Templt/Template-Execute/ ; sh /isisbuilds/CORBAemicro/Avenger/_Ampler/Execute 1 localhost /isisbuilds/CORBAemicro.sh" />
 
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/Results-One/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /isisbuilds/Avenger/_Templt/Template-Display/Results-Two/_Result" />
