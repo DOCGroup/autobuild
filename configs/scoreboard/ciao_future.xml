@@ -2,7 +2,7 @@
 <preamble>
 <center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
 <hr/>
-This is the CIAO virtual scoreboard for future platforms/development. 
+This is the CIAO virtual scoreboard for future platforms/development.
 <hr/>
 </preamble>
 
@@ -42,18 +42,6 @@ This is the CIAO virtual scoreboard for future platforms/development.
 
 <group>
   <name>prism_import branch</name>
-  <build>
-    <name>FC6_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>FC6_CIAO_Core</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-  </build>
   <build>
     <name>WinXP_VC71_CIAOCore_Debug</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17/vc71</url>
