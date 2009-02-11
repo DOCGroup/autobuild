@@ -1,3 +1,9 @@
+Wed Feb 11 16:53:33 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/FC6Core.xml:
+
+          added xerces2 to default.features. 
+        
 Tue Feb 10 23:27:12 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
@@ -42,7 +48,7 @@ Tue Feb 10 23:27:12 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/sparc/SunOS10_Studio9.xml:
 
           Added xerces2 to default.features and platform_macros, as appropriate.
-        
+
 Tue Feb 10 14:25:10 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * scoreboard.pl
