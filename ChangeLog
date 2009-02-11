@@ -1,9 +1,19 @@
+Wed Feb 11 20:28:42 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/trian/ace_for_tao.xml:
+        * configs/autobuild/trian/ciao_no_inline.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+        * configs/autobuild/trian/vc8_minimum_corba.xml:
+        * configs/autobuild/trian/versioned_namespace.xml:
+        
+          added xerces2 to default.features.
+        
 Wed Feb 11 16:53:33 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/FC6Core.xml:
 
-          added xerces2 to default.features. 
-        
+          added xerces2 to default.features.
+
 Tue Feb 10 23:27:12 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/abbarach/Mac_OSX_Tiger.xml:
