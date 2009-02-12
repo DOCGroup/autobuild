@@ -1,3 +1,9 @@
+Thu Feb 12 13:07:05 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/FC6NoInt.xml:
+
+          added xerces2. 
+        
 Wed Feb 11 20:28:42 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/trian/ace_for_tao.xml:
@@ -5,9 +11,9 @@ Wed Feb 11 20:28:42 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/trian/trian_cosmic_release.xml:
         * configs/autobuild/trian/vc8_minimum_corba.xml:
         * configs/autobuild/trian/versioned_namespace.xml:
-        
+
           added xerces2 to default.features.
-        
+
 Wed Feb 11 16:53:33 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/FC6Core.xml:
