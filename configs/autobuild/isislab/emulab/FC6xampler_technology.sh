@@ -111,6 +111,13 @@ create_html ()
 
 }
 
+create_front_page ()
+{
+  date  > date.txt 2>&1
+  echo 'These results were generated on '
+  cat date.txt
+}
+
 ###############################################################################
 #
 # main program
@@ -127,4 +134,5 @@ BASE_ROOT=$ACE_ROOT
 DEFAULT_TITLE=ACE+TAO
 BASE_TITLE=$DEFAULT_TITLE
 
+create_front_page > /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php
 create_index_page > /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-technology.php

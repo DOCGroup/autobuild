@@ -145,9 +145,8 @@
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/isisbuilds/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
-    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php ; ls -alR " />
+    <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <command name="anonymous_shell"   options="echo These results were generated on $(date). > /isisbuilds/Avenger/_Templt/Template-Display/_Report/index-front.php" />
     <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/FC6xampler_technology.sh" />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler" />
