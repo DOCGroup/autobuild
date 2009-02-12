@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\wince6r\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\wince6r\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\\ACE\\wince6r\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"    value="C:\\ACE\\wince6r\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="HOST_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers" />
         <environment name="HOST_TAO_IDL" value="C:\\ACE\\VC8\\ACE_wrappers\\bin\\tao_idl.exe" />
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />

@@ -1,3 +1,4 @@
+ls
 <!-- $Id$ -->
 <autobuild>
   <configuration>
@@ -5,6 +6,7 @@
         <environment name="ACE_ROOT"        value="/home/colding/work/src/ACE/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/colding/work/src/ACE/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"       value="/home/colding/work/src/ACE/ACE_wrappers/TAO/CIAO" />
+        <environment name="DANCE_ROOT"       value="/home/colding/work/src/ACE/ACE_wrappers/TAO/CIAO/DAnCE" />
         <environment name="LD_LIBRARY_PATH" value="/home/colding/work/src/ACE/ACE_wrappers/lib" />
 
         <variable name="root"     value="/home/colding/work/src/ACE" />
@@ -29,7 +31,7 @@
 
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\ninline=0\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />  
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nxerces2\n'" />
 
   <command name="print_os_version" />
   <command name="print_env_vars" />

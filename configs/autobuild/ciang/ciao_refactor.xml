@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"      value="C:\\ACE\\ciao_refactor\\ACE_wrappers" />
         <environment name="TAO_ROOT"      value="C:\\ACE\\ciao_refactor\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\\ACE\\ciao_refactor\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"     value="C:\\ACE\\ciao_refactor\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="RSYNC_RSH"     value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"          value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\bin;C:\\zlib\\lib;C:\\zzip\\lib;c:\\xerces-vc8\\lib;C:\\Perl\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\ACE\\ciao_refactor\\ACE_wrappers\\bin;C:\\ACE\\ciao_refactor\\ACE_wrappers\\lib;c:\\xerces\\bin;C:\\Perl\\bin;c:\\zzip\\lib;c:\\zlib\\lib;c:\\putty;c:\\xerces\\lib;c:\\cygwin\\bin" type="prefix" />
         <environment name="INCLUDE"       value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\include;" type="prefix" />

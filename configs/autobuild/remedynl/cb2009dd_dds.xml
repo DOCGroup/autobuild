@@ -3,6 +3,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\CB2009dd\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\CB2009dd\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\\ACE\\CB2009dd\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"    value="C:\\ACE\\CB2009dd\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="DDS_ROOT"     value="C:\\ACE\\CB2009dd_DDS\\DDS" />
         <environment name="XERCESCROOT"  value="C:\\xerces-c-src_2_7_0" />
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />

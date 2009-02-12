@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"      value="C:\\ACE\\VC8\\ACE_wrappers" />
         <environment name="TAO_ROOT"      value="C:\\ACE\\VC8\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="RSYNC_RSH"     value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"          value="C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;c:\\utils\\bin;C:\\Perl\\bin;c:\\zzip\\lib;c:\\zlib\\lib;c:\\putty;c:\\utils\\lib;c:\\cygwin\\bin" type="prefix" />
         <environment name="INCLUDE"      value="c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\PlatformSDK\\include;c:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\SDK\\v2.0\\include;c:\\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\include" type="prefix" />

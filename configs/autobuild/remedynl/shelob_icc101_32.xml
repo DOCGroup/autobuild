@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"        value="/home/build/ACE/icc101_32/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/icc101_32/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/icc101_32/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DAnCE_ROOT"        value="/home/build/ACE/icc101_32/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/opt/intel/cc/10.1.017/lib:/home/build/ACE/icc101_32/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="PATH"            value="/opt/intel/cc/10.1.017/bin" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>

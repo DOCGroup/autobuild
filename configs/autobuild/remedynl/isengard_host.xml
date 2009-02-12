@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"     value="/export/home/build/ACE/host/ACE_wrappers"/>
         <environment name="TAO_ROOT"     value="/export/home/build/ACE/host/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"    value="/export/home/build/ACE/host/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"    value="/export/home/build/ACE/host/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/usr/local/lib:/export/home/build/ACE/host/ACE_wrappers/lib" type="prefix"/>
         <environment name="PATH" value="/usr/local/bin:/opt/gcc/bin:" type="prefix"/>
 

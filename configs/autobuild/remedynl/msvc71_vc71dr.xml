@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\VC71dr\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\VC71dr\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\\ACE\\VC71dr\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"    value="C:\\ACE\\VC71dr\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Vc7\\bin;C:\\ACE\\VC71dr\\ACE_wrappers\\bin;C:\\opensslvc71\\openssl-0.9.7d\\out32dll" type="prefix" />
         <environment name="SSL_ROOT"     value="C:\\opensslvc71\\openssl-0.9.7d" />

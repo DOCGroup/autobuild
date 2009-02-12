@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\ACE" />
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_Release\\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CIAO"/>
+        <environment name="DANCE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CIAO\\DAnCE"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\Program Files (x86)\Windows Installer XML v3"/>
         <environment name="XERCESCROOT"   value="C:\\Libraries\\xerces-c-2_7_0-win32-vc8"/>
