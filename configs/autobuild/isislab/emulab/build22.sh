@@ -1,5 +1,5 @@
-#/users/bczar/runbuild.sh FC8autoconf
-#/users/bczar/runbuild.sh FC8Full
+/users/bczar/runbuild.sh FC8autoconf
+/users/bczar/runbuild.sh FC8Full
 /users/bczar/runbuild.sh FC6xmlconfig
 /users/bczar/runbuild.sh FC6ostream
 /users/bczar/runbuild.sh FC6acefortao
