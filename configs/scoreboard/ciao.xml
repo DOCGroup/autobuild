@@ -11,6 +11,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
 <name>Linux</name>
   <build>
+    <name>FC6_ostream</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gen_ostream/</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
+  <build>
     <name>FC6_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
     <build_sponsor>ISIS</build_sponsor>
