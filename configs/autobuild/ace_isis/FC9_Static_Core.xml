@@ -26,7 +26,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\ndebug=0\ninline=0\nstatic_libs_only=1\ncidl=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='debug=0\ncidl=1\nzlib=1\nzzip=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='debug=0\ncidl=1\nzlib=1\nzzip=1\nxerces2=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
