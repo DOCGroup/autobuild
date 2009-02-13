@@ -12,13 +12,11 @@
     <command name="process_listener"  options="localhost:32001" />
     <command name="log"               options="on" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\n\n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nxerces2=1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\nxerces2=1\n'" />
-
-    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -28,13 +26,13 @@
     <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO_*.mwc,TAO/CIAO -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO_*.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k -j 5" />
 
-    <command name="auto_run_tests"    options=" -a -o -t -C" />
+    <command name="auto_run_tests"    options=" -a -o -t" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="status"            options="off" />
 </autobuild>

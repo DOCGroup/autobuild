@@ -28,7 +28,7 @@
     <command name="make"              options="-k -C TAO/CIAO/CIDLC" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="status"            options="off" />
 
     <command name="shell"             options="bzip2 -k -f ACE_wrappers/TAO/CIAO/CIDLC/cidlc" />
