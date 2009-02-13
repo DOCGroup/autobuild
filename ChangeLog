@@ -1,9 +1,15 @@
+Fri Feb 13 01:36:08 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/fc6-env.xml:
+
+          Forgot leading slash on environment. 
+        
 Fri Feb 13 01:08:31 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/ace_isis/FC9_Static_Core.xml:
 
-          Added xerces2 to features. 
-        
+          Added xerces2 to features.
+
 Thu Feb 12 13:26:29 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/42tools/x86-32bit-fedora-rawhide.xml:
