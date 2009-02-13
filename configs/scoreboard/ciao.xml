@@ -361,6 +361,18 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
+            <name>WinXP_CodeGear_2009_Dynamic_Debug</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dd/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
+            <name>WinXP_CodeGear_2009_Dynamic_Release</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dr/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
           <name>WinXP_VC71_IPV6</name>
           <url>http://www.dre.vanderbilt.edu/~remedynl/VC71_IPV6/</url>
           <build_sponsor>Remedy IT</build_sponsor>

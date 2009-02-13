@@ -219,18 +219,6 @@ all the OS/platform combinations on which TAO is tested everyday.
            <red>60</red>
         </build>
         <build>
-            <name>WinXP_CodeGear_2009_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dd/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_CodeGear_2009_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dr/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP64_VC9_64bit_Debug</name>
             <url>http://scoreboard.ociweb.com/doc_trunk_earwig_winxp-x64_nmake_d1o0</url>
             <build_sponsor>OCI</build_sponsor>
