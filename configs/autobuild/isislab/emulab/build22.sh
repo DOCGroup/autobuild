@@ -21,7 +21,6 @@
 /users/bczar/runbuild.sh FC6versioned
 /users/bczar/runbuild.sh FC6NoIIOP
 /users/bczar/runbuild.sh FC6NoInt
-/users/bczar/runbuild.sh FC6prismintegration
 /users/bczar/runbuild.sh FC6SingleThreaded
 /users/bczar/runbuild.sh FC6Static
 /users/bczar/runbuild.sh FC6versioned
