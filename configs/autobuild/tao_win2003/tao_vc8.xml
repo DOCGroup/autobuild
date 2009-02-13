@@ -31,7 +31,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.mak' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/prism_import/sets ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='gen_ostream=1\nzlib=1\nzzip=1\n'" />
@@ -49,8 +49,6 @@
     <command name="generate_workspace" options="-type nmake -base vc8nmake -exclude TAO/CIAO/CIAO_*.mwc,TAO/TAO_*.mwc"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
-
-
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />

@@ -39,20 +39,4 @@ This is the CIAO virtual scoreboard for future platforms/development.
      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
    </build>
 </group>
-
-<group>
-  <name>prism_import branch</name>
-  <build>
-    <name>WinXP_VC71_CIAOCore_Debug</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade17/vc71</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>Win2003_VC8_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-</group>
 </scoreboard>
