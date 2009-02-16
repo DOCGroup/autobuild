@@ -15,6 +15,7 @@
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0-x86-windows-vc-8.0" />
+        <environment name="PATH"  value="C:\\xerces-c-3.0.0-x86-windows-vc-8.0\\lib;" type="prefix" />
 
         <variable name="configs"  value="Win32 VC8 Exceptions SSL" />
         <variable name="root"     value="C:\\ACE\\VC8r\\" />
