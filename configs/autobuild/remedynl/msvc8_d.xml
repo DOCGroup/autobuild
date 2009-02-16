@@ -14,8 +14,9 @@
         <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
+        <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0-x86-windows-vc-8.0" />
 
-        <variable name="configs"  value="Win32 VC8 Exceptions SSL NOXERCES" />
+        <variable name="configs"  value="Win32 VC8 Exceptions SSL" />
         <variable name="root"     value="C:\\ACE\\VC8\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\VC8\\" />
@@ -35,7 +36,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces=0\nssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces=1\nssl=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
