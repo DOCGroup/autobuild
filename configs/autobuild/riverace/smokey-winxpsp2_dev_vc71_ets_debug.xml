@@ -66,8 +66,9 @@
     <!-- will pick up the ACEd.dll built for ETS while invoking TAO_IDL. -->
     <command name="vc7make"           options="/useenv /build \x22ETS Debug\x22 TAO/TAO_ETS.sln" />
 
-    <command name="setup_lvrt" />
-    <command name="auto_run_tests"    options="-ExeSubDir ETS_Debug -a -o" />
+    <!-- Disable tests until the target reset box works -->
+    <!-- command name="setup_lvrt" / -->
+    <!-- command name="auto_run_tests"    options="-ExeSubDir ETS_Debug -a -o" / -->
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
