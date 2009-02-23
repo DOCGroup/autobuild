@@ -19,13 +19,11 @@
 
     <command name="log"               options="on" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_MONITOR_FRAMEWORK 0\n#define TAO_HAS_CORBA_MESSAGING 0\n#define ACE_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OCFLAGS=-Os\nuse_dep_libs=0\ncidl=1\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \\$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='optimize_collocated_invocations=0\ncorba_messaging=0\ncorba_e_compact=1\ncidl=1\n'" />
-
-    <command name="anonymous_shell"   options="scp bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -50,10 +48,8 @@
 
     <!-- Build the TAO_IDL compiler first and gen the idl_stubs, so that --dry-run will create a list of all targets. -->
     <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO/CIAO/tools/IDL3_to_IDL2" />
     <command name="make"              options="-k -C TAO/tao idl_stubs" />
     <command name="make"              options="-k -C TAO/tests idl_stubs" />
-    <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
 
     <!-- TAO: only build the minimum, tao -->
     <command name="make"              options="-k -C TAO/tao                --dry-run >> $LOG_ROOT/metrics/targets" />
@@ -62,11 +58,6 @@
     <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $LOG_ROOT/metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $LOG_ROOT/metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $LOG_ROOT/metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $LOG_ROOT/metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $LOG_ROOT/metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/examples/Null_Component --dry-run >> $LOG_ROOT/metrics/targets" />
 
     <command name="make"              options="-k -j4 -C TAO/tao" />
     <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />
@@ -74,8 +65,6 @@
     <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
     <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
     <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
-
-    <command name="make"              options="-k -j4 -C TAO/CIAO" />
 
     <command name="log"               options="off" />
 
