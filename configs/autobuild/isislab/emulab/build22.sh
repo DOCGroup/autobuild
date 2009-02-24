@@ -29,5 +29,6 @@
 /users/bczar/runbuild.sh FC6fpCORBAemicro
 /users/bczar/runbuild.sh FC6fpCORBAemicros
 /users/bczar/runbuild.sh FC6fpCORBAregular
+/users/bczar/runbuild.sh FC6fpCORBAminimum
 /users/bczar/runbuild.sh FC6xampler
 /users/bczar/runbuild.sh FC6valgrind
