@@ -1,0 +1,75 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <include name="fc6-env.xml" />
+
+        <environment name="LOG_ROOT"  value="/proj/autobuilds/logs/footprintCORBAemicro/" />
+
+        <variable name="root"     value="/isisbuilds/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/proj/autobuilds/logs/footprintCORBAemicro/" />
+        <variable name="configs"  value="Linux Exceptions" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32002" />
+
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_MONITOR_FRAMEWORK 0\n#define TAO_HAS_CORBA_MESSAGING 0\n#define ACE_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='OCFLAGS=-Os\nuse_dep_libs=0\ncidl=1\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \\$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='optimize_collocated_invocations=0\ncorba_messaging=0\ncorba_e_micro=1\ncidl=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_cidlc_version" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-type gnuautobuild" />
+
+    <command name="anonymous_shell"    options="mkdir $LOG_ROOT/metrics" />
+
+    <!-- ACE: only build the minimum, ace, ACEXML, and gperf -->
+    <command name="make"              options="-k -C ace        --dry-run > $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C ACEXML     --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C apps/gperf --dry-run >> $LOG_ROOT/metrics/targets" />
+
+    <command name="make"              options="-k -j4 -C ace" />
+    <command name="make"              options="-k -j4 -C ACEXML" />
+    <command name="make"              options="-k -j4 -C apps/gperf" />
+
+    <!-- Build the TAO_IDL compiler first and gen the idl_stubs, so that --dry-run will create a list of all targets. -->
+    <command name="make"              options="-k -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -C TAO/tao idl_stubs" />
+    <command name="make"              options="-k -C TAO/tests idl_stubs" />
+
+    <!-- TAO: only build the minimum, tao -->
+    <command name="make"              options="-k -C TAO/tao                --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/ORB_init     --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/ORB_destroy  --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $LOG_ROOT/metrics/targets" />
+
+    <command name="make"              options="-k -j4 -C TAO/tao" />
+    <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />
+    <command name="make"              options="-k -j4 -C TAO/tests/ORB_destroy" />
+    <command name="make"              options="-k -j4 -C TAO/tests/Hello" />
+    <command name="make"              options="-k -j4 -C TAO/tests/Muxing" />
+    <command name="make"              options="-k -j4 -C TAO/orbsvcs/orbsvcs" />
+
+    <command name="log"               options="off" />
+
+    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh /isisbuilds/build.txt /proj/autobuilds/logs/footprintCORBAemicro/metrics/x/ $LOG_ROOT/metrics/targets Footprint" />
+
+    <command name="process_logs"      options="clean=4 move prettify index" />
+    <command name="status"            options="off" />
+</autobuild>
