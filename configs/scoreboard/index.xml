@@ -63,16 +63,16 @@ Statistics</a>
     Text based test statistics</a>
 </li>
 <li>
-  Footprint statistics with GCC 4.0.2 on FC4:
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/regular/">
+  Footprint statistics:
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAregular/metrics/x/">
     Regular</a>,
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/corbaecompact/">
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAecompact/metrics/x/">
     CORBA e/compact</a>,
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/corbaemicro/">
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicro/metrics/x/">
     CORBA e/micro</a>
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/corbaemicros/">
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicros/metrics/x/">
     CORBA e/micro single threaded</a>
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/stats/minimum_corba/">
+  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAminimum/metrics/x/">
     Minimum CORBA</a>
 </li>
 </ul>
