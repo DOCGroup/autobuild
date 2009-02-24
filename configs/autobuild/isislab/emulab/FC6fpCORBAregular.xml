@@ -4,11 +4,11 @@
 
         <include name="fc6-env.xml" />
 
-        <environment name="LOG_ROOT"  value="/proj/autobuilds/logs/footprintCORBAeregular/" />
+        <environment name="LOG_ROOT"  value="/proj/autobuilds/logs/footprintCORBAregular/" />
 
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/proj/autobuilds/logs/footprintCORBAeregular/" />
+        <variable name="log_root" value="/proj/autobuilds/logs/footprintCORBAregular/" />
         <variable name="configs"  value="Linux Exceptions" />
 
     </configuration>
