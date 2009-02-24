@@ -38,7 +38,6 @@
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="status"            options="off" />
 </autobuild>
