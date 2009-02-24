@@ -139,6 +139,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Stats Builds</name>
    <build>
+      <name>FC6_Stats_CORBA_e_compact</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAecompact</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+   </build>
+   <build>
      <name>SuSE_Stats_Static</name>
      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/flamenco_Static</url>
      <build_sponsor>ISIS</build_sponsor>
