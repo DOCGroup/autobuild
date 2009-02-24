@@ -77,12 +77,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
      </build>
      <build>
-       <name>FC4_autoconf</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/autoconf</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
        <name>FC6_autoconf</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/autoconf</url>
        <build_sponsor>ISIS</build_sponsor>
@@ -151,20 +145,20 @@ all the OS/platform combinations on which TAO is tested everyday.
      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
-     <name>Stats_CORBA_e_micro</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/corbaemicro</url>
+     <name>FC6_Stats_CORBA_e_micro</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicro</url>
      <build_sponsor>ISIS</build_sponsor>
      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
-     <name>Stats_CORBA_e_micro_single_threaded</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/corbaemicros</url>
+     <name>FC6_Stats_CORBA_e_micro_single_threaded</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicros</url>
      <build_sponsor>ISIS</build_sponsor>
      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
-     <name>Stats_Minimum_Corba</name>
-     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/blade56/minimum_corba</url>
+     <name>FC6_Stats_Minimum_Corba</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAminimum</url>
      <build_sponsor>ISIS</build_sponsor>
      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
