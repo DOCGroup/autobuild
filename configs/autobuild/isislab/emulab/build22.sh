@@ -25,5 +25,9 @@
 /users/bczar/runbuild.sh FC6Static
 /users/bczar/runbuild.sh FC6versioned
 /users/bczar/runbuild.sh FC6wchar
+/users/bczar/runbuild.sh FC6fpCORBAecompact
+/users/bczar/runbuild.sh FC6fpCORBAemicro
+/users/bczar/runbuild.sh FC6fpCORBAemicros
+/users/bczar/runbuild.sh FC6fpCORBAregular
 /users/bczar/runbuild.sh FC6xampler
 /users/bczar/runbuild.sh FC6valgrind
