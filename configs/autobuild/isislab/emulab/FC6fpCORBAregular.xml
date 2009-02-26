@@ -61,12 +61,12 @@
     <command name="make"              options="-k -C TAO/tests/Hello        --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $LOG_ROOT/metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/ciaosvcs      --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $ACE_ROOT/../.metrics/targets" />
-    <command name="make"              options="-k -C TAO/CIAO/examples/Null_Component --dry-run >> $ACE_ROOT/../.metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/ciaosvcs      --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/tests/Minimum --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/examples/Null_Component --dry-run >> $LOG_ROOT/metrics/targets" />
 
     <command name="make"              options="-k -j4 -C TAO/tao" />
     <command name="make"              options="-k -j4 -C TAO/tests/ORB_init" />
@@ -79,7 +79,7 @@
 
     <command name="log"               options="off" />
 
-    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh /isisbuilds/build.txt /proj/autobuilds/logs/footprintregular/metrics/x/ $LOG_ROOT/metrics/targets Footprint" />
+    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh /isisbuilds/build.txt $LOG_ROOT/metrics/x/ $LOG_ROOT/metrics/targets Footprint" />
 
     <command name="process_logs"      options="clean=4 move prettify index" />
     <command name="status"            options="off" />
