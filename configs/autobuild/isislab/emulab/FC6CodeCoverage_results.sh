@@ -8,6 +8,7 @@ set -e
 LCOV_BIN_DIR=/usr/bin
 LCOV=$LCOV_BIN_DIR/lcov
 GENHTML=$LCOV_BIN_DIR/genhtml
+GCOV=$LCOV_BIN_DIR/gcov
 
 # Temporary coverage info file.
 TMP_INFO=tmp.info
@@ -26,7 +27,7 @@ covered_dirs=`find . -name "GNUmakefile.*" | sed -e 's,\./,,' -e 's,/GNUmakefile
 
 # Generate code coverage results/information.
 for d in $covered_dirs; do
-    $LCOV --directory $d --capture --output-file $TMP_INFO
+    $LCOV --directory $d --capture --output-file $TMP_INFO --gcov-tool $GCOV
     # We could feed genhtml a list of info files but this consolidated
     # info file approach saves us the hassle of keeping track of
     # individual info files.
