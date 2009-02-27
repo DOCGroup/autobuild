@@ -5,7 +5,7 @@
 set -e
 
 # Basic Configuration.  Additional configuration in the ~/.lcovrc file.
-LCOV_BIN_DIR=$HOME/lcov-1.4/bin
+LCOV_BIN_DIR=/usr/bin
 LCOV=$LCOV_BIN_DIR/lcov
 GENHTML=$LCOV_BIN_DIR/genhtml
 
@@ -16,9 +16,9 @@ TMP_INFO=tmp.info
 COVERAGE_INFO=coverage.info
 
 TMP_HTML_DIR=Coverage
-FINAL_HTML_DIR=/web/users/isisbuilds/Coverage
+FINAL_HTML_DIR=/proj/autobuilds/logs/codecoverage/LCOV
 
-COVERAGE_BUILD_DIR=/build/bczar/Code_Coverage/ACE_wrappers
+COVERAGE_BUILD_DIR=/isisbuilds/ACE_wrappers
 
 cd $COVERAGE_BUILD_DIR
 
@@ -29,11 +29,12 @@ for d in $covered_dirs; do
     $LCOV --directory $d --capture --output-file $TMP_INFO
     # We could feed genhtml a list of info files but this consolidated
     # info file approach saves us the hassle of keeping track of
-    # individual info files. 
+    # individual info files.
     cat $TMP_INFO >> $COVERAGE_INFO
 done
 
 # Generate code coverage results web pages.
 $GENHTML --output-directory=$TMP_HTML_DIR --frames $COVERAGE_INFO
 
-mv $TMP_HTML_DIR/* $FINAL_HTML_DIR
+mkdir -p $FINAL_HTML_DIR
+mv $TMP_HTML_DIR $FINAL_HTML_DIR
