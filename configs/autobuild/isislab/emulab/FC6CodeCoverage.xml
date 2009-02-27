@@ -34,7 +34,7 @@
 
     <command name="auto_run_tests"    options=" -a -o -t " />
 
-    <command name="shell"             options="$HOME/autobuild/configs/autobuild/isislab/emulab/FC6CodeCoverage_results.sh" />
+    <command name="shell"             options="/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/FC6CodeCoverage_results.sh" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
