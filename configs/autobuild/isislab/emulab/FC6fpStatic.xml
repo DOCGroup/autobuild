@@ -6,6 +6,8 @@
 
         <environment name="LOG_ROOT"  value="/proj/autobuilds/logs/fpStatic/" />
         <variable name="log_root" value="/proj/autobuilds/logs/fpStatic/" />
+        <variable name="root"     value="/isisbuilds/" />
+        <variable name="log_file" value="build.txt" />
 
         <variable name="configs"  value="Linux STATIC SSL Exceptions" />
     </configuration>
@@ -34,7 +36,6 @@
     <command name="make"              options="-j 4 -k" />
     <command name="make"              options="-j 4 -k -C TAO" />
 
-    <!-- Forces a sync to clean state -->
     <command name="shell"             options="/bin/sync" />
     <command name="shell"             options="sleep 10" />
     <command name="shell"             options="/bin/sync" />
