@@ -37,6 +37,6 @@
     <command name="make"              options="-j 5 -k" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=4 move prettify index" />
+    <command name="process_logs"      options="clean=2 move prettify index" />
     <command name="status"            options="off" />
 </autobuild>
