@@ -27,7 +27,7 @@ covered_dirs=`find . -name "GNUmakefile.*" | sed -e 's,\./,,' -e 's,/GNUmakefile
 
 # Generate code coverage results/information.
 for d in $covered_dirs; do
-    $LCOV --directory $d --capture --output-file $TMP_INFO --gcov-tool $GCOV
+    $LCOV --directory $d --capture --output-file $TMP_INFO
     # We could feed genhtml a list of info files but this consolidated
     # info file approach saves us the hassle of keeping track of
     # individual info files.
