@@ -23,19 +23,10 @@ COVERAGE_BUILD_DIR=/isisbuilds/ACE_wrappers
 
 cd $COVERAGE_BUILD_DIR
 
-covered_dirs=`find . -name "GNUmakefile.*" | sed -e 's,\./,,' -e 's,/GNUmakefile.*$,,' | uniq`
-
-# Generate code coverage results/information.
-for d in $covered_dirs; do
-    $LCOV --directory $d --capture --output-file $TMP_INFO
-    # We could feed genhtml a list of info files but this consolidated
-    # info file approach saves us the hassle of keeping track of
-    # individual info files.
-    cat $TMP_INFO >> $COVERAGE_INFO
-done
+$LCOV --directory $d --capture --output-file $COVERAGE_INFO
 
 # Generate code coverage results web pages.
-$GENHTML --output-directory=$TMP_HTML_DIR --frames $COVERAGE_INFO
+$GENHTML --output-directory=$TMP_HTML_DIR --frames $COVERAGE_INFO --show-details
 
 mkdir -p $FINAL_HTML_DIR
 mv $TMP_HTML_DIR $FINAL_HTML_DIR
