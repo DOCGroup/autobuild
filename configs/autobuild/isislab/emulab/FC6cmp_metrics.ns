@@ -10,6 +10,6 @@ tb-set-node-rpms $node /proj/autobuilds/rpms/gnuplot-4.0.0-12.i386.rpm /proj/aut
 
 tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-2_8-fc6-gcc411.tar.gz
 
-tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC6compiletime_metrics"
+tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC6cmp_metrics"
 
 $ns run
