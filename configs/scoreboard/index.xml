@@ -64,15 +64,15 @@ Statistics</a>
 </li>
 <li>
   Footprint statistics:
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAregular/metrics/x/">
+  <a href="http://www.dre.vanderbilt.edu/Stats/regular">
     Regular</a>,
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAecompact/metrics/x/">
+  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAecompact">
     CORBA e/compact</a>,
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicro/metrics/x/">
+  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAemicro">
     CORBA e/micro</a>
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicros/metrics/x/">
+  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAemicros">
     CORBA e/micro single threaded</a>
-  <a href="http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAminimum/metrics/x/">
+  <a href="http://www.dre.vanderbilt.edu/Stats/minimum">
     Minimum CORBA</a>
 </li>
 </ul>
