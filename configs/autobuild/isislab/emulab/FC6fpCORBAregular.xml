@@ -83,5 +83,5 @@
 
     <command name="process_logs"      options="clean=2 move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="scp -r * bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/Stats/regular" />
+    <command name="shell"             options="scp -r $LOG_ROOT/metrics/x/* bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/Stats/regular" />
 </autobuild>
