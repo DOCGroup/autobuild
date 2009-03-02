@@ -27,11 +27,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuautobuild" />
 
     <command name="make"              options="-k -j 4" />
 
-    <command name="auto_run_tests"    options=" -a" />
+    <command name="auto_run_tests"    options=" -a -o -t" />
 
     <command name="anonymous_shell"   options="lcov --directory /isisbuilds/ACE_wrappers --ignore-errors gcov,source --capture --output-file /isisbuilds/lcov.info" />
     <command name="anonymous_shell"   options="genhtml --output-directory=/isisbuilds/LCOV --frames --show-details /isisbuilds/lcov.info" />
