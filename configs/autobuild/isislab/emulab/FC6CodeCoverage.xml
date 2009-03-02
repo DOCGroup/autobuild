@@ -33,7 +33,7 @@
 
     <command name="auto_run_tests"    options=" -a" />
 
-    <command name="anonymous_shell"   options="lcov --directory /isisbuilds/ACE_wrappers --capture --output-file /isisbuilds/lcov.info" />
+    <command name="anonymous_shell"   options="lcov --directory /isisbuilds/ACE_wrappers --ignore-errors gcov,source --capture --output-file /isisbuilds/lcov.info" />
     <command name="anonymous_shell"   options="genhtml --output-directory=/isisbuilds/LCOV --frames --show-details /isisbuilds/lcov.info" />
 
     <command name="process_logs"      options="clean" />
