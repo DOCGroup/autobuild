@@ -3,7 +3,12 @@
     <configuration>
 
         <include name="fc6-env.xml" />
-        <environment name="VALGRIND_OPTS"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --show-reachable=yes" />
+        <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --suppressions="
+                                                  join=""
+                                                  variable="BUILD_CONFIG_PATH"
+                                                  join="dir"
+                                                  value="FC6valgrind.supp" />
+        <environment name="VALGRIND_OPTS"         variable="valgrind_opts" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
 
         <variable name="root"     value="/isisbuilds/" />

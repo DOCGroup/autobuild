@@ -1,3 +1,12 @@
+Wed Mar  4 13:06:07 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/isislab/emulab/FC6valgrind.xml:
+        * configs/autobuild/isislab/emulab/FC6valgrind.supp:
+
+          Added suppression rules for memory leaks in gcc and added
+          a file with those rules to VALGRIND_OPTS. Also removed
+          --show-reachable option.
+
 Wed Feb 25 00:10:19 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
@@ -6,7 +15,7 @@ Wed Feb 25 00:10:19 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/sparc/SunOS10_Studio9.xml:
 
           Added DANCE_ROOT.
-        
+
 Fri Feb 13 13:15:35 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/fc6-env.xml:

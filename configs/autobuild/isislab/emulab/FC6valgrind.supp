@@ -1,0 +1,15 @@
+# $Id$
+
+{
+   <Suppress all the leaks in cc1plus>
+   Memcheck:Leak
+   fun:*
+   obj:*cc1plus
+}
+
+{
+   <Suppress all the leaks in g++>
+   Memcheck:Leak
+   fun:*
+   obj:*g++*
+}
