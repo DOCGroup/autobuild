@@ -13,3 +13,10 @@
    fun:*
    obj:*g++*
 }
+
+{
+   <Suppress all the leaks in perl>
+   Memcheck:Leak
+   fun:*
+   obj:*perl
+}
