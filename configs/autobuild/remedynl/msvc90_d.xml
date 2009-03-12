@@ -1,14 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="C:\\ACE\\VC90\\ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="C:\\ACE\\VC90\\ACE_wrappers\\TAO"/>
-        <environment name="CIAO_ROOT"    value="C:\\ACE\\VC90\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"    value="C:\\ACE\\VC90\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
-        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
-        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90\\ACE_wrappers\\bin;C:\\ACE\\VC90\\ACE_wrappers\\lib;" type="prefix" />
-        <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
-        <environment name="PATH"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />
+        <environment name="ACE_ROOT"    value="C:\\ACE\\VC90\\ACE_wrappers" />
+        <environment name="TAO_ROOT"    value="C:\\ACE\\VC90\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"   value="C:\\ACE\\VC90\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"  value="C:\\ACE\\VC90\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
+        <environment name="ZLIB_ROOT"   value="C:\\Program Files (x86)\\GnuWin32"/>
+        <environment name="BZIP2_ROOT"  value="C:\\Program Files (x86)\\GnuWin32"/>
+        <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90\\ACE_wrappers\\bin;C:\\ACE\\VC90\\ACE_wrappers\\lib;" type="prefix" />
+        <environment name="XERCESCROOT" value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
+        <environment name="PATH"        value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />
 
         <variable name="configs"  value="Win32 VC90 Exceptions" />
         <variable name="root"     value="C:\\ACE\\VC90\\" />
@@ -29,8 +31,8 @@
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.vcproj' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.sln' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\nxerces3=1\nzlib=1\nbzip2=1\n'" />
 
     <command name="anonymous_shell"   options="c:\\cygwin\\bin\\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
     <command name="anonymous_shell"   options="c:\\cygwin\\bin\\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
