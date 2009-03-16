@@ -3,10 +3,12 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/gcc41/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/gcc41/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/gcc41/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"        value="/home/build/ACE/gcc41/ACE_wrappers/TAO/CIAO/DAnCE"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/gcc41/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"      value="/home/build/ACE/gcc41/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gcc41/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="SSL_ROOT"        value="/usr"/>
+        <environment name="ZLIB_ROOT"       value="/lib"/>
+        <environment name="BZIP2_ROOT"      value="/lib"/>
 
         <variable name="root"     value="/home/build/ACE/gcc41/" />
         <variable name="log_file" value="build.txt" />
@@ -22,7 +24,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nzlib=1\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nzlib=1\nbzip2=1\ncidl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=0\nzlib=1\nssl=1\nbzip2=1\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
