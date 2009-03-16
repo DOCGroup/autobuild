@@ -8,6 +8,12 @@ This is the CIAO virtual scoreboard for future platforms/development.
 
 <group>
 <name>Future Platforms</name>
+     <build>
+      <name>OpenSuSE_11_0_ICC101_32bit</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_icc101_32/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
    <build>
      <name>Debian_Etch_ARM_Cross_Host</name>
      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_arm_host/</url>
