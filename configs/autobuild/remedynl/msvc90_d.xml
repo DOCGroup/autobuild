@@ -6,8 +6,8 @@
         <environment name="CIAO_ROOT"   value="C:\\ACE\\VC90\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="DANCE_ROOT"  value="C:\\ACE\\VC90\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
-        <environment name="ZLIB_ROOT"   value="C:\\Program Files (x86)\\GnuWin32"/>
-        <environment name="BZIP2_ROOT"  value="C:\\Program Files (x86)\\GnuWin32"/>
+        <environment name="ZLIB_ROOT"   value="C:\\Program Files\\GnuWin32"/>
+        <environment name="BZIP2_ROOT"  value="C:\\Program Files\\GnuWin32"/>
         <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90\\ACE_wrappers\\bin;C:\\ACE\\VC90\\ACE_wrappers\\lib;" type="prefix" />
         <environment name="XERCESCROOT" value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
         <environment name="PATH"        value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />
