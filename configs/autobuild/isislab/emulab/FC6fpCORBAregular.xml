@@ -62,6 +62,7 @@
     <command name="make"              options="-k -C TAO/tests/Muxing       --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/orbsvcs/orbsvcs    --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/tools         --dry-run >> $LOG_ROOT/metrics/targets" />
+    <command name="make"              options="-k -C TAO/CIAO/ccm           --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/ciao          --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/ciaosvcs      --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/CIAO/DAnCE         --dry-run >> $LOG_ROOT/metrics/targets" />
