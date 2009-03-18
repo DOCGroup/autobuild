@@ -18,6 +18,16 @@ sub new
     return $self;
 }
 
+sub escape_options ($)
+{
+    my $options = shift;
+    my $new_options = $options;
+
+    ($new_options = $options) =~ s/([\"])/\\$1/g;
+
+    return $new_options;
+}
+
 ###############################################################################
 # Methods
 
@@ -68,7 +78,7 @@ sub Encode ($\%)
     foreach my $command (@{$data->{COMMANDS}}) {
         my $comments = "  <!-- $command->{FILE} line $command->{LINE_FROM} -->\n";
         my $out_xml = "  <command name=\"$command->{NAME}\"";
-        $out_xml .= " options=\"$command->{OPTIONS}\"" unless ($command->{OPTIONS} eq "");
+        $out_xml .= " options=\"" . escape_options ($command->{OPTIONS}) . "\"" unless ($command->{OPTIONS} eq "");
         $out_xml .= ($command->{SUBVARS} ? " " : " no") . "SubsVars" unless (!defined $command->{SUBVARS} || 2 == $command->{SUBVARS});
         $out_xml .= " directory=\"$command->{DIRECTORY}\"" unless ($command->{DIRECTORY} eq "");
         $out_xml .= " group=\"$command->{GROUP}\"" unless (!defined $command->{GROUP} || "" eq $command->{GROUP});
