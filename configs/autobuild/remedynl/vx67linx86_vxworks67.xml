@@ -1,13 +1,13 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-      <environment name="ACE_ROOT"        value="/nfs/galadriel/VxWorks64lin_x86/ACE_wrappers"/>
-      <environment name="TAO_ROOT"        value="/nfs/galadriel/VxWorks64lin_x86/ACE_wrappers/TAO"/>
-      <environment name="CIAO_ROOT"        value="/nfs/galadriel/VxWorks64lin_x86/ACE_wrappers/TAO/CIAO"/>
+      <environment name="ACE_ROOT"        value="/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers"/>
+      <environment name="TAO_ROOT"        value="/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers/TAO"/>
+      <environment name="CIAO_ROOT"        value="/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers/TAO/CIAO"/>
       <environment name="HOST_ROOT"        value="/home/build/ACE/VxWorks/host/ACE_wrappers"/>
-      <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks/host/ACE_wrappers/lib:/nfs/galadriel/VxWorks64lin_x86/ACE_wrappers/lib:/usr/local/lib" />
+      <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks/host/ACE_wrappers/lib:/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.73"/>
-        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers"/>
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks67lin_x86/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.132:80"/>
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
@@ -15,24 +15,24 @@
         <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
         <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
         <environment name="DOC_TEST_1_IPNAME" value="10.2.0.73" />
-        <environment name="DOC_TEST_1_ACE_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers" />
-        <environment name="DOC_TEST_1_TAO_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers/TAO" />
-        <environment name="DOC_TEST_1_FS_ROOT" value="/nfsace/galadriel/VxWorks64lin_x86/ACE_wrappers" />
+        <environment name="DOC_TEST_1_ACE_ROOT" value="/nfsace/galadriel/VxWorks67lin_x86/ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT" value="/nfsace/galadriel/VxWorks67lin_x86/ACE_wrappers/TAO" />
+        <environment name="DOC_TEST_1_FS_ROOT" value="/nfsace/galadriel/VxWorks67lin_x86/ACE_wrappers" />
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.73" />
-        <environment name="DOC_TEST_1_HOST_ROOT" value="/nfs/galadriel/VxWorks64lin_x86/ACE_wrappers" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.132:80" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="40" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="20" />
 
-        <variable name="root"     value="/nfs/galadriel/VxWorks64lin_x86/" />
+        <variable name="root"     value="/nfs/galadriel/VxWorks67lin_x86/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/nfs/galadriel/VxWorks64lin_x86/" />
-        <variable name="configs"  value="VxWorks_RTP Exceptions STATIC VxWorks64 NOXERCES" />
+        <variable name="log_root" value="/nfs/galadriel/VxWorks67lin_x86/" />
+        <variable name="configs"  value="VxWorks_RTP Exceptions STATIC VxWorks67 NOXERCES" />
 
     </configuration>
 
-    <command name="eval"              options="/home/build/WindRiver/wrenv.sh -p vxworks-6.4 -o print_env"/>
+    <command name="eval"              options="/home/build/WindRiver/wrenv.sh -p vxworks-6.7 -o print_env"/>
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32002" />
     <command name="log"               options="on" />
@@ -61,10 +61,8 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-a -o -t" />
-
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks64lin_x86" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VxWorks67lin_x86" />
 </autobuild>
