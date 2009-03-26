@@ -11,7 +11,7 @@
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks67lin_x86k/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.132:80"/>
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="35"/>
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="50"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
         <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
         <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
@@ -24,7 +24,7 @@
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.132:80" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="40" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
-        <environment name="DOC_TEST_1_REBOOT_TIME" value="20" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="50" />
 
 
         <variable name="root"     value="/nfs/galadriel/VxWorks67lin_x86k/" />
