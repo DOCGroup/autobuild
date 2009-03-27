@@ -6,13 +6,14 @@
       <environment name="CIAO_ROOT"        value="/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers/TAO/CIAO"/>
       <environment name="HOST_ROOT"        value="/home/build/ACE/VxWorks/host/ACE_wrappers"/>
       <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/VxWorks/host/ACE_wrappers/lib:/nfs/galadriel/VxWorks67lin_x86/ACE_wrappers/lib:/usr/local/lib" />
-        <environment name="ACE_RUN_VX_TGT_STARTUP_SCRIPT" value="/nfs/galadriel/VxWorks67lin_x86/start.txt"/>
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.73"/>
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="/nfsace/galadriel/VxWorks67lin_x86/ACE_wrappers"/>
         <environment name="ACE_TEST_VERBOSE" value="1"/>
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.132:80"/>
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="50"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.70"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="10001"/>
         <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
         <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
         <environment name="DOC_TEST_1_IPNAME" value="10.2.0.73" />
@@ -25,6 +26,8 @@
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="40" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="50" />
+        <environment name="DOC_TEST_1_TELNET_HOST" value="10.2.0.70" />
+        <environment name="DOC_TEST_1_TELNET_PORT" value="10001" />
 
         <variable name="root"     value="/nfs/galadriel/VxWorks67lin_x86/" />
         <variable name="log_file" value="build.txt" />
@@ -43,7 +46,6 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
-    <command name="file_manipulation" options="type=create file=start.txt output='C hostAdd(\x22enas\x22, \x2210.2.0.19\x22)\nC nfsIdSet(1000)\nC nfsMount(\x22enas\x22, \x22/share/develop/\x22, \x22/nfsace/\x22)\n'" />
 
     <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
 
