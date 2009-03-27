@@ -12,8 +12,8 @@
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.132:80"/>
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="50"/>
         <environment name="ACE_RUN_VX_TGT_REBOOT"      value="1"/>
-        <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.70"/>
-        <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="10001"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_HOST" value="10.2.0.73"/>
+        <environment name="ACE_RUN_VX_TGT_TELNET_PORT" value="23"/>
         <environment name="DOC_TEST_1" value="DOC_TEST_1"/>
         <environment name="DOC_TEST_1_OS" value="VXWORKS"/>
         <environment name="DOC_TEST_1_IPNAME" value="10.2.0.73" />
@@ -26,8 +26,8 @@
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="40" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="50" />
-        <environment name="DOC_TEST_1_TELNET_HOST" value="10.2.0.70" />
-        <environment name="DOC_TEST_1_TELNET_PORT" value="10001" />
+        <environment name="DOC_TEST_1_TELNET_HOST" value="10.2.0.73" />
+        <environment name="DOC_TEST_1_TELNET_PORT" value="23" />
 
         <variable name="root"     value="/nfs/galadriel/VxWorks67lin_x86/" />
         <variable name="log_file" value="build.txt" />
