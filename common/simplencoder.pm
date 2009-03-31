@@ -51,7 +51,7 @@ sub Encode ($\%)
         print $file_handle "  <configuration>\n";
 
         if (scalar (keys (%{$data->{VARS}})) != 0) {
-            foreach my $varkey (keys (%{$data->{VARS}})) {
+            foreach my $varkey (sort (keys (%{$data->{VARS}}))) {
                 print $file_handle "    <variable name=\"$varkey\" value=\"$data->{VARS}->{$varkey}\" />\n";
             }
         }

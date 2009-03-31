@@ -1,3 +1,9 @@
+Tue Mar 31 07:28:31 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * common/simplencoder.pm:
+
+          Added sorting of autobuild variables in a dump file.
+
 Wed Mar 18 09:43:09 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * common/simplencoder.pm:
