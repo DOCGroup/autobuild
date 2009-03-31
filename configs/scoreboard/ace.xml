@@ -194,8 +194,8 @@ all the OS/platform combinations on which ACE is tested everyday.
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks6.4_kernel_pthread_x86</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64lin_x86p/</url>
+     <name>VxWorks6.7_kernel_pthread_x86</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86p/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
@@ -206,26 +206,26 @@ all the OS/platform combinations on which ACE is tested everyday.
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks6.4_PPC603_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64r/</url>
+     <name>VxWorks6.7_PPC603_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67r/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks6.4_PPC603_IPv6_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64ripv6/</url>
+     <name>VxWorks6.7_PPC603_IPv6_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67ripv6/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks6.4_PENTIUM2_Shared_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64sh/</url>
+     <name>VxWorks6.7_PENTIUM2_Shared_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67sh/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>VxWorks6.4_PPC603_Kernel_Pthread_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks64rkp/</url>
+     <name>VxWorks6.7_PPC603_Kernel_Pthread_Release</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67rkp/</url>
      <build_sponsor>Remedy IT</build_sponsor>
      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
