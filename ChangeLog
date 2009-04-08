@@ -1,9 +1,15 @@
+Wed Apr  8 23:36:03 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/ciang/ciaocore_vc9.xml:
+
+          Revert to trunk. 
+        
 Sat Apr  4 03:04:01 UTC 2009  William R. Otte  <r._w@local>
 
         * configs/autobuild/merengue/merengue_vc71.xml:
 
           Added DAnCE_ROOT.
-        
+
 Tue Mar 31 07:28:31 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * common/simplencoder.pm:
