@@ -1,9 +1,20 @@
+Thu Apr  9 19:20:01 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc8.xml:
+        * configs/autobuild/equus/equus_vc8_release.xml:
+
+        * configs/autobuild/quake/quake_vc8_release.xml:
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Uses xerces3 instead of xerces2.
+
 Wed Apr  8 23:36:03 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/ciang/ciaocore_vc9.xml:
 
-          Revert to trunk. 
-        
+          Revert to trunk.
+
 Sat Apr  4 03:04:01 UTC 2009  William R. Otte  <r._w@local>
 
         * configs/autobuild/merengue/merengue_vc71.xml:

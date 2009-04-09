@@ -6,7 +6,7 @@
 		<environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\CIAO"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\MPC"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-2_7_0-win32-vc8"/>
+        <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-3_0_1-win32-vc8"/>
         <environment name="BOOST_ROOT"    value="C:\\Tools\\boost_1_35_0"/>
         <environment name="BOOST_VERSION" value="boost-1_35"/>
         <environment name="BOOST_CFG"     value="-vc8-mt" />

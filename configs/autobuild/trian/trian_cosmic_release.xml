@@ -7,8 +7,8 @@
         <environment name="DANCE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CIAO\\DAnCE"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\Program Files (x86)\Windows Installer XML v3"/>
-        <environment name="XERCESCROOT"   value="C:\\Libraries\\xerces-c-2_7_0-win32-vc8"/>
-        <environment name="XERCESC_VERSION"   value="2_7"/>
+        <environment name="XERCESCROOT"   value="C:\\Libraries\\xerces-c-3_0_1-win32-vc8"/>
+        <environment name="XERCESC_VERSION"   value="3_0"/>
         <environment name="BOOST_ROOT"    value="C:\\Libraries\\boost_1_35_0"/>
         <environment name="BOOST_VERSION" value="boost-1_35"/>
         <environment name="BOOST_CFG"     value="-vc8-mt" />
