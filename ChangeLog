@@ -1,11 +1,17 @@
+Sat Apr 11 18:17:55 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/scoreboard/cosmic.xml:
+
+          Changed name from VC71 to VC8.
+
 Fri Apr 10 12:09:58 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/merengue/merengue_driver.bat:
         * configs/autobuild/merengue/merengue_vc71.xml:
 
           Fixed subversion path, also make sure not to delete vcproj files
-          in .svn directories. 
-        
+          in .svn directories.
+
 Thu Apr  9 19:20:01 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc8.xml:
