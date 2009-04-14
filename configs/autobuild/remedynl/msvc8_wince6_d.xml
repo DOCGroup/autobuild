@@ -13,9 +13,9 @@
         <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
         <environment name="BOOST_CFG"               value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
-        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.142:80" />
+        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.145:80" />
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="30" />
-        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.143" />
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.146" />
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
         <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
         <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\\\\\10.2.0.144\\openshare" />
@@ -24,14 +24,14 @@
         <environment name="ACE_TEST_WINCE" value="1" />
         <environment name="DOC_TEST_1" value="DOC_TEST_1" />
         <environment name="DOC_TEST_1_OS" value="WinCE" />
-        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.143" />
+        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.146" />
         <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6\\ACE_wrappers" />
         <environment name="DOC_TEST_1_HOST_ROOT" value="Z:\\ACE\\wince6\\ACE_wrappers" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="60" />
-        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.143" />
-        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.142:80" />
+        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.146" />
+        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.145:80" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp \\\\\\\\10.2.0.144\\openshare" />
