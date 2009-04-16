@@ -1,3 +1,9 @@
+Thu Apr 16 16:01:30 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/scoreboard/releases.xml:
+        
+          Updated version number.
+
 Mon Apr 13 22:24:26 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/autobuild/42tools/x86-32bit-fedora-rawhide.xml:
@@ -8,7 +14,7 @@ Mon Apr 13 22:24:26 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
           interface is settled, we need a proper way to detect if to set
           the ACE_SCANDIR_CMP_USES_CONST_VOIDPTR macro in
           config-linux-common.h
-        
+
 Sat Apr 11 18:17:55 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/scoreboard/cosmic.xml:
