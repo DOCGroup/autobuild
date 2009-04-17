@@ -10,6 +10,8 @@
         <variable name="log_root" value="/export/home/build/ACE/SunCC" />
         <variable name="configs"  value="Exceptions" />
         <variable name="name"     value="Sun Forte" />
+        <variable name="make_program" value = "gmake" />
+
     </configuration>
 
     <command name="status"            options="on" />
