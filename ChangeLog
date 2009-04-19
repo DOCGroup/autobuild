@@ -1,3 +1,8 @@
+Sun Apr 19 20:26:43 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc8.xml:
+        * configs/autobuild/equus/equus_vc8_release.xml:
+
 Sun Apr 19 19:27:32 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl
