@@ -1,7 +1,14 @@
+Sun Apr 19 19:27:32 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * autobuild.pl
+        * command/print_purify_version.pm
+        * configs/autobuild/remedynl/minas_purify.xml:
+          Added print_purify_version
+
 Thu Apr 16 16:01:30 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/scoreboard/releases.xml:
-        
+
           Updated version number.
 
 Mon Apr 13 22:24:26 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>

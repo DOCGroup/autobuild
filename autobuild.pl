@@ -53,6 +53,7 @@ require command::print_env_vars;
 require command::print_autotools_version;
 require command::print_perl_version;
 require command::print_valgrind_version;
+require command::print_purify_version;
 require command::print_make_version;
 require command::print_openssl_version;
 require command::print_cidlc_version;
