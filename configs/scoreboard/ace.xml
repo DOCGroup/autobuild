@@ -254,6 +254,24 @@ all the OS/platform combinations on which ACE is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
+   <build>
+      <name>Solaris10_Sparc_Studio12_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/sol10suncc</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>Solaris10_Sparc_Studio12_Debug_Purify</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/sol10purify</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>Solaris10_Sparc_Studio12_Debug_Quantify</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/sol10quantify</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 </group>
 
 <group>
