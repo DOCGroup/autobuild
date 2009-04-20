@@ -31,7 +31,7 @@
     <command name="print_env_vars" />
     <command name="check_compiler" options="sun_cc" />
     <command name="print_ace_config" />
-    <command name="print_purify_version" />
+    <command name="print_quantify_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
