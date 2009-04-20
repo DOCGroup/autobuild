@@ -11,5 +11,6 @@ export LD_LIBRRAY_PATH
 
 svn up
 
-sh configs/autobuild/remedynl/minas_suncc.sh
 sh configs/autobuild/remedynl/minas_purify.sh
+sh configs/autobuild/remedynl/minas_suncc.sh
+sh configs/autobuild/remedynl/minas_quantify.sh
