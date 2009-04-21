@@ -3,7 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/cegccx86/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/cegccx86/ACE_wrappers/TAO"/>
-        <environment name="PATH"            value="/home/build/Danny/opt/x86mingw32ce/bin" type="prefix" />
+        <environment name="PATH"            value="/home/build/cegcc/bin/" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>
 
         <variable name="root"     value="/home/build/ACE/cegccx86/" />
