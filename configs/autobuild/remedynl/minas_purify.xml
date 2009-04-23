@@ -5,7 +5,7 @@
         <environment name="TAO_ROOT"        value="/export/home/build/ACE/purify/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/export/home/build/ACE/purify/ACE_wrappers/lib"/>
         <environment name="PATH" value="/opt/rational/releases/PurifyPlus.7.0.0.0-014/sun4_solaris2/bin" type="prefix" />
-        <environment name="ACE_RUNTEST_DELAY" value="10" />
+        <environment name="ACE_RUNTEST_DELAY" value="5" />
 
         <variable name="root"     value="/export/home/build/ACE/purify" />
         <variable name="log_file" value="build.txt" />
