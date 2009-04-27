@@ -14,7 +14,7 @@
         <!--environment name="BOOST_CFG"       value="-vc8-mt" /-->
         <!--environment name="BOOST_STATIC_LIB_PREFIX" value="lib" /-->
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
-        <environment name="ACE_RUN_VX_REBOOT_TIME" value="40" />
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="60" />
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.83" />
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\ace" />
         <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
@@ -33,7 +33,7 @@
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.83" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.147:80" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
-        <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="60" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use ace \\\\\\\\cegcc052\\ace_cegcc" />
         <environment name="DOC_TEST_2" value="DOC_TEST_2" />
         <environment name="DOC_TEST_2_OS" value="local" />
