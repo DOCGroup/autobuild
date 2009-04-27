@@ -1,0 +1,70 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"        value="/nfs/openshare/ACE/cegcc/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/nfs/openshare/ACE/cegcc/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/nfs/openshare/ACE/cegcc/ACE_wrappers/lib" />
+        <environment name="PATH"            value="/bin:/opt/x86mingw32/bin" type="prefix" />
+        <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="HOST_ROOT"       value="/home/build/ACE/cegcc/ACE_wrappers" />
+        <environment name="HOST_TAO_IDL"    value="/home/build/ACE/cegcc/ACE_wrappers\\bin\\tao_idl" />
+        <environment name="RSYNC_RSH"       value="/home/build/.ssh" />
+        <!--environment name="BOOST_ROOT"      value="C:\\Program Files\\boost\\boost_1_33_1"/-->
+        <!--environment name="BOOST_VERSION"   value="boost-1_33_1"/-->
+        <!--environment name="BOOST_CFG"       value="-vc8-mt" /-->
+        <!--environment name="BOOST_STATIC_LIB_PREFIX" value="lib" /-->
+        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
+        <environment name="ACE_RUN_VX_REBOOT_TIME" value="40" />
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.83" />
+        <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
+        <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
+        <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\\\\\10.2.0.144\\openshare" />
+        <environment name="ACE_RUN_ACE_LD_SEARCH_PATH" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers\\lib" />
+        <environment name="ACE_TEST_VERBOSE" value="1" />
+        <environment name="ACE_TEST_WINCE" value="1" />
+        <environment name="DOC_TEST_1" value="DOC_TEST_1" />
+        <environment name="DOC_TEST_1_OS" value="WinCE" />
+        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.83" />
+        <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers\\TAO" />
+        <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="/home/build/ACE/cegcc/ACE_wrappers" />
+        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="60" />
+        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.83" />
+        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.147:80" />
+        <environment name="DOC_TEST_1_REBOOT" value="1" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
+        <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp \\\\\\\\10.2.0.144\\openshare" />
+        <environment name="DOC_TEST_2" value="DOC_TEST_2" />
+        <environment name="DOC_TEST_2_OS" value="local" />
+        <environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/cegcc/ACE_wrappers" />
+
+        <variable name="configs"  value="WinCE CE gcc Exceptions WCHAR" />
+        <variable name="root"     value="/home/build/ACE/cegcc/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/build/ACE/cegcc/" />
+        <variable name="name"     value="WinXP VS.NET 2005" />
+        <variable name="svn_program"     value="/usr/bin/svn" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="log"               options="ON" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+
+    <command name="auto_run_tests"    options="-a -o" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="/usr/bin/rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/suse111gegcc052test" />
+</autobuild>
