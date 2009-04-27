@@ -1,9 +1,9 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/nfs/openshare/ACE/cegcc/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/nfs/openshare/ACE/cegcc/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/nfs/openshare/ACE/cegcc/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"        value="/mnt/openshare/cegcc/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/mnt/openshare/cegcc/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/mnt/openshare/cegcc/ACE_wrappers/lib" />
         <environment name="PATH"            value="/bin:/opt/x86mingw32/bin" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="HOST_ROOT"       value="/home/build/ACE/cegcc/ACE_wrappers" />
@@ -40,9 +40,9 @@
         <environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/cegcc/ACE_wrappers" />
 
         <variable name="configs"  value="WinCE CE gcc Exceptions WCHAR" />
-        <variable name="root"     value="/nfs/openshare/ACE/cegcc/" />
+        <variable name="root"     value="/mnt/openshare/cegcc/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/nfs/openshare/ACE/cegcc/" />
+        <variable name="log_root" value="/mnt/openshare/cegcc/" />
         <variable name="name"     value="WinXP VS.NET 2005" />
         <variable name="svn_program"     value="/usr/bin/svn" />
 
