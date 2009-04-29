@@ -25,7 +25,7 @@
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.129:80" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="40" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
-        <environment name="DOC_TEST_1_REBOOT_TIME" value="20" />
+        <environment name="DOC_TEST_1_REBOOT_TIME" value="40" />
         <environment name="DOC_TEST_1_TELNET_HOST" value="10.2.0.74" />
         <environment name="DOC_TEST_1_TELNET_PORT" value="23" />
 
