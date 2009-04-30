@@ -1,3 +1,9 @@
+Thu Apr 30 15:29:21 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/isislab/emulab/FC6valgrind.supp:
+
+          Corrected suppression rule for perl.
+
 Mon Apr 20 11:59:32 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:

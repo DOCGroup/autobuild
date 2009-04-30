@@ -18,5 +18,5 @@
    <Suppress all the leaks in perl>
    Memcheck:Leak
    fun:*
-   obj:*perl
+   obj:*perl*
 }
