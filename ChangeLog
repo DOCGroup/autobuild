@@ -1,3 +1,9 @@
+Wed May  6 17:43:52 UTC 2009  Adam Mitz  <mitza@ociweb.com>
+
+        * common/parse_compiler_output.pm:
+
+          Fix an HP aCC warning that was being parsed as an error.
+
 Thu Apr 30 15:29:21 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * configs/autobuild/isislab/emulab/FC6valgrind.supp:

@@ -56,6 +56,13 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/^Warning #\d+-D:/) {
+    # This is a warning from HP aCC even though it may
+    # contain the word "error" later on the line.
+    $self->Output_Warning ($s);
+    return;
+  }
+
   # The NMAKE output on Windows includes the complete command line; if there
   # are options with the word "warning" or "error" these get flagged as
   # errors. So if it's the command line, just output as normal.
@@ -287,6 +294,9 @@ sub handle_compiler_output_line($) {
     $self->Output_Normal ($s);
     return;
   }
+
+  #(AHM) special case for HP aCC:
+  # Warning #20013-D: Optimization aborted in function unknown. Attempting compilation unit again but dropping the optimization level to +O1. Please report this warning and error Signal 11 to HP. (20013)
 
   if (($s =~ m/\berror\b/i
        && $s !~ m/::error/i
