@@ -8,6 +8,7 @@
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers" />
         <environment name="HOST_TAO_IDL"    value="/home/build/ACE/host/ACE_wrappers/bin/tao_idl" />
+        <environment name="COMPARCH"        value="i386-mingw32ce-" />
         <environment name="RSYNC_RSH"       value="/home/build/.ssh" />
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="40" />
