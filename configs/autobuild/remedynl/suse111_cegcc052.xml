@@ -54,7 +54,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define UNICODE 1\n#define _UNICODE 1\n#define _WINDOWS 1\n#define CEVER\n#define ACE_USES_WCHAR\n#define WIN32 1\n#define ACE_HAS_WINCE\n#define _WINSOCKAPI_\n#define ACE_HAS_CEGCC\n#undef _WIN32_WCE\n#define _WIN32_WCE 0x600\n#include \x22ace/config-win32.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; \x5C\nACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Starting %s test at %D\n\x22), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Ending %s test t %D\n\x22), program));\n#define UNICODE 1\n#define _UNICODE 1\n#define _WINDOWS 1\n#define CEVER\n#define ACE_USES_WCHAR\n#define WIN32 1\n#define ACE_HAS_WINCE\n#define _WINSOCKAPI_\n#undef _WIN32_WCE\n#define _WIN32_WCE 0x600\n#include \x22ace/config-win32.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cegcc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nuses_wchar=1\n'" />
 
@@ -72,8 +72,6 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k" />
-
-    <command name="log"               options="PAUSE" />
 
     <command name="auto_run_tests"    options="-a -o" />
 
