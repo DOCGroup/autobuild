@@ -6,7 +6,6 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/cegcc/ACE_wrappers/lib" />
         <environment name="PATH"            value="/bin:/home/build/opt/x86mingw32ce/bin" type="prefix" />
         <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers" />
-        <environment name="HOST_TAO_IDL"    value="/home/build/ACE/host/ACE_wrappers/bin/tao_idl" />
         <environment name="COMPARCH"        value="i386-mingw32ce-" />
         <environment name="RSYNC_RSH"       value="/home/build/.ssh" />
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
@@ -24,7 +23,7 @@
         <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
-        <environment name="DOC_TEST_1_HOST_ROOT" value="/home/build/ACE/cegcc/ACE_wrappers" />
+        <environment name="DOC_TEST_1_HOST_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="60" />
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.83" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.147:80" />
@@ -54,7 +53,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TEST_DIR ACE_TEXT (\x22/network/temp/ACE/wince6/ACE_wrappers/tests/\x22)\n#define ACE_DEFAULT_TEST_DIR ACE_TEXT (\x22/network/temp/ACE/wince6/ACE_wrappers/tests/\x22)\n#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; \x5C\nACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Starting %s test at %D\x22), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Ending %s test t %D\x22), program));\n#define UNICODE 1\n#define _UNICODE 1\n#define _WINDOWS 1\n#define CEVER\n#define ACE_USES_WCHAR\n#define WIN32 1\n#define ACE_HAS_WINCE\n#define _WINSOCKAPI_\n#undef _WIN32_WCE\n#define _WIN32_WCE 0x600\n#include \x22ace/config-win32.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cegcc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nTAO_IDL_DEP := $(HOST_ROOT)/bin/tao_idl$(EXEEXT)\ninclude $(ACE_ROOT)/include/makeinclude/platform_cegcc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nuses_wchar=1\n'" />
 
     <command name="print_os_version" />
