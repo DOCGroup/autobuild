@@ -56,7 +56,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="auto_run_tests"    options="-a -o" />
+    <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
