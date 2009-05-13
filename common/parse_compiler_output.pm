@@ -431,7 +431,7 @@ sub handle_compiler_output_line($) {
 
   if ($s =~ m/ defined in discarded section /) {
     # Debian GCC compiler bug with templates/inline bits
-    $self->Output_Error ($s);
+    $self->Output_Warning ($s);
     return;
   }
 

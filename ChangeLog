@@ -1,7 +1,13 @@
+Wed May 13 13:57:11 UTC 2009  Adam Mitz  <mitza@ociweb.com>
+
+        * common/parse_compiler_output.pm:
+
+          Changed "defined in discarded section" from error to warning.
+
 Thu May  7 19:33:35 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/scoreboard/ciao.xml:
-        
+
           Updated the link for getting fedora_rawhide stats.
 
 Wed May  6 17:43:52 UTC 2009  Adam Mitz  <mitza@ociweb.com>
