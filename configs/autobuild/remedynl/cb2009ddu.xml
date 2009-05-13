@@ -7,6 +7,7 @@
         <environment name="PATH"         value="C:\\Program Files\\Codegear\\RAD Studio\\6.0\\Bin;C:\\Perl\\Bin;C:\\ACE\\CB2009ddu\\ACE_wrappers\\lib;C:\\ACE\\CB2009ddu\\ACE_wrappers\\bin;C:\\cygwin\\bin;" type="prefix" />
         <environment name="BOOST_ROOT"    value="C:\\Program Files\\CodeGear\\RAD Studio\\6.0" />
         <environment name="BOOST_VERSION" value="boost_1_35" />
+        <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0" />
 
         <environment name="BCBVER"   value="12" />
         <environment name="DEBUG"    value="1" />
