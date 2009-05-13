@@ -8,5 +8,5 @@ cd /home/build/cegcc/src/scripts/x86
 rm -rf *
 ../build-x86.sh
 #copy all dll to lib-dir
-cd /home/build/opt/i386-mingw32ce/
+cd /home/build/opt/ x86mingw32ce/
 find . -name *.dll -type f -print0 |xargs -0 -i cp {} /home/build/ACE/cegcc/ACE_wrappers/lib
