@@ -56,7 +56,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.sln' -exec rm '{}' ';'" />
     <command name="shell"             options="find ACE_wrappers -name '*.vcproj' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TEST_DIR ACE_TEXT (\x22/network/temp/marcel/ACE/tests\x22)\n#define ACE_DEFAULT_TEST_DIR ACE_TEXT (\x22/network/temp/marcel/ACE/tests\x22)\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_WINCE\n#undef _WIN32_WCE\n#define _WIN32_WCE 0x600\n#define _WINSOCKAPI_\n#define UNICODE 1\n#define _UNICODE 1\n#define WIN32 1\n#define _WINDOWS 1\n#define CEVER\n#define ACE_USES_WCHAR\n#define pentium\n#include \x22ace/config-win32.h\x22'\n" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TEST_DIR ACE_TEXT (\x22/network/temp/marcel/ACE/tests\x22)\n#define ACE_DEFAULT_TEST_DIR ACE_TEXT (\x22/network/temp/marcel/ACE/tests\x22)\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_WINCE\n#undef _WIN32_WCE\n#define _WIN32_WCE 0x600\n#define _WINSOCKAPI_\n#define UNICODE 1\n#define _UNICODE 1\n#define WIN32 1\n#define _WINDOWS 1\n#define CEVER\n#define ACE_USES_WCHAR\n#define pentium\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nuses_wchar=1\n'" />
 
     <command name="print_os_version" />
