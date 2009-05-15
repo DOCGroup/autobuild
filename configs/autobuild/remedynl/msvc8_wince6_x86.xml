@@ -66,7 +66,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -type vc8 -value_template platforms=\x22'eBox4300 (x86)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
+    <command name="generate_workspace" options="-exclude TAO -type vc8 -value_template platforms=\x22ICOP_eBox4300_60CS\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
     <command name="generate_workspace" options="-exclude TAO -type vxtest" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -k" />
@@ -80,7 +80,7 @@
     <command name="setenv"            options="ACE_ROOT=Z:\\ACE\\wince6_x86\\ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=Z:\\ACE\\wince6_x86\\ACE_wrappers\\TAO" />
 
-    <command name="auto_run_tests"    options="-a" /> <!-- -o -->
+    <!--command name="auto_run_tests"    options="-a" /--> <!-- -o -->
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
