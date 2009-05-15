@@ -10,9 +10,9 @@
         <environment name="INCLUDE" value="C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\SDK\\v2.0\\include;" type="prefix" />
         <environment name="LIB"     value="C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\LIB;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\lib;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\SDK\\v2.0\\lib;" type="prefix" />
         <environment name="LIBPATH" value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB" type="prefix"/>
-        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.142:80" />
+        <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="30" />
-        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.143" />
+        <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.83" />
         <environment name="ACE_RUN_VX_TGTSVR_ROOT" value="\\network\\temp\\ACE\\wince6_x86\\ACE_wrappers" />
         <environment name="ACE_RUN_VX_TGT_REBOOT" value="1" />
         <environment name="ACE_RUN_VX_STARTUP_COMMAND" value="net use temp \\\\\\\\10.2.0.144\\openshare" />
@@ -21,14 +21,14 @@
         <environment name="ACE_TEST_WINCE" value="1" />
         <environment name="DOC_TEST_1" value="DOC_TEST_1" />
         <environment name="DOC_TEST_1_OS" value="WinCE" />
-        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.143" />
+        <environment name="DOC_TEST_1_IPNAME" value="10.2.0.83" />
         <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\wince6_x86\\ACE_wrappers" />
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\wince6_x86\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\wince6_x86\\ACE_wrappers" />
         <environment name="DOC_TEST_1_HOST_ROOT" value="Z:\\ACE\\wince6_x86\\ACE_wrappers" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="60" />
-        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.143" />
-        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.142:80" />
+        <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.83" />
+        <environment name="DOC_TEST_1_IBOOT" value="10.2.0.147:80" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp \\\\\\\\10.2.0.144\\openshare" />
