@@ -66,7 +66,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -type vc8 -value_template platforms=\x22ICOP_eBox4300_60CS\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
+    <command name="generate_workspace" options="-exclude TAO -type vc8 -value_template platforms=\x'eBox4300_WINCE600_SDK (x86)'\x22 -value_template tao_idl=$(HOST_TAO_IDL)"/>
     <command name="generate_workspace" options="-exclude TAO -type vxtest" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -ALL -k" />
