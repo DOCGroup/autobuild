@@ -173,6 +173,12 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
+            <name>WinCE6_x86_VC8_host</name>
+            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8wince6x86host/</url>
+            <build_sponsor>Remedy IT</build_sponsor>
+            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+        </build>
+        <build>
             <name>WinCE6_VC8</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6/</url>
             <build_sponsor>Remedy IT</build_sponsor>
