@@ -2,6 +2,6 @@
 #
 # $Id$
 #
-cd /home/build/ACE/autobuild/
+cd /cygdrive/c/ACE/autobuild/
 svn up
-exec /usr/bin/perl /home/build/ACE/autobuild/autobuild.pl /home/build/ACE/autobuild/configs/autobuild/remedynl/cegcc_cygwin.xml
+exec /usr/bin/perl /cygdrive/c/ACE/autobuild/autobuild.pl /cygdrive/c/ACE/autobuild/configs/autobuild/remedynl/cegcc_cygwin.xml
