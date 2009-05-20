@@ -289,12 +289,6 @@ all the OS/platform combinations on which ACE is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-            <name>WinCE6_CEgcc_Cygwin</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/cygwincegcc/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP_Cygwin</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/Cygwin/</url>
             <build_sponsor>Remedy IT</build_sponsor>
