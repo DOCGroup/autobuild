@@ -31,9 +31,10 @@
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="80" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp /d & net use temp \\\\10.2.0.156\\ace_cegcc" />
+        <environment name="DOC_TEST_1_SYSTEM_LIBS" value="libgcc-0.55.2.dll;libstdc++-6.dll;libsupc++-6.dll;mingwm10.dll" />
         <environment name="DOC_TEST_2" value="DOC_TEST_2" />
         <environment name="DOC_TEST_2_OS" value="local" />
-        <environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/cegcc/ACE_wrappers" />
+        <environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
 
         <variable name="configs"  value="WinCE CE gcc Exceptions WCHAR" />
         <variable name="root"     value="/home/build/ACE/cegcc/" />
