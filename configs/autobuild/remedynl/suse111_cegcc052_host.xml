@@ -12,7 +12,7 @@
         <variable name="root"         value="/home/build/ACE/host/" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/home/build/ACE/host/" />
-        <variable name="name"         value="WinCE CE gcc" />
+        <variable name="name"         value="WinCE CE gcc host" />
         <variable name="svn_program"  value="/usr/bin/svn" />
 
     </configuration>
@@ -26,14 +26,9 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TEST_DIR ACE_TEXT (\x22/network/temp/ACE/wince6/ACE_wrappers/tests/\x22)\n#define ACE_DEFAULT_TEST_DIR ACE_TEXT (\x22/network/temp/ACE/wince6/ACE_wrappers/tests/\x22)\n#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; \x5C\nACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Starting %s test at %D\x22), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\x22(%P|%t) Ending %s test t %D\x22), program));\n#define UNICODE 1\n#define _UNICODE 1\n#define _WINDOWS 1\n#define CEVER\n#define ACE_USES_WCHAR\n#define WIN32 1\n#define ACE_HAS_WINCE\n#define _WINSOCKAPI_\n#undef _WIN32_WCE\n#define _WIN32_WCE 0x600\n#include \x22ace/config-win32.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='wince=1\nuses_wchar=1\ninline=0\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/gperf\nTAO_IDL_DEP := $(HOST_ROOT)/bin/tao_idl$(EXEEXT)\ninclude $(ACE_ROOT)/include/makeinclude/platform_cegcc.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='wince=1\nuses_wchar=1\n'" />
-
-    <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/-->
-    <!--command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ace_for_tao=1\n'" /-->
-    <!--command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ace_for_tao=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" /-->
-    <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\n}\n'" /-->
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ace_for_tao=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\n}\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -42,7 +37,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace"/>
+    <command name="generate_workspace" options="ACE_Host.mwc -type gnuace"/>
 
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k" />
