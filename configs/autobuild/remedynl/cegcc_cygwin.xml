@@ -3,9 +3,9 @@
     <configuration>
         <environment name="ACE_ROOT"          value="/home/build/ACE/cegcc/ACE_wrappers"/>
         <environment name="TAO_ROOT"          value="/home/build/ACE/cegcc/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH"   value="/home/build/ACE/cegcc/ACE_wrappers/lib:/home/build/ACE/host/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH"   value="/home/build/ACE/cegcc/ACE_wrappers/lib:/cygdrive/c/ACE/VC8/ACE_wrappers/lib" />
         <environment name="PATH"              value="/bin:/opt/x86mingw32ce/bin:/home/build/ACE/cegcc/ACE_wrappers/bin" type="prefix" />
-        <environment name="HOST_ROOT"         value="/home/build/ACE/host/ACE_wrappers" />
+        <environment name="HOST_ROOT"         value="/cygdrive/c/ACE/VC8/ACE_wrappers" />
         <environment name="COMPARCH"          value="i386-mingw32ce-" />
         <environment name="DLLS_FOR_TESTING"  value="mingwm10.dll,libsupc*-6.dll,libstdc*-6.dll,libgcc-0.55.2.dll" />
         <environment name="RSYNC_RSH"         value="ssh" />
