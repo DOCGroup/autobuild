@@ -8,7 +8,6 @@
         <environment name="HOST_ROOT"        value="/home/build/ACE/host/ACE_wrappers" />
        <environment name="COMPARCH"         value="i386-mingw32ce-" />
         <environment name="RSYNC_RSH"        value="ssh" />
-        <environment name="DLLS_FOR_TESTING" value="mingwm10.dll,libsupc*-6.dll,libstdc*-6.dll,libgcc-0.55.2.dll" />
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="40" />
         <environment name="ACE_RUN_VX_TGTHOST" value="10.2.0.83" />
