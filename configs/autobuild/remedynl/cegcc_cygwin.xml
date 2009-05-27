@@ -67,10 +67,18 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
+
     <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
     <command name="generate_workspace" options="-exclude TAO/CIAO -type vxtest -value_template libname_prefix=\x22lib\x22" />
 
     <command name="make"              options="-k realclean find=*akefile" />
+
+    <command name="setenv"            options="TAO_ROOT=/cygwin/home/build/ACE/cegcc/ACE_wrappers/TAO" />
+
+    <command name="make"              options="idl_stubs -k" />
+
+    <command name="setenv"            options="TAO_ROOT=/c/cygwin/home/build/ACE/cegcc/ACE_wrappers/TAO" />
+
     <command name="make"              options="-k" />
 
     <!--command name="auto_run_tests"    options="-a -o" /-->
