@@ -1,0 +1,36 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:/cygwin/home/build/ACE/cegcc/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:/cygwin/home/build/ACE/cegcc/ACE_wrappers/TAO"/>
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="Path"         value="c:\\msys\\1.0\\bin;C:\\MingW\\bin;C:\\ACE\\release\\ACE_wrappers\\bin;C:\\ACE\\release\\ACE_wrappers\\lib;" type="prefix" />
+        <environment name="RSYNC_RSH"         value="ssh" />
+        <environment name="PATH"              value="c:\\Program Files (x86)\\Microsoft Visual Studio 8\\Common7\\IDE;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\Vc\\vcpackages;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\Vc\\bin;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\vcpackages;" type="prefix" />
+        <environment name="PATH"              value="/cygdrive/c/cygwin/bin:/cygdrive/c/cygwin/opt/x86mingw32ce/bin:/cygdrive/c/cygwin/home/build/ACE/cegcc/ACE_wrappers/bin:/cygdrive/c/ACE/VC8/ACE_wrappers/lib" type="prefix" />
+        <environment name="INCLUDE"           value="c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\INCLUDE;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\SDK\\v2.0\\include;" type="prefix" />
+        <environment name="LIB"               value="c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\LIB;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\lib;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\SDK\\v2.0\\lib;LIBPATH=c:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;c:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB" type="prefix" />
+        <environment name="HOST_ROOT"         value="C:/ACE/VC8/ACE_wrappers" />
+
+        <variable name="configs"  value="Win32" />
+        <variable name="root"     value="C:\\cygwin\\home\\build\\ACE\\cegcc\\ACE_wrappers" />
+        <variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\\cygwin\\home\\build\\ACE\\cegcc\\ACE_wrappers" />
+        <variable name="name"     value="release" />
+    </configuration>
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32011" />
+    <command name="log"               options="ON" />
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+    <command name="make"              options="-k idlstubs COMPARCH=" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/cegccidlstubs" />
+</autobuild>
+
