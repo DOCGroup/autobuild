@@ -1,1 +1,1 @@
-echo "/c/ACE/autobuild/configs/autobuild/remedynl/cegcc_mingw_idlstubs.bat" | C:\msys\1.0\bin\sh --login -i
+perl \ace\autobuild\autobuild.pl cegcc_mingw_idlstubs.xml
