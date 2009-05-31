@@ -8,6 +8,7 @@ cd /home/build/cegcc/
 svn up
 cd /home/build/cegcc/src/scripts/x86
 rm -rf *
+export gcc_src=gcc
 ../build-x86.sh
 # rename libcoredll6.a to libcoredll.a to avoid
 # linker errors
