@@ -12,3 +12,4 @@ export LD_LIBRRAY_PATH
 svn up
 
 sh configs/autobuild/remedynl/anduin_suncc.sh
+sh configs/autobuild/remedynl/anduin_sunccfast.sh
