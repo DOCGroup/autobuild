@@ -8,7 +8,7 @@ cd /home/build/cegcc/
 svn up
 cd /home/build/cegcc/src/scripts/x86
 rm -rf *
-../build-x86.sh
+../build-x86.sh > /home/build/cegcc.txt
 # rename libcoredll6.a to libcoredll.a to avoid
 # linker errors
 cd /opt/x86mingw32ce/i386-mingw32ce/lib/
