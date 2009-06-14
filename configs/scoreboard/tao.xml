@@ -308,13 +308,13 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
    <build>
       <name>Solaris10_Studio12_x86_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10_x86</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/solx86</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
       <name>Solaris10_Studio12_x86_Debug_Fast</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10_x86fast</url>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/solx86fast</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
