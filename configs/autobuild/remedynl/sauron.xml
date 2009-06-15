@@ -56,6 +56,8 @@
     <command name="status"            options="off" />
     <command name="shell"             options="bash -c \x22rm -f /dnfs1/openvms/v82ia64/*.html /dnfs1/openvms/v82ia64/*.txt\x22" />
     <command name="shell"             options="bash -c \x22cp *.html *.txt /dnfs1/openvms/v82ia64/\x22" />
+    <command name="shell"             options="rsh vmshost \x22umount /nfs\x22" />
+    <command name="shell"             options="rsh vmshost \x22mount enas.remedy.nl/share/develop /nfs\x22" />
     <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/v82ia64 && ./copy_buildresult_vms.sh\x22" />
     <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/autobuild && svn up\x22" />
 </autobuild>
