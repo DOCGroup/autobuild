@@ -50,6 +50,13 @@ rm -rf ACE_wrappers_*
 #
 if [ -d ACE_wrappers ]; then mv ACE_wrappers ACE_wrappers_`date +%y%m%d`; fi
 #
+if /bin/ping -c1 rad4 >/dev/null 2>&1
+then
+  echo [`/bin/date`]: Finished part2 - Halting RAD4 Before rebooting RAD1...
+  /usr/local/bin/ssh rad4 reboot -h
+  /bin/sleep 10
+fi
+#
 echo [`/bin/date`]: Finished part2 - Rebooting...
 /bin/sync
 /bin/sleep 1
