@@ -6,5 +6,5 @@
 cd $HOME/ACE/autobuild
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/faragorn_dds4ccm.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fangorn_dds4ccm.xml
 
