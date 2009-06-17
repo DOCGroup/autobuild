@@ -11,7 +11,7 @@
         <variable name="make_program"        value="gmake" />
         <variable name="root"                value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard" />
         <variable name="log_file"            value="build.txt" />
-        <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/lynxos_ppc/native_tao_idl_build" />
+        <variable name="log_root"            value="/home/tao/rhel4/doc_scoreboard/scoreboard/lynxos_ppc/native_tao_idl_build" />
         <variable name="project_root"        value="/home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers" />
     </configuration>
 
@@ -52,6 +52,7 @@
     <command name="process_logs"      options="clean=40" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean=40 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command shell "rsync -avzLe ssh --delete /home/tao/rhel4/doc_scoreboard/scoreboard/lynxos_ppc/ tao@tao:/home/tao/htdocs/doc-scoreboard/lynxos_ppc" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
 </autobuild>

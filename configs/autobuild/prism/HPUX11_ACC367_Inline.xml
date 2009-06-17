@@ -12,7 +12,7 @@
         <variable name="make_program"        value="gmake" />
         <variable name="root"                value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline" />
         <variable name="log_file"            value="build.txt" />
-        <variable name="log_root"            value="/var/tao1/tao/htdocs/doc-scoreboard/hp1/aCC367/inline" />
+        <variable name="log_root"            value="/usr/users/tao/hp1/doc_scoreboard/scoreboard/aCC367/inline" />
         <variable name="configs"             value="HPUX aCC SSL QUICK FIXED_BUGS_ONLY" />
     </configuration>
 
@@ -52,7 +52,7 @@
     <command name="auto_run_tests"    options=" -a -o -t" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean=40 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
-
+    <command shell "rsync -avzLe ssh --delete /usr/users/tao/hp1/doc_scoreboard/scoreboard/ tao@tao:/home/tao/htdocs/doc-scoreboard/hp1" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
 </autobuild>

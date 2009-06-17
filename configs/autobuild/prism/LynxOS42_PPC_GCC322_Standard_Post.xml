@@ -4,10 +4,11 @@
     <configuration>
         <variable name="root"         value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard" />
         <variable name="log_file"     value="LynxOS42_test_results_run_on_rad1.txt" />
-        <variable name="log_root"     value="/var/tao1/tao/htdocs/doc-scoreboard/lynxos_ppc/tests_on_lynxos" />
+        <variable name="log_root"     value="/home/tao/rad1/doc_scoreboard/scoreboard/lynxos_ppc/tests_on_lynxos" />
         <variable name="project_root" value="/home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/ACE_wrappers" />
     </configuration>
 
     <command name="process_logs"      options="clean=40" />
     <command name="process_logs"      options="clean=40 move prettify index" />
+    <command shell "rsync -avzLe ssh --delete /home/tao/rad1/doc_scoreboard/scoreboard/lynxos_ppc/ tao@tao:/home/tao/htdocs/doc-scoreboard/lynxos_ppc" />
 </autobuild>
