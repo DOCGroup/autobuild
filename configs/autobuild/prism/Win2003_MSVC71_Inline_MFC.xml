@@ -10,7 +10,7 @@
 
         <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc71\\inlineMFC" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="T:\\doc-scoreboard\\win2003\\VC71_InlineMFC" />
+        <variable name="log_root"     value="C:\\doc-scoreboard\\win2003\\VC71_InlineMFC" />
         <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Inline MFC" />
         <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS SSL MFC QUICK FIXED_BUGS_ONLY" />
     </configuration>
@@ -46,6 +46,7 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=40 index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command shell "rsync -avzLe ssh --delete /cygdrive/c/doc-scoreboard/win2003/ tao@tao:/home/tao/htdocs/doc-scoreboard/win2003" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
 </autobuild>

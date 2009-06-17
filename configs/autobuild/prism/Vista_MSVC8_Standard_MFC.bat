@@ -12,7 +12,6 @@ if not exist %THIS_BUILD%.disable goto doBuild
   pause
   if exist %THIS_BUILD%.disable goto :eof
 :doBuild
-call "C:\Overnight_Builds\autobuild-xml\MachineConfig\Windows\Map_Network_Drives.bat"
 rem  ==============================================================================
 rem  The following fixes a problem with chaining builds on after one another where
 rem  the PATH continues to grow with all previous ACE_ROOT etc. being listed in it.

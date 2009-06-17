@@ -1,3 +1,20 @@
+Wed Jun 17 13:22:00 UTC 2009  Simon Massey  <sma@prismtech.com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.bat:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+
+          Use rsync to scoreboard results instead of nfs mounts (Win Boxes).
+
+        * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.bat:
+        * configs/autobuild/prism/WinXP_MSVC8_Standard_UnicodeMFC.xml:
+
+          Old builds removed.
+
 Wed Jun 17 10:40:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:

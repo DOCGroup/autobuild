@@ -10,7 +10,7 @@
 
         <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="T:\\doc-scoreboard\\vista\\VC8_StandardUniMFC" />
+        <variable name="log_root"     value="C:\\doc-scoreboard\\vista\\VC8_StandardUniMFC" />
         <variable name="name"         value="Windows Vista SP1 VC8 SP1 (VS.Net2005) Standard Unicode MFC (Non-Inline, Non-Debug)" />
         <variable name="configs"      value="WIN32 Win32 MFC unicode WCHAR VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK FIXED_BUGS_ONLY" />
     </configuration>
@@ -46,6 +46,7 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=40 index" />
-    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
+    <command shell "rsync -avzLe ssh --delete /cygdrive/c/doc-scoreboard/vista/ tao@tao:/home/tao/htdocs/doc-scoreboard/vista" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
 </autobuild>
