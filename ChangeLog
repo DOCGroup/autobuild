@@ -1,3 +1,8 @@
+Wed Jun 24 20:24:08 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * configs/scoreboard/releases.xml:
+          update for new release information. 
+
 Wed Jun 17 13:22:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.bat:
