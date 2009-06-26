@@ -2,8 +2,7 @@ Fri Jun 26 13:59:09 UTC 2009  Adam Mitz  <mitza@ociweb.com>
 
         * command/make.pm:
 
-          Directories with that match the find= pattern are not candidate
-          makefiles.
+          Directories that match the find= pattern are not candidate makefiles.
 
         * common/prettify.pm:
         * common/prettify.rb:
