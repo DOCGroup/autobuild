@@ -145,6 +145,7 @@ sub Run ($)
         my $makefile;
         $options =~ s/'/"/g;
         foreach $makefile (@makes) {
+            next unless -f $makefile; # skip directories
             $command = "$make_program -f $makefile $options";
             print "Running: $command\n";
             $ret = system ($command);

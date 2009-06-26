@@ -1112,7 +1112,8 @@ sub Test_Handler ($)
           || $s =~ m/fatal/
           || $s =~ m/FAIL:/
           || $s =~ m/FAILED/
-          || ($s =~ m/EXCEPTION/ && $s !~ m/NO_EXCEPTIONS/)
+          || ($s =~ m/EXCEPTION/ && $s !~ m/NO_EXCEPTIONS/
+              && $s !~ m/DACE_HAS_EXCEPTIONS/)
           || $s =~ m/ACE_ASSERT/
           || $s =~ m/Assertion/
           || $s =~ m/Source and destination overlap/

@@ -13,7 +13,9 @@ def parse_test_line (line)
 
     if (line =~ /Error/ || line =~ /ERROR/ ||
         line =~ /fatal/ || line =~ /FAILED/ || line =~ /FAIL:/ ||
-        (line =~ /EXCEPTION/ && line !~ /NO_EXCEPTIONS/) || line =~ /ACE_ASSERT/ ||
+        (line =~ /EXCEPTION/ && line !~ /NO_EXCEPTIONS/
+        && line !~ /DACE_HAS_EXCEPTIONS/) ||
+         line =~ /ACE_ASSERT/ ||
         line =~ /Assertion/ || line =~ /Mismatched free/ ||
         line =~ /are definitely lost in loss record/ ||
         line =~ /error while loading shared libraries/ ||

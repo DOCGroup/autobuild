@@ -1,7 +1,19 @@
+Fri Jun 26 13:59:09 UTC 2009  Adam Mitz  <mitza@ociweb.com>
+
+        * command/make.pm:
+
+          Directories with that match the find= pattern are not candidate
+          makefiles.
+
+        * common/prettify.pm:
+        * common/prettify.rb:
+
+          Test output containing -DACE_HAS_EXCEPTIONS is not an error.
+
 Wed Jun 24 20:24:08 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/scoreboard/releases.xml:
-          update for new release information. 
+          update for new release information.
 
 Wed Jun 17 13:22:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
