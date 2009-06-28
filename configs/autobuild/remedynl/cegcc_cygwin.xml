@@ -61,13 +61,12 @@
 
     <command name="make"              options="-k" />
 
-    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\rsync /cygdrive/d/ACE/cegcc/ /cygdrive/z/ACE/cegcc --recursive --progress --exclude .svn --exclude .obj --exclude GNUmakefile.* --exclude *.depend" />
+    <command name="anonymous_shell"   options="rsync /cygdrive/d/ACE/cegcc/ /cygdrive/z/ACE/cegcc --recursive --progress --exclude .svn --exclude .obj --exclude GNUmakefile.* --exclude *.depend" />
 
     <command name="setenv"            options="ACE_ROOT=/cygdrive/z/ACE/cegcc" />
     <command name="setenv"            options="TAO_ROOT=/cygdrive/z/ACE/cegcc/TAO" />
 
     <command name="auto_run_tests"    options="-a" />
-
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
