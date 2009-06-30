@@ -1,3 +1,11 @@
+Tue Jun 30 15:14:02 UTC 2009  William R. Otte <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/fc8-env.xml:
+        * configs/autobuild/isislab/emulab/FC8_NDDS.ns:
+        * configs/autobuild/isislab/emulab/FC8_NDDS.xml:
+        
+          NDDS-enabled build.
+
 Fri Jun 26 13:59:09 UTC 2009  Adam Mitz  <mitza@ociweb.com>
 
         * command/make.pm:
