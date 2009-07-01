@@ -37,9 +37,9 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuace" />
+    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-C TAO/CIAO -k" />
+    <command name="make"              options="-j 3 -C TAO/CIAO -k" />
 
     <command name="auto_run_tests"    options=" -C" />
 
