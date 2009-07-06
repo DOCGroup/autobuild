@@ -1,9 +1,24 @@
+Mon Jul  6 11:43:13 UTC 2009  Olli Savia  <ops@iki.fi>
+
+        * configs/autobuild/olli:
+        * configs/autobuild/olli/centos-53.xml:
+        * configs/autobuild/olli/freebsd-72.xml:
+        * configs/autobuild/olli/lynxos-40-xbuild.xml:
+        * configs/autobuild/olli/lynxos-42-xbuild.xml:
+        * configs/autobuild/olli/lynxos-42.xml:
+        * configs/autobuild/olli/lynxos-50-xbuild.xml:
+        * configs/autobuild/olli/openbsd-45.xml:
+        * configs/autobuild/olli/ubuntu-904.xml:
+
+          Added configs for my private builds. Hopefully I will be able
+          to export these to scoreboard soon.
+
 Tue Jun 30 15:14:02 UTC 2009  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/fc8-env.xml:
         * configs/autobuild/isislab/emulab/FC8_NDDS.ns:
         * configs/autobuild/isislab/emulab/FC8_NDDS.xml:
-        
+
           NDDS-enabled build.
 
 Fri Jun 26 13:59:09 UTC 2009  Adam Mitz  <mitza@ociweb.com>

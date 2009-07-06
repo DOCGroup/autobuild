@@ -1,0 +1,39 @@
+<!-- $Id$ -->
+<autobuild>
+  <configuration>
+    <variable name="root"     value="/home/osa/ACE-build/CentOS-5.3" />
+    <variable name="log_file" value="build.txt" />
+    <variable name="log_root" value="/mnt/ACE+TAO+CIAO/buildlogs/CentOS-5.3" />
+    <variable name="configs"  value="Linux Exceptions ZLIB SSL" />
+  </configuration>
+  
+  <command name="status"            options="on" />
+  <command name="process_listener"  options="localhost:32003" />
+  <command name="log"               options="on" />
+  <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+  <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n'"/>
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='athena3d=1\nfl=0\nfox=0\ngl=1\nmotif=1\nqt4=0\nqt=1\nrpc=0\nssl=1\ntk=1\nwxWindows=0\nx11=1\nxt=1\nzlib=1\n\nboost=1\nbzip2=1\nexceptions=1\nlzo1=0\nlzo2=0\nstl=1\n\nace_flreactor=0\nace_qtreactor=1\nace_tkreactor=1\nace_xtreactor=1\n\ntao_flresource=0\ntao_qtresource=1\ntao_tkresource=1\ntao_xtresource=1\n\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\n\nQTDIR=/usr/lib/qt-3.3\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\nLDFLAGS+=-Wl,-R$(ACE_ROOT)/lib,-R.\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qt4=1\nfox=1\nmotif=1\nathena=1\nzlib=1\nwxWindows=1\nrpc=1\nbzip2=1\nlzo1=1\nlzo2=1\nboost=1\nstl=1\n'" />
+  
+  <command name="print_os_version" />
+  <command name="print_env_vars" />
+  <command name="check_compiler" options="gcc" />
+  <command name="print_ace_config" />
+  <command name="print_openssl_version"/>
+  <command name="print_make_version" />
+  <command name="print_perl_version" />
+
+  <command name="generate_workspace" options="-exclude TAO           -type gnuace" />
+  <command name="generate_workspace" options="dirs=TAO -exclude CIAO -type gnuace" />
+  
+  <command name="make"               options="-k" />
+  <command name="make"               options="-k -C TAO" />
+  <!-- <command name="auto_run_tests"     options="-a -o -t" /> -->
+  <command name="log"                options="off" />
+  <command name="shell"              options="cat /mnt/ACE+TAO+CIAO/svn.log build.txt > new-build.txt; mv new-build.txt build.txt" />
+  <command name="process_logs"       options="clean=20 move prettify index" />
+
+  <command name="file_manipulation"  options="type=delete file=.disable" />
+  <command name="status"             options="off" />
+</autobuild>
