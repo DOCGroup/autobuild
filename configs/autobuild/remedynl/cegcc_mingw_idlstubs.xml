@@ -1,8 +1,8 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="Z:/ACE/cegcc/ACE_wrappers" />
-        <environment name="TAO_ROOT"     value="Z:/ACE/cegcc/ACE_wrappers/TAO"/>
+        <environment name="ACE_ROOT"     value="D:/ACE/cegcc/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="D:/ACE/cegcc/ACE_wrappers/TAO"/>
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="Path"         value="c:\\msys\\1.0\\bin;C:\\MingW\\bin;C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;" type="prefix" />
         <environment name="RSYNC_RSH"    value="ssh" />
@@ -13,9 +13,9 @@
         <environment name="HOST_ROOT"    value="C:/ACE/VC8/ACE_wrappers" />
 
         <variable name="configs"  value="Win32" />
-        <variable name="root"     value="Z:\\ACE\\cegcc\\" />
+        <variable name="root"     value="D:\\ACE\\cegcc\\" />
         <variable name="log_file" value="log.txt" />
-        <variable name="log_root" value="Z:\\ACE\\cegcc\\" />
+        <variable name="log_root" value="D:\\ACE\\cegcc\\" />
         <variable name="name"     value="release" />
         <variable name="svn_program"  value="c:\\cygwin\\bin\\svn" />
     </configuration>
