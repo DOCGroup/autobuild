@@ -131,6 +131,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/almost always misused/) {
+    # Ignore some annoying warnings on OpenBSD
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/\-W:c:,\-Xmismatch\-warning\=2/) {
     # catch VxWorks DIAB warning option before it is caught as Warning
     $self->Output_Normal ($s);
