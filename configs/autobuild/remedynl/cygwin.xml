@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"        value="/cygdrive/c/ACE/GCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/cygdrive/c/ACE/GCC/ACE_wrappers/TAO"/>
         <environment name="LD_LIBRARY_PATH" value="/cygdrive/c/ACE/GCC/ACE_wrappers/lib" />
-        <environment name="PATH"            value="/cygdrive/c/cygwin/bin" type="prefix" />
+        <environment name="PATH"            value="/cygdrive/c/cygwin/bin:/cygdrive/c/ACE/GCC/ACE_wrappers/lib" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/cygdrive/c/ACE/GCC/" />
@@ -27,8 +27,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-cygwin32.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cidl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
