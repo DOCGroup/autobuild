@@ -35,7 +35,7 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="generate_workspace" options="-type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO/connectors -type gnuautobuild" />
 
     <command name="make"              options="-j 5 -k" />
 
