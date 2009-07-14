@@ -10,6 +10,6 @@ tb-set-node-rpms $node  /proj/autobuilds/rpms/zziplib-0.13.49-4.fc8.i386.rpm /pr
 
 tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-3.0.1-gcc-fc8.tgz / /proj/autobuilds/tarfiles/ndds.4.4d_lic.tar.gz
 
-tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC8ostream"
+tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC8xmlconfig"
 
 $ns run

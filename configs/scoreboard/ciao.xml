@@ -59,7 +59,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
     <build>
-       <name>FC6_XML_Config</name>
+       <name>FC8_XML_Config</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/XMLConfig</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
