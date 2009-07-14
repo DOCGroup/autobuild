@@ -3,7 +3,7 @@
 /users/bczar/runbuild.sh FC6fpStatic
 /users/bczar/runbuild.sh FC6cmpmetrics
 /users/bczar/runbuild.sh FC6xmlconfig
-/users/bczar/runbuild.sh FC6ostream
+/users/bczar/runbuild.sh FC8ostream
 /users/bczar/runbuild.sh FC6acefortao
 /users/bczar/runbuild.sh FC6autoconf
 /users/bczar/runbuild.sh FC8ciaocore

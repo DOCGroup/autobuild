@@ -29,7 +29,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
   <build>
-    <name>FC6_ostream</name>
+    <name>FC8_ostream</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gen_ostream/</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
