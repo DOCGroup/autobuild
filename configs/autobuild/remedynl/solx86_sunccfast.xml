@@ -22,7 +22,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.10.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\nfast=1\nsctp=lksctp\ninline=0\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\nfast=1\ninline=0\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ec_typed_events=1\n'" />
 
     <command name="print_os_version" />
@@ -38,7 +38,7 @@
 
     <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
 
-    <command name="make"              options="-k -j 5" />
+    <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options=" -a -o -t" />
 

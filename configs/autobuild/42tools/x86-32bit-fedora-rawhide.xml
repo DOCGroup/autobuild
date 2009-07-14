@@ -23,8 +23,6 @@ ls
 
   <command name="shell"             options="rm -rf ACE_wrappers" />
   <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
-  <command name="anonymous_shell"   options="curl http://www.dre.vanderbilt.edu/~isisbuilds/CIDLC/gnu-linux/cidlc -o ACE_wrappers/TAO/CIAO/bin/cidlc" />
-  <command name="anonymous_shell"   options="chmod 755 ACE_wrappers/TAO/CIAO/bin/cidlc" />
 
   <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
   <command name="shell"             options="rm -f ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features" />

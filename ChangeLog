@@ -1,3 +1,9 @@
+Tue Jul 14 11:12:33 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * *.xml:
+          removed copy step of cidlc, removed cidl from default.features
+          and platform_macros.GNU
+
 Tue Jul 14 03:05:33 UTC 2009  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/scoreboard/releases.xml:

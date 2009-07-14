@@ -44,7 +44,7 @@
     <!-- Uses TAO/TAO.mwc -->
     <command name="generate_workspace" options="dirs=TAO -exclude TAO_ACE.mwc,CIAO -type gnuautobuild" />
     <!--  Uses TAO/CIAO -->
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc,CIDLC,CCF -type gnuautobuild" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_TAO.mwc -type gnuautobuild" />
 
     <!-- Clean workspace -->
     <command name="make"              options="-k realclean find=*akefile" />
@@ -56,7 +56,6 @@
     <command name="make"              options="-k -j 4 -C TAO" />
 
     <!-- Build CIAO -->
-    <command name="anonymous_shell"   options="/bin/cp /web/users/isisbuilds/CIDLC/Darwin/PowerPC/cidlc ACE_wrappers/TAO/CIAO/bin" />
     <command name="make"              options="-k -j 4 -C TAO/CIAO" />
 
     <command name="auto_run_tests"    options="-a -o -t -C" />

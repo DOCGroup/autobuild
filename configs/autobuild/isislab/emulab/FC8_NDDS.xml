@@ -28,7 +28,7 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type gnuautobuild" />
-    <command name="make"              options="-k -j 4" />
+    <command name="make"              options="-k -j 6" />
     <command name="auto_run_tests"    options="-C" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />

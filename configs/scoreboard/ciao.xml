@@ -149,12 +149,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-       <name>FC6_CIDLC</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/cidlc</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
          <name>FC6_NoInterceptors_Core</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/NoInt</url>
          <build_sponsor>ISIS</build_sponsor>
@@ -254,18 +248,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
    <build>
-      <name>Solaris10-CIDLC</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_CIDLC</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris10-x86-CIDLC</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/solaris_x86_CIDLC</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
       <name>Solaris10-GCC_4_0_2</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_GCC</url>
       <build_sponsor>ISIS</build_sponsor>
@@ -276,12 +258,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
 
 <group>
   <name>MacOS</name>
-  <build>
-    <name>Leopard_GCC4_CIDLC</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_CIDLC</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
   <build>
     <name>Leopard_GCC4_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
@@ -402,12 +378,6 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build>
             <name>WinXP_VC9_CIAO_NoInline_Debug</name>
             <url>http://www.dre.vanderbilt.edu/~isisbuilds/trian_noinline</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC71_CIDLC</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Win32_CIDLC</url>
             <build_sponsor>ISIS</build_sponsor>
            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
         </build>

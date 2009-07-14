@@ -29,15 +29,12 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_IP_MULTICAST\n#include \x22ace/config-vxworks.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='rtp=0\npthread=1\nstatic_libs=1\ndebug=1\ninline=0\noptimize=0\nTOOL = gnu\nCPU = PENTIUM4\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cidl=1\n'" />
-
-    <command name="anonymous_shell"   options="scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/gnu-linux/cidlc ACE_wrappers/TAO/CIAO/bin" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler" options="ccpentium" />
     <command name="print_ace_config" />
-    <command name="print_cidlc_version" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
 

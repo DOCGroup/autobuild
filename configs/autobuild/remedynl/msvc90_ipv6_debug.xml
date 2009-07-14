@@ -33,14 +33,10 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define _WIN32_WINNT 0x0501\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='rwho=0\nqos=0\nipv6=1\nxerces3=1\n'" />
 
-    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\scp -C johnnyw@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/CIDLC/Win32/cidlc.exe ACE_wrappers/TAO/CIAO/bin" />
-    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\chmod 777 ACE_wrappers/TAO/CIAO/bin/cidlc.exe" />
-
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler" options="msvc" />
     <command name="print_ace_config" />
-    <command name="print_cidlc_version" />
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-type vc9 -recurse -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc"/>
