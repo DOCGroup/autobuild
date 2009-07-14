@@ -6,7 +6,7 @@
 /users/bczar/runbuild.sh FC6ostream
 /users/bczar/runbuild.sh FC6acefortao
 /users/bczar/runbuild.sh FC6autoconf
-/users/bczar/runbuild.sh FC6ciaocore
+/users/bczar/runbuild.sh FC8ciaocore
 /users/bczar/runbuild.sh FC6CORBAecompact
 /users/bczar/runbuild.sh FC6CORBAemicro
 /users/bczar/runbuild.sh FC6Core

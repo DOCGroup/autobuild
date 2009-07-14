@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <include name="fc6-env.xml" />
+        <include name="fc8-env.xml" />
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/ciao_core/" />

@@ -41,7 +41,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>FC6_CIAO_Core</name>
+    <name>FC8_CIAO_Core</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
@@ -167,7 +167,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
          <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-        <name>FC6_Core</name>
+        <name>FC8_Core</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Core/</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>

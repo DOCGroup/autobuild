@@ -1,1 +1,1 @@
-/users/bczar/runbuild.sh FC6Core
+/users/bczar/runbuild.sh FC8Core
