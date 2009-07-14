@@ -323,6 +323,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
   <name>VxWorks</name>
    <build>
+     <name>VxWorks6.6_Solaris_PPC604</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks66sol_ppc604_isengard/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
      <name>VxWorks6.7_x86</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86/</url>
      <build_sponsor>Remedy IT</build_sponsor>
