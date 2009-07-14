@@ -3,6 +3,8 @@
 
         <environment name="ACE_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86" />
         <environment name="TAO_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO" />
+        <environment name="CIAO_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO/CIAO" />
+        <environment name="DANCE_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO/CIAO/DAnCE" />
         <environment name="LD_LIBRARY_PATH" value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/lib:/opt/data/acebuild/ACE_wrappers/build/linux-x86/ace:" />
 
         <variable name="project_root" value="/opt/data/acebuild/ACE_wrappers/build/linux-x86" />
@@ -19,7 +21,7 @@
     <command name="file_manipulation" options="type=create file=.disable-x86 output='RUNNING'" />
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="create_ace_build"  />
 
@@ -28,7 +30,7 @@
 
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/include/makeinclude/platform_macros.GNU output='optimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/include/makeinclude/platform_macros.GNU output='sctp=0\ndebug=0\noptimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features output='ipv6=1\nssl=1\nqos=0\nrwho=0\nsctp=0\n'" />
 
@@ -37,17 +39,12 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO,build.mwc -type gnuace" />
-    <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
+    <command name="generate_workspace" options="-type gnuace" />
 
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -C TAO realclean" />
-    <command name="make"              options="-k -j 2 debug=0 " />
-    <command name="make"              options="-k -C TAO -j 2 debug=0 sctp=0" />
+    <command name="make"              options="-k -j 2" />
 
-    <command name="auto_run_tests"    options="-a -o -t" />
+    <command name="auto_run_tests"    options="-a -o -t -C" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean move prettify index" />
