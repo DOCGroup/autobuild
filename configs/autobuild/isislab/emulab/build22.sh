@@ -12,7 +12,6 @@
 /users/bczar/runbuild.sh FC8Core
 /users/bczar/runbuild.sh FC8ORBCore
 /users/bczar/runbuild.sh FC8DynamicHash
-/users/bczar/runbuild.sh footprint_corba_e_compact
 /users/bczar/runbuild.sh FC6Full
 /users/bczar/runbuild.sh FC6FullReactors
 /users/bczar/runbuild.sh FC8gcc4
