@@ -3,6 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/export/home/build/ACE/SunCCfast/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/export/home/build/ACE/SunCCfast/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/export/home/build/ACE/SunCCfast/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"        value="/export/home/build/ACE/SunCCfast/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/export/home/build/ACE/SunCCfast/ACE_wrappers/lib"/>
 
         <variable name="root"     value="/export/home/build/ACE/SunCCfast" />
@@ -19,7 +21,7 @@
 
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-sunos5.10.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\nfast=1\ninline=0\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
@@ -36,11 +38,11 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="-type gnuace" />
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="auto_run_tests"    options=" -a -o -t -C" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
