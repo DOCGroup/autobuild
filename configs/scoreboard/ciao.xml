@@ -259,6 +259,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
   <name>MacOS</name>
   <build>
+    <name>Leopard_ICC110</name>
+    <url>http://www.dre.vanderbilt.edu/~remedynl/macosx_icc101</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>Leopard_GCC4_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
     <build_sponsor>ISIS</build_sponsor>
