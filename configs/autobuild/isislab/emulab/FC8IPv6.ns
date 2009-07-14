@@ -1,0 +1,15 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+set node [$ns node]
+tb-set-node-os  $node FEDORA8-STD
+tb-set-hardware $node pc8832
+
+# utils
+tb-set-node-rpms $node  /proj/autobuilds/rpms/zziplib-0.13.49-4.fc8.i386.rpm /proj/autobuilds/rpms/fc8/jdk-6u14-linux-i586.rpm /proj/autobuilds/rpms/fc8/sun-javadb-client-10.4.2-1.1.i386.rpm /proj/autobuilds/rpms/fc8/sun-javadb-common-10.4.2-1.1.i386.rpm /proj/autobuilds/rpms/fc8/sun-javadb-core-10.4.2-1.1.i386.rpm /proj/autobuilds/rpms/fc8/sun-javadb-demo-10.4.2-1.1.i386.rpm /proj/autobuilds/rpms/fc8/sun-javadb-docs-10.4.2-1.1.i386.rpm /proj/autobuilds/rpms/fc8/sun-javadb-javadoc-10.4.2-1.1.i386.rpm
+
+tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-3.0.1-gcc-fc8.tgz / /proj/autobuilds/tarfiles/ndds.4.4d_lic.tar.gz
+
+tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC8IPv6"
+
+$ns run

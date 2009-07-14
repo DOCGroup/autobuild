@@ -1,24 +1,24 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <include name="fc6-env.xml" />
+        <include name="fc8-env.xml" />
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/proj/autobuilds/logs/linux_gcc4_ssl/" />
+        <variable name="log_root" value="/proj/autobuilds/logs/versioned_namespace/" />
         <variable name="configs"  value="Linux SSL" />
-
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32003" />
+
+    <command name="process_listener"  options="localhost:32002" />
 
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USE_RCSID 1\n#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nboost=1\nzlib=1\nprobe=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\nxerces2=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nboost=1\nzlib=1\n\nxerces2=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nboost=1\nzlib=1\n\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\nxerces2=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='jaws=0\nssl=1\nboost=1\nzlib=1\n\nversioned_namespace=1\n\nxerces2=1\n'" />
 
     <command name="print_os_version" />
     <command name="check_compiler" options="gcc" />
@@ -28,7 +28,7 @@
 
     <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-j 6 -k" />
+    <command name="make"              options="-k" />
 
     <command name="auto_run_tests" options=" -a -o -t -C" />
 

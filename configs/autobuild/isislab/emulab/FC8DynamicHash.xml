@@ -1,24 +1,25 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <include name="fc6-env.xml" />
+        <include name="fc8-env.xml" />
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/proj/autobuilds/logs/gcc4/" />
-        <variable name="configs"  value="Linux SSL" />
-
+        <variable name="log_root" value="/proj/autobuilds/logs/Dynamic_Hash" />
+        <variable name="configs"  value="Linux Exceptions" />
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32003" />
+
+    <command name="process_listener"  options="localhost:32001" />
 
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="rem_sems"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\nTAO_IDLFLAGS += -H dynamic_hash\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\n\nxerces2=1\n'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USE_RCSID 1\n#include \x22ace/config-linux.h\x22\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nprobe=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\nxerces2=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n\nxerces2=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nxerces2=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -31,7 +32,7 @@
 
     <command name="make"              options="-j 6 -k" />
 
-    <command name="auto_run_tests" options=" -a -o -t -C" />
+    <command name="auto_run_tests"    options="-a -o -t -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />

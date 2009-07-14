@@ -23,7 +23,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
      </build>
     <build>
-       <name>FC6_WChar</name>
+       <name>FC8_WChar</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/wchar</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
@@ -35,7 +35,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>FC6_Full</name>
+    <name>FC8_Full</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
@@ -47,7 +47,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
   </build>
      <build>
-        <name>FC6_ACE_FOR_TAO</name>
+        <name>FC8_ACE_FOR_TAO</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ace_for_tao</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
@@ -113,7 +113,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
    <build>
-   <name>FC6_SingleThreaded</name>
+   <name>FC8_SingleThreaded</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/SingleThreaded/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
@@ -125,7 +125,7 @@ all the OS/platform combinations on which CIAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
    </build>
      <build>
-        <name>FC6_Versioned_Namespace</name>
+        <name>FC8_Versioned_Namespace</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/versioned_namespace</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
@@ -186,31 +186,31 @@ all the OS/platform combinations on which CIAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-        <name>FC6_GCC4</name>
+        <name>FC8_GCC4</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gcc4</url>
        <build_sponsor>ISIS</build_sponsor>
        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-      <name>FC6_Static</name>
+      <name>FC8_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Static</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>FC6_IPV6</name>
+      <name>FC8_IPV6</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/IPV6</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-      <name>FC6_Dynamic_Hash_Op_Lookup</name>
+      <name>FC8_Dynamic_Hash_Op_Lookup</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Dynamic_Hash</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
      </build>
      <build>
-        <name>FC6_Implicit_Templates</name>
+        <name>FC8_Implicit_Templates</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ImplicitTemplates</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
