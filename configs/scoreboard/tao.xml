@@ -65,18 +65,6 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
      <build>
-      <name>FC9_x86_IPv6</name>
-      <url>http://www.dre.vanderbilt.edu/~qualcomm/FC9_x86_IPv6</url>
-      <build_sponsor>Qualcomm</build_sponsor>
-      <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
-     </build>
-     <build>
-      <name>FC9_x86_SCTP</name>
-      <url>http://www.dre.vanderbilt.edu/~qualcomm/FC9_x86_SCTP</url>
-      <build_sponsor>Qualcomm</build_sponsor>
-      <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
-     </build>
-     <build>
        <name>FC6_autoconf</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/autoconf</url>
        <build_sponsor>ISIS</build_sponsor>

@@ -10,6 +10,18 @@ all the OS/platform combinations on which CIAO is tested everyday.
 
 <group>
 <name>Linux</name>
+     <build>
+      <name>FC9_x86_IPv6</name>
+      <url>http://www.dre.vanderbilt.edu/~qualcomm/FC9_x86_IPv6</url>
+      <build_sponsor>Qualcomm</build_sponsor>
+      <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
+     </build>
+     <build>
+      <name>FC9_x86_SCTP</name>
+      <url>http://www.dre.vanderbilt.edu/~qualcomm/FC9_x86_SCTP</url>
+      <build_sponsor>Qualcomm</build_sponsor>
+      <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
+     </build>
     <build>
        <name>FC6_WChar</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/wchar</url>
