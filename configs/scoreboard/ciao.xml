@@ -230,6 +230,12 @@ all the OS/platform combinations on which CIAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
+      <name>Solaris10_Studio12_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
       <name>Solaris10_Sparc_Studio12_Debug_Purify</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/sol10purify</url>
       <build_sponsor>Remedy IT</build_sponsor>
