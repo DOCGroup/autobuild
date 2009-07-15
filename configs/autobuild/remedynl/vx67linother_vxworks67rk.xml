@@ -16,7 +16,7 @@
     <command name="eval"              options="/home/build/WindRiver/wrenv.sh -p vxworks-6.7 -o print_env"/>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32003" />
+    <command name="process_listener"  options="localhost:32002" />
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
