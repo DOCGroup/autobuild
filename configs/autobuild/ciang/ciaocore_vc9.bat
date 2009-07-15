@@ -5,4 +5,4 @@ cd C:\ACE\autobuild
 svn up
 
 
-perl autobuild.pl configs\autobuild\ciang\ciaocore_vc8.xml
+perl autobuild.pl configs\autobuild\ciang\ciaocore_vc9.xml
