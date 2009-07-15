@@ -28,13 +28,9 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
-    <command name="generate_workspace" options="dirs=TAO -exclude CIAO,*.mwc -type gnuautobuild" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-type gnuautobuild" />
 
-    <command name="make"              options="-j 2 -k" />
-    <command name="make"              options="-j 2 -k -C TAO" />
-    <command name="make"              options="-j 2 -k -C TAO/CIAO" />
+    <command name="make"              options="-j 5 -k" />
 
     <command name="auto_run_tests"    options="-a -o -t -C" />
     <command name="process_logs"      options="clean" />
