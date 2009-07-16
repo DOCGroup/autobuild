@@ -1,3 +1,16 @@
+Thu Jul 16 13:30:00 UTC 2009  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+
+          Add checkout and build of CIAO/DAnCE.
+
 Tue Jul 14 11:12:33 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * *.xml:

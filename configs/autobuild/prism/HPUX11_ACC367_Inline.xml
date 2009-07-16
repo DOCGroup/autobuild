@@ -5,6 +5,8 @@
         <environment name="MPC_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline/ACE_wrappers/MPC" />
         <environment name="ACE_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline/ACE_wrappers" />
         <environment name="TAO_ROOT"         value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"       value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="SHLIB_PATH"       value="/usr/users/tao/hp1/doc_scoreboard/aCC367/inline/ACE_wrappers/lib:/usr/local/aCC3.67/opt/aCC/lib:/usr/local/ssl/lib" />
         <environment name="PATH"             value="/usr/local/aCC3.67/opt/aCC/bin:/usr/bin:/opt/ansic/bin:/usr/ccs/bin:/usr/contrib/bin:/usr/local/bin" />
         <environment name="SSL_ROOT"         value="/usr/local/ssl" />
@@ -41,7 +43,7 @@
     <!-- Uses ACE.mwc -->
     <command name="generate_workspace" options="-exclude TAO,build.mwc,prism -type gnuace" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,oldCIAO -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc -type gnuace" />
 
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k -C TAO realclean find=*akefile" />
