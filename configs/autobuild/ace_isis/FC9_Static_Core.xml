@@ -46,6 +46,7 @@
 
     <command name="make"              options="-j 2 -k -C ace" />
     <command name="make"              options="-j 2 -k -C apps/gperf/src" />
+    <command name="make"              options="-j 2 -k -C apps/JAWS/server" />
     <command name="make"              options="-j 2 -k -C ACEXML" />
     <command name="make"              options="-j 2 -k -C tests" />
     <command name="make"              options="-j 2 -k -C protocols" />

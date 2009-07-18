@@ -1,3 +1,9 @@
+Sat Jul 18 20:31:16 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
+
+        * configs/autobuild/ace_isis/FC9_Static_Core.xml:
+         
+          added JAWS to the build sequence. 
+
 Sat Jul 18 15:15:38 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/scoreboard/tao.xml:
