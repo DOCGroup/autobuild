@@ -1,469 +1,524 @@
 <!-- $Id$ -->
 <scoreboard>
-<preamble>
-<center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
-<hr/>
-This is the CIAO virtual scoreboard for the beta or release. It shows
-all the OS/platform combinations on which CIAO is tested everyday.
-<hr/>
-</preamble>
+  <preamble>
+    <center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
+    <hr/>
+    This is the CIAO virtual scoreboard for the beta or release. It shows
+    all the OS/platform combinations on which CIAO is tested everyday.
+    <hr/>
+  </preamble>
 
-<group>
-<name>Linux</name>
-     <build>
+  <group>
+    <name>Linux</name>
+    <build>
+      <name>RHEL4-NoInline</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/rhel4/gcc344/standard</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+    </build>
+    <build>
       <name>FC9_x86_IPv6</name>
       <url>http://www.dre.vanderbilt.edu/~qualcomm/FC9_x86_IPv6</url>
       <build_sponsor>Qualcomm</build_sponsor>
       <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>FC9_x86_SCTP</name>
       <url>http://www.dre.vanderbilt.edu/~qualcomm/FC9_x86_SCTP</url>
       <build_sponsor>Qualcomm</build_sponsor>
       <build_sponsor_url>http://www.qualcomm.com/</build_sponsor_url>
-     </build>
-    <build>
-       <name>FC8_WChar</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/wchar</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-  <build>
-    <name>FC8_ostream</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gen_ostream/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>FC8_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>FC8_CIAO_Core</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-  </build>
-     <build>
-        <name>FC8_ACE_FOR_TAO</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ace_for_tao</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-  <build>
-    <name>FC8_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/FC8Full/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
     <build>
-       <name>FC8_XML_Config</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/XMLConfig</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+      <name>FC8_WChar</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/wchar</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-     <build>
+    <build>
+      <name>FC8_ostream</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gen_ostream/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_CIAO_Core</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_ACE_FOR_TAO</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ace_for_tao</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/FC8Full/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_XML_Config</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/XMLConfig</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
       <name>Fedora_Rawhide_i386</name>
       <url>http://www.42tools.com/downloads/tao_autobuild_logs/fedora_rawhide</url>
       <build_sponsor>42tools</build_sponsor>
       <build_sponsor_url>http://www.42tools.com</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>RHEL53_ICC101_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC101/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>RHEL53_ICC110_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC110/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>OpenSuSE_11_0_ICC110_64bit</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_icc110_64/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>OpenSuSE_11_0_ICC101_64bit</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_icc101_64/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-       <name>RHEL53_GCC_IA64</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_GCC</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
+      <name>RHEL53_GCC_IA64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_GCC</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>Debian_Etch_Static_GCC-4.1.2</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
+    </build>
     <build>
-        <name>FC9_Static_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-   <build>
-   <name>FC8_SingleThreaded</name>
+      <name>FC9_Static_Core</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_SingleThreaded</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/SingleThreaded/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
-   <name>FC6_Full_Reactor</name>
+    </build>
+    <build>
+      <name>FC6_Full_Reactor</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full_Reactors/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-     <build>
-        <name>FC8_Versioned_Namespace</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/versioned_namespace</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
-       <name>FC6_Valgrind</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/valgrind</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
+      <name>FC8_Versioned_Namespace</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/versioned_namespace</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC6_Valgrind</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/valgrind</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
       <name>Ubuntu_710_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>Ubuntu_710_IPV6</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_IPV6</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>Ubuntu_710_Dynamic_Hash_Op_Lookup</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Dynamic_Hash</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-        <name>Ubuntu_710_Implicit_Templates</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
+    </build>
+    <build>
+      <name>Ubuntu_710_Implicit_Templates</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-         <name>FC6_NoInterceptors_Core</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/NoInt</url>
-         <build_sponsor>ISIS</build_sponsor>
-         <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC8_Core</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Core/</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
+    </build>
+    <build>
+      <name>FC6_NoInterceptors_Core</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/NoInt</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_Core</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Core/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
 
-     <build>
+    <build>
       <name>OpenSuSE_11_0_ACE_FOR_TAO</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC9_NoInline</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC8_GCC4</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gcc4</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
+      <name>FC9_NoInline</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC8_GCC4</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/gcc4</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
       <name>FC8_Static</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Static</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>FC8_IPV6</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/IPV6</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
+    </build>
+    <build>
       <name>FC8_Dynamic_Hash_Op_Lookup</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Dynamic_Hash</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC8_Implicit_Templates</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ImplicitTemplates</url>
+    </build>
+    <build>
+      <name>FC8_Implicit_Templates</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ImplicitTemplates</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
-</group>
+    </build>
+  </group>
 
-<group>
-<name>Stats Builds</name>
-   <build>
+  <group>
+    <name>Stats Builds</name>
+    <build>
       <name>FC6_FP_Stats</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/fpStatic/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>FC6_CP_Stats</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/CP_Metrics/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>FC6_Stats_Regular</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAregular</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-</group>
+    </build>
+  </group>
 
-<group>
-   <name>Solaris</name>
-   <build>
+  <group>
+    <name>Solaris</name>
+    <build>
       <name>Solaris10_Studio12_x86_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/solx86</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10_Studio12_x86_Debug_Fast</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/solx86fast</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10_Studio12_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10_Sparc_Studio12_Debug_Purify</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/sol10purify</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10_Sparc_Studio12_Debug_Purify_Fast</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/sol10purifyfast</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10-x86-Studio10</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10-x86-GCC_3_4_3</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_GCC34</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10-Studio10</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-   <build>
+    </build>
+    <build>
       <name>Solaris10-GCC_4_0_2</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_GCC</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-</group>
+    </build>
+  </group>
 
 
-<group>
-  <name>MacOS</name>
-  <build>
-    <name>Leopard_ICC110</name>
-    <url>http://www.dre.vanderbilt.edu/~remedynl/macosx_icc101</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>Leopard_GCC4_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>Leopard_GCC3.3_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cosmic_gcc3.3</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-</group>
+  <group>
+    <name>MacOS</name>
+    <build>
+      <name>Leopard_ICC110</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/macosx_icc101</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>Leopard_GCC4_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>Leopard_GCC3.3_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/cosmic_gcc3.3</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+  </group>
 
-<group>
-  <name>VxWorks</name>
-   <build>
-     <name>VxWorks6.6_Solaris_PPC604</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks66sol_ppc604_isengard/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_x86</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_x86_host</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86_host/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-</group>
+  <group>
+    <name>VxWorks</name>
+    <build>
+      <name>VxWorks6.6_Solaris_PPC604</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks66sol_ppc604_isengard/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>VxWorks6.7_x86</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>VxWorks6.7_x86_host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86_host/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+  </group>
 
 
-<group>
-   <name>Windows</name>
-  <build>
-    <name>Win2003_VC8_Full</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-        <build>
-            <name>WinXP_CodeGear_2009_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dd/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC9_WarningLevel4</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9_w4</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_CodeGear_2009_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dr/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-          <name>WinXP_VC71_IPV6</name>
-          <url>http://www.dre.vanderbilt.edu/~remedynl/VC71_IPV6/</url>
-          <build_sponsor>Remedy IT</build_sponsor>
-          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-          <name>WinXP_VC9_IPV6</name>
-          <url>http://www.dre.vanderbilt.edu/~remedynl/VC90_IPV6/</url>
-          <build_sponsor>Remedy IT</build_sponsor>
-          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC9_ACE_FOR_TAO</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_ace_for_tao</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC71_NET_Dynamic_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC71_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC71dr</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC9_Dynamic_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC90dr</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-           <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC8_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC8r</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC9</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/VC90</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC9_CIAOCore_Static_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9s</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC9_CIAOCore_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_core</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC9_FULL</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_VC9_full</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinXP_VC9_CIAO_NoInline_Debug</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/trian_noinline</url>
-            <build_sponsor>ISIS</build_sponsor>
-           <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC71_Full</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/merengue_full</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC8_Full</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-        </build>
-        <build>
-            <name>Win2003_VC9_Versioned_Namespace</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_versioned_namespace</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-        </build>
-        <build>
-          <name>WinXP_VC8_Debug</name>
-          <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
-          <build_sponsor>Remedy IT</build_sponsor>
-          <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-      </group>
+  <group>
+    <name>Windows</name>
+    <build>
+      <name>Vista_VC8_Standard_MFC_Unicode</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardUniMFC</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+    </build>
+    <build>
+      <name>Vista_VC8_Standard_MFC</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardMFC</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC71_Debug_MFC</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_DebugMFC</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+      <orange>30</orange>
+      <red>60</red>
+    </build>
+
+    <build>
+      <name>Win2003_VC71_Inline_MFC</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_InlineMFC</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+      <orange>30</orange>
+      <red>60</red>
+    </build>
+
+    <build>
+      <name>Win2003_VC8_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_CodeGear_2009_Dynamic_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dd/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC9_WarningLevel4</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9_w4</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_CodeGear_2009_Dynamic_Release</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/CB2009/dr/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC71_IPV6</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC71_IPV6/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC9_IPV6</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC90_IPV6/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC9_ACE_FOR_TAO</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_ace_for_tao</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC71_NET_Dynamic_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC71</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC71_Dynamic_Release</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC71dr</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC9_Dynamic_Release</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC90dr</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC8_Release</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC8r</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC9</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC90</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC9_CIAOCore_Static_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9s</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC9_CIAOCore_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_core</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC9_FULL</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_VC9_full</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC9_CIAO_NoInline_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/trian_noinline</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC71_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/merengue_full</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC8_Full</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_win2003_full</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
+      <name>Win2003_VC9_Versioned_Namespace</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_versioned_namespace</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_VC8_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/VC8</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+  </group>
+  <group>
+    <name>HP-UX</name>
+    <build>
+      <name>HPUX11i_aCC367_NoInline</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/aCC367/standard</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+      <orange>72</orange> <!-- 3x24 hours -->
+      <red>96</red>       <!-- 4x24 hours -->
+    </build>
+    <build>
+      <name>HPUX11i_aCC367_Inline</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/hp1/aCC367/inline</url>
+      <build_sponsor>PrismTech</build_sponsor>
+      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
+      <orange>48</orange> <!-- 2x24 hours -->
+      <red>72</red>       <!-- 3x24 hours -->
+    </build>
+  </group>
 </scoreboard>

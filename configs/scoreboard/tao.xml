@@ -95,12 +95,6 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-        <name>RHEL4-NoInline</name>
-        <url>http://tao.prismtech.com/doc-scoreboard/rhel4/gcc344/standard</url>
-        <build_sponsor>PrismTech</build_sponsor>
-        <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-     </build>
-     <build>
         <name>OpenSUSE_10_3_GCC_4_2</name>
         <url>http://www.dre.vanderbilt.edu/~remedynl/suse103_gcc42/</url>
         <build_sponsor>Remedy IT</build_sponsor>
@@ -161,12 +155,6 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
-           <name>Vista_VC8_Standard_MFC_Unicode</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardUniMFC</url>
-           <build_sponsor>PrismTech</build_sponsor>
-           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-        </build>
-        <build>
             <name>WinCE6_VC8_host</name>
             <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8wince6host/</url>
             <build_sponsor>Remedy IT</build_sponsor>
@@ -196,28 +184,7 @@ all the OS/platform combinations on which TAO is tested everyday.
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
-        <build>
-           <name>Vista_VC8_Standard_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardMFC</url>
-           <build_sponsor>PrismTech</build_sponsor>
-           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-        </build>
-        <build>
-           <name>Win2003_VC71_Debug_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_DebugMFC</url>
-           <build_sponsor>PrismTech</build_sponsor>
-           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-           <orange>30</orange>
-           <red>60</red>
-        </build>
-        <build>
-           <name>Win2003_VC71_Inline_MFC</name>
-           <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_InlineMFC</url>
-           <build_sponsor>PrismTech</build_sponsor>
-           <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-           <orange>30</orange>
-           <red>60</red>
-        </build>
+
         <build>
             <name>WinXP64_VC9_64bit_Debug</name>
             <url>http://scoreboard.ociweb.com/doc_trunk_earwig_winxp-x64_nmake_d1o0</url>
@@ -274,22 +241,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>HP-UX</name>
-   <build>
-      <name>HPUX11i_aCC367_NoInline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1/aCC367/standard</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-      <orange>72</orange> <!-- 3x24 hours -->
-      <red>96</red>       <!-- 4x24 hours -->
-   </build>
-   <build>
-      <name>HPUX11i_aCC367_Inline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/hp1/aCC367/inline</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-      <orange>48</orange> <!-- 2x24 hours -->
-      <red>72</red>       <!-- 3x24 hours -->
-   </build>
    <build>
      <name>HPUX11iv2_IA64_GCC</name>
      <url>http://www.dre.vanderbilt.edu/~remedynl/HPUX_IA64_GCC/</url>
