@@ -49,7 +49,7 @@
     <command name="auto_run_tests"    options=" -a -o" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=2 index" />
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/sol10purifyfast" />
 </autobuild>
