@@ -47,12 +47,6 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>FC8_CIAO_Core</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ciao_core/</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-    </build>
-    <build>
       <name>FC8_ACE_FOR_TAO</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ace_for_tao</url>
       <build_sponsor>ISIS</build_sponsor>
@@ -105,12 +99,6 @@
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_GCC</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>Debian_Etch_Static_GCC-4.1.2</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/lindy_Static/</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
     <build>
       <name>FC9_Static_Core</name>
@@ -454,12 +442,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Win2003_VC9_CIAOCore_Static_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9s</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
       <name>Win2003_VC9_CIAOCore_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_core</url>
       <build_sponsor>ISIS</build_sponsor>
@@ -474,12 +456,6 @@
     <build>
       <name>WinXP_VC9_CIAO_NoInline_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/trian_noinline</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Win2003_VC71_Full</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/merengue_full</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
