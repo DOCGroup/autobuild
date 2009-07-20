@@ -3,6 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/home/build/ACE/GCC/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/GCC/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"      value="/home/build/ACE/GCC/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="SHLIB_PATH"      value="/home/build/ACE/GCC/ACE_wrappers/lib" />
         <environment name="PATH"            value="/usr/local/bin" type="prefix" />
@@ -38,7 +40,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="-type gnuace" />
 
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k -j 3" />
