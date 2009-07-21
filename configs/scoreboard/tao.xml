@@ -53,7 +53,7 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
    <build>
-   <name>FC6_ORB_Core</name>
+   <name>FC8_ORB_Core</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ORB_Core/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
@@ -83,7 +83,7 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-        <name>FC6_NO_IIOP</name>
+        <name>FC8_NO_IIOP</name>
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/no_iiop</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
