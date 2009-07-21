@@ -1,11 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="XERCESCROOT"     value="/build/utils/xerces"/>
-        <environment name="ZLIB_ROOT"       value="/build/utils/zlib"/>
-        <environment name="BOOST_ROOT"      value="/build/utils/boost"/>
-        <environment name="BOOST_VERSION"   value="boost-1_34_1"/>
-        <environment name="BOOST_CFG"       value="-gcc41"/>
+        <include name="fc8-env.xml" />
         <environment name="BAGATEL_EXE"     value="/isisbuilds/Bagatel/src/bagatel" />
         <environment name="REPORT_DIR"      value="/isisbuilds/Avenger/_Templt/Template-Display" />
         <environment name="AVENGER_DIR"     value="/isisbuilds/Avenger" />
@@ -147,7 +143,7 @@
 
     <command name="anonymous_shell"   options="cd /isisbuilds/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/FC6xampler_technology.sh" />
+    <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/FC8xampler_technology.sh" />
 
     <command name="anonymous_shell"   options="cp -R /isisbuilds/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler" />
     <command name="anonymous_shell"   options="chmod 755 /proj/autobuilds/logs/FC6xampler -R" />

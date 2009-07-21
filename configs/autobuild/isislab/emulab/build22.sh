@@ -31,5 +31,5 @@
 /users/bczar/runbuild.sh FC6fpCORBAregular
 /users/bczar/runbuild.sh FC6fpCORBAminimum
 /users/bczar/runbuild.sh FC6CodeCoverage
-/users/bczar/runbuild.sh FC6xampler
+/users/bczar/runbuild.sh FC8xampler
 /users/bczar/runbuild.sh FC6valgrind
