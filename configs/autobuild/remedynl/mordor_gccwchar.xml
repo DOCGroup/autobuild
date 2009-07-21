@@ -22,7 +22,6 @@
     <command name="process_listener"  options="localhost:32001" />
 
     <command name="log"               options="on" />
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
@@ -38,9 +37,10 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type gnuace" />
-
     <command name="make"              options="-k realclean find=*akefile" />
+
+    <command name="generate_workspace" options="-type gnuace -exclude TAO" />
+
     <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options=" -a " />
