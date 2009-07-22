@@ -11,6 +11,12 @@
   <group>
     <name>Linux</name>
     <build>
+       <name>FC9_Minimum</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_Minimum/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
       <name>RHEL4-NoInline</name>
       <url>http://tao.prismtech.com/doc-scoreboard/rhel4/gcc344/standard</url>
       <build_sponsor>PrismTech</build_sponsor>
@@ -266,7 +272,7 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Solaris10-x86-Studio10</name>
+      <name>Solaris10-x86-Studio12</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
