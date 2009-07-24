@@ -133,6 +133,12 @@ all the OS/platform combinations on which ACE is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
+      <name>RHEL_53_i386_Debug(gcc)</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/rhel53_32_gcc/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
       <name>Ubuntu_904_x64_Debug(gcc)</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/ubuntu904_64_gcc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
