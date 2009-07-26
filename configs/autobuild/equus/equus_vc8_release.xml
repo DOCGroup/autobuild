@@ -3,7 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\ACE" />
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\TAO"/>
-		<environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\CIAO"/>
+	<environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\CIAO"/>
+	<environment name="OLD_CONTRIB_ROOT" value="C:\\bczar\\CoSMIC_VC8_Release\\old-contrib"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\\Program Files\\Windows Installer XML v3"/>
         <environment name="CVS_RSH"      value="plink.exe" />
@@ -36,7 +37,8 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO TAO" />
-	<command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/CIAO CIAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/CIAO CIAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/old-contrib old-contrib" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 

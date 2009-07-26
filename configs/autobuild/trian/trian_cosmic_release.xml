@@ -4,6 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\ACE" />
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_Release\\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CIAO"/>
+        <environment name="OLD_CONTRIB_ROOT" value="C:\\bczar\\CoSMIC_Release\\old-contrib"/>
         <environment name="DANCE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CIAO\\DAnCE"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\Program Files (x86)\Windows Installer XML v3"/>
@@ -37,6 +38,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO TAO" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/CIAO CIAO" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/old-contrib old-contrib" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 

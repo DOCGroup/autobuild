@@ -1,38 +1,48 @@
+Sun Jul 26 20:50:13 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc8.xml:
+        * configs/autobuild/equus/equus_vc8_release.xml:
+
+        * configs/autobuild/quake/quake_vc8_release.xml:
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+	  Fixed nightly CoSMIC builds after CCF was moved to the old-contrib repository.
+
 Mon Jul 20 22:08:00 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/autobuild/isislab/emulab/FC8gcc4.xml
         * configs/autobuild/isislab/emulab/FC8acefortao.xml
         * configs/autobuild/isislab/emulab/FC8versioned.xml
         * configs/autobuild/isislab/emulab/FC8ImplicitTemplate.xml
-        
+
           Set optimize to zero, the compiler on FC8 appears to have a bug that generates
-          bad object files in certain cases where hidden visibility is used. 
+          bad object files in certain cases where hidden visibility is used.
 
 Mon Jul 20 14:02:27 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/scoreboard/ciao.xml:
-        
+
           removed some inactive builds.
 
 Sat Jul 18 20:31:16 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/autobuild/ace_isis/FC9_Static_Core.xml:
-         
-          added JAWS to the build sequence. 
+
+          added JAWS to the build sequence.
 
 Sat Jul 18 15:15:38 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/scoreboard/tao.xml:
         * configs/scoreboard/ciao.xml:
-        
-          Move some builds to the CIAO scoreboard. 
+
+          Move some builds to the CIAO scoreboard.
 
 Fri Jul 17 20:27:40 UTC 2009  ISIS Build Czar  <bczar@blade52.isislab.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/fc8-env.xml:
 
-          Updates zzip_root environment variable. 
-        
+          Updates zzip_root environment variable.
+
 Thu Jul 16 13:30:00 UTC 2009  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
