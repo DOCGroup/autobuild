@@ -24,7 +24,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-cygwin32.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cygwin32.GNU\n'" />
@@ -40,8 +40,6 @@
     <command name="generate_workspace" options="-exclude TAO -type gnuace" />
 
     <command name="make"              options="-k" />
-
-    <command name="auto_run_tests"     options="-a -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
