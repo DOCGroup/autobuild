@@ -35,11 +35,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-k realclean find=*akefile" />
+    <command name="make"              options="-C TAO/CIAO -k realclean find=*akefile" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO/connectors -type gnuautobuild" />
+    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-j 5 -k" />
+    <command name="make"              options="-C TAO/CIAO -j 5 -k" />
 
     <command name="auto_run_tests"    options=" -C" />
 
