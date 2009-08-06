@@ -8,6 +8,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/dds4ccm/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="NDDSHOME" value="/home/build/ndds.4.4d" />
         <environment name="NDDSARCHITECTURE" value="i86Linux2.6gcc4.1.1" />
+        <environment name="CIAO_TRACE_ENABLE" value="1" />
         <environment name="SSL_ROOT"        value="/usr"/>
 
         <variable name="root"     value="/home/build/ACE/dds4ccm/" />
