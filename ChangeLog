@@ -1,3 +1,8 @@
+Fri Aug  7 12:50:00 UTC 2009  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/ciao.xml:
+          Remove our HP11 aCC 3.67 builds.
+
 Thu Aug  6 08:14:12 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
@@ -7,7 +12,7 @@ Thu Aug  6 08:14:12 UTC 2009  Johnny Willemsen  <jwillemsen@remedy.nl>
 Sun Jul 26 23:30:44 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/quake/quake_vc8_release.xml:
-	  Fixed %PATH% to add SlikSvn.
+          Fixed %PATH% to add SlikSvn.
 
 Sun Jul 26 20:50:13 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
