@@ -5,6 +5,7 @@
 cd /home/build/cegcc/
 svn up
 cd /home/build/cegcc/src/scripts
+rm -rf /home/build/opt
 rm -rf /home/build/cegcc/src/scripts/x86
 mkdir /home/build/cegcc/src/scripts/x86
 cd /home/build/cegcc/src/scripts/x86
