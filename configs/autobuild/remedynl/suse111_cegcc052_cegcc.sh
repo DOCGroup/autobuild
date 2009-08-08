@@ -8,7 +8,7 @@ cd /home/build/cegcc/src/scripts
 rm -rf /home/build/cegcc/src/scripts/x86
 mkdir /home/build/cegcc/src/scripts/x86
 cd /home/build/cegcc/src/scripts/x86
-../build-x86.sh > /home/build/cegccbuild.txt
+../build-x86.sh --prefix=/home/build/opt/x86mingw32ce/ > /home/build/cegccbuild.txt
 # rename libcoredll6.a to libcoredll.a to avoid
 # linker errors
 cd /home/build/opt/x86mingw32ce/i386-mingw32ce/lib/
