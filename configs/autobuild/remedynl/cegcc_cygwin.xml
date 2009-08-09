@@ -23,9 +23,9 @@
         <environment name="DOC_TEST_1" value="DOC_TEST_1" />
         <environment name="DOC_TEST_1_OS" value="WinCE" />
         <environment name="DOC_TEST_1_IPNAME" value="10.2.0.86" />
-        <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE_wrappers" />
-        <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE_wrappers\\TAO" />
-        <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_ACE_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers\\TAO" />
+        <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE\\cegcc\\ACE_wrappers" />
         <environment name="DOC_TEST_1_HOST_ROOT" value="/cygdrive/d/ACE/cegcc/ACE_wrappers" />
         <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="60" />
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.86" />
@@ -33,7 +33,7 @@
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp /d & net use temp \\\\10.2.0.144\\openshare" />
-        <environment name="DOC_TEST_1_SYSTEM_LIBS" value="libgcc-0.55.2.dll;libstdc*-6.dll;libsupc*-6.dll;mingwm10.dll" />
+        <environment name="DOC_TEST_1_SYSTEM_LIBS" value="libgcc*.dll;libstdc*-6.dll;libssp*-6.dll;mingwm10.dll" />
         <environment name="DOC_TEST_2" value="DOC_TEST_2" />
         <environment name="DOC_TEST_2_OS" value="local" />
         <environment name="DOC_TEST_2_ACE_ROOT" value="/cygdrive/c/cygwin/home/build/ACE/host/ACE_wrappers" />
@@ -60,6 +60,17 @@
     <command name="print_perl_version" />
 
     <command name="make"              options="-k" />
+
+    <command name="log"               options="PAUSE" />
+
+    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\rsync /cygdrive/d/ACE/cegcc/ /cygdrive/z/ACE/cegcc --recursive --progress --exclude .svn --exclude .obj --exclude GNUmakefile.* --exclude *.depend" />
+
+    <command name="log"               options="PAUSE" />
+
+    <command name="setenv"            options="ACE_ROOT=Z:\\ACE\\cegcc\\ACE_wrappers" />
+    <command name="setenv"            options="TAO_ROOT=Z:\\ACE\\cegcc\\ACE_wrappers\\TAO" />
+
+    <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
