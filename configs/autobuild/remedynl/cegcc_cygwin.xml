@@ -33,7 +33,7 @@
         <environment name="DOC_TEST_1_REBOOT" value="1" />
         <environment name="DOC_TEST_1_REBOOT_TIME" value="30" />
         <environment name="DOC_TEST_1_STARTUP_COMMAND" value="net use temp /d & net use temp \\\\10.2.0.144\\openshare" />
-        <environment name="DOC_TEST_1_SYSTEM_LIBS" value="libgcc*.dll;libstdc*-6.dll;libssp*-6.dll;mingwm10.dll" />
+        <environment name="DOC_TEST_1_SYSTEM_LIBS" value="libgcc*.dll;libstdc*.dll;libssp*dll;mingwm10.dll" />
         <environment name="DOC_TEST_2" value="DOC_TEST_2" />
         <environment name="DOC_TEST_2_OS" value="local" />
         <environment name="DOC_TEST_2_ACE_ROOT" value="/cygdrive/c/cygwin/home/build/ACE/host/ACE_wrappers" />
