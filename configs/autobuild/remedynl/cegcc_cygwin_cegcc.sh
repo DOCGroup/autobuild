@@ -6,8 +6,9 @@ cd /opt
 rm -rf *
 cd /home/build/cegcc/
 svn up
+rm -rf /home/build/cegcc/src/scripts/x86
+mkdir /home/build/cegcc/src/scripts/x86
 cd /home/build/cegcc/src/scripts/x86
-rm -rf *
 ../build-x86.sh > /home/build/cegcc.txt
 # rename libcoredll6.a to libcoredll.a to avoid
 # linker errors
