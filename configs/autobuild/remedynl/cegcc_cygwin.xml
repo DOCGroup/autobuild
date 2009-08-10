@@ -67,8 +67,8 @@
 
     <command name="log"               options="PAUSE" />
 
-    <command name="setenv"            options="ACE_ROOT=Z:\\ACE\\cegcc\\ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=Z:\\ACE\\cegcc\\ACE_wrappers\\TAO" />
+    <command name="setenv"            options="ACE_ROOT=/cygdrive/z/ACE/cegcc/ACE_wrappers" />
+    <command name="setenv"            options="TAO_ROOT=/cygdrive/z/ACE/cegcc/ACE_wrappers/TAO" />
 
     <command name="auto_run_tests"    options="-a" />
 
