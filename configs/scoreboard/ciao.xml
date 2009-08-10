@@ -71,12 +71,6 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>Fedora_Rawhide_i386</name>
-      <url>http://www.42tools.com/downloads/tao_autobuild_logs/fedora_rawhide</url>
-      <build_sponsor>42tools</build_sponsor>
-      <build_sponsor_url>http://www.42tools.com</build_sponsor_url>
-    </build>
-    <build>
       <name>RHEL53_ICC101_IA64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC101/</url>
       <build_sponsor>Remedy IT</build_sponsor>
