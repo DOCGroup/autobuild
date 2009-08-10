@@ -5,7 +5,7 @@
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/wchar/" />
-        <variable name="configs"  value="Linux SSL Exceptions WCHAR" />
+        <variable name="configs"  value="Linux NDDS SSL Exceptions WCHAR" />
     </configuration>
 
     <command name="status"            options="on" />

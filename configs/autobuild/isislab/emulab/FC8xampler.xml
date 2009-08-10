@@ -9,7 +9,7 @@
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/FC6xampler" />
-        <variable name="configs"  value="Linux SSL Exceptions ZLIB" />
+        <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
 
     </configuration>
 

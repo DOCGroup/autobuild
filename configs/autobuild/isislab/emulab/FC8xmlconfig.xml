@@ -6,7 +6,7 @@
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/XMLConfig" />
-        <variable name="configs"  value="SSL Linux Exceptions ZLIBT" />
+        <variable name="configs"  value="SSL Linux NDDS Exceptions ZLIBT" />
 
     </configuration>
 

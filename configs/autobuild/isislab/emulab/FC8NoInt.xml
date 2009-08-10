@@ -5,7 +5,7 @@
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/NoInt/" />
-        <variable name="configs"  value="Linux NoInterceptor Core" />
+        <variable name="configs"  value="Linux NDDS NoInterceptor Core" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -16,7 +16,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\n\n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='interceptors=0\nxerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='interceptors=0\nxerces3=1\nndds=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

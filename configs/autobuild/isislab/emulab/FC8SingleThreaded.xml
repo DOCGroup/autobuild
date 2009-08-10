@@ -5,7 +5,7 @@
         <variable name="root"     value="/isisbuilds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/SingleThreaded" />
-        <variable name="configs"  value="Linux ST Exceptions" />
+        <variable name="configs"  value="Linux NDDS ST Exceptions" />
 
     </configuration>
 
@@ -17,8 +17,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nthreads=0\ndebug=0\nexceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nxerces3=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=0\nthreads=0\ndebug=0\nexceptions=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nxerces3=1\nndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nndds=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
