@@ -40,12 +40,6 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
-     <build>
-       <name>RHWS40_ICC10.1</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/RHW4_IA64_ICC101</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
    <build>
    <name>FC8_ORB_Core</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ORB_Core/</url>
