@@ -11,6 +11,12 @@
   <group>
     <name>Linux</name>
     <build>
+       <name>Ubuntu_710_WChar</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_wchar/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
        <name>FC9_Minimum</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_Minimum/</url>
        <build_sponsor>ISIS</build_sponsor>
