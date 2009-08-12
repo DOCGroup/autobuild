@@ -322,6 +322,12 @@
 
   <group>
     <name>VxWorks</name>
+   <build>
+     <name>VxWorks6.6_Solaris_Host</name>
+     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks66sol_ppc_host_isengard/</url>
+     <build_sponsor>Remedy IT</build_sponsor>
+     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
     <build>
       <name>VxWorks6.6_Solaris_PPC604</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks66sol_ppc604_isengard/</url>
