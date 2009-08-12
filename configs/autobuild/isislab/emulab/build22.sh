@@ -22,7 +22,7 @@
 /users/bczar/runbuild.sh FC8NoIIOP
 /users/bczar/runbuild.sh FC8NoInt
 /users/bczar/runbuild.sh FC8SingleThreaded
-/users/bczar/runbuild.sh FC8Static
+/users/bczar/runbuild.sh FC8Static2
 /users/bczar/runbuild.sh FC8versioned
 /users/bczar/runbuild.sh FC8wchar
 /users/bczar/runbuild.sh FC6fpCORBAecompact
