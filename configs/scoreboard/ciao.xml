@@ -254,7 +254,7 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>Solaris10-Studio10</name>
+      <name>Solaris10-Studio12</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/sparc_Solaris10_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
