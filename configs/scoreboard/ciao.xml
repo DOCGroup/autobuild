@@ -77,24 +77,6 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>RHEL53_ICC101_IA64</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC101/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>RHEL53_ICC110_IA64</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_ICC110/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>RHEL53_GCC_IA64</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/RH5_IA64_GCC</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC9_Static_Core</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/Static_Core/</url>
       <build_sponsor>ISIS</build_sponsor>
