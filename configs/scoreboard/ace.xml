@@ -288,12 +288,6 @@ all the OS/platform combinations on which ACE is tested everyday.
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
-        <build>
-            <name>WinCE6_CEgcc_Suse_11.1</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/suse111gegcc052/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
    <build>
       <name>WindowsXP_VC7.1_Debug(SSL,IPv6)</name>
       <url>http://acebuilds.riverace.com/timmy-xpvc71/dev/vc71_debug</url>
