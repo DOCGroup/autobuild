@@ -6,14 +6,12 @@
         <environment name="CIAO_ROOT"   value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="DANCE_ROOT"  value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
-        <environment name="ZLIB_ROOT"   value="C:\\Program Files\\GnuWin32"/>
-        <environment name="PATH"        value="C:\\Program Files\\GnuWin32\\bin;" type="prefix" />
-        <environment name="BZIP2_ROOT"  value="C:\\Program Files\\GnuWin32"/>
-        <environment name="XERCESCROOT" value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
-        <environment name="PATH"        value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />
+        <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
+        <environment name="PATH"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />
         <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\bin;C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\lib;" type="prefix" />
         <environment name="NDDSHOME"    value="C:\\Program Files\\RTI\\ndds.4.4d" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2008" />
+        <environment name="PATH"        value="C:\\Program Files\\RTI\\ndds.4.4d\\lib\\i86Win32VS2008;" type="prefix" />
 
         <variable name="configs"  value="Win32 VC90 Exceptions" />
         <variable name="root"     value="C:\\ACE\\VC90MinCORBA\\" />
@@ -34,8 +32,8 @@
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.vcproj' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.sln' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nzlib=1\nbzip2=1\nndds=1\nminimum_corba=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nndds=1\nminimum_corba=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -43,7 +41,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc9 -recurse -value_template Detect64BitPortabilityProblems=TRUE -exclude TAO/TAO_*.mwc,TAO/CIAO"/>
+    <command name="generate_workspace" options="-type vc9 -exclude TAO/TAO_*.mwc,TAO/CIAO"/>
 
     <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -ALL -Debug -k" />
 
