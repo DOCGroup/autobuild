@@ -1,3 +1,10 @@
+Sat Aug 15 17:18:33 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
+
+        * configs/autobuild/sparc/SunOS10_GCC402.xml
+        
+          Make this build listen on the same socket, this machine
+          is really slow and can't handle two builds.
+
 Fri Aug  7 12:50:00 UTC 2009  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/ciao.xml:
