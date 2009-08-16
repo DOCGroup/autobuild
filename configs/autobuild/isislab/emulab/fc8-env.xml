@@ -13,5 +13,6 @@
         <environment name="LD_LIBRARY_PATH"  value="/build/utils/xerces/lib:/build/utils/zzip/lib:/isisbuilds/ACE_wrappers/lib:/ndds.4.4d_lic/lib/i86Linux2.6gcc4.1.1" />
         <environment name="NDDSHOME"         value="/ndds.4.4d_lic"/>
         <environment name="NDDSARCHITECTURE" value="i86Linux2.6gcc4.1.1"/>
+        <environment name="RTI_LICENSE_FILE" value="/users/bczar/license.dat" />
   </configuration>
 </autobuild>
