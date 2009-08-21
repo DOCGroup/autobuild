@@ -28,7 +28,7 @@
   <command name="generate_workspace" options="dirs=TAO -exclude CIAO -type gnuace" />
   
   <command name="make"               options="-k" />
-  <command name="make"               options="-k -C TAO" />
+  <command name="make"               options="-k -C TAO/TAO_IDL" />
   <!-- <command name="auto_run_tests"     options="-a -o -t" /> -->
   <command name="log"                options="off" />
   <command name="shell"              options="cat /mnt/ACE+TAO+CIAO/svn.log build.txt > new-build.txt; mv new-build.txt build.txt" />
