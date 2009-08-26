@@ -73,6 +73,7 @@ else {
   require command::make;
 }
 require command::printaceconfig;
+require command::printqfconfig;
 require command::print_status;
 require command::process_logs;
 require command::shell;           ## (Setup stage) execute command.

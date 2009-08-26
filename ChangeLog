@@ -1,13 +1,20 @@
+Wed Aug 26 00:35:29 UTC 2009  Yan Dai  <dai_y@ociweb.com>
+
+        * autobuild.pl:
+        * command/printqfconfig.pm:
+
+          Added printqfconfig command.
+          
 Sun Aug 16 17:22:42 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/autobuild/isislab/emulab/fc8-env.xml:
-        
-          add license file location. 
+
+          add license file location.
 
 Sat Aug 15 17:18:33 UTC 2009  William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
 
         * configs/autobuild/sparc/SunOS10_GCC402.xml
-        
+
           Make this build listen on the same socket, this machine
           is really slow and can't handle two builds.
 
