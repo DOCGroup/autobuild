@@ -45,6 +45,7 @@ my $warn_nonfatal;
 require common::mail;
 require command::anonymous_shell;
 require command::auto_run_tests;
+require command::quickfast_auto_run_tests;
 require command::check_compiler;
 require command::check_linker;
 require command::doxygen;
