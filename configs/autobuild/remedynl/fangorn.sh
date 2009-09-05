@@ -10,3 +10,6 @@ svn up
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
                              $HOME/ACE/autobuild/configs/autobuild/remedynl/fangorn_dds4ccm.xml
 
+
+exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fangorn_idl3_plus.xml
