@@ -74,8 +74,6 @@
 
     <command name="log"               options="PAUSE" />
 
-    <command name="anonymous_shell"   options="c:\\cygwin\\bin\\rsync /cygdrive/c/ACE/wince6_x86/ /cygdrive/z/ACE/wince6_x86 --recursive --progress --exclude .svn --exclude .obj --exclude GNUmakefile.* --exclude *.depend" />
-
     <command name="log"               options="PAUSE" />
 
     <command name="setenv"            options="ACE_ROOT=Z:\\ACE\\wince6_x86\\ACE_wrappers" />
