@@ -1,7 +1,12 @@
+Tue Sep  8 21:14:41 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+	  Changed commandline options from vc8 to vc9.
+
 Tue Sep  8 19:47:42 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/trian/trian_cosmic_release.xml:
-	  Changing CoSMIC build to use GME 9.8.28 and UDM 3.2.1
+          Changing CoSMIC build to use GME 9.8.28 and UDM 3.2.1
 
 Thu Sep  3 20:40:22 UTC 2009  Yan Dai  <dai_y@ociweb.com>
 

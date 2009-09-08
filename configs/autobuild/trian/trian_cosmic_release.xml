@@ -21,7 +21,7 @@
         <environment name="ZLIB_ROOT" value="C:\\Libraries\\zlib-1.2.3" />
         <environment name="PATH"
         value="C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\bczar\\CoSMIC_Release\\ACE\\lib;C:\\bczar\\CoSMIC_Release\\CoSMIC\\bin;C:\\Libraries\\xerces-c-3.0.1-x86-windows-vc-9.0\\bin;C:\\Program Files (x86)\\ISIS\\UDM\\bin;C:\\Program Files (x86)\\ISIS\\UDM\\etc;C:\\Program Files (x86)\\ISIS\\UDM\\3rdparty\\xalan-c_1_11_0\\bin;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Program Files (x86)\\ISIS\\UDM\\3rdparty\\xerces-c_2_8_0\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files (x86)\\PuTTY\\bin;C:\\bczar\\bin\\usr\\local\\wbin;C:\\Program Files\\SlikSvn\\bin;C:\\Libraries\\zlib-1.2.3\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\BIN;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\Tools;c:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files (x86)\\Microsoft  Visual Studio 9.0\\VC\\VCPackages;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Tools\\binn\\;C:\\Program Files\\Microsoft Platform SDK\\Bin;C:\\Program Files\\Microsoft Platform SDK\\Bin\\WinNT;" />
-        <variable name="configs"  value="Win32 VC8 ZLIB Exceptions" />
+        <variable name="configs"  value="Win32 VC9 ZLIB Exceptions" />
         <variable name="root"     value="C:\\bczar\\CoSMIC_Release" />
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\\bczar\\CoSMIC_Release" />
@@ -31,9 +31,9 @@
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
 
-    <command name="win32make"     options="msvc_mpc_auto_compile -vc8 -dir %ACE_ROOT% -Release -k -clean" />
-    <command name="win32make"     options="msvc_mpc_auto_compile -vc8 -dir %TAO_ROOT% -Release -k -clean" />
-    <command name="win32make"     options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT% -Release -k -clean" />
+    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %ACE_ROOT% -Release -k -clean" />
+    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %TAO_ROOT% -Release -k -clean" />
+    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT% -Release -k -clean" />
     <command name="log"           options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
@@ -52,18 +52,18 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type vc8 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Release.sln -Release -k" />
+    <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release.mwc"/>
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Release.sln -Release -k" />
 
-    <command name="generate_workspace" options="-type vc8 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release_idl_to_picml.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Release_idl_to_picml.sln -Release -k" />
+    <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release_idl_to_picml.mwc"/>
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Release_idl_to_picml.sln -Release -k" />
 
-    <command name="generate_workspace" options="-type vc8 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.mwc"/>
-    <command name="win32make"         options="msvc_mpc_auto_compile -vc8 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer -Release -k" />
+    <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.mwc"/>
+    <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer -Release -k" />
 
-    <command name="anonymous_shell"   options="md5sum %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC8-nightly-md5sum.txt"/>
-<!--    <command name="anonymous_shell"   options="pscp -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC8"/>
-    <command name="anonymous_shell"   options="pscp -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC8-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC8"/>
+    <command name="anonymous_shell"   options="md5sum %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC9-nightly-md5sum.txt"/>
+<!--    <command name="anonymous_shell"   options="pscp -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC9"/>
+    <command name="anonymous_shell"   options="pscp -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC9-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC9"/>
 -->
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
