@@ -12,14 +12,14 @@ all the OS/platform combinations on which CoSMIC is tested everyday.
 	<group>
 		<name>Windows</name>
 		<build>
-			<name>WinXP_VC8_Debug</name>
-			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/equus_cosmic/</url>
+			<name>Windows Server 2003 (64 bit) VC9 Debug</name>
+			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_debug/</url>
 			<build_sponsor>ISIS</build_sponsor>
 			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
 		</build>
 		<build>
-			<name>WinXP_VC8_Release</name>
-			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/equus_cosmic_release/</url>
+			<name>Windows Server 2003 (64bit) VC9 Release</name>
+			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_release/</url>
 			<build_sponsor>ISIS</build_sponsor>
 			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
 		</build>
