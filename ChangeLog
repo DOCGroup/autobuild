@@ -1,3 +1,9 @@
+Wed Sep  9 20:27:51 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+	  Fixed path typos.
+
 Wed Sep  9 15:33:54 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/trian/trian_cosmic_debug.bat:
@@ -6,8 +12,8 @@ Wed Sep  9 15:33:54 UTC 2009  Sumant Tambe  <sutambe@nospam>
         * configs/autobuild/trian/trian_cosmic_release.xml:
 
         * configs/scoreboard/cosmic.xml:
-	  Added CoSMIC debug and release build on trian.
-	  CoSMIC now uses GME 9.8.28 and UDM 3.2.1
+          Added CoSMIC debug and release build on trian.
+          CoSMIC now uses GME 9.8.28 and UDM 3.2.1
 
 Tue Sep  8 21:14:41 UTC 2009  Sumant Tambe  <sutambe@nospam>
 

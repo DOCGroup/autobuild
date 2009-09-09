@@ -62,13 +62,13 @@
     <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer -Release -k" />
 
     <command name="anonymous_shell"   options="md5sum %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi > %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC9-nightly-md5sum.txt"/>
-    <command name="anonymous_shell"   options="pscp -i C:\Docume~1\bczar\Mydocu~1\trian_cosmic.ppk -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC9"/>
-    <command name="anonymous_shell"   options="pscp -i C:\Docume~1\bczar\Mydocu~1\trian_cosmic.ppk -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC9-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC9"/>
+    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.msi  bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC9"/>
+    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC-VC9-nightly-md5sum.txt bczar@naboo.dre.vanderbilt.edu:/export/web/www/cosmic/downloads/nightly/VC9"/>
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -i C:\Docume~1\bczar\Mydocu~1\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Release\\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_cosmic_release"/>
-    <command name="anonymous_shell"   options="pscp -i C:\Docume~1\bczar\Mydocu~1\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Release\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Release\\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Release\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_cosmic_release"/>
 
 </autobuild>
