@@ -6,7 +6,7 @@
         <environment name="LD_LIBRARY_PATH"  value="/home/build/ACE/cegcc/ACE_wrappers/lib:/home/build/ACE/host/ACE_wrappers/lib" />
         <environment name="PATH"             value="/bin:/home/build/opt/x86mingw32ce/bin:/home/build/ACE/cegcc/ACE_wrappers/bin" type="prefix" />
         <environment name="HOST_ROOT"        value="/home/build/ACE/host/ACE_wrappers" />
-       <environment name="COMPARCH"         value="i386-mingw32ce-" />
+        <environment name="COMPARCH"         value="i386-mingw32ce-" />
         <environment name="RSYNC_RSH"        value="ssh" />
         <environment name="ACE_RUN_VX_IBOOT" value="10.2.0.147:80" />
         <environment name="ACE_RUN_VX_REBOOT_TIME" value="40" />
