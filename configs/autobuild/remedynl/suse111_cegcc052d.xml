@@ -23,7 +23,7 @@
         <environment name="DOC_TEST_1_TAO_ROOT" value="\\network\\temp\\ACE_wrappers\\TAO" />
         <environment name="DOC_TEST_1_FS_ROOT" value="\\network\\temp\\ACE_wrappers" />
         <environment name="DOC_TEST_1_HOST_ROOT" value="/home/build/ACE/cegcc/ACE_wrappers" />
-        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="90" />
+        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="150" />
         <environment name="DOC_TEST_1_HOSTNAME" value="10.2.0.83" />
         <environment name="DOC_TEST_1_IBOOT" value="10.2.0.147:80" />
         <environment name="DOC_TEST_1_REBOOT" value="1" />
