@@ -1,13 +1,19 @@
+Fri Sep 11 16:21:58 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/scoreboard/cosmic.xml:
+	
+          . Added CoSMIC builds on equus. 
+
 Wed Sep  9 21:34:08 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
         * configs/autobuild/trian/trian_cosmic_release.xml:
-	  
-	  Fixecd ZLIB_ROOT environmental variable.
+
+          Fixecd ZLIB_ROOT environmental variable.
 
         * configs/scoreboard/cosmic.xml:
 
-	  Fixed typos in buils names.
+          Fixed typos in buils names.
 
 Wed Sep  9 20:27:51 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
