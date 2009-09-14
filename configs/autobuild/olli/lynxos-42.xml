@@ -25,11 +25,11 @@
   <command name="print_perl_version" />
 
   <command name="generate_workspace" options="-exclude TAO           -type gnuace" />
-  <command name="generate_workspace" options="dirs=TAO -exclude CIAO -type gnuace" />
+  <!--  <command name="generate_workspace" options="dirs=TAO -exclude CIAO -type gnuace" />  -->
 
   <command name="make"               options="-k" />
-  <command name="make"               options="-k -C TAO" />
-  <!--  <command name="auto_run_tests"     options="-a -o -t" /> -->
+  <!--  <command name="make"               options="-k -C TAO" /> -->
+  <command name="auto_run_tests"     options="-a" />
   <command name="log"                options="off" />
   <command name="shell"              options="cat /mnt/ACE+TAO+CIAO/svn.log build.txt > new-build.txt; mv new-build.txt build.txt" />
   <command name="process_logs"       options="move prettify index" />
