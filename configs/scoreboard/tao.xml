@@ -82,6 +82,12 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>Ubuntu_9_04</name>
+       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/Ubuntu-9.04/</url>
+       <build_sponsor>Olli Savia</build_sponsor>
+       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+     </build>
 </group>
 
 <group>
@@ -234,6 +240,24 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
    </build>
+  <build>
+    <name>LynxOS_4_0_XBuild</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0-xbuild/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
+  <build>
+    <name>LynxOS_4_2_XBuild</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.2-xbuild/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
+  <build>
+    <name>LynxOS_5_0_XBuild</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-5.0-xbuild/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
 </group>
 
 <group>
@@ -302,6 +326,38 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
+</group>
+
+<group>
+  <name>OpenBSD</name>
+  <build>
+    <name>OpenBSD_4_5</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-4.5/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+  <name>FreeBSD</name>
+  <build>
+    <name>FreeBSD_5_5</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-5.5/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
+  <build>
+    <name>FreeBSD_6_4</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-6.2/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
+  <build>
+    <name>FreeBSD_7_2</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-7.2/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
 </group>
 
 </scoreboard>
