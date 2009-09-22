@@ -11,6 +11,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Linux</name>
      <build>
+       <name>FC10_GCC_432</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/fc10_gcc</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
        <name>FC6_CORBA_e_compact</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/CORBA_e_compact</url>
        <build_sponsor>ISIS</build_sponsor>

@@ -97,12 +97,6 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>FC10_GCC_432</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/fc10_gcc</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
        <name>FC11_GCC_440</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/fc11_gcc</url>
        <build_sponsor>Remedy IT</build_sponsor>
