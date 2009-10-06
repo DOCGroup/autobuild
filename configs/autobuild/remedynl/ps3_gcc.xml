@@ -6,13 +6,11 @@
         <environment name="CIAO_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib" />
-        <environment name="NDDSHOME" value="/home/build/RTI/ndds.4.4d" />
-        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.1.1" />
-        
+       
         <variable name="root"     value="/home/build/ACE/gcc/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/gcc/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB XERCES NDDS" />
+        <variable name="configs"  value="Linux Exceptions ZLIB XERCES" />
 
     </configuration>
 
@@ -23,8 +21,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='zlib=1\nndds=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='zlib=1\nndds=1\nxerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='zlib=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='zlib=1\nxerces3=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
