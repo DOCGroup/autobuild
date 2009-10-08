@@ -3,8 +3,8 @@
     <configuration>
         <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\ACE" />
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\TAO"/>
-	<environment name="CIAO_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\CIAO"/>
-	<environment name="OLD_CONTRIB_ROOT" value="C:\\bczar\\CoSMIC_VC8_Debug\\old-contrib"/>
+	<environment name="CIAO_ROOT"    value="C:\\bczar\\CoSMIC_VC8_Debug\\CIAO"/>
+	<environment name="CCF_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\CoSMIC\\contrib"/>
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_VC8_Debug\\MPC"/>
         <environment name="CVS_RSH"      value="plink.exe" />
         <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-3_0_1-win32-vc8"/>
@@ -34,7 +34,6 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO TAO" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/CIAO CIAO" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/old-contrib old-contrib" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 
