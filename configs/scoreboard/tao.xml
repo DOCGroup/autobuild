@@ -322,7 +322,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>LabVIEW_RT</name>
    <build>
       <name>WindowsXP_VC7.1_LabVIEWRT_TAO_Debug</name>
-      <url>http://acebuilds.riverace.com/smokey-winxpsp2/dev/vc71_ets_debug</url>
+      <url>http://acebuilds.riverace.com/timmy-xpvc71/dev/vc71_ets_debug</url>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
