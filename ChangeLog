@@ -1,8 +1,28 @@
+Thu Oct  8 01:35:08 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          . Fixed a typo.
+
+Wed Oct  7 19:27:42 UTC 2009 William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
+
+        * configs/autobuild/equus/equus_vc8.xml:
+        * configs/autobuild/equus/equus_vc8_release.xml:
+	
+          . Added mcpp.
+
+Fri Sep 25 2:57:27 UTC 2009 William R. Otte  <wotte@william-r-ottes-macbook-pro-2.local>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          . Added mcpp.
+
 Fri Sep 11 16:21:58 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/scoreboard/cosmic.xml:
-	
-          . Added CoSMIC builds on equus. 
+
+          . Added CoSMIC builds on equus.
 
 Wed Sep  9 21:34:08 UTC 2009  Sumant Tambe  <sutambe@nospam>
 

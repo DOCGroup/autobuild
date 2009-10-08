@@ -1,5 +1,5 @@
 <!-- $Id$ -->
-autobuild>
+<autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\ACE" />
         <environment name="TAO_ROOT"     value="C:\\bczar\\CoSMIC_Release\\TAO"/>
