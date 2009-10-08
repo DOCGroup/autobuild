@@ -10,7 +10,7 @@
 /users/bczar/runbuild.sh FC6CORBAecompact2
 /users/bczar/runbuild.sh FC6CORBAemicro
 /users/bczar/runbuild.sh FC8Core
-/users/bczar/runbuild.sh FC8ORBCore
+/users/bczar/runbuild.sh FC8ORBCore2
 /users/bczar/runbuild.sh FC8DynamicHash
 /users/bczar/runbuild.sh FC6Full
 /users/bczar/runbuild.sh FC6FullReactors
