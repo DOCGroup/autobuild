@@ -16,13 +16,13 @@
 /users/bczar/runbuild.sh FC6FullReactors
 /users/bczar/runbuild.sh FC8gcc4
 /users/bczar/runbuild.sh FC8gcc4ssl
-/users/bczar/runbuild.sh FC8ImplicitTemplate
+/users/bczar/runbuild.sh FC8ImplicitTemplat2
 /users/bczar/runbuild.sh FC8IPv6
 /users/bczar/runbuild.sh FC8versioned
 /users/bczar/runbuild.sh FC8NoIIOP
 /users/bczar/runbuild.sh FC8NoInt
 /users/bczar/runbuild.sh FC8SingleThreaded2
-/users/bczar/runbuild.sh FC8Static2
+/users/bczar/runbuild.sh FC8static2
 /users/bczar/runbuild.sh FC8versioned
 /users/bczar/runbuild.sh FC8wchar
 /users/bczar/runbuild.sh FC6fpCORBAecompact
