@@ -13,7 +13,7 @@
 /users/bczar/runbuild.sh FC8ORBCore2
 /users/bczar/runbuild.sh FC8DynamicHash
 /users/bczar/runbuild.sh FC6Full
-/users/bczar/runbuild.sh FC6FullReactors
+/users/bczar/runbuild.sh FC6FullReactors2
 /users/bczar/runbuild.sh FC8gcc4
 /users/bczar/runbuild.sh FC8gcc4ssl
 /users/bczar/runbuild.sh FC8ImplicitTemplat2
