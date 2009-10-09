@@ -14,7 +14,7 @@
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\doc-scoreboard\\vista\\VC8_StandardUniMFC" />
         <variable name="name"         value="Windows Vista SP1 VC8 SP1 (VS.Net2005) Standard Unicode MFC (Non-Inline, Non-Debug)" />
-        <variable name="configs"      value="WIN32 Win32 MFC unicode WCHAR VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK FIXED_BUGS_ONLY" />
+        <variable name="configs"      value="WIN32 Win32 MFC unicode WCHAR VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK FIXED_BUGS_ONLY NOXERCES" />
     </configuration>
 
     <command name="status"            options="on" />

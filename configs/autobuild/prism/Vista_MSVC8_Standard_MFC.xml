@@ -14,7 +14,7 @@
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\doc-scoreboard\\vista\\VC8_StandardMFC" />
         <variable name="name"         value="WinXP VC8 (VS.Net2005) DLL Standard MFC (Non-Inline, Non-Debug)" />
-        <variable name="configs"      value="WIN32 Win32 MFC VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK FIXED_BUGS_ONLY" />
+        <variable name="configs"      value="WIN32 Win32 MFC VC8 SSL SANDBOX HAS_EXTENDED_FT_INTERCEPTORS QUICK FIXED_BUGS_ONLY NOXERCES" />
     </configuration>
 
     <command name="status"            options="on" />

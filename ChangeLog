@@ -1,3 +1,14 @@
+Fri Oct  9 13:33:33 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+
+          Added NOXERCES to configs in these setups since they don't
+          provide xerces library.
+
 Thu Oct  8 18:27:38 UTC 2009  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/tao.xml: Corrected the host where LabVIEW RT

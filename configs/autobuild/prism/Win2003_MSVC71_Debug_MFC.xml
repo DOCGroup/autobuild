@@ -14,7 +14,7 @@
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\doc-scoreboard\\win2003\\VC71_DebugMFC" />
         <variable name="name"         value="WinXP VC71 (VS.Net2003) DLL Debug MFC" />
-        <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS SSL MFC QUICK FIXED_BUGS_ONLY" />
+        <variable name="configs"      value="Win32 VC71 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS SSL MFC QUICK FIXED_BUGS_ONLY NOXERCES" />
     </configuration>
 
     <command name="status"            options="on" />
