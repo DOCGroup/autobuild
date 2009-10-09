@@ -9,6 +9,9 @@
 	<environment name="BOOST_ROOT"      value="/build/utils/boost"/>
 	<environment name="BOOST_VERSION"   value="boost-1_34_1"/>
 	<environment name="BOOST_CFG"       value="-gcc41"/>
-        <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/isisbuilds/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/build/utils/xerces/lib:/isisbuilds/ACE_wrappers/lib:/build/utils/boost/lib:/build/utils/zlib/lib:/users/bczar/ndds44d/ndds.4.4d_lic/lib/i86Linux2.6gcc4.1.1" />
+        <environment name="NDDSHOME"         value="/users/bczar/ndds44d/ndds.4.4d_lic"/>
+        <environment name="NDDSARCHITECTURE" value="i86Linux2.6gcc4.1.1"/>
+        <environment name="RTI_LICENSE_FILE" value="/users/bczar/ndds44d/license.dat" />
   </configuration>
 </autobuild>
