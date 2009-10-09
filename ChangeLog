@@ -1,3 +1,8 @@
+Fri Oct  9 21:45:46 UTC 2009  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml: Updated location of the
+          WindowsXP_VC7.1_Debug(SSL,IPv6) build.
+
 Fri Oct  9 13:33:33 UTC 2009  Vladimir Zykov  <vz@prismtech.com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
