@@ -33,3 +33,4 @@
 /users/bczar/runbuild.sh FC6CodeCoverage
 /users/bczar/runbuild.sh FC8xampler2
 /users/bczar/runbuild.sh FC6valgrind
+/users/bczar/runbuild.sh FC10Core
