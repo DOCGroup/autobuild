@@ -22,7 +22,7 @@
 /users/bczar/runbuild.sh FC8NoIIOP
 /users/bczar/runbuild.sh FC8NoInt
 /users/bczar/runbuild.sh FC8SingleThreaded2
-/users/bczar/runbuild.sh FC8static2
+/users/bczar/runbuild.sh FC8Static3
 /users/bczar/runbuild.sh FC8versioned
 /users/bczar/runbuild.sh FC8wchar
 /users/bczar/runbuild.sh FC6fpCORBAecompact
@@ -31,5 +31,5 @@
 /users/bczar/runbuild.sh FC6fpCORBAregular
 /users/bczar/runbuild.sh FC6fpCORBAminimum
 /users/bczar/runbuild.sh FC6CodeCoverage
-/users/bczar/runbuild.sh FC8xampler
+/users/bczar/runbuild.sh FC8xampler2
 /users/bczar/runbuild.sh FC6valgrind
