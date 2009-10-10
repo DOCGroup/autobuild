@@ -10,6 +10,6 @@ tb-set-hardware $node pc8832
 
 #tb-set-node-tarfiles $node / /proj/autobuilds/tarfiles/boost-1_34_1-fc6-gcc411.tar.gz / /proj/autobuilds/tarfiles/xerces-3.0.1-gcc-fc8.tgz / /proj/autobuilds/tarfiles/zzip-fc8.tgz
 
-tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild.sh FC10Core"
+tb-set-node-startcmd $node "/proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/run_autobuild_fc10.sh FC10Core"
 
 $ns run
