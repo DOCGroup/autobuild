@@ -68,7 +68,7 @@ sub Run ($)
 
     if(-r "/etc/redhat-release"){
         print "<h3>RedHat Linux Version (/etc/redhat-release)</h3>\n";
-	system("cat /etc/redhat-release");
+        system("cat /etc/redhat-release");
     }
 
     if(-r "/etc/SuSE-release"){
@@ -78,12 +78,12 @@ sub Run ($)
 
     if(-r "/etc/debian_version"){
         print "<h3>Debian Linux Version (/etc/debian_version)</h3>\n";
-	system("cat /etc/debian_version");
+        system("cat /etc/debian_version");
     }
 
     if(-r "/proc/version"){
         print "<h3>Linux Kernel Version (/proc/version)</h3>\n";
-	system("cat /proc/version");
+        system("cat /proc/version");
     }
 
     if(-r "/etc/release"){
@@ -94,6 +94,11 @@ sub Run ($)
     if(-r "/var/emulab/boot/nodeid"){
         print "<h3>Emulab NodeId(/var/emulab/boot/nodeid)</h3>\n";
         system("cat /var/emulab/boot/nodeid");
+    }
+
+    if(-x "/bin/ip"){
+        print "<h3>Linux IP network address information (ip addr show)</h3>\n";
+        system("/bin/ip addr show");
     }
 
     if(-x "/usr/sbin/prtdiag"){
