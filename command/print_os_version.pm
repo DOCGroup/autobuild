@@ -156,6 +156,9 @@ sub Run ($)
         print "<h3>Memory info</h3>\n";
         print filter_info($systeminfo, "total physical memory") . "\n";
         print filter_info($systeminfo, "virtual memory") . "\n";
+
+        print "<h3>Network info</h3>\n";
+        print filter_info($systeminfo, "network card") . "\n";
     }
 
     print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
