@@ -99,6 +99,11 @@ sub Run ($)
     if(-x "/bin/ip"){
         print "<h3>Linux IP network address information (ip addr show)</h3>\n";
         system("/bin/ip addr show");
+    } else {
+        if(-x "/sbin/ip"){
+            print "<h3>Linux IP network address information (ip addr show)</h3>\n";
+            system("/sbin/ip addr show");
+        }
     }
 
     if(-x "/usr/sbin/prtdiag"){
