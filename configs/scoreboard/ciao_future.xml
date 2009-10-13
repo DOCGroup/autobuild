@@ -38,11 +38,5 @@ This is the CIAO virtual scoreboard for future platforms/development.
      <build_sponsor>ISIS</build_sponsor>
      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
    </build>
-     <build>
-      <name>OpenSuSE_11_1_GCC_DDS4CCM</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/faragorn_dds4ccm/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
 </group>
 </scoreboard>
