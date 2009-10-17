@@ -15,7 +15,7 @@
         <environment name="BOOST_CFG"     value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="UDM_PATH" 	  value="C:\\Program Files\\ISIS\\UDM" />
-        <environment name="UDM_VERSION"	  value="UDMDLL_3_1_3" />
+        <environment name="UDM_VERSION"	  value="UDMDLL_3_1_2" />
         <environment name="GME_VERSION"	  value="7_6_29" />
         <environment name="COSMIC_ROOT"  value="C:\\bczar\\CoSMIC_VC8_Release\\CoSMIC" />
         <environment name="ZLIB_ROOT" value="C:\\Tools\\zlib-1.2.3" />
