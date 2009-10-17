@@ -1,7 +1,21 @@
+Sat Oct 17 04:46:37 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/ciang/ciang_cosmic_vc8.xml:
+        * configs/autobuild/ciang/ciang_cosmic_vc8_release.xml:
+
+        * configs/autobuild/equus/equus_vc8.xml:
+        * configs/autobuild/equus/equus_vc8_release.xml:
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          . Specify individual .sln files to clean the workspace. Unwanted
+	  .sln files are picked up if the root directory is specified.
+
 Sat Oct 17 03:46:06 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/scoreboard/cosmic.xml:
-	
+
           . Specified seperate names to the builds.
 
 Sat Oct 17 00:13:20 UTC 2009  Sumant Tambe  <sutambe@nospam>

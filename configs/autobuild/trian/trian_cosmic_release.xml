@@ -33,7 +33,12 @@
 
     <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %ACE_ROOT% -Release -k -clean" />
     <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %TAO_ROOT% -Release -k -clean" />
-    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT% -Release -k -clean" />
+    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir
+    %COSMIC_ROOT%\\Release.sln  -Release -k -clean" />
+    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir
+    %COSMIC_ROOT%\\Release_idl_to_picml.sln -Release -k -clean" />
+    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir
+    %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.sln -Release -k -clean" />
     <command name="log"           options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE ACE" />
