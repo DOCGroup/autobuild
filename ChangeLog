@@ -1,3 +1,10 @@
+Sat Oct 17 00:06:15 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/ciang/ciang_cosmic_vc8.xml:
+        * configs/autobuild/ciang/ciang_cosmic_vc8_release.xml:
+
+          . Fixed %PATH%
+
 Fri Oct 16 23:52:38 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/ciang/ciang_cosmic.bat:
@@ -6,7 +13,7 @@ Fri Oct 16 23:52:38 UTC 2009  Sumant Tambe  <sutambe@nospam>
         * configs/autobuild/ciang/ciang_cosmic_vc8.xml:
         * configs/autobuild/ciang/ciang_cosmic_vc8_release.bat:
         * configs/autobuild/ciang/ciang_cosmic_vc8_release.xml:
-	
+
           . Added a CoSMIC vc8 build on Ciang.dre
 
 Fri Oct  9 21:45:46 UTC 2009  Steve Huston  <shuston@riverace.com>
