@@ -36,13 +36,13 @@ all the OS/platform combinations on which CoSMIC is tested everyday.
 			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
 		</build>
 		<build>
-			<name>Windows_XP_VC8_Debug</name>
+			<name>Windows_Server_2003_XP_VC8_Debug</name>
 			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_cosmic/</url>
 			<build_sponsor>ISIS</build_sponsor>
 			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
 		</build>
 		<build>
-			<name>Windows_XP_VC8_Release</name>
+			<name>Windows_Server_2003_VC8_Release</name>
 			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_cosmic_release/</url>
 			<build_sponsor>ISIS</build_sponsor>
 			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
