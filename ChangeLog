@@ -1,3 +1,13 @@
+Sat Oct 17 00:13:20 UTC 2009  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/ciang/ciang_cosmic_vc8.xml:
+
+          . Typo in destination directory.
+
+        * configs/scoreboard/cosmic.xml:
+
+          . Added CoSMIC build on ciang to the scoreboard.
+
 Sat Oct 17 00:06:15 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/ciang/ciang_cosmic_vc8.xml:
