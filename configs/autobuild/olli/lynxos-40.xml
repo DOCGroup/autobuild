@@ -4,7 +4,7 @@
     <variable name="root"     value="/home/osa/ACE-build/LynxOS-4.0" />
     <variable name="log_file" value="build.txt" />
     <variable name="log_root" value="/mnt/ACE+TAO+CIAO/buildlogs/LynxOS-4.0" />
-    <variable name="configs"  value="LynxOS Exceptions ZLIB SSL" />
+    <variable name="configs"  value="LynxOS Exceptions ZLIB" />
   </configuration>
   
   <command name="status"            options="on" />
