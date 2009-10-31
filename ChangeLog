@@ -1,3 +1,8 @@
+Sat Oct 31 17:03:59 UTC 2009  Olli Savia  <ops@iki.fi>
+
+        * configs/scoreboard/tao.xml:
+          Removed OpenBSD 4.5 build and added OpenBSD 4.6 build. 
+
 Sat Oct 17 20:09:28 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/ciang/ciang_cosmic_vc8_release.xml:
@@ -12,7 +17,7 @@ Sat Oct 17 20:09:28 UTC 2009  Sumant Tambe  <sutambe@nospam>
         * configs/scoreboard/cosmic.xml:
 
           . Removed ciang builds from CoSMIC scoreboard because equus builds
-	  became fast!
+          became fast!
 
 Sat Oct 17 04:46:37 UTC 2009  Sumant Tambe  <sutambe@nospam>
 
