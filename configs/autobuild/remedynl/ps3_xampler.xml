@@ -1,10 +1,10 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <include name="fc8-env.xml" />
         <environment name="BAGATEL_EXE"     value="/home/build/ACE/Bagatel/src/bagatel" />
         <environment name="REPORT_DIR"      value="/home/build/ACE/Avenger/_Templt/Template-Display" />
         <environment name="AVENGER_DIR"     value="/home/build/ACE/Avenger" />
+        <environment name="LD_LIBRARY_PATH" value="/usr/local/lib" />
 
         <variable name="root"     value="/home/build/ACE/" />
         <variable name="log_file" value="build.txt" />
