@@ -8,7 +8,7 @@
 
         <variable name="root"     value="/home/build/ACE/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/ps3xampler" />
+        <variable name="log_root" value="/home/build/ACE/ps3xampler/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
 
     </configuration>
