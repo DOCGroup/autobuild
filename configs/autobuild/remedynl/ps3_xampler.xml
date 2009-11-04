@@ -8,7 +8,7 @@
 
         <variable name="root"     value="/home/build/ACE/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/proj/autobuilds/logs/FC6xampler" />
+        <variable name="log_root" value="/home/build/ACE/ps3xampler" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
 
     </configuration>
@@ -145,8 +145,8 @@
 
     <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/FC8xampler_technology.sh" />
 
-    <command name="anonymous_shell"   options="cp -R /home/build/ACE/Avenger/_Templt/Template-Display /proj/autobuilds/logs/FC6xampler" />
-    <command name="anonymous_shell"   options="chmod 755 /proj/autobuilds/logs/FC6xampler -R" />
+    <command name="anonymous_shell"   options="cp -R /home/build/ACE/Avenger/_Templt/Template-Display /home/build/ACE/ps3xampler" />
+    <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/ps3xampler -R" />
 
     <command name="anonymous_shell"   options="tar cvf /home/build/ACE/CORBAemicro.tar /home/build/ACE/CORBAemicro/Avenger/_Templt/Template-Execute/_Result" />
     <command name="anonymous_shell"   options="tar cvf /home/build/ACE/CORBAemicrostatic.tar /home/build/ACE/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result" />
@@ -154,10 +154,10 @@
     <command name="anonymous_shell"   options="bzip2 /home/build/ACE/CORBAemicro.tar" />
     <command name="anonymous_shell"   options="bzip2 /home/build/ACE/CORBAemicrostatic.tar" />
     <command name="anonymous_shell"   options="bzip2 /home/build/ACE/regular.tar" />
-    <command name="anonymous_shell"   options="mkdir -p /proj/autobuilds/logs/FC6xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/ACE/CORBAemicro.tar.bz2 /proj/autobuilds/logs/FC6xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/ACE/CORBAemicrostatic.tar.bz2 /proj/autobuilds/logs/FC6xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/ACE/regular.tar.bz2 /proj/autobuilds/logs/FC6xampler/results" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/ps3xampler/results" />
+    <command name="anonymous_shell"   options="cp /home/build/ACE/CORBAemicro.tar.bz2 /home/build/ACE/ps3xampler/results" />
+    <command name="anonymous_shell"   options="cp /home/build/ACE/CORBAemicrostatic.tar.bz2 /home/build/ACE/ps3xampler/results" />
+    <command name="anonymous_shell"   options="cp /home/build/ACE/regular.tar.bz2 /home/build/ACE/ps3xampler/results" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
