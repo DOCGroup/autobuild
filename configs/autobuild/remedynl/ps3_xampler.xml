@@ -42,6 +42,10 @@
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\n'" />
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/build.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
 
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicro/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\n'" />
+
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler" options="g++" />
@@ -53,25 +57,21 @@
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/regular/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/home/build/ACE/regular/ACE_wrappers/lib" />
     <command name="generate_workspace" options="/home/build/ACE/regular/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /home/build/ACE/regular/ACE_wrappers -k -j 6" />
+    <command name="make"               options="-C /home/build/ACE/regular/ACE_wrappers -k -j 2" />
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/lib" />
     <command name="generate_workspace" options="/home/build/ACE/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /home/build/ACE/CORBAemicrostatic/ACE_wrappers -k -j 6" />
+    <command name="make"               options="-C /home/build/ACE/CORBAemicrostatic/ACE_wrappers -k -j 2" />
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicro/ACE_wrappers/lib" />
     <command name="generate_workspace" options="/home/build/ACE/CORBAemicro/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /home/build/ACE/CORBAemicro/ACE_wrappers -k -j 6" />
+    <command name="make"               options="-C /home/build/ACE/CORBAemicro/ACE_wrappers -k -j 2" />
 
     <command name="make"              options="-C /home/build/ACE/Bagatel/src" />
-
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicro/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\n'" />
 
     <command name="setenv"            options="TAO_DIR=/home/build/ACE/regular/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/regular/ACE_wrappers" />
