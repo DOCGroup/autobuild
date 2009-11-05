@@ -143,7 +143,7 @@
 
     <command name="anonymous_shell"   options="cd /home/build/ACE/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/FC8xampler_technology.sh" />
+    <command name="anonymous_shell"   options="sh /home/build/ACE/autobuild/configs/autobuild/remedynl/ps3_xampler_technology.sh" />
 
     <command name="anonymous_shell"   options="cp -R /home/build/ACE/Avenger/_Templt/Template-Display /home/build/ACE/ps3xampler" />
     <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/ps3xampler -R" />
