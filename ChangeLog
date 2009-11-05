@@ -1,3 +1,23 @@
+Thu Nov 05 11:45:00 UTC 2009  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_and_Cross.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests_Trigger.sh:
+
+          Check .disable again after build but before trigger tests.
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+
+          Reduce the amount of log files kept (free up disk space).
+
+        * autobuild.pl:
+        * commands/generate_makefile.pm:
+        * commands/generate_workspace.pm:
+
+          Correct for space in roots.
+
 Sat Oct 31 17:03:59 UTC 2009  Olli Savia  <ops@iki.fi>
 
         * configs/scoreboard/tao.xml:

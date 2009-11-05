@@ -52,7 +52,7 @@
 
     <command name="auto_run_tests"    options=" -a -o -t" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean=40 move prettify index" />
+    <command name="process_logs"      options="clean=30 move prettify index" />
     <command name="status"            options="off" />
     <command shell "rsync -avzLe ssh --delete /home/tao/rhel4/doc_scoreboard/scoreboard/rhel4/ tao@tao:/home/tao/htdocs/doc-scoreboard/rhel4" />
     <command name="file_manipulation" options="type=delete file=.disable" />

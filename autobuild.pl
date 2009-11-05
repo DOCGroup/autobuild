@@ -575,7 +575,7 @@ INPFILE: foreach my $file (@files) {
   }
 
   my $oldRoot = $data{VARS}->{root};
-  if (defined $oldRoot && $oldRoot =~ s/\s*([^\s]+)\s*/$1/) {
+  if (defined $oldRoot && $oldRoot =~ s/^\s*(.+?)\s*$/$1/) {
     if (!File::Spec->file_name_is_absolute ($oldRoot)) {
       $oldRoot = File::Spec->rel2abs ($oldRoot);
       $data{VARS}->{root} = $oldRoot;
@@ -738,7 +738,7 @@ INPFILE: foreach my $file (@files) {
       $CMD .= "s $LINE_FROM-$LINE_TO";
     }
     $CMD .= " of \"$FILE\"";
-    my $CMD2 = "with options: \"$OPTIONS\"";
+    my $CMD2 = "with options: $OPTIONS";
 
     print "\n",'=' x 79,"\n===== $CMD\n" if (1 < $verbose);
 
@@ -772,7 +772,7 @@ INPFILE: foreach my $file (@files) {
       $OPTIONS=
         subsituteVars ($OPTIONS, $FILE, $LINE_FROM, $LINE_TO) if ($SUBVARS);
       if ($OPTIONS ne $command->{OPTIONS}) {
-        print "===== subsitutions: \"$OPTIONS\"\n" if (1 < $verbose);
+        print "===== subsitutions: $OPTIONS\n" if (1 < $verbose);
       }
 
       # Always subsitute any <variables> in the command's directory string
@@ -788,7 +788,7 @@ INPFILE: foreach my $file (@files) {
         }
 
         if ("" ne $DIRECTORY) {
-          print "===== root: \"$DIRECTORY\"\n" if (1 < $verbose);
+          print "===== root: $DIRECTORY\n" if (1 < $verbose);
           $data{VARS}->{root} = $DIRECTORY;
           if (!chdir ($DIRECTORY)) {
             print STDERR "WARNING: While $CMD $CMD2:\n" if ($verbose <= 1);

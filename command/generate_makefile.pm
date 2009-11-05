@@ -82,7 +82,7 @@ sub Run ($)
         $options =~ s/dirs=$dirs//;
     }
 
-    my $command = "perl $project_root/bin/mpc.pl $options";
+    my $command = "perl \"$project_root/bin/mpc.pl\" $options";
 
     if ($dirs) {
         my $dir;

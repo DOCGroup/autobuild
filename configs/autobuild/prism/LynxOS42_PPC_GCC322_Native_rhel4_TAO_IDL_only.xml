@@ -49,9 +49,9 @@
     <command name="make"              options="-k -C apps/gperf/src" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
 
-    <command name="process_logs"      options="clean=40" />
+    <command name="process_logs"      options="clean=30" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean=40 move prettify index" />
+    <command name="process_logs"      options="clean=30 move prettify index" />
     <command name="status"            options="off" />
     <command shell "rsync -avzLe ssh --delete /home/tao/rhel4/doc_scoreboard/scoreboard/lynxos_ppc/ tao@tao:/home/tao/htdocs/doc-scoreboard/lynxos_ppc" />
     <command name="file_manipulation" options="type=delete file=.disable" />

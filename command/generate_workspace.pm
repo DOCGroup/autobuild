@@ -110,7 +110,7 @@ sub Run ($)
     }
 
     ## Create the MPC command line
-    my $command = "perl $mwc $options";
+    my $command = "perl \"$mwc\" $options";
 
     if ($dirs) {
         my $dir;
