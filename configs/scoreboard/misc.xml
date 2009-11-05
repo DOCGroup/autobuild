@@ -21,5 +21,11 @@ This is a miscellaneous scoreboard for ACE+TAO.
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
+  <build>
+    <name>Linux_Fuzz_Test_Conversion</name>
+    <url>http://www.dre.vanderbilt.edu/~remedynl/fangorn_fuzz/</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
 </group>
 </scoreboard>
