@@ -5,7 +5,6 @@
 /users/bczar/runbuild.sh FC8xmlconfig
 /users/bczar/runbuild.sh FC8ostream
 /users/bczar/runbuild.sh FC8acefortao
-/users/bczar/runbuild.sh FC6autoconf2
 /users/bczar/runbuild.sh FC8ciaocore
 /users/bczar/runbuild.sh FC6CORBAecompact2
 /users/bczar/runbuild.sh FC6CORBAemicro
@@ -33,4 +32,3 @@
 /users/bczar/runbuild.sh FC6CodeCoverage
 /users/bczar/runbuild.sh FC8xampler2
 /users/bczar/runbuild.sh FC6valgrind
-/users/bczar/runbuild.sh FC10Core
