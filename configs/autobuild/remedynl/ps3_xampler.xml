@@ -1,6 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
+        <environment name="ACE_ROOT"        value="/home/build/ACE/regular/ACE_wrappers"/>
         <environment name="BAGATEL_EXE"     value="/home/build/ACE/Bagatel/src/bagatel" />
         <environment name="REPORT_DIR"      value="/home/build/ACE/Avenger/_Templt/Template-Display" />
         <environment name="AVENGER_DIR"     value="/home/build/ACE/Avenger" />
@@ -42,9 +43,9 @@
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\n'" />
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/build.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicro/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicrostatic/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/regular/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicro/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -56,19 +57,22 @@
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/regular/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/regular/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/home/build/ACE/regular/ACE_wrappers/lib" />
-    <command name="generate_workspace" options="/home/build/ACE/regular/ACE_wrappers/build.mwc -type gnuautobuild" />
+    <command name="make"               options="-C /home/build/ACE/regular/ACE_wrappers -k realclean" />
+    <command name="generate_workspace" options="/home/build/ACE/regular/ACE_wrappers/build.mwc -type gnuace" />
     <command name="make"               options="-C /home/build/ACE/regular/ACE_wrappers -k -j 2" />
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/lib" />
-    <command name="generate_workspace" options="/home/build/ACE/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
+    <command name="make"               options="-C /home/build/ACE/CORBAemicrostatic/ACE_wrappers -k realclean" />
+    <command name="generate_workspace" options="/home/build/ACE/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuace" />
     <command name="make"               options="-C /home/build/ACE/CORBAemicrostatic/ACE_wrappers -k -j 2" />
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicro/ACE_wrappers/lib" />
-    <command name="generate_workspace" options="/home/build/ACE/CORBAemicro/ACE_wrappers/build.mwc -type gnuautobuild" />
+    <command name="make"               options="-C /home/build/ACE/CORBAemicro/ACE_wrappers -k realclean" />
+    <command name="generate_workspace" options="/home/build/ACE/CORBAemicro/ACE_wrappers/build.mwc -type gnuace" />
     <command name="make"               options="-C /home/build/ACE/CORBAemicro/ACE_wrappers -k -j 2" />
 
     <command name="make"              options="-C /home/build/ACE/Bagatel/src" />
@@ -77,18 +81,21 @@
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/regular/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/regular/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/regular/ACE_wrappers/lib" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="setenv"            options="TAO_DIR=/home/build/ACE/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/lib" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="setenv"            options="TAO_DIR=/home/build/ACE/CORBAemicro/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicro/ACE_wrappers/lib" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
@@ -163,5 +170,7 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean=2 move prettify index" />
     <command name="status"            options="off" />
+
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3xampler" />
 
 </autobuild>
