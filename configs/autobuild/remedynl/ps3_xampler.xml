@@ -81,22 +81,22 @@
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/regular/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/regular/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/regular/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="setenv"            options="TAO_DIR=/home/build/ACE/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="setenv"            options="TAO_DIR=/home/build/ACE/CORBAemicro/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/CORBAemicro/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicro/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
@@ -127,9 +127,9 @@
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/Avenger/_Templt/Template-Display/Results-Two/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/Avenger/_Templt/Template-Display/Results-Three/_Result" />
 
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro_Linux_GCC" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/Avenger/_Docses /home/build/ACE/Avenger/_Templt/Template-Display/_Docses" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/Avenger/_Images /home/build/ACE/Avenger/_Templt/Template-Display/_Images" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/Avenger/_Styles /home/build/ACE/Avenger/_Templt/Template-Display/_Styles" />
