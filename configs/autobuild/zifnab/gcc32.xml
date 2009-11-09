@@ -5,8 +5,8 @@
         <environment name="TAO_ROOT"          value="/builds/gcc32/ACE_wrappers/TAO" />
         <environment name="CIAO_ROOT"          value="/builds/gcc32/ACE_wrappers/TAO/CIAO" />
         <environment name="DANCE_ROOT"          value="/builds/gcc32/ACE_wrappers/TAO/CIAO/DAnCE" />
-        <environment name="DYLD_LIBRARY_PATH" value="/builds/gcc32/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib" />
-        <environment name="XERCESCROOT"       value="/opt/local" />
+        <environment name="DYLD_LIBRARY_PATH" value="/builds/gcc32/ACE_wrappers/lib:/builds/utils/gcc32/lib" />
+        <environment name="XERCESCROOT"       value="/builds/utils/gcc32" />
         <environment name="SSL_ROOT"         value="/usr" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.6" />
 
@@ -28,7 +28,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-snowleopard.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\nbuildbits=32'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\nbuildbits=32\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\n'" />
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
