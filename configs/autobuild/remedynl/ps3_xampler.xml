@@ -108,6 +108,8 @@
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/regular/Xampler/C++/_Suites /home/build/ACE/regular/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/regular/Avenger/_Templt/Template-Execute/_Report" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/Avenger/_Templt/Template-Execute/_Report" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/Avenger/_Templt/Template-Display/_Report" />
+
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/CORBAemicrostatic.sh output='export LD_LIBRARY_PATH=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/CORBAemicrostatic/ACE_wrappers/lib" />
