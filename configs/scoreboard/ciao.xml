@@ -288,6 +288,12 @@
   <group>
     <name>MacOS</name>
     <build>
+      <name>Snow_Leopard_GCC_32_bit</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/gcc32</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
       <name>Leopard_GCC4_Full</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
       <build_sponsor>ISIS</build_sponsor>
