@@ -1,19 +1,19 @@
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"          value="/builds/gcc32/ACE_wrappers" />
-        <environment name="TAO_ROOT"          value="/builds/gcc32/ACE_wrappers/TAO" />
-        <environment name="CIAO_ROOT"          value="/builds/gcc32/ACE_wrappers/TAO/CIAO" />
-        <environment name="DANCE_ROOT"          value="/builds/gcc32/ACE_wrappers/TAO/CIAO/DAnCE" />
-        <environment name="DYLD_LIBRARY_PATH" value="/builds/gcc32/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib" />
+        <environment name="ACE_ROOT"          value="/builds/gcc64/ACE_wrappers" />
+        <environment name="TAO_ROOT"          value="/builds/gcc64/ACE_wrappers/TAO" />
+        <environment name="CIAO_ROOT"          value="/builds/gcc64/ACE_wrappers/TAO/CIAO" />
+        <environment name="DANCE_ROOT"          value="/builds/gcc64/ACE_wrappers/TAO/CIAO/DAnCE" />
+        <environment name="DYLD_LIBRARY_PATH" value="/builds/gcc64/ACE_wrappers/lib:/project/abbarachtmp/wotte/utils/xerces/lib" />
         <environment name="XERCESCROOT"       value="/opt/local" />
         <environment name="SSL_ROOT"         value="/usr" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.6" />
 
-        <variable name="root"     value="/builds/gcc32/" />
+        <variable name="root"     value="/builds/gcc64/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/builds/gcc32" />
-        <variable name="project_root" value="/builds/gcc32/ACE_wrappers" />
+        <variable name="log_root" value="/builds/gcc64" />
+        <variable name="project_root" value="/builds/gcc64/ACE_wrappers" />
         <variable name="configs"  value="Darwin" />
     </configuration>
 
@@ -28,7 +28,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-snowleopard.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\nbuildbits=32'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\ndebug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\n'" />
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
@@ -49,5 +49,5 @@
     <command name="process_logs"      options="clean move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/gcc32" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/gcc64" />
 </autobuild>

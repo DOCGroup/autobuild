@@ -1,2 +1,3 @@
-svn up /builds/autobuilds
-perl /builds/autobuilds/autobuild.pl /builds/autobuild/configs/autobuild/zifnab/gcc32.xml
+svn up /builds/autobuild
+perl /builds/autobuild/autobuild.pl /builds/autobuild/configs/autobuild/zifnab/gcc32.xml
+perl /builds/autobuild/autobuild.pl /builds/autobuild/configs/autobuild/zifnab/gcc64.xml
