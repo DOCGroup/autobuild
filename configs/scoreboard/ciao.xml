@@ -300,6 +300,12 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
+      <name>Snow_Leopard_ICC_11.1_64_bit</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/intel64</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
+    <build>
       <name>Leopard_GCC4_Full</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/abbarach_gcc4</url>
       <build_sponsor>ISIS</build_sponsor>
