@@ -158,6 +158,12 @@
     <command name="anonymous_shell"   options="cp -R /home/build/ACE/xampler/Avenger/_Templt/Template-Display /home/build/ACE/xampler/ps3xampler" />
     <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/xampler/ps3xampler -R" />
 
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/CORBAemicro.tar" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/CORBAemicrostatic.tar" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/regular.tar" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/CORBAemicro.tar.bz2" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/CORBAemicrostatic.tar.bz2" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/regular.tar.bz2" />
     <command name="anonymous_shell"   options="tar cvf /home/build/ACE/xampler/CORBAemicro.tar /home/build/ACE/xampler/CORBAemicro/Avenger/_Templt/Template-Execute/_Result" />
     <command name="anonymous_shell"   options="tar cvf /home/build/ACE/xampler/CORBAemicrostatic.tar /home/build/ACE/xampler/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result" />
     <command name="anonymous_shell"   options="tar cvf /home/build/ACE/xampler/regular.tar /home/build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Result" />
