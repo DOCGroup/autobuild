@@ -18,6 +18,8 @@
     <command name="process_listener"  options="localhost:32005" />
     <command name="log"               options="ON" />
 
+    <command name="svn"               options="rm -rf /home/build/ACE/xampler" />
+
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
