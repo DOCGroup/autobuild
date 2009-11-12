@@ -16,9 +16,11 @@
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32005" />
-    <command name="log"               options="ON" />
 
     <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/xampler/ps3xampler/" />
+
+    <command name="log"               options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
