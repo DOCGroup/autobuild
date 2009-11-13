@@ -9,7 +9,7 @@
 
         <variable name="root"     value="/home/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/xampler/ps3xampler/" />
+        <variable name="log_root" value="/home/build/ACE/xampler/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
 
     </configuration>
@@ -18,7 +18,7 @@
     <command name="process_listener"  options="localhost:32005" />
 
     <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/xampler/ps3xampler/" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/xampler" />
 
     <command name="log"               options="ON" />
 
