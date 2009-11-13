@@ -243,7 +243,7 @@ sub ParseIfAttribute ($$$$$$$;$)
       $existingIF =
         main::subsituteVars ($existingIF, $file, $lineStart, $lineEnd);
       if ($existingIF !~ s/^\s*(?:true|)\s*$/1/i) {
-        $existingIF = eval ($existingIF);
+        chomp ($existingIF = eval ($existingIF));
         $existingIF = 0 if (!defined $existingIF ||
                             $existingIF !~ s/^\s*(.+?)\s*$/$1/);
       }
@@ -728,7 +728,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
           # itself evaluated and the result of this is stored as the next part
           # of the resultant string being created.
           #
-          $thisValue= eval ($thisValue);
+          chomp ($thisValue= eval ($thisValue));
           $thisValue = 0 if (!defined $thisValue || "" eq $thisValue);
           if ('' eq $VALUE) {
             $VALUE = $thisValue;
@@ -909,7 +909,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
     }
     if ($EVAL) {
       $VALUE = 1 if ($VALUE =~ m/^\s*(true|)\s*$/i);
-      $VALUE = eval $VALUE;
+      chomp ($VALUE = eval ($VALUE));
       $VALUE = 0 if (!defined $VALUE || "" eq $VALUE);
     }
   }

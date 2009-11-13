@@ -575,7 +575,7 @@ INPFILE: foreach my $file (@files) {
   }
 
   my $oldRoot = $data{VARS}->{root};
-  if (defined $oldRoot && $oldRoot =~ s/^\s*(.+?)\s*$/$1/) {
+  if (defined $oldRoot && $oldRoot =~ s/^\s*([^\s].*?)\s*$/$1/) {
     if (!File::Spec->file_name_is_absolute ($oldRoot)) {
       $oldRoot = File::Spec->rel2abs ($oldRoot);
       $data{VARS}->{root} = $oldRoot;
@@ -665,7 +665,7 @@ INPFILE: foreach my $file (@files) {
         $DIRECTORY=
           subsituteVars ($DIRECTORY, $FILE, $LINE_FROM, $LINE_TO);
 
-        if ($DIRECTORY =~ s/\s*([^\s]+)\s*/$1/ &&
+        if ($DIRECTORY =~ s/^\s*([^\s].*?)\s*$/$1/ &&
             !File::Spec->file_name_is_absolute ($DIRECTORY)) {
           $DIRECTORY = File::Spec->rel2abs ($DIRECTORY);
         }
@@ -763,7 +763,7 @@ INPFILE: foreach my $file (@files) {
     if ($IF_result !~ s/^\s*(?:true|)\s*$/1/i) {
       $IF_result = eval ($IF_result);
       $IF_result = 0 if (!defined $IF_result ||
-                         $IF_result !~ s/^\s*([^\s]+)\s*$/$1/);
+                         $IF_result !~ s/^\s*([^\s].*?)\s*$/$1/);
     }
 
     if ($IF_result) {
@@ -782,7 +782,7 @@ INPFILE: foreach my $file (@files) {
         $DIRECTORY=
           subsituteVars ($DIRECTORY, $FILE, $LINE_FROM, $LINE_TO );
 
-        if ($DIRECTORY =~ s/\s*([^\s]+)\s*/$1/ &&
+        if ($DIRECTORY =~ s/^\s*([^\s].*?)\s*$/$1/ &&
             !File::Spec->file_name_is_absolute ($DIRECTORY)) {
           $DIRECTORY = File::Spec->rel2abs ($DIRECTORY);
         }
