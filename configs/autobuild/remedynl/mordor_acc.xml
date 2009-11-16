@@ -10,6 +10,7 @@
         <environment name="PATH"            value="/usr/local/bin:/home/build/opt/aCC/bin/" type="prefix" />
         <environment name="SSL_ROOT"        value="/usr"/>
         <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="__COMPILER_DEMO_DAYS_TO_WARN"       value="-1" />
 
         <variable name="root"     value="/home/build/ACE/aCC/" />
         <variable name="log_file" value="build.txt" />
