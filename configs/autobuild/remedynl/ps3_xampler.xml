@@ -9,7 +9,7 @@
 
         <variable name="root"     value="/home/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/xampler/" />
+        <variable name="log_root" value="/home/build/ACE/xamplerlog/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
 
     </configuration>
@@ -185,5 +185,6 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --recursive --delete -z ps3xampler johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3xampler" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z /home/build/ACE/xamplerlog johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3xampler/logfiles" />
 
 </autobuild>
