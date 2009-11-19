@@ -1,3 +1,12 @@
+Thu Nov 19 14:22:00 UTC 2009  Simon Massey  <sma@prismtech.com>
+
+        * command/Process/ProcessUnix.pm
+
+          Allow for spaced roots corrections. Updated from
+          existing code in tao161/bin/PerACE/ProcessUnix.pm
+          to allow for quotes without secondary spawning
+          which would make the later kill fail.
+
 Fri Nov 13 14:35:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
         * autobuild.pl:

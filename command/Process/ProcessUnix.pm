@@ -20,6 +20,39 @@ sub new
     return $self;
 }
 
+sub parse_command_line ($)
+{
+    my $cmdline = shift;
+    $cmdline =~ s/^\s+//;
+
+    my @cmdlist = ();
+    while ($cmdline ne '') {
+        if ($cmdline =~ /^\"([^\"\\]*(?:\\.[^\"\\]*)*)\"(.*)/) {
+            my $unquoted = $1;
+            $cmdline = $2;
+            $unquoted =~ s/\\\"/\"/g;
+            push @cmdlist, $unquoted;
+        }
+        elsif ($cmdline =~ /^\'([^\'\\]*(?:\\.[^\'\\]*)*)\'(.*)/) {
+            my $unquoted = $1;
+            $cmdline = $2;
+            $unquoted =~ s/\\\'/\'/g;
+            push @cmdlist, $unquoted;
+        }
+        elsif ($cmdline =~ /^([^\s]*)(.*)/) {
+            push @cmdlist, $1;
+            $cmdline = $2;
+        }
+        else {
+            # this must be some kind of error
+            push @cmdlist, $cmdline;
+        }
+        $cmdline =~ s/^\s+//;
+    }
+
+    return @cmdlist;
+}
+
 sub Spawn ()
 {
     my $self = shift;
@@ -36,7 +69,8 @@ sub Spawn ()
         }
         elsif (defined $id) {
             #child here
-            exec $options;
+            my @commands = parse_command_line ($options);
+            exec @commands;
             die "ERROR: exec failed for <" . $options . ">";
         }
         elsif ($! =~ /No more process/) {
