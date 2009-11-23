@@ -30,9 +30,9 @@
 
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/include/makeinclude/platform_macros.GNU output='sctp=0\ndebug=0\noptimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/include/makeinclude/platform_macros.GNU output='xerces2=1\nsctp=0\ndebug=0\noptimize=1\ninline=1\nssl=1\nqos=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features output='ipv6=1\nssl=1\nqos=0\nrwho=0\nsctp=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/build/linux-x86/bin/MakeProjectCreator/config/default.features output='ipv6=1\nssl=1\nqos=0\nrwho=0\nsctp=0\nxerces2=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
