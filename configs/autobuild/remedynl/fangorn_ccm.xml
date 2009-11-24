@@ -9,6 +9,7 @@
         <environment name="NDDSHOME" value="/home/build/ndds.4.4d" />
         <environment name="NDDSARCHITECTURE" value="i86Linux2.6gcc4.1.1" />
         <environment name="SSL_ROOT"        value="/usr"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="25"/>
 
         <variable name="root"     value="/home/build/ACE/dds4ccm/" />
         <variable name="log_file" value="build.txt" />
