@@ -7,6 +7,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/ImplicitTemplates" />
         <variable name="configs"  value="SSL Linux NDDS Exceptions ZLIB DISABLE_TRANSPORT_CURRENT" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="10"/>
 
     </configuration>
 

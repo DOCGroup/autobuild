@@ -6,6 +6,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/NoInt/" />
         <variable name="configs"  value="Linux NDDS NoInterceptor Core" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="13"/>
     </configuration>
 
     <command name="status"            options="on" />

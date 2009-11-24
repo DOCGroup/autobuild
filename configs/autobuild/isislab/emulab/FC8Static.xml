@@ -6,6 +6,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/Static" />
         <variable name="configs"  value="Linux NDDS STATIC SSL ZLIB" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="17"/>
     </configuration>
 
     <command name="status"            options="on" />

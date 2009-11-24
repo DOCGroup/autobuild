@@ -6,6 +6,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/no_iiop/" />
         <variable name="configs"  value="Linux CIAO NDDS no_iiop SSL" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="12"/>
 
     </configuration>
 

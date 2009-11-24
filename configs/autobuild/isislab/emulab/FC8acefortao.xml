@@ -6,6 +6,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/ace_for_tao/" />
         <variable name="configs"  value="Linux CIAO NDDS Core SSL ACE_FOR_TAO" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="2"/>
     </configuration>
 
     <command name="status"            options="on" />

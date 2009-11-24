@@ -6,6 +6,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/gcc4/" />
         <variable name="configs"  value="Linux NDDS SSL" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="8"/>
 
     </configuration>
 

@@ -7,6 +7,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/proj/autobuilds/logs/Core10" />
         <variable name="configs"  value="Linux NDDS Exceptions" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="22"/>
     </configuration>
 
     <command name="status"            options="on" />
