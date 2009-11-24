@@ -7,4 +7,4 @@ cd $HOME/ACE/autobuild
 svn up
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fangorn_dds4ccm.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fangorn_ccm.xml
