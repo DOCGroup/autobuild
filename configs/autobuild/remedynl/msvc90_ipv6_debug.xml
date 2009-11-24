@@ -13,7 +13,7 @@
         <environment name="NDDSHOME"    value="T:\\RTI\\nddsw32.4.4d" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2008" />
 
-        <variable name="configs"  value="Win32 VC90 Exceptions IPV6" />
+        <variable name="configs"  value="Win32 VC90 Exceptions IPV6 NDDS XERCES" />
         <variable name="root"     value="C:\\ACE\\VC90IPV6\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\VC90IPV6\\" />
