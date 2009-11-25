@@ -154,6 +154,12 @@
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
+     <build>
+       <name>OpenSuSE_11_0_GCC4.3.1</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/suse11_64_gcc</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
     <build>
       <name>OpenSuSE_11_1_Core</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/fangorn_ccm/</url>
