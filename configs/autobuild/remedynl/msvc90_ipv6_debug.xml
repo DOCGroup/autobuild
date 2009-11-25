@@ -12,6 +12,7 @@
         <environment name="PATH"        value="T:\\RTI\\nddsw32.4.4d\\lib\\i86Win32VS2008;" type="prefix" />
         <environment name="NDDSHOME"    value="T:\\RTI\\nddsw32.4.4d" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2008" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="26"/>
 
         <variable name="configs"  value="Win32 VC90 Exceptions IPV6 NDDS XERCES" />
         <variable name="root"     value="C:\\ACE\\VC90IPV6\\" />
