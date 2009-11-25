@@ -25,6 +25,8 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
+    <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/copy_rti_dds.sh" />
+
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
 
     <command name="make"              options="-j 6 -C TAO/CIAO -k" />
