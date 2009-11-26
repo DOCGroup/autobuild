@@ -69,7 +69,7 @@
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-a -o" />
+    <command name="auto_run_tests"    options="-a -o -t" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
