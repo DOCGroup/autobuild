@@ -97,12 +97,17 @@ sub Run ($)
     }
 
     if(-x "/bin/ip"){
-        print "<h3>Linux IP network address information (ip addr show)</h3>\n";
+        print "<h3>IP network address information (ip addr show)</h3>\n";
         system("/bin/ip addr show");
     } else {
         if(-x "/sbin/ip"){
-            print "<h3>Linux IP network address information (ip addr show)</h3>\n";
+            print "<h3>IP network address information (ip addr show)</h3>\n";
             system("/sbin/ip addr show");
+        } else {
+           if(-x "/usr/sbin/ifconfig"){
+               print "<h3>IP network address information (ifconfig -a)</h3>\n";
+               system("/usr/sbin/ifconfig -a");
+           }
         }
     }
 
