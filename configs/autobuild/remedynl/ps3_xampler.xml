@@ -182,6 +182,6 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --recursive --delete -z ps3xampler johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3xampler" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z /home/build/ACE/xamplerlog/* johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3xampler/ps3xampler" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z /home/build/ACE/xamplerlog/* johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3xamplerlog" />
 
 </autobuild>

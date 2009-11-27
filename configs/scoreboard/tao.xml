@@ -30,7 +30,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>
     <build>
        <name>FC9_PPC64_IBM_Cell_Xampler</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/ps3xampler/ps3xampler/</url>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/ps3xamplerlog</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
