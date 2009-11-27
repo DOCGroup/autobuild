@@ -28,6 +28,8 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
+    <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/copy_rti_dds.sh" />
+
     <command name="generate_workspace" options="dirs=TAO/CIAO CIAO_TAO.mwc -type gnuautobuild" />
 
     <command name="make"              options="-j 6 -k -C TAO/CIAO" />

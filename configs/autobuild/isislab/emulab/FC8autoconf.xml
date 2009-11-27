@@ -28,6 +28,8 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
+    <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/copy_rti_dds.sh" />
+
     <command name="shell"             options="cd ACE_wrappers; autoreconf --install --force -I m4" />
     <command name="shell"             options="mkdir ACE_wrappers/build" />
     <command name="shell"             options="cd ACE_wrappers/build; ../configure" />
