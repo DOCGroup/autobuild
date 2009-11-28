@@ -1,3 +1,7 @@
+Sat Nov 28 00:24:28 UTC 2009  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/tao.xml: Removed the LabVIEW RT build.
+
 Thu Nov 19 14:22:00 UTC 2009  Simon Massey  <sma@prismtech.com>
 
         * command/Process/ProcessUnix.pm
