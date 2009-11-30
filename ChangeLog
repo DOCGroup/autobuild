@@ -1,3 +1,29 @@
+Mon Nov 30 09:40:00 UTC 2009  Martin Corino <mcorino@remedy.nl>
+
+        * command/auto_run_remote_tests.pm:
+        
+          New command 'auto_run_remote_tests' to enable running the integrated 
+          regression tests through a (configurable) remote shell command on a 
+          cross build target from the autobuild task on the cross build host.
+          
+        * command/print_remote_os_version.pm:
+        
+          New command 'print_remote_os_version' to enable printing the OS
+          information of the cross build target through a (configurable) remote
+          shell command (autobuild variable 'remote_shell').
+          
+        * command/print_tool_version.pm:
+        * command/print_openssl_version.pm:
+        
+          Updated to enable printing the tool version on the cross build target
+          through a (configurable) remote shell command.
+          Triggered by command option value 'remote'.
+          
+        * autobuild.pl:
+        
+          Updated to include new autobuild commands 'auto_run_remote_tests' and
+          'print_remote_os_version'.
+          
 Sat Nov 28 00:24:28 UTC 2009  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/tao.xml: Removed the LabVIEW RT build.
