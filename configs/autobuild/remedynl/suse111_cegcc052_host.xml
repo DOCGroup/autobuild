@@ -3,6 +3,7 @@
     <configuration>
         <environment name="ACE_ROOT"     value="/home/build/ACE/host/ACE_wrappers" />
         <environment name="TAO_ROOT"     value="/home/build/ACE/host/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"     value="/home/build/ACE/host/ACE_wrappers/TAO/CIAO"/>
         <environment name="PATH"         value="/bin" type="prefix" />
         <environment name="PATH"         value="/bin" type="prefix" />
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib" />
