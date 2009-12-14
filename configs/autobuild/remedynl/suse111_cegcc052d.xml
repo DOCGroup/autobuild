@@ -33,6 +33,18 @@
         <environment name="DOC_TEST_2" value="DOC_TEST_2" />
         <environment name="DOC_TEST_2_OS" value="local" />
         <environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
+        <environment name="DOC_TEST_3" value="DOC_TEST_3" />
+        <environment name="DOC_TEST_3_OS" value="local" />
+        <environment name="DOC_TEST_3_ACE_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
+        <environment name="DOC_TEST_4" value="DOC_TEST_4" />
+        <environment name="DOC_TEST_4_OS" value="local" />
+        <environment name="DOC_TEST_4_ACE_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
+        <environment name="DOC_TEST_5" value="DOC_TEST_5" />
+        <environment name="DOC_TEST_5_OS" value="local" />
+        <environment name="DOC_TEST_5_ACE_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
+        <environment name="DOC_TEST_6" value="DOC_TEST_6" />
+        <environment name="DOC_TEST_6_OS" value="local" />
+        <environment name="DOC_TEST_6_ACE_ROOT" value="/home/build/ACE/host/ACE_wrappers" />
 
         <variable name="configs"  value="WinCE CE gcc Exceptions WCHAR" />
         <variable name="root"     value="/home/build/ACE/cegcc/" />
