@@ -1,3 +1,11 @@
+Mon Dec 14 04:05:47 UTC 2009  Abdul Sowayan  <sowayan@gmail.com>
+
+        * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
+        * configs/autobuild/zifnab/zifnab.sh:
+        * configs/scoreboard/tao.xml:
+
+        Added iPhone_3.1.2 Hardware build.
+
 Mon Dec 14 03:26:34 UTC 2009  Abdul Sowayan  <sowayan@gmail.com>
 
         * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:

@@ -352,6 +352,12 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor>ISIS</build_sponsor>
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
+  <build>
+    <name>iPhone_3.1.2_Hardware</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/iPhone_3.1.2_Hardware.xml</url>
+    <build_sponsor>ISIS</build_sponsor>
+    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+  </build>
 </group>
 
 </scoreboard>
