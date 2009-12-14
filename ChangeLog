@@ -1,8 +1,15 @@
+Mon Dec 14 03:26:34 UTC 2009  Abdul Sowayan  <sowayan@gmail.com>
+
+        * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:
+        * configs/autobuild/zifnab/zifnab.sh:
+
+          Changes needed to add static Snowleopard host build.
+
 Mon Dec 14 02:51:06 UTC 2009  Abdul Sowayan  <sowayan@gmail.com>
 
         * configs/scoreboard/tao.xml:
 
-          Added a static Snowleopard host build.  
+          Added a static Snowleopard host build.
 
 Mon Nov 30 09:40:00 UTC 2009  Martin Corino <mcorino@remedy.nl>
 
