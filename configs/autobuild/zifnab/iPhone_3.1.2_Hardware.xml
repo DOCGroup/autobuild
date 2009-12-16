@@ -1,6 +1,5 @@
 <autobuild>
     <configuration>
-
         <environment name="HOST_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
         <environment name="ACE_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
@@ -8,10 +7,12 @@
         <environment name="IPHONE_TARGET" value="HARDWARE" />
         <environment name="IPHONE_VERSION" value="3.1.2" />
 
-        <variable name="root"     value="/builds/iPhone_3.1.2_Hardware" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/builds/iPhone_3.1.2_Hardware" />
+        <variable name="root"         value="/builds/iPhone_3.1.2_Hardware" />
+        <variable name="remote_root"  value="/private/var/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
+        <variable name="log_file"     value="build.txt" />
+        <variable name="log_root"     value="/builds/iPhone_3.1.2_Hardware" />
         <variable name="project_root" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
+        <variable name="remote_shell" value="ssh root@192.168.0.194" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -23,12 +24,14 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-iphone.h\x22\n\n '" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_iphone.GNU\n'" />
     <command name="print_os_version" />
+    <command name="print_remote_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
     <command name="generate_workspace" options="-type gnuautobuild -static TAO_ACE.mwc" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -j16" />
+    <command name="auto_run_remote_tests"/>
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
