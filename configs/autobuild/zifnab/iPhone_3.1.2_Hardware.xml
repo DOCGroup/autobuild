@@ -16,8 +16,6 @@
 
     <command name="status"            options="on" />
 
-    <command name="process_listener"  options="localhost:32002" />
-
     <command name="log"               options="on" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
@@ -28,9 +26,9 @@
     <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
-    <command name="generate_workspace" options="-type gnuace -static TAO_ACE.mwc" />
+    <command name="generate_workspace" options="-type gnuautobuild -static TAO_ACE.mwc" />
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k -j16" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
