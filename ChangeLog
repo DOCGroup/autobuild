@@ -1,3 +1,9 @@
+Mon Dec 21 22:00:31 UTC 2009  Trevor Fields  <fields_t@ociweb.com>
+
+        * configs/scoreboard/dds.xml:
+
+          Moved the builds from oslo.
+
 Wed Dec 16 16:01:44 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:
