@@ -1002,6 +1002,7 @@ sub Setup_Handler ($)
     elsif ($s =~ /^M / ||
            $s =~ m/WARNING/ ||
            $s =~ m/IGNORING/ ||
+           $s =~ m/svn: warning:/ ||
            $s =~ m/has not been defined/ )
     {
         $self->Output_Warning ($s);
