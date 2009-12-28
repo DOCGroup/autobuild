@@ -11,6 +11,12 @@
   <group>
     <name>Linux</name>
     <build>
+      <name>SELinux_MPC440</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/mpc440build/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>FC10_GCC_Core_x64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/fc1064core</url>
       <build_sponsor>Remedy IT</build_sponsor>
