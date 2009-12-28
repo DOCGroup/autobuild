@@ -1,19 +1,18 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/dds4ccm/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/dds4ccm/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/dds4ccm/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"        value="/home/build/ACE/dds4ccm/ACE_wrappers/TAO/CIAO/DAnCE">
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/dds4ccm/ACE_wrappers/lib:/usr/local/lib:/mnt/develop/RTI/ndds.4.4d/lib/i86Linux2.6gcc4.1.1/" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/core/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO/CIAO/DAnCE">
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/core/ACE_wrappers/lib:/usr/local/lib:/mnt/develop/RTI/ndds.4.4d/lib/i86Linux2.6gcc4.1.1/" />
         <environment name="NDDSHOME" value="/mnt/develop/RTI/ndds.4.4d" />
-        <environment name="NDDSARCHITECTURE" value="i86Linux2.6gcc4.1.1" />
-        <environment name="SSL_ROOT"        value="/usr"/>
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="25"/>
+        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.1.1" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="30"/>
 
-        <variable name="root"     value="/home/build/ACE/dds4ccm/" />
+        <variable name="root"     value="/home/build/ACE/core/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/dds4ccm/" />
+        <variable name="log_root" value="/home/build/ACE/core/" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS" />
 
     </configuration>
@@ -40,12 +39,12 @@
 
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-C TAO/CIAO -j 5 -k" />
+    <command name="make"              options="-C TAO/CIAO -j 3 -k" />
 
     <command name="auto_run_tests"    options=" -C" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fangorn_ccm" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fc1064core" />
 </autobuild>
