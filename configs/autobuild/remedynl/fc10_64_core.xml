@@ -5,12 +5,10 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO/CIAO/DAnCE">
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/core/ACE_wrappers/lib:/usr/local/lib:/mnt/develop/RTI/ndds.4.4d/lib/i86Linux2.6gcc4.1.1/" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/core/ACE_wrappers/lib:/usr/local/lib:/mnt/develop/RTI/ndds.4.4d/lib/x64Linux2.6gcc4.1.1/" />
         <environment name="NDDSHOME" value="/mnt/develop/RTI/ndds.4.4d" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.1.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="30"/>
-        <environment name="DANCE_LOG_LEVEL"        value="1"/>
-        <environment name="CIAO_LOG_LEVEL"        value="1"/>
 
         <variable name="root"     value="/home/build/ACE/core/" />
         <variable name="log_file" value="build.txt" />
