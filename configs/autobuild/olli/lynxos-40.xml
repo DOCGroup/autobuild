@@ -10,8 +10,6 @@
   <command name="status"            options="on" />
   <command name="process_listener"  options="localhost:32003" />
   <command name="log"               options="on" />
-  <command name="file_manipulation" options="type=mustnotexist file=.disable" />
-  <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-lynxos.h\x22\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE\n'"/>
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='VERSION=4.0.0\n\ndebug=1\ninline=0\noptimize=0\n\nathena=1\nfl=0\nfox=0\ngl=0\nmotif=1\nqt4=0\nqt=0\nrpc=0\nssl=1\ntk=1\ntrio=1\nwxWindows=0\nx11=1\nxt=1\nzlib=1\n\nboost=0\nbzip2=0\nexceptions=1\nlzo2=0\nstl=1\n\nace_flreactor=0\nace_qtreactor=0\nace_tkreactor=1\nace_xtreactor=1\n\ntao_flresource=0\ntao_qtresource=0\ntao_tkresource=1\ntao_xtresource=1\n\nami=1\nrt_corba=1\nsmart_proxies=1\ninterceptors=1\ninterface_repo=1\ncorba_messaging=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_lynxos.GNU\n\nPLATFORM_X11_CPPFLAGS+=-I/usr/X11R6/include\nPLATFORM_X11_LDFLAGS+=-L/usr/X11R6/lib\nPLATFORM_TRIO_LDFLAGS=-L/usr/local/lib\nLDFLAGS+=-Wl,-R$(ACE_ROOT)/lib,-R.\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qt4=1\nfox=1\nmotif=1\nathena=1\nzlib=1\nwxWindows=1\nrpc=1\nbzip2=1\nlzo1=1\nlzo2=1\nboost=1\nstl=1\n'" />
@@ -33,6 +31,5 @@
   <command name="log"                options="off" />
   <command name="shell"              options="cat /tmp/svn.log build.txt > new-build.txt; mv new-build.txt build.txt" />
   <command name="process_logs"       options="clean=10 move prettify index" />
-  <command name="file_manipulation"  options="type=delete file=.disable" />
   <command name="status"             options="off" />
 </autobuild>
