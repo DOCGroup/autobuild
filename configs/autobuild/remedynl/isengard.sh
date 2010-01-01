@@ -11,6 +11,4 @@ export LD_LIBRRAY_PATH
 
 svn up
 
-sh configs/autobuild/remedynl/isengard_host.sh
-sh configs/autobuild/remedynl/isengard_vxworks66.sh
 sh configs/autobuild/remedynl/isengard_suncc.sh
