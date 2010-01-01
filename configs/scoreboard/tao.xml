@@ -342,6 +342,12 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
   </build>
+  <build>
+    <name>FreeBSD_8_0</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-8.0/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
 </group>
 
 <group>

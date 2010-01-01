@@ -1,3 +1,8 @@
+Fri Jan  1 10:21:04 UTC 2010  Olli Savia  <ops@iki.fi>
+
+        * configs/scoreboard/tao.xml:
+          Added FreeBSD 8.0 build.
+
 Mon Dec 21 22:00:31 UTC 2009  Trevor Fields  <fields_t@ociweb.com>
 
         * configs/scoreboard/dds.xml:
@@ -9,12 +14,12 @@ Wed Dec 16 16:01:44 UTC 2009  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:
         * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
 
-          Removed process listener, upped make job count. 
-        
+          Removed process listener, upped make job count.
+
         * configs/scoreboard/tao.xml:
 
           Fixed log location for iphone build.
-        
+
 Mon Dec 14 04:05:47 UTC 2009  Abdul Sowayan  <sowayan@gmail.com>
 
         * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
