@@ -1,3 +1,10 @@
+Fri Jan 15 19:58:22 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/zifnab/vm-osx-64-builds.sh:
+        * configs/autobuild/zifnab/vm-osx-64-driver.cmd:
+
+          Final changes to enable VM builds. 
+        
 Fri Jan 15 19:42:29 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/gcc32.xml:
@@ -6,8 +13,8 @@ Fri Jan 15 19:42:29 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/zifnab/vm-osx-64-driver.cmd:
         * configs/autobuild/zifnab/zifnab.sh:
 
-          Moved GCC builds into a virtual machine. 
-        
+          Moved GCC builds into a virtual machine.
+
 Fri Jan 15 19:05:42 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/vm-osx-64-driver.sh:
