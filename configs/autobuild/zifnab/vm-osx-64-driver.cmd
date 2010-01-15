@@ -1,4 +1,4 @@
 #!/bin/sh
-svn up  /build/autobuild
-exec /build/autobuild/configs/zifnab/vm-osx-64-builds.sh
+svn up  /builds/autobuild
+exec /builds/autobuild/configs/autobuild/zifnab/vm-osx-64-builds.sh
 
