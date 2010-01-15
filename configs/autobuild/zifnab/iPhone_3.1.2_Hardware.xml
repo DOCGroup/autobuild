@@ -3,13 +3,13 @@
         <environment name="default_PROCESS_START_WAIT_INTERVAL" value="240" />
         <environment name="default_PROCESS_STOP_WAIT_INTERVAL"  value="240" />
 
-        <environment name="HOST_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
-        <environment name="ACE_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
-        <environment name="TAO_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
-        <environment name="CIAO_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO/CIAO" />
+        <environment name="HOST_ROOT"  value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
+        <environment name="ACE_ROOT"   value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
+        <environment name="TAO_ROOT"   value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
+        <environment name="CIAO_ROOT"  value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO/CIAO" />
         <environment name="DANCE_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO/CIAO/DAnCE" />
 
-        <environment name="IPHONE_TARGET" value="HARDWARE" />
+        <environment name="IPHONE_TARGET"  value="HARDWARE" />
         <environment name="IPHONE_VERSION" value="3.1.2" />
 
         <variable name="root"         value="/builds/iPhone_3.1.2_Hardware" />
@@ -18,6 +18,28 @@
         <variable name="log_root"     value="/builds/iPhone_3.1.2_Hardware" />
         <variable name="remote_shell" value="ssh root@192.168.69.102" />
         <variable name="configs"      value="STATIC" />
+
+        <environment name="DOC_TEST_1"                             value="DOC_TEST_1" />
+        <environment name="DOC_TEST_1_OS"                          value="iPhone" />
+        <environment name="DOC_TEST_1_IPNAME"                      value="192.168.69.102" />
+        <environment name="DOC_TEST_1_ACE_ROOT"                    value="/private/var/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
+        <environment name="DOC_TEST_1_TAO_ROOT"                    value="/private/var/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
+        <environment name="DOC_TEST_1_HOST_ROOT"                   value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
+        <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL" value="240" />
+        <environment name="DOC_TEST_1_PROCESS_STOP_WAIT_INTERVAL"  value="240" />
+        <environment name="DOC_TEST_1_HOSTNAME"                    value="192.168.69.102" />
+        <environment name="DOC_TEST_1_REBOOT"                      value="0" />
+
+        <environment name="DOC_TEST_2"                             value="DOC_TEST_2" />
+        <environment name="DOC_TEST_2_OS"                          value="iPhone" />
+        <environment name="DOC_TEST_2_IPNAME"                      value="192.168.69.102" />
+        <environment name="DOC_TEST_2_ACE_ROOT"                    value="/private/var/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
+        <environment name="DOC_TEST_2_TAO_ROOT"                    value="/private/var/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
+        <environment name="DOC_TEST_2_HOST_ROOT"                   value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
+        <environment name="DOC_TEST_2_PROCESS_START_WAIT_INTERVAL" value="240" />
+        <environment name="DOC_TEST_2_PROCESS_STOP_WAIT_INTERVAL"  value="240" />
+        <environment name="DOC_TEST_2_HOSTNAME"                    value="192.168.69.102" />
+        <environment name="DOC_TEST_2_REBOOT"                      value="0" />
     </configuration>
 
     <command name="status"            options="on" />
