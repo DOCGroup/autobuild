@@ -1,9 +1,16 @@
+Fri Jan 15 19:05:42 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/zifnab/vm-osx-64-driver.sh:
+        * configs/autobuild/zifnab/vm-osx-64-gcc.sh:
+
+          Start of supporting builds in hosted VMs.
+        
 Thu Jan 14 16:05:32 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
 
-          added line to rsync results to the device. 
-        
+          added line to rsync results to the device.
+
 Fri Jan  1 10:21:04 UTC 2010  Olli Savia  <ops@iki.fi>
 
         * configs/scoreboard/tao.xml:
