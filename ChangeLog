@@ -1,3 +1,10 @@
+Fri Jan 15 20:26:20 UTC 2010  William R. Otte <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/zifnab/vm-osx-64-2-builds.sh:
+        * configs/autobuild/zifnab/vm-osx-64-2-driver.cmd:
+
+          Added second VM.
+        
 Fri Jan 15 19:58:22 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/vm-osx-64-builds.sh:
