@@ -1,5 +1,8 @@
 <autobuild>
     <configuration>
+        <environment name="default_PROCESS_START_WAIT_INTERVAL" value="25" />
+        <environment name="default_PROCESS_STOP_WAIT_INTERVAL"  value="25" />
+
         <environment name="HOST_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
         <environment name="ACE_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/builds/iPhone_3.1.2_Hardware/ACE_wrappers/TAO" />
