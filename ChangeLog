@@ -1,17 +1,29 @@
+Sun Jan 17 17:40:21 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:
+        * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
+        * configs/autobuild/zifnab/iPhone_3.1.2_Simulator.xml:
+        * configs/autobuild/zifnab/vm-osx-64-3-builds.sh:
+        * configs/autobuild/zifnab/vm-osx-64-3-driver.cmd:
+        * configs/autobuild/zifnab/vm-osx-64-builds.sh:
+        * configs/autobuild/zifnab/zifnab.sh:
+
+          Added third VM. 
+        
 Fri Jan 15 20:26:20 UTC 2010  William R. Otte <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/vm-osx-64-2-builds.sh:
         * configs/autobuild/zifnab/vm-osx-64-2-driver.cmd:
 
           Added second VM.
-        
+
 Fri Jan 15 19:58:22 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/vm-osx-64-builds.sh:
         * configs/autobuild/zifnab/vm-osx-64-driver.cmd:
 
-          Final changes to enable VM builds. 
-        
+          Final changes to enable VM builds.
+
 Fri Jan 15 19:42:29 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/gcc32.xml:
