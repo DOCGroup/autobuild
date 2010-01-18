@@ -3,8 +3,8 @@
 # $Id$
 #
 
-cd $HOME/ACE/autobuild
+cd $HOME/mpc440_build/ACE/autobuild
 
-exec /usr/bin/perl $HOME/teton_build/ACE/autobuild/autobuild.pl \
-                             $HOME/teton_build/ACE/autobuild/configs/autobuild/remedynl/mpc440build_host.xml
+exec /usr/bin/perl $HOME/mpc440_build/ACE/autobuild/autobuild.pl \
+                             $HOME/mpc440_build/ACE/autobuild/configs/autobuild/remedynl/mpc440build_host.xml
 

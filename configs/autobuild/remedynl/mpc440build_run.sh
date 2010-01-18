@@ -2,8 +2,8 @@
 #
 # $Id$
 #
-cd $HOME/teton_build/ACE/autobuild
+cd $HOME/mpc440_build/ACE/autobuild
 
 svn up
 
-sh $HOME/teton_build/ACE/autobuild/configs/autobuild/remedynl/mpc440build_host.sh && $HOME/teton_build/ACE/autobuild/configs/autobuild/remedynl/mpc440build.sh
+sh $HOME/mpc440_build/ACE/autobuild/configs/autobuild/remedynl/mpc440build_host.sh && $HOME/mpc440_build/ACE/autobuild/configs/autobuild/remedynl/mpc440build.sh
