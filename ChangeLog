@@ -1,3 +1,9 @@
+Mon Jan 18 21:18:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
+
+        * command/check_compiler.pm:
+        
+          Updated to recognize more breeds of GCC cross compilers.
+        
 Sun Jan 17 17:40:21 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:

@@ -46,9 +46,9 @@ sub Run ($)
 
     print "================ Compiler version ================\n";
 
-    if($compiler =~ m/^(\w*-)?(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc|ccpentium|ccppc|c\+\+ppc|c\+\+pentium)/){
+    if($compiler =~ m/^(\w*-)*(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc|ccpentium|ccppc|c\+\+ppc|c\+\+pentium)/){
         system($compiler." -v 2>&1");
-      if($compiler =~ m/^(\w*-)?(gcc|g\+\+|g\+\+-?[0-9])/){
+      if($compiler =~ m/^(\w*-)*(gcc|g\+\+|g\+\+-?[0-9])/){
           my $linker = `$compiler -print-prog-name=ld`;
           chomp $linker;
           if($linker eq "ld"){
