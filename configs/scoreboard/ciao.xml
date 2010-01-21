@@ -214,12 +214,6 @@
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-    <build>
-      <name>FC9_PPC64_IBM_Cell</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3_gcc/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
   </group>
 
   <group>
