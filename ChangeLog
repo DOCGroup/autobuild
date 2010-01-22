@@ -1,3 +1,9 @@
+Fri Jan 22 11:32:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
+
+        * configs/scoreboard/ciao.xml:
+        
+          Added PS3 Cell BE host and crossbuilds.
+
 Tue Jan 19 14:08:00 UTC 2010  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/parse_compiler_output.pm:

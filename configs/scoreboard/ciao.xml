@@ -214,6 +214,30 @@
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
+    <build>
+      <name>FC10_PS3CellBE_PPU_Crossbuild</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3cellbuild</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC10_PS3CellBE_PPU_Crossbuild_Host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3cellbuild_host</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC10_PS3CellBE_GCC_Crossbuild</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3gccbuild</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC10_PS3CellBE_GCC_Crossbuild_Host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3gccbuild_host</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
   </group>
 
   <group>
