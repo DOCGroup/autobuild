@@ -8,6 +8,7 @@
         <environment name="REPORT_DIR"      value="/home/build/ACE/xampler/Avenger/_Templt/Template-Display" />
         <environment name="AVENGER_DIR"     value="/home/build/ACE/xampler/Avenger" />
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib::/usr/local/lib" />
+        <environment name="CROSS_COMPILE" value="ppu-"/>
 
         <variable name="root"     value="/home/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
@@ -55,7 +56,7 @@
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
-    <command name="check_compiler" options="g++" />
+    <command name="check_compiler" options="ppu-gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
