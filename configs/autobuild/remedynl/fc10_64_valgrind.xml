@@ -53,6 +53,8 @@
 
     <command name="auto_run_tests"    options=" -C" />
 
+    <command name="shell"             options="kilall ciao_componentserver" />
+
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />

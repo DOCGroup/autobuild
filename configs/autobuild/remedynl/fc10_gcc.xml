@@ -6,9 +6,9 @@
         <environment name="CIAO_ROOT"         value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH"   value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib:" />
-        <environment name="LD_LIBRARY_PATH" value="/mnt/develop/RTI/ndds.4.5b.rev01/lib/x64Linux2.6gcc4.3.2/:" type="prefix"/>
+        <environment name="LD_LIBRARY_PATH" value="/mnt/develop/RTI/ndds.4.5b.rev01/lib/i86Linux2.6gcc4.1.1/:" type="prefix"/>
         <environment name="NDDSHOME" value="/mnt/develop/RTI/ndds.4.5b.rev01" />
-        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.3.2" />
+        <environment name="NDDSARCHITECTURE" value="i86Linux2.6gcc4.1.1" />
         <environment name="SSL_ROOT"          value="/usr"/>
 
         <variable name="root"     value="/home/build/ACE/gcc/" />
@@ -45,6 +45,8 @@
     <command name="make"              options="-k -j 4" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
+
+    <command name="shell"             options="kilall ciao_componentserver" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
