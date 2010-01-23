@@ -34,7 +34,7 @@
 
     <command name="log"               options="on" />
     
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_POSIX_SEM_TIMEOUT 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=1\nxerces2=1\nndds=0\ninline=0\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
