@@ -16,6 +16,7 @@
         <environment name="INCLUDE"     value="C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\INCLUDE;C:\Program Files\Microsoft Visual Studio 9.0\VC\INCLUDE;C:\Program Files\\Microsoft SDKs\Windows\v6.0A\include;" type="prefix" />
         <environment name="LIB"         value="C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\LIB;C:\Program Files\Microsoft Visual Studio 9.0\VC\LIB;C:\Program Files\\Microsoft SDKs\Windows\v6.0A\lib;" type="prefix" />
         <environment name="LIBPATH"     value="C:\WINDOWS\Microsoft.NET\Framework\v3.5;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\LIB;C:\Program Files\Microsoft Visual Studio 9.0\VC\LIB;" type="prefix" />
+        <environment name="PATH"        value="C:\Program Files\\Microsoft SDKs\Windows\v6.0A\bin;" type="prefix" />
 
         <variable name="configs"  value="Win32 VC90 Exceptions NDDS XERCES" />
         <variable name="root"     value="C:\\ACE\\VC90MinCORBA\\" />
