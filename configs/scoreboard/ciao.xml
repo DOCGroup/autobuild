@@ -262,6 +262,18 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+    <build>
+      <name>FC10_MPC440_Xampler_Crossbuild</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/mpc440_xamplerlog</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC10_MPC440_Xampler_Crossbuild_Host</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/mpc440_xampler_host</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
   </group>
 
   <group>
