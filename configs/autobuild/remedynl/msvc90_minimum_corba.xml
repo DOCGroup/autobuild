@@ -8,15 +8,15 @@
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
         <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
         <environment name="PATH"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />
-        <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\bin;C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\lib;" type="prefix" />
-        <environment name="NDDSHOME"    value="C:\\Program Files\\RTI\\ndds.4.4d" />
+        <environment name="PATH"        value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\bin;C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\lib;" type="prefix" />
+        <environment name="PATH"        value="T:\\RTI\\nddsw32.4.4d\\lib\\i86Win32VS2008;" type="prefix" />
+        <environment name="NDDSHOME"    value="T:\\RTI\\nddsw32.4.4d" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2008" />
-        <environment name="PATH"        value="C:\\Program Files\\RTI\\ndds.4.4d\\lib\\i86Win32VS2008;" type="prefix" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="26"/>
-        <environment name="INCLUDE"     value="C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\INCLUDE;C:\Program Files\Microsoft Visual Studio 9.0\VC\INCLUDE;C:\Program Files\\Microsoft SDKs\Windows\v6.0A\include;" type="prefix" />
-        <environment name="LIB"         value="C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\LIB;C:\Program Files\Microsoft Visual Studio 9.0\VC\LIB;C:\Program Files\\Microsoft SDKs\Windows\v6.0A\lib;" type="prefix" />
-        <environment name="LIBPATH"     value="C:\WINDOWS\Microsoft.NET\Framework\v3.5;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\LIB;C:\Program Files\Microsoft Visual Studio 9.0\VC\LIB;" type="prefix" />
-        <environment name="PATH"        value="C:\Program Files\\Microsoft SDKs\Windows\v6.0A\bin;" type="prefix" />
+        <environment name="INCLUDE"     value="C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\INCLUDE;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\include;" type="prefix" />
+        <environment name="LIB"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\lib;" type="prefix" />
+        <environment name="LIBPATH"     value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;" type="prefix" />
+        <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\bin;" type="prefix" />
 
         <variable name="configs"  value="Win32 VC90 Exceptions NDDS XERCES" />
         <variable name="root"     value="C:\\ACE\\VC90MinCORBA\\" />
