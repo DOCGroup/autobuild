@@ -13,7 +13,7 @@
         <variable name="root"         value="/builds/iPhone_3.1.2_Simulator" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/builds/iPhone_3.1.2_Simulator" />
-        <variable name="configs"      value="STATIC" />
+        <variable name="configs"      value="STATIC FIXED_BUGS_ONLY" />
     </configuration>
 
     <command name="status"            options="on" />

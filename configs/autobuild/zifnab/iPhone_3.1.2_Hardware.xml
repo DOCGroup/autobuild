@@ -17,7 +17,7 @@
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/builds/iPhone_3.1.2_Hardware" />
         <variable name="remote_shell" value="ssh root@192.168.69.102" />
-        <variable name="configs"      value="STATIC" />
+        <variable name="configs"      value="STATIC FIXED_BUGS_ONLY NO_IFR" />
 
         <environment name="DOC_TEST_1"                             value="DOC_TEST_1" />
         <environment name="DOC_TEST_1_OS"                          value="iPhone" />
