@@ -10,6 +10,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Linux</name>
+    <build>
+       <name>FC9_Minimum</name>
+       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_Minimum/</url>
+       <build_sponsor>ISIS</build_sponsor>
+       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    </build>
      <build>
        <name>FC6_CORBA_e_compact</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/CORBA_e_compact</url>
