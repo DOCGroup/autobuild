@@ -1,13 +1,31 @@
+Tue Jan 26 16:10:50 UTC 2010  Abdul Sowayan  <sowayan@gmail.com>
+
+        * command/auto_run_remote_tests.pm:
+
+          auto_run_remote_tests ignores PROCESS_START_WAIT_INTERVAL and 
+          PROCESS_STOP_WAIT_INTERVAL on the iPhone Hardware build. Those
+          environment variables are not set on the iPhone Hardware. This
+          is a temporary hack until the autotest framework is enhanced to
+          accommodate ssh based testing (such as iPhone). Introduced
+          environment variables REMOTE_OS, REMOTE_PROCESS_START_WAIT_INTERVAL,
+          and REMOTE_PROCESS_STOP_WAIT_INTERVAL
+
+        * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
+ 
+          Set REMOTE_OS, REMOTE_PROCESS_START_WAIT_INTERVAL,
+          and REMOTE_PROCESS_STOP_WAIT_INTERVAL environment 
+          variables.
+
 Mon Jan 25 09:28:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
 
         * configs/scoreboard/ciao.xml:
-        
+
           Added MPC440 host and crossbuilds.
 
 Fri Jan 22 11:32:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
 
         * configs/scoreboard/ciao.xml:
-        
+
           Added PS3 Cell BE host and crossbuilds.
 
 Tue Jan 19 14:08:00 UTC 2010  Johnny Willemsen  <jwillemsen@remedy.nl>

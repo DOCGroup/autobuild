@@ -1,5 +1,8 @@
 <autobuild>
     <configuration>
+        <environment name="REMOTE_OS"                           value="iPhone" />
+        <environment name="REMOTE_PROCESS_START_WAIT_INTERVAL"  value="240" />
+        <environment name="REMOTE_PROCESS_STOP_WAIT_INTERVAL"   value="240" />
         <environment name="default_PROCESS_START_WAIT_INTERVAL" value="240" />
         <environment name="default_PROCESS_STOP_WAIT_INTERVAL"  value="240" />
 

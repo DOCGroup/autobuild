@@ -179,6 +179,20 @@ sub Run ($)
     $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:\$LD_LIBRARY_PATH ";
     $remote_cmd .= "PATH=\$PATH:$remote_root/bin:$remote_root/lib ";
     
+    if ($ENV{'REMOTE_OS'} eq 'iPhone') {
+        if (exists $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'}) {
+            $remote_cmd .= "default_PROCESS_START_WAIT_INTERVAL=" . $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'} . " ";
+        } else {
+            $remote_cmd .= "default_PROCESS_START_WAIT_INTERVAL=240 ";
+        }
+
+        if (exists $ENV{'REMOTE_PROCESS_STOP_WAIT_INTERVAL'}) {
+            $remote_cmd .= "default_PROCESS_STOP_WAIT_INTERVAL=" . $ENV{'REMOTE_PROCESS_STOP_WAIT_INTERVAL'} . " ";
+        } else {
+            $remote_cmd .= "default_PROCESS_STOP_WAIT_INTERVAL=240 ";
+        }
+    }
+
     if(defined $script_path) {
         $remote_cmd .= "perl $script_path/auto_run_tests.pl $options";
     }
