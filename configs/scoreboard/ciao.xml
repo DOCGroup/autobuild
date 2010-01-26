@@ -313,18 +313,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Solaris10_Sparc_Studio12_Debug_Purify</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/sol10purify</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>Solaris10_Sparc_Studio12_Debug_Purify_Fast</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/sol10purifyfast</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>Solaris10-x86-Studio12</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/corona_Solaris10_X86_STUDIO9</url>
       <build_sponsor>ISIS</build_sponsor>
