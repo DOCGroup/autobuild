@@ -46,7 +46,7 @@
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
-    <command name="anonymous_shell"             options="kilall ciao_componentserver" />
+    <command name="anonymous_shell"             options="killall ciao_componentserver" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
