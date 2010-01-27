@@ -1,6 +1,6 @@
 <autobuild>
-  <!-- The command used to create this file (on wasp2003) was -->
-  <!-- M:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc -buildflags "debug=0 optimize=1 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler vc71gnu -creator mitza -docbuild 1 -docrepo 1 -environment "prefix PATH=f:\\msys\\bin;" -environment "INCLUDE=F:\\Program Files\\VS71\\VC7\\INCLUDE;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include" -environment "LIB=F:\\Program Files\\VS71\\VC7\\LIB;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib" -mpcopt "-relative TAO_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO" -outdir U:\mitza -->
+  <!-- The command used to create this file (on oci1329xp) was -->
+  <!-- nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\doc -buildflags "debug=0 optimize=1 static_libs_only=1" -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO -compiler vc71gnu -creator mitza -docbuild 1 -docrepo 1 -environment "prefix PATH=f:\\msys\\bin;" -environment "INCLUDE=F:\\Program Files\\VS71\\VC7\\INCLUDE;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\include" -environment "LIB=F:\\Program Files\\VS71\\VC7\\LIB;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib\\prerelease;F:\\Program Files\\VS71\\VC7\\PlatformSDK\\lib" -hostname wasp2003 -mpcopt "-relative TAO_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO" -outdir autobuild\configs\autobuild\oci -platform win2003 -sandbox 1 -->
   <configuration>
     <environment name="ACE_ROOT"     value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1"/>
     <environment name="CIAO_ROOT"    value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO\\CIAO"/>
@@ -36,41 +36,41 @@
   <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -relative TAO_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO"/>
 
   <!-- Build dependencies -->
-  <command name="make" options="-s -k release find=*akefile dir=TAO depend"/>
-  <command name="make" options="   -k release find=*akefile dir=bin depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=protocols depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=protocols/tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=examples depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=performance-tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/examples depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/performance-tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/examples depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/DevGuideExamples depend"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO depend"/>
+  <command name="make" options="   -k  find=*akefile dir=bin depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
 
   <!-- Build targets -->
-  <command name="make" options="-s -k release find=*akefile dir=TAO"/>
-  <command name="make" options="   -k release find=*akefile dir=bin"/>
-  <command name="make" options="-s -k release find=*akefile dir=tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=protocols"/>
-  <command name="make" options="-s -k release find=*akefile dir=protocols/tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=examples"/>
-  <command name="make" options="-s -k release find=*akefile dir=performance-tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/examples"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/performance-tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/examples"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/performance-tests"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/DevGuideExamples"/>
-  <command name="make" options="-s -k release find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO"/>
+  <command name="make" options="   -k  find=*akefile dir=bin"/>
+  <command name="make" options="-s -k  find=*akefile dir=tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -Config STATIC -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="-a -t -o -Config STATIC -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
