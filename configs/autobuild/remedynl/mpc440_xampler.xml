@@ -28,9 +28,9 @@
 
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO regular" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicrostatic" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO CORBAemicro" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO regular" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO CORBAemicrostatic" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO CORBAemicro" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Xampler" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/mpc440_build/ACE/xampler/CORBAemicro/Xampler" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/mpc440_build/ACE/xampler/regular/Xampler" />
@@ -59,7 +59,7 @@
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
-    <command name="check_compiler" options="ppu-gcc" />
+    <command name="check_compiler" options="powerpc-angstrom-linux-gcc" />
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
