@@ -21,7 +21,7 @@
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2005" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="31"/>
 
-        <variable name="configs"  value="Win32 VC8 Exceptions SSL NDDS XERCES" />
+        <variable name="configs"  value="Win32 VC8 Exceptions SSL XERCES" />
         <variable name="root"     value="C:\\ACE\\VC8r\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\VC8r\\" />
@@ -42,7 +42,7 @@
     <command name="shell"             options="find ACE_wrappers -name '*.manifest' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces3=1\nssl=1\nndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ipv6=1\nxerces3=1\nssl=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
