@@ -21,7 +21,7 @@
         <variable name="remote_shell" value="ssh build@ps3-1.remedy.nl" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/home/build/ACE/crossbuild/" />
-        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR" />
+        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI" />
 
     </configuration>
 
@@ -33,7 +33,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="log"               options="on" />
-    
+
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
