@@ -54,7 +54,7 @@
 
     <command name="make"              options="-C /home/build/ACE/crossbuild/xampler/Bagatel/src" />
 
-    <command name="setenv"            options="TAO_DIR=/home/build/ACE/host/ACE_wrappers" />
+    <command name="setenv"            options="TAO_DIR=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/lib" />
