@@ -14,6 +14,8 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/xamplerlog/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
+        <variable name="remote_root"  value="/home/build/ACE/crossbuild/ACE_wrappers" />
+        <variable name="remote_shell" value="ssh build@ps3-2.remedy.nl" />
 
     </configuration>
 
@@ -59,7 +61,7 @@
     <command name="anonymous_shell"   options="cd /home/build/ACE/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
-    <!-- command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" / -->
+    <command name="anonymous_shell"   options="$SHELL -c \x22ssh build@ps3-2.remedy.nl -o StrictHostKeyChecking=no exit\x22" / -->
 
     <command name="anonymous_shell"   options="rm -rf /home/build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/xampler/regular/Xampler/C++/_Suites /home/build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Suites" />
