@@ -53,9 +53,9 @@
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\n'" />
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/build.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicrostatic/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicro/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nCROSS=powerpc-angstrom-linux-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicrostatic/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicro/Xampler/C++/makefile.local output='CORBA=MICRO\nLOCATOR=FILE\nCROSS=powerpc-angstrom-linux-\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
