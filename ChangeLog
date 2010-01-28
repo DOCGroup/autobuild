@@ -1,8 +1,14 @@
+Thu Jan 28 00:58:17 UTC 2010  Abdul Sowayan  <sowayan@gmail.com>
+
+        * configs/autobuild/zifnab/iPad_3.2_Simulator.xml:
+
+          Added iPad 3.2 Simulator build script.
+
 Tue Jan 26 16:10:50 UTC 2010  Abdul Sowayan  <sowayan@gmail.com>
 
         * command/auto_run_remote_tests.pm:
 
-          auto_run_remote_tests ignores PROCESS_START_WAIT_INTERVAL and 
+          auto_run_remote_tests ignores PROCESS_START_WAIT_INTERVAL and
           PROCESS_STOP_WAIT_INTERVAL on the iPhone Hardware build. Those
           environment variables are not set on the iPhone Hardware. This
           is a temporary hack until the autotest framework is enhanced to
@@ -11,9 +17,9 @@ Tue Jan 26 16:10:50 UTC 2010  Abdul Sowayan  <sowayan@gmail.com>
           and REMOTE_PROCESS_STOP_WAIT_INTERVAL
 
         * configs/autobuild/zifnab/iPhone_3.1.2_Hardware.xml:
- 
+
           Set REMOTE_OS, REMOTE_PROCESS_START_WAIT_INTERVAL,
-          and REMOTE_PROCESS_STOP_WAIT_INTERVAL environment 
+          and REMOTE_PROCESS_STOP_WAIT_INTERVAL environment
           variables.
 
 Mon Jan 25 09:28:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
