@@ -38,7 +38,7 @@
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/regular/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=ppu-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/regular/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=ppu-\nID=$(HOST_ROOT)/bin/tao_idl\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -96,12 +96,12 @@
     <command name="anonymous_shell"   options="cp -R /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display /home/build/ACE/crossbuild/xampler/ps3xampler" />
     <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/crossbuild/xampler/ps3xampler -R" />
 
-    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/regular.tar" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/regular.tar.bz2" />
-    <command name="anonymous_shell"   options="tar cvf /home/build/ACE/crossbuild/xampler/regular.tar /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/_Result" />
-    <command name="anonymous_shell"   options="bzip2 /home/build/ACE/crossbuild/xampler/regular.tar" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/ps3xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/ACE/crossbuild/xampler/regular.tar.bz2 /home/build/ACE/crossbuild/xampler/ps3xampler/results" />
+    <!-- command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/regular.tar" / -->
+    <!-- command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/regular.tar.bz2" / -->
+    <!-- command name="anonymous_shell"   options="tar cvf /home/build/ACE/crossbuild/xampler/regular.tar /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/_Result" / -->
+    <!-- command name="anonymous_shell"   options="bzip2 /home/build/ACE/crossbuild/xampler/regular.tar" / -->
+    <!-- command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/ps3xampler/results" / -->
+    <!-- command name="anonymous_shell"   options="cp /home/build/ACE/crossbuild/xampler/regular.tar.bz2 /home/build/ACE/crossbuild/xampler/ps3xampler/results" / -->
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
