@@ -2,20 +2,20 @@
 <autobuild>
     <configuration>
         <environment name="PATH"              value="/opt/angstrom/bin" type="prefix"/>
-        <environment name="HOST_ROOT"         value="/home/build/mpc440_build/ACE/xamplerhost/ACE_wrappers"/>
-        <environment name="ACE_ROOT"        value="/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers"/>
-        <environment name="BAGATEL_EXE"     value="/home/build/mpc440_build/ACE/xampler/Bagatel/src/bagatel" />
-        <environment name="REPORT_DIR"      value="/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display" />
-        <environment name="AVENGER_DIR"     value="/home/build/mpc440_build/ACE/xampler/Avenger" />
-        <environment name="LD_LIBRARY_PATH" value="/home/build/mpc440_build/ACE/xamplerhost/ACE_wrappers/lib::/usr/local/lib" />
+        <environment name="HOST_ROOT"         value="/home/build/ACE/host/ACE_wrappers"/>
+        <environment name="ACE_ROOT"        value="/home/build/ACE/crossbuild/regular/ACE_wrappers"/>
+        <environment name="BAGATEL_EXE"     value="/home/build/ACE/crossbuild/Bagatel/src/bagatel" />
+        <environment name="REPORT_DIR"      value="/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display" />
+        <environment name="AVENGER_DIR"     value="/home/build/ACE/crossbuild/Avenger" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib::/usr/local/lib" />
         <environment name="SSL_ROOT"          value="/opt/angstrom/powerpc-angstrom-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/opt/angstrom/powerpc-angstrom-linux/usr"/>
         <environment name="XERCESCROOT"       value="/opt/angstrom/powerpc-angstrom-linux/usr"/>
         <environment name="CROSS_COMPILE"     value="powerpc-angstrom-linux-"/>
 
-        <variable name="root"     value="/home/build/mpc440_build/ACE/xampler/" />
+        <variable name="root"     value="/home/build/ACE/crossbuild/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/mpc440_build/ACE/xamplerlog/" />
+        <variable name="log_root" value="/home/build/ACE/crossbuildlog/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
 
     </configuration>
@@ -23,22 +23,22 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32005" />
 
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/*" />
+    <!--command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild" / -->
 
     <command name="log"               options="ON" />
 
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO regular" />
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO CORBAemicrostatic" />
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO CORBAemicro" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/mpc440_build/ACE/xampler/CORBAemicro/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/mpc440_build/ACE/xampler/regular/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/mpc440_build/ACE/xampler/regular/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /home/build/mpc440_build/ACE/xampler/Bagatel" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/mpc440_build/ACE/xampler/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/ACE/crossbuild/CORBAemicrostatic/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/ACE/crossbuild/CORBAemicro/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/ACE/crossbuild/regular/Xampler" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/CORBAemicro/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/regular/Avenger" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /home/build/ACE/crossbuild/Bagatel" />
+    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/Avenger" />
 
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
@@ -53,9 +53,9 @@
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='corba_e_micro=1\n'" />
     <command name="file_manipulation" options="type=create file=CORBAemicro/ACE_wrappers/build.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/regular/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/CORBAemicro/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nCROSS=powerpc-angstrom-linux-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicrostatic/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicro/Xampler/C++/makefile.local output='BITS=64\nCORBA=MICRO\nLOCATOR=FILE\nCROSS=powerpc-angstrom-linux-\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -64,119 +64,119 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="setenv"             options="ACE_ROOT=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers" />
-    <command name="setenv"             options="TAO_ROOT=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers/TAO"/>
-    <command name="generate_workspace" options="/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers/build.mwc -type gnuace" />
-    <command name="make"               options="-C /home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers -k -j 2" />
+    <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers" />
+    <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers/TAO"/>
+    <command name="generate_workspace" options="/home/build/ACE/crossbuild/regular/ACE_wrappers/build.mwc -type gnuace" />
+    <command name="make"               options="-C /home/build/ACE/crossbuild/regular/ACE_wrappers -k -j 2" />
 
-    <command name="setenv"             options="ACE_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"             options="TAO_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers/TAO"/>
-    <command name="generate_workspace" options="/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuace" />
-    <command name="make"               options="-C /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers -k -j 2" />
+    <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers" />
+    <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers/TAO"/>
+    <command name="generate_workspace" options="/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuace" />
+    <command name="make"               options="-C /home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers -k -j 2" />
 
-    <command name="setenv"             options="ACE_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"             options="TAO_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers/TAO"/>
-    <command name="generate_workspace" options="/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers/build.mwc -type gnuace" />
-    <command name="make"               options="-C /home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers -k -j 2" />
+    <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers" />
+    <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers/TAO"/>
+    <command name="generate_workspace" options="/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers/build.mwc -type gnuace" />
+    <command name="make"               options="-C /home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers -k -j 2" />
 
-    <command name="make"              options="-C /home/build/mpc440_build/ACE/xampler/Bagatel/src" />
+    <command name="make"              options="-C /home/build/ACE/crossbuild/Bagatel/src" />
 
-    <command name="setenv"            options="TAO_DIR=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers" />
-    <command name="setenv"            options="ACE_ROOT=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers/TAO" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="setenv"            options="TAO_DIR=/home/build/ACE/crossbuild/regular/ACE_wrappers" />
+    <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers" />
+    <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers/TAO" />
+    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
-    <command name="setenv"            options="TAO_DIR=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"            options="ACE_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers/TAO" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="setenv"            options="TAO_DIR=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers" />
+    <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers" />
+    <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers/TAO" />
+    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers/lib" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/CORBAemicrostatic/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
-    <command name="setenv"            options="TAO_DIR=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"            options="ACE_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers/TAO" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="setenv"            options="TAO_DIR=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers" />
+    <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers" />
+    <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers/TAO" />
+    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers/lib" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/CORBAemicro/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh bczar@localhost -o StrictHostKeyChecking=no exit\x22" />
 
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/CORBAemicro/Xampler/C++/_Suites /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Xampler/C++/_Suites /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/regular/Xampler/C++/_Suites /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Report" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Execute/_Report" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Report" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/CORBAemicro/Xampler/C++/_Suites /home/build/ACE/crossbuild/CORBAemicro/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/CORBAemicrostatic/Xampler/C++/_Suites /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/regular/Xampler/C++/_Suites /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/_Report" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Execute/_Report" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Report" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.sh output='export LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers/lib\n'" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/ACE_wrappers/lib" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicrostatic.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers/lib\n'" />
+    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/CORBAemicrostatic/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; sh /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.sh" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/CORBAemicrostatic.sh" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/regular.sh output='export LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers/lib\n'" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/regular/ACE_wrappers/lib" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib\n'" />
+    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/ ; sh /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Ampler/Execute 1 localhost /home/build/mpc440_build/ACE/xampler/regular.sh" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/regular/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/regular.sh" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/CORBAemicro.sh output='export LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers/lib\n'" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/mpc440_build/ACE/xampler/CORBAemicro/ACE_wrappers/lib" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/CORBAemicro.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers/lib\n'" />
+    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/CORBAemicro/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger/_Templt/Template-Execute/ ; sh /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger/_Ampler/Execute 1 localhost /home/build/mpc440_build/ACE/xampler/CORBAemicro.sh" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/CORBAemicro/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/CORBAemicro/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/CORBAemicro.sh" />
 
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Three/_Result" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/Results-One/_Result" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/Results-Two/_Result" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/Results-Three/_Result" />
 
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/Avenger/_Docses /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Docses" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/Avenger/_Images /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Images" />
-    <command name="anonymous_shell"   options="ln -s /home/build/mpc440_build/ACE/xampler/Avenger/_Styles /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Styles" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/Results-Two/_Result/CORBAemicrostatic_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/CORBAemicro/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/Results-Three/_Result/CORBAemicro_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/Avenger/_Docses /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Docses" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/Avenger/_Images /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Images" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/Avenger/_Styles /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Styles" />
 
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Broker/regular" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Broker/CORBAemicro" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Broker/regular" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Broker/CORBAemicro" />
 
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Ported/Linux_GCC" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC/name.txt output='Linux with GCC\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Ported/Linux_GCC/name.txt output='Linux with GCC\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Broker/regular/name.txt output='TAO Regular\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Broker/CORBAemicrostatic/name.txt output='CORBAe micro static\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Broker/CORBAemicro/name.txt output='CORBAe micro\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
-    <command name="anonymous_shell"   options="cd /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
     <!-- command name="anonymous_shell"   options="sh /home/build/mpc440_build/ACE/autobuild/configs/autobuild/remedynl/mpc440_xampler_technology.sh" / -->
 
-    <command name="anonymous_shell"   options="cp -R /home/build/mpc440_build/ACE/xampler/Avenger/_Templt/Template-Display /home/build/mpc440_build/ACE/xampler/mpc440xampler" />
-    <command name="anonymous_shell"   options="chmod 755 /home/build/mpc440_build/ACE/xampler/mpc440xampler -R" />
+    <command name="anonymous_shell"   options="cp -R /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display /home/build/ACE/crossbuild/mpc440xampler" />
+    <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/crossbuild/mpc440xampler -R" />
 
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/CORBAemicro.tar" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.tar" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/regular.tar" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/CORBAemicro.tar.bz2" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.tar.bz2" />
-    <command name="anonymous_shell"   options="rm -rf /home/build/mpc440_build/ACE/xampler/regular.tar.bz2" />
-    <command name="anonymous_shell"   options="tar cvf /home/build/mpc440_build/ACE/xampler/CORBAemicro.tar /home/build/mpc440_build/ACE/xampler/CORBAemicro/Avenger/_Templt/Template-Execute/_Result" />
-    <command name="anonymous_shell"   options="tar cvf /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.tar /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result" />
-    <command name="anonymous_shell"   options="tar cvf /home/build/mpc440_build/ACE/xampler/regular.tar /home/build/mpc440_build/ACE/xampler/regular/Avenger/_Templt/Template-Execute/_Result" />
-    <command name="anonymous_shell"   options="bzip2 /home/build/mpc440_build/ACE/xampler/CORBAemicro.tar" />
-    <command name="anonymous_shell"   options="bzip2 /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.tar" />
-    <command name="anonymous_shell"   options="bzip2 /home/build/mpc440_build/ACE/xampler/regular.tar" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/mpc440_build/ACE/xampler/mpc440xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/mpc440_build/ACE/xampler/CORBAemicro.tar.bz2 /home/build/mpc440_build/ACE/xampler/mpc440xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/mpc440_build/ACE/xampler/CORBAemicrostatic.tar.bz2 /home/build/mpc440_build/ACE/xampler/mpc440xampler/results" />
-    <command name="anonymous_shell"   options="cp /home/build/mpc440_build/ACE/xampler/regular.tar.bz2 /home/build/mpc440_build/ACE/xampler/mpc440xampler/results" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/CORBAemicro.tar" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/CORBAemicrostatic.tar" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/regular.tar" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/CORBAemicro.tar.bz2" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/CORBAemicrostatic.tar.bz2" />
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/regular.tar.bz2" />
+    <command name="anonymous_shell"   options="tar cvf /home/build/ACE/crossbuild/CORBAemicro.tar /home/build/ACE/crossbuild/CORBAemicro/Avenger/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="tar cvf /home/build/ACE/crossbuild/CORBAemicrostatic.tar /home/build/ACE/crossbuild/CORBAemicrostatic/Avenger/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="tar cvf /home/build/ACE/crossbuild/regular.tar /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/_Result" />
+    <command name="anonymous_shell"   options="bzip2 /home/build/ACE/crossbuild/CORBAemicro.tar" />
+    <command name="anonymous_shell"   options="bzip2 /home/build/ACE/crossbuild/CORBAemicrostatic.tar" />
+    <command name="anonymous_shell"   options="bzip2 /home/build/ACE/crossbuild/regular.tar" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/mpc440xampler/results" />
+    <command name="anonymous_shell"   options="cp /home/build/ACE/crossbuild/CORBAemicro.tar.bz2 /home/build/ACE/crossbuild/mpc440xampler/results" />
+    <command name="anonymous_shell"   options="cp /home/build/ACE/crossbuild/CORBAemicrostatic.tar.bz2 /home/build/ACE/crossbuild/mpc440xampler/results" />
+    <command name="anonymous_shell"   options="cp /home/build/ACE/crossbuild/regular.tar.bz2 /home/build/ACE/crossbuild/mpc440xampler/results" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
@@ -184,6 +184,6 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /regular/ --exclude /CORBAemicro/ --exclude /CORBAemicrostatic/ mpc440xampler johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/mpc440_xampler" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z /home/build/mpc440_build/ACE/xamplerlog/* johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/mpc440_xamplerlog" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z /home/build/ACE/crossbuildlog/* johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/mpc440_xamplerlog" />
 
 </autobuild>
