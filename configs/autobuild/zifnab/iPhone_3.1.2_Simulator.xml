@@ -3,7 +3,6 @@
         <environment name="default_PROCESS_START_WAIT_INTERVAL" value="240" />
         <environment name="default_PROCESS_STOP_WAIT_INTERVAL"  value="240" />
 
-        <environment name="HOST_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
         <environment name="ACE_ROOT" value="/builds/iPhone_3.1.2_Simulator/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/builds/iPhone_3.1.2_Simulator/ACE_wrappers/TAO" />
 
@@ -21,7 +20,7 @@
     <command name="log"               options="on" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\ncross_compile=1'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-iphone-simulator.h\x22\n\n '" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_iphone.GNU\n'" />
 
