@@ -70,7 +70,7 @@
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/regular.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/lib" />
 
-    <!--command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl cd /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/ sh /home/build/ACE/crossbuild/xampler/regular/Avenger/_Ampler/Execute 1 ps3-2.remedy.nl /home/build/ACE/crossbuild/xampler/regular.sh" /-->
+    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl cd /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/ sh /home/build/ACE/crossbuild/xampler/regular/Avenger/_Ampler/Execute 1 ps3-2.remedy.nl /home/build/ACE/crossbuild/xampler/regular.sh" />
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
 
@@ -91,7 +91,7 @@
 
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <!-- command name="anonymous_shell"   options="sh /home/build/ACE/autobuild/configs/autobuild/remedynl/ps3_xampler_technology.sh" / -->
+    <command name="anonymous_shell"   options="sh /home/build/ACE/autobuild/configs/autobuild/remedynl/ps3cellbuild_xampler_technology.sh" />
 
     <command name="anonymous_shell"   options="cp -R /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display /home/build/ACE/crossbuild/xampler/ps3xampler" />
     <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/crossbuild/xampler/ps3xampler -R" />
