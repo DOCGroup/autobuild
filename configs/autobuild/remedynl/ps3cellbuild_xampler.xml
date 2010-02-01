@@ -58,8 +58,8 @@
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.6.X_Linux_GCC -exec make -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh build@ps3-2.remedy.nl -o StrictHostKeyChecking=no exit\x22" / -->
 
@@ -74,7 +74,7 @@
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
 
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.6.X_Linux_GCC /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result/regular_Linux_GCC" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/Avenger/_Docses /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Docses" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/Avenger/_Images /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Images" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/Avenger/_Styles /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Styles" />
