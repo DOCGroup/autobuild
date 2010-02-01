@@ -70,7 +70,7 @@
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/regular.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/regular/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl cd /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/ sh /home/build/ACE/crossbuild/xampler/regular/Avenger/_Ampler/Execute 1 ps3-2.remedy.nl /home/build/ACE/crossbuild/xampler/regular.sh" />
+    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/regular/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/regular/Avenger/_Ampler/Execute 1 ps3-2.remedy.nl /home/build/ACE/crossbuild/xampler/regular.sh\\\\x22\x22" />
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
 
