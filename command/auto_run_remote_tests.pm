@@ -158,6 +158,16 @@ sub Run ($)
         $options =~ s/script_path=$script_path//;
     }
 
+    my $extra_env;
+    if ($options =~ m/extra_env='([^']*)'/) {
+        $extra_env = $1;
+        $options =~ s/extra_env='$dir'//;
+    }
+    elsif ($options =~ m/extra_env=([^\s]*)/) {
+        $extra_env = $1;
+        $options =~ s/extra_env=$dir//;
+    }
+
     if (defined $dir) {
         $remote_cmd .= "cd $dir && ";
     }
@@ -176,8 +186,11 @@ sub Run ($)
     }
     
     $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root ";
-    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:\$LD_LIBRARY_PATH ";
-    $remote_cmd .= "PATH=\$PATH:$remote_root/bin:$remote_root/lib ";
+    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:\\\$LD_LIBRARY_PATH ";
+    $remote_cmd .= "PATH=\\\$PATH:$remote_root/bin:$remote_root/lib ";
+    if (defined $extra_env) {
+      $remote_cmd .= "$extra_env ";
+    }
     
     if ($ENV{'REMOTE_OS'} eq 'iPhone') {
         if (exists $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'}) {
