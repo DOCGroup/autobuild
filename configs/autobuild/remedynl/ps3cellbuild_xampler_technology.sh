@@ -135,4 +135,4 @@ DEFAULT_TITLE=ACE+TAO
 BASE_TITLE=$DEFAULT_TITLE
 
 create_front_page > /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-front.php
-create_index_page > /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Report/index-technology.php
+create_index_page > /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-technology.php
