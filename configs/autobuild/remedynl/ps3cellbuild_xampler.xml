@@ -105,7 +105,7 @@
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean=2 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /regular/ --exclude /CORBAemicro/ --exclude /CORBAemicrostatic/ ps3xampler johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/ps3cellbuild_xampler" />
