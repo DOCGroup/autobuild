@@ -52,7 +52,7 @@
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers/TAO"/>
     <command name="generate_workspace" options="/home/build/ACE/crossbuild/regular/ACE_wrappers/build.mwc -type gnuace" />
-    <command name="make"               options="-C /home/build/ACE/crossbuild/regular/ACE_wrappers -k -j 2" />
+    <command name="make"               options="-C /home/build/ACE/crossbuild/regular/ACE_wrappers -k" />
 
     <command name="make"              options="-C /home/build/ACE/crossbuild/Bagatel/src" />
 
