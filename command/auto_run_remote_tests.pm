@@ -19,8 +19,10 @@ sub new
     my $proto = shift;
     my $class = ref ($proto) || $proto;
     my $self = {'internal_options' => {'-envmod' => \&Handle_Envmod,
+                                       '-extra_env' => \&Handle_XtraEnv
                                       },
                 'substitute_vars_in_options' => 1,
+                'extra_env' => undef
                };
 
     bless ($self, $class);
@@ -68,6 +70,7 @@ sub Run ($)
     my($remainder) = '';
     foreach my $part (grep(!/^\s*$/,
                            split(/(\"[^\"]+\"|\'[^\']+\'|\s+)/, $options))) {
+      print STDERR $part . "\n";                           
       # This assumes that all internal options will take only
       # one parameter.
       if (defined $self->{'internal_options'}->{$part}) {
@@ -94,6 +97,8 @@ sub Run ($)
     }
     $options = $remainder;
     $options =~ s/\s+$//;
+
+    print STDERR $options . "\n";
 
     # if no remote root defined use root
     if (!defined $remote_root) {
@@ -158,16 +163,6 @@ sub Run ($)
         $options =~ s/script_path=$script_path//;
     }
 
-    my $extra_env;
-    if ($options =~ m/extra_env='([^']*)'/) {
-        $extra_env = $1;
-        $options =~ s/extra_env='$dir'//;
-    }
-    elsif ($options =~ m/extra_env=([^\s]*)/) {
-        $extra_env = $1;
-        $options =~ s/extra_env=$dir//;
-    }
-
     if (defined $dir) {
         $remote_cmd .= "cd $dir && ";
     }
@@ -188,11 +183,11 @@ sub Run ($)
     $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root ";
     $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:\\\$LD_LIBRARY_PATH ";
     $remote_cmd .= "PATH=\\\$PATH:$remote_root/bin:$remote_root/lib ";
-    if (defined $extra_env) {
-      $remote_cmd .= "$extra_env ";
+    if (defined $self->{'extra_env'}) {
+      $remote_cmd .= $self->{'extra_env'} . " ";
     }
     
-    if ($ENV{'REMOTE_OS'} eq 'iPhone') {
+    if (defined $ENV{'REMOTE_OS'} and ($ENV{'REMOTE_OS'} eq 'iPhone')) {
         if (exists $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'}) {
             $remote_cmd .= "default_PROCESS_START_WAIT_INTERVAL=" . $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'} . " ";
         } else {
@@ -228,6 +223,21 @@ sub Handle_Envmod {
 
   if ($value =~ /(\w+)=(.*)/) {
     $ENV{$1} = $2;
+  }
+}
+
+##############################################################################
+
+sub Handle_XtraEnv {
+  my($self)  = shift;
+  my($value) = shift;
+
+  if ($value =~ /^\'([^\']*)\'$|^\"([^\"]*)\"$/) {
+    $value = $1;
+  }
+
+  if ($value =~ /(\w+)=(.*)/) {
+    $self->{'extra_env'} .= ' ' . $value;
   }
 }
 
