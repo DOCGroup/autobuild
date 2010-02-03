@@ -112,7 +112,7 @@
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC/name.txt output='Linux with GCC\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC/name.txt output='Linux\n'" />
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/ppu/name.txt output='TAO ppu\n'" />
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/gcc/name.txt output='TAO gcc\n'" />
