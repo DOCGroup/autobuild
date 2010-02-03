@@ -2,6 +2,7 @@
 <autobuild>
     <configuration>
         <environment name="PATH"            value="/opt/cell/toolchain/bin" type="prefix"/>
+        <environment name="PATH"            value="/opt/ppc64/toolchain/bin" type="prefix"/>
         <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers"/>
         <environment name="ACE_ROOT"        value="/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers"/>
         <environment name="BAGATEL_EXE"     value="/home/build/ACE/crossbuild/xampler/Bagatel/src/bagatel" />
@@ -62,7 +63,7 @@
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc/ACE_wrappers/TAO"/>
-    <command name="generate_workspace" options="/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/build.mwc -type gnuace" />
+    <command name="generate_workspace" options="/home/build/ACE/crossbuild/xampler/gcc/ACE_wrappers/build.mwc -type gnuace" />
     <command name="make"               options="-C /home/build/ACE/crossbuild/xampler/gcc/ACE_wrappers -k" />
 
     <command name="make"              options="-C /home/build/ACE/crossbuild/xampler/Bagatel/src" />
