@@ -88,6 +88,10 @@
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/_Suites /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/_Report" />
 
+    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/gcc/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/gcc/Xampler/C++/_Suites /home/build/ACE/crossbuild/xampler/gcc/Avenger/_Templt/Template-Execute/_Suites" />
+    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/gcc/Avenger/_Templt/Template-Execute/_Report" />
+
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/ppu.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/lib" />
 
