@@ -200,6 +200,11 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/illegal redefinition/) {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/is not recognized as an internal or external command/) {
     # Something can't be found that needs to get executed
     $self->Output_Error ($s);
