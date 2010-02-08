@@ -43,6 +43,12 @@ sub handle_compiler_output_line($) {
 
   # Check out the line to figure out whether it is an error or not
 
+  if ($s =~ m/^ICECC[\[]\d+[\]]/) {
+    # debug messages of the Icecream distributed compiler; can be ignored
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/^error\W\(future\)\W908\:\W\".*\.idl\".*\'export\'/i) {
     # HP1 aCC complains about "future errors" but these particular ones are
     # for IDL compilations not c++.
