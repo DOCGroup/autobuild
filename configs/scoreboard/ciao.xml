@@ -429,22 +429,10 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>WinXP_Embarcadero_2010_Dynamic_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/CB2010/dd/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>Win2003_VC9_WarningLevel4</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9_w4</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>WinXP_Embarcadero_2010_Dynamic_Release</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/CB2010/dr/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>WinXP_VC9_IPV6</name>
