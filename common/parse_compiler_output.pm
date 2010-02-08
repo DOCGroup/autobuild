@@ -93,6 +93,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/^Warning: .* will be ignored./) {
+    # Warning from RTI ddsgen, ignore because this is not important for us
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/^Error scanning file .* for dependencies/) {
     # EVC 4 complains about non-existent files during dependency
     # generation.  This is not an actual error.
