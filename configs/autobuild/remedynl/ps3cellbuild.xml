@@ -15,7 +15,7 @@
         <environment name="ZLIB_ROOT"         value="/opt/cell/sysroot/usr"/>
         <environment name="XERCESCROOT"       value="/opt/cell/sysroot/usr"/>
         <environment name="CROSS_COMPILE"     value="ppu-"/>
-        <environment name="ICECC_VERSION"     value="/home/build/ppc64cell-ppugcc-4.1.1.tar.gz" />
+        <environment name="ICECC_VERSION"     value="/home/build/linux-x86-ppugcc-4.1.1-linux-ppc.tar.gz" />
 
         <variable name="root"         value="/home/build/ACE/crossbuild/" />
         <variable name="remote_root"  value="/home/build/ACE/crossbuild/ACE_wrappers" />

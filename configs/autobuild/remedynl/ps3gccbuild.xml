@@ -15,7 +15,7 @@
         <environment name="ZLIB_ROOT"         value="/opt/ppc64/sysroot/usr"/>
         <environment name="XERCESCROOT"       value="/opt/ppc64/sysroot/usr"/>
         <environment name="CROSS_COMPILE"     value="powerpc64-unknown-linux-gnu-"/>
-        <environment name="ICECC_VERSION"     value="/home/build/powerpc64-gcc-4.4.2.tar.gz" />
+        <environment name="ICECC_VERSION"     value="/home/build/linux-x86-gcc-4.4.2-linux-ppc.tar.gz" />
 
         <variable name="root"         value="/home/build/ACE/crossbuild/" />
         <variable name="remote_root"  value="/home/build/ACE/crossbuild/ACE_wrappers" />
