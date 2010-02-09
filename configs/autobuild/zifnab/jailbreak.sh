@@ -13,5 +13,5 @@
 
 kill -HUP `ps -axwwwww | grep blackra1n | grep -v grep | awk '{print $1}'`
 osascript /builds/autobuild/configs/autobuild/zifnab/jailbreak.scpt
-sleep 30
+sleep 60
 kill -HUP `ps -axwwwww | grep blackra1n | grep -v grep | awk '{print $1}'`
