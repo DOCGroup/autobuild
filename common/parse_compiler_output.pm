@@ -41,6 +41,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/^Warning: .* will be ignored./) {
+    # Warning from RTI ddsgen, ignore because this is not important for us
+    $self->Output_Normal ($s);
+    return;
+  }
+
   # Check out the line to figure out whether it is an error or not
 
   if ($s =~ m/^ICECC[\[]\d+[\]]/) {
@@ -88,12 +94,6 @@ sub handle_compiler_output_line($) {
   }
 
   if ($s =~ m/^Info: .* will be ignored./) {
-    # Warning from RTI ddsgen, ignore because this is not important for us
-    $self->Output_Normal ($s);
-    return;
-  }
-
-  if ($s =~ m/^Warning: .* will be ignored./) {
     # Warning from RTI ddsgen, ignore because this is not important for us
     $self->Output_Normal ($s);
     return;
