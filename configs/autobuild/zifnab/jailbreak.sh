@@ -12,5 +12,5 @@
 #    then click on "Enable access for assistive devices."
 
 kill -HUP `ps -axwwwww | grep blackra1n | grep -v grep | awk '{print $1}'`
-osascript jailbreak.scpt
+osascript /builds/autobuild/configs/autobuild/zifnab/jailbreak.scpt
 
