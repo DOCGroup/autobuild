@@ -102,7 +102,7 @@
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/lib" />
-    <command name="setenv"            options="PATH=/opt/ppc64/toolchain-gcc-4.4.2:/usr/bin:/bin"/>
+    <command name="setenv"            options="PATH=/opt/ppc64/toolchain-gcc-4.4.2/bin:/usr/bin:/bin"/>
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/gcc442/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/gcc442/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
 
