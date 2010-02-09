@@ -121,17 +121,17 @@
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/ppu.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Ampler/Execute 2 localhost /home/build/ACE/crossbuild/xampler/ppu.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/xampler/ppu.sh\\\x22\x22" />
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc432.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Ampler/Execute 2 localhost /home/build/ACE/crossbuild/xampler/gcc432.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/xampler/gcc432.sh\\\x22\x22" />
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc442.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Ampler/Execute 2 localhost /home/build/ACE/crossbuild/xampler/gcc442.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/xampler/gcc442.sh\\\x22\x22" />
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result" />
