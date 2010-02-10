@@ -41,7 +41,7 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  if ($s =~ m/^Warning: .* will be ignored/) {
+  if ($s =~ m/^Warning:.* will be ignored/) {
     # Warning from RTI ddsgen, ignore because this is not important for us
     $self->Output_Normal ($s);
     return;
