@@ -76,7 +76,7 @@
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/TAO"/>
-    <command name="setenv"             options="PATH=/opt/ppc64/toolchain-gcc-4.4.2:/usr/bin:/bin"/>
+    <command name="setenv"             options="PATH=/opt/ppc64/toolchain-gcc-4.4.2/bin:/usr/bin:/bin"/>
     <command name="generate_workspace" options="/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/build.mwc -type gnuace" />
     <command name="make"               options="-C /home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers -k" />
 
