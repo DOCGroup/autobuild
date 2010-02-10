@@ -19,7 +19,7 @@
         <variable name="remote_root"  value="/private/var/builds/iPhone_3.1.2_Hardware/ACE_wrappers" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/builds/iPhone_3.1.2_Hardware" />
-        <variable name="remote_shell" value="ssh root@192.168.69.102" />
+        <variable name="remote_shell" value="ssh -o ServerAliveInterval=5 root@192.168.69.102" />
         <variable name="configs"      value="STATIC FIXED_BUGS_ONLY NO_IFR" />
 
         <environment name="DOC_TEST_1"                             value="DOC_TEST_1" />
