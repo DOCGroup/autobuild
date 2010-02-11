@@ -1,3 +1,13 @@
+Thu Feb 11 20:36:54 UTC 2010  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/equus/equus_vc8.xml:
+        * configs/autobuild/equus/equus_vc8_release.xml:
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Added boost 1.42.
+
 Thu Feb 11 19:16:00 UTC 2010  Marcel Smit <msmit@remedy.nl
 
         * configs/scoreboard/ciao.xml:
@@ -7,7 +17,7 @@ Thu Feb 11 19:16:00 UTC 2010  Marcel Smit <msmit@remedy.nl
 Mon Feb 8 10:51:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
 
         * common/parse_compiler_output.pm:
-          
+
           Ignore ICECC debug messages instead of marking them errors.
 
 Wed Feb 3 15:38:00 UTC 2010  Martin Corino <mcorino@remedy.nl>

@@ -10,8 +10,8 @@
         <environment name="CVS_RSH"      value="plink.exe" />
         <environment name="XERCESCROOT"   value="C:\\Tools\\xerces-c-3_0_1-win32-vc8"/>
         <environment name="XERCESC_VERSION"   value="3_0"/>
-        <environment name="BOOST_ROOT"    value="C:\\Tools\\boost_1_35_0"/>
-        <environment name="BOOST_VERSION" value="boost-1_35"/>
+        <environment name="BOOST_ROOT"    value="C:\\Tools\\boost_1_42"/>
+        <environment name="BOOST_VERSION" value="boost-1_42"/>
         <environment name="BOOST_CFG"     value="-vc8-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="UDM_PATH" 	  value="C:\\Program Files\\ISIS\\UDM" />
