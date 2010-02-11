@@ -22,6 +22,12 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+    <build>
+      <name>FC10_GCC_ThreadSwitch_x64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/fc1064thrswitch/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
      <build>
        <name>FC10_GCC_432</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/fc10_gcc</url>

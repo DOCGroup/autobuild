@@ -1,3 +1,9 @@
+Thu Feb 11 19:16:00 UTC 2010  Marcel Smit <msmit@remedy.nl
+
+        * configs/scoreboard/ciao.xml:
+
+          Added FC10 64 ThreadSwitch to the scoreboard.
+
 Mon Feb 8 10:51:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
 
         * common/parse_compiler_output.pm:
