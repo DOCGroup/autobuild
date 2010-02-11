@@ -47,7 +47,7 @@
     <command name="file_manipulation" options="type=create file=gcc432/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc432/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/include/makeinclude/platform_macros.GNU output='FLAGS_C_CC += -mcpu=cell\nCROSS_COMPILE=powerpc64-unknown-linux-gnu-\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=powerpc64-unknown-linux-gnu-\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
