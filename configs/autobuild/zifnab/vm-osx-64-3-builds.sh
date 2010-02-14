@@ -2,7 +2,7 @@
 echo "`date`" > ~/last_run
 perl /builds/autobuild/autobuild.pl -V /builds/autobuild/configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml
 
-ssh -o ConnectTimeout=10 root@192.168.69.102 reboot
+ssh -o ConnectTimeout=15 root@192.168.69.102 reboot
 sleep 60
 ssh wotte@192.168.69.108 /builds/autobuild/configs/autobuild/zifnab/jailbreak.sh
 sleep 60
