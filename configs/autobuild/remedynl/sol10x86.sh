@@ -11,5 +11,5 @@ export LD_LIBRRAY_PATH
 
 svn up
 
-sh configs/autobuild/remedynl/solx86_suncc.sh
-sh configs/autobuild/remedynl/solx86_sunccfast.sh
+sh configs/autobuild/remedynl/sol10x86_suncc.sh
+sh configs/autobuild/remedynl/sol10x86_sunccfast.sh
