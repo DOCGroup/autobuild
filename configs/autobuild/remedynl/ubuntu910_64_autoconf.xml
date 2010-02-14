@@ -9,6 +9,7 @@
         <environment name="SSL_ROOT"        value="/usr"/>
 
         <variable name="root"     value="/home/build/ACE/autoconf/" />
+        <variable name="build_name"   value="ub910_64" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/autoconf/" />
         <variable name="configs"  value="Linux Exceptions SSL BOOST" />
@@ -34,9 +35,9 @@
 
     <command name="configure"         options="CXX=g++ --preclean" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="dir build=ub910_64 -k" />
 
-    <command name="auto_run_tests"    options=" -a" />
+    <command name="auto_run_tests"    options="dir build=ub910_64 -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
