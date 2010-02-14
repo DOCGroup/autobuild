@@ -9,6 +9,7 @@
         <environment name="SSL_ROOT"        value="/usr"/>
 
         <variable name="root"     value="/home/build/ACE/autoconf/" />
+        <variable name="project_root" value="/home/build/ACE/autoconf/" />
         <variable name="build_name"   value="ub910_64" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/autoconf/" />
