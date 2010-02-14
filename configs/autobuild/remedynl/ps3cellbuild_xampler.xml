@@ -27,12 +27,9 @@
     <command name="log"               options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ppu" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO gcc432" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO gcc442" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/ACE/crossbuild/xampler/ppu/Xampler" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/xampler/ppu/Avenger" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/ACE/crossbuild/xampler/gcc432/Xampler" />
-    <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/xampler/gcc432/Avenger" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/xampler/trunk /home/build/ACE/crossbuild/xampler/gcc442/Xampler" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/xampler/gcc442/Avenger" />
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/bagatel/trunk /home/build/ACE/crossbuild/xampler/Bagatel" />
@@ -42,17 +39,12 @@
     <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
-    <command name="file_manipulation" options="type=create file=gcc432/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=gcc432/ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=powerpc64-unknown-linux-gnu-\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=gcc432/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
-    <command name="file_manipulation" options="type=create file=gcc432/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=powerpc64-unknown-linux-gnu-\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=ppu-\nID=$(HOST_ROOT)/bin/tao_idl\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc432/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-unknown-linux-gnu-\nID=$(HOST_ROOT)/bin/tao_idl\n'" />
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc442/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-unknown-linux-gnu-\nID=$(HOST_ROOT)/bin/tao_idl\n'" />
 
     <command name="print_os_version" />
@@ -67,12 +59,6 @@
     <command name="setenv"             options="PATH=/opt/cell/toolchain/bin:/usr/bin:/bin"/>
     <command name="generate_workspace" options="/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/build.mwc -type gnuace" />
     <command name="make"               options="-C /home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers -k" />
-
-    <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers" />
-    <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/TAO"/>
-    <command name="setenv"             options="PATH=/opt/ppc64/toolchain/bin:/usr/bin:/bin"/>
-    <command name="generate_workspace" options="/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/build.mwc -type gnuace" />
-    <command name="make"               options="-C /home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers -k" />
 
     <command name="setenv"             options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/TAO"/>
@@ -90,14 +76,6 @@
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
 
-    <command name="setenv"            options="TAO_DIR=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers" />
-    <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers" />
-    <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/TAO" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/lib" />
-    <command name="setenv"            options="PATH=/opt/ppc64/toolchain/bin:/usr/bin:/bin"/>
-    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/gcc432/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/xampler/gcc432/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
-
     <command name="setenv"            options="TAO_DIR=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers" />
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/TAO" />
@@ -110,10 +88,6 @@
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/_Suites /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/_Report" />
 
-    <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/gcc432/Xampler/C++/_Suites /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/_Suites" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/_Report" />
-
     <command name="anonymous_shell"   options="rm -rf /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/gcc442/Xampler/C++/_Suites /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/_Report" />
@@ -122,11 +96,6 @@
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/ppu/ACE_wrappers/lib" />
 
     <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/xampler/ppu.sh\\\x22\x22" />
-
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc432.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/lib\n'" />
-    <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc432/ACE_wrappers/lib" />
-
-    <command name="anonymous_shell"   options="ssh build@ps3-2.remedy.nl \x22$SHELL --login -c \\\x22cd /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/ ; sh /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Ampler/Execute 1 localhost /home/build/ACE/crossbuild/xampler/gcc432.sh\\\x22\x22" />
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc442.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/xampler/gcc442/ACE_wrappers/lib" />
@@ -138,14 +107,12 @@
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-Three/_Result" />
 
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/ppu/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-One/_Result/ppu_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/gcc432/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result/gcc432_Linux_GCC" />
-    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-Three/_Result/gcc442_Linux_GCC" />
+    <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/gcc442/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result/gcc442_Linux_GCC" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/Avenger/_Docses /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Docses" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/Avenger/_Images /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Images" />
     <command name="anonymous_shell"   options="ln -s /home/build/ACE/crossbuild/xampler/Avenger/_Styles /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Styles" />
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/ppu" />
-    <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/gcc432" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/gcc442" />
 
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC" />
@@ -153,7 +120,6 @@
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Ported/Linux_GCC/name.txt output='Linux\n'" />
 
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/ppu/name.txt output='TAO ppu\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/gcc432/name.txt output='TAO gcc432\n'" />
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Broker/gcc442/name.txt output='TAO gcc442\n'" />
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
