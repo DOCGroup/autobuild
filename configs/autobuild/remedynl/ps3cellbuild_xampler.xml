@@ -36,11 +36,11 @@
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/xampler/Avenger" />
 
     <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=ppu/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=powerpc64-unknown-linux-gnu-\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\nCROSS_COMPILE=powerpc64-unknown-linux-gnu-\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
