@@ -45,8 +45,8 @@
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc442/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=ppu-\nID=$(HOST_ROOT)/bin/tao_idl\nGPERF=$(HOST_ROOT)/bin/ace_gperf\n'" />
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc442/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-unknown-linux-gnu-\nID=$(HOST_ROOT)/bin/tao_idl\nGPERF=$(HOST_ROOT)/bin/ace_gperf\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/ppu/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=ppu-\nID=$(HOST_ROOT)/bin/tao_idl\nID_OPTS:=$(HOST_ROOT)/bin/ace_gperf\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/xampler/gcc442/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-unknown-linux-gnu-\nID=$(HOST_ROOT)/bin/tao_idl\nID_OPTS:=$(HOST_ROOT)/bin/ace_gperf\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

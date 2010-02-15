@@ -40,7 +40,7 @@
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\nID=$(HOST_ROOT)/bin/tao_idl\nGPERF=$(HOST_ROOT)/bin/ace_gperf\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular/Xampler/C++/makefile.local output='LOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc-angstrom-linux-\nID=$(HOST_ROOT)/bin/tao_idl\nID_OPTS:=$(HOST_ROOT)/bin/ace_gperf\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
