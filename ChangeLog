@@ -1,3 +1,10 @@
+Mon Feb 15 17:30:21 UTC 2010  Abdul Sowayan  <sowayan@gmail.com>
+
+        * configs/scoreboard/tao.xml:
+
+          iPhone builds are late (orange) after 36 hours,
+           not 24 hours.
+
 Thu Feb 11 20:36:54 UTC 2010  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc8.xml:
