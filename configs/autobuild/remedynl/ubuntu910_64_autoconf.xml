@@ -32,7 +32,7 @@
     <command name="shell"             options="cd ACE_wrappers; autoreconf --install --force -I m4" />
     <command name="shell"             options="mkdir ACE_wrappers/build" />
     <command name="shell"             options="cd ACE_wrappers/build; ../configure" />
-    <command name="make"              options="dir=build -j 2 -k" />
+    <command name="make"              options="dir=build -k" />
 
     <command name="auto_run_tests"    options="dir build -a" />
 
