@@ -20,7 +20,7 @@
     <command name="process_listener"  options="localhost:32003" />
     <command name="log"               options="on" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE ." />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
