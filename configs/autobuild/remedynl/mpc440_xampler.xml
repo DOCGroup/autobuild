@@ -36,7 +36,7 @@
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/Avenger" />
 
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
