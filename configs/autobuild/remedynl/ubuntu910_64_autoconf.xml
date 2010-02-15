@@ -8,14 +8,12 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/autoconf/ACE_wrappers/lib:/usr/local/lib" />
         <environment name="SSL_ROOT"        value="/usr"/>
 
-        <variable name="root"     value="/home/build/ACE/autoconf/ACE_wrappers" />
+        <variable name="root"     value="/home/build/ACE/autoconf" />
         <variable name="project_root" value="/home/build/ACE/autoconf/" />
         <variable name="build_name"   value="ub910_64" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/autoconf/ACE_wrappers" />
+        <variable name="log_root" value="/home/build/ACE/autoconf" />
         <variable name="configs"  value="Linux Exceptions SSL BOOST" />
-        <variable name="automake_build" value="yes" />
-
     </configuration>
 
     <command name="status"            options="on" />
@@ -33,13 +31,12 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="shell"             options="./bin/bootstrap" />
+    <command name="shell"             options="cd ACE_wrappers; autoreconf --install --force -I m4" />
+    <command name="shell"             options="mkdir ACE_wrappers/build" />
+    <command name="shell"             options="cd ACE_wrappers/build; ../configure" />
+    <command name="make"              options="dir=build -j 2 -k" />
 
-    <command name="configure"         options="CXX=g++ --preclean" />
-
-    <command name="make"              options="dir build=ub910_64 -k" />
-
-    <command name="auto_run_tests"    options="dir build=ub910_64 -a" />
+    <command name="auto_run_tests"    options="dir build -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
