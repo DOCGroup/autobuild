@@ -15,6 +15,7 @@
         <environment name="ZLIB_ROOT"         value="/opt/ppc64/sysroot/usr"/>
         <environment name="XERCESCROOT"       value="/opt/ppc64/sysroot/usr"/>
         <environment name="CROSS_COMPILE"     value="powerpc64-unknown-linux-gnu-"/>
+        <environment name="TCPU"              value="cell"/>
         <environment name="ICECC_VERSION"     value="/home/build/linux-x86-gcc-4.4.2-linux-ppc.tar.gz" />
 
         <variable name="root"         value="/home/build/ACE/crossbuild/" />
@@ -38,7 +39,7 @@
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CCFLAGS += -fno-strict-aliasing\nFLAGS_C_CC += -mcpu=cell\nicecream=1\nbuildbits=64\ndebug=1\nxerces2=1\nndds=1\ninline=0\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CCFLAGS += -fno-strict-aliasing\ncpumodelflag=1\nicecream=1\nbuildbits=64\ndebug=1\nxerces2=1\nndds=1\ninline=0\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\n'" />
 
     <command name="print_os_version" />
