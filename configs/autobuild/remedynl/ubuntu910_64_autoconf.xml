@@ -34,7 +34,7 @@
     <command name="shell"             options="cd ACE_wrappers/build; ../configure" />
     <command name="make"              options="dir=build -k" />
 
-    <command name="auto_run_tests"    options="dir build -a" />
+    <command name="auto_run_tests"    options="dir=build -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
