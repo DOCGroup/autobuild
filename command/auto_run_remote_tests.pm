@@ -37,7 +37,6 @@ sub CheckRequirements ()
     my $root = main::GetVariable ('root');
     my $remote_root = main::GetVariable ('remote_root');
     my $remote_shell = main::GetVariable ('remote_shell');
-    my $remote_libpath = main::GetVariable ('remote_libpath');
 
     if (!(defined $root || defined $remote_root)) {
         print STDERR __FILE__, ": Requires \"remote_root\" or \"root\" variable\n";
@@ -64,6 +63,7 @@ sub Run ($)
     my $sandbox = main::GetVariable ('sandbox');
     my $project_root = main::GetVariable ('project_root');
     my $remote_shell = main::GetVariable ('remote_shell');
+    my $remote_libpath = main::GetVariable ('remote_libpath');
     my $remote_cmd = "";
 
     # Pull out options meant for this module
