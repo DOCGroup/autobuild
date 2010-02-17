@@ -37,6 +37,7 @@ sub CheckRequirements ()
     my $root = main::GetVariable ('root');
     my $remote_root = main::GetVariable ('remote_root');
     my $remote_shell = main::GetVariable ('remote_shell');
+    my $remote_libpath = main::GetVariable ('remote_libpath');
 
     if (!(defined $root || defined $remote_root)) {
         print STDERR __FILE__, ": Requires \"remote_root\" or \"root\" variable\n";
@@ -181,7 +182,11 @@ sub Run ($)
     }
     
     $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root ";
-    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:\\\$LD_LIBRARY_PATH ";
+    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib";
+    if (defined $remote_libpath) {
+      $remote_cmd .= ":$remote_libpath";
+    }
+    $remote_cmd .= ":\\\$LD_LIBRARY_PATH ";
     $remote_cmd .= "PATH=\\\$PATH:$remote_root/bin:$remote_root/lib ";
     if (defined $self->{'extra_env'}) {
       $remote_cmd .= $self->{'extra_env'} . " ";

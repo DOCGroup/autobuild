@@ -7,10 +7,10 @@
         <environment name="CIAO_ROOT"         value="/home/build/mpc440_build/ACE/latest/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/home/build/mpc440_build/ACE/latest/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="HOST_ROOT"         value="/home/build/mpc440_build/ACE/host/ACE_wrappers"/>
-        <!-- environment name="LD_LIBRARY_PATH"   value="/home/build/mpc440_build/ACE/latest/ACE_wrappers/lib:/usr/local/lib:/mnt/develop/RTI/ndds.4.4d/lib/x64Linux2.6gcc4.1.1" / -->
-        <environment name="LD_LIBRARY_PATH"   value="/home/build/mpc440_build/ACE/host/ACE_wrappers/lib:/usr/local/lib" />
-        <!-- environment name="NDDSHOME"          value="/mnt/develop/RTI/ndds.4.4d" / -->
-        <!-- environment name="NDDSARCHITECTURE"  value="i86Linux2.6gcc4.1.1" / -->
+        <environment name="LD_LIBRARY_PATH"   value="/home/build/mpc440_build/ACE/host/ACE_wrappers/lib:/usr/local/lib:/mnt/develop/RTI/ndds.4.4d/lib/ppc4xxFPLinux2.6gcc4.3.3" />
+        <environment name="NDDSHOME"          value="/mnt/develop/RTI/ndds.4.4d" />
+        <environment name="NDDSARCHITECTURE"  value="ppc4xxFPLinux2.6gcc4.3.3" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="34"/>
         <environment name="SSL_ROOT"          value="/opt/angstrom/powerpc-angstrom-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/opt/angstrom/powerpc-angstrom-linux/usr"/>
         <environment name="XERCESCROOT"       value="/opt/angstrom/powerpc-angstrom-linux/usr"/>
@@ -19,10 +19,11 @@
 
         <variable name="root"         value="/home/build/mpc440_build/ACE/latest/" />
         <variable name="remote_root"  value="/home/build/mpc440_build/ACE/latest/ACE_wrappers" />
+        <variable name="remote_libpath"  value="/opt/RTI/lib" />
         <variable name="remote_shell" value="ssh build@mpc440-01" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/home/build/mpc440_build/ACE/latest/" />
-        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI" />
+        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS" />
 
     </configuration>
 
@@ -38,8 +39,8 @@
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='icecream=1\ndebug=1\nxerces2=1\nndds=0\ninline=0\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ndds=0\nboost=0\nzlib=1\nssl=1\nxerces2=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='icecream=1\ndebug=1\nxerces2=1\nndds=1\ninline=0\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_remote_os_version" />
@@ -55,7 +56,7 @@
 
     <command name="make"              options="-k -j 20" />
 
-    <command name="auto_run_remote_tests"/>
+    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=34'"/>
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
