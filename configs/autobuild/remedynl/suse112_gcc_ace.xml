@@ -43,9 +43,6 @@
 
     <command name="auto_run_tests"    options=" -a" />
 
-    <command name="anonymous_shell"   options="lcov --directory /home/build/ACE/gcc44/ACE_wrappers --ignore-errors gcov,source --capture --output-file /home/build/ACE/gcc44/ACE/lcov.info" />
-    <command name="anonymous_shell"   options="genhtml --output-directory=/home/build/ACE/LCOV --legend --frames --show-details /home/build/ACE/gcc44/ACE/lcov.info" />
-
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
