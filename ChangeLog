@@ -1,3 +1,9 @@
+Thu Feb 23 07:01:00 UTC 2010  Marcel Smit <msmit@remedy.nl
+
+        * configs/scoreboard/ciao.xml:
+
+          Added FC10 64 Optimized to the scoreboard.
+
 Wed Feb 17 14:58:00 UTC 2010  Martin Corino <mcorino@remedy.nl>
 
         * command/auto_run_remote_tests.pm:
