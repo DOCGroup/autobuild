@@ -20,7 +20,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define TAO_HAS_TRANSPORT_CURRENT 0\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=0\nssl=1\noptimize=1\nexceptions=1\nrtti=1\ninline=1\nTAO_IDLFLAGS += -Gd -Gp \ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nxerces3=1\ndds4ccm_ndds=1\nndds=1\nCCFLAGS += -fno-strict-aliasing\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nzlib=1\nzzip=1\ntransport_current=0\nxerces3=1\nndds4ccm_ndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nzlib=1\nzzip=1\ntransport_current=0\nxerces3=1\ndds4ccm_ndds=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
