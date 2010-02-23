@@ -1,3 +1,10 @@
+Tue Feb 23 12:40:04 UTC 2010  William Otte  <wotte@zifnab>
+
+        * configs/autobuild/lindy_isis:
+        * configs/scoreboard/ciao_future.xml:
+        
+         Removed builds on lindy. 
+
 Thu Feb 23 07:01:00 UTC 2010  Marcel Smit <msmit@remedy.nl
 
         * configs/scoreboard/ciao.xml:
