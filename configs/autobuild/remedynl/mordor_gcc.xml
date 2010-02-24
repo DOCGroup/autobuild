@@ -47,6 +47,8 @@
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
+    <command name="make"              options="-k realclean find=*akefile" />
+
     <command name="log"               options="off" />
 
     <command name="make"              options="-k realclean find=*akefile" />
