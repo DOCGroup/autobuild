@@ -17,7 +17,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_USES_STD_NAMESPACE_FOR_STDCPP_LIB 1\n#define ACE_SHOULD_MALLOC_STATIC_OBJECT_LOCK 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nstatic_libs_only=1\nexceptions=1\noptimize=0\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -Wwrite-strings -Wcast-align\nCPPFLAGS += -DACE_USE_RCSID=0\nxerces3=1\ndds4ccm_ndds=1\nndds=1\nCCFLAGS += -fno-strict-aliasing\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nstatic_libs_only=1\nexceptions=1\noptimize=0\ndebug=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -Wwrite-strings -Wcast-align\nCPPFLAGS += -DACE_USE_RCSID=0\nxerces3=1\ndds4ccm_ndds=1\nndds=1\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\nzlib=1\nzzip=1\nxerces3=1\ndds4ccm_ndds=1\n'" />
 
     <command name="print_os_version" />
