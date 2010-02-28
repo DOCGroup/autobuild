@@ -987,6 +987,8 @@ sub Setup_Handler ($)
         $s =~ m/unknown user/ ||
         $s =~ m/Failed to add file/ ||
         $s =~ m/Failed to add directory/ ||
+        $s =~ m/error: Autoconf version/ ||
+        $s =~ m/m4 failed with/ ||
         $s =~ m/^ERROR/ ||
         $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i ||
