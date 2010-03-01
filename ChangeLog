@@ -1,3 +1,10 @@
+Mon Mar  1 14:41:28 UTC 2010  William Otte  <wotte@zifnab>
+
+        * configs/autobuild/corona/SunOS10_x86_GCC34.xml:
+        * configs/autobuild/corona/SunOS10_x86_Studio9.xml:
+        
+          Xerces3.
+
 Tue Feb 23 14:37:00 UTC 2010  Marcel Smit <msmit@remedy.nl
 
         * configs/scoreboard/ciao.xml:
