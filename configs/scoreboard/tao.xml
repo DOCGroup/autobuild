@@ -125,48 +125,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>Windows</name>
         <build>
-            <name>WinCE6_CEgcc_Suse_11.1</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/suse111gegcc052/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinCE6_x86_MSCV</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6x86/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinCE6_VC8_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6r/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinCE6_VC8_host</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8wince6host/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinCE6_x86_VC8_host</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8wince6x86host/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinCE6_VC8</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
-            <name>WinCE6_x86_CEgcc_Cygwin</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/cygwincegcc/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
-        <build>
             <name>WinXP64_VC9_64bit_Debug</name>
             <url>http://scoreboard.ociweb.com/doc_trunk_earwig_winxp-x64_nmake_d1o0</url>
             <build_sponsor>OCI</build_sponsor>

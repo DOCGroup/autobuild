@@ -282,12 +282,6 @@ all the OS/platform combinations on which ACE is tested everyday.
 
 <group>
 <name>Windows</name>
-        <build>
-            <name>WinCE6_VC8_Pro_SDK_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/msvc8ce6pror/</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
    <build>
       <name>WindowsXP_VC7.1_Debug(SSL,IPv6)</name>
       <url>http://acebuilds.riverace.com/smokey-winxpsp2/dev/vc71_debug</url>
