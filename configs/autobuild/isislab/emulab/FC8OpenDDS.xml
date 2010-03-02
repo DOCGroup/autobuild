@@ -8,7 +8,7 @@
         <variable name="log_root" value="/proj/autobuilds/logs/OpenDDS" />
         <variable name="configs"  value="Linux NDDS Exceptions" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="40"/>
-        <environment name="DDS_ROOT" value="/isisbuilds/ACE_wrappers/TAO"/>
+        <environment name="DDS_ROOT" value="/isisbuilds/ACE_wrappers/TAO/DDS"/>
     </configuration>
 
     <command name="status"            options="on" />
