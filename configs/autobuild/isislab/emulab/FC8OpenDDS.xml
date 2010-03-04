@@ -27,9 +27,9 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-type gnuautobuild" />
 
-    <command name="make"              options="-j 6 -C TAO/CIAO -k" />
+    <command name="make"              options="-j 6 -k" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />
