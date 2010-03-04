@@ -1,3 +1,10 @@
+Thu Mar  4 22:06:48 UTC 2010  Trevor Fields  <fields_t@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_Beta_stockholm.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_trunk_stockholm.phx_linux_gcc_d1o0n1.xml:
+
+          Removed multithreaded compile option.
+
 Thu Mar  4 18:09:35 UTC 2010  Sumant Tambe  <sutambe@nospam>
 
         * configs/autobuild/equus/equus_vc8_release.xml:

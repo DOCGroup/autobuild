@@ -34,19 +34,19 @@
   <command name="check_compiler"     options="gcc"/>
 
   <!-- Conditionally clean binaries -->
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0n1/.clean_binaries clean_binaries"/>
-  <command name="make" options="   -k -j2 find=*akefile dir=bin conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0n1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0n1/.clean_binaries clean_binaries"/>
+  <command name="make" options="   -k  find=*akefile dir=bin conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0n1/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build dependencies -->
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO depend"/>
-  <command name="make" options="   -k -j2 find=*akefile dir=bin depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO depend"/>
+  <command name="make" options="   -k  find=*akefile dir=bin depend"/>
 
   <!-- Build targets -->
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
-  <command name="make" options="   -k -j2 find=*akefile dir=bin"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO"/>
+  <command name="make" options="   -k  find=*akefile dir=bin"/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
