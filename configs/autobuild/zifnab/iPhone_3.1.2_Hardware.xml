@@ -66,7 +66,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-type gnuautobuild -static" />
-    <command name="make"              options="-k -j4" />
+    <command name="make"              options="-k -j10" />
     <command name="anonymous_shell"   options="/usr/bin/rsync -rve /usr/bin/ssh --exclude='*.svn*' --exclude '*.o' --exclude '*.cpp' --exclude '*.h' --exclude '*.depend*' --exclude 'GNUmakefile*' --exclude '*.inl' --exclude '*.am' --exclude '*.mpb' --exclude '*.html' --exclude '*.jpg' --exclude '*.mpc' --exclude '*.pdf' --exclude '*.ppt' --exclude 'Change*' --exclude '*.a' -l ACE_wrappers root@192.168.69.102:/private/var/builds/iPhone_3.1.2_Hardware/" />
     <command name="auto_run_remote_tests"/>
 

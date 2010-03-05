@@ -35,7 +35,7 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="generate_workspace" options="-type gnuautobuild -static" />
-    <command name="make"              options="-k -j4" />
+    <command name="make"              options="-k -j10" />
     <command name="auto_run_tests"    options=" -a -o -t" />
 
     <command name="log"               options="off" />
