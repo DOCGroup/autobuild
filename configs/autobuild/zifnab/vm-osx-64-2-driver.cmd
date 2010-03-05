@@ -1,6 +1,6 @@
 #!/bin/sh
 svn up  /builds/autobuild
 export PATH=/opt/icecream/bin:$PATH
-/opt/icecream/sbin/iceccd &
+sudo /opt/icecream/sbin/iceccd &
 export ICECC_VERSION=/Users/bczar/9729ecda0c3e2a5ab080917526226623.tar.gz
 exec /builds/autobuild/configs/autobuild/zifnab/vm-osx-64-2-builds.sh
