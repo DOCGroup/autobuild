@@ -23,7 +23,7 @@
     <command name="print_ace_config" />
     <command name="generate_workspace" options="-type gnuace -static TAO_ACE.mwc" />
     <command name="make"              options="-k realclean" />
-    <command name="make"              options="-k -j10" />
+    <command name="make"              options="-k -j4" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

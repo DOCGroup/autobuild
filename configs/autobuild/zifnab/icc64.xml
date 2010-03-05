@@ -38,7 +38,7 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="make"              options="-j 10 -k" />
+    <command name="make"              options="-j 16 -k" />
 
     <!-- Build CIAO -->
     <command name="make"              options="-k -j 16 -C TAO/CIAO" />
