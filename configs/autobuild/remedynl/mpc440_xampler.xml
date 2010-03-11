@@ -36,7 +36,7 @@
     <command name="svn"               options="co http://shiva.ms.mff.cuni.cz/svn/avenger/trunk /home/build/ACE/crossbuild/Avenger" />
 
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=regular/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
@@ -71,7 +71,7 @@
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Execute/_Report" />
     <command name="anonymous_shell"   options="mkdir -p /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display/_Report" />
 
-    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib\n'" />
+    <command name="file_manipulation" options="type=create file=/home/build/ACE/crossbuild/regular.sh output='export LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib" />
 
     <command name="anonymous_shell"   options="ssh build@mpc440-02.remedy.nl \x22sh --login -c \\\x22cd /home/build/ACE/crossbuild/regular/Avenger/_Templt/Template-Execute/ ; /bin/sh /home/build/ACE/crossbuild/regular/Avenger/_Ampler/Execute.sh 1 localhost /home/build/ACE/crossbuild/regular.sh\\\x22\x22" />
