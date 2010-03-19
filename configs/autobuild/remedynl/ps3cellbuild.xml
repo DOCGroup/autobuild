@@ -39,7 +39,7 @@
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cpumodelflag=1\nicecream=1\nbuildbits=64\nno_hidden_visibility=1\ndebug=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\ninline=1\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='cpumodelflag=1\nicecream=1\nbuildbits=64\nno_hidden_visibility=1\ndebug=0\noptimize=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\ninline=1\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='dds4ccm_ndds=1\nndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\n'" />
 
     <command name="print_os_version" />
