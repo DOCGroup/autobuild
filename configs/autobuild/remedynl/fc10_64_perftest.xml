@@ -24,7 +24,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_DDS4CCM_CONTEXT_SWITCH 0\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#define CIAO_DDS4CCM_CONTEXT_SWITCH 0\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='TCPU=native\narchmodelflag=1\ntunemodelflag=1\ndebug=0\noptimize=1\nbuildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces2=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\n'" />
 
