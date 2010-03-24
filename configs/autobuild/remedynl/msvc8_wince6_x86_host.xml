@@ -53,7 +53,7 @@
     <command name="vc8make"         options="/build debug ACE_Host.sln" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/msvc8wince6x86host" />
 </autobuild>

@@ -42,7 +42,7 @@
 
     <command name="make"              options="-k idl_stubs -C TAO COMPARCH=" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
 </autobuild>
 

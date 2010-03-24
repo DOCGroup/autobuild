@@ -60,7 +60,7 @@
     <command name="setenv"            options="ACE_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/home/build/ACE/crossbuild/regular/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/home/build/ACE/crossbuild/regular/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
+    <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean=5 -C {} \;" />
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/regular/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="$SHELL -c \x22ssh build@mpc440-02 -o StrictHostKeyChecking=no exit\x22" />
