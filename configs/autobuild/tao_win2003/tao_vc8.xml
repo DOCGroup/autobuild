@@ -47,7 +47,7 @@
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=5 index" />
+    <command name="process_logs"      options="move prettify clean=3 index" />
     <command name="status"            options="off" />
 
     <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/tao_win2003_full" />
