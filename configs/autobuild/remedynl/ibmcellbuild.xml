@@ -18,7 +18,7 @@
 
         <variable name="root"         value="/root/ACE/crossbuild/" />
         <variable name="remote_root"  value="/root/ACE/crossbuild/ACE_wrappers" />
-        <variable name="remote_shell" value="ssh build@ps3-1.remedy.nl" />
+        <variable name="remote_shell" value="ssh 10.207.173.55" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/root/ACE/crossbuild/" />
         <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS" />
@@ -56,7 +56,7 @@
 
     <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=32'"/>
 
-    <!-- command name="anonymous_shell"   options="ssh build@ps3-1.remedy.nl killall ciao_componentserver" / -->
+    <!-- command name="anonymous_shell"   options="ssh 10.207.173.55 killall ciao_componentserver" / -->
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
