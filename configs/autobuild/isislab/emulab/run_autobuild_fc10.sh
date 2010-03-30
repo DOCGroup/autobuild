@@ -3,7 +3,7 @@ export user=`whoami`
 sudo chown $user /build
 echo "Starting $1 autobuild run at `date`" > /proj/autobuilds/logs/$1.log
 echo "Creating build partition...." >> /proj/autobuilds/logs/$1.log
-sudo parted --script /dev/sda mkpartfs primary ext2 10000 20000
+sudo parted --script /dev/sda mkpartfs primary ext2 10000 30000
 echo "Sleeping for 20 seconds to allow kernel time to update partition table..." >> /proj/autobuilds/logs/$1.log
 sleep 20
 echo "Creating filesystem on new partition" >> /proj/autobuilds/logs/$1.log
