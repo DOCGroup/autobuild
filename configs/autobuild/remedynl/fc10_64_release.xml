@@ -42,7 +42,7 @@
 
     <command name="generate_workspace" options="-type gnuace" />
 
-    <command name="make"              options="-k -j 2" />
+    <command name="make"              options="-k -j 20" />
 
     <command name="auto_run_tests"    options=" -a -o -t -C" />
 
