@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on oci1444) was -->
-  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template default_platform=x64" -outdir autobuild\configs\autobuild\oci -piggyback C:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -->
+  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template platforms=x64" -outdir autobuild\configs\autobuild\oci -piggyback C:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -->
   <configuration>
     <environment name="ACE_ROOT"              value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0"/>
     <environment name="CIAO_ROOT"             value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO"/>
@@ -29,7 +29,7 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template default_platform=x64"/>
+  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template platforms=x64"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build \x22debug|x64\x22 ./DDS.sln"/>

@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on oci1444) was -->
-  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO -compiler vc9 -creator mitza@ociweb.com -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template default_platform=x64" -outdir autobuild\configs\autobuild\oci -sandbox 1 -testopt "-Config FIXED_BUGS_ONLY" -->
+  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\doc -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO -compiler vc9 -creator mitza@ociweb.com -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template platforms=x64" -outdir autobuild\configs\autobuild\oci -sandbox 1 -testopt "-Config FIXED_BUGS_ONLY" -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO"/>
@@ -29,7 +29,7 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc9 -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template default_platform=x64"/>
+  <command name="generate_workspace" options="-type vc9 -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template platforms=x64"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build \x22debug|x64\x22 TAO/TAO_ACE.sln"/>
