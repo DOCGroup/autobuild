@@ -59,7 +59,7 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>FC10_GCC_LWCCM_x64</name>
+       <name>FC10_GCC_LwCCM_x64</name>
        <url>http://www.dre.vanderbilt.edu/~remedynl/fc1064lwccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
