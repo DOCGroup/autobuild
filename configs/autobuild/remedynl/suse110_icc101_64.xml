@@ -38,7 +38,7 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-type gnuace" />
+    <command name="generate_workspace" options="-type gnuautobuild" />
 
     <command name="make"              options="-k" />
 

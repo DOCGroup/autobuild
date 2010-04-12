@@ -41,7 +41,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="TAO_COIOP.mwc -type gnuace" />
+    <command name="generate_workspace" options="TAO_COIOP.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k -j 8" />
 

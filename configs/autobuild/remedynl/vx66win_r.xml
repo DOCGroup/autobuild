@@ -45,7 +45,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
 
     <command name="make"              options="-k " />
 

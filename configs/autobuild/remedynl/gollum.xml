@@ -43,7 +43,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='INSLIB = $(ACE_ROOT)/lib\ndebug=1\ninline=0\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_openvms.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=1\n'" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuautobuild" />
 
     <command name="make"              options="-k " />
 

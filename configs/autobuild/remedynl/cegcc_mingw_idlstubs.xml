@@ -37,7 +37,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='wince=1\nuses_wchar=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_cegcc.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qos=1\nwince=1\nuses_wchar=1\n'" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
     <command name="generate_workspace" options="-exclude TAO -type vxtest -value_template libname_prefix=\x22lib\x22" />
 
     <command name="make"              options="-k idl_stubs -C TAO COMPARCH=" />

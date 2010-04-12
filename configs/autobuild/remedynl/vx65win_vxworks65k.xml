@@ -46,7 +46,7 @@
     <command name="print_perl_version" />
 
     <!-- Uses ACE.mwc -->
-    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_DAnCE.mwc -type gnuace" />
+    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_DAnCE.mwc -type gnuautobuild" />
 
     <command name="make"              options="-k -C TAO/CIAO" />
 

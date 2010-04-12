@@ -48,9 +48,9 @@
 
     <!-- Uses ACE.mwc -->
 
-    <command name="generate_workspace" options="-exclude TAO,ASNMP,tests/HTBP,examples.netsvcs,websvcs,performance-tests -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO,ASNMP,tests/HTBP,examples.netsvcs,websvcs,performance-tests -type gnuautobuild" />
     <!-- Uses TAO/TAO.mwc -->
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,examples,performance-tests,docs,interop-tests -type gnuace" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO,examples,performance-tests,docs,interop-tests -type gnuautobuild" />
 
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="make"              options="-k -C TAO realclean find=*akefile" />

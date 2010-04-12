@@ -30,9 +30,9 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuace" />
-    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuace" />
-    <command name="generate_workspace" options="dirs=TAO/CIAO -type gnuace" />
+    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
+    <command name="generate_workspace" options="dirs=TAO -exclude TAO_*.mwc,CIAO -type gnuautobuild" />
+    <command name="generate_workspace" options="dirs=TAO/CIAO -type gnuautobuild" />
 
     <command name="make"              options="-k --dry-run > $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k CXX=$ACE_ROOT/bin/g++_metric.sh" />
