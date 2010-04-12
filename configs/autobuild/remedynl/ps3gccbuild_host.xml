@@ -5,13 +5,15 @@
         <environment name="TAO_ROOT"     value="/home/build/ACE/host/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"    value="/home/build/ACE/host/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"    value="/home/build/ACE/host/ACE_wrappers/TAO/CIAO/DAnCE"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/mnt/develop/RTI/ndds.4.5b.rev01/lib/x64Linux2.6gcc4.3.2" />
+        <environment name="NDDSHOME"          value="/mnt/develop/RTI/ndds.4.5b.rev01" />
+        <environment name="NDDSARCHITECTURE"  value="x64Linux2.6gcc4.3.2" />
         <environment name="ICECC_VERSION" value="/home/build/linux-x86-fc10gcc-4.3.2-linux-x86_64.tar.gz" />
 
         <variable name="root"     value="/home/build/ACE/host/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/host/" />
-        <variable name="configs"  value="Linux Exceptions NOXERCES" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -28,9 +30,8 @@
     <command name="svn"               options="status . " />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='icecream=1\nno_hidden_visibility=1\ndebug=0\ninline=0\nboost=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/CIAO/tools/IDL3_to_IDL2\n}\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='icecream=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\nzlib=1\nssl=1\nno_hidden_visibility=1\ndebug=0\ninline=0\nboost=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='dds4ccm_ndds=1\nndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -39,7 +40,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="ACE_Host.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-type gnuautobuild -exclude apps/gperf/tests" />
 
     <command name="make"              options="-k -j 20" />
 
