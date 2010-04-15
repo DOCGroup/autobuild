@@ -122,7 +122,7 @@ sub Run ($)
         my $retval = $self->copy_log ($keep);
         return 0 if ($retval == 0);
     }
-    
+
     # Prettify the logs
 
     if ($options =~ m/prettify/) {
@@ -140,7 +140,7 @@ sub Run ($)
         my $retval = $self->clean_logs ($keep);
         return 0 if ($retval == 0);
     }
-    
+
     # Create an index
 
     if ($options =~ m/index/) {
@@ -243,7 +243,7 @@ sub move_log ()
     $ret = copy ($log_file, $newlogfile);
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem copying $log_file to $newlogfile: $!\n";
-    } 
+    }
     else {
         ## unlink returns the number of successfully copied files
         $ret = unlink ($log_file);
@@ -279,12 +279,12 @@ sub index_logs ()
     my $log_root = main::GetVariable ('log_root');
     my $name = main::GetVariable ('name');
     my @files;
-    
+
     # chop off trailing slash
     if ($log_root =~ m/^(.*)\/$/) {
         $log_root = $1;
     }
-    
+
     utility::index_logs $log_root, $name;
 
     return 1;
@@ -342,7 +342,7 @@ sub copy_log ()
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem copying $oldlog_file to $newlogfile: $!\n";
         return 0;
-    } 
+    }
 
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);
@@ -356,18 +356,18 @@ sub copy_log ()
         print "Saving $oldlog_file as $newlogfile\n";
     }
 
-    # This should be a simple move, however, we  use copy/unlink instead 
-    # of move since on Windows the move fails if the file is open (like 
+    # This should be a simple move, however, we  use copy/unlink instead
+    # of move since on Windows the move fails if the file is open (like
     # a test that doesn't finish) whereas the copy and unlink succeed.
     $ret = copy ($oldlog_file, $savelogfile);
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem copying $oldlog_file to $savelogfile: $!\n";
         return 0;
-    } 
+    }
     $ret = unlink ($oldlog_file);
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem removing $oldlog_file: $!\n";
-    } 
+    }
     chmod (0644, $savelogfile);
 
     # Clean up old saved files
