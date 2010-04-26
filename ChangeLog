@@ -1,3 +1,12 @@
+Mon Apr 26 09:15:48 UTC 2010  Vladimir Zykov  <vladimir.zykov@prismtech.com>
+
+        * configs/autobuild/isislab/emulab/FC6valgrind.xml:
+          Defined ACE_DEFAULT_SELECT_REACTOR_SIZE to 1000. Normally
+          this is defined on Linux equal to FD_SETSIZE which is 1024. But
+          on Valgrind build a portion of the fds is used by valgrind. In
+          my setup max available fd was 1014 but just to be sure that
+          application can use all of the fds let's make it 1000.
+
 Thu Apr  8 13:33:41 UTC 2010  Marcel Smit  <msmit@remedy.nl>
 
         * configs/scoreboard/ciao.xml:
@@ -26,8 +35,8 @@ Fri Mar  5 15:18:41 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/zifnab/vm-osx-64-3-driver.cmd:
         * configs/autobuild/zifnab/vm-osx-64-driver.cmd:
 
-          Set up icecream for OS X builds. 
-        
+          Set up icecream for OS X builds.
+
 Thu Mar  4 22:06:48 UTC 2010  Trevor Fields  <fields_t@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_Latest_Beta_stockholm.phx_linux_gcc_d1o0n1.xml:
