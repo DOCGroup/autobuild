@@ -2,13 +2,13 @@
 <autobuild>
     <configuration>
         <environment name="PATH"              value="/opt/cell/toolchain/bin" type="prefix"/>
-        <environment name="ACE_ROOT"          value="/root/ACE/crossbuild/ACE_wrappers"/>
-        <environment name="TAO_ROOT"          value="/root/ACE/crossbuild/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"         value="/root/ACE/crossbuild/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"        value="/root/ACE/crossbuild/ACE_wrappers/TAO/CIAO/DAnCE"/>
+        <environment name="ACE_ROOT"          value="/mnt/ACE/crossbuild/ACE_wrappers"/>
+        <environment name="TAO_ROOT"          value="/mnt/ACE/crossbuild/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"         value="/mnt/ACE/crossbuild/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"        value="/mnt/ACE/crossbuild/ACE_wrappers/TAO/CIAO/DAnCE"/>
         <environment name="HOST_ROOT"         value="/root/ACE/host/ACE_wrappers"/>
-        <environment name="LD_LIBRARY_PATH"   value="/root/ACE/host/ACE_wrappers/lib:/usr/local/lib:/share/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1" />
-        <environment name="NDDSHOME"          value="/share/ndds.4.5b.rev01" />
+        <environment name="LD_LIBRARY_PATH"   value="/root/ACE/host/ACE_wrappers/lib:/usr/local/lib:/mnt/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1" />
+        <environment name="NDDSHOME"          value="/mnt/ndds.4.5b.rev01" />
         <environment name="NDDSARCHITECTURE"  value="cell64Linux2.6ppu4.1.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="32"/>
         <environment name="SSL_ROOT"          value="/opt/cell/sysroot/usr"/>
@@ -16,11 +16,11 @@
         <environment name="XERCESCROOT"       value="/opt/cell/sysroot/usr"/>
         <environment name="CROSS_COMPILE"     value="ppu-"/>
 
-        <variable name="root"         value="/root/ACE/crossbuild/" />
-        <variable name="remote_root"  value="/root/ACE/crossbuild/ACE_wrappers" />
+        <variable name="root"         value="/mnt/ACE/crossbuild/" />
+        <variable name="remote_root"  value="/mnt/ACE/crossbuild/ACE_wrappers" />
         <variable name="remote_shell" value="ssh 10.207.173.55" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="/root/ACE/crossbuild/" />
+        <variable name="log_root"     value="/mnt/ACE/crossbuild/" />
         <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS" />
 
     </configuration>
@@ -55,8 +55,6 @@
     <command name="make"              options="-k -j 20" />
 
     <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=32'"/>
-
-    <!-- command name="anonymous_shell"   options="ssh 10.207.173.55 killall ciao_componentserver" / -->
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
