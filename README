@@ -237,6 +237,15 @@ SCOREBOARD NOTES
     a url defined by <build_sponsor_url> url </build_sponsor_url> 
     that would be displayed when the name is clicked.
 
+(10) To optimize the speed of scoreboard generation and (greatly)
+     decrease diskspace requirements one could use the -b option.
+     When specified the scoreboard script will not create local
+     cache copies of build logfiles (raw and prettified) but
+     will use build URL based links throughout *unless* a build
+     configuration explicitly specifies that the local cache must
+     be used through the definition of a '<cache/>' tag in the
+     '<build>' section for that build.     
+
 USING Cygwin on Windows
 =======================
 

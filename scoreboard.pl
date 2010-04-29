@@ -77,6 +77,8 @@ our $verbose = 0;
 our $scoreboard_title = 'Scoreboard';
 our $use_local = 0;
 
+our $use_build_logs = 0;
+
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
 <A HREF=\"https://svn.dre.vanderbilt.edu/viewvc/ACE_autobuild/trunk/README?revision=HEAD\">
@@ -201,14 +203,14 @@ sub query_latest ()
     foreach my $buildname (keys %builds) {
         my $latest = load_web_latest ($builds{$buildname}{URL});
 
-	if (defined $latest && $latest =~ m/(...._.._.._.._..) /)
-	{
-       	    $builds{$buildname}{BASENAME} = $1;
-	}
-	else {
-		print STDERR "    Error: Could not find latest.txt for $buildname\n";
-        	next;
-	}
+        if (defined $latest && $latest =~ m/(...._.._.._.._..) /)
+        {
+            $builds{$buildname}{BASENAME} = $1;
+        }
+        else {
+            print STDERR "    Error: Could not find latest.txt for $buildname\n";
+            next;
+        }
 
         if ($latest =~ m/Config: (\d+)/) {
             $builds{$buildname}{CONFIG_SECTION} = $1;
@@ -505,28 +507,32 @@ sub update_cache ($)
             next;
         }
 
-        my $basename = $builds{$buildname}{BASENAME};
-        my $address = $builds{$buildname}{URL} . "/" . $builds{$buildname}{BASENAME} . ".txt";
+        ### Do we need to update the local cache or do we work
+        ### with the storage of the build itself?
+        if ((!$use_build_logs) || (defined $builds{$buildname}{CACHE})) {
+            my $basename = $builds{$buildname}{BASENAME};
+            my $address = $builds{$buildname}{URL} . "/" . $builds{$buildname}{BASENAME} . ".txt";
 
-        my $filename = $builds{$buildname}{BASENAME} . '.txt';
+            my $filename = $builds{$buildname}{BASENAME} . '.txt';
 
-        print "    Looking at $buildname\n" if ($verbose);
+            print "    Looking at $buildname\n" if ($verbose);
 
-        mkpath "$directory/$buildname";
+            mkpath "$directory/$buildname";
 
-        if (! -r "$directory/$buildname/$filename") {
-            print "        Downloading\n" if ($verbose);
-            my $ua = LWP::UserAgent->new;
-            my $request = HTTP::Request->new('GET', $address);
-            my $response = $ua->request($request, "$directory/$buildname/$filename");
+            if (! -r "$directory/$buildname/$filename") {
+                print "        Downloading\n" if ($verbose);
+                my $ua = LWP::UserAgent->new;
+                my $request = HTTP::Request->new('GET', $address);
+                my $response = $ua->request($request, "$directory/$buildname/$filename");
 
-            if (!$response->is_success ()) {
-                warn "WARNING: Unable to download $address\n";
-                next;
+                if (!$response->is_success ()) {
+                    warn "WARNING: Unable to download $address\n";
+                    next;
+                }
+
+                print "        Prettifying\n" if($verbose);
+                Prettify::Process ("$directory/$buildname/$filename");
             }
-
-            print "        Prettifying\n" if($verbose);
-            Prettify::Process ("$directory/$buildname/$filename");
         }
     }
 }
@@ -695,10 +701,10 @@ print "in local_update_cache, post=$post\n";
         }
         undef $file_handle;
 
-	if (!defined $latest) {
-	    print STDERR "    Error: Could not find latest.txt for $buildname\n";
-       	    next;
-	}
+        if (!defined $latest) {
+            print STDERR "    Error: Could not find latest.txt for $buildname\n";
+            next;
+        }
 
         if ($latest =~ m/Config: (\d+)/) {
             $builds{$buildname}{CONFIG_SECTION} = $1;
@@ -762,48 +768,52 @@ sub clean_cache ($)
     }
 
     foreach my $buildname (keys %builds) {
-        my $keep = $keep_default;
-        my @existing;
+        ### Do we use the local cache or do we work
+        ### with the storage of the build itself?
+        if ((!$use_build_logs) || (defined $builds{$buildname}{CACHE})) {
+            my $keep = $keep_default;
+            my @existing;
 
-        print "    Looking at $buildname\n" if ($verbose);
+            print "    Looking at $buildname\n" if ($verbose);
 
-        my $cache_dir = $directory . "/" . $buildname;
-        my $dh = new DirHandle ($cache_dir);
+            my $cache_dir = $directory . "/" . $buildname;
+            my $dh = new DirHandle ($cache_dir);
 
-        # Load the directory contents into the @existing array
+            # Load the directory contents into the @existing array
 
-        if (!defined $dh) {
-            print STDERR "Error: Could not read $directory\n";
-            return 0;
-        }
-
-        while (defined($_ = $dh->read)) {
-            if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
-                push @existing, "$cache_dir/$1";
+            if (!defined $dh) {
+                print STDERR "Error: Could not read $directory\n";
+                return 0;
             }
-        }
-        undef $dh;
 
-        @existing = reverse sort @existing;
+            while (defined($_ = $dh->read)) {
+                if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
+                    push @existing, "$cache_dir/$1";
+                }
+            }
+            undef $dh;
 
-        # Remove the latest $keep logs from the list
-        if (defined $builds{$buildname}->{KEEP}) {
-            $keep = $builds{$buildname}->{KEEP};
-        }
+            @existing = reverse sort @existing;
 
-        for (my $i = 0; $i < $keep; ++$i) {
-            shift @existing;
-        }
+            # Remove the latest $keep logs from the list
+            if (defined $builds{$buildname}->{KEEP}) {
+                $keep = $builds{$buildname}->{KEEP};
+            }
 
-        # Delete anything left in the list
+            for (my $i = 0; $i < $keep; ++$i) {
+                shift @existing;
+            }
 
-        foreach my $file (@existing) {
-            print "        Removing $file files\n" if ($verbose);
-            unlink $file . ".txt";
-            unlink $file . "_Full.html";
-            unlink $file . "_Brief.html";
-            unlink $file . "_Totals.html";
-            unlink $file . "_Config.html";
+            # Delete anything left in the list
+
+            foreach my $file (@existing) {
+                print "        Removing $file files\n" if ($verbose);
+                unlink $file . ".txt";
+                unlink $file . "_Full.html";
+                unlink $file . "_Brief.html";
+                unlink $file . "_Totals.html";
+                unlink $file . "_Config.html";
+            }
         }
     }
 }
@@ -980,7 +990,7 @@ sub update_html ($$$)
     print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n";
 
     if ($rss_file ne "") {
-	print $indexhtml "<link rel=\"alternate\" title=\"$scoreboard_title RSS\" href=\"$rss_file\" type=\"application/rss+xml\">\n";
+        print $indexhtml "<link rel=\"alternate\" title=\"$scoreboard_title RSS\" href=\"$rss_file\" type=\"application/rss+xml\">\n";
     }
 
     print $indexhtml "</head>\n";
@@ -1062,21 +1072,21 @@ sub update_html_table ($$@)
         if (defined $builds{$buildname}->{MANUAL_LINK}) {
             $havemanual = 1;
         }
-	if (defined $builds{$buildname}->{PDF}) {
-	    $havepdf = 1;
-	}
-	if (defined $builds{$buildname}->{PS}) {
-	    $haveps = 1;
-	}
-	if (defined $builds{$buildname}->{HTML}) {
-	    $havehtml = 1;
-	}
-	if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
-	    $havesponsor = 1;
-	}
-	if (defined $builds{$buildname}->{SNAPSHOT}) {
-	    $havesnapshot = 1;
-	}
+        if (defined $builds{$buildname}->{PDF}) {
+            $havepdf = 1;
+        }
+        if (defined $builds{$buildname}->{PS}) {
+            $haveps = 1;
+        }
+        if (defined $builds{$buildname}->{HTML}) {
+            $havehtml = 1;
+        }
+        if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
+            $havesponsor = 1;
+        }
+        if (defined $builds{$buildname}->{SNAPSHOT}) {
+            $havesnapshot = 1;
+        }
         if (defined $builds{$buildname}->{FULL_HISTORY} ||
             defined $builds{$buildname}->{CLEAN_HISTORY}) {
             $havehistory = 1;
@@ -1116,7 +1126,15 @@ sub update_html_table ($$@)
 
         if (defined $builds{$buildname}->{BASENAME}) {
             my $basename = $builds{$buildname}->{BASENAME};
-            my $webfile = "$buildname/$basename";
+
+            ### Do we use the local cache or do we work
+            ### with the storage of the build itself?
+            my $webfile;
+            if ((!$use_build_logs) || (defined $builds{$buildname}{CACHE})) {
+                $webfile = "$buildname/$basename";
+            } else {
+                $webfile = $builds{$buildname}->{URL}."/$basename";
+            }
 
             my $orange = $orange_default;
             my $red = $red_default;
@@ -1279,63 +1297,62 @@ sub update_html_table ($$@)
             }
         }
 
-	if ($havepdf) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{PDF}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
-			print $indexhtml "pdf</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
-	}
+        if ($havepdf) {
+            print $indexhtml "<td>";
+            if (defined $builds{$buildname}->{PDF}) {
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
+                print $indexhtml "pdf</a>";
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+        }
 
-	if ($haveps) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{PS}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
-			print $indexhtml "ps</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
-	}
+        if ($haveps) {
+            print $indexhtml "<td>";
+            if (defined $builds{$buildname}->{PS}) {
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
+                print $indexhtml "ps</a>";
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+        }
 
-	if ($havehtml) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{HTML}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
-			print $indexhtml "html</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
+        if ($havehtml) {
+            print $indexhtml "<td>";
+            if (defined $builds{$buildname}->{HTML}) {
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
+                print $indexhtml "html</a>";
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+        }
 
-	}
+        if ($havesnapshot) {
+            print $indexhtml "<td>";
+            if (defined $builds{$buildname}->{SNAPSHOT}) {
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
+                print $indexhtml "snapshot</a>";
+            }
+            else {
+                print $indexhtml "&nbsp;";
+            }
+        }
 
-	if ($havesnapshot) {
-		print $indexhtml "<td>";
-		if (defined $builds{$buildname}->{SNAPSHOT}) {
-			print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
-			print $indexhtml "snapshot</a>";
-		}
-		else {
-			print $indexhtml "&nbsp;";
-		}
-	}
-
-	if ($havesponsor) {
-		print $indexhtml "<td>";
-		print $indexhtml "<a href=\"";
-		if (defined $builds{$buildname}->{BUILD_SPONSOR_URL}) {
-			print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."";
-		}
-		print $indexhtml "\" target=\"_blank\">";
-		if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
-			print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."";
-		}
-		print $indexhtml "</a>";
-	}
+        if ($havesponsor) {
+            print $indexhtml "<td>";
+            print $indexhtml "<a href=\"";
+            if (defined $builds{$buildname}->{BUILD_SPONSOR_URL}) {
+                print $indexhtml $builds{$buildname}->{BUILD_SPONSOR_URL}."";
+            }
+            print $indexhtml "\" target=\"_blank\">";
+            if (defined $builds{$buildname}->{BUILD_SPONSOR}) {
+                print $indexhtml $builds{$buildname}->{BUILD_SPONSOR}."";
+            }
+            print $indexhtml "</a>";
+        }
 
         if ($havehistory) {
             print $indexhtml "<td>";
@@ -1357,7 +1374,7 @@ sub update_html_table ($$@)
             print $indexhtml "</td>";
         }
 
-	print $indexhtml "</tr>\n";
+        print $indexhtml "</tr>\n";
     }
     print $indexhtml "</table>\n";
 }
@@ -1529,14 +1546,14 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x/;
 
-if (!getopts ('cd:f:hi:o:t:vzlr:s:k:x')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-x]\n",
-          "              [-k num_logs]\n";
+          "              [-k num_logs] [-b]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1552,6 +1569,7 @@ if (!getopts ('cd:f:hi:o:t:vzlr:s:k:x')
     print "    -c         co-located directory, all files local in -d \n";
     print "    -k         number of logs to keep, default is $keep_default\n";
     print "    -x         'history' links generated\n";
+    print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1586,6 +1604,10 @@ $index = $opt_i;
 print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
 build_index_page ($dir, $index);
 exit (1);
+}
+
+if (defined $opt_b) {
+    $use_build_logs = 1;
 }
 
 if (defined $opt_z) {

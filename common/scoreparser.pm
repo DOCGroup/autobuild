@@ -157,15 +157,18 @@ sub Parse ($\@)
             elsif (m/^\s*<keep>(.*)<\/keep>\s*$/i) {
                 $build_info{KEEP} = $1;
             }
-	    elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
-		$build_info{PDF} = $1;
-	    }
-	    elsif (m/^\s*<ps>(.*)<\/ps>\s*$/i) {
-	 	$build_info{PS} = $1;
-	    }
-	    elsif (m/^\s*<html>(.*)<\/html>\s*$/i) {
-	 	$build_info{HTML} = $1;
-	    }
+            elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
+                $build_info{PDF} = $1;
+            }
+            elsif (m/^\s*<ps>(.*)<\/ps>\s*$/i) {
+                $build_info{PS} = $1;
+            }
+            elsif (m/^\s*<html>(.*)<\/html>\s*$/i) {
+                $build_info{HTML} = $1;
+            }
+            elsif (m/^\s*<cache\/>\s*$/i) {
+                $build_info{CACHE} = 1;
+            }
             else {
                 print STDERR "Error: $lineno: Unexpected in state <$state>: $_\n";
                 return 0;
