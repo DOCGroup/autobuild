@@ -59,6 +59,6 @@
     <command name="make"              options="-j 2 -k -C TAO/CIAO" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="move prettify clean index" />
+    <command name="process_logs"      options="move prettify clean=2 index" />
     <command name="status"            options="off" />
 </autobuild>
