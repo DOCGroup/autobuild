@@ -39,7 +39,7 @@
     <command name="auto_run_tests"    options=" -a -o -t" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
+    <command name="process_logs"      options="clean=2 move prettify index" />
 
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/iPhone_3.1.2_Simulator" />
