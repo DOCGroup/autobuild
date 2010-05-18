@@ -95,7 +95,7 @@
 
     <command name="anonymous_shell"   options="cd /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <command name="anonymous_shell"   options="sh /home/build/ACE/autobuild/configs/autobuild/remedynl/mpc440_xampler_technology.sh" />
+    <!--command name="anonymous_shell"   options="sh /home/build/ACE/autobuild/configs/autobuild/remedynl/mpc440_xampler_technology.sh" /-->
 
     <command name="anonymous_shell"   options="cp -R /home/build/ACE/crossbuild/Avenger/_Templt/Template-Display /home/build/ACE/crossbuild/mpc440xampler" />
     <command name="anonymous_shell"   options="chmod 755 /home/build/ACE/crossbuild/mpc440xampler -R" />
