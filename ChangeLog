@@ -1,3 +1,9 @@
+Tue May 18 21:58:55 UTC 2010  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/scoreboard/ciao.xml:
+
+          Added builds on Fedora 12 for testing "make install" of ACE+TAO+CIAO.
+
 Thu Apr 29 12:12:41 UTC 2010  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao_dre.sh:

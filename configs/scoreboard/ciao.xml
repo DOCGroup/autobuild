@@ -328,6 +328,18 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+   <build>
+      <name>Fedora12_32bit</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d0o1b32</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>Fedora12_32bit_installed</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d0o1b32_inst</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
   </group>
 
   <group>
