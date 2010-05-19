@@ -340,6 +340,30 @@
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
+   <build>
+      <name>FC12_64bit</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d0o1</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC12_64bit_installed</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d0o1_inst</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC12_debug</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d1o0</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC12_debug_installed</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d1o0_inst</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
   </group>
 
   <group>

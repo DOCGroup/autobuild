@@ -1,3 +1,16 @@
+Wed May 19 21:02:46 UTC 2010  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1_inst.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32_inst.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d1o0_inst.xml:
+        * configs/scoreboard/ciao.xml:
+
+          Added debug and 64-bit variants of the build that I added yesterday.
+          The non-debug 32 and 64-bit builds use the same source tree and ARCH.
+
 Tue May 18 21:58:55 UTC 2010  Adam Mitz  <mitza@ociweb.com>
 
         * configs/scoreboard/ciao.xml:

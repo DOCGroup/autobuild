@@ -1,0 +1,92 @@
+<autobuild>
+  <!-- The command used to create this file (on tick) was -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=0 optimize=1 buildbits?=default ARCH?=x86_64" -buildname arch -checkout "" -ciao 1 -compiler gcc -creator mitza -docbuild 1 -docrepo 1 -environment XERCESCROOT=/usr -environment DANCE_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/CIAO/DAnCE -featureflags "xerces2=1 ssl=1" -hostname tick -outdir . -testopt "-ExeSubDir x86_64 -Config ARCH -Config FIXED_BUGS_ONLY" -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch"/>
+    <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/CIAO"/>
+    <environment name="DANCE_ROOT"      value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/CIAO/DAnCE"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/DDS"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/lib:"/>
+    <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
+    <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO"/>
+    <environment name="QTDIR"           value="/usr/lib64/qt4"/>
+    <environment name="XERCESCROOT"     value="/usr"/>
+    <variable    name="build_name"      value="arch"/>
+    <variable    name="creator"         value="mitza"/>
+    <variable    name="log_file"        value="arch64.log"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_tick_linux_gcc_d0o1"/>
+    <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch"/>
+    <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="clone_build_tree"/>
+  <command name="rem_sems"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/arch/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/arch/bin/MakeProjectCreator/config/default.features output='xerces2=1\nssl=1\nzlib=1\nqt4=1\nqt=0\nbzip2=1\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/arch/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\nbuildbits?=default\nARCH?=x86_64\nssl=1\nfl=1\ntk=1\nxt=1\nzlib=1\nqt4=1\nbzip2=1\nINSTALL_PREFIX=/tao_builds/taoadmin/installed\nINSTALL_LIB?=lib64\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/arch/setenv64.sh output='export buildbits=default\nexport ARCH=x86_64\nexport INSTALL_LIB=lib64\nACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/arch\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/CIAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nexport QTDIR=/usr/lib64/qt4\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/TAO\x22; export TAO_ROOT\nXERCESCROOT=\x22/usr\x22; export XERCESCROOT\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_openssl_version"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="gcc"/>
+
+  <!-- Conditionally clean binaries -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=apps/JAWS/server conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="   -k -j2 find=*akefile dir=bin conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=protocols conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=protocols/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=apps/JAWS/server"/>
+  <command name="make" options="   -k -j2 find=*akefile dir=bin"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=protocols"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=protocols/tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=examples"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=performance-tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/examples"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/performance-tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
+  <!-- Installation -->
+  <command name="anonymous_shell" options="chmod -R ug+w /tao_builds/taoadmin/installed"/>
+  <command name="make" options="-k find=*akefile dir=contrib/minizip install"/>
+  <command name="make" options="-k find=*akefile dir=TAO install"/>
+  <command name="make" options="-k find=*akefile dir=apps/JAWS/server install"/>
+  <command name="make" options="-k find=*akefile dir=TAO/CIAO install"/>
+  <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/installed"/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="-a -t -o -C -ExeSubDir x86_64 -Config ARCH -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>
