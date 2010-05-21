@@ -41,6 +41,7 @@
   <!-- Conditionally clean binaries -->
   <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=apps/JAWS/server conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="   -k -j2 find=*akefile dir=bin conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=protocols conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
@@ -64,6 +65,7 @@
   <!-- Build dependencies -->
   <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=apps/JAWS/server depend"/>
   <command name="make" options="   -k -j2 find=*akefile dir=bin depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=protocols depend"/>
@@ -83,6 +85,7 @@
   <!-- Build targets -->
   <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=apps/JAWS/server"/>
   <command name="make" options="   -k -j2 find=*akefile dir=bin"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=protocols"/>
