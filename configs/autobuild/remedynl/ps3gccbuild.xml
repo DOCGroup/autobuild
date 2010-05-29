@@ -57,7 +57,7 @@
 
     <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=33'"/>
 
-    <!-- command name="anonymous_shell"   options="ssh build@ps3-3.remedy.nl killall ciao_componentserver" / -->
+    <!-- command name="anonymous_shell"   options="ssh build@ps3-3.remedy.nl killall dance_locality_manager" / -->
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
