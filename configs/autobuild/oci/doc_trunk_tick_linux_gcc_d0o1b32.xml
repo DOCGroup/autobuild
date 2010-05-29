@@ -110,7 +110,7 @@
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/installed"/>
 
   <!-- Post build -->
-  <command name="anonymous_shell" options="cd ACE_wrappers/build/arch ; ln -sf i686/libBased_Pointer_Test_Lib.so i686/libBug_2980_Regression.so i686/libDLL_Test_Lib.so i686/Process_Test i686/Process_Semaphore_Test i686/Signal_Test tests ; ln -sf i686/ciao_componentserver TAO/CIAO/bin"/>
+  <command name="anonymous_shell" options="cd ACE_wrappers/build/arch ; ln -sf i686/libBased_Pointer_Test_Lib.so i686/libBug_2980_Regression.so i686/libDLL_Test_Lib.so i686/Process_Test i686/Process_Semaphore_Test i686/Signal_Test tests ; ln -sf i686/ciao_componentserver TAO/CIAO/bin ; ln -sf i686/dance_locality_manager i686/dance_plan_launcher TAO/CIAO/DAnCE/bin"/>
   <command name="auto_run_tests"  options="-a -t -o -C -ExeSubDir i686 -Config ARCH -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
