@@ -6,5 +6,5 @@
 cd $HOME/ACE/autobuild
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/ps3cellbuild_xampler_host.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_host.xml
 
