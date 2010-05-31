@@ -64,9 +64,9 @@ create_index_page ()
 
   echo '<TABLE border="2"><TBODY>'
 
-  create_config_page "/home/build/ACE/regular/ACE_wrappers/" "TAO Regular"
-  create_config_page "/home/build/ACE/CORBAemicro/ACE_wrappers/" "CORBA/e micro"
-  create_config_page "/home/build/ACE/CORBAemicrostatic/ACE_wrappers/" "CORBA/e micro static"
+  create_config_page "/build/ACE/regular/ACE_wrappers/" "TAO Regular"
+  create_config_page "/build/ACE/CORBAemicro/ACE_wrappers/" "CORBA/e micro"
+  create_config_page "/build/ACE/CORBAemicrostatic/ACE_wrappers/" "CORBA/e micro static"
 
   echo '<TR><TD>CPU Information</TD><TD>/proc/cpuinfo</TD></TR>'
   echo '<TR><TD colspan="2"><PRE>'
@@ -134,5 +134,5 @@ BASE_ROOT=$ACE_ROOT
 DEFAULT_TITLE=ACE+TAO
 BASE_TITLE=$DEFAULT_TITLE
 
-create_front_page > /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-front.php
-create_index_page > /home/build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-technology.php
+create_front_page > /build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-front.php
+create_index_page > /build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-technology.php
