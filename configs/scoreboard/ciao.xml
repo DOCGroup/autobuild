@@ -270,13 +270,13 @@
     </build>
     <build>
       <name>FC10_IBMCellBE_PPU_Xampler_Crossbuild_Host</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/ibmcellbuild_xampler_host</url>
+      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_xampler_host</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC10_IBMCellBE_PPU_Xampler_Crossbuild</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/ibmcellbuild_xamplerlog/</url>
+      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_xamplerlog/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
