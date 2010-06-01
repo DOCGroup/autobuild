@@ -1,6 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
+        <environment name="PATH"              value="/opt/cell/toolchain/bin" type="prefix"/>
         <environment name="HOST_ROOT"       value="/root/ACE/hoststatic/ACE_wrappers"/>
         <environment name="ACE_ROOT"        value="/build/ACE/xampler/ppu/ACE_wrappers"/>
         <environment name="BAGATEL_EXE"     value="/build/ACE/xampler/Bagatel/src/bagatel" />
@@ -20,7 +21,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32002" />
+    <command name="process_listener"  options="localhost:32003" />
 
     <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler" />
