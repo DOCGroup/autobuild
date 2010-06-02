@@ -15,8 +15,8 @@
         <environment name="BOOST_CFG"     value="-vc9-mt" />
         <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
         <environment name="UDM_PATH" 	  value="C:\\Program Files (x86)\\ISIS\\UDM" />
-        <environment name="UDM_VERSION"	  value="UDMDLL_3_2_1" />
-        <environment name="GME_VERSION"	  value="9_8_28" />
+        <environment name="UDM_VERSION"	  value="UDMDLL_3_2" />
+        <environment name="GME_VERSION"	  value="10_2_9" />
         <environment name="COSMIC_ROOT"  value="C:\\bczar\\CoSMIC_Debug\\CoSMIC" />
         <environment name="ZLIB_ROOT" value="C:\\Libraries\\zlib-1.2.3-vc9" />
         <environment name="PATH"
@@ -26,7 +26,7 @@
         <variable name="log_file" value="log.txt" />
         <variable name="log_root" value="C:\\bczar\\CoSMIC_Debug" />
         <variable name="project_root" value="C:\\bczar\\CoSMIC_Debug\\ACE" />
-        <variable name="name"     value="CoSMIC Debug VC9 GME-9.8.28 Windows Server 2003 x64" />
+        <variable name="name"     value="CoSMIC Debug VC9 GME-10.2.9 Windows Server 2003 x64" />
     </configuration>
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
@@ -43,7 +43,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 
     <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\nxerces2=1\nmcpp=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\nxerces3=1\nmcpp=1\nssl=0\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

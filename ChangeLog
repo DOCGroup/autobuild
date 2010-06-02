@@ -1,3 +1,10 @@
+Wed Jun  2 21:43:28 UTC 2010  Sumant Tambe  <sutambe@nospam>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Updated CoSMIC builds to GME 10 and UDM 3.2.4
+
 Wed May 19 21:02:46 UTC 2010  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1.xml:
