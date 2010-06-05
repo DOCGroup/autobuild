@@ -194,7 +194,7 @@ sub handle_compiler_output_line($) {
   }
 
   if ($s =~ m/identifier spellings differ only in case/) {
-    $self->Output_Warning ($s);
+    $self->Output_Error ($s);
     return;
   }
 
