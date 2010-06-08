@@ -3,6 +3,8 @@
 # $Id$
 #
 
+svn up /build/ACE/autobuild
+
 cd $HOME/ACE/autobuild
 
 svn up
