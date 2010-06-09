@@ -9,7 +9,7 @@
     <environment name="DOC_TEST_2"      value="DOC_TEST_2"/>
     <environment name="DOC_TEST_2_OS"   value="local"/>
     <environment name="DOC_TEST_2_EXE_SUBDIR" value="i686"/>
-    <environment name="DOC_TEST_ARCH"   value="1"/>
+    <environment name="DOC_TEST_2_ARCH" value="1"/>
     <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/lib:"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
     <environment name="PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
