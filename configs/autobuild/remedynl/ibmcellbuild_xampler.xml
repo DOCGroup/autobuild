@@ -65,8 +65,8 @@
     <command name="setenv"             options="ACE_ROOT=/build/ACE/xampler/gcc442/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/build/ACE/xampler/gcc442/ACE_wrappers/TAO"/>
     <command name="setenv"             options="PATH=/opt/ppc64/toolchain-gcc-4.4.2/bin:/usr/bin:/bin"/>
-    <command name="generate_workspace" options="/build/ACE/xampler/gcc442/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /build/ACE/xampler/gcc442/ACE_wrappers -k" />
+    <!-- command name="generate_workspace" options="/build/ACE/xampler/gcc442/ACE_wrappers/build.mwc -type gnuautobuild" /-->
+    <!-- command name="make"               options="-C /build/ACE/xampler/gcc442/ACE_wrappers -k" /-->
 
     <command name="make"              options="-C /build/ACE/xampler/Bagatel/src" />
 
@@ -84,7 +84,7 @@
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc442/ACE_wrappers/lib" />
     <command name="setenv"            options="PATH=/opt/ppc64/toolchain-gcc-4.4.2/bin:/usr/bin:/bin"/>
     <command name="anonymous_shell"   options="cd /build/ACE/xampler/gcc442/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean=5 -C {} \;" />
-    <command name="anonymous_shell"   options="cd /build/ACE/xampler/gcc442/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
+    <!-- command name="anonymous_shell"   options="cd /build/ACE/xampler/gcc442/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" /-->
 
     <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/ppu/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="ln -s /build/ACE/xampler/ppu/Xampler/C++/_Suites /build/ACE/xampler/ppu/Avenger/_Templt/Template-Execute/_Suites" />
@@ -102,11 +102,10 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc442.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc442/ACE_wrappers/lib:/build/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc442/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc442/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc442/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc442.sh\\\x22\x22" />
+    <!-- command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc442/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc442/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc442.sh\\\x22\x22" /-->
 
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result" />
-    <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Three/_Result" />
 
     <command name="anonymous_shell"   options="ln -s /build/ACE/xampler/ppu/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result/ppu_Linux_GCC" />
     <command name="anonymous_shell"   options="ln -s /build/ACE/xampler/gcc442/Avenger/_Templt/Template-Execute/_Result/TAO_1.7.X_Linux_GCC /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result/gcc442_Linux_GCC" />
@@ -132,13 +131,6 @@
 
     <command name="anonymous_shell"   options="cp -R /build/ACE/xampler/Avenger/_Templt/Template-Display /build/ACE/xampler/ps3xampler" />
     <command name="anonymous_shell"   options="chmod 755 /build/ACE/xampler/ps3xampler -R" />
-
-    <!-- command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/ppu.tar" / -->
-    <!-- command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/ppu.tar.bz2" / -->
-    <!-- command name="anonymous_shell"   options="tar cvf /build/ACE/xampler/ppu.tar /build/ACE/xampler/ppu/Avenger/_Templt/Template-Execute/_Result" / -->
-    <!-- command name="anonymous_shell"   options="bzip2 /build/ACE/xampler/ppu.tar" / -->
-    <!-- command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/ps3xampler/results" / -->
-    <!-- command name="anonymous_shell"   options="cp /build/ACE/xampler/ppu.tar.bz2 /build/ACE/xampler/ps3xampler/results" / -->
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
