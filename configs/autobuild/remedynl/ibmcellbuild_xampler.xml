@@ -97,12 +97,12 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/ppu.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/ppu/ACE_wrappers/lib:/build/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/ppu/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/ppu/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/ppu/Avenger/_Ampler/Execute 1 localhost /build/ACE/xampler/ppu.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/ppu/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/ppu/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/ppu.sh\\\x22\x22" />
 
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc442.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc442/ACE_wrappers/lib:/build/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc442/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc442/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc442/Avenger/_Ampler/Execute 1 localhost /build/ACE/xampler/gcc442.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc442/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc442/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc442.sh\\\x22\x22" />
 
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-Two/_Result" />
