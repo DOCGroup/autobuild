@@ -1,3 +1,12 @@
+Fri Jun 11 22:40:13 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+        
+          Updated builds to use xerces 3.1
+          
+          Removed mcpp from the release build.
+
 Fri Jun 11 19:06:29 UTC 2010  Adam Mitz  <mitza@ociweb.com>
 
         * common/parse_compiler_output.pm:

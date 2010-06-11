@@ -8,8 +8,8 @@
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Debug\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\Program Files (x86)\Windows Installer XML v3"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="XERCESCROOT"  value="C:\\Libraries\\xerces-c-3.0.1-x86-windows-vc-9.0"/>
-        <environment name="XERCESC_VERSION"   value="3_0"/>
+        <environment name="XERCESCROOT"  value="C:\\Libraries\\xerces-c-3.1.1-x86-windows-vc-9.0"/>
+        <environment name="XERCESC_VERSION"   value="3_1"/>
         <environment name="BOOST_ROOT"    value="C:\\Libraries\\boost_1_42"/>
         <environment name="BOOST_VERSION" value="boost-1_42"/>
         <environment name="BOOST_CFG"     value="-vc9-mt" />
@@ -31,8 +31,8 @@
     <command name="process_listener" options="localhost:32001" />
     <command name="status"            options="on" />
 
-    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %ACE_ROOT%\\ACE\\ACE.sln -Debug -k -clean" />
-    <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %TAO_ROOT%\\TAO_IDL\\TAO_IDL.sln -Debug -k -clean" />
+    <!-- command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %ACE_ROOT%\\ACE\\ACE.sln -Debug -k -clean" / -->
+    <!-- command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %TAO_ROOT%\\TAO_IDL\\TAO_IDL.sln -Debug -k -clean" / -->
     <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\CoSMIC.sln -Debug -k -clean" />
     <command name="log"           options="ON" />
 
@@ -43,7 +43,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 
     <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\nxerces3=1\nssl=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='register=0\nboost=1\nzlib=1\nxerces3=1\nssl=0\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -52,11 +52,11 @@
     <command name="print_perl_version" />
 
     <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\cosmic.mwc"/>
-    <command name="generate_workspace" options="-type vc9 %ACE_ROOT%\\ace\\ace.mwc"/>
-    <command name="generate_workspace" options="-type vc9 %TAO_ROOT%\\TAO_IDL\\TAO_IDL.mwc"/>
+    <!-- command name="generate_workspace" options="-type vc9 %ACE_ROOT%\\ace\\ace.mwc"/ -->
+    <!-- command name="generate_workspace" options="-type vc9 %TAO_ROOT%\\TAO_IDL\\TAO_IDL.mwc"/ -->
 
-    <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %ACE_ROOT%\\ace\\ACE.sln -Debug -k" />
-    <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %TAO_ROOT%\\TAO_IDL\\TAO_IDL.sln -Debug -k" />
+    <!-- command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %ACE_ROOT%\\ace\\ACE.sln -Debug -k" / -->
+    <!-- command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %TAO_ROOT%\\TAO_IDL\\TAO_IDL.sln -Debug -k" / -->
     <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\CoSMIC.sln -Debug -k" />
 
     <command name="log"               options="OFF" />

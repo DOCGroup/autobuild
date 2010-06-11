@@ -8,8 +8,8 @@
         <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Release\\MPC"/>
         <environment name="WIX_ROOT"     value="C:\Program Files (x86)\Windows Installer XML v3"/>
         <environment name="CVS_RSH"      value="plink.exe" />
-        <environment name="XERCESCROOT"  value="C:\\Libraries\\xerces-c-3.0.1-x86-windows-vc-9.0"/>
-        <environment name="XERCESC_VERSION"   value="3_0"/>
+        <environment name="XERCESCROOT"  value="C:\\Libraries\\xerces-c-3.1.1-x86-windows-vc-9.0"/>
+        <environment name="XERCESC_VERSION"   value="3_1"/>
         <environment name="BOOST_ROOT"    value="C:\\Libraries\\boost_1_42"/>
         <environment name="BOOST_VERSION" value="boost-1_42"/>
         <environment name="BOOST_CFG"     value="-vc9-mt" />
@@ -48,7 +48,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />
 
     <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\nxerces3=1\nssl=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='register=0\nboost=1\nzlib=1\nxerces3=1\nssl=0\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -59,7 +59,7 @@
     <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release.mwc"/>
     <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Release.sln -Release -k" />
 
-    <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release_idl_to_picml.mwc -features mcpp=1 -static -name_modifier *_Static"/>
+    <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Release_idl_to_picml.mwc -static -name_modifier *_Static"/>
     <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Release_idl_to_picml.sln -Release -k" />
 
     <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Installer\\CoSMIC_Installer.mwc"/>
