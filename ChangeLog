@@ -1,9 +1,16 @@
+Sun Jun 13 22:01:43 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+        
+          Updated build script to define GAME_ROOT environment variable.
+
 Fri Jun 11 23:18:33 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
 
           Removed unused statements.
-          
+
 Fri Jun 11 22:40:13 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
