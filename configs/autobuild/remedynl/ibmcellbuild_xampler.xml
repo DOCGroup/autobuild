@@ -127,7 +127,7 @@
 
     <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
-    <command name="anonymous_shell"   options="sh /root/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
+    <command name="anonymous_shell"   options="sh /build/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
 
     <command name="anonymous_shell"   options="cp -R /build/ACE/xampler/Avenger/_Templt/Template-Display /build/ACE/xampler/ps3xampler" />
     <command name="anonymous_shell"   options="chmod 755 /build/ACE/xampler/ps3xampler -R" />
