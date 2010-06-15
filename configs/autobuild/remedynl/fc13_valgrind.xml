@@ -24,7 +24,7 @@
         <variable name="root"     value="/home/build/ACE/valgrind/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/valgrind/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB SSL BOOST Valgrind" />
+        <variable name="configs"  value="Linux Exceptions NDDS ZLIB SSL BOOST Valgrind" />
 
     </configuration>
 
