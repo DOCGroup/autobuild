@@ -1,7 +1,13 @@
-Tue Jun 15 19:24:19 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+Thu Jun 17 03:24:43 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_release.xml:
         
+          Updated configuration to Wix 3.5
+
+Tue Jun 15 19:24:19 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
           Updated release build scripts.
 
 Tue Jun 15 14:44:54 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
