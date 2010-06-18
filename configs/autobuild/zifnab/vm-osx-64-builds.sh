@@ -1,5 +1,7 @@
 #!/bin/sh
 echo "`date`" > ~/last_run
-perl /builds/autobuild/autobuild.pl -V /builds/autobuild/configs/autobuild/zifnab/gcc64.xml
+
+### This virtual machine is disabled, do not use!
+
 sudo shutdown -h now
 
