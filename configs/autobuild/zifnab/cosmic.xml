@@ -1,0 +1,34 @@
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers/TAO" />
+        <environment name="COSMIC_ROOT" value="/builds/CoSMIC/CoSMIC" />
+        <environment name="BOOST_ROOT"  value="/builds/utils/gcc64" />
+        <environment name="XERCESCROOT_ROOT"  value="/builds/utils/gcc64" />
+
+        <variable name="root"     value="/builds/CoSMIC" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/builds/CoSMIC" />
+        <variable name="project_root" value="/builds/CoSMIC/CoSMIC" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+
+    <command name="log"               options="on" />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC" />
+    <command name="shell"             options="find CoSMIC -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler"    options="gcc" />
+    <command name="print_ace_config" />
+    <command name="generate_workspace" options="-type gnuautobuild -static Release_idl_to_picml.mwc" />
+    <command name="make"              options="-k realclean" />
+    <command name="make"              options="-k -j4 mfc=1" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /CoSMIC*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/CoSMIC" />
+</autobuild>

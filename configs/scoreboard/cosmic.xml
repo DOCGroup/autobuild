@@ -24,4 +24,13 @@ all the OS/platform combinations on which CoSMIC is tested everyday.
 			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
 		</build>
 	</group>
+        <group>
+          <name>Mac OS X</name>
+          <build>
+            <name>idl_to_picml</name>
+            <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/CoSMIC</url>
+            <build_sponsor>ISIS</build_sponsor>
+            <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+          </build>
+        </group>
 </scoreboard>
