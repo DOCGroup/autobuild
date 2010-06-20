@@ -3,6 +3,7 @@ svn up /builds/autobuild
 ssh -o ConnectTimeout=15 root@192.168.69.102 reboot
 ssh -o ConnectTimeout=15 root@192.168.69.146 reboot
 
+perl /builds/autobuild/autobuild.pl -V /builds/autobuild/configs/autobuild/zifnab/cosmic.xml
 perl /builds/autobuild/autobuild.pl -V /builds/autobuild/configs/autobuild/zifnab/Snow_Leopard_Static_Host_Fast.xml
 
 perl /builds/autobuild/autobuild.pl -V /builds/autobuild/configs/autobuild/zifnab/iPad_3.2_Hardware.xml &
