@@ -3,6 +3,7 @@
         <environment name="ACE_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/builds/Snow_Leopard_Static_Host/ACE_wrappers/TAO" />
         <environment name="COSMIC_ROOT" value="/builds/CoSMIC/CoSMIC" />
+        <environment name="GAME_ROOT" value="/builds/CoSMIC/CoSMIC/Utils/GAME" />
         <environment name="BOOST_ROOT"  value="/builds/utils/gcc64" />
         <environment name="XERCESCROOT_ROOT"  value="/builds/utils/gcc64" />
 
