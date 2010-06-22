@@ -1,7 +1,14 @@
+Tue Jun 22 04:45:29 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+        
+          Added mfc to the default.features configuration.
+
 Tue Jun 22 02:52:18 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/zifnab/cosmic.xml:
-        
+
           Configuration was missing GAME_ROOT environment variable.
 
 Thu Jun 17 03:24:43 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
