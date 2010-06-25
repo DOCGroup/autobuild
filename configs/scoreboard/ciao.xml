@@ -257,18 +257,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC10_PS3CellBE_GCC_Crossbuild</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3gccbuild</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC10_PS3CellBE_GCC_Crossbuild_Host</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/ps3gccbuild_host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC10_PS3CellBE_PPU_Xampler_Crossbuild</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/ps3cellbuild_xamplerlog/</url>
       <build_sponsor>Remedy IT</build_sponsor>
