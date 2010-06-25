@@ -91,18 +91,6 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>Ubuntu_910_x64_Debug(gcc)</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/ubuntu_910_64_gcc</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>Ubuntu_910_x64_Debug(autoconf)</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/ubuntu_910_64_autoconf</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>OpenSuSE_11_1_GCC_64bit</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/suse111_64_gcc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
