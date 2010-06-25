@@ -41,7 +41,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake"/>
+    <command name="generate_workspace" options="-exclude TAO/CIAO type nmake"/>
 
     <command name="make"              options="/I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
