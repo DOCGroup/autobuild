@@ -30,11 +30,11 @@
 
     <command name="anonymous_shell"   options="sh /proj/autobuilds/data/autobuild/configs/autobuild/isislab/emulab/copy_rti_dds.sh" />
 
-    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO -type gnuautobuild" />
 
     <command name="make"              options="-j 6 -k" />
 
-    <command name="auto_run_tests" options=" -a -o -t -C" />
+    <command name="auto_run_tests" options=" -a -o -t" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />
