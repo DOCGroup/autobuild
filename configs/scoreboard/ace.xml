@@ -71,14 +71,14 @@ all the OS/platform combinations on which ACE is tested everyday.
      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-       <name>RHEL_5_x64_Debug(Intel)</name>
+       <name>RHEL_53_x64_Debug(Intel)</name>
        <url>http://acebuilds.riverace.com/smokey/dev/icc_debug</url>
        <red>36</red>
        <build_sponsor>Riverace</build_sponsor>
        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-       <name>RHEL_5_x64_Debug(gcc)</name>
+       <name>RHEL_53_x64_Debug(gcc)</name>
        <url>http://acebuilds.riverace.com/smokey/dev/gcc_debug</url>
        <red>36</red>
        <build_sponsor>Riverace</build_sponsor>
@@ -159,58 +159,6 @@ all the OS/platform combinations on which ACE is tested everyday.
          <build_sponsor>Riverace</build_sponsor>
          <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
-</group>
-
-<group>
-  <name>VxWorks</name>
-   <build>
-     <name>VxWorks6.7_x86_kernel</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86k/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_PPC603_kernel</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_ppc603k/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_kernel_pthread_x86</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86p/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_kernel_pthread_x86</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67lin_x86p/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_PPC603_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67r/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_PPC603_IPv6_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67ripv6/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_PENTIUM2_Shared_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67sh/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
-   <build>
-     <name>VxWorks6.7_PPC603_Kernel_Pthread_Release</name>
-     <url>http://www.dre.vanderbilt.edu/~remedynl/VxWorks67rkp/</url>
-     <build_sponsor>Remedy IT</build_sponsor>
-     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-   </build>
 </group>
 
 <group>
