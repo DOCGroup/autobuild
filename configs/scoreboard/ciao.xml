@@ -107,12 +107,6 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>FC8_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/ace_for_tao</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-    </build>
-    <build>
       <name>FC8_Full</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/FC8Full/</url>
       <build_sponsor>ISIS</build_sponsor>
@@ -196,12 +190,6 @@
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
-    <build>
-      <name>OpenSuSE_11_0_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_acefortao/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
     <build>
       <name>FC9_NoInline</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>
@@ -464,12 +452,6 @@
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9_w4</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Win2003_VC9_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_ace_for_tao</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
     <build>
       <name>WinXP_VC8_Release</name>
