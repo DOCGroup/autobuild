@@ -1,13 +1,21 @@
+Mon Jun 28 19:43:32 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+        
+          Forced build to use MPC -r 1829 since it will generate a 
+          valid workspace that builds CoSMIC.
+
 Wed Jun 23 11:36:41 UTC 2010  Martin Corino  <mcorino@remedy.nl>
 
-	* configs/scoreboard/ciao.xml:
-	  Removed deprecated builds.
+	     * configs/scoreboard/ciao.xml:
+	       Removed deprecated builds.
 
 Tue Jun 22 04:45:29 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
         * configs/autobuild/trian/trian_cosmic_release.xml:
-        
+
           Added mfc to the default.features configuration.
 
 Tue Jun 22 02:52:18 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
