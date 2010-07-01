@@ -34,10 +34,10 @@
 
     <command name="generate_workspace" options="dirs=TAO/CIAO -exclude CIAO_*.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-k -j 6" />
-    <command name="make"              options="-k -j 6 -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -j 6 -C TAO" />
-    <command name="make"              options="-k -j 6 -C TAO/CIAO" />
+    <command name="make"              options="-k -j 2" />
+    <command name="make"              options="-k -j 2 -C TAO/TAO_IDL" />
+    <command name="make"              options="-k -j 2 -C TAO" />
+    <command name="make"              options="-k -j 2 -C TAO/CIAO" />
     <command name="auto_run_tests"    options="-a -o -t -C" />
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />

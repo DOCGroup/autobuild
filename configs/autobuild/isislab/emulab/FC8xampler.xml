@@ -54,19 +54,19 @@
     <command name="setenv"             options="TAO_ROOT=/isisbuilds/regular/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/isisbuilds/regular/ACE_wrappers/lib" />
     <command name="generate_workspace" options="/isisbuilds/regular/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /isisbuilds/regular/ACE_wrappers -k -j 6" />
+    <command name="make"               options="-C /isisbuilds/regular/ACE_wrappers -k -j 2" />
 
     <command name="setenv"             options="ACE_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/isisbuilds/CORBAemicrostatic/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/isisbuilds/CORBAemicrostatic/ACE_wrappers/lib" />
     <command name="generate_workspace" options="/isisbuilds/CORBAemicrostatic/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 6" />
+    <command name="make"               options="-C /isisbuilds/CORBAemicrostatic/ACE_wrappers -k -j 2" />
 
     <command name="setenv"             options="ACE_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/isisbuilds/CORBAemicro/ACE_wrappers/TAO"/>
     <command name="setenv"             options="LD_LIBRARY_PATH=/isisbuilds/CORBAemicro/ACE_wrappers/lib" />
     <command name="generate_workspace" options="/isisbuilds/CORBAemicro/ACE_wrappers/build.mwc -type gnuautobuild" />
-    <command name="make"               options="-C /isisbuilds/CORBAemicro/ACE_wrappers -k -j 6" />
+    <command name="make"               options="-C /isisbuilds/CORBAemicro/ACE_wrappers -k -j 2" />
 
     <command name="make"              options="-C /isisbuilds/Bagatel/src" />
 

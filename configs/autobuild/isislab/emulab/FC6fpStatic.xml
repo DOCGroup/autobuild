@@ -33,7 +33,7 @@
 
     <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuautobuild" />
 
-    <command name="make"              options="-j 6 -k" />
+    <command name="make"              options="-j 2 -k" />
 
     <command name="shell"             options="/bin/sync" />
     <command name="shell"             options="sleep 10" />
