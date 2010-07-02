@@ -136,7 +136,7 @@ int _tmain(int argc, LPTSTR argv[])
 
   STARTUPINFO si = { sizeof(si) };
   PROCESS_INFORMATION pi;
-  ::CreateProcess(NULL, szCommand, NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &si, &pi);
+  ::CreateProcess(NULL, szCommand, NULL, NULL, TRUE/*inherit*/, CREATE_SUSPENDED, NULL, NULL, &si, &pi);
 
   // Place this processin the job.
   ::AssignProcessToJobObject(hjob, pi.hProcess);
