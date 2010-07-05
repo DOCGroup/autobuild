@@ -1,10 +1,10 @@
 <releases>
 	<major>
-    <version>x.7</version>
-    <date>2009-06-22</date>
+    <version>x.8</version>
+    <date>2010-07-04</date>
 	</major>
 	<beta>
-    <version>x.7.8</version>
-    <date>2010-04-02</date>
+    <version>x.8.0</version>
+    <date>2010-07-04</date>
 	</beta>
 </releases>
