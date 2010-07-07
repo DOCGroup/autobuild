@@ -24,7 +24,7 @@
     <command name="print_ace_config" />
     <command name="check_compiler" options="doxygen" />
 
-    <command name="shell" options="$HOME/autobuild/configs/autobuild/remedynl/fc13_doxygen.pl" />
+    <command name="shell" options="$HOME/ACE/autobuild/configs/autobuild/remedynl/fc13_doxygen.pl" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
