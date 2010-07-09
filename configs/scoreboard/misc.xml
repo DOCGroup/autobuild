@@ -21,6 +21,12 @@ This is a miscellaneous scoreboard for ACE+TAO.
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>Doxygen_Latest</name>
+    <url>http://www.dre.vanderbilt.edu/~remedynl/fc13_doxygen</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
 </group>
 </scoreboard>
 
