@@ -110,7 +110,7 @@
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/installed"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -C -ExeSubDir i686 -Config ARCH -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/>
+  <command name="auto_run_tests"  options="-a -t -o -C -ExeSubDir i686 -Config ARCH -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
