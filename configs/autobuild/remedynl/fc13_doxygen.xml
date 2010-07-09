@@ -16,6 +16,9 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
     <command name="log"               options="on" />
+
+    <command name="shell"             options="rm -rf ACE_wrappers/html" />
+
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-doxygen.h\x22\n'" />
@@ -29,4 +32,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fc13_doxygen" />
 </autobuild>
