@@ -1,0 +1,63 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"    value="C:\\ACE\\VC100\\ACE_wrappers" />
+        <environment name="TAO_ROOT"    value="C:\\ACE\\VC100\\ACE_wrappers\\TAO"/>
+        <environment name="CIAO_ROOT"   value="C:\\ACE\\VC100\\ACE_wrappers\\TAO\\CIAO"/>
+        <environment name="DANCE_ROOT"  value="C:\\ACE\\VC100\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
+        <environment name="ZLIB_ROOT"   value="C:\\Program Files\\GnuWin32"/>
+        <environment name="PATH"        value="C:\\Program Files\\GnuWin32\\bin;" type="prefix" />
+        <environment name="BZIP2_ROOT"  value="C:\\Program Files\\GnuWin32"/>
+        <environment name="XERCESCROOT" value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
+        <environment name="PATH"        value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\bin;" type="prefix" />
+        <environment name="PATH"        value="C:\\ACE\\VC100\\ACE_wrappers\\bin;C:\\ACE\\VC100\\ACE_wrappers\\lib;" type="prefix" />
+        <environment name="PATH"        value="C:\\RTI\\ndds.4.5b.rev01\\lib\\i86Win32VS2008;" type="prefix" />
+        <environment name="NDDSHOME"    value="C:\\RTI\\ndds.4.5b.rev01" />
+        <environment name="NDDSARCHITECTURE"    value="i86Win32VS2008" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="26"/>
+        <environment name="INCLUDE"     value="C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\INCLUDE;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v7.0A\\include;" type="prefix" />
+        <environment name="LIB"         value="C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\LIB;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\lib;" type="prefix" />
+        <environment name="LIBPATH"     value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\LIB;" type="prefix" />
+        <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 10.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\bin;C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\bin;" type="prefix" />
+
+        <variable name="configs"  value="Win32 VC100 Exceptions NDDS XERCES" />
+        <variable name="root"     value="C:\\ACE\\VC100\\" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="C:\\ACE\\VC100\\" />
+        <variable name="name"     value="WinXP VS.NET 2008" />
+        <variable name="svn_program"  value="c:\\cygwin\\bin\\svn" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
+
+    <command name="log"               options="ON" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.mak' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-type nmake -base vc10nmake -exclude TAO/CIAO"/>
+
+    <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
+
+    <command name="auto_run_tests"    options="-a -o -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/VC100" />
+</autobuild>
