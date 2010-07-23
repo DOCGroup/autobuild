@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on oci1444) was -->
-  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template platforms=x64" -outdir autobuild\configs\autobuild\oci -piggyback C:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -->
+  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template platforms=x64 -features content_subscription=0" -outdir configs\autobuild\oci -piggyback C:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -testopt "-Config DDS_NO_CONTENT_SUBSCRIPTION" -->
   <configuration>
     <environment name="ACE_ROOT"              value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0"/>
     <environment name="CIAO_ROOT"             value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO"/>
@@ -29,13 +29,13 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template platforms=x64"/>
+  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template platforms=x64 -features content_subscription=0"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build \x22debug|x64\x22 ./DDS.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="dir=. -Config DDS_NO_CONTENT_SUBSCRIPTION -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
