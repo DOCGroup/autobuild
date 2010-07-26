@@ -13,7 +13,7 @@
 
         <variable name="root"     value="/build/isisbuilds/Static" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_Static" />
+        <variable name="log_root" value="/build/isisbuilds/Static" />
         <variable name="configs"  value="Linux STATIC SSL ZLIB MULTICORE" />
     </configuration>
 
@@ -48,4 +48,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />
     <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/balar_Static" />
 </autobuild>

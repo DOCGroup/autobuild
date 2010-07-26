@@ -41,5 +41,5 @@
     <command name="shell"             options="bzip2 -k -f XSC/bin/xsc-binary" />
     <command name="shell"             options="/bin/mv XSC/bin/xsc-binary.bz2 /web/users/isisbuilds/XSC/gnu-linux/" />
     <command name="shell"             options="/bin/mv XSC/bin/xsc-binary /web/users/isisbuilds/XSC/gnu-linux/" />
-
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:" />
 </autobuild>
