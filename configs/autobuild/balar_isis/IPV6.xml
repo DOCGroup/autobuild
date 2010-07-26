@@ -14,7 +14,7 @@
         <variable name="root"     value="/build/isisbuilds/IPV6" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/balar_IPV6" />
-        <variable name="configs"  value="Linux SSL IPV6 ZLIB" />
+        <variable name="configs"  value="Linux SSL IPV6 ZLIB MULTICORE" />
     </configuration>
 
     <command name="status"            options="on" />
