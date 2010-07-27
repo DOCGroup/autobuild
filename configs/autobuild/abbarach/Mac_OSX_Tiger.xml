@@ -12,7 +12,7 @@
 
         <variable name="root"     value="/build/isisbuilds/gcc4/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/abbarach_gcc4" />
+        <variable name="log_root" value="/build/isisbuilds/gcc4" />
         <variable name="project_root" value="/build/isisbuilds/gcc4/ACE_wrappers" />
         <variable name="configs"  value="Darwin" />
     </configuration>
@@ -49,4 +49,5 @@
     <command name="process_logs"      options="clean=2 move prettify index" />
 
     <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/abbarach_gcc4" />
 </autobuild>

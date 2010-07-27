@@ -13,7 +13,7 @@
         <variable name="project_root" value="/build/isisbuilds/XSC/XSC" />
         <variable name="root"     value="/build/isisbuilds/XSC/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/abbarach_XSC" />
+        <variable name="log_root" value="/build/isisbuilds/XSC" />
         <variable name="configs"  value="Darwin/PowerPC Exceptions" />
     </configuration>
 
@@ -43,5 +43,5 @@
     <command name="shell"             options="bzip2 -k -f XSC/bin/xsc-binary" />
     <command name="shell"             options="/bin/mv XSC/bin/xsc-binary.bz2 /web/users/isisbuilds/XSC/darwin/" />
     <command name="shell"             options="/bin/mv XSC/bin/xsc-binary /web/users/isisbuilds/XSC/darwin/" />
-
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/abbarach_XSC" />
 </autobuild>
