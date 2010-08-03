@@ -190,6 +190,12 @@
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>OpenSuSE_11_3_GCC4.5.0</name>
+       <url>http://www.dre.vanderbilt.edu/~remedynl/suse113_64_gcc</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
     <build>
       <name>FC12_NoInline</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ace_NoInline/</url>

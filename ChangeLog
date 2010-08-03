@@ -1,3 +1,8 @@
+Tue Aug  3  8:09:15 UTC 2010  Marcel Smit  <msmit@remedy.nl>
+
+        * configs/scoreboard/ciao.xml:
+          Added OpenSuSE 11.3 64 bit build
+
 Wed Jul 28 12:23:15 UTC 2010  Marcel Smit  <msmit@remedy.nl>
 
         * configs/scoreboard/tao.xml:
