@@ -78,7 +78,7 @@ sub Run ($)
         return 0;
     }
 
-    my $command = "perl bin/fuzz.pl $options";
+    my $command = "perl $ENV{'ACE_ROOT'}/bin/fuzz.pl $options";
 
     print "Running: $command\n";
     system ($command);

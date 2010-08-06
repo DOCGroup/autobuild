@@ -41,6 +41,19 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  # VC10 / MSBuild
+  if ($s =~ /^\s*(?:\d+>)?Project "[^"]+" \(\d+\) is building "([^"]+)" \((\d+)\)/) {
+    my ($prj, $seq) = ($1, $2);
+    $prj =~ /\\([^.\\]+)\.vcxproj$/;
+    $self->Output_Subsection ("$1 ($seq)");
+    return;
+  }
+
+  if ($s =~ /^\s*0 (Error|Warning)\(s\)\s*$/) {
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/^Warning:.* will be ignored/) {
     # Warning from RTI ddsgen, ignore because this is not important for us
     $self->Output_Normal ($s);
