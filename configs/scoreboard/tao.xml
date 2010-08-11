@@ -307,6 +307,16 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
+   <name>VxWorks</name>
+   <build>
+      <name>VxWorks_6.8_x86_RTP_Debug</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_oci1176_VxWorks6.8_gcc_d1o0</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+</group>
+
+<group>
   <name>OpenBSD</name>
   <build>
     <name>OpenBSD_4_6</name>
