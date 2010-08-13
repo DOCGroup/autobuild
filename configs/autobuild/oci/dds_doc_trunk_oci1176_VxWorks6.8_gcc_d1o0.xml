@@ -9,7 +9,7 @@
     <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/DDS/build/VxWorks6.8_gcc_d1o0"/>
     <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/VxWorks6.8_gcc_d1o0/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.8_gcc_d1o0/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/lib:"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
-    <environment name="PATH"            value=":/tao_builds/taoadmin/DDS/build/VxWorks6.8_gcc_d1o0/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.8_gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:" type="suffix"/>
+    <environment name="PATH"            value="/tao_builds/taoadmin/DDS/build/VxWorks6.8_gcc_d1o0/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.8_gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin" type="prefix"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.8_gcc_d1o0/TAO"/>
     <variable    name="base"            value="DDS"/>
     <variable    name="build_name"      value="VxWorks6.8_gcc_d1o0"/>
