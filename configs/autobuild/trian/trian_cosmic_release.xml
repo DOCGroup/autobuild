@@ -27,7 +27,7 @@
     <variable name="root"     value="C:\\bczar\\CoSMIC_Release" />
     <variable name="log_file" value="log.txt" />
     <variable name="log_root" value="C:\\bczar\\CoSMIC_Release" />
-    <variable name="project_root" value="C:\\bczar\\CoSMIC_Release\\ACE" />
+    <variable name="project_root" value="C:\\bczar\\CoSMIC_Release\\Latest_Micro\\ACE" />
     <variable name="name"     value="CoSMIC Release VC9 GME-10.2.9 Windows Server 2003 x64" />
   </configuration>
   <command name="process_listener" options="localhost:32001" />

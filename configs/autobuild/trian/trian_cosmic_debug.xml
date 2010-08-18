@@ -28,7 +28,7 @@
     <variable name="root"     value="C:\\bczar\\CoSMIC_Debug" />
     <variable name="log_file" value="log.txt" />
     <variable name="log_root" value="C:\\bczar\\CoSMIC_Debug" />
-    <variable name="project_root" value="C:\\bczar\\CoSMIC_Debug\\ACE" />
+    <variable name="project_root" value="C:\\bczar\\CoSMIC_Debug\\Latest_Micro\\ACE" />
     <variable name="name"     value="CoSMIC Debug VC9 GME-10.2.9 Windows Server 2003 x64" />
   </configuration>
 
