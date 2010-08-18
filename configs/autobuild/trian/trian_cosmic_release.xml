@@ -7,7 +7,7 @@
     <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Release\\MPC"/>
 
     <environment name="CCF_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CoSMIC\\contrib"/>
-    <environment name="WIX_ROOT"     value="C:\\Program Files (x86)\\Windows Installer XML v3.5"/>
+    <environment name="WIX_ROOT"     value="C:\utils\wix3.5"/>
     <environment name="CVS_RSH"      value="plink.exe" />
     <environment name="XERCESCROOT"  value="C:\\Libraries\\xerces-c-3.1.1-x86-windows-vc-9.0"/>
     <environment name="XERCESC_VERSION"   value="3_1"/>
