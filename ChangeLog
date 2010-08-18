@@ -1,3 +1,10 @@
+Wed Aug 18 17:01:39 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Bug fix in configuration.
+
 Wed Aug 18 16:28:02 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
