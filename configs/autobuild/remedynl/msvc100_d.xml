@@ -21,7 +21,7 @@
         <environment name="LIBPATH"     value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\LIB;" type="prefix" />
         <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 10.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\bin;C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\bin;" type="prefix" />
 
-        <variable name="configs"  value="Win32 VC100 Exceptions NDDS XERCES" />
+        <variable name="configs"  value="Win32 VC100 Exceptions XERCES" />
         <variable name="root"     value="C:\\ACE\\VC100\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\VC100\\" />
