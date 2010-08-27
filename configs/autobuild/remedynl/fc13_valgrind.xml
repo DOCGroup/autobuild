@@ -13,7 +13,7 @@
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.3.2" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="18"/>
 
-        <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --trace-children=yes --suppressions="
+        <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --show-reachable=yes --trace-children=yes --suppressions="
                                                   join=""
                                                   variable="BUILD_CONFIG_PATH"
                                                   join="dir"
