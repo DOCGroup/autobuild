@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"                value="Z:/aragon/vx551_win_ppc/ACE_wrappers" />
         <environment name="TAO_ROOT"                value="Z:/aragon/vx551_win_ppc/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"               value="Z:/aragon/vx551_win_ppc/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"               value="Z:/aragon/vx551_win_ppc/ACE_wrappers/TAO/CIAO/DAnCE"/>
+        <environment name="DANCE_ROOT"               value="Z:/aragon/vx551_win_ppc/ACE_wrappers/TAO/DAnCE"/>
         <environment name="HOST_ROOT"               value="C:/ACE/VxWorks/Host/ACE_wrappers"/>
         <environment name="PATH"                    value="C:\\Tornado2.2\\host\\x86-win32\\bin;C:\\tools\\nixtools;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\lib;C:\\ACE\\VxWorks\\Host\\ACE_wrappers\\bin;c:\\perl\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;" type="prefix" />
         <environment name="WIND_BASE"               value="C:/Tornado2.2"/>

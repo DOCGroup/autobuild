@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86" />
         <environment name="TAO_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO" />
         <environment name="CIAO_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO/CIAO" />
-        <environment name="DANCE_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO/CIAO/DAnCE" />
+        <environment name="DANCE_ROOT"        value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/TAO/DAnCE" />
         <environment name="LD_LIBRARY_PATH" value="/opt/data/acebuild/ACE_wrappers/build/linux-x86/lib:/opt/data/acebuild/ACE_wrappers/build/linux-x86/ace:" />
 
         <variable name="project_root" value="/opt/data/acebuild/ACE_wrappers/build/linux-x86" />

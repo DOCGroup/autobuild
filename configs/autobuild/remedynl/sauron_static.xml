@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"        value="/aceroot/ACE_wrappers"/>
         <environment name="TAO_ROOT"        value="/aceroot/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/aceroot/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DAnCE_ROOT"       value="/aceroot/ACE_wrappers/TAO/CIAO/DAnCE"/>
+        <environment name="DAnCE_ROOT"       value="/aceroot/ACE_wrappers/TAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/aceroot/ACE_wrappers/lib" />
         <environment name="PATH"            value="/gnu/bin:/aceroot/ACE_wrappers/lib" type="prefix" />
         <environment name="TMPDIR"          value="/aceroot"/>

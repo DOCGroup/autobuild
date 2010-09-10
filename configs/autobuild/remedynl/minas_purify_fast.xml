@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"        value="/export/home/build/ACE/purifyfast/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/export/home/build/ACE/purifyfast/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/export/home/build/ACE/purifyfast/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"        value="/export/home/build/ACE/purifyfast/ACE_wrappers/TAO/CIAO/DAnCE"/>
+        <environment name="DANCE_ROOT"        value="/export/home/build/ACE/purifyfast/ACE_wrappers/TAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/export/home/build/ACE/purifyfast/ACE_wrappers/lib"/>
         <environment name="PATH" value="/opt/rational/releases/PurifyPlus.7.0.0.0-014.G/sun4_solaris2/bin" type="prefix" />
         <environment name="ACE_RUNTEST_DELAY" value="5" />

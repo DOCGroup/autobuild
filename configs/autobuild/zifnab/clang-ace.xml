@@ -1,0 +1,51 @@
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"          value="/builds/Clang_ACE/ACE_wrappers" />
+        <environment name="TAO_ROOT"          value="/builds/Clang_ACE/ACE_wrappers/TAO" />
+        <environment name="CIAO_ROOT"          value="/builds/Clang_ACE/ACE_wrappers/TAO/CIAO" />
+        <environment name="DANCE_ROOT"          value="/builds/Clang_ACE/ACE_wrappers/TAO/DAnCE" />
+        <environment name="DYLD_LIBRARY_PATH" value="/builds/Clang_ACE/ACE_wrappers/lib:/builds/utils/Clang_ACE:/builds/Clang/llvm-build/Release+Asserts/lib" />
+        <environment name="PATH" value="/builds/Clang/llvm-build/Release+Asserts/bin" type="prefix" />
+        <environment name="XERCESCROOT"       value="/builds/utils/clang" />
+        <environment name="SSL_ROOT"         value="/usr" />
+        <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.6" />
+
+        <variable name="root"     value="/builds/Clang_ACE/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/builds/Clang_ACE" />
+        <variable name="project_root" value="/builds/Clang_ACE/ACE_wrappers" />
+        <variable name="configs"  value="Darwin" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32002" />
+
+    <command name="log"               options="on" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-snowleopard.h\x22\n\n '" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC=clang\nCXX=clang++\ndebug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\n'" />
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler"    options="clang++" />
+    <command name="print_ace_config" />
+
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
+
+    <command name="make"              options="-k realclean find=*akefile" />
+
+    <command name="make"              options="-j 16 -k" />
+
+    <command name="auto_run_tests"    options="-a -C" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=2 move prettify index" />
+
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/Clang_ACE" />
+</autobuild>

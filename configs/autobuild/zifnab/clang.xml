@@ -1,0 +1,37 @@
+<autobuild>
+    <configuration>
+
+        <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.6" />
+
+        <variable name="root"     value="/builds/Clang/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/builds/Clang" />
+        <variable name="project_root" value="/builds/Clang/llvm-build" />
+        <variable name="configs"  value="Darwin" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32002" />
+
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co http://llvm.org/svn/llvm-project/llvm/trunk llvm" />
+    <command name="svn"               options="co http://llvm.org/svn/llvm-project/cfe/trunk llvm/tools/clang" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler"    options="gcc" />
+
+    <command name="shell" options="rm -rf llvm-build" />
+    <command name="shell" options="mkdir llvm-build" />
+    <command name="shell" options="cd llvm-build ; ../llvm/configure --enable-optimized" />
+
+    <command name="make"              options="-j 16 -k" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=2 move prettify index" />
+
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /llvm*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/Clang" />
+</autobuild>

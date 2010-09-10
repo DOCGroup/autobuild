@@ -23,7 +23,7 @@
     <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
-    <command name="generate_workspace" options="-type gnuautobuild -static Release_idl_to_picml.mwc" />
+    <command name="generate_workspace" options="-type gnuace -static Release_idl_to_picml.mwc" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -j4 mfc=1" />
 
