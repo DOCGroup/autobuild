@@ -41,7 +41,7 @@
   <command name="make" options="-s -k  find=*akefile dir=. conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.8_gcc_d1o0/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
-  <command name="generate_workspace" options="-type gnuace -exclude TAO/CIAO,TAO/DDS,TAO/TAO_ACE.mwc,TAO/TAOACE.mwc TAO_for_DDS.mwc"/>
+  <command name="generate_workspace" options="-type gnuace -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,TAO/TAO_ACE.mwc,TAO/TAOACE.mwc TAO_for_DDS.mwc"/>
   <command name="anonymous_shell"    options="cp -pf /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/bin/ace_gperf ACE_wrappers/build/VxWorks6.8_gcc_d1o0/bin"/>
   <command name="anonymous_shell"    options="cp -pf /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/bin/tao_idl ACE_wrappers/build/VxWorks6.8_gcc_d1o0/bin"/>
 

@@ -59,7 +59,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
-  <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
+  <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
   <command name="generate_workspace" options="-type gnuace TAO/CIAO/CIAO.mwc"/>
 
   <!-- Build dependencies -->

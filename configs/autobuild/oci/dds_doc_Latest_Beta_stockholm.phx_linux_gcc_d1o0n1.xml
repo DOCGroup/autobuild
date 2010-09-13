@@ -43,7 +43,7 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/DDS conditional_rm=/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0n1/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
-  <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc"/>
+  <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k  find=*akefile dir=TAO depend"/>

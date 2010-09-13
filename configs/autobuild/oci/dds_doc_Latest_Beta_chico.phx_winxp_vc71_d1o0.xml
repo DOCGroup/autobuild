@@ -31,7 +31,7 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc"/>
+  <command name="generate_workspace" options="-type vc71 -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS/DDS_TAO.mwc,ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build debug TAO/TAO_ACE.sln"/>

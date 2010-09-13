@@ -33,7 +33,7 @@
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -relative TAO_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO -relative ACE_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1"/>
+  <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc -relative TAO_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1\\TAO -relative ACE_ROOT=D:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71gnu_d0o1s1"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k  find=*akefile dir=TAO depend"/>

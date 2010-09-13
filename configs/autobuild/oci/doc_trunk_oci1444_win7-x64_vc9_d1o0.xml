@@ -29,7 +29,7 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc9 -recurse -exclude TAO/CIAO,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template platforms=x64"/>
+  <command name="generate_workspace" options="-type vc9 -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc -value_template platforms=x64"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build \x22debug|x64\x22 TAO/TAO_ACE.sln"/>

@@ -1,3 +1,26 @@
+Mon Sep 13 15:01:37 UTC 2010  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_Latest_Beta_chico.phx_winxp_vc71_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_Latest_Beta_spider_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/dds_doc_Latest_Beta_stockholm.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_trunk_chico.phx_winxp_vc71_s1d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_earwig_winxp-x64_nmake_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_fly_sunos59_suncc58_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_hornet_wince5_vc8_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_oci1176_VxWorks6.8_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_oci1444_win7-x64_vc9_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_qnx_qnx_gcc_d1o0i0.xml:
+        * configs/autobuild/oci/doc_trunk_stockholm.phx_linux_gcc_d1o0n1.xml:
+        * configs/autobuild/oci/doc_trunk_sydney.phx_sunos59_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_viper_aix53_va8_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1.xml:
+        * configs/autobuild/oci/doc_trunk_weevil_win2003_vc71_s1d1o0.xml:
+
+          Builds that had an mpc option of -exclude TAO/CIAO now also need
+          to exclude TAO/DAnCE.
+
 Mon Sep 13 08:18:00 UTC 2010  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
