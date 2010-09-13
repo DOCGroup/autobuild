@@ -61,10 +61,12 @@ sub Run ($)
                                        "$svnurl/Middleware/trunk/TAO/<file>?revision=HEAD"],
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
                                        "$svnurl/Middleware/trunk/CIAO/<file>?revision=HEAD"],
+                       'DAnCE'     => ['ChangeLog', 'TAO/DAnCE/',
+                                       "$svnurl/Middleware/trunk/DAnCE/<file>?revision=HEAD"],
                        'DDS'       => ['ChangeLog', 'DDS/',
                                        "$svnurl/DDS/trunk/<file>?revision=HEAD"],
                       );
-    my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DDS');
+    my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DAnCE', 'DDS');
 
     foreach my $option (split(/\s+/, $options)) {
       if ($option =~ /([^=]+)=(.*)/) {
@@ -197,6 +199,15 @@ sub Run ($)
     foreach my $dir ($ENV{CIAO_ROOT}, "TAO/CIAO") {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ CIAO VERSION ================\n";
+
+        print_file ("$dir/VERSION", 0);
+        last;
+      }
+    }
+
+    foreach my $dir ($ENV{DANCE_ROOT}, "TAO/DAnCE") {
+      if (defined $dir && -r "$dir/VERSION") {
+        print "================ DAnCE VERSION ================\n";
 
         print_file ("$dir/VERSION", 0);
         last;
