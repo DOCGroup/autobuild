@@ -1,3 +1,11 @@
+Mon Sep 13 20:40:38 UTC 2010  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32.xml:
+        * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d1o0.xml:
+
+          These two files shouldn't have been included in the last commit
+          because they do build CIAO and DAnCE.
+
 Mon Sep 13 15:01:37 UTC 2010  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_Latest_Beta_chico.phx_winxp_vc71_d1o0.xml:
