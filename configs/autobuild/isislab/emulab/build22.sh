@@ -1,4 +1,3 @@
-/users/bczar/runbuild.sh FC8autoconf
 /users/bczar/runbuild.sh FC8Full
 /users/bczar/runbuild.sh FC6fpStatic
 /users/bczar/runbuild.sh FC6cmpmetrics2
