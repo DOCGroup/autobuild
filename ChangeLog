@@ -1,3 +1,21 @@
+Tue Sep 14 11:24:39 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/olli/centos-21.xml:
+        * configs/autobuild/olli/freebsd-55.xml:
+        * configs/autobuild/olli/freebsd-64.xml:
+        * configs/autobuild/olli/freebsd-72.xml:
+        * configs/autobuild/olli/freebsd-80.xml:
+        * configs/autobuild/olli/lynxos-40-xbuild.xml:
+        * configs/autobuild/olli/lynxos-40.xml:
+        * configs/autobuild/olli/lynxos-42-xbuild.xml:
+        * configs/autobuild/olli/lynxos-42.xml:
+        * configs/autobuild/olli/lynxos-50-xbuild.xml:
+        * configs/autobuild/olli/openbsd-46.xml:
+        * configs/autobuild/olli/ubuntu-904.xml:
+
+          Add -exclude DAnCE, but these builds shouln't be checking out DAnCE
+          in the first place.
+
 Tue Sep 14 02:30:16 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/scoreboard/ciao.xml:
