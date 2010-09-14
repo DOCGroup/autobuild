@@ -5,7 +5,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\versioned_namespace\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\versioned_namespace\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"     value="C:\\ACE\\versioned_namespace\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"     value="C:\\ACE\\versioned_namespace\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="DANCE_ROOT"     value="C:\\ACE\\versioned_namespace\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="XERCESCROOT"  value="C:\\utils"/>
         <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\ACE\\versioned_namespace\\ACE_wrappers\\bin;C:\\ACE\\versioned_namespace\\ACE_wrappers\\lib;C:\\utils\\lib;c:\\cygwin\\bin" type="prefix" />

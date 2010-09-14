@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\BCB2007dd\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"    value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="DANCE_ROOT"    value="C:\\ACE\\BCB2007dd\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="XERCESCROOT"  value="C:\\xerces-c-src_2_7_0" />
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"         value="C:\\Program Files\\Codegear\\RAD Studio\\5.0\\Bin;C:\\Perl\\Bin;C:\\ACE\\BCB2007dd\\ACE_wrappers\\lib;C:\\ACE\\BCB2007dd\\ACE_wrappers\\bin;C:\\cygwin\\bin;C:\\xerces-c-src_2_7_0\\lib" type="prefix" />

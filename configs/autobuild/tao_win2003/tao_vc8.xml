@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\VC8\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="DANCE_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="RSYNC_RSH"    value="c:\\Cygwin\\bin\\ssh" />
         <environment name="XERCESCROOT"  value="C:\\xerces-vc8" />
         <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\bin;C:\\zlib\\lib;C:\\zzip\\lib;c:\\xerces-vc8\\lib;C:\\Perl\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;C:\\ACE\\VC8\\ACE_wrappers\\TAO\\CIAO\\bin;c:\\cygwin\\bin;c:\\zzip\\lib;c:\\zlib\\lib" type="prefix" />

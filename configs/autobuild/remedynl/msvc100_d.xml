@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"    value="C:\\ACE\\VC100\\ACE_wrappers" />
         <environment name="TAO_ROOT"    value="C:\\ACE\\VC100\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"   value="C:\\ACE\\VC100\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"  value="C:\\ACE\\VC100\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="DANCE_ROOT"  value="C:\\ACE\\VC100\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
         <environment name="ZLIB_ROOT"   value="C:\\Program Files\\GnuWin32"/>
         <environment name="PATH"        value="C:\\Program Files\\GnuWin32\\bin;" type="prefix" />

@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"    value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers" />
         <environment name="TAO_ROOT"    value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"   value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"  value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="DANCE_ROOT"  value="C:\\ACE\\VC90MinCORBA\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
         <environment name="XERCESCROOT"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
         <environment name="PATH"  value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;" type="prefix" />

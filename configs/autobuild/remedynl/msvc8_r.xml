@@ -4,7 +4,7 @@
         <environment name="ACE_ROOT"     value="C:\\ACE\\VC8r\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ACE\\VC8r\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"    value="C:\\ACE\\VC8r\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"    value="C:\\ACE\\VC8r\\ACE_wrappers\\TAO\\CIAO\\DAnCE"/>
+        <environment name="DANCE_ROOT"    value="C:\\ACE\\VC8r\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="SSL_ROOT"     value="c:\\OpenSSL" />
         <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\ACE\\VC8r\\ACE_wrappers\\bin;C:\\ACE\\VC8r\\ACE_wrappers\\lib;C:\\Perl\\bin;c:\\Cygwin\\bin" type="prefix" />

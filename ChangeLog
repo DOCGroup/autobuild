@@ -1,3 +1,40 @@
+Tue Sep 14 02:28:43 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/ciang/ciang_vc9.xml:
+        * configs/autobuild/ciang/ciaocore_vc9.xml:
+        * configs/autobuild/ciang/vc9_static.xml:
+        * configs/autobuild/ciang/vc9_w4.xml:
+        * configs/autobuild/remedynl/bcb2007dd.xml:
+        * configs/autobuild/remedynl/bcb2007dd_dds.xml:
+        * configs/autobuild/remedynl/cb2009dd.xml:
+        * configs/autobuild/remedynl/cb2009dd_dds.xml:
+        * configs/autobuild/remedynl/cb2009dr.xml:
+        * configs/autobuild/remedynl/cb2010dd.xml:
+        * configs/autobuild/remedynl/cb2010dr.xml:
+        * configs/autobuild/remedynl/msvc100_d.xml:
+        * configs/autobuild/remedynl/msvc71_d.xml:
+        * configs/autobuild/remedynl/msvc71_ipv6_debug.xml:
+        * configs/autobuild/remedynl/msvc71_vc71dr.xml:
+        * configs/autobuild/remedynl/msvc8_d.xml:
+        * configs/autobuild/remedynl/msvc8_r.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_host.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_pro_r.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_r.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_test.xml:
+        * configs/autobuild/remedynl/msvc8_wince6_x86_host.xml:
+        * configs/autobuild/remedynl/msvc90_d.xml:
+        * configs/autobuild/remedynl/msvc90_ipv6_debug.xml:
+        * configs/autobuild/remedynl/msvc90_minimum_corba.xml:
+        * configs/autobuild/remedynl/msvc90_vc90dr.xml:
+        * configs/autobuild/remedynl/rad2007dd.xml:
+        * configs/autobuild/remedynl/rad2007dd_dds.xml:
+        * configs/autobuild/tao_win2003/tao_vc8.xml:
+        * configs/autobuild/trian/ace_for_tao.xml:
+        * configs/autobuild/trian/ciao_no_inline.xml:
+        * configs/autobuild/trian/versioned_namespace.xml:
+
+          Upadted DAnCE path.
+        
 Mon Sep 13 20:40:38 UTC 2010  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32.xml:
