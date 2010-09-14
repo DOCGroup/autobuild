@@ -1,3 +1,9 @@
+Tue Sep 14 02:30:16 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/scoreboard/ciao.xml:
+
+          Removed ubuntu builds.
+
 Tue Sep 14 02:28:43 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/ciang/ciang_vc9.xml:
@@ -34,7 +40,7 @@ Tue Sep 14 02:28:43 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/trian/versioned_namespace.xml:
 
           Upadted DAnCE path.
-        
+
 Mon Sep 13 20:40:38 UTC 2010  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32.xml:

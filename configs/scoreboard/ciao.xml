@@ -65,12 +65,6 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-       <name>Ubuntu_710_WChar</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_wchar/</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
       <name>RHEL4-NoInline</name>
       <url>http://tao.prismtech.com/doc-scoreboard/rhel4/gcc344/standard</url>
       <build_sponsor>PrismTech</build_sponsor>
@@ -147,30 +141,6 @@
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/valgrind</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-    </build>
-    <build>
-      <name>Ubuntu_710_Static</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Static</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Ubuntu_710_IPV6</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_IPV6</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Ubuntu_710_Dynamic_Hash_Op_Lookup</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_Dynamic_Hash</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Ubuntu_710_Implicit_Templates</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/balar_isis_ImplicitTemplates</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
       <name>FC8_NoInterceptors_Core</name>
