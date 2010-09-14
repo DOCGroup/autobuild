@@ -45,8 +45,7 @@
 
   <!-- Installation -->
   <command name="anonymous_shell" options="chmod -R ug+w /tao_builds/taoadmin/dbg_installed"/>
-  <command name="make" options="-k find=*akefile dir=dds install INSTALLER=/home/mitza/MPC/prj_install.pl"/>
-  <!-- change the previous line after prj_install.pl is committed -->
+  <command name="make" options="-k find=*akefile dir=dds install"/>
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/dbg_installed"/>
 
   <!-- Post build -->
