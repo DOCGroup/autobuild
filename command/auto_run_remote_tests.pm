@@ -71,7 +71,7 @@ sub Run ($)
     my($remainder) = '';
     foreach my $part (grep(!/^\s*$/,
                            split(/(\"[^\"]+\"|\'[^\']+\'|\s+)/, $options))) {
-      print STDERR $part . "\n";                           
+      print STDERR $part . "\n";
       # This assumes that all internal options will take only
       # one parameter.
       if (defined $self->{'internal_options'}->{$part}) {
@@ -167,7 +167,7 @@ sub Run ($)
     if (defined $dir) {
         $remote_cmd .= "cd $dir && ";
     }
-    
+
     my $remote_tao_root = main::GetVariable ('remote_tao_root');
     if (!defined $remote_tao_root) {
         $remote_tao_root = "$remote_root/TAO";
@@ -178,9 +178,9 @@ sub Run ($)
     }
     my $remote_dance_root = main::GetVariable ('remote_dance_root');
     if (!defined $remote_dance_root) {
-        $remote_dance_root = "$remote_ciao_root/DAnCE";
+        $remote_dance_root = "$remote_tao_root/DAnCE";
     }
-    
+
     $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root ";
     $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib";
     if (defined $remote_libpath) {
@@ -191,7 +191,7 @@ sub Run ($)
     if (defined $self->{'extra_env'}) {
       $remote_cmd .= $self->{'extra_env'} . " ";
     }
-    
+
     if (defined $ENV{'REMOTE_OS'} and ($ENV{'REMOTE_OS'} eq 'iPhone')) {
         if (exists $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'}) {
             $remote_cmd .= "default_PROCESS_START_WAIT_INTERVAL=" . $ENV{'REMOTE_PROCESS_START_WAIT_INTERVAL'} . " ";
