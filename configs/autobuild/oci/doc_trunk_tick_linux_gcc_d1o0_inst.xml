@@ -22,7 +22,7 @@
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
   <command name="clone_build_tree"/>
-  <command name="shell"              options="cd ACE_wrappers/build/inst64dbg ; rm -rf ace ACEXML apps bin/{depgen,mwc,mpc}.pl contrib/minizip include Kokyu protocols/ace TAO/{utils,TAO_IDL,tao,CIAO/ccm,CIAO/ciao,CIAO/tools} ACE.mwc TAO/*.mwc TAO/CIAO/CIAO_*.mwc TAO/CIAO/connectors/dds4ccm/*.mwc"/>
+  <command name="shell"              options="cd ACE_wrappers/build/inst64dbg ; rm -rf ace ACEXML apps bin/{depgen,mwc,mpc}.pl contrib/minizip include Kokyu protocols/ace TAO/{utils,TAO_IDL,tao,CIAO/ccm,CIAO/ciao,CIAO/tools} ACE.mwc TAO/*.mwc TAO/CIAO/CIAO_*.mwc TAO/CIAO/connectors/dds4ccm/*.mwc TAO/DAnCE/DAnCE_TAO.mwc"/>
   <command name="shell"              options="cd ACE_wrappers/build/inst64dbg ; ls -ld TAO/orbsvcs/* TAO/DAnCE/* TAO/CIAO/connectors/ami4ccm/* TAO/CIAO/connectors/dds4ccm/* | perl -ne'print if s/^d.*?(\S+)$/$1/' | egrep -vi 'tests|examples' | xargs -t rm -rf"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/inst64dbg/setenv.sh output='export PROJ_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64dbg\nexport ROOT_ROOT=/tao_builds/taoadmin/doc/ACE_wrappers\nexport ACE_ROOT=/tao_builds/taoadmin/dbg_installed/share/ace\nexport CIAO_ROOT=/tao_builds/taoadmin/dbg_installed/share/ciao\nexport DANCE_ROOT=/tao_builds/taoadmin/dbg_installed/share/DAnCE\nexport LD_LIBRARY_PATH=/usr/sfw/lib:/usr/local/lib:\nexport MPC_ROOT=/home/taoadmin/MPC\nexport PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\nexport QTDIR=/usr/lib64/qt4\nexport TAO_ROOT=/tao_builds/taoadmin/dbg_installed/share/tao\nexport XERCESCROOT=/usr\n'"/>
   <command name="print_os_version"/>
@@ -46,9 +46,11 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64dbg/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64dbg/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64dbg/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64dbg/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse"/>
+  <command name="generate_workspace" options="-type gnuace TAO/DAnCE/tests"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k -j2 find=*akefile dir=tests depend"/>
@@ -64,6 +66,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE/tests depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k -j2 find=*akefile dir=tests"/>
@@ -79,6 +82,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE"/>
 
   <!-- Post build -->
 <!--  <command name="auto_run_tests"  options="-a -t -o -C -ExeSubDir i686 -Config ARCH -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/> -->
