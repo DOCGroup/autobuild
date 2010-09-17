@@ -18,6 +18,7 @@
 
         <variable name="root"         value="/build/ACE/crossbuild/" />
         <variable name="remote_root"  value="/build/ACE/crossbuild/ACE_wrappers" />
+        <variable name="remote_libpath"  value="/build/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1" />
         <variable name="remote_shell" value="ssh 10.207.173.55" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/build/ACE/crossbuild/" />
