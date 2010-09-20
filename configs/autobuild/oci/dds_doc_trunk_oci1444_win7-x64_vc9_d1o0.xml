@@ -1,21 +1,29 @@
 <autobuild>
   <!-- The command used to create this file (on oci1444) was -->
-  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -mpcopt "-value_template platforms=x64 -features content_subscription=0" -outdir configs\autobuild\oci -piggyback C:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -testopt "-Config DDS_NO_CONTENT_SUBSCRIPTION" -->
+  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -environment "JAVA_HOME=c:\Program Files\Java\jdk1.6.0_18" -environment JAVA_PLATFORM=win32 -environment QTDIR=c:\\qt-everywhere-opensource-src-4.6.2 -environment QT_CFG=d4 -environment WIRETAP_VERSION=0.3.1 -environment GLIB_ROOT=c:\wireshark-win64-libs-1.2\gtk2 -environment WIRESHARK_SRC=c:\\wireshark-1.2 -environment JBOSS_HOME=c:\jboss-4.2.3.GA -mpcopt "-value_template platforms=x64 -features content_subscription=0,wireshark=1,qt4=1,java=1" -outdir . -piggyback c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -testopt "-Config DDS_NO_CONTENT_SUBSCRIPTION" -->
   <configuration>
-    <environment name="ACE_ROOT"              value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0"/>
-    <environment name="CIAO_ROOT"             value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO"/>
-    <environment name="DDS_ROOT"              value="c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0"/>
-    <environment name="MPC_ROOT"              value="c:\\tao_builds\\taoadmin\\MPC"/>
-    <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
-    <environment name="PATH"                  value="C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin\\amd64;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\bin;C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\bin;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\lib;C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\lib;" type="prefix"/>
-    <environment name="TAO_ROOT"              value="C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO"/>
-    <variable    name="base"                  value="DDS"/>
-    <variable    name="build_name"            value="doc_vc9_d1o0"/>
-    <variable    name="creator"               value="mitza@ociweb.com"/>
-    <variable    name="log_file"              value="doc_vc9_d1o0.log"/>
-    <variable    name="log_root"              value="w:\\autobuild_logs\\dds_doc_trunk_oci1444_win7-x64_vc9_d1o0"/>
-    <variable    name="project_root"          value="c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0"/>
-    <variable    name="root"                  value="c:\\tao_builds\\taoadmin\\DDS"/>
+    <environment name="ACE_ROOT"        value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0"/>
+    <environment name="CIAO_ROOT"       value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO"/>
+    <environment name="DANCE_ROOT"      value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\DAnCE"/>
+    <environment name="DDS_ROOT"        value="c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0"/>
+    <environment name="GLIB_ROOT"       value="c:\\wireshark-win64-libs-1.2\\gtk2"/>
+    <environment name="JAVA_HOME"       value="c:\\Program Files\\Java\\jdk1.6.0_18"/>
+    <environment name="JAVA_PLATFORM"   value="win32"/>
+    <environment name="JBOSS_HOME"      value="c:\\jboss-4.2.3.GA"/>
+    <environment name="MPC_ROOT"        value="c:\\tao_builds\\taoadmin\\MPC"/>
+    <environment name="PATH"            value="C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin\\amd64;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\bin;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\lib;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\lib;" type="prefix"/>
+    <environment name="QTDIR"           value="c:\\qt-everywhere-opensource-src-4.6.2"/>
+    <environment name="QT_CFG"          value="d4"/>
+    <environment name="TAO_ROOT"        value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO"/>
+    <environment name="WIRESHARK_SRC"   value="c:\\wireshark-1.2"/>
+    <environment name="WIRETAP_VERSION" value="0.3.1"/>
+    <variable    name="base"            value="DDS"/>
+    <variable    name="build_name"      value="doc_vc9_d1o0"/>
+    <variable    name="creator"         value="mitza@ociweb.com"/>
+    <variable    name="log_file"        value="doc_vc9_d1o0.log"/>
+    <variable    name="log_root"        value="w:\\autobuild_logs\\dds_doc_trunk_oci1444_win7-x64_vc9_d1o0"/>
+    <variable    name="project_root"    value="c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0"/>
+    <variable    name="root"            value="c:\\tao_builds\\taoadmin\\DDS"/>
   </configuration>
 
   <!-- Build preparation -->
@@ -24,18 +32,20 @@
   <command name="log"                options="on"/>
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
   <command name="clone_build_tree"/>
-  <command name="file_manipulation"  options="type=create file=build/doc_vc9_d1o0/setenv.cmd output='set ACE_ROOT=C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\nset CIAO_ROOT=C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO\nset DDS_ROOT=c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\nset MPC_ROOT=c:\\tao_builds\\taoadmin\\MPC\nset OPENDDS_DCPS_TS_FLAGS= \nset \x22PATH=C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin\\amd64;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\bin;C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\bin;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\lib;C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\lib;%PATH%\x22\nset TAO_ROOT=C:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/doc_vc9_d1o0/setenv.cmd output='set ACE_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\nset CIAO_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\CIAO\nset DANCE_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\\DAnCE\nset DDS_ROOT=c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\nset GLIB_ROOT=c:\\wireshark-win64-libs-1.2\\gtk2\nset JAVA_HOME=c:\\Program Files\\Java\\jdk1.6.0_18\nset JAVA_PLATFORM=win32\nset JBOSS_HOME=c:\\jboss-4.2.3.GA\nset MPC_ROOT=c:\\tao_builds\\taoadmin\\MPC\nset \x22PATH=C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\VC\\bin\\amd64;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\bin;c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\lib;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\lib;%PATH%\x22\nset QTDIR=c:\\qt-everywhere-opensource-src-4.6.2\nset QT_CFG=d4\nset TAO_ROOT=c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0\\TAO\nset WIRESHARK_SRC=c:\\wireshark-1.2\nset WIRETAP_VERSION=0.3.1\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template platforms=x64 -features content_subscription=0"/>
+  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template platforms=x64 -features content_subscription=0,wireshark=1,qt4=1,java=1"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build \x22debug|x64\x22 ./DDS.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config DDS_NO_CONTENT_SUBSCRIPTION -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
+  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl build  -Dmwc.features=content_subscription=0,wireshark=1,qt4=1,java=1"/>
+  <command name="auto_run_tests"  options="dir=. -Config DDS_NO_CONTENT_SUBSCRIPTION -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG -a -l java/tests/dcps_java_tests.lst"/>
+  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test "/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
