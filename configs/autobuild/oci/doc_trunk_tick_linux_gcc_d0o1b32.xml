@@ -54,15 +54,15 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/arch/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DAnCE,ACE.mwc,TAO/TAO.mwc"/>
-  <command name="generate_workspace" options="-type gnuace TAO/CIAO/CIAO.mwc"/>
   <command name="generate_workspace" options="-type gnuace TAO/DAnCE"/>
+  <command name="generate_workspace" options="-type gnuace TAO/CIAO/CIAO.mwc"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip depend"/>
@@ -80,10 +80,10 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k -j2 find=*akefile dir=contrib/minizip"/>
@@ -101,10 +101,10 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE"/>
 
   <!-- Installation -->
   <command name="anonymous_shell" options="chmod -R ug+w /tao_builds/taoadmin/installed"/>
@@ -112,8 +112,8 @@
   <command name="make" options="-k find=*akefile dir=contrib/minizip install"/>
   <command name="make" options="-k find=*akefile dir=TAO install"/>
   <command name="make" options="-k find=*akefile dir=apps/JAWS/server install"/>
-  <command name="make" options="-k find=*akefile dir=TAO/CIAO install"/>
   <command name="make" options="-k find=*akefile dir=TAO/DAnCE install"/>
+  <command name="make" options="-k find=*akefile dir=TAO/CIAO install"/>
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/installed"/>
 
   <!-- Post build -->

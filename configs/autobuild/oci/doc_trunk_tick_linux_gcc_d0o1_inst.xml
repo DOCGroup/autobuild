@@ -45,8 +45,8 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64/.clean_binaries clean_binaries"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse"/>
@@ -65,8 +65,8 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE/tests depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k -j2 find=*akefile dir=tests"/>
@@ -81,8 +81,8 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
-  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE/tests"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO"/>
 
   <!-- Post build -->
 <!--  <command name="auto_run_tests"  options="-a -t -o -C -ExeSubDir i686 -Config ARCH -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/> -->
