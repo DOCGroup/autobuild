@@ -50,11 +50,14 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc442/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-unknown-linux-gnu-\nID=$(HOST_ROOT)/bin/tao_idl\nID_OPTS:=-g $(HOST_ROOT)/bin/ace_gperf\n'" />
 
     <command name="print_os_version" />
+    <command name="print_remote_os_version" />
     <command name="print_env_vars" />
+    <command name="print_perl_version" />
+    <command name="print_perl_version" options="remote"/>
+    <command name="print_openssl_version" options="remote"/>
+    <command name="print_make_version" />
     <command name="check_compiler" options="ppu-gcc" />
     <command name="print_ace_config" />
-    <command name="print_make_version" />
-    <command name="print_perl_version" />
 
     <command name="setenv"             options="ACE_ROOT=/build/ACE/xampler/ppu/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/build/ACE/xampler/ppu/ACE_wrappers/TAO"/>
