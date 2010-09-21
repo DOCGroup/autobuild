@@ -44,7 +44,7 @@
   <command name="vc7make" options="/build \x22debug|x64\x22 ./DDS.sln"/>
 
   <!-- Post build -->
-  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl build  -Dmwc.features=content_subscription=0,wireshark=1,qt4=1,java=1"/>
+  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl build  -Dmwc.features=content_subscription=0,wireshark=1,qt4=1,java=1 \x22-Dmwc.arguments=-value_template platforms=x64\x22"/>
   <command name="auto_run_tests"  options="dir=. -Config DDS_NO_CONTENT_SUBSCRIPTION -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG -a -l java/tests/dcps_java_tests.lst"/>
   <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test "/>
   <command name="log"             options="off"/>
