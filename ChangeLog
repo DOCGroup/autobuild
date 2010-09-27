@@ -1,8 +1,17 @@
+Mon Sep 27 19:18:31 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/isislab/emulab/FC8ORBCore.xml:
+        * configs/autobuild/isislab/emulab/FC8acefortao.xml:
+        * configs/autobuild/remedynl/suse110_gcc_acefortao.xml:
+        * configs/autobuild/trian/ace_for_tao.xml:
+
+          Remove CIAO from the svn checkout for these builds. 
+
 Fri Sep 24 16:10:04 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1b32_inst.xml:
         * configs/autobuild/oci/doc_trunk_tick_linux_gcc_d0o1_inst.xml:
-        
+
           Updated DAnCE root.
 
 Tue Sep 14 11:24:39 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
