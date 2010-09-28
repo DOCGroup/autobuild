@@ -134,5 +134,5 @@ BASE_ROOT=$ACE_ROOT
 DEFAULT_TITLE=ACE+TAO
 BASE_TITLE=$DEFAULT_TITLE
 
-create_front_page > /build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-front.php
-create_index_page > /build/ACE/crossbuild/xampler/Avenger/_Templt/Template-Display/_Report/index-technology.php
+create_front_page > /build/ACE/xampler/Avenger/_Templt/Template-Display/_Report/index-front.php
+create_index_page > /build/ACE/xampler/Avenger/_Templt/Template-Display/_Report/index-technology.php
