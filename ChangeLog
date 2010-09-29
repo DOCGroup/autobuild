@@ -1,3 +1,9 @@
+Wed Sep 29 10:55:00 UTC 2010  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+
+          Modify the exclusion list for the test target tar.
+
 Mon Sep 27 19:18:31 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/isislab/emulab/FC8ORBCore.xml:
