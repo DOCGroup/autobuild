@@ -59,7 +59,7 @@
   <command name="log"               options="OFF" />
   <command name="process_logs"      options="move prettify clean=5 index" />
   <command name="status"            options="off" />
-  <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Debug\\*.txt bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_cosmic_debug"/>
-  <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Debug\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/trian_cosmic_debug"/>
+  <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Debug\\*.txt bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/trian_cosmic_debug"/>
+  <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\Mydocu~1\\trian_cosmic.ppk -p -C C:\\bczar\\CoSMIC_Debug\\*.html bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/trian_cosmic_debug"/>
 
 </autobuild>

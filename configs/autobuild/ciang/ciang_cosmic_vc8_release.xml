@@ -71,6 +71,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\private-key.ppk -p -C C:\\bczar\\CoSMIC_VC8_Release\\*.txt  bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/ciang_cosmic_release"/>
-    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\private-key.ppk -p -C C:\\bczar\\CoSMIC_VC8_Release\\*.html bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/auto_compile_logs/ciang_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\private-key.ppk -p -C C:\\bczar\\CoSMIC_VC8_Release\\*.txt  bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/ciang_cosmic_release"/>
+    <command name="anonymous_shell"   options="pscp -i C:\\Docume~1\\bczar\\private-key.ppk -p -C C:\\bczar\\CoSMIC_VC8_Release\\*.html bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/ciang_cosmic_release"/>
 </autobuild>
