@@ -1,3 +1,8 @@
+Thu Sep 30 14:35:04 UTC 2010  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml: Corrected location of Riverace Windows
+          XP VC9 build. Changed names of RHEL_53* to RHEL_5*.
+
 Wed Sep 29 10:55:00 UTC 2010  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
