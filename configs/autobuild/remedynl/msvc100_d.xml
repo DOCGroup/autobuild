@@ -9,8 +9,8 @@
         <environment name="ZLIB_ROOT"   value="C:\\Program Files\\GnuWin32"/>
         <environment name="PATH"        value="C:\\Program Files\\GnuWin32\\bin;" type="prefix" />
         <environment name="BZIP2_ROOT"  value="C:\\Program Files\\GnuWin32"/>
-        <environment name="XERCESCROOT" value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
-        <environment name="PATH"        value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\bin;" type="prefix" />
+        <environment name="XERCESCROOT" value="C:\\xerces-c-3.1.1-x86-windows-vc-10.0" />
+        <environment name="PATH"        value="C:\\xerces-c-3.1.1-x86-windows-vc-10.0\\lib;C:\\xerces-c-3.1.1-x86-windows-vc-10.0\\bin;" type="prefix" />
         <environment name="PATH"        value="C:\\ACE\\VC100\\ACE_wrappers\\bin;C:\\ACE\\VC100\\ACE_wrappers\\lib;" type="prefix" />
         <environment name="PATH"        value="C:\\RTI\\ndds.4.5b.rev01\\lib\\i86Win32VS2008;" type="prefix" />
         <environment name="NDDSHOME"    value="C:\\RTI\\ndds.4.5b.rev01" />
@@ -50,11 +50,11 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -base vc10nmake -exclude TAO/CIAO,TAO/DAnCE"/>
+    <command name="generate_workspace" options="-type nmake -base vc10nmake"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
-    <command name="auto_run_tests"    options="-a -o -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
+    <command name="auto_run_tests"    options="-a -o -C -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
