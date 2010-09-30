@@ -7,7 +7,7 @@
         <environment name="TAO_ROOT" value="/builds/iPhone_3.1.2_Simulator/ACE_wrappers/TAO" />
 
         <environment name="IPHONE_TARGET" value="SIMULATOR" />
-        <environment name="IPHONE_VERSION" value="3.1.3" />
+        <environment name="IPHONE_VERSION" value="4.1" />
 
         <variable name="root"         value="/builds/iPhone_3.1.2_Simulator" />
         <variable name="log_file"     value="build.txt" />
