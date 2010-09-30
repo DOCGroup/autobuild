@@ -6,8 +6,6 @@ cd $HOME/ACE/autobuild
 
 svn up
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fc10_64_ne_fccm.xml
+$HOME/ACE/autobuild/configs/autobuild/remedynl/fc10_64_ne_fccm.sh
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fc10_64_ne_lwccm.xml
+$HOME/ACE/autobuild/configs/autobuild/remedynl/fc10_64_ne_lwccm.sh
