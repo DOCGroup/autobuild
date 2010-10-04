@@ -38,8 +38,8 @@
   <command name="log"           options="ON" />
 
   <!-- get latest micro release of middleware and MPC -->
-  <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-5_8_1 Latest_Micro" />
-  <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/tags/ACE+TAO+CIAO-5_8_1 MPC"/>
+  <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-5_8_2 Latest_Micro" />
+  <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/MPC/tags/ACE+TAO+CIAO-5_8_2 MPC"/>
 
   <!-- get trunk for CoSMIC -->
   <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/CoSMIC/trunk/CoSMIC CoSMIC" />

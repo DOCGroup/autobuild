@@ -1,3 +1,10 @@
+Mon Oct  4 14:58:28 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Updated to latest micro release of DOC middleware.
+
 Thu Sep 30 14:35:04 UTC 2010  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Corrected location of Riverace Windows
@@ -16,7 +23,7 @@ Mon Sep 27 19:18:31 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
         * configs/autobuild/remedynl/suse110_gcc_acefortao.xml:
         * configs/autobuild/trian/ace_for_tao.xml:
 
-          Remove CIAO from the svn checkout for these builds. 
+          Remove CIAO from the svn checkout for these builds.
 
 Fri Sep 24 16:10:04 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
