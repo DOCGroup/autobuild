@@ -20,6 +20,8 @@
                                                   value="fc10_64_valgrind.supp" />
         <environment name="VALGRIND_OPTS"         variable="valgrind_opts" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
+        <environment name="ACE_RUNTEST_DELAY"     value="2" />
+
 
         <variable name="root"     value="/home/build/ACE/valgrind/" />
         <variable name="log_file" value="build.txt" />
