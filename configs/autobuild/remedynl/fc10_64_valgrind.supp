@@ -20,3 +20,12 @@
    fun:*
    obj:*perl*
 }
+
+{
+   strlen/__GI__dl_open/dlopen_doit
+   Memcheck:Cond
+   fun:strlen
+   fun:__GI__dl_open
+   fun:dlopen_doit
+}
+
