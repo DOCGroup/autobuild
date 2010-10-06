@@ -37,8 +37,8 @@
     <command name="make"              options="-k --dry-run > $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k CXX=$ACE_ROOT/bin/g++_metric.sh" />
     <command name="make"              options="-k -C TAO/TAO_IDL" />
-    <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO/CIAO/tools/IDL3_to_IDL2" />
+    <command name="make"              options="-k -C TAO idl_stubs" />
     <command name="make"              options="-k -C TAO/CIAO idl_stubs" />
     <command name="make"              options="-k -C TAO --dry-run >> $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C TAO/TAO_IDL realclean find=*akefile" />
