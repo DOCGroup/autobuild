@@ -1,3 +1,11 @@
+Thu Oct  7 19:47:23 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
+
+        * configs/autobuild/ace_isis/FC9_Minimum.xml:
+        * configs/autobuild/ace_isis/FC9_NoInline.xml:
+        * configs/autobuild/ace_isis/FC9_Static_Core.xml:
+
+          updated log copying.
+
 Mon Oct  4 14:58:28 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:

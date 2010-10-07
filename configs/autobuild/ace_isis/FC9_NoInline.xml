@@ -12,13 +12,13 @@
 
         <variable name="root"     value="/build/isisbuilds/NoInline" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/web/users/isisbuilds/auto_compile_logs/ace_NoInline" />
+        <variable name="log_root" value="/build/isisbuilds/NoInline" />
         <variable name="configs"  value="Linux Exceptions ZLIB" />
 
     </configuration>
 
     <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32002" />
+    <command name="process_listener"  options="localhost:32001" />
     <command name="log"               options="on" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
@@ -46,4 +46,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=2 move prettify index" />
     <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/ace_NoInline" />
 </autobuild>
