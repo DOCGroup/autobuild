@@ -31,5 +31,5 @@
     <command name="process_logs"      options="clean move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /CoSMIC*/ --include *.txt --include *.html --exclude ** ./ bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/zifnab/CoSMIC" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /CoSMIC*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/CoSMIC" />
 </autobuild>
