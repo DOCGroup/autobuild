@@ -137,12 +137,6 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
     <build>
-      <name>FC6_Valgrind</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/valgrind</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-    </build>
-    <build>
       <name>FC8_NoInterceptors_Core</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/NoInt</url>
       <build_sponsor>ISIS</build_sponsor>
