@@ -14,7 +14,7 @@
         <variable name="root"     value="/home/build/ACE/full_ccm/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/full_ccm/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS CCM_NOEVENT" />
 
     </configuration>
 
