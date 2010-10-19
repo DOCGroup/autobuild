@@ -22,11 +22,13 @@
   <command name="print_make_version" />
   <command name="print_perl_version" />
 
-  <command name="generate_workspace" options="-exclude TAO           -type gnuace" />
+  <command name="generate_workspace" options="-exclude TAO                          -type gnuace" />
   <command name="generate_workspace" options="dirs=TAO -exclude CIAO -exclude DAnCE -type gnuace" />
 
   <command name="make"               options="-k" />
+  <command name="make"               options="-k install" />
   <command name="make"               options="-k -C TAO" />
+  <command name="make"               options="-k -C TAO install" />
   <command name="auto_run_tests"     options="-a -o -t" />
   <command name="log"                options="off" />
   <command name="shell"              options="cat /tmp/svn.log build.txt > new-build.txt; mv new-build.txt build.txt" />
