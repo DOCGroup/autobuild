@@ -11,6 +11,18 @@
   <group>
     <name>Linux</name>
     <build>
+      <name>FC10_GCC_FullCCM_NoEvents_x64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/fc1064nefccm</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+        <build>
+      <name>FC10_GCC_LWCCM_NoEvents_x64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/fc1064nelwccm</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>FC10_GCC_Core_x64</name>
       <url>http://www.dre.vanderbilt.edu/~remedynl/fc1064core</url>
       <build_sponsor>Remedy IT</build_sponsor>
