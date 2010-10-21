@@ -1,3 +1,9 @@
+Thu Oct 21 12:46:50 UTC 2010  J.T. Conklin  <jtc@acorntoolworks.com>
+
+        * configs/scoreboard/tao.xml:
+
+          Remove NetBSD_i386_Automake build.
+
 Thu Oct  7 20:57:51 UTC 2010  William R. Otte  <wotte@dre.vanderbilt.edu>
 
         * configs/autobuild/zifnab/Snow_Leopard_Static_Host.xml:
