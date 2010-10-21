@@ -263,3 +263,27 @@
    fun:_dlerror_run
    fun:dlopen@@GLIBC_2.2.5
 }
+
+{
+  <ndds>
+  Memcheck:Leak
+  fun:*
+  fun:*register_type*
+}
+
+{
+  <ndds>
+  Memcheck:Leak
+  fun:*
+  fun:*get_instance*
+  obj:*libnddscpp*
+}
+
+
+{
+  <ndds>
+  Memcheck:Leak
+  fun:*
+  fun:*_dl_scope_free*
+}
+
