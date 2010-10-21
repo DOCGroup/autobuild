@@ -178,15 +178,6 @@
    Memcheck:Leak
    fun:calloc
    fun:_dl_new_object
-   fun:_dl_map_object_from_fd
-   fun:_dl_map_object
-   fun:dl_open_worker
-   fun:_dl_catch_error
-   fun:_dl_open
-   fun:dlopen_doit
-   fun:_dl_catch_error
-   fun:_dlerror_run
-   fun:dlopen@@GLIBC_2.2.5
 }
 
 {
@@ -194,11 +185,6 @@
    Memcheck:Leak
    fun:malloc
    fun:_dl_scope_free
-   fun:_dl_close_worker
-   fun:_dl_close
-   fun:_dl_catch_error
-   fun:_dlerror_run
-   fun:dlclose
 }
 
 {
@@ -206,14 +192,6 @@
    Memcheck:Leak
    fun:malloc
    fun:_dl_lookup_symbol_x
-   fun:_dl_relocate_object
-   fun:dl_open_worker
-   fun:_dl_catch_error
-   fun:_dl_open
-   fun:dlopen_doit
-   fun:_dl_catch_error
-   fun:_dlerror_run
-   fun:dlopen@@GLIBC_2.2.5
 }
 
 {
@@ -221,15 +199,6 @@
    Memcheck:Leak
    fun:malloc
    fun:_dl_new_object
-   fun:_dl_map_object_from_fd
-   fun:_dl_map_object
-   fun:dl_open_worker
-   fun:_dl_catch_error
-   fun:_dl_open
-   fun:dlopen_doit
-   fun:_dl_catch_error
-   fun:_dlerror_run
-   fun:dlopen@@GLIBC_2.2.5
 }
 
 {
@@ -238,13 +207,6 @@
    fun:malloc
    fun:open_path
    fun:_dl_map_object
-   fun:dl_open_worker
-   fun:_dl_catch_error
-   fun:_dl_open
-   fun:dlopen_doit
-   fun:_dl_catch_error
-   fun:_dlerror_run
-   fun:dlopen@@GLIBC_2.2.5
 }
 
 {
@@ -253,15 +215,6 @@
    fun:malloc
    fun:realloc
    fun:_dl_new_object
-   fun:_dl_map_object_from_fd
-   fun:_dl_map_object
-   fun:dl_open_worker
-   fun:_dl_catch_error
-   fun:_dl_open
-   fun:dlopen_doit
-   fun:_dl_catch_error
-   fun:_dlerror_run
-   fun:dlopen@@GLIBC_2.2.5
 }
 
 {
@@ -276,7 +229,6 @@
   Memcheck:Leak
   fun:*
   fun:*get_instance*
-  obj:*libnddscpp*
 }
 
 
