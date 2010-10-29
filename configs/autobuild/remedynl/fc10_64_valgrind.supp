@@ -25,7 +25,7 @@
   <RTI warning>
   Memcheck:Param
   socketcall.sendmsg(msg.msg_name)
-  obj:/lib64/libpthread-2.11.2.so
+  obj:*libpthread-2.11.2.so
   fun:NDDS_Transport_UDPv4_send
 }
 
