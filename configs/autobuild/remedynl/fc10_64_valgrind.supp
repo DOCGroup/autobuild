@@ -239,3 +239,9 @@
   fun:*_dl_scope_free*
 }
 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:dl_open_worker
+}
