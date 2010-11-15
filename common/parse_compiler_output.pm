@@ -247,6 +247,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/cannot execute binary file/) {
+    # Means we can't execute the binary, probably using target executable on host
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/command not found/) {
     # Means we can't find something to execute
     $self->Output_Error ($s);
