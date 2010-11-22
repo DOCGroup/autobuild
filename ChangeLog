@@ -1,3 +1,9 @@
+Mon Nov 22 14:59:53 UTC 2010  Vladimir Zykov  <vladimir.zykov@prismtech.com>
+
+        * configs/autobuild/remedynl/mpc440build_host.xml:
+        * configs/autobuild/remedynl/ibmcellbuild_host.xml:
+          Added building of tao_idl3_to_xmi on host builds.
+
 Thu Oct 21 12:46:50 UTC 2010  J.T. Conklin  <jtc@acorntoolworks.com>
 
         * configs/scoreboard/tao.xml:
