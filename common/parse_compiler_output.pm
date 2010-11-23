@@ -319,6 +319,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/feupdateenv is not implemented and will always fail/) {
+    # Library mismatch on Linux Intel C++ - can safely be ignored.
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/\s*warning:\s/i) {
     $self->Output_Warning ($s);
     return;

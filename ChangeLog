@@ -1,3 +1,9 @@
+Tue Nov 23 21:47:44 UTC 2010  Steve Huston  <shuston@riverace.com>
+
+        * common/parse_compiler_output.pm: Add "feupdateenv is not implemented"
+          warning to those that are ignored. This is a spurious lib mismatch
+          warning from Intel C++ that can safely be ignored.
+
 Tue Nov 23 08:57:51 UTC 2010  Vladimir Zykov  <vladimir.zykov@prismtech.com>
 
         * configs/autobuild/remedynl/mpc440build_host.xml:
