@@ -1,3 +1,13 @@
+Wed Nov 24 01:31:45 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Updated to latest micro release of DOC middleware
+
+          Updated build script to use https:// protocol with the anonymous
+          username/password combo.
+
 Tue Nov 23 21:47:44 UTC 2010  Steve Huston  <shuston@riverace.com>
 
         * common/parse_compiler_output.pm: Add "feupdateenv is not implemented"
