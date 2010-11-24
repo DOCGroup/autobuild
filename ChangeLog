@@ -1,3 +1,13 @@
+Wed Nov 24 12:11:40 UTC 2010  Vladimir Zykov  <vladimir.zykov@prismtech.com>
+
+        * configs/autobuild/remedynl/mpc440build_host.xml:
+          Reverted changes to this file. It's not used currently.
+
+        * configs/autobuild/remedynl/ibmcellbuild_host.xml:
+        * configs/autobuild/remedynl/mpc440selbuild_host.xml:
+          Added xerces to MPC features and ported changes from
+          mpc440build_host.xml to mpc440selbuild_host.xml.
+
 Wed Nov 24 01:31:45 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
