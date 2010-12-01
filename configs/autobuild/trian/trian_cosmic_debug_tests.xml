@@ -53,7 +53,11 @@
   <command name="print_ace_config" />
   <command name="print_perl_version" />
 
-  <!-- we are starting with idl_to_picml tests -->
+  <!-- build CoSMIC -->
+  <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\cosmic.mwc"/>
+  <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\CoSMIC.sln -Debug -k" />
+
+  <!-- build the test now -->
   <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\PIM\\PICML\\tests\\IDL_to_PICML"/>
   <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\PIM\\PICML\\tests\\IDL_to_PICML\\IDL_to_PICML.sln -Debug -k" />
 

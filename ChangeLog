@@ -1,3 +1,9 @@
+Wed Dec  1 14:10:18 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
+
+          Added commands to build CoSMIC before building the tests. ;-)
+
 Wed Dec  1 14:03:42 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
