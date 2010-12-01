@@ -1,3 +1,9 @@
+Wed Dec  1 13:54:34 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
+
+          Changed the build location for the tests.
+
 Wed Dec  1 06:14:10 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
