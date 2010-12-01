@@ -1,36 +1,42 @@
 <!-- $Id$ -->
 <scoreboard>
-	<preamble>
-<center>
-			<h1>CoSMIC Beta/Release Candidate Scoreboard</h1>
-		</center>
-<hr />
-This is the CoSMIC virtual scoreboard for the beta or release. It shows
-all the OS/platform combinations on which CoSMIC is tested everyday.
-<hr />
-</preamble>
-	<group>
-		<name>Windows</name>
-		<build>
-			<name>Windows_Server_2003_VC9_Debug</name>
-			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_debug/</url>
-			<build_sponsor>ISIS</build_sponsor>
-			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-		</build>
-		<build>
-			<name>Windows_Server_2003_VC9_Release</name>
-			<url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_release/</url>
-			<build_sponsor>ISIS</build_sponsor>
-			<build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-		</build>
-	</group>
-        <group>
-          <name>Mac OS X</name>
-          <build>
-            <name>idl_to_picml</name>
-            <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/CoSMIC</url>
-            <build_sponsor>ISIS</build_sponsor>
-            <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-          </build>
-        </group>
+  <preamble>
+    <center>
+      <h1>CoSMIC Beta/Release Candidate Scoreboard</h1>
+    </center>
+    <hr />
+    This is the CoSMIC virtual scoreboard for the beta or release. It shows
+    all the OS/platform combinations on which CoSMIC is tested everyday.
+    <hr />
+  </preamble>
+  <group>
+    <name>Windows</name>
+    <build>
+      <name>Windows_Server_2003_VC9_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_debug/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>Windows_Server_2003_VC9_Tests_Debug</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_debug_tests/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+    <build>
+      <name>Windows_Server_2003_VC9_Release</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_cosmic_release/</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+  </group>
+  <group>
+    <name>Mac OS X</name>
+    <build>
+      <name>idl_to_picml</name>
+      <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/CoSMIC</url>
+      <build_sponsor>ISIS</build_sponsor>
+      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
+    </build>
+  </group>
 </scoreboard>
