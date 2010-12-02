@@ -14,8 +14,13 @@ cd /home/tao/rad1/doc_scoreboard/native_gcc322/standard
 echo [`/bin/date`]: Building ACE, tao_idl and gperf native statically on rhel4 with gcc 3.2.2
 /usr/bin/perl /home/tao/doc_autobuild/autobuild/autobuild.pl /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml
 #
-if /usr/bin/test -f /home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/.disable; then echo [`/bin/date`]: LynxOS4.2 Cross compiler build locked-up; exit 2; fi
-echo [`/bin/date`]: Triggering Build of ACE and TAO on rhel4 with LynxOS4.2 PPC gcc 3.2.2 cross compiler
-/home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh
+if /usr/bin/test -x /home/tao/rhel4/doc_scoreboard/native_gcc322/standard/ACE_wrappers/bin/tao_idl
+then
+  if /usr/bin/test -f /home/tao/rad1/doc_scoreboard/lynxos42_ppc_gcc322/standard/.disable; then echo [`/bin/date`]: LynxOS4.2 Cross compiler build locked-up; exit 2; fi
+  echo [`/bin/date`]: Triggering Build of ACE and TAO on rhel4 with LynxOS4.2 PPC gcc 3.2.2 cross compiler
+  /home/tao/doc_autobuild/autobuild/configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh
+else
+  echo [`/bin/date`]: TAO_IDL not built, aborting build of cross compiler
+fi
 echo [`/bin/date`]: Finished
 exit

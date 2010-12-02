@@ -1,3 +1,9 @@
+Thu Dec  2 09:35:00 UTC 2010  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_and_Cross.sh:
+
+          Stop cross build from starting if tao_idl didn't build natively.
+
 Thu Dec  2 00:33:18 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
