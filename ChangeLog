@@ -1,3 +1,11 @@
+Thu Dec  2 00:33:18 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Fixed errors in the environment variable configuration.
+
 Wed Dec  1 17:51:27 UTC 2010  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
