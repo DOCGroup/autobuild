@@ -1,3 +1,8 @@
+Sat Jan  8 08:50:07 UTC 2011  Olli Savia  <ops@iki.fi>
+
+        * configs/scoreboard/tao.xml:
+          Removed Ubuntu 9.04 build and added Ubuntu 10.04 build.
+
 Fri Jan  7 11:22:46 UTC 2011  Olli Savia  <ops@iki.fi>
 
         * configs/autobuild/olli/ubuntu-1004.xml:

@@ -71,8 +71,8 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>Ubuntu_9_04</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/Ubuntu-9.04/</url>
+       <name>Ubuntu_10_04</name>
+       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/Ubuntu-10.04/</url>
        <build_sponsor>Olli Savia</build_sponsor>
        <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
      </build>
