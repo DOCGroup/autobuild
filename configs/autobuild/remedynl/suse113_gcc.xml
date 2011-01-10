@@ -10,7 +10,7 @@
         <variable name="root"     value="/home/build/ACE/gcc/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/gcc/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB XERCES" />
+        <variable name="configs"  value="Linux Exceptions ZLIB XERCES DOXYGEN" />
 
     </configuration>
 
