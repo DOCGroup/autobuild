@@ -1,3 +1,12 @@
+Mon Jan 17 20:11:54 UTC 2011  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/smokey-win7_dev_vc9_debug.xml:
+        * configs/autobuild/riverace/smokey-win7_dev_vc10_debug.xml:
+          New Windows 7 builds; Visual Studio 2008 and 2010.
+
+        * configs/scoreboard/ace.xml: Removed Riverace's VC7.1 on XP build;
+          added Windows 7 builds for VC9 and 10, above.
+
 Fri Jan 14 21:04:11 UTC 2011  Brian Johnson  <johnsonb@ociweb.com>
 
         * command/jboss_build.pm:
