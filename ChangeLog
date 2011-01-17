@@ -1,3 +1,7 @@
+Mon Jan 17 21:50:37 UTC 2011  Steve Huston  <shuston@riverace.com>
+
+        * configs/scoreboard/ace.xml: Removed RHEL 3 and 4 builds.
+
 Mon Jan 17 20:11:54 UTC 2011  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/smokey-win7_dev_vc9_debug.xml:
