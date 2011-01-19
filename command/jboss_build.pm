@@ -30,19 +30,18 @@ sub CheckRequirements ()
 {
     my $self = shift;
     my $project_root = main::GetVariable ('project_root');
-    my $jboss_root = main::GetVariable ('JBOSS_ROOT');
-    my $java_home = main::GetVariable ('JAVA_HOME');
+    my $jboss_root = main::GetVariable ('jboss_root');
 
     if (!defined $project_root) {
         print STDERR __FILE__, ": Requires \"project_root\" variable\n";
         return 0;
     }
     if (!defined $jboss_root) {
-        print STDERR __FILE__, ": Requires \"JBOSS_ROOT\" variable\n";
+        print STDERR __FILE__, ": Requires \"jboss_root\" variable\n";
         return 0;
     }
-    if (!defined $java_home) {
-        print STDERR __FILE__, ": Requires \"JAVA_HOME\" variable\n";
+    if (!defined $ENV{JAVA_HOME}) {
+        print STDERR __FILE__, ": Requires \"JAVA_HOME\" environment variable\n";
         return 0;
     }
 
@@ -56,7 +55,7 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $project_root = main::GetVariable ('project_root');
-    my $jboss_root = main::GetVariable ('JBOSS_ROOT');
+    my $jboss_root = main::GetVariable ('jboss_root');
 
     # Pull out options meant for this module
     my($next) = undef;
