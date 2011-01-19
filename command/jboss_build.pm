@@ -90,8 +90,6 @@ sub Run ($)
     $options = $remainder;
     $options =~ s/\s+$//;
 
-    main::PrintStatus ('Compile', 'build');
-
     my $current_dir = getcwd ();
 
     my $dir;
@@ -107,16 +105,6 @@ sub Run ($)
         $dir = $project_root . "/build";
     }
     
-    my $command;
-    if ($options =~ m/command='([^']*)'/) {
-        $command = $1;
-        $options =~ s/command='$command'//;
-    }
-    elsif ($options =~ m/command=([^\s]*)/) {
-        $command = $1;
-        $options =~ s/command=$command//;
-    }
-
     my $script;
     if ($options =~ m/script='([^']*)'/) {
         $script = $1;
@@ -136,8 +124,16 @@ sub Run ($)
         $target = $1;
         $options =~ s/target=$target//;
     }
+
+    if (($dir =~ m/testsuite/) &&
+        ($target =~ m/test/)) {
+      main::PrintStatus ('Test', 'testsuite');
+    }
+    else {
+      main::PrintStatus ('Compile', 'build');
+    }
     
-    my $complete_command = $command . " " . $script . " " . $target;
+    my $complete_command = $script . " " . $target;
     
     if (!chdir $dir) {
       print STDERR __FILE__, ": Cannot change to $dir\n";
