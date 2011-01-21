@@ -51,6 +51,7 @@ require command::check_compiler;
 require command::check_linker;
 require command::doxygen;
 require command::jboss_build;
+require command::jboss_report;
 require command::print_os_version;
 require command::print_remote_os_version;
 require command::print_env_vars;
