@@ -47,6 +47,12 @@ sub CheckRequirements ()
         return 0;
     }
 
+    my $project_root = main::GetVariable ('project_root');
+    if (!defined $project_root) {
+        print STDERR __FILE__, ": Requires \"project_root\" variable\n";
+        return 0;
+    }
+
     my $log_root = main::GetVariable ('log_root');
     if (!defined $log_root) {
         print STDERR __FILE__, ": Requires \"log_root\" variable\n";
@@ -78,6 +84,7 @@ sub Run ($)
     my $moved = 0;
     my $log_root = main::GetVariable ('log_root');
     my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
 
     if (!-r $log_root || !-d $log_root) {
         ## Due to weirdness from NFS, this directory may exist but not
@@ -88,7 +95,11 @@ sub Run ($)
     }
 
     if (!-r $root || !-d $root) {
-        mkpath($root);
+        eval { mkpath($root) };
+    }
+
+    if (!-r $project_root || !-d $project_root) {
+        eval { mkpath($project_root) };
     }
 
     if ($main::verbose == 1 ) {
@@ -125,7 +136,8 @@ sub copy_log ()
 {
     my $self = shift;
     my $keep = shift;
-    my $root = main::GetVariable ('root');
+    my $root = main::GetVariable ('project_root');
+    my $project_root = main::GetVariable ('root');
     my $log_root = main::GetVariable ('log_root');
     my $log_file = main::GetVariable ('log_file');
     my $jboss_reports_dir = main::GetVariable ('jboss_reports_dir');
@@ -135,10 +147,11 @@ sub copy_log ()
     if ($log_root =~ m/^(.*)\/$/) {
         $log_root = $1;
     }
-
-    # chop off trailing slash
     if ($root =~ m/^(.*)\/$/) {
         $root = $1;
+    }
+    if ($project_root =~ m/^(.*)\/$/) {
+        $project_root = $1;
     }
 
     # Create name of save directory ( = name of build )
@@ -150,7 +163,7 @@ sub copy_log ()
         mkpath($save_root);
     }
     my $oldlog_file = $root . "/" . $log_file;
-    my $old_jboss_reports_dir = $root . "/" . $jboss_reports_dir;
+    my $old_jboss_reports_dir = $project_root . "/" . $jboss_reports_dir;
 
     if (!defined $oldlog_file) {
         print STDERR __FILE__, ": Requires \"logfile\" variable\n";
