@@ -98,7 +98,7 @@ sub Run ($)
         $dir = $project_root . "/build";
     }
     
-    my $script;
+    my $script = "";
     if ($options =~ m/script='([^']*)'/) {
         $script = $1;
         $options =~ s/script='$script'//;
@@ -108,7 +108,7 @@ sub Run ($)
         $options =~ s/script=$script//;
     }
 
-    my $target;
+    my $target = "";
     if ($options =~ m/target='([^']*)'/) {
         $target = $1;
         $options =~ s/target='$target'//;
