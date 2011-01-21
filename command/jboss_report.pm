@@ -136,8 +136,8 @@ sub copy_log ()
 {
     my $self = shift;
     my $keep = shift;
-    my $root = main::GetVariable ('project_root');
-    my $project_root = main::GetVariable ('root');
+    my $root = main::GetVariable ('root');
+    my $project_root = main::GetVariable ('project_root');
     my $log_root = main::GetVariable ('log_root');
     my $log_file = main::GetVariable ('log_file');
     my $jboss_reports_dir = main::GetVariable ('jboss_reports_dir');
