@@ -1,3 +1,7 @@
+Sat Jan 22 14:13:37 UTC 2011  Martin Corino  <mcorino@remedy.nl>
+
+        * configs/scoreboard/tao.xml: Added MingW32 build.
+
 Mon Jan 17 21:50:37 UTC 2011  Steve Huston  <shuston@riverace.com>
 
         * configs/scoreboard/ace.xml: Removed RHEL 3 and 4 builds.

@@ -1,0 +1,42 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:/ACE/MingW/ACE_wrappers" />
+        <environment name="TAO_ROOT"     value="C:/ACE/MingW/ACE_wrappers/TAO"/>
+        <environment name="XERCESCROOT"  value="C:/xerces-c-3.1.1/dist"/>
+        <environment name="SSL_ROOT"     value="C:/openssl-1.0.0c/dist"/>
+        <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
+        <environment name="Path"         value="C:\\openssl-1.0.0c\\dist\\bin;C:\\ACE\\MingW\\ACE_wrappers\\bin;C:\\ACE\\MingW\\ACE_wrappers\\lib;" type="prefix" />
+
+        <variable name="configs"  value="Win32 SSL Exceptions" />
+        <variable name="root"     value="C:\\ACE\\MingW\\" />
+        <variable name="log_file" value="log.txt" />
+        <variable name="log_root" value="C:\\ACE\\MingW\\" />
+        <variable name="name"     value="release" />
+    </configuration>
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32011" />
+    <command name="log"               options="ON" />
+    <command name="make"              options="-k realclean find=*akefile" />
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/trunk ." />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='qos=1\ndebug=0\nno_strict_aliasing=1\nssl=1\nxerces3=1\nPLATFORM_SSL_LIBS := -lssleay32 -leay32\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qos=1\nssl=1\nxerces3=1\n'" />
+    <!-- command name="file_manipulation" options="type=create file=ACE_wrappers/MingW.mwc output='workspace {\nace\ntests\nexamples/Reactor/WFMO_Reactor\nprotocols\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests\nTAO/DevGuideExamples\n}\n'" / -->
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+    <command name="generate_workspace" options="-type gnuace -exclude TAO/TAO_*.mwc,TAO/CIAO,TAO/DAnCE" />
+    <command name="make"              options="-k" />
+    <command name="auto_run_tests"     options="-a -o -t -s \x22C:\\ACE\\autobuild\\win32sandbox\\sandbox.exe -t 5400000\x22" />
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ /cygdrive/z/MingW" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/mingw32" />
+</autobuild>
+
