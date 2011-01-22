@@ -19,7 +19,7 @@
     <command name="log"               options="ON" />
     <command name="make"              options="-k realclean find=*akefile" />
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/trunk ." />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/sets/ACE+TAO+CIAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='qos=1\ndebug=0\nno_strict_aliasing=1\nssl=1\nxerces3=1\nPLATFORM_SSL_LIBS := -lssleay32 -leay32\ninclude $(ACE_ROOT)/include/makeinclude/platform_mingw32.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='qos=1\nssl=1\nxerces3=1\n'" />
