@@ -24,7 +24,7 @@
 {
   <RTI warning>
   Memcheck:Param
-  socketcall.sendmsg(msg.msg_name)
+  fun:*
   fun:NDDS_Transport_UDPv4_send
   fun:RTINetioSender_send
 }
