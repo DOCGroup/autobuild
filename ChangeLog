@@ -1,3 +1,11 @@
+Wed Jan 26 21:06:36 UTC 2011  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/ralphie_dev_xlc9_debug.xml: Renamed to
+          ralphie_dev_xlc10_debug.xml - updated the compiler.
+
+        * configs/scoreboard/ace.xml: Updated name/location of the above build.
+          Removed Riverace's 2 VC8 builds.
+
 Sat Jan 22 14:13:37 UTC 2011  Martin Corino  <mcorino@remedy.nl>
 
         * configs/scoreboard/tao.xml: Added MingW32 build.

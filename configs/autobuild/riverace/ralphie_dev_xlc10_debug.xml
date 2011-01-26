@@ -3,7 +3,8 @@
     <configuration>
 
         <environment name="ACE_ROOT"  value="/acebuilds/ACE_wrappers/build/xlc9_debug" />
-        <environment name="LIBPATH"   value="/acebuilds/ACE_wrappers/build/xlc9_debug/lib:.:/usr/lib" />
+        <!-- Setting LIBPATH with ...aix_xlc_patch makes DLL_Test hang -->
+        <!-- environment name="LIBPATH"   value="/acebuilds/ACE_wrappers/build/xlc9_debug/lib:.:/home/shuston/aix_xlc_patch/lib:/usr/lib" / -->
         <environment name="MPC_ROOT"  value="/acebuilds/MPC" />
 
         <variable name="root"         value="/acebuilds/ACE_wrappers" />
@@ -40,7 +41,9 @@
     <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/xlc9_debug -type gnuace -exclude build,Kokyu" />
 
     <command name="file_manipulation" options="type=create file=build/xlc9_debug/ace/config.h output='#define ACE_HAS_AIO_CALLS\n#include \x22ace/config-aix-5.x.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/xlc9_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
+
+    <!-- This CCFLAGS mod is TEMPORARY until IBM releases a real patch!!! -->
+    <command name="file_manipulation" options="type=create file=build/xlc9_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\nCCFLAGS += -qpath=ILbc:/home/shuston/aix_xlc_patch/exe\ninclude $(ACE_ROOT)/include/makeinclude/platform_aix_ibm.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
