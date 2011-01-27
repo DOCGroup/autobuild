@@ -185,7 +185,8 @@ sub copy_log ()
 
     my $timestamp = POSIX::strftime("%Y_%m_%d_%H_%M", gmtime);
     $newlogfile = $log_root . "/" . $timestamp . ".txt";
-    $newreportsdir = $log_root . "/" . $timestamp . "_reports";
+    my $reportsdir_name = $timestamp . "_reports";
+    $newreportsdir = $log_root . "/" . $reportsdir_name;
     my $savelogfile = $save_root . "/" . $timestamp . ".txt";
     my $savereportsdir = $save_root . "/" . $timestamp . "_reports";
 
@@ -194,7 +195,7 @@ sub copy_log ()
     }
 
     my $edited_log_file = $oldlog_file . ".tmp";
-    edit_logfile ($oldlog_file, $edited_log_file);
+    edit_logfile ($oldlog_file, $edited_log_file, "$reportsdir_name/html");
     my $ret;
     ## copy returns the number of successfully copied files
     $ret = copy ($edited_log_file, $newlogfile);
@@ -227,11 +228,17 @@ sub copy_log ()
     }
 
     $ret = unlink ($oldlog_file);
-    
+
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem removing $oldlog_file: $!\n";
     }
     chmod (0644, $savelogfile);
+
+    $ret = unlink ($edited_log_file);
+
+    if ( $ret < 1 ) {
+        print STDERR __FILE__, "Problem removing $edited_log_file: $!\n";
+    }
 
     # Clean up old saved files
     my $dh = new DirHandle ($save_root);
@@ -339,6 +346,7 @@ sub edit_logfile()
 {
     my $logfile = shift;
     my $new_logfile = shift;
+    my $report_relative_location = shift;
   
     open LOG, $logfile or die "ERROR: Can't open $logfile";
     open NEW_LOG, ">$new_logfile" or die "ERROR: Can't open $new_logfile";
@@ -422,6 +430,7 @@ sub edit_logfile()
         
         print NEW_LOG "$newline";
     }
+    print NEW_LOG "\[<a href=\"$report_relative_location/html\">JBoss Report Details</a>\]\n";
     close LOG;
     close NEW_LOG;
 }
