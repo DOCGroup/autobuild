@@ -430,7 +430,7 @@ sub edit_logfile()
         
         print NEW_LOG "$newline";
     }
-    print NEW_LOG "\[<a href=\"$report_relative_location/html\">JBoss Report Details</a>\]\n";
+    print NEW_LOG "\[<a href=\"$report_relative_location\">JBoss Report Details</a>\]\n";
     close LOG;
     close NEW_LOG;
 }
