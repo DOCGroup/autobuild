@@ -193,9 +193,11 @@ sub copy_log ()
         print "Copying $oldlog_file to $newlogfile\n";
     }
 
+    my $edited_log_file = $oldlog_file . ".tmp";
+    edit_logfile ($oldlog_file, $edited_log_file);
     my $ret;
     ## copy returns the number of successfully copied files
-    $ret = copy ($oldlog_file, $newlogfile);
+    $ret = copy ($edited_log_file, $newlogfile);
     if ( $ret < 1 ) {
         print STDERR __FILE__, "Problem copying $oldlog_file to $newlogfile: $!\n";
         return 0;
@@ -333,6 +335,117 @@ sub copy_dir ()
     return 1;
 }
 
+sub edit_logfile()
+{
+    my $logfile = shift;
+    my $new_logfile = shift;
+  
+    open LOG, $logfile or die "ERROR: Can't open $logfile";
+    open NEW_LOG, ">$new_logfile" or die "ERROR: Can't open $new_logfile";
+    my $testfailed = 0;
+    my $testclass = "";
+    my $newline;
+    my $teststime = 0;
+    my $testsection = 0;
+    my $testsrun = 0;
+    my $NO_TEST = "<NO_TEST_IDENTIFIED>";
+    my $ind_test_name = "";
+    my $ind_test_text = "";
+    my $ind_test_errors = 0;
+    while (<LOG>) {
+        chomp;
+        $newline = "";
+        if (/^#+\s+Test\s+\([^\)]*\)/) {
+            # multiple Test sections are created, only use the first one
+            if (++$testsection == 1) {
+                $newline = "$_\n";
+            }
+        }
+        elsif (/^Running: \"build.(?:sh|cmd)\s+(\S+)\s*\" in /) {
+            $testclass = $1;
+            $newline = "auto_run_tests: $testclass\n$_\n";
+        }
+        elsif (/^Total time:(?: (\d+) minutes)? (\d+) seconds/) {
+            $teststime = 0;
+            if (defined $1) {
+                $teststime += 60 * $1;
+            }
+            if (defined $2) {
+                $teststime += $2;
+            }
+            if ($testclass ne "") {
+                # identifying this as a subsection for prettify.pm
+                my $status = $testfailed;
+                my $status_add_on = "";
+                if ($testsrun > 0) {
+                    $status_add_on = "\(of $testsrun subtests\)";
+                }
+                $newline = "\nauto_run_tests_finished: $testclass Time:$teststime ".
+                    "Result:$status $status_add_on\n";
+                $testfailed = 0;
+                $testsrun = 0;
+            }
+            else {
+                $newline = "$_\n";
+            }
+        }
+        elsif (/^\s*\[junit\] Running (\S+)/) {
+            if ($ind_test_name ne "") {
+                $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors);
+                $ind_test_name = "";
+            }
+            $ind_test_text = "$_\n";
+            $ind_test_name = $1;
+        }
+        elsif (/^\s*\[junit\] Tests (run\:.+)/) {
+            $1 =~ /^run: (\d+), Failures: (\d+), Errors: (\d+), Time elapsed: \d+/;
+            $testsrun += $1;
+            $ind_test_errors = $2 + $3;
+            $testfailed += $ind_test_errors;
+            $ind_test_text .= "$_\n";
+        }
+        elsif (/^\s*\[junit\] Test .*? FAILED\s*$/) {
+            $ind_test_text .= "$_\n";
+        }
+        elsif (/^\s*BUILD FAILED\s*$/) {
+            $testfailed += 1;
+            s/FAILED/FA1LED/;
+            $newline = "$_\n";
+        }
+        else {
+            if ($ind_test_name ne "") {
+                $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors);
+                $ind_test_name = "";
+            }
+            $newline .= "$_\n";
+        }
+        
+        print NEW_LOG "$newline";
+    }
+    close LOG;
+    close NEW_LOG;
+}
+
+sub edit_individual_test()
+{
+    my $line = shift;
+    my $test_name = shift;
+    my $num_errors = shift;
+    my $error_lines = 0;
+    
+    while ($line =~ m/\[junit\] Test $test_name FAILED/g) {
+        ++$error_lines;
+    }
+    
+    $line =~ s/(Failures: \d+,) Errors: /$1 Err0rs: /;
+
+    while (++$error_lines <= $num_errors) {
+        # add a psuedo-FAILED line, so it will be more obvious
+        $line .= "\[junit\] Test $test_name FAILED\*\n";
+    }
+    
+    return $line;
+}
 
 ##############################################################################
 
