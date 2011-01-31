@@ -87,11 +87,11 @@ sub Run ($)
 
     my $dir;
     if ($options =~ m/dir='([^']*)'/) {
-        $dir = $project_root . "$1";
+        $dir = $project_root . "/$1";
         $options =~ s/dir='$dir'//;
     }
     elsif ($options =~ m/dir=([^\s]*)/) {
-        $dir = $project_root . "$1";
+        $dir = $project_root . "/$1";
         $options =~ s/dir=$dir//;
     }
     else {
