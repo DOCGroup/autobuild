@@ -85,17 +85,30 @@ sub Run ($)
 
     my $current_dir = getcwd ();
 
+    my $root_dir;
+    if ($options =~ m/root_dir='([^']*)'/) {
+        $root_dir = $1;
+        $options =~ s/root_dir='$root_dir'//;
+    }
+    elsif ($options =~ m/root_dir=([^\s]*)/) {
+        $root_dir = $1;
+        $options =~ s/root_dir=$root_dir//;
+    }
+    else {
+        $root_dir = $project_root;
+    }
+    
     my $dir;
     if ($options =~ m/dir='([^']*)'/) {
-        $dir = $project_root . "/$1";
+        $dir = $root_dir . "/$1";
         $options =~ s/dir='$dir'//;
     }
     elsif ($options =~ m/dir=([^\s]*)/) {
-        $dir = $project_root . "/$1";
+        $dir = $root_dir . "/$1";
         $options =~ s/dir=$dir//;
     }
     else {
-        $dir = $project_root . "/build";
+        $dir = $root_dir . "/build";
     }
     
     my $script = "";
