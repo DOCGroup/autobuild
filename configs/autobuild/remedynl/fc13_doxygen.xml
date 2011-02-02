@@ -21,7 +21,6 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-doxygen.h\x22\n'" />
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="print_ace_config" />
