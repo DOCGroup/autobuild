@@ -14,7 +14,7 @@
         <variable name="root"     value="/home/build/ACE/core/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/core/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS CCM_NOEVENT" />
 
     </configuration>
 
@@ -26,7 +26,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_ZIOP 1\n#define ACE_INITIALIZE_MEMORY_BEFORE_USE\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

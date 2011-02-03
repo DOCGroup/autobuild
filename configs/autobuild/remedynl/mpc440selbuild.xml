@@ -22,7 +22,7 @@
         <variable name="remote_shell" value="ssh build@mpc440-03" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/home/build/ACE/latest/" />
-        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS" />
+        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT" />
 
     </configuration>
 
@@ -39,7 +39,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=powerpc-angstrom-linux-\nicecream=1\ndebug=0\noptimize=1\nxerces2=1\nndds=1\ndds4ccm_ndds=1\ninline=1\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\ndds4ccm_ndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_remote_os_version" />
