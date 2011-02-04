@@ -3,15 +3,15 @@
         <environment name="default_PROCESS_START_WAIT_INTERVAL" value="240" />
         <environment name="default_PROCESS_STOP_WAIT_INTERVAL"  value="240" />
 
-        <environment name="ACE_ROOT" value="/builds/iOS_4.2.1_Simulator/ACE_wrappers" />
-        <environment name="TAO_ROOT" value="/builds/iOS_4.2.1_Simulator/ACE_wrappers/TAO" />
+        <environment name="ACE_ROOT" value="/builds/iOS_4.2_Simulator/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/builds/iOS_4.2_Simulator/ACE_wrappers/TAO" />
 
         <environment name="IPHONE_TARGET" value="SIMULATOR" />
-        <environment name="IPHONE_VERSION" value="4.2.1" />
+        <environment name="IPHONE_VERSION" value="4.2" />
 
-        <variable name="root"         value="/builds/iOS_4.2.1_Simulator" />
+        <variable name="root"         value="/builds/iOS_4.2_Simulator" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="/builds/iOS_4.2.1_Simulator" />
+        <variable name="log_root"     value="/builds/iOS_4.2_Simulator" />
         <variable name="configs"      value="STATIC FIXED_BUGS_ONLY" />
     </configuration>
 
@@ -42,5 +42,5 @@
     <command name="process_logs"      options="clean=2 move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/iOS_4.2.1_Simulator" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/iOS_4.2_Simulator" />
 </autobuild>
