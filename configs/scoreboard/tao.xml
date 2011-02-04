@@ -353,24 +353,8 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>iPhone_3.1.2_Hardware</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/iPhone_3.1.2_Hardware</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>iPad_3.2_Simulator</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/iPad_3.2_Simulator</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
-    <name>iPhone_4.0_Simulator</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/iPhone_4.0_Simulator</url>
+    <name>iOS_4.2.1_Simulator</name>
+    <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/iOS_4.2.1_Simulator</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>ISIS</build_sponsor>
