@@ -43,7 +43,7 @@
 
     <command name="generate_workspace" options="TAO_COIOP.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-k -j 8" />
+    <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" />
 

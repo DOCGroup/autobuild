@@ -23,7 +23,6 @@
 /users/bczar/runbuild.sh FC8Static3
 /users/bczar/runbuild.sh FC8versioned
 /users/bczar/runbuild.sh FC8wchar
-/users/bczar/runbuild.sh FC6fpCORBAecompact
 /users/bczar/runbuild.sh FC6fpCORBAemicro
 /users/bczar/runbuild.sh FC6fpCORBAemicros
 /users/bczar/runbuild.sh FC6fpCORBAregular
