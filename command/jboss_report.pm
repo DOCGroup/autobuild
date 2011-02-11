@@ -342,6 +342,34 @@ sub copy_dir ()
     return 1;
 }
 
+sub find_targets()
+{
+    if ((/^_.*?\:\s*$/) ||
+        ($_ !~ /^[[:alpha:]][[:alpha:]\-]+?\:\s*$/) || 
+        (/-unit\:\s*$/))    {
+        return "";
+    }
+    elsif ((/^(tomcat\-.*?\-tests)\:\s*$/) ||
+           (/^(tests\-jacc\-.*?)\:\s*$/) ||
+           (/^(tests\-jbossmessaging)\:\s*$/) ||
+           (/^(tests\-jbossmessaging\-cluster)\:\s*$/) ||
+           (/^(.*?\-invoker\-tests)\:\s*$/) ||
+           (/^(.*?\-classloader\-leak)\:\s*$/) ||
+           (/^(tests(?:\-.+?)?\-profile[^\-]*)\:\s*$/) ||
+           (/^(jboss\-.+?\-tests)\:\s*$/) ||
+           (/^(tests\-bootstrap\-dependencies)\:\s*$/) ||
+           (/^(tests\-springdeployer)\:\s*$/) ||
+           (/^(tests\-clustering\-all\-stacks)\:\s*$/) ||
+           (/^(tests\-binding\-manager)\:\s*$/) ||
+           (/^(tests\-compatibility)\:\s*$/) ||
+           (/^(tests\-aop\-scoped)\:\s*$/) ||
+           (/^(tests\-jts)\:\s*$/)) {
+        return $1;
+    }
+
+    return "";
+}
+
 sub edit_logfile()
 {
     my $logfile = shift;
@@ -351,49 +379,55 @@ sub edit_logfile()
     open LOG, $logfile or die "ERROR: Can't open $logfile";
     open NEW_LOG, ">$new_logfile" or die "ERROR: Can't open $new_logfile";
     my $testfailed = 0;
-    my $testclass = "";
+    # indicates that we should not look for individual test targets
+    my $no_ind_test_targets = 0;
+    my $sub_test = "";
     my $newline;
-    my $teststime = 0;
     my $testsection = 0;
     my $testsrun = 0;
     my $NO_TEST = "<NO_TEST_IDENTIFIED>";
     my $ind_test_name = "";
     my $ind_test_text = "";
     my $ind_test_errors = 0;
+    my $temp = "";
+    # identify Error matches within deprecated warnings
+    my $deprecation_warning_seq = 0;
     while (<LOG>) {
         chomp;
         $newline = "";
+        if (($deprecation_warning_seq > 0) &&
+            (++$deprecation_warning_seq > 2)) {
+            # only want to check one line after we identify the deprecated warning
+            $deprecation_warning_seq = 0;
+        }
+
         if (/^#+\s+Test\s+\([^\)]*\)/) {
             # multiple Test sections are created, only use the first one
             if (++$testsection == 1) {
                 $newline = "$_\n";
             }
         }
-        elsif (/^Running: \"build.(?:sh|cmd)\s+(\S+)\s*\" in /) {
-            $testclass = $1;
-            $newline = "auto_run_tests: $testclass\n$_\n";
+        elsif (($no_ind_test_targets == 0) && /^Running: \"build.(?:sh|cmd)\s+(\S+)\s*\" in /) {
+            $sub_test = $1;
+            if ($sub_test eq "tests") {
+                $no_ind_test_targets = 1;
+                $sub_test = "";
+                $newline = "$_\n";
+            }
+            else {
+                $newline = "auto_run_tests: $sub_test\n$_\n";
+            }
         }
         elsif (/^Total time:(?: (\d+) minutes)? (\d+) seconds/) {
-            $teststime = 0;
+            my $teststime = 0;
             if (defined $1) {
                 $teststime += 60 * $1;
             }
             if (defined $2) {
                 $teststime += $2;
             }
-            if ($testclass ne "") {
-                # identifying this as a subsection for prettify.pm
-                my $status = $testfailed;
-                my $status_add_on = "";
-                if ($testsrun > 0) {
-                    $status_add_on = "\(of $testsrun subtests\)";
-                }
-                $newline = "\nauto_run_tests_finished: $testclass Time:$teststime ".
-                    "Result:$status $status_add_on\n";
-                $testfailed = 0;
-                $testsrun = 0;
-            }
-            else {
+            $newline = process_subtest_end(\$sub_test, \$testfailed, \$testsrun, $teststime);
+            if ($newline eq "") {
                 $newline = "$_\n";
             }
         }
@@ -422,6 +456,17 @@ sub edit_logfile()
         }
         elsif (s/HeapDumpOnOutOfMemoryError/HeapDumpOnOutOfMemoryErr0r/) {
             $newline = "$_\n";
+        }
+        elsif (($no_ind_test_targets == 1) && (($temp = find_targets()) ne "")) {
+            $newline = process_subtest_end(\$sub_test, \$testfailed, \$testsrun, "\<no time\>");
+            $sub_test = $temp;
+            $newline .= "auto_run_tests: $sub_test\n";
+        }
+        elsif (/warning\: \[deprecation\]/) {
+            $deprecation_warning_seq = 1;
+        }
+        elsif (($deprecation_warning_seq > 0) && (s/(\"[^\"]*?[E|e])rror([^\"]*?\")/$1rr0r$2/)) {
+            # replace Error (reported in string after deprecated warning) with Err0r
         }
         else {
             if ($ind_test_name ne "") {
@@ -453,10 +498,33 @@ sub edit_individual_test()
 
     while (++$error_lines <= $num_errors) {
         # add a psuedo-FAILED line, so it will be more obvious
-        $line .= "\[junit\] Test $test_name FAILED\*\n";
+        $line .= "    \[junit\] Test $test_name FAILED\*\n";
     }
     
     return $line;
+}
+
+sub process_subtest_end()
+{
+    my $ref_sub_test = shift;
+    my $ref_testfailed = shift;
+    my $ref_testsrun = shift;
+    my $teststime = shift;
+    
+    if ($$ref_sub_test ne "") {
+        # identifying this as a subsection for prettify.pm
+        my $status = $$ref_testfailed;
+        my $status_add_on = "";
+        if ($$ref_testsrun > 0) {
+            $status_add_on = "\(of $$ref_testsrun subtests\)";
+        }
+        $$ref_testfailed = 0;
+        $$ref_testsrun = 0;
+        return "\nauto_run_tests_finished: $$ref_sub_test Time:$teststime ".
+            "Result:$status $status_add_on\n";
+    }
+    
+    return "";
 }
 
 ##############################################################################
