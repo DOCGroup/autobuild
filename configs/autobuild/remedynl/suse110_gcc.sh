@@ -8,5 +8,3 @@ svn up
 
 # Run the build.
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/suse110_gcc_full.sh
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/suse110_gcc_acefortao.sh
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/suse110_gcc_coiop.sh

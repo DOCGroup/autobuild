@@ -17,8 +17,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
     <build>
-      <name>OpenSuSE_11_0_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_acefortao/</url>
+      <name>FC14_ACE_FOR_TAO</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -65,8 +65,8 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-        <name>OpenSuSE_11_0_COIOP</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/suse110_gcc_COIOP/</url>
+        <name>FC14_COIOP</name>
+        <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_COIOP/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
