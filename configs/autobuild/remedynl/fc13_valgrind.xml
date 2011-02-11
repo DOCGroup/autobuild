@@ -17,7 +17,7 @@
                                                   join=""
                                                   variable="BUILD_CONFIG_PATH"
                                                   join="dir"
-                                                  value="fc10_64_valgrind.supp" />
+                                                  value="fc13_64_valgrind.supp" />
         <environment name="VALGRIND_OPTS"         variable="valgrind_opts" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
         <environment name="ACE_RUNTEST_DELAY"     value="2" />
