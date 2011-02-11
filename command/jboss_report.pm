@@ -420,6 +420,9 @@ sub edit_logfile()
             s/FAILED/FA1LED/;
             $newline = "$_\n";
         }
+        elsif (s/HeapDumpOnOutOfMemoryError/HeapDumpOnOutOfMemoryErr0r/) {
+            $newline = "$_\n";
+        }
         else {
             if ($ind_test_name ne "") {
                 $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors);
