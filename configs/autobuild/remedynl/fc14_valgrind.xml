@@ -17,7 +17,7 @@
                                                   join=""
                                                   variable="BUILD_CONFIG_PATH"
                                                   join="dir"
-                                                  value="fc13_64_valgrind.supp" />
+                                                  value="fc14_valgrind.supp" />
         <environment name="VALGRIND_OPTS"         variable="valgrind_opts" />
         <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
         <environment name="ACE_RUNTEST_DELAY"     value="2" />
@@ -63,5 +63,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fc13_valgrind" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fc14_valgrind" />
 </autobuild>

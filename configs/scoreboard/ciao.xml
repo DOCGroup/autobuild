@@ -35,8 +35,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC13_GCC_Valgrind_x64</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/fc13_valgrind</url>
+      <name>FC14_GCC_Valgrind_x64</name>
+      <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
