@@ -39,11 +39,11 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="generate_workspace" options="-type gnuautobuild" />
+    <command name="generate_workspace" options="-type gnuautobuild -exclude TAO" />
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -a -o -t -C" />
+    <command name="auto_run_tests"    options=" -a" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
