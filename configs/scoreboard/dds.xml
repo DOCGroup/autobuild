@@ -22,6 +22,12 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
+  <build>
+    <name>Win2008r2x64_VC10_Debug</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
+    <build_sponsor>OCI</build_sponsor>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
+  </build>
 </group>
 
 <group>
