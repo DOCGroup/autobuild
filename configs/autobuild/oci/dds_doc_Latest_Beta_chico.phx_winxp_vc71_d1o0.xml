@@ -8,7 +8,7 @@
     <environment name="DANCE_ROOT"   value="d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DAnCE"/>
     <environment name="DDS_ROOT"     value="d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0"/>
     <environment name="MPC_ROOT"     value="u:\\MPC"/>
-    <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\VC7\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DDS\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\lib;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DDS\\lib;" type="prefix"/>
+    <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\VC7\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\lib;d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0\\lib;" type="prefix"/>
     <environment name="TAO_ROOT"     value="d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO"/>
     <variable    name="build_name"   value="vc71_d1o0"/>
     <variable    name="creator"      value="mitza@ociweb.com"/>
@@ -28,7 +28,7 @@
   <command name="shell"              options="cd DDS & perl U:\\MPC\\clone_build_tree.pl vc71_d1o0"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/vc71_d1o0/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#include \x22ace/config-win32.h\x22\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_d1o0/bin/MakeProjectCreator/config/default.features output='qos=1\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\nset CIAO_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\CIAO\nset DANCE_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DAnCE\nset DDS_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0\nset MPC_ROOT=u:\\MPC\nset PATH=C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\VC7\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DDS\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\lib;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DDS\\lib;%PATH%\nset TAO_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/vc71_d1o0/setenv.cmd output='set ACE_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\nset CIAO_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\CIAO\nset DANCE_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\\DAnCE\nset DDS_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0\nset MPC_ROOT=u:\\MPC\nset PATH=C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\VC7\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0\\bin;d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\lib;d:\\tao_builds\\taoadmin\\doc_beta\\DDS\\build\\vc71_d1o0\\lib;%PATH%\nset TAO_ROOT=d:\\tao_builds\\taoadmin\\doc_beta\\ACE_wrappers\\build\\vc71_d1o0\\TAO\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
@@ -42,7 +42,7 @@
   <command name="vc7make" options="/build debug ../../../DDS/build/vc71_d1o0/DDS.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=..\\..\\..\\DDS\\build\\vc71_d1o0 -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="dir=../../../DDS/build/vc71_d1o0 -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
