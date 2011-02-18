@@ -27,7 +27,7 @@
     <command name="check_compiler" options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type gnuautobuild" />
+    <command name="generate_workspace" options="-type gnuautobuild -exclude TAO/DDS/tools/modeling/tests" />
 
     <command name="make"              options="-j 3 -k" />
 
