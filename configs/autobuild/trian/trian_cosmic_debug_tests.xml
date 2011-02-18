@@ -54,6 +54,10 @@
   <command name="print_ace_config" />
   <command name="print_perl_version" />
 
+  <!-- build DOC middleware -->
+  <command name="generate_workspace" options="-type vc9 %CIAO_ROOT%\\CIAO_TAO_DAnCE.mwc"/>
+  <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %CIAO_ROOT%\\CIAO_TAO_DAnCE.sln -Debug -k" />
+
   <!-- build CoSMIC -->
   <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\cosmic.mwc"/>
   <command name="win32make"  options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\CoSMIC.sln -Debug -k" />

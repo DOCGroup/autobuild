@@ -1,3 +1,10 @@
+Fri Feb 18 03:51:34 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
+
+          Building all of the DOC middleware is now part of the
+          build process.
+
 Wed Jan 26 21:06:36 UTC 2011  Steve Huston  <shuston@riverace.com>
 
         * configs/autobuild/riverace/ralphie_dev_xlc9_debug.xml: Renamed to
@@ -26,7 +33,7 @@ Mon Jan 17 20:11:54 UTC 2011  Steve Huston  <shuston@riverace.com>
 Fri Jan 14 21:04:11 UTC 2011  Brian Johnson  <johnsonb@ociweb.com>
 
         * command/jboss_build.pm:
-        
+
           Nightly build support.
 
 Sat Jan  8 08:50:07 UTC 2011  Olli Savia  <ops@iki.fi>
