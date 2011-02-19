@@ -1,3 +1,12 @@
+Sat Feb 19 19:46:50 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Update build script with ACE_LACKS_STL_STRING_FUNCTORS macro so
+          that specialized ACE functors for std::string in GAME build.
+
 Fri Feb 18 03:51:34 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
