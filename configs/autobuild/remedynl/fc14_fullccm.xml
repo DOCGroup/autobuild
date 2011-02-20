@@ -1,19 +1,19 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/core/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/core/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/build/ACE/core/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"      value="/home/build/ACE/core/ACE_wrappers/TAO/DAnCE">
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/core/ACE_wrappers/lib:/usr/local/lib:" />
+        <environment name="ACE_ROOT"        value="/home/build/ACE/fullccm/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/build/ACE/fullccm/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/fullccm/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"      value="/home/build/ACE/fullccm/ACE_wrappers/TAO/DAnCE">
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/fullccm/ACE_wrappers/lib:/usr/local/lib:" />
         <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d/lib/x64Linux2.6gcc4.3.2/:" type="prefix"/>
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.3.2" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="40"/>
 
-        <variable name="root"     value="/home/build/ACE/core/" />
+        <variable name="root"     value="/home/build/ACE/fullccm/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/core/" />
+        <variable name="log_root" value="/home/build/ACE/fullccm/" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS" />
 
     </configuration>
@@ -40,7 +40,7 @@
 
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-C TAO/CIAO -j 3 -k" />
+    <command name="make"              options="-C TAO/CIAO -k" />
 
     <command name="auto_run_tests"    options=" -C" />
 
@@ -49,5 +49,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fc1064ccm" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ johnnyw@naboo.dre.vanderbilt.edu:/web/users/remedynl/fc14_fullccm" />
 </autobuild>
