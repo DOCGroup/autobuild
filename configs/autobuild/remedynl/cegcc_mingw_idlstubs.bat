@@ -1,1 +1,0 @@
-perl \ace\autobuild\autobuild.pl cegcc_mingw_idlstubs.xml
