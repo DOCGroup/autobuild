@@ -12,55 +12,55 @@
     <name>Linux</name>
     <build>
       <name>FC14_GCC_FullCCM_NoEvents_x64</name>
-      <url>http://buildlogs.remedy.nl/fc14_fullccm_ne</url>
+      <url>http://buildlogs.theaceorb.nl/fc14_fullccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
         <build>
       <name>FC14_GCC_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.remedy.nl/fc14_lwccm_ne</url>
+      <url>http://buildlogs.theaceorb.nl/fc14_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC14_GCC_Core_x64</name>
-      <url>http://buildlogs.remedy.nl/fc14_core</url>
+      <url>http://buildlogs.theaceorb.nl/fc14_core</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC10_GCC_Optimized_x64</name>
-      <url>http://buildlogs.remedy.nl/fc1064optimized</url>
+      <url>http://buildlogs.theaceorb.nl/fc1064optimized</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC14_GCC_Valgrind_x64</name>
-      <url>http://buildlogs.remedy.nl/fc14_valgrind</url>
+      <url>http://buildlogs.theaceorb.nl/fc14_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC14_GCC_Perf_x64</name>
-      <url>http://buildlogs.remedy.nl/fc14_perf/</url>
+      <url>http://buildlogs.theaceorb.nl/fc14_perf/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC14_GCC_Perf_TS_x64</name>
-      <url>http://buildlogs.remedy.nl/fc14_perf_ts/</url>
+      <url>http://buildlogs.theaceorb.nl/fc14_perf_ts/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
        <name>FC10_GCC_432_x64</name>
-       <url>http://buildlogs.remedy.nl/fc10_64_gcc</url>
+       <url>http://buildlogs.theaceorb.nl/fc10_64_gcc</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
        <name>FC14_GCC_FullCCM_x64</name>
-       <url>http://buildlogs.remedy.nl/fc14_fullccm</url>
+       <url>http://buildlogs.theaceorb.nl/fc14_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -150,7 +150,7 @@
     </build>
      <build>
        <name>OpenSuSE_11_3_GCC_64bit</name>
-       <url>http://buildlogs.remedy.nl/suse113_64_gcc</url>
+       <url>http://buildlogs.theaceorb.nl/suse113_64_gcc</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -222,13 +222,13 @@
     </build>
     <build>
       <name>FC10_MPC440_SELinuxCrossbuild</name>
-      <url>http://buildlogs.remedy.nl/mpc440selbuild</url>
+      <url>http://buildlogs.theaceorb.nl/mpc440selbuild</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC10_MPC440_SELinuxCrossbuild_Host</name>
-      <url>http://buildlogs.remedy.nl/mpc440selbuild_host</url>
+      <url>http://buildlogs.theaceorb.nl/mpc440selbuild_host</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -354,13 +354,13 @@
     </build>
     <build>
       <name>WinXP_VC8_Release</name>
-      <url>http://buildlogs.remedy.nl/VC8r</url>
+      <url>http://buildlogs.theaceorb.nl/VC8r</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>WinXP_VC9</name>
-      <url>http://buildlogs.remedy.nl/VC90</url>
+      <url>http://buildlogs.theaceorb.nl/VC90</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -396,13 +396,13 @@
     </build>
     <build>
       <name>WinXP_VC8_Debug</name>
-      <url>http://buildlogs.remedy.nl/VC8</url>
+      <url>http://buildlogs.theaceorb.nl/VC8</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
         <build>
             <name>WinXP_VC10_Debug</name>
-            <url>http://buildlogs.remedy.nl/VC100</url>
+            <url>http://buildlogs.theaceorb.nl/VC100</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
