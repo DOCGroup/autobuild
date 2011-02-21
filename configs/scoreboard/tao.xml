@@ -12,7 +12,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
     <build>
       <name>FC14_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_acefortao/</url>
+      <url>http://buildlogs.remedy.nl/fc14_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -24,7 +24,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>
      <build>
        <name>FC14_CORBA_e_compact</name>
-       <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_corbaec/</url>
+       <url>http://buildlogs.remedy.nl/fc14_corbaec/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -60,7 +60,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
      <build>
         <name>FC14_COIOP</name>
-        <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_COIOP/</url>
+        <url>http://buildlogs.remedy.nl/fc14_COIOP/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -119,12 +119,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
         <build>
-            <name>Win2008r2x64_VC10_Debug</name>
-            <url>http://scoreboard.ociweb.com/doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
-            <build_sponsor>OCI</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-        </build>
-        <build>
             <name>Win7x64_VC9_Debug</name>
             <url>http://scoreboard.ociweb.com/doc_trunk_oci1444_win7-x64_vc9_d1o0</url>
             <build_sponsor>OCI</build_sponsor>
@@ -156,13 +150,13 @@ all the OS/platform combinations on which TAO is tested everyday.
         </build>
         <build>
             <name>WinXP_VC8_Versioned_Namespace</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/vc8version</url>
+            <url>http://buildlogs.remedy.nl/vc8version</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
         <build>
             <name>MingW32_Release</name>
-            <url>http://www.dre.vanderbilt.edu/~remedynl/mingw32</url>
+            <url>http://buildlogs.remedy.nl/mingw32</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
@@ -172,19 +166,19 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>Solaris</name>
     <build>
       <name>Solaris10_Studio12_x86_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/solx86</url>
+      <url>http://buildlogs.remedy.nl/solx86</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>Solaris10_Studio12_x86_Debug_Fast</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/solx86fast</url>
+      <url>http://buildlogs.remedy.nl/solx86fast</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>Solaris10_Studio12_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~remedynl/Solaris10</url>
+      <url>http://buildlogs.remedy.nl/Solaris10</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -246,7 +240,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   <name>OpenVMS</name>
   <build>
     <name>OpenVMS83_IA64</name>
-    <url>http://www.dre.vanderbilt.edu/~remedynl/openvmsia64</url>
+    <url>http://buildlogs.remedy.nl/openvmsia64</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
