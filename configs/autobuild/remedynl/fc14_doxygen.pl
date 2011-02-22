@@ -10,9 +10,8 @@ require File::Copy;
 require File::Path;
 
 local $dont_generate = 0;
-local $dont_install = 1;
+local $dont_install = 0;
 local $STAGING = '/home/build/ACE/doxygen';
-local $DEST    = '/home/build/ACE/doxygen';
 local $MODULE  = 'ACE_wrappers';
 
 $ENV{'PATH'} = $ENV{'PATH'}.':/usr/local/bin';
@@ -70,22 +69,13 @@ sub generate_doxygen_files {
 }
 
 sub install_doxygen_files {
-  chdir $DEST
-    || die "Cannot chdir to destination area\n";
-
-  File::Copy::move('html', 'html.bak')
-    || die "Cannot save html directory backup\n";
-
-  if (File::Copy::move("$STAGING/$MODULE/html", "html") == 0) {
-    print STDERR "$STAGING/$MODULE/html -> html\n";
-    warn "Cannot move new html directory in place, restoring backup...\n";
-    File::Copy::move('html.bak', 'html')
-      || die "PANIC: Error while restoring backup!!!\n";
-    return 0;
+  open(GENDOXY, "rsync --recursive --delete html qnap.remedy.nl::Doxygen")
+    || die "Cannot start doxygen generation script\n";
+  while (<GENDOXY>) {
+    print $_;
   }
-
-  File::Path::rmtree('html.bak')
-    || warn "Problems removing backup copy\n";
+  close(GENDOXY)
+    || die "Error in doxygen generation script\n";
 
   return 1;
 }
