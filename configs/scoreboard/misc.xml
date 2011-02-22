@@ -10,19 +10,13 @@ This is a miscellaneous scoreboard for ACE+TAO.
 <group>
   <name>Utility Builds</name>
   <build>
-    <name>Doxygen</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/tao_TAO_doxygen/</url>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
     <name>Linux_Fuzz</name>
     <url>http://buildlogs.theaceorb.nl/fc14_64_fuzz</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>Doxygen_Latest</name>
+    <name>Doxygen</name>
     <url>http://buildlogs.theaceorb.nl/fc14_doxygen</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
