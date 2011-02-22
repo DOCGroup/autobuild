@@ -17,13 +17,13 @@ This is a miscellaneous scoreboard for ACE+TAO.
   </build>
   <build>
     <name>Linux_Fuzz</name>
-    <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_64_fuzz</url>
+    <url>http://buildlogs.theaceorb.nl/fc14_64_fuzz</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
     <name>Doxygen_Latest</name>
-    <url>http://www.dre.vanderbilt.edu/~remedynl/fc14_doxygen</url>
+    <url>http://buildlogs.theaceorb.nl/fc14_doxygen</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
