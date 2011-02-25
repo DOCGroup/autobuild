@@ -69,7 +69,7 @@ sub generate_doxygen_files {
 }
 
 sub install_doxygen_files {
-  open(GENDOXY, "rsync --recursive --delete html/* qnap.remedy.nl::Doxygen")
+  open(GENDOXY, "rsync --recursive --delete html/* qnap.remedy.nl::Doxygen 2>&1 |")
     || die "Cannot start doxygen rsync\n";
   while (<GENDOXY>) {
     print $_;
