@@ -1317,7 +1317,7 @@ sub Normal ($)
     my $self = shift;
     my $s = shift;
     my $state = shift;
-    $state = lc $state;
+    $state = lc($state);
 
     if( defined $state && $state eq 'config' ) {
       print {$self->{FH}} "$s\n";
@@ -1356,7 +1356,7 @@ sub Description ($)
     my $self = shift;
     my $s = shift || '';
     my $state = shift;
-    $state = lc $state;
+    $state = lc ($state);
 
     # Escape any '<' or '>' signs
     $s =~ s/</&lt;/g;
