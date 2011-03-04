@@ -54,5 +54,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/isislab/vc9s"/>
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include  *.txt --include *.html --exclude ** ./  bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/auto_compile_logs/isislab/vc9s"/>
 </autobuild>
