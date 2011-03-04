@@ -28,6 +28,13 @@ all the OS/platform combinations on which ACE is tested everyday.
 
 <group>
   <name>Linux</name>
+
+     <build>
+      <name>Ubuntu_10_04_GCC</name>
+      <url>http://buildlogs.theaceorb.nl/ubuntu_910_64_gcc/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
      <build>
        <name>RHEL_5_x64_Debug(Intel)</name>
        <url>http://acebuilds.riverace.com/smokey/dev/icc_debug</url>
