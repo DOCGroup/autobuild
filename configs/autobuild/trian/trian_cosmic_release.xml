@@ -38,6 +38,9 @@
   <command name="log"           options="ON" />
 
   <!-- get latest micro release of middleware and MPC -->
+  <command name="shell"             options="/Q /S %COSMIC_ROOT%" />
+  <command name="shell"             options="/Q /S %MPC_ROOT%" />
+
   <command name="svn"               options="--username anonymous --password anonymous co https://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_Micro Latest_Micro" />
   <command name="svn"               options="--username anonymous --password anonymous co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
 
