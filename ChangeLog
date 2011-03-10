@@ -1,3 +1,11 @@
+Thu Mar 10 21:21:47 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Updated to build against latest version of DOC
+          middleware.
+
 Sat Feb 19 19:46:50 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
