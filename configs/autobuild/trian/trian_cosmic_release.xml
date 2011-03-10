@@ -7,7 +7,7 @@
     <environment name="MPC_ROOT"     value="C:\\bczar\\CoSMIC_Release\\MPC"/>
 
     <environment name="CCF_ROOT"     value="C:\\bczar\\CoSMIC_Release\\CoSMIC\\contrib"/>
-    <environment name="WIX_ROOT"     value="C:\utils\wix3.5"/>
+    <environment name="WIX_ROOT"     value="C:\\utils\\wix3.5"/>
     <environment name="CVS_RSH"      value="plink.exe" />
     <environment name="XERCESCROOT"  value="C:\\Libraries\\xerces-c-3.1.1-x86-windows-vc-9.0"/>
     <environment name="XERCESC_VERSION"   value="3_1"/>
@@ -38,8 +38,8 @@
   <command name="log"           options="ON" />
 
   <!-- get latest micro release of middleware and MPC -->
-  <command name="shell"             options="/Q /S %COSMIC_ROOT%" />
-  <command name="shell"             options="/Q /S %MPC_ROOT%" />
+  <command name="shell"             options="del /Q /S C:\\bczar\\CoSMIC_Release\\Latest_Micro" />
+  <command name="shell"             options="del /Q /S C:\\bczar\\CoSMIC_Release\\MPC" />
 
   <command name="svn"               options="--username anonymous --password anonymous co https://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_Micro Latest_Micro" />
   <command name="svn"               options="--username anonymous --password anonymous co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
