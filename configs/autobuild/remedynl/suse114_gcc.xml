@@ -1,0 +1,56 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"      value="/home/build/ACE/gcc/ACE_wrappers/TAO/DAnCE"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib:" />
+
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5b.rev01/lib/x64Linux2.6gcc4.3.2/:" type="prefix"/>
+        <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5b.rev01" />
+        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.3.2" />
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="18"/>
+
+        <variable name="root"     value="/home/build/ACE/gcc/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="log_root" value="/home/build/ACE/gcc/" />
+        <variable name="configs"  value="Linux Exceptions ZLIB XERCES DOXYGEN NDDS" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32003" />
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define IDL_ANON_ERROR\n#define TAO_SUPPRESS_NEW_LINE_IN_EXCEPTION_LOGGING\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\nbuildbits=64\nzlib=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='dds4ccm_ndds=1\nndds=1\nzlib=1\nxerces3=1\n'" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="gcc" />
+    <command name="print_ace_config" />
+    <command name="print_openssl_version"/>
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="make"              options="-k realclean find=*akefile" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="generate_workspace" options="-type gnuautobuild" />
+
+    <command name="make"              options="-k -j 2" />
+
+    <command name="auto_run_tests"    options=" -a -o -t -C" />
+
+    <command name="anonymous_shell"   options="killall dance_locality_manager" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/suse114_64_gcc" />
+</autobuild>
