@@ -30,9 +30,9 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nndds4ccm_ndds=1\nndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-snowleopard.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ndds4ccm_ndds=1\nndds=1\ndebug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\nPLATFORM_NDDS_FLAGS=-ppPath cpp-4.2 -I.\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\ndebug=0\nstatic_libs_only=0\noptimize=0\nxerces3=1\nPLATFORM_NDDS_FLAGS=-ppPath cpp-4.2 -I.\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\n'" />
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="check_compiler"    options="gcc" />
