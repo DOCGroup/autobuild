@@ -1,6 +1,7 @@
 REM $Id$
 
-call "C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Tools\vsvars32.bat"
+call "C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat"
+
 
 cd "C:\ACE\autobuild"
 
