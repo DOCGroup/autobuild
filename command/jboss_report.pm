@@ -12,7 +12,7 @@ use File::Copy;
 use FileHandle;
 use POSIX;
 use Time::Local;
-use File::Path qw(remove_tree);
+use File::Path;
 
 ###############################################################################
 # Forward Declarations
