@@ -37,7 +37,9 @@ sub handle_compiler_output_line($) {
   # Check for the subsection indicator
   # VC71 || GNU make || nmake || borland make
   if ($s =~ m/^(?:\d+>)?------ Build started: Project: (.*), Config.*/ || $s =~ /GNUmakefile: (.*) MAKEFLAGS.*/ || $s =~ /nmake.exe\" \/f Makefile.(.*) CFG.*/ || $s =~ /make .* -f (.*).bor .*/) {
-    $self->Output_Subsection ($1);
+    my $subsec = $1;
+    $subsec .= " ($1)" if $s =~ /^(\d+)>---/;
+    $self->Output_Subsection ($subsec);
     return;
   }
 
@@ -46,6 +48,12 @@ sub handle_compiler_output_line($) {
     my ($prj, $seq) = ($1, $2);
     $prj =~ /\\([^.\\]+)\.vcxproj$/;
     $self->Output_Subsection ("$1 ($seq)");
+    return;
+  }
+
+  # NMake
+  if ($s =~ /^Project: Makefile\.(\w+)\.mak\s*$/) {
+    $self->Output_Subsection ($1);
     return;
   }
 
