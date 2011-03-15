@@ -129,8 +129,8 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
 <name>Solaris</name>
    <build>
-      <name>Solaris_9_gcc3_Debug</name>
-      <url>http://acebuilds.riverace.com/heidi/dev/gcc3_debug</url>
+      <name>Solaris_9_SunStudio11_Debug</name>
+      <url>http://acebuilds.riverace.com/heidi/dev/ss11_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
