@@ -12,7 +12,7 @@ use File::Copy;
 use FileHandle;
 use POSIX;
 use Time::Local;
-use File::Path;
+use File::Path qw(remove_tree);
 
 ###############################################################################
 # Forward Declarations
@@ -288,9 +288,17 @@ sub copy_log ()
     for (my $i = 0; $i < $keep; ++$i) {
         shift @existing_local_logs;
         shift @existing_logs;
-        shift @existing_reports;
     }
 
+    my $reports_keep = $keep / 2;
+    if ($reports_keep < 1) {
+        $reports_keep = 1;
+    }
+    
+    for (my $i = 0; $i < $reports_keep; ++$i) {
+        shift @existing_reports;
+    }
+    
     # Delete anything left in the list
 
     foreach my $file (@existing_local_logs) {
