@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $Id$
-#
-
-cd /aceroot
-
-perl -X -I/aceroot/autobuild /aceroot/autobuild/autobuild.pl /aceroot/autobuild/configs/autobuild/remedynl/gollum-release.xml
-
