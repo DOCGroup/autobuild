@@ -1,3 +1,11 @@
+Thu Mar 17 16:31:05 UTC 2011  Steve Huston  <shuston@riverace.com>
+
+        * configs/autobuild/riverace/payslee_dev_debug.xml: RHEL 4 build gone.
+
+        * configs/scoreboard/ace.xml:
+        * configs/autobuild/riverace/payslee_dev_gcc_debug.xml:
+          New RHEL 6 build.
+
 Tue Mar 15 15:42:15 UTC 2011  Adam Mitz  <mitza@ociweb.com>
 
         * common/parse_compiler_output.pm:

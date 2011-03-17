@@ -50,6 +50,13 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
+       <name>RHEL_6_x64_Debug(gcc)</name>
+       <url>http://acebuilds.riverace.com/payslee/dev/gcc_debug</url>
+       <red>36</red>
+       <build_sponsor>Riverace</build_sponsor>
+       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+     </build>
+     <build>
        <name>OpenSuSE_11_0_GCC_64bit</name>
        <url>http://buildlogs.theaceorb.nl/suse110_64_gcc</url>
        <build_sponsor>Remedy IT</build_sponsor>
