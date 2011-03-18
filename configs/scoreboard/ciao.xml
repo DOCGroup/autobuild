@@ -227,12 +227,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC10_GCC_Release_Optimized_x64</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/fc10_release</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC10_MPC440_SELinuxCrossbuild</name>
       <url>http://buildlogs.theaceorb.nl/mpc440selbuild</url>
       <build_sponsor>Remedy IT</build_sponsor>
