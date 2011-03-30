@@ -11,9 +11,9 @@
         <environment name="NDDSHOME"          value="/build/ndds.4.5b.rev01" />
         <environment name="NDDSARCHITECTURE"  value="cell64Linux2.6ppu4.1.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="32"/>
-        <environment name="SSL_ROOT"          value="/opt/cell/sysroot/usr"/>
-        <environment name="ZLIB_ROOT"         value="/opt/cell/sysroot/usr"/>
-        <environment name="XERCESCROOT"       value="/opt/cell/sysroot/usr"/>
+        <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="CIAO_LOG_LEVEL"    value="1"/>
         <environment name="DANCE_LOG_LEVEL"   value="1"/>
 

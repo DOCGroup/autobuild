@@ -8,14 +8,16 @@
         <environment name="REPORT_DIR"      value="/build/ACE/xampler/Avenger/_Templt/Template-Display" />
         <environment name="AVENGER_DIR"     value="/build/ACE/xampler/Avenger" />
         <environment name="LD_LIBRARY_PATH" value="/usr/local/lib" />
-        <environment name="TCPU"            value="cell"/>
+        <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
 
         <variable name="root"     value="/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/root/ACE/xamplerlog/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
         <variable name="remote_root"  value="/build/ACE/ACE_wrappers" />
-        <variable name="remote_shell" value="ssh 10.207.173.56" />
+        <variable name="remote_shell" value="ssh snalinux6" />
 
     </configuration>
 
@@ -34,7 +36,7 @@
     <command name="anonymous_shell"   options="rsync --progress --recursive jwillemsen@naboo.dre.vanderbilt.edu:/home/jwillemsen/Avenger/* /build/ACE/xampler/Avenger/" />
 
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=powerpc64-unknown-linux-gnu-\ncpumodelflag=1\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/include/makeinclude/platform_macros.GNU output='TCPU=cell\nCROSS_COMPILE=powerpc64-unknown-linux-gnu-\ncpumodelflag=1\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
 
