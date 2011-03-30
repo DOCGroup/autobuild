@@ -17,11 +17,11 @@
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
 
-
+  
        <variable name="root"     value="/home/build/ACE/target/" />
        <variable name="remote_root"  value="/home/root/ACE/build/ACE_wrappers" />
        <!--variable name="configs"  value="Linux Exceptions ZLIB NDDS XERCES" /-->
-        <variable name="remote_libpath"  value="/opt/rtidds45dctu/lib/ppc4xxFPLinux2.6gcc4.5.1" />
+        <variable name="remote_libpath"  value="/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1" />
         <variable name="remote_shell" value="ssh root@tgtctu.remedy.nl" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/home/build/ACE/target/" />
@@ -70,5 +70,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc14_64_ctu" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc12_full" />
 </autobuild>
