@@ -17,19 +17,19 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC14_GCC_FullCCM_NoEvents_x64</name>
+      <name>FC14_FullCCM_NoEvents_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_fullccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC14_GCC_LwCCM_NoEvents_x64</name>
+      <name>FC14_LwCCM_NoEvents_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC14_GCC_Core_x64</name>
+      <name>FC14_Core_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_core</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -41,19 +41,19 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC14_GCC_Valgrind_x64</name>
+      <name>FC14_Valgrind_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC14_GCC_Perf_x64</name>
+      <name>FC14_Perf_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_perf/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC14_GCC_Perf_TS_x64</name>
+      <name>FC14_Perf_TS_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_perf_ts/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -65,7 +65,7 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>FC14_GCC_FullCCM_x64</name>
+       <name>FC14_FullCCM_x64</name>
        <url>http://buildlogs.theaceorb.nl/fc14_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
