@@ -56,7 +56,7 @@
 
     <command name="make"              options="-k -j 20" />
 
-    <!-- command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=32'"/-->
+    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=32'"/>
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
