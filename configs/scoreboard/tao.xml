@@ -155,12 +155,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
-      <name>WinXP_VC8_Versioned_Namespace</name>
-      <url>http://buildlogs.theaceorb.nl/vc8version</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>MingW32_Release</name>
       <url>http://buildlogs.theaceorb.nl/mingw32</url>
       <build_sponsor>Remedy IT</build_sponsor>

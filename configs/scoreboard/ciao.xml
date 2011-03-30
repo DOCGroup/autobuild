@@ -354,13 +354,7 @@
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
     <build>
-      <name>WinXP_VC8_Release</name>
-      <url>http://buildlogs.theaceorb.nl/VC8r</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>WinXP_VC9</name>
+      <name>WinXP_VC9_Debug</name>
       <url>http://buildlogs.theaceorb.nl/VC90</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
