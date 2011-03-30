@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="PATH"              value="/usr/local/ngclinux/powerpc/bin" type="prefix"/>
+        <environment name="PATH"              value="/usr/local/ngclinux/powerpc64/bin" type="prefix"/>
         <environment name="HOST_ROOT"       value="/root/ACE/hoststatic/ACE_wrappers"/>
         <environment name="ACE_ROOT"        value="/build/ACE/xampler/gcc/ACE_wrappers"/>
         <environment name="BAGATEL_EXE"     value="/build/ACE/xampler/Bagatel/src/bagatel" />

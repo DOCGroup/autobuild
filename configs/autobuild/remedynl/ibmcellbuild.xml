@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="PATH"              value="/usr/local/ngclinux/powerpc/bin" type="prefix"/>
+        <environment name="PATH"              value="/usr/local/ngclinux/powerpc64/bin" type="prefix"/>
         <environment name="ACE_ROOT"          value="/build/ACE/crossbuild/ACE_wrappers"/>
         <environment name="TAO_ROOT"          value="/build/ACE/crossbuild/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"         value="/build/ACE/crossbuild/ACE_wrappers/TAO/CIAO"/>
