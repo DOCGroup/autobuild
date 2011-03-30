@@ -7,4 +7,7 @@ cd $HOME/ACE/autobuild
 svn up
 
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_host.sh
+
+svn up
+
 sh $HOME/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler.sh
