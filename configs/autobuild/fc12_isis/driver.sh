@@ -4,10 +4,10 @@
 #
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                             $HOME/autobuild/configs/autobuild/ace_isis/FC12_Minimum.xml
+                             $HOME/autobuild/configs/autobuild/fc12_isis/FC12_Minimum.xml
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-                   $HOME/autobuild/configs/autobuild/ace_isis/FC12_NoInline.xml
+                   $HOME/autobuild/configs/autobuild/fc12_isis/FC12_NoInline.xml
 
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-  $HOME/autobuild/configs/autobuild/ace_isis/FC12_Static_Core.xml
+  $HOME/autobuild/configs/autobuild/fc12_isis/FC12_Static_Core.xml
