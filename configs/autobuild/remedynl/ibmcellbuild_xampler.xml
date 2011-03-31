@@ -36,7 +36,7 @@
     <command name="anonymous_shell"   options="rsync --progress --recursive jwillemsen@naboo.dre.vanderbilt.edu:/home/jwillemsen/Avenger/* /build/ACE/xampler/Avenger/" />
 
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/ace/config.h output='#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS-COMPILE=1\nTCPU=cell\nCROSS_COMPILE=powerpc64-ngc-linux-\ncpumodelflag=1\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/include/makeinclude/platform_macros.GNU output='TCPU=cell\nCROSS_COMPILE=powerpc64-ngc-linux-\ncpumodelflag=1\nbuildbits=64\noptimize=1\ndebug=0\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/bin/MakeProjectCreator/config/default.features output='\n'" />
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
