@@ -11,7 +11,7 @@
         <environment name="LD_LIBRARY_PATH" value="/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1:"/>
         <environment name="NDDSHOME" value="/opt/rtidds45dctu" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="28"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="45"/>
         
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
@@ -62,7 +62,7 @@
     <command name="make"              options="-k -j 2" />
 
     <!--command name="auto_run_remote_tests"    options=" -a -o -t -C" /-->
-     <command name="auto_run_remote_tests"   options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=28'" />
+     <command name="auto_run_remote_tests"   options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=45'" />
 
 
     <command name="anonymous_shell"             options="killall dance_locality_manager" />
