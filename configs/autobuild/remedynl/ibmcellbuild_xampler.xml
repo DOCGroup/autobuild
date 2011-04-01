@@ -55,7 +55,7 @@
     <command name="setenv"             options="ACE_ROOT=/build/ACE/xampler/gcc/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/build/ACE/xampler/gcc/ACE_wrappers/TAO"/>
     <command name="generate_workspace" options="/build/ACE/xampler/gcc/ACE_wrappers/build.mwc -type gnuautobuild"/>
-    <command name="make"               options="-C /build/ACE/xampler/gcc/ACE_wrappers -k" />
+    <command name="make"               options="-C /build/ACE/xampler/gcc/ACE_wrappers -k -j 20" />
 
     <command name="make"              options="-C /build/ACE/xampler/Bagatel/src" />
 
