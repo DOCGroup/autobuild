@@ -264,13 +264,13 @@
     </build>
     <build>
       <name>FC12_Optimized</name>
-      <url>http://buildlogs.theaceorb.nl/fc12_full</url>
+      <url>http://buildlogs.theaceorb.nl/fc12_optimized</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>FC12_Optimized_host</name>
-      <url>http://buildlogs.theaceorb.nl/fc12_full_host</url>
+      <url>http://buildlogs.theaceorb.nl/fc12_optimized_host</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
