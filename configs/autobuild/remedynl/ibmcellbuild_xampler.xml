@@ -97,14 +97,14 @@
     <command name="anonymous_shell"   options="sh /root/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
 
     <command name="anonymous_shell"   options="cp -R /build/ACE/xampler/Avenger/_Templt/Template-Display /build/ACE/xampler/cellxampler" />
-    <command name="anonymous_shell"   options="chmod 755 /build/ACE/xampler/ps3xampler -R" />
+    <command name="anonymous_shell"   options="chmod 755 /build/ACE/xampler/cellxampler -R" />
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="rsync --progress --recursive --delete -z ---exclude /CORBAemicro/ --exclude /CORBAemicrostatic/ cellxampler jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z cellxampler jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler" />
     <command name="shell"             options="rsync --progress --recursive --delete -z /root/ACE/xamplerlog/* jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xamplerlog" />
 
 </autobuild>
