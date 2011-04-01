@@ -73,7 +73,7 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib:/build/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib" />
 
-    <!--command name="anonymous_shell"   options="ssh 10.207.173.56 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc.sh\\\x22\x22" /-->
+    <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc.sh\\\x22\x22" /-->
 
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
 
@@ -96,7 +96,7 @@
 
     <command name="anonymous_shell"   options="sh /root/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
 
-    <command name="anonymous_shell"   options="cp -R /build/ACE/xampler/Avenger/_Templt/Template-Display /build/ACE/xampler/ps3xampler" />
+    <command name="anonymous_shell"   options="cp -R /build/ACE/xampler/Avenger/_Templt/Template-Display /build/ACE/xampler/cellxampler" />
     <command name="anonymous_shell"   options="chmod 755 /build/ACE/xampler/ps3xampler -R" />
 
     <command name="process_logs"      options="clean" />
@@ -104,7 +104,7 @@
     <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="status"            options="off" />
 
-    <command name="shell"             options="rsync --progress --recursive --delete -z ---exclude /CORBAemicro/ --exclude /CORBAemicrostatic/ ps3xampler jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z ---exclude /CORBAemicro/ --exclude /CORBAemicrostatic/ cellxampler jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler" />
     <command name="shell"             options="rsync --progress --recursive --delete -z /root/ACE/xamplerlog/* jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xamplerlog" />
 
 </autobuild>
