@@ -75,6 +75,12 @@ all the OS/platform combinations on which ACE is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
+       <name>OpenSuSE_11_3_GCC_64bit</name>
+       <url>http://buildlogs.theaceorb.nl/suse113_64_gcc</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
       <name>CentOS_5_2_GCC_64bit</name>
       <url>http://buildlogs.theaceorb.nl/centos52_64_gcc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
