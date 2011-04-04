@@ -40,7 +40,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=x86_64-ngc-linux-\ndebug=0\noptimize=1\nbuildbits=64\nzlib=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=x86_64-ngc-linux-\ndebug=0\noptimize=1\nbuildbits=64\nzlib=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\nroot_is_symlink=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cross_compile=1\nzlib=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\n'" />
 
     <command name="print_os_version" />
@@ -70,5 +70,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc12_optimized" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** /home/build/ACE/target/ qnap.remedy.nl::Buildlogs/fc12_optimized" />
 </autobuild>
