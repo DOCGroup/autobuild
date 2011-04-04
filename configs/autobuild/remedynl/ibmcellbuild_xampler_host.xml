@@ -5,6 +5,7 @@
         <environment name="TAO_ROOT"     value="/root/ACE/hoststatic/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"    value="/root/ACE/hoststatic/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/hoststatic/ACE_wrappers/lib" />
+        <environment name="PATH"         value="/usr/bin" type="prefix"/>
 
         <variable name="root"     value="/root/ACE/hoststatic/" />
         <variable name="log_file" value="build.txt" />
