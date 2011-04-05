@@ -1,3 +1,10 @@
+Tue Apr  5 22:04:00 UTC 2011  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/doc_trunk_wiro_linux_gcc-4.6_d1o0.xml:
+        * configs/scoreboard/tao.xml:
+
+          Added GCC 4.6 on Ubuntu 10.04 x64.
+
 Thu Mar 24 15:03:50 UTC 2011  Olli Savia  <ops@iki.fi>
 
         * configs/scoreboard/ace.xml:
