@@ -2,29 +2,29 @@
 <autobuild>
     <configuration>
         <environment name="PATH"            value="/usr/local/ngclinux/x86_64/bin" type="prefix"/>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/target/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/target/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/build/ACE/target/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"      value="/home/build/ACE/target/ACE_wrappers/TAO/DAnCE"/>
+        <environment name="ACE_ROOT"        value="/exports/x86_64-OE/home/root/ACE/build/ACE_wrappers"/>
+        <environment name="TAO_ROOT"        value="/exports/x86_64-OE/home/root/ACE/build/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"       value="/exports/x86_64-OE/home/root/ACE/build/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"      value="/exports/x86_64-OE/home/root/ACE/build/ACE_wrappers/TAO/DAnCE"/>
         <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/usr/local/lib:/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1:"/>
         <environment name="NDDSHOME" value="/opt/rtidds45dctu" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="46"/>
-        
+
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
 	<environment name="RSYNC_RSH"       value="/usr/bin/ssh" />
 
-  
-       <variable name="root"     value="/home/build/ACE/target/" />
+
+       <variable name="root"     value="/exports/x86_64-OE/home/root/ACE/build/" />
        <variable name="remote_root"  value="/home/root/ACE/build/ACE_wrappers" />
        <!--variable name="configs"  value="Linux Exceptions ZLIB NDDS XERCES" /-->
         <variable name="remote_libpath"  value="/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1" />
         <variable name="remote_shell" value="ssh root@tgtctu.remedy.nl" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="/home/build/ACE/target/" />
+        <variable name="log_root"     value="/exports/x86_64-OE/home/root/ACE/build/" />
         <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT" />
 
 
@@ -40,7 +40,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=x86_64-ngc-linux-\ndebug=0\noptimize=1\nbuildbits=64\nzlib=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\nroot_is_symlink=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CROSS_COMPILE=x86_64-ngc-linux-\ndebug=0\noptimize=1\nbuildbits=64\nzlib=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cross_compile=1\nzlib=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\n'" />
 
     <command name="print_os_version" />
@@ -55,7 +55,7 @@
     <command name="print_openssl_version" options="remote"/>
 
 
- 
+
 
     <command name="generate_workspace" options="-type gnuautobuild" />
 
