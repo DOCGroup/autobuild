@@ -93,7 +93,7 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
-    <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
+    <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; export REPORT_DIR=/build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
     <command name="anonymous_shell"   options="sh /root/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
 
