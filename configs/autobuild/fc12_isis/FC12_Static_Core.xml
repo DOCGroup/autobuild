@@ -9,6 +9,7 @@
         <environment name="ZLIB_ROOT"       value="/usr/" />
         <environment name="ZZIP_ROOT"       value="/build/isisbuilds/utils" />
         <environment name="LD_LIBRARY_PATH" value="/build/isisbuilds/utils/lib" />
+        <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/build/isisbuilds/Static_Core" />
         <variable name="name"     value="Core" />
