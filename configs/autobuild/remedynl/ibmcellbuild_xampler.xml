@@ -15,7 +15,7 @@
 
         <variable name="root"     value="/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/root/ACE/xamplerlog/" />
+        <variable name="log_root" value="/root/ACE/ibmcellbuild_xamplerlog/" />
         <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
         <variable name="remote_root"  value="/build/ACE/ACE_wrappers" />
         <variable name="remote_shell" value="ssh snalinux6" />
@@ -106,6 +106,6 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --recursive --delete -z cellxampler jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z /root/ACE/xamplerlog/* jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xamplerlog" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z /root/ACE/ibmcellbuild_xamplerlog jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen" />
 
 </autobuild>
