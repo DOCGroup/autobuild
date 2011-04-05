@@ -11,6 +11,7 @@
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="RSYNC_RSH"       value="ssh" />
 
         <variable name="root"     value="/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
