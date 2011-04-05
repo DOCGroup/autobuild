@@ -28,8 +28,6 @@
     <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/gcc" />
 
-    <command name="log"               options="ON" />
-
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO gcc" />
     <command name="anonymous_shell"   options="rsync --progress --recursive jwillemsen@naboo.dre.vanderbilt.edu:/home/jwillemsen/Xampler/* /build/ACE/xampler/gcc/Xampler/" />
     <command name="anonymous_shell"   options="rsync --progress --recursive jwillemsen@naboo.dre.vanderbilt.edu:/home/jwillemsen/Avenger/* /build/ACE/xampler/gcc/Avenger/" />
@@ -42,6 +40,8 @@
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-ngc-linux-\nID=$(HOST_ROOT)/bin/tao_idl\nID_OPTS:=-g $(HOST_ROOT)/bin/ace_gperf\n'" />
+
+    <command name="log"               options="ON" />
 
     <command name="print_os_version" />
     <command name="print_remote_os_version" />
