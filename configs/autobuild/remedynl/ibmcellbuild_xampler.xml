@@ -16,7 +16,7 @@
         <variable name="root"     value="/build/ACE/xampler/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/root/ACE/ibmcellbuild_xamplerlog/" />
-        <variable name="configs"  value="Linux NDDS SSL Exceptions ZLIB" />
+        <variable name="configs"  value="Linux SSL Exceptions ZLIB" />
         <variable name="remote_root"  value="/build/ACE/ACE_wrappers" />
         <variable name="remote_shell" value="ssh snalinux6" />
 
@@ -24,6 +24,8 @@
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32004" />
+
+    <command name="log"               options="ON" />
 
     <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/gcc" />
@@ -40,8 +42,6 @@
     <command name="file_manipulation" options="type=create file=gcc/ACE_wrappers/build.mwc output='workspace {\nace\nTAO/tao\n}\n'" />
 
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc/Xampler/C++/makefile.local output='BITS=64\nLOCATOR=FILE\nMODE=STATIC\nCROSS=powerpc64-ngc-linux-\nID=$(HOST_ROOT)/bin/tao_idl\nID_OPTS:=-g $(HOST_ROOT)/bin/ace_gperf\n'" />
-
-    <command name="log"               options="ON" />
 
     <command name="print_os_version" />
     <command name="print_remote_os_version" />
@@ -71,7 +71,7 @@
     <command name="anonymous_shell"   options="ln -s /build/ACE/xampler/gcc/Xampler/C++/_Suites /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/_Report" />
 
-    <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib:/build/ndds.4.5b.rev01/lib/cell64Linux2.6ppu4.1.1\n'" />
+    <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib" />
 
     <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc.sh\\\x22\x22" />
@@ -93,7 +93,7 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
-    <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; export REPORT_DIR=/build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
+    <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
     <command name="anonymous_shell"   options="sh /root/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
 
