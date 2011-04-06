@@ -16,7 +16,7 @@
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="CIAO_LOG_LEVEL"    value="1"/>
         <environment name="DANCE_LOG_LEVEL"   value="1"/>
-        <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="RSYNC_RSH"       value="/usr/bin/ssh" />
 
         <variable name="root"         value="/build/ACE/crossbuild/" />
         <variable name="remote_root"  value="/build/ACE/crossbuild/ACE_wrappers" />

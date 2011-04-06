@@ -6,7 +6,7 @@
         <environment name="CIAO_ROOT"    value="/root/ACE/hoststatic/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/hoststatic/ACE_wrappers/lib" />
         <environment name="PATH"         value="/usr/bin" type="prefix"/>
-        <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="RSYNC_RSH"       value="/usr/bin/ssh" />
 
         <variable name="root"     value="/root/ACE/hoststatic/" />
         <variable name="log_file" value="build.txt" />
