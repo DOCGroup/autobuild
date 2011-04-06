@@ -25,10 +25,10 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32004" />
 
-    <command name="log"               options="ON" />
-
     <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/gcc" />
+
+    <command name="log"               options="ON" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO gcc" />
     <command name="anonymous_shell"   options="rsync --progress --recursive jwillemsen@naboo.dre.vanderbilt.edu:/home/jwillemsen/Xampler/* /build/ACE/xampler/gcc/Xampler/" />
