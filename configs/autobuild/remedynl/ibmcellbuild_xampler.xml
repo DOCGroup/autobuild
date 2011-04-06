@@ -102,7 +102,7 @@
 
     <command name="process_logs"      options="clean" />
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
 
     <command name="shell"             options="rsync --progress --recursive --delete -z cellxampler jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler" />
