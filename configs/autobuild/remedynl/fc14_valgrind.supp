@@ -232,6 +232,13 @@
 }
 
 {
+  <ndds>
+  Memcheck:Leak
+  fun:*
+  fun:*_dl_new_object*
+}
+
+{
    <insert_a_suppression_name_here>
    Memcheck:Leak
    fun:malloc
