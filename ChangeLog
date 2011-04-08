@@ -1,3 +1,11 @@
+Fri Apr  8 13:40:02 UTC 2011  Adam Mitz  <mitza@ociweb.com>
+
+        * command/check_compiler.pm:
+        * configs/autobuild/oci/doc_trunk_wiro_linux_clang_d1o0.xml:
+        * configs/scoreboard/ace.xml:
+
+          Clang on Linux build and ability to check clang version.
+
 Tue Apr  5 22:04:00 UTC 2011  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/doc_trunk_wiro_linux_gcc-4.6_d1o0.xml:
