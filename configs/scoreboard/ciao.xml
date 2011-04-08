@@ -35,12 +35,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC10_GCC_Optimized_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc1064optimized</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC14_Valgrind_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc14_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -58,12 +52,6 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
-     <build>
-       <name>FC10_GCC_432_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc10_64_gcc</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
      <build>
        <name>FC14_FullCCM_x64</name>
        <url>http://buildlogs.theaceorb.nl/fc14_fullccm</url>
