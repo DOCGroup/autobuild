@@ -25,7 +25,10 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32004" />
 
-    <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler" />
+    <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/gcc/Xampler" />
+    <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/gcc/Avenger" />
+    <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/Bagatel" />
+    <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/Avenger" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/gcc" />
 
     <command name="log"               options="ON" />
@@ -55,6 +58,7 @@
 
     <command name="setenv"             options="ACE_ROOT=/build/ACE/xampler/gcc/ACE_wrappers" />
     <command name="setenv"             options="TAO_ROOT=/build/ACE/xampler/gcc/ACE_wrappers/TAO"/>
+    <command name="make"               options="-C /build/ACE/xampler/gcc/ACE_wrappers realclean" />
     <command name="generate_workspace" options="/build/ACE/xampler/gcc/ACE_wrappers/build.mwc -type gnuautobuild"/>
     <command name="make"               options="-C /build/ACE/xampler/gcc/ACE_wrappers -k -j 20" />
 
