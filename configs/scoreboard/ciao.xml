@@ -209,18 +209,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC10_MPC440_SELinuxCrossbuild</name>
-      <url>http://buildlogs.theaceorb.nl/mpc440selbuild</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC10_MPC440_SELinuxCrossbuild_Host</name>
-      <url>http://buildlogs.theaceorb.nl/mpc440selbuild_host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC12_MPC440_SELinux</name>
       <url>http://buildlogs.theaceorb.nl/mpc440ctubuild</url>
       <build_sponsor>Remedy IT</build_sponsor>
