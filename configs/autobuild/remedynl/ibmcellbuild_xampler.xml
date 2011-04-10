@@ -79,7 +79,7 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 3 localhost /build/ACE/xampler/gcc.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc.sh\\\x22\x22" />
 
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
 
@@ -98,7 +98,7 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/Avenger/_Templt/Template-Display/title.txt output='TAO\n'" />
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/Avenger/_Templt/Template-Display/flags.txt output='Override_Size_Secondary = 600x300\n'" />
 
-    <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; export REPORT_DIR=/build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
+    <command name="anonymous_shell"   options="cd /build/ACE/xampler/Avenger/_Templt/Template-Display ; php -q ${AVENGER_DIR}/_Ampler/Display.php" />
 
     <command name="anonymous_shell"   options="sh /root/ACE/autobuild/configs/autobuild/remedynl/ibmcellbuild_xampler_technology.sh" />
 
