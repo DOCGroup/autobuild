@@ -34,7 +34,7 @@
 
     <command name="make"              options="realclean find=*akefile" />
 
-    <command name="generate_workspace" options="-type gnuace" />
+    <command name="generate_workspace" options="-type gnuace -exclude TAO" />
 
     <command name="make"              options="-k" />
 
