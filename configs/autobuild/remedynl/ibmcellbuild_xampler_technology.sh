@@ -2,7 +2,7 @@
 #
 # $Id$
 
-COMPILER="gcc"
+COMPILER="powerpc64-ngc-linux--gcc"
 
 create_config_page ()
 {
