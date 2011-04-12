@@ -55,7 +55,7 @@
     <command name="anonymous_shell"   options="tar czvf project.tgz README emit output" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /emit/ --exclude /output/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc14_coverity" />
 

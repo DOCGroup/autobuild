@@ -47,7 +47,7 @@
     <command name="anonymous_shell"             options="killall dance_locality_manager" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc14_fullccm" />
 </autobuild>
