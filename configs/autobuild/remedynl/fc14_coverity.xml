@@ -11,6 +11,9 @@
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.1.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="35"/>
+        <environment name="MAILTO" value="jwillemsen@remedy.nl"/>
+        <environment name="MAIL" value="mail -S smtp=zimbra.remedy.nl"/>
+        <environment name="MAILFROM" value="jwillemsen@remedy.nl"/>
 
         <variable name="root"     value="/home/build/ACE/coverity/" />
         <variable name="log_file" value="build.txt" />
@@ -33,6 +36,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
     <command name="file_manipulation" options="type=create file=README output='Johnny Willemsen\njwillemsen@remedy.nl\ACE+TAO+CIAO+DAnCE'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\n}\n'" />
+    <command name="file_manipulation" options="type=create file=rsmailfile output='v2;ACE/TAO/CIAO/DAnCE;build;jwillemsen@remedy.nl;http://buildlogs.theaceorb.nl/fc14_coverity/project.tgz'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -49,6 +53,8 @@
     <command name="anonymous_shell"   options="cov-build -e emit -o output make -C ACE_wrappers" />
 
     <command name="anonymous_shell"   options="tar czvf project.tgz README emit output" />
+
+    <command name="anonymous_shell"   options="mail -r jwillemsen@remedy.nl -s \x22Coverity\x22 jwillemsen@remedy.nl < rsmailfile" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
