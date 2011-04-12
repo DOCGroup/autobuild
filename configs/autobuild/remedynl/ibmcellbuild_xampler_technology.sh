@@ -65,8 +65,6 @@ create_index_page ()
   echo '<TABLE border="2"><TBODY>'
 
   create_config_page "/build/ACE/regular/ACE_wrappers/" "TAO Regular"
-  create_config_page "/build/ACE/CORBAemicro/ACE_wrappers/" "CORBA/e micro"
-  create_config_page "/build/ACE/CORBAemicrostatic/ACE_wrappers/" "CORBA/e micro static"
 
   echo '<TR><TD>CPU Information</TD><TD>/proc/cpuinfo</TD></TR>'
   echo '<TR><TD colspan="2"><PRE>'
