@@ -46,7 +46,7 @@
 
     <command name="generate_workspace" options="ACE_Host.mwc -type gnuautobuild" />
 
-    <command name="anonymous_shell"   options="cov-build -e emit -o output -k" />
+    <command name="anonymous_shell"   options="cov-build -e emit -o output" />
 
     <command name="anonymous_shell"   options="tar czvf project.tgz README emit output" />
 
