@@ -36,7 +36,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
     <command name="file_manipulation" options="type=create file=README output='Johnny Willemsen\njwillemsen@remedy.nl\nACE+TAO+CIAO+DAnCE\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\n}\n'" />
-    <command name="file_manipulation" options="type=create file=rsmailfile output='v2;ACE/TAO/CIAO/DAnCE;build;jwillemsen@remedy.nl;http://buildlogs.theaceorb.nl/fc14_coverity/project.tgz'" />
+    <command name="file_manipulation" options="type=create file=rsmailfile output='v2;ACE/TAO/CIAO/DAnCE;build;jwillemsen@remedy.nl;http://buildlogs.theaceorb.nl/fc14_coverity/project.tgz\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
