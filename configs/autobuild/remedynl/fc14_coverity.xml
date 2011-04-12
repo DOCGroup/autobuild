@@ -32,6 +32,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
     <command name="file_manipulation" options="type=create file=README output='Johnny Willemsen\njwillemsen@remedy.nl\ACE+TAO+CIAO+DAnCE'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\n}\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -41,13 +42,11 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="make"              options="-C ace -k realclean find=*akefile" />
+    <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
+    <command name="generate_workspace" options="ACE_Host.mwc -type gnuautobuild" />
 
-    <command name="make"              options="cov-build -e emit -o output -C ace -k" />
-
-    <command name="anonymous_shell"             options="killall dance_locality_manager" />
+    <command name="make"              options="cov-build -e emit -o output -k" />
 
     <command name="anonymous_shell"             options="tar czvf project.tgz README emit output" />
 
