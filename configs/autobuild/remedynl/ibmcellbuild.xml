@@ -10,7 +10,7 @@
         <environment name="LD_LIBRARY_PATH"   value="/root/ACE/host/ACE_wrappers/lib:/usr/local/lib:/build/ndds.4.5d/lib/cell64Linux2.6gcc4.5.1" />
         <environment name="NDDSHOME"          value="/build/ndds.4.5d" />
         <environment name="NDDSARCHITECTURE"  value="cell64Linux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="32"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="26"/>
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
@@ -57,7 +57,7 @@
 
     <command name="make"              options="-k -j 20" />
 
-    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=32'"/>
+    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=26'"/>
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify clean index" />

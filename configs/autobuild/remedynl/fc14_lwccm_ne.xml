@@ -9,7 +9,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d/lib/x64Linux2.6gcc4.3.2/:" type="prefix"/>
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.3.2" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="47"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="27"/>
 
         <variable name="root"     value="/home/build/ACE/lwccm_ne/" />
         <variable name="log_file" value="build.txt" />

@@ -19,7 +19,7 @@
         <environment name="PATH"        value="T:\\RTI\\ndds.4.5b.rev01\\lib\\i86Win32VS2005;" type="prefix" />
         <environment name="NDDSHOME"    value="T:\\RTI\\ndds.4.5b.rev01" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2005" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="31"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="36"/>
 
         <variable name="configs"  value="Win32 VC8 Exceptions SSL XERCES" />
         <variable name="root"     value="C:\\ACE\\VC8\\" />

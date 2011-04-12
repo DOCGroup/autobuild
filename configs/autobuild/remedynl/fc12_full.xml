@@ -10,7 +10,7 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/usr/local/lib:/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1:"/>
         <environment name="NDDSHOME" value="/opt/rtidds45dctu" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="45"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="24"/>
 
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>

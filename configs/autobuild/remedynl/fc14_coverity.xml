@@ -10,7 +10,7 @@
         <environment name="PATH" value="/home/build/cov-sbi-linux64-5.2.1.hotfix/bin:" type="prefix"/>
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.1.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="30"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="35"/>
 
         <variable name="root"     value="/home/build/ACE/coverity/" />
         <variable name="log_file" value="build.txt" />
