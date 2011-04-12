@@ -70,7 +70,7 @@
     <command name="setenv"            options="ACE_ROOT=/build/ACE/xampler/gcc/ACE_wrappers" />
     <command name="setenv"            options="TAO_ROOT=/build/ACE/xampler/gcc/ACE_wrappers/TAO" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib" />
-    <command name="anonymous_shell"   options="cd /build/ACE/xampler/gcc/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean=5 -C {} \;" />
+    <command name="anonymous_shell"   options="cd /build/ACE/xampler/gcc/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make clean -C {} \;" />
     <command name="anonymous_shell"   options="cd /build/ACE/xampler/gcc/Xampler/C++/_Suites ; find . -type d -name TAO_1.7.X_Linux_GCC -exec make -C {} \;" />
 
     <command name="anonymous_shell"   options="rm -rf /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/_Suites" />
