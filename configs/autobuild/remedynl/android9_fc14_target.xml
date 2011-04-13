@@ -56,9 +56,7 @@
   <command name="generate_workspace" options="ACE_TAO.mwc -type gnuace" />
   <!--command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" /-->
 
-  <command name="make"              options="-C ace -k" />
-  <command name="make"              options="-C tests GNUmakefile.Test_Output -k" />
-  <command name="make"              options="-C tests GNUmakefile.OS_Test -k" />
+  <command name="make"              options="-k" />
 
   <!--command name="anonymous_shell"   options="killall emulator" /-->
 
