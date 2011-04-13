@@ -1,0 +1,64 @@
+<!-- $Id$ -->
+<autobuild>
+  <configuration>
+    <environment name="ACE_ROOT"        value="/home/build/ACE/target/ACE_wrappers"/>
+    <environment name="TAO_ROOT"        value="/home/build/ACE/target/ACE_wrappers/TAO"/>
+    <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers"/>
+    <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/home/build/ACE/target/ACE_wrappers/lib" type="prefix"/>
+    <environment name="CROSS_COMPILE" value="arm-linux-androideabi-"/>
+
+    <environment name="ANDROID_SDK_ROOT" value="/home/build/android/android-sdk-linux_x86"/>
+    <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/home/build/android/android-8-ndk-toolchain"/>
+    <!--environment name="ANDROID_CREATE_AVD_OPTIONS" value="-c 1024M -t 1"/-->
+    <environment name="ANDROID_FS_ROOT" value="/cache" />
+    <environment name="ANDROID_AVD_OPTIONS" value="-noaudio -no-window -wipe-data"/>
+    <environment name="ANDROID_AVD_NAME" value="Android-8"/>
+    <!--environment name="ACE_RUN_VX_TGT_REBOOT" value="0"/-->
+
+    <environment name="PATH" value="/home/build/android/android-8-ndk-toolchain/bin" type="prefix"/>
+
+    <variable name="root"     value="/home/build/ACE/target/"/>
+    <variable name="log_file" value="build.txt"/>
+    <variable name="log_root" value="/home/build/ACE/target/"/>
+    <variable name="configs"  value="Exceptions STATIC NOXERCES ANDROID"/>
+
+    <environment name="DOC_TEST_1"    value="DOC_TEST_1"/>
+    <environment name="DOC_TEST_1_OS" value="ANDROID" />
+    <environment name="ACE_TEST_VERBOSE" value="1" />
+  </configuration>
+
+  <command name="status"            options="on" />
+  <command name="process_listener"  options="localhost:32002" />
+  <command name="log"               options="on" />
+
+  <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/branches/RemedyWorkSet ." />
+
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-android.h\x22\n'"/>
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=0\ndebug=1\nno_hidden_visibility=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" />
+
+  <command name="print_os_version" />
+  <command name="print_env_vars" />
+  <!--command name="check_compiler" options="ccpentium" /-->
+  <command name="print_ace_config" />
+  <command name="print_make_version" />
+  <command name="print_perl_version" />
+
+  <command name="make"              options="-k realclean find=*akefile" />
+  <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+  <command name="generate_workspace" options="ACE_TAO.mwc -type gnuautobuild" />
+
+  <command name="make"              options="-k" />
+
+  <command name="anonymous_shell"   options="killall emulator" />
+
+  <command name="auto_run_tests"    options=" -a"/>
+
+  <command name="anonymous_shell"   options="killall emulator" />
+  <command name="log"               options="off"/>
+  <command name="process_logs"      options="clean=5 move prettify index" />
+  <command name="status"            options="off"/>
+  <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ /mnt/Buildlogs/android8_fc14_target" />
+</autobuild>
