@@ -6,7 +6,6 @@
         <environment name="CIAO_ROOT"    value="/root/ACE/hoststatic/ACE_wrappers/TAO/CIAO"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/hoststatic/ACE_wrappers/lib" />
         <environment name="PATH"         value="/usr/bin" type="prefix"/>
-        <environment name="RSYNC_RSH"       value="/usr/bin/ssh" />
 
         <variable name="root"     value="/root/ACE/hoststatic/" />
         <variable name="log_file" value="build.txt" />
@@ -46,6 +45,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler_host" />
+    <command name="shell"             options="rsync -e "/usr/bin/ssh -i /root/.ssh/id_dsa" --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_xampler_host" />
 </autobuild>
 
