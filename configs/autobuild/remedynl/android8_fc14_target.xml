@@ -31,7 +31,7 @@
   <command name="process_listener"  options="localhost:32002" />
   <command name="log"               options="on" />
 
-  <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/branches/RemedyWorkSet ." />
+  <command name="svn"               options="co http://atcmirror.remedy.nl/repo/local/atcrepo/branches/AndroidSet ." />
 
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-android.h\x22\n'"/>
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=0\ndebug=1\nno_hidden_visibility=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
