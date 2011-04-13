@@ -34,7 +34,7 @@
   <command name="svn"               options="co http://atcmirror.remedy.nl/repo/local/atcrepo/branches/AndroidSet ." />
 
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DEFAULT_TEMP_DIR \"/data/tmp\"\n#include \x22ace/config-android.h\x22\n'"/>
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=0\ndebug=1\nno_hidden_visibility=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
   <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" /-->
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" />
