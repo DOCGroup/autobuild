@@ -58,6 +58,8 @@
 
     <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=26'"/>
 
+    <command name="anonymous_shell"   options="ssh snalinux5 killall dance_locality_manager" />
+
     <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
