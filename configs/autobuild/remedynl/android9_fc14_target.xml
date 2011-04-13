@@ -55,16 +55,16 @@
   <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
   <command name="generate_workspace" options="ACE_TAO.mwc -type gnuace" />
-  <!--command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" /-->
+  <command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" />
 
   <command name="make"              options="-k" />
 
-  <!--command name="anonymous_shell"   options="killall emulator" /-->
+  <command name="anonymous_shell"   options="killall emulator" />
 
   <!-- No tests since these will hang infinite due to linker problems, due to changes on trunk -->
-  <!--command name="auto_run_tests"    options=" -a"/-->
+  <command name="auto_run_tests"    options=" -a"/>
 
-  <!--command name="anonymous_shell"   options="killall emulator" /-->
+  <command name="anonymous_shell"   options="killall emulator" />
 
   <command name="log"               options="off"/>
   <command name="process_logs"      options="clean=100 move prettify index" />
