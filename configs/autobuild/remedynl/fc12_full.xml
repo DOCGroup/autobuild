@@ -8,25 +8,24 @@
         <environment name="DANCE_ROOT"      value="/exports/x86_64-OE/home/root/ACE/build/ACE_wrappers/TAO/DAnCE"/>
         <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/usr/local/lib:/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1:"/>
-        <environment name="NDDSHOME" value="/opt/rtidds45dctu" />
+        <environment name="NDDSHOME"        value="/opt/rtidds45dctu" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="24"/>
 
-        <environment name="SSL_ROOT"          value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
-        <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
-        <environment name="XERCESCROOT"       value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
+        <environment name="SSL_ROOT"        value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
+        <environment name="ZLIB_ROOT"       value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
+        <environment name="XERCESCROOT"     value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="RSYNC_RSH"       value="/usr/bin/ssh" />
 
 
 
-       <variable name="root"     value="/exports/x86_64-OE/home/root/ACE/build/" />
-       <variable name="remote_root"  value="/home/root/ACE/build/ACE_wrappers" />
-       <!--variable name="configs"  value="Linux Exceptions ZLIB NDDS XERCES" /-->
-        <variable name="remote_libpath"  value="/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1" />
-        <variable name="remote_shell" value="ssh root@tgtctu.remedy.nl" />
-        <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="/exports/x86_64-OE/home/root/ACE/build/" />
-        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT" />
+        <variable name="root"               value="/exports/x86_64-OE/home/root/ACE/build/" />
+        <variable name="remote_root"        value="/home/root/ACE/build/ACE_wrappers" />
+        <variable name="remote_libpath"     value="/opt/rtidds45dctu/lib/x64Linux2.6gcc4.5.1" />
+        <variable name="remote_shell"       value="ssh root@tgtctu.remedy.nl" />
+        <variable name="log_file"           value="build.txt" />
+        <variable name="log_root"           value="/exports/x86_64-OE/home/root/ACE/build/" />
+        <variable name="configs"            value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT" />
 
 
     </configuration>
@@ -63,10 +62,10 @@
     <command name="make"              options="-k -j 2" />
 
     <!--command name="auto_run_remote_tests"    options=" -a -o -t -C" /-->
-     <command name="auto_run_remote_tests"   options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=45'" />
+     <command name="auto_run_remote_tests"   options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=24'" />
 
 
-    <command name="anonymous_shell"             options="killall dance_locality_manager" />
+    <command name="anonymous_shell"   options="ssh root@tgtctu killall dance_locality_manager" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
