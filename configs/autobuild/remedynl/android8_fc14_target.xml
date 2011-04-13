@@ -10,7 +10,7 @@
     <environment name="ANDROID_SDK_ROOT" value="/home/build/android/android-sdk-linux_x86"/>
     <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/home/build/android/android-8-ndk-toolchain"/>
     <!--environment name="ANDROID_CREATE_AVD_OPTIONS" value="-c 1024M -t 1"/-->
-    <environment name="ANDROID_FS_ROOT" value="/cache" />
+    <environment name="ANDROID_FS_ROOT" value="/data" />
     <environment name="ANDROID_AVD_OPTIONS" value="-noaudio -no-window -wipe-data"/>
     <environment name="ANDROID_AVD_NAME" value="Android-8"/>
     <!--environment name="ACE_RUN_VX_TGT_REBOOT" value="0"/-->
@@ -36,11 +36,12 @@
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-android.h\x22\n'"/>
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=0\ndebug=1\nno_hidden_visibility=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" />
+  <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" /-->
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" />
 
   <command name="print_os_version" />
   <command name="print_env_vars" />
-  <!--command name="check_compiler" options="ccpentium" /-->
+  <command name="check_compiler" options="arm-linux-androideabi-g++" />
   <command name="print_ace_config" />
   <command name="print_make_version" />
   <command name="print_perl_version" />
@@ -49,6 +50,7 @@
   <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
   <command name="generate_workspace" options="ACE_TAO.mwc -type gnuautobuild" />
+  <command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" />
 
   <command name="make"              options="-k" />
 
@@ -58,7 +60,7 @@
 
   <command name="anonymous_shell"   options="killall emulator" />
   <command name="log"               options="off"/>
-  <command name="process_logs"      options="clean=5 move prettify index" />
+  <command name="process_logs"      options="clean=30 move prettify index" />
   <command name="status"            options="off"/>
   <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ /mnt/Buildlogs/android8_fc14_target" />
 </autobuild>

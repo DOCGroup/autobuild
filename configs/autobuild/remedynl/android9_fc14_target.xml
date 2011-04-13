@@ -54,7 +54,7 @@
   <command name="make"              options="-k realclean find=*akefile" />
   <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-  <command name="generate_workspace" options="ACE_TAO.mwc -type gnuace" />
+  <command name="generate_workspace" options="ACE_TAO.mwc -type gnuautobuild" />
   <command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" />
 
   <command name="make"              options="-k" />
