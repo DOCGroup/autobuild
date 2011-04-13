@@ -79,7 +79,7 @@
     <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib\n'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib" />
 
-    <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 \x22localhost -i ~/.ssh/id_rsa\x22 /build/ACE/xampler/gcc.sh\\\x22\x22" />
+    <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/ ; sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 \\\x22localhost -i ~/.ssh/id_rsa\\\x22 /build/ACE/xampler/gcc.sh\\\x22\x22" />
 
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/Avenger/_Templt/Template-Display/Results-One/_Result" />
 
