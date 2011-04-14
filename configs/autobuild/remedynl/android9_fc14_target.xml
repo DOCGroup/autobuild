@@ -22,11 +22,11 @@
     <variable name="log_root" value="/home/build/ACE/target/"/>
     <variable name="configs"  value="Exceptions STATIC NOXERCES ANDROID"/>
 
-    <environment name="DOC_TEST_1"    value="DOC_TEST_1"/>
-    <environment name="DOC_TEST_1_OS" value="ANDROID" />
-    <environment name="ACE_TEST_VERBOSE" value="1" />
-    <environment name="DOC_TEST_2" value="DOC_TEST_2" />
-    <environment name="DOC_TEST_2_OS" value="local" />
+    <environment name="DOC_TEST_1"          value="DOC_TEST_1"/>
+    <environment name="DOC_TEST_1_OS"       value="ANDROID" />
+    <environment name="ACE_TEST_VERBOSE"    value="1" />
+    <environment name="DOC_TEST_2"          value="DOC_TEST_2" />
+    <environment name="DOC_TEST_2_OS"       value="local" />
     <environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/target/ACE_wrappers" />
   </configuration>
 
@@ -38,11 +38,11 @@
 
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/data/tmp\"\n#include \x22ace/config-android.h\x22\n'"/>
   <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\"(%P|%t) Starting %s test at %D\"), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\"(%P|%t) Ending %s test t%D\"),program));\n#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/cache/tmp\"\n#include \x22ace/config-android.h\x22\n'"/-->
-  <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/cache/tmp\"\n#include \x22ace/config-android.h\x22\n'"/-->
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
-  <!-- command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" /-->
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\nTAO/tests\n}\nTAO/tests/Hello\n}\n'" />
+  <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" /-->
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO/bin/hello.lst output='TAO/tests/Hello/run_test.pl:\n'" />
 
   <command name="print_os_version" />
   <command name="print_env_vars" />
@@ -62,7 +62,7 @@
   <command name="anonymous_shell"   options="killall emulator" />
 
   <!-- No tests since these will hang infinite due to linker problems, due to changes on trunk -->
-  <command name="auto_run_tests"    options=" -a"/>
+  <command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/>
 
   <command name="anonymous_shell"   options="killall emulator" />
 
