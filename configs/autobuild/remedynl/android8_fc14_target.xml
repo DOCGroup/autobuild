@@ -52,7 +52,6 @@
   <command name="make"              options="-k realclean find=*akefile" />
   <command name="shell"             options="find . -name 'GNUmakefile*' -exec rm -rf '{}' ';'" />
   <command name="shell"             options="find . -name '.depend*' -exec rm -rf '{}' ';'" />
-  <command name="shell"             options="find . -name '.shobj*' -exec rm -rf '{}' ';'" />
   <command name="shell"             options="find . -name '*.o' -exec rm -rf '{}' ';'" />
   <command name="shell"             options="find . -name '*.a' -exec rm -rf '{}' ';'" />
   <command name="shell"             options="find . -name '*.so' -exec rm -rf '{}' ';'" />
