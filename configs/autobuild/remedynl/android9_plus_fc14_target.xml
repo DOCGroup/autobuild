@@ -11,7 +11,7 @@
     <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/home/build/android/android-9-ndk-toolchain"/>
     <!--environment name="ANDROID_CREATE_AVD_OPTIONS" value="-c 1024M -t 1"/-->
     <environment name="ANDROID_FS_ROOT" value="/data" />
-    <environment name="ANDROID_AVD_OPTIONS" value="-noaudio -no-window -wipe-data"/>
+    <environment name="ANDROID_AVD_OPTIONS" value="-noaudio -no-window -wipe-data -partition-size 1024"/>
     <environment name="ANDROID_AVD_NAME" value="Android-9"/>
     <!--environment name="ACE_RUN_VX_TGT_REBOOT" value="0"/-->
 
