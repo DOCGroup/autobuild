@@ -68,7 +68,6 @@
 
   <command name="anonymous_shell"   options="killall emulator" />
 
-  <!-- No tests since these will hang infinite due to linker problems, due to changes on trunk -->
   <command name="auto_run_tests"    options=" -a"/>
 
   <command name="anonymous_shell"   options="killall emulator" />

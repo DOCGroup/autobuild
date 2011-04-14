@@ -28,15 +28,13 @@
     <environment name="DOC_TEST_2_OS"       value="ANDROID" />
 
     <environment name="ACE_TEST_VERBOSE"    value="1" />
-    <!--environment name="DOC_TEST_2_ACE_ROOT" value="/home/build/ACE/target/ACE_wrappers" /-->
   </configuration>
 
   <command name="status"            options="on" />
   <command name="process_listener"  options="localhost:32002" />
   <command name="log"               options="on" />
 
-  <!--command name="svn"               options="co http://atcmirror.remedy.nl/repo/local/atcrepo/branches/AndroidSet ." /-->
-  <command name="svn"               options="up" />
+ <command name="svn"               options="co http://atcmirror.remedy.nl/repo/local/atcrepo/branches/AndroidSet ." />
 
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/data/tmp\"\n#include \x22ace/config-android.h\x22\n'"/>
   <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\"(%P|%t) Starting %s test at %D\"), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\"(%P|%t) Ending %s test t%D\"),program));\n#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/cache/tmp\"\n#include \x22ace/config-android.h\x22\n'"/-->
@@ -56,24 +54,23 @@
   <!-- clean up all old stuff, for all security. No left overs from previous builds -->
   <!-- Especially when switching between static and shared object build, nothing -->
   <!-- should be left on the system -->
-  <!--command name="make"              options="-k realclean find=*akefile" /-->
-  <!--command name="shell"             options="find . -name 'GNUmakefile*' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '.depend*' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '*.o' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '*.a' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '*.so' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '*.so.*' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '*.cxx' -exec rm -rf '{}' ';'" /-->
-  <!--command name="shell"             options="find . -name '*.hxx' -exec rm -rf '{}' ';'" /-->
+  <command name="make"              options="-k realclean find=*akefile" />
+  <command name="shell"             options="find . -name 'GNUmakefile*' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '.depend*' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '*.o' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '*.a' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '*.so' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '*.so.*' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '*.cxx' -exec rm -rf '{}' ';'" />
+  <command name="shell"             options="find . -name '*.hxx' -exec rm -rf '{}' ';'" />
 
-  <!--command name="generate_workspace" options="ACE_TAO.mwc -type gnuautobuild" /-->
-  <!--command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" /-->
+  <command name="generate_workspace" options="ACE_TAO.mwc -type gnuautobuild" />
+  <command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" />
 
-  <!--command name="make"              options="-k" /-->
+  <command name="make"              options="-k" />
 
   <command name="anonymous_shell"   options="killall emulator" />
 
-  <!-- No tests since these will hang infinite due to linker problems, due to changes on trunk -->
   <command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/>
 
   <command name="anonymous_shell"   options="killall emulator" />
