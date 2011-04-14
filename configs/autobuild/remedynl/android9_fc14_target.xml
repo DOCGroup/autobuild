@@ -42,7 +42,7 @@
   <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_START_TEST(NAME) const ACE_TCHAR *program = NAME; ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\"(%P|%t) Starting %s test at %D\"), NAME))\n#define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT (\"(%P|%t) Ending %s test t%D\"),program));\n#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/cache/tmp\"\n#include \x22ace/config-android.h\x22\n'"/-->
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\napps/gperf/src\nprotocols\nTAO/tao\nTAO/TAO_IDL\nTAO/tests/Hello\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\nTAO/tests\n}\n}\n'" />
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\napps/gperf/src\nprotocols\nTAO/tao\nTAO/TAO_IDL\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\nTAO/tests\n}\nTAO/tests/Hello\n}\n'" />
   <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" /-->
   <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO/bin/hello.lst output='TAO/tests/Hello/run_test.pl:\n'" />
 
