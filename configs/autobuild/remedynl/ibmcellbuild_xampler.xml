@@ -76,7 +76,7 @@
     <command name="anonymous_shell"   options="ln -s /build/ACE/xampler/gcc/Xampler/C++/_Suites /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/_Suites" />
     <command name="anonymous_shell"   options="mkdir -p /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute/_Report" />
 
-    <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib:$LD_LIBRARY_PATH\n'" />
+    <command name="file_manipulation" options="type=create file=/build/ACE/xampler/gcc.sh output='export LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib:$LD_LIBRARY_PATH\nSSH_OPTIONS=\x22-i /home/root/.ssh/id_rsa\x22'" />
     <command name="setenv"            options="LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib" />
 
     <command name="anonymous_shell"   options="ssh snalinux6 \x22$SHELL --login -c \\\x22cd /build/ACE/xampler/gcc/Avenger/_Templt/Template-Execute && SSH_OPTIONS='-i /home/root/.ssh/id_rsa' LD_LIBRARY_PATH=/build/ACE/xampler/gcc/ACE_wrappers/lib:\\$LD_LIBRARY_PATH sh /build/ACE/xampler/gcc/Avenger/_Ampler/Execute.sh 1 localhost /build/ACE/xampler/gcc.sh\\\x22\x22" />
