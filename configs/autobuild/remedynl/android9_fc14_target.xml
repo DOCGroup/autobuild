@@ -44,8 +44,8 @@
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=0\noptimize=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" />
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" />
-  <!--command name="file_manipulation" options="type=create file=ACE_wrappers/TAO/bin/hello.lst output='TAO/tests/Hello/run_test.pl:\n'" /-->
+  <!--command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nace\ntests\n}\n'" /-->
+  <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO/bin/hello.lst output='TAO/tests/Hello/run_test.pl:\n'" />
 
   <command name="print_os_version" />
   <command name="print_env_vars" />
@@ -74,8 +74,8 @@
 
   <command name="anonymous_shell"   options="killall emulator" />
 
-  <!--command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/-->
-  <command name="auto_run_tests"    options=" -a"/>
+  <command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/>
+  <!--command name="auto_run_tests"    options=" -a"/-->
 
   <command name="anonymous_shell"   options="killall emulator" />
 
