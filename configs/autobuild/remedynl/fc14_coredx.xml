@@ -9,7 +9,7 @@
 
         <environment name="COREDX_TOP" value="/home/build/coredx-3.2.0_p5-Evaluation"/>
         <environment name="COREDX_HOST" value="Linux_2.6_x86_64_gcc43"/>
-        <environment name="TWINOAKS_LICENSE_FILE value="/home/build/Willemsen_Remedy_CoreDXeval2.lic"/>
+        <environment name="TWINOAKS_LICENSE_FILE" value="/home/build/Willemsen_Remedy_CoreDXeval2.lic"/>
         <environment name="COREDX_TARGET" value="Linux_2.6_x86_64_gcc43"/>
 
         <variable name="root"     value="/home/build/ACE/coredx/" />
