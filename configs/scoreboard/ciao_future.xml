@@ -9,10 +9,10 @@ This is the CIAO virtual scoreboard for future platforms/development.
 <group>
 <name>Future Platforms</name>
     <build>
-      <name>FC8_OpenDDS</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/OpenDDS</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+      <name>FC14_OpenDDS</name>
+        <url>http://buildlogs.theaceorb.nl/fc14_opendds/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
 </group>
 </scoreboard>
