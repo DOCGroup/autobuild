@@ -6,10 +6,10 @@
         <environment name="CIAO_ROOT"        value="/home/build/ACE/coverity/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/home/build/ACE/coverity/ACE_wrappers/TAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/coverity/ACE_wrappers/lib:/usr/local/lib:" />
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d/lib/x64Linux2.6gcc4.1.1/:" type="prefix"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
         <environment name="PATH" value="/home/build/cov-sbi-linux64-5.2.1.hotfix/bin:" type="prefix"/>
-        <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d" />
-        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.1.1" />
+        <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
+        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="35"/>
         <environment name="MAILTO" value="jwillemsen@remedy.nl"/>
         <environment name="MAIL" value="mail -S smtp=zimbra.remedy.nl"/>
