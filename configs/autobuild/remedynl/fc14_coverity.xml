@@ -58,5 +58,5 @@
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /emit/ --exclude /output/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc14_coverity" />
 
-    <!--command name="anonymous_shell"   options="mail -r jwillemsen@remedy.nl -s \x22Coverity\x22 build@submit.scan.coverity.com < rsmailfile" /-->
+    <command name="anonymous_shell"   options="mail -r jwillemsen@remedy.nl -s \x22Coverity\x22 build@submit.scan.coverity.com < rsmailfile" />
 </autobuild>
