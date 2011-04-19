@@ -33,7 +33,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\nccm_lw=1\nccm_noevent=1\n'" />
     <command name="file_manipulation" options="type=create file=rsmailfile output='v2;ACE+TAO+CIAO+DAnCE;spUCR38h;jwillemsen@remedy.nl;http://buildlogs.theaceorb.nl/fc14_coverity/project.tgz\n'" />
     <command name="file_manipulation" options="type=create file=README output='Johnny Willemsen\njwillemsen@remedy.nl\nACE+TAO+CIAO+DAnCE\n'" />
 
@@ -58,5 +58,5 @@
     <command name="status"            options="off" />
     <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /emit/ --exclude /output/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc14_coverity" />
 
-    <command name="anonymous_shell"   options="mail -r jwillemsen@remedy.nl -s \x22Coverity\x22 build@submit.scan.coverity.com < rsmailfile" />
+    <!--command name="anonymous_shell"   options="mail -r jwillemsen@remedy.nl -s \x22Coverity\x22 build@submit.scan.coverity.com < rsmailfile" /-->
 </autobuild>
