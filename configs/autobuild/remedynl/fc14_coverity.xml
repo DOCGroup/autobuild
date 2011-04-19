@@ -47,7 +47,7 @@
 
     <command name="make"              options="-C TAO/CIAO -k realclean find=*akefile" />
 
-    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_DAnCE.mwc -type gnuautobuild" />
 
     <command name="anonymous_shell"   options="cov-build -e emit -o output make -C ACE_wrappers/TAO/CIAO" />
 
