@@ -34,7 +34,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\ndds4ccm_ndds=1\nccm_lw=1\nccm_noevent=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\n}\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
     <command name="file_manipulation" options="type=create file=rsmailfile output='v2;ACE+TAO+CIAO+DAnCE;spUCR38h;jwillemsen@remedy.nl;http://buildlogs.theaceorb.nl/fc14_coverity/project.tgz\n'" />
     <command name="file_manipulation" options="type=create file=README output='Johnny Willemsen\njwillemsen@remedy.nl\nACE+TAO+CIAO+DAnCE\n'" />
 
