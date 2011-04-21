@@ -60,6 +60,8 @@
     <command name="log"               options="append" />
     <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=25'"/>
 
+    <command name="anonymous_shell"   options="ssh root@tgtctu killall dance_locality_manager" />
+
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
