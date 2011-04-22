@@ -1,3 +1,25 @@
+Fri Apr 22 14:50:11 UTC 2011  Steve Huston  <shuston@billy.mro.riverace.com>
+
+        * configs/autobuild/riverace/billy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/billy_dev_studio10-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_autoconf_dev_va6_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_gcc3_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6-64_debug.xml:
+        * configs/autobuild/riverace/cuddy_dev_va6_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug.xml:
+        * configs/autobuild/riverace/jane_dev_debug_wchar.xml:
+        * configs/autobuild/riverace/jane_dev_static_release.xml:
+        * configs/autobuild/riverace/lily_dev_vc8_64_debug.xml
+        * configs/autobuild/riverace/lily_dev_vc8_debug.xml:
+        * configs/autobuild/riverace/lily_dev_vc9_debug.xml:
+        * configs/autobuild/riverace/timmy-xpvc71_dev_vc71_tao_host.xml:
+        * configs/autobuild/riverace/timmy_dev_debug.xml:
+          Removed old builds that are no longer run.
+
+        * configs/autobuild/riverace/billy_dev_xlc11-64_debug.xml:
+        * configs/scoreboard/ace.xml:
+          New build, AIX 7.1, XL C++ 11.
+
 Fri Apr  8 13:40:02 UTC 2011  Adam Mitz  <mitza@ociweb.com>
 
         * command/check_compiler.pm:
