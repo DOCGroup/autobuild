@@ -25,7 +25,7 @@ all the OS/platform combinations on which ACE is tested everyday.
         <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-        <name>AIX_1.1_XLC11-64_Debug</name>
+        <name>AIX_7.1_XLC11-64_Debug</name>
         <url>http://acebuilds.riverace.com/billy/dev/xlc11-64_debug</url>
         <red>36</red>
         <build_sponsor>Riverace</build_sponsor>
