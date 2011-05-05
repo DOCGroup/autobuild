@@ -310,7 +310,7 @@ sub copy_log ()
     }
 
     foreach my $report_dir (@existing_reports) {
-        File::Path::remove_tree($report_dir);
+        File::Path::rmtree($report_dir);
     }
 
     return 1;
