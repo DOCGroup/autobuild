@@ -17,7 +17,7 @@
     <environment name="BOOST_STATIC_LIB_PREFIX" value="lib" />
     <environment name="UDM_PATH"     value="C:\\Program Files (x86)\\ISIS\\UDM" />
     <environment name="UDM_VERSION"    value="UDMDLL_3_2" />
-    <environment name="GME_VERSION"    value="10_2_9" />
+    <environment name="GME_VERSION"    value="10_8_18" />
     <environment name="COSMIC_ROOT"  value="C:\\bczar\\CoSMIC_Debug_Tests\\CoSMIC" />
     <environment name="GAME_ROOT"  value="C:\\bczar\\CoSMIC_Debug_Tests\\CoSMIC\\Utils\\GAME" />
     <environment name="ZLIB_ROOT" value="C:\\Libraries\\zlib-1.2.3-vc9" />

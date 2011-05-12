@@ -1,3 +1,11 @@
+Thu May 12 20:04:27 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_debug.xml:
+        * configs/autobuild/trian/trian_cosmic_debug_tests.xml:
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Updated to GME 10.8.18.
+
 Wed May 11 19:31:22 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_debug.xml:
