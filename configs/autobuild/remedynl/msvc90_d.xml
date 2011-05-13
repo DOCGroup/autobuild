@@ -20,6 +20,9 @@
         <environment name="LIB"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\lib;" type="prefix" />
         <environment name="LIBPATH"     value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;" type="prefix" />
         <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\bin;" type="prefix" />
+        <environment name="QTDIR"       value="C:\\Qt\4.7.3\" />
+        <environment name="QT_CFG"      value="4" />
+        <environment name="PATH"        value="C:\\Qt\4.7.3\bin" />
 
         <variable name="configs"  value="Win32 VC90 Exceptions NDDS XERCES" />
         <variable name="root"     value="C:\\ACE\\VC90\\" />
@@ -42,7 +45,7 @@
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\nqt4=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
