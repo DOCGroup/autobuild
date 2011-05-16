@@ -6,6 +6,7 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/doxygen/ACE_wrappers/TAO"/>
 
         <environment name="PATH"            value="/usr/local/bin:" type="prefix" />
+        <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable name="root"     value="/home/build/ACE/doxygen" />
         <variable name="log_file" value="build.txt" />

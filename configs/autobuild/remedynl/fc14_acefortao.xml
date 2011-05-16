@@ -8,6 +8,7 @@
         <environment name="DANCE_ROOT"        value="/home/build/ACE/acefortao/ACE_wrappers/TAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/acefortao/ACE_wrappers/lib" />
         <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable name="root"     value="/home/build/ACE/acefortao/" />
         <variable name="log_file" value="build.txt" />
@@ -29,8 +30,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nace_for_tao = 1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nace_for_tao=1\nssl=0\nrwho=0\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nace_for_tao = 1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nace_for_tao=1\nssl=0\nrwho=0\nqt4=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

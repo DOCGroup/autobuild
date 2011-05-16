@@ -7,6 +7,8 @@
         <environment name="DANCE_ROOT"        value="/home/build/ACE/opendds/ACE_wrappers/TAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/opendds/ACE_wrappers/lib:/usr/local/lib:" />
         <environment name="DDS_ROOT" value="/home/build/ACE/opendds/ACE_wrappers/TAO/DDS" />
+        <environment name="QT4_SUFFIX"      value="-qt4" />
+
         <variable name="root"     value="/home/build/ACE/opendds/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/opendds/" />
@@ -22,8 +24,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_opendds=1\nssl=1\nzlib=1\ninline=0\nboost=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='dds_suppress_anys=0\nxerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_opendds=1\nccm_lw=1\nccm_noevent=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_opendds=1\nssl=1\nzlib=1\ninline=0\nboost=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='dds_suppress_anys=0\nxerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_opendds=1\nccm_lw=1\nccm_noevent=1\nqt4=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

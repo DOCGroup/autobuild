@@ -12,6 +12,7 @@
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="29"/>
+        <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --show-reachable=yes --trace-children=yes --suppressions="
                                                   join=""
@@ -37,8 +38,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='optimize=0\nvalgrind=1\nbuildbits=64\ninline=0\nssl=1\nzlib=1\nboost=1\ndds4ccm_ndds=1\nndds=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\nssl=1\ndds4ccm_ndds=1\nndds=1\nxerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='qt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\noptimize=0\nvalgrind=1\nbuildbits=64\ninline=0\nssl=1\nzlib=1\nboost=1\ndds4ccm_ndds=1\nndds=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nzlib=1\nssl=1\ndds4ccm_ndds=1\nndds=1\nxerces3=1\nqt4=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />

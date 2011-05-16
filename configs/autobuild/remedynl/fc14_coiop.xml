@@ -8,6 +8,7 @@
         <environment name="DANCE_ROOT"        value="/home/build/ACE/COIOP/ACE_wrappers/TAO/DAnCE"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/COIOP/ACE_wrappers/lib" />
         <environment name="RSYNC_RSH"       value="ssh" />
+        <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable name="root"     value="/home/build/ACE/COIOP/" />
         <variable name="log_file" value="build.txt" />
@@ -29,8 +30,8 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nprobe=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nqt4=1\n\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO_COIOP.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\nTAO/tests/COIOP\n}\n'" />
 
     <command name="print_os_version" />
