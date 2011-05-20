@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on oci1444) was -->
-  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -environment "JAVA_HOME=c:\Program Files\Java\jdk1.6.0_18" -environment JAVA_PLATFORM=win32 -environment QTDIR=c:\\qt-everywhere-opensource-src-4.6.2 -environment QT_CFG=d4 -environment WIRETAP_VERSION=0.3.1 -environment GLIB_ROOT=c:\wireshark-win64-libs-1.2\gtk2 -environment WIRESHARK_SRC=c:\\wireshark-1.2 -environment JBOSS_HOME=c:\jboss-4.2.3.GA -environment ANT_HOME=c:\apache-ant-1.8.0 -environment VS100COMNTOOLS= -mpcopt "-value_template platforms=x64 -features wireshark=1,qt4=1,java=1" -outdir . -piggyback c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -->
+  <!-- C:\tao_builds\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -buildname doc_vc9_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc9 -creator mitza@ociweb.com -dds 1 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -environment "JAVA_HOME=c:\Program Files\Java\jdk1.6.0_18" -environment JAVA_PLATFORM=win32 -environment QTDIR=c:\\qt-everywhere-opensource-src-4.6.2 -environment QT_CFG=d4 -environment WIRETAP_VERSION=0.3.1 -environment GLIB_ROOT=c:\wireshark-win64-libs-1.2\gtk2 -environment WIRESHARK_SRC=c:\\wireshark-1.2 -environment JBOSS_HOME=c:\jboss-4.2.3.GA -environment ANT_HOME=c:\apache-ant-1.8.0 -environment VS100COMNTOOLS= -mpcopt "-value_template platforms=x64 -features wireshark=1,qt4=1,java=1" -outdir ..\..\autobuild\configs\autobuild\oci -piggyback c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc9_d1o0 -sandbox 1 -->
   <configuration>
     <environment name="ACE_ROOT"        value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc9_d1o0"/>
     <environment name="ANT_HOME"        value="c:\\apache-ant-1.8.0"/>
@@ -39,15 +39,18 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="check_compiler"     options="msvc"/>
-  <command name="generate_workspace" options="-type vc9 DDS.mwc -value_template platforms=x64 -features wireshark=1,qt4=1,java=1"/>
+  <command name="shell"              options="cd c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\tools\\modeling\\tests & for /d %x in (*) do del /q %x\\model\\*.mpc"/>
+  <command name="shell"              options="cd c:\\tao_builds\\taoadmin\\DDS\\build\\doc_vc9_d1o0\\tools\\modeling\\tests & perl setup.pl"/>
+  <command name="generate_workspace" options="-type vc9 DDS.mwc tools/modeling/tests/modeling_tests.mwc -value_template platforms=x64 -features wireshark=1,qt4=1,java=1"/>
 
   <!-- Build targets -->
   <command name="vc7make" options="/build \x22debug|x64\x22 ./DDS.sln"/>
+  <command name="vc7make" options="/build \x22debug|x64\x22 tools/modeling/tests/modeling_tests.sln"/>
 
   <!-- Post build -->
-  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl build  -Dmwc.features=wireshark=1,qt4=1,java=1 \x22-Dmwc.arguments=-value_template platforms=x64\x22"/>
-  <command name="auto_run_tests"  options="dir=. -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG -a -l java/tests/dcps_java_tests.lst"/>
-  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test "/>
+  <command name="shell"           options="perl java/build_scripts/jms_scoreboard.pl build  -Dmwc.features=wireshark=1,qt4=1,java=1 \x22-Dmwc.arguments=-value_template platforms=x64\x22"/>
+  <command name="auto_run_tests"  options="dir=. -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config Win32 -Config NO_LOADAVG -a -l java/tests/dcps_java_tests.lst -l tools/modeling/tests/modeling_tests.lst"/>
+  <command name="shell"           options="perl java/build_scripts/jms_scoreboard.pl test "/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
