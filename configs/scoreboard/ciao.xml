@@ -11,6 +11,12 @@
   <group>
     <name>Linux</name>
     <build>
+      <name>FC14_OpenDDS</name>
+        <url>http://buildlogs.theaceorb.nl/fc14_opendds/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>FC14_ICC12</name>
       <url>http://buildlogs.theaceorb.nl/fc14_icc12</url>
       <build_sponsor>Remedy IT</build_sponsor>
