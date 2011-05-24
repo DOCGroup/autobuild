@@ -1322,6 +1322,7 @@ sub Normal ($)
     if (defined $state && $state eq 'config') {
         $s =~ s/</&lt;/g;
         $s =~ s/>/&gt;/g;
+        $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
         print {$self->{FH}} "$s\n";
     }
 }
