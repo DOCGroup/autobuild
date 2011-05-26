@@ -22,14 +22,14 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/html/robots.txt output='User-agent: *\nDisallow: /\n'"/>
-    <command name="shell"             options="cp $HOME/favicon.ico ACE_wrappers/html" />
+    <command name="shell"             options="wget http://download.theaceorb.nl/favicon.ico -O ACE_wrappers/html/favicon.ico" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
     <command name="print_ace_config" />
     <command name="check_compiler" options="doxygen" />
 
-    <command name="shell" options="$HOME/ACE/autobuild/configs/autobuild/remedynl/fc14_doxygen.pl" />
+    <command name="shell" options="$HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_doxygen.pl" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
