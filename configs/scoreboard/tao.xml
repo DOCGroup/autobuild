@@ -12,7 +12,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
     <build>
       <name>FC15_ACE_FOR_TAO</name>
-      <url>http://buildlogs.theaceorb.nl/fc14_acefortao/</url>
+      <url>http://buildlogs.theaceorb.nl/fc15_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
