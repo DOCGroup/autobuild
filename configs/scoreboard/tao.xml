@@ -23,8 +23,8 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
      <build>
-       <name>FC14_CORBA_e_compact</name>
-       <url>http://buildlogs.theaceorb.nl/fc14_corbaec/</url>
+       <name>FC15_CORBA_e_compact</name>
+       <url>http://buildlogs.theaceorb.nl/fc15_corbaec/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -72,7 +72,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
      <build>
         <name>FC15_COIOP</name>
-        <url>http://buildlogs.theaceorb.nl/fc14_COIOP/</url>
+        <url>http://buildlogs.theaceorb.nl/fc15_COIOP/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
