@@ -44,5 +44,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc14_opendds" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_opendds" />
 </autobuild>
