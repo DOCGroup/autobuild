@@ -11,13 +11,13 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
   <name>Utility Builds</name>
   <build>
     <name>Linux_Fuzz</name>
-    <url>http://buildlogs.theaceorb.nl/fc14_64_fuzz</url>
+    <url>http://buildlogs.theaceorb.nl/fc15_fuzz</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
     <name>Doxygen</name>
-    <url>http://buildlogs.theaceorb.nl/fc14_doxygen</url>
+    <url>http://buildlogs.theaceorb.nl/fc15_doxygen</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>

@@ -11,7 +11,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Linux</name>
     <build>
-      <name>FC14_ACE_FOR_TAO</name>
+      <name>FC15_ACE_FOR_TAO</name>
       <url>http://buildlogs.theaceorb.nl/fc14_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -71,7 +71,7 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
-        <name>FC14_COIOP</name>
+        <name>FC15_COIOP</name>
         <url>http://buildlogs.theaceorb.nl/fc14_COIOP/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
