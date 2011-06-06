@@ -140,6 +140,12 @@ sub Run ($)
         print "\n";
     }
 
+    if(-x "/bin/df"){
+        print "<h3>Disk space information (df -H)</h3>\n";
+        system("/bin/df -H");
+    } else {
+
+    }
     if(-r "/proc/cpuinfo"){
         my $systeminfo = `cat /proc/cpuinfo` ;
 
