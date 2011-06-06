@@ -65,7 +65,7 @@ sub new
     return $self;
 }
 
-sub do_print ($) 
+sub do_print ($)
 {
     my $self = shift;
 
@@ -155,6 +155,11 @@ sub do_print ($)
         }
     }
 
+    if(-r "/bin/df"){
+        print "<h3>Disk space information (df -H)</h3>\n";
+        system("/bin/df -H");
+    }
+
     if(-r "/proc/cpuinfo"){
         my $systeminfo = `cat /proc/cpuinfo` ;
 
@@ -171,8 +176,8 @@ sub do_print ($)
 
     print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
           $self->delay_factor(), "\n";
-          
-    return 1;          
+
+    return 1;
 }
 
 sub filter_info {
@@ -232,16 +237,16 @@ sub Run ($)
     my $self = shift;
 
     my $remote_shell = main::GetVariable ('remote_shell');
-    
+
     main::PrintStatus ('Config', "print Remote OS Version - remote shell=$remote_shell" );
 
     open REMOTE_CMD, "| $remote_shell perl"
         or die "can't fork: $!";
-    
+
     print REMOTE_CMD $remote_script;
 
     close REMOTE_CMD; # or die "bad remote cmd: $! $?";
-    
+
     return 1;
 }
 
