@@ -30,6 +30,13 @@
 }
 
 {
+  <IIOP warning>
+  Memcheck:Addr8
+  fun:*
+  fun:*parse_string_i*
+}
+
+{
    <dlopen>
    Memcheck:Leak
    fun:calloc
@@ -94,7 +101,7 @@
 }
 
 {
-   <dlopen6
+   <dlopen6>
    Memcheck:Leak
    fun:malloc
    fun:_dl_new_object
@@ -213,21 +220,6 @@
   <ndds>
   Memcheck:Leak
   fun:*
-  fun:*register_type*
-}
-
-{
-  <ndds>
-  Memcheck:Leak
-  fun:*
-  fun:*get_instance*
-}
-
-
-{
-  <ndds>
-  Memcheck:Leak
-  fun:*
   fun:*_dl_scope_free*
 }
 
@@ -236,6 +228,20 @@
   Memcheck:Leak
   fun:*
   fun:*_dl_new_object*
+}
+
+{
+  <ndds>
+  Memcheck:Leak
+  fun:*
+  fun:*NDDSConfigLogger*get_instance*
+}
+
+{
+  <ndds>
+  Memcheck:Leak
+  fun:*
+  fun:*register_or_unregister_typeI*
 }
 
 {
