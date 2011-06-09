@@ -3,15 +3,7 @@
   <!-- /distcomp/nightly/BuildXML/buildxml.pl -autotest 0 -base /tao_builds/taoadmin/DDS -buildflags utility=1 -checkout "" -compiler fuzz -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -outdir . -piggyback /tao_builds/taoadmin/doc/build/doxygen_u1 -piggypeer 1 -supporting 0 -->
   <configuration>
     <environment name="ACE_ROOT"              value="/tao_builds/taoadmin/doc/build/doxygen_u1/ACE"/>
-    <environment name="CIAO_ROOT"             value="/tao_builds/taoadmin/doc/build/doxygen_u1/CIAO"/>
-    <environment name="CVSROOT"               value=":pserver:taoadmin@cvs.ociweb.com:/cvs"/>
-    <environment name="CVS_RSH"               value="ssh"/>
     <environment name="DDS_ROOT"              value="/tao_builds/taoadmin/DDS/build/fuzz_u1"/>
-    <environment name="LD_LIBRARY_PATH"       value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/fuzz_u1/lib:/tao_builds/taoadmin/doc/build/doxygen_u1/ACE/lib:"/>
-    <environment name="MPC_ROOT"              value="/home/taoadmin/MPC"/>
-    <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
-    <environment name="PATH"                  value="/tao_builds/taoadmin/DDS/build/fuzz_u1/bin:/tao_builds/taoadmin/doc/build/doxygen_u1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
-    <environment name="TAO_ROOT"              value="/tao_builds/taoadmin/doc/build/doxygen_u1/TAO"/>
     <variable    name="base"                  value="DDS"/>
     <variable    name="build_name"            value="fuzz_u1"/>
     <variable    name="creator"               value="mitza"/>
@@ -27,13 +19,13 @@
   <command name="log"                options="on"/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
-  <command name="file_manipulation"  options="type=create file=build/fuzz_u1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/doxygen_u1/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/build/doxygen_u1/CIAO\x22; export CIAO_ROOT\nCVSROOT=\x22:pserver:taoadmin@cvs.ociweb.com:/cvs\x22; export CVSROOT\nCVS_RSH=\x22ssh\x22; export CVS_RSH\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/fuzz_u1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/fuzz_u1/lib:/tao_builds/taoadmin/doc/build/doxygen_u1/ACE/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nOPENDDS_DCPS_TS_FLAGS=\x22 \x22; export OPENDDS_DCPS_TS_FLAGS\nPATH=\x22/tao_builds/taoadmin/DDS/build/fuzz_u1/bin:/tao_builds/taoadmin/doc/build/doxygen_u1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/build/doxygen_u1/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/fuzz_u1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/doxygen_u1/ACE\x22; export ACE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/fuzz_u1\x22; export DDS_ROOT\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
 
   <!-- Build targets -->
   <command name="shell" options="rm -rf build/fuzz_u1/dds_* build/fuzz_u1/tools/modeling/plugins"/>
-  <command name="fuzz" options="-t check_for_newline,check_for_tab,check_for_inline_in_cpp,check_for_improper_main_declaration,check_for_push_and_pop,check_for_changelog_errors,check_for_long_file_names,check_for_ORB_init,check_for_refcountservantbase,check_for_trailing_whitespace"/>
+  <command name="shell" options="cd build/fuzz_u1 ; tools/scripts/dds_fuzz.pl"/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
