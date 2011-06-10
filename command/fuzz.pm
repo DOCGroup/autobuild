@@ -78,7 +78,12 @@ sub Run ($)
         return 0;
     }
 
-    my $command = "perl $ENV{'ACE_ROOT'}/bin/fuzz.pl $options";
+    my $script = $ENV{'ACE_ROOT'} . '/bin/fuzz.pl';
+    if ($options =~ s/script='([^']*)'//) {
+      $script = $1;
+    }
+
+    my $command = "perl $script $options";
 
     print "Running: $command\n";
     system ($command);

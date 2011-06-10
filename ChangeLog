@@ -1,3 +1,13 @@
+Fri Jun 10 14:49:44 UTC 2011  Adam Mitz  <mitza@ociweb.com>
+
+        * command/fuzz.pm:
+
+          Allow for a custom fuzz script.
+
+        * configs/autobuild/oci/dds_doc_trunk_mosquito_linux_fuzz_u1.xml:
+
+          Use that.
+
 Tue May 24 14:04:25 UTC 2011  Adam Mitz  <mitza@ociweb.com>
 
         * common/prettify.pm:

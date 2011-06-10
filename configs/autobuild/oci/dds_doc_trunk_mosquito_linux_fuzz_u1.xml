@@ -26,7 +26,7 @@
 
   <!-- Build targets -->
   <command name="shell" options="rm -rf build/fuzz_u1/dds_* build/fuzz_u1/tools/modeling/plugins"/>
-  <command name="shell" options="cd build/fuzz_u1 ; tools/scripts/dds_fuzz.pl"/>
+  <command name="fuzz"  options="script='tools/scripts/dds_fuzz.pl'"/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
