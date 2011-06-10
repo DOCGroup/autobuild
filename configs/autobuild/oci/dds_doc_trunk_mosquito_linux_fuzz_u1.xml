@@ -4,6 +4,7 @@
   <configuration>
     <environment name="ACE_ROOT"              value="/tao_builds/taoadmin/doc/build/doxygen_u1/ACE"/>
     <environment name="DDS_ROOT"              value="/tao_builds/taoadmin/DDS/build/fuzz_u1"/>
+    <environment name="MPC_ROOT"              value="/home/taoadmin/MPC"/>
     <variable    name="base"                  value="DDS"/>
     <variable    name="build_name"            value="fuzz_u1"/>
     <variable    name="creator"               value="mitza"/>
@@ -19,7 +20,7 @@
   <command name="log"                options="on"/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
-  <command name="file_manipulation"  options="type=create file=build/fuzz_u1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/doxygen_u1/ACE\x22; export ACE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/fuzz_u1\x22; export DDS_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/fuzz_u1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/doxygen_u1/ACE\x22; export ACE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/fuzz_u1\x22; export DDS_ROOT\nexport MPC_ROOT=/home/taoadmin/MPC\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
 
