@@ -1,3 +1,9 @@
+Tue Jun 14 12:02:00 UTC 2011  Simon Massey  <sma at prismtech dot com>
+
+        * common/prettify.pm:
+
+          Show up sslv3 alert certificate expired problems.
+
 Fri Jun 10 14:49:44 UTC 2011  Adam Mitz  <mitza@ociweb.com>
 
         * command/fuzz.pm:

@@ -1103,6 +1103,7 @@ sub Test_Handler ($)
         || $s =~ m/holds reference to undefined symbol/
         || $s =~ m/unknown symbol name/
         || $s =~ m/can't open input/
+        || $s =~ m/ACE_SSL .+ error code\: [0-9]+ - error\:[0-9]+\:SSL routines\:SSL3_READ_BYTES\:sslv3 alert certificate expired/
         || $s =~ m/memPartFree: invalid block/ )
     {
         $self->Output_Error ($s);
