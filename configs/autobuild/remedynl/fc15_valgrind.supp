@@ -45,6 +45,13 @@
 }
 
 {
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:*
+   fun:*ACE_Log_Msg_Manager*init_backend*
+}
+
+{
    <dlopen>
    Memcheck:Leak
    fun:calloc
