@@ -29,12 +29,12 @@
   fun:RTINetioSender_send
 }
 
-
 {
-  <IIOP warning>
-  Memcheck:Addr8
-  fun:*
-  fun:*TAO_IIOP_Profile*parse_string_i*
+   <IIOP error>
+   Memcheck:Addr8
+   fun:__strspn_sse42
+   fun:*ACE_OS*strspn*
+   fun:*TAO_IIOP_Profile*parse_string_i*
 }
 
 {
