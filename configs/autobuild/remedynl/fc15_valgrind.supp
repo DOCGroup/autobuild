@@ -41,14 +41,7 @@
    <cleanup load>
    Memcheck:Leak
    fun:*
-   fun:*ACE_Log_Msg_Manager*init_backend*
    fun:*ACE_Log_Msg_Manager*get_lock*
-   fun:*ACE_Log_Msg*
-   fun:*ACE_TSS_cleanup*
-   fun:*ACE_Log_Msg*close*
-   fun:*ACE_Base_Thread_Adapter*close_log_msg*
-   fun:*ACE_OS11cleanup_tss*
-   fun:*ACE_Object_Manager*fini*
 }
 
 {
