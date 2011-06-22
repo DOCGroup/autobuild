@@ -35,7 +35,7 @@
 
     <command name="make"              options="-k realclean" />
 
-    <command name="shell"             options="rsh vmshost \x22cd $HOME/ACE/autobuild/configs/autobuild/remedynl && ./sauron_setup_ace_vms.sh\x22" />
+    <command name="shell"             options="rsh vmshost \x22cd /home/build/ace/autobuild/configs/autobuild/remedynl && ./sauron_setup_ace_vms.sh\x22" />
     <command name="shell"             options="bash -c \x22cp /dnfs1/openvms/v82ia64/ace_vms_update.tar .\x22" />
     <command name="shell"             options="bash -c \x22gnutar -xf ace_vms_update.tar -g /dev/null\x22" />
 
@@ -58,7 +58,7 @@
     <command name="shell"             options="bash -c \x22cp *.html *.txt /dnfs1/openvms/v82ia64/\x22" />
     <command name="shell"             options="rsh vmshost \x22umount /nfs\x22" />
     <command name="shell"             options="rsh vmshost \x22mount enas.remedy.nl/share/develop /nfs\x22" />
-    <command name="shell"             options="rsh vmshost \x22cd $HOME/ACE/autobuild/configs/autobuild/remedynl && ./sauron_copy_buildresult_vms.sh\x22" />
-    <command name="shell"             options="rsh vmshost \x22cd $HOME/ACE/autobuild/configs/autobuild/remedynl && svn up\x22" />
+    <command name="shell"             options="rsh vmshost \x22cd /home/build/ace/autobuild/configs/autobuild/remedynl && ./sauron_copy_buildresult_vms.sh\x22" />
+    <command name="shell"             options="rsh vmshost \x22cd /home/build/ace/autobuild/configs/autobuild/remedynl && svn up\x22" />
     <command name="shell"             options="rsh vmshost \x22cd /nfs/openvms/autobuild && svn up\x22" />
 </autobuild>
