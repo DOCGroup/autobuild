@@ -37,7 +37,7 @@ all the OS/platform combinations on which ACE is tested everyday.
   <name>Linux</name>
 
      <build>
-      <name>Ubuntu_1004_10_GCC</name>
+      <name>Ubuntu_10_04_10_GCC</name>
       <url>http://buildlogs.theaceorb.nl/ubuntu_1004_64_gcc/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
