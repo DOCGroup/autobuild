@@ -11,6 +11,12 @@
   <group>
     <name>Linux</name>
     <build>
+      <name>FC15_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fc15_versioned/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>FC15_OpenDDS</name>
         <url>http://buildlogs.theaceorb.nl/fc15_opendds/</url>
         <build_sponsor>Remedy IT</build_sponsor>
@@ -129,12 +135,6 @@
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Full_Reactors/</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC8_Versioned_Namespace</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/versioned_namespace</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
     <build>
       <name>FC8_NoInterceptors_Core</name>
