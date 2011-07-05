@@ -45,7 +45,7 @@
 
     <command name="generate_workspace" options="-type gnuace" />
 
-    <command name="make"              options="-k c++0x=1" />
+    <command name="make"              options="-C IDLtoCPP -k c++0x=1" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
