@@ -17,6 +17,7 @@
         <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable name="root"     value="/home/build/ACE/IDLtoCPP0x/" />
+        <variable name="project_root" value="IDLtoCPP" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/IDLtoCPP0x/" />
         <variable name="configs"  value="Linux SSL NDDS ZLIB" />
@@ -45,7 +46,7 @@
 
     <command name="generate_workspace" options="-type gnuace" />
 
-    <command name="make"              options="-C IDLtoCPP -k c++0x=1" />
+    <command name="make"              options="-k c++0x=1" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
