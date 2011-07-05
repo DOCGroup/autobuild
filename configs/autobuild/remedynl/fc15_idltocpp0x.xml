@@ -41,7 +41,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type gnuace" />
+    <command name="generate_workspace" options="IDLtoCPP -type gnuace" />
 
     <command name="make"              options="-k c++0x=1" />
 
