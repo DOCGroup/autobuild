@@ -33,7 +33,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\nboost=1\nssl=1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='inline=1\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\nboost=1\nssl=1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nversioned_namespace=1\nqt4=1\nndds=1\ndds4ccm_ndds=1\nxerces3=1\nbzip2=1\nzlib=1\n'" />
 
     <command name="print_os_version" />
