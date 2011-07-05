@@ -41,9 +41,9 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type gnuace0x" />
+    <command name="generate_workspace" options="-type gnuace" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k c++0x=1" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
