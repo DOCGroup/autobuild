@@ -19,6 +19,7 @@
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/IDLtoCPP0x/" />
         <variable name="configs"  value="Linux SSL NDDS ZLIB" />
+        <variable name="base"     value="IDLtoCPP" />
 
     </configuration>
 
