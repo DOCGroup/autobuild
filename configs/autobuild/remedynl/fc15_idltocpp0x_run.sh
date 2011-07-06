@@ -7,9 +7,4 @@ cd $HOME/ACE/autobuild
 svn up
 
 # Run the build.
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_versioned.xml
-
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_idltocpp0x.xml
-
+sh $HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_versioned.sh && $HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_idltocpp0x.sh
