@@ -45,7 +45,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type gnuace0x -exclude public" />
+    <command name="generate_workspace" options="-type gnuace -exclude public" />
 
     <command name="make"              options="-k" />
 
