@@ -1,0 +1,15 @@
+Jailbreak the device.  Install the following from Cydia:
+
+openssh
+insomnia (to keep from going to sleep)
+apt packages
+wget
+rsync
+
+To get perl, ssh in to the device, and
+
+wget http://coredev.nl/cydia/coredev.pub
+apt-key add coredev.pub
+echo 'deb http://coredev.nl/cydia iphone main' > /etc/apt/sources.list.d/coredev.nl.list
+
+now relaunch cydia, and perl will be available for install. 
