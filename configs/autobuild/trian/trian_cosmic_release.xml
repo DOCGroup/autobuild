@@ -35,13 +35,7 @@
 
   <command name="log"           options="ON" />
 
-  <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Release_Build.sln -Release -k -clean" />
-  <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer.sln -Release -k -clean" />
-
   <!-- get latest micro release of middleware and MPC -->
-  <command name="shell"             options="del /Q /S C:\\bczar\\CoSMIC_Release\\Latest_Micro" />
-  <command name="shell"             options="del /Q /S C:\\bczar\\CoSMIC_Release\\MPC" />
-
   <command name="svn"               options="--username anonymous --password anonymous co https://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_Micro Latest_Micro" />
   <command name="svn"               options="--username anonymous --password anonymous co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk MPC"/>
 
@@ -57,6 +51,11 @@
   <command name="print_ace_config" />
   <command name="print_perl_version" />
 
+  <!-- Clean the current workspace -->
+  <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Release_Build.sln -Release -k -clean" />
+  <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer.sln -Release -k -clean" />
+
+  <!-- Build the current workspace -->
   <command name="generate_workspace" options="-type vc9 -include %COSMIC_ROOT% %COSMIC_ROOT%\\Installer\\CoSMIC_Release_Build.mwc"/>
   <command name="win32make"         options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Release_Build.sln -Release -k" />
 

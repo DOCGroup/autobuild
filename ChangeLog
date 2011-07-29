@@ -1,3 +1,11 @@
+Fri Jul 29 19:20:04 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          The build failed to delete the old Wix object files. This
+          caused the installer configuration to not be consistent with
+          the current workspace.
+
 Fri Jul 29 19:15:30 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
 
         * configs/autobuild/trian/trian_cosmic_release.xml:
