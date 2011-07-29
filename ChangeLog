@@ -1,3 +1,10 @@
+Fri Jul 29 19:15:30 UTC 2011  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * configs/autobuild/trian/trian_cosmic_release.xml:
+
+          Moved the log command up to the start of the build process so
+          we can see the pre-build command results.
+
 Tue Jun 14 12:02:00 UTC 2011  Simon Massey  <sma at prismtech dot com>
 
         * common/prettify.pm:

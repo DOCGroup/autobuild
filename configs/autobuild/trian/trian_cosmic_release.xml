@@ -33,9 +33,10 @@
   <command name="process_listener" options="localhost:32001" />
   <command name="status"            options="on" />
 
+  <command name="log"           options="ON" />
+
   <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Release_Build.sln -Release -k -clean" />
   <command name="win32make"     options="msvc_mpc_auto_compile -vc9 -dir %COSMIC_ROOT%\\Installer\\CoSMIC_Installer.sln -Release -k -clean" />
-  <command name="log"           options="ON" />
 
   <!-- get latest micro release of middleware and MPC -->
   <command name="shell"             options="del /Q /S C:\\bczar\\CoSMIC_Release\\Latest_Micro" />
