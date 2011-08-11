@@ -119,12 +119,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>Windows</name>
     <build>
-      <name>Win2003_VC9_ACE_FOR_TAO</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_ace_for_tao</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-    </build>
-    <build>
       <name>Win2008R2x64_VC10_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
