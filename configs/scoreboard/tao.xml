@@ -235,28 +235,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-  <name>NetBSD</name>
-  <build>
-    <name>NetBSD_i386</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_i386</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-  <build>
-    <name>NetBSD_i386_NoInline</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_i386_noinline</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-  <build>
-    <name>NetBSD_i386_Static</name>
-    <url>http://www.acorntoolworks.com/~jtc/auto_compile_logs/netbsd_i386_static</url>
-    <build_sponsor>J.T. Conklin</build_sponsor>
-    <build_sponsor_url>http://www.acorntoolworks.com/</build_sponsor_url>
-  </build>
-</group>
-
-<group>
    <name>QNX</name>
    <build>
       <name>QNX_6.3.2_x86-gcc_3.3.5</name>
