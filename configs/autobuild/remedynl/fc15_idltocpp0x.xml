@@ -48,7 +48,7 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst" />
+    <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst  -r /home/build/ACE/IDLtoCPP0x" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
