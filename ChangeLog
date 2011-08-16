@@ -1,3 +1,8 @@
+Tue Aug 15 16:20:27 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/dds.xml:
+          Also added our FC15_OpenDDS build here
+
 Mon Aug 15 04:36:27 UTC 2011  Trevor Fields  fields_t@ociweb.com
 
         * configs/autobuild/oci/doc_trunk_tick_android_gcc_d0o1.xml:
