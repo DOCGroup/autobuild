@@ -41,7 +41,7 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find IDLtoCPP -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co http://svn.remedy.nl/repos/idl2c++x0/trunk IDLtoCPP" />
 
