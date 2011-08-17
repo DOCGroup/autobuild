@@ -37,7 +37,7 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="generate_workspace" options="-type gnuautobuild -exclude TAO/DDS/tools/modeling/tests" />
+    <command name="generate_workspace" options="-type gnuautobuild -exclude TAO/DDS/tools/modeling/tests -exclude TAO/DDS/contrib" />
 
     <command name="make"              options="-k" />
 
