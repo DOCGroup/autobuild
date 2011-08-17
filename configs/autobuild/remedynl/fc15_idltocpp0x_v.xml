@@ -56,7 +56,7 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst -r /home/build/ACE/IDLtoCPP0x_v script_path=$ACE_ROOT/bin" />
+    <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst -r /home/build/ACE/IDLtoCPP0x_v/IDLtoCPP script_path=$ACE_ROOT/bin" />
 
     <command name="anonymous_shell"   options="killall memcheck" />
 
