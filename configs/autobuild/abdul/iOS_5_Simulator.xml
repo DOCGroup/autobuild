@@ -19,7 +19,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-iphone-simulator.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC=clang\nCXX=clang++\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_iphone.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC:=clang\nCXX:=clang++\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_iphone.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -39,5 +39,5 @@
     <command name="process_logs"      options="clean=2 move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/abdulbuilds/iOS_5_Simulator" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/abdul/iOS_5_Simulator" />
 </autobuild>
