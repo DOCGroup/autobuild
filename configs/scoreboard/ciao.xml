@@ -289,7 +289,7 @@
   <group>
     <name>MacOS</name>
     <build>
-      <name>Snow_Leopard_GCC_64_bit</name>
+      <name>Lion_GCC_64_bit</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/gcc64</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
