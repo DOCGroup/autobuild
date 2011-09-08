@@ -42,7 +42,6 @@
   <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_VERBOSE_NOTSUP\n#define ACE_DEFAULT_TEMP_DIR \"/data/tmp\"\n#include \x22ace/config-android.h\x22\n'"/>
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='\nstatic_libs_only=1\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_TAO.mwc output='workspace {\nexclude {\nexamples\napps/gperf/tests\nTAO/orbsvcs\nTAO/examples\nTAO/docs\nTAO/CIAO\nTAO/DAnCE\n}\n}\n'" />
 
   <command name="print_os_version" />
   <command name="print_env_vars" />
@@ -53,15 +52,15 @@
 
   <command name="make"              options="-k realclean find=*akefile" />
 
-  <command name="generate_workspace" options="ACE_TAO.mwc -type gnuautobuild" />
-  <command name="generate_workspace" options="ACE_TAO.mwc -type vxtest" />
+  <command name="generate_workspace" options="-type gnuautobuild" />
+  <command name="generate_workspace" options="-type vxtest" />
 
   <command name="make"              options="-k" />
 
   <command name="anonymous_shell"   options="killall emulator" />
 
   <!--command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/-->
-  <command name="auto_run_tests"    options=" -o"/>
+  <!--command name="auto_run_tests"    options=" -o"/-->
 
   <command name="anonymous_shell"   options="killall emulator" />
 
