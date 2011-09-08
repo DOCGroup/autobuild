@@ -9,6 +9,22 @@ all the OS/platform combinations on which TAO is tested everyday.
 </preamble>
 
 <group>
+<name>Android</name>
+    <build>
+      <name>FC15_NDK6_r9_host</name>
+      <url>http://buildlogs.theaceorb.nl/fc15_ndk6_r9_host/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC15_NDK6_r9_target</name>
+      <url>http://buildlogs.theaceorb.nl/fc15_ndk6_r9_target/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+</group>
+
+<group>
 <name>Linux</name>
     <build>
       <name>FC15_ACE_FOR_TAO</name>
