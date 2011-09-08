@@ -1,0 +1,83 @@
+<autobuild>
+  <!-- The command used to create this file (on firefly) was -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=0 optimize=1 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler gcc -creator fields_t -docbuild 1 -docrepo 1 -outdir . -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1"/>
+    <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/CIAO"/>
+    <environment name="DANCE_ROOT"      value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DAnCE"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DDS"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/lib:"/>
+    <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="PATH"            value="/tao_builds/android/arm_platform9/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
+    <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO"/>
+    <environment name="SDK"             value="/tao_builds/android/android-sdk-linux_x86"/>
+    <environment name="NDK"             value="/tao_builds/android/android-ndk-r6"/>
+    <environment name="NDK_STANDALONE"  value="/tao_builds/android/arm_platform9"/>
+    <environment name="HOST_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1" />
+
+    <variable    name="build_name"      value="android_gcc_d0o1s1"/>
+    <variable    name="creator"         value="fields_t"/>
+    <variable    name="log_file"        value="android_gcc_d0o1s1.log"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_firefly_android_gcc_d0o1s1"/>
+    <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1"/>
+    <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="clone_build_tree"/>
+  <command name="rem_sems"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/android_gcc_d0o1s1/ace/config.h output='#include \x22ace/config-android.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/android_gcc_d0o1s1/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\nstatic_libs_only=1\nCROSS-COMPILE=1\nCROSS_COMPILE = arm-linux-androideabi-\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_android_linux.GNU\nTAO_IDL := $(HOST_ROOT)/bin/tao_idl\nTAO_IDLFLAGS += -g $(HOST_ROOT)/bin/ace_gperf\nTAO_IDL_DEP := $(HOST_ROOT)/bin/tao_idl$(EXEEXT)\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/android_gcc_d0o1s1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/android/arm_platform9/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO\x22; export TAO_ROOT\nHOST_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1\x22; export HOST_ROOT\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="gcc"/>
+  <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
+
+  <command name="anonymous_shell"    options="/tao_builds/android/android-ndk-r6b/build/tools/make-standalone-toolchain.sh --platform=android-9 --install-dir=/tao_builds/android/arm_platform9"/>
+
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k  find=*akefile dir=TAO depend"/>
+  <command name="make" options="   -k  find=*akefile dir=bin depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k  find=*akefile dir=TAO"/>
+  <command name="make" options="   -k  find=*akefile dir=bin"/>
+  <command name="make" options="-s -k  find=*akefile dir=tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols"/>
+  <command name="make" options="-s -k  find=*akefile dir=protocols/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/examples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
+
+  <!-- Post build -->
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>
