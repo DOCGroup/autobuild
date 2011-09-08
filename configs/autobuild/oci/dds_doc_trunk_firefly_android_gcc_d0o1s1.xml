@@ -36,10 +36,11 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
-  <command name="check_compiler"     options="gcc"/>
+  <command name="check_compiler"     options="arm-linux-androideabi-gcc"/>
   <command name="generate_workspace" options="-type gnuace -static DDS.mwc"/>
 
   <!-- Copy the host built idl compiler -->
+  <command name="anonymous_shell"    options="rm /tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin/opendds_idl"/>
   <command name="anonymous_shell"    options="ln -s /tao_builds/taoadmin/DDS/build/gcc_d0o1s1/bin/opendds_idl /tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin/opendds_idl"/>
 
   <!-- Build dependencies -->

@@ -36,7 +36,7 @@
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
-  <command name="check_compiler"     options="gcc"/>
+  <command name="check_compiler"     options="arm-linux-androideabi-gcc"/>
   <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
 
   <command name="anonymous_shell"    options="/tao_builds/android/android-ndk-r6b/build/tools/make-standalone-toolchain.sh --platform=android-9 --install-dir=/tao_builds/android/arm_platform9"/>
