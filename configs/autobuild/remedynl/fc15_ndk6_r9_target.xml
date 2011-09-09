@@ -59,7 +59,7 @@
   <command name="anonymous_shell"   options="killall emulator-arm" />
 
   <!--command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/-->
-  <!--command name="auto_run_tests"    options=" -o"/-->
+  <command name="auto_run_tests"    options=" -a"/>
 
   <command name="anonymous_shell"   options="killall emulator-arm" />
 
