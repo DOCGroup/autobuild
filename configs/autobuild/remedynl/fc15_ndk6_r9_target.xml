@@ -24,12 +24,12 @@
 
     <environment name="DOC_TEST_1"          value="DOC_TEST_1"/>
     <environment name="DOC_TEST_1_OS"       value="ANDROID" />
+    <environment name="DOC_TEST_1_PROCESS_START_WAIT_INTERVAL"       value="60" />
     <environment name="DOC_TEST_2"          value="DOC_TEST_2" />
     <environment name="DOC_TEST_2_OS"       value="ANDROID" />
+    <environment name="DOC_TEST_2_PROCESS_START_WAIT_INTERVAL"       value="60" />
 
     <environment name="ACE_TEST_VERBOSE"    value="1" />
-
-    <environment name="ACE_RUNTEST_DELAY" value="2" />
 
 </configuration>
 
