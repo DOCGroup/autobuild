@@ -56,12 +56,11 @@
 
   <command name="make"              options="-k" />
 
-  <command name="anonymous_shell"   options="killall emulator-arm" />
+  <command name="anonymous_shell"   options="killall -r emulator*" />
 
-  <!--command name="auto_run_tests"    options=" -l /home/build/ACE/target/ACE_wrappers/TAO/bin/hello.lst"/-->
-  <command name="auto_run_tests"    options=" -a"/>
+  <command name="auto_run_tests"    options=" -a -o"/>
 
-  <command name="anonymous_shell"   options="killall emulator-arm" />
+  <command name="anonymous_shell"   options="killall -r emulator*" />
 
   <command name="log"               options="off"/>
   <command name="process_logs"      options="clean move prettify index" />
