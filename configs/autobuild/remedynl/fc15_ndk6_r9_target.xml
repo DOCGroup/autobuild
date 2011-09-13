@@ -7,13 +7,12 @@
     <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/home/build/ACE/target/ACE_wrappers/lib" type="prefix"/>
     <environment name="CROSS_COMPILE" value="arm-linux-androideabi-"/>
 
+    <environment name="ANDROID_SDK_HOME" value="/home/build/"/>
     <environment name="ANDROID_SDK_ROOT" value="/home/build/android/android-sdk-linux_x86"/>
     <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/home/build/android/android-9-ndk-toolchain"/>
-    <!--environment name="ANDROID_CREATE_AVD_OPTIONS" value="-c 1024M -t 1"/-->
     <environment name="ANDROID_FS_ROOT" value="/data" />
     <environment name="ANDROID_AVD_OPTIONS" value="-noaudio -no-window -wipe-data -partition-size 1024"/>
     <environment name="ANDROID_AVD_NAME" value="Android-9"/>
-    <!--environment name="ACE_RUN_VX_TGT_REBOOT" value="0"/-->
 
     <environment name="PATH" value="/home/build/android/android-9-ndk-toolchain/bin" type="prefix"/>
 
