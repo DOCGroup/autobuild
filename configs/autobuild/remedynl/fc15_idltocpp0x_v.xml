@@ -7,11 +7,11 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/versioned/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"        value="/home/build/ACE/versioned/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/home/build/ACE/versioned/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="IDL2Cxx0x_ROOT"        value="/home/build/ACE/IDLtoCPP0x_v/IDLtoCPP"/>
+        <environment name="IDL2Cxx0x_ROOT"        value="/home/build/ACE/IDLtoCPP0x_v/IDL2Cxx"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/versioned/ACE_wrappers/lib" />
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/IDLtoCPP0x_v/IDLtoCPP/lib" type="prefix"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/IDLtoCPP0x_v/IDL2Cxx/lib" type="prefix"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
-        <environment name="PATH" value="/home/build/ACE/IDLtoCPP0x_v/IDLtoCPP/bin" type="prefix"/>
+        <environment name="PATH" value="/home/build/ACE/IDLtoCPP0x_v/IDL2Cxx/bin" type="prefix"/>
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="39"/>
@@ -56,12 +56,12 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst -r /home/build/ACE/IDLtoCPP0x_v/IDLtoCPP script_path=$ACE_ROOT/bin" />
+    <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst -r /home/build/ACE/IDLtoCPP0x_v/IDL2Cxx script_path=$ACE_ROOT/bin" />
 
     <command name="anonymous_shell"   options="killall memcheck" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /IDLtoCPP*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_idltocpp0x_v" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /IDL2Cxx*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_idltocpp0x_v" />
 </autobuild>
