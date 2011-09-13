@@ -18,11 +18,11 @@
         <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable name="root"     value="/home/build/ACE/IDLtoCPP0x_v/" />
-        <variable name="project_root" value="IDLtoCPP" />
+        <variable name="project_root" value="IDL2Cxx" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/IDLtoCPP0x_v/" />
         <variable name="configs"  value="Linux SSL NDDS ZLIB" />
-        <variable name="base"     value="IDLtoCPP" />
+        <variable name="base"     value="IDL2Cxx" />
         <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --show-reachable=yes --trace-children=yes --suppressions="
                                                   join=""
                                                   variable="BUILD_CONFIG_PATH"
@@ -41,9 +41,9 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="shell"             options="find IDLtoCPP -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find IDL2Cxx -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="svn"               options="co http://svn.remedy.nl/repos/idl2c++x0/trunk IDLtoCPP" />
+    <command name="svn"               options="co http://svn.remedy.nl/repos/idl2c++x0/trunk IDL2Cxx" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
