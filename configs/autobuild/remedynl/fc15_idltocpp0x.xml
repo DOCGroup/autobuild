@@ -46,7 +46,7 @@
 
     <command name="generate_workspace" options="-type gnuace -exclude public" />
 
-    <command name="shell"             options="cd ridl && ../scripts.ridl/make-orbpidl.sh " />
+    <command name="shell"             options="cd IDL2Cxx/ridl && ../scripts.ridl/make-orbpidl.sh " />
 
     <command name="make"              options="-k" />
 
