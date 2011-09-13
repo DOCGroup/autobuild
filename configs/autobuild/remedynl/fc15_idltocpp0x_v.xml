@@ -54,6 +54,8 @@
 
     <command name="generate_workspace" options="-type gnuace -exclude public" />
 
+    <command name="shell"             options="scripts.ridl/make-orbpidl.sh " />
+
     <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options="-l bin/idl2cpp0x_tests.lst -r /home/build/ACE/IDLtoCPP0x_v/IDL2Cxx script_path=$ACE_ROOT/bin" />
