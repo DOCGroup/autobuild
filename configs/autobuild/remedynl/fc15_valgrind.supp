@@ -38,6 +38,13 @@
 }
 
 {
+   <IIOP error>
+   Memcheck:Addr8
+   fun:__strspn_sse42
+   fun:*ACE_Arg_Shifter*cur_arg_strncasecmp*
+}
+
+{
    <cleanup load>
    Memcheck:Leak
    fun:*
