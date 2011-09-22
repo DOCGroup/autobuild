@@ -24,6 +24,7 @@
     <environment name="DOC_TEST_DEFAULT"                             value="DOC_TEST_DEFAULT"/>
     <environment name="DOC_TEST_DEFAULT_OS"                          value="ANDROID" />
     <environment name="DOC_TEST_DEFAULT_PROCESS_START_WAIT_INTERVAL" value="60" />
+    <environment name="DOC_TEST_DEFAULT_HOSTNAME"                    value="10.0.2.15" />
 
     <environment name="ACE_TEST_VERBOSE"    value="1" />
 
