@@ -334,7 +334,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   <name>MacOS</name>
   <build>
     <name>Lion</name>
-    <url>http://173.66.26.53:8080/lion_full/build</url>
+    <url>http://173.66.26.53:8080/lion_full_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
