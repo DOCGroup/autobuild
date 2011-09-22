@@ -1088,6 +1088,7 @@ sub Test_Handler ($)
         || $s =~ m/Invalid write of size/
         || $s =~ m/Invalid read of size/
         || $s =~ m/invalid string:/
+        || $s =~ m/Conditional jump or move depends on uninitialised value/
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Can't call method/
         || $s =~ m/memPartAlloc: block too big/
