@@ -93,6 +93,7 @@ require command::vc6make;
 require command::vc7make;
 require command::incredibuild;
 require command::wincemake;
+require command::xcodemake;
 require command::svn;
 require command::zip;
 require command::unzip;

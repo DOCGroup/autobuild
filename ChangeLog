@@ -1,3 +1,10 @@
+Wed Sep 28 22:11:48 UTC 2011  Abdul Sowayan  <sowayan@gmail.com>
+
+        * autobuild.pl:
+        * command/xcodemake.pm:
+
+          First cut at adding support for building from Apple's Xcode IDE.
+
 Tue Aug 23 23:02:11 UTC 2011  Trevor Fields  fields_t@ociweb.com
 
         * configs/scoreboard/tao_future.xml:
