@@ -22,7 +22,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-lion.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='CC:=$(IPHONE_PLATFORM)/usr/bin/clang\nCXX:=$(IPHONE_PLATFORM)/usr/bin/clang++\nbuildbits=64\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_lion.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_lion.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
