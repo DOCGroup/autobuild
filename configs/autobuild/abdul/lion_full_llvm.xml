@@ -32,7 +32,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type make" />
+    <command name="generate_workspace" options="-type gnumake" />
 
     <command name="make"              options="-k -j 2" />
 
