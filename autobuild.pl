@@ -95,6 +95,7 @@ require command::incredibuild;
 require command::wincemake;
 require command::xcodemake;
 require command::svn;
+require command::p4;
 require command::zip;
 require command::unzip;
 require command::run_perl_script;  ## This runs a perl command (like test).

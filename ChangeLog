@@ -1,3 +1,10 @@
+Thu Sep 29 01:26:42 UTC 2011  Abdullah Sowayan  <sowayan@gmail.com>
+
+        * autobuild.pl:
+        * command/p4.pm:
+
+          Added a new command for p4 (Perforce) version control system.
+
 Wed Sep 28 22:11:48 UTC 2011  Abdul Sowayan  <sowayan@gmail.com>
 
         * autobuild.pl:
