@@ -14,7 +14,7 @@
     </configuration>
 
     <command name="status"            options="on" />
-
+    <command name="process_listener"  options="localhost:32002" />
     <command name="log"               options="on" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
@@ -40,5 +40,4 @@
     <command name="process_logs"      options="clean=2 move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/abdul/iOS_5_Simulator" />
 </autobuild>
