@@ -349,20 +349,12 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_4.2_Simulator</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/iOS_4.2_Simulator</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-  </build>
-  <build>
     <name>iOS_5_Simulator</name>
-    <url>http://www.dre.vanderbilt.edu/~isisbuilds/abdul/iOS_5_Simulator</url>
+    <url>http://173.66.26.53:8080/iOS_5_Simulator/build</url>
     <orange>48</orange>
     <red>72</red>
-    <build_sponsor>ISIS</build_sponsor>
-    <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+    <build_sponsor>Abdul Sowayan</build_sponsor>
+    <build_sponsor_url></build_sponsor_url>
   </build>
 </group>
 </scoreboard>
