@@ -92,7 +92,13 @@ sub Run ($)
         $p4_program = "p4";
     }
 
-    my $ret = system ("$p4_program $options");
+    my $ret = system ("$p4_program changes -m 1 -s submitted");
+
+    if ($ret != 0) {
+        print STDERR __FILE__, " ERROR: $p4_program changes -m1 returned $ret\n";
+    }
+
+    $ret = system ("$p4_program $options");
     if ($ret != 0) {
         print STDERR __FILE__, " ERROR: $p4_program $options returned $ret\n";
     }
