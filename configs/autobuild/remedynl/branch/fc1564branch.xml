@@ -27,6 +27,7 @@
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_HAS_ZIOP 1\n#define ACE_INITIALIZE_MEMORY_BEFORE_USE\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces2=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\nccm_lw=0\ndds4ccm_ndds=1\nndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/TAO/CIAO/TAO_CIAO.mwc output='workspace {$(ACE_ROOT)/ace\n$(ACE_ROOT)/apps/gperf/src\n$(ACE_ROOT)/apps/JAWS/server\n$(ACE_ROOT)/protocols/ace/INet\n$(ACE_ROOT)/contrib\n$(TAO_ROOT)/tao\n$(TAO_ROOT)/TAO_IDL\n$(TAO_ROOT)/utils\n$(TAO_ROOT)/orbsvcs/orbsvcs/CosNaming.mpc\n$(TAO_ROOT)/orbsvcs/orbsvcs/CosNaming_Serv.mpc\n$(TAO_ROOT)/orbsvcs/orbsvcs/CosNaming_Skel.mpc\n$(TAO_ROOT)/orbsvcs/Naming_Service\n$(TAO_ROOT)/orbsvcs/orbsvcs/Svc_Utils.mpc\n$(TAO_ROOT)/tests\n$(CIAO_ROOT)/ccm\n$(CIAO_ROOT)/ciao\n$(DANCE_ROOT)\n$(CIAO_ROOT)/tools\n$(CIAO_ROOT)/connectors\n$(CIAO_ROOT)/tests\n$(CIAO_ROOT)/examples\n$(CIAO_ROOT)/performance-tests\n$(CIAO_ROOT)/tutorials\n}'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -38,7 +39,7 @@
 
     <command name="make"              options="-C TAO/CIAO -k realclean find=*akefile" />
 
-    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="TAO/CIAO/TAO_CIAO.mwc -type gnuautobuild" />
 
     <command name="make"              options="-C TAO/CIAO -j 3 -k" />
 
