@@ -43,7 +43,7 @@
 
     <command name="make"              options="-C TAO/CIAO -j 3 -k" />
 
-    <command name="auto_run_tests"    options=" -o -t -C" />
+    <command name="auto_run_tests"    options=" -o -C" />
 
     <command name="anonymous_shell"             options="killall dance_locality_manager" />
 
