@@ -95,6 +95,7 @@ require command::incredibuild;
 require command::wincemake;
 require command::xcodemake;
 require command::svn;
+require command::git;
 require command::p4;
 require command::zip;
 require command::unzip;
