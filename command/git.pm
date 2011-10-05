@@ -2,7 +2,7 @@
 # $Id$
 #
 
-package SVN;
+package GIT;
 
 use strict;
 use warnings;
