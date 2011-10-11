@@ -67,7 +67,7 @@
 
   <!-- Run tests -->
   <command name="anonymous_shell"   options="killall -r emulator*" />
-  <command name="auto_run_tests"    options="dir=."/>
+  <!-- <command name="auto_run_tests"    options="dir=."/> -->
   <command name="anonymous_shell"   options="killall -r emulator*" />
 
   <!-- Post build -->
