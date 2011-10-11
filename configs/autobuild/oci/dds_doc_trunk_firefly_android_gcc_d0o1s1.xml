@@ -15,6 +15,21 @@
     <environment name="NDK_STANDALONE"  value="/tao_builds/android/arm_platform9"/>
     <environment name="HOST_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1" />
 
+    <environment name="CROSS_COMPILE" value="arm-linux-androideabi-"/>
+
+    <environment name="ANDROID_SDK_HOME"           value="/tao_builds/android/"/>
+    <environment name="ANDROID_SDK_ROOT"           value="/tao_builds/android/android-sdk-linux_x86"/>
+    <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/tao_builds/android/arm_platform9"/>
+    <environment name="ANDROID_FS_ROOT"            value="/data" />
+    <environment name="ANDROID_AVD_OPTIONS"        value="-noaudio -no-window -wipe-data -partition-size 1024"/>
+    <environment name="ANDROID_AVD_NAME"           value="Android-9"/>
+
+    <environment name="DOC_TEST_DEFAULT"                             value="DOC_TEST_DEFAULT"/>
+    <environment name="DOC_TEST_DEFAULT_OS"                          value="ANDROID" />
+    <environment name="DOC_TEST_DEFAULT_PROCESS_START_WAIT_INTERVAL" value="60" />
+
+    <environment name="ACE_TEST_VERBOSE"    value="1" />
+
     <variable    name="base"            value="DDS"/>
     <variable    name="build_name"      value="android_gcc_d0o1s1"/>
     <variable    name="creator"         value="fields_t"/>
@@ -22,6 +37,7 @@
     <variable    name="log_root"        value="/www-docs/autobuild_logs/dds_doc_trunk_firefly_android_gcc_d0o1s1"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1"/>
     <variable    name="root"            value="/tao_builds/taoadmin/DDS"/>
+    <variable    name="configs"         value="Exceptions STATIC NOXERCES ANDROID"/>
   </configuration>
 
   <!-- Build preparation -->
@@ -31,7 +47,7 @@
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
-  <command name="file_manipulation"  options="type=create file=build/android_gcc_d0o1s1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/android/arm_platform9/bin:/tao_builds/taoadmin/DDS/build/gcc_d0o1s1/bin:/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO\x22; export TAO_ROOT\nHOST_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1\x22; export HOST_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=build/android_gcc_d0o1s1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/android/arm_platform9/bin:/tao_builds/taoadmin/DDS/build/gcc_d0o1s1/bin:/tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO\x22; export TAO_ROOT\nHOST_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1\x22; export HOST_ROOT\nANDROID_SDK_HOME=\x22/tao_builds/android/\x22; export ANDROID_SDK_HOME\nANDROID_SDK_ROOT=\x22/tao_builds/android/android-sdk-linux_x86\x22; export ANDROID_SDK_ROOT\nANDROID_NDK_TOOLCHAIN_ROOT=\x22/tao_builds/android/arm_platform9\x22; export ANDROID_NDK_TOOLCHAIN_ROOT\nANDROID_FS_ROOT=\x22/data\x22; export ANDROID_FS_ROOT\nANDROID_AVD_OPTIONS=\x22-noaudio -no-window -wipe-data -partition-size 1024\x22; export ANDROID_AVD_OPTIONS\nANDROID_AVD_NAME=\x22Android-9\x22; export ANDROID_AVD_NAME\nDOC_TEST_DEFAULT=\x22DOC_TEST_DEFAULT\x22; export DOC_TEST_DEFAULT\nDOC_TEST_DEFAULT_OS=\x22ANDROID\x22; export DOC_TEST_DEFAULT_OS\nDOC_TEST_DEFAULT_PROCESS_START_WAIT_INTERVAL=\x2260\x22; export DOC_TEST_DEFAULT_PROCESS_START_WAIT_INTERVAL\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
@@ -48,6 +64,11 @@
 
   <!-- Build targets -->
   <command name="make" options="-s -k  find=*akefile dir=."/>
+
+  <!-- Run tests -->
+  <command name="anonymous_shell"   options="killall -r emulator*" />
+  <command name="auto_run_tests"    options="dir=."/>
+  <command name="anonymous_shell"   options="killall -r emulator*" />
 
   <!-- Post build -->
   <command name="log"             options="off"/>
