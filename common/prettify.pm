@@ -906,6 +906,13 @@ sub Setup_Handler ($)
         $self->Output_Normal ($s);
         $totals->{CVS_TIMESTAMP} = 'Yes';
     }
+    elsif ($s =~ m/Change (\d+) on \d+\/\d+\/\d+ by/i) ## This is for Perforce please leave
+    {
+        $self->Output_Normal ($s);
+
+        my $revision = $1;
+        $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
+    }
     elsif ($s =~ m/Fetching external item into '([^']+)'/i)
     {
         $self->Output_Normal ($s);
