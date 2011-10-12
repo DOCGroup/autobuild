@@ -76,6 +76,7 @@ foreach my $file (sort keys %{$counter->{summaries}}) {
   if($warn) {
     print "${indent}WARNING:     $warn\n";
     for my $info (@{$counter->{summaries}->${file}->{warn_info}}) {
+      $info->[2] = '' unless defined $info->[2];
       print "$indent  " . $info->[2] . ' ' . $info->[0] . ':' . $info->[1];
     }
   }
@@ -83,6 +84,7 @@ foreach my $file (sort keys %{$counter->{summaries}}) {
   if($error) {
     print "${indent}ERROR:       $error\n";
     for my $info (@{$counter->{summaries}->{$file}->{error_info}}) {
+      $info->[2] = '' unless defined $info->[2];
       print "$indent  " . $info->[2] . ' ' . $info->[0] . ':' . $info->[1];
     }
   }

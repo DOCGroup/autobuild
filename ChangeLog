@@ -1,3 +1,9 @@
+Wed Oct 12 20:19:28 UTC 2011  Adam Mitz  <mitza@ociweb.com>
+
+        * analyze_test_log.pl:
+
+          Avoid Perl runtime warnings from use of possibly undefined values.
+
 Wed Oct 12 19:59:23 UTC 2011  Abdul Sowayan  <sowayan@gmail.com>
 
         * common/prettify.pm:
