@@ -6,7 +6,7 @@
         <environment name="IPHONE_TARGET"  value="SIMULATOR" />
         <environment name="IPHONE_VERSION" value="5" />
 
-        <environment name="XCODE_ROOT" value="/Developer_4.2" />
+        <environment name="XCODE_ROOT" value="/Developer" />
         <variable name="root"          value="/builds/iOS_5_Simulator" />
         <variable name="log_file"      value="build.txt" />
         <variable name="log_root"      value="/builds/iOS_5_Simulator/build" />
@@ -20,7 +20,7 @@
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='ssl=0\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-iphone-simulator.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_iphone.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='static_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_macosx_iphone.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
