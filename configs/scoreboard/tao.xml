@@ -341,6 +341,14 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url></build_sponsor_url>
   </build>
   <build>
+    <name>Lion_Static</name>
+    <url>http://173.66.26.53:8080/lion_full_static_llvm/build</url>
+    <orange>48</orange>
+    <red>72</red>
+    <build_sponsor>Abdul Sowayan</build_sponsor>
+    <build_sponsor_url></build_sponsor_url>
+  </build>
+  <build>
     <name>Snow_Leopard_Static_Host</name>
     <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/Snow_Leopard_Static_Host</url>
     <orange>48</orange>
