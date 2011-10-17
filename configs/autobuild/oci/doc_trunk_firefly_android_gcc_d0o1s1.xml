@@ -95,13 +95,6 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/DevGuideExamples"/>
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
-  <command name="anonymous_shell"   options="killall -r emulator*" />
-
-  <command name="auto_run_tests"    options=" -a -o"/>
-<!-- run only the tests run by remedy until verifying the tao tests should work.
-  <command name="auto_run_tests"    options=" -a -t -o"/>
--->
-  <command name="anonymous_shell"   options="killall -r emulator*" />
 
   <!-- Post build -->
   <command name="log"             options="off"/>

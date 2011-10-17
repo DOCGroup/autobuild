@@ -1,0 +1,67 @@
+<autobuild>
+  <!-- The command used to create this file (on firefly) was -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=0 optimize=1 static_libs_only=1" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." -compiler gcc -creator fields_t -docbuild 1 -docrepo 1 -outdir . -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1"/>
+    <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/CIAO"/>
+    <environment name="DANCE_ROOT"      value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DAnCE"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO/DDS"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/lib:"/>
+    <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="PATH"            value="/tao_builds/android/arm_platform9/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
+    <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1/TAO"/>
+    <environment name="SDK"             value="/tao_builds/android/android-sdk-linux_x86"/>
+    <environment name="NDK"             value="/tao_builds/android/android-ndk-r6"/>
+    <environment name="NDK_STANDALONE"  value="/tao_builds/android/arm_platform9"/>
+    <environment name="HOST_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1" />
+
+    <environment name="CROSS_COMPILE" value="arm-linux-androideabi-"/>
+
+    <environment name="ANDROID_SDK_HOME"           value="/tao_builds/android/"/>
+    <environment name="ANDROID_SDK_ROOT"           value="/tao_builds/android/android-sdk-linux_x86"/>
+    <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/tao_builds/android/arm_platform9"/>
+    <environment name="ANDROID_FS_ROOT"            value="/data" />
+    <environment name="ANDROID_AVD_OPTIONS"        value="-noaudio -no-window -wipe-data -partition-size 1024"/>
+    <environment name="ANDROID_AVD_NAME"           value="Android-9"/>
+
+    <environment name="DOC_TEST_DEFAULT"                             value="DOC_TEST_DEFAULT"/>
+    <environment name="DOC_TEST_DEFAULT_OS"                          value="ANDROID" />
+    <environment name="DOC_TEST_DEFAULT_PROCESS_START_WAIT_INTERVAL" value="60" />
+
+    <environment name="ACE_TEST_VERBOSE"    value="1" />
+
+    <variable    name="build_name"      value="android_gcc_d0o1s1"/>
+    <variable    name="creator"         value="fields_t"/>
+    <variable    name="log_file"        value="android_gcc_d0o1s1.log"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_firefly_android_gcc_d0o1s1-tests"/>
+    <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1"/>
+    <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
+    <variable    name="configs"         value="Exceptions STATIC NOXERCES ANDROID"/>
+
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+
+
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="arm-linux-androideabi-g++"/>
+
+  <command name="anonymous_shell"   options="killall -r emulator*" />
+
+  <command name="auto_run_tests"    options=" -a -o"/>
+<!-- run only the tests run by remedy until verifying the tao tests should work.
+  <command name="auto_run_tests"    options=" -a -t -o"/>
+-->
+  <command name="anonymous_shell"   options="killall -r emulator*" />
+
+  <!-- Post build -->
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>
