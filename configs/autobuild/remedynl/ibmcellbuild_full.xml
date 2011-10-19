@@ -18,7 +18,7 @@
         <environment name="DANCE_LOG_LEVEL"   value="1"/>
 
         <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="26"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="46"/>
 
         <variable name="root"         value="/build/ACE/crossbuild_full/" />
         <variable name="remote_root"  value="/build/ACE/crossbuild_full/ACE_wrappers" />
@@ -59,7 +59,7 @@
 
     <command name="make"              options="-k -j 20" />
 
-    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=26'"/>
+    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=46'"/>
 
     <command name="anonymous_shell"   options="ssh snalinux6 killall dance_locality_manager" />
     <command name="anonymous_shell"   options="ssh snalinux6 killall tao_cosnaming" />
