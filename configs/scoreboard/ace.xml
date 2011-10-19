@@ -122,32 +122,11 @@ all the OS/platform combinations on which ACE is tested everyday.
 	 <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-	 <name>HP-UX_11iv3_ia64_aC++_Debug(autoconf)</name>
-	 <url>http://acebuilds.riverace.com/mindy/dev/autoconf_acc_debug</url>
-         <red>36</red>
-	 <build_sponsor>Riverace</build_sponsor>
-	 <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
 	 <name>HP-UX_11iv2_ia64_aC++_Debug</name>
 	 <url>http://acebuilds.riverace.com/gump/dev/acc_debug</url>
          <red>36</red>
 	 <build_sponsor>Riverace</build_sponsor>
 	 <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-	 <name>HP-UX_11iv2_ia64_aC++_Debug(autoconf)</name>
-	 <url>http://acebuilds.riverace.com/gump/dev/autoconf_acc_debug</url>
-         <red>36</red>
-	 <build_sponsor>Riverace</build_sponsor>
-	 <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-         <name>HP-UX_11iv2_PA-RISC_aC++_Debug</name>
-         <url>http://acebuilds.riverace.com/lucky/dev/acc_debug</url>
-         <red>36</red>
-         <build_sponsor>Riverace</build_sponsor>
-         <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
 </group>
 
@@ -156,20 +135,6 @@ all the OS/platform combinations on which ACE is tested everyday.
    <build>
       <name>Solaris_9_SunStudio11_Debug</name>
       <url>http://acebuilds.riverace.com/heidi/dev/ss11_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris_9_gcc3_Debug(autoconf)</name>
-      <url>http://acebuilds.riverace.com/heidi/dev/autoconf_gcc3_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-   </build>
-   <build>
-      <name>Solaris_10_sparc_Studio10_Static_Debug(32bit)</name>
-      <url>http://acebuilds.riverace.com/chad/dev/studio10_static_debug</url>
       <red>36</red>
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
