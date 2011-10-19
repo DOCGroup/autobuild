@@ -1,17 +1,19 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/lwccm_ne/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/lwccm_ne/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/build/ACE/lwccm_ne/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"      value="/home/build/ACE/lwccm_ne/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/lwccm_ne/ACE_wrappers/lib:/usr/local/lib:" />
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
-        <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
-        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="27"/>
-        <environment name="QT4_SUFFIX"      value="-qt4" />
-        
+        <environment name="ACE_ROOT"          value="/home/build/ACE/lwccm_ne/ACE_wrappers"/>
+        <environment name="TAO_ROOT"          value="/home/build/ACE/lwccm_ne/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"         value="/home/build/ACE/lwccm_ne/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"        value="/home/build/ACE/lwccm_ne/ACE_wrappers/TAO/DAnCE"/>
+        <environment name="LD_LIBRARY_PATH"   value="/home/build/ACE/lwccm_ne/ACE_wrappers/lib:/usr/local/lib:" />
+        <environment name="LD_LIBRARY_PATH"   value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
+        <environment name="NDDSHOME"          value="/home/build/ndds/ndds.4.5d.rev11" />
+        <environment name="NDDSARCHITECTURE"  value="x64Linux2.6gcc4.5.1" />
+        <environment name="QT4_SUFFIX"        value="-qt4" />
+
+        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="27"/>
+
         <!-- Temporarly: Log the errors. -->
         <environment name="DDS4CCM_LOG_LEVEL" value="1"/>
         <environment name="CIAO_LOG_LEVEL"    value="1"/>

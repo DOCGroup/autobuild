@@ -10,11 +10,14 @@
         <environment name="LD_LIBRARY_PATH"   value="/home/build/ACE/host/ACE_wrappers/lib:/usr/local/lib:/opt/ndds.4.5d.rev11/lib/ppc4xxFPLinux2.6gcc4.5.1" />
         <environment name="NDDSHOME"          value="/opt/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE"  value="ppc4xxFPLinux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="25"/>
+
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc/powerpc-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc/powerpc-ngc-linux/usr"/>
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc/powerpc-ngc-linux/usr"/>
         <environment name="RSYNC_SSH"         value="/usr/bin/ssh"/>
+
+        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="25"/>
 
         <variable name="root"         value="/exports/PPC440FP-OE/home/root/ACE/build/" />
         <variable name="remote_root"  value="/home/root/ACE/build/ACE_wrappers" />

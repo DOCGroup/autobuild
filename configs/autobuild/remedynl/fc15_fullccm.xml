@@ -9,8 +9,10 @@
         <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="30"/>
-        <environment name="QT4_SUFFIX"      value="-qt4" />
+        <environment name="QT4_SUFFIX"       value="-qt4" />
+
+        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="30"/>
 
         <variable name="root"     value="/home/build/ACE/fullccm/" />
         <variable name="log_file" value="build.txt" />

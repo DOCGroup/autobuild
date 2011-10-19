@@ -10,12 +10,15 @@
         <environment name="LD_LIBRARY_PATH"   value="/root/ACE/full_host/ACE_wrappers/lib:/usr/local/lib:/build/ndds.4.5d.rev11/lib/cell64Linux2.6gcc4.5.1" />
         <environment name="NDDSHOME"          value="/build/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE"  value="cell64Linux2.6gcc4.5.1" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID"        value="27"/>
+
         <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
         <environment name="CIAO_LOG_LEVEL"    value="1"/>
         <environment name="DANCE_LOG_LEVEL"   value="1"/>
+
+        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="26"/>
 
         <variable name="root"         value="/build/ACE/crossbuild_full/" />
         <variable name="remote_root"  value="/build/ACE/crossbuild_full/ACE_wrappers" />
@@ -56,7 +59,7 @@
 
     <command name="make"              options="-k -j 20" />
 
-    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=27'"/>
+    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=26'"/>
 
     <command name="anonymous_shell"   options="ssh snalinux6 killall dance_locality_manager" />
     <command name="anonymous_shell"   options="ssh snalinux6 killall tao_cosnaming" />
