@@ -31,7 +31,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_NDEBUG\n#define ACE_NLOGGING\n#define DDS4CCM_NLOGGING\n#define DANCE_NLOGGING\n#define CIAO_NLOGGING\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_NTRACE 1\n#define ACE_NDEBUG 1\n#define ACE_NLOGGING 1\n#define TAO_NTRACE 1\n#define TAO_NDEBUG 1\n#define TAO_NLOGGING 1\n#define CIAO_NTRACE 1\n#define CIAO_NDEBUG 1\n#define CIAO_NLOGGING 1\n#define DANCE_NTRACE 1\n#define DANCE_NDEBUG 1\n#define DANCE_NLOGGING 1\n#define DDS4CCM_NTRACE 1\n#define DDS4CCM_NDEBUG 1\n#define DDS4CCM_NLOGGING 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='valgrind=1\ninline=0\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\nboost=1\nssl=1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nqt4=1\nndds=1\ndds4ccm_ndds=1\nxerces3=1\nbzip2=1\nzlib=1\n'" />
 
