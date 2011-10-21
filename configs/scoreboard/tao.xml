@@ -321,7 +321,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
   <name>MacOS</name>
   <build>
-    <name>Lion</name>
+    <name>Lion_LLVM_3.0_x64</name>
     <url>http://173.66.26.53:8080/lion_full_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
@@ -329,7 +329,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url></build_sponsor_url>
   </build>
   <build>
-    <name>Lion_Static</name>
+    <name>Lion_Static_LLVM_3.0_x64</name>
     <url>http://173.66.26.53:8080/lion_full_static_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
@@ -345,7 +345,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_5_Simulator</name>
+    <name>iOS_5_Simulator_LLVM_3.0</name>
     <url>http://173.66.26.53:8080/iOS_5_Simulator/build</url>
     <orange>48</orange>
     <red>72</red>
