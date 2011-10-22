@@ -5,8 +5,8 @@
         <environment name="TAO_ROOT"          value="/builds/lion_full_llvm/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"         value="/builds/lion_full_llvm/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/builds/lion_full_llvm/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="XERCESCROOT"       value="/builds/xercesc"/>
-        <environment name="DYLD_LIBRARY_PATH" value="/builds/lion_full_llvm/ACE_wrappers/lib:/builds/xercesc/lib"/>
+        <environment name="XERCESCROOT"       value="/builds/xerces-c-3.1.1"/>
+        <environment name="DYLD_LIBRARY_PATH" value="/builds/lion_full_llvm/ACE_wrappers/lib:/builds/xerces-c-3.1.1/lib"/>
 
         <variable name="root"                 value="/builds/lion_full_llvm" />
         <variable name="log_file"             value="build.txt" />
