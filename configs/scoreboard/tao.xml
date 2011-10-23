@@ -326,7 +326,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>sowayan@gmail.com</build_sponsor_url>
+    <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
     <name>Lion_Static_LLVM_3.0_x64</name>
@@ -334,7 +334,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>sowayan@gmail.com</build_sponsor_url>
+    <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
     <name>Snow_Leopard_Static_Host</name>
@@ -350,7 +350,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>sowayan@gmail.com</build_sponsor_url>
+    <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
     <name>iOS_5_Hardware_LLVM_3.0</name>
