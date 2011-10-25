@@ -33,7 +33,7 @@
     <variable    name="build_name"      value="android_gcc_d0o1s1"/>
     <variable    name="creator"         value="fields_t"/>
     <variable    name="log_file"        value="android_gcc_d0o1s1.log"/>
-    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_firefly_android_gcc_d0o1s1-tests"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_firefly_android_gcc_d0o1s1_tests"/>
     <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/android_gcc_d0o1s1"/>
     <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
     <variable    name="configs"         value="Exceptions STATIC NOXERCES ANDROID"/>
