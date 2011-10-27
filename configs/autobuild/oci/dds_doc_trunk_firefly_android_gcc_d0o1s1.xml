@@ -41,7 +41,7 @@
   </configuration>
 
   <!-- Build preparation -->
-  <command name="process_listener"   options="localhost:32001"/>
+  <command name="process_listener"   options="localhost:33001"/>
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ."/>
