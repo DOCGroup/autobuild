@@ -7,11 +7,11 @@
         <environment name="TAO_ROOT"        value="/home/build/ACE/versioned/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"       value="/home/build/ACE/versioned/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"      value="/home/build/ACE/versioned/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="IDL2Cxx0x_ROOT"  value="/home/build/ACE/IDLtoCPP0x_fuzz/IDLtoCPP"/>
+        <environment name="TAOX11_ROOT"     value="/home/build/ACE/IDLtoCPP0x_fuzz/IDLtoCPP/taox11"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/versioned/ACE_wrappers/lib" />
         <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/IDLtoCPP0x_fuzz/IDLtoCPP/lib" type="prefix"/>
         <environment name="LD_LIBRARY_PATH" value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
-        <environment name="PATH" value="/home/build/ACE/IDLtoCPP0x_fuzz/IDLtoCPP/bin" type="prefix"/>
+        <environment name="PATH" value="/home/build/ACE/IDLtoCPP0x_fuzz/IDLtoCPP/bin/taox11" type="prefix"/>
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
         <environment name="QT4_SUFFIX"       value="-qt4" />
