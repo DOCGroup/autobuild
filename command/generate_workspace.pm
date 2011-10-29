@@ -35,7 +35,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"root\" variable\n";
         return 0;
     }
-    
+
     return 1;
 }
 
@@ -48,6 +48,7 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $base = main::GetVariable ('base') || 'ACE_wrappers';
+    my $custom_mwcdir = main::GetVariable ('mwcdir');
 
     if (!-r $root || !-d $root) {
         mkpath($root);
@@ -70,7 +71,7 @@ sub Run ($)
     if (!defined $project_root) {
         $project_root = $base;
     }
-    
+
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -96,12 +97,16 @@ sub Run ($)
 
     ## Get the location of the mwc.pl script
     my $mwc = undef;
-    my @mwcdirs = ("$this_dir/bin", $ENV{MPC_ROOT});
-    splice @mwcdirs, 1, 0, "$ENV{ACE_ROOT}/bin" if defined $ENV{ACE_ROOT};
-    foreach my $mwcdir (@mwcdirs) {
-      if (defined $mwcdir && -r "$mwcdir/mwc.pl") {
-        $mwc = "$mwcdir/mwc.pl";
-        last;
+    if (defined $custom_mwcdir && -r "$custom_mwcdir/mwc.pl") {
+      $mwc = "$custom_mwcdir/mwc.pl";
+    } else {
+      my @mwcdirs = ("$this_dir/bin", $ENV{MPC_ROOT});
+      splice @mwcdirs, 1, 0, "$ENV{ACE_ROOT}/bin" if defined $ENV{ACE_ROOT};
+      foreach my $mwcdir (@mwcdirs) {
+        if (defined $mwcdir && -r "$mwcdir/mwc.pl") {
+          $mwc = "$mwcdir/mwc.pl";
+          last;
+        }
       }
     }
     if (!defined $mwc) {

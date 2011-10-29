@@ -25,6 +25,7 @@
         <variable name="log_root" value="/home/build/ACE/IDLtoCPP0x_v/" />
         <variable name="configs"  value="Linux SSL NDDS ZLIB" />
         <variable name="base"     value="IDL2Cxx" />
+        <variable name="mwcdir"   value="/home/build/ACE/IDLtoCPP0x_v/IDL2Cxx/taox11/bin" />
         <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --show-reachable=yes --trace-children=yes --suppressions="
                                                   join=""
                                                   variable="BUILD_CONFIG_PATH"

@@ -25,6 +25,7 @@
         <variable name="log_root" value="/home/build/ACE/IDLtoCPP0x/" />
         <variable name="configs"  value="Linux SSL NDDS ZLIB" />
         <variable name="base"     value="IDL2Cxx" />
+        <variable name="mwcdir"   value="/home/build/ACE/IDLtoCPP0x/IDL2Cxx/taox11/bin" />
     </configuration>
 
     <command name="status"            options="on" />
