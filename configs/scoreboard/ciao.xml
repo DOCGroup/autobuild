@@ -10,6 +10,12 @@
 
   <group>
     <name>Linux</name>
+     <build>
+       <name>FC15_CORBA_e_compact</name>
+       <url>http://buildlogs.theaceorb.nl/fc15_corbaec/</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
     <build>
       <name>FC15_NoLogging</name>
         <url>http://buildlogs.theaceorb.nl/fc15_nologging/</url>
