@@ -22,7 +22,7 @@
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\nssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='zlib=1\nssl=1\nbzip2=1\n'" />
 
     <command name="print_os_version" />
@@ -46,5 +46,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/rhel61_32_gcc" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/rhel61_64_gcc" />
 </autobuild>
