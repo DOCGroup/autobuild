@@ -26,7 +26,7 @@
         <variable name="remote_shell" value="ssh snalinux5" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/build/ACE/crossbuild/" />
-        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT" />
+        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT CCM_DIRECTCOLL" />
 
     </configuration>
 
