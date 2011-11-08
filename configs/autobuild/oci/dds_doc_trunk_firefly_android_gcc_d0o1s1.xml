@@ -56,7 +56,7 @@
   <command name="generate_workspace" options="-type gnuace -static DDS.mwc"/>
 
   <!-- Copy the host built idl compiler -->
-  <command name="anonymous_shell"    options="rm /tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin/opendds_idl"/>
+  <command name="anonymous_shell"    options="rm -f /tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin/opendds_idl"/>
   <command name="anonymous_shell"    options="ln -s /tao_builds/taoadmin/DDS/build/gcc_d0o1s1/bin/opendds_idl /tao_builds/taoadmin/DDS/build/android_gcc_d0o1s1/bin/opendds_idl"/>
 
   <!-- Build dependencies -->
