@@ -46,6 +46,7 @@
   <!-- Installation -->
   <command name="anonymous_shell" options="chmod -R ug+w /tao_builds/taoadmin/dbg_installed"/>
   <command name="make" options="-k find=*akefile dir=dds install"/>
+  <command name="make" options="-k find=*akefile dir=tools install"/>
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/dbg_installed"/>
 
   <!-- Post build -->
