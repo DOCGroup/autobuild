@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on mosquito.ociweb.com) was -->
-  <!-- ../../../../oci/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildfile doc_trunk_mosquito_linux_gcc_d0o1i0c1 -buildflags "debug=0 optimize=1 inline=0 interceptors=0 ami=0 rt_corba=0 corba_messaging=0" -buildname gcc_d0o1i0c1 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO" -compiler gcc -configh "#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1" -creator johnc@ociweb.com -docbuild 1 -docrepo 1 -featureflags "corba_e_compact=1 rmcast=0 ace_codecs=0 ace_filecache=0 ace_other=0 ace_token=0 ace_uuid=0 ami=0 corba_messaging=0 ec_typed_events=0 interceptors=0 rt_corba=0 rwho=0 ssl=0" -outdir ./ -peerlayout 1 -->
+  <!-- ../../../../oci/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildfile doc_trunk_mosquito_linux_gcc_d0o1i0c1 -buildflags "debug=0 optimize=1 inline=0 interceptors=0 ami=0 rt_corba=0 corba_messaging=0" -buildname gcc_d0o1i0c1 -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ACE . dir=ACE" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO" -compiler gcc -creator johnc@ociweb.com -docbuild 1 -docrepo 1 -featureflags "corba_e_compact=1 rmcast=0 ace_codecs=0 ace_filecache=0 ace_other=0 ace_token=0 ace_uuid=0 ami=0 corba_messaging=0 ec_typed_events=0 interceptors=0 rt_corba=0 rwho=0 ssl=0" -outdir ./ -peerlayout 1 -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO"/>
@@ -26,7 +26,7 @@
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/TAO . dir=TAO"/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
-  <command name="file_manipulation"  options="type=update file=build/gcc_d0o1i0c1/ACE/ace/config.h output='#define ACE_GCC_HAS_TEMPLATE_INSTANTIATION_VISIBILITY_ATTRS 1\n#include \x22ace/config-linux.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=update file=build/gcc_d0o1i0c1/ACE/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
   <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/ACE/bin/MakeProjectCreator/config/default.features output='corba_e_compact=1\nrmcast=0\nace_codecs=0\nace_filecache=0\nace_other=0\nace_token=0\nace_uuid=0\nami=0\ncorba_messaging=0\nec_typed_events=0\ninterceptors=0\nrt_corba=0\nrwho=0\nssl=0\n'"/>
   <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/ACE/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\ninline=0\ninterceptors=0\nami=0\nrt_corba=0\ncorba_messaging=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
   <command name="file_manipulation"  options="type=create file=build/gcc_d0o1i0c1/ACE/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/CIAO\x22; export CIAO_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/TAO\x22; export TAO_ROOT\n'"/>
@@ -54,7 +54,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
-  <command name="generate_workspace" options="-type gnuace -recurse -exclude CIAO,DDS,ACE/ACE.mwc,TAO/TAO.mwc"/>
+  <command name="generate_workspace" options="-type gnuautobuild -recurse -exclude CIAO,DDS,ACE/ACE.mwc,TAO/TAO.mwc"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO depend"/>
