@@ -19,8 +19,6 @@
         <environment name="XERCESCROOT"     value="/usr/local/ngclinux/x86_64/x86_64-ngc-linux/usr"/>
         <environment name="RSYNC_RSH"       value="/usr/bin/ssh" />
 
-
-
         <variable name="root"               value="/exports/x86_64-OE/home/root/ACE/build/" />
         <variable name="remote_root"        value="/home/root/ACE/build/ACE_wrappers" />
         <variable name="remote_libpath"     value="/opt/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1" />
@@ -28,7 +26,6 @@
         <variable name="log_file"           value="build.txt" />
         <variable name="log_root"           value="/exports/x86_64-OE/home/root/ACE/build/" />
         <variable name="configs"            value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_NOEVENT CCM_DIRECTCOLL" />
-
 
     </configuration>
 
