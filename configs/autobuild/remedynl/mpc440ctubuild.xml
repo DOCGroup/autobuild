@@ -16,7 +16,7 @@
         <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc/powerpc-ngc-linux/usr"/>
         <environment name="RSYNC_SSH"         value="/usr/bin/ssh"/>
 
-        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="25"/>
 
         <variable name="root"         value="/exports/PPC440FP-OE/home/root/ACE/build/" />

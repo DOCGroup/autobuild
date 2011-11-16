@@ -20,7 +20,7 @@
         <environment name="NDDSHOME"    value="T:\\RTI\\ndds.4.5b.rev01" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2005" />
 
-        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="36"/>
 
         <variable name="configs"  value="Win32 VC8 Exceptions SSL XERCES" />

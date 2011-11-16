@@ -11,7 +11,7 @@
         <environment name="NDDSHOME" value="/home/build/ndds/ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
 
-        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="21"/>
 
         <variable name="root"     value="/home/build/ACE/gcc/" />

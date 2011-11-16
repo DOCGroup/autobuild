@@ -16,7 +16,7 @@
         <environment name="NDDSHOME"    value="C:\\RTI\\ndds.4.5d" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2010" />
 
-        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="38"/>
 
         <environment name="INCLUDE"     value="C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\INCLUDE;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v7.0A\\include;" type="prefix" />
