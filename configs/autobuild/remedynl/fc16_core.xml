@@ -12,7 +12,7 @@
         <environment name="QT4_SUFFIX"       value="-qt4" />
 
         <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="28"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="51"/>
 
         <variable name="root"     value="/home/build/ACE/core/" />
         <variable name="log_file" value="build.txt" />
