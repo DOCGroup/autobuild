@@ -8,5 +8,5 @@ cd $HOME/ACE/autobuild
 svn up
 
 exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_valgrind.xml
+                             $HOME/ACE/autobuild/configs/autobuild/remedynl/fc16_valgrind.xml
 
