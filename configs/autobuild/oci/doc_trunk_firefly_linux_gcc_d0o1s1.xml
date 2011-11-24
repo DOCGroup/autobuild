@@ -5,10 +5,10 @@
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/CIAO"/>
     <environment name="DANCE_ROOT"      value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/DAnCE"/>
-    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/DDS"/>
-    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/lib:"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/DDS/build/gcc_d0o1s1"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/lib:/tao_builds/taoadmin/DDS/build/gcc_d0o1s1/lib:"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
-    <environment name="PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
+    <environment name="PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:/tao_builds/taoadmin/DDS/build/gcc_d0o1s1/bin:"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO"/>
     <variable    name="build_name"      value="gcc_d0o1s1"/>
     <variable    name="creator"         value="fields_t"/>
@@ -22,32 +22,83 @@
   <command name="process_listener"   options="localhost:33001"/>
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
-  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ."/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc_d0o1s1/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d0o1s1/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\nstatic_libs_only=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d0o1s1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d0o1s1/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\ndds4ccm_opendds=1\nstatic_libs_only=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d0o1s1/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/DDS/build/gcc_d0o1s1\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/lib:/tao_builds/taoadmin/DDS/build/gcc_d0o1s1/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:/tao_builds/taoadmin/DDS/build/gcc_d0o1s1/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d0o1s1/TAO\x22; export TAO_ROOT\n'"/>
+   <command name="file_manipulation" options="type=create file=ACE_wrappers/build/gcc_d0o1s1/bin/MakeProjectCreator/config/default.features output='dds4ccm_opendds=1\nccm_lw=1\n'" />
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="gcc"/>
+
+
+  <!-- Conditionally clean binaries -->
+  <command name="make" options="-s -k find=*akefile dir=TAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="   -k find=*akefile dir=bin conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=protocols conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+<!--
+  <command name="make" options="-s -k find=*akefile dir=tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=protocols/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0d1/.clean_binaries clean_binaries"/>
+-->
+
+  <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -static -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
+  <command name="generate_workspace" options="-type gnuace -static TAO/CIAO/CIAO_DAnCE.mwc"/>
 
   <!-- Build dependencies -->
-  <command name="make" options="-s -k find=*akefile dir=ace depend"/>
-  <command name="make" options="-s -k find=*akefile dir=apps/gperf depend"/>
-  <command name="make" options="-s -k find=*akefile dir=TAO/TAO_IDL depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO depend"/>
   <command name="make" options="   -k find=*akefile dir=bin depend"/>
   <command name="make" options="-s -k find=*akefile dir=protocols depend"/>
+<!--
+  <command name="make" options="-s -k find=*akefile dir=tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=protocols/tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=examples depend"/>
+  <command name="make" options="-s -k find=*akefile dir=performance-tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/examples depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/performance-tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/examples depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/DevGuideExamples depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
+-->
 
   <!-- Build targets -->
-  <command name="make" options="-s -k find=*akefile dir=ace"/>
-  <command name="make" options="-s -k find=*akefile dir=apps/gperf"/>
-  <command name="make" options="-s -k find=*akefile dir=TAO/TAO_IDL"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO"/>
   <command name="make" options="   -k find=*akefile dir=bin"/>
   <command name="make" options="-s -k find=*akefile dir=protocols"/>
+<!--
+  <command name="make" options="-s -k find=*akefile dir=tests"/>
+  <command name="make" options="-s -k find=*akefile dir=protocols/tests"/>
+  <command name="make" options="-s -k find=*akefile dir=examples"/>
+  <command name="make" options="-s -k find=*akefile dir=performance-tests"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/tests"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/examples"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/performance-tests"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/tests"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/examples"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/performance-tests"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/DevGuideExamples"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
+-->
 
   <!-- Post build -->
   <command name="log"             options="off"/>
