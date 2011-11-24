@@ -100,6 +100,18 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+    <build>
+      <name>FC16_Perf_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_perf/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC16_Perf_TS_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_perf_ts/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
      <build>
        <name>FC15_FullCCM_x64</name>
        <url>http://buildlogs.theaceorb.nl/fc15_fullccm</url>
