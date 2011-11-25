@@ -27,6 +27,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Linux</name>
      <build>
+        <name>FC15_COIOP</name>
+        <url>http://buildlogs.theaceorb.nl/fc15_COIOP/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
        <name>FC15_CORBA_e_compact</name>
        <url>http://buildlogs.theaceorb.nl/fc15_corbaec/</url>
        <build_sponsor>Remedy IT</build_sponsor>
@@ -35,6 +41,24 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build>
       <name>FC15_ACE_FOR_TAO</name>
       <url>http://buildlogs.theaceorb.nl/fc15_acefortao/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+     <build>
+        <name>FC16_COIOP</name>
+        <url>http://buildlogs.theaceorb.nl/fc16_COIOP/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+       <name>FC16_CORBA_e_compact</name>
+       <url>http://buildlogs.theaceorb.nl/fc16_corbaec/</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+    <build>
+      <name>FC16_ACE_FOR_TAO</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -73,12 +97,6 @@ all the OS/platform combinations on which TAO is tested everyday.
         <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/no_iiop</url>
         <build_sponsor>ISIS</build_sponsor>
         <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC15_COIOP</name>
-        <url>http://buildlogs.theaceorb.nl/fc15_COIOP/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
        <name>Ubuntu_10_04</name>
