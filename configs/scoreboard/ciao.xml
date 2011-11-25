@@ -178,12 +178,6 @@
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
     </build>
-    <build>
-      <name>FC8_Core</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/Core/</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
      <build>
        <name>OpenSuSE_11_4_GCC_64bit</name>
        <url>http://buildlogs.theaceorb.nl/suse114_64_gcc</url>
