@@ -40,7 +40,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO/CIAO,TAO/DAnCE -type gnuautobuild" />
 
     <command name="make"              options="-k" />
 
