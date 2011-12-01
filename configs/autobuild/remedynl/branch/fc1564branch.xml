@@ -44,7 +44,8 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -o -t -C" />
+    <command name="auto_run_tests"    options=" -C" />
+    <!--command name="auto_run_tests"    options=" -o -t -C" /-->
 
     <command name="anonymous_shell"   options="killall dance_locality_manager" />
 
