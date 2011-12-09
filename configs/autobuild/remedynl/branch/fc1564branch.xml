@@ -42,7 +42,7 @@
     <command name="make"              options="-C TAO/CIAO -k realclean find=*akefile" />
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
     <command name="make"              options="-C TAO/CIAO -k" />
-    <command name="auto_run_tests"    options=" -C" />
+    <!--command name="auto_run_tests"    options=" -C" /-->
 
     <!-- COMPILE AND TEST EVERYTHING-->
     <!--command name="make"              options="-k realclean find=*akefile" /-->
