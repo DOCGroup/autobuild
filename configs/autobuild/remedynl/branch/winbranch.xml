@@ -38,8 +38,8 @@
 
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/RemedyWork DOC_ROOT" />
-    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk DOC_ROOT" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/branches/RemedyWork DOC_ROOT" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk DOC_ROOT/MPC" />
 
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.mak' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
