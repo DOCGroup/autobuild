@@ -1,17 +1,17 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"    value="C:\\ACE\\branch\\ACE_wrappers" />
-        <environment name="TAO_ROOT"    value="C:\\ACE\\branch\\ACE_wrappers\\TAO"/>
-        <environment name="CIAO_ROOT"   value="C:\\ACE\\branch\\ACE_wrappers\\TAO\\CIAO"/>
-        <environment name="DANCE_ROOT"  value="C:\\ACE\\branch\\ACE_wrappers\\TAO\\DAnCE"/>
+        <environment name="ACE_ROOT"    value="C:\\ACE\\branch\\DOC_ROOT\\ACE" />
+        <environment name="TAO_ROOT"    value="C:\\ACE\\branch\\DOC_ROOT\\TAO"/>
+        <environment name="CIAO_ROOT"   value="C:\\ACE\\branch\\DOC_ROOT\\CIAO"/>
+        <environment name="DANCE_ROOT"  value="C:\\ACE\\branch\\DOC_ROOT\\DAnCE"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
         <environment name="ZLIB_ROOT"   value="C:\\Program Files\\GnuWin32"/>
         <environment name="PATH"        value="C:\\Program Files\\GnuWin32\\bin;" type="prefix" />
         <environment name="BZIP2_ROOT"  value="C:\\Program Files\\GnuWin32"/>
         <environment name="XERCESCROOT" value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0" />
         <environment name="PATH"        value="C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\lib;C:\\xerces-c-3.0.0-x86-windows-vc-9.0\\bin;" type="prefix" />
-        <environment name="PATH"        value="C:\\ACE\\branch\\ACE_wrappers\\bin;C:\\ACE\\branch\\ACE_wrappers\\lib;" type="prefix" />
+        <environment name="PATH"        value="C:\\ACE\\branch\\DOC_ROOT\\ACE\\bin;C:\\ACE\\branch\\DOC_ROOT\\ACE\\lib;" type="prefix" />
         <environment name="PATH"        value="C:\\RTI\\ndds.4.5d.rev11\\lib\\i86Win32VS2008;" type="prefix" />
         <environment name="NDDSHOME"    value="C:\\RTI\\ndds.4.5d.rev11" />
         <environment name="NDDSARCHITECTURE"    value="i86Win32VS2008" />
@@ -38,13 +38,14 @@
 
     <command name="log"               options="ON" />
 
-    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/branches/RemedyWorkSet ." />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/RemedyWork DOC_ROOT" />
+    <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk DOC_ROOT" />
 
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.mak' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
     <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\n'" />
+    <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -61,5 +62,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=50 index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ /cygdrive/z/winbranchbuild" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ /cygdrive/z/winbranchbuild" />
 </autobuild>
