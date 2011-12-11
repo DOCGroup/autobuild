@@ -30,6 +30,7 @@
         <variable name="log_root" value="C:\\ACE\\branch\\" />
         <variable name="name"     value="WinXP VS.NET 2008" />
         <variable name="svn_program"  value="c:\\cygwin\\bin\\svn" />
+        <variable name="project_root" value="C:\\ACE\\branch\\DOC_ROOT" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -42,8 +43,8 @@
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/Middleware/branches/RemedyWork DOC_ROOT" />
     <command name="svn"               options="co https://svn.dre.vanderbilt.edu/DOC/MPC/trunk DOC_ROOT/MPC" />
 
-    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.mak' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
-    <command name="shell"             options="c:\\cygwin\\bin\\find ACE_wrappers -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find DOC_ROOT -name '*.mak' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
+    <command name="shell"             options="c:\\cygwin\\bin\\find DOC_ROOT -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/bin/MakeProjectCreator/config/default.features output='xerces3=1\ndds4ccm_ndds=1\nndds=1\n'" />
@@ -54,7 +55,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -base vc9nmake -exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc"/>
+    <command name="generate_workspace" options="-type nmake -base vc9nmake -exclude DOC_ROOT/TAO/TAO_*.mwc,DOC_ROOT/CIAO/CIAO_*.mwc"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
