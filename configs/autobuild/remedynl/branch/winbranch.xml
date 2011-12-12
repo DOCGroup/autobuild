@@ -55,7 +55,7 @@
     <command name="print_ace_config" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="-type nmake -base vc9nmake -exclude DOC_ROOT/ADBC -exclude DOC_ROOT/TAO/TAO_*.mwc,DOC_ROOT/CIAO/CIAO_*.mwc"/>
+    <command name="generate_workspace" options="-type nmake -base vc9nmake -exclude ADBC -exclude TAO/TAO_*.mwc,CIAO/CIAO_*.mwc"/>
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
