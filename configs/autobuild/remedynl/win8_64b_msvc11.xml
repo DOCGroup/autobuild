@@ -13,8 +13,6 @@
         <environment name="LIBPATH"     value="C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;C:\\Windows\\Microsoft.NET\\Framework\\v3.5;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\LIB;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\LIB;" type="prefix" />
         <environment name="PATH"        value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files (x86)\\Microsoft SDKs\\F#\\3.0\\Framework\\v4.0\\;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\BIN;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\Tools;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;C:\\Windows\\Microsoft.NET\\Framework\\v3.5;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\VCPackages;C:\\Program Files (x86)\\HTML Help Workshop;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Windows Kits\\8.0\\bin\\x86;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v8.0A\\bin\\NETFX 4.0 Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v8.0A\\bin;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\110\\DTS\\Binn\\" type="prefix" />
 
-        <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
-
         <variable name="configs"  value="Win32 VC90 Exceptions NDDS XERCES" />
         <variable name="root"     value="C:\\ACE\\trunk\\" />
         <variable name="log_file" value="build.txt" />
@@ -38,7 +36,7 @@
     <command name="shell"             options="c:\\cygwin\\bin\\find DOC_ROOT -name '*.manifest' -exec c:\\cygwin\\bin\\rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/ace/config.h output='#define ACE_DISABLE_WIN32_INCREASE_PRIORITY\n#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-win32.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/bin/MakeProjectCreator/config/default.features output=''" />
+    <command name="file_manipulation" options="type=create file=DOC_ROOT/ACE/bin/MakeProjectCreator/config/default.features output='versioned_namespace=1\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -51,7 +49,7 @@
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 NO_EXTERNAL_DEPS=1" />
 
     <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean=50 index" />
+    <command name="process_logs"      options="move prettify index" />
     <command name="status"            options="off" />
     <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/win8_64b_msvc11" />
 </autobuild>
