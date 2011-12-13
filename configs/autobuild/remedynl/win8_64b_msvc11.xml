@@ -17,7 +17,7 @@
         <variable name="root"     value="C:\\ACE\\trunk\\" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="C:\\ACE\\trunk\\" />
-        <variable name="name"     value="WinXP VS.NET 2008" />
+        <variable name="name"     value="Win8 Visual Studio 11" />
         <variable name="svn_program"  value="c:\\cygwin\\bin\\svn" />
         <variable name="project_root" value="C:\\ACE\\trunk\\DOC_ROOT" />
     </configuration>
