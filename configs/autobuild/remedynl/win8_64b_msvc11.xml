@@ -8,7 +8,7 @@
         <environment name="MPC_ROOT"    value="C:\\ACE\\trunk\\DOC_ROOT\\MPC"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"        value="C:\\ACE\\trunk\\DOC_ROOT\\ACE\\bin;C:\\ACE\\trunk\\DOC_ROOT\\ACE\\lib;" type="prefix" />
-        <environment name="INCLUDE"     value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\shared;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\um;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\winrt;" type="prefix" />
+        <environment name="INCLUDE"     value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\shared;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\um;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\winrt;LIB=C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\LIB;C:\\Program Files(x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\LIB;C:\\Program Files (x86)\\WindowsKits\\8.0\\lib\\win8\\um\\x86;" type="prefix" />
         <environment name="LIB"         value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\LIB;C:\\Program Files(x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\LIB;C:\\Program Files (x86)\\WindowsKits\\8.0\\lib\\win8\\um\\x86;" type="prefix" />
         <environment name="LIBPATH"     value="C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;C:\\Windows\\Microsoft.NET\\Framework\\v3.5;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\LIB;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\LIB;" type="prefix" />
         <environment name="PATH"        value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\bin;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v8.0A\\bin;C:\\Program Files (x86)\\Windows Kits\\8.0\\bin\\x86" type="prefix" />
@@ -53,5 +53,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=50 index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ /cygdrive/z/win8_64b_msvc11" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/win8_64b_msvc11" />
 </autobuild>

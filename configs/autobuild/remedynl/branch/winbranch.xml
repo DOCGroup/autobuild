@@ -64,5 +64,5 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=50 index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ /cygdrive/z/winbranchbuild" />
+    <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/winbranchbuild" />
 </autobuild>
