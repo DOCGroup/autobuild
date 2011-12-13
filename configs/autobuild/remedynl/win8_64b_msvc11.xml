@@ -52,5 +52,6 @@
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify index" />
     <command name="status"            options="off" />
+    <command name="shell"             options="c:\\cygwin\\bin\\chmod 744 *" />
     <command name="shell"             options="c:\\cygwin\\bin\\rsync --progress --recursive --delete -z --exclude /DOC_ROOT*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/win8_64b_msvc11" />
 </autobuild>
