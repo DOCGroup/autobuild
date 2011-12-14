@@ -19,10 +19,6 @@
         <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="37"/>
 
-        <environment name="INCLUDE"     value="C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\INCLUDE;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\include;" type="prefix" />
-        <environment name="LIB"         value="C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v6.0A\\lib;" type="prefix" />
-        <environment name="LIBPATH"     value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;" type="prefix" />
-        <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\bin;C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0A\\bin;" type="prefix" />
         <environment name="QTDIR"       value="C:\\Qt\\4.7.3\\" />
         <environment name="QT_CFG"      value="4" />
         <environment name="PATH"        value="C:\\Qt\\4.7.3\\bin;" type="prefix" />
@@ -37,6 +33,8 @@
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
+
+    <command name="eval"             options="\x22C:\\Program Files\\Microsoft Visual Studio 9\\VC\\vcvarsall.bat\x22 x86 & set" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 

@@ -19,11 +19,6 @@
         <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
         <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="38"/>
 
-        <environment name="INCLUDE"     value="C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\INCLUDE;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v7.0A\\include;" type="prefix" />
-        <environment name="LIB"         value="C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\LIB;C:\\Program Files\\\\Microsoft SDKs\\Windows\\v7.0A\\lib;" type="prefix" />
-        <environment name="LIBPATH"     value="C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\LIB;" type="prefix" />
-        <environment name="PATH"        value="C:\\Program Files\\Microsoft Visual Studio 10.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\bin;C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\bin;" type="prefix" />
-
         <variable name="configs"  value="Win32 VC100 Exceptions XERCES NDDS" />
         <variable name="root"     value="C:\\ACE\\VC100\\" />
         <variable name="log_file" value="build.txt" />
@@ -34,6 +29,8 @@
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
+
+    <command name="eval"             options="\x22C:\\Program Files\\Microsoft Visual Studio 10\\VC\\vcvarsall.bat\x22 x86 & set" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
