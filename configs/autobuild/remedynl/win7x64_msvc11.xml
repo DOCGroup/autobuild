@@ -21,11 +21,7 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="print_env_vars" />
-
-    <command name="eval"             options="\x22C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\vcvarsall.bat\x22 x86 | set" />
-
-    <command name="print_env_vars" />
+    <command name="eval"             options="\x22C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\vcvarsall.bat\x22 x86 & set" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
