@@ -7,9 +7,8 @@
         <environment name="DANCE_ROOT"    value="C:\\ACE\\VC8\\ACE_wrappers\\TAO\\DAnCE"/>
         <environment name="RSYNC_RSH"    value="C:\\cygwin\\bin\\ssh" />
         <environment name="SSL_ROOT"     value="c:\\OpenSSL" />
-        <environment name="PATH"         value="C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\vcpackages;C:\\Program Files\\Microsoft Visual Studio 8\\Vc\\bin;C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcpackages;C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;C:\\Perl\\bin;c:\\Cygwin\\bin" type="prefix" />
-        <environment name="INCLUDE"      value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\INCLUDE;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\include;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\include;" type="prefix" />
-        <environment name="LIB"          value="c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\LIB;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\PlatformSDK\\lib;c:\\Program Files\\Microsoft Visual Studio 8\\SDK\\v2.0\\lib;LIBPATH=c:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;c:\\Program Files\\Microsoft Visual Studio 8\\VC\\ATLMFC\\LIB" type="prefix" />
+        <environment name="PATH"  value="C:\\ACE\\VC8\\ACE_wrappers\\bin;C:\\ACE\\VC8\\ACE_wrappers\\lib;" type="prefix" />
+        <environment name="PATH"         value="C:\\Perl\\bin;c:\\Cygwin\\bin" type="prefix" />
         <environment name="BOOST_ROOT"              value="C:\\Program Files\\boost\\boost_1_33_1"/>
         <environment name="BOOST_VERSION"           value="boost-1_33_1"/>
         <environment name="BOOST_CFG"               value="-vc8-mt" />
@@ -33,6 +32,8 @@
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
+
+    <command name="eval"             options="\x22C:\\Program Files\\Microsoft Visual Studio 8\\VC\\vcvarsall.bat\x22 x86 & set" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
