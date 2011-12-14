@@ -26,7 +26,7 @@
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git ATCD" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git MPC" />
 
-    <command name="make"              options="-C ACE -k realclean find=*akefile" />
+    <command name="make"              options="-k realclean -C ACE" />
 
     <command name="shell"             options="find -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
