@@ -144,7 +144,7 @@ sub ParseAttribute (\$)
     $$attributes =~ s/^\s*([^\s="]*)//;
     $firstAttribute = $1;
   }
-  
+
   # Now identify if there is a value, and if so isolate that.
   #
   my $value;
@@ -249,7 +249,7 @@ sub ParseIfAttribute ($$$$$$$;$)
       }
     }
   }
-  
+
   return $existingIF;
 }
 
@@ -341,7 +341,7 @@ sub DealWithInclude ($$$$$\%$)
 {
   my ($self, $filename, $lineStart,
       $lineEnd, $oldState, $data, $attributes) = @_;
-  
+
   my $includeOK = 1;
   my $includeFile = '';
   my $includeIf;
@@ -713,7 +713,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
     elsif ($thisAttrib =~ m/^eval(?:uate)?$/i) {
       # Check for old prismtech meaning (=true) or new style (empty or no
       # string given) meaning that ALL of the resultant value must be evaluated
-      # before being stored. (Note that we now do this AFTER we have susituted
+      # before being stored. (Note that we now do this AFTER we have substituted
       # any variables in this string AND only if we are actually creating this
       # variable.)
       #
@@ -834,7 +834,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
       }
     }
     #-------------------------------------------------------------------------
-    # We have an unknown attribute and possiable value, treat this as
+    # We have an unknown attribute and possible value, treat this as
     # a command name with options, if we have not seen the name yet.
     #
     elsif ("" eq $NAME) {
@@ -913,7 +913,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
       $VALUE = 0 if (!defined $VALUE || "" eq $VALUE);
     }
   }
-  
+
   return ($IF_TEXT, $NAME, $TYPE, $VALUE, \@GROUPS);
 }
 
@@ -1222,7 +1222,7 @@ sub FindNameIF ($$$$$)
 sub DealWithCommandTag ($$$$$\%)
 {
   my ($file, $lineStart, $lineEnd, $tag, $attributes, $data) = @_;
-  
+
   ShouldBeSelfClosedTag ($file, $lineStart, $lineEnd, $tag, $attributes);
   my ($PAIRS, $NAME, $IF_TEXT) =
     FindNameIF ($file, $lineStart, $lineEnd, $tag, $attributes);
