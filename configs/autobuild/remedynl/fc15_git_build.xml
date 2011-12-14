@@ -54,7 +54,7 @@
 
     <command name="make"              options="-C ../CIAO -k" />
 
-    <command name="auto_run_tests"    options=" -C" />
+    <command name="auto_run_tests"    options=" -C" script_path="$ACE_ROOT/bin" />
 
     <command name="anonymous_shell"   options="killall dance_locality_manager" />
 
