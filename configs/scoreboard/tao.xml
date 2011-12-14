@@ -165,8 +165,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Win8x64_VC11_Versioned_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/win8_64b_msvc11</url>
+      <name>Win7x64_VC11_Versioned_Debug</name>
+      <url>http://buildlogs.theaceorb.nl/win7x64_msvc11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
