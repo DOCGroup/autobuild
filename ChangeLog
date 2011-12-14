@@ -1,3 +1,9 @@
+Wed Dec 14 15:38:28 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/file_manipulation.pm:
+          Added support for using environment variables for file create/append/
+          delete operations
+
 Wed Dec 14 13:36:28 UTC 2011  Martin Corino <mcorino@remedy.nl>
 
         * command/git.pm:
