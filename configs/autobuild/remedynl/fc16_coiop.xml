@@ -28,7 +28,7 @@
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git ATCD" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git MPC" />
 
-    <command name="make"              options="-k realclean find=*akefile" />
+    <command name="make"              options="-C ACE -k realclean find=*akefile" />
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
@@ -47,7 +47,7 @@
 
     <command name="generate_workspace" options="$ACE_ROOT/TAO_COIOP.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C ACE" />
 
     <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" />
 
