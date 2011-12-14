@@ -11,10 +11,11 @@
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="QT4_SUFFIX"      value="-qt4" />
 
-        <variable name="root"     value="/home/build/ACE/COIOP/" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/COIOP/" />
-        <variable name="configs"  value="Linux SSL COIOP" />
+        <variable name="root"         value="/home/build/ACE/COIOP/" />
+        <variable name="log_file"     value="build.txt" />
+        <variable name="log_root"     value="/home/build/ACE/COIOP/" />
+        <variable name="configs"      value="Linux SSL COIOP" />
+        <variable name="project_root" value="/home/build/ACE/COIOP/ATCD" />
 
     </configuration>
 
@@ -31,10 +32,10 @@
 
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=ATCD/ACE/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
-    <command name="file_manipulation" options="type=create file=ATCD/ACE/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nprobe=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
-    <command name="file_manipulation" options="type=create file=ATCD/ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nqt4=1\n\n'" />
-    <command name="file_manipulation" options="type=create file=ATCD/ACE/TAO_COIOP.mwc output='workspace {\nace\napps/gperf/src\n$(TAO_ROOT)/TAO_IDL\n$(TAO_ROOT)/tao\n$(TAO_ROOT)/tests/COIOP\n}\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nprobe=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nqt4=1\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/TAO_COIOP.mwc output='workspace {\nace\napps/gperf/src\n$(TAO_ROOT)/TAO_IDL\n$(TAO_ROOT)/tao\n$(TAO_ROOT)/tests/COIOP\n}\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -48,7 +49,7 @@
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-l $TAO_ROOT/tests/COIOP/COIOP.lst" />
+    <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />

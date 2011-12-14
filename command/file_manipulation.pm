@@ -706,7 +706,7 @@ sub Run ($)
         ### option  output=
         ###################
         elsif ($option =~ m/^output=(.*)/) {
-            $output.= $1;  ### Multiple outputs concatanate
+            $output.= $1;  ### Multiple outputs concatenate
         }
         ### option      to=
         ### option    target=
