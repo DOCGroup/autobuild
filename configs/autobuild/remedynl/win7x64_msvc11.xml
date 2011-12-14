@@ -8,15 +8,6 @@
         <environment name="MPC_ROOT"    value="C:\\ACE\\trunk\\DOC_ROOT\\MPC"/>
         <environment name="RSYNC_RSH"   value="C:\\cygwin\\bin\\ssh" />
         <environment name="PATH"        value="C:\\ACE\\trunk\\DOC_ROOT\\ACE\\bin;C:\\ACE\\trunk\\DOC_ROOT\\ACE\\lib;" type="prefix" />
-        <environment name="INCLUDE"     value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\INCLUDE;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\shared;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\um;C:\\Program Files (x86)\\Windows Kits\\8.0\\include\\winrt;LIB=C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\LIB;C:\\Program Files(x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\LIB;C:\\Program Files (x86)\\WindowsKits\\8.0\\lib\\win8\\um\\x86;" type="prefix" />
-        <environment name="LIBPATH"     value="C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;C:\\Windows\\Microsoft.NET\\Framework\\v3.5;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\LIB;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\ATLMFC\\LIB;LOCALAPPDATA=C:\\Users\\build\\AppData\\Local;" type="prefix" />
-        <environment name="PATH"        value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files (x86)\\Microsoft SDKs\\F#\\3.0\\Framework\\v4.0\\;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\BIN;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\Tools;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;C:\\Windows\\Microsoft.NET\\Framework\\v3.5;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\VCPackages;C:\\Program Files (x86)\\HTML Help Workshop;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Windows Kits\\8.0\\bin\\x86;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v8.0A\\bin\\NETFX 4.0 Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v8.0A\\bin;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\110\\DTS\\Binn\\" type="prefix" />
-        <environment name="WindowsSdkDir" value="C:\\Program Files (x86)\\Windows Kits\\8.0\\" type="prefix" />
-        <environment name="VCINSTALLDIR" value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\VisualStudioVersion=11.0" type="prefix" />
-        <environment name="VS110COMNTOOLS" value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\Tools\\" type="prefix" />
-        <environment name="VSINSTALLDIR" value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\" type="prefix" />
-        <environment name="VSSDK110Install" value="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VSSDK\\" type="prefix" />
-        <environment name="WindowsSdkDir" value="C:\\Program Files (x86)\\Windows Kits\\8.0\\" type="prefix" />
 
         <variable name="configs"  value="Win32 VC110" />
         <variable name="root"     value="C:\\ACE\\trunk\\" />
@@ -29,6 +20,8 @@
 
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
+
+    <command name="shell"             options="C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VC\\vcvarsall.bat x86" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
