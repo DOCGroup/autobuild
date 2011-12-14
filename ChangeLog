@@ -1,3 +1,9 @@
+Wed Dec 14 13:36:28 UTC 2011  Martin Corino <mcorino@remedy.nl>
+
+        * command/git.pm:
+
+          Updated git command handler.
+
 Sat Oct 29 17:43:28 UTC 2011  Martin Corino <mcorino@remedy.nl>
 
         * command/generate_workspace.pm:

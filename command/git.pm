@@ -92,6 +92,46 @@ sub Run ($)
         $git_program = "git";
     }
 
+    if ($options =~ m/^clone[\s]+([^\s]+)(.*)$/) {
+      # in case of the clone command we attempt to check if the repo
+      # has been cloned before (not uncommon for repeatedly executed
+      # autobuilds) in which case we turn the clone into a pull
+      my $repo_url = $1;
+      my $rest_opts = $2;
+      my $repo_dir = '';
+      my $do_pull = 0;
+      # see if repo (sub)dir specified in command
+      if ($rest_opts =~ m/\s*([^\s]+)$/) {
+        $repo_dir = $1;
+      }
+      if (-z $repo_dir || !-d "$repo_dir/.git") {
+        # check dir name extracted from repo url
+        if ($repo_url =~ m/([^\/]+)[\/]?[\.]git$/) {
+          $repo_dir = $1;
+        } else {
+          $repo_url =~ m/(^[\/]+)$/;
+          $repo_dir = $1;
+        }
+        if (-d "$repo_dir/.git") {
+          $do_pull = 1;
+        }
+      } else {
+        $do_pull = 1;
+      }
+      if ($do_pull) {
+        if(!chdir $repo_dir) {
+            print STDERR __FILE__, ": Cannot change to $repo_dir\n";
+            return 0;
+        }
+        $options = 'pull';
+      }
+    }
+
+    my $ret = system ("$git_program $options");
+    if ($ret != 0) {
+        print STDERR __FILE__, " ERROR: $git_program $options returned $ret\n";
+    }
+
     chdir $current_dir;
 
     return 1;
@@ -99,4 +139,4 @@ sub Run ($)
 
 ##############################################################################
 
-main::RegisterCommand ("git", new SVN ());
+main::RegisterCommand ("git", new GIT ());
