@@ -30,7 +30,7 @@
     <command name="status"            options="on" />
     <command name="process_listener"  options="localhost:32001" />
 
-    <command name="eval"             options="\x22C:\\Program Files\\Microsoft Visual Studio 10\\VC\\vcvarsall.bat\x22 x86 & set" />
+    <command name="eval"             options="\x22C:\\Program Files\\Microsoft Visual Studio 10.0\\VC\\vcvarsall.bat\x22 x86 & set" />
 
     <command name="win32make"         options="nmake /I CFG=\x22Win32 Debug\x22 REALCLEAN" />
 
