@@ -1,7 +1,6 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-
         <environment name="ACE_ROOT"        value="/home/build/ACE/doxygen/ACE_wrappers" />
         <environment name="TAO_ROOT"        value="/home/build/ACE/doxygen/ACE_wrappers/TAO"/>
 
@@ -29,7 +28,7 @@
     <command name="print_ace_config" />
     <command name="check_compiler" options="doxygen" />
 
-    <command name="shell" options="$HOME/ACE/autobuild/configs/autobuild/remedynl/fc15_doxygen.pl" />
+    <command name="shell" options="$HOME/ACE/autobuild/configs/autobuild/remedynl/fc16_doxygen.pl" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
