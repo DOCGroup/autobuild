@@ -32,7 +32,7 @@
     <command name="anonymous_shell"   options="rm -rf $DOC_ROOT" />
     <command name="anonymous_shell"   options="rm -rf $MPC_ROOT" />
 
-    <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git ATCD" />
+    <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git DOC_ROOT" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git MPC" />
 
         <command name="print_env_vars" />
