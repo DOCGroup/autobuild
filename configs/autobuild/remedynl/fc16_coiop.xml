@@ -5,11 +5,11 @@
         <variable name="build_root"   relative_value="<home>/ACE/COIOP" />
         <variable name="configs"      value="Linux SSL COIOP" />
 
-        <variable name="doc_root"     value="DOC_ROOT" />
         <variable name="root"         relative_value="<build_root>" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     relative_value="<build_root>" />
-        <variable name="project_root" relative_value="<build_root>/<doc_root>" />
+        <variable name="doc_root"     value="<build_root>/DOC_ROOT" />
+        <variable name="project_root" relative_value="<doc_root>" />
 
         <environment name="BUILD_ROOT"      relative_value="<build_root>" />
         <environment name="DOC_ROOT"        relative_value="<doc_root>" />
