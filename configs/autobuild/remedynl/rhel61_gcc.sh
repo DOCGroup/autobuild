@@ -7,4 +7,4 @@ cd $HOME/ACE/autobuild
 svn up
 
 # Run the build.
-sh $HOME/ACE/autobuild/configs/autobuild/remedynl/ngc/rhel61_gcc_ace.sh
+sh $HOME/ACE/autobuild/configs/autobuild/remedynl/rhel61_gcc_ace.sh
