@@ -7,4 +7,6 @@
     <command name="anonymous_shell"   options="rm -rf $MPC_ROOT" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git $DOC_ROOT_NAME" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git $MPC_NAME" />
+    <command name="anonymous_shell"   options="cd $DOC_ROOT && git log -1 | grep git-svn-id" />
+    <command name="anonymous_shell"   options="cd $MPC_ROOT && git log -1 | grep git-svn-id" />
 </autobuild>
