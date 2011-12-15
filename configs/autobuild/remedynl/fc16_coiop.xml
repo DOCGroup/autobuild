@@ -12,12 +12,12 @@
         <variable name="project_root" relative_value="<build_root>/<doc_root>" />
 
         <environment name="BUILD_ROOT"      relative_value="<build_root>" />
-        <environment name="DOC_ROOT"        value="${BUILD_ROOT}/DOC_ROOT" />
-        <environment name="ACE_ROOT"        value="${DOC_ROOT}/ACE" />
-        <environment name="TAO_ROOT"        value="${DOC_ROOT}/TAO"/>
-        <environment name="CIAO_ROOT"       value="${DOC_ROOT}/CIAO"/>
-        <environment name="DANCE_ROOT"      value="${DOC_ROOT}/DAnCE"/>
-        <environment name="MPC_ROOT"        value="${BUILD_ROOT}/MPC"/>
+        <environment name="DOC_ROOT"        relative_value="<doc_root>" />
+        <environment name="ACE_ROOT"        relative_value="<doc_root>/ACE" />
+        <environment name="TAO_ROOT"        relative_value="<doc_root>/TAO"/>
+        <environment name="CIAO_ROOT"       relative_value="<doc_root>/CIAO"/>
+        <environment name="DANCE_ROOT"      relative_value="<doc_root>/DAnCE"/>
+        <environment name="MPC_ROOT"        relative_value="<build_root>/MPC"/>
         <environment name="LD_LIBRARY_PATH" value="${ACE_ROOT}/lib:" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="QT4_SUFFIX"      value="-qt4" />
