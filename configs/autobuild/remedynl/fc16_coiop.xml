@@ -20,15 +20,13 @@
     <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nqt4=1\n\n'" />
     <command name="file_manipulation" options="type=create file=<ace_root>/TAO_COIOP.mwc output='workspace {\nace\napps/gperf/src\n$(TAO_ROOT)/TAO_IDL\n$(TAO_ROOT)/tao\n$(TAO_ROOT)/tests/COIOP\n}\n'" />
 
-    <command name="print_os_version" />
-    <command name="print_env_vars" />
-    <command name="check_compiler" options="gcc" />
-    <command name="print_ace_config" />
-    <command name="print_openssl_version"/>
-    <command name="print_make_version" />
-    <command name="print_perl_version" />
+    <include name="printbuildenv.xml" />
 
-    <command name="fuzz"         options="" />
+    <command name="generate_workspace" options="$ACE_ROOT/TAO_COIOP.mwc -type gnuace" />
+
+    <command name="make"              options="-k -C ACE" />
+
+    <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
