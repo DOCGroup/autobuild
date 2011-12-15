@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="BUILD_ROOT"      value="ACE/COIOP" />
+        <environment name="BUILD_ROOT"      environment="$HOME/ACE/COIOP" />
         <environment name="DOC_ROOT"        value="${BUILD_ROOT}/DOC_ROOT" />
         <environment name="ACE_ROOT"        value="${DOC_ROOT}/ACE" />
         <environment name="TAO_ROOT"        value="${DOC_ROOT}/TAO"/>
@@ -12,9 +12,9 @@
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="QT4_SUFFIX"      value="-qt4" />
 
-        <variable name="root"         value="${HOME}/${BUILD_ROOT}" />
+        <variable name="root"         value="${BUILD_ROOT}" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="${HOME}/${BUILD_ROOT}" />
+        <variable name="log_root"     value="${BUILD_ROOT}" />
         <variable name="configs"      value="Linux SSL COIOP" />
         <variable name="project_root" value="${DOC_ROOT}" />
     </configuration>
