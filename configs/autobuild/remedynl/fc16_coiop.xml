@@ -1,7 +1,8 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="BUILD_ROOT"      environment="$(HOME)/ACE/COIOP" />
+        <environment name="HOME"            environment="$(HOME)" />
+        <environment name="BUILD_ROOT"      value="${HOME}/ACE/COIOP" />
         <environment name="DOC_ROOT"        value="${BUILD_ROOT}/DOC_ROOT" />
         <environment name="ACE_ROOT"        value="${DOC_ROOT}/ACE" />
         <environment name="TAO_ROOT"        value="${DOC_ROOT}/TAO"/>
