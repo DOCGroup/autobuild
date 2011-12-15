@@ -48,7 +48,7 @@
 
     <command name="make"              options="-k -C ACE" />
 
-    <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" script_path="$ACE_ROOT/bin" />
+    <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" script_path=$ACE_ROOT/bin />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
