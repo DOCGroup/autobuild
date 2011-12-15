@@ -1,20 +1,22 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/COIOP/ATCD/ACE" />
-        <environment name="TAO_ROOT"        value="/home/build/ACE/COIOP/ATCD/TAO"/>
-        <environment name="CIAO_ROOT"       value="/home/build/ACE/COIOP/ATCD/CIAO"/>
-        <environment name="DANCE_ROOT"      value="/home/build/ACE/COIOP/ATCD/DAnCE"/>
-        <environment name="MPC_ROOT"        value="/home/build/ACE/COIOP/MPC"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/COIOP/ATCD/ACE/lib:" type="prefix" />
+        <environment name="BUILD_ROOT"      value="/home/build/ACE/COIOP" />
+        <environment name="DOC_ROOT"        value="${BUILD_ROOT}/DOC_ROOT" />
+        <environment name="ACE_ROOT"        value="${DOC_ROOT}/ACE" />
+        <environment name="TAO_ROOT"        value="${DOC_ROOT}/TAO"/>
+        <environment name="CIAO_ROOT"       value="${DOC_ROOT}/CIAO"/>
+        <environment name="DANCE_ROOT"      value="${DOC_ROOT}/DAnCE"/>
+        <environment name="MPC_ROOT"        value="${BUILD_ROOT}/MPC"/>
+        <environment name="LD_LIBRARY_PATH" value="${ACE_ROOT}/lib:" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="QT4_SUFFIX"      value="-qt4" />
 
-        <variable name="root"         value="/home/build/ACE/COIOP/" />
+        <variable name="root"         value="${BUILD_ROOT}" />
         <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="/home/build/ACE/COIOP/" />
+        <variable name="log_root"     value="${BUILD_ROOT}" />
         <variable name="configs"      value="Linux SSL COIOP" />
-        <variable name="project_root" value="/home/build/ACE/COIOP/ATCD" />
+        <variable name="project_root" value="${DOC_ROOT}" />
     </configuration>
 
     <command name="status"            options="on" />
@@ -23,8 +25,8 @@
 
     <command name="log"               options="on" />
 
-    <command name="anonymous_shell"   options="rm -rf ATCD" />
-    <command name="anonymous_shell"   options="rm -rf MPC" />
+    <command name="anonymous_shell"   options="rm -rf $DOC_ROOT" />
+    <command name="anonymous_shell"   options="rm -rf $MPC_ROOT" />
 
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git ATCD" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git MPC" />
@@ -51,5 +53,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ATCD/ --exclude /MPC/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc16_COIOP" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /$DOC_ROOT/ --exclude /$MPC_ROOT/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc16_COIOP" />
 </autobuild>
