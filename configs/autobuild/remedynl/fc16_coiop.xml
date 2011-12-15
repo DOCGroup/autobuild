@@ -1,6 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
+        <variable name="home"         environment="HOME" />
+        <variable name="build_root"   relative_value="<home>/ACE/COIOP" />
+        <variable name="configs"      value="Linux SSL COIOP" />
+
+        <variable name="doc_root"     value="DOC_ROOT" />
+        <variable name="root"         relative_value="<build_root>" />
+        <variable name="log_file"     value="build.txt" />
+        <variable name="log_root"     relative_value="<build_root>" />
+        <variable name="project_root" relative_value="<build_root>/<doc_root>" />
+
         <environment name="BUILD_ROOT"      value="/home/build/ACE/COIOP" />
         <environment name="DOC_ROOT"        value="${BUILD_ROOT}/DOC_ROOT" />
         <environment name="ACE_ROOT"        value="${DOC_ROOT}/ACE" />
@@ -11,14 +21,6 @@
         <environment name="LD_LIBRARY_PATH" value="${ACE_ROOT}/lib:" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="QT4_SUFFIX"      value="-qt4" />
-
-        <variable name="home"         environment="HOME" />
-        <variable name="build_root"   value="/home/build" />
-        <variable name="root"         relative_value="<build_root>/ACE/COIOP" />
-        <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     value="${HOME}/ACE/COIOP" />
-        <variable name="configs"      value="Linux SSL COIOP" />
-        <variable name="project_root" value="${HOME}/ACE/COIOP/DOC_ROOT" />
     </configuration>
 
     <command name="status"            options="on" />
