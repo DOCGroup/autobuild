@@ -26,6 +26,7 @@
         <environment name="CIAO_ROOT"       relative_value="<ciao_root>"/>
         <environment name="DANCE_ROOT"      relative_value="<dance_root>"/>
         <environment name="MPC_ROOT"        relative_value="<mpc_root>"/>
+        <environment name="MPC_NAME"        relative_value="<mpc_name>"/>
         <environment name="LD_LIBRARY_PATH" relative_value="<ace_root>/lib:<tao_root>/lib:<ciao_root>/lib:<dance_root>/lib" type="prefix" />
         <environment name="RSYNC_RSH"       value="ssh" />
         <environment name="QT4_SUFFIX"      value="-qt4" />
