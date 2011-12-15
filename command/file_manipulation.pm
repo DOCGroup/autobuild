@@ -45,31 +45,6 @@ sub CheckRequirements ()
     return 1;
 }
 
-# Convert environment variables
-sub preprocess {
-  my($self, $str) = @_;
-
-  ## We need to replace $(...) with the equivalent environment variable
-  ## value.
-  while ($str =~ /\$(\?)?([\(\w\)]+)/) {
-    my $optional = $1;
-    my $name = $2;
-    $name =~ s/[\(\)]//g;
-    my $val = $ENV{$name};
-
-    if (!defined $val) {
-      if (defined $optional) {
-        $str =~ s/\$\?\S+//;
-        next;
-      }
-    }
-
-    ## Do the replacement
-    $str =~ s/\$\??([\(\w\)]+)/$val/;
-  }
-  return $str;
-}
-
 ##############################################################################
 # INTERNAL Function NOT exported
 # This ensures that the output is an array reference or is undefined if
@@ -898,7 +873,7 @@ sub Run ($)
             $output =~ s/\\n/\n/g;
             $output =~ s/\\x27/'/g;
 
-            my $file_handle = new FileHandle ($self->preprocess ($filename), 'a');
+            my $file_handle = new FileHandle ($filename, 'a');
 
             if (!defined $file_handle) {
                 print STDERR __FILE__, ":\n",
@@ -928,13 +903,12 @@ sub Run ($)
 
         $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
-        my $file = $self->preprocess ($filename);
 
-        my $file_handle = new FileHandle ($file, 'w');
+        my $file_handle = new FileHandle ($filename, 'w');
 
         if (!defined $file_handle) {
             print STDERR __FILE__, ":\n",
-                  "  Error creating file ($root/)$file: $!\n";
+                  "  Error creating file ($root/)$filename: $!\n";
             return 0;
         }
 
@@ -990,7 +964,7 @@ sub Run ($)
     ### type=  delete
     #################
     elsif ($type eq "delete") {
-        unlink $self->preprocess ($filename);
+        unlink $filename;
     }
     ### type=   move
     ### type=  rename
