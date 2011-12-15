@@ -928,7 +928,7 @@ sub Run ($)
 
         $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
-        $file = $self->preprocess ($filename);
+        my $file = $self->preprocess ($filename);
 
         my $file_handle = new FileHandle ($file, 'w');
 
