@@ -1,18 +1,20 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="home"         environment="HOME" />
-        <variable name="build_root"   relative_value="<home>/ACE/COIOP" />
-        <variable name="configs"      value="Linux SSL COIOP" />
+        <variable name="home"          environment="HOME" />
+        <variable name="build_root"    relative_value="<home>/ACE/COIOP" />
+        <variable name="configs"       value="Linux SSL COIOP" />
 
-        <variable name="root"         relative_value="<build_root>" />
-        <variable name="log_file"     value="build.txt" />
-        <variable name="log_root"     relative_value="<build_root>" />
-        <variable name="doc_root"     value="<build_root>/DOC_ROOT" />
-        <variable name="project_root" relative_value="<doc_root>" />
+        <variable name="root"          relative_value="<build_root>" />
+        <variable name="log_file"      value="build.txt" />
+        <variable name="log_root"      relative_value="<build_root>" />
+        <variable name="doc_root_name" value="DOC_ROOT" />
+        <variable name="doc_root"      relative_value="<build_root>/<doc_root_name>" />
+        <variable name="project_root"  relative_value="<doc_root>" />
 
         <environment name="BUILD_ROOT"      relative_value="<build_root>" />
         <environment name="DOC_ROOT"        relative_value="<doc_root>" />
+        <environment name="DOC_ROOT_NAME"   relative_value="<doc_root_name>" />
         <environment name="ACE_ROOT"        relative_value="<doc_root>/ACE" />
         <environment name="TAO_ROOT"        relative_value="<doc_root>/TAO"/>
         <environment name="CIAO_ROOT"       relative_value="<doc_root>/CIAO"/>
@@ -32,10 +34,8 @@
     <command name="anonymous_shell"   options="rm -rf $DOC_ROOT" />
     <command name="anonymous_shell"   options="rm -rf $MPC_ROOT" />
 
-    <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git DOC_ROOT" />
+    <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git $DOC_ROOT_NAME" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git MPC" />
-
-        <command name="print_env_vars" />
 
     <command name="file_manipulation" options="type=create file=$(ACE_ROOT)/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
     <command name="file_manipulation" options="type=create file=$(ACE_ROOT)/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nprobe=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
