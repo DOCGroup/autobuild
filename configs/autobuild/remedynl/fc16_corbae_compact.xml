@@ -1,53 +1,25 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
+        <variable name="name"      value="fc16_corbaec" />
+        <variable name="configs"   value="Linux SSL CORBA_E_COMPACT" />
 
-        <environment name="ACE_ROOT"        value="/home/build/ACE/corbaec/ACE_wrappers" />
-        <environment name="TAO_ROOT"        value="/home/build/ACE/corbaec/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/corbaec/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"        value="/home/build/ACE/corbaec/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/corbaec/ACE_wrappers/lib" />
-        <environment name="RSYNC_RSH"       value="ssh" />
-        <environment name="QT4_SUFFIX"      value="-qt4" />
-
-        <variable name="root"     value="/home/build/ACE/corbaec/" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/corbaec/" />
-        <variable name="configs"  value="Linux SSL CORBA_E_COMPACT" />
-
+        <include name="buildenv.xml" />
     </configuration>
 
-    <command name="status"            options="on" />
+    <include name="preprocess.xml" />
 
-    <command name="process_listener"  options="localhost:32002" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\ncorba_e_compact=1\nqt4=1\n'" />
 
-    <command name="log"               options="on" />
+    <include name="printbuildenv.xml" />
 
-    <command name="make"              options="-k realclean find=*akefile" />
-
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
-
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\ncorba_e_compact=1\nqt4=1\n'" />
-
-    <command name="print_os_version" />
-    <command name="print_env_vars" />
-    <command name="check_compiler" options="gcc" />
-    <command name="print_ace_config" />
-    <command name="print_make_version" />
-    <command name="print_perl_version" />
-
-    <command name="generate_workspace" options="-exclude TAO/CIAO,TAO/DAnCE -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude ADBC,CIAO,DAnCE -type gnuautobuild" />
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -a -o -t" />
+    <command name="auto_run_tests"    options=" -a -o -t script_path=$ACE_ROOT/bin" />
 
-    <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
-    <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc16_corbaec" />
+    <include name="postprocess.xml" />
 </autobuild>

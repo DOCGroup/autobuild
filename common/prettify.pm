@@ -958,7 +958,7 @@ sub Setup_Handler ($)
             $totals->{SUBVERSION_LAST_EXTERNAL}  = 'None';
         }
         # Since we don't know what is being checked out or updated, we have to guess
-        # (unlike when sets are used, these are accuratly handled above).
+        # (unlike when sets are used, these are accurately handled above).
         elsif ($revision < 70000)
         {
             $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;
