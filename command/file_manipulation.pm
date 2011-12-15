@@ -928,12 +928,13 @@ sub Run ($)
 
         $output =~ s/\\n/\n/g;
         $output =~ s/\\x27/'/g;
+        $file = $self->preprocess ($filename);
 
-        my $file_handle = new FileHandle ($self->preprocess ($filename), 'w');
+        my $file_handle = new FileHandle ($file, 'w');
 
         if (!defined $file_handle) {
             print STDERR __FILE__, ":\n",
-                  "  Error creating file ($root/)$filename: $!\n";
+                  "  Error creating file ($root/)$file: $!\n";
             return 0;
         }
 

@@ -190,7 +190,7 @@ SCOREBOARD NOTES
     when a build is late. Non-late builds are white, late builds
     are orange, and very late builds are red.  The defaults for
     orange and red are 24 and 48 hours respectively.  These are
-    based on the assumption that builds will run daily or less, 
+    based on the assumption that builds will run daily or less,
     perhaps continuously.  The values for orange and red can be
     changed for individual builds with the parameters <orange>
     hours </orange> and <red> hours </red>.
@@ -201,8 +201,8 @@ SCOREBOARD NOTES
     is "runon" with a list of days (date abbrevs).  For example,
       [build_xyz]
       runon Mon Thu
-    thus, build_xyz will not be considered late until the current 
-    time passes the next build by the amount specified in orange and 
+    thus, build_xyz will not be considered late until the current
+    time passes the next build by the amount specified in orange and
     red plus the number of days between the last and next builds.
     This feature is activated by the presence of the -s <file>
     switch.
@@ -212,29 +212,29 @@ SCOREBOARD NOTES
     may wish to have the machine running scoreboard.pl do some of the
     function normally done by autobuild.pl, speciffically the
     maintenance of the output logs.  This can be accomplished with
-    the -c option.  When this option is specified the directory 
-    specified in the required -d option is maintained by the 
+    the -c option.  When this option is specified the directory
+    specified in the required -d option is maintained by the
     scoreboard program.  This allows, for example, the autobuild to
     specify only "process_logs move" and the remainder, "prettify,
     clean, and index" will be done by the scoreboard.  It also allows
-    the faster relative refs to be used as url or skipped entirely, 
+    the faster relative refs to be used as url or skipped entirely,
     if the name of the build matches the name of the sub-directory.
 
-(8) To retain the full capabilites of autobuild.pl in the situation
+(8) To retain the full capabilities of autobuild.pl in the situation
     above(7).  The KEEP parameter was added to the scoreboard.  The
     value for keep can be specified globally with the -k switch to
     scoreboard.pl or for individual builds with the <keep> number
-    </keep>.  
+    </keep>.
 
-    This parameter also works with the existing (no -c) mode and 
-    applies to the number of items kept in the cache.  
+    This parameter also works with the existing (no -c) mode and
+    applies to the number of items kept in the cache.
 
     The default for keep is 5.
 
 (9) To help identify builds on the scoreboard there is a "Build
     Sponsor" column.  This consists of two parts the name of the
     sponsor defined by <build_sponsor> name </build_sponsor> and
-    a url defined by <build_sponsor_url> url </build_sponsor_url> 
+    a url defined by <build_sponsor_url> url </build_sponsor_url>
     that would be displayed when the name is clicked.
 
 (10) To optimize the speed of scoreboard generation and (greatly)
@@ -244,7 +244,7 @@ SCOREBOARD NOTES
      will use build URL based links throughout *unless* a build
      configuration explicitly specifies that the local cache must
      be used through the definition of a '<cache/>' tag in the
-     '<build>' section for that build.     
+     '<build>' section for that build.
 
 USING Cygwin on Windows
 =======================
@@ -328,13 +328,13 @@ progress.  Unix supported only for now, NT support on the way.
      look at SCOREBOARD_URL for a full list of the errors.
 
 
-     Alternatively, if you would like the build errors to be sent to a group of 
+     Alternatively, if you would like the build errors to be sent to a group of
      people, use the following line instead of MAIL_ADMIN above:
 
      <variable name="MAIL_ADMIN_FILE"  value="C:/foo/mail_map.txt" />
 
      The MAIL_ADMIN_FILE variables point to a file that contains the email addresses
-     of people who should notified by email when an error occurs. Note that file 
+     of people who should notified by email when an error occurs. Note that file
      should have one email address per line.
 
 (2)  For Windows NT only, you also need to add the domain name of the SMTP
