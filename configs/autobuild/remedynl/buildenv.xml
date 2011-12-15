@@ -1,6 +1,8 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
+        <variable name="home"          environment="HOME" />
+        <variable name="build_root"    relative_value="<home>/ACE/<name>" />
         <variable name="root"          relative_value="<build_root>" />
         <variable name="log_file"      value="build.txt" />
         <variable name="log_root"      relative_value="<build_root>" />
@@ -15,6 +17,7 @@
         <variable name="dance_root"    relative_value="<doc_root>/DAnCE"/>
         <variable name="mpc_root"      relative_value="<build_root>/<mpc_name>"/>
 
+        <environment name="BUILD_NAME"      relative_value="<name>" />
         <environment name="BUILD_ROOT"      relative_value="<build_root>" />
         <environment name="DOC_ROOT"        relative_value="<doc_root>" />
         <environment name="DOC_ROOT_NAME"   relative_value="<doc_root_name>" />

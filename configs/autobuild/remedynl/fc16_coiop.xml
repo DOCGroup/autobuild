@@ -3,6 +3,7 @@
     <configuration>
         <variable name="home"          environment="HOME" />
         <variable name="build_root"    relative_value="<home>/ACE/COIOP" />
+        <variable name="name"          value="fc16_COIOP" />
         <variable name="configs"       value="Linux SSL COIOP" />
 
         <include name="buildenv.xml" />
@@ -42,5 +43,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /$DOC_ROOT/ --exclude /$MPC_ROOT/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc16_COIOP" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude $DOC_ROOT_NAME --exclude $MPC_ROOT_NAME --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/$BUILD_NAME" />
 </autobuild>
