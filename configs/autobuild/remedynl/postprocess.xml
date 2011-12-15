@@ -1,0 +1,7 @@
+<!-- $Id$ -->
+<autobuild>
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean move prettify index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude $DOC_ROOT_NAME --exclude $MPC_NAME --include *.txt --include *.html --exclude ** ./ $RSYNC_HOST/$BUILD_NAME" />
+</autobuild>
