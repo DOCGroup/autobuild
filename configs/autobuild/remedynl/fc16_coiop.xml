@@ -1,8 +1,6 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="home"          environment="HOME" />
-        <variable name="build_root"    relative_value="<home>/ACE/COIOP" />
         <variable name="name"          value="fc16_COIOP" />
         <variable name="configs"       value="Linux SSL COIOP" />
 
