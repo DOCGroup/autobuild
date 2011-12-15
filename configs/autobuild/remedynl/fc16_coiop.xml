@@ -11,7 +11,7 @@
         <variable name="log_root"     relative_value="<build_root>" />
         <variable name="project_root" relative_value="<build_root>/<doc_root>" />
 
-        <environment name="BUILD_ROOT"      value="<build_root>" />
+        <environment name="BUILD_ROOT"      relative_value="<build_root>" />
         <environment name="DOC_ROOT"        value="${BUILD_ROOT}/DOC_ROOT" />
         <environment name="ACE_ROOT"        value="${DOC_ROOT}/ACE" />
         <environment name="TAO_ROOT"        value="${DOC_ROOT}/TAO"/>
