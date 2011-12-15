@@ -41,7 +41,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_HR_TIME_POLICY_STRATEGY\n#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='minimaltoc=1\nCROSS_COMPILE=powerpc64-ngc-linux-\nTCPU=cell\ntunemodelflag=1\ncpumodelflag=1\nbuildbits=64\ndebug=0\noptimize=1\nxerces2=1\ndds4ccm_ndds=1\nndds=1\ninline=1\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cross_compile=1\ndds4ccm_ndds=1\nndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\nccm_direct_collocation=1\n'" />
 
