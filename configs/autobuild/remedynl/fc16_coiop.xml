@@ -13,7 +13,7 @@
         <environment name="QT4_SUFFIX"      value="-qt4" />
 
         <variable name="home"         environment="HOME" />
-        <variable name="build_root"   value="/home/build/ACE/COIOP" />
+        <variable name="build_root"   value="/home/build" />
         <variable name="root"         relative_value="<build_root>/ACE/COIOP" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="${HOME}/ACE/COIOP" />
