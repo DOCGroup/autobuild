@@ -23,12 +23,11 @@
 
     <command name="log"               options="on" />
 
+    <command name="anonymous_shell"   options="rm -rf ATCD" />
+    <command name="anonymous_shell"   options="rm -rf MPC" />
+
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git ATCD" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git MPC" />
-
-    <command name="make"              options="-k realclean -C ACE" />
-
-    <command name="shell"             options="find -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=$(ACE_ROOT)/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_UIOP 0\n#define TAO_HAS_DIOP 0\n#define TAO_HAS_COIOP 1\n#define TAO_HAS_SHMIOP 0\n'"/>
     <command name="file_manipulation" options="type=create file=$(ACE_ROOT)/include/makeinclude/platform_macros.GNU output='boost=1\nssl=1\nprobe=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS += -pedantic -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
@@ -47,7 +46,7 @@
 
     <command name="make"              options="-k -C ACE" />
 
-    <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" script_path=$ACE_ROOT/bin />
+    <command name="auto_run_tests"    options="-l TAO/tests/COIOP/COIOP.lst" script_path="$ACE_ROOT/bin" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
