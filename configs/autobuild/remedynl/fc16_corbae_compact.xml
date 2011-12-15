@@ -15,7 +15,7 @@
 
     <include name="printbuildenv.xml" />
 
-    <command name="generate_workspace" options="-exclude ADBC,CIAO,DAnCE -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude CIAO,DAnCE -type gnuautobuild" />
 
     <command name="make"              options="-k" />
 
