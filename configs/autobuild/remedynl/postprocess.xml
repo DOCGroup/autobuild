@@ -4,5 +4,5 @@
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z --exclude $DOC_ROOT_NAME --exclude $MPC_NAME --include *.txt --include *.html --exclude ** ./ $RSYNC_HOST/$BUILD_NAME" />
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z $LOG_ROOT/* $RSYNC_HOST/$BUILD_NAME" />
 </autobuild>
