@@ -8,4 +8,4 @@ svn up
 
 # Run the build.
 exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
-     $HOME/autobuild/configs/autobuild/remedynl/fc16_acefortao.xml
+     $HOME/autobuild/configs/autobuild/remedynl/fc16_nologging.xml
