@@ -32,7 +32,7 @@
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define TAO_USE_WAIT_ON_LF_NO_UPCALL\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_WAIT_ON_LF_NO_UPCALL\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\nccm_lw=1\nccm_noevent=1\nqt4=1\n'" />
 
