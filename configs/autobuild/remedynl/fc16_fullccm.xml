@@ -24,7 +24,7 @@
 
     <command name="make"              options="-C $CIAO_ROOT -k" />
 
-    <command name="auto_run_tests"    options=" -C script_path=$ACE_ROOT/bin" />
+    <command name="auto_run_tests"    options="-C script_path=$ACE_ROOT/bin" />
 
     <include name="postprocess.xml" />
 </autobuild>

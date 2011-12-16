@@ -7,4 +7,5 @@
     <command name="print_openssl_version"/>
     <command name="print_make_version" />
     <command name="print_perl_version" />
+    <command name="print_valgrind_version" />
 </autobuild>
