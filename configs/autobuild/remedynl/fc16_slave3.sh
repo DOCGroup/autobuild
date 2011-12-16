@@ -6,3 +6,5 @@
 cd $HOME/autobuild
 svn up
 
+sh $HOME/autobuild/configs/autobuild/remedynl/fc16_03_fullccm.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_03_fullccm_ne.sh && \

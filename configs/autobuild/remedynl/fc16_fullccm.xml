@@ -9,7 +9,6 @@
         <variable name="dds4ccmid" value="30"/>
 
         <include name="buildenv.xml" />
-
     </configuration>
 
     <include name="preprocess.xml" />
