@@ -46,6 +46,18 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+   <build>
+      <name>FC16_LwCCM_NoEvents_RW_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_rw</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+   <build>
+      <name>FC16_LwCCM_NoEvents_RW_PRE_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_rw_pre</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
     <build>
       <name>FC16_Core_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc16_core</url>

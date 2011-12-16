@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="name"      value="fc16_lwccm_ne" />
+        <variable name="name"      value="fc16_lwccm_ne_rw_pre" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS CCM_NOEVENT" />
 
         <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />

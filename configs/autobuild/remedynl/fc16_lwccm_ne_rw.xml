@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="name"      value="fc16_lwccm_ne" />
+        <variable name="name"      value="fc16_lwccm_ne_rw" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS CCM_NOEVENT" />
 
         <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
@@ -14,7 +14,6 @@
         <environment name="DDS4CCM_LOG_LEVEL" value="1"/>
         <environment name="CIAO_LOG_LEVEL"    value="1"/>
         <environment name="DANCE_LOG_LEVEL"   value="1"/>
-
     </configuration>
 
     <include name="preprocess.xml" />
