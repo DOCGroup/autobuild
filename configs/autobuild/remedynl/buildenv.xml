@@ -4,7 +4,7 @@
         <variable name="home"          environment="HOME" />
         <variable name="build_root"    relative_value="<home>/ACE/<name>" />
         <variable name="root"          relative_value="<build_root>" />
-        <variable name="log_file"      value="build.txt" />
+        <variable name="log_file"      value="logfile.txt" />
         <variable name="log_root"      relative_value="<home>/log" />
         <variable name="doc_root_name" value="DOC_ROOT" />
         <variable name="doc_root"      relative_value="<build_root>/<doc_root_name>" />
