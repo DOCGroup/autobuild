@@ -7,6 +7,6 @@ cd $HOME/autobuild
 svn up
 
 # Run the build.
-sh $HOME/autobuild/configs/autobuild/remedynl/fc16_coiop.sh && \
-   $HOME/autobuild/configs/autobuild/remedynl/fc16_corbae_compact.sh && \
-   $HOME/autobuild/configs/autobuild/remedynl/fc16_acefortao.sh
+sh $HOME/autobuild/configs/autobuild/remedynl/fc16_01_coiop.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_corbae_compact.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_acefortao.sh
