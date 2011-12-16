@@ -13,7 +13,7 @@
 
     <include name="preprocess.xml" />
 
-    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_WAIT_RW_STRATEGY\n#define TAO_USE_MUXED_TRANSPORT_MUX_STRATEGY 0\n#define TAO_USE_BLOCKING_FLUSHING\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_BLOCKING_CONNECT_STRATEGY\n#define TAO_USE_WAIT_RW_STRATEGY\n#define TAO_USE_MUXED_TRANSPORT_MUX_STRATEGY 0\n#define TAO_USE_BLOCKING_FLUSHING\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\nccm_lw=0\ndds4ccm_ndds=1\nndds=1\nqt4=1\n'" />
 
