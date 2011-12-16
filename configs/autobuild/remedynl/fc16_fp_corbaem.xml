@@ -13,7 +13,7 @@
 
     <include name="printbuildenv.xml" />
 
-    <command name="generate_workspace" options="-type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude $CIAO_ROOT,$DANCE_ROOT -type gnuautobuild" />
 
     <command name="anonymous_shell"    options="mkdir $LOG_ROOT/metrics" />
 
