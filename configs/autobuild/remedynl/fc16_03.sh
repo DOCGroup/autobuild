@@ -8,3 +8,4 @@ svn up
 
 sh $HOME/autobuild/configs/autobuild/remedynl/fc16_03_fullccm.sh && \
    $HOME/autobuild/configs/autobuild/remedynl/fc16_03_fullccm_ne.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_03_lwccm_ne_rw_pre.sh

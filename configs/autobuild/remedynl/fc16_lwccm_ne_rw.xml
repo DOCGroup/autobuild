@@ -1,0 +1,35 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="fc16_lwccm_ne" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS CCM_NOEVENT" />
+
+        <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
+        <variable name="nddsver"   value="ndds.4.5d.rev11" />
+        <variable name="dds4ccmid" value="27"/>
+
+        <include name="buildenv.xml" />
+
+        <!-- Temporarly: Log the errors. -->
+        <environment name="DDS4CCM_LOG_LEVEL" value="1"/>
+        <environment name="CIAO_LOG_LEVEL"    value="1"/>
+        <environment name="DANCE_LOG_LEVEL"   value="1"/>
+
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define TAO_USE_BLOCKING_CONNECT_STRATEGY\n#define TAO_USE_WAIT_RW_STRATEGY\n#define TAO_USE_MUXED_TRANSPORT_MUX_STRATEGY 0\n#define TAO_USE_BLOCKING_FLUSHING\n#define TAO_USE_WAIT_ON_LF_NO_UPCALL\n#define TAO_HAS_ZIOP 1\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='buildbits=64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=0\nboost=1\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='xerces3=1\nboost=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\nccm_lw=1\nccm_noevent=1\nqt4=1\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="$CIAO_ROOT/CIAO_TAO.mwc -type gnuautobuild" />
+
+    <command name="make"              options="-C $CIAO_ROOT -k" />
+
+    <command name="auto_run_tests"    options="-C script_path=$ACE_ROOT/bin" />
+
+    <include name="postprocess.xml" />
+</autobuild>
