@@ -60,7 +60,7 @@ sub Run ($)
     {
         $mute = (uc $1 eq "MUTE");
     }
-    
+
     if ((uc $options eq "ON") or (uc $options eq "APPEND")) {
         my $root = main::GetVariable ('root');
 
@@ -83,7 +83,7 @@ sub Run ($)
         open (OLDOUT, ">&STDOUT");
         open (OLDERR, ">&STDERR");
 
-        if($main::verbose == 1) { 
+        if($main::verbose == 1) {
           main::PrintStatus ('Setup', 'Logging: stdout/stderr redirected');
         }
 

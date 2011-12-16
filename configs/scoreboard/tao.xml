@@ -38,18 +38,18 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>FC16_CORBA_e_micro</name>
+       <url>http://buildlogs.theaceorb.nl/fc16_corbaem/</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
     <build>
       <name>FC16_ACE_FOR_TAO</name>
       <url>http://buildlogs.theaceorb.nl/fc16_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
-     <build>
-       <name>FC6_CORBA_e_micro</name>
-       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/CORBA_e_micro</url>
-       <build_sponsor>ISIS</build_sponsor>
-       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-     </build>
      <build>
        <name>FC6_valgrind</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/valgrind</url>

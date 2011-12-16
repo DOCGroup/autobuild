@@ -5,7 +5,6 @@
 /users/bczar/runbuild.sh FC8ostream
 /users/bczar/runbuild.sh FC8ciaocore
 /users/bczar/runbuild.sh FC6CORBAecompact2
-/users/bczar/runbuild.sh FC6CORBAemicro
 /users/bczar/runbuild.sh FC8Core
 /users/bczar/runbuild.sh FC8DynamicHash2
 /users/bczar/runbuild.sh FC6Full

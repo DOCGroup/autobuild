@@ -23,8 +23,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC15_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc15_nologging/</url>
+      <name>FC16_NoLogging</name>
+        <url>http://buildlogs.theaceorb.nl/fc16_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>

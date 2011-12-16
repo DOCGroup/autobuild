@@ -182,7 +182,7 @@ SCOREBOARD NOTES
     scoreboard. Clicking on the link will download/open the file.
     A column header will appear called SNAPSHOT. If this tag is
     not in the config file then the column will not appear on the
-    screen for taht row. This is useful if you want to release
+    screen for that row. This is useful if you want to release
     a snapshot of the CVS repository ready for a user to download
     and run "./configure".
 
