@@ -101,16 +101,16 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Stats Builds</name>
    <build>
-      <name>FC6_Stats_CORBA_e_compact</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAecompact</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+      <name>FC16_Stats_CORBA_e_compact</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_fp_corbaec/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>FC6_Stats_CORBA_e_micro</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/footprintCORBAemicro</url>
-     <build_sponsor>ISIS</build_sponsor>
-     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
+     <name>FC16_Stats_CORBA_e_micro</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_fp_corbaem/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
      <name>FC6_Stats_CORBA_e_micro_single_threaded</name>
