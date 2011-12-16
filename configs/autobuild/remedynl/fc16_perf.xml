@@ -1,56 +1,29 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="/home/build/ACE/gcc/ACE_wrappers"/>
-        <environment name="TAO_ROOT"         value="/home/build/ACE/gcc/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"       value="/home/build/ACE/gcc/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="LD_LIBRARY_PATH"  value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib:" />
-        <environment name="LD_LIBRARY_PATH"  value="/home/build/ndds/ndds.4.5d.rev11/lib/x64Linux2.6gcc4.5.1/:" type="prefix"/>
-        <environment name="NDDSHOME"         value="/home/build/ndds/ndds.4.5d.rev11" />
-        <environment name="NDDSARCHITECTURE" value="x64Linux2.6gcc4.5.1" />
-        <environment name="QT4_SUFFIX"       value="-qt4" />
+        <variable name="name"      value="fc16_perf" />
 
-        <!-- http://devportal.remedy.nl/projects/ngcmaintenance/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="33"/>
-
-        <variable name="root"     value="/home/build/ACE/gcc/" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/gcc/" />
+        <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
+        <variable name="nddsver"   value="ndds.4.5d.rev11" />
+        <variable name="dds4ccmid" value="33"/>
         <variable name="configs"  value="Linux Exceptions ZLIB SSL NDDS" />
 
+        <include name="buildenv.xml" />
     </configuration>
 
-    <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32003" />
-    <command name="log"               options="on" />
+    <include name="preprocess.xml" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define CIAO_DDS4CCM_CONTEXT_SWITCH 0\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\nbuildbits=64\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='xerces2=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\nqt4=1\n'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_DDS4CCM_CONTEXT_SWITCH 0\n#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\nbuildbits=64\nqt4=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='xerces2=1\nzlib=1\nssl=1\nbzip2=1\ndds4ccm_ndds=1\nndds=1\nqt4=1\n'" />
+    <include name="printbuildenv.xml" />
 
-    <command name="print_os_version" />
-    <command name="print_env_vars" />
-    <command name="check_compiler" options="gcc" />
-    <command name="print_ace_config" />
-    <command name="print_openssl_version"/>
-    <command name="print_make_version" />
-    <command name="print_perl_version" />
+    <command name="generate_workspace" options="$CIAO_ROOT/CIAO_TAO.mwc -type gnuautobuild" />
 
-    <command name="make"              options="-C TAO/CIAO -k realclean find=*akefile" />
+    <command name="make"              options="-C $CIAO_ROOT -k" />
 
-    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO.mwc -type gnuautobuild" />
+    <command name="auto_run_tests"    options="-C script_path=$ACE_ROOT/bin" />
 
-    <command name="make"              options="-C TAO/CIAO -k" />
-
-    <command name="auto_run_tests"    options=" -C" />
-
-    <command name="anonymous_shell"   options="killall dance_locality_manager" />
-
-    <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
-    <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc16_perf" />
+    <include name="postprocess.xml" />
 </autobuild>
