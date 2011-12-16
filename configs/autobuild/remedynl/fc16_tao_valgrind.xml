@@ -1,0 +1,35 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="fc16_tao_valgrind" />
+
+        <variable    name="valgrind_opts"         value="-q --tool=memcheck --num-callers=25 --leak-check=yes --show-reachable=yes --trace-children=yes --suppressions="
+                                                  join=""
+                                                  variable="BUILD_CONFIG_PATH"
+                                                  join="dir"
+                                                  value="fc16_valgrind.supp" />
+        <environment name="VALGRIND_OPTS"         variable="valgrind_opts" />
+        <environment name="ACE_RUN_VALGRIND_CMD"  value="valgrind" />
+        <environment name="ACE_RUNTEST_DELAY"     value="2" />
+
+        <variable name="configs"  value="Linux Exceptions NDDS ZLIB SSL BOOST Valgrind" />
+
+        <include name="buildenv.xml" />
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+    <command name="file_manipulation" options="type=create file=<ace_root>ace/config.h output='#define ACE_HAS_VALGRIND\n#define ACE_DEFAULT_SELECT_REACTOR_SIZE 1000\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='ssl=1\ninline=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nxerces2=1\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='ssl=1\nxerces2=1\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="-exclude CIAO,DAnCE -type gnuautobuild" />
+
+    <command name="make"              options="-k" />
+
+    <command name="auto_run_tests"    options="-a -o -t script_path=$ACE_ROOT/bin" />
+
+    <include name="postprocess.xml" />
+</autobuild>
