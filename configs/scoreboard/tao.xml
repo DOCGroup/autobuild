@@ -56,6 +56,12 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+        <name>FC16_NO_IIOP</name>
+      <url>http://buildlogs.theaceorb.nl/fc16_noiiop/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
     <build>
        <name>FC8_Xampler</name>
        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/FC6xampler</url>
@@ -73,12 +79,6 @@ all the OS/platform combinations on which TAO is tested everyday.
        <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_gcc-4.6_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC8_NO_IIOP</name>
-        <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/no_iiop</url>
-        <build_sponsor>ISIS</build_sponsor>
-        <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
      </build>
      <build>
        <name>Ubuntu_10_04</name>

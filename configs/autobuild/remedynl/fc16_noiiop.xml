@@ -1,0 +1,22 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="fc16_noiiop" />
+        <variable name="configs"  value="Linux CIAO NDDS no_iiop SSL" />
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n#define TAO_HAS_IIOP 0\n#define TAO_HAS_NAMED_RT_MUTEXES 1\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='ssl=1\nprobe=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCCFLAGS +=  -Wno-long-long -Wno-variadic-macros -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='ndds=1\nssl=1\ntao_no_iiop=1\n\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/TAO_NO_IIOP.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/tao\n}\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="$ACE_ROOT/TAO_NO_IIOP.mwc -type gnuautobuild" />
+
+    <command name="make"              options="-C $ACE_ROOT -k" />
+
+    <include name="postprocess.xml" />
+</autobuild>
