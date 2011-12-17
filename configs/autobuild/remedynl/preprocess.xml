@@ -5,7 +5,7 @@
     <command name="status"            options="on" />
     <command name="log"               options="on" />
     <command name="anonymous_shell"   options="rm -rf $LOG_ROOT/*" />
-    <command name="anonymous_shell"   options="rsync --exclude $LOG_FILE --progress --recursive --delete -z $RSYNC_HOST/$BUILD_NAME/* $LOG_ROOT" />
+    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z $RSYNC_HOST/$BUILD_NAME/* $LOG_ROOT" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/atcd.git $DOC_ROOT_NAME" />
     <command name="git"               options="clone --depth 1 http://:@git.remedy.nl/git/mpc.git $MPC_NAME" />
     <command name="anonymous_shell"   options="cd $DOC_ROOT && git log -1 | grep git-svn-id" />

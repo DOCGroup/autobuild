@@ -21,7 +21,7 @@
         <environment name="BUILD_NAME"      relative_value="<name>" />
         <environment name="BUILD_ROOT"      relative_value="<build_root>" />
         <environment name="LOG_ROOT"        relative_value="<log_root>" />
-        <environment name="LOG_FILE"        relative_value="<log_root>/<log_file>" />
+        <environment name="LOG_FILE"        relative_value="<build_root>/<log_file>" />
         <environment name="DOC_ROOT"        relative_value="<doc_root>" />
         <environment name="DOC_ROOT_NAME"   relative_value="<doc_root_name>" />
         <environment name="ACE_ROOT"        relative_value="<ace_root>" />
