@@ -43,9 +43,7 @@
     <command name="make"              options="-k -C $TAO_ROOT/tests/Muxing" />
     <command name="make"              options="-k -C $TAO_ROOT/orbsvcs/orbsvcs" />
 
-    <command name="shell"             options="$ACE_ROOT/bin/generate_compile_stats.sh $LOG_ROOT/build.txt $LOG_ROOT/metrics/x/ $LOG_ROOT/metrics/targets Footprint" />
-
-    <command name="log"               options="off" />
+    <command name="anonymous_shell"   options="$ACE_ROOT/bin/generate_compile_stats.sh $LOG_ROOT/build.txt $LOG_ROOT/metrics/x/ $LOG_ROOT/metrics/targets Footprint" />
 
     <include name="postprocess.xml" />
 </autobuild>
