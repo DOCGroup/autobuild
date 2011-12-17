@@ -3,6 +3,7 @@
     <configuration>
         <variable name="name"      value="rhel61_x64_ace" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP" />
+        <include name="buildenv.xml" />
     </configuration>
 
     <include name="preprocess.xml" />
