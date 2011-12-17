@@ -13,9 +13,9 @@
 
     <include name="printbuildenv.xml" />
 
-    <command name="generate_workspace" options="-exclude $CIAO_ROOT,$DANCE_ROOT -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude CIAO,DAnCE -type gnuautobuild" />
 
-    <command name="anonymous_shell"    options="mkdir $LOG_ROOT/metrics" />
+    <command name="anonymous_shell"    options="mkdir -p $LOG_ROOT/metrics" />
 
     <command name="make"              options="-k -C $ACE_ROOT/ace        --dry-run > $LOG_ROOT/metrics/targets" />
     <command name="make"              options="-k -C $ACE_ROOT/ACEXML     --dry-run >> $LOG_ROOT/metrics/targets" />
