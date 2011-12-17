@@ -9,11 +9,6 @@
         <variable name="dds4ccmid" value="27"/>
 
         <include name="buildenv.xml" />
-
-        <!-- Temporarly: Log the errors. -->
-        <environment name="DDS4CCM_LOG_LEVEL" value="1"/>
-        <environment name="CIAO_LOG_LEVEL"    value="1"/>
-        <environment name="DANCE_LOG_LEVEL"   value="1"/>
     </configuration>
 
     <include name="preprocess.xml" />
