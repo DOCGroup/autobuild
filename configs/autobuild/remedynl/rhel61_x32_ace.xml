@@ -1,0 +1,23 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="rhel61_x32_ace" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP" />
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='buildbits=32\nssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='zlib=1\nssl=1\nbzip2=1\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="-exclude TAO,CIAO,DAnCE -type gnuautobuild" />
+
+    <command name="make"              options="-k" />
+
+    <command name="auto_run_tests"    options="-a script_path=$ACE_ROOT/bin" />
+
+    <include name="postprocess.xml" />
+</autobuild>
