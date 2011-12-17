@@ -17,7 +17,7 @@
 
     <command name="generate_workspace" options="-exclude CIAO,DAnCE -type gnuautobuild" />
 
-    <command name="make"              options="-k -C $CIAO_ROOT" />
+    <command name="make"              options="-k" />
 
     <command name="auto_run_tests"    options=" -a -o -t script_path=$ACE_ROOT/bin" />
 
