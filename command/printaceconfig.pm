@@ -61,12 +61,12 @@ sub Run ($)
                                        "$svnurl/Middleware/trunk/TAO/<file>?revision=HEAD"],
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
                                        "$svnurl/Middleware/trunk/CIAO/<file>?revision=HEAD"],
-                       'DAnCE'     => ['ChangeLog', 'TAO/DAnCE/',
+                       'DANCE'     => ['ChangeLog', 'TAO/DAnCE/',
                                        "$svnurl/Middleware/trunk/DAnCE/<file>?revision=HEAD"],
                        'DDS'       => ['ChangeLog', 'DDS/',
                                        "$svnurl/DDS/trunk/<file>?revision=HEAD"],
                       );
-    my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DAnCE', 'DDS');
+    my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DANCE', 'DDS');
 
     foreach my $option (split(/\s+/, $options)) {
       if ($option =~ /([^=]+)=(.*)/) {
