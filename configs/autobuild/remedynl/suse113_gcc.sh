@@ -3,10 +3,9 @@
 # $Id$
 #
 
-cd $HOME/ACE/autobuild
-
+cd $HOME/autobuild
 svn up
 
-exec /usr/bin/perl $HOME/ACE/autobuild/autobuild.pl \
-                             $HOME/ACE/autobuild/configs/autobuild/remedynl/suse113_gcc.xml
+exec /usr/bin/perl $HOME/autobuild/autobuild.pl \
+     $HOME/autobuild/configs/autobuild/remedynl/suse113_gcc.xml
 
