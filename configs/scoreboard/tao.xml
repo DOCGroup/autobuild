@@ -89,16 +89,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-<name>Code Coverage Builds</name>
-   <build>
-      <name>FC6_Code_Coverage</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/emulab/codecoverage</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-   </build>
-</group>
-
-<group>
 <name>Stats Builds</name>
    <build>
       <name>FC16_Stats_CORBA_e_compact</name>
