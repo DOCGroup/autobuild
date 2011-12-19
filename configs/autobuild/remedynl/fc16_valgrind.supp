@@ -52,6 +52,13 @@
 }
 
 {
+   <cleanup load>
+   Memcheck:Leak
+   fun:*
+   fun:*ACE_Log_Msg*close*
+}
+
+{
    <insert_a_suppression_name_here>
    Memcheck:Leak
    fun:*
