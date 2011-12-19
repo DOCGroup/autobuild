@@ -8,9 +8,9 @@
 
     <include name="preprocess.xml" />
 
-    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define IDL_ANON_ERROR\n#define TAO_SUPPRESS_NEW_LINE_IN_EXCEPTION_LOGGING\n#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\nbuildbits=64\nzlib=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='dds4ccm_ndds=1\nndds=1\nzlib=1\nxerces3=1\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define IDL_ANON_ERROR\n#define TAO_SUPPRESS_NEW_LINE_IN_EXCEPTION_LOGGING\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\nbuildbits=64\nzlib=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='dds4ccm_ndds=1\nndds=1\nzlib=1\nxerces3=1\n'" />
 
     <include name="printbuildenv.xml" />
 
