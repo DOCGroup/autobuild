@@ -733,14 +733,18 @@ sub new ($)
         $project = 'ACE_wrappers';
     }
     chdir ($project);
-    my @files = ('bin/ace_tests.lst', 'bin/tao_orb_tests.lst',
-                 'bin/tao_other_tests.lst', 'bin/ciao_tests.lst');
+    if (defined $ENV{ACE_ROOT}) {
+        push @files, "$ENV{ACE_ROOT}/bin/ace_tests.lst";
+    }
     if (defined $ENV{TAO_ROOT}) {
         push @files, "$ENV{TAO_ROOT}/bin/tao_orb_tests.lst",
                      "$ENV{TAO_ROOT}/bin/tao_other_tests.lst";
     }
     if (defined $ENV{CIAO_ROOT}) {
         push @files, "$ENV{CIAO_ROOT}/bin/ciao_tests.lst";
+    }
+    if (defined $ENV{DACE_ROOT}) {
+        push @files, "$ENV{DANCE_ROOT}/bin/dance_tests.lst";
     }
     foreach my $file (@files) {
       if (-r $file) {
