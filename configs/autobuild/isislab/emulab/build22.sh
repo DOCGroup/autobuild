@@ -9,8 +9,6 @@
 /users/bczar/runbuild.sh FC8ImplicitTemplat2
 /users/bczar/runbuild.sh FC8IPv6
 /users/bczar/runbuild.sh FC8NoInt
-/users/bczar/runbuild.sh FC8SingleThreaded2
-/users/bczar/runbuild.sh FC8Static3
 /users/bczar/runbuild.sh FC8wchar
 /users/bczar/runbuild.sh FC6fpCORBAemicro
 /users/bczar/runbuild.sh FC6fpCORBAemicros
