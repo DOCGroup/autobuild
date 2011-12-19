@@ -1,32 +1,19 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"         value="/home/build/ACE/fuzz/ACE_wrappers" />
-        <environment name="TAO_ROOT"         value="/home/build/ACE/fuzz/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"         value="/home/build/ACE/fuzz/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"         value="/home/build/ACE/fuzz/ACE_wrappers/TAO/DAnCE"/>
-        <variable name="root"     value="/home/build/ACE/fuzz/" />
-        <environment name="QT4_SUFFIX"      value="-qt4" />
-
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/fuzz/" />
-        <variable name="name"     value="Linux Fuzz" />
+        <variable name="name"      value="fc16_fuzz" />
+        <include name="buildenv.xml" />
     </configuration>
 
-    <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32002" />
+    <include name="preprocess.xml" />
 
-    <command name="log"               options="ON" />
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define IDL_ANON_ERROR\n#define TAO_SUPPRESS_NEW_LINE_IN_EXCEPTION_LOGGING\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\nbuildbits=64\nzlib=1\nxerces3=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='dds4ccm_ndds=1\nndds=1\nzlib=1\nxerces3=1\n'" />
 
-    <command name="print_os_version" />
-    <command name="print_env_vars" />
-    <command name="print_ace_config" />
+    <include name="printbuildenv.xml" />
 
     <command name="fuzz"         options="" />
 
-    <command name="log"               options="OFF" />
-    <command name="process_logs"      options="move prettify clean index" />
-    <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc16_fuzz" />
+    <include name="postprocess.xml" />
 </autobuild>

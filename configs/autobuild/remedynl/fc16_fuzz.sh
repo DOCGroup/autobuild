@@ -1,8 +1,8 @@
 #!/bin/sh
 
-cd $HOME/ACE/autobuild
-
+cd $HOME/autobuild
 svn up
 
-/usr/bin/perl $HOME/ACE/autobuild/autobuild.pl $HOME/ACE/autobuild/configs/autobuild/remedynl/fc16_fuzz.xml
+/usr/bin/perl $HOME/autobuild/autobuild.pl \
+    $HOME/autobuild/configs/autobuild/remedynl/fc16_fuzz.xml
 
