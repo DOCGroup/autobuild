@@ -1,0 +1,29 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="fc15_versioned" />
+        <variable name="configs"  value="Linux SSL NDDS ZLIB" />
+
+        <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
+        <variable name="nddsver"   value="ndds.4.5d.rev11" />
+        <variable name="dds4ccmid" value="39"/>
+
+        <include name="buildenv.xml" />
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+   <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='valgrind=1\ninline=0\ndds4ccm_ndds=1\nndds=1\nssl=1\nzlib=1\nboost=1\nssl=1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='boost=1\nssl=1\nversioned_namespace=1\nqt4=1\nndds=1\ndds4ccm_ndds=1\nxerces3=1\nbzip2=1\nzlib=1\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="-type gnuautobuild" />
+
+    <command name="make"              options="-a -o -t -C $CIAO_ROOT" />
+
+    <command name="auto_run_tests"    options="-C script_path=$ACE_ROOT/bin" />
+
+    <include name="postprocess.xml" />
+</autobuild>

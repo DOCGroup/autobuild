@@ -1,4 +1,4 @@
-<!-- $Id$ --> 
+<!-- $Id$ -->
 <scoreboard>
   <preamble>
     <center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
@@ -30,6 +30,12 @@
     </build>
     <build>
       <name>FC15_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fc15_versioned/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC16_Versioned_Namespace</name>
         <url>http://buildlogs.theaceorb.nl/fc15_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
