@@ -1,4 +1,4 @@
-<!-- $Id$ -->
+<!-- <!-- $Id$ --> -->
 <scoreboard>
   <preamble>
     <center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
@@ -187,6 +187,12 @@
     <build>
       <name>FC12_IBMCellBE_Crossbuild</name>
       <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC12_IBMCellBE_LwCCM_NE_RW_PRE_Crossbuild</name>
+      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_lwccm_ne_rw_pre</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
