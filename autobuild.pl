@@ -54,6 +54,7 @@ require command::jboss_build;
 require command::jboss_report;
 require command::print_os_version;
 require command::print_remote_os_version;
+require command::print_autobuild_config;
 require command::print_env_vars;
 require command::print_autotools_version;
 require command::print_tool_version;

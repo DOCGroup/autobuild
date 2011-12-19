@@ -1,3 +1,10 @@
+Mon Dec 19 13:38:52 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * autobuild.pl:
+        * command/print_autobuild_config.pm:
+        * configs/autobuild/remedynl/printbuildenv.xml:
+          Added command to print autobuild file contents to the config page
+
 Mon Dec 19 12:47:06 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
