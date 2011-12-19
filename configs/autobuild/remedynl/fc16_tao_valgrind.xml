@@ -19,8 +19,8 @@
 
     <include name="preprocess.xml" />
 
-    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define ACE_HAS_VALGRIND\n#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='ssl=1\ninline=0\ndebug=1\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='valgrind=1\nssl=1\ninline=0\ndebug=1\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
     <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='ssl=1\nxerces3=1\n'" />
 
     <include name="printbuildenv.xml" />
