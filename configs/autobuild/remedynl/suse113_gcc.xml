@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="name"      value="suse111_64_gcc" />
+        <variable name="name"      value="suse113_64_gcc" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP" />
         <include name="buildenv.xml" />
     </configuration>

@@ -1,16 +1,16 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="name"      value="suse111_64_gcc" />
+        <variable name="name"      value="suse112_64_gcc" />
         <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP" />
         <include name="buildenv.xml" />
     </configuration>
 
     <include name="preprocess.xml" />
 
-    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='CCFLAGS += -fprofile-arcs -ftest-coverage\nLDFLAGS += -fprofile-arcs -ftest-coverage\nbuildbits=64\nssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='zlib=1\nssl=1\nbzip2=1\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='CCFLAGS += -fprofile-arcs -ftest-coverage\nLDFLAGS += -fprofile-arcs -ftest-coverage\nbuildbits=64\nssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='zlib=1\nssl=1\nbzip2=1\n'" />
 
     <include name="printbuildenv.xml" />
 

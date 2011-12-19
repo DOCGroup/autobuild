@@ -7,9 +7,9 @@
 
     <include name="preprocess.xml" />
 
-    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#define TAO_HAS_ZIOP 0\n#define ACE_HAS_MONITOR_FRAMEWORK 0\n#define TAO_HAS_CORBA_MESSAGING 0\n#define ACE_LACKS_UNIX_SYSLOG\n#define ACE_NLOGGING 1\n#define TAO_HAS_SENDFILE 0\n#define TAO_HAS_MCAST_PARSER 0\n#define TAO_HAS_CORBANAME_PARSER 0\n#define TAO_HAS_CORBALOC_PARSER 0\n#define TAO_HAS_DDL_PARSER 0\n#define TAO_HAS_HTTP_PARSER 0\n#include \x22ace/config-linux.h\x22\n#undef ACE_HAS_IP_MULTICAST\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='inline=1\nthreads=0\nOCFLAGS=-Os\nuse_dep_libs=0\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \\$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='optimize_collocated_invocations=0\ncorba_messaging=0\ncorba_e_micro=1\ntransport_current=0\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define TAO_HAS_ZIOP 0\n#define ACE_HAS_MONITOR_FRAMEWORK 0\n#define TAO_HAS_CORBA_MESSAGING 0\n#define ACE_LACKS_UNIX_SYSLOG\n#define ACE_NLOGGING 1\n#define TAO_HAS_SENDFILE 0\n#define TAO_HAS_MCAST_PARSER 0\n#define TAO_HAS_CORBANAME_PARSER 0\n#define TAO_HAS_CORBALOC_PARSER 0\n#define TAO_HAS_DDL_PARSER 0\n#define TAO_HAS_HTTP_PARSER 0\n#include \x22ace/config-linux.h\x22\n#undef ACE_HAS_IP_MULTICAST\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='inline=1\nthreads=0\nOCFLAGS=-Os\nuse_dep_libs=0\nstatic_libs_only=1\nLDFLAGS+=-Xlinker -M -Xlinker -Map -Xlinker \\$@.map\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\noptimize=1\ndebug=0\nexceptions=1\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='optimize_collocated_invocations=0\ncorba_messaging=0\ncorba_e_micro=1\ntransport_current=0\n'" />
 
     <include name="printbuildenv.xml" />
 
