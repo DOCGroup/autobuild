@@ -732,6 +732,7 @@ sub new ($)
     if (!defined $project) {
         $project = 'ACE_wrappers';
     }
+    my @files;
     chdir ($project);
     if (defined $ENV{ACE_ROOT}) {
         push @files, "$ENV{ACE_ROOT}/bin/ace_tests.lst";
@@ -921,6 +922,18 @@ sub Setup_Handler ($)
     {
         $self->Output_Normal ($s);
         $totals->{SUBVERSION_LAST_EXTERNAL} = $1;
+    }
+    elsif ($s =~ m/git-svn-id: svn:\/\/svn.dre.vanderbilt.edu\/DOC\/Middleware\/trunk\@(\d+) /i)
+    {
+        my $revision = $1;
+        $totals->{SUBVERSION_CHECKEDOUT_ACE} = $1;
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/git-svn-id: svn:\/\/svn.dre.vanderbilt.edu\/DOC\/MPC\/trunk\@(\d+) /i)
+    {
+        my $revision = $1;
+        $totals->{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        $self->Output_Normal ($s);
     }
     elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)\./i)
     {
