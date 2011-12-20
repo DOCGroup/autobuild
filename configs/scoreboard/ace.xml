@@ -57,18 +57,6 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-      <name>OpenSuSE_11_1_GCC_64bit</name>
-      <url>http://buildlogs.theaceorb.nl/suse111_64_gcc/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>OpenSuSE_11_2_GCC_64bit</name>
-      <url>http://buildlogs.theaceorb.nl/suse112_64_gcc/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
        <name>OpenSuSE_11_3_GCC_64bit</name>
        <url>http://buildlogs.theaceorb.nl/suse113_64_gcc</url>
        <build_sponsor>Remedy IT</build_sponsor>
