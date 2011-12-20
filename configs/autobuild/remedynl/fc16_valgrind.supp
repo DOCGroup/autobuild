@@ -34,7 +34,6 @@
    Memcheck:Addr8
    fun:__strspn_sse42
    fun:*ACE_OS*strspn*
-   fun:*TAO_IIOP_Profile*parse_string_i*
 }
 
 {
