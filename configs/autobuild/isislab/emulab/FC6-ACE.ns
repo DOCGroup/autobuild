@@ -1,8 +1,0 @@
-set ns [new Simulator]
-source tb_compat.tcl
-
-set node [$ns node]
-tb-set-node-os  $node FC6-STD
-tb-set-hardware $node pc8832
-
-$ns run
