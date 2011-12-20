@@ -1,0 +1,26 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="fc16_xmlconfig" />
+
+        <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
+        <variable name="nddsver"   value="ndds.4.5d.rev11" />
+        <variable name="configs"  value="Linux Exceptions ZLIB SSL NDDS WCHAR" />
+
+        <include name="buildenv.xml" />
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#define ACE_HAS_XML_SVC_CONF\n#define ACE_HAS_REACTOR_NOTIFICATION_QUEUE 1\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='ssl=1\noptimize=1\ninline=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='ndds=1\nssl=1\nzlib=1\nzzip=1\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="-type gnuautobuild" />
+
+    <command name="make"              options="-k" />
+
+    <include name="postprocess.xml" />
+</autobuild>

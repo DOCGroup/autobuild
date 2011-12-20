@@ -1,0 +1,25 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <variable name="name"      value="fc16_nointerceptors" />
+
+        <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
+        <variable name="nddsver"   value="ndds.4.5d.rev11" />
+
+        <include name="buildenv.xml" />
+    </configuration>
+
+    <include name="preprocess.xml" />
+
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='dds4ccm_ndds=1\nndds=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\ndebug=0\ninterceptors=0\n\n\n\n# Perform some stricter C/C++ checking\nCCFLAGS += -Wwrite-strings -Wcast-align\n\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='ndds=1\ninterceptors=0\nxerces3=1\ndds4ccm_ndds=1\n'" />
+
+    <include name="printbuildenv.xml" />
+
+    <command name="generate_workspace" options="-type gnuautobuild" />
+
+    <command name="make"              options="-k" />
+
+    <include name="postprocess.xml" />
+</autobuild>

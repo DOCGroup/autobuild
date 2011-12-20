@@ -1,0 +1,51 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+
+        <include name="fc6-env.xml" />
+
+        <environment name="LOG_ROOT"  value="/proj/autobuilds/logs/fpStatic/" />
+        <variable name="log_root" value="/proj/autobuilds/logs/fpStatic/" />
+        <variable name="root"     value="/isisbuilds/" />
+        <variable name="log_file" value="build.txt" />
+        <variable name="MOGRIFY" value="/usr/bin/mogrify" />
+        <variable name="configs"  value="Linux STATIC SSL Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+
+    <command name="process_listener"  options="localhost:32001" />
+
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_HAS_MONITOR_FRAMEWORK 0\n#define TAO_HAS_SENDFILE 0\n#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='use_dep_libs=0\nstatic_libs_only=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n\noptimize=1\ndebug=0\n#ssl=1\nCPPFLAGS += -DACE_USE_RCSID=0\n\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="g++" />
+    <command name="print_ace_config" />
+    <command name="print_make_version" />
+    <command name="print_perl_version" />
+
+    <command name="generate_workspace" options="-exclude TAO/CIAO -type gnuautobuild" />
+
+    <command name="make"              options="-j 2 -k" />
+
+    <command name="shell"             options="/bin/sync" />
+    <command name="shell"             options="sleep 10" />
+    <command name="shell"             options="/bin/sync" />
+    <command name="shell"              options="/isisbuilds/ACE_wrappers/bin/footprint_stats.sh /isisbuilds/ACE_wrappers $LOG_ROOT/Stats" />
+    <command name="shell"              options="/isisbuilds/ACE_wrappers/bin/performance_stats.sh /isisbuilds/ACE_wrappers $LOG_ROOT/Stats" />
+    <command name="shell"              options="/isisbuilds/ACE_wrappers/bin/topinfo_simple_stats.sh /isisbuilds/ACE_wrappers $LOG_ROOT/Stats isisbuil" />
+    <command name="shell"              options="/isisbuilds/ACE_wrappers/bin/topinfo_iorsize_stats.sh /isisbuilds/ACE_wrappers $LOG_ROOT/Stats isisbuil 1" />
+    <command name="shell"              options="/isisbuilds/ACE_wrappers/bin/topinfo_iorsize_stats.sh /isisbuilds/ACE_wrappers $LOG_ROOT/Stats isisbuil 0" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=2 move prettify index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="scp -r $LOG_ROOT/Stats/* bczar@naboo.dre.vanderbilt.edu:/web/users/isisbuilds/Stats" />
+</autobuild>

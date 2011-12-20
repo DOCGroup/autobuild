@@ -1,3 +1,77 @@
+Tue Dec 20 09:21:17 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+          Cleanup of a lot of old builds. Moved the most important builds to
+          our build farm and deprecated emulab as build environment
+
+        * configs/autobuild/remedynl/fc16_01.sh:
+        * configs/autobuild/remedynl/fc16_01_ipv6.sh:
+        * configs/autobuild/remedynl/fc16_01_wchar.sh:
+        * configs/autobuild/remedynl/fc16_01_xmlconfig.sh:
+        * configs/autobuild/remedynl/fc16_04.sh:
+        * configs/autobuild/remedynl/fc16_04_nointerceptors.sh:
+        * configs/autobuild/remedynl/fc16_fp_performance.xml:
+        * configs/autobuild/remedynl/fc16_ipv6.xml:
+        * configs/autobuild/remedynl/fc16_nointerceptors.xml:
+        * configs/autobuild/remedynl/fc16_ostream.xml:
+        * configs/autobuild/remedynl/fc16_wchar.xml:
+        * configs/autobuild/remedynl/fc16_xmlconfig.xml:
+
+        * configs/scoreboard/ciao.xml:
+        * configs/scoreboard/tao.xml:
+
+        * configs/autobuild/isislab/emulab:
+
+        * configs/autobuild/isislab/emulab/FC6-ACE.ns:
+        * configs/autobuild/isislab/emulab/FC6FullReactors.ns:
+        * configs/autobuild/isislab/emulab/FC6FullReactors.xml:
+        * configs/autobuild/isislab/emulab/FC6cmpmetrics.ns:
+        * configs/autobuild/isislab/emulab/FC6cmpmetrics.xml:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAecompact.ns:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAecompact.xml:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAemicro.ns:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAemicro.xml:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAemicros.ns:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAemicros.xml:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAminimum.ns:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAminimum.xml:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAregular.ns:
+        * configs/autobuild/isislab/emulab/FC6fpCORBAregular.xml:
+        * configs/autobuild/isislab/emulab/FC6fpStatic.ns:
+        * configs/autobuild/isislab/emulab/FC6fpStatic.xml:
+        * configs/autobuild/isislab/emulab/FC8DynamicHash.ns:
+        * configs/autobuild/isislab/emulab/FC8DynamicHash.xml:
+        * configs/autobuild/isislab/emulab/FC8Full.ns:
+        * configs/autobuild/isislab/emulab/FC8Full.xml:
+        * configs/autobuild/isislab/emulab/FC8IPv6.ns:
+        * configs/autobuild/isislab/emulab/FC8IPv6.xml:
+        * configs/autobuild/isislab/emulab/FC8ImplicitTemplate.ns:
+        * configs/autobuild/isislab/emulab/FC8ImplicitTemplate.xml:
+        * configs/autobuild/isislab/emulab/FC8NoInt.ns:
+        * configs/autobuild/isislab/emulab/FC8NoInt.xml:
+        * configs/autobuild/isislab/emulab/FC8ostream.ns:
+        * configs/autobuild/isislab/emulab/FC8ostream.xml:
+        * configs/autobuild/isislab/emulab/FC8wchar.ns:
+        * configs/autobuild/isislab/emulab/FC8wchar.xml:
+        * configs/autobuild/isislab/emulab/FC8xmlconfig.ns:
+        * configs/autobuild/isislab/emulab/FC8xmlconfig.xml:
+        * configs/autobuild/isislab/emulab/README.txt:
+        * configs/autobuild/isislab/emulab/build0.sh:
+        * configs/autobuild/isislab/emulab/build12.sh:
+        * configs/autobuild/isislab/emulab/build18.sh:
+        * configs/autobuild/isislab/emulab/build20.sh:
+        * configs/autobuild/isislab/emulab/build22.sh:
+        * configs/autobuild/isislab/emulab/build6.sh:
+        * configs/autobuild/isislab/emulab/copy_rti_dds.sh:
+        * configs/autobuild/isislab/emulab/fc6-env.xml:
+        * configs/autobuild/isislab/emulab/fc6-interactive.ns:
+        * configs/autobuild/isislab/emulab/fc8-env.xml:
+        * configs/autobuild/isislab/emulab/fc8-interactive.ns:
+        * configs/autobuild/isislab/emulab/run_autobuild.sh:
+        * configs/autobuild/isislab/emulab/versioned_namespace.xml:
+        * configs/autobuild/isislab/emulab/win-dev.ns:
+
+          Removed these files.
+
 Mon Dec 19 13:38:52 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * autobuild.pl:
