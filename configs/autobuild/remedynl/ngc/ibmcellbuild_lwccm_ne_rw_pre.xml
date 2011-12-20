@@ -59,7 +59,7 @@
 
     <command name="make"              options="-k -j 20" />
 
-    <command name="auto_run_remote_tests" options="-extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=26'"/>
+    <command name="auto_run_remote_tests" options="-C -extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=26'"/>
 
     <command name="anonymous_shell"   options="ssh snalinux5 killall dance_locality_manager" />
     <command name="anonymous_shell"   options="ssh snalinux5 killall tao_cosnaming" />
