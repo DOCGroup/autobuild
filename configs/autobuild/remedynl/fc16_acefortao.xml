@@ -11,7 +11,7 @@
 
     <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
     <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='boost=1\nace_for_tao = 1\nqt4=1\nace_qt4reactor=1\ntao_qtresource=1\nQTDIR=/usr\nPLATFORM_QT_LDFLAGS = -L$(QTDIR)/lib64\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='boost=1\nace_for_tao=1\nssl=0\nrwho=0\nqt4=1\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='boost=1\nace_for_tao=1\nssl=1\nrwho=0\nqt4=1\n'" />
 
     <include name="printbuildenv.xml" />
 
