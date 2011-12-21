@@ -36,7 +36,7 @@
     </build>
     <build>
       <name>FC16_Versioned_Namespace</name>
-        <url>http://buildlogs.theaceorb.nl/fc15_versioned/</url>
+        <url>http://buildlogs.theaceorb.nl/fc16_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
