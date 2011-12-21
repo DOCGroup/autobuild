@@ -1,50 +1,24 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers"/>
-        <environment name="TAO_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO"/>
-        <environment name="CIAO_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO/CIAO"/>
-        <environment name="DANCE_ROOT"        value="/home/build/ACE/gcc/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/gcc/ACE_wrappers/lib:/usr/local/lib" />
-        <environment name="SSL_ROOT"        value="/usr"/>
-
-        <variable name="root"     value="/home/build/ACE/gcc/" />
-        <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/gcc/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP" />
-
+        <variable name="name"      value="rhel53_32_gcc" />
+        <variable name="configs"   value="Linux Exceptions ZLIB SSL ZIOP" />
+        <include name="buildenv.xml" />
     </configuration>
 
-    <command name="status"            options="on" />
-    <command name="process_listener"  options="localhost:32003" />
-    <command name="log"               options="on" />
+    <include name="preprocess.xml" />
 
-    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="file_manipulation" options="type=create file=<ace_root>/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=<ace_root>/include/makeinclude/platform_macros.GNU output='ssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=<ace_root>/bin/MakeProjectCreator/config/default.features output='zlib=1\nssl=1\nbzip2=1\n'" />
 
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='ssl=1\nzlib=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='zlib=1\nssl=1\nbzip2=1\n'" />
+    <include name="printbuildenv.xml" />
 
-    <command name="print_os_version" />
-    <command name="print_env_vars" />
-    <command name="check_compiler" options="gcc" />
-    <command name="print_ace_config" />
-    <command name="print_openssl_version"/>
-    <command name="print_make_version" />
-    <command name="print_perl_version" />
-
-    <command name="make"              options="-k realclean find=*akefile" />
-
-    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-
-    <command name="generate_workspace" options="-exclude TAO -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO,CIAO,DAnCE -type gnuautobuild" />
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options=" -a" />
+    <command name="auto_run_tests"    options="-a script_path=$ACE_ROOT/bin" />
 
-    <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
-    <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/rhel53_32_gcc" />
+    <include name="postprocess.xml" />
 </autobuild>
