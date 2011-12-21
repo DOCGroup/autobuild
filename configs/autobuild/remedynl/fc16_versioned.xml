@@ -1,7 +1,7 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <variable name="name"      value="fc15_versioned" />
+        <variable name="name"      value="fc16_versioned" />
         <variable name="configs"  value="Linux SSL NDDS ZLIB" />
 
         <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
