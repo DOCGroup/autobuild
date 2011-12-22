@@ -109,6 +109,9 @@ sub Run ($)
     $url =~ s/<file>/$cl/;
     print "================ <a href=\"$url\">Autobuild $cl</a> ================\n";
 
+    my $configs = main::GetVariable ('configs');
+    print "Test config: $configs\n";
+
     my $current_dir = getcwd ();
 
     if (!chdir $root) {

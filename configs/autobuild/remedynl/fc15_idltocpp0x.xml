@@ -38,7 +38,7 @@
 
     <command name="shell"             options="find IDL2Cxx -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="svn"               options="co http://svn.remedy.nl/repos/idl2c++x0/trunk IDL2Cxx" />
+    <command name="git"               options="clone http://:@git.remedy.nl/git/idl2c++11.git idl2cpp11" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -49,14 +49,14 @@
 
     <command name="generate_workspace" options="-type gnuace -exclude public -exclude ACE" />
 
-    <command name="shell"             options="cd IDL2Cxx/ridl && scripts/make-orbpidl.sh " />
+    <command name="shell"             options="cd idl2cpp11/ridl && scripts/make-orbpidl.sh " />
 
     <command name="make"              options="-k" />
 
-    <command name="auto_run_tests"    options="-l taox11/bin/taox11_tests.lst  -r /home/build/ACE/IDLtoCPP0x/IDL2Cxx script_path=$ACE_ROOT/bin" />
+    <command name="auto_run_tests"    options="-l taox11/bin/taox11_tests.lst  -r /home/build/ACE/IDLtoCPP0x/idl2cpp11 script_path=$ACE_ROOT/bin" />
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean move prettify index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /IDL2Cxx*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_idltocpp0x" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /idl2cpp11*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_idltocpp0x" />
 </autobuild>
