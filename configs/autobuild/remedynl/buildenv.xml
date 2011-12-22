@@ -38,6 +38,5 @@
         <environment name="LD_LIBRARY_PATH"           relative_value="/home/build/ndds/<nddsver>/lib/<nddsarch>/:" type="prefix"/>
         <environment name="NDDSHOME"                  relative_value="/home/build/ndds/<nddsver>" />
         <environment name="NDDSARCHITECTURE"          relative_value="<nddsarch>" />
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" relative_value="<dds4ccmid>"/>
     </configuration>
 </autobuild>

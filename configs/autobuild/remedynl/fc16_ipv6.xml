@@ -5,7 +5,7 @@
 
         <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
         <variable name="nddsver"   value="ndds.4.5d.rev11" />
-        <variable name="dds4ccmid" value="54"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" relative_value="54"/>
         <variable name="configs"  value="Linux NDDS SSL IPV6 ZLIB" />
 
         <include name="buildenv.xml" />

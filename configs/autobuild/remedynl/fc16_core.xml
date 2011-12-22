@@ -6,7 +6,7 @@
 
         <variable name="nddsarch"  value="x64Linux2.6gcc4.5.1" />
         <variable name="nddsver"   value="ndds.4.5d.rev11" />
-        <variable name="dds4ccmid" value="51"/>
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" relative_value="51"/>
 
         <include name="buildenv.xml" />
     </configuration>
