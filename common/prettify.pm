@@ -735,7 +735,8 @@ sub new ($)
     my @files;
     chdir ($project);
     if (defined $ENV{ACE_ROOT}) {
-        push @files, "$ENV{ACE_ROOT}/bin/ace_tests.lst";
+        push @files, "$ENV{ACE_ROOT}/bin/ace_tests.lst",
+                     "$ENV{ACE_ROOT}/tests/run_test.lst";
     }
     if (defined $ENV{TAO_ROOT}) {
         push @files, "$ENV{TAO_ROOT}/bin/tao_orb_tests.lst",
