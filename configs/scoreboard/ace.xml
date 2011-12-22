@@ -76,7 +76,7 @@ all the OS/platform combinations on which ACE is tested everyday.
      </build>
      <build>
       <name>RHEL_61_x32_Debug(gcc)</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_x86_ace/</url>
+      <url>http://buildlogs.theaceorb.nl/rhel61_i686_ace/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
