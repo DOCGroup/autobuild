@@ -1,3 +1,8 @@
+Thu Dec 22 12:11:26 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * command/auto_run_tests.pm:
+          If no script_path is given, default to $ACE_ROOT
+
 Tue Dec 20 09:21:17 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
 
           Cleanup of a lot of old builds. Moved the most important builds to

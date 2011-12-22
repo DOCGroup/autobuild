@@ -159,7 +159,7 @@ sub Run ($)
          $command = "perl $script_path/auto_run_tests.pl $options";
       }
       else {
-         $command = "perl bin/auto_run_tests.pl $options";
+         $command = "perl $ACE_ROOT/bin/auto_run_tests.pl $options";
       }
     }
 
