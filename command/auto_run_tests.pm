@@ -54,6 +54,7 @@ sub Run ($)
     my $sandbox = main::GetVariable ('sandbox');
     my $project_root = main::GetVariable ('project_root');
     my $automake_build = main::GetVariable ('automake_build');
+    my $ACE_ROOT = $ENV{ACE_ROOT};
 
     # Pull out options meant for this module
     my($next) = undef;
