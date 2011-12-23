@@ -1,3 +1,14 @@
+Fri Dec 23 20:58:21 UTC 2011  Adam Mitz  <mitza@ociweb.com>
+
+        * command/auto_run_tests.pm:
+
+          For compatibility, don't assume $ACE_ROOT if dir= is provided.
+
+        * command/printaceconfig.pm:
+
+          Moved configs output so that it's before in between the autobuild
+          changelog header, and check if configs is defined before using.
+
 Thu Dec 22 12:11:26 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * command/auto_run_tests.pm:

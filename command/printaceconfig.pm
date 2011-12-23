@@ -104,13 +104,13 @@ sub Run ($)
     $url =~ s/<file>/$config_file/;
     print "XML Config file: <a href=\"$url\">${config_file}</a>\n";
 
+    my $configs = main::GetVariable ('configs');
+    print "Test config: $configs\n" if defined $configs;
+
     my $cl = $information{AUTOBUILD}->[0];
     $url = $information{AUTOBUILD}->[2];
     $url =~ s/<file>/$cl/;
     print "================ <a href=\"$url\">Autobuild $cl</a> ================\n";
-
-    my $configs = main::GetVariable ('configs');
-    print "Test config: $configs\n";
 
     my $current_dir = getcwd ();
 

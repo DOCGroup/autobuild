@@ -156,11 +156,14 @@ sub Run ($)
           $options =~ s/script_path=$script_path//;
       }
 
-      if(defined $script_path) {
+      if (defined $script_path) {
          $command = "perl $script_path/auto_run_tests.pl $options";
       }
-      else {
+      elsif (!defined $dir) {
          $command = "perl $ACE_ROOT/bin/auto_run_tests.pl $options";
+      }
+      else {
+         $command = "perl bin/auto_run_tests.pl $options";
       }
     }
 
