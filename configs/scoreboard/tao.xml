@@ -34,13 +34,13 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
      <build>
        <name>FC16_CORBA_e_compact</name>
-       <url>http://buildlogs.theaceorb.nl/fc16_corbaec/</url>
+       <url>http://buildlogs.theaceorb.nl/fc16_corbae_compact/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
        <name>FC16_CORBA_e_micro</name>
-       <url>http://buildlogs.theaceorb.nl/fc16_corbaem/</url>
+       <url>http://buildlogs.theaceorb.nl/fc16_corbae_micro/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
