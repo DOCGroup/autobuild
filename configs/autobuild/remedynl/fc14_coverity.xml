@@ -17,13 +17,9 @@
         <environment name="MAIL"            value="mail -S smtp=zimbra.remedy.nl"/>
         <environment name="MAILFROM"        value="jwillemsen@remedy.nl"/>
 
-        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
-        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="35"/>
-
         <variable name="root"     value="/home/build/ACE/coverity/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/home/build/ACE/coverity/" />
-        <variable name="configs"  value="Linux Exceptions ZLIB SSL ZIOP NDDS CCM_NOEVENT" />
 
     </configuration>
 
