@@ -7,6 +7,5 @@ cd $HOME/autobuild
 svn up
 
 sh $HOME/autobuild/configs/autobuild/remedynl/fc16_04_perf_ts.sh && \
-   $HOME/autobuild/configs/autobuild/remedynl/fc16_04_lwccm_ne_rw.sh && \
-   $HOME/autobuild/configs/autobuild/remedynl/fc16_04_nointerceptors.sh
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_04_lwccm_ne_rw.sh
 
