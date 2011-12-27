@@ -9,4 +9,6 @@ svn up
 # Run the build.
 sh $HOME/autobuild/configs/autobuild/remedynl/fc16_01_coiop.sh && \
    $HOME/autobuild/configs/autobuild/remedynl/fc16_01_ipv6.sh && \
-   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_xmlconfig.sh
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_xmlconfig.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_valgrind.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_lwccm_ne_rw_pre.sh
