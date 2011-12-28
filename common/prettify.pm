@@ -774,6 +774,20 @@ sub new ($)
         }
       }
     }
+    if (defined $ENV{ACE_ROOT}) {
+      if (-r '$ENV{ACE_ROOT}/tests/run_test.lst') {
+        my $fileinput = new FileHandle ('$ENV{ACE_ROOT}/tests/run_test.lst', 'r');
+        while (<$fileinput>) {
+          if (/\!FIXED_BUGS_ONLY/) {
+            if (/^\s*([^\:]*)/) {
+              my $TestName = "tests/$1";
+              $TestName =~ s/\s+$//;
+              $self->{UNFIXED_BUGS}{$TestName} = 1;
+            }
+          }
+        }
+      }
+    }
     chdir ($current_dir);
 
     bless ($self, $class);

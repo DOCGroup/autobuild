@@ -1,3 +1,8 @@
+Wed Dec 28 09:15:52 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * common/prettify.pm:
+          Also check for tests/run_test.lst under ACE_ROOT
+
 Fri Dec 23 20:58:21 UTC 2011  Adam Mitz  <mitza@ociweb.com>
 
         * command/auto_run_tests.pm:
