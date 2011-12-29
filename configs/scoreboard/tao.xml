@@ -28,7 +28,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
      <build>
         <name>FC16_COIOP</name>
-        <url>http://buildlogs.theaceorb.nl/fc16_COIOP/</url>
+        <url>http://buildlogs.theaceorb.nl/fc16_coiop/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
