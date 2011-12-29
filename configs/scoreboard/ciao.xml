@@ -65,12 +65,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_Core_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_core</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC16_Valgrind_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc16_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
