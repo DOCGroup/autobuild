@@ -7,6 +7,6 @@ cd $HOME/autobuild
 svn up
 
 # Run the build.
-sh $HOME/autobuild/configs/autobuild/remedynl/fc16_01_coiop.sh && \
-   $HOME/autobuild/configs/autobuild/remedynl/fc16_01_valgrind.sh
+sh $HOME/autobuild/configs/autobuild/remedynl/fc16_01_valgrind.sh && \
+   $HOME/autobuild/configs/autobuild/remedynl/fc16_05_tao_valgrind.sh
 
