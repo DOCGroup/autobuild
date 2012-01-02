@@ -1357,7 +1357,9 @@ sub Normal ($)
     my $self = shift;
     my $s = shift;
     my $state = shift;
-    $state = lc($state);
+    if (defined $state) {
+      $state = lc($state);
+    }
 
     if (defined $state && $state eq 'config') {
         $s =~ s/</&lt;/g;
