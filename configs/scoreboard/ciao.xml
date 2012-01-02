@@ -343,7 +343,7 @@
     </build>
         <build>
             <name>WinXP_VC10_Debug</name>
-            <url>http://buildlogs.theaceorb.nl/VC100</url>
+            <url>http://buildlogs.theaceorb.nl/winxp_msvc10_debug</url>
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
