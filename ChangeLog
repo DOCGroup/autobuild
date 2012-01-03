@@ -1,3 +1,9 @@
+Tue Jan  3 12:33:30 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * configs/scoreboard/ciao.xml:
+          Ended gathering of compile time stats, current systems are so fast that
+          compile times are not interesting to gather. Updated links to fp builds
+
 Wed Dec 28 09:15:52 UTC 2011  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * common/prettify.pm:
