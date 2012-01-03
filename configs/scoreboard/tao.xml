@@ -104,7 +104,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
    <build>
      <name>FC16_Stats_Minimum_Corba</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_fp_minimum/</url>
+      <url>http://buildlogs.theaceorb.nl/fc16_fp_corbaminimum/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
