@@ -52,7 +52,7 @@
   <command name="vc7make" options="/build \x22debug|x64\x22 TAO/orbsvcs/DevGuideExamples/DevGuideExamples.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 1200000\x22 -Config SSL -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 2400000\x22 -Config SSL -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
