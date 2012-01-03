@@ -11,8 +11,8 @@ require File::Path;
 
 local $dont_generate = 0;
 local $dont_install = 0;
-local $STAGING = '/home/build/ACE/doxygen';
-local $MODULE  = 'ACE_wrappers';
+local $STAGING = $ENV{'DOC_ROOT'};
+local $MODULE  = 'ACE';
 
 $ENV{'PATH'} = $ENV{'PATH'}.':/usr/local/bin';
 
