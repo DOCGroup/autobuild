@@ -1,9 +1,0 @@
-<!-- $Id$ -->
-<autobuild>
-    <command name="anonymous_shell"   options="killall dance_locality_manager" />
-    <command name="anonymous_shell"   options="killall memcheck" />
-    <command name="log"               options="off" />
-    <command name="process_logs"      options="clean move prettify index" />
-    <command name="status"            options="off" />
-    <command name="anonymous_shell"   options="rsync --progress --recursive --delete -z $LOG_ROOT/ $RSYNC_HOST/$BUILD_NAME" />
-</autobuild>
