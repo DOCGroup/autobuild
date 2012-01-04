@@ -28,6 +28,12 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>FC16_Coverity</name>
+    <url>http://buildlogs.theaceorb.nl/fc16_coverity</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>Mail_Test_Stats</name>
     <url>http://buildlogs.theaceorb.nl/fc16_mail_teststats</url>
     <build_sponsor>Remedy IT</build_sponsor>
