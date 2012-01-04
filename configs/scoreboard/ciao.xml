@@ -301,7 +301,7 @@
     </build>
     <build>
       <name>WinXP_VC9_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/VC90</url>
+      <url>http://buildlogs.theaceorb.nl/winxp_msvc9_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -331,7 +331,7 @@
     </build>
     <build>
       <name>WinXP_VC8_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/VC8</url>
+      <url>http://buildlogs.theaceorb.nl/winxp_msvc8_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
