@@ -286,6 +286,7 @@ sub handle_compiler_output_line($) {
        # ... or a template location where it could be either a
        # warning or an error, but the lines around it would show the
        # real reason ...
+       || $s =~ m/^.*:[0-9]+:\s+let op:/i
        || $s =~ m/^.*:[0-9]+:\s+note:/i
        || $s =~ m/^.*:[0-9]+:\s+instantiated\sfrom\s/) {
       if (defined $main::verbose and $main::verbose == 1) {
