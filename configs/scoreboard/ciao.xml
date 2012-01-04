@@ -341,5 +341,11 @@
             <build_sponsor>Remedy IT</build_sponsor>
             <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
         </build>
+    <build>
+      <name>MingW32_GCC_462_Release</name>
+      <url>http://buildlogs.theaceorb.nl/winxp_mingw32</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
   </group>
 </scoreboard>
