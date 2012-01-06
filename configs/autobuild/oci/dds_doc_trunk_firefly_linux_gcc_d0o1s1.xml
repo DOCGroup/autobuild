@@ -36,11 +36,9 @@
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k  find=*akefile dir=dds/idl depend"/>
-  <command name="make" options="-s -k  find=*akefile dir=. depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k  find=*akefile dir=dds/idl"/>
-  <command name="make" options="-s -k  find=*akefile dir=."/>
 
   <!-- Post build -->
   <command name="log"             options="off"/>
