@@ -127,6 +127,7 @@ sub Run ($)
       }
     }
 
+    print "Running: $git_program $options\n";
     my $ret = system ("$git_program $options");
     if ($ret != 0) {
         print STDERR __FILE__, " ERROR: $git_program $options returned $ret\n";
