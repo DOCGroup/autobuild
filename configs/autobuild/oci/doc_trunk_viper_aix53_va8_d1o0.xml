@@ -98,7 +98,7 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<project_root>/bin/sandbox 1200\x22 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="-a -t -o -Config SANDBOX -s \x22<project_root>/bin/sandbox 2400\x22 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
