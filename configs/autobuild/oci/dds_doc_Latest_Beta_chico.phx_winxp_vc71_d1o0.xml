@@ -42,7 +42,7 @@
   <command name="vc7make" options="/build debug ../../../DDS/build/vc71_d1o0/DDS.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=../../../DDS/build/vc71_d1o0 -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 1200000\x22 -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="dir=../../../DDS/build/vc71_d1o0 -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 2400000\x22 -Config Win32 -Config NO_LOADAVG"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
