@@ -60,7 +60,7 @@
   <command name="make" options="-s -k find=*akefile dir=TAO/CIAO/ciao depend"/>
   <command name="make" options="-s -k find=*akefile dir=TAO/CIAO/tools depend"/>
   <command name="make" options="-s -k find=*akefile dir=TAO/DDS depend"/>
-  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO/connectors depend"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO depend"/>
 
   <!-- Build targets -->
   <command name="make" options="-s -k find=*akefile dir=TAO"/>
@@ -73,11 +73,11 @@
   <command name="make" options="-s -k find=*akefile dir=TAO/CIAO/tools"/>
   <command name="make" options="-s -k find=*akefile dir=TAO/DDS idl_stubs"/>
   <command name="make" options="-s -k find=*akefile dir=TAO/DDS"/>
-  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO/connectors"/>
+  <command name="make" options="-s -k find=*akefile dir=TAO/CIAO"/>
 
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-C -Config FIXED_BUGS_ONLY -Config CIAO -Config Linux"/>
+<!--  <command name="auto_run_tests"  options="-C -Config FIXED_BUGS_ONLY -Config CIAO -Config Linux"/> -->
   <command name="auto_run_tests"  options="dir=."/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
