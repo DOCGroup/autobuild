@@ -34,6 +34,12 @@
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+    <build>
+      <name>FCRawhide_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fcrawhide_versioned/</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
    <build>
       <name>FC16_LwCCM_NoEvents_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne</url>
