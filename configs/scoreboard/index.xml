@@ -46,14 +46,14 @@ page </a> for more details.
 <h3>Additional Development Process Related Pages</h3>
 <p>
 In addition to the build results found in the Scoreboard described
-above, a number of other ACE/TAO/CIAO development process related web
+above, a number of other ACE/TAO/CIAO/DAnCE development process related web
 pages we use are the following:
 <ul>
 <li>
   <a href="http://www.dre.vanderbilt.edu/Coverage/">Code Coverage</a>
 </li>
 <li>
-  <a href="http://www.dre.vanderbilt.edu/Stats/">Compile- and Run-Time
+  <a href="http://atcdstats.theaceorb.nl">Compile- and Run-Time
 Statistics</a>
 </li>
 <li>
@@ -62,20 +62,20 @@ Statistics</a>
 </li>
 <li>
   Footprint statistics:
-  <a href="http://www.dre.vanderbilt.edu/Stats/regular">
+  <a href="http://atcdstats.theaceorb.nl/regular/index.html">
     Regular</a>,
-  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAecompact">
+  <a href="http://atcdstats.theaceorb.nl/CORBAecompact/index.html">
     CORBA e/compact</a>,
-  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAemicro">
+  <a href="http://www.dre.vanderbilt.edu/CORBAemicro/index.html">
     CORBA e/micro</a>
-  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAemicros">
+  <a href="http://atcdstats.theaceorb.nl/CORBAemicros/index.html">
     CORBA e/micro single threaded</a>
-  <a href="http://www.dre.vanderbilt.edu/Stats/CORBAminimum">
+  <a href="http://atcdstats.theaceorb.nl/CORBAminimum/index.html">
     Minimum CORBA</a>
 </li>
 </ul>
 The <i>Code Coverage</i> pages illustrate which areas of
-ACE+TAO+CIAO code are used, and how frequently.  The <i>Compile- and
+ACE+TAO+CIAO+DAnCE code are used, and how frequently.  The <i>Compile- and
 Run-Time</i> pages contain compilation times, static footprint
 measurements, and performance metrics.
 </p>
