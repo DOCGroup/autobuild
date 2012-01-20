@@ -54,7 +54,7 @@
     <command name="check_compiler" options="powerpc-ngc-linux-gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-type gnuautobuild" />
+    <command name="generate_workspace" options="-workers 2 -type gnuautobuild" />
 
     <command name="make"              options="-k -j 3" />
 
