@@ -39,7 +39,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="ACE_Host.mwc -worker 2 -type gnuautobuild" />
+    <command name="generate_workspace" options="ACE_Host.mwc -workers 2 -type gnuautobuild" />
 
     <command name="make"              options="-k -j 3" />
 
