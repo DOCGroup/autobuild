@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on spider.ociweb.com) was -->
-  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc_beta -branchname Latest_Beta -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_Beta -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS" -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -mpcopt "-exclude TAO/DDS/tools/modeling/tests" -outdir . -supporting 0 -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc_beta -branchname Latest_Beta -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/Latest_Beta -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS" -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -mpcopt "-exclude TAO/DDS/tools/modeling/tests" -outdir . -supporting 0 -environment OPENDDS_RTPS_DEFAULT_D0=142 -testopt "-Config RTPS" -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/TAO/CIAO"/>
@@ -8,6 +8,7 @@
     <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/TAO/DDS"/>
     <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/lib:/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/TAO/DDS/lib:"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="OPENDDS_RTPS_DEFAULT_D0" value="142"/>
     <environment name="PATH"            value="/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/TAO/DDS/bin:"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc_beta/ACE_wrappers/build/gcc_d1o0/TAO"/>
     <variable    name="build_name"      value="gcc_d1o0"/>
@@ -54,7 +55,7 @@
   <command name="make" options="-s -k  find=*akefile dir=TAO/DDS"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=TAO/DDS -Config Linux"/>
+  <command name="auto_run_tests"  options="dir=TAO/DDS -Config Linux -Config RTPS"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>

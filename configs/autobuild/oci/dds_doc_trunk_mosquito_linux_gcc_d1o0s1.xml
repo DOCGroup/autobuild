@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on mosquito.ociweb.com) was -->
-  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=1 optimize=0 static_libs_only=1" -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler gcc -creator mitza -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -mpcopt "-features content_subscription=0" -outdir mitza -piggyback /tao_builds/taoadmin/doc/build/gcc_d1o0s1 -piggypeer 1 -testopt "-Config DDS_NO_CONTENT_SUBSCRIPTION" -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=1 optimize=0 static_libs_only=1" -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler gcc -creator mitza -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -mpcopt "-features content_subscription=0" -outdir mitza -piggyback /tao_builds/taoadmin/doc/build/gcc_d1o0s1 -piggypeer 1 -testopt "-Config RTPS -Config DDS_NO_CONTENT_SUBSCRIPTION" -environment OPENDDS_RTPS_DEFAULT_D0=136 -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/CIAO"/>
@@ -10,6 +10,7 @@
     <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/DDS/build/gcc_d1o0s1"/>
     <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/gcc_d1o0s1/lib:/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE/lib:"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="OPENDDS_RTPS_DEFAULT_D0" value="136"/>
     <environment name="PATH"            value="/tao_builds/taoadmin/DDS/build/gcc_d1o0s1/bin:/tao_builds/taoadmin/doc/build/gcc_d1o0s1/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d1o0s1/TAO"/>
     <variable    name="base"            value="DDS"/>
@@ -43,7 +44,7 @@
   <command name="make" options="-s -k  find=*akefile dir=."/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config DDS_NO_CONTENT_SUBSCRIPTION -Config STATIC -Config Linux"/>
+  <command name="auto_run_tests"  options="dir=. -Config DDS_NO_CONTENT_SUBSCRIPTION -Config STATIC -Config Linux -Config RTPS"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>

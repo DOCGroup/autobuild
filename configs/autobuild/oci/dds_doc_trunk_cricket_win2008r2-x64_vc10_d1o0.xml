@@ -1,12 +1,13 @@
 <autobuild>
   <!-- The command used to create this file (on CRICKET) was -->
-  <!-- C:\tao_builds\taoadmin\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc10 -creator mitza -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -hostname cricket -outdir configs -piggyback c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc10_d1o0 -sandbox 1 -->
+  <!-- C:\tao_builds\taoadmin\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc10 -creator mitza -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment MPC_ROOT=c:\tao_builds\taoadmin\MPC -hostname cricket -outdir configs -piggyback c:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc10_d1o0 -sandbox 1 -environment OPENDDS_RTPS_DEFAULT_D0=130 -testopt "-Config RTPS" -->
   <configuration>
     <environment name="ACE_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc10_d1o0"/>
     <environment name="CIAO_ROOT"    value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc10_d1o0\\TAO\\CIAO"/>
     <environment name="DANCE_ROOT"   value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc10_d1o0\\TAO\\DAnCE"/>
     <environment name="DDS_ROOT"     value="c:\\tao_builds\\taoadmin\\DDS\\build\\vc10_d1o0"/>
     <environment name="MPC_ROOT"     value="c:\\tao_builds\\taoadmin\\MPC"/>
+    <environment name="OPENDDS_RTPS_DEFAULT_D0" value="130"/>
     <environment name="PATH"         value="C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\IDE;C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64;c:\\tao_builds\\taoadmin\\DDS\\build\\vc10_d1o0\\bin;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc10_d1o0\\bin;c:\\tao_builds\\taoadmin\\DDS\\build\\vc10_d1o0\\lib;c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc10_d1o0\\lib;" type="prefix"/>
     <environment name="TAO_ROOT"     value="c:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc10_d1o0\\TAO"/>
     <variable    name="base"         value="DDS"/>
@@ -35,7 +36,7 @@
   <command name="vc7make" options="/build \x22debug|x64\x22 ./DDS.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 2400000\x22 -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="dir=. -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox64 -t 2400000\x22 -Config Win32 -Config NO_LOADAVG -Config RTPS"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>

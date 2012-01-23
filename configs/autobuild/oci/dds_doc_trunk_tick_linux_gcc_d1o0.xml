@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on tick) was -->
-  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler gcc -creator mitza -dds 1 -docbuild 1 -docrepo 1 -environment QTDIR=/usr/lib64/qt4 -hostname tick -outdir . -piggyback /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0 -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler gcc -creator mitza -dds 1 -docbuild 1 -docrepo 1 -environment QTDIR=/usr/lib64/qt4 -hostname tick -outdir . -piggyback /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0 -environment OPENDDS_RTPS_DEFAULT_D0=144 -testopt "-Config RTPS" -->
   <!-- Added installation -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0"/>
@@ -10,6 +10,7 @@
     <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/DDS/build/gcc_d1o0"/>
     <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/DDS/build/gcc_d1o0/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/lib:"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="OPENDDS_RTPS_DEFAULT_D0" value="144"/>
     <environment name="PATH"            value="/tao_builds/taoadmin/DDS/build/gcc_d1o0/bin:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
     <environment name="QTDIR"           value="/usr/lib64/qt4"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO"/>
@@ -50,7 +51,7 @@
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/dbg_installed"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config Linux"/>
+  <command name="auto_run_tests"  options="dir=. -Config Linux -Config RTPS"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>

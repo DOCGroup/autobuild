@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on oci1329xp) was -->
-  <!-- U:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\DDS -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler vc71 -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -hostname chico.phx -outdir . -piggyback d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0 -testopt "-s \x22u:\\autobuild\\win32sandbox\\sandbox.exe -t 2400000\x22 -Config SANDBOX" -->
+  <!-- U:\nightly\BuildXML\buildxml.pl -base d:\tao_builds\taoadmin\DDS -buildflags "ssl=1 debug=1 optimize=0" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler vc71 -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -hostname chico.phx -outdir . -piggyback d:\tao_builds\taoadmin\doc\ACE_wrappers\build\vc71_s1d1o0 -testopt "-Config RTPS -s \x22u:\\autobuild\\win32sandbox\\sandbox.exe -t 2400000\x22 -Config SANDBOX" -environment OPENDDS_RTPS_DEFAULT_D0=128 -->
   <configuration>
     <environment name="ACE_ROOT"              value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0"/>
     <environment name="CIAO_ROOT"             value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO\\CIAO"/>
@@ -9,6 +9,7 @@
     <environment name="DDS_ROOT"              value="d:\\tao_builds\\taoadmin\\DDS\\build\\vc71_s1d1o0"/>
     <environment name="MPC_ROOT"              value="u:\\MPC"/>
     <environment name="OPENDDS_DCPS_TS_FLAGS" value=" "/>
+    <environment name="OPENDDS_RTPS_DEFAULT_D0" value="128"/>
     <environment name="PATH"                  value="C:\\Program Files\\Microsoft Visual Studio .NET 2003\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio .NET 2003\\VC7\\bin;d:\\tao_builds\\taoadmin\\DDS\\build\\vc71_s1d1o0\\bin;d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\bin;d:\\tao_builds\\taoadmin\\DDS\\build\\vc71_s1d1o0\\lib;d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\lib;" type="prefix"/>
     <environment name="TAO_ROOT"              value="d:\\tao_builds\\taoadmin\\doc\\ACE_wrappers\\build\\vc71_s1d1o0\\TAO"/>
     <variable    name="base"                  value="DDS"/>
@@ -37,7 +38,7 @@
   <command name="vc7make" options="/build debug ./DDS.sln"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -s \x22u:\\autobuild\\win32sandbox\\sandbox.exe -t 2400000\x22 -Config SANDBOX -Config SSL -Config Win32 -Config NO_LOADAVG"/>
+  <command name="auto_run_tests"  options="dir=. -s \x22u:\\autobuild\\win32sandbox\\sandbox.exe -t 2400000\x22 -Config SANDBOX -Config SSL -Config Win32 -Config NO_LOADAVG -Config RTPS"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
