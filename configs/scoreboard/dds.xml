@@ -11,6 +11,12 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Windows</name>
   <build>
+    <name>WinXP_MinGW_OpenDDS</name>
+      <url>http://buildlogs.theaceorb.nl/winxp_mingw_opendds</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>dds_doc_trunk_chico.phx_winxp_vc71_s1d1o0</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_chico.phx_winxp_vc71_s1d1o0</url>
     <build_sponsor>OCI</build_sponsor>
