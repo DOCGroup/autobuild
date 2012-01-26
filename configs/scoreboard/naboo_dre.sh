@@ -1,5 +1,4 @@
 #!/bin/sh
-#
 # $Id$
 
 PERLLIB=autobuild
@@ -8,8 +7,6 @@ export PERLLIB
 cd $HOME/autobuild
 svn cleanup
 svn up
-
-# /usr/bin/perl $HOME/autobuild/scoreboard.pl -o /export/project/workarea01/Scoreboard/html -c $HOME/autobuild/configs/scoreboard/acetao.xml 2>&1 &
 
 # Generate the index page!
 /usr/bin/perl ./scoreboard.pl -v -d /export/web/www/scoreboard -i $HOME/autobuild/configs/scoreboard/index.xml  2>&1 &
@@ -24,6 +21,7 @@ svn up
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/cosmic.xml -o cosmic.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/xsc.xml -o xsc.html -r xsc.rss 2>&1  &
+/usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/taox11.xml -o taox11.html -r taox11.rss 2>&1  &
 
 # Generate the test matrices!
 ##testmatrix/update_scoreboard.sh 2>&1 &
