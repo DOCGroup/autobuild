@@ -1168,7 +1168,8 @@ sub update_html_table ($$@)
             print $indexhtml '>',decode_timestamp ($basename);
 
             print $indexhtml '<td>';
-            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS}) {
+            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
+                $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS !~ /None/}) {
                 print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
             }
             elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
