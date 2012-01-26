@@ -410,6 +410,7 @@ sub new ($)
     $self->{SUBVERSION_LAST_EXTERNAL}  = 'None';
     $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
+    $self->{SUBVERSION_CHECKEDOUT_OPENDDS} = 'None';
 
     bless ($self, $class);
     return $self;
@@ -560,6 +561,7 @@ sub Footer ()
     $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
     $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
     $totals .= " CVS: \"$self->{CVS_TIMESTAMP}\""; ## Prismtech still use some CVS please leave
+    $totals .= " OpenDDS: $self->{SUBVERSION_CHECKEDOUT_OPENDDS}";
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -946,6 +948,12 @@ sub Setup_Handler ($)
     {
         my $revision = $1;
         $totals->{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/git-svn-id: svn:\/\/svn.dre.vanderbilt.edu\/DOC\/DDS\/trunk\@(\d+) /i)
+    {
+        my $revision = $1;
+        $totals->{SUBVERSION_CHECKEDOUT_OPENDDS} = $1;
         $self->Output_Normal ($s);
     }
     elsif ($s =~ m/(?:Checked out|Updated) external (?:at|to) revision (\d+)\./i)

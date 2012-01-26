@@ -48,6 +48,7 @@ use Time::Local;
 #                 ->{CLEAN_HISTORY}    <- Link with clean history information
 #                 ->{SUBVERSION_CHECKEDOUT_ACE}  <- SVN Revision of ACE_wrappers checked out
 #                 ->{SUBVERSION_CHECKEDOUT_MPC}  <- SVN Revision of MPC checked out
+#                 ->{SUBVERSION_CHECKEDOUT_OPENDDS}  <- SVN Revision of OpenDDS checked out
 #                 ->{CVS_TIMESTAMP}    <- The time AFTER the last cvs operation (PRISMTECH still use some cvs, please leave)
 
 my %builds;
@@ -243,6 +244,9 @@ sub query_latest ()
         }
         if ($latest =~ m/MPC: ([^ ]+)/) {
             $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
+        }
+        if ($latest =~ m/OpenDDS: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_OPENDDS} = $1;
         }
         if ($latest =~ m/CVS: \"([^\"]+)\"/) {
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
@@ -738,6 +742,9 @@ print "in local_update_cache, post=$post\n";
         if ($latest =~ m/MPC: ([^ ]+)/) {
             $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
         }
+        if ($latest =~ m/OpenDDS: ([^ ]+)/) {
+            $builds{$buildname}{SUBVERSION_CHECKEDOUT_OPENDDS} = $1;
+        }
         if ($latest =~ m/CVS: \"([^\"]+)\"/) {
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
@@ -1161,7 +1168,10 @@ sub update_html_table ($$@)
             print $indexhtml '>',decode_timestamp ($basename);
 
             print $indexhtml '<td>';
-            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
+            if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS}) {
+                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
+            }
+            elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
                 print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
             }
             else {
