@@ -22,6 +22,12 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
    </build>
+   <build>
+      <name>SUSE114_NDK6_r9_arm_target_tests</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_firefly_android_gcc_d0o1s1_tests</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
+   </build>
 </group>
 
 <group>
