@@ -142,6 +142,12 @@
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>OpenSuSE_12_1_GCC_64bit</name>
+       <url>http://buildlogs.theaceorb.nl/suse121_debug</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
     <build>
       <name>FC16_IPV6</name>
        <url>http://buildlogs.theaceorb.nl/fc16_ipv6</url>

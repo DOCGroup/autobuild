@@ -35,6 +35,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>suse121_gcc47_c++11</name>
+    <url>http://buildlogs.theaceorb.nl/suse121_c++11_gcc47</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>winxp_mingw_c++11</name>
     <url>http://buildlogs.theaceorb.nl/winxp_mingw_c++11</url>
       <build_sponsor>Remedy IT</build_sponsor>
