@@ -1,0 +1,57 @@
+<autobuild>
+  <!-- The command used to create this file (on oci1176) was -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -autotest 0 -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 CPU=PENTIUM4" -buildname VxWorks6.9_gcc_d1o0 -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO -compiler gcc -create "TAO_for_DDS.mwc=workspace {\nace/ace.mpc\nTAO/tao/tao.mpc\nTAO/tao/AnyTypeCode\nTAO/tao/Codeset\nTAO/tao/IORTable\nTAO/tao/PortableServer\nTAO/tao/ImR_Client\nTAO/tao/PI\nTAO/tao/CodecFactory\nTAO/orbsvcs/orbsvcs/Svc_Utils.mpc\nTAO/tao/PI_Server\nTAO/tao/IORManipulation\nTAO/tao/Valuetype\nTAO/tao/Messaging\nTAO/orbsvcs/orbsvcs/CosNaming.mpc\nTAO/orbsvcs/orbsvcs/PortableGroup.mpc\nTAO/orbsvcs/orbsvcs/FTORB.mpc\n}\n" -creator mitza -crosscopy /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1 -devguide 0 -docbuild 1 -environment "suffix LD_LIBRARY_PATH=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/lib:" -mpcopt TAO_for_DDS.mwc -noace 1 -notaoace 1 -outdir . -platform VxWorks6.9 -prependws TAO_for_DDS.mwc -supporting 0 -wrenv /distcomp/VxWorks/WindRiverVx6.9/vxworks-6.9 -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0"/>
+    <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO/CIAO"/>
+    <environment name="DANCE_ROOT"      value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO/DAnCE"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO/DDS"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/lib:"/>
+    <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
+    <environment name="PATH"            value=":/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:" type="suffix"/>
+    <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO"/>
+    <variable    name="build_name"      value="VxWorks6.9_gcc_d1o0"/>
+    <variable    name="creator"         value="mitza"/>
+    <variable    name="log_file"        value="VxWorks6.9_gcc_d1o0.log"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/doc_trunk_oci1176_VxWorks6.9_gcc_d1o0"/>
+    <variable    name="project_root"    value="/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0"/>
+    <variable    name="root"            value="/tao_builds/taoadmin/doc"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="process_listener"   options="localhost:32001"/>
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="eval"               options="/distcomp/VxWorks/WindRiverVx6.9/wrenv.sh  -p vxworks-6.9 -o print_env"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
+  <command name="clone_build_tree"/>
+  <command name="rem_sems"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/VxWorks6.9_gcc_d1o0/ace/config.h output='#include \x22ace/config-vxworks6.9.h\x22\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/VxWorks6.9_gcc_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\nCPU=PENTIUM4\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_vxworks6.9.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/VxWorks6.9_gcc_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22$PATH:/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO\x22; export TAO_ROOT\n/distcomp/VxWorks/WindRiverVx6.9/wrenv.sh  -p vxworks-6.9\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/VxWorks6.9_gcc_d1o0/TAO_for_DDS.mwc output='workspace {\nace/ace.mpc\nTAO/tao/tao.mpc\nTAO/tao/AnyTypeCode\nTAO/tao/Codeset\nTAO/tao/IORTable\nTAO/tao/PortableServer\nTAO/tao/ImR_Client\nTAO/tao/PI\nTAO/tao/CodecFactory\nTAO/orbsvcs/orbsvcs/Svc_Utils.mpc\nTAO/tao/PI_Server\nTAO/tao/IORManipulation\nTAO/tao/Valuetype\nTAO/tao/Messaging\nTAO/orbsvcs/orbsvcs/CosNaming.mpc\nTAO/orbsvcs/orbsvcs/PortableGroup.mpc\nTAO/orbsvcs/orbsvcs/FTORB.mpc\n}\n'"/>
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_ace_config"   options="XML_URL=https://svn.ociweb.com/viewvc/nightly"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="ccpentium"/>
+
+  <!-- Conditionally clean binaries -->
+  <command name="make" options="-s -k  find=*akefile dir=. conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/VxWorks6.9_gcc_d1o0/.clean_binaries clean_binaries"/>
+
+  <!-- Finish build preparation -->
+  <command name="generate_workspace" options="-type gnuace -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,TAO/TAO_ACE.mwc,TAO/TAOACE.mwc TAO_for_DDS.mwc"/>
+  <command name="anonymous_shell"    options="cp -pf /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/bin/ace_gperf ACE_wrappers/build/VxWorks6.9_gcc_d1o0/bin"/>
+  <command name="anonymous_shell"    options="cp -pf /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0w1/bin/tao_idl ACE_wrappers/build/VxWorks6.9_gcc_d1o0/bin"/>
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k  find=*akefile dir=. depend"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k  find=*akefile dir=."/>
+
+  <!-- Post build -->
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>

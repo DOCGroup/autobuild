@@ -1,3 +1,17 @@
+Fri Feb 17 23:57:24 UTC 2012  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_trunk_oci1176_VxWorks6.9_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_oci1176_VxWorks6.9_gcc_d1o0.xml:
+        * configs/scoreboard/dds.xml:
+        * configs/scoreboard/tao.xml:
+
+          Upgraded from VxWorks 6.8 to 6.9.
+
+        * configs/autobuild/oci/dds_doc_trunk_oci1176_VxWorks6.8_gcc_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_oci1176_VxWorks6.8_gcc_d1o0.xml:
+
+          Removed these files.
+
 Mon Feb  6 18:13:44 UTC 2012  Trevor Fields  <fields_t@ociweb.com>
 
         * scoreboard/tao.xml:
