@@ -1038,6 +1038,7 @@ sub Setup_Handler ($)
         $s =~ m/[^\w]+ERROR/ ||
         $s =~ m/no such file/i ||
         $s =~ m/BUILD FAILED/ ||
+        $s =~ m/Error: Another instance of MPC is using/ ||
         $s =~ m/The following error occurred while executing this line/ ||
         $s =~ m/No commands are being checked/ ||
         $s =~ m/When Checking \"/ ||
