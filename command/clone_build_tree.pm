@@ -71,6 +71,10 @@ sub Run ($)
         $dir = $1;
     }
     $dir = "$dir/$base";
+    
+    if ($options =~ s/^((?:.*?\s)?\s*)-sub_dir (\S+)/$1/) {
+        $dir = "$dir/$2";
+    }
 
     chdir ($dir);
 

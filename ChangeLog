@@ -1,3 +1,9 @@
+Wed Mar  7 21:34:45 UTC 2012  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/clone_build_tree.pm:
+
+          Added flag to indicate a sub-directory of the $root/$base to clone.
+
 Fri Feb 17 23:57:24 UTC 2012  Adam Mitz  <mitza@ociweb.com>
 
         * configs/autobuild/oci/dds_doc_trunk_oci1176_VxWorks6.9_gcc_d1o0.xml:
