@@ -361,8 +361,8 @@ sub query_history ()
     print "Getting history informatin\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
-        my $full_link = 'http://download.theaceorb.nl/teststat/builds/' . $buildname . '.html';
-        my $clean_link = 'http://download.theaceorb.nl/teststat/builds/clean_' . $buildname . '.html';
+        my $full_link = 'http://teststat.theaceorb.nl/teststat/builds/' . $buildname . '.html';
+        my $clean_link = 'http://teststat.theaceorb.nl/teststat/builds/clean_' . $buildname . '.html';
         if (defined $clean_link) {
             print "    Clean history [$buildname] from $full_link\n" if ($verbose);
 
@@ -1369,7 +1369,7 @@ sub update_html_table ($$@)
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{FULL_HISTORY}) {
                 print $indexhtml "<a href=\"";
-                print $indexhtml "http:\/\/download.theaceorb.nl\/teststat\/builds\/", $buildname, ".html";
+                print $indexhtml "http:\/\/teststat.theaceorb.nl\/teststat\/builds\/", $buildname, ".html";
                 print $indexhtml "\">";
                 print $indexhtml "Full";
                 print $indexhtml "</a>";
@@ -1377,7 +1377,7 @@ sub update_html_table ($$@)
             }
             if (defined $builds{$buildname}->{CLEAN_HISTORY}) {
                 print $indexhtml "<a href=\"";
-                print $indexhtml "http:\/\/download.theaceorb.nl\/teststat\/builds\/clean_", $buildname, ".html";
+                print $indexhtml "http:\/\/teststat.theaceorb.nl\/teststat\/builds\/clean_", $buildname, ".html";
                 print $indexhtml "\">";
                 print $indexhtml "Clean";
                 print $indexhtml "</a>";
