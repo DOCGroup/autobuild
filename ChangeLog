@@ -1,3 +1,17 @@
+Fri Mar 23 21:45:36 UTC 2012  Adam Mitz  <mitza@ociweb.com>
+
+        * configs/autobuild/oci/dds_doc_trunk_wiro_linux_gcc-4.7_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_wiro_linux_gcc-4.7_d1o0.xml:
+        * configs/scoreboard/dds.xml:
+        * configs/scoreboard/tao.xml:
+
+          Upgraded from GCC 4.6.3 to 4.7.0.
+
+        * configs/autobuild/oci/dds_doc_trunk_wiro_linux_gcc-4.6_d1o0.xml:
+        * configs/autobuild/oci/doc_trunk_wiro_linux_gcc-4.6_d1o0.xml:
+
+          Removed these files.
+
 Wed Mar  7 22:01:22 UTC 2012  Brian Johnson  <johnsonb@ociweb.com>
 
         * command/clone_build_tree.pm:
