@@ -5,6 +5,7 @@
         <environment name="TAO_ROOT"   value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC\\ACE_wrappers\\TAO"/>
         <environment name="CIAO_ROOT"  value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC\\ACE_wrappers\\TAO\\CIAO"/>
         <environment name="DANCE_ROOT" value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC\\ACE_wrappers\\TAO\\DAnCE"/>
+        <environment name="TAO_IDL3_TO_IDL2_FLAGS" value=" "/>
         <environment name="MPC_ROOT"   value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC\\ACE_wrappers\\MPC" />
         <environment name="PATH"       value="C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC\\ACE_wrappers\\bin;C:\\Overnight_Builds\\DOC_Group\\vc8\\standardUniMFC\\ACE_wrappers\\lib;C:\\openssl-0.9.7i\\out32dll;C:\\Perl\\bin;C:\\Program Files\\Subversion\\bin" type="prefix" />
         <environment name="RSYNC_RSH"  value="C:\\cygwin\\bin\\ssh" />
