@@ -15,13 +15,13 @@
     <command name="log"               options="on" />
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-snowleopard.h\x22\n\n '" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_snowleopard.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#include \x22ace/config-macosx-lion.h\x22\n\n '" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='include $(ACE_ROOT)/include/makeinclude/platform_macosx_lion.GNU\n'" />
     <command name="print_os_version" />
     <command name="print_env_vars" />
-    <command name="check_compiler"    options="gcc" />
+    <command name="check_compiler"    options="clang++" />
     <command name="print_ace_config" />
-    <command name="generate_workspace" options="-type gnuace -static TAO_ACE.mwc" />
+    <command name="generate_workspace" options="-type gnuace -static TAO_ACE.mwc -workers 16" />
     <command name="make"              options="-k realclean" />
     <command name="make"              options="-k -j16" />
 
@@ -29,5 +29,5 @@
     <command name="process_logs"      options="clean move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/Snow_Leopard_Static_Host" />
+    <command name="shell"             options="rsync -e 'ssh -i /Users/wotte/.ssh/id_build' --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/Snow_Leopard_Static_Host" />
 </autobuild>

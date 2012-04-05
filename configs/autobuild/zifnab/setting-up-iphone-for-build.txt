@@ -6,6 +6,19 @@ apt packages
 wget
 rsync
 
+Jailbreak. 
+Launch Cydia.
+Select 'Hacker'
+Wait for it to finish downloading packages
+Go to search and find the following packages:
+.  openssh
+.  insomnia
+.  Apt packages
+.  wget
+.  rsync
+
+SSH to the root account on the device, default password is 'alpine'.  First SSH attempt will take some time, as the device needs to generate keys.
+
 To get perl, ssh in to the device, and
 
 wget http://coredev.nl/cydia/coredev.pub
@@ -13,3 +26,4 @@ apt-key add coredev.pub
 echo 'deb http://coredev.nl/cydia iphone main' > /etc/apt/sources.list.d/coredev.nl.list
 
 now relaunch cydia, and perl will be available for install. 
+

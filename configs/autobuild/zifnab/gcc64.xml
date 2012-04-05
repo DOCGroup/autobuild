@@ -8,11 +8,11 @@
         <environment name="DYLD_LIBRARY_PATH" value="/builds/gcc64/ACE_wrappers/lib:/builds/utils/gcc64" />
         <environment name="XERCESCROOT"       value="/builds/utils/gcc64" />
         <environment name="SSL_ROOT"         value="/usr" />
-        <environment name="NDDSHOME"         value="/users/bczar/ndds.4.5d"/>
+        <environment name="NDDSHOME"         value="/build/ndds.4.5f"/>
         <environment name="NDDSARCHITECTURE" value="x64Darwin10gcc4.2.1"/>
-        <environment name="RTI_LICENSE_FILE" value="/users/bczar/rti_license.dat" />
+        <environment name="RTI_LICENSE_FILE" value="/build/ndds.4.5f/rti_license.dat" />
 	<!-- XALANHOME needed for rtiddsgen -->
-        <environment name="XALANHOME" value="/opt/local/share/java" />
+        <environment name="XALANHOME" value="/builds/xalan-j_2_7_1" />
         <environment name="MACOSX_DEPLOYMENT_TARGET" value="10.6" />
         <variable name="root"     value="/builds/gcc64/" />
         <variable name="log_file" value="build.txt" />
@@ -38,7 +38,7 @@
     <command name="check_compiler"    options="gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="-exclude TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -type gnuautobuild -workers 16" />
 
     <command name="make"              options="-k realclean find=*akefile" />
 
@@ -53,5 +53,5 @@
     <command name="process_logs"      options="clean=2 move prettify index" />
 
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/gcc64" />
+    <command name="shell"             options="rsync -e 'ssh -i /Users/wotte/.ssh/id_build' --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ bczar@anduril.dre.vanderbilt.edu:/export/webusers/isisbuilds/zifnab/gcc64" />
 </autobuild>
