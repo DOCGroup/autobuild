@@ -1,13 +1,13 @@
 <!-- $Id$ -->
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT"     value="/home/build/ACE/host/ACE_wrappers"/>
-        <environment name="TAO_ROOT"     value="/home/build/ACE/host/ACE_wrappers/TAO"/>
-        <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib" />
+        <environment name="ACE_ROOT"     value="/home/wotte/ACE/host/ACE_wrappers"/>
+        <environment name="TAO_ROOT"     value="/home/wotte/ACE/host/ACE_wrappers/TAO"/>
+        <environment name="LD_LIBRARY_PATH" value="/home/wotte/ACE/host/ACE_wrappers/lib" />
 
-        <variable name="root"     value="/home/build/ACE/host/" />
+        <variable name="root"     value="/home/wotte/ACE/host/" />
         <variable name="log_file" value="build.txt" />
-        <variable name="log_root" value="/home/build/ACE/host/" />
+        <variable name="log_root" value="/home/wotte/ACE/host/" />
         <variable name="configs"  value="Linux Exceptions NOXERCES" />
     </configuration>
 
@@ -35,13 +35,13 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="ACE_Host.mwc -type gnuautobuild" />
+    <command name="generate_workspace" options="ACE_Host.mwc -type gnuace -workers 2" />
 
     <command name="make"              options="-k" />
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean index" />
     <command name="status"            options="off" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_ndk6_r9_host" />
+<!--    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ qnap.remedy.nl::Buildlogs/fc15_ndk6_r9_host" /> -->
 </autobuild>
 

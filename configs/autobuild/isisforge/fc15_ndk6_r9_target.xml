@@ -1,24 +1,25 @@
 <!-- $Id$ -->
 <autobuild>
   <configuration>
-    <environment name="ACE_ROOT"        value="/home/build/ACE/target/ACE_wrappers"/>
-    <environment name="TAO_ROOT"        value="/home/build/ACE/target/ACE_wrappers/TAO"/>
-    <environment name="HOST_ROOT"       value="/home/build/ACE/host/ACE_wrappers"/>
-    <environment name="LD_LIBRARY_PATH" value="/home/build/ACE/host/ACE_wrappers/lib:/home/build/ACE/target/ACE_wrappers/lib" type="prefix"/>
+    <environment name="ACE_ROOT"        value="/home/wotte/ACE/target/ACE_wrappers"/>
+    <environment name="TAO_ROOT"        value="/home/wotte/ACE/target/ACE_wrappers/TAO"/>
+    <environment name="HOST_ROOT"       value="/home/wotte/ACE/host/ACE_wrappers"/>
+    <environment name="LD_LIBRARY_PATH" value="/home/wotte/ACE/host/ACE_wrappers/lib:/home/wotte/ACE/target/ACE_wrappers/lib" type="prefix"/>
     <environment name="CROSS_COMPILE" value="arm-linux-androideabi-"/>
-
-    <environment name="ANDROID_SDK_HOME" value="/home/build/"/>
-    <environment name="ANDROID_SDK_ROOT" value="/home/build/android/android-sdk-linux_x86"/>
-    <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/home/build/android/android-9-ndk-toolchain"/>
+    <environment name="NDK" value="/home/wotte/android/android-ndk-r5b" />
+    <environment name="NDK_STANDALONE" value="/home/wotte/android/android_standalone" />
+    <environment name="ANDROID_SDK_HOME" value="/home/wotte/android"/>
+    <environment name="ANDROID_SDK_ROOT" value="/home/wotte/android/android-sdk-linux_x86"/>
+    <environment name="ANDROID_NDK_TOOLCHAIN_ROOT" value="/home/wotte/android/android_standalone" />
     <environment name="ANDROID_FS_ROOT" value="/data" />
     <environment name="ANDROID_AVD_OPTIONS" value="-noaudio -no-window -wipe-data -partition-size 1024"/>
-    <environment name="ANDROID_AVD_NAME" value="Android-9"/>
+    <environment name="ANDROID_AVD_NAME" value="doc_android"/>
 
-    <environment name="PATH" value="/home/build/android/android-9-ndk-toolchain/bin" type="prefix"/>
+    <environment name="PATH" value="/home/wotte/android/android_standalone/bin" type="prefix"/>
 
-    <variable name="root"     value="/home/build/ACE/target/"/>
+    <variable name="root"     value="/home/wotte/ACE/target/"/>
     <variable name="log_file" value="build.txt"/>
-    <variable name="log_root" value="/home/build/ACE/target/"/>
+    <variable name="log_root" value="/home/wotte/ACE/target/"/>
     <variable name="configs"  value="Exceptions STATIC NOXERCES ANDROID"/>
 
     <environment name="DOC_TEST_DEFAULT"                             value="DOC_TEST_DEFAULT"/>
@@ -36,7 +37,7 @@
 
  <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ." />
 
-  <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DEFAULT_TEMP_DIR \"/data/tmp\"\n#include \x22ace/config-android.h\x22\n'"/>
+<command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define ACE_DEFAULT_TEMP_DIR \"/data/tmp\"\n#include \x22ace/config-android.h\x22\n'"/> 
   <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_android.GNU\n'" />
   <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output=''" />
 
