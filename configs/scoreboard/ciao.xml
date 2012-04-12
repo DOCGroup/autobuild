@@ -293,8 +293,8 @@
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
     </build>
     <build>
-      <name>Win2003_VC71_Debug_MFC</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_DebugMFC</url>
+      <name>Win2003_VC8_Debug_MFC</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC8_DebugMFC</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
       <orange>30</orange>
@@ -302,8 +302,8 @@
     </build>
 
     <build>
-      <name>Win2003_VC71_Inline_MFC</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC71_InlineMFC</url>
+      <name>Win2003_VC8_Inline_MFC</name>
+      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC8_InlineMFC</url>
       <build_sponsor>PrismTech</build_sponsor>
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
       <orange>30</orange>

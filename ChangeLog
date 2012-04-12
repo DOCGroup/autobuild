@@ -1,3 +1,9 @@
+Thu Apr 12 10:05:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * configs/scoreboard/ciao.xml:
+
+          Now VC71 is deprecated by DocGroup move onto VC8 builds instead.
+
 Fri Mar 30 13:58:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
