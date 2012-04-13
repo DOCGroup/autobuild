@@ -14,6 +14,7 @@
         <variable name="root"                value="/home/tao/rhel4/doc_scoreboard/gcc344/standard" />
         <variable name="log_file"            value="build.txt" />
         <variable name="log_root"            value="/home/tao/rhel4/doc_scoreboard/scoreboard/rhel4/gcc344/standard" />
+        <variable name="name"                value="Red Hat Enterprise Linux ES release 4 (Nahant Update 2)" />
         <variable name="configs"             value="Linux Exceptions QUICK FIXED_BUGS_ONLY BOOST" />
     </configuration>
 

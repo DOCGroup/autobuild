@@ -14,7 +14,7 @@
         <variable name="root"         value="C:\\Overnight_Builds\\DOC_Group\\vc8\\debugMFC" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="C:\\doc-scoreboard\\win2003\\VC8_DebugMFC" />
-        <variable name="name"         value="WinXP VC8 (VS.Net2003) DLL Debug MFC" />
+        <variable name="name"         value="Win2003 VC8 (VS.Net2003) Debug MFC" />
         <variable name="configs"      value="Win32 VC8 SANDBOX HAS_EXTENDED_FT_INTERCEPTORS SSL MFC QUICK FIXED_BUGS_ONLY NOXERCES" />
     </configuration>
 

@@ -1,3 +1,23 @@
+Fri Apr 13 09:02:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC8_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC8_Inline_MFC.xml:
+          Correct Web build names.
+
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC71_Debug_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Inline_MFC.bat:
+        * configs/autobuild/prism/Win2003_MSVC71_Standard_MFC.bat:
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Inline.sh:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.xml:
+        * configs/autobuild/prism/HPUX11_ACC367_Standard.sh:
+          Deleted.
+
 Thu Apr 12 10:05:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
 
         * configs/scoreboard/ciao.xml:
