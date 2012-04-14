@@ -277,26 +277,8 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
   <name>FreeBSD</name>
   <build>
-    <name>FreeBSD_5_5</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-5.5/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-  <build>
-    <name>FreeBSD_6_4</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-6.4/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-  <build>
     <name>FreeBSD_7_2</name>
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-7.2/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-  <build>
-    <name>FreeBSD_8_0</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-8.0/</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
   </build>
