@@ -81,7 +81,7 @@ sub Run ($)
     }
 
     if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
+        $project_root = $ENV{ACE_ROOT};
     }
 
     if (!-r $project_root || !-d $project_root) {

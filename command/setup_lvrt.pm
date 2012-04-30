@@ -83,7 +83,7 @@ sub Run ($)
         $root = $1;
     }
     if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
+        $project_root = $ENV{ACE_ROOT};
     }
 
     main::PrintStatus ('Setup', 'Setup_LVRT');

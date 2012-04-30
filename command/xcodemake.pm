@@ -80,7 +80,7 @@ sub Run ($)
     }
 
     if (!defined $project_root) {
-        $project_root = 'ACE_wrappers';
+        $project_root = $ENV{ACE_ROOT};
     }
 
     if (!-r $project_root || !-d $project_root) {
@@ -101,7 +101,7 @@ sub Run ($)
     if ($ret != 0) {
       print "[BUILD ERROR detected in ", getcwd(), "]\n";
     }
-    
+
     chdir $current_dir;
 
     return 1;
