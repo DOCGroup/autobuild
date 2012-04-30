@@ -98,17 +98,27 @@ sub Run ($)
         }
     }
 
-    my $command = "perl bin/pippen.pl $options";
+    my $script_path = 'bin';
+    if ($options =~ m/script_path='([^']*)'/) {
+        $script_path = $1;
+        $options =~ s/script_path='$script_path'//;
+    }
+    elsif ($options =~ m/script_path=([^\s]*)/) {
+        $script_path = $1;
+        $options =~ s/script_path=$script_path//;
+    }
+
+    my $command = "perl $script_path/pippen.pl $options";
 
     if ($options =~ m/msvc_mpc_auto_compile(.*)$/) {
         # override with the old file
-        $command = "perl bin/msvc_mpc_auto_compile.pl $1";
+        $command = "perl $script_path/msvc_mpc_auto_compile.pl $1";
     } elsif ($options =~ m/msvc_static_compile(.*)$/) {
         # override with the old file
-        $command = "perl bin/msvc_static_compile.pl $1";
+        $command = "perl $script_path/msvc_static_compile.pl $1";
     } elsif ($options =~ m/msvc_cidlc (.*)$/) {
         # override with the old file
-        $command = "perl bin/msvc_cidlc.pl $1";
+        $command = "perl $script_path/msvc_cidlc.pl $1";
     }
     else {
         # allow an arbitrary command
