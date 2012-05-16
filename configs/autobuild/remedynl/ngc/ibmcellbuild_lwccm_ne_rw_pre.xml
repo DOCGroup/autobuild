@@ -55,7 +55,7 @@
     <command name="check_compiler" options="powerpc64-ngc-linux-gcc" />
     <command name="print_ace_config" />
 
-    <command name="generate_workspace" options="-workers 20 -type gnuautobuild" />
+    <command name="generate_workspace" options="-workers 20 -type gnuautobuild -workers_dir /tmp/ibmcellbuild_lwccm_ne_rw_pre" />
 
     <command name="make"              options="-k -j 20" />
 

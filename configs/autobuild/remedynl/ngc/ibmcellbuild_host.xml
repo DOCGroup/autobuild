@@ -38,7 +38,7 @@
     <command name="print_make_version" />
     <command name="print_perl_version" />
 
-    <command name="generate_workspace" options="ACE_Host.mwc -workers 20 -type gnuautobuild" />
+    <command name="generate_workspace" options="ACE_Host.mwc -workers 20 -type gnuautobuild -workers_dir /tmp/ibmcellbuild_host" />
 
     <command name="make"              options="-k -j 20" />
 
