@@ -1,3 +1,8 @@
+Wed May 16 15:02:00 UTC 2012  Marcel Smit  <msmit at remedy dot ml>
+
+        * configs/scoreboard/ciao.xml:
+          Added a new build (DDS4CCM openDDS on windows).
+
 Fri Apr 13 09:02:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:

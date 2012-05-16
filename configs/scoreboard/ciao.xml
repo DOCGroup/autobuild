@@ -359,12 +359,18 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
-        <build>
-            <name>WinXP_VC10_Debug</name>
-            <url>http://buildlogs.theaceorb.nl/winxp_msvc10_debug</url>
-            <build_sponsor>Remedy IT</build_sponsor>
-            <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-        </build>
+    <build>
+      <name>WinXP_VC10_Debug</name>
+      <url>http://buildlogs.theaceorb.nl/winxp_msvc10_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>WinXP_DDS4CCM_OpenDDS</name>
+      <url>http://buildlogs.theaceorb.nl/winxp_msvc10_dds4ccm_opendds</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
     <build>
       <name>MingW32_GCC_462_Release</name>
       <url>http://buildlogs.theaceorb.nl/winxp_mingw32</url>
