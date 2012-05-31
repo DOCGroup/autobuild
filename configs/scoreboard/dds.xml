@@ -87,14 +87,14 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>FC16_OpenDDS</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_opendds</url>
+    <name>FC17_OpenDDS</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_opendds</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>FC16_OpenDDS_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_opendds_valgrind</url>
+    <name>FC17_OpenDDS_Valgrind</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_opendds_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>

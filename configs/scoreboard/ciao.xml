@@ -23,86 +23,86 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC16_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc16_nologging/</url>
+      <name>FC17_NoLogging</name>
+        <url>http://buildlogs.theaceorb.nl/fc17_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_Versioned_Namespace</name>
-        <url>http://buildlogs.theaceorb.nl/fc16_versioned/</url>
+      <name>FC17_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fc17_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_DDS4CCM_OpenDDS</name>
-        <url>http://buildlogs.theaceorb.nl/fc16_dds4ccm_opendds/</url>
+      <name>FC17_DDS4CCM_OpenDDS</name>
+        <url>http://buildlogs.theaceorb.nl/fc17_dds4ccm_opendds/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne</url>
+      <name>FC17_LwCCM_NoEvents_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_Install_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_install</url>
+      <name>FC17_LwCCM_NoEvents_Install_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_install</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_Install_Test_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_install_test</url>
+      <name>FC17_LwCCM_NoEvents_Install_Test_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_install_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_Compile_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_compile</url>
+      <name>FC17_LwCCM_NoEvents_Compile_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_compile</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_LF_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_lf</url>
+      <name>FC17_LwCCM_NoEvents_LF_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_lf</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_RW_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_rw</url>
+      <name>FC17_LwCCM_NoEvents_RW_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_rw</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC16_LwCCM_NoEvents_RW_PRE_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_lwccm_ne_rw_pre</url>
+      <name>FC17_LwCCM_NoEvents_RW_PRE_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_rw_pre</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_Valgrind_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_valgrind</url>
+      <name>FC17_Valgrind_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_Perf_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_perf/</url>
+      <name>FC17_Perf_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_perf/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_Perf_TS_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_perf_ts/</url>
+      <name>FC17_Perf_TS_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_perf_ts/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-       <name>FC16_FullCCM_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc16_fullccm</url>
+       <name>FC17_FullCCM_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc17_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -113,26 +113,26 @@
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_WChar</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_wchar</url>
+      <name>FC17_WChar</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_wchar</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_ostream</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_ostream</url>
+      <name>FC17_ostream</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_ostream</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_XML_Config</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_xmlconfig</url>
+      <name>FC17_XML_Config</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_xmlconfig</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_NoInterceptors</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_nointerceptors</url>
+      <name>FC17_NoInterceptors</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_nointerceptors</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -149,8 +149,8 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC16_IPV6</name>
-       <url>http://buildlogs.theaceorb.nl/fc16_ipv6</url>
+      <name>FC17_IPV6</name>
+       <url>http://buildlogs.theaceorb.nl/fc17_ipv6</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -261,14 +261,14 @@
   <group>
     <name>Stats Builds</name>
     <build>
-      <name>FC16_FP_Stats</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_fp_performance/</url>
+      <name>FC17_FP_Stats</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_fp_performance/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC16_FP_Stats_Regular</name>
-      <url>http://buildlogs.theaceorb.nl/fc16_fp_regular/</url>
+      <name>FC17_FP_Stats_Regular</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_fp_regular/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
