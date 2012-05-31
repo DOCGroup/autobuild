@@ -11,8 +11,8 @@ all the OS/platform combinations on which XSC is tested everyday.
 <group>
   <name>Linux</name>
      <build>
-       <name>OpenSuSE_12_1_GCC_64bit_XSC</name>
-       <url>http://buildlogs.theaceorb.nl/suse121_xsc</url>
+       <name>FC17_GCC_64bit_XSC</name>
+       <url>http://buildlogs.theaceorb.nl/fc17_xsc</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
