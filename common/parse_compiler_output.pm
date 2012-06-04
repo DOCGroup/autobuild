@@ -220,6 +220,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/required from here/) {
+    # Given by gcc 4.7
+    $self->Output_Warning ($s);
+    return;
+  }
+
   if ($s =~ m/identifier spellings differ only in case/) {
     $self->Output_Error ($s);
     return;
