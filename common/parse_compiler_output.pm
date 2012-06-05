@@ -220,7 +220,7 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  if ($s =~ m/required from here/) {
+  if ($s =~ m/required from/) {
     # Given by gcc 4.7
     $self->Output_Warning ($s);
     return;
