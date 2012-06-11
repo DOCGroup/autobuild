@@ -26,11 +26,12 @@
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ."/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS"/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc_d1o0/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/bin/MakeProjectCreator/config/default.features output='xerces2=1\nssl=1\nzlib=1\nqt4=1\nqt=0\nbzip2=1\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\nssl=1\nfl=1\ntk=1\nxt=1\nzlib=1\nqt4=1\nbzip2=1\nINSTALL_PREFIX=/tao_builds/taoadmin/dbg_installed\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/bin/MakeProjectCreator/config/default.features output='xerces2=1\nssl=1\nzlib=1\nqt4=1\nqt=0\nbzip2=1\ndds4ccm_opendds=1\ndds_suppress_anys=0\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/include/makeinclude/platform_macros.GNU output='debug=1\noptimize=0\nssl=1\nfl=1\ntk=1\nxt=1\nzlib=1\nqt4=1\nbzip2=1\ndds4ccm_opendds=1\nINSTALL_PREFIX=/tao_builds/taoadmin/dbg_installed\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nexport QTDIR=/usr/lib64/qt4\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/TAO\x22; export TAO_ROOT\nXERCESCROOT=\x22/usr\x22; export XERCESCROOT\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
@@ -56,6 +57,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DDS conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples conditional_rm=/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0/.clean_binaries clean_binaries"/>
@@ -63,6 +65,7 @@
   <!-- Finish build preparation -->
   <command name="generate_workspace" options="-type gnuace -recurse -exclude TAO/CIAO,TAO/DAnCE,TAO/DDS,ACE.mwc,TAO/TAO.mwc"/>
   <command name="generate_workspace" options="-type gnuace TAO/DAnCE"/>
+  <command name="generate_workspace" options="-type gnuace TAO/DDS/DDS_no_tests.mwc"/>
   <command name="generate_workspace" options="-type gnuace TAO/CIAO/CIAO.mwc"/>
 
   <!-- Build dependencies -->
@@ -82,6 +85,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE depend"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DDS depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples depend"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples depend"/>
@@ -103,6 +107,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/examples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/performance-tests"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DAnCE"/>
+  <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DDS"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/DevGuideExamples"/>
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
@@ -118,7 +123,7 @@
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/dbg_installed"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o -C -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux"/>
+  <command name="auto_run_tests"  options="-a -t -o -C -Config FIXED_BUGS_ONLY -Config SSL -Config CIAO -Config Linux -Config DDS4CCM_OPENDDS -Config DDS4CCM"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
