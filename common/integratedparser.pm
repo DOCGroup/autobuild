@@ -84,6 +84,9 @@ sub Parse ($\@)
             elsif (m/^\s*<build_ciao>\s*$/i){
                 $global_build_name = 'CIAO';
             }
+            elsif (m/^\s*<build_dds>\s*$/i){
+                $global_build_name = 'DDS';
+            }
             elsif (m/^\s*<scoreboard>\s*$/i) {
                 $state = 'scoreboard';
             }
