@@ -135,11 +135,11 @@ sub build_index_page ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO's Distributed Scoreboard</title>\n</head>\n";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n</head>\n";
 
     ### Start body
 
-    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO+CIAO's Distributed Scoreboard\n</h1></center>\n<hr>\n";
+    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard\n</h1></center>\n<hr>\n";
     my $parser = new IndexParser;
     $parser->Parse ($index, \%builds);
     print $indexhtml "$preamble\n";
@@ -1423,9 +1423,9 @@ sub build_integrated_page ($)
                      "tao",
                      "tao_future",
                      "misc",
-                     "dds",
                      "ciao",
-                     "ciao_future");
+                     "ciao_future",
+                     "dds");
 
     my $newfile = new FileHandle;
 
