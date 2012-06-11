@@ -1423,6 +1423,7 @@ sub build_integrated_page ($)
                      "tao",
                      "tao_future",
                      "misc",
+                     "dds",
                      "ciao",
                      "ciao_future");
 
