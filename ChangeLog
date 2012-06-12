@@ -1,3 +1,13 @@
+Tue Jun 12 09:50:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC8_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC8_Inline_MFC.xml:
+          Stop trying to build DDS that was added to the CIAO mwc files, we didn't check it out
+          and so carn't build it!
+
 Wed May 16 15:02:00 UTC 2012  Marcel Smit  <msmit at remedy dot ml>
 
         * configs/scoreboard/ciao.xml:

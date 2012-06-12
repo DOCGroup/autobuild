@@ -39,7 +39,7 @@
     <command name="print_perl_version" />
     <command name="print_openssl_version"/>
 
-    <command name="generate_workspace" options="-exclude prism,TAO/TAO_*.mwc -recurse -type vc8 -base ace_unicode" />
+    <command name="generate_workspace" options="-exclude prism,TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc -recurse -type vc8 -base ace_unicode" />
 
     <command name="win32make"         options="msvc_mpc_auto_compile -u -vc8 -ALL -Release -k" />
 
