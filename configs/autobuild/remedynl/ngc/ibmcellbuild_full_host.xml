@@ -25,10 +25,11 @@
     <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS"/>
 
     <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_HR_TIME_POLICY_STRATEGY\n#define ACE_HAS_CLOCK_GETTIME_MONOTONIC\n#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\ninline=0\nboost=0\noptimize=1\nxerces2=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/CIAO/tools/IDL3_to_IDL2\nTAO/DAnCE/tools/XML\nTAO/CIAO/tools/IDL3_to_XMI\n}\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ACE_Host.mwc output='workspace {\nace\napps/gperf/src\nTAO/TAO_IDL\nTAO/CIAO/tools/IDL3_to_IDL2\nTAO/DAnCE/tools/XML\nTAO/CIAO/tools/IDL3_to_XMI\nTAO/DDS/dds/idl\n}\n'" />
     <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=0\nxerces2=1\n'" />
 
     <command name="print_os_version" />
