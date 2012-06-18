@@ -146,7 +146,7 @@ sub Run ($)
           $options .= " -Exclude " . join (" -Exclude ", split (' ', $excludes));
       }
 
-      my $script_path = 'bin';
+      my $script_path;
       if ($options =~ m/script_path='([^']*)'/) {
           $script_path = $1;
           $options =~ s/script_path='$script_path'//;
@@ -161,6 +161,9 @@ sub Run ($)
       }
       elsif (!defined $dir) {
          $command = "perl $ACE_ROOT/bin/auto_run_tests.pl $options";
+      }
+      else {
+         $command = "perl bin/auto_run_tests.pl $options";
       }
     }
 

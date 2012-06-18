@@ -154,7 +154,7 @@ sub Run ($)
         $options .= " -Exclude " . join (" -Exclude ", split (' ', $excludes));
     }
 
-    my $script_path = 'bin';
+    my $script_path;
     if ($options =~ m/script_path='([^']*)'/) {
         $script_path = $1;
         $options =~ s/script_path='$script_path'//;
@@ -206,7 +206,12 @@ sub Run ($)
         }
     }
 
-    $remote_cmd .= "perl $script_path/auto_run_tests.pl $options";
+    if(defined $script_path) {
+        $remote_cmd .= "perl $script_path/auto_run_tests.pl $options";
+    }
+    else {
+        $remote_cmd .= "perl bin/auto_run_tests.pl $options";
+    }
 
     print "Remote shell: $remote_shell\n";
     print "Running: $remote_cmd\n";
