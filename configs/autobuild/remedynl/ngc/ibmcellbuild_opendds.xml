@@ -59,7 +59,7 @@
 
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_OpenDDS.mwc -workers 20 -type gnuautobuild -workers_dir /tmp/ibmcellbuild_opendds" />
 
-    <command name="make"              options="-k -j 20" />
+    <command name="make"              options="-k -j 4" />
 
     <command name="auto_run_remote_tests" options="-C -extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=46'"/>
 
