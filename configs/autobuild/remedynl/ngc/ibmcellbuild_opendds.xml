@@ -59,7 +59,7 @@
 
     <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_OpenDDS.mwc -workers 20 -type gnuautobuild -workers_dir /tmp/ibmcellbuild_opendds" />
 
-    <command name="anonymous_shell" options="cp -pf $HOST_ROOT/TAO/DDS/bin/opendds_idl TAO/DDS/bin"/>
+    <command name="anonymous_shell" options="cp -pf $HOST_ROOT/TAO/DDS/bin/opendds_idl $DDS_ROOT/bin"/>
 
     <command name="make"              options="-C TAO/CIAO -k -j 20" />
 
