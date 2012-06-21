@@ -23,7 +23,7 @@
 
         <variable name="root"         value="/build/ACE/crossbuild_opendds/" />
         <variable name="remote_root"  value="/build/ACE/crossbuild_opendds/ACE_wrappers" />
-        <variable name="remote_libpath"  value="/build/ndds.4.5d.rev11/lib/cell64Linux2.6gcc4.5.1" />
+        <variable name="remote_libpath"  value="/build/ndds.4.5d.rev11/lib/cell64Linux2.6gcc4.5.1:$DDS_ROOT/lib" />
         <variable name="remote_shell" value="ssh snalinux6" />
         <variable name="log_file"     value="build.txt" />
         <variable name="log_root"     value="/build/ACE/crossbuild_opendds/" />

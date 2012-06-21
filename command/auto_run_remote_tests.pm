@@ -180,8 +180,12 @@ sub Run ($)
     if (!defined $remote_dance_root) {
         $remote_dance_root = "$remote_tao_root/DAnCE";
     }
+    my $remote_opendds_root = main::GetVariable ('remote_opendds_root');
+    if (!defined $remote_opendds_root) {
+        $remote_opendds_root = "$remote_opendds_root/DDS";
+    }
 
-    $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root ";
+    $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root DDS_ROOT=$remote_opendds_root ";
     $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib";
     if (defined $remote_libpath) {
       $remote_cmd .= ":$remote_libpath";
