@@ -6,7 +6,7 @@
         <environment name="TAO_ROOT"          value="/build/ACE/crossbuild_opendds/ACE_wrappers/TAO"/>
         <environment name="CIAO_ROOT"         value="/build/ACE/crossbuild_opendds/ACE_wrappers/TAO/CIAO"/>
         <environment name="DANCE_ROOT"        value="/build/ACE/crossbuild_opendds/ACE_wrappers/TAO/DAnCE"/>
-        <environment name="DDS_ROOT"           value="/build/ACE/crossbuild_opendds/ACE_wrappers/TAO/DDS"/>
+        <environment name="DDS_ROOT"          value="/build/ACE/crossbuild_opendds/ACE_wrappers/TAO/DDS"/>
         <environment name="HOST_ROOT"         value="/root/ACE/full_host/ACE_wrappers"/>
         <environment name="LD_LIBRARY_PATH"   value="/root/ACE/full_host/ACE_wrappers/lib:/root/ACE/full_host/ACE_wrappers/TAO/DDS/lib:/usr/local/lib:/build/ndds.4.5d.rev14/lib/cell64Linux2.6gcc4.5.1" />
         <environment name="NDDSHOME"          value="/build/ndds.4.5d.rev24" />
@@ -61,7 +61,7 @@
 
     <command name="anonymous_shell" options="ln -sf $HOST_ROOT/TAO/DDS/bin/opendds_idl $DDS_ROOT/bin"/>
 
-    <command name="make"              options="-C TAO/CIAO -k -j 20" />
+    <command name="make"              options="-C TAO/CIAO -k -j 10" />
 
     <command name="auto_run_remote_tests" options="-C -extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=46'"/>
 
