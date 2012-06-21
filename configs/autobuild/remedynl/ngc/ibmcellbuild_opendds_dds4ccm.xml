@@ -1,0 +1,77 @@
+<!-- $Id$ -->
+<autobuild>
+    <configuration>
+        <environment name="PATH"              value="/usr/local/ngclinux/powerpc64/bin" type="prefix"/>
+        <environment name="ACE_ROOT"          value="/build/ACE/crossbuild_opendds_dds4ccm/ACE_wrappers"/>
+        <environment name="TAO_ROOT"          value="/build/ACE/crossbuild_opendds_dds4ccm/ACE_wrappers/TAO"/>
+        <environment name="CIAO_ROOT"         value="/build/ACE/crossbuild_opendds_dds4ccm/ACE_wrappers/TAO/CIAO"/>
+        <environment name="DANCE_ROOT"        value="/build/ACE/crossbuild_opendds_dds4ccm/ACE_wrappers/TAO/DAnCE"/>
+        <environment name="DDS_ROOT"          value="/build/ACE/crossbuild_opendds_dds4ccm/ACE_wrappers/TAO/DDS"/>
+        <environment name="HOST_ROOT"         value="/root/ACE/full_host/ACE_wrappers"/>
+        <environment name="LD_LIBRARY_PATH"   value="/root/ACE/full_host/ACE_wrappers/lib:/root/ACE/full_host/ACE_wrappers/TAO/DDS/lib:/usr/local/lib:/build/ndds.4.5d.rev14/lib/cell64Linux2.6gcc4.5.1" />
+        <environment name="NDDSHOME"          value="/build/ndds.4.5d.rev24" />
+        <environment name="NDDSARCHITECTURE"  value="cell64Linux2.6gcc4.5.1" />
+
+        <environment name="SSL_ROOT"          value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="ZLIB_ROOT"         value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="XERCESCROOT"       value="/usr/local/ngclinux/powerpc64/powerpc64-ngc-linux/usr"/>
+        <environment name="CIAO_LOG_LEVEL"    value="1"/>
+        <environment name="DANCE_LOG_LEVEL"   value="1"/>
+
+        <!-- http://devportal.remedy.nl/projects/rti-main/wiki/DDS4CCM_DEFAULT_DOMAIN_ID -->
+        <environment name="DDS4CCM_DEFAULT_DOMAIN_ID" value="46"/>
+
+        <variable name="root"         value="/build/ACE/crossbuild_opendds_dds4ccm/" />
+        <variable name="remote_root"  value="/build/ACE/crossbuild_opendds_dds4ccm/ACE_wrappers" />
+        <variable name="remote_libpath"  value="/build/ndds.4.5d.rev11/lib/cell64Linux2.6gcc4.5.1:$DDS_ROOT/lib" />
+        <variable name="remote_shell" value="ssh snalinux6" />
+        <variable name="log_file"     value="build.txt" />
+        <variable name="log_root"     value="/build/ACE/crossbuild_opendds_dds4ccm/" />
+        <variable name="configs"      value="Linux Exceptions ZLIB SSL XERCES NO_IFR NO_IDL3_TO_XMI NDDS CCM_DIRECTCOLL DDS4CCM DDS4CCM_OPENDDS" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="process_listener"  options="localhost:32004" />
+
+    <command name="make"              options="-k realclean find=*akefile" />
+
+    <command name="shell"             options="find ACE_wrappers -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="log"               options="on" />
+
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="svn"               options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk . dir=ACE_wrappers/TAO/DDS"/>
+
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#define CIAO_PRE_ESTABLISH_CONNECTIONS 1\n#define TAO_USE_HR_TIME_POLICY_STRATEGY\n#define ACE_HAS_CLOCK_GETTIME_MONOTONIC\n#define TAO_USE_DOTTED_DECIMAL_ADDRESSES 1\n#include \x22ace/config-linux.h\x22\n'"/>
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='minimaltoc=1\nCROSS_COMPILE=powerpc64-ngc-linux-\nTCPU=cell\ntunemodelflag=1\ncpumodelflag=1\nbuildbits=64\ndebug=0\noptimize=1\nxerces2=1\ndds4ccm_ndds=0\ndds4ccm_opendds=1\nndds=1\ninline=1\nssl=1\nzlib=1\nboost=0\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='cross_compile=1\ndds4ccm_ndds=0\ndds4ccm_opendds=1\nndds=1\nboost=0\nzlib=1\nssl=1\nxerces2=1\nccm_direct_collocation=1\ndds_suppress_anys=0\n'" />
+
+    <command name="print_os_version" />
+    <command name="print_remote_os_version" />
+    <command name="print_env_vars" />
+    <command name="print_perl_version" />
+    <command name="print_perl_version" options="remote"/>
+    <command name="print_openssl_version" options="remote"/>
+    <command name="print_make_version" />
+    <command name="check_compiler" options="powerpc64-ngc-linux-gcc" />
+    <command name="print_ace_config" />
+
+    <command name="generate_workspace" options="TAO/CIAO/CIAO_TAO_OpenDDS.mwc -workers 20 -type gnuautobuild -workers_dir /tmp/ibmcellbuild_opendds" />
+
+    <command name="anonymous_shell" options="ln -sf $HOST_ROOT/TAO/DDS/bin/opendds_idl $DDS_ROOT/bin"/>
+
+    <command name="make"              options="-C TAO/CIAO -k -j 10" />
+
+    <command name="auto_run_remote_tests" options="-C -extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=46'"/>
+
+    <command name="anonymous_shell"   options="ssh snalinux6 killall dance_locality_manager" />
+    <command name="anonymous_shell"   options="ssh snalinux6 killall tao_cosnaming" />
+    <command name="anonymous_shell"   options="ssh snalinux6 killall dance_node_manager" />
+    <command name="anonymous_shell"   options="ssh snalinux6 killall dance_execution_manager" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="move prettify clean index" />
+    <command name="status"            options="off" />
+    <command name="shell"             options="rsync -e "/usr/bin/ssh -i /root/.ssh/id_dsa" --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** ./ jwillemsen@naboo.dre.vanderbilt.edu:/web/users/jwillemsen/ibmcellbuild_opendds_dds4ccm" />
+</autobuild>
