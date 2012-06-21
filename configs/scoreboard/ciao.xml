@@ -1,4 +1,4 @@
-<!-- $Id$ -->
+<!-- <!-- $Id$ --> -->
 <scoreboard>
   <preamble>
     <center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
@@ -185,8 +185,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC12_IBMCellBE_Crossbuild_OpenDDS</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_opendds</url>
+      <name>FC12_IBMCellBE_Crossbuild_OpenDDS_DDS4CCM</name>
+      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_opendds_dds4ccm</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>

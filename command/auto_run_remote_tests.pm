@@ -186,7 +186,7 @@ sub Run ($)
     }
 
     $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root DDS_ROOT=$remote_opendds_root ";
-    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib";
+    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:$remote_opendds_root/lib";
     if (defined $remote_libpath) {
       $remote_cmd .= ":$remote_libpath";
     }
