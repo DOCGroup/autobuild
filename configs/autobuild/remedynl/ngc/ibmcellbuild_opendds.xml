@@ -62,7 +62,7 @@
 
     <command name="make"              options="-C TAO/DDS -k -j 10" />
 
-    <command name="auto_run_remote_tests" options="-C -extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=46'"/>
+    <command name="auto_run_remote_tests" options="-d -extra_env 'DDS4CCM_DEFAULT_DOMAIN_ID=46'"/>
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="move prettify clean index" />
