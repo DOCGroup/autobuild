@@ -119,6 +119,7 @@
   <command name="make" options="-k find=*akefile dir=TAO install"/>
   <command name="make" options="-k find=*akefile dir=apps/JAWS/server install"/>
   <command name="make" options="-k find=*akefile dir=TAO/DAnCE install"/>
+  <command name="make" options="-k find=*akefile dir=TAO/DDS install"/>
   <command name="make" options="-k find=*akefile dir=TAO/CIAO install"/>
   <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/taoadmin/dbg_installed"/>
 
