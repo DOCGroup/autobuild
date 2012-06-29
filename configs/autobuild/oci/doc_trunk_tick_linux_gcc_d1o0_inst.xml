@@ -50,7 +50,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/CIAO conditional=/tao_builds/taoadmin/doc/ACE_wrappers/build/inst64dbg/.clean_binaries clean_binaries"/>
 
   <!-- Finish build preparation -->
-  <command name="generate_workspace" options="-type gnuace -recurse"/>
+  <command name="generate_workspace" options="-type gnuace -recurse -features dds4ccm_opendds=0"/>
   <command name="generate_workspace" options="-type gnuace TAO/DAnCE/tests"/>
 
   <!-- Build dependencies -->
