@@ -1123,7 +1123,8 @@ sub Test_Handler ($)
         return;
     }
 
-    if ($s =~ m/gethostbyname: getaddrinfo returned ERROR/)
+    if ($s =~ m/gethostbyname: getaddrinfo returned ERROR/
+     || $s =~ m/==\d+==.*XML::XML_Error_Handler/) # valgrind stack trace
     {
       $self->Output_Normal ($s);
     }

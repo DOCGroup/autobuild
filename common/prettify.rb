@@ -7,7 +7,8 @@
 # Return true if the test succeeds, false if it fails!
 
 def parse_test_line (line)
-    if (line =~ /gethostbyname: getaddrinfo returned ERROR/)
+    if (line =~ /gethostbyname: getaddrinfo returned ERROR/ ||
+        line =~ /==\d+==.*XML::XML_Error_Handler/) # valgrind stack trace
         return true
     end
 

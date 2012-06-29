@@ -1,3 +1,11 @@
+Fri Jun 29 20:18:31 UTC 2012  Adam Mitz  <mitza@ociweb.com>
+
+        * common/prettify.pm:
+        * common/prettify.rb:
+
+          Valgrind output may contain XML::XML_Error_Handler in a stack trace,
+          and this should not be considered an error.
+
 Tue Jun 12 09:50:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
