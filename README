@@ -1,5 +1,4 @@
 /**
-
  @page Autobuild and scoreboard tools
 
  @section Autobuild_Introduction Introduction
@@ -352,4 +351,3 @@ recieve email notification, add and modifiy the line below:
 
 <CODE>$Id$</CODE>
 */
-
