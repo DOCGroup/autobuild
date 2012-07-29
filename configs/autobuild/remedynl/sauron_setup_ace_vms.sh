@@ -1,6 +1,7 @@
 #!/bin/sh
 
-svn up $HOME/ace/autobuild
+cd $HOME/ace/autobuild
+git pull
 mkdir -p $HOME/ace/openvms
 cd $HOME/ace/openvms
 rm -rf ace_vms_update.tar
