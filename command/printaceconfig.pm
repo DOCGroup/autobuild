@@ -49,7 +49,7 @@ sub Run ($)
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
     my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc';
-    my $giturl = 'https://git.dre.vanderbilt.edu'
+    my $giturl = 'https://git.dre.vanderbilt.edu';
     my %information = ('XML'       => ['', '',
                                        "$giturl/autobuild/autobuild/blobs/master/<file>"],
                        'AUTOBUILD' => ['ChangeLog', '',
