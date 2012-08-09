@@ -20,7 +20,7 @@ git pull
 /usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/cosmic.xml -o cosmic.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/xsc.xml -o xsc.html -r xsc.rss 2>&1  &
-/usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/taox11.xml -o taox11.html -r taox11.rss 2>&1  &
+/usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/taox11.xml -o taox11.html -r taox11.rss 2>&1  &
 
 # Generate the test matrices!
 ##testmatrix/update_scoreboard.sh 2>&1 &
