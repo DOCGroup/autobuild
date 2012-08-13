@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd /nfs/openvms/autobuild
+git pull
 cd $HOME/ace/autobuild
 git pull
 mkdir -p $HOME/ace/openvms
