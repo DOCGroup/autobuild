@@ -19,7 +19,7 @@
         <variable name="root"     value="/aceroot/" />
         <variable name="log_file" value="build.txt" />
         <variable name="log_root" value="/aceroot/" />
-        <variable name="configs"  value="Exceptions OpenVMS" />
+        <variable name="configs"  value="OpenVMS" />
     </configuration>
 
     <command name="status"            options="on" />
