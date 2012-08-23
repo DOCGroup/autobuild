@@ -5,7 +5,7 @@ PERLLIB=autobuild
 export PERLLIB
 
 cd $HOME/autobuild
-git pull
+/usr/local/bin/git pull
 
 # Generate the index page!
 /usr/bin/perl ./scoreboard.pl -v -d /export/web/www/scoreboard -i $HOME/autobuild/configs/scoreboard/index.xml  2>&1 &
