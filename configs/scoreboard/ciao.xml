@@ -173,42 +173,6 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC12_IBMCellBE_Crossbuild_Host</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC12_IBMCellBE_Crossbuild</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC12_IBMCellBE_Crossbuild_OpenDDS_DDS4CCM</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_opendds_dds4ccm</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC12_IBMCellBE_LwCCM_NE_RW_PRE_Crossbuild</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_lwccm_ne_rw_pre</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC12_IBMCellBE_Crossbuild_Full_Host</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_full_host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC12_IBMCellBE_Full_Crossbuild</name>
-      <url>http://www.dre.vanderbilt.edu/~jwillemsen/ibmcellbuild_full</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC12_MPC440_SELinux</name>
       <url>http://buildlogs.theaceorb.nl/mpc440ctubuild</url>
       <build_sponsor>Remedy IT</build_sponsor>
