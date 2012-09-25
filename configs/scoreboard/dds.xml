@@ -93,6 +93,12 @@ all the OS/platform combinations on which DDS is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>OpenSuSE_12_2_OpenDDS</name>
+      <url>http://buildlogs.theaceorb.nl/suse122_opendds</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>FC17_OpenDDS_Valgrind</name>
       <url>http://buildlogs.theaceorb.nl/fc17_opendds_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
