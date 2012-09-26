@@ -53,6 +53,7 @@
     <command name="print_perl_version" />
     <command name="print_perl_version" options="remote"/>
     <command name="print_openssl_version" options="remote"/>
+    <command name="print_autobuild_config" />
 
     <command name="generate_workspace" options="-workers 2 -type gnuautobuild" />
 
