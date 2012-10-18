@@ -1144,6 +1144,7 @@ sub Test_Handler ($)
         || $s =~ m/ld error: error loading file/
         || $s =~ m/Stale NFS file handle/
         || $s =~ m/exception resulted in call to terminate/
+        || $s =~ m/terminate called after throwing an instance of/
         || $s =~ m/aborted due to compilation errors/
         || $s =~ m/Can't open perl script/
         || $s =~ m/Don't know how to make check/

@@ -23,6 +23,7 @@ def parse_test_line (line)
         line =~ /Invalid read of size/ ||
         line =~ /aborted due to compilation errors/ ||
         line =~ /exception resulted in call to terminate/ ||
+        line =~ /terminate called after throwing an instance of/ ||
         line =~ /glibc detected/ ||
         line =~ /memPartFree: invalid block/ ||
         line =~ /memPartAlloc: block too big/ ||
