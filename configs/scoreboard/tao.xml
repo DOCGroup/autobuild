@@ -288,7 +288,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   <name>MacOS</name>
   <build>
     <name>Lion_LLVM_3.0_x64</name>
-    <url>http://sowayan.dyndns-server.com:8080/lion_full_llvm/build</url>
+    <url>http://sowayan.dyndns-server.com/builds/lion_full_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
@@ -296,7 +296,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   </build>
   <build>
     <name>Lion_Static_LLVM_3.0_x64</name>
-    <url>http://sowayan.dyndns-server.com:8080/lion_full_static_llvm/build</url>
+    <url>http://sowayan.dyndns-server.com/builds/lion_full_static_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
@@ -312,7 +312,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   </build>
   <build>
     <name>iOS_5_Simulator_LLVM_3.0</name>
-    <url>http://sowayan.dyndns-server.com:8080/iOS_5_Simulator/build</url>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_5_Simulator/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
@@ -320,7 +320,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   </build>
   <build>
     <name>iOS_5_Hardware_LLVM_3.0</name>
-    <url>http://sowayan.dyndns-server.com:8080/iOS_5_Hardware/build</url>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_5_Hardware/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
