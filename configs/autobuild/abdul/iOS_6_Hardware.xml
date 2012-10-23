@@ -1,16 +1,16 @@
 <autobuild>
     <configuration>
-        <environment name="ACE_ROOT" value="/builds/iOS_5_Hardware/ACE_wrappers" />
-        <environment name="TAO_ROOT" value="/builds/iOS_5_Hardware/ACE_wrappers/TAO" />
+        <environment name="ACE_ROOT" value="/builds/iOS_6_Hardware/ACE_wrappers" />
+        <environment name="TAO_ROOT" value="/builds/iOS_6_Hardware/ACE_wrappers/TAO" />
         <environment name="HOST_ROOT"value="/builds/lion_full_static_llvm/ACE_wrappers" />
 
         <environment name="IPHONE_TARGET"  value="HARDWARE" />
-        <environment name="IPHONE_VERSION" value="5.0" />
+        <environment name="IPHONE_VERSION" value="6.0" />
 
         <environment name="XCODE_ROOT" value="/Developer" />
-        <variable name="root"          value="/builds/iOS_5_Hardware" />
+        <variable name="root"          value="/builds/iOS_6_Hardware" />
         <variable name="log_file"      value="build.txt" />
-        <variable name="log_root"      value="/builds/iOS_5_Hardware/build" />
+        <variable name="log_root"      value="/builds/iOS_6_Hardware/build" />
         <variable name="configs"       value="STATIC FIXED_BUGS_ONLY" />
     </configuration>
 
