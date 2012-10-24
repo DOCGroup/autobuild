@@ -7,9 +7,9 @@
         <environment name="IPHONE_VERSION" value="6.0" />
 
         <environment name="XCODE_ROOT" value="/Developer" />
-        <variable name="root"          value="/builds/iOS_5_Simulator" />
+        <variable name="root"          value="/builds/iOS_6_Simulator" />
         <variable name="log_file"      value="build.txt" />
-        <variable name="log_root"      value="/builds/iOS_5_Simulator/build" />
+        <variable name="log_root"      value="/builds/iOS_6_Simulator/build" />
         <variable name="configs"       value="STATIC FIXED_BUGS_ONLY" />
     </configuration>
 
