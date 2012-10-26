@@ -287,16 +287,16 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
   <name>MacOS</name>
   <build>
-    <name>Lion_LLVM_3.0_x64</name>
-    <url>http://sowayan.dyndns-server.com/builds/lion_full_llvm/build</url>
+    <name>Mountain_Lion</name>
+    <url>http://sowayan.dyndns-server.com/builds/mountain_lion_full_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>Lion_Static_LLVM_3.0_x64</name>
-    <url>http://sowayan.dyndns-server.com/builds/lion_full_static_llvm/build</url>
+    <name>Mountain_Lion_Static</name>
+    <url>http://sowayan.dyndns-server.com/builds/mountain_lion_full_static_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
@@ -311,16 +311,16 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_5_Simulator_LLVM_3.0</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_5_Simulator/build</url>
+    <name>iOS_6_Simulator</name>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_6_Simulator/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_5_Hardware_LLVM_3.0</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_5_Hardware/build</url>
+    <name>iOS_6_Hardware</name>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_6_Hardware/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
