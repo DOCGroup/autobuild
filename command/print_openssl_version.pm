@@ -37,16 +37,23 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
+    my $remote = 0;
     my $remote_shell = main::GetVariable ('remote_shell');
 
-    main::PrintStatus ('Config', "print OpenSSL Version" );
-
-    print "<h3>OpenSSL version (openssl version)</h3>\n";
     if ($options =~ m/remote/) {
+        $remote = 1;
         if (!defined $remote_shell) {
           print "WARNING: no remote_shell variable defined!\n";
           return 1;
         }
+    }
+
+    main::PrintStatus ('Config', $remote ?
+      "print Remote OpenSSL version - remote shell=$remote_shell" :
+      "print " OpenSSL version" );
+
+    print "<h3>OpenSSL version (openssl version)</h3>\n";
+    if ($remote) {
         print "Remote shell: $remote_shell\n";
         system ("$remote_shell openssl version");
     } else {
@@ -59,7 +66,7 @@ sub Run ($)
                 return 1;
             }
         }
-    
+
         #if no env var "SSL_ROOT" then we expect to find openssl on the PATH
         system ('openssl version');
     }
