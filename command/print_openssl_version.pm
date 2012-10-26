@@ -50,7 +50,7 @@ sub Run ($)
 
     main::PrintStatus ('Config', $remote ?
       "print Remote OpenSSL version - remote shell=$remote_shell" :
-      "print " OpenSSL version" );
+      "print OpenSSL version" );
 
     print "<h3>OpenSSL version (openssl version)</h3>\n";
     if ($remote) {
