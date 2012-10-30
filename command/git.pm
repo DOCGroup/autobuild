@@ -69,9 +69,9 @@ sub Run ($)
     # the options string. If no dir is given, just run the command with
     # specified options in $root.
     my $dir;
-    if ($options =~ m/\sdir=([^\s]*)/) {
-        $dir = $1;
-        $options =~ s/\sdir=$dir//;
+    if ($options =~ m/(^dir=|\sdir=)([^\s]*)/) {
+        $dir = $2;
+        $options =~ s/(^dir=|\sdir=)$dir//;
     }
     else {
         $dir = $root;
