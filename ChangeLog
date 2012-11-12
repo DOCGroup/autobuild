@@ -1,3 +1,28 @@
+Wed Nov 12 10:38:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_MFC.xml:
+        * configs/autobuild/prism/Vista_MSVC8_Standard_UnicodeMFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC8_Debug_MFC.xml:
+        * configs/autobuild/prism/Win2003_MSVC8_Inline_MFC.xml:
+          Remove the CIAO testing as CIAO/DAnCE requires xerces to be testable.
+          (also remove the sandbox for the windows tests.)
+
+Wed Sep 05 17:00:18 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_and_Cross.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Native_rhel4_TAO_IDL_only.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Post.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests_Trigger.sh:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard_Tests.xml:
+        * configs/autobuild/prism/LynxOS42_PPC_GCC322_Standard.xml:
+        * configs/scoreboard/tao.xml:
+
+        Removed these builds.
+
 Fri Jun 29 20:18:31 UTC 2012  Adam Mitz  <mitza@ociweb.com>
 
         * common/prettify.pm:
