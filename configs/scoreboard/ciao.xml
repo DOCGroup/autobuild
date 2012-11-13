@@ -263,16 +263,6 @@
   </group>
 
   <group>
-    <name>MacOS</name>
-    <build>
-      <name>Lion_GCC_64_bit</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/zifnab/gcc64</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-  </group>
-
-  <group>
     <name>Windows</name>
     <build>
       <name>Vista_VC8_Standard_MFC_Unicode</name>
@@ -303,14 +293,6 @@
       <orange>30</orange>
       <red>60</red>
     </build>
-
-
-    <build>
-      <name>Win2003_VC9_WarningLevel4</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/isislab/vc9_w4</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
     <build>
       <name>WinXP_VC9_Debug</name>
       <url>http://buildlogs.theaceorb.nl/winxp_msvc9_debug</url>
@@ -318,28 +300,10 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Win2003_VC9_CIAOCore_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_core</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Win2003_VC9_FULL</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/ciang_VC9_full</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
       <name>WinXP_VC9_CIAO_NoInline_Debug</name>
       <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_noinline</url>
       <build_sponsor>ISIS</build_sponsor>
       <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
-      <name>Win2003_VC9_Versioned_Namespace</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_versioned_namespace</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu/</build_sponsor_url>
     </build>
     <build>
       <name>WinXP_VC8_Debug</name>
