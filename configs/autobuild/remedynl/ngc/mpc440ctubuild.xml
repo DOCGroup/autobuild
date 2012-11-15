@@ -71,5 +71,5 @@
     <command name="status"            options="off" />
 
     <command name="shell"             options="pwd; ls" />
-    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** /home/build/ACE/target/ qnap.remedy.nl::Qweb/Buildlogs/mpc440ctubuild" />
+    <command name="shell"             options="rsync --progress --recursive --delete -z --exclude /.svn/ --exclude /ACE_wrappers*/ --include *.txt --include *.html --exclude ** /home/build/ACE/target/ treebeard.remedy.nl::Buildlogs/mpc440ctubuild" />
 </autobuild>
