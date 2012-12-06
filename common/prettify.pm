@@ -1030,6 +1030,7 @@ sub Setup_Handler ($)
         $s =~ m/t connect to host/ ||
         $s =~ m/Checksum mismatch for/ ||
         $s =~ m/unknown user/ ||
+        $s =~ m/not found in upstream origin, using HEAD instead/ ||
         $s =~ m/Failed to add file/ ||
         $s =~ m/Failed to add directory/ ||
         $s =~ m/error: Autoconf version/ ||
