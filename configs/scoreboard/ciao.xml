@@ -12,13 +12,13 @@
     <name>Linux</name>
      <build>
       <name>RHEL_61_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_x64_ciao_debug/</url>
+      <url>http://buildlogs.theaceorb.nl/rhel61_x64_ciao_debug_ndds45erev12/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
       <name>RHEL_61_Release</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_x64_ciao_release/</url>
+      <url>http://buildlogs.theaceorb.nl/rhel61_x64_ciao_release_ndds45erev12/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
