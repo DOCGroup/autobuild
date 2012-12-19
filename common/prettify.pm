@@ -1044,6 +1044,7 @@ sub Setup_Handler ($)
         $s =~ m/The following error occurred while executing this line/ ||
         $s =~ m/No commands are being checked/ ||
         $s =~ m/When Checking \"/ ||
+        $s =~ m/command not found\"/ ||
         $s =~ m/No commands are being executed/ ||
         $s =~ /^C / )
     {
