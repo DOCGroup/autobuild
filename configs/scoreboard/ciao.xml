@@ -197,6 +197,30 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
+      <name>FC12_CEEL_x86_64_debug_host</name>
+      <url>http://buildlogs.theaceorb.nl/fc12_x86_64_ceel_debug_host</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC12_CEEL_x86_64_debug</name>
+      <url>http://buildlogs.theaceorb.nl/fc12_x86_64_ceel_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC12_CEEL_x86_64_release_host</name>
+      <url>http://buildlogs.theaceorb.nl/fc12_x86_64_ceel_release_host</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
+      <name>FC12_CEEL_x86_64_release</name>
+      <url>http://buildlogs.theaceorb.nl/fc12_x86_64_ceel_release</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>FC12_Full</name>
       <url>http://buildlogs.theaceorb.nl/fc12_full</url>
       <build_sponsor>Remedy IT</build_sponsor>
