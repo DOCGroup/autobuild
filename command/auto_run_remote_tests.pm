@@ -190,8 +190,8 @@ sub Run ($)
     if (defined $remote_libpath) {
       $remote_cmd .= ":$remote_libpath";
     }
-    $remote_cmd .= ":\\\$LD_LIBRARY_PATH ";
-    $remote_cmd .= "PATH=\\\$PATH:$remote_root/bin:$remote_root/lib ";
+    $remote_cmd .= ":\$LD_LIBRARY_PATH ";
+    $remote_cmd .= "PATH=$remote_root/bin:$remote_root/lib:\$PATH ";
     if (defined $self->{'extra_env'}) {
       $remote_cmd .= $self->{'extra_env'} . " ";
     }
