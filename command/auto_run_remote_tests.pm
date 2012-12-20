@@ -165,7 +165,7 @@ sub Run ($)
     }
 
     if (defined $dir) {
-        $remote_cmd .= "cd $dir && ";
+        $remote_cmd .= "cd $dir ";
     }
 
     my $remote_tao_root = main::GetVariable ('remote_tao_root');
