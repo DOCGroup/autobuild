@@ -1151,6 +1151,7 @@ sub Test_Handler ($)
         || $s =~ m/aborted due to compilation errors/
         || $s =~ m/Can't open perl script/
         || $s =~ m/Write failed: Broken pipe /
+        || $s =~ m/exec request failed on channel/
         || $s =~ m/Don't know how to make check/
         || $s =~ m/glibc detected/
         || $s =~ m/C interp: unable to open/
