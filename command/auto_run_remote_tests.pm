@@ -165,7 +165,7 @@ sub Run ($)
     }
 
     if (defined $dir) {
-        $remote_cmd .= "cd $dir ";
+        $remote_cmd .= "cd $dir && ";
     }
 
     my $remote_tao_root = main::GetVariable ('remote_tao_root');
@@ -185,13 +185,13 @@ sub Run ($)
         $remote_opendds_root = "$remote_tao_root/DDS";
     }
 
-    $remote_cmd .= "&& export ACE_ROOT=$remote_root && export TAO_ROOT=$remote_tao_root && export CIAO_ROOT=$remote_ciao_root && export=DANCE_ROOT=$remote_dance_root && export=DDS_ROOT=$remote_opendds_root ";
-    $remote_cmd .= "&& export LD_LIBRARY_PATH=$remote_root/lib:$remote_opendds_root/lib";
+    $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root DDS_ROOT=$remote_opendds_root ";
+    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:$remote_opendds_root/lib";
     if (defined $remote_libpath) {
       $remote_cmd .= ":$remote_libpath";
     }
     $remote_cmd .= ":\\\$LD_LIBRARY_PATH ";
-    $remote_cmd .= "&& export PATH=$remote_root/bin:$remote_root/lib:\\\$PATH ";
+    $remote_cmd .= " PATH=\\\$PATH:$remote_root/bin:$remote_root/lib ";
     if (defined $self->{'extra_env'}) {
       $remote_cmd .= $self->{'extra_env'} . " ";
     }
@@ -211,10 +211,10 @@ sub Run ($)
     }
 
     if(defined $script_path) {
-        $remote_cmd .= "&& perl $script_path/auto_run_tests.pl $options";
+        $remote_cmd .= " perl $script_path/auto_run_tests.pl $options";
     }
     else {
-        $remote_cmd .= "&& perl bin/auto_run_tests.pl $options";
+        $remote_cmd .= " perl bin/auto_run_tests.pl $options";
     }
 
     print "Remote shell: $remote_shell\n";
