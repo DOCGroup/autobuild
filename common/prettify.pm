@@ -1044,6 +1044,7 @@ sub Setup_Handler ($)
         $s =~ m/The following error occurred while executing this line/ ||
         $s =~ m/No commands are being checked/ ||
         $s =~ m/When Checking \"/ ||
+        $s =~ m/command not found\"/ ||
         $s =~ m/No commands are being executed/ ||
         $s =~ /^C / )
     {
@@ -1149,6 +1150,8 @@ sub Test_Handler ($)
         || $s =~ m/terminate called after throwing an instance of/
         || $s =~ m/aborted due to compilation errors/
         || $s =~ m/Can't open perl script/
+        || $s =~ m/Write failed: Broken pipe /
+        || $s =~ m/exec request failed on channel/
         || $s =~ m/Don't know how to make check/
         || $s =~ m/glibc detected/
         || $s =~ m/C interp: unable to open/

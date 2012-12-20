@@ -186,12 +186,12 @@ sub Run ($)
     }
 
     $remote_cmd .= "ACE_ROOT=$remote_root TAO_ROOT=$remote_tao_root CIAO_ROOT=$remote_ciao_root DANCE_ROOT=$remote_dance_root DDS_ROOT=$remote_opendds_root ";
-    $remote_cmd .= "LD_LIBRARY_PATH=$remote_root/lib:$remote_opendds_root/lib";
+    $remote_cmd .= "LD_LIBRARY_PATH=\\\$ACE_ROOT/lib:\\\$DDS_ROOT/lib";
     if (defined $remote_libpath) {
       $remote_cmd .= ":$remote_libpath";
     }
     $remote_cmd .= ":\\\$LD_LIBRARY_PATH ";
-    $remote_cmd .= "PATH=\\\$PATH:$remote_root/bin:$remote_root/lib ";
+    $remote_cmd .= " PATH=\\\$PATH:\\\$ACE_ROOT/bin:\\\$ACE_ROOT/lib ";
     if (defined $self->{'extra_env'}) {
       $remote_cmd .= $self->{'extra_env'} . " ";
     }
@@ -211,10 +211,10 @@ sub Run ($)
     }
 
     if(defined $script_path) {
-        $remote_cmd .= "perl $script_path/auto_run_tests.pl $options";
+        $remote_cmd .= " perl $script_path/auto_run_tests.pl $options";
     }
     else {
-        $remote_cmd .= "perl bin/auto_run_tests.pl $options";
+        $remote_cmd .= " perl bin/auto_run_tests.pl $options";
     }
 
     print "Remote shell: $remote_shell\n";
