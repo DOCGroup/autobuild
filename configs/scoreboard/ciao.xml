@@ -185,18 +185,6 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC12_MPC440_SELinux</name>
-      <url>http://buildlogs.theaceorb.nl/mpc440ctubuild</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>FC12_MPC440_SELinux_host</name>
-      <url>http://buildlogs.theaceorb.nl/mpc440ctubuild_host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC12_CEEL_x86_64_debug_host</name>
       <url>http://buildlogs.theaceorb.nl/fc12_ceel_x86_64_debug_host</url>
       <build_sponsor>Remedy IT</build_sponsor>
