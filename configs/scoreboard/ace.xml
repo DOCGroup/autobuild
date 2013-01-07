@@ -86,12 +86,6 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor>Olli Savia</build_sponsor>
        <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
      </build>
-     <build>
-       <name>Ubuntu_12_04_Clang_x64</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_clang_d1o0</url>
-       <build_sponsor>OCI</build_sponsor>
-       <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
-     </build>
 </group>
 
 <group>
