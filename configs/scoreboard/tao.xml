@@ -165,12 +165,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Solaris10_Studio12_x86_Debug_Fast</name>
-      <url>http://buildlogs.theaceorb.nl/sol10x86_suncc_fast</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>Solaris10_Studio12_Debug</name>
       <url>http://buildlogs.theaceorb.nl/sol10sparc_suncc</url>
       <build_sponsor>Remedy IT</build_sponsor>
