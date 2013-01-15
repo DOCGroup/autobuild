@@ -17,6 +17,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc17_c++11_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_c++11_ciaox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>fc17_c++11_footprint</name>
     <url>http://buildlogs.theaceorb.nl/fc17_c++11_footprint</url>
       <build_sponsor>Remedy IT</build_sponsor>
