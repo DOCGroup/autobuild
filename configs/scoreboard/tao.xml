@@ -52,7 +52,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
      <build>
        <name>FC17_CORBA_e_micro</name>
-       <url>http://buildlogs.theaceorb.nl/fc17_corbae_micro/</url>
+       <url>http://buildlogs.theaceorb.nl/fc18_corbae_micro/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
