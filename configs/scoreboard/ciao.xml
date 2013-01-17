@@ -248,6 +248,12 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+    <build>
+      <name>FC17_FP_Stats_Versioned</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_fp_versioned/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
   </group>
 
   <group>
