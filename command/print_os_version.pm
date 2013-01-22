@@ -91,6 +91,11 @@ sub Run ($)
         system("cat /etc/release");
     }
 
+    if(-r "/usr/local/ngclinux/x86_64/version"){
+        print "<h3>NGC Linux release (/usr/local/ngclinux/x86_64/version)</h3>\n";
+        system("cat /usr/local/ngclinux/x86_64/version");
+    }
+
     if(-r "/var/emulab/boot/nodeid"){
         print "<h3>Emulab NodeId(/var/emulab/boot/nodeid)</h3>\n";
         system("cat /var/emulab/boot/nodeid");
