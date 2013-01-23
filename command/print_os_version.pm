@@ -91,6 +91,11 @@ sub Run ($)
         system("cat /etc/release");
     }
 
+    if(-r "/etc/version"){
+        print "<h3>OS version (/etc/version)</h3>\n";
+        system("cat /etc/version");
+    }
+
     if(-r "/usr/local/ngclinux/x86_64/version"){
         print "<h3>NGC Linux release (/usr/local/ngclinux/x86_64/version)</h3>\n";
         system("cat /usr/local/ngclinux/x86_64/version");
