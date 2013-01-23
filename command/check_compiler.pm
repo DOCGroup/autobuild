@@ -59,7 +59,7 @@ sub Run ($)
           }
       }
     }
-    elsif(lc $compiler =~ m/^(sun_cc|studio)/) {
+    elsif(lc $compiler =~ m/^(sun_cc|studio|suncc)/) {
         system("CC -V");
     }
     elsif(lc $compiler eq "mingwcygwin"){
@@ -80,7 +80,7 @@ sub Run ($)
     elsif(lc $compiler eq "dm"){
         system("scppn");
     }
-    elsif(lc $compiler =~ m/^(msvc|vc)/){
+    elsif(lc $compiler =~ m/^(msvc|vc|cl)/){
         system("cl");
     }
     elsif(lc $compiler eq "deccxx"){
