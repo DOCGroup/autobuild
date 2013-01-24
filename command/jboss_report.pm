@@ -19,9 +19,6 @@ use File::Path;
 
 sub copy_log ();
 
-my $newlogfile;
-my $newreportsdir;
-
 ###############################################################################
 # Constructor
 
@@ -65,12 +62,6 @@ sub CheckRequirements ()
         return 0;
     }
 
-    my $jboss_reports_dir = main::GetVariable ('jboss_reports_dir');
-    if (!defined $jboss_reports_dir) {
-        print STDERR __FILE__, ": Requires \"jboss_reports_dir\" variable\n";
-        return 0;
-    }
-
     return 1;
 }
 
@@ -81,7 +72,6 @@ sub Run ($)
     my $self = shift;
     my $options = shift;
     my $keep = 10;
-    my $moved = 0;
     my $log_root = main::GetVariable ('log_root');
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
@@ -107,22 +97,21 @@ sub Run ($)
     }
 
     # Copy the logs
+    if ($options =~ m/copy/) {
+        if ($options =~ m/copy='([^']*)'/ ||
+            $options =~ m/copy=([^\s]*)/) {
+            $keep = $1;
+        }
+    }
+    else {
+        return 0;
+    }
 
     if ($options =~ m/copy='([^']*)'/ || $options =~ m/copy=([^\s]*)/) {
-        if ($moved == 1) {
-            print STDERR __FILE__, ": move and copy are mutually exclusive\n";
-            return 0;
-        }
-        $moved = 1;
         my $retval = $self->copy_log ($1);
         return 0 if ($retval == 0);
     }
     elsif ($options =~ m/copy/) {
-        if ($moved == 1) {
-            print STDERR __FILE__, ": move and copy are mutually exclusive\n";
-            return 0;
-        }
-        $moved = 1;
         my $retval = $self->copy_log ($keep);
         return 0 if ($retval == 0);
     }
@@ -163,8 +152,6 @@ sub copy_log ()
         mkpath($save_root);
     }
     my $oldlog_file = $root . "/" . $log_file;
-    my $old_jboss_reports_dir = $project_root . "/" . $jboss_reports_dir;
-
     if (!defined $oldlog_file) {
         print STDERR __FILE__, ": Requires \"logfile\" variable\n";
         return 0;
@@ -174,19 +161,22 @@ sub copy_log ()
         return 0;
     }
 
-    if (!defined $old_jboss_reports_dir) {
-        print STDERR __FILE__, ": Requires \"jboss_reports_dir\" variable\n";
-        return 0;
-    }
-    if (!-d $old_jboss_reports_dir) {
-        print STDERR __FILE__, ": Cannot read directory: $old_jboss_reports_dir\n";
-        return 0;
+    my $reports_html;
+    my $newreportsdir;
+    my $old_jboss_reports_dir;
+    my $timestamp = POSIX::strftime("%Y_%m_%d_%H_%M", gmtime);
+    if (defined $jboss_reports_dir) {
+        $old_jboss_reports_dir = $project_root . "/" . $jboss_reports_dir;
+        if (!-d $old_jboss_reports_dir) {
+            print STDERR __FILE__, ": Cannot read directory: $old_jboss_reports_dir\n";
+            return 0;
+        }
+        my $reportsdir = $timestamp . "_reports";
+        $reports_html = $reportsdir . "/html";
+        $newreportsdir = $log_root . "/" . $reportsdir;
     }
 
-    my $timestamp = POSIX::strftime("%Y_%m_%d_%H_%M", gmtime);
-    $newlogfile = $log_root . "/" . $timestamp . ".txt";
-    my $reportsdir_name = $timestamp . "_reports";
-    $newreportsdir = $log_root . "/" . $reportsdir_name;
+    my $newlogfile = $log_root . "/" . $timestamp . ".txt";
     my $savelogfile = $save_root . "/" . $timestamp . ".txt";
     my $savereportsdir = $save_root . "/" . $timestamp . "_reports";
 
@@ -195,7 +185,7 @@ sub copy_log ()
     }
 
     my $edited_log_file = $oldlog_file . ".tmp";
-    edit_logfile ($oldlog_file, $edited_log_file, "$reportsdir_name/html");
+    edit_logfile ($oldlog_file, $edited_log_file, $reports_html);
     my $ret;
     ## copy returns the number of successfully copied files
     $ret = copy ($edited_log_file, $newlogfile);
@@ -207,8 +197,9 @@ sub copy_log ()
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);
     
-    copy_dir($old_jboss_reports_dir, $newreportsdir);
-
+    if (defined $old_jboss_reports_dir) {
+        copy_dir($old_jboss_reports_dir, $newreportsdir);
+    }
     # Touch a trigger file to tell the scoreboard that the log is complete
     my $triggerfile = $log_root . "/post";
     open(FH, ">$triggerfile");
@@ -378,6 +369,219 @@ sub find_targets()
     return "";
 }
 
+sub replace_error
+{
+    my $multiple = shift;
+    $multiple = 0 if (!defined($multiple));
+
+    my $replaced = 0;
+    while ((s/([E|e])rror/$1rr0r/ ||
+            s/ERROR/ERR0R/) &&
+           $multiple) {
+        $replaced = 1;
+    }
+
+    return $replaced;
+}
+
+sub replace_error_in_quote
+{
+    my $multiple = shift;
+    $multiple = 0 if (!defined($multiple));
+
+    my $replaced = 0;
+    my @segments;
+    my $string = $_;
+    while ($string =~ s/^([^\"]*)(\"[^\"]*)(\")?//) {
+        push(@segments, $1) if ($1 ne "");
+        my $quote_str = $2;
+        $quote_str .= $3 if (defined($3));
+        push(@segments, $quote_str);
+    }
+    if ($string ne "") {
+        push(@segments, $string);
+    }
+    my $ret_str = "";
+    my $done = 0;
+    for my $segment (@segments) {
+        while (!$done &&
+               ($segment =~ s/^(\"[^\"]*?[E|e])rror([^\"]*?\")$/$1rr0r$2/ ||
+                $segment =~ s/^(\"[^\"]*?)ERROR([^\"]*?\")$/$1ERR0R$2/)) {
+            $replaced = 1;
+            $done = !$multiple;
+        }
+        $ret_str .= $segment;
+    }
+    $_ = $ret_str;
+
+    return $replaced;
+}
+
+my $NO_SEQ = 0; my $FIND_TEST = 1; my $IN_RUN = 2; my $MAYBE_DONE = 3; my $RES_NEXT = 4;
+my $line_num = 0;
+sub end_test_section
+{
+    my $test_ref = shift;
+    my $check_end = shift;
+
+    my $size = scalar(@{$test_ref->{ind_test_lines}});
+    if ($size == 0 ||
+        (defined($check_end) && $check_end &&
+         (($test_ref->{ind_test_run} +
+           $test_ref->{ind_test_failures} +
+           $test_ref->{ind_test_errors} +
+           $test_ref->{ind_test_skipped}) == 0))) {
+        print "ERROR: identified a Run, but no test results(line=$line_num," .
+          " run=$test_ref->{run_name})\n" if ($test_ref->{run_name} ne "");
+        return 0;
+    }
+
+    my $errors = $test_ref->{ind_test_failures} + $test_ref->{ind_test_errors};
+    my $error_repl_str;
+    my $num = 0;
+    while ($errors > 0 && $num < $size) {
+        if ($test_ref->{ind_test_lines}->[$num++] =~ /\b([E|e]rror|ERROR)\b/) {
+            --$errors;
+        }
+    }
+
+    if ($errors <= 0) {
+        while ($num < $size) {
+            while ($test_ref->{ind_test_lines}->[$num] =~ s/\b([E|e]rror|ERROR)\b/ERR0R(jboss7)/) {
+            }
+            ++$num;
+        }
+    }
+    else {
+        while ($errors-- > 0) {
+            push(@{$test_ref->{ind_test_lines}}, "[JBoss7] ERROR (added for nightly build, see previous log output)\n");
+        }
+    }
+    my $start = "";
+    my $end = "";
+    if ($test_ref->{ind_test_name} ne "") {
+        $start = "\n\nauto_run_tests: $test_ref->{ind_test_name}\n";
+        $end = "\nauto_run_tests_finished: $test_ref->{ind_test_name}\n\n";
+    }
+    $test_ref->{test_lines} .= $start;
+    for my $ind_test_line (@{$test_ref->{ind_test_lines}}) {
+        $test_ref->{test_lines} .= "$ind_test_line";
+    }
+    $test_ref->{test_lines} .= $end;
+    $test_ref->{ind_test_lines} = [];
+
+    $test_ref->{ind_test_run} = 0;
+    $test_ref->{ind_test_failures} = 0;
+    $test_ref->{ind_test_errors} = 0;
+    $test_ref->{ind_test_skipped} = 0;
+    $test_ref->{ind_test_name} = "";
+    $test_ref->{run_name} = "";
+    return 1;
+}
+
+sub inline_test
+{
+    my $test_ref = shift;
+    my $newline_ref = shift;
+
+    if ($test_ref->{test_seq} == $NO_SEQ) {
+        if ($$newline_ref =~ /^\[INFO\] --- maven-\w+-plugin.*?\s(\S*)\s---\s*$/) {
+            $test_ref->{ind_test_name} = $1;
+        }
+
+        if ($$newline_ref =~ /^$test_ref->{TEST_LINE}$/) {
+            push(@{$test_ref->{delayed_lines}}, $$newline_ref);
+            $test_ref->{test_seq} = $FIND_TEST;
+            $$newline_ref = "";
+        }
+        return 0;
+    }
+
+    if ($test_ref->{test_seq} == $FIND_TEST) {
+        if ($$newline_ref =~ s/^( T E S T S)$/$1 ($test_ref->{ind_test_name})/) {
+            $test_ref->{test_seq} = $MAYBE_DONE;
+            push(@{$test_ref->{ind_test_lines}}, @{$test_ref->{delayed_lines}});
+        }
+        else {
+            my $delayed_lines = join("\n", @{$test_ref->{delayed_lines}});
+            $$newline_ref = "$delayed_lines$$newline_ref";
+        }
+        $test_ref->{delayed_lines} = [];
+    }
+    elsif ($test_ref->{test_seq} && $$newline_ref =~ /^Running (\S+)\s*$/) {
+        $test_ref->{run_name} = $1;
+        $test_ref->{test_seq} = $IN_RUN;
+    }
+    elsif ($test_ref->{test_seq} && $$newline_ref =~ /Tests run: (\d+), Failures: (\d+), Errors: (\d+), Skipped: (\d+)/) {
+        my $end_section = 0;
+        if ($test_ref->{test_seq} == $RES_NEXT) {
+            my $desc = ($test_ref->{ind_test_run} != $1) ?
+                "Run total count=$test_ref->{ind_test_run}, but results indicates=$1;" : "";
+            $desc .= ($test_ref->{ind_test_failures} != $2) ?
+                "Failures total count=$test_ref->{ind_test_run}, but results indicates=$2;" : "";
+            $desc .= ($test_ref->{ind_test_errors} != $3) ?
+                "Errors total count=$test_ref->{ind_test_run}, but results indicates=$3;" : "";
+            $desc .= ($test_ref->{ind_test_skipped} != $4) ?
+                "Skipped total count=$test_ref->{ind_test_run}, but results indicates=$1" : "";
+            if ($desc ne "") {
+                print "ERROR: Total results don't match cummulative results(line=$line_num): $desc\n";
+            }
+            $end_section = 1;
+        }
+        else {
+            $test_ref->{ind_test_run} += $1;
+            $test_ref->{ind_test_failures} += $2;
+            $test_ref->{ind_test_errors} += $3;
+            $test_ref->{ind_test_skipped} += $4;
+        }
+
+        if ($$newline_ref =~ /^(.*)(Tests run: \d+, Failures: \d+, Errors: \d+, Skipped: .*)$/) {
+            my $extra = $1;
+            my $test_str = $2;
+            if ($extra =~ /\S/) {
+                push(@{$test_ref->{ind_test_lines}}, $extra);
+                $$newline_ref = $test_str;
+                print "Split <$extra> and <$test_str> (line=$line_num)\n";
+            }
+        }
+
+        $$newline_ref =~ s/( Failures: \d+,) Errors: /$1 Err0rs: /;
+        $test_ref->{test_seq} = $MAYBE_DONE;
+        push(@{$test_ref->{ind_test_lines}}, $$newline_ref);
+        $$newline_ref = "";
+        if ($end_section) {
+            end_test_section($test_ref, 1);
+        }
+    }
+    elsif ($test_ref->{test_seq} == $RES_NEXT) {
+        if ($$newline_ref =~ /^\[INFO\]$/) {
+            end_test_section($test_ref, 1);
+            $test_ref->{test_seq} = $NO_SEQ;
+        }
+        $$newline_ref =~ s/^(Failed tests):/$1(jboss7 error):/;
+    }
+    elsif ($test_ref->{test_seq} == $MAYBE_DONE) {
+        if ($$newline_ref =~ /^Results :\s*$/) {
+            $test_ref->{test_seq} = $RES_NEXT;
+        }
+        elsif (!($$newline_ref =~ /^\s*$/) &&
+               !($$newline_ref =~ /^$test_ref->{TEST_LINE}$/) &&
+               !($$newline_ref =~ /^Concurrency/)) {
+            end_test_section($test_ref, 1);
+            $test_ref->{test_seq} = $NO_SEQ;
+        }
+    }
+
+    if ($test_ref->{test_seq} == $NO_SEQ) {
+        return 0;
+    }
+
+    push(@{$test_ref->{ind_test_lines}}, $$newline_ref);
+    $$newline_ref = "";
+    
+    return 1;
+}
+
 sub edit_logfile()
 {
     my $logfile = shift;
@@ -390,26 +594,65 @@ sub edit_logfile()
     # indicates that we should not look for individual test targets
     my $no_ind_test_targets = 0;
     my $sub_test = "";
-    my $newline;
     my $testsection = 0;
     my $testsrun = 0;
-    my $NO_TEST = "<NO_TEST_IDENTIFIED>";
     my $ind_test_name = "";
     my $ind_test_text = "";
     my $ind_test_errors = 0;
     my $temp = "";
     # identify Error matches within deprecated warnings
     my $deprecation_warning_seq = 0;
+    my $in_audit = 0;
+    my %test;
+    $test{in_test} = 0;
+    $test{test_seq} = $NO_SEQ;
+    $test{test_lines} = "";
+    $test{ind_test_lines} = [];
+    $test{ind_test_run} = 0;
+    $test{ind_test_failures} = 0;
+    $test{ind_test_errors} = 0;
+    $test{ind_test_skipped} = 0;
+    $test{ind_test_name} = "";
+    $test{run_name} = "";
+    $test{delayed_lines} = [];
+    $test{TEST_LINE} = "-------------------------------------------------------";
+    my $endline;
+    my $time_str;
     while (<LOG>) {
         chomp;
-        $newline = "";
+        if (defined($endline)) {
+            # just tack on anything after and don't edit
+            $endline .= "$_\n";
+            next;
+        }
+        my $newline;
+        ++$line_num;
         if (($deprecation_warning_seq > 0) &&
             (++$deprecation_warning_seq > 2)) {
             # only want to check one line after we identify the deprecated warning
             $deprecation_warning_seq = 0;
         }
+        
+        if (!defined($time_str) &&
+            /^#################### [^\[]+ \[([^\]]+)\]/) {
+            $time_str = $1;
+        }
 
-        if (/^#+\s+Test\s+\([^\)]*\)/) {
+        if (/^\[INFO\] Starting audit\.\.\.\s*$/) {
+            $in_audit = 1;
+            $newline = "$_\n";
+        }
+        elsif ($in_audit && /^\s*Audit done.\s*/) {
+            $in_audit = 0;
+            $newline = "$_\n";
+        }
+        elsif ($in_audit &&
+               /^.*:[0-9]+:\s/ &&
+               !(/(?:[E|e]rror|ERROR)/) &&
+               s/(^.*:[0-9]+:\s)/$1warning: /) {
+            $newline = "$_\n";
+        }
+        elsif (/^#+\s+Test\s+\([^\)]*\)/) {
             # multiple Test sections are created, only use the first one
             if (++$testsection == 1) {
                 $newline = "$_\n";
@@ -462,7 +705,7 @@ sub edit_logfile()
             s/FAILED/FA1LED/;
             $newline = "$_\n";
         }
-        elsif (s/HeapDumpOnOutOfMemoryError/HeapDumpOnOutOfMemoryErr0r/) {
+        elsif (/HeapDumpOnOutOfMemoryError/ && replace_error()) {
             $newline = "$_\n";
         }
         elsif (($no_ind_test_targets == 1) && (($temp = find_targets()) ne "")) {
@@ -472,9 +715,29 @@ sub edit_logfile()
         }
         elsif (/warning\: \[deprecation\]/) {
             $deprecation_warning_seq = 1;
+            $newline = "$_\n";
         }
-        elsif (($deprecation_warning_seq > 0) && (s/(\"[^\"]*?[E|e])rror([^\"]*?\")/$1rr0r$2/)) {
+        elsif (($deprecation_warning_seq > 0) &&
+               (/\"[^\"]*?[E|e]rror[^\"]*?\"/) && replace_error_in_quote(1)) {
             # replace Error (reported in string after deprecated warning) with Err0r
+            $newline = "$_\n";
+        }
+        elsif (/^\[WARNING\].*(?:[E|e]rror|ERROR)/ && replace_error(1)) {
+            $newline = "$_\n";
+        }
+        elsif (/\"[^\"]*(?:[E|e]rror|ERROR)[^\"]*\"/ && replace_error_in_quote(1)) {
+            # replace string with ERROR as ERR0R
+            $newline = "$_\n";
+        }
+        elsif (/(error-context)/ ||
+               /(?:[E|e]rror|ERROR) Context/) {
+            replace_error(1);
+            # replace string with ERROR as ERR0R
+            $newline = "$_\n";
+        }
+        elsif (/#################### End \[/) {
+            $endline = "$_\n";
+            next;
         }
         else {
             if ($ind_test_name ne "") {
@@ -483,10 +746,26 @@ sub edit_logfile()
             }
             $newline .= "$_\n";
         }
-        
-        print NEW_LOG "$newline";
+
+        if (!inline_test(\%test, \$newline)) {
+            print NEW_LOG "$newline";
+        }
     }
-    print NEW_LOG "\[<a href=\"$report_relative_location\">JBoss Report Details</a>\]\n";
+
+    end_test_section(\%test);
+    if ($test{test_lines} ne "") {
+        if ($testsection == 0) {
+            print NEW_LOG "#################### Test (testsuite) [$time_str]\n";
+        }
+        print NEW_LOG "$test{test_lines}";
+    }
+    if (defined($endline)) {
+        print NEW_LOG "\n$endline\n";
+    }
+
+    if (defined($report_relative_location)) {
+        print NEW_LOG "\[<a href=\"$report_relative_location\">JBoss Report Details</a>\]\n";
+    }
     close LOG;
     close NEW_LOG;
 }

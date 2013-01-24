@@ -1,6 +1,7 @@
 <autobuild>
   <!-- The command used to create this file (on oci1176) was -->
-  <!-- /lhome/cjohn/dev/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=1 optimize=0 inline=0 CC=ntox86-gcc-3.3.5 CXX=ntox86-gcc-3.3.5 LD=ntox86-gcc-3.3.5" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment QNX_HOST=/usr/qnx630/host/qnx6/x86 -environment QNX_TARGET=/usr/qnx630/target/qnx6 -environment MAKEFLAGS=-I/usr/qnx630/target/qnx6/usr/include -environment "suffix PATH=:/usr/qnx630/host/qnx6/x86/usr/bin:/usr/qnx630/host/qnx6/x86/usr/sbin:/usr/qnx630/host/qnx6/x86/sbin:/usr/qnx630/host/qnx6/x86/bin:/usr/qnx630/host/qnx6/x86/usr/photon/appbuilder" -hostname qnx -outdir . -piggyback /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0 -platform qnx -environment OPENDDS_RTPS_DEFAULT_D0=141 -testopt "-Config RTPS" -->
+  <!-- /lhome/cjohn/dev/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=1 optimize=0 inline=0 CC=ntox86-gcc-3.3.5 CXX=ntox86-gcc-3.3.5 LD=ntox86-gcc-3.3.5" -checkout "svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk ." -compiler gcc -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment QNX_HOST=/usr/qnx630/host/qnx6/x86 -environment QNX_TARGET=/usr/qnx630/target/qnx6 -environment MAKEFLAGS=-I/usr/qnx630/target/qnx6/usr/include -environment "suffix PATH=:/usr/qnx630/host/qnx6/x86/usr/bin:/usr/qnx630/host/qnx6/x86/usr/sbin:/usr/qnx630/host/qnx6/x86/sbin:/usr/qnx630/host/qnx6/x86/bin:/usr/qnx630/host/qnx6/x86/usr/photon/appbuilder" -hostname qnx -outdir . -piggyback /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0 -platform qnx -environment OPENDDS_RTPS_DEFAULT_D0=141 -testopt "-Config RTPS -Config NO_SHMEM" -->
+  <!-- Added -Config NO_SHMEM -->
   <configuration>
     <environment name="ACE_ROOT"          value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0"/>
     <environment name="CIAO_ROOT"         value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0i0/TAO/CIAO"/>
@@ -47,7 +48,7 @@
   <command name="make" options="-s -k  find=*akefile dir=."/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="dir=. -Config QNX -Config RTPS"/>
+  <command name="auto_run_tests"  options="dir=. -Config QNX -Config RTPS -Config NO_SHMEM"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>

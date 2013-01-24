@@ -122,7 +122,7 @@ sub Run ($)
     }
 
     my $target = "";
-    if ($options =~ m/target='([^']*)'/) {
+    if ($options =~ m/target=\s*'([^']*)'/) {
         $target = $1;
         $options =~ s/target='$target'//;
     }

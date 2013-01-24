@@ -1,6 +1,7 @@
 <autobuild>
   <!-- The command used to create this file (on mosquito.ociweb.com) was -->
   <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -buildflags "debug=0 optimize=1 inline=0 corba_e_compact=1" -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler gcc -create user_macros.GNU=built_in_topics=0\njava=1\n -creator mitza@ociweb.com -dds 1 -devguide 0 -docbuild 1 -docrepo 1 -environment JAVA_HOME=/tao_builds/taoadmin/jdk1.6.0_31 -environment JAVA_PLATFORM=linux -environment ANT_HOME=/usr/local/ant -environment JBOSS_HOME=/tao_builds/taoadmin/jboss-4.2.3.GA -environment "prefix PATH=/tao_builds/taoadmin/jdk1.6.0_31/bin:" -mpcopt "-features built_in_topics=0,java=1" -outdir . -piggyback /tao_builds/taoadmin/doc/build/gcc_d0o1i0c1 -piggypeer 1 -->
+  <!-- Removed "-Config RTPS" from testing (no built-in topics) -->
   <configuration>
     <environment name="ACE_ROOT"                value="/tao_builds/taoadmin/doc/build/gcc_d0o1i0c1/ACE"/>
     <environment name="ANT_HOME"                value="/usr/local/ant"/>
@@ -52,7 +53,7 @@
 
   <!-- Post build -->
   <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl build -Dnative.debug=false -Dmwc.features=built_in_topics=0,java=1 "/>
-  <command name="auto_run_tests"  options="dir=. -Config CORBA_E_COMPACT -Config NO_BUILT_IN_TOPICS -Config RTPS -Config Linux -a -l java/tests/dcps_java_tests.lst -l tools/modeling/tests/modeling_tests.lst"/>
+  <command name="auto_run_tests"  options="dir=. -Config CORBA_E_COMPACT -Config NO_BUILT_IN_TOPICS -Config Linux -a -l java/tests/dcps_java_tests.lst -l tools/modeling/tests/modeling_tests.lst"/>
   <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test -Dnative.debug=false"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>

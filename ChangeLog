@@ -1,3 +1,86 @@
+Fri Jan 18 16:13:56 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          More fixes for tagging errors.
+
+Thu Jan 17 15:39:55 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixed test section consolidation.
+
+Tue Jan 15 15:03:09 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          More JBoss7 output manipulation.
+
+Mon Jan 14 19:16:35 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixing cleaning up of java audit.
+
+Thu Jan 10 20:47:00 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Adding in errors for nightly build scripts.
+
+Thu Jan 10 20:20:25 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixed jboss7 output manipulation.
+
+Wed Jan  9 20:08:25 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixed script logging.
+
+Wed Jan  9 19:10:44 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixing syntax errors.
+
+Wed Jan  9 17:38:37 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixing error log editing for JBoss7.
+
+Wed Jan  2 23:36:35 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixed to only indicate report location if provided.
+
+Wed Jan  2 21:08:36 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Fixed order for parameter declaration.
+
+Wed Jan  2 19:41:36 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          No longer requiring jboss_reports_dir variable.
+
+Wed Jan  2 13:54:13 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/jboss_report.pm:
+
+          Added regex substitution to prevent non-error reported as compile error.
+
+Fri Dec 21 16:02:31 UTC 2012  Weiqi Gao  <gao_w@ociweb.com>
+
+        * command/jboss_build.pm:
+          Fixed passing quoted string.
+
 Wed Nov 12 10:38:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
 
         * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml:
