@@ -127,6 +127,11 @@ sub do_print ($)
         system("cat /usr/local/ngclinux/x86_64/version");
     }
 
+    if(-r "/usr/local/ceel/x86_64/version"){
+        print "<h3>CEEL release (/usr/local/ceel/x86_64/version)</h3>\n";
+        system("cat /usr/local/ceel/x86_64/version");
+    }
+
     if(-r "/var/emulab/boot/nodeid"){
         print "<h3>Emulab NodeId(/var/emulab/boot/nodeid)</h3>\n";
         system("cat /var/emulab/boot/nodeid");
