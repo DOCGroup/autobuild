@@ -36,7 +36,7 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
   <name>Linux</name>
      <build>
-        <name>FC17_ACE_ST</name>
+        <name>FC18_ACE_ST</name>
         <url>http://buildlogs.theaceorb.nl/fc18_ace_st/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
