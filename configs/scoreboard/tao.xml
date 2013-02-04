@@ -57,20 +57,20 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC17_WChar</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_wchar</url>
+      <name>FC18_WChar</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_wchar</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-        <name>FC17_COIOP</name>
-        <url>http://buildlogs.theaceorb.nl/fc17_coiop/</url>
+        <name>FC18_COIOP</name>
+        <url>http://buildlogs.theaceorb.nl/fc18_coiop/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>FC17_CORBA_e_compact</name>
-       <url>http://buildlogs.theaceorb.nl/fc17_corbae_compact/</url>
+       <name>FC18_CORBA_e_compact</name>
+       <url>http://buildlogs.theaceorb.nl/fc18_corbae_compact/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -81,20 +81,20 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC17_ACE_FOR_TAO</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_acefortao/</url>
+      <name>FC18_ACE_FOR_TAO</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_acefortao/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-      <name>FC17_TAO_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_tao_valgrind/</url>
+      <name>FC18_TAO_Valgrind</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_tao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-        <name>FC17_NO_IIOP</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_noiiop/</url>
+        <name>FC18_NO_IIOP</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_noiiop/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>

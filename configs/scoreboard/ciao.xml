@@ -23,14 +23,14 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC17_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc17_nologging/</url>
+      <name>FC18_NoLogging</name>
+        <url>http://buildlogs.theaceorb.nl/fc18_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_Versioned_Namespace</name>
-        <url>http://buildlogs.theaceorb.nl/fc17_versioned/</url>
+      <name>FC18_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fc18_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -47,14 +47,14 @@
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_DDS4CCM_OpenDDS_Valgrind</name>
-        <url>http://buildlogs.theaceorb.nl/fc17_dds4ccm_opendds_valgrind/</url>
+      <name>FC18_DDS4CCM_OpenDDS_Valgrind</name>
+        <url>http://buildlogs.theaceorb.nl/fc18_dds4ccm_opendds_valgrind/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC17_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne</url>
+      <name>FC18_LwCCM_NoEvents_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -88,27 +88,9 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
-   <build>
-      <name>FC17_LwCCM_NoEvents_LF_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_lf</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-   <build>
-      <name>FC17_LwCCM_NoEvents_RW_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_rw</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-   <build>
-      <name>FC17_LwCCM_NoEvents_RW_PRE_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_rw_pre</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
     <build>
-      <name>FC17_Valgrind_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_valgrind</url>
+      <name>FC18_Valgrind_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -125,8 +107,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-       <name>FC17_FullCCM_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc17_fullccm</url>
+       <name>FC18_FullCCM_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc18_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
