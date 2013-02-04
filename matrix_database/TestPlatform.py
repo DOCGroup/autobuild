@@ -33,8 +33,7 @@ class ACE_TAO_Test:
 class TestMatrix:
 	def __init__ (self, num_platforms):
 		self.name = "Test Matrix for ACE/TAO"
-		# max number of tests = 500, just for initialization of array
-		self.max_tests = 1000
+		self.max_tests = 1200
 		self.testResults =[[0]*num_platforms for row in range(self.max_tests)]
 		for n in range (0, self.max_tests): 
 			for m in range (0, num_platforms): 
