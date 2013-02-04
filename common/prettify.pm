@@ -1046,7 +1046,8 @@ sub Setup_Handler ($)
         $s =~ m/When Checking \"/ ||
         $s =~ m/command not found\"/ ||
         $s =~ m/No commands are being executed/ ||
-        $s =~ /^C / )
+        $s =~ /^C / ||
+        $s =~ /^......C /) # svn tree conflict -> C in column 7
     {
         $self->Output_Error ($s);
     }
