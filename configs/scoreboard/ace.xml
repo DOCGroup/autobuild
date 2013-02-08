@@ -98,6 +98,12 @@ all the OS/platform combinations on which ACE is tested everyday.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>OpenSuSE_12_1_ICC13</name>
+       <url>http://buildlogs.theaceorb.nl/suse121_ace_icc13/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 </group>
 
 <group>
