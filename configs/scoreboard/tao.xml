@@ -87,8 +87,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-      <name>FC18_TAO_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc18_tao_valgrind/</url>
+      <name>FC17_TAO_Valgrind</name>
+      <url>http://buildlogs.theaceorb.nl/fc17_tao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
