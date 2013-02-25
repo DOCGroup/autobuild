@@ -99,6 +99,12 @@ all the OS/platform combinations on which DDS is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>FC18_OpenDDS_Versioned</name>
+      <url>http://buildlogs.theaceorb.nl/fc18_opendds_versioned</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>OpenSuSE_12_2_OpenDDS</name>
       <url>http://buildlogs.theaceorb.nl/suse122_opendds</url>
       <build_sponsor>Remedy IT</build_sponsor>
