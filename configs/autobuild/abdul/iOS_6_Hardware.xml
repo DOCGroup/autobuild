@@ -5,7 +5,7 @@
         <environment name="HOST_ROOT"value="/builds/lion_full_static_llvm/ACE_wrappers" />
 
         <environment name="IPHONE_TARGET"  value="HARDWARE" />
-        <environment name="IPHONE_VERSION" value="6.0" />
+        <environment name="IPHONE_VERSION" value="6.1" />
 
         <environment name="XCODE_ROOT" value="/Applications/Xcode.app" />
         <variable name="root"          value="/builds/iOS_6_Hardware" />
