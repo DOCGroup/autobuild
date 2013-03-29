@@ -11,20 +11,20 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 <group>
   <name>Master builds</name>
   <build>
-    <name>fc17_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_c++11</url>
+    <name>fc17_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc18_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_c++11</url>
+    <name>fc18_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_c++11_ciaox11</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_c++11_ciaox11</url>
+    <name>fc17_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_ciaox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -53,14 +53,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse121_gcc47_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/suse121_c++11_gcc47</url>
+    <name>suse121_taox11_gcc47</name>
+    <url>http://buildlogs.theaceorb.nl/suse121_taox11_gcc47</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse122_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_c++11</url>
+    <name>suse122_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -77,8 +77,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc16_c++11_coverage</name>
-    <url>http://buildlogs.theaceorb.nl/fc16_c++11_coverage</url>
+    <name>fc16_taox11_coverage</name>
+    <url>http://buildlogs.theaceorb.nl/fc16_taox11_coverage</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -105,8 +105,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse122_c++11_clang</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_c++11_clang</url>
+    <name>suse122_taox11_clang</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_taox11_clang</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
