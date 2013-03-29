@@ -1,6 +1,6 @@
 <autobuild>
   <!-- The command used to create this file (on mealworm.ociweb.com) was -->
-  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 inline=0 buildbits=32" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ ." -compiler gcc -creator harrisb@ociweb.com -outdir . -peerlayout 1 -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "debug=1 optimize=0 inline=0 buildbits=32" -checkout "svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/OCI_Asynch_IMR/ ." -compiler gcc -creator harrisb@ociweb.com -outdir . -peerlayout 1 -->
   <!-- modified for make install -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/build/gcc_d1o0i0b32/ACE"/>
@@ -23,7 +23,7 @@
   <command name="process_listener"   options="localhost:32001"/>
   <command name="status"             options="on"/>
   <command name="log"                options="on"/>
-  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/trunk/ ."/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/branches/OCI_Asynch_IMR/ ."/>
   <command name="clone_build_tree"/>
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=build/gcc_d1o0i0b32/ACE/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
