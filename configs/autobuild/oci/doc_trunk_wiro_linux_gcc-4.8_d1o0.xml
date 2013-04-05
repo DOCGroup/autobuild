@@ -1,13 +1,12 @@
 <autobuild>
   <!-- The command used to create this file (on wiro) was -->
-  <!-- /home/mitza/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "CC=gcc-4.8 CXX=g++-4.8 LD=g++-4.8 LDFLAGS+=-Wl,-R,/usr/local/lib64 debug=1 optimize=0" -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO -compiler gcc-4.8 -creator mitza -docbuild 1 -docrepo 1 -environment LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -outdir . -->
+  <!-- /home/mitza/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/doc -buildflags "CC=gcc-4.8 CXX=g++-4.8 LD=g++-4.8 LDFLAGS+=-Wl,-R,/usr/local/lib64 debug=1 optimize=0" -checkout svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO -compiler gcc-4.8 -creator mitza -docbuild 1 -docrepo 1 -outdir . -->
   <configuration>
     <environment name="ACE_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0"/>
     <environment name="CIAO_ROOT"       value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/CIAO"/>
     <environment name="DANCE_ROOT"      value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/DAnCE"/>
     <environment name="DDS_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/DDS"/>
     <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/lib:"/>
-    <environment name="LIBRARY_PATH"    value="/usr/lib/x86_64-linux-gnu"/>
     <environment name="MPC_ROOT"        value="/home/taoadmin/MPC"/>
     <environment name="PATH"            value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
     <environment name="TAO_ROOT"        value="/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO"/>
@@ -28,7 +27,7 @@
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=update file=ACE_wrappers/build/gcc-4.8_d1o0/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
   <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc-4.8_d1o0/include/makeinclude/platform_macros.GNU output='LDFLAGS+=-Wl,-R,/usr/local/lib64\ndebug=1\noptimize=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\nCC=gcc-4.8\nCXX=g++-4.8\nLD=g++-4.8\n'"/>
-  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc-4.8_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/lib:\x22; export LD_LIBRARY_PATH\nLIBRARY_PATH=\x22/usr/lib/x86_64-linux-gnu\x22; export LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO\x22; export TAO_ROOT\n'"/>
+  <command name="file_manipulation"  options="type=create file=ACE_wrappers/build/gcc-4.8_d1o0/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0\x22; export ACE_ROOT\nCIAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/CIAO\x22; export CIAO_ROOT\nDANCE_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/DAnCE\x22; export DANCE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/sfw/lib:/usr/local/lib:/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/home/taoadmin/MPC\x22; export MPC_ROOT\nPATH=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/doc/ACE_wrappers/build/gcc-4.8_d1o0/TAO\x22; export TAO_ROOT\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
   <command name="print_ace_config"/>
