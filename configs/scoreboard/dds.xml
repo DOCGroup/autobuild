@@ -116,6 +116,18 @@ all the OS/platform combinations on which DDS is tested everyday.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+     <name>Beagleboard_OpenDDS</name>
+     <url>http://buildlogs.theaceorb.nl/beagleboard_opendds/</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+  <build>
+     <name>Beagleboard_OpenDDS_Host</name>
+     <url>http://buildlogs.theaceorb.nl/beagleboard_opendds_host/</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 </group>
 
 <group>

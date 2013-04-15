@@ -93,7 +93,7 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
      </build>
      <build>
-       <name>Beagleboard</name>
+       <name>Beagleboard_ACE</name>
        <url>http://buildlogs.theaceorb.nl/beagleboard_ace/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
