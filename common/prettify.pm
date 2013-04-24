@@ -465,7 +465,7 @@ sub CurrentTest
 sub Error ($)
 {
     my $self = shift;
-    my $line = shift . "\n";
+    my $line = (shift) . "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
 
@@ -477,7 +477,7 @@ sub Error ($)
 sub Warning ($)
 {
     my $self = shift;
-    my $line = shift . "\n";
+    my $line = (shift) . "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
     $test->{OUT} .= $line;
@@ -486,7 +486,7 @@ sub Warning ($)
 sub Normal ($)
 {
     my $self = shift;
-    my $line = shift . "\n";
+    my $line = (shift) . "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
     my $separator = '=' x 78 . "\n";
