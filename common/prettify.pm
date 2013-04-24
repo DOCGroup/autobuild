@@ -491,7 +491,7 @@ sub Normal ($)
     return unless defined $test;
     my $separator = '=' x 78 . "\n";
 
-    if ($line =~ /^auto_run_tests_finished: .*Time:(\d+)s\s+Result:(\d+)/)
+    if ($line =~ /^auto_run_tests_finished: .*Time:(\d+)s\s+Result:([-\d]+)/)
     {
         $test->{TIME} = $1;
         $test->{RESULT} = $2;
