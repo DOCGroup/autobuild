@@ -421,7 +421,7 @@ sub Footer ()
         {
             print $out "<failure>\n", $indent x 3,
               "<![CDATA[$error]]></failure><system-out>\n", $indent x 3,
-              "<![CDATA[$test->{OUT}]]></system-out>\n";
+              "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
         }
     }
 
