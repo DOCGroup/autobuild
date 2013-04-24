@@ -582,7 +582,7 @@ INPFILE: foreach my $file (@files) {
     next;
   }
 
-  my $oldRoot = $data{VARS}->{root};
+  my $oldRoot = GetVariable ("root");
   if (defined $oldRoot && $oldRoot =~ s/^\s*([^\s].*?)\s*$/$1/) {
     if (!File::Spec->file_name_is_absolute ($oldRoot)) {
       $oldRoot = File::Spec->rel2abs ($oldRoot);
