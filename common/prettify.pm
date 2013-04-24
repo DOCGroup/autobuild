@@ -350,6 +350,158 @@ sub Normal ($)
     # Ignore
 }
 
+###############################################################################
+###############################################################################
+
+package Prettify::JUnit;
+
+use strict;
+use warnings;
+
+use FileHandle;
+
+###############################################################################
+
+sub new ($)
+{
+    my $proto = shift;
+    my $class = ref ($proto) || $proto;
+    my $self = {};
+
+    my $basename = shift;
+    my $filename = $basename . '_JUnit.xml';
+    $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
+    $self->{CURRENT_SECTION} = '';
+
+    bless ($self, $class);
+    return $self;
+}
+
+sub Header ()
+{
+    my $self = shift;
+    my $out = $self->{FH};
+    print $out '<?xml version="1.0" encoding="UTF-8"?>', "\n",
+      '<testsuites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"', "\n",
+      '            xsi:noNamespaceSchemaLocation="JUnit.xsd">', "\n";
+}
+
+sub Footer ()
+{
+    my $self = shift;
+    my $out = $self->{FH};
+
+    my $indent = '  ';
+    print $out $indent, '<testsuite name="Autobuild_Tests" ';
+
+    my $numtests = @{$self->{TESTS}};
+
+    if ($numtests == 0)
+    {
+        # Need to insert a dummy testcase to jenkins doesn't think there is
+        # a failure.
+        print $out 'tests="1">', "\n", $indent x 2,
+          '<testcase name="dummy_test"/>', "\n";
+    }
+    else
+    {
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\">\n";
+    }
+
+    foreach my $test (@{$self->{TESTS}})
+    {
+        my $error = $test->{ERROR} || '';
+
+        print $out $indent x 2,
+          "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
+          "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
+
+        if ($error ne "")
+        {
+            print $out "<failure>\n", $indent x 3,
+              "<![CDATA[$error]]></failure><system-out>\n", $indent x 3,
+              "<![CDATA[$test->{OUT}]]></system-out>\n";
+        }
+    }
+
+    print $out $indent, "</testsuite>\n</testsuites>\n";
+}
+
+sub Section ($)
+{
+    my $self = shift;
+    my $s = shift;
+    $self->{CURRENT_SECTION} = $s;
+}
+
+sub Description ($)
+{
+}
+
+sub Timestamp ($)
+{
+}
+
+sub Subsection ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    if ($self->{CURRENT_SECTION} =~ /test/i)
+    {
+        $s =~ s/ \(Bug currently UNFIXED.*\)//;
+        push @{$self->{TESTS}}, {NAME => $s, RESULT => 0, TIME => 0};
+    }
+}
+
+sub CurrentTest
+{
+    my $self = shift;
+    my $last = $#{$self->{TESTS}};
+    return ($last >= 0) ? $self->{TESTS}->[$last] : undef;
+}
+
+sub Error ($)
+{
+    my $self = shift;
+    my $line = shift . "\n";
+    my $test = $self->CurrentTest ();
+    return unless defined $test;
+
+    ++$self->{FAILED} unless defined $test->{ERROR};
+    $test->{ERROR} .= $line;
+    $test->{OUT} .= $line;
+}
+
+sub Warning ($)
+{
+    my $self = shift;
+    my $line = shift . "\n";
+    my $test = $self->CurrentTest ();
+    return unless defined $test;
+    $test->{OUT} .= $line;
+}
+
+sub Normal ($)
+{
+    my $self = shift;
+    my $line = shift . "\n";
+    my $test = $self->CurrentTest ();
+    return unless defined $test;
+    my $separator = '=' x 78 . "\n";
+
+    if ($line =~ /^auto_run_tests_finished: .*Time:(\d+)s\s+Result:(\d+)/)
+    {
+        $test->{TIME} = $1;
+        $test->{RESULT} = $2;
+    }
+    elsif ($line ne $separator)
+    {
+        $test->{OUT} .= $line;
+    }
+}
+
 
 ###############################################################################
 ###############################################################################
@@ -719,6 +871,12 @@ sub new ($)
             new Prettify::Totals_HTML ($basename), #Must be 2
             new Prettify::Config_HTML ($basename), #Must be 3
         );
+
+    my $junit = main::GetVariable ('junit_xml_output');
+    if (defined $junit) {
+        push @{$self->{OUTPUT}},
+          new Prettify::JUnit (($junit eq '1') ? $basename : $junit);
+    }
 
     # Output the header for the files
 

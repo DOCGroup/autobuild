@@ -193,6 +193,7 @@ sub clean_logs ($)
 
     foreach my $file (@existing) {
         unlink $file . ".txt";
+        unlink $file . "_JUnit.xml";
         unlink $file . "_Full.html";
         unlink $file . "_Brief.html";
         unlink $file . "_Totals.html";
