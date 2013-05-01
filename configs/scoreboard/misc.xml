@@ -23,7 +23,7 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
   </build>
   <build>
     <name>Coverity</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_coverity</url>
+    <url>http://buildlogs.theaceorb.nl/fc19_coverity</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
