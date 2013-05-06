@@ -250,6 +250,11 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/IDL::ParseError:/) {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/illegal redefinition/) {
     $self->Output_Error ($s);
     return;
