@@ -373,6 +373,8 @@ sub new ($)
     $self->{FH} = new FileHandle ($filename, 'w');
     $self->{FILENAME} = $filename;
     $self->{CURRENT_SECTION} = '';
+    $self->{FAILED} = 0;
+    $self->{TESTS} = [];
 
     bless ($self, $class);
     return $self;
@@ -874,8 +876,14 @@ sub new ($)
 
     my $junit = main::GetVariable ('junit_xml_output');
     if (defined $junit) {
-        push @{$self->{OUTPUT}},
-          new Prettify::JUnit (($junit eq '1') ? $basename : $junit);
+        if ($junit eq '1') {
+            $junit = $basename;
+        }
+        else {
+            $basename =~ /^(.*[\/\\])/;
+            $junit = $1 . $junit;
+        }
+        push @{$self->{OUTPUT}}, new Prettify::JUnit ($junit);
     }
 
     # Output the header for the files
