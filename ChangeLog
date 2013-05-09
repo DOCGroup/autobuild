@@ -1,3 +1,10 @@
+Thu May  9 17:20:11 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/process_logs.pm:
+
+          Needed to unset the reference to the Prettify object so the file handles
+          would be closed.
+
 Thu May  9 13:58:43 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
 
         * command/process_logs.pm:

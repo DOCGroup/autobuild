@@ -285,8 +285,12 @@ sub prettify_log ($)
         # $keep_logs
         my $junit;
         my $save_root;
+        my @filenames;
         for my $output (@{$process->{OUTPUT}}) {
-            my $file = $output->{FILENAME};
+            push(@filenames, $output->{FILENAME});
+        }
+        undef $process;
+        for my $file (@filenames) {
             if (defined $file && -r $file) {
                 $save_root = save_root() if !defined $save_root;
                 $file =~ s/^(.*[\/\\])//;
