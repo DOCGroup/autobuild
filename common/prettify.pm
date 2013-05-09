@@ -27,6 +27,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
     $self->{BUFFER_NON_ERRORS} = 0;
 
     @{ $self->{BUFFERED_NON_ERRORS} } = ();
@@ -217,6 +218,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
 
     bless ($self, $class);
     return $self;
@@ -541,6 +543,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
     $self->{LAST_SECTION} = "";
 
     $self->{SECTION_SUBSECTIONS} = 0;
@@ -1400,6 +1403,8 @@ sub Process ($)
     {
         $processor->SendEmailNotification();
     }
+
+    return $processor;
 }
 
 sub WriteLatest($)
@@ -1513,6 +1518,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
 
     bless ($self, $class);
     return $self;

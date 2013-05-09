@@ -23,7 +23,9 @@ sub move_log ();
 sub clean_logs ($);
 sub prettify_log ($);
 sub index_logs ();
+sub save_root ();
 sub copy_log ();
+sub keep_files ();
 
 my $newlogfile;
 
@@ -125,7 +127,12 @@ sub Run ($)
 
     # Prettify the logs
 
-    if ($options =~ m/prettify/) {
+    my $prettify_keep = 0;
+    if ($options =~ m/prettify='([^']*)'/ || $options =~ m/prettify=([^\s]*)/) {
+        my $retval = $self->prettify_log ($moved, $1);
+        return 0 if ($retval == 0);
+    }
+    elsif ($options =~ m/prettify/) {
         my $retval = $self->prettify_log ($moved);
         return 0 if ($retval == 0);
     }
@@ -263,6 +270,7 @@ sub prettify_log ($)
 {
     my $self = shift;
     my $moved = shift;
+    my $keep_logs = shift;
     my $root = main::GetVariable ('root');
     my $log_file = main::GetVariable ('log_file');
 
@@ -270,7 +278,40 @@ sub prettify_log ($)
         $log_file = $newlogfile;
     }
 
-    Prettify::Process ($log_file);
+    my $process = Prettify::Process ($log_file);
+    if ($keep_logs) {
+        # if keeping prettified logs, then identify each prettified log file,
+        # copy it to the save_root (same as copy_log), and then keep at most
+        # $keep_logs
+        my $junit;
+        my $save_root;
+        for my $output (@{$process->{OUTPUT}}) {
+            my $file = $output->{FILENAME};
+            if (defined $file && -r $file) {
+                $save_root = save_root() if !defined $save_root;
+                $file =~ s/^(.*[\/\\])//;
+                my $basedir = $1;
+
+                # copy the Prettify::Process generated file
+                my $oldfile = $basedir . $file;
+                my $newfile = $save_root . "/" . $file;
+                my $ret = copy ($oldfile, $newfile);
+                if ( $ret < 1 ) {
+                    print STDERR __FILE__, "Problem copying $oldfile to $newfile: $!\n";
+                    return 0;
+                }
+
+                # Make sure it has the correct permissions
+                chmod (0644, $newfile);
+
+                # identify the _*.* extension for this output (_Full.html, _JUnit.xml, etc.)
+                $file =~ /_[^_]+\.\w+$/;
+                my $ext = $&;
+                my $search = '^.*' . $ext;
+                $self->keep_files($save_root, $search, $keep_logs);
+            }
+        }
+    }
     return 1;
 }
 
@@ -291,13 +332,10 @@ sub index_logs ()
     return 1;
 }
 
-sub copy_log ()
+sub save_root ()
 {
-    my $self = shift;
-    my $keep = shift;
     my $root = main::GetVariable ('root');
     my $log_root = main::GetVariable ('log_root');
-    my $log_file = main::GetVariable ('log_file');
     my $save_root;
 
     # chop off trailing slash
@@ -318,6 +356,28 @@ sub copy_log ()
     if (!-r $save_root || !-d $save_root) {
         mkpath($save_root);
     }
+    return $save_root;
+}
+
+sub copy_log ()
+{
+    my $self = shift;
+    my $keep = shift;
+    my $root = main::GetVariable ('root');
+    my $log_root = main::GetVariable ('log_root');
+    my $log_file = main::GetVariable ('log_file');
+    my $save_root = save_root();
+
+    # chop off trailing slash
+    if ($log_root =~ m/^(.*)\/$/) {
+        $log_root = $1;
+    }
+
+    # chop off trailing slash
+    if ($root =~ m/^(.*)\/$/) {
+        $root = $1;
+    }
+
     my $oldlog_file = $root . "/" . $log_file;
 
     if (!defined $oldlog_file) {
@@ -371,20 +431,34 @@ sub copy_log ()
     }
     chmod (0644, $savelogfile);
 
+    $self->keep_files($save_root, '^...._.._.._.._..\\.txt$', $keep);
+
+    return 1;
+}
+
+sub keep_files ()
+{
+    my $self = shift;
+    my $dir = shift;
+    my $pattern = shift;
+    my $keep = shift;
+
     # Clean up old saved files
-    my $dh = new DirHandle ($save_root);
+    my $dh = new DirHandle ($dir);
     my @existing;
 
     # Load the directory contents into the @existing array
 
     if (!defined $dh) {
-        print STDERR __FILE__, ": Could not read directory $save_root\n";
+        print STDERR __FILE__, ": Could not read directory $dir\n";
         return 0;
     }
 
     while (defined($_ = $dh->read)) {
-        if ($_ =~ m/^(...._.._.._.._..).txt/) {
-            push @existing, $save_root . '/' . $1;
+        # if the file matches the desired pattern, then store it to determine
+        # if it should be kept or removed
+        if ($_ =~ m/$pattern/) {
+            push @existing, $dir . '/' . $_;
         }
     }
     undef $dh;
@@ -400,7 +474,7 @@ sub copy_log ()
     # Delete anything left in the list
 
     foreach my $file (@existing) {
-        unlink $file . ".txt";
+        unlink $file;
     }
 
     return 1;

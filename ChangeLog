@@ -1,3 +1,20 @@
+Thu May  9 13:58:43 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * command/process_logs.pm:
+
+          Added an optional number of prettified outputs to copy and keep
+          in the save_root.  prettify_log stores off the Prettify object
+          and retrieves each prettified output objects file, to make a
+          copy and clean up all but the desired number of files to keep.
+          Refactored keep_files out of copy_log, taking a directory to
+          operate in, a pattern to search for, and the number of files
+          matching the pattern to keep.
+
+        * common/prettify.pm:
+
+          Prettify::Process now returns the created Prettify object and
+          stores the filename for each output object.
+
 Fri Jan 18 16:13:56 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
 
         * command/jboss_report.pm:
