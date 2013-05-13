@@ -474,6 +474,7 @@ sub Error ($)
     return unless defined $test;
 
     ++$self->{FAILED} unless defined $test->{ERROR};
+    $line =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f]/?/g;
     $test->{ERROR} .= $line;
     $test->{OUT} .= $line;
 }
@@ -484,6 +485,7 @@ sub Warning ($)
     my $line = (shift) . "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
+    $line =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f]/?/g;
     $test->{OUT} .= $line;
 }
 
@@ -502,6 +504,7 @@ sub Normal ($)
     }
     elsif ($line ne $separator)
     {
+        $line =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f]/?/g;
         $test->{OUT} .= $line;
     }
 }
@@ -884,7 +887,7 @@ sub new ($)
         }
         else {
             $basename =~ /^(.*[\/\\])/;
-            $junit = $1 . $junit;
+            $junit = ((defined $1) ? $1 : '') . $junit;
         }
         push @{$self->{OUTPUT}}, new Prettify::JUnit ($junit);
     }
