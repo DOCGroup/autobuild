@@ -466,6 +466,12 @@ sub CurrentTest
     return ($last >= 0) ? $self->{TESTS}->[$last] : undef;
 }
 
+sub CleanCData
+{
+    my $strref = shift;
+    $$strref =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f\x80-\xff]/?/g;
+}
+
 sub Error ($)
 {
     my $self = shift;
@@ -474,7 +480,7 @@ sub Error ($)
     return unless defined $test;
 
     ++$self->{FAILED} unless defined $test->{ERROR};
-    $line =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f]/?/g;
+    CleanCData (\$line);
     $test->{ERROR} .= $line;
     $test->{OUT} .= $line;
 }
@@ -485,7 +491,7 @@ sub Warning ($)
     my $line = (shift) . "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
-    $line =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f]/?/g;
+    CleanCData (\$line);
     $test->{OUT} .= $line;
 }
 
@@ -504,7 +510,7 @@ sub Normal ($)
     }
     elsif ($line ne $separator)
     {
-        $line =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f]/?/g;
+        CleanCData (\$line);
         $test->{OUT} .= $line;
     }
 }
