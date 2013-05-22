@@ -89,7 +89,7 @@
   <command name="make" options="-s -k -j2 find=*akefile dir=TAO/orbsvcs/DevGuideExamples"/>
 
   <!-- Post build -->
-  <command name="auto_run_tests"  options="-a -t -o"/>
+  <command name="auto_run_tests"  options="-a -t -o -Config NO_LOOPBACK_MCAST"/>
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
