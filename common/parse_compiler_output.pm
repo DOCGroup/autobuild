@@ -231,6 +231,16 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  # Embarcadero C++ Builder
+  if ($s =~ m/Error E/) {
+    $self->Output_Error ($s);
+    return;
+  }
+  if ($s =~ m/Warning W/) {
+    $self->Output_Warning ($s);
+    return;
+  }
+
   if ($s =~ m/not be built due to the following missing/) {
     # Indicates that something is not properly configured - ie,
     # incorrect depenancies in the mpc files, default.featres setting,
