@@ -68,6 +68,9 @@ sub Run ($)
     elsif(lc $compiler eq "bcc32"){
         system("bcc32 --version");
     }
+    elsif(lc $compiler eq "bcc64"){
+        system("bcc64 --version");
+    }
     elsif(lc $compiler eq "bccx"){
         system("bccx --version");
     }
