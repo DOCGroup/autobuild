@@ -48,7 +48,7 @@ sub Run ($)
         system("ilink32 -v");
     }
     elsif(lc $linker eq "ilink64"){
-        system("ilink32 -v");
+        system("ilink64 -v");
     }
     elsif(lc $linker eq "ilink"){
         system("ilink -v");
