@@ -65,10 +65,10 @@ sub Run ($)
     elsif(lc $compiler eq "mingwcygwin"){
         system("g++ -v -mno-cygwin");
     }
-    elsif(lc $compiler eq "borland"){
+    elsif(lc $compiler eq "bcc32"){
         system("bcc32 --version");
     }
-    elsif(lc $compiler eq "cbx"){
+    elsif(lc $compiler eq "bccx"){
         system("bccx --version");
     }
     elsif(lc $compiler eq "kylix"){
