@@ -27,6 +27,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
     $self->{BUFFER_NON_ERRORS} = 0;
 
     @{ $self->{BUFFERED_NON_ERRORS} } = ();
@@ -217,6 +218,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
 
     bless ($self, $class);
     return $self;
@@ -373,6 +375,8 @@ sub new ($)
     $self->{FH} = new FileHandle ($filename, 'w');
     $self->{FILENAME} = $filename;
     $self->{CURRENT_SECTION} = '';
+    $self->{FAILED} = 0;
+    $self->{TESTS} = [];
 
     bless ($self, $class);
     return $self;
@@ -462,6 +466,12 @@ sub CurrentTest
     return ($last >= 0) ? $self->{TESTS}->[$last] : undef;
 }
 
+sub CleanCData
+{
+    my $strref = shift;
+    $$strref =~ s/[\x00-\x08\x0b\x0c\x0e-\x1f\x80-\xff]/?/g;
+}
+
 sub Error ($)
 {
     my $self = shift;
@@ -470,6 +480,7 @@ sub Error ($)
     return unless defined $test;
 
     ++$self->{FAILED} unless defined $test->{ERROR};
+    CleanCData (\$line);
     $test->{ERROR} .= $line;
     $test->{OUT} .= $line;
 }
@@ -480,6 +491,7 @@ sub Warning ($)
     my $line = (shift) . "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
+    CleanCData (\$line);
     $test->{OUT} .= $line;
 }
 
@@ -498,6 +510,7 @@ sub Normal ($)
     }
     elsif ($line ne $separator)
     {
+        CleanCData (\$line);
         $test->{OUT} .= $line;
     }
 }
@@ -539,6 +552,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
     $self->{LAST_SECTION} = "";
 
     $self->{SECTION_SUBSECTIONS} = 0;
@@ -874,8 +888,14 @@ sub new ($)
 
     my $junit = main::GetVariable ('junit_xml_output');
     if (defined $junit) {
-        push @{$self->{OUTPUT}},
-          new Prettify::JUnit (($junit eq '1') ? $basename : $junit);
+        if ($junit eq '1') {
+            $junit = $basename;
+        }
+        else {
+            $basename =~ /^(.*[\/\\])/;
+            $junit = ((defined $1) ? $1 : '') . $junit;
+        }
+        push @{$self->{OUTPUT}}, new Prettify::JUnit ($junit);
     }
 
     # Output the header for the files
@@ -1392,6 +1412,8 @@ sub Process ($)
     {
         $processor->SendEmailNotification();
     }
+
+    return $processor;
 }
 
 sub WriteLatest($)
@@ -1505,6 +1527,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{FH} = new FileHandle ($filename, 'w');
+    $self->{FILENAME} = $filename;
 
     bless ($self, $class);
     return $self;

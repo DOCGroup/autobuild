@@ -156,8 +156,8 @@ sub Run ($)
     }
 
     if(-x "/bin/df"){
-        print "<h3>Disk space information (df -H)</h3>\n";
-        system("/bin/df -H");
+        print "<h3>Disk space information (df -k)</h3>\n";
+        system ("/bin/df -k /tmp " . (main::GetVariable ('root') || ''));
     }
 
     if(-r "/proc/cpuinfo"){
