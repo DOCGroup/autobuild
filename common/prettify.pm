@@ -1287,7 +1287,7 @@ sub Config_Handler ($)
         my $revision = $totals->{SVN_REVISIONS}[$index];
         my $url = $3;
 
-        if ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/Middleware\/trunk/i)
+        if ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/Middleware/i)
         {
             $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
         }
