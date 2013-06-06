@@ -9,13 +9,6 @@ all the OS/platform combinations on which XSC is tested everyday.
 </preamble>
 
 <group>
-  <name>Linux</name>
-     <build>
-       <name>FC18_GCC_64bit_XSC</name>
-       <url>http://buildlogs.theaceorb.nl/fc18_xsc</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
 </group>
 
 </scoreboard>
