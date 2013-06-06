@@ -577,6 +577,7 @@ sub new ($)
     $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_OPENDDS} = 'None';
+    $self->{SVN_REVISIONS} = ();
 
     bless ($self, $class);
     return $self;
@@ -1089,6 +1090,7 @@ sub Normal_Handler ($)
 
 sub Setup_Handler ($)
 {
+
     my $self = shift;
     my $s = shift;
     if (!defined $s)
@@ -1238,7 +1240,7 @@ sub Setup_Handler ($)
         $self->Output_Warning ($s);
     }
     else
-     {
+    {
         $self->Output_Normal ($s);
     }
 }
@@ -1268,6 +1270,41 @@ sub Config_Handler ($)
     # We only want to output config stuff to the Config_HTML class (and FULL)
     $outputs[0]->Normal($s, $state);
     $outputs[3]->Normal($s, $state);
+
+    my $totals= (@{$self->{OUTPUT}})[2];
+
+    if ($s =~ m/SVN_REVISION(_(\d))?=(\d+)/)
+    {
+        my $index = $2;
+        $index ||= 0;
+        $totals->{SVN_REVISIONS}[$index] = $3;
+    }
+    elsif ($s =~ m/SVN_URL(_(\d))?=(.+)/)
+    {
+        my $index = $2;
+        $index ||= 0;
+
+        my $revision = $totals->{SVN_REVISIONS}[$index];
+        my $url = $3;
+
+        if ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/Middleware/i)
+        {
+            $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
+        }
+        elsif ($url =~ m/svn\+ssh:\/\/svn.ociweb.com\/ocitao/i)
+        {
+            $totals->{SUBVERSION_CHECKEDOUT_ACE} = $revision;
+        }
+        elsif ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/DDS\/trunk/i)
+        {
+            print "matched\n";
+            $totals->{SUBVERSION_CHECKEDOUT_OPENDDS} = $revision;
+        }
+        elsif ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/MPC\/trunk/i)
+        {
+            $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;
+        }
+    }
 }
 
 sub Autoconf_Handler ($)
