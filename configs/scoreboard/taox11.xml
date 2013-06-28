@@ -35,8 +35,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_c++11_footprint</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_c++11_footprint</url>
+    <name>fc17_taox11_footprint</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_taox11_footprint</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -53,8 +53,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_c++11_valgrind</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_c++11_valgrind</url>
+    <name>fc17_taox11_valgrind</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_taox11_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -77,26 +77,26 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw_c++11</url>
+    <name>winxp_mingw_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/winxp_mingw_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw_c++11_debug</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw_c++11_debug</url>
+    <name>winxp_mingw_taox11_debug</name>
+    <url>http://buildlogs.theaceorb.nl/winxp_mingw_taox11_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw64_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_c++11</url>
+    <name>winxp_mingw64_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>win7_mingw64_c++11</name>
-    <url>http://buildlogs.theaceorb.nl/win7_mingw64_c++11</url>
+    <name>win7_mingw64_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/win7_mingw64_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
