@@ -17,7 +17,7 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
   </build>
   <build>
     <name>Doxygen</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_doxygen</url>
+    <url>http://buildlogs.theaceorb.nl/fc19_doxygen</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
