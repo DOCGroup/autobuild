@@ -65,14 +65,14 @@
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC18_Versioned_SO_2</name>
-        <url>http://buildlogs.theaceorb.nl/fc18_versioned_so2</url>
+      <name>FC19_Versioned_SO_2</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_versioned_so2</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC18_DDS4CCM_OpenDDS</name>
-        <url>http://buildlogs.theaceorb.nl/fc18_dds4ccm_opendds/</url>
+      <name>FC19_DDS4CCM_OpenDDS</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_dds4ccm_opendds/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -83,14 +83,14 @@
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC18_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc18_lwccm_ne</url>
+      <name>FC19_LwCCM_NoEvents_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC17_LwCCM_NoEvents_Install_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_install</url>
+      <name>FC19_LwCCM_NoEvents_Install_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_install</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>

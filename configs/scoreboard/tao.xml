@@ -93,8 +93,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-        <name>FC18_NO_IIOP</name>
-      <url>http://buildlogs.theaceorb.nl/fc18_noiiop/</url>
+        <name>FC19_NO_IIOP</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_noiiop/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>

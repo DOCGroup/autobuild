@@ -11,7 +11,7 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
   <name>Utility Builds</name>
   <build>
     <name>Linux_Fuzz</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_fuzz</url>
+    <url>http://buildlogs.theaceorb.nl/fc19_fuzz</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -29,7 +29,7 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
   </build>
   <build>
     <name>Mail_Test_Stats</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_mail_teststats</url>
+    <url>http://buildlogs.theaceorb.nl/fc19_mail_teststats</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
