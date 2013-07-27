@@ -47,14 +47,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_taox11_doxygen</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11_doxygen</url>
+    <name>fc19_taox11_doxygen</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_taox11_doxygen</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_taox11_valgrind</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11_valgrind</url>
+    <name>fc19_taox11_valgrind</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_taox11_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -101,8 +101,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc16_taox11_coverage</name>
-    <url>http://buildlogs.theaceorb.nl/fc16_taox11_coverage</url>
+    <name>fc19_taox11_coverage</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_taox11_coverage</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
