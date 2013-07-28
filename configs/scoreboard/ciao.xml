@@ -53,8 +53,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC18_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc18_nologging/</url>
+      <name>FC19_NoLogging</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
