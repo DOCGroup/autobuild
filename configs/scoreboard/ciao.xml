@@ -161,8 +161,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_NoInterceptors</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_nointerceptors</url>
+      <name>FC19_NoInterceptors</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_nointerceptors</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>

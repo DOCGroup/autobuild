@@ -139,7 +139,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Stats Builds</name>
    <build>
-      <name>FC17_Stats_CORBA_e_compact</name>
+      <name>FC19_Stats_CORBA_e_compact</name>
       <url>http://buildlogs.theaceorb.nl/fc17_fp_corbaec/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
