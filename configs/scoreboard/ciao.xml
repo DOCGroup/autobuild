@@ -101,20 +101,20 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC17_LwCCM_NoEvents_OpenDDS_Install_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_install_opendds</url>
+      <name>FC19_LwCCM_NoEvents_OpenDDS_Install_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_install_opendds</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC17_LwCCM_NoEvents_OpenDDS_Install_Test_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_install_opendds_test</url>
+      <name>FC19_LwCCM_NoEvents_OpenDDS_Install_Test_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_install_opendds_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC17_LwCCM_NoEvents_Compile_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_lwccm_ne_compile</url>
+      <name>FC19_LwCCM_NoEvents_Compile_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_compile</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -155,8 +155,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_XML_Config</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_xmlconfig</url>
+      <name>FC19_XML_Config</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_xmlconfig</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
