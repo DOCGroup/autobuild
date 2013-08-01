@@ -125,14 +125,14 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_Perf_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_perf/</url>
+      <name>FC19_Perf_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_perf/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_Perf_TS_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_perf_ts/</url>
+      <name>FC19_Perf_TS_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_perf_ts/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -149,8 +149,8 @@
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_ostream</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_ostream</url>
+      <name>FC19_ostream</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_ostream</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -255,20 +255,20 @@
   <group>
     <name>Stats Builds</name>
     <build>
-      <name>FC17_FP_Stats</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_fp_performance/</url>
+      <name>FC19_FP_Stats</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_fp_performance/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_FP_Stats_Regular</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_fp_regular/</url>
+      <name>FC19_FP_Stats_Regular</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_fp_regular/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC17_FP_Stats_Versioned</name>
-      <url>http://buildlogs.theaceorb.nl/fc17_fp_versioned/</url>
+      <name>FC19_FP_Stats_Versioned</name>
+      <url>http://buildlogs.theaceorb.nl/fc19_fp_versioned/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
