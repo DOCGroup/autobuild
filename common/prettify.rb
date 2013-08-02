@@ -21,6 +21,7 @@ def parse_test_line (line)
         line =~ /Compilation failed in require at/ ||
         line =~ /Invalid write of size/ ||
         line =~ /Invalid read of size/ ||
+        line =~ /compilation aborted at/ ||
         line =~ /aborted due to compilation errors/ ||
         line =~ /exception resulted in call to terminate/ ||
         line =~ /terminate called after throwing an instance of/ ||

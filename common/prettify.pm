@@ -1357,6 +1357,7 @@ sub Test_Handler ($)
         || $s =~ m/Conditional jump or move depends on uninitialised value/
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Use of uninitialised value of size/
+        || $s =~ m/compilation aborted at/
         || $s =~ m/Can't call method/
         || $s =~ m/memPartAlloc: block too big/
         || $s =~ m/C interp: token/
