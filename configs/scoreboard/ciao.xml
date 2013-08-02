@@ -77,11 +77,17 @@
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC18_DDS4CCM_OpenDDS_Valgrind</name>
-        <url>http://buildlogs.theaceorb.nl/fc18_dds4ccm_opendds_valgrind/</url>
+      <name>FC19_DDS4CCM_OpenDDS_Valgrind</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_dds4ccm_opendds_valgrind/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+     <build>
+       <name>FC19_FullCCM_NoEvents_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc19_fullccm_ne</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
    <build>
       <name>FC19_LwCCM_NoEvents_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne</url>
@@ -137,8 +143,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-       <name>FC18_FullCCM_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc18_fullccm</url>
+       <name>FC19_FullCCM_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc19_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -185,8 +191,8 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC18_IPV6</name>
-       <url>http://buildlogs.theaceorb.nl/fc18_ipv6</url>
+      <name>FC19_IPV6</name>
+       <url>http://buildlogs.theaceorb.nl/fc19_ipv6</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
