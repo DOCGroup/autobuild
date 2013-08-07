@@ -59,12 +59,6 @@
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_Versioned_SO_2</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_versioned_so2</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC19_DDS4CCM_OpenDDS</name>
         <url>http://buildlogs.theaceorb.nl/fc19_dds4ccm_opendds/</url>
         <build_sponsor>Remedy IT</build_sponsor>
