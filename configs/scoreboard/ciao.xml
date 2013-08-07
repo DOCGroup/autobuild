@@ -167,12 +167,6 @@
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC19_IPV6</name>
-       <url>http://buildlogs.theaceorb.nl/fc19_ipv6</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC12_CEEL_x86_64_debug_host</name>
       <url>http://buildlogs.theaceorb.nl/fc12_ceel_x86_64_debug_host</url>
       <build_sponsor>Remedy IT</build_sponsor>
