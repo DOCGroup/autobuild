@@ -133,6 +133,12 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
 <name>Windows</name>
     <build>
+      <name>Win7_cbuilderxe4_bcc32_debug</name>
+      <url>http://buildlogs.theaceorb.nl/win7_cbuilderxe4_bcc32_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+    <build>
       <name>WindowsXP_VC9_Debug</name>
       <url>http://acebuilds.riverace.com/smokey-winxpsp2/dev/vc9_debug</url>
       <red>36</red>
