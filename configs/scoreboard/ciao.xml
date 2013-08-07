@@ -23,12 +23,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-      <name>FC19_atcd_debug</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_atcd_debug/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
       <name>RHEL_63_Debug_NDDS_500rev00</name>
       <url>http://buildlogs.theaceorb.nl/rhel63_x64_ciao_debug_ndds500rev00/</url>
       <build_sponsor>Remedy IT</build_sponsor>
