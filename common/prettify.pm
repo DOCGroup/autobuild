@@ -1365,6 +1365,7 @@ sub Test_Handler ($)
         || $s =~ m/Stale NFS file handle/
         || $s =~ m/exception resulted in call to terminate/
         || $s =~ m/terminate called after throwing an instance of/
+        || $s =~ m/symbol lookup error/
         || $s =~ m/aborted due to compilation errors/
         || $s =~ m/Can't open perl script/
         || $s =~ m/Write failed: Broken pipe/

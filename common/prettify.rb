@@ -30,6 +30,7 @@ def parse_test_line (line)
         line =~ /memPartAlloc: block too big/ ||
         line =~ /ld error: error loading file/ ||
         line =~ /C interp: unable to open/ ||
+        line =~ /symbol lookup error/ ||
         line =~ /holds reference to undefined symbol/ ||
         line =~ /unknown symbol name/ ||
         line =~ /Can't open perl script/ ||
