@@ -30,13 +30,13 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
    <build>
       <name>FC19_NDK8e_r14_arm_tao</name>
-        <url>fc19_tao_android_ndk8e_r14_static</url>
+        <url>http://buildlogs.theaceorb.nl/fc19_tao_android_ndk8e_r14_static</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
       <name>FC19_NDK8e_r14_arm_tao_host</name>
-        <url>fc19_tao_android_ndk8e_r14_static_host</url>
+        <url>http://buildlogs.theaceorb.nl/fc19_tao_android_ndk8e_r14_static_host</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
