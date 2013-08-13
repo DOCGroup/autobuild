@@ -155,14 +155,26 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
    <build>
-      <name>FC19_NDK8e_r14_arm_opendds</name>
+      <name>FC19_NDK8e_r14_arm_opendds_static</name>
         <url>http://buildlogs.theaceorb.nl/fc19_opendds_android_ndk8e_r14_static</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>FC19_NDK8e_r14_arm_opendds_host</name>
+      <name>FC19_NDK8e_r14_arm_opendds_static_host</name>
         <url>http://buildlogs.theaceorb.nl/fc19_opendds_android_ndk8e_r14_static_host</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC19_NDK8e_r14_arm_opendds_shared</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_opendds_android_ndk8e_r14_shared</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC19_NDK8e_r14_arm_opendds_shared_host</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_opendds_android_ndk8e_r14_shared_host</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
