@@ -29,14 +29,26 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
    </build>
    <build>
-      <name>FC19_NDK8e_r14_arm_tao</name>
+      <name>FC19_NDK8e_r14_arm_static_tao</name>
         <url>http://buildlogs.theaceorb.nl/fc19_tao_android_ndk8e_r14_static</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>FC19_NDK8e_r14_arm_tao_host</name>
+      <name>FC19_NDK8e_r14_arm_static_tao_host</name>
         <url>http://buildlogs.theaceorb.nl/fc19_tao_android_ndk8e_r14_static_host</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC19_NDK8e_r14_arm_shared_tao</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_tao_android_ndk8e_r14_shared</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
+   <build>
+      <name>FC19_NDK8e_r14_arm_shared_tao_host</name>
+        <url>http://buildlogs.theaceorb.nl/fc19_tao_android_ndk8e_r14_shared_host</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
