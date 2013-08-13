@@ -1375,6 +1375,7 @@ sub Test_Handler ($)
         || $s =~ m/C interp: unable to open/
         || $s =~ m/holds reference to undefined symbol/
         || $s =~ m/unknown symbol name/
+        || $s =~ m/service name too long/
         || $s =~ m/is not recognized as an internal or external command/
         || $s =~ m/can't open input/
         || $s =~ m/ACE_SSL .+ error code\: [0-9]+ - error\:[0-9]+\:SSL routines\:SSL3_READ_BYTES\:sslv3 alert certificate expired/

@@ -33,6 +33,7 @@ def parse_test_line (line)
         line =~ /symbol lookup error/ ||
         line =~ /holds reference to undefined symbol/ ||
         line =~ /unknown symbol name/ ||
+        line =~ /service name too long/ ||
         line =~ /Can't open perl script/ ||
         line =~ /Don't know how to make check/ ||
         line =~ /pure virtual /i )
