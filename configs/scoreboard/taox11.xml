@@ -59,12 +59,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse121_taox11_gcc47</name>
-    <url>http://buildlogs.theaceorb.nl/suse121_taox11_gcc47</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>suse122_taox11</name>
     <url>http://buildlogs.theaceorb.nl/suse122_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
