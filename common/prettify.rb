@@ -26,6 +26,7 @@ def parse_test_line (line)
         line =~ /exception resulted in call to terminate/ ||
         line =~ /terminate called after throwing an instance of/ ||
         line =~ /glibc detected/ ||
+        line =~ /Segmentation fault/ ||
         line =~ /memPartFree: invalid block/ ||
         line =~ /memPartAlloc: block too big/ ||
         line =~ /ld error: error loading file/ ||

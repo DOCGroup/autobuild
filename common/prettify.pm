@@ -1367,6 +1367,7 @@ sub Test_Handler ($)
         || $s =~ m/terminate called after throwing an instance of/
         || $s =~ m/symbol lookup error/
         || $s =~ m/aborted due to compilation errors/
+        || $s =~ m/Segmentation fault/
         || $s =~ m/Can't open perl script/
         || $s =~ m/Write failed: Broken pipe/
         || $s =~ m/exec request failed on channel/
