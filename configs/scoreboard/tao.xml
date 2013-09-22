@@ -371,16 +371,16 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_6_Simulator</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_6_Simulator/build</url>
+    <name>iOS_7_Simulator</name>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_7_Simulator/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_6_Hardware</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_6_Hardware/build</url>
+    <name>iOS_7_Hardware</name>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_7_Hardware/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
