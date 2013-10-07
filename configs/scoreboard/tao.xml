@@ -122,6 +122,7 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+<!-- OCI currently doesn't have the resources for these builds
      <build>
        <name>RHEL_63_32bit_NoInline_Debug</name>
        <url>http://scoreboard.ociweb.com/doc_trunk_mealworm_linux_gcc_d1o0i0b32</url>
@@ -134,6 +135,7 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
+-->
      <build>
        <name>FC6_Compact_NoInline</name>
        <url>http://scoreboard.ociweb.com/doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
@@ -369,16 +371,16 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_6_Simulator</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_6_Simulator/build</url>
+    <name>iOS_7_Simulator</name>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_7_Simulator/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>iOS_6_Hardware</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_6_Hardware/build</url>
+    <name>iOS_7_Hardware</name>
+    <url>http://sowayan.dyndns-server.com/builds/iOS_7_Hardware/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
