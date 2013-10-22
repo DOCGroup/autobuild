@@ -92,12 +92,6 @@
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
-    <build>
-      <name>FC19_DDS4CCM_OpenDDS_Valgrind</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_dds4ccm_opendds_valgrind/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
      <build>
        <name>FC19_FullCCM_NoEvents_x64</name>
        <url>http://buildlogs.theaceorb.nl/fc19_fullccm_ne</url>
