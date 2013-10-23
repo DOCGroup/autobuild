@@ -34,6 +34,12 @@
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
+   <build>
+      <name>Beagleboard_NDK8e_r16_shared</name>
+        <url>http://buildlogs.theaceorb.nl/beagleboard_ndk8e_r16_shared</url>
+        <build_sponsor>Remedy IT</build_sponsor>
+        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+   </build>
 </group>
 
   <group>
