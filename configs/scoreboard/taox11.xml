@@ -151,86 +151,86 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 <group>
   <name>Packaging builds</name>
   <build>
-    <name>fc17_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11_package_test</url>
+    <name>fc17_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11_packaging</url>
+    <name>fc17_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc18_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_taox11_package_test</url>
+    <name>fc18_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc18_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_taox11_packaging</url>
+    <name>fc18_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_package_test</url>
+    <name>fc19_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_packaging</url>
+    <name>fc19_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel64_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/rhel64_taox11_package_test</url>
+    <name>rhel64_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel64_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel64_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/rhel64_taox11_packaging</url>
+    <name>rhel64_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel64_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel63_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/rhel63_taox11_package_test</url>
+    <name>rhel63_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel63_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/rhel63_taox11_packaging</url>
+    <name>rhel63_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse122_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_taox11_package_test</url>
+    <name>suse122_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse122_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_taox11_packaging</url>
+    <name>suse122_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse123_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_taox11_package_test</url>
+    <name>suse123_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse123_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse123_taox11_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_taox11_packaging</url>
+    <name>suse123_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse123_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
