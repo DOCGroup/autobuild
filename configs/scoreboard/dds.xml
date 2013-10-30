@@ -11,24 +11,6 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Windows</name>
   <build>
-    <name>WinXP_MinGW_OpenDDS</name>
-      <url>http://buildlogs.theaceorb.nl/winxp_mingw_opendds</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>Win7x64_VC11_OpenDDS</name>
-      <url>http://buildlogs.theaceorb.nl/win7_msvc11_opendds</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>WinXP_VC10_OpenDDS</name>
-      <url>http://buildlogs.theaceorb.nl/winxp_msvc10_opendds</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>dds_doc_trunk_chico.phx_winxp_vc71_s1d1o0</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_chico.phx_winxp_vc71_s1d1o0</url>
     <build_sponsor>OCI</build_sponsor>
@@ -99,20 +81,8 @@ all the OS/platform combinations on which DDS is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>FC19_OpenDDS_Versioned</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_opendds_versioned</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>OpenSuSE_12_3_OpenDDS</name>
       <url>http://buildlogs.theaceorb.nl/suse123_opendds</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>FC19_OpenDDS_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_opendds_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
