@@ -63,6 +63,18 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
+      <name>CentOS_63_Debug_NDDS_500rev00</name>
+      <url>http://buildlogs.theaceorb.nl/centos63_x64_ciao_debug_ndds500rev00/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+      <name>CentOS_63_Release_NDDS_500rev00</name>
+      <url>http://buildlogs.theaceorb.nl/centos63_x64_ciao_release_ndds500rev00/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
       <name>RHEL_63_Debug_NDDS_500rev00</name>
       <url>http://buildlogs.theaceorb.nl/rhel63_x64_ciao_debug_ndds500rev00/</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -71,6 +83,18 @@
      <build>
       <name>RHEL_63_Release_NDDS_500rev00</name>
       <url>http://buildlogs.theaceorb.nl/rhel63_x64_ciao_release_ndds500rev00/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+      <name>RHEL_64_Debug_NDDS_500rev00</name>
+      <url>http://buildlogs.theaceorb.nl/rhel64_x64_ciao_debug_ndds500rev00/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
+     <build>
+      <name>RHEL_64_Release_NDDS_500rev00</name>
+      <url>http://buildlogs.theaceorb.nl/rhel64_x64_ciao_release_ndds500rev00/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
