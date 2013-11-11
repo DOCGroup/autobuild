@@ -71,6 +71,11 @@ sub Run ($)
         system("cat /etc/redhat-release");
     }
 
+    if(-r "/etc/centos-release"){
+        print "<h3>CentOS Linux Version (/etc/centos-release)</h3>\n";
+        system("cat /etc/centos-release");
+    }
+
     if(-r "/etc/SuSE-release"){
         print "<h3>SuSE Linux Version (/etc/SuSE-release)</h3>\n";
         system("cat /etc/SuSE-release");
