@@ -32,6 +32,7 @@ def parse_test_line (line)
         line =~ /ld error: error loading file/ ||
         line =~ /C interp: unable to open/ ||
         line =~ /symbol lookup error/ ||
+        line =~ /Could not open/ ||
         line =~ /holds reference to undefined symbol/ ||
         line =~ /unknown symbol name/ ||
         line =~ /service name too long/ ||

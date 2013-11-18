@@ -1372,6 +1372,7 @@ sub Test_Handler ($)
         || $s =~ m/Write failed: Broken pipe/
         || $s =~ m/exec request failed on channel/
         || $s =~ m/Don't know how to make check/
+        || $s =~ m/Could not open/
         || $s =~ m/glibc detected/
         || $s =~ m/C interp: unable to open/
         || $s =~ m/holds reference to undefined symbol/
