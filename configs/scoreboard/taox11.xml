@@ -94,6 +94,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>suse131_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_ciaox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
 </group>
 
 <group>
@@ -183,6 +189,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>suse131_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_taox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+    <build>
     <name>winxp_mingw_taox11</name>
     <url>http://buildlogs.theaceorb.nl/winxp_mingw_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -355,6 +367,18 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse123_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/suse123_taox11_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse131_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_taox11_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse131_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
