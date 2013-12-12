@@ -273,7 +273,87 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 </group>
 
 <group>
-  <name>Packaging builds</name>
+  <name>Ruby Packaging builds</name>
+  <!-- CentOS -->
+  <build>
+    <name>centos63_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos63_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos64_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos64_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos65_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos65_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <!-- Fedora -->
+  <build>
+    <name>fc17_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc18_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc19_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <!-- Red Hat -->
+  <build>
+    <name>rhel63_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel64_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel64_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel65_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel65_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <!-- openSUSE -->
+  <build>
+    <name>suse122_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse123_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse123_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse131_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+  <name>TAOX11 Packaging builds</name>
   <build>
     <name>fc17_taox11_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc17_taox11_x86_64_package_test</url>
