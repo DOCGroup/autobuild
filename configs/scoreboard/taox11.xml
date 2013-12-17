@@ -41,6 +41,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc20_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>fc19_ciaox11_fuzz</name>
     <url>http://buildlogs.theaceorb.nl/fc19_ciaox11_fuzz</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -137,6 +143,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc19_taox11</name>
     <url>http://buildlogs.theaceorb.nl/fc19_taox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc20_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -330,6 +342,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>fc20_ruby_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
   <!-- Red Hat -->
   <build>
     <name>rhel63_ruby_x86_64_packaging</name>
@@ -411,6 +429,18 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc19_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/fc19_taox11_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc20_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc20_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
