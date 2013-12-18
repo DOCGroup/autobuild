@@ -95,7 +95,7 @@
      </build>
    <build>
       <name>FC19_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne</url>
+      <url>http://buildlogs.theaceorb.nl/fc20_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
