@@ -63,8 +63,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-        <name>FC19_COIOP</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_coiop/</url>
+        <name>FC20_COIOP</name>
+        <url>http://buildlogs.theaceorb.nl/fc20_coiop/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
