@@ -212,20 +212,20 @@
   <group>
     <name>Stats Builds</name>
     <build>
-      <name>FC19_FP_Stats</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_performance/</url>
+      <name>FC20_FP_Stats</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_performance/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_FP_Stats_Regular</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_regular/</url>
+      <name>FC20_FP_Stats_Regular</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_regular/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_FP_Stats_Versioned</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_versioned/</url>
+      <name>FC20_FP_Stats_Versioned</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_versioned/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>

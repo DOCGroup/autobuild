@@ -153,8 +153,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_sanitizer</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_sanitizer</url>
+    <name>fc20_taox11_sanitizer</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_sanitizer</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -213,8 +213,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_footprint</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_footprint</url>
+    <name>fc20_taox11_footprint</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_footprint</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -225,8 +225,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_doxygen</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_doxygen</url>
+    <name>fc20_taox11_doxygen</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_doxygen</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -273,8 +273,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_coverage</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_coverage</url>
+    <name>fc20_taox11_coverage</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_coverage</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
