@@ -142,12 +142,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_XML_Config</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_xmlconfig</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
       <name>FC19_NoInterceptors</name>
       <url>http://buildlogs.theaceorb.nl/fc19_nointerceptors</url>
       <build_sponsor>Remedy IT</build_sponsor>
