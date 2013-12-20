@@ -100,20 +100,20 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC19_LwCCM_NoEvents_Install_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_install</url>
+      <name>FC20_LwCCM_NoEvents_Install_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_lwccm_ne_install</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC19_LwCCM_NoEvents_Install_Test_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_install_test</url>
+      <name>FC20_LwCCM_NoEvents_Install_Test_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_lwccm_ne_install_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC19_LwCCM_NoEvents_Compile_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_lwccm_ne_compile</url>
+      <name>FC20_LwCCM_NoEvents_Compile_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_lwccm_ne_compile</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
