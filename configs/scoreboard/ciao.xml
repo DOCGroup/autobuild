@@ -70,26 +70,26 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC19_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_nologging/</url>
+      <name>FC20_NoLogging</name>
+        <url>http://buildlogs.theaceorb.nl/fc20_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_Versioned_Namespace</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_versioned/</url>
+      <name>FC20_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fc20_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_DDS4CCM_OpenDDS</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_dds4ccm_opendds/</url>
+      <name>FC20_DDS4CCM_OpenDDS</name>
+        <url>http://buildlogs.theaceorb.nl/fc20_dds4ccm_opendds/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-       <name>FC19_FullCCM_NoEvents_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc19_fullccm_ne</url>
+       <name>FC20_FullCCM_NoEvents_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc20_fullccm_ne</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -124,8 +124,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-       <name>FC19_FullCCM_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc19_fullccm</url>
+       <name>FC20_FullCCM_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc20_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -136,14 +136,14 @@
       <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_ostream</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_ostream</url>
+      <name>FC20_ostream</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_ostream</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>FC19_NoInterceptors</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_nointerceptors</url>
+      <name>FC20_NoInterceptors</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_nointerceptors</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
