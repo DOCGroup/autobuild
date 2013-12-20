@@ -58,7 +58,7 @@ all the OS/platform combinations on which TAO is tested everyday.
      </build>
     <build>
       <name>FC20_WChar</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_wchar</url>
+      <url>http://buildlogs.theaceorb.nl/fc20_wchar</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -69,14 +69,14 @@ all the OS/platform combinations on which TAO is tested everyday.
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
-       <name>FC20_CORBA_e_compact</name>
+<!--        <name>FC20_CORBA_e_compact</name> -->
        <url>http://buildlogs.theaceorb.nl/fc20_corbae_compact/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
        <name>FC20_CORBA_e_micro</name>
-       <url>http://buildlogs.theaceorb.nl/fc19_corbae_micro/</url>
+       <url>http://buildlogs.theaceorb.nl/fc20_corbae_micro/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
@@ -87,8 +87,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-      <name>FC19_TAO_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_tao_valgrind/</url>
+      <name>FC20_TAO_Valgrind</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_tao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>

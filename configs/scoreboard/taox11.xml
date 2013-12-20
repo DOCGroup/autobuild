@@ -171,6 +171,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc20_taox11_optimized</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_optimized</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>fc20_taox11_sanitizer</name>
     <url>http://buildlogs.theaceorb.nl/fc20_taox11_sanitizer</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -285,14 +291,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
    <build>
-      <name>FC19_NDK8e_r14_arm_taox11_shared</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_taox11_android_ndk8e_r14_shared</url>
+      <name>FC20_NDK8e_r14_arm_taox11_shared</name>
+        <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_shared</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>FC19_NDK8e_r14_arm_taox11_shared_host</name>
-        <url>http://buildlogs.theaceorb.nl/fc19_taox11_android_ndk8e_r14_shared_host</url>
+      <name>FC20_NDK8e_r14_arm_taox11_shared_host</name>
+        <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_shared_host</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
@@ -319,8 +325,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_taox11_icc14</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_taox11_icc14</url>
+    <name>fc20_taox11_icc14</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_icc14</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
