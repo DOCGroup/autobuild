@@ -63,18 +63,6 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
      <build>
-      <name>RHEL_61_x64_Debug(gcc)</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_x64_ace/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL_61_x32_Debug(gcc)</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_i686_ace/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
        <name>CentOS_5_3</name>
        <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5.3/</url>
        <build_sponsor>Olli Savia</build_sponsor>
