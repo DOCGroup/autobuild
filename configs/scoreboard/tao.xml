@@ -32,30 +32,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Linux</name>
-     <build>
-      <name>RHEL_62_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/rhel62_x64_tao_debug/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL_62_Release</name>
-      <url>http://buildlogs.theaceorb.nl/rhel62_x64_tao_release/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL_64_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/rhel64_x64_tao_debug/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL_64_Release</name>
-      <url>http://buildlogs.theaceorb.nl/rhel64_x64_tao_release/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
     <build>
       <name>FC20_WChar</name>
       <url>http://buildlogs.theaceorb.nl/fc20_wchar</url>
@@ -214,18 +190,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>Solaris</name>
-    <build>
-      <name>Solaris10_Studio12_x86_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/sol10x86_suncc</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
-    <build>
-      <name>Solaris10_Studio12_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/sol10sparc_suncc</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
    <build>
       <name>Solaris9_Studio11_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_fly_sunos59_suncc58_d1o0</url>
