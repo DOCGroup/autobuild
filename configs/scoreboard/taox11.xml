@@ -313,14 +313,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>win7_msvc12_taox11</name>
+    <name>win81_msvc12_taox11</name>
     <url>http://buildlogs.theaceorb.nl/win7_msvc12_taox11/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>winxp_icc14_taox11</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_icc14_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
