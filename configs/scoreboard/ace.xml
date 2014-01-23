@@ -36,18 +36,6 @@ all the OS/platform combinations on which ACE is tested everyday.
 <group>
   <name>Linux</name>
      <build>
-      <name>RHEL_61_x64_Debug(gcc)</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_x64_ace/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL_61_x32_Debug(gcc)</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_i686_ace/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
         <name>FC20_ACE_ST</name>
         <url>http://buildlogs.theaceorb.nl/fc20_ace_st/</url>
         <build_sponsor>Remedy IT</build_sponsor>
