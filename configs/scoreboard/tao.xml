@@ -39,12 +39,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
      <build>
-        <name>FC20_COIOP</name>
-        <url>http://buildlogs.theaceorb.nl/fc20_coiop/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
        <name>FC20_CORBA_e_compact</name>
        <url>http://buildlogs.theaceorb.nl/fc20_corbae_compact/</url>
        <build_sponsor>Remedy IT</build_sponsor>
@@ -65,12 +59,6 @@ all the OS/platform combinations on which TAO is tested everyday.
      <build>
       <name>FC20_TAO_Valgrind</name>
       <url>http://buildlogs.theaceorb.nl/fc20_tao_valgrind/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC20_NO_IIOP</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_noiiop/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
