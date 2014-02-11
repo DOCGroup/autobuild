@@ -2,7 +2,7 @@
     <configuration>
         <environment name="ACE_ROOT" value="/builds/iOS_7_Hardware/ACE_wrappers" />
         <environment name="TAO_ROOT" value="/builds/iOS_7_Hardware/ACE_wrappers/TAO" />
-        <environment name="HOST_ROOT"value="/builds/mountain_lion_full_static_llvm/ACE_wrappers" />
+        <environment name="HOST_ROOT"value="/builds/mavericks_full_static_llvm/ACE_wrappers" />
 
         <environment name="IPHONE_TARGET"  value="HARDWARE" />
         <environment name="IPHONE_VERSION" value="7.0" />
