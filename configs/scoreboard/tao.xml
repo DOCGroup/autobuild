@@ -289,16 +289,16 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
   <name>MacOS</name>
   <build>
-    <name>Mountain_Lion</name>
-    <url>http://sowayan.dyndns-server.com/builds/mountain_lion_full_llvm/build</url>
+    <name>Mavericks_Lion</name>
+    <url>http://sowayan.dyndns-server.com/builds/mavericks_full_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
     <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
   </build>
   <build>
-    <name>Mountain_Lion_Static</name>
-    <url>http://sowayan.dyndns-server.com/builds/mountain_lion_full_static_llvm/build</url>
+    <name>Mavericks_Static</name>
+    <url>http://sowayan.dyndns-server.com/builds/mavericks_full_static_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
     <build_sponsor>Abdul Sowayan</build_sponsor>
