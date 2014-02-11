@@ -289,7 +289,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
   <name>MacOS</name>
   <build>
-    <name>Mavericks_Lion</name>
+    <name>Mavericks</name>
     <url>http://sowayan.dyndns-server.com/builds/mavericks_full_llvm/build</url>
     <orange>48</orange>
     <red>72</red>
