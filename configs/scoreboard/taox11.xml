@@ -307,6 +307,16 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 <group>
   <name>Future builds</name>
   <build>
+    <name>rhel65_ciaox11_coverity</name>
+    <url>http://buildlogs.theaceorb.nl/rhel65_ciaox11_coverity/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+  <name>Future builds</name>
+  <build>
     <name>fc20_ciaox11_corbae_compact</name>
     <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_corbae_compact</url>
       <build_sponsor>Remedy IT</build_sponsor>
