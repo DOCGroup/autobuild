@@ -305,7 +305,7 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 </group>
 
 <group>
-  <name>Future builds</name>
+  <name>Misc builds</name>
   <build>
     <name>rhel65_ciaox11_coverity</name>
     <url>http://buildlogs.theaceorb.nl/rhel65_ciaox11_coverity/</url>
