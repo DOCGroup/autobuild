@@ -257,7 +257,7 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
-      <name>Win7x64_VC11_Debug</name>
+      <name>Win7_VC11_Debug</name>
       <url>http://buildlogs.theaceorb.nl/win7_msvc11_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
