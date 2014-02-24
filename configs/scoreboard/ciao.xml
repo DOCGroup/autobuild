@@ -245,12 +245,6 @@
       <red>60</red>
     </build>
     <build>
-      <name>WinXP_VC9_CIAO_NoInline_Debug</name>
-      <url>http://www.dre.vanderbilt.edu/~isisbuilds/auto_compile_logs/trian_noinline</url>
-      <build_sponsor>ISIS</build_sponsor>
-      <build_sponsor_url>http://www.dre.vanderbilt.edu</build_sponsor_url>
-    </build>
-    <build>
       <name>WinXP_VC10_Release</name>
       <url>http://buildlogs.theaceorb.nl/winxp_msvc10_release</url>
       <build_sponsor>Remedy IT</build_sponsor>
