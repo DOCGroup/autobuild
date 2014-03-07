@@ -75,3 +75,4 @@ main::RegisterCommand ("print_quantify_version", new print_tool_version("quantif
 main::RegisterCommand ("print_valgrind_version", new print_tool_version("valgrind", "--version"));
 main::RegisterCommand ("print_perl_version", new print_tool_version("perl", "-V"));
 main::RegisterCommand ("print_ruby_version", new print_tool_version("ruby", "-v"));
+main::RegisterCommand ("print_inspector_xe_version", new print_tool_version("inspxe-cl", "-V"));
