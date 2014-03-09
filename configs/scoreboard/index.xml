@@ -51,7 +51,7 @@ above, a number of other ACE/TAO/CIAO/DAnCE development process related web
 pages we use are the following:
 <ul>
 <li>
-  <a href="http://www.dre.vanderbilt.edu/Coverage/">Code Coverage</a>
+  <a href="https://scan.coverity.com/projects/1">Coverity Scan for Static Analysis and Test Coverage</a>
 </li>
 <li>
   <a href="http://atcdstats.theaceorb.nl">Compile- and Run-Time
@@ -75,7 +75,7 @@ Statistics</a>
     Minimum CORBA</a>
 </li>
 </ul>
-The <i>Code Coverage</i> pages illustrate which areas of
+The <i>Coverity Scan</i> pages illustrate which areas of
 ACE+TAO+CIAO+DAnCE code are used, and how frequently.  The <i>Compile- and
 Run-Time</i> pages contain compilation times, static footprint
 measurements, and performance metrics.
