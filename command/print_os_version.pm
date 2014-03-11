@@ -201,11 +201,6 @@ sub Run ($)
         print filter_info($systeminfo, "network card") . "\n";
     }
 
-    if($^O eq "MSWin32"){
-        print "<h3>Disk Information</h3>\n";
-        system("powershell gwmi Win32_LogicalDisk -Filter \"DriveType=3\" ^|select Name, FileSystem,FreeSpace,BlockSize,Size ^| % {\$_.BlockSize=((\$_.FreeSpace)/(\$_.Size))*100;\$_.FreeSpace=(\$_.FreeSpace/1GB);\$_.Size=(\$_.Size/1GB);\$_}^| Format-Table Name, @{n=\'FS\';e={\$_.FileSystem}},@{n=\'Free, Gb\';e={\'{0:N2}\'-f\$_.FreeSpace}}, @{n=\'Free,%\';e={\'{0:N2}\'-f \$_.BlockSize}},@{n=\'Capacity ,Gb\';e={\'{0:N3}\'-f \$_.Size}} -AutoSize");
-    }
-
     print "<h3>Approximate BogoMIPS (larger means faster)</h3>\n",
           $self->delay_factor(), "\n";
 
