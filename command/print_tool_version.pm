@@ -76,3 +76,4 @@ main::RegisterCommand ("print_valgrind_version", new print_tool_version("valgrin
 main::RegisterCommand ("print_perl_version", new print_tool_version("perl", "-V"));
 main::RegisterCommand ("print_ruby_version", new print_tool_version("ruby", "-v"));
 main::RegisterCommand ("print_inspector_xe_version", new print_tool_version("inspxe-cl", "-V"));
+main::RegisterCommand ("print_windows_defender_status", new print_tool_version("powershell", "Get-Service -DisplayName 'Windows Defender'"));
