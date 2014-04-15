@@ -44,12 +44,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Linux</name>
-    <build>
-      <name>FC20_WChar</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_wchar</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
      <build>
        <name>FC20_CORBA_e_compact</name>
        <url>http://buildlogs.theaceorb.nl/fc20_corbae_compact/</url>
