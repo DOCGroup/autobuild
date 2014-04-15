@@ -144,6 +144,18 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
+     <build>
+      <name>Win81_cbuilderxe6_bcc32_debug</name>
+      <url>http://buildlogs.theaceorb.nl/win81_cbuilderxe6_bcc32_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
+     <build>
+      <name>Win81_cbuilderxe6_bcc32_release</name>
+      <url>http://buildlogs.theaceorb.nl/win81_cbuilderxe6_bcc32_release</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
     <build>
       <name>Win2008R2x64_VC10_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
