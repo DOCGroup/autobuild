@@ -141,12 +141,6 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
-    <build>
-      <name>FC20_NoInterceptors</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_nointerceptors</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
      <build>
        <name>OpenSuSE_13_1_GCC_64bit</name>
        <url>http://buildlogs.theaceorb.nl/suse131_debug</url>
