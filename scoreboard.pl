@@ -134,8 +134,19 @@ sub build_index_page ($$)
     }
 
     ### Print Header
-    print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n</head>\n";
+    print $indexhtml "<!DOCTYPE html>";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n";
+    print $indexhtml "<style>\n";
+    print $indexhtml "table { border-collapse: collapse; }\n";
+    print $indexhtml "th { background: #ddd; }\n";
+    print $indexhtml "td { padding: inherit 5px; }\n";
+    print $indexhtml ".name { min-width: 350px; }\n";
+    print $indexhtml ".time { min-width: 105px; }\n";
+    print $indexhtml ".rev { min-width: 40px; }\n";
+    print $indexhtml ".fullbrief { min-width: 30px; }\n";
+    print $indexhtml ".status { min-width: 50px; }\n";
+    print $indexhtml "</style>\n";
+    print $indexhtml "</head>\n";
 
     ### Start body
 
@@ -1102,11 +1113,11 @@ sub update_html_table ($$@)
 
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
-    print $indexhtml "<th>Build Name</th><th>Last Finished</th>";
-    print $indexhtml "<th>Rev</th>";
-    print $indexhtml "<th>Config</th><th>Setup</th><th>Compile</th><th>Tests</th><th>Failures</th>";
+    print $indexhtml "<th class='name'>Build Name</th><th class='time'>Last Finished</th>";
+    print $indexhtml "<th class='rev'>Rev</th>";
+    print $indexhtml "<th>Config</th><th class='fullbrief'>Setup</th><th class='fullbrief'>Compile</th><th class='fullbrief'>Tests</th><th>Failures</th>";
     print $indexhtml "<th>Manual</th>" if ($havemanual);
-    print $indexhtml "<th>Status</th>" if ($havestatus);
+    print $indexhtml "<th class='status'>Status</th>" if ($havestatus);
     print $indexhtml "<th>Build <br>Sponsor</th>" if ($havesponsor);
     print $indexhtml "<th>History</th>" if ($havehistory);
     # New entries
