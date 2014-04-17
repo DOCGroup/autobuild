@@ -1,3 +1,10 @@
+Tue Apr 15 22:34:37 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
+
+        * scoreboard.pl
+
+          Add stylesheet in header, make table cells constant width and 
+          collapse borders for readability.
+
 Thu May  9 17:20:11 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
 
         * command/process_logs.pm:
