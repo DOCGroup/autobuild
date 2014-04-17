@@ -1,5 +1,12 @@
 Thu Apr 17 21:15:38 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
-        * scoreboard.pl
+
+        * testmatrix/HTMLScoreboard.py:
+
+          on Click of test result cell, pop up its build name.
+
+Thu Apr 17 21:15:38 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
+
+        * scoreboard.pl:
 
           Add stylesheet in header, make table cells constant width and 
           collapse borders for readability.
@@ -8,7 +15,7 @@ Thu Apr 17 21:15:38 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
 Tue Apr 15 22:34:37 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
-        * scoreboard.pl
+        * scoreboard.pl:
 
           Add stylesheet in header, make table cells constant width and 
           collapse borders for readability.

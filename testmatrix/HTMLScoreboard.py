@@ -36,6 +36,28 @@ class HTMLTestMatrix2:
 		<style>
 			@import "matrix.css";
 		</style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script language="javaScript">
+function showBuild(result, buildId) {
+  var name = $(".txt:eq(" + (buildId - 1) + ")").html();
+  alert("Build " + buildId + ":" + name + " " + result);
+}
+
+$(function() {
+  var buildOffset = 3;
+  $(".p,.f,.s").click(function() {
+    var j = $(this);
+    var buildId = j.index() - buildOffset;
+    var result = "PASSED";
+    if (j.hasClass("f")) {
+      result = "FAILED";
+    } else if (j.hasClass("s")) {
+      result = "SKIPPED";
+    }
+    showBuild(result, buildId);
+  });
+});
+    </script>
 	</head>
 	<body>
 """
