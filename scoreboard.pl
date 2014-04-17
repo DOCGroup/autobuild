@@ -134,18 +134,8 @@ sub build_index_page ($$)
     }
 
     ### Print Header
-    print $indexhtml "<!DOCTYPE html>";
+    print $indexhtml "<!DOCTYPE html>\n";
     print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n";
-    print $indexhtml "<style>\n";
-    print $indexhtml "table { border-collapse: collapse; }\n";
-    print $indexhtml "th { background: #ddd; }\n";
-    print $indexhtml "td { padding: inherit 5px; }\n";
-    print $indexhtml ".name { min-width: 350px; }\n";
-    print $indexhtml ".time { min-width: 105px; }\n";
-    print $indexhtml ".rev { min-width: 40px; }\n";
-    print $indexhtml ".fullbrief { min-width: 30px; }\n";
-    print $indexhtml ".status { min-width: 50px; }\n";
-    print $indexhtml "</style>\n";
     print $indexhtml "</head>\n";
 
     ### Start body
@@ -1004,8 +994,18 @@ sub update_html ($$$)
     }
 
     ### Print Header
-    print $indexhtml "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
+    print $indexhtml "<!DOCTYPE html>\n";
     print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n";
+    print $indexhtml "<style>\n";
+    print $indexhtml "table { border-collapse: collapse; }\n";
+    print $indexhtml "th { background: #ddd; }\n";
+    print $indexhtml "td { padding: inherit 5px; }\n";
+    print $indexhtml ".name { min-width: 350px; }\n";
+    print $indexhtml ".time { min-width: 105px; }\n";
+    print $indexhtml ".rev { min-width: 40px; }\n";
+    print $indexhtml ".fullbrief { min-width: 30px; }\n";
+    print $indexhtml ".status { min-width: 50px; }\n";
+    print $indexhtml "</style>\n";
 
     if ($rss_file ne "") {
         print $indexhtml "<link rel=\"alternate\" title=\"$scoreboard_title RSS\" href=\"$rss_file\" type=\"application/rss+xml\">\n";

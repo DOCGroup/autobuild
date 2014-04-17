@@ -1,3 +1,11 @@
+Thu Apr 17 21:15:38 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
+        * scoreboard.pl
+
+          Add stylesheet in header, make table cells constant width and 
+          collapse borders for readability.
+
+          Prev change went to wrong html file.
+
 Tue Apr 15 22:34:37 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
         * scoreboard.pl
