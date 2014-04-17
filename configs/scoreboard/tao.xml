@@ -105,26 +105,26 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Stats Builds</name>
    <build>
-      <name>FC19_Stats_CORBA_e_compact</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_corbaec/</url>
+      <name>FC20_Stats_CORBA_e_compact</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_corbaec/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>FC19_Stats_CORBA_e_micro</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_corbaem/</url>
+     <name>FC20_Stats_CORBA_e_micro</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_corbaem/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>FC19_Stats_CORBA_e_micro_single_threaded</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_corbaems/</url>
+     <name>FC20_Stats_CORBA_e_micro_single_threaded</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_corbaems/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-     <name>FC19_Stats_Minimum_Corba</name>
-      <url>http://buildlogs.theaceorb.nl/fc19_fp_corbaminimum/</url>
+     <name>FC20_Stats_Minimum_Corba</name>
+      <url>http://buildlogs.theaceorb.nl/fc20_fp_corbaminimum/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
