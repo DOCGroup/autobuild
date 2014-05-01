@@ -155,13 +155,13 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
    <build>
-      <name>fc20_NDK8e_r14_arm_ciaox11_shared</name>
+      <name>fc20_ndk8e_r14_arm_ciaox11_shared</name>
         <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_android_ndk8e_r14_shared</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>fc20_NDK8e_r14_arm_ciaox11_shared_host</name>
+      <name>fc20_ndk8e_r14_arm_ciaox11_shared_host</name>
         <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_android_ndk8e_r14_shared_host</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
@@ -327,13 +327,13 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
    <build>
-      <name>fc20_NDK8e_r14_arm_taox11_shared</name>
+      <name>fc20_ndk8e_r14_arm_taox11_shared</name>
         <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_shared</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
    </build>
    <build>
-      <name>fc20_NDK8e_r14_arm_taox11_shared_host</name>
+      <name>fc20_ndk8e_r14_arm_taox11_shared_host</name>
         <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_shared_host</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
