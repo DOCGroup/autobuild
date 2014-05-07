@@ -159,9 +159,9 @@ $(function() {
 		sperc = "%.0f" % perc
 
 		# If any failed
-		if nfail > 0
+		if nfail > 0:
 			self.failed += 1
-		elif npass > 0
+		elif npass > 0:
 			self.passed += 1
 
 		if self.matrix_row & 1:
@@ -229,9 +229,9 @@ Summary</th>
 		html += '<td>%.1f</td>' % pperc
 		html += '<td>%.1f</td>' % fperc
 		html += '</tr>\n'
-		html += '</table>'
+		html += '</table>\n'
 		html += '<p>%d tests passed, ' % self.passed
-		html += '%d failed</p>' % self.failed
+		html += '%d failed</p>\n' % self.failed
 		return html
 
 	def writeBriefs (self, npass, nfail, nskip):
