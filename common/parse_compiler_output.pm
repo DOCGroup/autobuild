@@ -104,6 +104,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/WARNING/)
+  {
+    $self->Output_Warning ($s);
+    return;
+  }
+
   if ($s =~ m/clang/)
   {
     $self->Output_Normal ($s);
