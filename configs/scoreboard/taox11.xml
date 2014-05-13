@@ -707,8 +707,50 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc17_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc17_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc18_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc19_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>fc20_ciaox11_x86_64_aspn_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel63_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel64_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel64_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel65_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel65_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel70_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel70_ciaox11_x86_64_aspn_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
