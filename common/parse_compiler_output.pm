@@ -283,7 +283,15 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  # Brix11 error
   if ($s =~ m/ERROR/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
+
+  # RIDL error
+  if ($s =~ m/RbX-ERR:/)
   {
     $self->Output_Error ($s);
     return;
