@@ -104,7 +104,7 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  if ($s =~ m/WARNING/)
+  if ($s =~ /WARNING:/)
   {
     $self->Output_Warning ($s);
     return;
@@ -415,7 +415,7 @@ sub handle_compiler_output_line($) {
     }
 
   # Brix11 error
-  if ($s =~ /ERROR/)
+  if ($s =~ /ERROR:/)
   {
     $self->Output_Error ($s);
     return;
