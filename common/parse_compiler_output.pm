@@ -283,20 +283,6 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  # Brix11 error
-  if ($s =~ m/ERROR/)
-  {
-    $self->Output_Error ($s);
-    return;
-  }
-
-  # RIDL error
-  if ($s =~ m/RbX-ERR:/)
-  {
-    $self->Output_Error ($s);
-    return;
-  }
-
   if ($s =~ m/cannot execute binary file/) {
     # Means we can't execute the binary, probably using target executable on host
     $self->Output_Error ($s);
@@ -427,6 +413,25 @@ sub handle_compiler_output_line($) {
       $self->Output_Error ($s);
       return;
     }
+
+  # Brix11 error
+  if ($s =~ /ERROR/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
+
+  # RIDL error
+  if ($s =~ /RbX-ERR:/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
+  if ($s =~ /RILL-ERR:/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
 
   if ($s =~ m/.*\d+\-\d+:? \([SI]\)/) {
     # Again, IBM's compilers speak in code langauge
