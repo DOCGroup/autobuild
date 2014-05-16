@@ -433,6 +433,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ /ArgumentError/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/.*\d+\-\d+:? \([SI]\)/) {
     # Again, IBM's compilers speak in code langauge
     if ($s =~ m/.*Compilation will proceed shortly./) {
