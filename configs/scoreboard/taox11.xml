@@ -583,6 +583,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc20_taox11_android_ndk8e_r14_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>rhel63_taox11_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/rhel63_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -591,6 +597,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>rhel63_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/rhel63_taox11_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel63_taox11_android_ndk8e_r14_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_taox11_android_ndk8e_r14_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -639,6 +651,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>centos63_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/centos63_taox11_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos63_taox11_android_ndk8e_r14_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos63_taox11_android_ndk8e_r14_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
