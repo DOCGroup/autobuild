@@ -1,3 +1,19 @@
+Wed May 21 17:22:18 UTC 2014  Simon McQueen  <simon.mcqueen@microfocus.com>
+
+        * configs/autobuild/microfocus/common_make_end.xml
+        * configs/autobuild/microfocus/common_start.xml
+        * configs/autobuild/microfocus/rhel5_x86_inline_gcc44.xml
+        * configs/autobuild/microfocus/rhel5_x86_noinline.xml
+        * configs/autobuild/microfocus/rhel6_x64_ft_inline.xml
+        * configs/autobuild/microfocus/rhel6_x86_debug.xml
+        * configs/autobuild/microfocus/sol10_s64_stu12u2_inline.xml
+
+          Draft new autobuilds.
+
+        * configs/autobuild/prism/RHEL4_GCC344_Standard_Full_DocGroup.xml
+
+          Correct typo.
+
 Tue May  6 14:33:13 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
         * testmatrix/HTMLScoreboard.py:
@@ -20,7 +36,7 @@ Thu Apr 17 21:15:38 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
         * scoreboard.pl:
 
-          Add stylesheet in header, make table cells constant width and 
+          Add stylesheet in header, make table cells constant width and
           collapse borders for readability.
 
           Prev change went to wrong html file.
@@ -29,7 +45,7 @@ Tue Apr 15 22:34:37 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
         * scoreboard.pl:
 
-          Add stylesheet in header, make table cells constant width and 
+          Add stylesheet in header, make table cells constant width and
           collapse borders for readability.
 
 Thu May  9 17:20:11 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
