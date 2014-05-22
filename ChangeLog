@@ -1,3 +1,9 @@
+Thu May 22 14:20:42 UTC 2014  Simon McQueen  <simon.mcqueen@microfocus.com>
+
+        * configs/scoreboard/ciao.xml
+
+          Remove PrismTech builds from the scoreboard. These are discontinuing.
+
 Thu May 22 11:06:31 UTC 2014  Simon McQueen  <simon.mcqueen@microfocus.com>
 
         * configs/scoreboard/ciao.xml

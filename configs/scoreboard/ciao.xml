@@ -162,12 +162,6 @@
       <red>168</red>
     </build>
     <build>
-      <name>RHEL4-NoInline</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/rhel4/gcc344/standard</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-    </build>
-    <build>
       <name>FC20_ostream</name>
       <url>http://buildlogs.theaceorb.nl/fc20_ostream</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -250,35 +244,6 @@
   </group>
   <group>
     <name>Windows</name>
-    <build>
-      <name>Vista_VC8_Standard_MFC_Unicode</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardUniMFC</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-    </build>
-    <build>
-      <name>Vista_VC8_Standard_MFC</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/vista/VC8_StandardMFC</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-    </build>
-    <build>
-      <name>Win2003_VC8_Debug_MFC</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC8_DebugMFC</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-      <orange>30</orange>
-      <red>60</red>
-    </build>
-
-    <build>
-      <name>Win2003_VC8_Inline_MFC</name>
-      <url>http://tao.prismtech.com/doc-scoreboard/win2003/VC8_InlineMFC</url>
-      <build_sponsor>PrismTech</build_sponsor>
-      <build_sponsor_url>http://www.prismtech.com/</build_sponsor_url>
-      <orange>30</orange>
-      <red>60</red>
-    </build>
     <build>
       <name>Win7_VC11_Debug</name>
       <url>http://buildlogs.theaceorb.nl/win7_msvc11_debug</url>
