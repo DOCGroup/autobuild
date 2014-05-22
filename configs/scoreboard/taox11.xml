@@ -805,6 +805,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>suse131_ciaox11_x86_64_aspn_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_ciaox11_x86_64_aspn_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>rhel63_ciaox11_x86_64_aspn_package_test</name>
     <url>http://buildlogs.theaceorb.nl/rhel63_ciaox11_x86_64_aspn_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
