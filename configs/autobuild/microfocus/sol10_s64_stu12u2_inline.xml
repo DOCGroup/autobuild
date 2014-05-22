@@ -1,0 +1,14 @@
+<!-- $Id: sol10_s64_stu12u2_inline.xml 317671 2014-05-19 21:52:05Z SimonMcQ $ -->
+
+<autobuild>
+    <configuration>
+        <variable name="this_build" value="sol10_s64_stu12u2_inline" />
+        <variable name="configs" value="Solaris" />
+        <env SSL_ROOT="/usr/local/ssl64" />
+    </configuration>
+    <include common_start.xml />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/ace/config.h output='#undef __ACE_INLINE__\n#define __ACE_INLINE__ 1\n#include \"ace/config-sunos5.10.h\"\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\n\nexceptions=1\nthreads=1\nshared_libs_only=1\nstdcpplib=1\nboost=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ACE_wrappers/bin/MakeProjectCreator/config/default.features output='boost=0\n'" />
+    <include common_make_end.xml />
+</autobuild>
