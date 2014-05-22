@@ -1,3 +1,10 @@
+Thu May 22 11:06:31 UTC 2014  Simon McQueen  <simon.mcqueen@microfocus.com>
+
+        * configs/scoreboard/ciao.xml
+        * configs/scoreboard/index.xml
+
+          Add some builds to the scoreboard.
+
 Wed May 21 17:22:18 UTC 2014  Simon McQueen  <simon.mcqueen@microfocus.com>
 
         * configs/autobuild/microfocus/common_make_end.xml
