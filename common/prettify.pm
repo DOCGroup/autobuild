@@ -1300,6 +1300,11 @@ sub Config_Handler ($)
             print "matched\n";
             $totals->{SUBVERSION_CHECKEDOUT_OPENDDS} = $revision;
         }
+        elsif ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/DDS\/branches/i)
+        {
+            print "matched\n";
+            $totals->{SUBVERSION_CHECKEDOUT_OPENDDS} = $revision;
+        }
         elsif ($url =~ m/svn:\/\/svn.dre.vanderbilt.edu\/DOC\/MPC\/trunk/i)
         {
             $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;

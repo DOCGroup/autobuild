@@ -1,3 +1,9 @@
+Fri May 30 19:30:34 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * common/prettify.pm
+
+          Find URL for DDS branches in config logs.
+
 Thu May 22 14:20:42 UTC 2014  Simon McQueen  <simon.mcqueen@microfocus.com>
 
         * configs/scoreboard/ciao.xml
