@@ -143,12 +143,6 @@
       <orange>72</orange>
       <red>168</red>
     </build>
-    <build>
-      <name>FC20_ostream</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_ostream</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    </build>
      <build>
        <name>OpenSuSE_13_1_GCC_64bit</name>
        <url>http://buildlogs.theaceorb.nl/suse131_debug</url>
