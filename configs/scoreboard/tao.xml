@@ -164,13 +164,13 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>
     <build>
       <name>MingW64_Win32_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/winxp_mingw</url>
+      <url>http://buildlogs.theaceorb.nl/winxp_atcd_mingw_win32</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>MingW64_Win64_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/win7_mingw</url>
+      <url>http://buildlogs.theaceorb.nl/win7_atcd_mingw_win64</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
