@@ -53,12 +53,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc17_ciaox11</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_ciaox11</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>fc18_ciaox11</name>
     <url>http://buildlogs.theaceorb.nl/fc18_ciaox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -218,12 +212,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 
 <group>
   <name>TAOX11 Master builds</name>
-  <build>
-    <name>fc17_taox11</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
   <build>
     <name>fc18_taox11</name>
     <url>http://buildlogs.theaceorb.nl/fc18_taox11</url>
@@ -449,14 +437,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   </build>
   <!-- Fedora -->
   <build>
-    <name>fc17_ruby_x86_64_packaging</name>
-    <red>192</red>
-    <orange>168</orange>
-    <url>http://buildlogs.theaceorb.nl/fc17_ruby_x86_64_packaging</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>fc18_ruby_x86_64_packaging</name>
     <red>192</red>
     <orange>168</orange>
@@ -558,12 +538,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 
 <group>
   <name>TAOX11 Packaging builds</name>
-  <build>
-    <name>fc17_taox11_x86_64_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11_x86_64_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
   <build>
     <name>fc18_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/fc18_taox11_x86_64_packaging</url>
@@ -695,12 +669,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 <group>
   <name>TAOX11 Package Test builds</name>
   <build>
-    <name>fc17_taox11_x86_64_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_taox11_x86_64_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>fc18_taox11_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc18_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -804,12 +772,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 
 <group>
   <name>CIAOX11 Package Test builds</name>
-  <build>
-    <name>fc17_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc17_ciaox11_x86_64_aspn_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
   <build>
     <name>fc18_ciaox11_x86_64_aspn_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc18_ciaox11_x86_64_aspn_package_test</url>
