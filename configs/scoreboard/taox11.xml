@@ -179,6 +179,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>centos70_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/centos70_ciaox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>suse122_ciaox11</name>
     <url>http://buildlogs.theaceorb.nl/suse122_ciaox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -299,6 +305,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>centos65_taox11</name>
     <url>http://buildlogs.theaceorb.nl/centos65_taox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos70_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/centos70_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -432,6 +444,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
     <red>192</red>
     <orange>168</orange>
     <url>http://buildlogs.theaceorb.nl/centos65_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos70_ruby_x86_64_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/centos70_ruby_x86_64_packaging</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -631,6 +651,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>centos65_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/centos65_taox11_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos70_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos70_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
