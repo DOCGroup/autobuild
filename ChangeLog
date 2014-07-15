@@ -1,3 +1,9 @@
+Tue Jul 15 15:40:30 UTC 2014
+
+        * testmatrix/HTMLScoreboard.py
+
+          Change timestamp to local time, like main page.
+
 Fri May 30 19:30:34 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * common/prettify.pm

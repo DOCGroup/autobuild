@@ -370,7 +370,7 @@ Summary</th>
                         f.write(self.matrix_header)
 			f.write("</table>")
 			f.write("<br>Last updated at ");
-			f.write(time.asctime(time.gmtime()));
+			f.write(time.asctime(time.localtime()));
 			f.write(" UTC<br>");
 			f.write(self.html_end)
 		finally:
