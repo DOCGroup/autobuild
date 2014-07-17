@@ -371,7 +371,7 @@ Summary</th>
 			f.write("</table>")
 			f.write("<br>Last updated at ");
 			f.write(time.asctime(time.localtime()));
-			f.write(" UTC<br>");
+			f.write("<br>");
 			f.write(self.html_end)
 		finally:
 			f.close()

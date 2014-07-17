@@ -1,4 +1,10 @@
-Tue Jul 15 15:40:30 UTC 2014
+Thu Jul 17 20:40:06 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * testmatrix/HTMLScoreboard.py
+
+          Remove UTC from timestamp string.
+
+Tue Jul 15 15:40:30 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * testmatrix/HTMLScoreboard.py
 
