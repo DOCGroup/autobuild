@@ -1512,7 +1512,7 @@ sub format_time
 
 	}
     }
-    return scalar(gmtime($time_in_secs)) . " UTC";
+    return scalar(gmtime($time_in_secs));
 }
 
 ###############################################################################
