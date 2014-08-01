@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use File::Spec;
+use File::Spec::Functions;
 
 ## Get Environment variables used for locating
 ## directory containting script to run as child
@@ -17,7 +18,7 @@ print "PIDFILE Loc: $PIDFILE\n";
 ## This is a parent process, so store own pid as parent
 my $childs_pid;
 my $childs_proc;
-my $cmd = catfile($ENV{AUTOBUILD_ROOT}, 'autobuild,pl');
+my $cmd = catfile($ENV{AUTOBUILD_ROOT}, 'autobuild.pl');
 my $Win_cmd = "perl $cmd @ARGV";
 my $debug = 1;
 my $wait_pid_time_sec = 5;

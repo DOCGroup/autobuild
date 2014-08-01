@@ -1,3 +1,9 @@
+Fri Aug  1 20:24:07 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Fix issue with catfile and autobuild,pl
+
 Fri Aug  1 20:17:13 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * autobuild_spawner.pl
