@@ -1,3 +1,9 @@
+Fri Aug  1 20:44:01 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Log perl location.
+
 Fri Aug  1 20:33:50 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * autobuild_spawner.pl

@@ -72,6 +72,7 @@ sub start_child_process {
     my $perl = `where perl`;
     $perl =~ s/\\/\\\\/g;
     chomp $perl;
+    print "Windows Perl location $perl\n";
 
     print "Windows command: $Win_cmd\n";
     #Child is either created or fails to spawn and exits
