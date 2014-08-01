@@ -73,6 +73,7 @@ sub start_child_process {
     $perl =~ s/\\/\\\\/g;
     chomp $perl;
 
+    print "Windows command: $Win_cmd\n";
     #Child is either created or fails to spawn and exits
     #thus ending child's logical processing
     Win32::Process::Create($childs_proc, $perl, $Win_cmd, 0, 0, ".") ||
@@ -105,6 +106,7 @@ sub start_child_process {
       }
       local $| = 1;
 
+      print "Linux command: $cmd\n";
       #Child either exec's or exits thus ending child's logical processing
       unless (exec($cmd, @ARGV))
       {
