@@ -1,3 +1,9 @@
+Fri Aug  1 20:17:13 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Updated for running on Jenkins slave.
+
 Fri Aug  1 19:20:42 UTC 2014 Peter Oschwald <oschwaldp@ociweb.com>
 
         * autobuild_spawner.pl

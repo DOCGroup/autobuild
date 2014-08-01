@@ -14,13 +14,10 @@ use Env qw(@JENKINS_HOME);
 my $PIDFILE = "@JENKINS_HOME\/buildPid.txt";
 print "PIDFILE Loc: $PIDFILE\n";
 
-my $work_dir = "@JENKINS_HOME";
-my $work_to_do = "test.pl";
-
 ## This is a parent process, so store own pid as parent
 my $childs_pid;
 my $childs_proc;
-my $cmd = "$work_dir\/$work_to_do";
+my $cmd = catfile($ENV{AUTOBUILD_ROOT}, 'autobuild,pl');
 my $Win_cmd = "perl $cmd @ARGV";
 my $debug = 1;
 my $wait_pid_time_sec = 5;
