@@ -21,7 +21,7 @@ my $childs_proc;
 my $cmd = catfile($ENV{AUTOBUILD_ROOT}, 'autobuild.pl');
 my $Win_cmd = "perl $cmd @ARGV";
 my $debug = 1;
-my $wait_pid_time_sec = 5;
+my $wait_pid_time_sec = 60 * 3; # Every 3 minutes
 
 package Parent;
 

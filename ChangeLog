@@ -1,3 +1,9 @@
+Wed Aug  6 20:38:39 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Wait longer between checks of child process
+
 Fri Aug  1 20:44:01 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * autobuild_spawner.pl
