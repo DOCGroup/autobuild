@@ -177,15 +177,13 @@ if(-e $PIDFILE) {
 
   ## Because this process is a step-parent, can't waitpid on
   ## child process, so instead simply check if it is still running
-  if(Parent::step_child_still_running($step_childs_pid)){
-    print "Child still running, but we don't own it\n";
-    print "Exiting with status ", ReturnCode::Type->EXIT_STILL_RUNNING, "\n";
-    exit(ReturnCode::Type->EXIT_STILL_RUNNING);
-  } else {
-    print "Child's pid file still present, but no longer running!\n";
-    Parent::delete_pid_file();
-    print "Deleted child's pid file\n";
-  }
+  while(Parent::step_child_still_running($step_childs_pid)){
+    print "Child still running, but we don't own it.  Wait for it to finish.\n";
+    sleep($wait_pid_time_sec);
+  } 
+  print "Child's pid file still present, but no longer running!\n";
+  Parent::delete_pid_file();
+  print "Deleted child's pid file\n";
 }
 
 # PARENT PROCESSING CONTINUES HERE
