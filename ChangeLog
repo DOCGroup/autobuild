@@ -4,6 +4,16 @@ Mon Aug 11 20:57:09 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
           Show % pass and fail to two digits.
 
+Fri Aug  8 09:18:02 CDT 2014 Peter Oschwald <oschwaldp@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Modified script so if child's original parent process died
+          while child still running, and new parent begins, the new
+          parent will wait on the orphaned child to finish instead of
+          simply exiting.  And then it will spawn its own child to
+          run the new build it was intended to do.
+
 Wed Aug  6 20:38:39 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * autobuild_spawner.pl
