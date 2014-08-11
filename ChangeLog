@@ -1,3 +1,9 @@
+Mon Aug 11 20:57:09 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * testmatrix/HTMLScoreboard.py
+
+          Show % pass and fail to two digits.
+
 Wed Aug  6 20:38:39 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * autobuild_spawner.pl

@@ -226,8 +226,8 @@ Summary</th>
 			html += '<td>-</td>'
 		else:
 			html += '<td>%d</td>' % nskip
-		html += '<td>%.1f</td>' % pperc
-		html += '<td>%.1f</td>' % fperc
+		html += '<td>%.2f</td>' % pperc
+		html += '<td>%.2f</td>' % fperc
 		html += '</tr>\n'
 		html += '</table>\n'
 		html += '<p>%d tests passed, ' % self.passed
