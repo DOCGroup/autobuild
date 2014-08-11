@@ -679,8 +679,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>windows_taox11_i686_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/windows_taox11_i686_packaging</url>
+    <name>win7_mingw64_32_taox11_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/win7_mingw64_32_taox11_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -779,8 +779,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>windows_taox11_i686_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/windows_taox11_i686_package_test</url>
+    <name>win7_mingw64_32_taox11_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/win7_mingw64_32_taox11_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
