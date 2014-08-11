@@ -1,3 +1,49 @@
+Fri Aug  8 09:18:02 CDT 2014 Peter Oschwald <oschwaldp@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Modified script so if child's original parent process died
+          while child still running, and new parent begins, the new
+          parent will wait on the orphaned child to finish instead of
+          simply exiting.  And then it will spawn its own child to
+          run the new build it was intended to do.
+
+Wed Aug  6 20:38:39 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Wait longer between checks of child process
+
+Fri Aug  1 20:44:01 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Log perl location.
+
+Fri Aug  1 20:33:50 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Log command before running it.
+
+Fri Aug  1 20:24:07 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Fix issue with catfile and autobuild,pl
+
+Fri Aug  1 20:17:13 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Updated for running on Jenkins slave.
+
+Fri Aug  1 19:20:42 UTC 2014 Peter Oschwald <oschwaldp@ociweb.com>
+
+        * autobuild_spawner.pl
+
+          Added file.
+
 Thu Jul 17 20:40:06 UTC 2014 Jeff Schmitz <schmitzj@ociweb.com>
 
         * testmatrix/HTMLScoreboard.py
