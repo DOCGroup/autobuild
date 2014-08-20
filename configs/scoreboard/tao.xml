@@ -274,6 +274,7 @@ all the OS/platform combinations on which TAO is tested everyday.
   </build>
 </group>
 
+<!-- Temporarily offline
 <group>
   <name>MacOS</name>
   <build>
@@ -309,4 +310,5 @@ all the OS/platform combinations on which TAO is tested everyday.
     <build_sponsor_url>sowayan@gmail.com</build_sponsor_url>
   </build>
 </group>
+-->
 </scoreboard>
