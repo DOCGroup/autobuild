@@ -244,6 +244,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
 </group>
 
+<!-- Temporarily offline
 <group>
    <name>VxWorks</name>
    <build>
@@ -253,6 +254,7 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
 </group>
+-->
 
 <group>
   <name>OpenBSD</name>

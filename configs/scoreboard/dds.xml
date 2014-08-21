@@ -44,12 +44,14 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
+<!-- Temporarily off line
   <build>
     <name>dds_doc_trunk_oci1179_linux_gcc_d1o0i0w1</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1179_linux_gcc_d1o0i0w1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
+-->
   <build>
     <name>dds_doc_trunk_tick_linux_gcc_d1o0</name>
     <url>http://scoreboard.ociweb.com/dds_doc_trunk_tick_linux_gcc_d1o0</url>
@@ -86,6 +88,7 @@ all the OS/platform combinations on which DDS is tested everyday.
   </build>
 </group>
 
+<!-- Temporarily off line
 <group>
   <name>VxWorks</name>
   <build>
@@ -95,6 +98,7 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 </group>
+-->
 
 <group>
   <name>Android</name>
