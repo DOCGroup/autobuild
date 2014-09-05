@@ -179,6 +179,7 @@ sub Run ($)
     #
     # platform_macros.GNU, if it exists
     #
+    my @dirs = ();
 
     if (-r "$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU") {
         print "================ platform_macros.GNU ================\n";
@@ -191,7 +192,12 @@ sub Run ($)
         print_file ("$ENV{ACE_ROOT}/VERSION", 0);
     }
 
-    foreach my $dir ($ENV{TAO_ROOT}, "TAO") {
+    @dirs = ();
+    if (exists $ENV{TAO_ROOT}) {
+      push (@dirs, $ENV{TAO_ROOT});
+    }
+    push (@dirs, 'TAO');
+    foreach my $dir (@dirs) {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ TAO VERSION ================\n";
 
@@ -200,7 +206,12 @@ sub Run ($)
       }
     }
 
-    foreach my $dir ($ENV{CIAO_ROOT}, "TAO/CIAO") {
+    @dirs = ();
+    if (exists $ENV{CIAO_ROOT}) {
+      push (@dirs, $ENV{CIAO_ROOT});
+    }
+    push (@dirs, 'TAO/CIAO');
+    foreach my $dir (@dirs) {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ CIAO VERSION ================\n";
 
@@ -209,7 +220,12 @@ sub Run ($)
       }
     }
 
-    foreach my $dir ($ENV{DANCE_ROOT}, "TAO/DAnCE") {
+    @dirs = ();
+    if (exists $ENV{DANCE_ROOT}) {
+      push (@dirs, $ENV{DANCE_ROOT});
+    }
+    push (@dirs, 'TAO/DAnCE');
+    foreach my $dir (@dirs) {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ DAnCE VERSION ================\n";
 
@@ -218,7 +234,12 @@ sub Run ($)
       }
     }
 
-    foreach my $dir ($ENV{DDS_ROOT}, "TAO/DDS") {
+    @dirs = ();
+    if (exists $ENV{DDS_ROOT}) {
+      push (@dirs, $ENV{DDS_ROOT});
+    }
+    push (@dirs, 'TAO/DDS');
+    foreach my $dir (@dirs) {
       if (defined $dir && -r "$dir/VERSION") {
         print "================ DDS VERSION ================\n";
 
