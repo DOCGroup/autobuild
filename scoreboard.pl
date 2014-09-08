@@ -1000,7 +1000,7 @@ sub update_html ($$$)
     print $indexhtml "table { border-collapse: collapse; }\n";
     print $indexhtml "th { background: #ddd; }\n";
     print $indexhtml "td { padding: inherit 5px; }\n";
-    print $indexhtml ".name { min-width: 375px; }\n";
+    print $indexhtml ".name { min-width: 400px; }\n";
     print $indexhtml ".time { min-width: 105px; }\n";
     print $indexhtml ".rev { min-width: 40px; }\n";
     print $indexhtml ".fullbrief { min-width: 85px; }\n";

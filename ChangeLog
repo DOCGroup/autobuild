@@ -1,3 +1,9 @@
+Mon Sep  8 19:12:49 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
+
+        * scoreboard.pl:
+
+          Adjust with of name column.
+
 Thu Aug 21 17:28:51 UTC 2014  Phil Mesnier  <mesnier_p@ociweb.com>
 
         * configs/scoreboard/dds.xml:
