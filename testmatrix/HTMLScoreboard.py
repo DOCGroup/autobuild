@@ -171,14 +171,15 @@ $(function() {
 		html += self.highlight_html + ">"
 
 		html += "<td>%d</td>" % npass
-		html += "<td>%d</td>" % nfail
-		html += "<td>%d</td>" % nskip
-		if perc < 50.0:
-			html += '<td class="f">' + sperc + "</td>"
-		elif perc < 90.0:
-			html += '<td class="w">' + sperc + "</td>"
+		if nfail == 0:
+		  html += "<td>%d</td>" % nfail
+		elif nfail == 1:
+		  html += "<td class='w'>%d</td>" % nfail
 		else:
-			html += '<td>' + sperc + "</td>"
+		  html += "<td class='f'>%d</td>" % nfail
+
+		html += "<td>%d</td>" % nskip
+		html += '<td>' + sperc + "</td>"
 
 		## now write out the <td>s for test results
 		for res in results:
@@ -191,7 +192,12 @@ $(function() {
 
 		## now write out the name of the test
 		##fname = str(linkfile) + '.html'
-		html += '<td>' + name + '</td>'
+		if nfail == 0:
+		  html += '<td>' + name + '</td>'
+		elif nfail == 1:
+		  html += '<td class="w">' + name + '</td>'
+    else
+		  html += '<td class="f">' + name + '</td>'
 
 		self.matrix_html = html + "</tr>\n"
 
