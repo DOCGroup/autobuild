@@ -193,11 +193,11 @@ $(function() {
 		## now write out the name of the test
 		##fname = str(linkfile) + '.html'
 		if nfail == 0:
-		  html += '<td>' + name + '</td>'
+			html += '<td>' + name + '</td>'
 		elif nfail == 1:
-		  html += '<td class="w">' + name + '</td>'
-    else
-		  html += '<td class="f">' + name + '</td>'
+			html += '<td class="w">' + name + '</td>'
+		else:
+			html += '<td class="f">' + name + '</td>'
 
 		self.matrix_html = html + "</tr>\n"
 

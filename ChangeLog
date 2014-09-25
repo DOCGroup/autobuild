@@ -1,3 +1,9 @@
+Thu Sep 25 03:16:45 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
+
+        * testmatrix/HTMLScoreboard.py
+
+          Fix python errors.
+
 Wed Sep 24 21:08:46 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
         * testmatrix/HTMLScoreboard.py
