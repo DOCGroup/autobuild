@@ -133,7 +133,7 @@ sub wait_on_child {
     ## 0   - if child exists but has not yet changed state
     ## pid - when child with pid's state has changed
 
-    $datestring = localtime();
+    my $datestring = localtime();
     print "Parent (PID:$$) waiting on child (PID: $childs_pid) at $datestring\n";
     my $res = waitpid($childs_pid, WNOHANG);
 
