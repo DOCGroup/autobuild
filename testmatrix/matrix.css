@@ -55,8 +55,8 @@ table.matrix tr th.colhead {
 
 
 .p {background-color:green}
-.f {background-color:red; color: black;}
-.w {background-color:gold; color: black;}
+.f,.fail {background-color:red; color: white;}
+.w,.warn {background-color:gold; color: black;}
 .s {background-color:gainsboro; color: black; text-decoration: line-through;}
 
 .lnk {cursor: pointer;}

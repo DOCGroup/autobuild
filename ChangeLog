@@ -1,3 +1,10 @@
+Thu Sep 25 14:51:48 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
+
+        * testmatrix/HTMLScoreboard.py
+        * buildmatrix/buildmatrix.css:
+
+          Don't allow click of nfail or test name.
+
 Thu Sep 25 03:16:45 UTC 2014  Jeff Schmitz <schmitzj@ociweb.com>
 
         * testmatrix/HTMLScoreboard.py

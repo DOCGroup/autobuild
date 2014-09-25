@@ -174,9 +174,9 @@ $(function() {
 		if nfail == 0:
 		  html += "<td>%d</td>" % nfail
 		elif nfail == 1:
-		  html += "<td class='w'>%d</td>" % nfail
+		  html += "<td class='warn'>%d</td>" % nfail
 		else:
-		  html += "<td class='f'>%d</td>" % nfail
+		  html += "<td class='fail'>%d</td>" % nfail
 
 		html += "<td>%d</td>" % nskip
 		html += '<td>' + sperc + "</td>"
@@ -195,9 +195,9 @@ $(function() {
 		if nfail == 0:
 			html += '<td>' + name + '</td>'
 		elif nfail == 1:
-			html += '<td class="w">' + name + '</td>'
+			html += '<td class="warn">' + name + '</td>'
 		else:
-			html += '<td class="f">' + name + '</td>'
+			html += '<td class="fail">' + name + '</td>'
 
 		self.matrix_html = html + "</tr>\n"
 
