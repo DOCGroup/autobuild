@@ -1380,8 +1380,8 @@ sub Test_Handler ($)
         || $s =~ m/exec request failed on channel/
         || $s =~ m/Don't know how to make check/
         || $s =~ m/Could not open/
-        || $s =~ m/No such file or directory/
         || $s =~ m/Errno::ENOENT/
+        || $s =~ m/No such file or directory/
         || $s =~ m/C interp: unable to open/
         || $s =~ m/glibc detected/
         || $s =~ m/holds reference to undefined symbol/
