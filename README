@@ -16,7 +16,6 @@ SOFTWARE REQUIREMENTS
 (2) Libwww-perl module.  You can get this from http://www.cpan.org.
     Red Hat Linux distributions may have an optional package perl-libwww-perl.
 
-
 QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 ==========================================
 
