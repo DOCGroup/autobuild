@@ -811,62 +811,176 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 </group>
 
 <group>
-  <name>CIAOX11 Packaging builds</name>
+  <name>AXCIOMA Packaging builds</name>
   <build>
-    <name>fc20_ciaox11_x86_64_aspn_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_x86_64_aspn_packaging</url>
+    <name>fc18_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc19_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc20_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel63_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel64_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel64_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel65_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel65_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>rhel70_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/rhel70_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos63_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos63_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos64_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos64_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos65_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos65_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos70_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/centos70_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse122_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse123_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse123_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse131_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_axcioma_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
 </group>
 
 <group>
-  <name>CIAOX11 Package Test builds</name>
+  <name>AXCIOMA Package Test builds</name>
   <build>
-    <name>fc18_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc18_ciaox11_x86_64_aspn_package_test</url>
+    <name>fc18_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc18_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc19_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc19_ciaox11_x86_64_aspn_package_test</url>
+    <name>fc19_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc19_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_x86_64_aspn_package_test</url>
+    <name>fc20_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse131_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse131_ciaox11_x86_64_aspn_package_test</url>
+    <name>rhel63_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel63_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel63_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/rhel63_ciaox11_x86_64_aspn_package_test</url>
+    <name>rhel64_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel64_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel64_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/rhel64_ciaox11_x86_64_aspn_package_test</url>
+    <name>rhel65_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel65_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel65_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/rhel65_ciaox11_x86_64_aspn_package_test</url>
+    <name>rhel70_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/rhel70_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>rhel70_ciaox11_x86_64_aspn_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/rhel70_ciaox11_x86_64_aspn_package_test</url>
+    <name>centos63_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/centos63_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos64_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/centos64_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos65_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/centos65_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>centos70_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/centos70_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse122_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse122_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse123_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse123_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse131_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse131_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
