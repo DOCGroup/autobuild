@@ -20,7 +20,7 @@ This sets the autobuild variable "cvs_tag" to the value given with the attribute
 
 -xml Dumps to a new file (with _dump appended to the filename) the combined variables, environment, and command settings that the parsed input file created. This removes the need for any of the included files that the original input file requires.
 
---------------------
+---------------------
 
 Autorun.pl performs its operations during 4 distinct stages on each input file (one file at a time from the list provided) being processed:
 
