@@ -1197,6 +1197,12 @@ sub Setup_Handler ($)
             {
                 $totals->{CVS_TIMESTAMP} = "SVN Rev: $totals->{SUBVERSION_CHECKEDOUT_ACE}";
             }
+
+            ## Some OpenDDS builds are using old build system, rather than jenkins
+            if ('None' eq $totals->{SUBVERSION_CHECKEDOUT_OPENDDS})
+            {
+                $totals->{SUBVERSION_CHECKEDOUT_OPENDDS} = $revision;
+            }
         }
     }
     elsif ($s =~ m/aborted/i ||
