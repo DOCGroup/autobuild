@@ -32,5 +32,11 @@ sponsorship is received.
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+    <build>
+      <name>Win81_VC14_ACE_CPP11_Debug</name>
+      <url>http://buildlogs.theaceorb.nl/win81_msvc14_atcd_ace_cpp11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    </build>
 </group>
 </scoreboard>
