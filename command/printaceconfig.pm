@@ -48,24 +48,26 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
-    my $svnurl = 'https://svn.dre.vanderbilt.edu/viewvc';
-    my $giturl = 'https://raw.githubusercontent.com/DOCGroup';
+    my $opendds_url = 'https://svn.dre.vanderbilt.edu/viewvc';
+    my $atcd_url = 'https://github.com/DOCGroup/ATCD';
+    my $mpc_url = 'https://github.com/DOCGroup/MPC';
+    my $autobuild_url = 'https://raw.githubusercontent.com/DOCGroup';
     my %information = ('XML'       => ['', '',
-                                       "$giturl/autobuild/master/<file>"],
+                                       "$autobuild_url/autobuild/master/<file>"],
                        'AUTOBUILD' => ['ChangeLog', '',
-                                       "$giturl/autobuild/master/<file>"],
+                                       "$autobuild_url/autobuild/master/<file>"],
                        'MPC'       => ['ChangeLog', 'MPC/',
-                                       "$svnurl/MPC/trunk/<file>?revision=HEAD"],
+                                       "$mpc_url/MPC/commits/master/"],
                        'ACE'       => ['ChangeLog', '',
-                                       "$svnurl/Middleware/trunk/ACE/<file>?revision=HEAD"],
+                                       "$atcd_url/commits/master/ACE"],
                        'TAO'       => ['ChangeLog', 'TAO/',
-                                       "$svnurl/Middleware/trunk/TAO/<file>?revision=HEAD"],
+                                       "$atcd_url/commits/master/TAO"],
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
-                                       "$svnurl/Middleware/trunk/CIAO/<file>?revision=HEAD"],
+                                       "$atcd_url/commits/master/CIAO"],
                        'DANCE'     => ['ChangeLog', 'TAO/DAnCE/',
-                                       "$svnurl/Middleware/trunk/DAnCE/<file>?revision=HEAD"],
+                                       "$atcd_url/commits/master/DAnCE"],
                        'DDS'       => ['ChangeLog', 'DDS/',
-                                       "$svnurl/DDS/trunk/<file>?revision=HEAD"],
+                                       "$opendds_url/DDS/trunk/<file>?revision=HEAD"],
                       );
     my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DANCE', 'DDS');
 
