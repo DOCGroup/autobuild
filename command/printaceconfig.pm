@@ -51,11 +51,11 @@ sub Run ($)
     my $opendds_url = 'https://svn.dre.vanderbilt.edu/viewvc';
     my $atcd_url = 'https://github.com/DOCGroup/ATCD';
     my $mpc_url = 'https://github.com/DOCGroup/MPC';
-    my $autobuild_url = 'https://raw.githubusercontent.com/DOCGroup';
+    my $autobuild_url = 'https://github.com/DOCGroup/autobuild';
     my %information = ('XML'       => ['', '',
-                                       "$autobuild_url/autobuild/master/<file>"],
+                                       "$autobuild_url/master/<file>"],
                        'AUTOBUILD' => ['ChangeLog', '',
-                                       "$autobuild_url/autobuild/master/<file>"],
+                                       "$autobuild_url/commits/master"],
                        'MPC'       => ['ChangeLog', 'MPC/',
                                        "$mpc_url/MPC/commits/master/"],
                        'ACE'       => ['ChangeLog', '',
