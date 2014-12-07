@@ -57,7 +57,7 @@ sub Run ($)
                        'AUTOBUILD' => ['ChangeLog', '',
                                        "$autobuild_url/commits/master"],
                        'MPC'       => ['ChangeLog', 'MPC/',
-                                       "$mpc_url/MPC/commits/master/"],
+                                       "$mpc_url/commits/master/"],
                        'ACE'       => ['ChangeLog', '',
                                        "$atcd_url/commits/master/ACE"],
                        'TAO'       => ['ChangeLog', 'TAO/',
