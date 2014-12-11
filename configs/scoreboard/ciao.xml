@@ -94,8 +94,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC20_LwCCM_NoEvents_Compile_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_lwccm_ne_compile</url>
+      <name>FC21_LwCCM_NoEvents_Compile_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_compile</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
