@@ -68,18 +68,18 @@ all the OS/platform combinations on which ACE is tested everyday.
        <build_sponsor>Riverace</build_sponsor>
        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
      </build>
-     <build>
+<!--     <build>
        <name>CentOS_5_3</name>
        <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5.3/</url>
        <build_sponsor>Olli Savia</build_sponsor>
        <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-     </build>
-     <build>
+     </build>-->
+<!--     <build>
        <name>CentOS_3_9</name>
        <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-3.9/</url>
        <build_sponsor>Olli Savia</build_sponsor>
        <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-     </build>
+     </build>-->
 </group>
 
 <group>
@@ -127,7 +127,7 @@ all the OS/platform combinations on which ACE is tested everyday.
 
 <group>
   <name>LynxOS</name>
-  <build>
+<!--  <build>
     <name>LynxOS_4_0</name>
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0</url>
     <build_sponsor>Olli Savia</build_sponsor>
@@ -138,7 +138,7 @@ all the OS/platform combinations on which ACE is tested everyday.
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.2</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
+  </build>-->
 </group>
 
 </scoreboard>
