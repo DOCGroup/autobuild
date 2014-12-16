@@ -53,7 +53,7 @@ sub Run ($)
     my $mpc_url = 'https://github.com/DOCGroup/MPC';
     my $autobuild_url = 'https://github.com/DOCGroup/autobuild';
     my %information = ('XML'       => ['', '',
-                                       "$autobuild_url/master/<file>"],
+                                       "$autobuild_url/blob/master/<file>"],
                        'AUTOBUILD' => ['ChangeLog', '',
                                        "$autobuild_url/commits/master"],
                        'MPC'       => ['ChangeLog', 'MPC/',
