@@ -111,38 +111,38 @@
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
-    <build>
+<!--    <build>
       <name>RedHat_EL5_x86_inline_gcc44</name>
       <url>http://tao.microfocus.com/scoreboard/rhel5_x86_inline_gcc44</url>
       <build_sponsor>Micro Focus</build_sponsor>
       <build_sponsor_url>http://www.microfocus.com/products/corba/index.aspx</build_sponsor_url>
       <orange>72</orange>
       <red>168</red>
-    </build>
-    <build>
+    </build>-->
+<!--    <build>
       <name>RedHat_EL5_x86_no_inline</name>
       <url>http://tao.microfocus.com/scoreboard/rhel5_x86_noinline</url>
       <build_sponsor>Micro Focus</build_sponsor>
       <build_sponsor_url>http://www.microfocus.com/products/corba/index.aspx</build_sponsor_url>
       <orange>72</orange>
       <red>168</red>
-    </build>
-    <build>
+    </build>-->
+<!--    <build>
       <name>RedHat_EL6_x64_FT_interceptors_inline</name>
       <url>http://tao.microfocus.com/scoreboard/rhel6_x64_ft_inline</url>
       <build_sponsor>Micro Focus</build_sponsor>
       <build_sponsor_url>http://www.microfocus.com/products/corba/index.aspx</build_sponsor_url>
       <orange>72</orange>
       <red>168</red>
-    </build>
-    <build>
+    </build>-->
+<!--    <build>
       <name>RedHat_EL6_x86_debug</name>
       <url>http://tao.microfocus.com/scoreboard/rhel6_x86_debug</url>
       <build_sponsor>Micro Focus</build_sponsor>
       <build_sponsor_url>http://www.microfocus.com/products/corba/index.aspx</build_sponsor_url>
       <orange>72</orange>
       <red>168</red>
-    </build>
+    </build>-->
      <build>
        <name>OpenSuSE_13_1_GCC_64bit</name>
        <url>http://buildlogs.theaceorb.nl/suse131_atcd_debug</url>
@@ -188,14 +188,14 @@
   </group>
   <group>
     <name>Solaris</name>
-    <build>
+<!--    <build>
       <name>Sol_10_SPARC_64bit_SunStudio_12u2_inline</name>
       <url>http://tao.microfocus.com/scoreboard/sol10_s64_stu12u2_inline</url>
       <build_sponsor>Micro Focus</build_sponsor>
       <build_sponsor_url>http://www.microfocus.com/products/corba/index.aspx</build_sponsor_url>
       <orange>72</orange>
       <red>168</red>
-  </build>
+    </build>-->
   </group>
   <group>
     <name>Stats Builds</name>
