@@ -44,7 +44,7 @@
 
     <command name="generate_workspace" options="-exclude ATCD/CIAO -exclude ATCD/DAnCE -type gnuautobuild -value_template vms_old_make=1" />
 
-    <command name="make"              options="-k" />
+    <command name="make"              options="-k -C ATCD" />
 
     <command name="auto_run_tests"    options=" -a -o -t" />
 
