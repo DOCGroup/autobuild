@@ -149,6 +149,12 @@
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
+     <build>
+       <name>OpenSuSE_13_2_GCC_64bit</name>
+       <url>http://buildlogs.theaceorb.nl/suse132_atcd_debug</url>
+       <build_sponsor>Remedy IT</build_sponsor>
+       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+     </build>
 <!--   <build>
       <name>FC12_32bit</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d0o1b32</url>
