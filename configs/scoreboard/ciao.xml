@@ -58,8 +58,8 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
     <build>
-      <name>FC20_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc20_atcd_nologging/</url>
+      <name>FC21_NoLogging</name>
+        <url>http://buildlogs.theaceorb.nl/fc21_atcd_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -82,14 +82,14 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC20_LwCCM_NoEvents_Install_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_lwccm_ne_install</url>
+      <name>FC21_LwCCM_NoEvents_Install_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
    <build>
-      <name>FC20_LwCCM_NoEvents_Install_Test_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_lwccm_ne_install_test</url>
+      <name>FC21_LwCCM_NoEvents_Install_Test_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
