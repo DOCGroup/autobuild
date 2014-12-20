@@ -1,17 +1,17 @@
-<!-- $Id$ -->
+<!-- smoke_dev_icc_debug.xml - Build ACE development using Intel C++ -->
 <autobuild>
     <configuration>
 
-        <environment name="ACE_ROOT"        value="/acebuilds/ACE_wrappers/build/icc_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ACE_wrappers/build/icc_debug/lib:/opt/intel/Compiler/11.0/074/lib/intel64:/usr/lib" />
+        <environment name="ACE_ROOT"        value="/acebuilds/ATCD/ACE/build/dev_icc_debug" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ATCD/ACE/build/dev_icc_debug/lib:/opt/intel/Compiler/11.0/074/lib/intel64:/usr/lib" />
         <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
 
-        <variable name="root"         value="/acebuilds/ACE_wrappers" />
-        <variable name="build_name"   value="icc_debug" />
-        <variable name="project_root" value="/acebuilds/ACE_wrappers/build/icc_debug" />
-        <variable name="log_file"     value="icc_debug.txt" />
+        <variable name="root"         value="/acebuilds/ATCD/ACE" />
+        <variable name="build_name"   value="dev_icc_debug" />
+        <variable name="project_root" value="/acebuilds/ATCD/ACE/build/dev_icc_debug" />
+        <variable name="log_file"     value="dev_icc_debug.txt" />
         <variable name="log_root"     value="/cinny/acebuilds/logs/smokey/dev/icc_debug" />
-        <variable name="local_features" value="/acebuilds/ACE_wrappers/local.features" />
+        <variable name="local_features" value="/acebuilds/ATCD/ACE/local.features" />
         <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES" />
 
     </configuration>
@@ -23,24 +23,20 @@
 
     <command name="make"              options="-k realclean find=*akefile" />
 
-    <command name="svn"               options="dir=/acebuilds/MPC update --non-interactive" />
-    <command name="svn"               options="update --non-interactive" />
-
-    <command name="file_manipulation" options="type=delete file=.disable" />
-
-    <command name="file_manipulation" options="type=mustnotexist file=build/icc_debug/.disable" />
+    <command name="git"               options="dir=/acebuilds/MPC pull" />
+    <command name="git"               options="checkout master" />
+    <command name="git"               options="pull" />
 
     <command name="create_ace_build"  options="-a -v" />
-    <command name="file_manipulation" options="type=create file=build/icc_debug/.disable output='RUNNING'" />
 
     <!-- Delete the build's Makefiles before regenerating them. -->
-    <command name="shell"             options="find build/icc_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
+    <command name="shell"             options="find build/dev_icc_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
     <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\n'" />
-    <command name="generate_workspace" options="-feature_file /acebuilds/ACE_wrappers/local.features -relative ACE_ROOT=/acebuilds/ACE_wrappers/build/icc_debug -type gnuace" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ATCD/ACE/local.features -relative ACE_ROOT=/acebuilds/ATCD/ACE/build/dev_icc_debug -type gnuace" />
 
-    <command name="file_manipulation" options="type=create file=build/icc_debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
-    <command name="file_manipulation" options="type=create file=build/icc_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=build/dev_icc_debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/dev_icc_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
 
     <command name="print_os_version" />
     <command name="print_env_vars" />
@@ -53,6 +49,6 @@
 
     <command name="log"               options="off" />
     <command name="process_logs"      options="clean=5 move prettify index" />
-    <command name="file_manipulation" options="type=delete file=build/icc_debug/.disable" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
     <command name="status"            options="off" />
 </autobuild>
