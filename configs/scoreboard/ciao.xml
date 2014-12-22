@@ -35,13 +35,13 @@
      </build>
      <build>
       <name>RHEL_64_Debug_NDDS_510rev0</name>
-      <url>http://buildlogs.theaceorb.nl/rhel64_ciao_debug_ndds510rev0/</url>
+      <url>http://buildlogs.theaceorb.nl/rhel64_atcd_debug_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
      <build>
       <name>RHEL_64_Release_NDDS_510rev0</name>
-      <url>http://buildlogs.theaceorb.nl/rhel64_ciao_release_ndds510rev0/</url>
+      <url>http://buildlogs.theaceorb.nl/rhel64_atcd_release_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
