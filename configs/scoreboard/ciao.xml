@@ -45,18 +45,6 @@
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
-     <build>
-      <name>RHEL_61_Debug_NDDS_510rev0</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_atcd_debug_ndds510rev0/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-      <name>RHEL_61_Release_NDDS_510rev0</name>
-      <url>http://buildlogs.theaceorb.nl/rhel61_atcd_release_ndds510rev0/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
     <build>
       <name>FC21_NoLogging</name>
         <url>http://buildlogs.theaceorb.nl/fc21_atcd_nologging/</url>
