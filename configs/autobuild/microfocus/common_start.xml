@@ -1,14 +1,15 @@
 <autobuild>
     <configuration>
       <var builds_home="/home/oftao/doc_group" />
-      <var root var="builds_home" join=dir var="this_build"  />
+      <var root var="builds_home" join=dir var="this_build"
+      <var proect_root var="root" join=dir ATCD />
       <!-- Set ACE_ROOT, TAO_ROOT, MPC_ROOT, CIAO_ROOT and DANCE_ROOT -->
-      <env ACE_ROOT group=default var="root" join=dir ATCD ACE />
+      <env ACE_ROOT group=default var="project_root" join=dir ACE />
       <env MPC_ROOT group=default var="root" join=dir MPC />
-      <env TAO_ROOT group=default var="root" join=dir ATCD TAO />
-      <env CIAO_ROOT group=default var="root" join=dir ATCD CIAO />
-      <env DANCE_ROOT group=default  var="root" join=dir ATCD DAnCE />
-      <env LD_LIBRARY_PATH group=default  var="root" join=dir ATCD ACE lib />
+      <env TAO_ROOT group=default var="project_root" join=dir TAO />
+      <env CIAO_ROOT group=default var="project_root" join=dir CIAO />
+      <env DANCE_ROOT group=default  var="project_root" join=dir DAnCE />
+      <env LD_LIBRARY_PATH group=default  var="root" join=dir ACE lib />
       <variable name="log_file" value="build.txt" />
       <var name="log_root" var="builds_home" join=dir scoreboard
                                              join=dir
