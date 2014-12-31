@@ -14,7 +14,6 @@
       <var name="log_root" var="builds_home" join=dir scoreboard
                                              join=dir
                                              var="this_build" />
-      <environment name="GIT_SSL_NO_VERIFY" value="true"/>
     </configuration>
 
     <command name="status" options="on" />
@@ -22,6 +21,6 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log" options="ON" />
 
-    <command name="git" options="clone https://github.com/DOCGroup/MPC.git" />
-    <command name="git" options="clone https://github.com/DOCGroup/ATCD.git" />
+    <command name="git" options="clone git://github.com/DOCGroup/MPC.git" />
+    <command name="git" options="clone git://github.com/DOCGroup/ATCD.git" />
 </autobuild>
