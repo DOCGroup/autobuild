@@ -6,8 +6,8 @@
         <env SSL_ROOT="/usr/local/ssl64" />
     </configuration>
     <include common_start.xml />
-    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#undef __ACE_INLINE__\n#define __ACE_INLINE__ 1\n#include \"ace/config-sunos5.10.h\"\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\n\nexceptions=1\nthreads=1\nshared_libs_only=1\nstdcpplib=1\nboost=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=0\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/ace/config.h output='#undef __ACE_INLINE__\n#define __ACE_INLINE__ 1\n#include \"ace/config-sunos5.10.h\"\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\n\nexceptions=1\nthreads=1\nshared_libs_only=1\nstdcpplib=1\nboost=0\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_sunos5_sunc++.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/bin/MakeProjectCreator/config/default.features output='boost=0\n'" />
     <include common_make_end.xml />
 </autobuild>

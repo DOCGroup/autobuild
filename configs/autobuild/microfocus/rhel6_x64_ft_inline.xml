@@ -5,8 +5,8 @@
         <variable name="configs" value="Linux Exceptions QUICK FIXED_BUGS_ONLY BOOST HAS_EXTENDED_FT_INTERCEPTORS" />
     </configuration>
     <include common_start.xml />
-    <command name="file_manipulation" options="type=create file=ACE/ace/config.h output='#undef __ACE_INLINE__\n#define __ACE_INLINE__ 1\n#define ACE_STRICT_BOOLEAN_DEMARSHALLING 1\n#define TAO_STRICT_ENUM_MARSHALLING 1\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#define TAO_DEFAULT_MIOP_EAGER_DEQUEUEING false\n\n#include \"ace/config-linux.h\"\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\n\nexceptions=1\nthreads=1\nshared_libs_only=1\nstdcpplib=1\nboost=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
-    <command name="file_manipulation" options="type=create file=ACE/bin/MakeProjectCreator/config/default.features output='boost=1\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/ace/config.h output='#undef __ACE_INLINE__\n#define __ACE_INLINE__ 1\n#define ACE_STRICT_BOOLEAN_DEMARSHALLING 1\n#define TAO_STRICT_ENUM_MARSHALLING 1\n#define TAO_HAS_EXTENDED_FT_INTERCEPTORS 1\n#define TAO_DEFAULT_MIOP_EAGER_DEQUEUEING false\n\n#include \"ace/config-linux.h\"\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/include/makeinclude/platform_macros.GNU output='buildbits=64\noptimize=1\ndebug=0\ninline=1\n\nexceptions=1\nthreads=1\nshared_libs_only=1\nstdcpplib=1\nboost=1\n\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/bin/MakeProjectCreator/config/default.features output='boost=1\n'" />
     <include common_make_end.xml />
 </autobuild>
