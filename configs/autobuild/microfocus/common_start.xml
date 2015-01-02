@@ -1,7 +1,7 @@
 <autobuild>
     <configuration>
       <var builds_home="/home/oftao/doc_group" />
-      <var name="root" var="builds_home" join=dir var="this_build"
+      <var name="root" var="builds_home" join=dir var="this_build" />
       <var name="project_root" var="root" join=dir ATCD />
       <!-- Set ACE_ROOT, TAO_ROOT, MPC_ROOT, CIAO_ROOT and DANCE_ROOT -->
       <env ACE_ROOT group=default var="project_root" join=dir ACE />
