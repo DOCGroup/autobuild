@@ -1,16 +1,15 @@
-<!-- $Id: common_start.xml 317677 2014-05-21 09:46:49Z SimonMcQ $ -->
-
 <autobuild>
     <configuration>
       <var builds_home="/home/oftao/doc_group" />
-      <var root var="builds_home" join=dir var="this_build"  />
+      <var name="root" var="builds_home" join=dir var="this_build" />
+      <var name="project_root" var="root" join=dir ATCD />
       <!-- Set ACE_ROOT, TAO_ROOT, MPC_ROOT, CIAO_ROOT and DANCE_ROOT -->
-      <env ACE_ROOT group=default var="root" join=dir ACE_wrappers />
-      <env MPC_ROOT group=default var="root" join=dir ACE_wrappers MPC />
-      <env TAO_ROOT group=default var="root" join=dir ACE_wrappers TAO />
-      <env CIAO_ROOT group=default var="root" join=dir ACE_wrappers TAO CIAO />
-      <env DANCE_ROOT group=default  var="root" join=dir ACE_wrappers TAO DAnCE />
-      <env LD_LIBRARY_PATH group=default  var="root" join=dir ACE_wrappers lib />
+      <env ACE_ROOT group=default var="project_root" join=dir ACE />
+      <env MPC_ROOT group=default var="root" join=dir MPC />
+      <env TAO_ROOT group=default var="project_root" join=dir TAO />
+      <env CIAO_ROOT group=default var="project_root" join=dir CIAO />
+      <env DANCE_ROOT group=default  var="project_root" join=dir DAnCE />
+      <env LD_LIBRARY_PATH group=default  var="root" join=dir ACE lib />
       <variable name="log_file" value="build.txt" />
       <var name="log_root" var="builds_home" join=dir scoreboard
                                              join=dir
@@ -22,5 +21,6 @@
     <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
     <command name="log" options="ON" />
 
-    <command name="svn" options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO+CIAO ." />
+    <command name="git" options="clone git://github.com/DOCGroup/MPC.git" />
+    <command name="git" options="clone git://github.com/DOCGroup/ATCD.git" />
 </autobuild>
