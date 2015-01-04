@@ -3,131 +3,107 @@
 <preamble>
 <center><h1>ACE Release Candidate Scoreboard</h1></center>
 <hr/>
-This is the ACE virtual scoreboard for the micro, minor, and major releases. It shows
-all the OS/platform combinations on which ACE is tested everyday.
+This is the ACE virtual scoreboard for the micro, minor, and major
+releases. It shows all the OS/platform combinations on which ACE
+is tested everyday.
 <hr/>
 </preamble>
 
 <group>
   <name>AIX </name>
-     <build>
-        <name>AIX_5.3_XLC7_Debug</name>
-        <url>http://acebuilds.riverace.com/charlie/dev/xlc7_debug</url>
-        <red>36</red>
-        <build_sponsor>Riverace</build_sponsor>
-        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-        <name>AIX_6.1_XLC10_Debug</name>
-        <url>http://acebuilds.riverace.com/ralphie/dev/xlc10_debug</url>
-        <red>36</red>
-        <build_sponsor>Riverace</build_sponsor>
-        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-        <name>AIX_7.1_XLC11-64_Debug</name>
-        <url>http://acebuilds.riverace.com/billy/dev/xlc11-64_debug</url>
-        <red>36</red>
-        <build_sponsor>Riverace</build_sponsor>
-        <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-</group>
-
-<group>
-  <name>Linux</name>
-     <build>
-        <name>FC21_ACE_ST</name>
-        <url>http://buildlogs.theaceorb.nl/fc21_atcd_ace_st/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-        <name>FC20_ACE_clang</name>
-        <url>http://buildlogs.theaceorb.nl/fc20_atcd_ace_clang/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
-     <build>
-       <name>RHEL_5_x64_Debug(Intel)</name>
-       <url>http://acebuilds.riverace.com/smokey/dev/icc_debug</url>
-       <red>36</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-       <name>RHEL_5_x64_Debug(gcc)</name>
-       <url>http://acebuilds.riverace.com/smokey/dev/gcc_debug</url>
-       <red>36</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-       <name>RHEL_6_x64_Debug(gcc)</name>
-       <url>http://acebuilds.riverace.com/payslee/dev/gcc_debug</url>
-       <red>36</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-<!--     <build>
-       <name>CentOS_5_3</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5.3/</url>
-       <build_sponsor>Olli Savia</build_sponsor>
-       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-     </build>-->
-<!--     <build>
-       <name>CentOS_3_9</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-3.9/</url>
-       <build_sponsor>Olli Savia</build_sponsor>
-       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-     </build>-->
+  <build>
+    <name>AIX_5.3_XLC7_Debug</name>
+    <url>http://acebuilds.riverace.com/charlie/dev/xlc7_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>AIX_6.1_XLC10_Debug</name>
+    <url>http://acebuilds.riverace.com/ralphie/dev/xlc10_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>AIX_7.1_XLC11-64_Debug</name>
+    <url>http://acebuilds.riverace.com/billy/dev/xlc11-64_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
 </group>
 
 <group>
   <name>HP-UX</name>
-     <build>
-       <name>HP-UX_11iv3_ia64_aC++_Debug</name>
-       <url>http://acebuilds.riverace.com/mindy/dev/acc_debug</url>
-       <red>36</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
-     <build>
-       <name>HP-UX_11iv2_ia64_aC++_Debug</name>
-       <url>http://acebuilds.riverace.com/gump/dev/acc_debug</url>
-       <red>36</red>
-       <build_sponsor>Riverace</build_sponsor>
-       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-     </build>
+  <build>
+    <name>HP-UX_11iv3_ia64_aC++_Debug</name>
+    <url>http://acebuilds.riverace.com/mindy/dev/acc_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>HP-UX_11iv2_ia64_aC++_Debug</name>
+    <url>http://acebuilds.riverace.com/gump/dev/acc_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
 </group>
 
 <group>
-<name>Windows</name>
-    <build>
-      <name>WindowsXP_VC9_Debug</name>
-      <url>http://acebuilds.riverace.com/smokey-winxpsp2/dev/vc9_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-    </build>
-    <build>
-      <name>Windows7_VC9_Debug</name>
-      <url>http://acebuilds.riverace.com/smokey-win7/dev/vc9_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-    </build>
-    <build>
-      <name>Windows7_VC10_Debug</name>
-      <url>http://acebuilds.riverace.com/smokey-win7/dev/vc10_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-    </build>
+  <name>Linux</name>
+  <build>
+    <name>FC21_ACE_ST</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_atcd_ace_st/</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>FC20_ACE_clang</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_atcd_ace_clang/</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>RHEL_5_x64_Debug(Intel)</name>
+    <url>http://acebuilds.riverace.com/smokey/dev/icc_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>RHEL_5_x64_Debug(gcc)</name>
+    <url>http://acebuilds.riverace.com/smokey/dev/gcc_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>RHEL_6_x64_Debug(gcc)</name>
+    <url>http://acebuilds.riverace.com/payslee/dev/gcc_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <!--     <build>
+       <name>CentOS_5_3</name>
+       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5.3/</url>
+       <build_sponsor>Olli Savia</build_sponsor>
+       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+       </build>-->
+  <!--     <build>
+       <name>CentOS_3_9</name>
+       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-3.9/</url>
+       <build_sponsor>Olli Savia</build_sponsor>
+       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+       </build>-->
 </group>
 
 <group>
   <name>LynxOS</name>
-<!--  <build>
+  <build>
     <name>LynxOS_4_0</name>
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0</url>
     <build_sponsor>Olli Savia</build_sponsor>
@@ -138,7 +114,60 @@ all the OS/platform combinations on which ACE is tested everyday.
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.2</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
+  </build>
+</group>
+
+<group>
+  <name>OpenBSD</name>
+  <build>
+    <name>OpenBSD-5_6</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-5.6/</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+<name>Solaris</name>
+  <build>
+    <name>Solaris_10_sparc_Studio12_Debug</name>
+    <url>http://acebuilds.riverace.com/chad/dev/studio12_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>Solaris_10_sparc_Studio12_Release_WChar(64bit-full-warnings)</name>
+    <url>http://acebuilds.riverace.com/chad/dev/studio12-64_release_wchar</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+  <name>Windows</name>
+  <build>
+    <name>WindowsXP_VC9_Debug</name>
+    <url>http://acebuilds.riverace.com/smokey-winxpsp2/dev/vc9_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>Windows7_VC9_Debug</name>
+    <url>http://acebuilds.riverace.com/smokey-win7/dev/vc9_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>Windows7_VC10_Debug</name>
+    <url>http://acebuilds.riverace.com/smokey-win7/dev/vc10_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
 </group>
 
 </scoreboard>
