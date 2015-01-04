@@ -200,8 +200,8 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  if ($s =~ m/srand() seed choices are invariably poor/) {
-    # Ignore some annoying warnings on OpenBSD
+  if ($s =~ m/seed choices are invariably poor/) {
+    # Ignore "srand() seed choices are invariably poor" warning on OpenBSD
     $self->Output_Normal ($s);
     return;
   }
