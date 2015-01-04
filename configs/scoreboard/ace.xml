@@ -128,6 +128,24 @@ is tested everyday.
 </group>
 
 <group>
+<name>Solaris</name>
+  <build>
+    <name>Solaris_10_sparc_Studio12_Debug</name>
+    <url>http://acebuilds.riverace.com/chad/dev/studio12_debug</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+  <build>
+    <name>Solaris_10_sparc_Studio12_Release_WChar(64bit-full-warnings)</name>
+    <url>http://acebuilds.riverace.com/chad/dev/studio12-64_release_wchar</url>
+    <red>36</red>
+    <build_sponsor>Riverace</build_sponsor>
+    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
+  </build>
+</group>
+
+<group>
   <name>Windows</name>
   <build>
     <name>WindowsXP_VC9_Debug</name>
