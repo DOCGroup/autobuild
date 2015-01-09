@@ -25,7 +25,7 @@
   <command name="generate_workspace" options="dirs=ACE -type gnuace" />
   <command name="generate_workspace" options="dirs=TAO -type gnuace" />
 
-  <command name="make"               options="-k -C TAO" />
+  <command name="make"               options="-k -C ACE" />
   <command name="make"               options="-k -C TAO" />
 
   <command name="log"                options="off" />
