@@ -1,4 +1,3 @@
-<!-- $Id$ -->
 <scoreboard>
 <preamble>
 <center><h1>ACE Release Candidate Scoreboard</h1></center>
@@ -87,18 +86,12 @@ is tested everyday.
     <build_sponsor>Riverace</build_sponsor>
     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
   </build>
-  <!--     <build>
-       <name>CentOS_5_3</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5.3/</url>
-       <build_sponsor>Olli Savia</build_sponsor>
-       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-       </build>-->
-  <!--     <build>
-       <name>CentOS_3_9</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-3.9/</url>
-       <build_sponsor>Olli Savia</build_sponsor>
-       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-       </build>-->
+  <build>
+    <name>CentOS_5</name>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5</url>
+    <build_sponsor>Olli Savia</build_sponsor>
+    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+  </build>-->
 </group>
 
 <group>
@@ -121,7 +114,7 @@ is tested everyday.
   <name>OpenBSD</name>
   <build>
     <name>OpenBSD-5_6</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-5.6/</url>
+    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-5.6</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
   </build>
