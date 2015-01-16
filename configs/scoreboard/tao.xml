@@ -138,12 +138,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>Windows</name>
-<!--    <build>
+    <build>
       <name>Win2008R2x64_VC10_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
+    </build>
 <!--    <build>
       <name>Win7x64_VC9_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_oci1444_win7-x64_vc9_d1o0</url>
