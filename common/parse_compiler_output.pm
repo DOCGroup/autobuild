@@ -200,6 +200,18 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/gnu.linkonce.t/) {
+    # Ignore "xxx.gnu.linkonce.t.xxx warnings on LynxOS 5.0
+    $self->Output_Normal ($s);
+    return;
+  }
+
+  if ($s =~ m/seed choices are invariably poor/) {
+    # Ignore "srand() seed choices are invariably poor" warning on OpenBSD
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/\-W:c:,\-Xmismatch\-warning\=2/) {
     # catch VxWorks DIAB warning option before it is caught as Warning
     $self->Output_Normal ($s);

@@ -9,7 +9,7 @@
       <env TAO_ROOT group=default var="project_root" join=dir TAO />
       <env CIAO_ROOT group=default var="project_root" join=dir CIAO />
       <env DANCE_ROOT group=default  var="project_root" join=dir DAnCE />
-      <env LD_LIBRARY_PATH group=default  var="root" join=dir ACE lib />
+      <env LD_LIBRARY_PATH group=default  var="project_root" join=dir ACE lib />
       <variable name="log_file" value="build.txt" />
       <var name="log_root" var="builds_home" join=dir scoreboard
                                              join=dir
