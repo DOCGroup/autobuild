@@ -263,16 +263,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 -->
 
 <group>
-  <name>OpenBSD</name>
-<!--  <build>
-    <name>OpenBSD_4_6</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-4.6/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
-</group>
-
-<group>
   <name>FreeBSD</name>
 <!--  <build>
     <name>FreeBSD_7_2</name>
