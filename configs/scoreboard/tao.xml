@@ -199,8 +199,8 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-   <name>LynxOS</name>
-<!--  <build>
+  <name>LynxOS</name>
+  <build>
     <name>LynxOS_4_0_XBuild</name>
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0-xbuild/</url>
     <build_sponsor>Olli Savia</build_sponsor>
@@ -217,7 +217,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-5.0-xbuild/</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
+  </build>
 </group>
 
 <group>
