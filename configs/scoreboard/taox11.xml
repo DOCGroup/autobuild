@@ -381,14 +381,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
     <build>
-    <name>winxp_mingw64_32_taox11</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_taox11</url>
+    <name>win81_mingw64_32_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw64_32_taox11_debug</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_taox11_debug</url>
+    <name>win81_mingw64_32_taox11_debug</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_taox11_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -863,12 +863,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw64_32_taox11_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_taox11_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>win7_mingw64_32_taox11_package_test</name>
     <url>http://buildlogs.theaceorb.nl/win7_mingw64_32_taox11_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -1131,12 +1125,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse132_axcioma_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/suse132_axcioma_x86_64_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>winxp_mingw64_32_axcioma_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_axcioma_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
