@@ -170,13 +170,13 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>-->
     <build>
       <name>MingW64_Win32_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_atcd</url>
+      <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>MingW64_Win64_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/win7_mingw64_64_atcd</url>
+      <url>http://buildlogs.theaceorb.nl/win81_mingw64_64_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -199,8 +199,8 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-   <name>LynxOS</name>
-<!--  <build>
+  <name>LynxOS</name>
+  <build>
     <name>LynxOS_4_0_XBuild</name>
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0-xbuild/</url>
     <build_sponsor>Olli Savia</build_sponsor>
@@ -217,7 +217,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-5.0-xbuild/</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
+  </build>
 </group>
 
 <group>

@@ -125,8 +125,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw64_32_ciaox11</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_ciaox11</url>
+    <name>win7_mingw64_32_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/win7_mingw64_32_ciaox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -386,15 +386,27 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
-    <build>
-    <name>winxp_mingw64_32_taox11</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_taox11</url>
+  <build>
+    <name>win81_mingw64_32_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>winxp_mingw64_32_taox11_debug</name>
-    <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_taox11_debug</url>
+    <name>win81_mingw64_64_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_taox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_mingw64_32_taox11_debug</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_taox11_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win7_mingw64_32_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/win7_mingw64_32_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -593,18 +605,42 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>windows_ruby_i686_packaging</name>
+    <name>winxp_ruby_i686_packaging</name>
     <red>192</red>
     <orange>168</orange>
-    <url>http://buildlogs.theaceorb.nl/windows_ruby_i686_packaging</url>
+    <url>http://buildlogs.theaceorb.nl/winxp_ruby_i686_packaging</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>windows_ruby_x86_64_packaging</name>
+    <name>win7_ruby_i686_packaging</name>
     <red>192</red>
     <orange>168</orange>
-    <url>http://buildlogs.theaceorb.nl/windows_ruby_x86_64_packaging</url>
+    <url>http://buildlogs.theaceorb.nl/win7_ruby_i686_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win7_ruby_x86_64_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/win7_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_ruby_i686_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/win81_ruby_i686_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_ruby_x86_64_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/win81_ruby_x86_64_packaging</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -880,6 +916,18 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>win81_mingw64_32_taox11_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_taox11_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_mingw64_64_taox11_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_64_taox11_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
 </group>
 
 <group>
@@ -1134,8 +1182,19 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>win81_mingw64_32_axcioma_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_axcioma_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_mingw64_64_axcioma_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_64_axcioma_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
 </group>
 
 </scoreboard>
-
 
