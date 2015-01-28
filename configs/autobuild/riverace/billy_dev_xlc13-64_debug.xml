@@ -3,7 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"  value="/acebuilds/ATCD/ACE/build/dev_xlc11-64_debug" />
-        <environment name="LIBPATH"   value="/acebuilds/ATCD/ACE/build/dev_xlc11-64_debug/lib:.:/usr/lib" />
+        <!-- environment name="LIBPATH"   value="/acebuilds/ATCD/ACE/build/dev_xlc11-64_debug/lib:.:/usr/lib" / -->
         <environment name="MPC_ROOT"  value="/acebuilds/MPC" />
         <!-- Avoid SSL local certificate issues -->
 	<environment name="GIT_SSL_NO_VERIFY" value="true" />
