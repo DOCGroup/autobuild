@@ -613,10 +613,26 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>win81_ruby_i686_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/win81_ruby_i686_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>win7_ruby_x86_64_packaging</name>
     <red>192</red>
     <orange>168</orange>
     <url>http://buildlogs.theaceorb.nl/win7_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_ruby_x86_64_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/win81_ruby_x86_64_packaging</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
