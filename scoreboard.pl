@@ -827,6 +827,106 @@ sub clean_cache ($)
 }
 
 
+###############################################################################
+#
+# timestamp_class
+#
+# Decodes a YYYYMMDDHHMM timestamp and figures out the class
+#
+# Arguments:  $ - encoded timestamp
+#             $ - orange hours
+#             $ - red hours
+#             $ - build name
+#
+# Returns:    $ - class
+#
+###############################################################################
+sub timestamp_class ($$$$)
+{
+    my $timestamp = shift;
+    my $warning = shift;
+    my $late = shift;
+    my $buildname = shift;
+
+    if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
+        my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
+
+        my $nowtime = timegm (gmtime());
+
+        if ($sched_file ne "") {
+            my $file_handle = new FileHandle ($sched_file, 'r');
+            if (!defined $file_handle) {
+                print STDERR "Error: Could not open file <$sched_file>: $!\n";
+                return 0;
+            }
+
+            my @daylist;
+            my $acceptit=0;
+            while (<$file_handle>) {
+                if ( $_ =~ /\[$buildname\]/ ) {
+                    $acceptit = 1;
+                    next;
+                }
+                if ( $_ =~ /^\s*\[/ ) {
+                    $acceptit = 0;
+                }
+                if ( $acceptit ) {
+                    my @cmd = split;
+                    my $len = @cmd;
+                    if ( $len > 0 && $cmd[0] eq "runon" ) {
+                        my $arg;
+                        my $day;
+                        foreach $arg (@cmd[1..($len-1)]) {
+                            foreach $day (0..6) {
+                                if ( $arg eq $days[$day] ) {
+                                    push (@daylist, $day);
+                                    push (@daylist, $day + 7);
+                                    push (@daylist, $day + 14);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            sub numerically { $a <=> $b }
+            @daylist = sort numerically @daylist;
+
+            if ( @daylist > 0 ) {
+                my $dow;
+                $dow = (gmtime($buildtime))[6] + 7;
+                my $next_day;
+                my $prev_day;
+                my $i;
+                foreach $i (@daylist) {
+                    $next_day = $i;
+                    if ( $next_day > $dow ) { last; }
+                    $prev_day = $next_day;
+                }
+                my $addhours = ($next_day - $prev_day - 1) * 24;
+                $late += $addhours;
+                $warning += $addhours;
+            }
+        }
+
+        if ($nowtime - $buildtime > (60 * 60 * $late)) {
+            return 'late';
+        }
+
+        if ($nowtime - $buildtime > (60 * 60 * $warning)) {
+            return 'warning';
+        }
+
+        if ($nowtime - $buildtime > (60 * 30)) {
+            return 'new';
+        }
+
+        return 'normal'
+    }
+
+    warn 'Unable to decode time';
+
+    return 'gray';
+}
 
 ###############################################################################
 #
@@ -1005,6 +1105,10 @@ sub update_html ($$$)
     print $indexhtml ".rev { min-width: 40px; }\n";
     print $indexhtml ".fullbrief { min-width: 85px; }\n";
     print $indexhtml ".status { min-width: 50px; }\n";
+    print $indexhtml ".new { font-weight: bold; }\n";
+    print $indexhtml ".normal { background: white; }\n";
+    print $indexhtml ".warning { background: orange; }\n";
+    print $indexhtml ".late { background: red; }\n";
     print $indexhtml "</style>\n";
 
     if ($rss_file ne "") {
@@ -1166,19 +1270,22 @@ sub update_html_table ($$@)
             }
 
             my $color;
+            my $class;
 
             if (defined $builds{$buildname}->{STATUS} &&
                 $builds{$buildname}->{STATUS} =~ /Disabled\r?/) {
                 $color = 'Gray';
             }
             else {
-                $color = timestamp_color ($basename, $orange, $red, $buildname);
+                $class = timestamp_class ($basename, $orange, $red, $buildname);
             }
-            print $indexhtml '<td bgcolor=';
-            print $indexhtml $color;
+            print $indexhtml '<td class=';
+            print $indexhtml $class;
             print $indexhtml '>',decode_timestamp ($basename);
 
-            print $indexhtml '<td>';
+            print $indexhtml '<td class=';
+            print $indexhtml $class;
+            print $indexhtml '>&nbsp;';
             if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
                 !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
                 print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
