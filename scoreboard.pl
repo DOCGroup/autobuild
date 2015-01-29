@@ -916,7 +916,7 @@ sub timestamp_class ($$$$)
             return 'warning';
         }
 
-        if ($nowtime - $buildtime > (60 * 30)) {
+        if ($nowtime - $buildtime < (60 * 30)) {
             return 'new';
         }
 
