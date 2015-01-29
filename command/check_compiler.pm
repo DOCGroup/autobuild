@@ -119,7 +119,7 @@ sub Run ($)
     }
     elsif($compiler =~ m/^(vacpp)/i ){
         if(-x "/usr/bin/lslpp"){
-           system("/usr/bin/lslpp -l vacpp.cmp.core | grep vacpp.cmp.core");
+           system("/usr/bin/lslpp -l | grep -i \'C++ Compiler\'");
         }else {
            print "ERROR: Could not find /usr/bin/lslpp!!\n";
         }
