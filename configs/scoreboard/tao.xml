@@ -10,12 +10,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Android</name>
-<!--   <build>
+   <build>
       <name>SUSE114_NDK6_r9_arm_host</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_firefly_linux_gcc_d0o1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-   </build>-->
+   </build>
 <!--   <build>
       <name>SUSE114_NDK6_r9_arm_target</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_firefly_android_gcc_d0o1s1</url>
