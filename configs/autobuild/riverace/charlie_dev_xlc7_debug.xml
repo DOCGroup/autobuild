@@ -3,7 +3,7 @@
     <configuration>
 
         <environment name="ACE_ROOT"  value="/acebuilds/ATCD/ACE/build/dev_xlc7_debug" />
-        <environment name="LIBPATH"   value="/acebuilds/ATCD/ACE/build/dev_xlc7_debug/lib:.:/usr/lib" />
+        <!-- environment name="LIBPATH"   value="/acebuilds/ATCD/ACE/build/dev_xlc7_debug/lib:.:/usr/lib" / -->
         <environment name="MPC_ROOT"  value="/acebuilds/MPC" />
 
         <variable name="root"         value="/acebuilds/ATCD/ACE" />
