@@ -40,6 +40,6 @@
 
     <command name="log"               options="OFF" />
     <command name="process_logs"      options="move prettify clean=5 index" />
-    <command name="file_manipulation" options="type=delete file=ATCD/ACE/.disable" />
+    <command name="file_manipulation" options="type=delete file=ATCD/.disable" />
     <command name="status"            options="off" />
 </autobuild>
