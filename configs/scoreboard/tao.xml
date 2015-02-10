@@ -144,18 +144,18 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
-<!--    <build>
+    <build>
       <name>Win7x64_VC9_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_oci1444_win7-x64_vc9_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
-<!--    <build>
+    </build>
+    <build>
       <name>WinXP64_VC9_64bit_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_earwig_winxp-x64_nmake_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
+    </build>
 <!--    <build>
       <name>Win2003_VC71_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_weevil_win2003_vc71_s1d1o0</url>
