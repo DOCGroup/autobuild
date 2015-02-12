@@ -578,6 +578,7 @@ sub new ($)
     $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_OPENDDS} = 'None';
     $self->{SVN_REVISIONS} = ();
+    $self->{GIT_REVISIONS} = ();
 
     bless ($self, $class);
     return $self;
@@ -1321,12 +1322,15 @@ sub Config_Handler ($)
         my $url = $1;
         if ($url =~ m/git:\/\/git.ociweb.com\/git\/DOCGroup\/ATCD.git/)
         {
+            print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
+            print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
         }
     }
     elsif ($s =~ m/GIT_COMMIT=(.+)/)
     {
+        print "Matched GIT revision $1\n";
         $totals->{GIT_REVISIONS}[0] = $1;
     }
 }
