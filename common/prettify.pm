@@ -1316,6 +1316,19 @@ sub Config_Handler ($)
             $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;
         }
     }
+    elsif ($s =~ m/GIT_URL=(.+)/)
+    {
+        my $url = $1;
+        if ($url =~ m/git:\/\/git.ociweb.com\/git\/DOCGroup\/ATCD.git/)
+        {
+            my $revision = $totals->{GIT_REVISIONS}[0];
+            $totals->{GIT_CHECKEDOUT_ACE} = $revision;
+        }
+    }
+    elsif ($s =~ m/GIT_COMMIT=(.+)/)
+    {
+        $totals->{GIT_REVISIONS}[0] = $1;
+    }
 }
 
 sub Autoconf_Handler ($)
