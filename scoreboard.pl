@@ -1290,11 +1290,6 @@ sub update_html_table ($$@)
                 !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
                 print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
             }
-            elsif (defined $builds{$buildname}->{GIT_CHECKEDOUT_ACE}) {
-                my $sha = $builds{$buildname}->{GIT_CHECKEDOUT_ACE};
-                my $shastart = substr($sha, 0, 8);
-                print $indexhtml $shastart;
-            }
             elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
                 print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
             }

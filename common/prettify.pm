@@ -726,7 +726,12 @@ sub Footer ()
     }
 
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
-    $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
+    if ($self->{GIT_CHECKEDOUT_ACE}) {
+      my $sha = substr($self->{GIT_CHECKEDOUT_ACE}, 0, 8);
+      $totals .= " ACE: $sha";
+    } else {
+      $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
+    }
     $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
     $totals .= " CVS: \"$self->{CVS_TIMESTAMP}\""; ## Prismtech still use some CVS please leave
     $totals .= " OpenDDS: $self->{SUBVERSION_CHECKEDOUT_OPENDDS}";
