@@ -1211,6 +1211,17 @@ sub Setup_Handler ($)
             }
         }
     }
+    elsif ($s =~ m/git clone .* git:\/\/atcd.git/i)
+    {
+      $totals->{GIT_CHECKEDOUT_ACE} = "Matched";
+    }
+    elsif ($s =~ m/^commit (.*)$/)
+    {
+      my $sha = $1;
+      if ($totals->{GIT_CHECKEDOUT_ACE} == "Matched") {
+        $totals->{GIT_CHECKEDOUT_ACE} = $sha;
+      }
+    }
     elsif ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
         $s =~ m/nothing known about/ ||
