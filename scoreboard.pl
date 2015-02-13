@@ -826,6 +826,7 @@ sub clean_cache ($)
     }
 }
 
+sub numerically { $a <=> $b }
 
 ###############################################################################
 #
@@ -888,7 +889,6 @@ sub timestamp_class ($$$$)
                     }
                 }
             }
-            sub numerically { $a <=> $b }
             @daylist = sort numerically @daylist;
 
             if ( @daylist > 0 ) {
@@ -989,7 +989,6 @@ sub timestamp_color ($$$$)
                     }
                 }
             }
-            sub numerically { $a <=> $b }
             @daylist = sort numerically @daylist;
 
             if ( @daylist > 0 ) {
