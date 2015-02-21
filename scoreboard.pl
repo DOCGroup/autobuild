@@ -82,7 +82,7 @@ our $use_build_logs = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
-<A HREF=\"https://svn.dre.vanderbilt.edu/viewvc/ACE_autobuild/trunk/README?revision=HEAD\">
+<A HREF=\"https://raw.githubusercontent.com/DOCGroup/autobuild/master/README\">
 here</A>.\n";
 
 ###############################################################################
