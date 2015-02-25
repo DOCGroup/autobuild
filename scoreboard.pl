@@ -28,6 +28,7 @@ use Time::Local;
 
 # %builds->{$name}->{GROUP}            <- Group this build is in
 #                 ->{URL}              <- Link to use for directing to all logs
+#                 ->{DIFFROOT}         <- URL to append GIT sha to, for diffs
 #                 ->{MANUAL_LINK}      <- Link to use to manually start a build
 #                 ->{ORANGE_TIME}      <- Number of hours before build turns orange
 #                 ->{RED_TIME}         <- Number of hours before build turns red
@@ -1282,18 +1283,24 @@ sub update_html_table ($$@)
             print $indexhtml $class;
             print $indexhtml '>',decode_timestamp ($basename);
 
-            print $indexhtml '<td class=';
-            print $indexhtml $class;
-            print $indexhtml '>&nbsp;';
+            my $diffRev = '';
             if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
                 !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
-                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
+                $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
             }
             elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
-                print $indexhtml $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
+                $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
             }
             else {
-                print $indexhtml "&nbsp;";
+                $diffRev = 'None';
+            }
+            my $diffRoot = $builds{$buildname}->{DIFFROOT};
+            # If we have a diff revision, and a diffroot URL, show a link
+            if (($diffRev !~ /None/) && ($diffRoot)) {
+              my $link = "<a href='$diffRoot + $diffRev'>$diffRev</a>";
+              print $indexhtml "<td class='$class'>&nbsp;$link&nbsp;</td>";
+            } else {
+              print $indexhtml "<td class='$class'>&nbsp;$diffRev&nbsp;</td>";
             }
 
             print $indexhtml '<td>';
