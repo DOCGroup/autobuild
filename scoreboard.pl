@@ -1297,7 +1297,7 @@ sub update_html_table ($$@)
             my $diffRoot = $builds{$buildname}->{DIFFROOT};
             # If we have a diff revision, and a diffroot URL, show a link
             if (($diffRev !~ /None/) && ($diffRoot)) {
-              my $url = $diffRoot + $diffRev;
+              my $url = $diffRoot . $diffRev;
               my $link = "<a href='$url'>$diffRev</a>";
               print $indexhtml "<td class='$class'>&nbsp;$link&nbsp;</td>";
             } else {
