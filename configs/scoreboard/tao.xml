@@ -184,12 +184,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>Solaris</name>
-<!--   <build>
+   <build>
       <name>Solaris9_Studio11_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_fly_sunos59_suncc58_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>-->
+   </build>
 <!--   <build>
       <name>Solaris9_i386_gcc_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_sydney.phx_sunos59_gcc_d1o0</url>
