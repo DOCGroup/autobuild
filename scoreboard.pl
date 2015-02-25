@@ -644,7 +644,7 @@ sub local_update_cache ($)
             $post = 1;
             unlink $triggerfile;
         }
-print "in local_update_cache, post=$post\n";
+        print "        in local_update_cache, post=$post\n" if $verbose;
 
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" ) {next;}
@@ -683,7 +683,7 @@ print "in local_update_cache, post=$post\n";
         }
 
         # Update the index file, since it may have changed
-        if ($updated) {
+        if ($updated || $post) {
             print "        Creating new index\n" if ($verbose);
             utility::index_logs ("$directory/$buildname", $buildname);
         }
