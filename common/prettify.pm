@@ -1221,6 +1221,7 @@ sub Setup_Handler ($)
       if ($totals->{GIT_CHECKEDOUT_ACE} eq "Matched") {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
       }
+      $self->Output_Normal ($s);
     }
     elsif ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
