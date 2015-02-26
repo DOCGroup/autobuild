@@ -1218,7 +1218,7 @@ sub Setup_Handler ($)
     elsif ($s =~ m/^commit (.*)$/)
     {
       my $sha = $1;
-      if ($totals->{GIT_CHECKEDOUT_ACE} == "Matched") {
+      if ($totals->{GIT_CHECKEDOUT_ACE} eq "Matched") {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
       }
     }
