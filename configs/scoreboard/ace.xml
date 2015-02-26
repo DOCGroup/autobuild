@@ -65,14 +65,12 @@ is tested everyday.
     <url>http://buildlogs.theaceorb.nl/fc21_atcd_ace_st/</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>FC20_ACE_clang</name>
     <url>http://buildlogs.theaceorb.nl/fc20_atcd_ace_clang/</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-    <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>RHEL_5_x64_Debug(Intel)</name>
