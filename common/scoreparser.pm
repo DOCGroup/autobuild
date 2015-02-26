@@ -130,6 +130,9 @@ sub Parse ($\@)
 
                 $build_info{NAME} = $name;
             }
+            elsif (m/^\s*<diffroot>(.*)<\/diffroot>\s*$/i) {
+                $build_info{DIFFROOT} = $1;
+            }
             elsif (m/^\s*<url>(.*)<\/url>\s*$/i) {
                 $build_info{URL} = $1;
 

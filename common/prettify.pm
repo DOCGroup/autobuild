@@ -578,6 +578,7 @@ sub new ($)
     $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_OPENDDS} = 'None';
     $self->{SVN_REVISIONS} = ();
+    $self->{GIT_REVISIONS} = ();
 
     bless ($self, $class);
     return $self;
@@ -725,7 +726,12 @@ sub Footer ()
     }
 
     $totals .= " Failures: $self->{TOTAL_ERROR_SUBSECTIONS}";
-    $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
+    if ($self->{GIT_CHECKEDOUT_ACE}) {
+      my $sha = substr($self->{GIT_CHECKEDOUT_ACE}, 0, 8);
+      $totals .= " ACE: $sha";
+    } else {
+      $totals .= " ACE: $self->{SUBVERSION_CHECKEDOUT_ACE}";
+    }
     $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
     $totals .= " CVS: \"$self->{CVS_TIMESTAMP}\""; ## Prismtech still use some CVS please leave
     $totals .= " OpenDDS: $self->{SUBVERSION_CHECKEDOUT_OPENDDS}";
@@ -1205,6 +1211,17 @@ sub Setup_Handler ($)
             }
         }
     }
+    elsif ($s =~ m/git clone .* git:\/\/atcd.git/i)
+    {
+      $totals->{GIT_CHECKEDOUT_ACE} = "Matched";
+    }
+    elsif ($s =~ m/^commit (.*)$/)
+    {
+      my $sha = $1;
+      if ($totals->{GIT_CHECKEDOUT_ACE} eq "Matched") {
+        $totals->{GIT_CHECKEDOUT_ACE} = $sha;
+      }
+    }
     elsif ($s =~ m/aborted/i ||
         $s =~ m/cannot access/i ||
         $s =~ m/nothing known about/ ||
@@ -1315,6 +1332,22 @@ sub Config_Handler ($)
         {
             $totals->{SUBVERSION_CHECKEDOUT_MPC} = $revision;
         }
+    }
+    elsif ($s =~ m/GIT_URL=(.+)/)
+    {
+        my $url = $1;
+        if ($url =~ m/git:\/\/git.ociweb.com\/git\/DOCGroup\/ATCD.git/)
+        {
+            print "Matched GIT url $url\n";
+            my $revision = $totals->{GIT_REVISIONS}[0];
+            print "Matched GIT url to revision $revision\n";
+            $totals->{GIT_CHECKEDOUT_ACE} = $revision;
+        }
+    }
+    elsif ($s =~ m/GIT_COMMIT=(.+)/)
+    {
+        print "Matched GIT revision $1\n";
+        $totals->{GIT_REVISIONS}[0] = $1;
     }
 }
 

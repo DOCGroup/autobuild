@@ -10,18 +10,18 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Android</name>
-<!--   <build>
+   <build>
       <name>SUSE114_NDK6_r9_arm_host</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_firefly_linux_gcc_d0o1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-   </build>-->
-<!--   <build>
+   </build>
+   <build>
       <name>SUSE114_NDK6_r9_arm_target</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_firefly_android_gcc_d0o1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-   </build>-->
+   </build>
 <!--   <build>
       <name>SUSE114_NDK6_r9_arm_target_tests</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_firefly_android_gcc_d0o1s1_tests</url>
@@ -44,6 +44,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Linux</name>
+     <build>
+       <name>FC5</name>
+       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FC5/</url>
+       <build_sponsor>Olli Savia</build_sponsor>
+       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
+     </build>
      <build>
        <name>FC21_CORBAe_compact</name>
        <url>http://buildlogs.theaceorb.nl/fc21_atcd_corbae_compact/</url>
@@ -76,30 +82,30 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
 -->
-<!--     <build>
+     <build>
        <name>FC6_Compact_NoInline</name>
        <url>http://scoreboard.ociweb.com/doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-     </build>-->
-<!--     <build>
+     </build>
+     <build>
        <name>Ubuntu_14_04_GCC_49_x64</name>
        <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_gcc-4.9_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-     </build>-->
+     </build>
      <build>
        <name>Ubuntu_14_04_Clang_x64</name>
        <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_clang_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
-<!--     <build>
+     <build>
        <name>Ubuntu_10_04</name>
        <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/Ubuntu-10.04/</url>
        <build_sponsor>Olli Savia</build_sponsor>
        <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-     </build>-->
+     </build>
 </group>
 
 <group>
@@ -132,45 +138,45 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>Windows</name>
-<!--    <build>
+    <build>
       <name>Win2008R2x64_VC10_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
-<!--    <build>
+    </build>
+    <build>
       <name>Win7x64_VC9_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_oci1444_win7-x64_vc9_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
-<!--    <build>
+    </build>
+    <build>
       <name>WinXP64_VC9_64bit_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_earwig_winxp-x64_nmake_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
-<!--    <build>
+    </build>
+    <build>
       <name>Win2003_VC71_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_weevil_win2003_vc71_s1d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
-<!--    <build>
+    </build>
+    <build>
       <name>Win2003_VC71_Static_Release</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>-->
+    </build>
     <build>
       <name>MingW64_Win32_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/winxp_mingw64_32_atcd</url>
+      <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
     <build>
       <name>MingW64_Win64_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/win7_mingw64_64_atcd</url>
+      <url>http://buildlogs.theaceorb.nl/win81_mingw64_64_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
     </build>
@@ -178,12 +184,12 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
    <name>Solaris</name>
-<!--   <build>
+   <build>
       <name>Solaris9_Studio11_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_fly_sunos59_suncc58_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>-->
+   </build>
 <!--   <build>
       <name>Solaris9_i386_gcc_Debug</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_sydney.phx_sunos59_gcc_d1o0</url>
@@ -193,8 +199,8 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-   <name>LynxOS</name>
-<!--  <build>
+  <name>LynxOS</name>
+  <build>
     <name>LynxOS_4_0_XBuild</name>
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0-xbuild/</url>
     <build_sponsor>Olli Savia</build_sponsor>
@@ -211,7 +217,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-5.0-xbuild/</url>
     <build_sponsor>Olli Savia</build_sponsor>
     <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
+  </build>
 </group>
 
 <group>
@@ -255,16 +261,6 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
 </group>
 -->
-
-<group>
-  <name>OpenBSD</name>
-<!--  <build>
-    <name>OpenBSD_4_6</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-4.6/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
-</group>
 
 <group>
   <name>FreeBSD</name>
