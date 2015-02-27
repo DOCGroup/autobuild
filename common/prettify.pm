@@ -577,6 +577,8 @@ sub new ($)
     $self->{SUBVERSION_CHECKEDOUT_ACE} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_MPC} = 'None';
     $self->{SUBVERSION_CHECKEDOUT_OPENDDS} = 'None';
+    $self->{GIT_CHECKEDOUT_ACE} = 'None';
+    $self->{GIT_CHECKEDOUT_OPENDDS} = 'None';
     $self->{SVN_REVISIONS} = ();
     $self->{GIT_REVISIONS} = ();
 
@@ -734,7 +736,12 @@ sub Footer ()
     }
     $totals .= " MPC: $self->{SUBVERSION_CHECKEDOUT_MPC}";
     $totals .= " CVS: \"$self->{CVS_TIMESTAMP}\""; ## Prismtech still use some CVS please leave
-    $totals .= " OpenDDS: $self->{SUBVERSION_CHECKEDOUT_OPENDDS}";
+    if ($self->{GIT_CHECKEDOUT_OPENDDS}) {
+      my $sha = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
+      $totals .= " OpenDDS: $sha";
+    } else {
+      $totals .= " OpenDDS: $self->{SUBVERSION_CHECKEDOUT_OPENDDS}";
+    }
     $totals .= "\n";
 
     print {$self->{FH}} "<!-- BUILD_TOTALS: $totals -->\n";
@@ -1214,11 +1221,12 @@ sub Setup_Handler ($)
     elsif ($s =~ m/git clone .* git:\/\/atcd.git/i)
     {
       $totals->{GIT_CHECKEDOUT_ACE} = "Matched";
+      $self->Output_Normal ($s);
     }
     elsif ($s =~ m/^commit (.*)$/)
     {
       my $sha = $1;
-      if ($totals->{GIT_CHECKEDOUT_ACE} eq "Matched") {
+      if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched") {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
       }
       $self->Output_Normal ($s);
@@ -1336,13 +1344,21 @@ sub Config_Handler ($)
     }
     elsif ($s =~ m/GIT_URL=(.+)/)
     {
+        # Jenkins environment
         my $url = $1;
-        if ($url =~ m/git:\/\/git.ociweb.com\/git\/DOCGroup\/ATCD.git/)
+        if ($url =~ m/git:\/\/.*\/ATCD\.git/i)
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
+        }
+        elsif ($url =~ m/git:\/\/.*\/OpenDDS\.git/i)
+        {
+            print "Matched GIT url $url\n";
+            my $revision = $totals->{GIT_REVISIONS}[0];
+            print "Matched GIT url to revision $revision\n";
+            $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
         }
     }
     elsif ($s =~ m/GIT_COMMIT=(.+)/)
