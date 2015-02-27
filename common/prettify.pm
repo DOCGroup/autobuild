@@ -1218,16 +1218,30 @@ sub Setup_Handler ($)
             }
         }
     }
-    elsif ($s =~ m/git clone .* git:\/\/atcd.git/i)
+    elsif (($s =~ m/git clone.*git:\/\/.*atcd\.git/i) ||
+           ($s =~ m/origin.*git:\/\/.*atcd\.git/i))
     {
+      # Add git remote -v to config before git log -1 to guarantee url
       $totals->{GIT_CHECKEDOUT_ACE} = "Matched";
+      $self->Output_Normal ($s);
+    }
+    elsif (($s =~ m/git clone.*git:\/\/.*OpenDDS\.git/i) ||
+           ($s =~ m/origin.*git:\/\/.*OpenDDS\.git/i))
+    {
+      # Add git remote -v to config before git log -1 to guarantee url
+      $totals->{GIT_CHECKEDOUT_OPENDDS} = "Matched";
       $self->Output_Normal ($s);
     }
     elsif ($s =~ m/^commit (.*)$/)
     {
       my $sha = $1;
-      if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched") {
+      if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched")
+      {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
+      }
+      elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
+      {
+        $totals->{GIT_CHECKEDOUT_OPENDDS} = $sha;
       }
       $self->Output_Normal ($s);
     }
