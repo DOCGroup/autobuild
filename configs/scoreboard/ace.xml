@@ -67,8 +67,8 @@ is tested everyday.
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>FC20_ACE_clang</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_atcd_ace_clang/</url>
+    <name>FC21_ACE_clang</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_atcd_ace_clang/</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
