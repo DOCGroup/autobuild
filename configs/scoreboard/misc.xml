@@ -14,24 +14,28 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
     <url>http://buildlogs.theaceorb.nl/fc20_atcd_fuzz</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>Doxygen</name>
     <url>http://buildlogs.theaceorb.nl/fc20_atcd_doxygen</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>Coverity</name>
     <url>http://buildlogs.theaceorb.nl/rhel70_atcd_coverity</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>Mail_Test_Stats</name>
     <url>http://buildlogs.theaceorb.nl/fc20_atcd_mail_teststats</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
 </group>
 </scoreboard>

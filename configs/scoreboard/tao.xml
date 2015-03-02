@@ -33,12 +33,14 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://buildlogs.theaceorb.nl/fc20_tao_android_ndk8e_r14_shared</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
    </build>
    <build>
       <name>FC20_NDK8e_r14_arm_shared_tao_host</name>
       <url>http://buildlogs.theaceorb.nl/fc20_tao_android_ndk8e_r14_shared_host</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
    </build>
 </group>
 
@@ -55,12 +57,14 @@ all the OS/platform combinations on which TAO is tested everyday.
        <url>http://buildlogs.theaceorb.nl/fc21_atcd_corbae_compact/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
        <name>FC21_CORBAe_micro</name>
        <url>http://buildlogs.theaceorb.nl/fc21_atcd_corbae_micro/</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>FC20_TAO_Valgrind</name>
@@ -115,24 +119,28 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_corbaec/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
    </build>
    <build>
      <name>FC20_Stats_CORBA_e_micro</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_corbaem/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
    </build>
    <build>
      <name>FC20_Stats_CORBA_e_micro_single_threaded</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_corbaems/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
    </build>
    <build>
      <name>FC20_Stats_Minimum_Corba</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_corbaminimum/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
    </build>
 </group>
 
@@ -173,12 +181,14 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://buildlogs.theaceorb.nl/win81_mingw64_32_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>MingW64_Win64_GCC_Release</name>
       <url>http://buildlogs.theaceorb.nl/win81_mingw64_64_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
 </group>
 
@@ -227,6 +237,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     <url>http://buildlogs.theaceorb.nl/openvmsia64</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
 </group>
 

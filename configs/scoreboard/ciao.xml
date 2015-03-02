@@ -14,90 +14,105 @@
       <url>http://buildlogs.theaceorb.nl/centos63_atcd_debug_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>CentOS_63_Release_NDDS_510rev0</name>
       <url>http://buildlogs.theaceorb.nl/centos63_atcd_release_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>CentOS_70_Debug_NDDS_510rev0</name>
       <url>http://buildlogs.theaceorb.nl/centos70_atcd_debug_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>CentOS_70_Release_NDDS_510rev0</name>
       <url>http://buildlogs.theaceorb.nl/centos70_atcd_release_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>RHEL_64_Debug_NDDS_510rev0</name>
       <url>http://buildlogs.theaceorb.nl/rhel64_atcd_debug_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>RHEL_64_Release_NDDS_510rev0</name>
       <url>http://buildlogs.theaceorb.nl/rhel64_atcd_release_ndds510rev0/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
     <build>
       <name>FC21_NoLogging</name>
         <url>http://buildlogs.theaceorb.nl/fc21_atcd_nologging/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>FC20_Versioned_Namespace</name>
         <url>http://buildlogs.theaceorb.nl/fc20_atcd_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
      <build>
        <name>FC20_FullCCM_NoEvents_x64</name>
        <url>http://buildlogs.theaceorb.nl/fc20_atcd_fullccm_ne</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
    <build>
       <name>FC20_LwCCM_NoEvents_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
    <build>
       <name>FC21_LwCCM_NoEvents_Install_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
    <build>
       <name>FC21_LwCCM_NoEvents_Install_Test_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
    <build>
       <name>FC21_LwCCM_NoEvents_Compile_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_compile</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>FC20_Valgrind_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
      <build>
        <name>FC20_FullCCM_x64</name>
        <url>http://buildlogs.theaceorb.nl/fc20_atcd_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
       <name>RedHat_EL5_x86_inline_gcc44</name>
@@ -192,18 +207,21 @@
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_performance/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>FC20_FP_Stats_Regular</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_regular/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>FC20_FP_Stats_Versioned</name>
       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_versioned/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
   </group>
   <group>
@@ -213,12 +231,14 @@
       <url>http://buildlogs.theaceorb.nl/win81_msvc11_atcd_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>Win81_VC12_Debug</name>
       <url>http://buildlogs.theaceorb.nl/win81_msvc12_atcd_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
   </group>
 </scoreboard>
