@@ -181,6 +181,9 @@ sub Parse ($\@)
             elsif (m/^\s*<red>(.*)<\/red>\s*$/i) {
                 $build_info{RED_TIME} = $1;
             }
+            elsif (m/^\s*<diffroot>(.*)<\/diffroot>\s*$/i) {
+                # Ignore
+            }
 	    elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
 		$build_info{PDF} = $1;
 	    }
