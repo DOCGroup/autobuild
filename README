@@ -22,7 +22,7 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 
 (1) Check out the latest build scripts from subversion using:
 
-       svn co svn://svn.dre.vanderbilt.edu/ACE/autobuild/trunk autobuild
+       git clone https://github.com/DOCGroup/autobuild
 
 (2) Look at the existing XML configuration files in
     autobuild/configs/autobuild/*.  Create a new XML configuration
