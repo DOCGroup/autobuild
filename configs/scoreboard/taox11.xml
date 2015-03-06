@@ -279,26 +279,26 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_optimized</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_optimized</url>
+    <name>fc21_taox11_optimized</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_optimized</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_sanitizer</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_sanitizer</url>
+    <name>fc21_taox11_sanitizer</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_sanitizer</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_corbae_compact</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_corbae_compact</url>
+    <name>fc21_taox11_corbae_compact</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_corbae_compact</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_corbae_micro</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_corbae_micro</url>
+    <name>fc21_taox11_corbae_micro</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_corbae_micro</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -363,14 +363,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_doxygen</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_doxygen</url>
+    <name>fc21_taox11_doxygen</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_doxygen</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_valgrind</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_valgrind</url>
+    <name>fc21_taox11_valgrind</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -429,8 +429,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_coverage</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_coverage</url>
+    <name>fc21_taox11_coverage</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_coverage</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
