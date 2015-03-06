@@ -89,8 +89,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_no_ami_facet</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_no_ami_facet</url>
+    <name>fc21_ciaox11_no_ami_facet</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_no_ami_facet</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -107,8 +107,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_no_dds4ccm</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_no_dds4ccm</url>
+    <name>fc21_ciaox11_no_dds4ccm</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_no_dds4ccm</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>

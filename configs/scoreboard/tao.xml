@@ -67,8 +67,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
      <build>
-      <name>FC20_TAO_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_tao_valgrind/</url>
+      <name>FC21_TAO_Valgrind</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_tao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
      </build>
