@@ -59,22 +59,22 @@
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
-      <name>FC20_Versioned_Namespace</name>
-        <url>http://buildlogs.theaceorb.nl/fc20_atcd_versioned/</url>
+      <name>FC21_Versioned_Namespace</name>
+        <url>http://buildlogs.theaceorb.nl/fc21_atcd_versioned/</url>
         <build_sponsor>Remedy IT</build_sponsor>
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
      <build>
-       <name>FC20_FullCCM_NoEvents_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fullccm_ne</url>
+       <name>FC21_FullCCM_NoEvents_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc21_atcd_fullccm_ne</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
    <build>
-      <name>FC20_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_lwccm_ne</url>
+      <name>FC21_LwCCM_NoEvents_x64</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
@@ -108,8 +108,8 @@
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
      <build>
-       <name>FC20_FullCCM_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc20_atcd_fullccm</url>
+       <name>FC21_FullCCM_x64</name>
+       <url>http://buildlogs.theaceorb.nl/fc21_atcd_fullccm</url>
        <build_sponsor>Remedy IT</build_sponsor>
        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
@@ -203,22 +203,22 @@
   <group>
     <name>Stats Builds</name>
     <build>
-      <name>FC20_FP_Stats</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_performance/</url>
+      <name>FC21_FP_Stats</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_performance/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
-      <name>FC20_FP_Stats_Regular</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_regular/</url>
+      <name>FC21_FP_Stats_Regular</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_regular/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
-      <name>FC20_FP_Stats_Versioned</name>
-      <url>http://buildlogs.theaceorb.nl/fc20_atcd_fp_versioned/</url>
+      <name>FC21_FP_Stats_Versioned</name>
+      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_versioned/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>

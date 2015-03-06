@@ -347,7 +347,4 @@ If you'd like to change the email address of autobuild displayed to users who
 recieve email notification, add and modifiy the line below:
 
 <variable name="MAIL_SENDER_ADDRESS"  value="autobuild@mydomain.com" />
-
-
-<CODE>$Id$</CODE>
 */
