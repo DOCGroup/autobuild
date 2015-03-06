@@ -17,14 +17,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_footprint_regular</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_footprint_regular</url>
+    <name>fc21_ciaox11_footprint_regular</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_footprint_regular</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_footprint_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_footprint_test</url>
+    <name>fc21_ciaox11_footprint_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_footprint_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -95,14 +95,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_no_dds4ccm_facet</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_no_dds4ccm_facet</url>
+    <name>fc21_ciaox11_no_dds4ccm_facet</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_no_dds4ccm_facet</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_regeneration</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_regeneration</url>
+    <name>fc21_ciaox11_regeneration</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_regeneration</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -113,20 +113,20 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_dds4ccm_ndds_event_only</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_dds4ccm_ndds_event_only</url>
+    <name>fc21_ciaox11_dds4ccm_ndds_event_only</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_dds4ccm_ndds_event_only</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_dds4ccm_ndds_state_only</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_dds4ccm_ndds_state_only</url>
+    <name>fc21_ciaox11_dds4ccm_ndds_state_only</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_dds4ccm_ndds_state_only</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_fuzz</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_fuzz</url>
+    <name>fc21_ciaox11_fuzz</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_fuzz</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
