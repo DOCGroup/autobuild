@@ -29,8 +29,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_sanitizer</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_sanitizer</url>
+    <name>fc21_ciaox11_sanitizer</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_sanitizer</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -41,14 +41,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_valgrind</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_valgrind</url>
+    <name>fc21_ciaox11_valgrind</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_valgrind</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_pedantic</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_pedantic</url>
+    <name>fc21_ciaox11_pedantic</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_pedantic</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -83,8 +83,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_ciaox11_no_corba_facet</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_no_corba_facet</url>
+    <name>fc21_ciaox11_no_corba_facet</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_ciaox11_no_corba_facet</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -451,8 +451,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 <group>
   <name>Misc builds</name>
   <build>
-    <name>fc20_taox11_x86_64_package_no_license_test</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_x86_64_package_no_license_test/</url>
+    <name>fc21_taox11_x86_64_package_no_license_test</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_x86_64_package_no_license_test/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
