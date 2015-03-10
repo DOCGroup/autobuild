@@ -32,7 +32,7 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
   </build>
   <build>
     <name>Mail_Test_Stats</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_atcd_mail_teststats</url>
+    <url>http://buildlogs.theaceorb.nl/fc21_atcd_mail_teststats</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
