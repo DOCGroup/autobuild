@@ -351,8 +351,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc20_taox11_fuzz</name>
-    <url>http://buildlogs.theaceorb.nl/fc20_taox11_fuzz</url>
+    <name>fc21_taox11_fuzz</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_fuzz</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
