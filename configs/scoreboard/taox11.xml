@@ -472,6 +472,18 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>fc20_ciaox11_devtests</name>
+    <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_devtests/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_mingw64_64_ciaox11_devtests</name>
+    <url>http://buildlogs.theaceorb.nl/win81_mingw64_64_ciaox11_devtests/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
 </group>
 
 <group>
