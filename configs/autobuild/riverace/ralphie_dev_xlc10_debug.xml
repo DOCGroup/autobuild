@@ -56,7 +56,8 @@
     <command name="auto_run_tests"    options="-a" />
 
     <command name="log"               options="off" />
-    <command name="process_logs"      options="clean=5 move prettify index" />
+    <!-- Can't do clean=5 index - AIX perl errors; see smokey clean_index_aix_builds.pl -->
+    <command name="process_logs"      options="move prettify" />
     <command name="file_manipulation" options="type=delete file=build/xlc10_debug/.disable" />
     <command name="status"            options="off" />
 </autobuild>
