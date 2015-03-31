@@ -13,7 +13,7 @@
         <variable name="log_root"     value="/smokey/acebuilds/logs/lucky/dev/acc_debug" />
         <variable name="local_features" value="/acebuilds/ATCD/ACE/local.features" />
         <variable name="make_program" value="gmake" />
-        <variable name="configs"      value="SSL Exceptions" />
+        <variable name="configs"      value="SSL Exceptions CHECK_RESOURCES" />
 
     </configuration>
 
@@ -33,7 +33,7 @@
     <!-- Delete the build's Makefiles before regenerating them. -->
     <command name="shell"             options="find build/dev_acc_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
 
-    <command name="file_manipulation" options="type=create file=local.features output='ssl=1\n'" />
+    <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nipv6=1\n'" />
     <command name="generate_workspace" options="-feature_file /acebuilds/ATCD/ACE/local.features -relative ACE_ROOT=/acebuilds/ATCD/ACE/build/dev_acc_debug -type gnuace" />
 
     <command name="file_manipulation" options="type=create file=build/dev_acc_debug/ace/config.h output='#include \x22ace/config-hpux-11.00.h\x22\n'" />
