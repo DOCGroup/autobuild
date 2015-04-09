@@ -375,10 +375,11 @@ sub replace_error
     $multiple = 0 if (!defined($multiple));
 
     my $replaced = 0;
-    while ((s/([E|e])rror/$1rr0r/ ||
-            s/ERROR/ERR0R/) &&
-           $multiple) {
+    while (s/([E|e])rror/$1rr0r/ ||
+           s/ERROR/ERR0R/) {
         $replaced = 1;
+
+        last if !$multiple;
     }
 
     return $replaced;
@@ -483,6 +484,8 @@ sub inline_test
 {
     my $test_ref = shift;
     my $newline_ref = shift;
+    my $new_format = shift;
+    $new_format = 0 if !defined($new_format);
 
     if ($test_ref->{test_seq} == $NO_SEQ) {
         if ($$newline_ref =~ /^\[INFO\] --- maven-\w+-plugin.*?\s(\S*)\s---\s*$/) {
@@ -545,7 +548,7 @@ sub inline_test
             }
         }
 
-        $$newline_ref =~ s/( Failures: \d+,) Errors: /$1 Err0rs: /;
+        replace_test_errors($newline_ref, $new_format);
         $test_ref->{test_seq} = $MAYBE_DONE;
         push(@{$test_ref->{ind_test_lines}}, $$newline_ref);
         $$newline_ref = "";
@@ -587,6 +590,7 @@ sub edit_logfile()
     my $logfile = shift;
     my $new_logfile = shift;
     my $report_relative_location = shift;
+    my $new_format = 0;
   
     open LOG, $logfile or die "ERROR: Can't open $logfile";
     open NEW_LOG, ">$new_logfile" or die "ERROR: Can't open $new_logfile";
@@ -620,6 +624,9 @@ sub edit_logfile()
     my $time_str;
     while (<LOG>) {
         chomp;
+        if (m/jboss_7_/ || m/jboss_8_/ || m/wildfly/) {
+            $new_format = 1;
+        }
         if (defined($endline)) {
             # just tack on anything after and don't edit
             $endline .= "$_\n";
@@ -684,7 +691,7 @@ sub edit_logfile()
         }
         elsif (/^\s*\[junit\] Running (\S+)/) {
             if ($ind_test_name ne "") {
-                $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors);
+                $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors, $new_format);
                 $ind_test_name = "";
             }
             $ind_test_text = "$_\n";
@@ -741,13 +748,13 @@ sub edit_logfile()
         }
         else {
             if ($ind_test_name ne "") {
-                $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors);
+                $newline = edit_individual_test($ind_test_text, $ind_test_name, $ind_test_errors, $new_format);
                 $ind_test_name = "";
             }
             $newline .= "$_\n";
         }
 
-        if (!inline_test(\%test, \$newline)) {
+        if (!inline_test(\%test, \$newline, $new_format)) {
             print NEW_LOG "$newline";
         }
     }
@@ -770,18 +777,30 @@ sub edit_logfile()
     close NEW_LOG;
 }
 
+sub replace_test_errors
+{
+    my $line_ref = shift;
+    my $new_format = shift;
+    $new_format = 0 if !defined($new_format);
+    if (!$new_format || $$line_ref =~ m/Failures: 0, Errors: 0/) {
+        $$line_ref =~ s/(Failures: \d+,) Errors: /$1 Err0rs: /;
+    }
+}
+
 sub edit_individual_test()
 {
     my $line = shift;
     my $test_name = shift;
     my $num_errors = shift;
+    my $new_format = shift;
+    $new_format = 0 if !defined($new_format);
     my $error_lines = 0;
     
     while ($line =~ m/\[junit\] Test $test_name FAILED/g) {
         ++$error_lines;
     }
-    
-    $line =~ s/(Failures: \d+,) Errors: /$1 Err0rs: /;
+
+    replace_test_errors(\$line, $new_format);
 
     while (++$error_lines <= $num_errors) {
         # add a psuedo-FAILED line, so it will be more obvious
