@@ -1,0 +1,54 @@
+<!-- rhel7_dev_icc14_debug.xml - Build ACE development using Intel C++ 2013 sp1 -->
+<autobuild>
+    <configuration>
+
+        <environment name="ACE_ROOT"        value="/acebuilds/ATCD/ACE/build/dev_icc14_debug" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ATCD/ACE/build/dev_icc14_debug/lib:/opt/intel/composerxe/lib/intel64:/usr/lib" />
+        <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
+
+        <variable name="root"         value="/acebuilds/ATCD/ACE" />
+        <variable name="build_name"   value="dev_icc14_debug" />
+        <variable name="project_root" value="/acebuilds/ATCD/ACE/build/dev_icc14_debug" />
+        <variable name="log_file"     value="dev_icc14_debug.txt" />
+        <variable name="log_root"     value="/acebuilds/logs/rhel7_aws/dev/icc14_debug" />
+        <variable name="local_features" value="/acebuilds/ATCD/ACE/local.features" />
+        <variable name="configs"      value="Exceptions SSL CHECK_RESOURCES" />
+
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=.disable" />
+    <command name="file_manipulation" options="type=create file=.disable output='RUNNING'" />
+    <command name="log"               options="on" />
+
+    <command name="make"              options="-k realclean find=*akefile" />
+
+    <command name="git"               options="dir=/acebuilds/MPC pull" />
+    <command name="git"               options="checkout master" />
+    <command name="git"               options="pull" />
+
+    <command name="create_ace_build"  options="-a -v" />
+
+    <!-- Delete the build's Makefiles before regenerating them. -->
+    <command name="shell"             options="find build/dev_icc14_debug -name 'GNUmakefile*' -exec rm '{}' ';'" />
+
+    <command name="file_manipulation" options="type=create file=local.features output='ssl=1\nqos=1\n'" />
+    <command name="generate_workspace" options="-feature_file /acebuilds/ATCD/ACE/local.features -relative ACE_ROOT=/acebuilds/ATCD/ACE/build/dev_icc14_debug -type gnuace" />
+
+    <command name="file_manipulation" options="type=create file=build/dev_icc14_debug/ace/config.h output='#include \x22ace/config-linux.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=build/dev_icc14_debug/include/makeinclude/platform_macros.GNU output='exceptions=1\ndebug=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux_icc.GNU\n'" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler"    options="icpc" />
+    <command name="print_ace_config" />
+
+    <command name="make"              options="-j 2 -k" />
+
+    <command name="auto_run_tests"    options="-a" />
+
+    <command name="log"               options="off" />
+    <command name="process_logs"      options="clean=5 move prettify index" />
+    <command name="file_manipulation" options="type=delete file=.disable" />
+    <command name="status"            options="off" />
+</autobuild>
