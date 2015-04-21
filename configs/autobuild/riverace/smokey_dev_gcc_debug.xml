@@ -1,4 +1,4 @@
-<!-- smoke_dev_gcc_debug.xml - Build ACE development using g++ -->
+<!-- smokey_dev_gcc_debug.xml - Build ACE development using g++ -->
 <autobuild>
     <configuration>
 

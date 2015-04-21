@@ -1,9 +1,9 @@
-<!-- smoke_dev_icc_debug.xml - Build ACE development using Intel C++ -->
+<!-- smokey_dev_icc_debug.xml - Build ACE development using Intel C++ -->
 <autobuild>
     <configuration>
 
         <environment name="ACE_ROOT"        value="/acebuilds/ATCD/ACE/build/dev_icc_debug" />
-        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ATCD/ACE/build/dev_icc_debug/lib:/opt/intel/Compiler/11.0/074/lib/intel64:/usr/lib" />
+        <environment name="LD_LIBRARY_PATH" value="/acebuilds/ATCD/ACE/build/dev_icc_debug/lib:/opt/intel/composer_xe_2011_sp1.13.367/lib/intel64:/usr/lib" />
         <environment name="MPC_ROOT"        value="/acebuilds/MPC" />
 
         <variable name="root"         value="/acebuilds/ATCD/ACE" />
