@@ -93,8 +93,8 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-       <name>Ubuntu_14_04_GCC_49_x64</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_gcc-4.9_d1o0</url>
+       <name>Ubuntu_14_04_GCC_51_x64</name>
+       <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_gcc-5.1_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
