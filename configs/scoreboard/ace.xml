@@ -156,6 +156,20 @@ is tested everyday.
     <build_sponsor>Riverace</build_sponsor>
     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
   </build>
+    <build>
+      <name>Win81_VC14_Debug</name>
+      <url>http://buildlogs.theaceorb.nl/win81_msvc14_atcd_ace_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+    </build>
+    <build>
+      <name>Win81_VC14_Release</name>
+      <url>http://buildlogs.theaceorb.nl/win81_msvc14_atcd_ace_release</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+    </build>
 </group>
 
 </scoreboard>
