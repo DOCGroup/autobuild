@@ -221,12 +221,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse123_ciaox11</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_ciaox11</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>suse131_ciaox11</name>
     <url>http://buildlogs.theaceorb.nl/suse131_ciaox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -401,12 +395,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse122_taox11</name>
     <url>http://buildlogs.theaceorb.nl/suse122_taox11</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse123_taox11</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -649,22 +637,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   </build>
   <!-- openSUSE -->
   <build>
-    <name>suse122_ruby_x86_64_packaging</name>
-    <red>192</red>
-    <orange>168</orange>
-    <url>http://buildlogs.theaceorb.nl/suse122_ruby_x86_64_packaging</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse123_ruby_x86_64_packaging</name>
-    <red>192</red>
-    <orange>168</orange>
-    <url>http://buildlogs.theaceorb.nl/suse123_ruby_x86_64_packaging</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>suse131_ruby_x86_64_packaging</name>
     <red>192</red>
     <orange>168</orange>
@@ -835,18 +807,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse122_taox11_x86_64_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_taox11_x86_64_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse123_taox11_x86_64_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_taox11_x86_64_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>suse131_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/suse131_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -961,18 +921,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>centos70_taox11_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/centos70_taox11_x86_64_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse122_taox11_x86_64_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_taox11_x86_64_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse123_taox11_x86_64_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -1125,18 +1073,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
-    <name>suse122_axcioma_x86_64_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_axcioma_x86_64_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse123_axcioma_x86_64_packaging</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_axcioma_x86_64_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>suse131_axcioma_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/suse131_axcioma_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -1251,18 +1187,6 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>centos70_axcioma_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/centos70_axcioma_x86_64_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse122_axcioma_x86_64_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse122_axcioma_x86_64_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-  </build>
-  <build>
-    <name>suse123_axcioma_x86_64_package_test</name>
-    <url>http://buildlogs.theaceorb.nl/suse123_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
