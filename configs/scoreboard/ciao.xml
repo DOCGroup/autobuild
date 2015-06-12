@@ -58,20 +58,6 @@
         <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
-    <build>
-      <name>FC21_Versioned_Namespace</name>
-        <url>http://buildlogs.theaceorb.nl/fc21_atcd_versioned/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-     <build>
-       <name>FC21_FullCCM_NoEvents_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc21_atcd_fullccm_ne</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-     </build>
    <build>
       <name>FC21_LwCCM_NoEvents_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne</url>
@@ -100,13 +86,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
-     <build>
-       <name>FC21_FullCCM_x64</name>
-       <url>http://buildlogs.theaceorb.nl/fc21_atcd_fullccm</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-     </build>
      <build>
       <name>RedHat_EL5_x86_inline_gcc44</name>
       <url>http://tao.microfocus.com/scoreboard/rhel5_x86_inline_gcc44</url>
