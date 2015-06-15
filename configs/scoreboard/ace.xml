@@ -81,38 +81,6 @@ is tested everyday.
     <build_sponsor>Riverace</build_sponsor>
     <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
   </build>
-  <build>
-    <name>CentOS_5</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/CentOS-5</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-</group>
-
-<group>
-  <name>LynxOS</name>
-  <build>
-    <name>LynxOS_4_0</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-  <build>
-    <name>LynxOS_4_2</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.2</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-</group>
-
-<group>
-  <name>OpenBSD</name>
-  <build>
-    <name>OpenBSD-5_6</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/OpenBSD-5.6</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
 </group>
 
 <group>

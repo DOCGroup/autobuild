@@ -1,4 +1,3 @@
-<!-- $Id$ -->
 <scoreboard>
 <preamble>
 <center><h1>TAO Beta/Release Candidate Scoreboard</h1></center>
@@ -47,12 +46,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
 <name>Linux</name>
      <build>
-       <name>FC5</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FC5/</url>
-       <build_sponsor>Olli Savia</build_sponsor>
-       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-     </build>
-     <build>
       <name>FC21_TAO_Valgrind</name>
       <url>http://buildlogs.theaceorb.nl/fc21_atcd_tao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -89,12 +82,6 @@ all the OS/platform combinations on which TAO is tested everyday.
        <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_clang_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
-     </build>
-     <build>
-       <name>Ubuntu_10_04</name>
-       <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/Ubuntu-10.04/</url>
-       <build_sponsor>Olli Savia</build_sponsor>
-       <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
      </build>
 </group>
 
@@ -195,28 +182,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-  <name>LynxOS</name>
-  <build>
-    <name>LynxOS_4_0_XBuild</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.0-xbuild/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-  <build>
-    <name>LynxOS_4_2_XBuild</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-4.2-xbuild/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-  <build>
-    <name>LynxOS_5_0_XBuild</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/LynxOS-5.0-xbuild/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>
-</group>
-
-<group>
   <name>OpenVMS</name>
   <build>
     <name>OpenVMS83_IA64</name>
@@ -258,16 +223,6 @@ all the OS/platform combinations on which TAO is tested everyday.
    </build>
 </group>
 -->
-
-<group>
-  <name>FreeBSD</name>
-<!--  <build>
-    <name>FreeBSD_7_2</name>
-    <url>http://www.dre.vanderbilt.edu/~olli/buildlogs/FreeBSD-7.2/</url>
-    <build_sponsor>Olli Savia</build_sponsor>
-    <build_sponsor_url>mailto:ops@iki.fi</build_sponsor_url>
-  </build>-->
-</group>
 
 <!-- Temporarily offline
 <group>
