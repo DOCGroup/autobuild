@@ -51,20 +51,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
-    <build>
-      <name>FC21_NoLogging</name>
-        <url>http://buildlogs.theaceorb.nl/fc21_atcd_nologging/</url>
-        <build_sponsor>Remedy IT</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-   <build>
-      <name>FC21_LwCCM_NoEvents_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
    <build>
       <name>FC21_LwCCM_NoEvents_Install_x64</name>
       <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install</url>
