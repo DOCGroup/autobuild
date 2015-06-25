@@ -168,17 +168,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-  <name>OpenVMS</name>
-  <build>
-    <name>OpenVMS83_IA64</name>
-    <url>http://buildlogs.theaceorb.nl/openvmsia64</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-  </build>
-</group>
-
-<group>
    <name>QNX</name>
 <!--   <build>
       <name>QNX_6.3.2_x86-gcc_3.3.5</name>
