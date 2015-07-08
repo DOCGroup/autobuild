@@ -713,14 +713,16 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc20_taox11_android_ndk8e_r14_packaging</name>
     <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    <red>168</red>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
     <name>fc20_taox11_android_ndk8e_r14_packaging_host</name>
     <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_packaging_host</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    <red>168</red>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
     <name>rhel63_taox11_x86_64_packaging</name>
@@ -951,8 +953,9 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc20_taox11_android_ndk8e_r14_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc20_taox11_android_ndk8e_r14_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    <red>168</red>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
 </group>
 
@@ -967,8 +970,9 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc20_axcioma_android_ndk8e_r14_packaging</name>
     <url>http://buildlogs.theaceorb.nl/fc20_axcioma_android_ndk8e_r14_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    <red>168</red>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
     <name>fc20_axcioma_x86_64_packaging</name>
@@ -1081,8 +1085,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>win7_mingw64_64_axcioma_packaging</name>
     <url>http://buildlogs.theaceorb.nl/win7_mingw64_64_axcioma_packaging</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
 </group>
 
@@ -1223,8 +1227,9 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc20_axcioma_android_ndk8e_r14_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc20_axcioma_android_ndk8e_r14_package_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+    <red>168</red>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
 </group>
 
