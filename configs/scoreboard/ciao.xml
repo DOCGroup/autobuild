@@ -185,8 +185,8 @@
   <group>
     <name>Windows</name>
     <build>
-      <name>Win81_VC14_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/win81_msvc14_atcd_debug</url>
+      <name>Win_VC14_Debug</name>
+      <url>http://buildlogs.theaceorb.nl/win_msvc14_atcd_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
