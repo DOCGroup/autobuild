@@ -251,6 +251,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>win_msvc14_32_ciaox11_ndds520rev0</name>
+    <url>http://buildlogs.theaceorb.nl/win_msvc14_32_ciaox11_ndds520rev0/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>win_msvc14_64_ciaox11</name>
     <url>http://buildlogs.theaceorb.nl/win_msvc14_64_ciaox11/</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -259,6 +265,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>win_msvc14_64_ciaox11_ndds520rev0</name>
     <url>http://buildlogs.theaceorb.nl/win_msvc14_64_ciaox11_ndds520rev0/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win_msvc14_64_ciaox11_release</name>
+    <url>http://buildlogs.theaceorb.nl/win_msvc14_64_ciaox11_release/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
