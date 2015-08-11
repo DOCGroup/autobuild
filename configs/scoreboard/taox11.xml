@@ -699,6 +699,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc21_taox11_doc_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_doc_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>fc22_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/fc22_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -987,6 +993,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>fc21_axcioma_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/fc21_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>fc21_axcioma_doc_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_axcioma_doc_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
