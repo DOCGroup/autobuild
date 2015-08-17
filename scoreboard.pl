@@ -686,7 +686,8 @@ sub local_update_cache ($)
         # Update the index file, since it may have changed
         if ($updated || $post) {
             print "        Creating new index\n" if ($verbose);
-            utility::index_logs ("$directory/$buildname", $buildname);
+            my $diffRoot = $builds{$buildname}->{DIFFROOT};
+            utility::index_logs ("$directory/$buildname", $buildname, $diffRoot);
         }
 
         # Get info from the latest build

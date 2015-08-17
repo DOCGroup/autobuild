@@ -9,14 +9,16 @@ package utility;
 #
 # Arguments:  $ - directory to index
 #             $ - optional name to add to title
+#             $ - optional diff root
 #
 # Returns:    Nothing
 #
 ###############################################################################
-sub index_logs ($$)
+sub index_logs ($$$)
 {
     my $dir = shift;
     my $name = shift;
+    my $diffRoot = shift;
     my @files;
     
     my $dh = new DirHandle ($dir);
@@ -60,16 +62,25 @@ sub index_logs ($$)
         print $fh '<tr>';
         
         if (defined $totals_fh) {
+            my $diffRev = 'None';
             print $fh "<td><a href=\"${file}_Totals.html\">$file</a></td>";
             while (<$totals_fh>) {
                 if (m/^<!-- BUILD_TOTALS\:/) {
-                    if (m/ACE: ([^ ]+)/) {
-                        print $fh "<td>$1</td>";
+                    if (m/ACE: ([0-9a-f]{6,12})/) {
+                        $diffRev = $1;
                     }
-                    else {
-                        print $fh '<td>&nbsp;</td>';
+                    elsif (m/OpenDDS: ([0-9a-f]{6,12})/) {
+                        $diffRev = $1;
                     }
                     
+                    if (($diffRev) && ($diffRev !~ /None/) && ($diffRoot)) {
+                      my $url = $diffRoot . $diffRev;
+                      my $link = "<a href='$url'>$diffRev</a>";
+                      print $fh "<td>&nbsp;$link&nbsp;</td>";
+                    } else {
+                      print $fh "<td>&nbsp;$diffRev&nbsp;</td>";
+                    }
+
                     if (m/Setup: (\d+)-(\d+)-(\d+)/) {
                         print $fh '<td>';
                         
