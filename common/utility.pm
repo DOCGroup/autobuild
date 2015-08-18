@@ -14,7 +14,7 @@ package utility;
 # Returns:    Nothing
 #
 ###############################################################################
-sub index_logs ()
+sub index_logs ($;$$)
 {
     my $dir = shift;
     my $name = shift;
