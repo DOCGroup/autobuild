@@ -331,7 +331,7 @@ sub index_logs ()
         $log_root = $1;
     }
 
-    utility::index_logs $log_root, $name;
+    utility::index_logs ($log_root, $name);
 
     return 1;
 }
