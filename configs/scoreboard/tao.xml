@@ -137,6 +137,12 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
+      <name>Win7x64_VC14_Release_IPv6_WChar</name>
+      <url>http://scoreboard.ociweb.com/doc_trunk_hornet_win7-x64_vc14_i1d0o1w1</url>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+    </build>
+    <build>
       <name>MingW64_Win32_GCC_Release</name>
       <url>http://buildlogs.theaceorb.nl/win_mingw64_32_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
