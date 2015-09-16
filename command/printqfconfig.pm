@@ -1,5 +1,5 @@
 #
-# $Id: printqfconfig.pm 5777 2008-08-13 17:49:09Z mitza 
+# $Id: printqfconfig.pm 5777 2008-08-13 17:49:09Z mitza
 #
 
 package PrintQFConfig;

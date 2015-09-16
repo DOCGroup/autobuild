@@ -3,7 +3,7 @@ package utility;
 
 ###############################################################################
 #
-# index_logs 
+# index_logs
 #
 # Builds the index.txt file
 #
@@ -20,7 +20,7 @@ sub index_logs ($;$$)
     my $name = shift;
     my $diffRoot = shift;
     my @files;
-    
+   
     my $dh = new DirHandle ($dir);
 
     # Load the directory contents into the @existing array
@@ -40,27 +40,27 @@ sub index_logs ($;$$)
     @files = reverse sort @files;
 
     my $fh = new FileHandle ($dir . '/index.html', 'w');
-    
+   
     if (!defined $fh) {
         print STDERR __FILE__, ": Cannot create index.html in $dir\n";
         return 0;
     }
-    
+   
     my $title = 'Build History';
-    
+   
     if (defined $name) {
         $title .= " for $name";
     }
-    
+   
     print $fh "<html>\n<head>\n<title>$title</title>\n</head>\n";
     print $fh "<body bgcolor=\"white\"><h1>$title</h1>\n<hr>\n";
     print $fh "<table border=\"1\">\n<th>Last Finished</th><th>Rev</th><th>Setup</th><th>Compile</th><th>Test</th>\n";
-    
+   
     foreach my $file (@files) {
         my $totals_fh = new FileHandle ($dir . '/' . $file . '_Totals.html', 'r');
-        
+       
         print $fh '<tr>';
-        
+       
         if (defined $totals_fh) {
             my $diffRev = 'None';
             print $fh "<td><a href=\"${file}_Totals.html\">$file</a></td>";
@@ -72,7 +72,7 @@ sub index_logs ($;$$)
                     elsif (m/OpenDDS: ([0-9a-f]{6,12})/) {
                         $diffRev = $1;
                     }
-                    
+                   
                     if (($diffRev) && ($diffRev !~ /None/) && ($diffRoot)) {
                       my $url = $diffRoot . $diffRev;
                       my $link = "<a href='$url'>$diffRev</a>";
@@ -83,40 +83,40 @@ sub index_logs ($;$$)
 
                     if (m/Setup: (\d+)-(\d+)-(\d+)/) {
                         print $fh '<td>';
-                        
+                       
                         if ($2 > 0) {
                             print $fh "<font color=\"red\">$2 Error(s)</font> ";
                         }
-                        
+                       
                         if ($3 > 0) {
                             print $fh "<font color=\"orange\">$3 Warning(s)</font>";
                         }
-                        
+                       
                         if ($2 == 0 && $3 == 0) {
                             print $fh '&nbsp';
                         }
-                        
+                       
                         print $fh '</td>';
                     }
                     else {
                         print $fh '<td>&nbsp;</td>';
                     }
-                    
+                   
                     if (m/Compile: (\d+)-(\d+)-(\d+)/) {
                         print $fh '<td>';
-                        
+                       
                         if ($2 > 0) {
                             print $fh "<font color=\"red\">$2 Error(s)</font> ";
                         }
-                        
+                       
                         if ($3 > 0) {
                             print $fh "<font color=\"orange\">$3 Warning(s)</font>";
                         }
-                        
+                       
                         if ($2 == 0 && $3 == 0) {
                             print $fh '&nbsp';
                         }
-                        
+                       
                         print $fh '</td>';
                     }
                     else {
@@ -125,19 +125,19 @@ sub index_logs ($;$$)
 
                     if (m/Test: (\d+)-(\d+)-(\d+)/) {
                         print $fh '<td>';
-                        
+                       
                         if ($2 > 0) {
                             print $fh "<font color=\"red\">$2 Error(s)</font> ";
                         }
-                        
+                       
                         if ($3 > 0) {
                             print $fh "<font color=\"orange\">$3 Warning(s)</font>";
                         }
-                        
+                       
                         if ($2 == 0 && $3 == 0) {
                             print $fh '&nbsp';
                         }
-                        
+                       
                         print $fh '</td>';
                     }
                     else {
@@ -153,7 +153,7 @@ sub index_logs ($;$$)
         }
         print $fh "</tr>\n";
     }
-    
+   
     print $fh "</table>\n</body>\n</html>\n";
     return 1;
 }

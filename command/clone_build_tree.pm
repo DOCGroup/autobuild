@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Clone_Build_Tree;
 

@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Create_ACE_Build;
 
@@ -35,7 +33,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"project_root\" variable\n";
         return 0;
     }
-    
+   
     my $build_name = main::GetVariable ('build_name');
 
     if (!defined $build_name) {

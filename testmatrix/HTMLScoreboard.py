@@ -5,7 +5,6 @@
 #              Justin Michel
 #              Chris Cleeland
 #        Date: 7/12/2004
-#         $Id$
 # ******************************************************************
 
 import sys, string, fileinput, re, math, os, time

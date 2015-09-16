@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package print_remote_os_version;
 

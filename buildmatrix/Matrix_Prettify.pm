@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 package Matrix_Prettify::Handler;
 use strict;
 use warnings;
@@ -56,7 +54,7 @@ sub new($) {
      new Matrix::Handler;
     );
 
-  return 
+  return
 }
 
 1

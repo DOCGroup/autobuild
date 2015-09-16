@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package JBoss_Build;
 
@@ -97,7 +95,7 @@ sub Run ($)
     else {
         $root_dir = $project_root;
     }
-    
+   
     my $dir;
     if ($options =~ m/dir='([^']*)'/) {
         $dir = $root_dir . "/$1";
@@ -110,7 +108,7 @@ sub Run ($)
     else {
         $dir = $root_dir . "/build";
     }
-    
+   
     my $script = "";
     if ($options =~ m/script='([^']*)'/) {
         $script = $1;
@@ -138,9 +136,9 @@ sub Run ($)
     else {
       main::PrintStatus ('Compile', 'build');
     }
-    
+   
     my $complete_command = $script . " " . $target;
-    
+   
     if (!chdir $dir) {
       print STDERR __FILE__, ": Cannot change to $dir\n";
       return 0;

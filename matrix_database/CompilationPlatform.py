@@ -4,9 +4,9 @@ import os, sys, string, fileinput, re, math, time
 from utils import *
 
 
-# represents one instance of one project 
+# represents one instance of one project
 class ACE_TAO_Compilation:
-	def __init__ (self, name, skipped, num_errors, num_warnings): 
+	def __init__ (self, name, skipped, num_errors, num_warnings):
 		self.name = name
                 self.skipped = skipped
                 self.num_errors = num_errors
@@ -16,7 +16,7 @@ class CompilationPlatform:
 	def __init__(self, db_file):
 		self.valid_db_file = 1
 		self.db_file = db_file
-		self.name = "" 
+		self.name = ""
 		self.raw_file = ""
 		self.compilation_results = []
                 self.start_time = ""
@@ -49,19 +49,19 @@ class CompilationPlatform:
                          break;
 	           name = splits[0]
                    if length == 1:
-                         name = trim(name); 
+                         name = trim(name);
                          skipped = 1
                    elif length == 3:
                          num_errors = string.atoi(splits[1])
-                         num_warnings = string.atoi(splits[2]) 
+                         num_warnings = string.atoi(splits[2])
                    else:
                          parse_error = 1		
-		   #print "compilation_result: ", line 
+		   #print "compilation_result: ", line
 		   self.compilation_results.append(ACE_TAO_Compilation (name, skipped, num_errors, num_warnings))
 		   line = trim(fh.readline())
                 if (parse_error == 1 or self.name == "" or self.raw_file == "" or self.start_time == "" or self.end_time == "" or len(self.compilation_results) == 0):
                    print "ERROR: invalid db file: ", self.db_file
                    self.valid_db_file = 0
-                                                                              
+                                                                             
 		fh.close()
-                
+               

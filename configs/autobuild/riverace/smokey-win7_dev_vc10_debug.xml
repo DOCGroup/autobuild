@@ -1,4 +1,3 @@
-<!-- $Id$ -->
 <autobuild>
     <configuration>
         <environment name="ACE_ROOT"     value="C:\\ace\\vc10\\ACE_wrappers" />

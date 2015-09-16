@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package RUN_PROCESS;
 
@@ -62,7 +60,7 @@ sub Run ($)
     } elsif ($options=~ m/kill=(\'[^\']*\'|[^\s]*)/) {
         $index= $1;
         $options=~ s/kill=$index//;    # Remove what was found from options
-        $mode = "kill";        
+        $mode = "kill";       
     }
 
     my $process = new command::Process::Process;

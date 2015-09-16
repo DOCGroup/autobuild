@@ -2,7 +2,6 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id$
 #
 
 use strict;
@@ -30,19 +29,19 @@ sub which {
     my($envSep) = $Config{'path_sep'};
     foreach $part (split(/$envSep/, $ENV{'PATH'})) {
       $part .= "/$prog";
-      if ( -x $part ) { 
-        $exec = $part;  
+      if ( -x $part ) {
+        $exec = $part; 
         last;
       }
-    }  
-  }    
-       
+    } 
+  }   
+      
   return $exec;
 }
 
 sub getExecutePath {
   my($prog) = shift;
-  my($loc)  = '';   
+  my($loc)  = '';  
 
   if ($prog ne basename($prog)) {
     if ($prog =~ /^[\/\\]/ ||
@@ -52,19 +51,19 @@ sub getExecutePath {
     else {
       $loc = getcwd() . '/' . dirname($prog);
     }
-  }  
+  } 
   else {
     $loc = dirname(which($prog));
   }
-   
+  
   if ($loc eq '.') {
     $loc = getcwd();
   }
-   
+  
   if ($loc ne '') {
-    $loc .= '/';   
+    $loc .= '/';  
   }
-   
+  
   return $loc;
 }
 

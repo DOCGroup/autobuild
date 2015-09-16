@@ -17,7 +17,7 @@ sub find_mailer()
 
    my $mailer;
 
-   foreach $mailer ( @MAILERS ) 
+   foreach $mailer ( @MAILERS )
    {
       if ( -x $mailer )
       {
@@ -55,7 +55,7 @@ sub send_message($$$)
   print MAIL $message;
   close(MAIL);
 
-  return 0; 
+  return 0;
 }
 
 ##############################################################################
@@ -90,9 +90,9 @@ sub send_message_Net_SMTP($$$)
 
   my $mailname = "";
   require Sys::Hostname;
-  
+ 
   my $mail_sender_address = main::GetVariable ( 'MAIL_SENDER_ADDRESS' );
-  
+ 
   if (defined $mail_sender_address)
   {
      $mailname = $mail_sender_address
@@ -108,7 +108,7 @@ sub send_message_Net_SMTP($$$)
      {
         require POSIX;
         $mailname = POSIX::cuserid()."\@". Sys::Hostname::hostname();
-     }  
+     } 
   }
 
   # Send the SMTP MAIL command
@@ -118,10 +118,10 @@ sub send_message_Net_SMTP($$$)
   $smtp->data();
 
   $smtp->to( $to );
- 
+
   # Start the mail
   $smtp->data();
- 
+
   # Send the header
   $smtp->datasend("Subject: $subject\n");
 
@@ -133,11 +133,11 @@ sub send_message_Net_SMTP($$$)
 
   # Send the termination string
   $smtp->dataend();
- 
+
   # Close the connection
   $smtp->quit();
 
-  return 0; 
+  return 0;
 }
 
 1;

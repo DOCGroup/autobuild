@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package rem_sems;
 
@@ -34,7 +32,7 @@ sub CheckRequirements ()
                     ": Requires \"ACE_ROOT\" environment variable\n";
         return 0;
     }
-    
+   
     return 1;
 }
 

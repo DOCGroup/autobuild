@@ -1,4 +1,3 @@
-<!-- $Id$ -->
 <scoreboard>
 <preamble>
 <center><h1>TAO Test Scoreboard</h1></center>
@@ -12,7 +11,5 @@ decide the migration paths and strategies.
 <group>
     <name>Builds for features and bugfixes comming up in the next beta</name>
 </group>
-
-
 
 </scoreboard>

@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Anonymous_Shell;
 

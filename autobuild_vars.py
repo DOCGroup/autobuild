@@ -30,7 +30,7 @@ def main ():
     if len(args) != 1:
         print "Must pass exactly one argument to this script."
         return
-    
+   
     # Create the parser
     handler = AutobuildHandler ()
     parser = xml.sax.make_parser ()
@@ -46,7 +46,7 @@ def main ():
     sep_expr = ""
     var_pre_expr = ""
     var_post_expr = ""
-    
+   
     if opts.unix:
         set_expr = "export "
         sep_expr = ":"
@@ -59,7 +59,7 @@ def main ():
     else:
         print "You must specify either unix or windows!"
         exit
-        
+       
     for variable, value in handler.env_map.iteritems ():
         command =  set_expr + variable + "=" + value
 

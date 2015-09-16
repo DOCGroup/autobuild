@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package check_compiler;
 

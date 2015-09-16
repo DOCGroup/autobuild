@@ -42,7 +42,7 @@ sub delete_pid_file {
 
 sub get_childs_pid_from_file {
   open FILE, $PIDFILE;
-  my @pids; 
+  my @pids;
   while(<FILE>) {
     chomp;
     push @pids, $_;
@@ -181,7 +181,7 @@ if(-e $PIDFILE) {
   while(Parent::step_child_still_running($step_childs_pid)){
     print "Child still running, but we don't own it.  Wait for it to finish.\n";
     sleep($wait_pid_time_sec);
-  } 
+  }
   print "Child's pid file still present, but no longer running!\n";
   Parent::delete_pid_file();
   print "Deleted child's pid file\n";

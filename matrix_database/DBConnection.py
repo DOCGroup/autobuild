@@ -20,5 +20,5 @@ class DBConnection:
                    sys.exit(-1)
                 curs = db.cursor();
                 return curs
-		  
-    
+		 
+   

@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package print_autotools_version;
 

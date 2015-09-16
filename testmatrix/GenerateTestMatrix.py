@@ -4,7 +4,6 @@
 #      Author: Heather Drury
 #              Justin Michel
 #        Date: 7/06/2004
-#         $Id$
 # ******************************************************************
 
 import sys
@@ -120,8 +119,8 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
 		ACEperc = ComputePercentage(ACEpass, ACEtotal)
 		TAOperc = ComputePercentage(TAOpass, TAOtotal)
 		overall = ComputePercentage((TAOpass+ACEpass), (TAOtotal+ACEtotal))
-	print "ACE tests ****", ACEtotal, ACEfail, ACEperc 
-	print "TAO tests ****", TAOtotal, TAOfail, TAOperc 
+	print "ACE tests ****", ACEtotal, ACEfail, ACEperc
+	print "TAO tests ****", TAOtotal, TAOfail, TAOperc
 	file = "/tmp/matrix_output." + fname + ".txt"
 	fh=open(file,"w")
 	percent='%\n'
@@ -150,7 +149,7 @@ def getSummaryResults (HTMLtestMatrix, builds, fname):
 	str = "# of tests skipped: %d\n" % (skip)
 	fh.write (str)
 
-	str = "Overall percentage: %.0f" % overall 
+	str = "Overall percentage: %.0f" % overall
 	str = str+percent
 	fh.write (str)
 	fh.close()
