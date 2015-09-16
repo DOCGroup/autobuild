@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Notify;
 
@@ -124,7 +122,7 @@ sub getEmail ($)
     my($username) = undef;
     my($ph) = new FileHandle();
     if (open($ph, "$revctrl status -v " . basename($file) . "|")) {
-      if ($revctrl =~ /cvs/) {      
+      if ($revctrl =~ /cvs/) {     
         while(<$ph>) {
           if (/working\s+revision\s*:\s*([^\s]+)/i) {
             $version = $1;
@@ -143,7 +141,7 @@ sub getEmail ($)
 
     if (defined $version) {
       if (open($ph, "$revctrl log -r$version " . basename($file) . "|")) {
-        if ($revctrl =~ /cvs/) {      
+        if ($revctrl =~ /cvs/) {     
           while(<$ph>) {
             if (/date:.*author:\s+([^;]+)/i) {
               $username = $1;
@@ -172,7 +170,7 @@ sub getEmail ($)
     print STDERR __FILE__, ": WARNING: ",
                  "Unable to chdir to ", dirname($file), "\n";
   }
-  
+ 
   return $email;
 }
 
@@ -244,10 +242,10 @@ sub sendSMTP_Email {
   $smtp->data();
 
   $smtp->to( @email );
- 
+
   # Start the mail
   $smtp->data();
- 
+
   # Send the header
   # This address will appear in the message
   $smtp->datasend("To: ".join(',',@email)."\n");
@@ -260,11 +258,11 @@ sub sendSMTP_Email {
 
   # Send the termination string
   $smtp->dataend();
- 
+
   # Close the connection
   $smtp->quit();
 
-  return 0; 
+  return 0;
 }
 
 sub collectCompileErrors {

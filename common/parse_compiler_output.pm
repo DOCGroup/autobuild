@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 package common::parse_compiler_output;
 use strict;
 use warnings;

@@ -1,4 +1,4 @@
-<!-- $Id$ -->
+<!--  -->
 <autobuild>
   <configuration>
     <environment name="ACE_ROOT"     value="C:\\bczar\\CoSMIC_Release\\Latest_Micro\\ACE_wrappers" />

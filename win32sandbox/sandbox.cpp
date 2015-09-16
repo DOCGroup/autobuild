@@ -1,4 +1,4 @@
-// sandbox.cpp 
+// sandbox.cpp
 
 #include "stdafx.h"
 
@@ -51,7 +51,7 @@ int _tmain(int argc, LPTSTR argv[])
     {
       fDebug = true;
     }
-    else 
+    else
       szCommand = argv[iArg];
   }
 
@@ -77,7 +77,7 @@ int _tmain(int argc, LPTSTR argv[])
   HANDLE hjob = ::CreateJobObject(NULL, NULL);
 
   // Place some restrictions on processes in the job.
-  
+ 
   // First, set some basic restrictions.
   JOBOBJECT_BASIC_LIMIT_INFORMATION jobli = { 0 };
 
@@ -90,7 +90,7 @@ int _tmain(int argc, LPTSTR argv[])
   if (dwTimeLimit > 0)
   {
     // The job cannot use more than dwTimeLimit milliseconds of CPU time.
-    jobli.PerJobUserTimeLimit.QuadPart = static_cast<__int64>(dwTimeLimit) * 10000; 
+    jobli.PerJobUserTimeLimit.QuadPart = static_cast<__int64>(dwTimeLimit) * 10000;
 
     jobli.LimitFlags |= JOB_OBJECT_LIMIT_JOB_TIME;
   }
@@ -116,12 +116,12 @@ int _tmain(int argc, LPTSTR argv[])
 
     ::SetInformationJobObject(hjob, JobObjectExtendedLimitInformation, &jobeli, sizeof(jobeli));
   }
-  else 
+  else
   {
     ::SetInformationJobObject(hjob, JobObjectBasicLimitInformation, &jobli, sizeof(jobli));
   }
 
-  
+ 
   // Second, set some UI restrictiosn.
   JOBOBJECT_BASIC_UI_RESTRICTIONS jobuir;
   jobuir.UIRestrictionsClass = JOB_OBJECT_UILIMIT_NONE;
@@ -150,10 +150,10 @@ int _tmain(int argc, LPTSTR argv[])
   h[0] = pi.hProcess;
   h[1] = hjob;
   DWORD dw =  ::WaitForMultipleObjects(2, h, FALSE, dwTimeLimit);
-  
+ 
   int nReturn = 0;
 
-  switch (dw - WAIT_OBJECT_0) 
+  switch (dw - WAIT_OBJECT_0)
   {
   case WAIT_TIMEOUT:
     if (fDebug)
@@ -184,7 +184,7 @@ int _tmain(int argc, LPTSTR argv[])
 
 void print_help(void)
 {
-  cerr 
+  cerr
     << "Creates a sandbox for processes to run in." << endl
     << endl
     << "SANDBOX.EXE [-t timelimit] [-p processlimit] [-m memorylimit] command" << endl

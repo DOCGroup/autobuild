@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Quickfast_Auto_Run_Tests;
 
@@ -101,7 +99,7 @@ sub Run ($)
         $dir = $1;
         $options =~ s/dir=$dir//;
     }
-    
+   
     my $command;
     if ($options =~ m/command='([^']*)'/) {
         $command = $1;

@@ -1,4 +1,3 @@
-# $Id$
 
 package IndexParser;
 
@@ -41,7 +40,7 @@ sub Parse ($)
     while (<$file_handle>) {
         chomp;
 
-        # Strip out a single-line comment 
+        # Strip out a single-line comment
         s/<!--(.*?)-->//g;
 
         # Need to do something more fancy for a multi-line comment
@@ -51,14 +50,14 @@ sub Parse ($)
            # until we hit the end tag -->
            $self->parse_comment($file_handle);
            next;
-        } 
+        }
         next if (m/^\s*$/);
 
         if(m/<preamble>/) {
             $main::preamble = $self->parse_preamble($file_handle);
             next;
         }
- 
+
         if ($state eq 'none') {
             if (m/^\s*<intropage>\s*$/i) {
                 $state = 'intropage';
@@ -93,7 +92,7 @@ sub Parse ($)
 ###############################################################################
 # Before we call this function, we have already found the opening tag
 # for an XML comment: <!--
-# This function keeps parsing the stream until it finds the tag to terminate 
+# This function keeps parsing the stream until it finds the tag to terminate
 # the comment: --> , and returns when it finds it.
 #
 # Arguments:  An open file stream.
@@ -112,8 +111,8 @@ sub parse_comment($\@)
    while(1){
      $ch = $result->getc();
 
-     # determine if we have hit an EOF or not     
-     if( ! defined $ch) { 
+     # determine if we have hit an EOF or not    
+     if( ! defined $ch) {
         last; # break out of the whlie loop
      }
 
@@ -126,13 +125,13 @@ sub parse_comment($\@)
      if($i >= 2) {
         my $tag="";
         $tag = join('', @c);
-        if($tag eq "-->") { 
+        if($tag eq "-->") {
           last;  # break out of the while loop
         }
-       
-        # Pop off the first element of the array and shift everything up 
+      
+        # Pop off the first element of the array and shift everything up
         shift(@c);
-        $i=1; 
+        $i=1;
      }
      ++$i;
    }
@@ -141,7 +140,7 @@ sub parse_comment($\@)
 ###############################################################################
 # Before we call this function, we have already found the opening tag
 # for an XML comment: <preamble>
-# This function keeps parsing the stream until it finds the tag to terminate 
+# This function keeps parsing the stream until it finds the tag to terminate
 # the comment: --> , and returns when it finds it.
 #
 # Arguments:  An open file stream.
@@ -161,8 +160,8 @@ sub parse_preamble($\@)
    while(1){
      $ch = $result->getc();
 
-     # determine if we have hit an EOF or not     
-     if( ! defined $ch) { 
+     # determine if we have hit an EOF or not    
+     if( ! defined $ch) {
         last; # break out of the whlie loop
      }
 
@@ -181,13 +180,13 @@ sub parse_preamble($\@)
           last;  # break out of the while loop
         }
 
-        # Pop off the first element of the array and shift everything up 
+        # Pop off the first element of the array and shift everything up
         shift(@c);
-        $i=9; 
+        $i=9;
      }
      ++$i;
    }
-   return( join('', @buf)); 
+   return( join('', @buf));
 }
 
 1;

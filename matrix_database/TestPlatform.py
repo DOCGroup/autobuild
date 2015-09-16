@@ -3,7 +3,6 @@
 # ******************************************************************
 #      Author: Heather Drury
 #        Date: 3/25/2004
-#         $Id$
 # ******************************************************************
 
 import os, sys, string, fileinput, re, math, time
@@ -24,7 +23,7 @@ test_finished = re.compile (r'auto_run_tests_finished:')
 
 # represents one instance of one test
 class ACE_TAO_Test:
-	def __init__ (self, name, result, time, flag): 
+	def __init__ (self, name, result, time, flag):
 		self.name = name
 		self.result = int(result)
 		self.time = float(time)
@@ -35,17 +34,17 @@ class TestMatrix:
 		self.name = "Test Matrix for ACE/TAO"
 		self.max_tests = 1200
 		self.testResults =[[0]*num_platforms for row in range(self.max_tests)]
-		for n in range (0, self.max_tests): 
-			for m in range (0, num_platforms): 
-				self.testResults[n][m] = SKIP 
+		for n in range (0, self.max_tests):
+			for m in range (0, num_platforms):
+				self.testResults[n][m] = SKIP
 		self.testNames = []
-		self.fileNames = [] 
+		self.fileNames = []
 
 	def getTestResults (self, build_num):
 		npass = 0
 		nfail = 0
 		nskip = 0
-		for n in range (0, len(self.testNames)): 
+		for n in range (0, len(self.testNames)):
 			if self.testResults[n][build_num] == SKIP:
 				nskip = nskip+1
 			if self.testResults[n][build_num] == FAIL:
@@ -59,7 +58,7 @@ class TestMatrix:
 		nfail = 0
 		nskip = 0
 		print "***", ntests, nplatforms
-		for m in range (0, nbuilds): 
+		for m in range (0, nbuilds):
 			a, b, c = self.computeTestResults(m)
 			npass = npass + a
 			nfail = nfail + b
@@ -75,15 +74,15 @@ class TestMatrix:
 			self.testNames.append(name)
 		else:
 			pass
-		# idx is index corresponding to this test 
+		# idx is index corresponding to this test
 		idx = self.testNames.index(name)
 		self.testResults[idx][build_num] = result
 
 		# get filename for later HTML writing
-		splits = name.split("/") 
+		splits = name.split("/")
 		fname = ""
 		if len(splits) == 1:
-			fname = name 
+			fname = name
 		else:
 			l = len(splits)
 			fname = splits [l-2]		
@@ -210,8 +209,8 @@ class TestPlatform:
 		if len(tokens) > 2:
 			ttime=tokens[2]
 			if len(tokens) < 3:
-				ttime = "" 
-				tresult = "" 
+				ttime = ""
+				tresult = ""
 			else:
 				ttime = tokens[len(tokens)-2]
 				tresult = tokens[len(tokens)-1]
@@ -241,7 +240,7 @@ class TestPlatform:
 			perc = (float(self.ACEfail)/float(self.ACEtotal))*100.0
 		except ZeroDivisionError:
 			print "divide by zero attempt"
-		print "\tPercentage: %.1f" % perc 
+		print "\tPercentage: %.1f" % perc
 		print "TAO:"
 		print "\tTotal tests run = ", self.TAOtotal
 		print "\tTests failed = ", self.TAOfail
@@ -249,7 +248,7 @@ class TestPlatform:
 			perc = (float(self.TAOfail)/float(self.TAOtotal))*100.0
 		except ZeroDivisionError:
 			print "divide by zero attempt"
-		print "\tPercentage: %.1f" % perc 
+		print "\tPercentage: %.1f" % perc
 		if self.testMin != 4000.0:
 			print "Tests:"
 			print "\tmin Test = %.1f min" %  (float(self.testMin)/60.0)
@@ -297,7 +296,7 @@ class TestPlatform:
                         return
 
 		time = 0.0
-		# scan thru the file, state=0 while in pre-test stuff and state=1 while in tests 
+		# scan thru the file, state=0 while in pre-test stuff and state=1 while in tests
 		while line != "":
 			readline = 0
                         if build_begin.match(line):
@@ -311,12 +310,12 @@ class TestPlatform:
                            n = line.find('UTC')
                            self.end_time = line[m+1:n]
                            break
-			if test_start.match(line): 
+			if test_start.match(line):
 				if (state < 1):
 					# we found where tests are starting
 					state=state+1
 			if state==0:
-				# this matches only lines that begin with "Error" or "ERROR" 
+				# this matches only lines that begin with "Error" or "ERROR"
 				if compile_error.match(line) and self.compile == PASS:
 					self.compile = FAIL
 			if state==1 and test_start.match(line):

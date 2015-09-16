@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Configure;
 
@@ -48,7 +46,7 @@ sub CheckRequirements ()
         print STDERR __FILE__, ": Requires \"project_root\" variable\n";
         return 0;
     }
-    
+   
     return 1;
 }
 
@@ -81,12 +79,12 @@ sub Run ($)
         $preclean = 1;
         $options =~ s/--preclean//;
     }
-    
+   
     if (!chdir $root) {
         print STDERR __FILE__, ": Cannot change to $root\n";
         return 0;
     }
-    
+   
     if (!-r $project_root || !-d $project_root) {
         mkpath($project_root);
     }
@@ -126,7 +124,7 @@ sub Run ($)
         my $working_dir = getcwd();
 
         print "[CONFIGURE ERROR detected in $working_dir]\n ";
-    } 
+    }
 
     chdir $current_dir;
 

@@ -1,4 +1,3 @@
-# $Id$
 
 package command::Process::Process;
 
@@ -59,7 +58,7 @@ sub Spawn ()
     my ($options) = @_;
     my $pid = 0;
 
-    # attempt to run 
+    # attempt to run
     FORK:
     {
         my $id;
@@ -82,13 +81,13 @@ sub Spawn ()
             # weird fork error
             print STDERR "ERROR: Can't fork <" . $options . ">: $!\n";
         }
-    }    
+    }   
     $pid;
 }
 
 sub Kill ()
 {
-    my $self = shift;    
+    my $self = shift;   
     my ($pid) = @_;
 
     kill 9, $pid;

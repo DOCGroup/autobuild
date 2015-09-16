@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 ###############################################################################
 # NOTE this is similar to "shell" as it executes it's options string, but

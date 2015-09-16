@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-# $Id$
 #
 #
 package buildmatrix;
@@ -62,10 +61,10 @@ sub process {
                             build_start_time => "",
                             build_end_time => "",
                             passed => 0,
-                            had_errors => 0,			    
+                            had_errors => 0,			   
                             had_warnings => 0,
-                            total => 0			    
-                           };			    
+                            total => 0			   
+                           };			   
     $self->add_results($v, $summary{$v->{NAME}});
   }
   while(my ($project, $results) = each %{$self->{results}}) {
@@ -86,7 +85,7 @@ sub process {
   $self->print_table(\%summary);
 
   $self->print_epilogue(\%summary);
-  
+ 
   if ($save_flag != 0) {
     $self->save_results(\%summary);
   }
@@ -174,13 +173,13 @@ sub add_results($$$) {
 
      # This one matches MSVC builds with nmake!
      qr{nmake\s.*/[fF]\s+(\S+).mak\s}x
-     
+    
     );
 
   my $state = 'NOT IN COMPILE';
   my $leave_compile = '#################### ';
   my $enter_compile = $leave_compile.'Compile ';
-    
+   
   LINE: while($line = $fh->getline) {
     chomp $line;
     if ($line =~ m/^\#+\sBegin\s\[(.+)\sUTC\]/) {
@@ -196,7 +195,7 @@ sub add_results($$$) {
       $state = 'NOT IN COMPILE';
       $self->{_current_project} = undef;
     }
-    
+   
     next unless $state eq 'COMPILE';
     foreach my $re (@regexp_list) {
       if ($line =~ m/$re/) {
@@ -423,7 +422,7 @@ sub save_results($) {
 
     my $result_file_name_tmp = "$result_file_dir/$db_fname.tmp";
     my $result_file_name = "$result_file_dir/$db_fname";
-    
+   
     my $result_file = new IO::File $result_file_name_tmp, 'w';
     if (not defined $result_file) {
       warn "Cannot open $result_file_name for writing\n";
@@ -431,9 +430,9 @@ sub save_results($) {
     }
     $result_file->print("$name\n");
     $result_file->print("$data->{log_fname} \n");
-    $result_file->print("$data->{build_start_time} \n"); 
+    $result_file->print("$data->{build_start_time} \n");
     $result_file->print("$data->{build_end_time} \n");
-    
+   
     my $skip_build = 1;
 
     foreach my $project (sort keys %{$self->{results}}) {
@@ -446,9 +445,9 @@ sub save_results($) {
       }
       $result_file->print("\n");
     }
-   
+  
     if ($skip_build == 1) {
-      unlink $result_file_name_tmp; 
+      unlink $result_file_name_tmp;
     }
     else {
       rename($result_file_name_tmp, $result_file_name);

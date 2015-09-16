@@ -16,7 +16,7 @@ def SaveCompilationResults2DB (builds, dbname):
     except:
       print "ERROR: failed to insert compilation results to database", dbname, sys.exc_type, sys.exc_value
       sys.exit(-1)
- 
+
 class CompilationDB:
         def __init__ (self, dbname):
 		self.project_ids = {}
@@ -55,7 +55,7 @@ class CompilationDB:
                         query = "INSERT INTO build VALUES (NULL, '%s', '%s', '%s', %d, '%s', %d, %d, %d, %d);" %(name, config[0], config[1], config[2], config[3], config[4], config[5], config[6], config[7])
                     #print "AddBuild ", query
                     self.curs.execute(query)
-                    self.build_ids[name] = self.curs.insert_id() 
+                    self.build_ids[name] = self.curs.insert_id()
                     #print "AddBuild: insert ", self.curs.insert_id()
 
         def AddBuildInstance (self, build, dbfile_load_status, build_instance_id
@@ -72,9 +72,9 @@ class CompilationDB:
                       self.build_instance_ids[build.name] = build_instance_id
                    #print "AddBuildInstance ", query
 
-        def AddProjects(self, build):    
+        def AddProjects(self, build):   
                 for m in range (0, len(build.compilation_results)):
-                   name = build.compilation_results[m].name; 
+                   name = build.compilation_results[m].name;
                    self.AddProject(name)
 
         def AddProject(self, name):
@@ -82,13 +82,13 @@ class CompilationDB:
 		if project_id == 0:
 	           query = "INSERT INTO project VALUES (NULL, '%s');" % (name)
                    self.curs.execute(query)
-		   #print "AddProject", query 
+		   #print "AddProject", query
 		   self.project_ids[name] = self.curs.insert_id()
 		   #print "AddProject: insert ", self.curs.insert_id()
 		else:
 		   self.project_ids[name] = project_id
 
-        def AddCompilationInstance(self, build):      
+        def AddCompilationInstance(self, build):     
 	        for n in range (0, len(build.compilation_results)):
 		   if self.project_ids.has_key(build.compilation_results[n].name) == 0:
 		       self.AddProject(build.compilation_results[n].name)
@@ -96,12 +96,12 @@ class CompilationDB:
                        query = "INSERT INTO compilation_instance VALUES(%d, %d, 1, NULL, NULL);" % (self.project_ids[build.compilation_results[n].name], self.build_instance_ids[build.name])
                    else:
                        query = "INSERT INTO compilation_instance VALUES(%d, %d, 0, %d, %d);" % (self.project_ids[build.compilation_results[n].name], self.build_instance_ids[build.name], build.compilation_results[n].num_errors, build.compilation_results[n].num_warnings)
-                   #print "AddCompilationInstance ", query         
+                   #print "AddCompilationInstance ", query        
                    try:
 		       self.curs.execute(query)
                    except _mysql_exceptions.IntegrityError:
 		       print "AddCompilationInstance failed: ", build.compilation_results[n].name, build.raw_file, sys.exc_type, sys.exc_value
-		       
+		      
 	def BuildLogLoaded(self, build_name, log_fname):
                 dbfile_load_status = -1
                 build_instance_id = -1
@@ -109,9 +109,9 @@ class CompilationDB:
                 result = self.curs.execute(query)
                 if result != 0:
                      build_instance_id = self.curs.fetchall()[0][0]
-                     insert_time = str(self.curs.fetchall()[0][1]) 
+                     insert_time = str(self.curs.fetchall()[0][1])
 		     dbfile_load_status = (insert_time != "None")
-	        #print  "BuildLogLoaded ", query, "build_instance_id=", build_instance_id, "compilation_loaded=", dbfile_load_status 
+	        #print  "BuildLogLoaded ", query, "build_instance_id=", build_instance_id, "compilation_loaded=", dbfile_load_status
                 return dbfile_load_status, build_instance_id
 
         def GetBuildId(self, build_name):
@@ -121,12 +121,12 @@ class CompilationDB:
                 ret = self.curs.execute(query)
                 if ret == 1:
                    build_id = self.curs.fetchall()[0][0]
-                   #print "GetBuildId: ", build_id 
+                   #print "GetBuildId: ", build_id
                 elif ret > 1:
                    print "ERROR: duplicate entry for build ", build_name
                 return build_id
- 
-                   
+
+                  
         def GetProjectId(self, project_name):
                 project_id = 0
                 query = "SELECT project_id FROM project WHERE project_name='%s';" % (project_name)
@@ -134,7 +134,7 @@ class CompilationDB:
                 ret = self.curs.execute(query)
                 if ret == 1:
                    project_id = self.curs.fetchall()[0][0]
-                   #print "GetTestId: ", project_id 
+                   #print "GetTestId: ", project_id
                 elif ret > 1:
                    print "ERROR: duplicate entry for project", project_name
                 return project_id
@@ -144,6 +144,6 @@ class CompilationDB:
 	        ret = self.curs.execute(query)
 	        if ret > 0:
 	          results = self.curs.fetchall()
-	          for m in range(0, len(results)): 
+	          for m in range(0, len(results)):
                     print txt2DbFname(results[m][0])
-    
+   

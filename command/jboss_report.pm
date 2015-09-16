@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package JBoss_Report;
 
@@ -196,7 +194,7 @@ sub copy_log ()
 
     # Make sure it has the correct permissions
     chmod (0644, $newlogfile);
-    
+   
     if (defined $old_jboss_reports_dir) {
         copy_dir($old_jboss_reports_dir, $newreportsdir);
     }
@@ -269,7 +267,7 @@ sub copy_log ()
         }
     }
     undef $dh;
-    
+   
     @existing_local_logs = reverse sort @existing_local_logs;
     @existing_logs = reverse sort @existing_logs;
     @existing_reports = reverse sort @existing_reports;
@@ -285,11 +283,11 @@ sub copy_log ()
     if ($reports_keep < 1) {
         $reports_keep = 1;
     }
-    
+   
     for (my $i = 0; $i < $reports_keep; ++$i) {
         shift @existing_reports;
     }
-    
+   
     # Delete anything left in the list
 
     foreach my $file (@existing_local_logs) {
@@ -344,7 +342,7 @@ sub copy_dir ()
 sub find_targets()
 {
     if ((/^_.*?\:\s*$/) ||
-        ($_ !~ /^[[:alpha:]][[:alpha:]\-]+?\:\s*$/) || 
+        ($_ !~ /^[[:alpha:]][[:alpha:]\-]+?\:\s*$/) ||
         (/-unit\:\s*$/))    {
         return "";
     }
@@ -581,7 +579,7 @@ sub inline_test
 
     push(@{$test_ref->{ind_test_lines}}, $$newline_ref);
     $$newline_ref = "";
-    
+   
     return 1;
 }
 
@@ -591,7 +589,7 @@ sub edit_logfile()
     my $new_logfile = shift;
     my $report_relative_location = shift;
     my $new_format = 0;
-  
+ 
     open LOG, $logfile or die "ERROR: Can't open $logfile";
     open NEW_LOG, ">$new_logfile" or die "ERROR: Can't open $new_logfile";
     my $testfailed = 0;
@@ -639,7 +637,7 @@ sub edit_logfile()
             # only want to check one line after we identify the deprecated warning
             $deprecation_warning_seq = 0;
         }
-        
+       
         if (!defined($time_str) &&
             /^#################### [^\[]+ \[([^\]]+)\]/) {
             $time_str = $1;
@@ -795,7 +793,7 @@ sub edit_individual_test()
     my $new_format = shift;
     $new_format = 0 if !defined($new_format);
     my $error_lines = 0;
-    
+   
     while ($line =~ m/\[junit\] Test $test_name FAILED/g) {
         ++$error_lines;
     }
@@ -806,7 +804,7 @@ sub edit_individual_test()
         # add a psuedo-FAILED line, so it will be more obvious
         $line .= "    \[junit\] Test $test_name FAILED\*\n";
     }
-    
+   
     return $line;
 }
 
@@ -816,7 +814,7 @@ sub process_subtest_end()
     my $ref_testfailed = shift;
     my $ref_testsrun = shift;
     my $teststime = shift;
-    
+   
     if ($$ref_sub_test ne "") {
         # identifying this as a subsection for prettify.pm
         my $status = $$ref_testfailed;
@@ -829,7 +827,7 @@ sub process_subtest_end()
         return "\nauto_run_tests_finished: $$ref_sub_test Time:$teststime ".
             "Result:$status $status_add_on\n";
     }
-    
+   
     return "";
 }
 

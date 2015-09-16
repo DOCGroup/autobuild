@@ -1,6 +1,3 @@
-//
-// $Id$
-//
 #include <stdio.h>
 #include <stdlib.h>
 

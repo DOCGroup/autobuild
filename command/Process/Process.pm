@@ -1,4 +1,3 @@
-# $Id$
 
 package command::Process::Process;
 
@@ -12,9 +11,9 @@ use Config;
 use English;
 
 if ( $OSNAME eq "MSWin32" ) {
-    require command::Process::ProcessWin32;    
+    require command::Process::ProcessWin32;   
 }
-else # ( $OSNAME neq "MSWin32" ) 
+else # ( $OSNAME neq "MSWin32" )
 {
     require command::Process::ProcessUnix;
 }

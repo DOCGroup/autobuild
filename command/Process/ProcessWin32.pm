@@ -1,4 +1,3 @@
-# $Id$
 
 package command::Process::Process;
 
@@ -19,7 +18,7 @@ sub new
 
 sub Spawn ()
 {
-    my $self = shift;    
+    my $self = shift;   
     my ($options) = @_;
 
     # First, try to separate process name and command-line options
@@ -36,7 +35,7 @@ sub Spawn ()
 
 sub Kill ()
 {
-    my $self = shift;    
+    my $self = shift;   
     my ($pid) = @_;
 
     Win32::Process::KillProcess($pid, 0);

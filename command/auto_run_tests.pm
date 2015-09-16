@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Auto_Run_Tests;
 

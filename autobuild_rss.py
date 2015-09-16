@@ -35,12 +35,12 @@ class ScoreboardHandler (xml.sax.handler.ContentHandler):
 
     def startElement (self, name, attrs):
         self.pos.append (name)
-        
+       
         if name == "build":
             self.state["name"] = ""
             self.state["url"] = ""
             self.state["sponsor"] = ""
-            
+           
         return
 
     def characters (self, content):
@@ -62,7 +62,7 @@ def appendTextNode (doc, parent, name, value) :
     ele = doc.createElement (name)
     ele.appendChild (doc.createTextNode (str (value)))
     parent.appendChild (ele)
-                     
+                    
 class RSSItem :
     def __init__ (self):
         self.title = ""
@@ -82,7 +82,7 @@ class RSSItem :
 
         parent.appendChild (item)
         return
-    
+   
 class RSSChannel :
     def __init__ (self):
         self.title = ""
@@ -98,7 +98,7 @@ class RSSChannel :
 
     def add_item (self, item):
         self.items.append (item)
-        
+       
     def to_xml (self, parent, doc):
         channel = doc.createElement ("channel")
         appendTextNode (doc, channel, "title", self.title)
@@ -138,7 +138,7 @@ class RSS :
 
         # Clean up
         rssdoc.unlink ()
-        
+       
 def parse (filename):
     handler = ScoreboardHandler ()
     parser = xml.sax.make_parser ()
@@ -153,22 +153,22 @@ def parse (filename):
 def fetch_latest (builds):
     import re
     from urllib import urlopen
-    
+   
     latest_builds = list ()
 
     valid_latest = re.compile ("\d\d\d\d_\d\d")
-    
+   
     for build in builds:
         try:
             uri = build[1]
-            
+           
             if opts.uri_regex != "":
                 uri = re.sub (opts.uri_regex[0],
                               opts.uri_regex[1],
                               uri)
-                
+               
             latest = urlopen (uri + "/latest.txt")
-                
+               
         #Get the contents, and make sure it represents a valid latest file
             string = latest.read ()
             if valid_latest.match (string) != None:
@@ -218,9 +218,9 @@ def main ():
     rss.add_channel (chan)
 
     rss.to_xml (opts.output)
-        
+       
     return 0
 
 if __name__ == "__main__":
     main ()
-    
+   

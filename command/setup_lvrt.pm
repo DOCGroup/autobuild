@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 # Setup_LVRT - Set up a LabVIEW Real Time target. This command copies all
 # the DLLs in $ACE_ROOT/lib to the LabVIEW RT target.
 

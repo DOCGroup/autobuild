@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 
 package Win32Make;
 
