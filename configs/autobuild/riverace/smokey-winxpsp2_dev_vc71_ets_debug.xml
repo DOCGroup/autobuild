@@ -1,11 +1,10 @@
-<!--  -->
 <!-- This build is for the LabVIEW RT/ETS target. There's a separate build -->
 <!-- for the host part ACE, gperf, TAO_IDL needed to build IDLs for this. -->
 <!-- Those results are in c:\ace\ACE_wrappers. -->
 
 <autobuild>
     <configuration>
-        <environment name="ACE_TEST_VERBOSE" value="1" />  
+        <environment name="ACE_TEST_VERBOSE" value="1" />
         <environment name="ACE_ROOT"     value="C:\\ace\\target_ets\\ACE_wrappers" />
         <environment name="TAO_ROOT"     value="C:\\ace\\target_ets\\ACE_wrappers\\TAO" />
         <environment name="HOST_ROOT"    value="C:\\ace\\ACE_wrappers" />
