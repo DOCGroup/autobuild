@@ -41,7 +41,7 @@ sub Output_Error {
   my $line = shift;
   ++$self->{summaries}->{$self->{file}}->{error};
   push @{$self->{summaries}->{$self->{file}}->{error_info}},
-  [$., $line, $self->{summaries}->{$self->{file}}->{test_name}];
+       [$., $line, $self->{summaries}->{$self->{file}}->{test_name}];
 }
 
 sub Output_Warning {
@@ -49,7 +49,7 @@ sub Output_Warning {
   my $line = shift;
   ++$self->{summaries}->{$self->{file}}->{warning};
   push @{$self->{summaries}->{$self->{file}}->{warn_info}},
-  [$., $line, $self->{summaries}->{$self->{file}}->{test_name}];
+       [$., $line, $self->{summaries}->{$self->{file}}->{test_name}];
 }
 
 package main;
@@ -72,15 +72,15 @@ foreach my $file (sort keys %{$counter->{summaries}}) {
   print "${indent}NORMAL:      $counter->{summaries}->{$file}->{normal}\n"
     if $counter->{summaries}->{$file}->{normal};
   my $warn = $counter->{summaries}->{$file}->{warning};
-  if($warn) {
+  if ($warn) {
     print "${indent}WARNING:     $warn\n";
-    for my $info (@{$counter->{summaries}->${file}->{warn_info}}) {
+    for my $info (@{$counter->{summaries}->{$file}->{warn_info}}) {
       $info->[2] = '' unless defined $info->[2];
       print "$indent  " . $info->[2] . ' ' . $info->[0] . ':' . $info->[1];
     }
   }
   my $error = $counter->{summaries}->{$file}->{error};
-  if($error) {
+  if ($error) {
     print "${indent}ERROR:       $error\n";
     for my $info (@{$counter->{summaries}->{$file}->{error_info}}) {
       $info->[2] = '' unless defined $info->[2];
