@@ -18,5 +18,21 @@ sponsorship is received.
       <build_sponsor>Riverace</build_sponsor>
       <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
    </build>
+   <build>
+      <name>RHEL_71_Safety_Base_Release</name>
+      <url>http://scoreboard.ociweb.com/doc_merge-face-safety_ant_linux-sb_gcc_d0o1</url>
+      <red>108</red>
+      <orange>96</orange>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
+   <build>
+      <name>RHEL_71_Safety_Extended_Release</name>
+      <url>http://scoreboard.ociweb.com/doc_merge-face-safety_ant_linux-se_gcc_d0o1</url>
+      <red>108</red>
+      <orange>96</orange>
+      <build_sponsor>OCI</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
+   </build>
 </group>
 </scoreboard>
