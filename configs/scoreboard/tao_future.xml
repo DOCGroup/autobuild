@@ -10,22 +10,6 @@ decide the migration paths and strategies.
 
 <group>
     <name>Builds for features and bugfixes comming up in the next beta</name>
-    <build>
-        <name>RHEL_71_Merge_Safety_Release</name>
-        <url>http://scoreboard.ociweb.com/doc_merge-face-safety_ant_linux_gcc_d0o1</url>
-        <red>108</red>
-        <orange>96</orange>
-        <build_sponsor>OCI</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>
-    <build>
-        <name>Win7_VC12_Merge_Safety_Release</name>
-        <url>http://scoreboard.ociweb.com/doc_merge-face-safety_bee_win7_vc12_d0o1</url>
-        <red>108</red>
-        <orange>96</orange>
-        <build_sponsor>OCI</build_sponsor>
-        <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-    </build>
 </group>
 
 </scoreboard>
