@@ -50,27 +50,6 @@
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
      </build>
-   <build>
-      <name>FC21_LwCCM_NoEvents_Install_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-   <build>
-      <name>FC21_LwCCM_NoEvents_Install_Test_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_lwccm_ne_install_test</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-    <build>
-      <name>FC21_Valgrind_x64</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_valgrind</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
      <build>
       <name>RedHat_EL5_x86_inline_gcc44</name>
       <url>http://tao.microfocus.com/scoreboard/rhel5_x86_inline_gcc44</url>
@@ -103,12 +82,6 @@
       <orange>72</orange>
       <red>168</red>
     </build>
-     <build>
-       <name>OpenSuSE_13_2_GCC_64bit</name>
-       <url>http://buildlogs.theaceorb.nl/suse132_atcd_debug</url>
-       <build_sponsor>Remedy IT</build_sponsor>
-       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-     </build>
 <!--   <build>
       <name>FC12_32bit</name>
       <url>http://scoreboard.ociweb.com/doc_trunk_tick_linux_gcc_d0o1b32</url>
@@ -155,30 +128,6 @@
       <build_sponsor_url>http://www.microfocus.com/products/corba/index.aspx</build_sponsor_url>
       <orange>72</orange>
       <red>168</red>
-    </build>
-  </group>
-  <group>
-    <name>Stats Builds</name>
-    <build>
-      <name>FC21_FP_Stats</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_performance/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-    <build>
-      <name>FC22_FP_Stats_Regular</name>
-      <url>http://buildlogs.theaceorb.nl/fc22_atcd_fp_regular/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-    <build>
-      <name>FC21_FP_Stats_Versioned</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_versioned/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
   </group>
 </scoreboard>
