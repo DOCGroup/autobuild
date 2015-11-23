@@ -850,6 +850,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>fc21_taox11_x86_64_package_test_debug</name>
+    <url>http://buildlogs.theaceorb.nl/fc21_taox11_x86_64_package_test_debug</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>fc22_taox11_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/fc22_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
