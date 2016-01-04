@@ -359,7 +359,7 @@ print STDERR "Error: Could not open file <$file_name>: $!\n";
 ###############################################################################
 sub query_history ()
 {
-    print "Getting history informatin\n" if ($verbose);
+    print "Getting history information\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
         my $full_link = 'http://teststat.theaceorb.nl/teststat/builds/' . $buildname . '.html';
@@ -1590,7 +1590,9 @@ sub build_integrated_page ($)
     update_cache ($dir);
     clean_cache ($dir);
     query_status ();
-    query_history ();
+    if (defined $opt_x) {
+      query_history ();
+    }
     update_html ($dir,"$dir/integrated.html", "");
     unlink ("$dir/temp.xml");
 }

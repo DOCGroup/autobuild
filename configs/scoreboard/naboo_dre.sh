@@ -19,7 +19,7 @@ svn up
 /usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/ciao.xml -o ciao.html -r ciao.rss 2>&1  &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/ciao_future.xml -o ciao_future.html  2>&1  &
 /usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/dds.xml -o dds.html -r dds.rss 2>&1  &
-/usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
+/usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/misc.xml -o misc.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/cosmic.xml -o cosmic.html 2>&1 &
 /usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/xsc.xml -o xsc.html -r xsc.rss 2>&1  &
 /usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -f $HOME/autobuild/configs/scoreboard/taox11.xml -o taox11.html -r taox11.rss 2>&1  &
@@ -28,7 +28,7 @@ svn up
 ##testmatrix/update_scoreboard.sh 2>&1 &
 
 # Generate integrated pages!
-/usr/bin/perl ./scoreboard.pl -b -x -d /export/web/www/scoreboard -z 2>&1 &
+/usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -z 2>&1 &
 
 #Generate build matrix
 #/usr/bin/perl buildmatrix/buildmatrix.pl $HOME/autobuild/configs/scoreboard/ace.xml /export/web/www/scoreboard 1 > /project/taotmp/scoreboard/buildmatrix/output.html 2> /tmp/build.out
