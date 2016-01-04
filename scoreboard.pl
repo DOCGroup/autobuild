@@ -472,8 +472,8 @@ sub decode_timestamp ($)
 
     if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
 
-	my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
-	$description = format_time($buildtime);
+  my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
+  $description = format_time($buildtime);
     }
     else {
         warn 'Unable to decode time';
@@ -700,7 +700,7 @@ sub local_update_cache ($)
 
             while (<$file_handle>) {
                 if ($_ =~ m/(...._.._.._.._..) /) {
-       	            $builds{$buildname}{BASENAME} = $1;
+                     $builds{$buildname}{BASENAME} = $1;
                     $latest = $_;
                 }
             }
@@ -1590,9 +1590,6 @@ sub build_integrated_page ($)
     update_cache ($dir);
     clean_cache ($dir);
     query_status ();
-    if (defined $opt_x) {
-      query_history ();
-    }
     update_html ($dir,"$dir/integrated.html", "");
     unlink ("$dir/temp.xml");
 }
@@ -1609,24 +1606,24 @@ sub format_time
     my $use_long_format = shift;
 
     if ($use_local) {
-	my @tmp = localtime($time_in_secs);
+  my @tmp = localtime($time_in_secs);
         my $hour = int($tmp[2]);
         my $ampm = ($hour >= 12 ? 'pm' : 'am');
         if ($hour > 12) {
           $hour -= 12;
-	}
-	elsif ($hour == 0) {
-	  $hour = 12;
-	}
+  }
+  elsif ($hour == 0) {
+    $hour = 12;
+  }
         my $year = int($tmp[5]) + 1900;
-	if (defined $use_long_format && $use_long_format) {
-	    return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
-			   int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
-	} else {
-	    return sprintf("%02d/%02d %02d:%02d %s",
-			   int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
+  if (defined $use_long_format && $use_long_format) {
+      return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
+         int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
+  } else {
+      return sprintf("%02d/%02d %02d:%02d %s",
+         int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
 
-	}
+  }
     }
     return scalar(gmtime($time_in_secs));
 }
