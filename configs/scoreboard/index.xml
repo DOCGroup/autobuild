@@ -5,7 +5,6 @@ You have reached the logically existing, virtual ACE+TAO+CIAO
 scoreboard.  It shows all the OS/compiler combinations ACE+TAO+CIAO are
 tested against everyday, all over the world.  We have builds running
 continuously at
-<a href="http://www.isis.vanderbilt.edu/">ISIS, Vanderbilt University</a>,
 <a href="http://www.theaceorb.nl/">Remedy IT</a>,
 <a href="http://www.riverace.com/">Riverace Corporation</a>,
 <a href="http://www.microfocus.com/products/corba/index.aspx">Micro Focus</a>,
@@ -20,9 +19,6 @@ The distributed scoreboard is divided into following categories:
 <li>CIAO Builds for Release [<a href="./ciao.html">regular</a>|<a href="ciao.rss">rss</a>]</li>
 <li>CIAO Builds for Future Release [<a href="./ciao_future.html">regular</a>]</li>
 <li>DDS Builds for Release [<a href="./dds.html">regular</a>|<a href="dds.rss">rss</a>]</li>
-<li>TAO X11 Builds for Release [<a href="./taox11.html">regular</a>]</li>
-<li>XSC Builds for Release [<a href="./xsc.html">regular</a>]</li>
-<li>CoSMIC Builds for Release [<a href="./cosmic.html">regular</a>]</li>
 <li><a href="./misc.html">Miscellaneous</a> Builds</li>
 <li><a href="./integrated.html">Integrated</a> page having all the
     above in a single page for folks who like it! </li>
