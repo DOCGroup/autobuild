@@ -66,59 +66,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 </group>
 
 <group>
-<name>Stats Builds</name>
-    <build>
-      <name>FC21_FP_Stats</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_performance/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-    <build>
-      <name>FC22_FP_Stats_Regular</name>
-      <url>http://buildlogs.theaceorb.nl/fc22_atcd_fp_regular/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-    <build>
-      <name>FC21_FP_Stats_Versioned</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_versioned/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-   <build>
-      <name>FC21_Stats_CORBA_e_compact</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_corbaec/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-   </build>
-   <build>
-     <name>FC21_Stats_CORBA_e_micro</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_corbaem/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-   </build>
-   <build>
-     <name>FC21_Stats_CORBA_e_micro_single_threaded</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_corbaems/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-   </build>
-   <build>
-     <name>FC21_Stats_Minimum_Corba</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_fp_corbaminimum/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-   </build>
-</group>
-
-<group>
    <name>Windows</name>
     <build>
       <name>Win_VC14_Debug</name>
