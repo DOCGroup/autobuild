@@ -243,6 +243,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>suse421_ciaox11</name>
+    <url>http://buildlogs.theaceorb.nl/suse421_ciaox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
    <build>
       <name>fc20_ciaox11_ndk8e_r14_arm</name>
         <url>http://buildlogs.theaceorb.nl/fc20_ciaox11_android_ndk8e_r14_shared</url>
@@ -442,6 +448,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse132_taox11</name>
     <url>http://buildlogs.theaceorb.nl/suse132_taox11</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse421_taox11</name>
+    <url>http://buildlogs.theaceorb.nl/suse421_taox11</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -694,6 +706,14 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
     <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>suse421_ruby_x86_64_packaging</name>
+    <red>192</red>
+    <orange>168</orange>
+    <url>http://buildlogs.theaceorb.nl/suse421_ruby_x86_64_packaging</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>win81_ruby_i686_packaging</name>
     <red>192</red>
     <orange>168</orange>
@@ -852,6 +872,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse132_taox11_x86_64_packaging</name>
     <url>http://buildlogs.theaceorb.nl/suse132_taox11_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse421_taox11_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse421_taox11_x86_64_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -1018,6 +1044,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse132_taox11_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/suse132_taox11_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse421_taox11_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse421_taox11_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
@@ -1222,6 +1254,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
   <build>
+    <name>suse421_axcioma_x86_64_packaging</name>
+    <url>http://buildlogs.theaceorb.nl/suse421_axcioma_x86_64_packaging</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>win_mingw64_32_axcioma_packaging</name>
     <url>http://buildlogs.theaceorb.nl/win_mingw64_32_axcioma_packaging</url>
       <build_sponsor>Remedy IT</build_sponsor>
@@ -1378,6 +1416,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
   <build>
     <name>suse132_axcioma_x86_64_package_test</name>
     <url>http://buildlogs.theaceorb.nl/suse132_axcioma_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>suse421_axcioma_x86_64_package_test</name>
+    <url>http://buildlogs.theaceorb.nl/suse421_axcioma_x86_64_package_test</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
   </build>
