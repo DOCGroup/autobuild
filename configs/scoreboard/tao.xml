@@ -27,9 +27,9 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
      <build>
       <name>FC21_TAO_Valgrind</name>
-      <url>http://buildlogs.theaceorb.nl/fc21_atcd_tao_valgrind/</url>
+      <url>http://buildlogs.remedy.nl/fc21_atcd_tao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
      </build>
 <!-- OCI currently doesn't have the resources for these builds
      <build>
@@ -69,9 +69,9 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>Windows</name>
     <build>
       <name>Win_VC14_Debug</name>
-      <url>http://buildlogs.theaceorb.nl/win_msvc14_atcd_debug</url>
+      <url>http://buildlogs.remedy.nl/win_msvc14_atcd_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
@@ -112,16 +112,16 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>
     <build>
       <name>MingW64_Win32_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/win_mingw64_32_atcd</url>
+      <url>http://buildlogs.remedy.nl/win_mingw64_32_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
     <build>
       <name>MingW64_Win64_GCC_Release</name>
-      <url>http://buildlogs.theaceorb.nl/win_mingw64_64_atcd</url>
+      <url>http://buildlogs.remedy.nl/win_mingw64_64_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.nl</build_sponsor_url>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
     </build>
 </group>
