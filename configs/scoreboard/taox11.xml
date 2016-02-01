@@ -70,8 +70,8 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fc21_ciaox11_ndds520rev0</name>
-    <url>http://buildlogs.remedy.nl/fc21_ciaox11_ndds520rev0</url>
+    <name>fc21_ciaox11_ndds510rev0</name>
+    <url>http://buildlogs.remedy.nl/fc21_ciaox11_ndds510rev0</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
   </build>
@@ -268,8 +268,20 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
+    <name>win_msvc14_32_ciaox11_dds4ccm</name>
+    <url>http://buildlogs.remedy.nl/win_msvc14_32_ciaox11_dds4ccm/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>win_msvc14_64_ciaox11</name>
     <url>http://buildlogs.remedy.nl/win_msvc14_64_ciaox11/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win_msvc14_64_ciaox11_dds4ccm</name>
+    <url>http://buildlogs.remedy.nl/win_msvc14_64_ciaox11_dds4ccm/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
   </build>
