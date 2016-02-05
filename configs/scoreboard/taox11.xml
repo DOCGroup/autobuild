@@ -286,6 +286,12 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
+    <name>win_msvc14_64_ciaox11_dds4ccm_nmake</name>
+    <url>http://buildlogs.remedy.nl/win_msvc14_64_ciaox11_dds4ccm_nmake/</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+  </build>
+  <build>
     <name>win_msvc14_64_ciaox11_nmake</name>
     <url>http://buildlogs.remedy.nl/win_msvc14_64_ciaox11_nmake/</url>
       <build_sponsor>Remedy IT</build_sponsor>
