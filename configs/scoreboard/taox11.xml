@@ -1322,7 +1322,23 @@ regarding this project contact Johnny Willemsen (jwillemsen at remedy dot nl).
 </group>
 
 <group>
-  <name>AXCIOMA Package Test builds</name>
+  <name>AXCIOMA SE Package Test builds</name>
+  <build>
+    <name>fc20_axcioma_se_x86_64_package_test</name>
+    <url>http://buildlogs.remedy.nl/fc20_axcioma_se_x86_64_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+  </build>
+  <build>
+    <name>win81_msvc14_64_axcioma_se_package_test</name>
+    <url>http://buildlogs.remedy.nl/win81_msvc14_64_axcioma_se_package_test</url>
+      <build_sponsor>Remedy IT</build_sponsor>
+      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+  </build>
+</group>
+
+<group>
+  <name>AXCIOMA FE Package Test builds</name>
   <build>
     <name>fc19_axcioma_x86_64_package_test</name>
     <url>http://buildlogs.remedy.nl/fc19_axcioma_x86_64_package_test</url>
