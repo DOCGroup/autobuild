@@ -1109,6 +1109,7 @@ sub update_html ($$$)
     print $indexhtml ".normal { background: white; }\n";
     print $indexhtml ".warning { background: orange; }\n";
     print $indexhtml ".late { background: red; }\n";
+    print $indexhtml ".disabled { background: gray; }\n";
     print $indexhtml "</style>\n";
 
     if ($rss_file ne "") {
@@ -1269,19 +1270,16 @@ sub update_html_table ($$@)
                 $red = $builds{$buildname}->{RED_TIME};
             }
 
-            my $color;
             my $class;
 
             if (defined $builds{$buildname}->{STATUS} &&
                 $builds{$buildname}->{STATUS} =~ /Disabled\r?/) {
-                $color = 'Gray';
+                $class = 'disabled';
             }
             else {
                 $class = timestamp_class ($basename, $orange, $red, $buildname);
             }
-            print $indexhtml '<td class=';
-            print $indexhtml $class;
-            print $indexhtml '>',decode_timestamp ($basename);
+            print $indexhtml '<td class=', $class, '>',decode_timestamp ($basename);
 
             my $diffRev = '';
             if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
@@ -1312,6 +1310,7 @@ sub update_html_table ($$@)
                 print $indexhtml "&nbsp;";
             }
 
+            my $color;
             if (!defined $builds{$buildname}->{SETUP_SECTION}) {
                 $color = 'white';
             }
