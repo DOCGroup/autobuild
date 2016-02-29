@@ -11,13 +11,13 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Android</name>
    <build>
       <name>SUSE114_NDK6_r9_arm_target</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_firefly_android_gcc_d0o1s1</url>
+      <url>http://scoreboard.ociweb.com/doc_master_firefly_android_gcc_d0o1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
    </build>
 <!--   <build>
       <name>SUSE114_NDK6_r9_arm_target_tests</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_firefly_android_gcc_d0o1s1_tests</url>
+      <url>http://scoreboard.ociweb.com/doc_master_firefly_android_gcc_d0o1s1_tests</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
    </build>-->
@@ -34,32 +34,32 @@ all the OS/platform combinations on which TAO is tested everyday.
 <!-- OCI currently doesn't have the resources for these builds
      <build>
        <name>RHEL_63_32bit_NoInline_Debug</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_mealworm_linux_gcc_d1o0i0b32</url>
+       <url>http://scoreboard.ociweb.com/doc_master_mealworm_linux_gcc_d1o0i0b32</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
      <build>
        <name>RHEL_63_32bit_NoInline_Debug_Installed</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_mealworm_linux_gcc_d1o0i0b32_inst</url>
+       <url>http://scoreboard.ociweb.com/doc_master_mealworm_linux_gcc_d1o0i0b32_inst</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
 -->
      <build>
        <name>FC6_Compact_NoInline</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
+       <url>http://scoreboard.ociweb.com/doc_master_mosquito_linux_gcc_d0o1i0c1</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
        <name>Ubuntu_14_04_GCC_53_x64</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_gcc-5.3_d1o0</url>
+       <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_gcc-5.3_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
        <name>Ubuntu_14_04_Clang_x64</name>
-       <url>http://scoreboard.ociweb.com/doc_trunk_wiro_linux_clang_d1o0</url>
+       <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_clang_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
@@ -76,31 +76,31 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>
     <build>
       <name>Win2008R2x64_VC10_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_cricket_win2008r2-x64_vc10_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
       <name>Win7x64_VC9_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_oci1444_win7-x64_vc9_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_oci1444_win7-x64_vc9_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
       <name>Win2003_VC71_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_weevil_win2003_vc71_s1d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_weevil_win2003_vc71_s1d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
       <name>Win2003_VC71_Static_Release</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_wasp2003_win2003_vc71gnu_d0o1s1</url>
+      <url>http://scoreboard.ociweb.com/doc_master_wasp2003_win2003_vc71gnu_d0o1s1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
       <name>Win7x64_VC14_Release_IPv6_WChar</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_hornet_win7-x64_vc14_i1d0o1w1</url>
+      <url>http://scoreboard.ociweb.com/doc_master_hornet_win7-x64_vc14_i1d0o1w1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
@@ -117,13 +117,13 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>Solaris</name>
    <build>
       <name>Solaris9_Studio11_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_fly_sunos59_suncc58_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_fly_sunos59_suncc58_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
 <!--   <build>
       <name>Solaris9_i386_gcc_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_sydney.phx_sunos59_gcc_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_sydney.phx_sunos59_gcc_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>-->
@@ -133,7 +133,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>QNX</name>
 <!--   <build>
       <name>QNX_6.3.2_x86-gcc_3.3.5</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_qnx_qnx_gcc_d1o0i0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_qnx_qnx_gcc_d1o0i0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>-->
@@ -143,7 +143,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>AIX</name>
 <!--   <build>
       <name>AIX_5.3_VA8_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_viper_aix53_va8_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_viper_aix53_va8_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>-->
@@ -154,7 +154,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>VxWorks</name>
    <build>
       <name>VxWorks_6.9_x86_RTP_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_trunk_oci1179_VxWorks6.9_gcc_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_oci1179_VxWorks6.9_gcc_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>

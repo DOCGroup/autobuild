@@ -77,7 +77,7 @@ sub start_child_process {
     print "Windows command: $Win_cmd\n";
     #Child is either created or fails to spawn and exits
     #thus ending child's logical processing
-    Win32::Process::Create($childs_proc, $perl, $Win_cmd, 0, 0, ".") ||
+    Win32::Process::Create($childs_proc, $perl, $Win_cmd, 1, 0, ".") ||
         print "Could not spawn child (Windows): $!\n";
 
     #parent

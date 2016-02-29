@@ -10,20 +10,20 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Windows</name>
   <build>
-    <name>dds_doc_trunk_oci1444_win7-x64_vc9_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1444_win7-x64_vc9_d1o0</url>
+    <name>dds_doc_master_oci1444_win7-x64_vc9_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_oci1444_win7-x64_vc9_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_trunk_cricket_win2008r2-x64_vc10_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_cricket_win2008r2-x64_vc10_d1o0</url>
+    <name>dds_doc_master_cricket_win2008r2-x64_vc10_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_cricket_win2008r2-x64_vc10_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_trunk_hornet_win7-x64_vc14_i1d1o0w1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_hornet_win7-x64_vc14_i1d1o0w1</url>
+    <name>dds_doc_master_hornet_win7-x64_vc14_i1d1o0w1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_hornet_win7-x64_vc14_i1d1o0w1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
@@ -32,46 +32,46 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Linux</name>
   <build>
-    <name>dds_doc_trunk_ant_linux-sb_gcc_d0o1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_ant_linux-sb_gcc_d0o1</url>
+    <name>dds_doc_master_ant_linux-sb_gcc_d0o1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_ant_linux-sb_gcc_d0o1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_mosquito_linux_gcc_d0o1i0c1</url>
+    <name>dds_doc_master_mosquito_linux_gcc_d0o1i0c1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_mosquito_linux_gcc_d0o1i0c1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 <!-- Temporarily off line
   <build>
-    <name>dds_doc_trunk_oci1179_linux_gcc_d1o0i0w1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1179_linux_gcc_d1o0i0w1</url>
+    <name>dds_doc_master_oci1179_linux_gcc_d1o0i0w1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_oci1179_linux_gcc_d1o0i0w1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
 -->
   <build>
-    <name>dds_doc_trunk_tick_linux_gcc_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_tick_linux_gcc_d1o0</url>
+    <name>dds_doc_master_tick_linux_gcc_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_tick_linux_gcc_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_trunk_tick_linux_gcc_d1o0_inst</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_tick_linux_gcc_d1o0_inst</url>
+    <name>dds_doc_master_tick_linux_gcc_d1o0_inst</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_tick_linux_gcc_d1o0_inst</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_trunk_wiro_linux_gcc-5.3_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_wiro_linux_gcc-5.3_d1o0</url>
+    <name>dds_doc_master_wiro_linux_gcc-5.3_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_wiro_linux_gcc-5.3_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_trunk_wiro_linux_clang_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_wiro_linux_clang_d1o0</url>
+    <name>dds_doc_master_wiro_linux_clang_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_wiro_linux_clang_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
@@ -85,8 +85,8 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>VxWorks</name>
   <build>
-    <name>dds_doc_trunk_oci1179_VxWorks6.9_gcc_d1o0</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_oci1179_VxWorks6.9_gcc_d1o0</url>
+    <name>dds_doc_master_oci1179_VxWorks6.9_gcc_d1o0</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_oci1179_VxWorks6.9_gcc_d1o0</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
@@ -96,8 +96,8 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Android</name>
   <build>
-    <name>dds_doc_trunk_firefly_android_gcc_d0o1s1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_firefly_android_gcc_d0o1s1</url>
+    <name>dds_doc_master_firefly_android_gcc_d0o1s1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_firefly_android_gcc_d0o1s1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
@@ -128,8 +128,8 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Fuzz</name>
   <build>
-    <name>dds_doc_trunk_mosquito_linux_fuzz_u1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_trunk_mosquito_linux_fuzz_u1</url>
+    <name>dds_doc_master_mosquito_linux_fuzz_u1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_mosquito_linux_fuzz_u1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
