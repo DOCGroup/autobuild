@@ -105,13 +105,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
     <build>
-      <name>MingW64_Win32_GCC_Release</name>
-      <url>http://buildlogs.remedy.nl/win_mingw64_32_atcd</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-    </build>
-    <build>
       <name>MingW64_Win64_GCC_Release</name>
       <url>http://buildlogs.remedy.nl/win_mingw64_64_atcd</url>
       <build_sponsor>Remedy IT</build_sponsor>
