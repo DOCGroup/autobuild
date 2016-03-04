@@ -13,28 +13,21 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
     <url>http://buildlogs.remedy.nl/fc21_atcd_fuzz</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+    <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>Doxygen</name>
     <url>http://buildlogs.remedy.nl/fc23_atcd_doxygen</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+    <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
   <build>
     <name>Coverity</name>
     <url>http://buildlogs.remedy.nl/rhel70_atcd_coverity</url>
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-  </build>
-  <build>
-    <name>Mail_Test_Stats</name>
-    <url>http://buildlogs.remedy.nl/fc21_atcd_mail_teststats</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+    <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
   </build>
 </group>
 </scoreboard>
