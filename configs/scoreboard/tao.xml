@@ -27,7 +27,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Linux</name>
      <build>
       <name>FC21_TAO_Valgrind</name>
-      <url>http://buildlogs.remedy.nl/fc21_atcd_tao_valgrind/</url>
+      <url>http://buildlogs.remedy.nl/fc21_acetao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
      </build>
