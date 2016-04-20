@@ -69,7 +69,7 @@ all the OS/platform combinations on which TAO is tested everyday.
    <name>Windows</name>
     <build>
       <name>Win_VC14_Debug</name>
-      <url>http://buildlogs.remedy.nl/win_msvc14_atcd_debug</url>
+      <url>http://buildlogs.remedy.nl/win_msvc14_acetao_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
@@ -106,7 +106,7 @@ all the OS/platform combinations on which TAO is tested everyday.
     </build>
     <build>
       <name>MingW64_Win64_GCC_Release</name>
-      <url>http://buildlogs.remedy.nl/win_mingw64_64_atcd</url>
+      <url>http://buildlogs.remedy.nl/win_mingw64_64_acetao</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
