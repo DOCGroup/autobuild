@@ -46,8 +46,10 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
-    my $opendds_url = 'https://svn.dre.vanderbilt.edu/viewvc';
-    my $atcd_url = 'https://github.com/DOCGroup/ATCD';
+    my $opendds_url = 'https://github.com/objectcomputing/OpenDDS';
+    my $atcd_url = 'https://github.com/DOCGroup/ACE_TAO';
+    my $ciao_url = 'https://github.com/DOCGroup/CIAO';
+    my $dance_url = 'https://github.com/DOCGroup/DAnCE';
     my $mpc_url = 'https://github.com/DOCGroup/MPC';
     my $autobuild_url = 'https://github.com/DOCGroup/autobuild';
     my %information = ('XML'       => ['', '',
@@ -61,11 +63,11 @@ sub Run ($)
                        'TAO'       => ['ChangeLog', 'TAO/',
                                        "$atcd_url/commits/master/TAO"],
                        'CIAO'      => ['ChangeLog', 'TAO/CIAO/',
-                                       "$atcd_url/commits/master/CIAO"],
+                                       "$ciao_url/commits/master"],
                        'DANCE'     => ['ChangeLog', 'TAO/DAnCE/',
-                                       "$atcd_url/commits/master/DAnCE"],
+                                       "$dance_url/commits/master"],
                        'DDS'       => ['ChangeLog', 'DDS/',
-                                       "$opendds_url/DDS/trunk/<file>?revision=HEAD"],
+                                       "$opendds_url/commits/master"],
                       );
     my @cl_order = ('MPC', 'ACE', 'TAO', 'CIAO', 'DANCE', 'DDS');
 

@@ -1358,7 +1358,7 @@ sub Config_Handler ($)
     {
         # Jenkins environment
         my $url = $1;
-        if ($url =~ m/git:\/\/.*\/ATCD\.git/i)
+        if ($url =~ m/git:\/\/.*\/ACE_TAO\.git/i)
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
