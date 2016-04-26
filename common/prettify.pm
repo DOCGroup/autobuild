@@ -1217,7 +1217,9 @@ sub Setup_Handler ($)
         }
     }
     elsif (($s =~ m/git clone.*git:\/\/.*atcd\.git/i) ||
-           ($s =~ m/origin.*git:\/\/.*atcd\.git/i))
+           ($s =~ m/origin.*git:\/\/.*atcd\.git/i) ||
+           ($s =~ m/git clone.*git:\/\/.*ace_tao\.git/i) ||
+           ($s =~ m/origin.*git:\/\/.*ace_tao\.git/i))
     {
       # Add git remote -v to config before git log -1 to guarantee url
       $totals->{GIT_CHECKEDOUT_ACE} = "Matched";
@@ -1358,7 +1360,8 @@ sub Config_Handler ($)
     {
         # Jenkins environment
         my $url = $1;
-        if ($url =~ m/git:\/\/.*\/ACE_TAO\.git/i)
+        if (($url =~ m/git:\/\/.*\/ACE_TAO\.git/i) ||
+            ($url =~ m/git:\/\/.*\/ATCD\.git/i))
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
