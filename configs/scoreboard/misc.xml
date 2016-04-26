@@ -8,13 +8,6 @@ This is a miscellaneous scoreboard for ACE+TAO+CIAO+DAnCE.
 
 <group>
   <name>Utility Builds</name>
-  <build>
-    <name>Coverity</name>
-    <url>http://buildlogs.remedy.nl/rhel70_acetao_coverity</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-    <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
-  </build>
 </group>
 </scoreboard>
 
