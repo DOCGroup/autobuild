@@ -30,6 +30,7 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://buildlogs.remedy.nl/fc21_acetao_valgrind/</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+      <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
      </build>
 <!-- OCI currently doesn't have the resources for these builds
      <build>
@@ -72,7 +73,7 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://buildlogs.remedy.nl/win_msvc14_acetao_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+      <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
     </build>
     <build>
       <name>Win2008R2x64_VC10_Debug</name>
@@ -109,7 +110,7 @@ all the OS/platform combinations on which TAO is tested everyday.
       <url>http://buildlogs.remedy.nl/win_mingw64_64_acetao</url>
       <build_sponsor>Remedy IT</build_sponsor>
       <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ATCD/commit/</diffroot>
+      <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
     </build>
 </group>
 
