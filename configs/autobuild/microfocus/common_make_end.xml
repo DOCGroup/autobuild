@@ -1,13 +1,9 @@
 <autobuild>
     <command name="generate_workspace" options="dirs=ACE -type gnuace" />
     <command name="generate_workspace" options="dirs=TAO -type gnuace" />
-    <command name="generate_workspace" options="dirs=DAnCE -type gnuace" />
-    <command name="generate_workspace" options="dirs=CIAO -type gnuace" />
 
     <command name="make" options="-k -C ACE" />
     <command name="make" options="-k -C TAO" />
-    <command name="make" options="-k -C DAnCE" />
-    <command name="make" options="-k -C CIAO" />
 
     <command name="auto_run_tests" options=" -a -o -t" />
 
