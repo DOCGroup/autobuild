@@ -448,6 +448,12 @@ sub handle_compiler_output_line($) {
     $self->Output_Error ($s);
     return;
   }
+  # Ruby error
+  if ($s =~ /rake aborted/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
 
   if ($s =~ /ArgumentError/)
   {
