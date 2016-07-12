@@ -455,6 +455,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ /NoMethodError/)
+  {
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ /ArgumentError/)
   {
     $self->Output_Error ($s);
