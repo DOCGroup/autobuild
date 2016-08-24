@@ -65,6 +65,12 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
      </build>
      <build>
+       <name>Raspberry_Pi_Crosscompile</name>
+       <url>http://scoreboard.ociweb.com/doc_master_ant_linux-rpi_gcc_d0o1</url>
+       <build_sponsor>OCI</build_sponsor>
+       <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
+     </build>
+     <build>
        <name>RedHat_EL5_x86_inline_gcc44</name>
        <url>http://tao.microfocus.com/scoreboard/rhel5_x86_inline_gcc44</url>
        <build_sponsor>Micro Focus</build_sponsor>
