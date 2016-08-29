@@ -32,6 +32,12 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Linux</name>
   <build>
+    <name>dds_doc_master_ant_linux-rpi_gcc_d0o1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_ant_linux-rpi_gcc_d0o1</url>
+    <build_sponsor>OCI</build_sponsor>
+    <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
+  </build>
+  <build>
     <name>dds_doc_master_ant_linux-sb_gcc_d0o1</name>
     <url>http://scoreboard.ociweb.com/dds_doc_master_ant_linux-sb_gcc_d0o1</url>
     <build_sponsor>OCI</build_sponsor>
