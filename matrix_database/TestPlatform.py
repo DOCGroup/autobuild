@@ -85,7 +85,7 @@ class TestMatrix:
 			fname = name
 		else:
 			l = len(splits)
-			fname = splits [l-2]		
+			fname = splits [l-2]
 		self.fileNames.append(fname)
 
 class TestPlatform:
@@ -203,9 +203,7 @@ class TestPlatform:
 		# this strips off the "auto_run_tests:, and the time and status
 		# leaves the test name plus any arguments
 		splits = line.split()
-		testname = ""
-		for n in range (1, len(splits)-2):
-			testname = testname + " " + splits[n]
+		testname = ' '.join(splits[1 : -2])
 		if len(tokens) > 2:
 			ttime=tokens[2]
 			if len(tokens) < 3:
