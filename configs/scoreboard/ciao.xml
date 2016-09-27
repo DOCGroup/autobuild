@@ -9,37 +9,37 @@
   <group>
     <name>Linux</name>
    <build>
-      <name>FC12_32bit</name>
+      <name>Fedora24_32bit</name>
       <url>http://scoreboard.ociweb.com/doc_master_tick_linux_gcc_d0o1b32</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
    <build>
-      <name>FC12_32bit_installed</name>
+      <name>Fedora24_32bit_installed</name>
       <url>http://scoreboard.ociweb.com/doc_master_tick_linux_gcc_d0o1b32_inst</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
    <build>
-      <name>FC12_64bit</name>
+      <name>Fedora24_64bit</name>
       <url>http://scoreboard.ociweb.com/doc_master_tick_linux_gcc_d0o1</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
    <build>
-      <name>FC12_64bit_installed</name>
+      <name>Fedora24_64bit_installed</name>
       <url>http://scoreboard.ociweb.com/doc_master_tick_linux_gcc_d0o1_inst</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
    <build>
-      <name>FC12_debug</name>
+      <name>Fedora24_debug</name>
       <url>http://scoreboard.ociweb.com/doc_master_tick_linux_gcc_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
    </build>
    <build>
-      <name>FC12_debug_installed</name>
+      <name>Fedora24_debug_installed</name>
       <url>http://scoreboard.ociweb.com/doc_master_tick_linux_gcc_d1o0_inst</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
