@@ -130,12 +130,14 @@ sub Run ($)
         mkpath($project_root);
     }
 
-    if (!chdir $ENV{'ACE_ROOT'} )
-    {
-        if (!chdir $project_root) {
-            print STDERR __FILE__, ": Cannot change to $project_root or $ENV{'ACE_ROOT'}\n";
-            return 0;
-        }
+    if (exists $ENV{ACE_ROOT}) {
+      if (!chdir $ENV{'ACE_ROOT'} )
+      {
+          if (!chdir $project_root) {
+              print STDERR __FILE__, ": Cannot change to $project_root or $ENV{'ACE_ROOT'}\n";
+              return 0;
+          }
+      }
     }
 
     foreach my $cle (@cl_order) {
@@ -151,22 +153,24 @@ sub Run ($)
       }
     }
 
-    #
-    # config.h, if it exists
-    #
-
-    if (-r "$ENV{ACE_ROOT}/ace/config.h") {
-        print "================ config.h ================\n";
-        print_file ("$ENV{ACE_ROOT}/ace/config.h", 1);
+    if (exists $ENV{ACE_ROOT}) {
+      #
+      # config.h, if it exists
+      #
+      if (-r "$ENV{ACE_ROOT}/ace/config.h") {
+          print "================ config.h ================\n";
+          print_file ("$ENV{ACE_ROOT}/ace/config.h", 1);
+      }
     }
 
-    #
-    # default.features, if it exists
-    #
-
-    if (-r "$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features") {
-        print "================ default.features ================\n";
-        print_file ("$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features", 1);
+    if (exists $ENV{ACE_ROOT}) {
+      #
+      # default.features, if it exists
+      #
+      if (-r "$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features") {
+          print "================ default.features ================\n";
+          print_file ("$ENV{ACE_ROOT}/bin/MakeProjectCreator/config/default.features", 1);
+      }
     }
 
     my $local_features = main::GetVariable ('local_features');
@@ -183,15 +187,17 @@ sub Run ($)
     #
     my @dirs = ();
 
-    if (-r "$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU") {
-        print "================ platform_macros.GNU ================\n";
-        print_file ("$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU", 1);
-    }
+    if (exists $ENV{ACE_ROOT}) {
+      if (-r "$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU") {
+          print "================ platform_macros.GNU ================\n";
+          print_file ("$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU", 1);
+      }
 
-    if ( -r "$ENV{ACE_ROOT}/VERSION" ) {
-        print "================ ACE VERSION ================\n";
+      if ( -r "$ENV{ACE_ROOT}/VERSION" ) {
+          print "================ ACE VERSION ================\n";
 
-        print_file ("$ENV{ACE_ROOT}/VERSION", 0);
+          print_file ("$ENV{ACE_ROOT}/VERSION", 0);
+      }
     }
 
     @dirs = ();
