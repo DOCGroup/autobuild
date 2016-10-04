@@ -114,8 +114,8 @@ all the OS/platform combinations on which TAO is tested everyday.
       <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
     </build>
     <build>
-      <name>Win2008R2x64_VC10_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_master_cricket_win2008r2-x64_vc10_d1o0</url>
+      <name>Win2012R2x64_VC10_Debug</name>
+      <url>http://scoreboard.ociweb.com/doc_master_cricket_win2012r2-x64_vc10_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
     </build>
