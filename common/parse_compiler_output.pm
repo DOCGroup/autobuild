@@ -55,7 +55,7 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  if ($s =~ /^\s*0 (Error|Warning)\(s\)\s*$/) {
+  if ($s =~ /^\s*(\[exec\]\s*)?0 (Error|Warning)\(s\)\s*$/) {
     $self->Output_Normal ($s);
     return;
   }
