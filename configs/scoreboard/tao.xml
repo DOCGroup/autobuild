@@ -25,13 +25,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Linux</name>
-     <build>
-      <name>FC24_TAO_Valgrind</name>
-      <url>http://buildlogs.remedy.nl/fc_acetao_valgrind/</url>
-      <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-      <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
-     </build>
 <!-- OCI currently doesn't have the resources for these builds
      <build>
        <name>RHEL_63_32bit_NoInline_Debug</name>
