@@ -27,6 +27,12 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor>Remedy IT</build_sponsor>
     <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
   </build>
+  <build>
+    <name>win_mingw64_64_opendds</name>
+    <url>http://buildlogs.remedy.nl/win_mingw64_64_opendds/</url>
+    <build_sponsor>Remedy IT</build_sponsor>
+    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+  </build>
 </group>
 
 <group>
