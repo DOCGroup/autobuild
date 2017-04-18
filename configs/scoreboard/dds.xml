@@ -50,12 +50,6 @@ all the OS/platform combinations on which DDS is tested everyday.
 <group>
   <name>Linux</name>
   <build>
-    <name>fedora_opendds</name>
-    <url>http://buildlogs.remedy.nl/fc_opendds/</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>fedora_opendds_versioned</name>
     <url>http://buildlogs.remedy.nl/fc_opendds_versioned/</url>
     <build_sponsor>Remedy IT</build_sponsor>
