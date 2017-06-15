@@ -108,12 +108,6 @@ sub handle_compiler_output_line($) {
     return;
   }
 
-  if ($s =~ m/clang/)
-  {
-    $self->Output_Normal ($s);
-    return;
-  }
-
   if ($s =~ m/^[ \t]*icl.exe/) {
     $self->Output_Normal ($s);
     return;
