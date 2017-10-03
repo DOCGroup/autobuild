@@ -277,6 +277,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/requested NFS version or transport protocol is not supported/) {
+    # Possible error when using NFS mount in a build, this way this error is directly visible
+    $self->Output_Error ($s);
+    return;
+  }
+
   if ($s =~ m/IDL::ParseError:/) {
     $self->Output_Error ($s);
     return;
