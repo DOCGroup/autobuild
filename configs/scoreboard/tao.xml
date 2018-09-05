@@ -32,13 +32,13 @@ all the OS/platform combinations on which TAO is tested everyday.
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-       <name>Ubuntu_16_04_GCC_82_x64</name>
+       <name>Ubuntu_18_04_GCC_82_x64</name>
        <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_gcc-8.2_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-       <name>Ubuntu_16_04_Clang_x64</name>
+       <name>Ubuntu_18_04_Clang_x64</name>
        <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_clang_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
