@@ -5,9 +5,7 @@ PERLLIB=autobuild
 export PERLLIB
 
 cd $HOME/autobuild
-#/usr/local/bin/git pull
-# naboo isn't able to do git with https, so use github svn support
-svn up
+git pull
 
 # Generate the index page!
 /usr/bin/perl ./scoreboard.pl -v -d /export/web/www/scoreboard -i $HOME/autobuild/configs/scoreboard/index.xml  2>&1 &
