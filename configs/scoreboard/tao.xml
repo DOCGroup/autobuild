@@ -25,34 +25,20 @@ all the OS/platform combinations on which TAO is tested everyday.
 
 <group>
 <name>Linux</name>
-<!-- OCI currently doesn't have the resources for these builds
      <build>
-       <name>RHEL_63_32bit_NoInline_Debug</name>
-       <url>http://scoreboard.ociweb.com/doc_master_mealworm_linux_gcc_d1o0i0b32</url>
-       <build_sponsor>OCI</build_sponsor>
-       <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
-     </build>
-     <build>
-       <name>RHEL_63_32bit_NoInline_Debug_Installed</name>
-       <url>http://scoreboard.ociweb.com/doc_master_mealworm_linux_gcc_d1o0i0b32_inst</url>
-       <build_sponsor>OCI</build_sponsor>
-       <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
-     </build>
--->
-     <build>
-       <name>FC6_Compact_NoInline</name>
+       <name>Debian9_Compact_NoInline</name>
        <url>http://scoreboard.ociweb.com/doc_master_mosquito_linux_gcc_d0o1i0c1</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-       <name>Ubuntu_16_04_GCC_73_x64</name>
-       <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_gcc-7.3_d1o0</url>
+       <name>Ubuntu_18_04_GCC_82_x64</name>
+       <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_gcc-8.2_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
      </build>
      <build>
-       <name>Ubuntu_16_04_Clang_x64</name>
+       <name>Ubuntu_18_04_Clang_x64</name>
        <url>http://scoreboard.ociweb.com/doc_master_wiro_linux_clang_d1o0</url>
        <build_sponsor>OCI</build_sponsor>
        <build_sponsor_url>http://theaceorb.com</build_sponsor_url>
@@ -149,12 +135,6 @@ all the OS/platform combinations on which TAO is tested everyday.
 <group>
    <name>Solaris</name>
    <build>
-      <name>Solaris9_Studio11_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_master_fly_sunos59_suncc58_d1o0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>
-   <build>
       <name>Sol_10_SPARC_64bit_SunStudio_12u2_inline</name>
       <url>http://tao.microfocus.com/scoreboard/sol10_s64_stu12u2_inline</url>
       <build_sponsor>Micro Focus</build_sponsor>
@@ -162,81 +142,6 @@ all the OS/platform combinations on which TAO is tested everyday.
       <orange>72</orange>
       <red>168</red>
    </build>
-<!--   <build>
-      <name>Solaris9_i386_gcc_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_master_sydney.phx_sunos59_gcc_d1o0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>-->
 </group>
 
-<group>
-   <name>QNX</name>
-<!--   <build>
-      <name>QNX_6.3.2_x86-gcc_3.3.5</name>
-      <url>http://scoreboard.ociweb.com/doc_master_qnx_qnx_gcc_d1o0i0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>-->
-</group>
-
-<group>
-   <name>AIX</name>
-<!--   <build>
-      <name>AIX_5.3_VA8_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_master_viper_aix53_va8_d1o0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>-->
-</group>
-
-<!-- Temporarily offline
-<group>
-   <name>VxWorks</name>
-   <build>
-      <name>VxWorks_6.9_x86_RTP_Debug</name>
-      <url>http://scoreboard.ociweb.com/doc_master_oci1179_VxWorks6.9_gcc_d1o0</url>
-      <build_sponsor>OCI</build_sponsor>
-      <build_sponsor_url>http://www.theaceorb.com</build_sponsor_url>
-   </build>
-</group>
--->
-
-<!-- Temporarily offline
-<group>
-  <name>MacOS</name>
-  <build>
-    <name>Mavericks</name>
-    <url>http://sowayan.dyndns-server.com/builds/mavericks_full_llvm/build</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>Mavericks_Static</name>
-    <url>http://sowayan.dyndns-server.com/builds/mavericks_full_static_llvm/build</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>iOS_7_Simulator</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_7_Simulator/build</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>mailto:sowayan@gmail.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>iOS_7_Hardware</name>
-    <url>http://sowayan.dyndns-server.com/builds/iOS_7_Hardware/build</url>
-    <orange>48</orange>
-    <red>72</red>
-    <build_sponsor>Abdul Sowayan</build_sponsor>
-    <build_sponsor_url>sowayan@gmail.com</build_sponsor_url>
-  </build>
-</group>
--->
 </scoreboard>
