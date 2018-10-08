@@ -89,14 +89,14 @@ all the OS/platform combinations on which TAO is tested everyday.
       <name>Win_VC14_Debug</name>
       <url>http://buildlogs.remedy.nl/win_msvc14_acetao_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+      <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
     </build>
     <build>
       <name>Win_VC15_Debug</name>
       <url>http://buildlogs.remedy.nl/win_msvc15_acetao_debug</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+      <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
     </build>
     <build>
@@ -127,7 +127,7 @@ all the OS/platform combinations on which TAO is tested everyday.
       <name>MingW64_Win64_GCC_Release</name>
       <url>http://buildlogs.remedy.nl/win_mingw64_64_acetao</url>
       <build_sponsor>Remedy IT</build_sponsor>
-      <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+      <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
       <diffroot>https://github.com/DOCGroup/ACE_TAO/commit/</diffroot>
     </build>
 </group>

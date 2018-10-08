@@ -31,13 +31,13 @@ all the OS/platform combinations on which DDS is tested everyday.
     <name>win_msvc15_opendds_debug</name>
     <url>http://buildlogs.remedy.nl/win_msvc15_opendds_debug/</url>
     <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+    <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
     <name>win_mingw64_64_opendds</name>
     <url>http://buildlogs.remedy.nl/win_mingw64_64_opendds/</url>
     <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+    <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
   </build>
 </group>
 
@@ -47,13 +47,13 @@ all the OS/platform combinations on which DDS is tested everyday.
     <name>fedora_opendds_versioned</name>
     <url>http://buildlogs.remedy.nl/fc_opendds_versioned/</url>
     <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+    <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
     <name>fedora_opendds_valgrind</name>
     <url>http://buildlogs.remedy.nl/fc_opendds_valgrind/</url>
     <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>http://www.remedy.nl</build_sponsor_url>
+    <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
     <name>dds_doc_master_ant_linux-rpi_gcc_d0o1</name>
