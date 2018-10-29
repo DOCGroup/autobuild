@@ -9,78 +9,7 @@ is tested everyday.
 </preamble>
 
 <group>
-  <name>AIX </name>
-  <build>
-    <name>AIX_5.3_XLC7_Debug</name>
-    <url>http://acebuilds.riverace.com/charlie/dev/xlc7_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>AIX_6.1_XLC10_Debug</name>
-    <url>http://acebuilds.riverace.com/ralphie/dev/xlc10_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>AIX_7.1_XLC11-64_Debug</name>
-    <url>http://acebuilds.riverace.com/billy/dev/xlc11-64_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-</group>
-
-<group>
-  <name>HP-UX</name>
-  <build>
-    <name>HP-UX_11iv3_ia64_aC++_Debug</name>
-    <url>http://acebuilds.riverace.com/mindy/dev/acc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>HP-UX_11iv2_ia64_aC++_Debug</name>
-    <url>http://acebuilds.riverace.com/gump/dev/acc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>HP-UX_11iv2_PA-RISC_aC++_Debug</name>
-    <url>http://acebuilds.riverace.com/lucky/dev/acc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-</group>
-
-<group>
   <name>Linux</name>
-  <build>
-    <name>RHEL_5_x64_Debug(Intel)</name>
-    <url>http://acebuilds.riverace.com/smokey/dev/icc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>RHEL_5_x64_Debug(gcc)</name>
-    <url>http://acebuilds.riverace.com/smokey/dev/gcc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>RHEL_6_x64_Debug(gcc)</name>
-    <url>http://acebuilds.riverace.com/payslee/dev/gcc_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
   <build>
     <name>RHEL_71_x64_SafetyBase_Release</name>
     <url>http://scoreboard.ociweb.com/doc_master_ant_linux-sb_gcc_d0o1</url>
@@ -92,35 +21,6 @@ is tested everyday.
     <url>http://scoreboard.ociweb.com/doc_master_ant_linux-se_gcc_d0o1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
-  </build>
-</group>
-
-<group>
-<name>Solaris</name>
-  <build>
-    <name>Solaris_10_sparc_Studio12_Debug</name>
-    <url>http://acebuilds.riverace.com/chad/dev/studio12_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-  <build>
-    <name>Solaris_10_sparc_Studio12_Release_WChar(64bit-full-warnings)</name>
-    <url>http://acebuilds.riverace.com/chad/dev/studio12-64_release_wchar</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-  </build>
-</group>
-
-<group>
-  <name>Windows</name>
-  <build>
-    <name>Windows8_VC12_Debug</name>
-    <url>http://acebuilds.riverace.com/smokey-win8/dev/vc12_debug</url>
-    <red>36</red>
-    <build_sponsor>Riverace</build_sponsor>
-    <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
   </build>
 </group>
 

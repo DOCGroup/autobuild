@@ -11,12 +11,5 @@ sponsorship is received.
 </preamble>
 <group>
    <name>Non-Release Builds for ACE</name>
-   <build>
-      <name>Solaris_9_SunStudio11_Debug</name>
-      <url>http://acebuilds.riverace.com/heidi/dev/ss11_debug</url>
-      <red>36</red>
-      <build_sponsor>Riverace</build_sponsor>
-      <build_sponsor_url>http://www.riverace.com</build_sponsor_url>
-   </build>
 </group>
 </scoreboard>
