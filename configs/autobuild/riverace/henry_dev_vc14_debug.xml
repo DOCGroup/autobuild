@@ -1,0 +1,45 @@
+<!-- henry_dev_vc14_debug.xml - Windows 10 Vis Studio 2015 (VC14) -->
+<autobuild>
+    <configuration>
+        <environment name="ACE_ROOT"     value="C:\\ace\\ATCD\\ACE" />
+        <environment name="PATH"         value="C:\\ace\\ATCD\\ACE\\lib" type="prefix" />
+        <environment name="MPC_ROOT"     value="C:\\ace\\MPC" />
+        <!-- environment name="SSL_ROOT"     value="C:\\openssl" / -->
+
+        <variable name="root"            value="C:\\ace" />
+        <variable name="project_root"    value="C:\\ace\\ATCD\\ACE" />
+	<variable name="log_file"        value="vc14_debug.log" />
+        <variable name="log_root"        value="s:\\build_logs\\dev\\vc14_debug" />
+        <variable name="name"            value="Win10 VC14 Debug" />
+        <variable name="local_features"  value="c:\\ace\\ATCD\\ACE\\local.features" />
+        <variable name="configs"         value="Win32 Exceptions" />
+    </configuration>
+
+    <command name="status"            options="on" />
+    <command name="file_manipulation" options="type=mustnotexist file=ATCD/.disable" />
+    <command name="file_manipulation" options="type=create file=ATCD/.disable output='RUNNING'" />
+
+    <command name="log"               options="ON" />
+
+    <!-- command name="git"               options="dir=/ace/MPC pull origin master" / -->
+    <!-- command name="git"               options="dir=ATCD/ACE checkout master" / -->
+    <!-- command name="git"               options="dir=ATCD/ACE pull origin master" / -->
+
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/ace/config.h output='#define ACE_DISABLE_WIN32_ERROR_WINDOWS\n#define ACE_HAS_STANDARD_CPP_LIBRARY 1\n#define ACE_HAS_TOKENS_LIBRARY\n#include \x22ace/config-win32.h\x22\n'" />
+    <command name="file_manipulation" options="type=create file=ATCD/ACE/local.features output='rwho = 0\nmfc = 1\nssl=0\nqos=1\nipv6 = 1\n'" />
+
+    <command name="print_os_version" />
+    <command name="print_env_vars" />
+    <command name="check_compiler" options="msvc" />
+    <command name="print_ace_config" />
+
+    <command name="generate_workspace" options="-type vc14 -recurse -exclude Kokyu -relative ACE_ROOT=C:\\ace\\ATCD\\ACE -feature_file c:\\ace\\ATCD\\ACE\\local.features" />
+    <command name="vc7make"           options="/rebuild debug ACE.sln" />
+
+    <command name="auto_run_tests"    options="-a" />
+
+    <command name="log"               options="OFF" />
+    <command name="process_logs"      options="move prettify clean=5 index" />
+    <command name="file_manipulation" options="type=delete file=ATCD/.disable" />
+    <command name="status"            options="off" />
+</autobuild>
