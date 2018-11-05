@@ -86,8 +86,8 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
   <build>
-    <name>dds_doc_master_sabre-opteron_linux_gcc_d1o0w1</name>
-    <url>http://scoreboard.ociweb.com/dds_doc_master_sabre-opteron_linux_gcc_d1o0w1</url>
+    <name>dds_doc_master_tardigrade_linux_gcc_d1o0w1</name>
+    <url>http://scoreboard.ociweb.com/dds_doc_master_tardigrade_linux_gcc_d1o0w1</url>
     <build_sponsor>OCI</build_sponsor>
     <build_sponsor_url>http://www.opendds.org</build_sponsor_url>
   </build>
