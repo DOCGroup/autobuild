@@ -1110,6 +1110,21 @@ sub Run ($)
             mkdir( $filename );
         }
     }
+    ### type=  chdir
+    ################
+    elsif ($type eq "chdir") {
+        if (defined $filename) {
+            if (-d $filename ) {
+                $current_dir = $filename;
+            } else {
+                print STDERR __FILE__, ":\n",
+                    "  Could not chdir into $filename, it is not a directory!\n";
+                return 0;
+            }
+        } else {
+            $current_dir = main::GetVariable ('root');
+        }
+    }
     ### type not found
     ##################
     else {
