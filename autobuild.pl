@@ -105,6 +105,8 @@ require command::setup_lvrt;
 require command::eval;
 require command::setenv;
 require command::setvariable;
+require command::cmake;
+require command::print_cmake_version;
 
 ##############################################################################
 # Parse the arguments supplied when executed
