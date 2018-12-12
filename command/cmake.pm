@@ -1,4 +1,7 @@
 # CMake Command Wrapper
+# Uses same cmake_command variable as print_cmake_version
+# Also uses cmake_generator variable which is passed to CMake using the -G
+# option as long --build hasn't been passed
 
 package Cmake;
 
@@ -50,13 +53,15 @@ sub Run ($)
     }
     $cmake_command .= " $options";
 
-    my $cwd = getcwd;
+    my $cwd = getcwd ();
     print "Running: ${cmake_command} in $cwd\n";
 
     system ($cmake_command);
     if ($?) {
-      print STDERR __FILE__, ": CMake Command Failed with Status: $?\n";
-      return 0;
+        print STDERR __FILE__, ": " .
+            "CMake Command \"$cmake_command\"" . ($? == -1 ?
+                "Could not be Run (Missing?)\n" : "Failed with Status $?\n");
+        return 0;
     }
 
     return 1;

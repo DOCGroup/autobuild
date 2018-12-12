@@ -1,4 +1,5 @@
 # Print CMake Version
+# Uses same cmake_command variable as the cmake command
 
 package print_cmake_version;
 
@@ -45,14 +46,14 @@ sub Run ($)
 
     main::PrintStatus ('Config', "print CMake Version" );
 
-    print "<h3>CMake version (";
-    print $cmake_command;
-    print " -v)</h3>\n";
+    print "<h3>CMake version ($cmake_command)</h3>\n";
 
-    system($cmake_command);
+    system ($cmake_command);
     if ($?) {
-      print STDERR __FILE__, ": CMake Command \"$cmake_command\" Failed with Status: $?\n";
-      return 0;
+        print STDERR __FILE__, ": " .
+            "CMake Command \"$cmake_command\"" . ($? == -1 ?
+                "Could not be Run (Missing?)\n" : "Failed with Status $?\n");
+        return 0;
     }
 
     return 1;
