@@ -8,8 +8,6 @@ use warnings;
 use Cwd;
 use File::Path;
 
-using common::utility;
-
 ###############################################################################
 # Constructor
 
@@ -136,7 +134,7 @@ sub Run ($)
 
     my $command;
     my $pattern;
-    my $ret;
+    my $ret = 0;
 
     if ($options =~ s/find=([^\s]*)//) {
         $pattern = $1;
@@ -148,17 +146,18 @@ sub Run ($)
             next unless -f $makefile; # skip directories
             $command = "$make_program -f $makefile $options";
             print "Running: $command\n";
-            $ret = utility::run_command ($command);
+            $ret = system ($command);
         }
     }
     else {
         $options =~ s/'/"/g;
         $command = "$make_program $options";
         print "Running: $command\n";
-        $ret = utility::run_command ($command);
+        $ret = system ($command);
     }
 
-    if (!$ret) {
+    if( $ret != 0  )
+    {
         my $working_dir = getcwd();
 
         ## If we used 'make -C' to change the directory, let's
@@ -169,7 +168,7 @@ sub Run ($)
             $working_dir = "$working_dir/$1";
         }
 
-        print STDERR "[BUILD ERROR detected in $working_dir]\n ";
+        print "[BUILD ERROR detected in $working_dir]\n ";
     }
 
     chdir $current_dir;
@@ -177,7 +176,7 @@ sub Run ($)
     ## Return PWD to the correct setting
     $ENV{PWD} = getcwd();
 
-    return $ret;
+    return 1;
 }
 
 ##############################################################################

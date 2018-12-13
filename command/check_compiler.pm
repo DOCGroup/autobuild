@@ -7,8 +7,6 @@ use warnings;
 
 use Cwd;
 
-use common::utility;
-
 ###############################################################################
 # Constructor
 
@@ -47,99 +45,93 @@ sub Run ($)
     print "================ Compiler version ================\n";
 
     if($compiler =~ m/^(\w*-)*(gcc|g\+\+|g\+\+-?[0-9]|ccsimpc|ccpentium|ccppc|c\+\+ppc|c\+\+pentium)/ || $compiler =~ m/^clang(\+\+)?(-[0-9\.]+)?/){
-        if (not utility::run_command ($compiler." -v 2>&1")) {
-            return 0;
-        }
-        if($compiler =~ m/^(\w*-)*(gcc|g\+\+|g\+\+-?[0-9])/ || $compiler =~ m/^clang(\+\+)?(-[0-9\.]+)?/){
-            my $linker = `$compiler -print-prog-name=ld`;
-            chomp $linker;
-            if($linker =~ m/ld$/){
-                return utility::run_command ($linker." -v 2>&1");
-            }
-            elsif($linker =~ m/ccs/){
-                return utility::run_command ($linker." -V 2>&1");
-            } else {
-              print STDERR __FILE__, ": ERROR: Unexpected Linker: $linker\n";
-            }
-        }
+        system($compiler." -v 2>&1");
+      if($compiler =~ m/^(\w*-)*(gcc|g\+\+|g\+\+-?[0-9])/ || $compiler =~ m/^clang(\+\+)?(-[0-9\.]+)?/){
+          my $linker = `$compiler -print-prog-name=ld`;
+          chomp $linker;
+          if($linker =~ m/ld$/){
+              system($linker." -v 2>&1");
+          }
+          elsif($linker =~ m/ccs/){
+              system($linker." -V 2>&1");
+          }
+      }
     }
     elsif(lc $compiler =~ m/^(sun_cc|studio|suncc)/) {
-        return utility::run_command ("CC -V");
+        system("CC -V");
     }
     elsif(lc $compiler eq "mingwcygwin"){
-        return utility::run_command ("g++ -v -mno-cygwin");
+        system("g++ -v -mno-cygwin");
     }
     elsif(lc $compiler eq "bcc32"){
-        return utility::run_command ("bcc32 --version");
+        system("bcc32 --version");
     }
     elsif(lc $compiler eq "bcc32c"){
-        return utility::run_command ("bcc32c --version");
+        system("bcc32c --version");
     }
     elsif(lc $compiler eq "bcc64"){
-        return utility::run_command ("bcc64 --version");
+        system("bcc64 --version");
     }
     elsif(lc $compiler eq "bccx"){
-        return utility::run_command ("bccx --version");
+        system("bccx --version");
     }
     elsif(lc $compiler eq "kylix"){
-        return utility::run_command ("bc++ -V");
+        system("bc++ -V");
     }
     elsif($compiler =~ m/^(dcc|dplus)/){
-        return utility::run_command ($compiler . " -V");
+        system($compiler . " -V");
     }
     elsif(lc $compiler eq "dm"){
-        return utility::run_command ("scppn");
+        system("scppn");
     }
     elsif(lc $compiler =~ m/^(msvc|vc|cl)/){
-        return utility::run_command ("cl");
+        system("cl");
     }
     elsif(lc $compiler eq "deccxx"){
-        return utility::run_command ("cxx/VERSION");
+        system("cxx/VERSION");
     }
     elsif(lc $compiler eq "cxx"){
-        return utility::run_command ("cxx -V");
+        system("cxx -V");
     }
     elsif(lc $compiler eq "acc"){
-        return utility::run_command ("aCC -V");
+        system("aCC -V");
     }
     elsif(lc $compiler eq "pgcc"){
-        return utility::run_command ("pgCC -V");
+        system("pgCC -V");
     }
     elsif(lc $compiler eq "mipspro"){
-        return utility::run_command ("CC -version");
+        system("CC -version");
     }
     elsif(lc $compiler eq "doxygen"){
-        return utility::run_command ("doxygen --version");
+        system("doxygen --version");
     }
     elsif($compiler =~ m/^(ecc|icc|icpc)/){
-        return utility::run_command ($compiler." -V 2>&1");
+        system($compiler." -V 2>&1");
     }
     elsif(lc $compiler eq "icl"){
-        return utility::run_command ("icl");
+        system("icl");
     }
     elsif($compiler =~ m/^(ibmcxx)/i ){
         if(-x "/usr/bin/lslpp"){
-            return utility::run_command ("/usr/bin/lslpp -l ibmcxx.cmp | grep ibmcxx.cmp");
-        } else {
-            print STDERR __FILE__, ": " .
-                "ERROR: Could not find /usr/bin/lslpp!!\n";
+           system("/usr/bin/lslpp -l ibmcxx.cmp | grep ibmcxx.cmp");
+        }else {
+           print "ERROR: Could not find /usr/bin/lslpp!!\n";
         }
     }
     elsif($compiler =~ m/^(vacpp)/i ){
         if(-x "/usr/bin/lslpp"){
-            return utility::run_command ("/usr/bin/lslpp -l | grep -i \'C++ Compiler\'");
-        } else {
-            print STDERR __FILE__, ": " .
-                "ERROR: Could not find /usr/bin/lslpp!!\n";
+           system("/usr/bin/lslpp -l | grep -i \'C++ Compiler\'");
+        }else {
+           print "ERROR: Could not find /usr/bin/lslpp!!\n";
         }
     }
     elsif(lc $compiler eq "c89"){
-        return utility::run_command ("c89 -Whelp 2>&1 | tail -2");
+        system("c89 -Whelp 2>&1 | tail -2");
     }
     else{
-        print STDERR __FILE__, ": " . "Invalid Compiler Option: $compiler\n";
+        system($compiler);
     }
-    return 0;
+    return 1;
 }
 
 ##############################################################################

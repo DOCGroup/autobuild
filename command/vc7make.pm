@@ -8,8 +8,6 @@ use warnings;
 use Cwd;
 use File::Path;
 
-use common::utility;
-
 ###############################################################################
 # Constructor
 
@@ -107,23 +105,22 @@ sub Run ($)
       $workspace = $1;
     }
 
-    my $ret = 1;
     if (defined $workspace && ! -r $workspace) {
       print "Skipping: $workspace not found\n";
     }
     else {
       print "Running: $command\n";
 
-      my $ret = utility::run_command ($command);
+      my $ret = system ($command);
 
-      if (!$ret) {
-        print STDERR "[BUILD ERROR detected in ", getcwd(), "]\n";
+      if ($ret != 0) {
+        print "[BUILD ERROR detected in ", getcwd(), "]\n";
       }
     }
 
     chdir $current_dir;
 
-    return $ret;
+    return 1;
 }
 
 ##############################################################################
