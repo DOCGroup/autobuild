@@ -37,6 +37,7 @@ my %command_table = ();
 my $cvs_tag;
 my $starting_dir= getcwd ();
 my $warn_nonfatal;
+my $status = 0;
 
 ##############################################################################
 # Load the commands allowed here
@@ -807,6 +808,7 @@ INPFILE: foreach my $file (@files) {
       if ($command_table{$NAME}->Run ($OPTIONS) == 0) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
+        $status = 1;
         if (!$keep_going) {
           print STDERR ", exiting.\n";
           chdir ($starting_dir);
@@ -829,3 +831,5 @@ INPFILE: foreach my $file (@files) {
   chdir ($starting_dir);
   ChangeENV (%originalENV);
 } ## next input file
+
+exit $status;
