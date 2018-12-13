@@ -8,6 +8,8 @@ use warnings;
 
 use Cwd;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -48,15 +50,7 @@ sub Run ($)
 
     print "<h3>CMake version ($cmake_command)</h3>\n";
 
-    system ($cmake_command);
-    if ($?) {
-        print STDERR __FILE__, ": " .
-            "CMake Command \"$cmake_command\"" . ($? == -1 ?
-                "Could not be Run (Missing?)\n" : "Failed with Status $?\n");
-        return 0;
-    }
-
-    return 1;
+    return utility::run_command ($cmake_command);
 }
 
 ##############################################################################
