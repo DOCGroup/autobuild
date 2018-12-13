@@ -9,6 +9,8 @@ use Cwd;
 use FileHandle;
 use File::Path;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -63,11 +65,11 @@ sub Run ($)
 
     print "Running: ${options}\n";
 
-    system ($options);
+    my $status = utility::run_command ($options);
 
     chdir $current_dir;
 
-    return 1;
+    return $status;
 }
 
 ##############################################################################
