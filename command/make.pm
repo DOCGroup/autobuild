@@ -8,7 +8,7 @@ use warnings;
 use Cwd;
 use File::Path;
 
-using common::utility;
+use common::utility;
 
 ###############################################################################
 # Constructor
