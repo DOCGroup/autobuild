@@ -737,6 +737,7 @@ INPFILE: foreach my $file (@files) {
     my $FILE      = $command->{FILE};
     my $LINE_FROM = $command->{LINE_FROM};
     my $LINE_TO   = $command->{LINE_FROM};
+    my $required  = $command->{REQUIRED};
 
     my $CMD = "Executing \"$NAME\" line";
     if (!defined $LINE_TO || $LINE_FROM == $LINE_TO) {
@@ -809,7 +810,7 @@ INPFILE: foreach my $file (@files) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
         $status = 1;
-        if (!$keep_going) {
+        if (!$keep_going && $required) {
           print STDERR ", exiting.\n";
           chdir ($starting_dir);
           ChangeENV (%originalENV);
