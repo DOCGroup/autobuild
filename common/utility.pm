@@ -21,7 +21,7 @@ sub run_command ($;$) {
           $error_message = sprintf ("Returned %d", $? >> 8);
       }
       print STDERR "Command \"$command\" $error_message\n";
-      return !$ignore_failure;
+      return $ignore_failure;
   }
   return 1;
 }
