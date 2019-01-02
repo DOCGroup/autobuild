@@ -11,7 +11,7 @@ all the OS/platform combinations on which TAO is tested everyday.
 <name>Android</name>
    <build>
       <name>SUSE421_NDKr12b_arm_target</name>
-      <url>http://scoreboard.ociweb.com/doc_master_firefly_android_gcc_d1o0</url>
+      <url>http://scoreboard.ociweb.com/doc_master_firefly_android_clang_d1o0</url>
       <build_sponsor>OCI</build_sponsor>
       <build_sponsor_url>http://theaceorb.com/</build_sponsor_url>
    </build>
