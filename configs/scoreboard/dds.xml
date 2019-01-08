@@ -44,12 +44,6 @@ all the OS/platform combinations on which DDS is tested everyday.
     <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
   </build>
   <build>
-    <name>fedora_opendds_valgrind</name>
-    <url>http://buildlogs.remedy.nl/fc_opendds_valgrind/</url>
-    <build_sponsor>Remedy IT</build_sponsor>
-    <build_sponsor_url>https://www.remedy.nl</build_sponsor_url>
-  </build>
-  <build>
     <name>dds_doc_master_ant_linux-rpi_gcc_d0o1</name>
     <url>http://scoreboard.ociweb.com/dds_doc_master_ant_linux-rpi_gcc_d0o1</url>
     <build_sponsor>OCI</build_sponsor>
