@@ -20,11 +20,10 @@ The distributed scoreboard is divided into following categories:
     above in a single page for folks who like it! </li>
 </p>
 <p>
-
 If you'd like to contribute builds to our virtual
-scoreboard <a href="mailto:devo-group@list.isis.vanderbilt.edu">please
-contact us</a> and let us know which platform combinations you can
-contribute.  Instructions for setting up your own daily build and
+scoreboard open a <a href ="https://github.com/DOCGroup/autobuild">pull request</a>
+with the platform you want to contribute.
+Instructions for setting up your own daily build and
 scoreboard are available
 <a href="https://raw.githubusercontent.com/DOCGroup/autobuild/master/README">here</a>.
 </p>
