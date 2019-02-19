@@ -339,7 +339,7 @@ sub PrintStatus ($$)
 }
 
 ##############################################################################
-# This takes a string and substitues any <variable_names> into a copy of the
+# This takes a string and substitutes any <variable_names> into a copy of the
 # string. In case of undefined variables, also needs the filename and line
 # number(s) where the definition of this string was found.
 #
