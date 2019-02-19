@@ -217,7 +217,7 @@ sub GetVariable ($)
   my $varname = shift;
   my $value = $data{VARS}->{$varname};
   if ($value && $value ne '') {
-    # fix the seperators
+    # fix the separators
     #
     $value =~ s/\\/\//g;
 
@@ -350,7 +350,7 @@ sub subsituteVars ($;$$$)
 
   # Search and replace all <vars> in string
   #
-  while ($outputString =~ s/<([a-zA-Z0-9.]+)>(.*)$//) {
+  while ($outputString =~ s/<([a-zA-Z0-9_.]+)>(.*)$//) {
     my $variable = $1;
     my $restOfString = $2;
     my $value= GetVariable( $variable );
