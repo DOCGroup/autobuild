@@ -1543,12 +1543,9 @@ sub build_integrated_page ($)
     print "Build Integrated page\n" if ($verbose);
 
     my @file_list = ("ace",
-                     "ace_future",
                      "tao",
-                     "tao_future",
                      "misc",
                      "ciao",
-                     "ciao_future",
                      "dds");
 
     my $newfile = new FileHandle;

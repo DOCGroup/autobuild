@@ -12,22 +12,18 @@ continuously at
 <p>
 The distributed scoreboard is divided into following categories:
 <li>ACE Builds for Release [<a href="./ace.html">regular</a>|<a href="ace.rss">rss</a>]</li>
-<li>ACE Builds for Future Release [<a href="./ace_future.html">regular</a>]</li>
 <li>TAO Builds for Release [<a href="./tao.html">regular</a>|<a href="tao.rss">rss</a>]</li>
-<li>TAO Builds for Future Release [<a href="./tao_future.html">regular</a>]</li>
 <li>CIAO Builds for Release [<a href="./ciao.html">regular</a>|<a href="ciao.rss">rss</a>]</li>
-<li>CIAO Builds for Future Release [<a href="./ciao_future.html">regular</a>]</li>
 <li>DDS Builds for Release [<a href="./dds.html">regular</a>|<a href="dds.rss">rss</a>]</li>
 <li><a href="./misc.html">Miscellaneous</a> Builds</li>
 <li><a href="./integrated.html">Integrated</a> page having all the
     above in a single page for folks who like it! </li>
 </p>
 <p>
-
 If you'd like to contribute builds to our virtual
-scoreboard <a href="mailto:devo-group@list.isis.vanderbilt.edu">please
-contact us</a> and let us know which platform combinations you can
-contribute.  Instructions for setting up your own daily build and
+scoreboard open a <a href ="https://github.com/DOCGroup/autobuild">pull request</a>
+with the platform you want to contribute.
+Instructions for setting up your own daily build and
 scoreboard are available
 <a href="https://raw.githubusercontent.com/DOCGroup/autobuild/master/README">here</a>.
 </p>
