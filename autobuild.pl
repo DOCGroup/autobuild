@@ -350,7 +350,7 @@ sub subsituteVars ($;$$$)
 
   # Search and replace all <vars> in string
   #
-  while ($outputString =~ s/<(\w+)>(.*)$//) {
+  while ($outputString =~ s/<([a-zA-Z0-9.]+)>(.*)$//) {
     my $variable = $1;
     my $restOfString = $2;
     my $value= GetVariable( $variable );
