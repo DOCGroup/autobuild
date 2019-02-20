@@ -1526,8 +1526,8 @@ sub GetVariable ($)
 ###############################################################################
 #
 # Reads lists of builds from different XML files and develops a
-# integrated scoreboard. This is in adition to the individual
-# scoreboards for ACE and TAO and CIAO seperately.  The names of xml files have
+# integrated scoreboard. This is in addition to the individual
+# scoreboards for ACE and TAO and CIAO separately.  The names of xml files have
 # been hardcoded.
 #
 # Arguments:  $ - Output directory
