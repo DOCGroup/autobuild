@@ -435,8 +435,8 @@ INPFILE: foreach my $file (@files) {
 
   # We save a copy of the initial environment values which is stored under
   # the name "default", any other group names encountered by the parsing will
-  # add extra entried to this hash, and add another copy of the initial
-  # environment (so these can be modified seporatly from the default).
+  # add extra entries to this hash, and add another copy of the initial
+  # environment (so these can be modified separately from the default).
   #
   my %copyENV = %ENV;
   $data{GROUPS}->{default} = \%copyENV;
@@ -519,7 +519,7 @@ INPFILE: foreach my $file (@files) {
   }
 
   ############################################################################
-  # Actaully set the environment variables
+  # Actually set the environment variables
   #
   print "\nSetting Enviroment variables\n" if ($verbose);
   my %originalENV = %ENV;
@@ -647,9 +647,9 @@ INPFILE: foreach my $file (@files) {
     else {
       my $cmd_handler = $command_table{$NAME};
 
-      # Subsitute any <variables> in the command's options string IF
-      # desired. (0= Don't Subsitute, 1= Always Subsitute, 2= If command
-      # normally requires subsitution, otherwise don't.)
+      # Substitute any <variables> in the command's options string IF
+      # desired. (0= Don't Substitute, 1= Always Substitute, 2= If command
+      # normally requires substitution, otherwise don't.)
       #
       if (2 == $SUBVARS &&
           defined $cmd_handler->{'substitute_vars_in_options'} &&
@@ -658,15 +658,15 @@ INPFILE: foreach my $file (@files) {
       }
 
       # We must change the environment BEFORE we attempt to subsituteVars
-      # as the function can subsitute environment values in place of
-      # environment names within the variable being subsituted.
+      # as the function can substitute environment values in place of
+      # environment names within the variable being substituted.
       #
       if ($GROUP ne $currentENV) {
         $currentENV = $GROUP;
         ChangeENV (%{$data{GROUPS}->{$GROUP}});
       }
 
-      # Always subsitute any <variables> in the command's directory string.
+      # Always substitute any <variables> in the command's directory string.
       #
       if ("" ne $DIRECTORY) {
         $DIRECTORY=
@@ -750,8 +750,8 @@ INPFILE: foreach my $file (@files) {
     print "\n",'=' x 79,"\n===== $CMD\n" if (1 < $verbose);
 
     # We must change the environment BEFORE we attempt to subsituteVars
-    # as the function can subsitute environment values in place of
-    # environment names within the variable being subsituted.
+    # as the function can substitute environment values in place of
+    # environment names within the variable being substituted.
     #
     if ("default" ne $GROUP) {
       print "===== environment: \"$GROUP\"\n" if (1 < $verbose);
@@ -774,7 +774,7 @@ INPFILE: foreach my $file (@files) {
     }
 
     if ($IF_result) {
-      # Subsitute any <variables> in the command's options string IF desired.
+      # Substitute any <variables> in the command's options string IF desired.
       #
       $OPTIONS=
         subsituteVars ($OPTIONS, $FILE, $LINE_FROM, $LINE_TO) if ($SUBVARS);
@@ -782,7 +782,7 @@ INPFILE: foreach my $file (@files) {
         print "===== subsitutions: $OPTIONS\n" if (1 < $verbose);
       }
 
-      # Always subsitute any <variables> in the command's directory string
+      # Always substitute any <variables> in the command's directory string
       # if a change of directory/root has been specified for the command.
       #
       if ("" ne $DIRECTORY) {
