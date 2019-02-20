@@ -1647,7 +1647,7 @@ sub get_time_str
 
 # Getopts
 #
-# You can do the followingt with this set os options.
+# You can do the following with this set os options.
 # 1. You can generate the index page for the scoreboard
 # 2. You can generate individual scoreboards for every subset ie. ace,
 #    ace_future, or whatever
@@ -1668,7 +1668,7 @@ sub get_time_str
 #     it in the directory pointed by -d option. The option -v is for
 #     verbose!
 #
-# 2: For generating individual html pagesyou can do this
+# 2: For generating individual html pages you can do this
 #
 #    $ ./scoreboard.pl -d [please see above for explanation]
 #                      -f [name and path of the XML file that needs
