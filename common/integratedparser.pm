@@ -74,17 +74,8 @@ sub Parse ($\@)
             }
         }
         elsif ($state eq 'integrated') {
-            if (m/^\s*<build_ace>\s*$/i){
-                $global_build_name = 'ACE';
-            }
-            elsif (m/^\s*<build_tao>\s*$/i){
-                $global_build_name = 'TAO';
-            }
-            elsif (m/^\s*<build_ciao>\s*$/i){
-                $global_build_name = 'CIAO';
-            }
-            elsif (m/^\s*<build_dds>\s*$/i){
-                $global_build_name = 'DDS';
+            if (m/^\s*<build_(.*)>\s*$/i){
+                $global_build_name = uc $1;
             }
             elsif (m/^\s*<scoreboard>\s*$/i) {
                 $state = 'scoreboard';
@@ -141,9 +132,7 @@ sub Parse ($\@)
                     $build_info{GROUP} = $group_name;
                 }
 
-		#%{%{$data}->{$build_info{NAME}}} = %build_info;
-                #$data->{$build_info{NAME}} = %build_info;
-		%{$data->{$build_info{NAME}}} = %build_info;
+                %{$data->{$build_info{NAME}}} = %build_info;
                 %build_info = ();
 
                 $state = 'group';
@@ -183,15 +172,15 @@ sub Parse ($\@)
             elsif (m/^\s*<diffroot>(.*)<\/diffroot>\s*$/i) {
                 $build_info{DIFFROOT} = $1;
             }
-	    elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
-		$build_info{PDF} = $1;
-	    }
-	    elsif (m/^\s*<ps>(.*)<\/ps>\s*$/i) {
-	 	$build_info{PS} = $1;
-	    }
-	    elsif (m/^\s*<html>(.*)<\/html>\s*$/i) {
-	 	$build_info{HTML} = $1;
-	    }
+            elsif (m/^\s*<pdf>(.*)<\/pdf>\s*$/i) {
+                $build_info{PDF} = $1;
+            }
+            elsif (m/^\s*<ps>(.*)<\/ps>\s*$/i) {
+                $build_info{PS} = $1;
+            }
+            elsif (m/^\s*<html>(.*)<\/html>\s*$/i) {
+                $build_info{HTML} = $1;
+            }
             else {
                 print STDERR "Error: Unexpected in state <$state>: $_\n";
                 return 0;

@@ -1,9 +1,10 @@
 <scoreboard>
 <preamble>
-<center><h1>DDS Beta/Release Candidate Scoreboard</h1></center>
+<center><h1>OpenDDS Scoreboard</h1></center>
 <hr/>
-This is the DDS virtual scoreboard for the beta or release. It shows
-all the OS/platform combinations on which DDS is tested everyday.
+This is the OpenDDS scoreboard for the micro, minor, and major
+releases. It shows all the OS/platform combinations on which OpenDDS
+is tested everyday.
 <hr/>
 </preamble>
 

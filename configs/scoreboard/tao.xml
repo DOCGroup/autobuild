@@ -1,9 +1,10 @@
 <scoreboard>
 <preamble>
-<center><h1>TAO Beta/Release Candidate Scoreboard</h1></center>
+<center><h1>TAO Scoreboard</h1></center>
 <hr/>
-This is the TAO virtual scoreboard for the beta or release. It shows
-all the OS/platform combinations on which TAO is tested everyday.
+This is the TAO scoreboard for the micro, minor, and major
+releases. It shows all the OS/platform combinations on which TAO
+is tested everyday.
 <hr/>
 </preamble>
 

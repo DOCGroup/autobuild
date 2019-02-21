@@ -1558,15 +1558,7 @@ sub build_integrated_page ($)
     print $newfile "<INTEGRATED>\n";
     foreach my $file_list(@file_list) {
         my $file_handle = new FileHandle;
-        if ($file_list eq 'ace') {
-            print $newfile "<build_ace>\n";
-        } elsif ($file_list eq 'tao') {
-            print $newfile "<build_tao>\n";
-        } elsif ($file_list eq 'ciao') {
-            print $newfile "<build_ciao>\n";
-        } elsif ($file_list eq 'dds') {
-            print $newfile "<build_dds>\n";
-        }
+        print $newfile "<build_$file_list>\n";
 
         $file_handle->open ("<configs/scoreboard/$file_list.xml");
         my @list = <$file_handle>;
