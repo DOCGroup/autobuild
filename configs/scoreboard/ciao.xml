@@ -1,9 +1,10 @@
 <scoreboard>
   <preamble>
-    <center><h1>CIAO Beta/Release Candidate Scoreboard</h1></center>
+    <center><h1>CIAO Scoreboard</h1></center>
     <hr/>
-    This is the CIAO virtual scoreboard for the beta or release. It shows
-    all the OS/platform combinations on which CIAO is tested everyday.
+    This is the CIAO scoreboard for the micro, minor, and major
+    releases. It shows all the OS/platform combinations on which CIAO
+    is tested everyday.
     <hr/>
   </preamble>
   <group>

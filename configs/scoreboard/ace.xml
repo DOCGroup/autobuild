@@ -1,8 +1,8 @@
 <scoreboard>
 <preamble>
-<center><h1>ACE Release Candidate Scoreboard</h1></center>
+<center><h1>ACE Scoreboard</h1></center>
 <hr/>
-This is the ACE virtual scoreboard for the micro, minor, and major
+This is the ACE scoreboard for the micro, minor, and major
 releases. It shows all the OS/platform combinations on which ACE
 is tested everyday.
 <hr/>
