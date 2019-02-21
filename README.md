@@ -29,10 +29,9 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
    to your local site.
 
    In the <configuration></configuration> section, you can set environment
-   variables like ACE_ROOT, PATH, CVSROOT, LD_LIBRARY_PATH, etc.
-   For example:
+   variables like ACE_ROOT, PATH, CVSROOT, LD_LIBRARY_PATH, etc. For example:
 
-     <environment name="ACE_ROOT"        value="/export/bugzilla/Minimum_newbuild/ACE_wrappers" />
+         <environment name="ACE_ROOT"        value="/export/bugzilla/Minimum_newbuild/ACE_wrappers" />
 
    The "root" variable is important. It is the root of all future
    "file_manipulation" commands.
@@ -47,47 +46,46 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 3. In the <configuration></configuration> section, specify the directory
    where to place the log files from the build.
    Ideally this directory should be accessible by a web server, so
-   that you can see the log files via http.
-   For example:
-    <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
-
+   that you can see the log files via http. For example:
+   
+         <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
 
 4. To run the build, you run autobuild.pl with the XML config file as the
     argument:
 
-  autobuild.pl Debian_Minimum_Static.xml
+         autobuild.pl Debian_Minimum_Static.xml
 
 5. To update a scoreboard, you run scoreboard.pl with input xml as the
     argument:
 
-  scoreboard.pl -d [Output directory where the html files are placed]
-                -f [name and path of the XML file that needs
-                   to be used as a meta-file for HTML
-                   generation]
-                -o [name of the output file. The html file will
-                   be saved by this name and placed in the
-                   directory pointed by -d].
+         scoreboard.pl -d [Output directory where the html files are placed]
+                       -f [name and path of the XML file that needs
+                           to be used as a meta-file for HTML
+                           generation]
+                       -o [name of the output file. The html file will
+                           be saved by this name and placed in the
+                           directory pointed by -d].
 
 
 OTHER NOTES
 ===========
 1.  In the <configuration></configuration> section, you set shell environment variables with the following tag:
 
-     <environment name="ENV VARIABLE NAME"  value="ENV VARIABLE VALUE" />
+         <environment name="ENV VARIABLE NAME"  value="ENV VARIABLE VALUE" />
 
 2.  In the <configuration></configuration> section, you set Perl global variables with the following tag:
 
-     <variable name="PERL GLOBAL VARIABLE NAME"  value="VARIABLE VALUE" />
+         <variable name="PERL GLOBAL VARIABLE NAME"  value="VARIABLE VALUE" />
 
 3.  Outside the configuration section, commands are specified with the following tag:
 
-     <command name="COMMAND NAME" options="COMMAND OPTIONS" />
+         <command name="COMMAND NAME" options="COMMAND OPTIONS" />
 
      Each command is located in Perl modules in the autobuild/command
      directory.  If you look in each Perl module, you will see a line
      such as:
 
-     main::RegisterCommand ("COMMAND NAME", new COMMAND ());
+         main::RegisterCommand ("COMMAND NAME", new COMMAND ());
 
      This line registers "COMMAND NAME" in a global table used by
      autobuild.pl to locate a command specified in the XML file.
@@ -96,7 +94,7 @@ OTHER NOTES
      not been written, you can use the "shell" command.  For example, to run
      the ls command on a Unix system:
 
-     <command name="shell" options="ls" />
+         <command name="shell" options="ls" />
 
 5.  When setting up a Windows build system make sure you disable the firewall
      and the automatic windows updates.
@@ -244,42 +242,38 @@ Cygwin and install it.
 MISCELLANEOUS NOTES
 ===================
 
-1. check_compiler  ->  print out the version of the compiler being used
+1. check_compiler  ->  print out the version of the compiler being used, for example:
 
-    For example:
-
-<command name="check_compiler" options="gcc" />
+         <command name="check_compiler" options="gcc" />
 
     The values which can be specified in the options field are in
     the Run() method of autobuild/command/check_compiler.pm
 
-2. configs  ->  Specify a special configuration for auto_run_tests.pl
+2. configs  ->  Specify a special configuration for auto_run_tests.pl, for example:
 
-    For example:
-
-<variable name="configs"  value="Linux ST" />
+         <variable name="configs"  value="Linux ST" />
 
    Will invoke: auto_run_tests.pl -Config Linux -Config ST
 
 3. print_os_version -> print out some information about the operating system
                         being used for the build
 
-<command name="print_os_version" />
+         <command name="print_os_version" />
 
    If you run on Windows with Cygwin or MingW and you have uname installed
    you can printed os version and uname results with
 
-<command name="print_os_version" options="useuname" />
+         <command name="print_os_version" options="useuname" />
 
 4. print_perl_version -> print out some information about the perl version
                           being used for the build
 
-<command name="print_perl_version" />
+         <command name="print_perl_version" />
 
 5. print_make_version -> print out some information about the make version
                           being used for the build
 
-<command name="print_make_version" />
+         <command name="print_make_version" />
 
 E-MAIL NOTIFICATION
 ===================
@@ -289,8 +283,8 @@ progress.  Unix supported only for now, NT support on the way.
 
 1.  Add the following lines to the configuration file:
 
-     <variable name="MAIL_ADMIN"  value="myname@mydomain.com" />
-     <variable name="SCOREBOARD_URL"  value="http://mydomain.com/my_scoreboard_url" />
+         <variable name="MAIL_ADMIN"  value="myname@mydomain.com" />
+         <variable name="SCOREBOARD_URL"  value="http://mydomain.com/my_scoreboard_url" />
 
      When build errors are detected, an e-mail will be sent to myname@mydomain.com,
      showing an abbreviated list of errors, and referring the recipient to
@@ -300,7 +294,7 @@ progress.  Unix supported only for now, NT support on the way.
      Alternatively, if you would like the build errors to be sent to a group of
      people, use the following line instead of MAIL_ADMIN above:
 
-     <variable name="MAIL_ADMIN_FILE"  value="C:/foo/mail_map.txt" />
+         <variable name="MAIL_ADMIN_FILE"  value="C:/foo/mail_map.txt" />
 
      The MAIL_ADMIN_FILE variables point to a file that contains the email addresses
      of people who should notified by email when an error occurs. Note that file
@@ -310,10 +304,10 @@ progress.  Unix supported only for now, NT support on the way.
      server used to send outgoing mail.  You do not need to add this line on
      UNIX platforms:
 
-     <variable name="MAIL_ADMIN_SMTP_HOST"  value="smtphostame.mydomain.com" />
+         <variable name="MAIL_ADMIN_SMTP_HOST"  value="smtphostame.mydomain.com" />
 
 NOTE:
 If you'd like to change the email address of autobuild displayed to users who
 recieve email notification, add and modifiy the line below:
 
-<variable name="MAIL_SENDER_ADDRESS"  value="autobuild@mydomain.com" />
+         <variable name="MAIL_SENDER_ADDRESS"  value="autobuild@mydomain.com" />
