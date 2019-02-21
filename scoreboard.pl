@@ -83,7 +83,7 @@ our $use_build_logs = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
-<A HREF=\"https://raw.githubusercontent.com/DOCGroup/autobuild/master/README\">
+<A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
 here</A>.\n";
 
 ###############################################################################
