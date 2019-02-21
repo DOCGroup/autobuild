@@ -1527,7 +1527,7 @@ sub GetVariable ($)
 #
 # Reads lists of builds from different XML files and develops a
 # integrated scoreboard. This is in addition to the individual
-# scoreboards separately.  The names of the xml files (without extension) have
+# scoreboards separately.  The names of the xml files have
 # to be passed with the -j commandline option
 #
 # Arguments:  $ - Output directory and comma separate list of input files
@@ -1544,7 +1544,7 @@ sub build_integrated_page ($$)
     print "Build Integrated page\n" if ($verbose);
 
     if (!defined $filelist) {
-      print "Need to specify with -j a comma separated list of input files (without extension)";
+      print "Need to specify with -j a comma separated list of input files";
       return;
     }
 
@@ -1562,8 +1562,8 @@ sub build_integrated_page ($$)
         my $file_handle = new FileHandle;
         print $newfile "<build_$file_list>\n";
 
-        unless ($file_handle->open ("<$file_list.xml")) {
-          print "could not open file $file_list.xml";
+        unless ($file_handle->open ("<$file_list")) {
+          print "could not open file $file_list";
           return;
         }
         my @list = <$file_handle>;
