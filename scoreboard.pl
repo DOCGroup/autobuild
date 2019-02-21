@@ -18,6 +18,7 @@ use DirHandle;
 use English;
 use FileHandle;
 use File::Path;
+use File::Basename;
 use Getopt::Std;
 use LWP::UserAgent;
 use Time::Local;
@@ -1560,7 +1561,9 @@ sub build_integrated_page ($$)
     print $newfile "<INTEGRATED>\n";
     foreach my $file_list(@file_list) {
         my $file_handle = new FileHandle;
-        print $newfile "<build_$file_list>\n";
+        # Get the filename without path and without extension
+        my $filename = fileparse($file_list, ".xml");
+        print $newfile "<build_$filename>\n";
 
         unless ($file_handle->open ("<$file_list")) {
           print "could not open file $file_list";
