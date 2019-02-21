@@ -209,7 +209,7 @@ SCOREBOARD NOTES
 (7) There are situations where you may have a number of system that
     share a single data store, via NFS and/or SMB.  In this case you
     may wish to have the machine running scoreboard.pl do some of the
-    function normally done by autobuild.pl, speciffically the
+    function normally done by autobuild.pl, specifically the
     maintenance of the output logs.  This can be accomplished with
     the -c option.  When this option is specified the directory
     specified in the required -d option is maintained by the
