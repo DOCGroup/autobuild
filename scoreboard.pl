@@ -1527,25 +1527,28 @@ sub GetVariable ($)
 #
 # Reads lists of builds from different XML files and develops a
 # integrated scoreboard. This is in addition to the individual
-# scoreboards for ACE and TAO and CIAO separately.  The names of xml files have
-# been hardcoded.
+# scoreboards separately.  The names of the xml files have
+# to be passed with the -j commandline option
 #
-# Arguments:  $ - Output directory
+# Arguments:  $ - Output directory and comma separate list of input files
 #
 # Returns:    Nothing
 #
 ###############################################################################
-sub build_integrated_page ($)
+sub build_integrated_page ($$)
 {
     my $dir = shift;
+    my $filelist = shift;
 
     unlink ("$dir/temp.xml");
     print "Build Integrated page\n" if ($verbose);
 
-    my @file_list = ("ace",
-                     "tao",
-                     "ciao",
-                     "dds");
+    if (!defined $filelist) {
+      print "Need to specify with -j a comma separated list of input files";
+      return;
+    }
+
+    my @file_list = split (',', $filelist);
 
     my $newfile = new FileHandle;
 
@@ -1559,7 +1562,10 @@ sub build_integrated_page ($)
         my $file_handle = new FileHandle;
         print $newfile "<build_$file_list>\n";
 
-        $file_handle->open ("<configs/scoreboard/$file_list.xml");
+        unless ($file_handle->open ("<$file_list")) {
+          print "could not open file $file_list";
+          return;
+        }
         my @list = <$file_handle>;
         print $newfile @list;
         print $newfile "\n";
@@ -1593,15 +1599,15 @@ sub format_time
     my $use_long_format = shift;
 
     if ($use_local) {
-  my @tmp = localtime($time_in_secs);
+      my @tmp = localtime($time_in_secs);
         my $hour = int($tmp[2]);
         my $ampm = ($hour >= 12 ? 'pm' : 'am');
         if ($hour > 12) {
           $hour -= 12;
-  }
-  elsif ($hour == 0) {
-    $hour = 12;
-  }
+    }
+    elsif ($hour == 0) {
+      $hour = 12;
+    }
         my $year = int($tmp[5]) + 1900;
   if (defined $use_long_format && $use_long_format) {
       return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
@@ -1669,14 +1675,14 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-x]\n",
-          "              [-k num_logs] [-b]\n";
+          "              [-k num_logs] [-b] [-j filelist]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1693,6 +1699,7 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
     print "    -k         number of logs to keep, default is $keep_default\n";
     print "    -x         'history' links generated\n";
     print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
+    print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1735,7 +1742,7 @@ if (defined $opt_b) {
 
 if (defined $opt_z) {
 print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_integrated_page ($dir);
+build_integrated_page ($dir, $opt_j);
 exit (1);
 }
 
