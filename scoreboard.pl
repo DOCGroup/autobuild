@@ -1544,7 +1544,6 @@ sub build_integrated_page ($)
 
     my @file_list = ("ace",
                      "tao",
-                     "misc",
                      "ciao",
                      "dds");
 
@@ -1698,9 +1697,9 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
     exit (1);
 }
 
-my $index = "configs/scoreboard/index.xml";
-my $inp_file = "configs/scoreboard/ace.xml";
-my $out_file = "ace.html";
+my $index = "";
+my $inp_file = "";
+my $out_file = "";
 my $rss_file = "";
 my $dir = "html";
 
