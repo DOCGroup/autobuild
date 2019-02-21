@@ -14,7 +14,7 @@ The distributed scoreboard is divided into following categories:
 <li>ACE Builds for Release [<a href="./ace.html">regular</a>|<a href="ace.rss">rss</a>]</li>
 <li>TAO Builds for Release [<a href="./tao.html">regular</a>|<a href="tao.rss">rss</a>]</li>
 <li>CIAO Builds for Release [<a href="./ciao.html">regular</a>|<a href="ciao.rss">rss</a>]</li>
-<li>DDS Builds for Release [<a href="./dds.html">regular</a>|<a href="dds.rss">rss</a>]</li>
+<li>OpenDDS Builds for Release [<a href="./dds.html">regular</a>|<a href="dds.rss">rss</a>]</li>
 <li><a href="./integrated.html">Integrated</a> page having all the
     above in a single page for folks who like it! </li>
 </p>
