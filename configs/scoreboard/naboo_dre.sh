@@ -19,7 +19,7 @@ git pull
 ##testmatrix/update_scoreboard.sh 2>&1 &
 
 # Generate integrated pages!
-/usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -z 2>&1 &
+/usr/bin/perl ./scoreboard.pl -b -d /export/web/www/scoreboard -z -j $HOME/autobuild/configs/scoreboard/ace,$HOME/autobuild/configs/scoreboard/tao,$HOME/autobuild/configs/scoreboard/ciao,$HOME/autobuild/configs/scoreboard/dds 2>&1 &
 
 #Generate build matrix
 #/usr/bin/perl buildmatrix/buildmatrix.pl $HOME/autobuild/configs/scoreboard/ace.xml /export/web/www/scoreboard 1 > /project/taotmp/scoreboard/buildmatrix/output.html 2> /tmp/build.out
