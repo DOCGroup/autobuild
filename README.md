@@ -19,7 +19,7 @@ SOFTWARE REQUIREMENTS
 QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 ==========================================
 
-1. Check out the latest build scripts from subversion using:
+1. Check out the latest build scripts from git using:
 
        git clone https://github.com/DOCGroup/autobuild
 
