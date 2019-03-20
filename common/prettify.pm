@@ -1216,17 +1216,17 @@ sub Setup_Handler ($)
             }
         }
     }
-    elsif (($s =~ m/git clone.*git:\/\/.*atcd\.git/i) ||
-           ($s =~ m/origin.*git:\/\/.*atcd\.git/i) ||
-           ($s =~ m/git clone.*git:\/\/.*ace_tao\.git/i) ||
-           ($s =~ m/origin.*git:\/\/.*ace_tao\.git/i))
+    elsif (($s =~ m/git clone.*(git|https):\/\/.*atcd\.git/i) ||
+           ($s =~ m/origin.*(git|https):\/\/.*atcd\.git/i) ||
+           ($s =~ m/git clone.*(git|https):\/\/.*ace_tao\.git/i) ||
+           ($s =~ m/origin.*(git|https):\/\/.*ace_tao\.git/i))
     {
       # Add git remote -v to config before git log -1 to guarantee url
       $totals->{GIT_CHECKEDOUT_ACE} = "Matched";
       $self->Output_Normal ($s);
     }
-    elsif (($s =~ m/git clone.*git:\/\/.*OpenDDS\.git/i) ||
-           ($s =~ m/origin.*git:\/\/.*OpenDDS\.git/i))
+    elsif (($s =~ m/git clone.*(git|https):\/\/.*OpenDDS\.git/i) ||
+           ($s =~ m/origin.*(git|https):\/\/.*OpenDDS\.git/i))
     {
       # Add git remote -v to config before git log -1 to guarantee url
       $totals->{GIT_CHECKEDOUT_OPENDDS} = "Matched";
@@ -1360,15 +1360,15 @@ sub Config_Handler ($)
     {
         # Jenkins environment
         my $url = $1;
-        if (($url =~ m/git:\/\/.*\/ACE_TAO\.git/i) ||
-            ($url =~ m/git:\/\/.*\/ATCD\.git/i))
+        if (($url =~ m/(git|https):\/\/.*\/ACE_TAO\.git/i) ||
+            ($url =~ m/(git|https):\/\/.*\/ATCD\.git/i))
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
         }
-        elsif ($url =~ m/git:\/\/.*\/OpenDDS\.git/i)
+        elsif ($url =~ m/(git|https):\/\/.*\/OpenDDS\.git/i)
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
