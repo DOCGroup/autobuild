@@ -3,7 +3,7 @@
 ## Autobuild Introduction
 
 The autobuild tools are a set of perl scripts, perl modules and
-XML configuration files to automatically build our projects 
+XML configuration files to automatically build our projects
 on multiple platforms.  The tools run on Unix (several flavors) and
 Windows NT/2k/XP.
 
@@ -28,8 +28,8 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
    for your build and customize it according
    to your local site.
 
-   In the <configuration></configuration> section, you can set environment
-   variables like ACE_ROOT, PATH, CVSROOT, LD_LIBRARY_PATH, etc. For example:
+   In the `<configuration></configuration>` section, you can set environment
+   variables like `ACE_ROOT`, `PATH`, `CVSROOT`, `LD_LIBRARY_PATH`, etc. For example:
 
          <environment name="ACE_ROOT"        value="/export/bugzilla/Minimum_newbuild/ACE_wrappers" />
 
@@ -43,11 +43,11 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
    The "make_program" variable enabled you to specify a different executable
    to call for make.
 
-3. In the <configuration></configuration> section, specify the directory
+3. In the `<configuration></configuration>` section, specify the directory
    where to place the log files from the build.
    Ideally this directory should be accessible by a web server, so
    that you can see the log files via http. For example:
-   
+
          <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
 
 4. To run the build, you run autobuild.pl with the XML config file as the
@@ -69,11 +69,11 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 
 OTHER NOTES
 ===========
-1.  In the <configuration></configuration> section, you set shell environment variables with the following tag:
+1.  In the `<configuration></configuration>` section, you set shell environment variables with the following tag:
 
          <environment name="ENV VARIABLE NAME"  value="ENV VARIABLE VALUE" />
 
-2.  In the <configuration></configuration> section, you set Perl global variables with the following tag:
+2.  In the `<configuration></configuration>` section, you set Perl global variables with the following tag:
 
          <variable name="PERL GLOBAL VARIABLE NAME"  value="VARIABLE VALUE" />
 
@@ -102,41 +102,41 @@ OTHER NOTES
 SCOREBOARD NOTES
 ===================
 
-1. PDF - to display a PDF file use the <pdf> build option in the
-    configuration file for the scoreboard.pl script. For example,
-    <pdf>test.pdf</pdf> will cause a hyperlink to appear called
-    'pdf' to appear on that row in the scoreboard. Clicking on the
+1. PDF - to display a PDF file use the `<pdf>` build option in the
+    configuration file for the `scoreboard.pl` script. For example,
+    `<pdf>test.pdf</pdf>` will cause a hyperlink to appear called
+    `pdf` to appear on that row in the scoreboard. Clicking on the
     link will download/open the file. A column header will appear
     called PDF. If this tag is the config file then the column will
     not appear in the screen. This is useful if you use doxygen to
     create postscript output and convert it to PDF format for
     greater reader usability.
 
-    The <url> contents plus the <pdf> contents are used to
-    refer to the document on the webserver. So if the <url> is
-    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu and the
-    <pdf> is test.pdf, the webserver will look for the file at
-    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu/test.pdf
+    The `<url>` contents plus the `<pdf>` contents are used to
+    refer to the document on the webserver. So if the `<url>` is
+    `http://deuce.doc.wustl.edu/test/machine_one_wustl_edu` and the
+    `<pdf>` is `test.pdf`, the webserver will look for the file at
+    `http://deuce.doc.wustl.edu/test/machine_one_wustl_edu/test.pdf`
 
-2. PS - to display a PS file use the <ps> build option in the
-    configuration file for the scoreboard.pl script. For example,
-    <ps>test.ps</ps> will cause a hyperlink to appear called
+2. PS - to display a PS file use the `<ps>` build option in the
+    configuration file for the `scoreboard.pl` script. For example,
+    `<ps>test.ps</ps>` will cause a hyperlink to appear called
     'ps' to appear on that row in the scoreboard. Clicking on the
     link will download/open the file. A column header will appear
     called PS. If this tag is the config file then the column will
     not appear on the screen. This is useful if you use doxygen to
     create postscript output.
 
-    The <url> contents plus the <ps> contents are used to
-    refer to the document on the webserver. So if the <url> is
-    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu and the
-    <ps> is test.ps, the webserver will look for the file at
-    http://deuce.doc.wustl.edu/test/machine_one_wustl_edu/test.ps
+    The `<url>` contents plus the `<ps>` contents are used to
+    refer to the document on the webserver. So if the `<url>` is
+    `http://deuce.doc.wustl.edu/test/machine_one_wustl_edu` and the
+    `<ps>` is `test.ps`, the webserver will look for the file at
+    `http://deuce.doc.wustl.edu/test/machine_one_wustl_edu/test.ps`
 
-3. HTML - to display a HTML file use the <html> build option in the
+3. HTML - to display a HTML file use the `<html>` build option in the
     configuration file for the scoreboard.pl script. For example,
-    <html>test.html</html> will cause a hyperlink to appear called
-    'html' to appear on that row in the scoreboard. Clicking on the
+    `<html>test.html</html>` will cause a hyperlink to appear called
+    `html` to appear on that row in the scoreboard. Clicking on the
     link will download/open the file. A column header will appear
     called HTML. If this tag is not in the config file then the
     column will not appear on the screen. This is useful if you
@@ -144,7 +144,7 @@ SCOREBOARD NOTES
 
 4. SNAPSHOT - for users of automake and autoconf, to display a
     created snapshot of the present code, use the
-    <snapshot>test.tar.gz</snapshot>. This will cause a hyperlink
+    `<snapshot>test.tar.gz</snapshot>`. This will cause a hyperlink
     to appear called 'snapshot' to appear on that row in the
     scoreboard. Clicking on the link will download/open the file.
     A column header will appear called SNAPSHOT. If this tag is
@@ -159,8 +159,8 @@ SCOREBOARD NOTES
     orange and red are 24 and 48 hours respectively.  These are
     based on the assumption that builds will run daily or less,
     perhaps continuously.  The values for orange and red can be
-    changed for individual builds with the parameters <orange>
-    hours </orange> and <red> hours </red>.
+    changed for individual builds with the parameters
+    `<orange>hours</orange>` and `<red>hours</red>`.
 
 6. A schedule file is available for less than daily builds.  This
     file has an .ini format.  Build names are specified in square
@@ -190,8 +190,7 @@ SCOREBOARD NOTES
 8. To retain the full capabilities of autobuild.pl in the situation
     above(7).  The KEEP parameter was added to the scoreboard.  The
     value for keep can be specified globally with the -k switch to
-    scoreboard.pl or for individual builds with the <keep> number
-    </keep>.
+    scoreboard.pl or for individual builds with the `<keep>number</keep>`.
 
     This parameter also works with the existing (no -c) mode and
     applies to the number of items kept in the cache.
@@ -200,8 +199,8 @@ SCOREBOARD NOTES
 
 9. To help identify builds on the scoreboard there is a "Build
     Sponsor" column.  This consists of two parts the name of the
-    sponsor defined by <build_sponsor> name </build_sponsor> and
-    a url defined by <build_sponsor_url> url </build_sponsor_url>
+    sponsor defined by `<build_sponsor>` name `</build_sponsor>` and
+    a url defined by `<build_sponsor_url>` url `</build_sponsor_url>`
     that would be displayed when the name is clicked.
 
 10. To optimize the speed of scoreboard generation and (greatly)
@@ -210,8 +209,8 @@ SCOREBOARD NOTES
      cache copies of build logfiles (raw and prettified) but
      will use build URL based links throughout *unless* a build
      configuration explicitly specifies that the local cache must
-     be used through the definition of a '<cache/>' tag in the
-     '<build>' section for that build.
+     be used through the definition of a `<cache/>` tag in the
+     `<build>` section for that build.
 
 USING Cygwin on Windows
 =======================
@@ -233,7 +232,7 @@ Cygwin and install it.
 
 * Start cygwin using the desktop icon and do a ssh to another server and
   close the cygwin shell again. Then copy the ssh keys from another system
-  to c:\cygwin\home\<user>\.ssh.
+  to `c:\cygwin\home\<user>\.ssh`.
 
 * For perl we prefer active state perl from www.activestate.com
 
