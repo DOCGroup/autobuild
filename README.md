@@ -1,9 +1,9 @@
 # Autobuild and scoreboard tools
 
-## Autobuild_Introduction Introduction
+## Autobuild Introduction
 
 The autobuild tools are a set of perl scripts, perl modules and
-XML configuration files to automatically build our projects (ACE+TAO)
+XML configuration files to automatically build our projects 
 on multiple platforms.  The tools run on Unix (several flavors) and
 Windows NT/2k/XP.
 
@@ -19,7 +19,7 @@ SOFTWARE REQUIREMENTS
 QUICK GUIDE GETTING STARTED WITH AUTOBUILD
 ==========================================
 
-1. Check out the latest build scripts from subversion using:
+1. Check out the latest build scripts from git using:
 
        git clone https://github.com/DOCGroup/autobuild
 

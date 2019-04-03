@@ -64,7 +64,7 @@ my @nogroup;
 
 my $orange_default = 24; # 1 day old before orange coloured build.
 my $red_default = 48;    # 2 days old before red coloured build.
-my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possiably
+my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possably
                          # the previous oldest copy during the scoreboard update time), for more
                          # consult the actual build machine where we store multiple builds.
 my $sched_file = "";
@@ -83,7 +83,7 @@ our $use_build_logs = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
-<A HREF=\"https://raw.githubusercontent.com/DOCGroup/autobuild/master/README\">
+<A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
 here</A>.\n";
 
 ###############################################################################
