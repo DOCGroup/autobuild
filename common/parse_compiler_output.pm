@@ -44,7 +44,7 @@ sub handle_compiler_output_line($) {
   # VC10 / MSBuild
   if ($s =~ /^\s*(?:\d+>)?Project "[^"]+" \(\d+\) is building "([^"]+)" \((\d+)\)/) {
     my ($prj, $seq) = ($1, $2);
-    $prj =~ /\\([^.\\]+)\.vcxproj$/;
+    $prj =~ /\\([^.\\]+)\.vcxproj(\.metaproj)?$/;
     $self->Output_Subsection ("$1 ($seq)");
     return;
   }
