@@ -326,6 +326,17 @@ sub NeverSelfClosedTag ($$$$\$)
 }
 
 ###############################################################################
+# CouldBeSelfClosedTag
+# Return true if tag is self closing and remove the trailing / in attributes
+# to match the other *SelfClosedTag functions.
+#
+sub CouldBeSelfClosedTag ($$$$\$)
+{
+  my ($filename, $lineStart, $lineEnd, $tag, $attributes) = @_;
+  return $$attributes =~ s/\s*\/$// ? 1 : 0;
+}
+
+###############################################################################
 
 my $nestedLevel = 0;
 my $state = '';
@@ -1222,7 +1233,6 @@ sub DealWithCommandTag ($$$$$\%)
 {
   my ($file, $lineStart, $lineEnd, $tag, $attributes, $data) = @_;
 
-  ShouldBeSelfClosedTag ($file, $lineStart, $lineEnd, $tag, $attributes);
   my ($PAIRS, $NAME, $IF_TEXT) =
     FindNameIF ($file, $lineStart, $lineEnd, $tag, $attributes);
   my $OPTIONS = '';
@@ -1472,10 +1482,30 @@ sub Parse ($$\%)
   my $lineNumberStartOfTag = 0; ## Line zero indicates not found yet.
   my $lineNumberEndOfTag = 1;   ## Shows where the last processed tag ended
 
+  # In "pre" mode, collect the content in-between the tags as is, sorta like
+  # <pre> in html, expect this only does whole lines.
+  #
+  my $preMode = 0;
+  my $preModeText = '';
+
   # This while loop reads each line of the file into $_ one by one until EOF.
   #
   while (<$file_handle>) {
     ++$lineNumberCurrent;
+
+    # Collect lines that aren't closing tags
+    if ($preMode) {
+      if ($_ =~ /\/>/ || $_ =~ /<\//) {
+        $preMode = 0;
+      } else {
+        # Replace Entity References
+        $_ =~ s/&lt;/</g;
+        $_ =~ s/&gt;/>/g;
+        $_ =~ s/&amp;/&/g;
+        $preModeText .= $_;
+        next;
+      }
+    }
 
     # Remove leading and trailing spaces from the current line just read in,
     # and if now blank read in another to replace it.
@@ -1861,6 +1891,8 @@ sub Parse ($$\%)
             # -------------------------------------
             #
             if ($tag =~ m/^command$/i) {
+              $preMode = !CouldBeSelfClosedTag (
+                $file, $lineNumberStartOfTag, $lineNumberEndOfTag, $tag, $attributes);
               DealWithCommandTag (
                 $file,
                 $lineNumberStartOfTag,
@@ -1868,6 +1900,10 @@ sub Parse ($$\%)
                 $tag,
                 $attributes,
                 %$data );
+            }
+            elsif ($tag =~ m!^/command$!i) {
+              $data->{COMMANDS}[-1]{CONTENTS} = $preModeText;
+              $preModeText = '';
             }
             else {
               DisplayProblem (
