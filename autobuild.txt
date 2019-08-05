@@ -82,7 +82,7 @@ This command splices together two other named variables and stores the resultant
 <relative_env name="environment" base_var="variable" suffix_var="variable" join="text" type="" />
 All attributes must be in the order given above although both join and type are optional. This command splices together two other named autobuild variables and stores the resultant string in environment variable being created. The join attribute is optional (defaulting to a null string) and if given its text will be spliced between the two other variable's text to form the result). If the type is given it works just as for the environment tag above.
 
-The <include name="filename" if="test" /> tag can now have an optional if attribute that will be evaluated immediatly during the parse stage.
+The <include name="filename" if="test" /> tag can now have an optional if attribute that will be evaluated immediately during the parse stage.
 This can sit anywhere in the input file and causes the named file to be opened and parsed at the current point. This file must have it's own <autobuild> and optional <configuration> sections to be processed and any variables, environment and commands will be added to the current file's already processed tags.
 
 <autobuild> .. <autobuild/>
@@ -156,8 +156,8 @@ joining characters between the original value and the newly defined value;
 environment variables do still get treated to the platform's path separating
 character.
 replace/set which simply resets or creates the environment variable with the value given,
-prefix which appends the original value of the environment variable to the end of the string, joind with a "path" separating character as defined by the platform autobuild.pl is running on,
-suffix/postfix which appends the value given to the end of the current value of the environment variable again seporated by a "path" character or
+prefix which appends the original value of the environment variable to the end of the string, joined with a "path" separating character as defined by the platform autobuild.pl is running on,
+suffix/postfix which appends the value given to the end of the current value of the environment variable again separated by a "path" character or
 ifundefined/default which will only create a new environment variable with the given value if it does not already exist.
 unset/delete/remove which will remove the variable.
 
@@ -180,9 +180,9 @@ Join="text" the optional, defaulting to a single space, used to modify (possibly
 
 Root="dir" or directory="dir" optionally specify that this command should have a different root to that defined globally.
 
-Substitute_variables or SubsVars, optionally used to over-ride the default for the individual command, indicating that the resultant options string should have any <Var> variables subsituted prior to use.
+Substitute_variables or SubsVars, optionally used to over-ride the default for the individual command, indicating that the resultant options string should have any <Var> variables substituted prior to use.
 
-NoSubsitute_variables or NoSubsVars, optionally used to over-ride the default for the individual command, indicating that the resultant options string should NOT have any <Var> variables susituted.
+NoSubstitute_variables or NoSubsVars, optionally used to over-ride the default for the individual command, indicating that the resultant options string should NOT have any <Var> variables substituted.
 
 group="group" optionally states that the command should be using the named environment group, it defaults to "default" which is always created.
 

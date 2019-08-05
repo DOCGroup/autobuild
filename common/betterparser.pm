@@ -41,7 +41,7 @@ sub ParseQuotes (\$)
       s/^(?:"(?:[^"\\]*(?:\\(?:0?[xX][[:xdigit:]]{0,2}|0[0-2]?[0-7]{0,2}|.))*)*")*//) {
     print STDERR "INTERNAL ERROR: ParseQuotes didn't match quoted string\n";
 
-    # If this occures, it will be due to the original <open..end> tag search
+    # If this occurs, it will be due to the original <open..end> tag search
     # failing to match the same pattern, i.e. the two patterns are out-of-
     # sync with each other.
 
@@ -240,7 +240,7 @@ sub ParseIfAttribute ($$$$$$$;$)
     $existingIF =~ s/^\s*(?:true|)\s*$/1/i;
     if ($processIF) {
       $existingIF =
-        main::subsituteVars ($existingIF, $file, $lineStart, $lineEnd);
+        main::substituteVars ($existingIF, $file, $lineStart, $lineEnd);
       if ($existingIF !~ s/^\s*(?:true|)\s*$/1/i) {
         chomp ($existingIF = eval ($existingIF));
         $existingIF = 0 if (!defined $existingIF ||
@@ -618,12 +618,12 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
     #-------------------------------------------------------------------------
     if ($thisAttrib =~ m/^(?:(relative_)?val(?:ue)?)$/i) {
       # relative_value is an DEPRECATED prismtech form that implies this
-      # value should have variables sustituted. To avoid missing variable
+      # value should have variables substituted. To avoid missing variable
       # warnings this is only done if we are actually creating this variable.
       #
       if (defined $1 && $IF_TEXT) {
         $thisValue =
-          main::subsituteVars ($thisValue, $file, $lineStart, $lineEnd);
+          main::substituteVars ($thisValue, $file, $lineStart, $lineEnd);
       }
 
       if ('' eq $VALUE) {
@@ -718,7 +718,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
       #
       if ($IF_TEXT) {
         $thisValue=
-          main::subsituteVars ($thisValue, $file, $lineStart, $lineEnd);
+          main::substituteVars ($thisValue, $file, $lineStart, $lineEnd);
         if ($thisValue =~ m/^\s*(true|)\s*$/i) {
           $EVAL= 1;
         }
@@ -740,9 +740,9 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
     }
     #-------------------------------------------------------------------------
     elsif ($thisAttrib =~
-      m/^(?:(no)?subs(?:itute)?(?:_?var(?:iable)?s)?)$/i) {
+      m/^(?:(no)?subs(?:t)?(?:itute)?(?:_?var(?:iable)?s)?)$/i) {
       if ($thisValue !~ s/^\s*(.+?)\s*$/$1/) {
-        # This is a signal to globally subsitute variables within the whole
+        # This is a signal to globally substitute variables within the whole
         # resultant value.
         #
         if (2 == $SUBVARS) {
@@ -757,7 +757,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
             "Ignoring the multiple attribute $thisAttrib" );
         }
       }
-      elsif (defined $1) { ## nosubsitute_variables="value" doesn't make sense
+      elsif (defined $1) { ## nosubstitute_variables="value" doesn't make sense
         DisplayProblem (
           $file,
           $lineStart,
@@ -767,11 +767,11 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
           " should not have a value" );
       }
       elsif ($IF_TEXT) {
-        # Subsitute_variables for just this given part, assuming we are
+        # Substitute_variables for just this given part, assuming we are
         # actually creating the variable.
         #
         $thisValue =
-          main::subsituteVars ($thisValue, $file, $lineStart, $lineEnd);
+          main::substituteVars ($thisValue, $file, $lineStart, $lineEnd);
         if ('' eq $VALUE) {
           $VALUE = $thisValue
         }
@@ -904,7 +904,7 @@ sub DealWithVariableTagAttributes ($$$$$\%$)
   }
   elsif ($IF_TEXT) {
     if (1 == $SUBVARS) {
-      $VALUE = main::subsituteVars ($VALUE, $file, $lineStart, $lineEnd);
+      $VALUE = main::substituteVars ($VALUE, $file, $lineStart, $lineEnd);
     }
     if ($EVAL) {
       $VALUE = 1 if ($VALUE =~ m/^\s*(true|)\s*$/i);
@@ -1228,7 +1228,7 @@ sub DealWithCommandTag ($$$$$\%)
   my $OPTIONS = '';
   my $DIRECTORY = '';
   my $JOIN = ' ';
-  my $SUBVARS = 2; ## use default, if 0 don't subsitute, if 1 subsitute.
+  my $SUBVARS = 2; ## use default, if 0 don't substitute, if 1 substitute.
   my $GROUP;
 
   while (scalar @$PAIRS) {
@@ -1314,7 +1314,7 @@ sub DealWithCommandTag ($$$$$\%)
     elsif ($thisAttrib =~
       m/^(?:(no)?subs(?:itute)?(?:_?var(?:iable)?s)?)$/i) {
       if ($thisValue !~ s/^\s*(.+?)\s*$/$1/) {
-        # This is a signal to globally subsitute variables within the whole
+        # This is a signal to globally substitute variables within the whole
         # option string.
         #
         if (2 == $SUBVARS) {
@@ -1329,7 +1329,7 @@ sub DealWithCommandTag ($$$$$\%)
             "Ignoring the multiple attribute $thisAttrib" );
         }
       }
-      elsif (defined $1) { ## nosubsitute_variables="value" doesn't make sense
+      elsif (defined $1) { ## nosubstitute_variables="value" doesn't make sense
         DisplayProblem (
           $file,
           $lineStart,
@@ -1339,12 +1339,12 @@ sub DealWithCommandTag ($$$$$\%)
             "<$tag $thisAttrib=\"$thisValue\">" );
       }
       elsif ($IF_autobuild) {
-        # Subsitute_variables for just this given bit of the option string
+        # Substitute_variables for just this given bit of the option string
         # We assume we are actually going to execute this command unless
         # the autobuild section tag is disabled.
         #
         $thisValue =
-          main::subsituteVars ($thisValue, $file, $lineStart, $lineEnd);
+          main::substituteVars ($thisValue, $file, $lineStart, $lineEnd);
         if ('' eq $OPTIONS) {
           $OPTIONS = $thisValue
         }
@@ -1354,7 +1354,7 @@ sub DealWithCommandTag ($$$$$\%)
       }
     }
     #-------------------------------------------------------------------------
-    # We have an unknown attribute and possiable value, treat this as a
+    # We have an unknown attribute and possible value, treat this as a
     # command name with options, if we have not seen the name yet.
     #
     elsif ("" eq $NAME) {
@@ -1458,7 +1458,7 @@ sub Parse ($$\%)
   my $file_handle = new FileHandle ($file, 'r');
   if (!defined $file_handle) {
     print STDERR "ERROR: Could not open file <$file>: $!\n";
-    return 0; ## effectivly $parsedOK= 0;
+    return 0; ## effectively $parsedOK= 0;
   }
 
   # Each file parsed updates the "date_string" variable for the timestamp of
@@ -1483,7 +1483,7 @@ sub Parse ($$\%)
     next if ($_ !~ s/^\s*(.+?)\s*$/$1/);
 
     # Keep appending each new line to the line(s) we are currently processing;
-    # this is kept as a single line seporated by a single space instead of
+    # this is kept as a single line separated by a single space instead of
     # multiple whitespace and new-line marks.
     #
     $inputFromFile .= ' ' . $_;
@@ -1491,7 +1491,7 @@ sub Parse ($$\%)
     # Remove anything up to the start of the first < character as these are to
     # be ignored. (These are just noise within the input stream into which the
     # XML tags are placed.) NOTE that quotes do NOT hide the start of XML tags,
-    # as these quotes could be used unballanced within the non-tag text.
+    # as these quotes could be used unbalanced within the non-tag text.
     #
     $inputFromFile =~ s/^[^<]+//;
     next if ("" eq $inputFromFile);
@@ -1578,7 +1578,7 @@ sub Parse ($$\%)
         # ignore any quoted > we find along the way as the optional value
         # strings to any attributes for this tag may have this character
         # embedded. Quoted strings may be surrounded by "" pairs and it
-        # is also complicated by the possiability that within these there can
+        # is also complicated by the possibility that within these there can
         # be escaped quotes.
         #
         my $tag = $inputFromFile;  ## Trimmed down if the end of tag is found.
