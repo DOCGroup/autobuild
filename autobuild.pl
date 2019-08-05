@@ -350,7 +350,7 @@ sub substituteVars ($;$$$)
 
   # Search and replace all <vars> in string
   #
-  while ($outputString =~ s/<(\w+)>(.*)$//) {
+  while ($outputString =~ s/<([a-zA-Z0-9_.]+)>(.*)$//) {
     my $variable = $1;
     my $restOfString = $2;
     my $value= GetVariable( $variable );
@@ -780,7 +780,7 @@ INPFILE: foreach my $file (@files) {
       $OPTIONS=
         substituteVars ($OPTIONS, $FILE, $LINE_FROM, $LINE_TO) if ($SUBVARS);
       if ($OPTIONS ne $command->{OPTIONS}) {
-        print "===== subsitutions: $OPTIONS\n" if (1 < $verbose);
+        print "===== substitutions: $OPTIONS\n" if (1 < $verbose);
       }
 
       # Always substitute any <variables> in the command's directory string

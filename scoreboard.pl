@@ -18,6 +18,7 @@ use DirHandle;
 use English;
 use FileHandle;
 use File::Path;
+use File::Basename;
 use Getopt::Std;
 use LWP::UserAgent;
 use Time::Local;
@@ -63,7 +64,7 @@ my @nogroup;
 
 my $orange_default = 24; # 1 day old before orange coloured build.
 my $red_default = 48;    # 2 days old before red coloured build.
-my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possiably
+my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possably
                          # the previous oldest copy during the scoreboard update time), for more
                          # consult the actual build machine where we store multiple builds.
 my $sched_file = "";
@@ -82,7 +83,7 @@ our $use_build_logs = 0;
 
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
-<A HREF=\"https://raw.githubusercontent.com/DOCGroup/autobuild/master/README\">
+<A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
 here</A>.\n";
 
 ###############################################################################
@@ -1526,30 +1527,29 @@ sub GetVariable ($)
 ###############################################################################
 #
 # Reads lists of builds from different XML files and develops a
-# integrated scoreboard. This is in adition to the individual
-# scoreboards for ACE and TAO and CIAO seperately.  The names of xml files have
-# been hardcoded.
+# integrated scoreboard. This is in addition to the individual
+# scoreboards separately.  The names of the xml files have
+# to be passed with the -j commandline option
 #
-# Arguments:  $ - Output directory
+# Arguments:  $ - Output directory and comma separate list of input files
 #
 # Returns:    Nothing
 #
 ###############################################################################
-sub build_integrated_page ($)
+sub build_integrated_page ($$)
 {
     my $dir = shift;
+    my $filelist = shift;
 
     unlink ("$dir/temp.xml");
     print "Build Integrated page\n" if ($verbose);
 
-    my @file_list = ("ace",
-                     "ace_future",
-                     "tao",
-                     "tao_future",
-                     "misc",
-                     "ciao",
-                     "ciao_future",
-                     "dds");
+    if (!defined $filelist) {
+      print "Need to specify with -j a comma separated list of input files";
+      return;
+    }
+
+    my @file_list = split (',', $filelist);
 
     my $newfile = new FileHandle;
 
@@ -1561,17 +1561,14 @@ sub build_integrated_page ($)
     print $newfile "<INTEGRATED>\n";
     foreach my $file_list(@file_list) {
         my $file_handle = new FileHandle;
-        if ($file_list eq 'ace') {
-            print $newfile "<build_ace>\n";
-        } elsif ($file_list eq 'tao') {
-            print $newfile "<build_tao>\n";
-        } elsif ($file_list eq 'ciao') {
-            print $newfile "<build_ciao>\n";
-        } elsif ($file_list eq 'dds') {
-            print $newfile "<build_dds>\n";
-        }
+        # Get the filename without path and without extension
+        my $filename = fileparse($file_list, ".xml");
+        print $newfile "<build_$filename>\n";
 
-        $file_handle->open ("<configs/scoreboard/$file_list.xml");
+        unless ($file_handle->open ("<$file_list")) {
+          print "could not open file $file_list";
+          return;
+        }
         my @list = <$file_handle>;
         print $newfile @list;
         print $newfile "\n";
@@ -1605,15 +1602,15 @@ sub format_time
     my $use_long_format = shift;
 
     if ($use_local) {
-  my @tmp = localtime($time_in_secs);
+      my @tmp = localtime($time_in_secs);
         my $hour = int($tmp[2]);
         my $ampm = ($hour >= 12 ? 'pm' : 'am');
         if ($hour > 12) {
           $hour -= 12;
-  }
-  elsif ($hour == 0) {
-    $hour = 12;
-  }
+    }
+    elsif ($hour == 0) {
+      $hour = 12;
+    }
         my $year = int($tmp[5]) + 1900;
   if (defined $use_long_format && $use_long_format) {
       return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
@@ -1650,7 +1647,7 @@ sub get_time_str
 
 # Getopts
 #
-# You can do the followingt with this set os options.
+# You can do the following with this set os options.
 # 1. You can generate the index page for the scoreboard
 # 2. You can generate individual scoreboards for every subset ie. ace,
 #    ace_future, or whatever
@@ -1671,7 +1668,7 @@ sub get_time_str
 #     it in the directory pointed by -d option. The option -v is for
 #     verbose!
 #
-# 2: For generating individual html pagesyou can do this
+# 2: For generating individual html pages you can do this
 #
 #    $ ./scoreboard.pl -d [please see above for explanation]
 #                      -f [name and path of the XML file that needs
@@ -1681,14 +1678,14 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-x]\n",
-          "              [-k num_logs] [-b]\n";
+          "              [-k num_logs] [-b] [-j filelist]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1705,13 +1702,14 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
     print "    -k         number of logs to keep, default is $keep_default\n";
     print "    -x         'history' links generated\n";
     print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
+    print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
     print "    All other options will be ignored  \n";
     exit (1);
 }
 
-my $index = "configs/scoreboard/index.xml";
-my $inp_file = "configs/scoreboard/ace.xml";
-my $out_file = "ace.html";
+my $index = "";
+my $inp_file = "";
+my $out_file = "";
 my $rss_file = "";
 my $dir = "html";
 
@@ -1747,7 +1745,7 @@ if (defined $opt_b) {
 
 if (defined $opt_z) {
 print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_integrated_page ($dir);
+build_integrated_page ($dir, $opt_j);
 exit (1);
 }
 

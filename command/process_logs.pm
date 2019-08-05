@@ -322,6 +322,7 @@ sub index_logs ()
     my $self = shift;
     my $log_root = main::GetVariable ('log_root');
     my $name = main::GetVariable ('name');
+    my $diffroot = main::GetVariable ('diffroot');
     my @files;
 
     # chop off trailing slash
@@ -329,7 +330,7 @@ sub index_logs ()
         $log_root = $1;
     }
 
-    utility::index_logs ($log_root, $name);
+    utility::index_logs ($log_root, $name, $diffroot);
 
     return 1;
 }

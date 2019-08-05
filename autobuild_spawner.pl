@@ -7,7 +7,7 @@ use File::Spec;
 use File::Spec::Functions;
 
 ## Get Environment variables used for locating
-## directory containting script to run as child
+## directory containing script to run as child
 ## as well as storing child's process id file in
 
 use Env qw(@JENKINS_HOME);
