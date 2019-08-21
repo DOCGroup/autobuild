@@ -35,7 +35,7 @@ my @files;
 my %data = ();
 my %command_table = ();
 my $cvs_tag;
-my $starting_dir= getcwd ();
+my $starting_dir = getcwd ();
 my $warn_nonfatal;
 
 ##############################################################################
@@ -161,7 +161,7 @@ while ($#ARGV >= 0)
   elsif ($ARGV[0] =~ m!^(-|/\?)!) {
     print "Error: Unknown option $ARGV[0]\n" if ($ARGV[0] !~ m!^(-|/)\?!);
     print
-      "Useage: $0 [-c][-cvs_tag <tag>][-d][-k][-p][-v][-xml] files_to_process.xml [...]\n",
+      "Usage: $0 [-c][-cvs_tag <tag>][-d][-k][-p][-v][-xml] files_to_process.xml [...]\n",
       "where:\n",
       "  -c    Parse and Check each command but don't execute any\n",
       "  -cvs_tag <tag>  Checkout operations use <tag> instead of HEAD\n",
@@ -195,17 +195,17 @@ my $parser = new BetterParser;
 # because FindBin does not work on OpenVMS
 #
 sub which {
-  my($prog)   = shift;
-  my($exec)   = $prog;
-  my($part)   = '';
+  my $prog = shift;
+  my $exec = $prog;
+  my $part = '';
   if (defined $ENV{'PATH'}) {
-	  foreach $part (split(/$pathsep/, $ENV{'PATH'})) {
-	    $part .= (( $^O eq 'VMS' ) ? "" : "/" ) . "$prog";
-	    if ( -x $part ) {
-		    $exec = $part;
-		    last;
-	    }
-	  }
+    foreach $part (split(/$pathsep/, $ENV{'PATH'})) {
+      $part .= (( $^O eq 'VMS' ) ? "" : "/" ) . "$prog";
+      if ( -x $part ) {
+        $exec = $part;
+        last;
+      }
+    }
   }
   return $exec;
 }
@@ -293,7 +293,7 @@ sub ChangeStatus ($$)
     if (!defined $file_handle) {
       print STDERR __FILE__,
         ': ', ($warn_nonfatal ? 'Unable to set' : 'Error setting'),
-	" status to file ($status_file)", ($warn_nonfatal ? '' : ": $!"), "\n";
+        " status to file ($status_file)", ($warn_nonfatal ? '' : ": $!"), "\n";
 
       # Non fatal error, so just return.
       return;
@@ -343,7 +343,7 @@ sub PrintStatus ($$)
 # string. In case of undefined variables, also needs the filename and line
 # number(s) where the definition of this string was found.
 #
-sub subsituteVars ($;$$$)
+sub substituteVars ($;$$$)
 {
   my ($inputString, $filename, $lineFrom, $lineTo) = @_;
   my $outputString= $inputString;
@@ -451,7 +451,7 @@ INPFILE: foreach my $file (@files) {
   $data{VARS}->{BUILD_CONFIG_FILE} = File::Basename::basename ($file);
   $data{VARS}->{BUILD_CONFIG_PATH} = File::Basename::dirname  ($file);
   my $temp_file = $file;
-  $temp_file =~ s!\\!/!g;  ## replace windows seperators with unix ones
+  $temp_file =~ s!\\!/!g;  ## replace windows separators with unix ones
   $temp_file =~ s!^.*configs/autobuild!configs/autobuild!;
   $data{VARS}->{CVS_CONFIG_FILE} = $temp_file;
 
@@ -465,7 +465,7 @@ INPFILE: foreach my $file (@files) {
   $data{VARS}->{AUTOBUILD_PL_PATH} = $this_file;
   $data{VARS}->{AUTOBUILD_ROOT} = File::Basename::dirname ($this_file);
 
-  # Setup some other usefull variables before parsing the actual xml file.
+  # Setup some other useful variables before parsing the actual xml file.
   #
   $data{VARS}->{'cvs_tag'}   = (defined $cvs_tag) ? $cvs_tag : 'HEAD';
   #
@@ -654,10 +654,10 @@ INPFILE: foreach my $file (@files) {
       if (2 == $SUBVARS &&
           defined $cmd_handler->{'substitute_vars_in_options'} &&
           $cmd_handler->{'substitute_vars_in_options'}            ) {
-        $command->{SUBVARS}= 1; # Record that we are subsituting
+        $command->{SUBVARS}= 1; # Record that we are substituting
       }
 
-      # We must change the environment BEFORE we attempt to subsituteVars
+      # We must change the environment BEFORE we attempt to substituteVars
       # as the function can substitute environment values in place of
       # environment names within the variable being substituted.
       #
@@ -670,7 +670,7 @@ INPFILE: foreach my $file (@files) {
       #
       if ("" ne $DIRECTORY) {
         $DIRECTORY=
-          subsituteVars ($DIRECTORY, $FILE, $LINE_FROM, $LINE_TO);
+          substituteVars ($DIRECTORY, $FILE, $LINE_FROM, $LINE_TO);
 
         if ($DIRECTORY =~ s/^\s*([^\s].*?)\s*$/$1/ &&
             !File::Spec->file_name_is_absolute ($DIRECTORY)) {
@@ -736,6 +736,7 @@ INPFILE: foreach my $file (@files) {
     my $FILE      = $command->{FILE};
     my $LINE_FROM = $command->{LINE_FROM};
     my $LINE_TO   = $command->{LINE_FROM};
+    my $CONTENTS  = $command->{CONTENTS};
 
     my $CMD = "Executing \"$NAME\" line";
     if (!defined $LINE_TO || $LINE_FROM == $LINE_TO) {
@@ -749,7 +750,7 @@ INPFILE: foreach my $file (@files) {
 
     print "\n",'=' x 79,"\n===== $CMD\n" if (1 < $verbose);
 
-    # We must change the environment BEFORE we attempt to subsituteVars
+    # We must change the environment BEFORE we attempt to substituteVars
     # as the function can substitute environment values in place of
     # environment names within the variable being substituted.
     #
@@ -766,7 +767,7 @@ INPFILE: foreach my $file (@files) {
     # Work out if we are going to execute this command.
     #
     my $IF_result =
-      subsituteVars ($IF_TEXT, $FILE, $LINE_FROM, $LINE_TO);
+      substituteVars ($IF_TEXT, $FILE, $LINE_FROM, $LINE_TO);
     if ($IF_result !~ s/^\s*(?:true|)\s*$/1/i) {
       $IF_result = eval ($IF_result);
       $IF_result = 0 if (!defined $IF_result ||
@@ -777,9 +778,9 @@ INPFILE: foreach my $file (@files) {
       # Substitute any <variables> in the command's options string IF desired.
       #
       $OPTIONS=
-        subsituteVars ($OPTIONS, $FILE, $LINE_FROM, $LINE_TO) if ($SUBVARS);
+        substituteVars ($OPTIONS, $FILE, $LINE_FROM, $LINE_TO) if ($SUBVARS);
       if ($OPTIONS ne $command->{OPTIONS}) {
-        print "===== subsitutions: $OPTIONS\n" if (1 < $verbose);
+        print "===== substitutions: $OPTIONS\n" if (1 < $verbose);
       }
 
       # Always substitute any <variables> in the command's directory string
@@ -787,7 +788,7 @@ INPFILE: foreach my $file (@files) {
       #
       if ("" ne $DIRECTORY) {
         $DIRECTORY=
-          subsituteVars ($DIRECTORY, $FILE, $LINE_FROM, $LINE_TO );
+          substituteVars ($DIRECTORY, $FILE, $LINE_FROM, $LINE_TO );
 
         if ($DIRECTORY =~ s/^\s*([^\s].*?)\s*$/$1/ &&
             !File::Spec->file_name_is_absolute ($DIRECTORY)) {
@@ -804,7 +805,7 @@ INPFILE: foreach my $file (@files) {
         }
       }
 
-      if ($command_table{$NAME}->Run ($OPTIONS) == 0) {
+      if ($command_table{$NAME}->Run ($OPTIONS, $CONTENTS) == 0) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
         if (!$keep_going) {
