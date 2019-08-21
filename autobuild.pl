@@ -161,7 +161,7 @@ while ($#ARGV >= 0)
   elsif ($ARGV[0] =~ m!^(-|/\?)!) {
     print "Error: Unknown option $ARGV[0]\n" if ($ARGV[0] !~ m!^(-|/)\?!);
     print
-      "Useage: $0 [-c][-cvs_tag <tag>][-d][-k][-p][-v][-xml] files_to_process.xml [...]\n",
+      "Usage: $0 [-c][-cvs_tag <tag>][-d][-k][-p][-v][-xml] files_to_process.xml [...]\n",
       "where:\n",
       "  -c    Parse and Check each command but don't execute any\n",
       "  -cvs_tag <tag>  Checkout operations use <tag> instead of HEAD\n",
@@ -293,7 +293,7 @@ sub ChangeStatus ($$)
     if (!defined $file_handle) {
       print STDERR __FILE__,
         ': ', ($warn_nonfatal ? 'Unable to set' : 'Error setting'),
-  " status to file ($status_file)", ($warn_nonfatal ? '' : ": $!"), "\n";
+        " status to file ($status_file)", ($warn_nonfatal ? '' : ": $!"), "\n";
 
       # Non fatal error, so just return.
       return;
