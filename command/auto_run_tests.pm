@@ -147,11 +147,13 @@ sub Run ($)
       my $script_path;
       if ($options =~ m/script_path='([^']*)'/) {
           $script_path = $1;
-          $options =~ s/script_path='$script_path'//;
+          my $script_pattern = quotemeta $1;
+          $options =~ s/script_path='$script_pattern'//;
       }
       elsif ($options =~ m/script_path=([^\s]*)/) {
           $script_path = $1;
-          $options =~ s/script_path=$script_path//;
+          my $script_pattern = quotemeta $1;
+          $options =~ s/script_path=$script_pattern//;
       }
 
       if (defined $script_path) {
