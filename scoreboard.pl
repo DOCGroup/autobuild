@@ -1100,7 +1100,7 @@ sub update_html ($$$)
     print $indexhtml "<!DOCTYPE html>\n";
     print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n";
     print $indexhtml "<style>\n";
-    if (defined $opt_y) {
+    if (defined $main::opt_y) {
         print $indexhtml $custom_css;
     } else {
         print $indexhtml "table { border-collapse: collapse; }\n";
