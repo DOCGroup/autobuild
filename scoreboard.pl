@@ -1686,7 +1686,7 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y/;
 
 if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:')
     || !defined $opt_d
