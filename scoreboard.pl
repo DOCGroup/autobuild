@@ -81,6 +81,8 @@ our $use_local = 0;
 
 our $use_build_logs = 0;
 
+our $custom_css = "";
+
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
 <A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
@@ -1098,19 +1100,23 @@ sub update_html ($$$)
     print $indexhtml "<!DOCTYPE html>\n";
     print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n";
     print $indexhtml "<style>\n";
-    print $indexhtml "table { border-collapse: collapse; }\n";
-    print $indexhtml "th { background: #ddd; }\n";
-    print $indexhtml "td { padding: inherit 5px; }\n";
-    print $indexhtml ".name { min-width: 400px; }\n";
-    print $indexhtml ".time { min-width: 105px; }\n";
-    print $indexhtml ".rev { min-width: 70px; }\n";
-    print $indexhtml ".fullbrief { min-width: 85px; }\n";
-    print $indexhtml ".status { min-width: 50px; }\n";
-    print $indexhtml ".new { font-weight: bold; }\n";
-    print $indexhtml ".normal { background: white; }\n";
-    print $indexhtml ".warning { background: orange; }\n";
-    print $indexhtml ".late { background: red; }\n";
-    print $indexhtml ".disabled { background: gray; }\n";
+    if (defined $opt_y) {
+        print $indexhtml $custom_css;
+    } else {
+        print $indexhtml "table { border-collapse: collapse; }\n";
+        print $indexhtml "th { background: #ddd; }\n";
+        print $indexhtml "td { padding: inherit 5px; }\n";
+        print $indexhtml ".name { min-width: 400px; }\n";
+        print $indexhtml ".time { min-width: 105px; }\n";
+        print $indexhtml ".rev { min-width: 70px; }\n";
+        print $indexhtml ".fullbrief { min-width: 85px; }\n";
+        print $indexhtml ".status { min-width: 50px; }\n";
+        print $indexhtml ".new { font-weight: bold; }\n";
+        print $indexhtml ".normal { background: white; }\n";
+        print $indexhtml ".warning { background: orange; }\n";
+        print $indexhtml ".late { background: red; }\n";
+        print $indexhtml ".disabled { background: gray; }\n";
+    }
     print $indexhtml "</style>\n";
 
     if ($rss_file ne "") {
@@ -1217,6 +1223,7 @@ sub update_html_table ($$@)
         }
     }
 
+    print $indexhtml "<div class='buildtable'>\n";
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
     print $indexhtml "<th class='name'>Build Name</th><th class='time'>Last Finished</th>";
@@ -1513,6 +1520,7 @@ sub update_html_table ($$@)
         print $indexhtml "</tr>\n";
     }
     print $indexhtml "</table>\n";
+    print $indexhtml "</div>\n";
 }
 
 ## Eventually this should probably be shared code with autobuild.pl, but
@@ -1680,7 +1688,7 @@ sub get_time_str
 
 use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
@@ -1703,6 +1711,7 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:')
     print "    -x         'history' links generated\n";
     print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
     print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
+    print "    -y         specify name of file with custom CSS styling";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1741,6 +1750,11 @@ exit (1);
 
 if (defined $opt_b) {
     $use_build_logs = 1;
+}
+
+if (defined $opt_y) {
+    open my $css_fh, '<', $opt_y or die "Can't open custom CSS file $opt_y";
+    read $css_fh, $custom_css, -s $css_fh;
 }
 
 if (defined $opt_z) {
