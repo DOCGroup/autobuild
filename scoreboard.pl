@@ -1174,6 +1174,7 @@ sub update_html_table ($$@)
     my $havesnapshot = 0;
     my $havehistory = 0;
     my $havesponsor = 0;
+    my $linktarget = "";
     my @builds;
 
     ### Table
@@ -1223,6 +1224,10 @@ sub update_html_table ($$@)
         }
     }
 
+    if (defined $main::opt_n) {
+        $linktarget = "target=\"_blank\""
+    }
+
     print $indexhtml "<div class='buildtable'>\n";
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
@@ -1247,7 +1252,7 @@ sub update_html_table ($$@)
         print $indexhtml '<tr><td>';
 
         if (defined $builds{$buildname}->{URL}) {
-            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/index.html\">" ;
+            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/index.html\" $linktarget>" ;
             print $indexhtml $buildname;
             print $indexhtml "</a> ";
         }
@@ -1304,7 +1309,7 @@ sub update_html_table ($$@)
             # If we have a diff revision, and a diffroot URL, show a link
             if (($diffRev !~ /None/) && ($diffRoot)) {
               my $url = $diffRoot . $diffRev;
-              my $link = "<a href='$url'>$diffRev</a>";
+              my $link = "<a href='$url' $linktarget>$diffRev</a>";
               print $indexhtml "<td class='$class'>&nbsp;$link&nbsp;</td>";
             } else {
               print $indexhtml "<td class='$class'>&nbsp;$diffRev&nbsp;</td>";
@@ -1312,7 +1317,7 @@ sub update_html_table ($$@)
 
             print $indexhtml '<td>';
             if (defined $builds{$buildname}->{CONFIG_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Config.html\">Config</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Config.html\" $linktarget>Config</a>] ";
             }
             else {
                 print $indexhtml "&nbsp;";
@@ -1321,22 +1326,26 @@ sub update_html_table ($$@)
             my $color;
             if (!defined $builds{$buildname}->{SETUP_SECTION}) {
                 $color = 'white';
+                $class = 'normal';
             }
             elsif ($builds{$buildname}->{SETUP_ERRORS} > 0) {
                 $color = 'red';
+                $class = 'error';
             }
             elsif ($builds{$buildname}->{SETUP_WARNINGS} > 0) {
                 $color = 'orange';
+                $class = 'warning';
             }
             else {
                 $color = 'lime';
+                $class = 'good';
             }
 
-            print $indexhtml "<td bgcolor=$color>";
+            print $indexhtml "<td bgcolor=$color class=\"$class\">";
             if (defined $builds{$buildname}->{SETUP_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\">Full</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\" $linktarget>Full</a>] ";
                 if ($builds{$buildname}->{SETUP_ERRORS} + $builds{$buildname}->{SETUP_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\">Brief</a>]";
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\" $linktarget>Brief</a>]";
                 }
             }
             else {
@@ -1345,22 +1354,26 @@ sub update_html_table ($$@)
 
             if (!defined $builds{$buildname}->{COMPILE_SECTION}) {
                 $color = 'white';
+                $class = 'normal';
             }
             elsif ($builds{$buildname}->{COMPILE_ERRORS} > 0) {
                 $color = 'red';
+                $class = 'error';
             }
             elsif ($builds{$buildname}->{COMPILE_WARNINGS} > 0) {
                 $color = 'orange';
+                $class = 'warning';
             }
             else {
                 $color = 'lime';
+                $class = 'good';
             }
 
-            print $indexhtml "<td bgcolor=$color>";
+            print $indexhtml "<td bgcolor=$color class=\"$class\">";
             if (defined $builds{$buildname}->{COMPILE_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\">Full</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\" $linktarget>Full</a>] ";
                 if ($builds{$buildname}->{COMPILE_ERRORS} + $builds{$buildname}->{COMPILE_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\">Brief</a>]";
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\" $linktarget>Brief</a>]";
                 }
             }
             else {
@@ -1369,22 +1382,26 @@ sub update_html_table ($$@)
 
             if (!defined $builds{$buildname}->{TEST_SECTION}) {
                 $color = 'white';
+                $class = 'normal';
             }
             elsif ($builds{$buildname}->{TEST_ERRORS} > 0) {
                 $color = 'red';
+                $class = 'error';
             }
             elsif ($builds{$buildname}->{TEST_WARNINGS} > 0) {
                 $color = 'orange';
+                $class = 'warning';
             }
             else {
                 $color = 'lime';
+                $class = 'good';
             }
 
-            print $indexhtml "<TD bgcolor=$color>";
+            print $indexhtml "<TD bgcolor=$color class=\"$class\">";
             if (defined $builds{$buildname}->{TEST_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\">Full</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\" $linktarget>Full</a>] ";
                 if ($builds{$buildname}->{TEST_ERRORS} + $builds{$buildname}->{TEST_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\">Brief</a>]";
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\" $linktarget>Brief</a>]";
                 }
             }
             else {
@@ -1393,11 +1410,13 @@ sub update_html_table ($$@)
             if (defined $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS}) {
                 if ($builds{$buildname}->{SECTION_ERROR_SUBSECTIONS} > 0) {
                     $color = 'red';
+                    $class = 'error';
                 }
                 else {
                     $color = 'lime';
+                    $class = 'good';
                 }
-                print $indexhtml "<TD bgcolor=$color>";
+                print $indexhtml "<TD bgcolor=$color class=\"$class\">";
                 print $indexhtml $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS};
             }
             else {
@@ -1431,7 +1450,7 @@ sub update_html_table ($$@)
         if ($havestatus) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{STATUS}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "/status.txt\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "/status.txt\" $linktarget\>";
                 print $indexhtml $builds{$buildname}->{STATUS};
                 print $indexhtml "</a>";
             }
@@ -1443,7 +1462,7 @@ sub update_html_table ($$@)
         if ($havepdf) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{PDF}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\" $linktarget\>";
                 print $indexhtml "pdf</a>";
             }
             else {
@@ -1454,7 +1473,7 @@ sub update_html_table ($$@)
         if ($haveps) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{PS}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\" $linktarget\>";
                 print $indexhtml "ps</a>";
             }
             else {
@@ -1465,7 +1484,7 @@ sub update_html_table ($$@)
         if ($havehtml) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{HTML}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\" $linktarget\>";
                 print $indexhtml "html</a>";
             }
             else {
@@ -1476,7 +1495,7 @@ sub update_html_table ($$@)
         if ($havesnapshot) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{SNAPSHOT}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\" $linktarget\>";
                 print $indexhtml "snapshot</a>";
             }
             else {
@@ -1502,7 +1521,7 @@ sub update_html_table ($$@)
             if (defined $builds{$buildname}->{FULL_HISTORY}) {
                 print $indexhtml "<a href=\"";
                 print $indexhtml "http:\/\/teststat.remedy.nl\/teststat\/builds\/", $buildname, ".html";
-                print $indexhtml "\">";
+                print $indexhtml "\" $linktarget>";
                 print $indexhtml "Full";
                 print $indexhtml "</a>";
                 print $indexhtml " ";
@@ -1510,7 +1529,7 @@ sub update_html_table ($$@)
             if (defined $builds{$buildname}->{CLEAN_HISTORY}) {
                 print $indexhtml "<a href=\"";
                 print $indexhtml "http:\/\/teststat.remedy.nl\/teststat\/builds\/clean_", $buildname, ".html";
-                print $indexhtml "\">";
+                print $indexhtml "\" $linktarget>";
                 print $indexhtml "Clean";
                 print $indexhtml "</a>";
             }
@@ -1686,14 +1705,14 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y $opt_n/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-x]\n",
-          "              [-k num_logs] [-b] [-j filelist]\n";
+          "              [-k num_logs] [-b] [-j filelist] [-y file] [-n]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1712,6 +1731,7 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:')
     print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
     print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
     print "    -y         specify name of file with custom CSS styling";
+    print "    -n         generate build links that open in new tab/window";
     print "    All other options will be ignored  \n";
     exit (1);
 }
