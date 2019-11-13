@@ -426,7 +426,7 @@ sub load_web_latest ($)
 
     ### Check the address
 
-    if ($address =~ m/^http:\/\/[\w.]*(.*)/) {
+    if ($address =~ m/^(http|https):\/\/[\w.]*(.*)/) {
         $address .= '/latest.txt';
     }
     else {
