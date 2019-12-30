@@ -15,7 +15,7 @@ sub run_command ($;$) {
       if ($? == -1) {
           $error_message = "Failed to Run: $!";
       } elsif ($? & 127) {
-          $error_message = sprintf ("Exited on Singal %d, %s coredump",
+          $error_message = sprintf ("Exited on Signal %d, %s coredump",
             ($? & 127),  ($? & 128) ? 'with' : 'without');
       } else {
           $error_message = sprintf ("Returned %d", $? >> 8);
