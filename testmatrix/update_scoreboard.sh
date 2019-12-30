@@ -36,7 +36,7 @@ function update_local_scoreboard()
   DBLOGDIR=$LOG_DIR/test_matrix_db
 
   # create the db log file directory if it does not exist
-  if [ ! -d $DBLOGDIR ]; then 
+  if [ ! -d $DBLOGDIR ]; then
      mkdir -p $DBLOGDIR
   fi
 
@@ -54,26 +54,14 @@ function update_local_scoreboard()
   ./buildMatrix 1 $BUILD_LIST $TEST_MATRIX
 
 
-  BUILD_LIST=$TEST_MATRIX_DIR/ace_future-list
-  TEST_MATRIX=ace_future_detailed
-  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ace_future.xml > $BUILD_LIST
-  ./buildMatrix 0 $BUILD_LIST $TEST_MATRIX
-
-
   BUILD_LIST=$TEST_MATRIX_DIR/tao-list
   TEST_MATRIX=tao_detailed
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao.xml > $BUILD_LIST
-  
+
   # generate the matrix and the *.db files
   ./buildMatrix 1 $BUILD_LIST $TEST_MATRIX
 
 
-  BUILD_LIST=$TEST_MATRIX_DIR/tao_future-list
-  TEST_MATRIX=tao_future_detailed
-  perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/tao_future.xml > $BUILD_LIST
-  ./buildMatrix 0 $BUILD_LIST $TEST_MATRIX
-
-  
   BUILD_LIST=$TEST_MATRIX_DIR/ciao-list
   TEST_MATRIX=ciao_detailed
   perl ./test-list-extract.pl -i $SCOREBOARD_CONFIG_DIR/ciao.xml > $BUILD_LIST
@@ -116,7 +104,7 @@ if [ -d "$LOG_DIR" ]; then
       # spawned at about the same time.
       echo "Found empty protection file.  Removing."
       rm "$TEST_MATRIX_PROTECTION_FILE"
-    fi 
+    fi
     # end of  if [ -n $STARTED_TIME ]
 
   fi

@@ -594,6 +594,7 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
+    my $contents = shift;
 
     my $root = main::GetVariable ('root');
 
@@ -683,6 +684,11 @@ sub Run ($)
     my $output;
     my $include= [];   ### Copytree Default include everything
     my $exclude= [];   ### Copytree Default exclude nothing
+
+    # Use contents of the tags as output if given
+    if (defined $contents) {
+      $output = $contents;
+    }
 
     foreach my $option (@splitOptions) {
 
