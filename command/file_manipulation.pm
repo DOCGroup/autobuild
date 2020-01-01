@@ -1131,6 +1131,26 @@ sub Run ($)
             $current_dir = main::GetVariable ('root');
         }
     }
+
+    ### type=  rmmkcd
+    # "rm, mkdir, chdir"
+    # Create or re-create and change into a directory in one command.
+    # Created for CMake build directories.
+    ################
+    elsif ($type eq "rmmkcd") {
+        if (-e $filename) {
+            rmtree ($filename, 0, 0);
+        }
+        mkdir ($filename);
+        if (-d $filename ) {
+            $current_dir = $filename;
+        } else {
+            print STDERR __FILE__, ":\n",
+                "  Could not chdir into $filename, it is not a directory!\n";
+            return 0;
+        }
+    }
+
     ### type not found
     ##################
     else {
