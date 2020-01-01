@@ -31,6 +31,9 @@ check_linker - Output information about the linker, specified in the
 clone_build_tree - Clones the source tree structure of the "root" directory
   into a directory specified by the "build_name" under a 'build' directory
   directly in the "root" directory.
+cmake - Run CMake program specified by cmake_command variable. Also uses
+  cmake_generator variable which is passed to CMake using the -G option as
+  long --build hasn't also been passed.
 configure - Run the 'configure' command in the "project_root" directory.
 cvsgrab - Run cvsgrab sub-commands.
 cvs - Run cvs sub-commands.
@@ -77,7 +80,9 @@ print_ace_config - Puts ACE, TAO, CIAO, DDS, MPC and autobuild information
 print_autotools_version - Puts version information about automake, autoconf,
   and libtool into the log file.
 print_cidlc_version - Puts cidlc version information into the log file.
-print_make_verison - Puts make version information into the log file.
+print_cmake_version - Uses the same cmake_command variable as the cmake
+  command. Puts the result of cmake_command --version into the log file.
+print_make_version - Puts make version information into the log file.
 print_os_version - Puts the hostname, operating system information,
   approximate BogoMIPS, and all environment variables into the log file.
 print_perl_version - Puts perl version information into the log file.
