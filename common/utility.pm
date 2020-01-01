@@ -4,26 +4,28 @@ package utility;
 
 # Run command, returns 0 if there was an error
 sub run_command ($;$) {
-  my $command = shift;
-  my $ignore_failure = shift;
-  if (!defined $ignore_failure) {
-      $ignore_failure = 0;
-  }
+    my $command = shift;
+    my $ignore_failure = shift;
+    if (!defined $ignore_failure) {
+        $ignore_failure = 0;
+    }
 
-  if (system ($command)) {
-      my $error_message;
-      if ($? == -1) {
-          $error_message = "Failed to Run: $!";
-      } elsif ($? & 127) {
-          $error_message = sprintf ("Exited on Signal %d, %s coredump",
-            ($? & 127),  ($? & 128) ? 'with' : 'without');
-      } else {
-          $error_message = sprintf ("Returned %d", $? >> 8);
-      }
-      print STDERR "Command \"$command\" $error_message\n";
-      return $ignore_failure;
-  }
-  return 1;
+    if (system ($command)) {
+        my $signal = $? & 127;
+        my $error_message;
+        if ($? == -1) {
+            $error_message = "Failed to Run: $!";
+        }
+        elsif ($signal) {
+            $error_message = sprintf ("Exited on Signal %d, %s coredump",
+                ($signal), ($? & 128) ? 'with' : 'without');
+        } else {
+            $error_message = sprintf ("Returned %d", $? >> 8);
+        }
+        print STDERR "Command \"$command\" $error_message\n";
+        return $ignore_failure;
+    }
+    return 1;
 }
 
 ###############################################################################
