@@ -853,7 +853,7 @@ sub Run ($)
         print STDERR __FILE__, ":\n  No type specified in command options\n";
         return 0;
     }
-    if (!defined ($filename) || ($filename eq "")) {
+    if ($type ne 'chdir' && (!defined ($filename) || ($filename eq ""))) {
         print STDERR __FILE__, ":\n",
               "  In file_manipulation $type\n",
               "  No source file specified in command options\n";
