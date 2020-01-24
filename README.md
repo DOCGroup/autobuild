@@ -3,7 +3,7 @@
 ## Autobuild Introduction
 
 The autobuild tools are a set of perl scripts, perl modules and
-XML configuration files to automatically build our projects 
+XML configuration files to automatically build our projects
 on multiple platforms.  The tools run on Unix (several flavors) and
 Windows NT/2k/XP.
 
@@ -47,7 +47,7 @@ QUICK GUIDE GETTING STARTED WITH AUTOBUILD
    where to place the log files from the build.
    Ideally this directory should be accessible by a web server, so
    that you can see the log files via http. For example:
-   
+
          <variable name="log_root" value="/home/bugzilla/.www-docs/auto_compile_logs/curufin_SingleThreaded" />
 
 4. To run the build, you run autobuild.pl with the XML config file as the
