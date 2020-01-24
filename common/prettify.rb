@@ -1,5 +1,3 @@
-# $Id$
-
 # This is the ruby code that determines whether a test has failed or not.
 # The integrate scoreboard doesn't parse compile errors, that is only
 # done by the regular scoreboard.
