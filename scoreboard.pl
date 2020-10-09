@@ -138,12 +138,12 @@ sub build_index_page ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE html>\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to DOCGroup Distributed Scoreboard</title>\n";
     print $indexhtml "</head>\n";
 
     ### Start body
 
-    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard\n</h1></center>\n<hr>\n";
+    print $indexhtml "<body bgcolor=white><center><h1>Welcome to DOCGroup Distributed Scoreboard\n</h1></center>\n<hr>\n";
     my $parser = new IndexParser;
     $parser->Parse ($index, \%builds);
     print $indexhtml "$preamble\n";
