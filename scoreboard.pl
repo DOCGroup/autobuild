@@ -1439,7 +1439,7 @@ sub update_html_table ($$@)
             print $indexhtml "<td align=center>";
             if (defined $builds{$buildname}->{MANUAL_LINK}) {
                 print $indexhtml "<input type=\"button\" value=\"Start\" ";
-                print $indexhtml "onclikc=\"window.location.href='";
+                print $indexhtml "onclick=\"window.location.href='";
                 print $indexhtml $builds{$buildname}->{MANUAL_LINK};
                 print $indexhtml "'\">";
             }
