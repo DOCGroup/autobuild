@@ -353,6 +353,176 @@ sub Normal ($)
 ###############################################################################
 ###############################################################################
 
+package Prettify::Failed_Tests_HTML;
+
+use strict;
+use warnings;
+
+use FileHandle;
+
+###############################################################################
+
+sub new ($)
+{
+    my $proto = shift;
+    my $class = ref ($proto) || $proto;
+    my $self = {};
+    my $basename = shift;
+    my $buildname = shift;
+
+    my $path = substr($basename, 0, index($basename, '/'));
+    my $filename = $path . "/Failed_Tests.html";
+
+    $basename =~ s/^.*\///;
+
+    $self->{FULLHTML} = $basename . "_Full.html";
+    $self->{ERROR_COUNTER} = 0;
+    $self->{WARNING_COUNTER} = 0;
+    $self->{SECTION_COUNTER} = 0;
+    $self->{SUBSECTION_COUNTER} = 0;
+    $self->{TITLE} = "Failed Test Brief Log";
+
+    unless (-e $filename) {
+        my $file_handle = new FileHandle ($filename, 'w');
+        print {$file_handle} "<h1>$self->{TITLE}</h1>\n";
+    }
+
+    $self->{FH} = new FileHandle ($filename, '>>');
+    $self->{FILENAME} = $filename;
+    $self->{BUILDNAME} = $buildname;
+
+    bless ($self, $class);
+    return $self;
+}
+
+sub Header ()
+{
+    my $self = shift;
+    print {$self->{FH}} "<html>\n";
+    print {$self->{FH}} "<body bgcolor=\"white\">\n";
+}
+
+sub Footer ()
+{
+    my $self = shift;
+
+    # In the case where there was no errors or warnings, output a note
+    if ($self->{ERROR_COUNTER} == 0 && $self->{WARNING_COUNTER} == 0) {
+        print {$self->{FH}} "No Errors or Warnings detected<br>\n";
+    }
+
+    print {$self->{FH}} "</body>\n";
+    print {$self->{FH}} "</html>\n";
+}
+
+sub Section ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    my $counter = ++$self->{SECTION_COUNTER};
+
+    # Save for later use
+
+    $self->{LAST_SECTION} = $s;
+}
+
+sub Description ($)
+{
+    my $self = shift;
+
+    # Ignore
+}
+
+sub Timestamp ($)
+{
+    my $self = shift;
+    # Ignore
+}
+
+sub Subsection ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    my $counter = ++$self->{SUBSECTION_COUNTER};
+
+    # Save for later use
+
+    $self->{LAST_SUBSECTION} = $s;
+}
+
+sub Print_Sections ()
+{
+    my $self = shift;
+
+    if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
+        if (defined $self->{BUILDNAME}) {
+            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2><hr>\n";
+            $self->{BUILDNAME} = undef;
+        }
+        print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";
+        print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>\n";
+        $self->{LAST_SUBSECTION} = undef;
+    }
+}
+
+sub Error ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    my $counter = ++$self->{ERROR_COUNTER};
+
+    $self->Print_Sections ();
+
+    print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
+    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
+                        . "\">Details</a>] </tt>";
+    print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+}
+
+sub Warning ($)
+{
+    my $self = shift;
+    my $s = shift;
+
+    # Escape any '<' or '>' signs
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    my $counter = ++$self->{WARNING_COUNTER};
+
+    $self->Print_Sections ();
+
+    print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
+    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter"
+                        . "\">Details</a>] </tt>";
+    print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+}
+
+sub Normal ($)
+{
+    my $self = shift;
+
+    # Ignore
+}
+
+###############################################################################
+###############################################################################
+
 package Prettify::JUnit;
 
 use strict;
@@ -868,6 +1038,7 @@ sub new ($)
     my $class = ref ($proto) || $proto;
     my $self = {};
     my $basename = shift;
+    my $buildname = shift;
 
     # Initialize some variables
 
@@ -896,6 +1067,7 @@ sub new ($)
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename), #Must be 2
             new Prettify::Config_HTML ($basename), #Must be 3
+            new Prettify::Failed_Tests_HTML ($basename, $buildname),
         );
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1505,13 +1677,14 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($)
+sub Process ($$)
 {
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
+    my $buildname = shift;
 
-    my $processor = new Prettify ($basename);
+    my $processor = new Prettify ($basename, $buildname);
 
     my $input = new FileHandle ($filename, 'r');
 

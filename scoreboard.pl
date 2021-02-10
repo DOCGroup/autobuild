@@ -539,7 +539,7 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename");
+                Prettify::Process ("$directory/$buildname/$filename", $buildname);
             }
         }
     }
@@ -653,7 +653,7 @@ sub local_update_cache ($)
             if ( -e $file . "_Totals.html" ) {next;}
             if ( $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt");
+                Prettify::Process ("$file.txt", $buildname);
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
