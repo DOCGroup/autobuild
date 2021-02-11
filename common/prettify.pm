@@ -381,6 +381,7 @@ sub new ($)
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{TITLE} = "Failed Test Brief Log";
+    $self->{GIT_CHECKEDOUT_OPENDDS} = "unknown";
 
     unless (-e $filename) {
         my $file_handle = new FileHandle ($filename, 'w');
@@ -466,9 +467,11 @@ sub Print_Sections ()
 
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
         if (defined $self->{BUILDNAME}) {
-            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2><hr>\n";
+            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
+            print {$self->{FH}} "Rev: $self->{GIT_CHECKEDOUT_OPENDDS}<hr>\n";
             $self->{BUILDNAME} = undef;
         }
+
         print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";
         print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>\n";
         $self->{LAST_SUBSECTION} = undef;
@@ -1067,7 +1070,7 @@ sub new ($)
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename), #Must be 2
             new Prettify::Config_HTML ($basename), #Must be 3
-            new Prettify::Failed_Tests_HTML ($basename, $buildname),
+            new Prettify::Failed_Tests_HTML ($basename, $buildname), #Must be 4
         );
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1283,6 +1286,7 @@ sub Setup_Handler ($)
     }
 
     my $totals= (@{$self->{OUTPUT}})[2];
+    my $failed_test= (@{$self->{OUTPUT}})[4];
 
     if ($s =~ m/Executing: (?:.*\/)?cvs(?:.exe)? /i) ## Prismtech still use some CVS please leave
     {
@@ -1414,6 +1418,7 @@ sub Setup_Handler ($)
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_OPENDDS} = $sha;
+        $failed_test->{GIT_CHECKEDOUT_OPENDDS} = $sha;
       }
       $self->Output_Normal ($s);
     }
@@ -1488,6 +1493,7 @@ sub Config_Handler ($)
     $outputs[3]->Normal($s, $state);
 
     my $totals= (@{$self->{OUTPUT}})[2];
+    my $failed_tests= (@{$self->{OUTPUT}})[4];
 
     if ($s =~ m/SVN_REVISION(_(\d))?=(\d+)/)
     {
@@ -1544,6 +1550,7 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+            $failed_tests->{GIT_CHECKEDOUT_OPENDDS} = $revision;
         }
     }
     elsif ($s =~ m/GIT_COMMIT=(.+)/)
