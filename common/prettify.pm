@@ -468,7 +468,8 @@ sub Print_Sections ()
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
         if (defined $self->{BUILDNAME}) {
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
-            print {$self->{FH}} "Rev: $self->{GIT_CHECKEDOUT_OPENDDS}<hr>\n";
+            my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
+            print {$self->{FH}} "Rev: $rev<hr>\n";
             $self->{BUILDNAME} = undef;
         }
 

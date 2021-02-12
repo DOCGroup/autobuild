@@ -151,6 +151,7 @@ sub build_index_page ($$)
 
     ### Print timestamp
 
+    print $indexhtml "<br><a href=\"Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
@@ -1138,6 +1139,7 @@ sub update_html ($$$)
 
     ### Print timestamp
 
+    print $indexhtml "<br><a href=\"Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
