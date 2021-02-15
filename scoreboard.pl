@@ -829,6 +829,11 @@ sub clean_cache ($)
             }
         }
     }
+
+    my $failed_tests = $directory . "/Failed_Tests.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
 }
 
 sub numerically { $a <=> $b }
