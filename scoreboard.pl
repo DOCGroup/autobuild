@@ -568,6 +568,11 @@ sub local_update_cache ($)
         return;
     }
 
+    my $failed_tests = $directory . "/Failed_Tests.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
     foreach my $buildname (keys %builds) {
         my $keep = $keep_default;
         my @existing;
@@ -780,6 +785,11 @@ sub clean_cache ($)
         return;
     }
 
+    my $failed_tests = $directory . "/Failed_Tests.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
     foreach my $buildname (keys %builds) {
         ### Do we use the local cache or do we work
         ### with the storage of the build itself?
@@ -828,11 +838,6 @@ sub clean_cache ($)
                 unlink $file . "_Config.html";
             }
         }
-    }
-
-    my $failed_tests = $directory . "/Failed_Tests.html";
-    if (-e $failed_tests) {
-        unlink $failed_tests;
     }
 }
 
