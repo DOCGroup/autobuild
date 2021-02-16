@@ -501,6 +501,9 @@ sub decode_timestamp ($)
 sub update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
+
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -540,9 +543,19 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename", $buildname);
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref);
             }
         }
+    }
+
+    my $failed_tests_by_test_file_name = $directory . "/Failed_Tests_By_Test.html";
+    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+    my $title = "Failed Test Brief Log By Test";
+    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
     }
 }
 
@@ -560,6 +573,8 @@ sub update_cache ($)
 sub local_update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -569,6 +584,11 @@ sub local_update_cache ($)
     }
 
     my $failed_tests = $directory . "/Failed_Tests.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -659,7 +679,7 @@ sub local_update_cache ($)
             if ( -e $file . "_Totals.html" ) {next;}
             if ( $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt", $buildname);
+                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref);
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
@@ -760,6 +780,16 @@ sub local_update_cache ($)
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
+
+    my $failed_tests_by_test_file_name = $directory . "/Failed_Tests_By_Test.html";
+    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+    my $title = "Failed Test Brief Log By Test";
+    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
+    }
 }
 
 
@@ -786,6 +816,11 @@ sub clean_cache ($)
     }
 
     my $failed_tests = $directory . "/Failed_Tests.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }

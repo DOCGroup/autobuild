@@ -369,6 +369,7 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $buildname = shift;
+    my $failed_tests = shift;
 
     my $path = substr($basename, 0, index($basename, '/'));
     my $filename = $path . "/Failed_Tests.html";
@@ -382,6 +383,7 @@ sub new ($)
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{TITLE} = "Failed Test Brief Log";
     $self->{GIT_CHECKEDOUT_OPENDDS} = "unknown";
+    $self->{FAILED_TESTS} = $failed_tests;
 
     unless (-e $filename) {
         my $file_handle = new FileHandle ($filename, 'w');
@@ -391,6 +393,8 @@ sub new ($)
     $self->{FH} = new FileHandle ($filename, '>>');
     $self->{FILENAME} = $filename;
     $self->{BUILDNAME} = $buildname;
+    $self->{USE_BUILDNAME} = '';
+    $self->{CURRENT_SUBSECTION} = '';
 
     bless ($self, $class);
     return $self;
@@ -464,18 +468,29 @@ sub Subsection ($)
 sub Print_Sections ()
 {
     my $self = shift;
+    my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
 
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
-        if (defined $self->{BUILDNAME}) {
+        if (defined $self->{USE_BUILDNAME}) {
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
-            my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
             print {$self->{FH}} "Rev: $rev<hr>\n";
-            $self->{BUILDNAME} = undef;
+            $self->{USE_BUILDNAME} = undef;
+        }
+
+        if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\nRev: $rev<br><br>\n";
+        } 
+        else {
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\nRev: $rev<br><br>\n";
         }
 
         print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";
         print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>\n";
+
+        $self->{CURRENT_SUBSECTION} = $self->{LAST_SUBSECTION};
+
         $self->{LAST_SUBSECTION} = undef;
+
     }
 }
 
@@ -492,10 +507,17 @@ sub Error ($)
 
     $self->Print_Sections ();
 
-    print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
-    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
-                        . "\">Details</a>] </tt>";
-    print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    my $Err1 = "<a name=\"error_$counter\"></a>\n";
+    my $Err2 = "<tt>[<a href=\"$self->{FULLHTML}#error_$counter" . "\">Details</a>] </tt>";
+    my $Err3 = "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+
+    print {$self->{FH}} $Err1;
+    print {$self->{FH}} $Err2;
+    print {$self->{FH}} $Err3;
+
+    $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Err1;
+    $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Err2;
+    $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Err3;
 }
 
 sub Warning ($)
@@ -511,10 +533,18 @@ sub Warning ($)
 
     $self->Print_Sections ();
 
-    print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
-    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter"
-                        . "\">Details</a>] </tt>";
-    print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+    my $Warning1 = "<a name=\"warning_$counter\"></a>\n";
+    my $Warning2 = "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter" . "\">Details</a>] </tt>";
+    my $Warning3 = "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+
+    print {$self->{FH}} $Warning1;
+    print {$self->{FH}} $Warning2;
+    print {$self->{FH}} $Warning3;
+
+    $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Warning1;
+    $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Warning2;
+    $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Warning3;
+
 }
 
 sub Normal ($)
@@ -1036,19 +1066,21 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($)
+sub new ($$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
     my $self = {};
     my $basename = shift;
     my $buildname = shift;
+    my $failed_tests_ref = shift;
 
     # Initialize some variables
 
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
+    $self->{FAILED_TESTS} = $failed_tests_ref;
 
     # Initialize the hash table of handlers for each section
 
@@ -1071,7 +1103,7 @@ sub new ($)
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename), #Must be 2
             new Prettify::Config_HTML ($basename), #Must be 3
-            new Prettify::Failed_Tests_HTML ($basename, $buildname), #Must be 4
+            new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}), #Must be 4
         );
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1685,14 +1717,15 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($$)
+sub Process ($$$)
 {
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
     my $buildname = shift;
+    my $failed_tests_ref = shift;
 
-    my $processor = new Prettify ($basename, $buildname);
+    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref);
 
     my $input = new FileHandle ($filename, 'r');
 
