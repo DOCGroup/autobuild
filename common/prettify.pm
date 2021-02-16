@@ -484,18 +484,21 @@ sub Error ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
 
-    my $counter = ++$self->{ERROR_COUNTER};
+        # Escape any '<' or '>' signs
+        $s =~ s/</&lt;/g;
+        $s =~ s/>/&gt;/g;
 
-    $self->Print_Sections ();
+        my $counter = ++$self->{ERROR_COUNTER};
 
-    print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
-    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
-                        . "\">Details</a>] </tt>";
-    print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+        $self->Print_Sections ();
+
+        print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
+        print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
+                            . "\">Details</a>] </tt>";
+        print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    }
 }
 
 sub Warning ($)
@@ -503,18 +506,20 @@ sub Warning ($)
     my $self = shift;
     my $s = shift;
 
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
+        # Escape any '<' or '>' signs
+        $s =~ s/</&lt;/g;
+        $s =~ s/>/&gt;/g;
 
-    my $counter = ++$self->{WARNING_COUNTER};
+        my $counter = ++$self->{WARNING_COUNTER};
 
-    $self->Print_Sections ();
+        $self->Print_Sections ();
 
-    print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
-    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter"
-                        . "\">Details</a>] </tt>";
-    print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+        print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
+        print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter"
+                            . "\">Details</a>] </tt>";
+        print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+    }
 }
 
 sub Normal ($)
