@@ -540,7 +540,7 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename", $buildname);
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs);
             }
         }
     }
@@ -659,7 +659,7 @@ sub local_update_cache ($)
             if ( -e $file . "_Totals.html" ) {next;}
             if ( $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt", $buildname);
+                Prettify::Process ("$file.txt", $buildname, $use_build_logs);
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
@@ -1149,7 +1149,9 @@ sub update_html ($$$)
 
     ### Print timestamp
 
-    print $indexhtml "<br><a href=\"Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+    if (!$use_build_logs) {
+        print $indexhtml "<br><a href=\"Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+    }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer

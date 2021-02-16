@@ -1036,13 +1036,14 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($)
+sub new ($$$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
     my $self = {};
     my $basename = shift;
     my $buildname = shift;
+    my $skip_failed_test_logs = shift;
 
     # Initialize some variables
 
@@ -1071,8 +1072,11 @@ sub new ($)
             new Prettify::Brief_HTML ($basename),
             new Prettify::Totals_HTML ($basename), #Must be 2
             new Prettify::Config_HTML ($basename), #Must be 3
-            new Prettify::Failed_Tests_HTML ($basename, $buildname), #Must be 4
         );
+    
+    if (!$skip_failed_test_logs) {
+        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname); #Must be 4, if used
+    }
 
     my $junit = main::GetVariable ('junit_xml_output');
     if (defined $junit) {
@@ -1287,7 +1291,6 @@ sub Setup_Handler ($)
     }
 
     my $totals= (@{$self->{OUTPUT}})[2];
-    my $failed_test= (@{$self->{OUTPUT}})[4];
 
     if ($s =~ m/Executing: (?:.*\/)?cvs(?:.exe)? /i) ## Prismtech still use some CVS please leave
     {
@@ -1419,7 +1422,11 @@ sub Setup_Handler ($)
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_OPENDDS} = $sha;
-        $failed_test->{GIT_CHECKEDOUT_OPENDDS} = $sha;
+        if (exists ($self->{OUTPUT}[4]))
+        {
+            (@{$self->{OUTPUT}})[4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
+        }
+
       }
       $self->Output_Normal ($s);
     }
@@ -1494,7 +1501,6 @@ sub Config_Handler ($)
     $outputs[3]->Normal($s, $state);
 
     my $totals= (@{$self->{OUTPUT}})[2];
-    my $failed_tests= (@{$self->{OUTPUT}})[4];
 
     if ($s =~ m/SVN_REVISION(_(\d))?=(\d+)/)
     {
@@ -1551,7 +1557,10 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
-            $failed_tests->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+            if (exists ($self->{OUTPUT}[4]))
+            {
+                (@{$self->{OUTPUT}})[4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+            }
         }
     }
     elsif ($s =~ m/GIT_COMMIT=(.+)/)
@@ -1685,14 +1694,15 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($$)
+sub Process ($$$)
 {
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
     my $buildname = shift;
+    my $skip_failed_test_logs = shift;
 
-    my $processor = new Prettify ($basename, $buildname);
+    my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs);
 
     my $input = new FileHandle ($filename, 'r');
 
