@@ -399,21 +399,26 @@ sub new ($)
 sub Header ()
 {
     my $self = shift;
-    print {$self->{FH}} "<html>\n";
-    print {$self->{FH}} "<body bgcolor=\"white\">\n";
+
+    if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
+        print {$self->{FH}} "<html>\n";
+        print {$self->{FH}} "<body bgcolor=\"white\">\n";
+    }
 }
 
 sub Footer ()
 {
     my $self = shift;
 
-    # In the case where there was no errors or warnings, output a note
-    if ($self->{ERROR_COUNTER} == 0 && $self->{WARNING_COUNTER} == 0) {
-        print {$self->{FH}} "No Errors or Warnings detected<br>\n";
-    }
+    if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
+        # In the case where there was no errors or warnings, output a note
+        if ($self->{ERROR_COUNTER} == 0 && $self->{WARNING_COUNTER} == 0) {
+            print {$self->{FH}} "No Errors or Warnings detected<br>\n";
+        }
 
-    print {$self->{FH}} "</body>\n";
-    print {$self->{FH}} "</html>\n";
+        print {$self->{FH}} "</body>\n";
+        print {$self->{FH}} "</html>\n";
+    }
 }
 
 sub Section ($)
