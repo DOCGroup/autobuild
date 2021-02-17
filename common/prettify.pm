@@ -370,6 +370,7 @@ sub new ($)
     my $basename = shift;
     my $buildname = shift;
     my $failed_tests = shift;
+    my $rev_link = shift;
 
     my $path = substr($basename, 0, index($basename, '/'));
     my $filename = $path . "/Failed_Tests.html";
@@ -384,6 +385,7 @@ sub new ($)
     $self->{TITLE} = "Failed Test Brief Log";
     $self->{GIT_CHECKEDOUT_OPENDDS} = "unknown";
     $self->{FAILED_TESTS} = $failed_tests;
+    $self->{REV_LINK} = $rev_link;
 
     unless (-e $filename) {
         my $file_handle = new FileHandle ($filename, 'w');
@@ -473,19 +475,22 @@ sub Print_Sections ()
 {
     my $self = shift;
     my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
+    my $rev_link = "Rev: <a href=$self->{REV_LINK}>$rev</a><hr>\n";
 
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
         if (defined $self->{USE_BUILDNAME}) {
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
-            print {$self->{FH}} "Rev: $rev<hr>\n";
+            if ($rev ne "unknown") {
+                print {$self->{FH}} $rev_link;
+            }            
             $self->{USE_BUILDNAME} = undef;
         }
 
         if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
-            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\nRev: $rev<br><br>\n";
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_link<br><br>\n";
         } 
         else {
-            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\nRev: $rev<br><br>\n";
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_link<br><br>\n";
         }
 
         print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";
@@ -1073,7 +1078,7 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($$$$)
+sub new ($$$$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
@@ -1082,6 +1087,7 @@ sub new ($$$$)
     my $buildname = shift;
     my $failed_tests_ref = shift;
     my $skip_failed_test_logs = shift;
+    my $rev_link = shift;
 
     # Initialize some variables
 
@@ -1114,7 +1120,7 @@ sub new ($$$$)
         );
 
     if (!$skip_failed_test_logs) {
-        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}); #Must be 4, if used
+        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link); #Must be 4, if used
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1732,7 +1738,7 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($$$$)
+sub Process ($$$$$)
 {
     my $filename = shift;
     my $basename = $filename;
@@ -1740,8 +1746,9 @@ sub Process ($$$$)
     my $buildname = shift;
     my $failed_tests_ref = shift;
     my $skip_failed_test_logs = shift;
+    my $rev_link = shift;
 
-    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs);
+    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link);
 
     my $input = new FileHandle ($filename, 'r');
 
