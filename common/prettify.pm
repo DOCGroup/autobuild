@@ -474,7 +474,9 @@ sub Print_Sections ()
         if (defined $self->{BUILDNAME}) {
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
             my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
-            print {$self->{FH}} "Rev: $rev<hr>\n";
+            if ($rev ne "unknown") {
+                print {$self->{FH}} "Rev: <a href='https://github.com/objectcomputing/OpenDDS/commit/$rev' >$rev</a><hr>\n";
+            }
             $self->{BUILDNAME} = undef;
         }
 
