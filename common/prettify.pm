@@ -1714,9 +1714,9 @@ sub Process ($;$$$)
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
-    my $buildname = @_ ? shift : "";
-    my $skip_failed_test_logs = @_ ? shift : 1;
-    my $rev_link = @_ ? shift : "";
+    my $buildname = shift // "";
+    my $skip_failed_test_logs = shift // 1;
+    my $rev_link = shift // "";
 
     my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs, $rev_link);
 
