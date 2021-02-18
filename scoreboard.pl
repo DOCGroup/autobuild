@@ -149,9 +149,13 @@ sub build_index_page ($$)
     print $indexhtml "$preamble\n";
     print $indexhtml "\n<hr>\n";
 
-    ### Print timestamp
+    ### Failed Test Reports
 
-    print $indexhtml "<br><a href=\"" . $scoreboard_title . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+    my $prefix = $scoreboard_title;
+    $prefix=~s/ /_/g;
+    print $indexhtml "<br><a href=\"" . $prefix . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+ 
+    ### Print timestamp
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
@@ -588,7 +592,9 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/" . $scoreboard_title . "_Failed_Tests.html";
+    my $prefix = $scoreboard_title;
+    $prefix=~s/ /_/g;
+    my $failed_tests = $directory . "/" . $prefix . "_Failed_Tests.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -826,7 +832,9 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/" . $scoreboard_title . "_Failed_Tests.html";
+    my $prefix = $scoreboard_title;
+    $prefix=~s/ /_/g;
+    my $failed_tests = $directory . "/" . $prefix . "_Failed_Tests.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -1191,7 +1199,9 @@ sub update_html ($$$)
     ### Print timestamp
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $scoreboard_title . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+        my $prefix = $scoreboard_title;
+        $prefix=~s/ /_/g;
+        print $indexhtml "<br><a href=\"" . $prefix . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
     }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 

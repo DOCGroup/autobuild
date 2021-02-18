@@ -372,6 +372,7 @@ sub new ($)
     my $rev_link = shift;
     my $scoreboard_title = shift;
 
+    $scoreboard_title=~s/ /_/g;
     my $path = substr($basename, 0, index($basename, '/'));
     my $filename = $path . "/" . $scoreboard_title . "_Failed_Tests.html";
 
