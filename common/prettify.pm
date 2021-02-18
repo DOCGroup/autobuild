@@ -1738,15 +1738,15 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($$$$$)
+sub Process ($;$$$$)
 {
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
-    my $buildname = shift;
-    my $failed_tests_ref = shift;
-    my $skip_failed_test_logs = shift;
-    my $rev_link = shift;
+    my $buildname = shift // "";
+    my $failed_tests_ref = shift // {};
+    my $skip_failed_test_logs = shift // 1;
+    my $rev_link = shift // "";
 
     my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link);
 
