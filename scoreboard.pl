@@ -151,7 +151,7 @@ sub build_index_page ($$)
 
     ### Print timestamp
 
-    print $indexhtml "<br><a href=\"Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+    print $indexhtml "<br><a href=\"" . $scoreboard_title . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
@@ -560,7 +560,7 @@ sub update_cache ($)
                   my $url = $diffRoot . $diffRev;
                   $link = "<a href='$url' $linktarget>$diffRev</a>";
                 }
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link);
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link, $scoreboard_title);
             }
         }
     }
@@ -588,7 +588,7 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/Failed_Tests.html";
+    my $failed_tests = $directory . "/" . $scoreboard_title . "_Failed_Tests.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -700,7 +700,7 @@ sub local_update_cache ($)
                   $link = "<a href='$url' $linktarget>$diffRev</a>";
                 }
 
-                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link);
+                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link, $scoreboard_title);
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
@@ -826,7 +826,7 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/Failed_Tests.html";
+    my $failed_tests = $directory . "/" . $scoreboard_title . "_Failed_Tests.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -1191,7 +1191,7 @@ sub update_html ($$$)
     ### Print timestamp
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+        print $indexhtml "<br><a href=\"" . $scoreboard_title . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
     }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 

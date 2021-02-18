@@ -370,9 +370,10 @@ sub new ($)
     my $basename = shift;
     my $buildname = shift;
     my $rev_link = shift;
+    my $scoreboard_title = shift;
 
     my $path = substr($basename, 0, index($basename, '/'));
-    my $filename = $path . "/Failed_Tests.html";
+    my $filename = $path . "/" . $scoreboard_title . "_Failed_Tests.html";
 
     $basename =~ s/^.*\///;
 
@@ -1050,7 +1051,7 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($$$$$)
+sub new ($$$$$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
@@ -1059,6 +1060,7 @@ sub new ($$$$$)
     my $buildname = shift;
     my $skip_failed_test_logs = shift;
     my $rev_link = shift;
+    my $scoreboard_title = shift;
 
     # Initialize some variables
 
@@ -1090,7 +1092,7 @@ sub new ($$$$$)
         );
     
     if (!$skip_failed_test_logs) {
-        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $rev_link); #Must be 4, if used
+        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $rev_link, $scoreboard_title); #Must be 4, if used
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1709,7 +1711,7 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($;$$$)
+sub Process ($;$$$$)
 {
     my $filename = shift;
     my $basename = $filename;
@@ -1717,8 +1719,9 @@ sub Process ($;$$$)
     my $buildname = shift // "";
     my $skip_failed_test_logs = shift // 1;
     my $rev_link = shift // "";
+    my $scoreboard_title = shift // "";
 
-    my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs, $rev_link);
+    my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs, $rev_link, $scoreboard_title);
 
     my $input = new FileHandle ($filename, 'r');
 
