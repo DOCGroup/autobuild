@@ -370,11 +370,10 @@ sub new ($)
     my $basename = shift;
     my $buildname = shift;
     my $rev_link = shift;
-    my $scoreboard_title = shift;
+    my $log_prefix = shift;
 
-    $scoreboard_title=~s/ /_/g;
     my $path = substr($basename, 0, index($basename, '/'));
-    my $filename = $path . "/" . $scoreboard_title . "_Failed_Tests.html";
+    my $filename = $path . "/" . $log_prefix . "_Failed_Tests.html";
 
     $basename =~ s/^.*\///;
 
@@ -1061,7 +1060,7 @@ sub new ($$$$$$)
     my $buildname = shift;
     my $skip_failed_test_logs = shift;
     my $rev_link = shift;
-    my $scoreboard_title = shift;
+    my $log_prefix = shift;
 
     # Initialize some variables
 
@@ -1093,7 +1092,7 @@ sub new ($$$$$$)
         );
     
     if (!$skip_failed_test_logs) {
-        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $rev_link, $scoreboard_title); #Must be 4, if used
+        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $rev_link, $log_prefix); #Must be 4, if used
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1720,9 +1719,9 @@ sub Process ($;$$$$)
     my $buildname = shift // "";
     my $skip_failed_test_logs = shift // 1;
     my $rev_link = shift // "";
-    my $scoreboard_title = shift // "";
+    my $log_prefix = shift // "";
 
-    my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs, $rev_link, $scoreboard_title);
+    my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs, $rev_link, $log_prefix);
 
     my $input = new FileHandle ($filename, 'r');
 
