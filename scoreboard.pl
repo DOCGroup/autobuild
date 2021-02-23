@@ -679,8 +679,7 @@ sub local_update_cache ($)
         print "        in local_update_cache, post=$post\n" if $verbose;
 
         foreach my $file (@existing) {
-            if ( -e $file . "_Totals.html" ) {next;}
-            if ( $post == 1 ) {
+            if ( -e $file . "_Totals.html" || $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
 
                 my $diffRev = '';
