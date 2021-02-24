@@ -372,8 +372,7 @@ sub new ($)
     my $rev_link = shift;
     my $log_prefix = shift;
 
-    my $path = substr($basename, 0, index($basename, '/'));
-    my $filename = $path . "/" . $log_prefix . "_Failed_Tests.html";
+    my $filename = $log_prefix . "_Failed_Tests.html";
 
     $basename =~ s/^.*\///;
 

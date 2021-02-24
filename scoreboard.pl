@@ -563,7 +563,7 @@ sub update_cache ($)
                   my $url = $diffRoot . $diffRev;
                   $link = "<a href='$url' $linktarget>$diffRev</a>";
                 }
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link, $log_prefix);
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link, $directory . "/" . $log_prefix);
             }
         }
     }
@@ -702,7 +702,7 @@ sub local_update_cache ($)
                   $link = "<a href='$url' $linktarget>$diffRev</a>";
                 }
 
-                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link, $log_prefix);
+                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link, $directory . "/" . $log_prefix);
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
