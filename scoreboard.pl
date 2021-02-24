@@ -544,28 +544,6 @@ sub update_cache ($)
 
                 print "        Prettifying\n" if($verbose);
 
-                my $diffRev = '';
-                if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
-                    !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
-                }
-                elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
-                }
-                else {
-                    $diffRev = 'None';
-                }
-                my $diffRoot = $builds{$buildname}->{DIFFROOT};
-                my $linktarget = '';
-                if (defined $main::opt_n) {
-                    $linktarget = "target=\"_blank\""
-                }
-                my $link = '';
-                if (($diffRev !~ /None/) && ($diffRoot)) {
-                  my $url = $diffRoot . $diffRev;
-                  $link = "'$url' $linktarget";
-                }
-
                 Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
@@ -684,28 +662,6 @@ sub local_update_cache ($)
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" || $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
-
-                my $diffRev = '';
-                if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
-                    !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
-                }
-                elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
-                }
-                else {
-                    $diffRev = 'None';
-                }
-                my $diffRoot = $builds{$buildname}->{DIFFROOT};
-                my $linktarget = '';
-                if (defined $main::opt_n) {
-                    $linktarget = "target=\"_blank\""
-                }
-                my $link = '';
-                if (($diffRev !~ /None/) && ($diffRoot)) {
-                  my $url = $diffRoot . $diffRev;
-                  $link = "'$url' $linktarget";
-                }
 
                 Prettify::Process ("$file.txt", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
                 $updated++;
