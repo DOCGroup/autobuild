@@ -371,13 +371,13 @@ sub new ($)
     my $buildname = shift;
     my $failed_tests = shift;
     my $rev_link = shift;
+    my $log_prefix = shift;
 
-    my $path = substr($basename, 0, index($basename, '/'));
-    my $filename = $path . "/Failed_Tests.html";
+    my $filename = $log_prefix . "_Failed_Tests.html";
 
     $basename =~ s/^.*\///;
 
-    $self->{FULLHTML} = $basename . "_Full.html";
+    $self->{FULLHTML} = "$buildname/$basename" . "_Full.html";
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
@@ -1078,7 +1078,7 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($$$$$)
+sub new ($$$$$$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
@@ -1088,6 +1088,7 @@ sub new ($$$$$)
     my $failed_tests_ref = shift;
     my $skip_failed_test_logs = shift;
     my $rev_link = shift;
+    my $log_prefix = shift;
 
     # Initialize some variables
 
@@ -1120,7 +1121,7 @@ sub new ($$$$$)
         );
 
     if (!$skip_failed_test_logs) {
-        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link); #Must be 4, if used
+        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be 4, if used
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1738,7 +1739,7 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($;$$$$)
+sub Process ($;$$$$$)
 {
     my $filename = shift;
     my $basename = $filename;
@@ -1747,8 +1748,9 @@ sub Process ($;$$$$)
     my $failed_tests_ref = shift // {};
     my $skip_failed_test_logs = shift // 1;
     my $rev_link = shift // "";
+    my $log_prefix = shift // "";
 
-    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link);
+    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix);
 
     my $input = new FileHandle ($filename, 'r');
 
