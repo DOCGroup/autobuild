@@ -152,7 +152,7 @@ sub build_index_page ($$)
     print $indexhtml "\n<hr>\n";
 
     ### Failed Test Reports
-    print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+    print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
  
     ### Print timestamp
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
@@ -566,7 +566,7 @@ sub update_cache ($)
                   $link = "'$url' $linktarget";
                 }
 
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link, "$directory/$log_prefix");
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
     }
@@ -594,7 +594,7 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests.html";
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -707,7 +707,7 @@ sub local_update_cache ($)
                   $link = "'$url' $linktarget";
                 }
 
-                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link, "$directory/$log_prefix");
+                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
@@ -833,7 +833,7 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests.html";
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -1198,7 +1198,7 @@ sub update_html ($$$)
     ### Print timestamp
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
     }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 

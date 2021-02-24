@@ -372,7 +372,7 @@ sub new ($)
     my $rev_link = shift;
     my $log_prefix = shift;
 
-    my $filename = $log_prefix . "_Failed_Tests.html";
+    my $filename = $log_prefix . "_Failed_Tests_By_Build.html";
 
     $basename =~ s/^.*\///;
 
@@ -381,7 +381,7 @@ sub new ($)
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
-    $self->{TITLE} = "Failed Test Brief Log";
+    $self->{TITLE} = "Failed Test Brief Log By Build";
     $self->{GIT_CHECKEDOUT_OPENDDS} = "unknown";
     $self->{REV_LINK} = $rev_link;
 
