@@ -376,7 +376,7 @@ sub new ($)
 
     $basename =~ s/^.*\///;
 
-    $self->{FULLHTML} = $basename . "_Full.html";
+    $self->{FULLHTML} = "$buildname/$basename" . "_Full.html";
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;

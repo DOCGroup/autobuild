@@ -549,21 +549,24 @@ sub update_cache ($)
                     !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
                     $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
                 }
+                elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
+                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
+                }
                 else {
                     $diffRev = 'None';
                 }
                 my $diffRoot = $builds{$buildname}->{DIFFROOT};
-                my $link = '';
                 my $linktarget = '';
                 if (defined $main::opt_n) {
                     $linktarget = "target=\"_blank\""
                 }
-                # If we have a diff revision, and a diffroot URL, create a link
+                my $link = '';
                 if (($diffRev !~ /None/) && ($diffRoot)) {
                   my $url = $diffRoot . $diffRev;
-                  $link = "<a href='$url' $linktarget>$diffRev</a>";
+                  $link = "'$url' $linktarget";
                 }
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link, $directory . "/" . $log_prefix);
+
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $link, "$directory/$log_prefix");
             }
         }
     }
@@ -687,22 +690,24 @@ sub local_update_cache ($)
                     !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
                     $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
                 }
+                elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
+                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
+                }
                 else {
                     $diffRev = 'None';
                 }
                 my $diffRoot = $builds{$buildname}->{DIFFROOT};
-                my $link = '';
                 my $linktarget = '';
                 if (defined $main::opt_n) {
                     $linktarget = "target=\"_blank\""
                 }
-                # If we have a diff revision, and a diffroot URL, create a link
+                my $link = '';
                 if (($diffRev !~ /None/) && ($diffRoot)) {
                   my $url = $diffRoot . $diffRev;
-                  $link = "<a href='$url' $linktarget>$diffRev</a>";
+                  $link = "'$url' $linktarget";
                 }
 
-                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link, $directory . "/" . $log_prefix);
+                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $link, "$directory/$log_prefix");
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
