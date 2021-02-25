@@ -83,6 +83,8 @@ our $use_build_logs = 0;
 
 our $custom_css = "";
 
+our $log_prefix = "";
+
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
 <A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
@@ -149,8 +151,10 @@ sub build_index_page ($$)
     print $indexhtml "$preamble\n";
     print $indexhtml "\n<hr>\n";
 
+    ### Failed Test Reports
+    print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+ 
     ### Print timestamp
-
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
@@ -539,7 +543,8 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename");
+
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
     }
@@ -565,6 +570,11 @@ sub local_update_cache ($)
     if (!-w $directory) {
         warn "Cannot write to $directory";
         return;
+    }
+
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
     }
 
     foreach my $buildname (keys %builds) {
@@ -650,10 +660,10 @@ sub local_update_cache ($)
         print "        in local_update_cache, post=$post\n" if $verbose;
 
         foreach my $file (@existing) {
-            if ( -e $file . "_Totals.html" ) {next;}
-            if ( $post == 1 ) {
+            if ( -e $file . "_Totals.html" || $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt");
+
+                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
@@ -777,6 +787,11 @@ sub clean_cache ($)
     if (!-w $directory) {
         warn "Cannot write to $directory";
         return;
+    }
+
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
     }
 
     foreach my $buildname (keys %builds) {
@@ -1138,6 +1153,9 @@ sub update_html ($$$)
 
     ### Print timestamp
 
+    if (!$use_build_logs) {
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+    }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
@@ -1787,6 +1805,7 @@ $inp_file = $opt_f;
 
 if (defined $opt_o) {
     $out_file = $opt_o;
+    ($log_prefix = $out_file) =~ s/\.[^.]+$//;
 }
 
 if (defined $opt_r) {
