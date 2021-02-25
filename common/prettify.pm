@@ -477,7 +477,17 @@ sub Print_Sections ()
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
             my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
             if ($rev ne "unknown") {
-                print {$self->{FH}} "Rev: <a href=$self->{REV_LINK}/$rev>$rev</a><hr>\n";
+                my $rev_line = "Rev: ";
+                if (length($self->{REV_LINK})) {
+                    $rev_line .= "<a href=$self->{REV_LINK}";
+                    $rev_line =~ s/\/$//g;
+                    $rev_line .= "/$rev>";
+                }
+                $rev_line .= $rev;
+                if (length($self->{REV_LINK})) {
+                    $rev_line .= "</a>";
+                }
+                print {$self->{FH}} "$rev_line<hr>\n";
             }
             $self->{BUILDNAME} = undef;
         }
