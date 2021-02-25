@@ -596,7 +596,7 @@ sub local_update_cache ($)
         unlink $failed_tests;
     }
 
-    $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -822,12 +822,12 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
 
-    $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
