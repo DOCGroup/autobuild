@@ -373,7 +373,7 @@ sub new ($)
     my $rev_link = shift;
     my $log_prefix = shift;
 
-    my $filename = $log_prefix . "_Failed_Tests.html";
+    my $filename = $log_prefix . "_Failed_Tests_By_Build.html";
 
     $basename =~ s/^.*\///;
 
@@ -382,7 +382,7 @@ sub new ($)
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
-    $self->{TITLE} = "Failed Test Brief Log";
+    $self->{TITLE} = "Failed Test Brief Log By Build";
     $self->{GIT_CHECKEDOUT_OPENDDS} = "unknown";
     $self->{FAILED_TESTS} = $failed_tests;
     $self->{REV_LINK} = $rev_link;
@@ -475,22 +475,34 @@ sub Print_Sections ()
 {
     my $self = shift;
     my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
-    my $rev_link = "Rev: <a href=$self->{REV_LINK}>$rev</a><hr>\n";
+    my $rev_line;
+    if ($rev ne "unknown") {
+        $rev_line = "Rev: ";
+        if (length($self->{REV_LINK})) {
+            $rev_line .= "<a href=$self->{REV_LINK}";
+            $rev_line =~ s/\/$//g;
+            $rev_line .= "/$rev>";
+        }
+        $rev_line .= $rev;
+        if (length($self->{REV_LINK})) {
+            $rev_line .= "</a>";
+        }
+    }
 
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
         if (defined $self->{USE_BUILDNAME}) {
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
             if ($rev ne "unknown") {
-                print {$self->{FH}} $rev_link;
+                print {$self->{FH}} "$rev_line<hr>\n";
             }            
             $self->{USE_BUILDNAME} = undef;
         }
 
         if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
-            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_link<br><br>\n";
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\$rev_line<br><br>\n";
         } 
         else {
-            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_link<br><br>\n";
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\$rev_line<br><br>\n";
         }
 
         print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";

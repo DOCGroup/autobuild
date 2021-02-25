@@ -154,7 +154,7 @@ sub build_index_page ($$)
     ### Failed Test Reports
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
         print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
     }
 
@@ -551,30 +551,8 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-
-                my $diffRev = '';
-                if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
-                    !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
-                }
-                elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
-                }
-                else {
-                    $diffRev = 'None';
-                }
-                my $diffRoot = $builds{$buildname}->{DIFFROOT};
-                my $linktarget = '';
-                if (defined $main::opt_n) {
-                    $linktarget = "target=\"_blank\""
-                }
-                my $link = '';
-                if (($diffRev !~ /None/) && ($diffRoot)) {
-                  my $url = $diffRoot . $diffRev;
-                  $link = "'$url' $linktarget";
-                }
                 
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $link, "$directory/$log_prefix");
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
     }
@@ -614,7 +592,7 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests.html";
+    my $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -709,30 +687,8 @@ sub local_update_cache ($)
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" || $post == 1 ) {
                 print "        Prettifying $file.txt\n" if($verbose);
-
-                my $diffRev = '';
-                if (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} &&
-                    !($builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS} =~ /None/)) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_OPENDDS};
-                }
-                elsif (defined $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE}) {
-                    $diffRev = $builds{$buildname}->{SUBVERSION_CHECKEDOUT_ACE};
-                }
-                else {
-                    $diffRev = 'None';
-                }
-                my $diffRoot = $builds{$buildname}->{DIFFROOT};
-                my $linktarget = '';
-                if (defined $main::opt_n) {
-                    $linktarget = "target=\"_blank\""
-                }
-                my $link = '';
-                if (($diffRev !~ /None/) && ($diffRoot)) {
-                  my $url = $diffRoot . $diffRev;
-                  $link = "'$url' $linktarget";
-                }
                 
-                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $link, "$directory/$log_prefix");
+                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
                 $updated++;
             } else {
                 # Create the triggerfile for the next time we run
@@ -868,7 +824,7 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests.html";
+    my $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -1238,7 +1194,7 @@ sub update_html ($$$)
     ### Print timestamp
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests.html\">Failed Test Brief Log</a><br>\n";
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
         print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
     }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
