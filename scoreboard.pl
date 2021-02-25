@@ -551,7 +551,6 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                
                 Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
@@ -592,12 +591,12 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Build.html";
+    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
 
-    $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+    $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -686,8 +685,7 @@ sub local_update_cache ($)
 
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" || $post == 1 ) {
-                print "        Prettifying $file.txt\n" if($verbose);
-                
+                print "        Prettifying $file.txt\n" if($verbose);                
                 Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
                 $updated++;
             } else {
@@ -824,12 +822,12 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Build.html";
+    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
 
-    $failed_tests = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+    $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }

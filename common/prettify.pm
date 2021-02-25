@@ -491,7 +491,7 @@ sub Print_Sections ()
 
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
         if (defined $self->{USE_BUILDNAME}) {
-            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
+            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>";
             if ($rev ne "unknown") {
                 print {$self->{FH}} "$rev_line\n";
             }            
@@ -499,19 +499,18 @@ sub Print_Sections ()
         }
 
         if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
-            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>\n";
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
         } 
         else {
-            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>\n";
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
         }
 
         print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";
-        print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>\n";
+        print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>";
 
         $self->{CURRENT_SUBSECTION} = $self->{LAST_SUBSECTION};
 
         $self->{LAST_SUBSECTION} = undef;
-
     }
 }
 
@@ -558,7 +557,7 @@ sub Warning ($)
         $self->Print_Sections ();
 
         my $Warning1 = "<a name=\"warning_$counter\"></a>\n";
-        my $Warning2 = "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter" . "\">Details</a>] </tt>";
+        my $Warning2 = "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter\">Details</a>] </tt>";
         my $Warning3 = "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
 
         print {$self->{FH}} $Warning1;
