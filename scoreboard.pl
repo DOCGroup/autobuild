@@ -796,7 +796,7 @@ sub local_update_cache ($)
     print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
 
     while (my ($k, $v) = each %failed_tests_by_test) {
-        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
         print {$failed_tests_by_test_file} "$v<br>\n";
     }
 }

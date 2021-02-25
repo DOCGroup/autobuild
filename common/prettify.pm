@@ -493,7 +493,7 @@ sub Print_Sections ()
         if (defined $self->{USE_BUILDNAME}) {
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
             if ($rev ne "unknown") {
-                print {$self->{FH}} "$rev_line<hr>\n";
+                print {$self->{FH}} "$rev_line\n";
             }            
             $self->{USE_BUILDNAME} = undef;
         }
