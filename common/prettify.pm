@@ -475,7 +475,7 @@ sub Print_Sections ()
 {
     my $self = shift;
     my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
-    my $rev_line;
+    my $rev_line = "";
     if ($rev ne "unknown") {
         $rev_line = "Rev: ";
         if (length($self->{REV_LINK})) {
@@ -1141,6 +1141,8 @@ sub new ($$$$$$$$)
     elsif (!$skip_failed_test_logs) {
         %{$self->{HANDLERS}} =
             (
+                'begin'     => \&Normal_Handler,
+                'setup'     => \&Setup_Handler,
                 'test'      => \&Test_Handler,
             );
 
