@@ -1109,6 +1109,10 @@ sub new ($$$$$$$$)
     $self->{LAST_DESCRIPTION} = '';
     $self->{FAILED_TESTS} = $failed_tests_ref;
     $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
+    
+    if ($failed_tests_only) {
+        $self->{TOTALS} = new Prettify::Totals_HTML ($basename);
+    }
 
     if (!$failed_tests_only) {
         # Initialize the hash table of handlers for each section
@@ -1143,6 +1147,7 @@ sub new ($$$$$$$$)
             (
                 'begin'     => \&Normal_Handler,
                 'setup'     => \&Setup_Handler,
+                'config'    => \&Config_Handler,
                 'test'      => \&Test_Handler,
             );
 
@@ -1364,7 +1369,7 @@ sub Setup_Handler ($)
         return;
     }
 
-    my $totals= (@{$self->{OUTPUT}})[2];
+    my $totals= $self->{FAILED_TESTS_ONLY} ? $self->{TOTALS} : (@{$self->{OUTPUT}})[2];
 
     if ($s =~ m/Executing: (?:.*\/)?cvs(?:.exe)? /i) ## Prismtech still use some CVS please leave
     {
@@ -1570,10 +1575,12 @@ sub Config_Handler ($)
     my $state = $self->{STATE};
 
     # We only want to output config stuff to the Config_HTML class (and FULL)
-    $outputs[0]->Normal($s, $state);
-    $outputs[3]->Normal($s, $state);
+    if (!$self->{FAILED_TESTS_ONLY}){
+        $outputs[0]->Normal($s, $state);
+        $outputs[3]->Normal($s, $state);
+    }
 
-    my $totals= (@{$self->{OUTPUT}})[2];
+    my $totals= $self->{FAILED_TESTS_ONLY} ? $self->{TOTALS} : (@{$self->{OUTPUT}})[2];
 
     if ($s =~ m/SVN_REVISION(_(\d))?=(\d+)/)
     {
