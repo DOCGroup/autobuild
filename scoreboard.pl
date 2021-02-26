@@ -152,9 +152,14 @@ sub build_index_page ($$)
     print $indexhtml "\n<hr>\n";
 
     ### Failed Test Reports
-    print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
- 
+
+    if (!$use_build_logs) {
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+    }
+
     ### Print timestamp
+
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
@@ -504,6 +509,9 @@ sub decode_timestamp ($)
 sub update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
+
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -543,10 +551,19 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
+    }
+
+    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+    my $title = "Failed Test Brief Log By Test";
+    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
     }
 }
 
@@ -564,6 +581,8 @@ sub update_cache ($)
 sub local_update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -572,7 +591,12 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -661,10 +685,12 @@ sub local_update_cache ($)
 
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" || $post == 1 ) {
-                print "        Prettifying $file.txt\n" if($verbose);
-
-                Prettify::Process ("$file.txt", $buildname, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
-                $updated++;
+                # skip scenario when Failed Test Log is not needed, and all other logs already exist
+                if (!($use_build_logs && (-e $file . "_Totals.html"))) { 
+                    print "        Prettifying $file.txt\n" if($verbose);                
+                    Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
+                    $updated++;
+                }
             } else {
                 # Create the triggerfile for the next time we run
                 open(FH, ">$triggerfile");
@@ -764,6 +790,16 @@ sub local_update_cache ($)
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
+
+    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+    my $title = "Failed Test Brief Log By Test";
+    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
+    }
 }
 
 
@@ -790,6 +826,11 @@ sub clean_cache ($)
     }
 
     my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
     if (-e $failed_tests) {
         unlink $failed_tests;
     }
@@ -1155,6 +1196,7 @@ sub update_html ($$$)
 
     if (!$use_build_logs) {
         print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
     }
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 

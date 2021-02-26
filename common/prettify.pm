@@ -369,6 +369,7 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $buildname = shift;
+    my $failed_tests = shift;
     my $rev_link = shift;
     my $log_prefix = shift;
 
@@ -383,6 +384,7 @@ sub new ($)
     $self->{SUBSECTION_COUNTER} = 0;
     $self->{TITLE} = "Failed Test Brief Log By Build";
     $self->{GIT_CHECKEDOUT_OPENDDS} = "unknown";
+    $self->{FAILED_TESTS} = $failed_tests;
     $self->{REV_LINK} = $rev_link;
 
     unless (-e $filename) {
@@ -393,6 +395,8 @@ sub new ($)
     $self->{FH} = new FileHandle ($filename, '>>');
     $self->{FILENAME} = $filename;
     $self->{BUILDNAME} = $buildname;
+    $self->{USE_BUILDNAME} = '';
+    $self->{CURRENT_SUBSECTION} = '';
 
     bless ($self, $class);
     return $self;
@@ -401,7 +405,6 @@ sub new ($)
 sub Header ()
 {
     my $self = shift;
-
     if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
         print {$self->{FH}} "<html>\n";
         print {$self->{FH}} "<body bgcolor=\"white\">\n";
@@ -471,29 +474,42 @@ sub Subsection ($)
 sub Print_Sections ()
 {
     my $self = shift;
+    my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
+    my $rev_line = "";
+    if ($rev ne "unknown") {
+        $rev_line = "Rev: ";
+        if (length($self->{REV_LINK})) {
+            $rev_line .= "<a href=$self->{REV_LINK}";
+            $rev_line =~ s/\/$//g;
+            $rev_line .= "/$rev>";
+        }
+        $rev_line .= $rev;
+        if (length($self->{REV_LINK})) {
+            $rev_line .= "</a>";
+        }
+    }
 
     if (defined $self->{LAST_SECTION} && defined $self->{LAST_SUBSECTION} && $self->{LAST_SECTION} eq 'Test') {
-        if (defined $self->{BUILDNAME}) {
-            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>\n";
-            my $rev = substr($self->{GIT_CHECKEDOUT_OPENDDS}, 0, 8);
+        if (defined $self->{USE_BUILDNAME}) {
+            print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>";
             if ($rev ne "unknown") {
-                my $rev_line = "Rev: ";
-                if (length($self->{REV_LINK})) {
-                    $rev_line .= "<a href=$self->{REV_LINK}";
-                    $rev_line =~ s/\/$//g;
-                    $rev_line .= "/$rev>";
-                }
-                $rev_line .= $rev;
-                if (length($self->{REV_LINK})) {
-                    $rev_line .= "</a>";
-                }
-                print {$self->{FH}} "$rev_line<hr>\n";
-            }
-            $self->{BUILDNAME} = undef;
+                print {$self->{FH}} "$rev_line\n";
+            }            
+            $self->{USE_BUILDNAME} = undef;
+        }
+
+        if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
+        } 
+        else {
+            $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
         }
 
         print {$self->{FH}} "<a name=\"subsection_$self->{SUBSECTION_COUNTER}\"></a>";
-        print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>\n";
+        print {$self->{FH}} "<h3>$self->{LAST_SUBSECTION}</h3>";
+
+        $self->{CURRENT_SUBSECTION} = $self->{LAST_SUBSECTION};
+
         $self->{LAST_SUBSECTION} = undef;
     }
 }
@@ -504,7 +520,6 @@ sub Error ($)
     my $s = shift;
 
     if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
-
         # Escape any '<' or '>' signs
         $s =~ s/</&lt;/g;
         $s =~ s/>/&gt;/g;
@@ -513,10 +528,17 @@ sub Error ($)
 
         $self->Print_Sections ();
 
-        print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
-        print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
-                            . "\">Details</a>] </tt>";
-        print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+        my $Err1 = "<a name=\"error_$counter\"></a>\n";
+        my $Err2 = "<tt>[<a href=\"$self->{FULLHTML}#error_$counter" . "\">Details</a>] </tt>";
+        my $Err3 = "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+
+        print {$self->{FH}} $Err1;
+        print {$self->{FH}} $Err2;
+        print {$self->{FH}} $Err3;
+
+        $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Err1;
+        $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Err2;
+        $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Err3;
     }
 }
 
@@ -534,10 +556,17 @@ sub Warning ($)
 
         $self->Print_Sections ();
 
-        print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
-        print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter"
-                            . "\">Details</a>] </tt>";
-        print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+        my $Warning1 = "<a name=\"warning_$counter\"></a>\n";
+        my $Warning2 = "<tt>[<a href=\"$self->{FULLHTML}#warning_$counter\">Details</a>] </tt>";
+        my $Warning3 = "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
+
+        print {$self->{FH}} $Warning1;
+        print {$self->{FH}} $Warning2;
+        print {$self->{FH}} $Warning3;
+
+        $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Warning1;
+        $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Warning2;
+        $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{CURRENT_SUBSECTION}} . $Warning3;
     }
 }
 
@@ -1060,48 +1089,72 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($$$$$$)
+sub new ($$$$$$$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
     my $self = {};
     my $basename = shift;
     my $buildname = shift;
+    my $failed_tests_ref = shift;
     my $skip_failed_test_logs = shift;
     my $rev_link = shift;
     my $log_prefix = shift;
+    my $failed_tests_only = shift;
 
     # Initialize some variables
 
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
-
-    # Initialize the hash table of handlers for each section
-
-    %{$self->{HANDLERS}} =
-        (
-            'begin'     => \&Normal_Handler,
-            'setup'     => \&Setup_Handler,
-            'config'    => \&Config_Handler,
-            'configure' => \&Autoconf_Handler,
-            'compile'   => \&Compile_Handler,
-            'test'      => \&Test_Handler,
-            'end'       => \&Normal_Handler
-        );
-
-    # Initialize the list of output classes
-
-    @{$self->{OUTPUT}} =
-        (
-            new Prettify::Full_HTML ($basename),   #Must be 0
-            new Prettify::Brief_HTML ($basename),
-            new Prettify::Totals_HTML ($basename), #Must be 2
-            new Prettify::Config_HTML ($basename), #Must be 3
-        );
+    $self->{FAILED_TESTS} = $failed_tests_ref;
+    $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
     
-    if (!$skip_failed_test_logs) {
-        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $rev_link, $log_prefix); #Must be 4, if used
+    if ($failed_tests_only) {
+        $self->{TOTALS} = new Prettify::Totals_HTML ($basename);
+    }
+
+    if (!$failed_tests_only) {
+        # Initialize the hash table of handlers for each section
+
+        %{$self->{HANDLERS}} =
+            (
+                'begin'     => \&Normal_Handler,
+                'setup'     => \&Setup_Handler,
+                'config'    => \&Config_Handler,
+                'configure' => \&Autoconf_Handler,
+                'compile'   => \&Compile_Handler,
+                'test'      => \&Test_Handler,
+                'end'       => \&Normal_Handler
+            );
+
+        # Initialize the list of output classes
+
+        @{$self->{OUTPUT}} =
+            (
+                new Prettify::Full_HTML ($basename),   #Must be at 0
+                new Prettify::Brief_HTML ($basename),
+                new Prettify::Totals_HTML ($basename), #Must be at 2
+                new Prettify::Config_HTML ($basename), #Must be at 3
+            );
+    
+        if (!$skip_failed_test_logs) {
+            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
+        }
+    }
+    elsif (!$skip_failed_test_logs) {
+        %{$self->{HANDLERS}} =
+            (
+                'begin'     => \&Normal_Handler,
+                'setup'     => \&Setup_Handler,
+                'config'    => \&Config_Handler,
+                'test'      => \&Test_Handler,
+            );
+
+        @{$self->{OUTPUT}} =
+            (
+                new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix),
+            );
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1316,7 +1369,7 @@ sub Setup_Handler ($)
         return;
     }
 
-    my $totals= (@{$self->{OUTPUT}})[2];
+    my $totals= $self->{FAILED_TESTS_ONLY} ? $self->{TOTALS} : (@{$self->{OUTPUT}})[2];
 
     if ($s =~ m/Executing: (?:.*\/)?cvs(?:.exe)? /i) ## Prismtech still use some CVS please leave
     {
@@ -1448,11 +1501,10 @@ sub Setup_Handler ($)
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_OPENDDS} = $sha;
-        if (exists ($self->{OUTPUT}[4]))
+        if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
         {
-            (@{$self->{OUTPUT}})[4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
+            (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
-
       }
       $self->Output_Normal ($s);
     }
@@ -1523,10 +1575,12 @@ sub Config_Handler ($)
     my $state = $self->{STATE};
 
     # We only want to output config stuff to the Config_HTML class (and FULL)
-    $outputs[0]->Normal($s, $state);
-    $outputs[3]->Normal($s, $state);
+    if (!$self->{FAILED_TESTS_ONLY}){
+        $outputs[0]->Normal($s, $state);
+        $outputs[3]->Normal($s, $state);
+    }
 
-    my $totals= (@{$self->{OUTPUT}})[2];
+    my $totals= $self->{FAILED_TESTS_ONLY} ? $self->{TOTALS} : (@{$self->{OUTPUT}})[2];
 
     if ($s =~ m/SVN_REVISION(_(\d))?=(\d+)/)
     {
@@ -1583,9 +1637,9 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
-            if (exists ($self->{OUTPUT}[4]))
+            if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
             {
-                (@{$self->{OUTPUT}})[4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+                (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
             }
         }
     }
@@ -1720,17 +1774,19 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($;$$$$)
+sub Process ($;$$$$$$)
 {
     my $filename = shift;
     my $basename = $filename;
     $basename =~ s/\.txt$//;
     my $buildname = shift // "";
+    my $failed_tests_ref = shift // {};
     my $skip_failed_test_logs = shift // 1;
     my $rev_link = shift // "";
     my $log_prefix = shift // "";
+    my $failed_tests_only = shift // 0;
 
-    my $processor = new Prettify ($basename, $buildname, $skip_failed_test_logs, $rev_link, $log_prefix);
+    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix, $failed_tests_only);
 
     my $input = new FileHandle ($filename, 'r');
 
@@ -1744,12 +1800,14 @@ sub Process ($;$$$$)
     # notification if MAIL_ADMIN was specified in the XML config
     # file.
 
-    my @errors = $processor->BuildErrors();
-    my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
-    my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
-    if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
-    {
-        $processor->SendEmailNotification();
+    if (!$failed_tests_only) {
+        my @errors = $processor->BuildErrors();
+        my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
+        my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
+        if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
+        {
+            $processor->SendEmailNotification();
+        }
     }
 
     return $processor;
