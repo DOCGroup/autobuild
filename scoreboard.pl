@@ -685,9 +685,12 @@ sub local_update_cache ($)
 
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" || $post == 1 ) {
-                print "        Prettifying $file.txt\n" if($verbose);                
-                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
-                $updated++;
+                # skip scenario when Failed Test Log is not needed, and all other logs already exist
+                if (!($use_build_logs && (-e $file . "_Totals.html"))) { 
+                    print "        Prettifying $file.txt\n" if($verbose);                
+                    Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
+                    $updated++;
+                }
             } else {
                 # Create the triggerfile for the next time we run
                 open(FH, ">$triggerfile");

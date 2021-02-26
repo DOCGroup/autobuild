@@ -1089,7 +1089,7 @@ use FileHandle;
 
 ###############################################################################
 
-sub new ($$$$$$$)
+sub new ($$$$$$$$)
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
@@ -1100,6 +1100,7 @@ sub new ($$$$$$$)
     my $skip_failed_test_logs = shift;
     my $rev_link = shift;
     my $log_prefix = shift;
+    my $failed_tests_only = shift;
 
     # Initialize some variables
 
@@ -1107,32 +1108,46 @@ sub new ($$$$$$$)
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
     $self->{FAILED_TESTS} = $failed_tests_ref;
+    $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
 
-    # Initialize the hash table of handlers for each section
+    if (!$failed_tests_only) {
+        # Initialize the hash table of handlers for each section
 
-    %{$self->{HANDLERS}} =
-        (
-            'begin'     => \&Normal_Handler,
-            'setup'     => \&Setup_Handler,
-            'config'    => \&Config_Handler,
-            'configure' => \&Autoconf_Handler,
-            'compile'   => \&Compile_Handler,
-            'test'      => \&Test_Handler,
-            'end'       => \&Normal_Handler
-        );
+        %{$self->{HANDLERS}} =
+            (
+                'begin'     => \&Normal_Handler,
+                'setup'     => \&Setup_Handler,
+                'config'    => \&Config_Handler,
+                'configure' => \&Autoconf_Handler,
+                'compile'   => \&Compile_Handler,
+                'test'      => \&Test_Handler,
+                'end'       => \&Normal_Handler
+            );
 
-    # Initialize the list of output classes
+        # Initialize the list of output classes
 
-    @{$self->{OUTPUT}} =
-        (
-            new Prettify::Full_HTML ($basename),   #Must be 0
-            new Prettify::Brief_HTML ($basename),
-            new Prettify::Totals_HTML ($basename), #Must be 2
-            new Prettify::Config_HTML ($basename), #Must be 3
-        );
+        @{$self->{OUTPUT}} =
+            (
+                new Prettify::Full_HTML ($basename),   #Must be at 0
+                new Prettify::Brief_HTML ($basename),
+                new Prettify::Totals_HTML ($basename), #Must be at 2
+                new Prettify::Config_HTML ($basename), #Must be at 3
+            );
+    
+        if (!$skip_failed_test_logs) {
+            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
+        }
+    }
+    elsif (!$skip_failed_test_logs) {
+        %{$self->{HANDLERS}} =
+            (
+                'test'      => \&Test_Handler,
+            );
 
-    if (!$skip_failed_test_logs) {
-        push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be 4, if used
+        @{$self->{OUTPUT}} =
+            (
+                new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix),
+            );
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1479,9 +1494,9 @@ sub Setup_Handler ($)
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_OPENDDS} = $sha;
-        if (exists ($self->{OUTPUT}[4]))
+        if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
         {
-            (@{$self->{OUTPUT}})[4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
+            (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
       }
       $self->Output_Normal ($s);
@@ -1613,9 +1628,9 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
-            if (exists ($self->{OUTPUT}[4]))
+            if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
             {
-                (@{$self->{OUTPUT}})[4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+                (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
             }
         }
     }
@@ -1750,7 +1765,7 @@ sub BuildErrors ($)
 # In this function we process the log file line by line,
 # looking for errors.
 
-sub Process ($;$$$$$)
+sub Process ($;$$$$$$)
 {
     my $filename = shift;
     my $basename = $filename;
@@ -1760,8 +1775,9 @@ sub Process ($;$$$$$)
     my $skip_failed_test_logs = shift // 1;
     my $rev_link = shift // "";
     my $log_prefix = shift // "";
+    my $failed_tests_only = shift // 0;
 
-    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix);
+    my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix, $failed_tests_only);
 
     my $input = new FileHandle ($filename, 'r');
 
@@ -1775,12 +1791,14 @@ sub Process ($;$$$$$)
     # notification if MAIL_ADMIN was specified in the XML config
     # file.
 
-    my @errors = $processor->BuildErrors();
-    my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
-    my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
-    if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
-    {
-        $processor->SendEmailNotification();
+    if (!$failed_tests_only) {
+        my @errors = $processor->BuildErrors();
+        my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
+        my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
+        if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
+        {
+            $processor->SendEmailNotification();
+        }
     }
 
     return $processor;
