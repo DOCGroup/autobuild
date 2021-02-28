@@ -683,10 +683,25 @@ sub local_update_cache ($)
         }
         print "        in local_update_cache, post=$post\n" if $verbose;
 
+        # Get info from the latest build
+        my $file_name1 = "$directory/$buildname/latest.txt";
+        my $file_handle1 = new FileHandle ($file_name1, 'r');
+        my $latest_basename = "";
+        if (defined $file_handle1) {
+            while (<$file_handle1>) {
+                if ($_ =~ m/(...._.._.._.._..) /) {
+                     $latest_basename = $1;
+                }
+            }
+        }
+        undef $file_handle1;
+
         foreach my $file (@existing) {
             if ( -e $file . "_Totals.html" || $post == 1 ) {
                 # skip scenario when Failed Test Log is not needed, and all other logs already exist
-                if (!($use_build_logs && (-e $file . "_Totals.html"))) { 
+                if (!($use_build_logs && (-e $file . "_Totals.html"))) {
+                    # process only the latest text file if logs already exist
+                    next if ((-e $file . "_Totals.html") && !($latest_basename eq substr($file, -length($latest_basename))));
                     print "        Prettifying $file.txt\n" if($verbose);                
                     Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
                     $updated++;
