@@ -154,8 +154,15 @@ sub build_index_page ($$)
     ### Failed Test Reports
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
     }
 
     ### Print timestamp
@@ -1211,12 +1218,22 @@ sub update_html ($$$)
         update_html_table ($dir, $indexhtml, $group);
     }
 
-    ### Print timestamp
+    ### Failed Test Reports
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
     }
+
+    ### Print timestamp
+
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
