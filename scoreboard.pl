@@ -806,10 +806,14 @@ sub local_update_cache ($)
         }
     }
 
-    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
-    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
-    my $title = "Failed Test Brief Log By Test";
-    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+    my $size = keys %failed_tests_by_test;
+    my $failed_tests_by_test_file;
+    if ($size > 0) {
+        my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+        $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+        my $title = "Failed Test Brief Log By Test";
+        print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+    }
 
     while (my ($k, $v) = each %failed_tests_by_test) {
         print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
