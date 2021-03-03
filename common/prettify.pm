@@ -10,6 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
+use DateTime::Format::Strptime;
 
 ###############################################################################
 
@@ -685,38 +686,12 @@ sub Timestamp ($)
         return;
     }
 
-    if ($ts =~ /^([A-Z][a-z]+)\s+([A-Z][a-z]+)\s+([0-9]+)\s+([0-2][0-9]:[0-5][0-9]:[0-5][0-9])\s+([0-9]+)\s+UTC/)
-    {
-        my $month = $2;
-        my $day = $3;
-        my $time = $4;
-        my $year = $5;
+    my $parser = DateTime::Format::Strptime->new(
+      pattern => '%A %B %d %T %Y %Z',
+      on_error => 'croak',
+    );
 
-        $month = "01" if ($month eq "Jan");
-        $month = "02" if ($month eq "Feb");
-        $month = "03" if ($month eq "Mar");
-        $month = "04" if ($month eq "Apr");
-        $month = "05" if ($month eq "May");
-        $month = "06" if ($month eq "Jun");
-        $month = "07" if ($month eq "Jul");
-        $month = "08" if ($month eq "Aug");
-        $month = "09" if ($month eq "Sep");
-        $month = "10" if ($month eq "Oct");
-        $month = "11" if ($month eq "Nov");
-        $month = "12" if ($month eq "Dec");
-
-        $day = "01" if ($day eq "1");
-        $day = "02" if ($day eq "2");
-        $day = "03" if ($day eq "3");
-        $day = "04" if ($day eq "4");
-        $day = "05" if ($day eq "5");
-        $day = "06" if ($day eq "6");
-        $day = "07" if ($day eq "7");
-        $day = "08" if ($day eq "8");
-        $day = "09" if ($day eq "9");
-
-        $self->{TIMESTAMP} = "$year-$month-${day}T${time}Z";
-    }
+    $self->{TIMESTAMP} = $parser->parse_datetime($ts);
 }
 
 sub Subsection ($)
