@@ -154,8 +154,15 @@ sub build_index_page ($$)
     ### Failed Test Reports
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
     }
 
     ### Print timestamp
@@ -806,10 +813,14 @@ sub local_update_cache ($)
         }
     }
 
-    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
-    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
-    my $title = "Failed Test Brief Log By Test";
-    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+    my $size = keys %failed_tests_by_test;
+    my $failed_tests_by_test_file;
+    if ($size > 0) {
+        my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+        $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+        my $title = "Failed Test Brief Log By Test";
+        print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+    }
 
     while (my ($k, $v) = each %failed_tests_by_test) {
         print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
@@ -1207,12 +1218,22 @@ sub update_html ($$$)
         update_html_table ($dir, $indexhtml, $group);
     }
 
-    ### Print timestamp
+    ### Failed Test Reports
 
     if (!$use_build_logs) {
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
-        print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
     }
+
+    ### Print timestamp
+
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
 
     ### Print the Footer
