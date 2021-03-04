@@ -10,7 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
-use DateTime::Format::Strptime;
+use Time::Piece;
 
 ###############################################################################
 
@@ -686,12 +686,13 @@ sub Timestamp ($)
         return;
     }
 
-    my $parser = DateTime::Format::Strptime->new(
-      pattern => '%A %B %d %T %Y %Z',
-      on_error => 'croak',
-    );
+    # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
+    $ts =~ s/ UTC$//;
 
-    $self->{TIMESTAMP} = $parser->parse_datetime($ts);
+    Time::Piece->use_locale();
+    my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
+
+    $self->{TIMESTAMP} = $tp->datetime;
 }
 
 sub Subsection ($)
