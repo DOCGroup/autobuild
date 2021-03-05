@@ -676,7 +676,7 @@ sub Timestamp ($)
 
     # Grab the first valid timestamp from a test section and use that for our test suite
 
-    if (!(defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i))
+    unless (defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i)
     {
         return;
     }
