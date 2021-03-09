@@ -669,7 +669,7 @@ sub Description ($)
 {
 }
 
-sub Timestamp ($)
+sub Timestamp
 {
     my $self = shift;
     my $ts = shift;
