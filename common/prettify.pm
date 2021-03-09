@@ -10,6 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
+use Time::Piece;
 
 ###############################################################################
 
@@ -494,13 +495,13 @@ sub Print_Sections ()
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>";
             if ($rev ne "unknown") {
                 print {$self->{FH}} "$rev_line\n";
-            }            
+            }
             $self->{USE_BUILDNAME} = undef;
         }
 
         if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
             $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
-        } 
+        }
         else {
             $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
         }
@@ -622,7 +623,7 @@ sub Footer ()
     my $out = $self->{FH};
 
     my $indent = '  ';
-    print $out $indent, '<testsuite name="Autobuild_Tests" ';
+    print $out $indent, "<testsuite name=\"Autobuild_Tests\" timestamp=\"$self->{TIMESTAMP}\" ";
 
     my $numtests = @{$self->{TESTS}};
 
@@ -668,8 +669,30 @@ sub Description ($)
 {
 }
 
-sub Timestamp ($)
+sub Timestamp
 {
+    my $self = shift;
+    my $ts = shift;
+
+    # Grab the first valid timestamp from a test section and use that for our test suite
+
+    unless (defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i)
+    {
+        return;
+    }
+
+    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+    {
+        return;
+    }
+
+    # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
+    $ts =~ s/ UTC$//;
+
+    Time::Piece->use_locale();
+    my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
+
+    $self->{TIMESTAMP} = $tp->datetime;
 }
 
 sub Subsection ($)
@@ -1109,7 +1132,7 @@ sub new ($$$$$$$$)
     $self->{LAST_DESCRIPTION} = '';
     $self->{FAILED_TESTS} = $failed_tests_ref;
     $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
-    
+
     if ($failed_tests_only) {
         $self->{TOTALS} = new Prettify::Totals_HTML ($basename);
     }
@@ -1137,7 +1160,7 @@ sub new ($$$$$$$$)
                 new Prettify::Totals_HTML ($basename), #Must be at 2
                 new Prettify::Config_HTML ($basename), #Must be at 3
             );
-    
+
         if (!$skip_failed_test_logs) {
             push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
         }
