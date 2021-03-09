@@ -44,7 +44,7 @@ sub handle_compiler_output_line($) {
   # VC10 / MSBuild
   if ($s =~ /^\s*(?:\d+>)?Project "[^"]+" \(\d+\) is building "([^"]+)" \((\d+)\)/) {
     my ($prj, $seq) = ($1, $2);
-    $prj =~ /\\([^.\\]+)\.vcxproj$/;
+    $prj =~ /\\([^.\\]+)\.vcxproj(\.metaproj)?$/;
     $self->Output_Subsection ("$1 ($seq)");
     return;
   }
@@ -333,13 +333,7 @@ sub handle_compiler_output_line($) {
       $self->Output_Warning ($s);
       return;
     }
-    # It could also be part of a split line warning relating to
-    # mktemp/mkstemp
-    if (/mkstemp/) {
-      $self->Output_Normal ($s);
-      return;
-    }
-    # Definately an error
+    # Definitely an error
     $self->Output_Error ($s);
     return;
   }
@@ -578,7 +572,7 @@ sub handle_compiler_output_line($) {
   }
 
   if (($s =~ m/warning/i
-       && ($s !~ m/ warning\(s\)/ && $s !~ m/\-undefined warning/ && $s !~ m/-i[^\s]*warning/i && $s !~ m/-l[^\s]*warning/i && $s !~ m/[^\s]+warning+[^\s]/i) && $s !~ m/0 warnings/)
+       && ($s !~ m/ warning\(s\)/ && $s !~ m/\-undefined warning/ && $s !~ m/-i[^\s]*warning/i && $s !~ m/-l[^\s]*warning/i && $s !~ m/[^\s]+warning+[^\s]/i) && $s !~ m/0 warnings/ && $s !~ m/cmake\s+.*_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING/)
       || $s =~ m/info: /i
       || $s =~ m/^error \(future\)/i
       || $s =~ m/^.*\.(h|i|inl|hpp|ipp|cpp|java): /)

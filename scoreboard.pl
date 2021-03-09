@@ -18,6 +18,7 @@ use DirHandle;
 use English;
 use FileHandle;
 use File::Path;
+use File::Basename;
 use Getopt::Std;
 use LWP::UserAgent;
 use Time::Local;
@@ -63,7 +64,7 @@ my @nogroup;
 
 my $orange_default = 24; # 1 day old before orange coloured build.
 my $red_default = 48;    # 2 days old before red coloured build.
-my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possiably
+my $keep_default = 2;    # Scoreboard only uses the most recent build anyway (and possably
                          # the previous oldest copy during the scoreboard update time), for more
                          # consult the actual build machine where we store multiple builds.
 my $sched_file = "";
@@ -80,9 +81,13 @@ our $use_local = 0;
 
 our $use_build_logs = 0;
 
+our $custom_css = "";
+
+our $log_prefix = "";
+
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
-<A HREF=\"https://raw.githubusercontent.com/DOCGroup/autobuild/master/README\">
+<A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
 here</A>.\n";
 
 ###############################################################################
@@ -135,16 +140,30 @@ sub build_index_page ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE html>\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to DOCGroup Distributed Scoreboard</title>\n";
     print $indexhtml "</head>\n";
 
     ### Start body
 
-    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard\n</h1></center>\n<hr>\n";
+    print $indexhtml "<body bgcolor=white><center><h1>Welcome to DOCGroup Distributed Scoreboard\n</h1></center>\n<hr>\n";
     my $parser = new IndexParser;
     $parser->Parse ($index, \%builds);
     print $indexhtml "$preamble\n";
     print $indexhtml "\n<hr>\n";
+
+    ### Failed Test Reports
+
+    if (!$use_build_logs) {
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
+    }
 
     ### Print timestamp
 
@@ -423,7 +442,7 @@ sub load_web_latest ($)
 
     ### Check the address
 
-    if ($address =~ m/^http:\/\/[\w.]*(.*)/) {
+    if ($address =~ m/^(http|https):\/\/[\w.]*(.*)/) {
         $address .= '/latest.txt';
     }
     else {
@@ -497,6 +516,9 @@ sub decode_timestamp ($)
 sub update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
+
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -536,9 +558,19 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename");
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
+    }
+
+    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+    my $title = "Failed Test Brief Log By Test";
+    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
     }
 }
 
@@ -556,12 +588,24 @@ sub update_cache ($)
 sub local_update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
 
     print "Updating Local Cache\n" if ($verbose);
 
     if (!-w $directory) {
         warn "Cannot write to $directory";
         return;
+    }
+
+    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
     }
 
     foreach my $buildname (keys %builds) {
@@ -646,12 +690,29 @@ sub local_update_cache ($)
         }
         print "        in local_update_cache, post=$post\n" if $verbose;
 
+        # Get info from the latest build
+        my $file_name1 = "$directory/$buildname/latest.txt";
+        my $file_handle1 = new FileHandle ($file_name1, 'r');
+        my $latest_basename = "";
+        if (defined $file_handle1) {
+            while (<$file_handle1>) {
+                if ($_ =~ m/(...._.._.._.._..) /) {
+                     $latest_basename = $1;
+                }
+            }
+        }
+        undef $file_handle1;
+
         foreach my $file (@existing) {
-            if ( -e $file . "_Totals.html" ) {next;}
-            if ( $post == 1 ) {
-                print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt");
-                $updated++;
+            if ( -e $file . "_Totals.html" || $post == 1 ) {
+                # skip scenario when Failed Test Log is not needed, and all other logs already exist
+                if (!($use_build_logs && (-e $file . "_Totals.html"))) {
+                    # process only the latest text file if logs already exist
+                    next if ((-e $file . "_Totals.html") && !($latest_basename eq substr($file, -length($latest_basename))));
+                    print "        Prettifying $file.txt\n" if($verbose);                
+                    Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
+                    $updated++;
+                }
             } else {
                 # Create the triggerfile for the next time we run
                 open(FH, ">$triggerfile");
@@ -751,6 +812,20 @@ sub local_update_cache ($)
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
+
+    my $size = keys %failed_tests_by_test;
+    my $failed_tests_by_test_file;
+    if ($size > 0) {
+        my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+        $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+        my $title = "Failed Test Brief Log By Test";
+        print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+    }
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
+    }
 }
 
 
@@ -774,6 +849,16 @@ sub clean_cache ($)
     if (!-w $directory) {
         warn "Cannot write to $directory";
         return;
+    }
+
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
     }
 
     foreach my $buildname (keys %builds) {
@@ -1097,19 +1182,23 @@ sub update_html ($$$)
     print $indexhtml "<!DOCTYPE html>\n";
     print $indexhtml "<html>\n<head>\n<title>$scoreboard_title</title>\n";
     print $indexhtml "<style>\n";
-    print $indexhtml "table { border-collapse: collapse; }\n";
-    print $indexhtml "th { background: #ddd; }\n";
-    print $indexhtml "td { padding: inherit 5px; }\n";
-    print $indexhtml ".name { min-width: 400px; }\n";
-    print $indexhtml ".time { min-width: 105px; }\n";
-    print $indexhtml ".rev { min-width: 70px; }\n";
-    print $indexhtml ".fullbrief { min-width: 85px; }\n";
-    print $indexhtml ".status { min-width: 50px; }\n";
-    print $indexhtml ".new { font-weight: bold; }\n";
-    print $indexhtml ".normal { background: white; }\n";
-    print $indexhtml ".warning { background: orange; }\n";
-    print $indexhtml ".late { background: red; }\n";
-    print $indexhtml ".disabled { background: gray; }\n";
+    if (defined $main::opt_y) {
+        print $indexhtml $custom_css;
+    } else {
+        print $indexhtml "table { border-collapse: collapse; }\n";
+        print $indexhtml "th { background: #ddd; }\n";
+        print $indexhtml "td { padding: inherit 5px; }\n";
+        print $indexhtml ".name { min-width: 400px; }\n";
+        print $indexhtml ".time { min-width: 105px; }\n";
+        print $indexhtml ".rev { min-width: 70px; }\n";
+        print $indexhtml ".fullbrief { min-width: 85px; }\n";
+        print $indexhtml ".status { min-width: 50px; }\n";
+        print $indexhtml ".new { font-weight: bold; }\n";
+        print $indexhtml ".normal { background: white; }\n";
+        print $indexhtml ".warning { background: orange; }\n";
+        print $indexhtml ".late { background: red; }\n";
+        print $indexhtml ".disabled { background: gray; }\n";
+    }
     print $indexhtml "</style>\n";
 
     if ($rss_file ne "") {
@@ -1127,6 +1216,20 @@ sub update_html ($$$)
     update_html_table ($dir, $indexhtml, undef) if ($#nogroup >= 0);
     foreach my $group (sort keys %groups) {
         update_html_table ($dir, $indexhtml, $group);
+    }
+
+    ### Failed Test Reports
+
+    if (!$use_build_logs) {
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
     }
 
     ### Print timestamp
@@ -1167,6 +1270,7 @@ sub update_html_table ($$@)
     my $havesnapshot = 0;
     my $havehistory = 0;
     my $havesponsor = 0;
+    my $linktarget = "";
     my @builds;
 
     ### Table
@@ -1216,6 +1320,11 @@ sub update_html_table ($$@)
         }
     }
 
+    if (defined $main::opt_n) {
+        $linktarget = "target=\"_blank\""
+    }
+
+    print $indexhtml "<div class='buildtable'>\n";
     print $indexhtml "<table border=1>\n";
     print $indexhtml "<tr>\n";
     print $indexhtml "<th class='name'>Build Name</th><th class='time'>Last Finished</th>";
@@ -1239,7 +1348,7 @@ sub update_html_table ($$@)
         print $indexhtml '<tr><td>';
 
         if (defined $builds{$buildname}->{URL}) {
-            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/index.html\">" ;
+            print $indexhtml "<a href=\"".$builds{$buildname}->{URL} ."/index.html\" $linktarget>" ;
             print $indexhtml $buildname;
             print $indexhtml "</a> ";
         }
@@ -1296,7 +1405,7 @@ sub update_html_table ($$@)
             # If we have a diff revision, and a diffroot URL, show a link
             if (($diffRev !~ /None/) && ($diffRoot)) {
               my $url = $diffRoot . $diffRev;
-              my $link = "<a href='$url'>$diffRev</a>";
+              my $link = "<a href='$url' $linktarget>$diffRev</a>";
               print $indexhtml "<td class='$class'>&nbsp;$link&nbsp;</td>";
             } else {
               print $indexhtml "<td class='$class'>&nbsp;$diffRev&nbsp;</td>";
@@ -1304,7 +1413,7 @@ sub update_html_table ($$@)
 
             print $indexhtml '<td>';
             if (defined $builds{$buildname}->{CONFIG_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Config.html\">Config</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Config.html\" $linktarget>Config</a>] ";
             }
             else {
                 print $indexhtml "&nbsp;";
@@ -1313,22 +1422,26 @@ sub update_html_table ($$@)
             my $color;
             if (!defined $builds{$buildname}->{SETUP_SECTION}) {
                 $color = 'white';
+                $class = 'normal';
             }
             elsif ($builds{$buildname}->{SETUP_ERRORS} > 0) {
                 $color = 'red';
+                $class = 'error';
             }
             elsif ($builds{$buildname}->{SETUP_WARNINGS} > 0) {
                 $color = 'orange';
+                $class = 'warning';
             }
             else {
                 $color = 'lime';
+                $class = 'good';
             }
 
-            print $indexhtml "<td bgcolor=$color>";
+            print $indexhtml "<td bgcolor=$color class=\"$class\">";
             if (defined $builds{$buildname}->{SETUP_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\">Full</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\" $linktarget>Full</a>] ";
                 if ($builds{$buildname}->{SETUP_ERRORS} + $builds{$buildname}->{SETUP_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\">Brief</a>]";
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{SETUP_SECTION} . "\" $linktarget>Brief</a>]";
                 }
             }
             else {
@@ -1337,22 +1450,26 @@ sub update_html_table ($$@)
 
             if (!defined $builds{$buildname}->{COMPILE_SECTION}) {
                 $color = 'white';
+                $class = 'normal';
             }
             elsif ($builds{$buildname}->{COMPILE_ERRORS} > 0) {
                 $color = 'red';
+                $class = 'error';
             }
             elsif ($builds{$buildname}->{COMPILE_WARNINGS} > 0) {
                 $color = 'orange';
+                $class = 'warning';
             }
             else {
                 $color = 'lime';
+                $class = 'good';
             }
 
-            print $indexhtml "<td bgcolor=$color>";
+            print $indexhtml "<td bgcolor=$color class=\"$class\">";
             if (defined $builds{$buildname}->{COMPILE_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\">Full</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\" $linktarget>Full</a>] ";
                 if ($builds{$buildname}->{COMPILE_ERRORS} + $builds{$buildname}->{COMPILE_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\">Brief</a>]";
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{COMPILE_SECTION} . "\" $linktarget>Brief</a>]";
                 }
             }
             else {
@@ -1361,22 +1478,26 @@ sub update_html_table ($$@)
 
             if (!defined $builds{$buildname}->{TEST_SECTION}) {
                 $color = 'white';
+                $class = 'normal';
             }
             elsif ($builds{$buildname}->{TEST_ERRORS} > 0) {
                 $color = 'red';
+                $class = 'error';
             }
             elsif ($builds{$buildname}->{TEST_WARNINGS} > 0) {
                 $color = 'orange';
+                $class = 'warning';
             }
             else {
                 $color = 'lime';
+                $class = 'good';
             }
 
-            print $indexhtml "<TD bgcolor=$color>";
+            print $indexhtml "<TD bgcolor=$color class=\"$class\">";
             if (defined $builds{$buildname}->{TEST_SECTION}) {
-                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\">Full</a>] ";
+                print $indexhtml "[<a href=\"".$webfile."_Full.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\" $linktarget>Full</a>] ";
                 if ($builds{$buildname}->{TEST_ERRORS} + $builds{$buildname}->{TEST_WARNINGS} > 0) {
-                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\">Brief</a>]";
+                    print $indexhtml "[<a href=\"".$webfile."_Brief.html#section_" . $builds{$buildname}->{TEST_SECTION} . "\" $linktarget>Brief</a>]";
                 }
             }
             else {
@@ -1385,11 +1506,13 @@ sub update_html_table ($$@)
             if (defined $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS}) {
                 if ($builds{$buildname}->{SECTION_ERROR_SUBSECTIONS} > 0) {
                     $color = 'red';
+                    $class = 'error';
                 }
                 else {
                     $color = 'lime';
+                    $class = 'good';
                 }
-                print $indexhtml "<TD bgcolor=$color>";
+                print $indexhtml "<TD bgcolor=$color class=\"$class\">";
                 print $indexhtml $builds{$buildname}->{SECTION_ERROR_SUBSECTIONS};
             }
             else {
@@ -1412,7 +1535,7 @@ sub update_html_table ($$@)
             print $indexhtml "<td align=center>";
             if (defined $builds{$buildname}->{MANUAL_LINK}) {
                 print $indexhtml "<input type=\"button\" value=\"Start\" ";
-                print $indexhtml "onclikc=\"window.location.href='";
+                print $indexhtml "onclick=\"window.location.href='";
                 print $indexhtml $builds{$buildname}->{MANUAL_LINK};
                 print $indexhtml "'\">";
             }
@@ -1423,7 +1546,7 @@ sub update_html_table ($$@)
         if ($havestatus) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{STATUS}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "/status.txt\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "/status.txt\" $linktarget\>";
                 print $indexhtml $builds{$buildname}->{STATUS};
                 print $indexhtml "</a>";
             }
@@ -1435,7 +1558,7 @@ sub update_html_table ($$@)
         if ($havepdf) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{PDF}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PDF}, "\" $linktarget\>";
                 print $indexhtml "pdf</a>";
             }
             else {
@@ -1446,7 +1569,7 @@ sub update_html_table ($$@)
         if ($haveps) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{PS}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{PS}, "\" $linktarget\>";
                 print $indexhtml "ps</a>";
             }
             else {
@@ -1457,7 +1580,7 @@ sub update_html_table ($$@)
         if ($havehtml) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{HTML}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{HTML}, "\/index.html\" $linktarget\>";
                 print $indexhtml "html</a>";
             }
             else {
@@ -1468,7 +1591,7 @@ sub update_html_table ($$@)
         if ($havesnapshot) {
             print $indexhtml "<td>";
             if (defined $builds{$buildname}->{SNAPSHOT}) {
-                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\"\>";
+                print $indexhtml "<a href=\"", $builds{$buildname}->{URL}, "\/", $builds{$buildname}->{SNAPSHOT}, "\" $linktarget\>";
                 print $indexhtml "snapshot</a>";
             }
             else {
@@ -1494,7 +1617,7 @@ sub update_html_table ($$@)
             if (defined $builds{$buildname}->{FULL_HISTORY}) {
                 print $indexhtml "<a href=\"";
                 print $indexhtml "http:\/\/teststat.remedy.nl\/teststat\/builds\/", $buildname, ".html";
-                print $indexhtml "\">";
+                print $indexhtml "\" $linktarget>";
                 print $indexhtml "Full";
                 print $indexhtml "</a>";
                 print $indexhtml " ";
@@ -1502,7 +1625,7 @@ sub update_html_table ($$@)
             if (defined $builds{$buildname}->{CLEAN_HISTORY}) {
                 print $indexhtml "<a href=\"";
                 print $indexhtml "http:\/\/teststat.remedy.nl\/teststat\/builds\/clean_", $buildname, ".html";
-                print $indexhtml "\">";
+                print $indexhtml "\" $linktarget>";
                 print $indexhtml "Clean";
                 print $indexhtml "</a>";
             }
@@ -1512,6 +1635,7 @@ sub update_html_table ($$@)
         print $indexhtml "</tr>\n";
     }
     print $indexhtml "</table>\n";
+    print $indexhtml "</div>\n";
 }
 
 ## Eventually this should probably be shared code with autobuild.pl, but
@@ -1526,30 +1650,29 @@ sub GetVariable ($)
 ###############################################################################
 #
 # Reads lists of builds from different XML files and develops a
-# integrated scoreboard. This is in adition to the individual
-# scoreboards for ACE and TAO and CIAO seperately.  The names of xml files have
-# been hardcoded.
+# integrated scoreboard. This is in addition to the individual
+# scoreboards separately.  The names of the xml files have
+# to be passed with the -j commandline option
 #
-# Arguments:  $ - Output directory
+# Arguments:  $ - Output directory and comma separate list of input files
 #
 # Returns:    Nothing
 #
 ###############################################################################
-sub build_integrated_page ($)
+sub build_integrated_page ($$)
 {
     my $dir = shift;
+    my $filelist = shift;
 
     unlink ("$dir/temp.xml");
     print "Build Integrated page\n" if ($verbose);
 
-    my @file_list = ("ace",
-                     "ace_future",
-                     "tao",
-                     "tao_future",
-                     "misc",
-                     "ciao",
-                     "ciao_future",
-                     "dds");
+    if (!defined $filelist) {
+      print "Need to specify with -j a comma separated list of input files";
+      return;
+    }
+
+    my @file_list = split (',', $filelist);
 
     my $newfile = new FileHandle;
 
@@ -1561,17 +1684,14 @@ sub build_integrated_page ($)
     print $newfile "<INTEGRATED>\n";
     foreach my $file_list(@file_list) {
         my $file_handle = new FileHandle;
-        if ($file_list eq 'ace') {
-            print $newfile "<build_ace>\n";
-        } elsif ($file_list eq 'tao') {
-            print $newfile "<build_tao>\n";
-        } elsif ($file_list eq 'ciao') {
-            print $newfile "<build_ciao>\n";
-        } elsif ($file_list eq 'dds') {
-            print $newfile "<build_dds>\n";
-        }
+        # Get the filename without path and without extension
+        my $filename = fileparse($file_list, ".xml");
+        print $newfile "<build_$filename>\n";
 
-        $file_handle->open ("<configs/scoreboard/$file_list.xml");
+        unless ($file_handle->open ("<$file_list")) {
+          print "could not open file $file_list";
+          return;
+        }
         my @list = <$file_handle>;
         print $newfile @list;
         print $newfile "\n";
@@ -1605,15 +1725,15 @@ sub format_time
     my $use_long_format = shift;
 
     if ($use_local) {
-  my @tmp = localtime($time_in_secs);
+      my @tmp = localtime($time_in_secs);
         my $hour = int($tmp[2]);
         my $ampm = ($hour >= 12 ? 'pm' : 'am');
         if ($hour > 12) {
           $hour -= 12;
-  }
-  elsif ($hour == 0) {
-    $hour = 12;
-  }
+    }
+    elsif ($hour == 0) {
+      $hour = 12;
+    }
         my $year = int($tmp[5]) + 1900;
   if (defined $use_long_format && $use_long_format) {
       return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
@@ -1650,7 +1770,7 @@ sub get_time_str
 
 # Getopts
 #
-# You can do the followingt with this set os options.
+# You can do the following with this set os options.
 # 1. You can generate the index page for the scoreboard
 # 2. You can generate individual scoreboards for every subset ie. ace,
 #    ace_future, or whatever
@@ -1671,7 +1791,7 @@ sub get_time_str
 #     it in the directory pointed by -d option. The option -v is for
 #     verbose!
 #
-# 2: For generating individual html pagesyou can do this
+# 2: For generating individual html pages you can do this
 #
 #    $ ./scoreboard.pl -d [please see above for explanation]
 #                      -f [name and path of the XML file that needs
@@ -1681,14 +1801,14 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y $opt_n/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-x]\n",
-          "              [-k num_logs] [-b]\n";
+          "              [-k num_logs] [-b] [-j filelist] [-y file] [-n]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1705,13 +1825,16 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:x')
     print "    -k         number of logs to keep, default is $keep_default\n";
     print "    -x         'history' links generated\n";
     print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
+    print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
+    print "    -y         specify name of file with custom CSS styling";
+    print "    -n         generate build links that open in new tab/window";
     print "    All other options will be ignored  \n";
     exit (1);
 }
 
-my $index = "configs/scoreboard/index.xml";
-my $inp_file = "configs/scoreboard/ace.xml";
-my $out_file = "ace.html";
+my $index = "";
+my $inp_file = "";
+my $out_file = "";
 my $rss_file = "";
 my $dir = "html";
 
@@ -1745,9 +1868,14 @@ if (defined $opt_b) {
     $use_build_logs = 1;
 }
 
+if (defined $opt_y) {
+    open my $css_fh, '<', $opt_y or die "Can't open custom CSS file $opt_y";
+    read $css_fh, $custom_css, -s $css_fh;
+}
+
 if (defined $opt_z) {
 print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_integrated_page ($dir);
+build_integrated_page ($dir, $opt_j);
 exit (1);
 }
 
@@ -1755,6 +1883,7 @@ $inp_file = $opt_f;
 
 if (defined $opt_o) {
     $out_file = $opt_o;
+    ($log_prefix = $out_file) =~ s/\.[^.]+$//;
 }
 
 if (defined $opt_r) {
