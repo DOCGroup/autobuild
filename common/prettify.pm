@@ -588,6 +588,9 @@ use warnings;
 
 use FileHandle;
 
+use Sys::Hostname;
+use URI::URL;
+
 ###############################################################################
 
 sub new ($)
@@ -621,9 +624,18 @@ sub Footer ()
 {
     my $self = shift;
     my $out = $self->{FH};
+    my $host = hostname;
+    if (!defined $host) {
+        $host = 'localhost';
+    }
+    my $git_hash = main::GetVariable ('TRIGGERING_COMMIT');
+    if (!defined $git_hash) {
+        $git_hash = 'n/a';
+    }
+    my $log_file = new URI::URL(main::GetVariable ('log_root') . '/' . main::GetVariable ('log_file') . "_Full.html");
 
     my $indent = '  ';
-    print $out $indent, "<testsuite name=\"Autobuild_Tests\" timestamp=\"$self->{TIMESTAMP}\" ";
+    print $out $indent, "<testsuite hostname=\"$host\" name=\"Autobuild_Tests\" timestamp=\"$self->{TIMESTAMP}\" ";
 
     my $numtests = @{$self->{TESTS}};
 
@@ -638,6 +650,11 @@ sub Footer ()
     {
         print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\">\n";
     }
+
+    print $out $indent x 2, "<properties>\n";
+    print $out $indent x 3, "<property name=\"git_hash\" value=\"$git_hash\"/>\n";
+    print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
+    print $out $indent x 2, "</properties>\n";
 
     foreach my $test (@{$self->{TESTS}})
     {
