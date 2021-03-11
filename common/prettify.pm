@@ -494,13 +494,13 @@ sub Print_Sections ()
             print {$self->{FH}} "<hr><h2>$self->{BUILDNAME}</h2>";
             if ($rev ne "unknown") {
                 print {$self->{FH}} "$rev_line\n";
-            }            
+            }
             $self->{USE_BUILDNAME} = undef;
         }
 
         if (defined $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}}) {
             $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} . "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
-        } 
+        }
         else {
             $self->{FAILED_TESTS}->{$self->{LAST_SUBSECTION}} = "<h3>$self->{BUILDNAME}</h3>\n$rev_line<br><br>";
         }
@@ -634,20 +634,18 @@ sub Footer ()
     my $log_file = new URI::URL(main::GetVariable ('log_root') . '/' . main::GetVariable ('log_file') . "_Full.html");
 
     my $indent = '  ';
-    print $out $indent, '<testsuite hostname="$host" name="Autobuild_Tests" ';
+    print $out $indent, '<testsuite name="Autobuild_Tests" ';
 
     my $numtests = @{$self->{TESTS}};
 
-    if ($numtests == 0)
+    if ($numtests > 0)
     {
-        # Need to insert a dummy testcase to jenkins doesn't think there is
-        # a failure.
-        print $out 'tests="1">', "\n", $indent x 2,
-          '<testcase name="dummy_test"/>', "\n";
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$host\">\n";
     }
     else
     {
-        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\">\n";
+        # Insert a dummy testcase so jenkins doesn't think there is a failure.
+        print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
     }
 
     print $out $indent x 2, "<properties>\n";
@@ -1126,7 +1124,7 @@ sub new ($$$$$$$$)
     $self->{LAST_DESCRIPTION} = '';
     $self->{FAILED_TESTS} = $failed_tests_ref;
     $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
-    
+
     if ($failed_tests_only) {
         $self->{TOTALS} = new Prettify::Totals_HTML ($basename);
     }
@@ -1154,7 +1152,7 @@ sub new ($$$$$$$$)
                 new Prettify::Totals_HTML ($basename), #Must be at 2
                 new Prettify::Config_HTML ($basename), #Must be at 3
             );
-    
+
         if (!$skip_failed_test_logs) {
             push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
         }
