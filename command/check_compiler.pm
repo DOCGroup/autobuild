@@ -16,7 +16,9 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $self = {
+      'required_by_default' => 1,
+    };
 
     bless ($self, $class);
     return $self;

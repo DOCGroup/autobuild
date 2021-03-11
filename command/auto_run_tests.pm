@@ -9,6 +9,8 @@ use Cwd;
 use FileHandle;
 use File::Path;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -19,6 +21,7 @@ sub new
     my $self = {'internal_options' => {'-envmod' => \&Handle_Envmod,
                                       },
                 'substitute_vars_in_options' => 1,
+                'required_by_default' => 1,
                };
 
     bless ($self, $class);
@@ -178,9 +181,9 @@ sub Run ($)
         print "Running: $command\n";
     }
 
-    system ($command);
+    my $success = utility::run_command ($command);
     chdir $current_dir;
-    return 1;
+    return $success;
 }
 
 ##############################################################################

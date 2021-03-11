@@ -1240,7 +1240,7 @@ sub DealWithCommandTag ($$$$$\%)
   my $JOIN = ' ';
   my $SUBVARS = 2; ## use default, if 0 don't substitute, if 1 substitute.
   my $GROUP;
-  my $required = 0;
+  my $required;
 
   while (scalar @$PAIRS) {
     my $thisPAIR = shift (@$PAIRS);

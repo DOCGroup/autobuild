@@ -740,6 +740,15 @@ INPFILE: foreach my $file (@files) {
     my $CONTENTS  = $command->{CONTENTS};
     my $required  = $command->{REQUIRED};
 
+    if (!defined($required)) {
+      if (exists($command_table{$NAME}->{required_by_default})) {
+        $required = $command_table{$NAME}->{required_by_default};
+      }
+      else {
+        $required = 0;
+      }
+    }
+
     my $CMD = "Executing \"$NAME\" line";
     if (!defined $LINE_TO || $LINE_FROM == $LINE_TO) {
       $CMD .= " $LINE_FROM";
