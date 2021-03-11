@@ -689,7 +689,9 @@ sub Timestamp ($)
     # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
     $ts =~ s/ UTC$//;
 
-    Time::Piece->use_locale();
+    if (Time::Piece->can('use_locale')) {
+      Time::Piece->use_locale();
+    }
     my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
 
     $self->{TIMESTAMP} = $tp->datetime;
