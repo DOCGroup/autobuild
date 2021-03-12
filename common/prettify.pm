@@ -589,6 +589,7 @@ use FileHandle;
 
 use Sys::Hostname;
 use URI::URL;
+our @commits = ();
 
 ###############################################################################
 
@@ -627,17 +628,12 @@ sub Footer ()
     if (!defined $host) {
         $host = 'localhost';
     }
-    my $git_hash = main::GetVariable ('TRIGGERING_COMMIT');
-    if (!defined $git_hash) {
-        $git_hash = 'n/a';
-    }
-    my $log_file = new URI::URL(main::GetVariable ('log_root') . '/' . main::GetVariable ('log_file') . "_Full.html");
+    my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
 
     my $indent = '  ';
     print $out $indent, '<testsuite name="Autobuild_Tests" ';
 
     my $numtests = @{$self->{TESTS}};
-
     if ($numtests > 0)
     {
         print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$host\">\n";
@@ -649,7 +645,9 @@ sub Footer ()
     }
 
     print $out $indent x 2, "<properties>\n";
-    print $out $indent x 3, "<property name=\"git_hash\" value=\"$git_hash\"/>\n";
+    print $out $indent x 3, "<property name=\"commits\" value=\"";
+    foreach my $commit (@commits) { print $out '[' . $commit . ']'; }
+    print $out "\"/>\n";
     print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
     print $out $indent x 2, "</properties>\n";
 
@@ -1375,7 +1373,6 @@ sub Normal_Handler ($)
 
 sub Setup_Handler ($)
 {
-
     my $self = shift;
     my $s = shift;
     if (!defined $s)
@@ -1512,6 +1509,7 @@ sub Setup_Handler ($)
       if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
+        push(@Prettify::JUnit::commits, $sha . "(ACE)");
       }
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
@@ -1520,6 +1518,7 @@ sub Setup_Handler ($)
         {
             (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
+        push(@Prettify::JUnit::commits, $sha . "(OPENDDS)");
       }
       $self->Output_Normal ($s);
     }
