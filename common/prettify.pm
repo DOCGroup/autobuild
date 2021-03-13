@@ -588,7 +588,6 @@ use warnings;
 use FileHandle;
 
 use URI::URL;
-our @commits = ();
 
 ###############################################################################
 
@@ -621,48 +620,42 @@ sub Header ()
 
 sub Footer ()
 {
-    my $self = shift;
-    my $out = $self->{FH};
-    my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
+  my $self = shift;
+  my $out = $self->{FH};
+  my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
 
-    my $indent = '  ';
-    print $out $indent, '<testsuite name="Autobuild_Tests" ';
+  my $indent = '  ';
+  print $out $indent, '<testsuite name="Autobuild_Tests" ';
 
-    my $numtests = @{$self->{TESTS}};
-    if ($numtests > 0)
-    {
-        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
+  my $numtests = @{$self->{TESTS}};
+  if ($numtests > 0) {
+    print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
+  }
+  else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
+    print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
+  }
+
+  print $out $indent x 2, "<properties>\n";
+  print $out $indent x 3, "<property name=\"commits\" value=\"";
+  foreach my $commit (@Prettify::commits) { print $out '[' . $commit . ']'; }
+  print $out "\"/>\n";
+  print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
+  print $out $indent x 2, "</properties>\n";
+
+  foreach my $test (@{$self->{TESTS}}) {
+    my $error = $test->{ERROR} || '';
+    print $out $indent x 2,
+      "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
+      "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
+
+    if ($error ne "") {
+      print $out "<failure>\n",
+        $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
+        $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
     }
-    else
-    {
-        # Insert a dummy testcase so jenkins doesn't think there is a failure.
-        print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
-    }
+  }
 
-    print $out $indent x 2, "<properties>\n";
-    print $out $indent x 3, "<property name=\"commits\" value=\"";
-    foreach my $commit (@commits) { print $out '[' . $commit . ']'; }
-    print $out "\"/>\n";
-    print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
-    print $out $indent x 2, "</properties>\n";
-
-    foreach my $test (@{$self->{TESTS}})
-    {
-        my $error = $test->{ERROR} || '';
-
-        print $out $indent x 2,
-          "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
-          "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
-
-        if ($error ne "")
-        {
-            print $out "<failure>\n", $indent x 3,
-              "<![CDATA[$error]]></failure><system-out>\n", $indent x 3,
-              "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
-        }
-    }
-
-    print $out $indent, "</testsuite>\n</testsuites>\n";
+  print $out $indent, "</testsuite>\n</testsuites>\n";
 }
 
 sub Section ($)
@@ -1094,6 +1087,7 @@ use base qw(common::parse_compiler_output);
 use Data::Dumper;
 use File::Basename;
 use FileHandle;
+our @commits = ();
 
 ###############################################################################
 
@@ -1504,7 +1498,7 @@ sub Setup_Handler ($)
       if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
-        push(@Prettify::JUnit::commits, $sha . "(ACE)");
+        push(@commits, "ACE:" . $sha);
       }
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
@@ -1513,7 +1507,7 @@ sub Setup_Handler ($)
         {
             (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
-        push(@Prettify::JUnit::commits, $sha . "(OPENDDS)");
+        push(@commits, "OPENDDS:" . $sha);
       }
       $self->Output_Normal ($s);
     }
