@@ -587,7 +587,6 @@ use warnings;
 
 use FileHandle;
 
-use Sys::Hostname;
 use URI::URL;
 our @commits = ();
 
@@ -624,10 +623,6 @@ sub Footer ()
 {
     my $self = shift;
     my $out = $self->{FH};
-    my $host = hostname;
-    if (!defined $host) {
-        $host = 'localhost';
-    }
     my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
 
     my $indent = '  ';
@@ -636,7 +631,7 @@ sub Footer ()
     my $numtests = @{$self->{TESTS}};
     if ($numtests > 0)
     {
-        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$host\">\n";
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
     }
     else
     {
@@ -1921,6 +1916,8 @@ use strict;
 use warnings;
 
 use FileHandle;
+our $host = 'localhost';
+our $host_next = 0;
 
 sub new ($)
 {
@@ -1964,19 +1961,26 @@ sub Footer ()
 
 sub Normal ($)
 {
-    my $self = shift;
-    my $s = shift;
-    my $state = shift;
-    if (defined $state) {
-      $state = lc($state);
+  my $self = shift;
+  my $s = shift;
+  my $state = shift;
+  if (defined $state) {
+    $state = lc($state);
+  }
+  if (defined $state && $state eq 'config') {
+    if ($host eq 'localhost') {
+      if ($host_next == 1) {
+        $host = $s;
+      }
+      elsif ($s eq "<h3>Hostname</h3>") {
+        $host_next = 1;
+      }
     }
-
-    if (defined $state && $state eq 'config') {
-        $s =~ s/</&lt;/g;
-        $s =~ s/>/&gt;/g;
-        $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
-        print {$self->{FH}} "$s\n";
-    }
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+    $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
+    print {$self->{FH}} "$s\n";
+  }
 }
 
 sub Section ($)
