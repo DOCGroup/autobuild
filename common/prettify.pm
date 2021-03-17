@@ -629,7 +629,7 @@ sub Footer ()
 
   my $numtests = @{$self->{TESTS}};
   if ($numtests > 0) {
-    print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::host\">\n";
+    print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
   }
   else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
     print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
@@ -1087,7 +1087,6 @@ use base qw(common::parse_compiler_output);
 use Data::Dumper;
 use File::Basename;
 use FileHandle;
-our $host = 'localhost';
 our @commits = ();
 
 ###############################################################################
@@ -1772,21 +1771,6 @@ sub BuildErrors ($)
      return @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}};
 }
 
-sub get_host_from_log($)
-{
-  if ($host eq 'localhost') {
-    my $log = shift;
-    open(FILE, $log) or die "Can't open $log: $!";
-    my $bytes = 512;
-    my $s;
-    read(FILE, $s, $bytes);
-    if ($s =~ m/<h\d>Hostname<\/h\d>\n([^\n]+)\n/) {
-      $host = $1;
-    }
-    close(FILE);
-  }
-}
-
 ###############################################################################
 # Exposed subroutines
 #
@@ -1806,10 +1790,8 @@ sub Process ($;$$$$$$)
     my $failed_tests_only = shift // 0;
 
     my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix, $failed_tests_only);
-    get_host_from_log($filename);
 
     my $input = new FileHandle ($filename, 'r');
-
     while (<$input>) {
         chomp;
         $processor->Process_Line ($_);
@@ -1927,6 +1909,8 @@ use strict;
 use warnings;
 
 use FileHandle;
+our $host = 'localhost';
+my $host_next = 0;
 
 sub new ($)
 {
@@ -1977,6 +1961,14 @@ sub Normal ($)
     $state = lc($state);
   }
   if (defined $state && $state eq 'config') {
+    if ($host eq 'localhost') {
+      if ($host_next == 1) {
+        $host = $s;
+      }
+      elsif ($s eq "<h3>Hostname</h3>") {
+        $host_next = 1;
+      }
+    }
     $s =~ s/</&lt;/g;
     $s =~ s/>/&gt;/g;
     $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
