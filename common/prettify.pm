@@ -10,7 +10,6 @@ use warnings;
 
 use FileHandle;
 use Cwd;
-use Time::Piece;
 
 ###############################################################################
 
@@ -623,7 +622,11 @@ sub Footer ()
     my $out = $self->{FH};
 
     my $indent = '  ';
-    print $out $indent, "<testsuite name=\"Autobuild_Tests\" timestamp=\"$self->{TIMESTAMP}\" ";
+    print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
+    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+    {
+        print $out "timestamp=\"$self->{TIMESTAMP}\" ";
+    }
 
     my $numtests = @{$self->{TESTS}};
 
@@ -674,27 +677,31 @@ sub Timestamp ($)
     my $self = shift;
     my $ts = shift;
 
-    # Grab the first valid timestamp from a test section and use that for our test suite
+    eval {
+        require Time::Piece;
 
-    if (!(defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i))
-    {
-        return;
+        # Grab the first valid timestamp from a test section and use that for our test suite
+
+        if (!(defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i))
+        {
+            return;
+        }
+
+        if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+        {
+            return;
+        }
+
+        # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
+        $ts =~ s/ UTC$//;
+
+        if (Time::Piece->can('use_locale')) {
+            Time::Piece->use_locale();
+        }
+        my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
+
+        $self->{TIMESTAMP} = $tp->datetime;
     }
-
-    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
-    {
-        return;
-    }
-
-    # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
-    $ts =~ s/ UTC$//;
-
-    if (Time::Piece->can('use_locale')) {
-      Time::Piece->use_locale();
-    }
-    my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
-
-    $self->{TIMESTAMP} = $tp->datetime;
 }
 
 sub Subsection ($)
