@@ -625,7 +625,11 @@ sub Footer ()
   my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
 
   my $indent = '  ';
-  print $out $indent, '<testsuite name="Autobuild_Tests" ';
+  print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
+  if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+  {
+    print $out "timestamp=\"$self->{TIMESTAMP}\" ";
+  }
 
   my $numtests = @{$self->{TESTS}};
   if ($numtests > 0) {
@@ -671,6 +675,34 @@ sub Description ($)
 
 sub Timestamp ($)
 {
+    my $self = shift;
+    my $ts = shift;
+
+    eval {
+        require Time::Piece;
+
+        # Grab the first valid timestamp from a test section and use that for our test suite
+
+        if (!(defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i))
+        {
+            return;
+        }
+
+        if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+        {
+            return;
+        }
+
+        # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
+        $ts =~ s/ UTC$//;
+
+        if (Time::Piece->can('use_locale')) {
+            Time::Piece->use_locale();
+        }
+        my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
+
+        $self->{TIMESTAMP} = $tp->datetime;
+    }
 }
 
 sub Subsection ($)
