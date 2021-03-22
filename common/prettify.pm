@@ -10,6 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
+use Time::Piece;
 
 ###############################################################################
 
@@ -587,8 +588,6 @@ use warnings;
 
 use FileHandle;
 
-use URI::URL;
-
 ###############################################################################
 
 sub new ($)
@@ -620,46 +619,43 @@ sub Header ()
 
 sub Footer ()
 {
-  my $self = shift;
-  my $out = $self->{FH};
-  my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
+    my $self = shift;
+    my $out = $self->{FH};
 
-  my $indent = '  ';
-  print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
-  if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
-  {
-    print $out "timestamp=\"$self->{TIMESTAMP}\" ";
-  }
+    my $indent = '  ';
+    print $out $indent, "<testsuite name=\"Autobuild_Tests\" timestamp=\"$self->{TIMESTAMP}\" ";
 
-  my $numtests = @{$self->{TESTS}};
-  if ($numtests > 0) {
-    print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::host\">\n";
-  }
-  else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
-    print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
-  }
+    my $numtests = @{$self->{TESTS}};
 
-  print $out $indent x 2, "<properties>\n";
-  print $out $indent x 3, "<property name=\"commits\" value=\"";
-  foreach my $commit (@Prettify::commits) { print $out '[' . $commit . ']'; }
-  print $out "\"/>\n";
-  print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
-  print $out $indent x 2, "</properties>\n";
-
-  foreach my $test (@{$self->{TESTS}}) {
-    my $error = $test->{ERROR} || '';
-    print $out $indent x 2,
-      "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
-      "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
-
-    if ($error ne "") {
-      print $out "<failure>\n",
-        $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
-        $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+    if ($numtests == 0)
+    {
+        # Need to insert a dummy testcase to jenkins doesn't think there is
+        # a failure.
+        print $out 'tests="1">', "\n", $indent x 2,
+          '<testcase name="dummy_test"/>', "\n";
     }
-  }
+    else
+    {
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\">\n";
+    }
 
-  print $out $indent, "</testsuite>\n</testsuites>\n";
+    foreach my $test (@{$self->{TESTS}})
+    {
+        my $error = $test->{ERROR} || '';
+
+        print $out $indent x 2,
+          "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
+          "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
+
+        if ($error ne "")
+        {
+            print $out "<failure>\n", $indent x 3,
+              "<![CDATA[$error]]></failure><system-out>\n", $indent x 3,
+              "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+        }
+    }
+
+    print $out $indent, "</testsuite>\n</testsuites>\n";
 }
 
 sub Section ($)
@@ -673,36 +669,30 @@ sub Description ($)
 {
 }
 
-sub Timestamp ($)
+sub Timestamp
 {
     my $self = shift;
     my $ts = shift;
 
-    eval {
-        require Time::Piece;
+    # Grab the first valid timestamp from a test section and use that for our test suite
 
-        # Grab the first valid timestamp from a test section and use that for our test suite
-
-        if (!(defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i))
-        {
-            return;
-        }
-
-        if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
-        {
-            return;
-        }
-
-        # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
-        $ts =~ s/ UTC$//;
-
-        if (Time::Piece->can('use_locale')) {
-            Time::Piece->use_locale();
-        }
-        my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
-
-        $self->{TIMESTAMP} = $tp->datetime;
+    unless (defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i)
+    {
+        return;
     }
+
+    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+    {
+        return;
+    }
+
+    # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
+    $ts =~ s/ UTC$//;
+
+    Time::Piece->use_locale();
+    my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
+
+    $self->{TIMESTAMP} = $tp->datetime;
 }
 
 sub Subsection ($)
@@ -1119,8 +1109,6 @@ use base qw(common::parse_compiler_output);
 use Data::Dumper;
 use File::Basename;
 use FileHandle;
-our $host = 'localhost';
-our @commits = ();
 
 ###############################################################################
 
@@ -1395,6 +1383,7 @@ sub Normal_Handler ($)
 
 sub Setup_Handler ($)
 {
+
     my $self = shift;
     my $s = shift;
     if (!defined $s)
@@ -1531,7 +1520,6 @@ sub Setup_Handler ($)
       if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
-        push(@commits, "ACE:" . $sha);
       }
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
@@ -1540,7 +1528,6 @@ sub Setup_Handler ($)
         {
             (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
-        push(@commits, "OPENDDS:" . $sha);
       }
       $self->Output_Normal ($s);
     }
@@ -1804,21 +1791,6 @@ sub BuildErrors ($)
      return @{$self->{OUTPUT}[0]->{BUILD_ERROR_COUNTER}};
 }
 
-sub get_host_from_log($)
-{
-  if ($host eq 'localhost') {
-    my $log = shift;
-    open(FILE, $log) or die "Can't open $log: $!";
-    my $bytes = 512;
-    my $s;
-    read(FILE, $s, $bytes);
-    if ($s =~ m/<h\d>Hostname<\/h\d>\n([^\n]+)\n/) {
-      $host = $1;
-    }
-    close(FILE);
-  }
-}
-
 ###############################################################################
 # Exposed subroutines
 #
@@ -1838,7 +1810,6 @@ sub Process ($;$$$$$$)
     my $failed_tests_only = shift // 0;
 
     my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix, $failed_tests_only);
-    get_host_from_log($filename);
 
     my $input = new FileHandle ($filename, 'r');
 
@@ -2002,18 +1973,19 @@ sub Footer ()
 
 sub Normal ($)
 {
-  my $self = shift;
-  my $s = shift;
-  my $state = shift;
-  if (defined $state) {
-    $state = lc($state);
-  }
-  if (defined $state && $state eq 'config') {
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
-    $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
-    print {$self->{FH}} "$s\n";
-  }
+    my $self = shift;
+    my $s = shift;
+    my $state = shift;
+    if (defined $state) {
+      $state = lc($state);
+    }
+
+    if (defined $state && $state eq 'config') {
+        $s =~ s/</&lt;/g;
+        $s =~ s/>/&gt;/g;
+        $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
+        print {$self->{FH}} "$s\n";
+    }
 }
 
 sub Section ($)
