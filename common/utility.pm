@@ -2,7 +2,8 @@ use strict;
 
 package utility;
 
-# Run command, returns 0 if there was an error
+# Run command, returns 0 if there was an error. If the second argument is
+# passed and is true, then it always returns 1.
 sub run_command ($;$) {
     my $command = shift;
     my $ignore_failure = shift;
@@ -18,8 +19,9 @@ sub run_command ($;$) {
         }
         elsif ($signal) {
             $error_message = sprintf ("Exited on Signal %d, %s coredump",
-                ($signal), ($? & 128) ? 'with' : 'without');
-        } else {
+                $signal, ($? & 128) ? 'with' : 'without');
+        }
+        else {
             $error_message = sprintf ("Returned %d", $? >> 8);
         }
         print STDERR "Command \"$command\" $error_message\n";
