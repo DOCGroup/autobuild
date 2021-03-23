@@ -710,13 +710,13 @@ sub local_update_cache ($)
         undef $file_handle1;
 
         foreach my $file (@existing) {
-          my $logs_exist = (-e $file . "_Totals.html");
-          if (!$logs_exist || (!$use_build_logs && ($latest_basename eq substr($file, -length($latest_basename))))) {
-            # process only the latest text file if logs already exist
-            print "        Prettifying $file.txt\n" if($verbose);
-            Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", $logs_exist);
-            $updated++;
-          }
+            my $logs_exist = (-e $file . "_Totals.html");
+            if (!$logs_exist || (!$use_build_logs && ($latest_basename eq substr($file, -length($latest_basename))))) {
+                # process only the latest text file if logs already exist
+                print "        Prettifying $file.txt\n" if($verbose);
+                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", $logs_exist);
+                $updated++;
+            }
         }
 
         # Remove the latest $keep logs from the list
