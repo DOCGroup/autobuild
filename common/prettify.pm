@@ -587,8 +587,6 @@ use warnings;
 
 use FileHandle;
 
-use URI::URL;
-
 ###############################################################################
 
 sub new ($)
@@ -620,46 +618,46 @@ sub Header ()
 
 sub Footer ()
 {
-  my $self = shift;
-  my $out = $self->{FH};
-  my $log_file = new URI::URL(main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html");
+    my $self = shift;
+    my $out = $self->{FH};
+    my $log_file = main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html";
 
-  my $indent = '  ';
-  print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
-  if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
-  {
-    print $out "timestamp=\"$self->{TIMESTAMP}\" ";
-  }
-
-  my $numtests = @{$self->{TESTS}};
-  if ($numtests > 0) {
-    print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
-  }
-  else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
-    print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
-  }
-
-  print $out $indent x 2, "<properties>\n";
-  print $out $indent x 3, "<property name=\"commits\" value=\"";
-  foreach my $commit (@Prettify::commits) { print $out '[' . $commit . ']'; }
-  print $out "\"/>\n";
-  print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
-  print $out $indent x 2, "</properties>\n";
-
-  foreach my $test (@{$self->{TESTS}}) {
-    my $error = $test->{ERROR} || '';
-    print $out $indent x 2,
-      "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
-      "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
-
-    if ($error ne "") {
-      print $out "<failure>\n",
-        $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
-        $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+    my $indent = '  ';
+    print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
+    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+    {
+        print $out "timestamp=\"$self->{TIMESTAMP}\" ";
     }
-  }
 
-  print $out $indent, "</testsuite>\n</testsuites>\n";
+    my $numtests = @{$self->{TESTS}};
+    if ($numtests > 0) {
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
+    }
+    else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
+        print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
+    }
+
+    print $out $indent x 2, "<properties>\n";
+    foreach my $k (keys %Prettify::commits) {
+        print $out $indent x 3, "<property name=\"$k\" value=\"$Prettify::commits{$k}\"/>\n";
+    }
+    print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
+    print $out $indent x 2, "</properties>\n";
+
+    foreach my $test (@{$self->{TESTS}}) {
+        my $error = $test->{ERROR} || '';
+        print $out $indent x 2,
+            "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
+            "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
+
+        if ($error ne "") {
+          print $out "<failure>\n",
+              $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
+              $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+        }
+    }
+
+    print $out $indent, "</testsuite>\n</testsuites>\n";
 }
 
 sub Section ($)
@@ -1119,7 +1117,7 @@ use base qw(common::parse_compiler_output);
 use Data::Dumper;
 use File::Basename;
 use FileHandle;
-our @commits = ();
+our %commits = ();
 
 ###############################################################################
 
@@ -1530,7 +1528,7 @@ sub Setup_Handler ($)
       if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
-        push(@commits, "ACE:" . $sha);
+        $commits{'commit_ACE'} = $sha;
       }
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
@@ -1539,7 +1537,7 @@ sub Setup_Handler ($)
         {
             (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
-        push(@commits, "OPENDDS:" . $sha);
+        $commits{'commit_OPENDDS'} = $sha;
       }
       $self->Output_Normal ($s);
     }
@@ -1986,26 +1984,26 @@ sub Footer ()
 
 sub Normal ($)
 {
-  my $self = shift;
-  my $s = shift;
-  my $state = shift;
-  if (defined $state) {
-    $state = lc($state);
-  }
-  if (defined $state && $state eq 'config') {
-    if ($host eq 'localhost') {
-      if ($host_next == 1) {
-        $host = $s;
-      }
-      elsif ($s eq "<h3>Hostname</h3>") {
-        $host_next = 1;
-      }
+    my $self = shift;
+    my $s = shift;
+    my $state = shift;
+    if (defined $state) {
+        $state = lc($state);
     }
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
-    $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
-    print {$self->{FH}} "$s\n";
-  }
+    if (defined $state && $state eq 'config') {
+        if ($host eq 'localhost') {
+            if ($host_next == 1) {
+                $host = $s;
+            }
+            elsif ($s eq "<h3>Hostname</h3>") {
+                $host_next = 1;
+            }
+        }
+        $s =~ s/</&lt;/g;
+        $s =~ s/>/&gt;/g;
+        $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
+        print {$self->{FH}} "$s\n";
+    }
 }
 
 sub Section ($)
