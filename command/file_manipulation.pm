@@ -853,7 +853,8 @@ sub Run ($)
         print STDERR __FILE__, ":\n  No type specified in command options\n";
         return 0;
     }
-    if ($type ne 'chdir' && (!defined ($filename) || ($filename eq ""))) {
+
+    if (!defined ($filename) || ($filename eq "")) {
         print STDERR __FILE__, ":\n",
               "  In file_manipulation $type\n",
               "  No source file specified in command options\n";
@@ -1114,40 +1115,6 @@ sub Run ($)
     elsif ($type eq "mkdir") {
         if (!-e $filename ) {
             mkdir( $filename );
-        }
-    }
-    ### type=  chdir
-    ################
-    elsif ($type eq "chdir") {
-        if (defined $filename) {
-            if (-d $filename ) {
-                $current_dir = $filename;
-            } else {
-                print STDERR __FILE__, ":\n",
-                    "  Could not chdir into $filename, it is not a directory!\n";
-                return 0;
-            }
-        } else {
-            $current_dir = main::GetVariable ('root');
-        }
-    }
-
-    ### type=  rmmkcd
-    # "rm, mkdir, chdir"
-    # Create or re-create and change into a directory in one command.
-    # Created for CMake build directories.
-    ################
-    elsif ($type eq "rmmkcd") {
-        if (-e $filename) {
-            rmtree ($filename, 0, 0);
-        }
-        mkdir ($filename);
-        if (-d $filename ) {
-            $current_dir = $filename;
-        } else {
-            print STDERR __FILE__, ":\n",
-                "  Could not chdir into $filename, it is not a directory!\n";
-            return 0;
         }
     }
 
