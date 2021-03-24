@@ -4,9 +4,12 @@
 package BetterParser;
 
 use strict;
+use warnings;
+
 use FileHandle;
 use File::Basename;
 use POSIX qw(strftime);
+use B qw(perlstring);
 
 ##############################################################################
 # Constructor
@@ -1434,7 +1437,8 @@ sub DealWithCommandTag ($$$$$\%)
                  IF_TEXT   => (defined $IF_TEXT ? $IF_TEXT : 1),
                  FILE      => $file,
                  LINE_FROM => $lineStart,
-                 LINE_TO   => $lineEnd
+                 LINE_TO   => $lineEnd,
+                 ARGS => [],
                 );
     push @{$data->{COMMANDS}}, \%value;
   }
@@ -1450,6 +1454,15 @@ sub DealWithCommandTag ($$$$$\%)
       }
     }
   }
+}
+
+# Replace XML Entity References
+sub replace_entities ($) {
+  my $str = shift;
+  $str =~ s/&lt;/</g;
+  $str =~ s/&gt;/>/g;
+  $str =~ s/&amp;/&/g;
+  return $str;
 }
 
 ###############################################################################
@@ -1486,23 +1499,26 @@ sub Parse ($$\%)
   # <pre> in html, expect this only does whole lines.
   #
   my $preMode = 0;
-  my $preModeText = '';
+  my $preModeText;
 
   # This while loop reads each line of the file into $_ one by one until EOF.
   #
   while (<$file_handle>) {
     ++$lineNumberCurrent;
 
+    # Inline version of preModeText
+    my $same_line_tag_contents;
+
     # Collect lines that aren't closing tags
     if ($preMode) {
-      if ($_ =~ /\/>/ || $_ =~ /<\//) {
+      if (!defined ($preModeText)) {
+        $preModeText = "";
+      }
+      if ($_ =~ /[<>]/) {
         $preMode = 0;
-      } else {
-        # Replace Entity References
-        $_ =~ s/&lt;/</g;
-        $_ =~ s/&gt;/>/g;
-        $_ =~ s/&amp;/&/g;
-        $preModeText .= $_;
+      }
+      else {
+        $preModeText .= replace_entities($_);
         next;
       }
     }
@@ -1614,6 +1630,10 @@ sub Parse ($$\%)
         my $tag = $inputFromFile;  ## Trimmed down if the end of tag is found.
         if ($inputFromFile =~
             s/^<\s*(?:[^>"]*(?:"(?:[^"\\]*(?:\\(?:0?[xX][[:xdigit:]]{0,2}|0[0-2]?[0-7]{0,2}|.))*)*")*)*>//) {
+          if ($tag =~ /<[^<>]+>(.*)<[^<>]+>/) {
+            $same_line_tag_contents = replace_entities($1);
+          }
+
           # OK, we have found a valid closing tag (the >) character. We need to
           # remove anything following the closing > from tag. (We can't just
           # capture the wanted string from the regular expression due to the
@@ -1891,8 +1911,12 @@ sub Parse ($$\%)
             # -------------------------------------
             #
             if ($tag =~ m/^command$/i) {
-              $preMode = !CouldBeSelfClosedTag (
+              my $closed = CouldBeSelfClosedTag (
                 $file, $lineNumberStartOfTag, $lineNumberEndOfTag, $tag, $attributes);
+              if (!$closed) {
+                $state = $tag;
+                $preMode = 1;
+              }
               DealWithCommandTag (
                 $file,
                 $lineNumberStartOfTag,
@@ -1901,9 +1925,74 @@ sub Parse ($$\%)
                 $attributes,
                 %$data );
             }
+            else {
+              DisplayProblem (
+                $file,
+                $lineNumberStartOfTag,
+                $lineNumberEndOfTag,
+                "IGNORING",
+                "Unknown '$state' tag <$tag" .
+                  (("" eq $attributes) ? "" : " $attributes" ) .
+                  ">" );
+            }
+          }
+          elsif ($state =~ m/^command$/i) {
+            if ($tag =~ m/^arg$/i) {
+              if (defined ($preModeText) && $preModeText =~ /\S/) {
+                DisplayProblem (
+                  $file,
+                  $lineNumberStartOfTag,
+                  $lineNumberEndOfTag,
+                  "IGNORING",
+                  "Unexpected text before <arg> tag: " . perlstring ($preModeText));
+              }
+              $preModeText = undef;
+              my $closed = CouldBeSelfClosedTag (
+                $file, $lineNumberStartOfTag, $lineNumberEndOfTag, $tag, $attributes);
+              my ($pairs, $name, $type, $value, $if_text) =
+                FindNameTypeIF (
+                  $file,
+                  $lineNumberStartOfTag,
+                  $lineNumberEndOfTag,
+                  $tag,
+                  $attributes,
+                  $IF_autobuild && $IF_configuration);
+              push(@{$data->{COMMANDS}[-1]{ARGS}}, [$name, undef]);
+              if (defined($same_line_tag_contents)) {
+                $data->{COMMANDS}[-1]{ARGS}->[-1]->[1] = $same_line_tag_contents;
+              }
+              elsif (!$closed) {
+                $preMode = 1;
+              }
+            }
+            elsif ($tag =~ m!^/arg$!i) {
+              if (defined($preModeText) && $preModeText =~ /\S/) {
+                if (defined($data->{COMMANDS}[-1]{ARGS}->[-1]->[1])) {
+                  DisplayProblem (
+                    $file,
+                    $lineNumberStartOfTag,
+                    $lineNumberEndOfTag,
+                    "IGNORING",
+                    "Unexpected text before </arg> tag: " . utility::str_repr ($preModeText));
+                }
+                else {
+                  $data->{COMMANDS}[-1]{ARGS}->[-1]->[1] = $preModeText;
+                }
+              }
+              $preModeText = undef;
+              $preMode = 1;
+            }
             elsif ($tag =~ m!^/command$!i) {
-              $data->{COMMANDS}[-1]{CONTENTS} = $preModeText;
-              $preModeText = '';
+              if (defined($preModeText) && $preModeText =~ /\S/) {
+                # For backwards compatibility with file_manipulation create
+                # commands with no <arg> tags.
+                push(@{$data->{COMMANDS}[-1]{ARGS}}, ["output", $preModeText]);
+              }
+              if (defined($same_line_tag_contents)) {
+                push(@{$data->{COMMANDS}[-1]{ARGS}}, ["output", $same_line_tag_contents]);
+              }
+              $preModeText = undef;
+              $state = 'autobuild';
             }
             else {
               DisplayProblem (

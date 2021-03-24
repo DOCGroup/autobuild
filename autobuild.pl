@@ -6,9 +6,12 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 ##############################################################################
 
 use diagnostics;
+use strict;
+
 use Time::Local;
 use File::Basename;
 use Cwd;
+use B qw(perlstring);
 
 if ( $^O eq 'VMS' ) {
   require VMS::Filespec;
@@ -739,7 +742,7 @@ INPFILE: foreach my $file (@files) {
     my $FILE      = $command->{FILE};
     my $LINE_FROM = $command->{LINE_FROM};
     my $LINE_TO   = $command->{LINE_FROM};
-    my $CONTENTS  = $command->{CONTENTS};
+    my $args = $command->{ARGS};
 
     my $CMD = "Executing \"$NAME\" line";
     if (!defined $LINE_TO || $LINE_FROM == $LINE_TO) {
@@ -749,7 +752,9 @@ INPFILE: foreach my $file (@files) {
       $CMD .= "s $LINE_FROM-$LINE_TO";
     }
     $CMD .= " of \"$FILE\"";
-    my $CMD2 = "with options: $OPTIONS";
+    my $arg_count = scalar (@{$args});
+    my $CMD2 = "with $arg_count argument" . ($arg_count == 1 ? "" : "s") .
+      " and options: " . perlstring ($OPTIONS);
 
     print "\n",'=' x 79,"\n===== $CMD\n" if (1 < $verbose);
 
@@ -765,7 +770,13 @@ INPFILE: foreach my $file (@files) {
       ChangeENV (%{$data{GROUPS}->{$GROUP}});
     }
 
-    print "===== $CMD2\n" if (1 < $verbose);
+    if ($verbose >= 2) {
+      print "===== $CMD2\n";
+      for my $i (@{$args}) {
+        my ($name, $value) = @{$i};
+        print ("=====   arg \"$name\": ", perlstring ($value), "\n");
+      }
+    }
 
     # Work out if we are going to execute this command.
     #
@@ -808,7 +819,7 @@ INPFILE: foreach my $file (@files) {
         }
       }
 
-      if ($command_table{$NAME}->Run ($OPTIONS, $CONTENTS) == 0) {
+      if ($command_table{$NAME}->Run ($OPTIONS, $args) == 0) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
         $status = 1;

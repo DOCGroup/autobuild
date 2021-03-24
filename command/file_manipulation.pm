@@ -5,14 +5,15 @@ package File_Manipulation;
 use strict;
 use warnings;
 
-use Cwd;
-use Cwd 'abs_path';
+use Cwd qw(getcwd abs_path);
 use File::Find;
 use File::Path;
 use File::Compare;
 use File::Copy;
 use File::Spec;
 use File::Basename;
+
+use common::utility;
 
 ###############################################################################
 # Constructor
@@ -569,7 +570,7 @@ $readFile= sub
                my $entry = $1;
                if ($entry =~ m/^\!(.*)$/) {
                    my $subfile = $1;
-                   my $oldcurdir = cwd;
+                   my $oldcurdir = getcwd ();
                    chdir dirname( $filename );  ### We can always chdir to this dir
                    ### since we read a file from there before.
                    my @entrylist = &$readFile( $subfile );
@@ -594,7 +595,7 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
-    my $contents = shift;
+    my $args = shift;
 
     my $root = main::GetVariable ('root');
 
@@ -685,9 +686,25 @@ sub Run ($)
     my $include= [];   ### Copytree Default include everything
     my $exclude= [];   ### Copytree Default exclude nothing
 
-    # Use contents of the tags as output if given
-    if (defined $contents) {
-      $output = $contents;
+    # Use output arg as output if given
+    my $output_arg = 0;
+    for my $i (@{$args}) {
+        if ($i->[0] eq "output") {
+            if ($output_arg) {
+                print STDERR __FILE__, ":\n",
+                    "  In file_manipulation\n",
+                    "  Multiple \"output\" args given\n";
+                return 0;
+            }
+            $output_arg = 1;
+            $output = $i->[1];
+        }
+        else {
+            print STDERR __FILE__, ":\n",
+                "  In file_manipulation\n",
+                "  Unexpected arg name \"$i->[0]\"\n";
+            return 0;
+        }
     }
 
     foreach my $option (@splitOptions) {
@@ -710,6 +727,15 @@ sub Run ($)
         ### option  output=
         ###################
         elsif ($option =~ m/^output=(.*)/) {
+            if (!defined ($output)) {
+                $output = "";
+            }
+            elsif ($output_arg) {
+                print STDERR __FILE__, ":\n",
+                    "  In file_manipulation $type\n",
+                    "  Can't use output option AND output argument\n";
+                return 0;
+            }
             $output.= $1;  ### Multiple outputs concatenate
         }
         ### option      to=
@@ -986,7 +1012,9 @@ sub Run ($)
     ### type=  rmtree
     #################
     elsif ($type eq "rmtree") {
-        rmtree ($filename, 0, 0);
+        if (!utility::remove_tree ($filename)) {
+            return 0;
+        }
     }
     ### type=  mustnotexist
     #######################
@@ -997,7 +1025,7 @@ sub Run ($)
             return 0;
         }
     }
-    ### type=  mustnotexist
+    ### type=  mustexist
     #######################
     elsif ($type eq "mustexist") {
         if (!-e $filename) {

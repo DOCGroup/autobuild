@@ -3,6 +3,8 @@ use warnings;
 
 package utility;
 
+use File::Path qw(rmtree);
+
 # Run command, returns 0 if there was an error. If the second argument is
 # passed and is true, then it always returns 1.
 sub run_command ($;$)
@@ -190,6 +192,24 @@ sub index_logs ($;$$)
     }
 
     print $fh "</table>\n</body>\n</html>\n";
+    return 1;
+}
+
+sub remove_tree ($)
+{
+    my $path = shift;
+    if (-e $path) {
+        rmtree ($path, {error => \my $errors});
+        if ($errors && @{$errors}) {
+            print STDERR __FILE__, ": failed to remove some or all of \"$path\". " .
+                "Details on following lines:\n";
+            for my $error (@{$errors}) {
+                my ($file, $message) = %{$error};
+                print STDERR __FILE__, ": remove error on $file: $message\n";
+            }
+            return 0;
+        }
+    }
     return 1;
 }
 

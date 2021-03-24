@@ -1,18 +1,17 @@
 # CMake Command Wrapper
-# Uses same cmake_command variable as print_cmake_version
-# Also uses cmake_generator variable which is passed to CMake using the -G
-# option as long --build hasn't been passed
+#
+# Contains the cmake and cmake_cmd commands
+#
+# Configure and build a CMake project in one command. See docs/autobuild.txt
+# for usage.
 
 package Cmake;
 
 use strict;
 use warnings;
 
-use Cwd;
-use FileHandle;
-use File::Path;
-
 use common::utility;
+use common::change_dir;
 
 ###############################################################################
 # Constructor
@@ -21,10 +20,12 @@ sub new
 {
     my $proto = shift;
     my $class = ref ($proto) || $proto;
-    my $self = {};
+    my $args = shift;
+    my $self = {
+        simple => $args->{simple} || 0,
+    };
 
-    bless ($self, $class);
-    return $self;
+    return bless ($self, $class);
 }
 
 ##############################################################################
@@ -47,20 +48,77 @@ sub Run ($)
 {
     my $self = shift;
     my $options = shift;
+    my $args = shift;
+
+    my $command_name = $self->{simple} ? "cmake_cmd" : "cmake";
+
+    # Get Args
+    my $build_dir = "build";
+    my $config_args = "..";
+    my $build_args = "--build .";
+    for my $i (@{$args}) {
+        my ($name, $value) = @{$i};
+        if (!$self->{simple} && $name eq 'build_dir') {
+            $build_dir = $value;
+        }
+        elsif (!$self->{simple} && $name eq 'config_args') {
+            $config_args = $value;
+        }
+        elsif (!$self->{simple} && $name eq 'build_args') {
+            $build_args = $value;
+        }
+        else {
+            print STDERR __FILE__,
+                ": unexpected arg name \"$name\" in $command_name command\n";
+            return 0;
+        }
+    }
 
     my $cmake_command = main::GetVariable ('cmake_command');
     my $cmake_generator = main::GetVariable ('cmake_generator');
-    if (defined $cmake_generator and $options !~ /--build/) {
-        $cmake_command .= " -G \"$cmake_generator\"";
+    if (defined $cmake_generator && $config_args !~ /\W-G\W/) {
+        $config_args .= " -G \"$cmake_generator\"";
     }
-    $cmake_command .= " $options";
 
-    my $cwd = getcwd ();
-    print "Running: ${cmake_command} in $cwd\n";
+    # cmake_cmd commmand
+    if ($self->{simple}) {
+        return utility::run_command ("$cmake_command $options");
+    }
+    elsif (length ($options)) {
+        print STDERR __FILE__,
+            ": options attribute not allowed for the cmake command\n";
+        return 0;
+    }
 
-    return utility::run_command ($cmake_command);
+    # Recreate Build Directory
+    if (!utility::remove_tree ($build_dir)) {
+        return 0;
+    }
+    if (!mkdir ($build_dir)) {
+        print STDERR __FILE__, ": failed to make build directory \"$build_dir\": $!\n";
+        return 0;
+    }
+
+    {
+        # Change to Build Directory
+        my $build_cd = ChangeDir->new({dir => $build_dir});
+        return 0 unless ($build_cd);
+
+        # Run Configure CMake Command
+        if (!utility::run_command ("$cmake_command $config_args")) {
+            return 0;
+        }
+
+        # Run Build CMake Command
+        if (!utility::run_command ("$cmake_command $build_args")) {
+            return 0;
+        }
+    }
+
+    return 1;
 }
 
 ##############################################################################
 
 main::RegisterCommand ("cmake", new Cmake ());
+main::RegisterCommand ("cmake_cmd", new Cmake ({simple => 1}));
