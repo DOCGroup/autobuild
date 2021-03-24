@@ -1,0 +1,24 @@
+<autobuild>
+  <configuration>
+    <variable name="root" value="."/>
+    <variable name="project_root" value="."/>
+    <variable name="log_root" value="."/>
+    <variable name="log_file" value="log.txt"/>
+    <variable name="cmake_command" value="fake_cmake.pl"/>
+    <variable name="cmake_generator" value="Fake Generator"/>
+  </configuration>
+
+  <command name="log" options="on"/>
+
+  <command name="print_cmake_version"/>
+
+  <command name="cmake"/>
+
+  <command name="cmake" dir="subdir">
+    <arg name="build_dir">the_build_dir</arg>
+    <arg name="config_args">.. --extra-config-opt -G "Extra Fake Generator"</arg>
+    <arg name="build_args">--build . --extra-build-opt</arg>
+  </command>
+
+  <command name="cmake_cmd" options="--cmake-cmd"/>
+</autobuild>

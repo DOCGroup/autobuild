@@ -1,0 +1,22 @@
+<autobuild>
+  <configuration>
+    <variable name="root" value="."/>
+    <variable name="project_root" value="."/>
+  </configuration>
+
+  <!-- Examples from docs/autobuild.txt -->
+  <command name="file_manipulation" options="type=create file=example1.txt output='if (x > 5)\n  print(\x22Greater than 5\x22);\n'"/>
+  <command name="file_manipulation" options="type=create file=example2.txt">
+    <arg name="output">
+if (x &gt; 5)
+  print("Greater than 5");
+    </arg>
+  </command>
+  <command name="file_manipulation"  options="type=create file=example3.txt">
+if (x &gt; 5)
+  print("Greater than 5");
+  </command>
+
+  <command name="file_manipulation" options="type=create file=multi_output_opts.txt output=1 output=2 output=3"/>
+  <command name="file_manipulation" options="type=create file=oneline_output.txt">OneLine</command>
+</autobuild>
