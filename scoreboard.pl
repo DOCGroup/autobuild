@@ -358,9 +358,9 @@ sub local_query_status ($)
                 }
             }
         }
-        else {
-            print STDERR "Error: Could not open file <$file_name>: $!\n";
-        }
+else {
+print STDERR "Error: Could not open file <$file_name>: $!\n";
+}
     }
 }
 
@@ -689,12 +689,6 @@ sub local_update_cache ($)
             unlink $triggerfile;
         }
         print "        in local_update_cache, post=$post\n" if $verbose;
-        if ($post == 0) {
-            # Create the triggerfile for the next time we run
-            open(FH, ">$triggerfile");
-            close(FH);
-            return;
-        }
 
         # Get info from the latest build
         my $file_name1 = "$directory/$buildname/latest.txt";
@@ -710,12 +704,20 @@ sub local_update_cache ($)
         undef $file_handle1;
 
         foreach my $file (@existing) {
-            my $logs_exist = (-e $file . "_Totals.html");
-            if (!$logs_exist || (!$use_build_logs && ($latest_basename eq substr($file, -length($latest_basename))))) {
-                # process only the latest text file if logs already exist
-                print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", $logs_exist);
-                $updated++;
+            if ( -e $file . "_Totals.html" || $post == 1 ) {
+                # skip scenario when Failed Test Log is not needed, and all other logs already exist
+                if (!($use_build_logs && (-e $file . "_Totals.html"))) {
+                    # process only the latest text file if logs already exist
+                    next if ((-e $file . "_Totals.html") && !($latest_basename eq substr($file, -length($latest_basename))));
+                    print "        Prettifying $file.txt\n" if($verbose);                
+                    Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
+                    $updated++;
+                }
+            } else {
+                # Create the triggerfile for the next time we run
+                open(FH, ">$triggerfile");
+                close(FH);
+                last;
             }
         }
 
