@@ -74,13 +74,13 @@ file_manipulation - This command provides the ability to append, create,
      `&lt;`, and `&` with `&amp;` like in standard XML and HTML. For example:
        <command name="file_manipulation" options="type=create file=file.txt">
          <arg name="output">
-         if (x &gt; 5)
-           print("Greater than 5");
+       if (x &gt; 5)
+         print("Greater than 5");
          </arg>
        </command>
    - File contents between command tags. This is a shortcut for the method
      above. For example:
-       <command name="file_manipulation"  options="type=create file=file.txt">
+       <command name="file_manipulation" options="type=create file=file.txt">
        if (x &gt; 5)
          print("Greater than 5");
        </command>

@@ -14,12 +14,13 @@ sub expect_file_contents
         my $file_contents = do { local $/; <$fh> };
         if ($file_contents ne $expected_contents) {
             print(
-              ("!" x 40) . " ERROR: \"$file\" contents are unexpected:\n" .
-              ("!" x 40) . " EXPECTED contains:\n" .
-              $expected_contents .
-              ("!" x 40) . " $file contains:\n" .
-              $file_contents .
-              ("!" x 40) . "\n");
+                ("!" x 40) . " ERROR: \"$file\" contents are unexpected:\n" .
+                ("!" x 40) . " EXPECTED contains:\n" .
+                $expected_contents .
+                ("!" x 40) . " $file contains:\n" .
+                $file_contents .
+                ("!" x 40) . "\n");
+            $main::exit_status = 1;
         }
     }
 }

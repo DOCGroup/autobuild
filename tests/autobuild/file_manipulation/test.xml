@@ -12,7 +12,7 @@ if (x &gt; 5)
   print("Greater than 5");
     </arg>
   </command>
-  <command name="file_manipulation"  options="type=create file=example3.txt">
+  <command name="file_manipulation" options="type=create file=example3.txt">
 if (x &gt; 5)
   print("Greater than 5");
   </command>

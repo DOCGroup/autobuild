@@ -15,11 +15,9 @@ if (!utility::run_command ("autobuild.pl test.xml")) {
 }
 
 # example*.txt files
-my $example_contents = <<"EOF";
-if (x > 5)
-  print("Greater than 5");
-EOF
-expect_file_contents ($example_contents,
+expect_file_contents (
+    "if (x > 5)\n" .
+    "  print(\"Greater than 5\");\n",
     'example1.txt', 'example2.txt', 'example3.txt');
 
 expect_file_contents ("123", "multi_output_opts.txt");
