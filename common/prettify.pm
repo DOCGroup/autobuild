@@ -10,6 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
+our $path = "";
 
 ###############################################################################
 
@@ -20,6 +21,7 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . "_Full.html";
+    $path = $filename;
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
@@ -620,8 +622,6 @@ sub Footer ()
 {
     my $self = shift;
     my $out = $self->{FH};
-    my $log_file = main::GetVariable('log_root') . '/' . main::GetVariable('log_file') . "_Full.html";
-
     my $indent = '  ';
     print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
     if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
@@ -641,7 +641,7 @@ sub Footer ()
     foreach my $k (keys %Prettify::commits) {
         print $out $indent x 3, "<property name=\"$k\" value=\"$Prettify::commits{$k}\"/>\n";
     }
-    print $out $indent x 3, "<property name=\"log_file\" value=\"$log_file\"/>\n";
+    print $out $indent x 3, "<property name=\"log_file\" value=\"$Prettify::Full_HTML::path\"/>\n";
     print $out $indent x 2, "</properties>\n";
 
     foreach my $test (@{$self->{TESTS}}) {
@@ -1528,7 +1528,6 @@ sub Setup_Handler ($)
       if ("$totals->{GIT_CHECKEDOUT_ACE}" eq "Matched")
       {
         $totals->{GIT_CHECKEDOUT_ACE} = $sha;
-        $commits{'commit_ACE'} = $sha;
       }
       elsif ("$totals->{GIT_CHECKEDOUT_OPENDDS}" eq "Matched")
       {
@@ -1537,7 +1536,6 @@ sub Setup_Handler ($)
         {
             (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $sha;
         }
-        $commits{'commit_OPENDDS'} = $sha;
       }
       $self->Output_Normal ($s);
     }
@@ -1663,6 +1661,7 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
+            $commits{'GIT_COMMIT_ACE'} = $revision;
         }
         elsif ($url =~ m/(git|https):\/\/.*\/OpenDDS\.git/i)
         {
@@ -1670,6 +1669,7 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+            $commits{'GIT_COMMIT_OPENDDS'} = $revision;
             if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
             {
                 (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;

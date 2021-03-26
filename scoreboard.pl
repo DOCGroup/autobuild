@@ -709,7 +709,7 @@ sub local_update_cache ($)
                 if (!($use_build_logs && (-e $file . "_Totals.html"))) {
                     # process only the latest text file if logs already exist
                     next if ((-e $file . "_Totals.html") && !($latest_basename eq substr($file, -length($latest_basename))));
-                    print "        Prettifying $file.txt\n" if($verbose);                
+                    print "        Prettifying $file.txt\n" if($verbose);
                     Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
                     $updated++;
                 }
@@ -1642,8 +1642,13 @@ sub update_html_table ($$@)
 ## for now, implement it as a no-op which returns something which is undefined.
 sub GetVariable ($)
 {
-   my %a=();
-   return $a{'UNDEFINED'};
+    my $v = shift;
+    if ($v eq 'junit_xml_output') {
+        return 1;
+    } else {
+        my %a=();
+        return $a{'UNDEFINED'};
+    }
 }
 
 
