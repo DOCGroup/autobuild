@@ -21,7 +21,8 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . "_Full.html";
-    $path = $filename;
+    my $log_root = main::GetVariable('log_root');
+    $path = ((defined $log_root) ? ($log_root . '/' . $filename) : $filename);
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
