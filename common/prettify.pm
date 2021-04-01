@@ -1664,7 +1664,7 @@ sub Config_Handler ($)
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
             $commits{'GIT_COMMIT_ACE'} = $revision;
         }
-        elsif ($url =~ m/(git|https):\/\/.*\/OpenDDS\.git/i)
+        elsif ($url =~ m/(git@|(git|https):\/\/).*\/OpenDDS\.git/i)
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
