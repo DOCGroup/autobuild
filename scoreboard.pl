@@ -541,7 +541,7 @@ sub delete_old_logs
     for (my $i = $keep; $i < $n; ++$i) {
         my $fb = shift(@$logs_ref);
         print "        Removing $fb files\n" if ($verbose);
-        unlink($fb.".txt", $fb."_Full.html", $fb."_Brief.html", $fb."_Totals.html", $fb."_Config.html");
+        unlink($fb.".txt", $fb."_JUnit.xml", $fb."_Full.html", $fb."_Brief.html", $fb."_Totals.html", $fb."_Config.html");
     }
     return ($keep < $n);
 }
@@ -592,6 +592,25 @@ sub update_latest_build_info
     }
     set_latest_build_info($latest, $buildname);
     return 1;
+}
+
+sub write_failed_tests_by_test
+{
+    my $directory = shift;
+    my $failed_tests_by_test_ref = shift;
+    my %failed_tests_by_test = %$failed_tests_by_test_ref;
+
+    # Sort by test
+    my @ks = (sort keys %failed_tests_by_test);
+    my $size = scalar @ks;
+    if ($size > 0) {
+        my $fh = new FileHandle ("$directory/$log_prefix"."_Failed_Tests_By_Test.html", 'w');
+        print {$fh} "<h1>Failed Test Brief Log By Test</h1>\n";
+        foreach my $k (@ks) {
+            print {$fh} "<hr><h2>$k</h2>\n";
+            print {$fh} "$failed_tests_by_test{$k}<br>\n";
+        }
+    }
 }
 
 ###############################################################################
@@ -653,16 +672,7 @@ sub update_cache ($)
             }
         }
     }
-
-    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
-    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
-    my $title = "Failed Test Brief Log By Test";
-    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
-
-    while (my ($k, $v) = each %failed_tests_by_test) {
-        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
-        print {$failed_tests_by_test_file} "$v<br>\n";
-    }
+    write_failed_tests_by_test($directory, $failed_tests_by_test_ref);
 }
 
 ###############################################################################
@@ -777,23 +787,9 @@ sub local_update_cache ($)
             my $diffRoot = $builds{$buildname}->{DIFFROOT};
             utility::index_logs ($build_dir, $buildname, $diffRoot);
         }
-
         update_latest_build_info($directory, $buildname);
     }
-
-    my $size = keys %failed_tests_by_test;
-    my $failed_tests_by_test_file;
-    if ($size > 0) {
-        my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
-        $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
-        my $title = "Failed Test Brief Log By Test";
-        print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
-    }
-
-    while (my ($k, $v) = each %failed_tests_by_test) {
-        print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
-        print {$failed_tests_by_test_file} "$v<br>\n";
-    }
+    write_failed_tests_by_test($directory, $failed_tests_by_test_ref);
 }
 
 
