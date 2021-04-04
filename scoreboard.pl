@@ -721,26 +721,27 @@ sub local_update_cache ($)
         my $build_dir = "$directory/$buildname";
 
         # Check if URL was given
-        if (defined $builds{$buildname}->{URL}) {
+        my $build_url = $builds{$buildname}->{URL};
+        if (defined $build_url) {
             #Pull remote build into local cache
             #This will only pull the "latest", under the assumption that
             #scoreboard.pl is running often enough to pick up all the desired builds.
             mkpath ($build_dir) unless -d $build_dir;
-            if (!pull("$builds{$buildname}->{URL}", $build_dir, "status.txt", 20)) {
+            if (!pull("$build_url", $build_dir, "status.txt", 20)) {
                 print "        No status for $buildname\n" if ($verbose);
             }
-            my $latest = load_web_latest ($builds{$buildname}->{URL});
+            my $latest = load_web_latest($build_url);
             if (defined $latest && $latest =~ /^(...._.._.._.._..) /) {
                 my $basename = $1;
                 my $fn = "$build_dir/$basename.txt";
                 if (! -r $fn) {
-                    if (!pull("$builds{$buildname}->{URL}", $build_dir, "$basename.txt")) {
-                        warn "WARNING: Unable to download $builds{$buildname}->{URL}/$basename.txt\n";
-                        next;
+                    if (pull("$build_url", $build_dir, "$basename.txt")) {
+                        print "        Creating $build_dir/post\n" if ($verbose);
+                        open (POST, ">$build_dir/post");
+                        close POST;
+                    } else {
+                        warn "WARNING: Unable to download $build_url/$basename.txt\n";
                     }
-                    print "        Creating $build_dir/post\n" if ($verbose);
-                    open (POST, ">$build_dir/post");
-                    close POST;
                 }
             }
         } else {
@@ -788,7 +789,6 @@ sub local_update_cache ($)
     }
     write_failed_tests_by_test($directory, $failed_tests_by_test_ref);
 }
-
 
 ###############################################################################
 #
