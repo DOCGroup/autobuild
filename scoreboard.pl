@@ -613,6 +613,20 @@ sub write_failed_tests_by_test
     }
 }
 
+sub pull ($$$;$)
+{
+    my $build_url = shift;
+    my $build_dir = shift;
+    my $file = shift;
+    my $timeout = shift;
+    print "        Download $build_url/$file\n" if ($verbose);
+    my $ua = LWP::UserAgent->new;
+    $ua->timeout($timeout) if (defined $timeout);
+    my $request = HTTP::Request->new('GET', "$build_url/$file");
+    my $response = $ua->request($request, "$build_dir/$file");
+    return $response->is_success();
+}
+
 ###############################################################################
 #
 # update_cache
@@ -648,27 +662,19 @@ sub update_cache ($)
         ### with the storage of the build itself?
         if ((!$use_build_logs) || (defined $builds{$buildname}{CACHE})) {
             my $basename = $builds{$buildname}{BASENAME};
-            my $address = $builds{$buildname}{URL} . "/" . $builds{$buildname}{BASENAME} . ".txt";
-
-            my $filename = $builds{$buildname}{BASENAME} . '.txt';
+            my $filename = "$basename.txt";
 
             print "    Looking at $buildname\n" if ($verbose);
 
             mkpath "$directory/$buildname";
 
             if (! -r "$directory/$buildname/$filename") {
-                print "        Downloading\n" if ($verbose);
-                my $ua = LWP::UserAgent->new;
-                my $request = HTTP::Request->new('GET', $address);
-                my $response = $ua->request($request, "$directory/$buildname/$filename");
-
-                if (!$response->is_success ()) {
-                    warn "WARNING: Unable to download $address\n";
-                    next;
+                if (pull("$builds{$buildname}{URL}", "$directory/$buildname", $filename)) {
+                    print "        Prettifying\n" if($verbose);
+                    Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
+                } else {
+                    warn "WARNING: Unable to download $builds{$buildname}{URL}/$filename\n";
                 }
-
-                print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
     }
@@ -720,12 +726,7 @@ sub local_update_cache ($)
             #This will only pull the "latest", under the assumption that
             #scoreboard.pl is running often enough to pick up all the desired builds.
             mkpath ($build_dir) unless -d $build_dir;
-            my $ua = LWP::UserAgent->new;
-            my $address = "$builds{$buildname}->{URL}/status.txt";
-            $ua->timeout(20);
-            my $request = HTTP::Request->new('GET', $address);
-            my $response = $ua->request($request, "$build_dir/status.txt");
-            if (!$response->is_success ()) {
+            if (!pull("$builds{$buildname}->{URL}", $build_dir, "status.txt", 20)) {
                 print "        No status for $buildname\n" if ($verbose);
             }
             my $latest = load_web_latest ($builds{$buildname}->{URL});
@@ -733,12 +734,8 @@ sub local_update_cache ($)
                 my $basename = $1;
                 my $fn = "$build_dir/$basename.txt";
                 if (! -r $fn) {
-                    print "        Downloading\n" if ($verbose);
-                    $address = "$builds{$buildname}->{URL}/$basename.txt";
-                    $request = HTTP::Request->new('GET', $address);
-                    $response = $ua->request($request, $fn);
-                    if (!$response->is_success ()) {
-                        warn "WARNING: Unable to download $address\n";
+                    if (!pull("$builds{$buildname}->{URL}", $build_dir, "$basename.txt")) {
+                        warn "WARNING: Unable to download $builds{$buildname}->{URL}/$basename.txt\n";
                         next;
                     }
                     print "        Creating $build_dir/post\n" if ($verbose);
@@ -771,7 +768,7 @@ sub local_update_cache ($)
 
         my $latest = get_latest($build_dir);
         foreach my $file (@existing) {
-            my $totals_exist = (-e $file . "_Totals.html") && !(-z $file . "_Totals.html");
+            my $totals_exist = (-e $file . "_Totals.html") && !(-z _);
             if ($post || !$use_build_logs || !$totals_exist || ($latest eq $file)) {
                 # process only the latest text file if logs already exist
                 print "        Prettifying $file.txt\n" if($verbose);
