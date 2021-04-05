@@ -502,6 +502,25 @@ sub decode_timestamp ($)
     return $description;
 }
 
+sub write_failed_tests_by_test
+{
+    my $directory = shift;
+    my $failed_tests_by_test_ref = shift;
+    my %failed_tests_by_test = %$failed_tests_by_test_ref;
+
+    # Sort by test
+    my @ks = (sort keys %failed_tests_by_test);
+    my $size = scalar @ks;
+    if ($size > 0) {
+        my $fh = new FileHandle ("$directory/$log_prefix"."_Failed_Tests_By_Test.html", 'w');
+        print {$fh} "<h1>Failed Test Brief Log By Test</h1>\n";
+        foreach my $k (@ks) {
+            print {$fh} "<hr><h2>$k</h2>\n";
+            print {$fh} "$failed_tests_by_test{$k}<br>\n";
+        }
+    }
+}
+
 ###############################################################################
 #
 # update_cache
@@ -527,7 +546,8 @@ sub update_cache ($)
         return;
     }
 
-    foreach my $buildname (keys %builds) {
+    my @buildnames = sort keys %builds;
+    foreach my $buildname (@buildnames) {
         ### Check to see if we had problems.  If there is no basename,
         ### we had problems downloading.
         if (!defined $builds{$buildname}{BASENAME}) {
@@ -562,16 +582,7 @@ sub update_cache ($)
             }
         }
     }
-
-    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
-    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
-    my $title = "Failed Test Brief Log By Test";
-    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
-
-    while (my ($k, $v) = each %failed_tests_by_test) {
-        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
-        print {$failed_tests_by_test_file} "$v<br>\n";
-    }
+    write_failed_tests_by_test($directory, $failed_tests_by_test_ref);
 }
 
 ###############################################################################
@@ -608,7 +619,8 @@ sub local_update_cache ($)
         unlink $failed_tests;
     }
 
-    foreach my $buildname (keys %builds) {
+    my @buildnames = sort keys %builds;
+    foreach my $buildname (@buildnames) {
         my $keep = $keep_default;
         my @existing;
 
@@ -709,7 +721,7 @@ sub local_update_cache ($)
                 if (!($use_build_logs && (-e $file . "_Totals.html"))) {
                     # process only the latest text file if logs already exist
                     next if ((-e $file . "_Totals.html") && !($latest_basename eq substr($file, -length($latest_basename))));
-                    print "        Prettifying $file.txt\n" if($verbose);                
+                    print "        Prettifying $file.txt\n" if($verbose);
                     Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
                     $updated++;
                 }
@@ -812,20 +824,7 @@ sub local_update_cache ($)
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
-
-    my $size = keys %failed_tests_by_test;
-    my $failed_tests_by_test_file;
-    if ($size > 0) {
-        my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
-        $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
-        my $title = "Failed Test Brief Log By Test";
-        print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
-    }
-
-    while (my ($k, $v) = each %failed_tests_by_test) {
-        print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
-        print {$failed_tests_by_test_file} "$v<br>\n";
-    }
+    write_failed_tests_by_test($directory, $failed_tests_by_test_ref);
 }
 
 
