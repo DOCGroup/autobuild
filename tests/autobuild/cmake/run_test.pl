@@ -6,11 +6,13 @@ use strict;
 use warnings;
 
 use FindBin;
+use constant autobuild_root => "$FindBin::Bin/../../../";
+$ENV{'PATH'} = "$ENV{'PATH'}:$FindBin::Bin:" . autobuild_root;
+use lib autobuild_root;
+chdir ($FindBin::Bin);
 
 use common::utility;
 use common::test_utils;
-
-$ENV{'PATH'} = "$ENV{'PATH'}:$FindBin::Bin";
 
 our $exit_status = 0;
 
@@ -80,5 +82,9 @@ if (!$found_version) {
 
 if ($exit_status) {
     dump_log ();
+    print("Test Failed\n");
+}
+else {
+    print("Test Passed\n");
 }
 exit ($exit_status);

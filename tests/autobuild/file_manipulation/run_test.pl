@@ -5,6 +5,12 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 use strict;
 use warnings;
 
+use FindBin;
+use constant autobuild_root => "$FindBin::Bin/../../../";
+$ENV{'PATH'} = "$ENV{'PATH'}:" . autobuild_root;
+use lib autobuild_root;
+chdir ($FindBin::Bin);
+
 use common::utility;
 use common::test_utils;
 
@@ -24,4 +30,10 @@ expect_file_contents ("123", "multi_output_opts.txt");
 
 expect_file_contents ("OneLine", "oneline_output.txt");
 
+if ($exit_status) {
+    print("Test Failed\n");
+}
+else {
+    print("Test Passed\n");
+}
 exit ($exit_status);

@@ -11,9 +11,6 @@ use FindBin;
 
 use lib $FindBin::Bin;
 use common::utility;
-use common::change_dir;
-
-$ENV{'PATH'} = "$ENV{'PATH'}:$FindBin::Bin";
 
 my $exit_status = 0;
 
@@ -25,13 +22,7 @@ sub run_test
     return if ($file ne "run_test.pl");
     my $dir = dirname ($path);
     print ("$dir\n");
-    my $cd = ChangeDir->new ({dir => dirname ($full_path)});
-    if (!$cd) {
-        $exit_status = 1;
-        return;
-    }
-
-    if (!utility::run_command ("perl -I$FindBin::Bin $file")) {
+    if (!utility::run_command ("perl $full_path")) {
         $exit_status = 1;
     }
 }
