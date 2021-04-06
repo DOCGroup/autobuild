@@ -238,14 +238,47 @@ sub GetVariable ($)
   return $value;
 }
 
+sub GetVariablesMatching ($)
+{
+  my $re = shift;
+  my @vars = ();
+  my %already_found = ();
+
+  # First the variables for which we know the order in which they were set.
+  for my $var (@{$data{vars_order}}) {
+    if ($var =~ m/$re/ && exists ($data{VARS}->{$var})) {
+      $already_found{$var} = 1;
+      push(@vars, [$var, GetVariable ($var)])
+    }
+  }
+
+  # Then comes variables with undefined order
+  for my $var (keys (%{$data{VARS}})) {
+    if ($var =~ m/$re/ && !exists ($already_found{$var})) {
+      push(@vars, [$var, GetVariable ($var)])
+    }
+  }
+
+  return \@vars;
+}
+
 ##############################################################################
 #
-sub SetVariable ($$)
+sub SetVariable ($$;$)
 {
-  my $variable = shift;
-  my $option = shift;
+  my $name = shift;
+  my $value = shift;
+  my $our_data = shift // \%data;
 
-  $data{VARS}->{$variable} = $option;
+  my @new_vars_order = grep {$_ ne $name} @{$our_data->{vars_order}};
+  if (defined ($value)) {
+    push(@new_vars_order, $name);
+    $our_data->{VARS}->{$name} = $value;
+  }
+  else {
+    delete ($our_data->{VARS}->{$name});
+  }
+  $our_data->{vars_order} = \@new_vars_order;
 }
 
 ##############################################################################
@@ -438,6 +471,7 @@ INPFILE: foreach my $file (@files) {
   undef (@{$data{COMMANDS}});
   undef (%{$data{GROUPS}});
   undef (@{$data{UNUSED_GROUPS}});
+  $data{vars_order} = [];
 
   # We save a copy of the initial environment values which is stored under
   # the name "default", any other group names encountered by the parsing will

@@ -52,10 +52,21 @@ sub Run ($)
 
     my $command_name = $self->{simple} ? "cmake_cmd" : "cmake";
 
+    # Get cmake_var_* Autobuild Variables
+    my @cmake_vars = ();
+    my $autobuild_var_cmake_var_re = qr/^cmake_var_(\w+)$/;
+    my $autobuild_var_cmake_vars = main::GetVariablesMatching ($autobuild_var_cmake_var_re);
+    for my $i (@{$autobuild_var_cmake_vars}) {
+        my ($raw_name, $value) = @{$i};
+        $raw_name =~ $autobuild_var_cmake_var_re;
+        push (@cmake_vars, [$1, $value]);
+    }
+
     # Get Args
     my $build_dir = "build";
     my $config_args = "..";
     my $build_args = "--build .";
+    my $arg_cmake_var_re = qr/^var_(\w+)$/;
     for my $i (@{$args}) {
         my ($name, $value) = @{$i};
         if (!$self->{simple} && $name eq 'build_dir') {
@@ -66,6 +77,13 @@ sub Run ($)
         }
         elsif (!$self->{simple} && $name eq 'build_args') {
             $build_args = $value;
+        }
+        elsif (!$self->{simple} && $name =~ $arg_cmake_var_re) {
+            $name =~ $arg_cmake_var_re;
+            $name = $1;
+            # Override existing value
+            @cmake_vars = grep {$_->[0] ne $name} @cmake_vars;
+            push (@cmake_vars, [$name, $value]);
         }
         else {
             print STDERR __FILE__,
@@ -88,6 +106,14 @@ sub Run ($)
         print STDERR __FILE__,
             ": options attribute not allowed for the cmake command\n";
         return 0;
+    }
+
+    # Insert cmake_var_* Autobuild Variables and var_* Arguments
+    for my $i (@cmake_vars) {
+        my ($name, $value) = @{$i};
+        if ($config_args !~ /-D\W*$name/) {
+            $config_args .= " -D \"$name=$value\"";
+        }
     }
 
     # Recreate Build Directory

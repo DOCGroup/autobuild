@@ -6,5 +6,5 @@ Tests the `cmake`, `cmake_cmd`, and `print_cmake_version` commands by running
 those files to the what it expects.
 
 An autobuild log is used to test `print_cmake_version` to test that it's
-printing the version, but it causes autobuild to put errors there, so it's
-dumped if there's an error.
+printing the version. This causes autobuild to put errors there during the time
+it's being used, so it's dumped if there's an error.

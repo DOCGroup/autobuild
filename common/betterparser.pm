@@ -955,7 +955,7 @@ sub DealWithConfigSectionTags ($$$$$\%)
       print "  Ignoring variable $NAME=\"$VALUE\"\n" if (1 < $main::verbose);
     }
     elsif (!defined $original || $TYPE =~ m/^(replace|set)$/i) {
-      $data->{VARS}->{$NAME} = $VALUE;
+      main::SetVariable($NAME, $VALUE, $data);
       print "  ", (!defined $original ? "Created" : "Replaced"),
         " variable $NAME=\"$VALUE\"\n" if (1 < $main::verbose);
     }
@@ -971,16 +971,16 @@ sub DealWithConfigSectionTags ($$$$$\%)
     }
     elsif ($TYPE =~ m/^prefix$/i) {
       $VALUE .= $original;
-      $data->{VARS}->{$NAME} = $VALUE;
+      main::SetVariable($NAME, $VALUE, $data);
       print "  Prefixed variable $NAME=\"$VALUE\"\n" if (1 < $main::verbose);
     }
     elsif ($TYPE =~ m/^(delete|unset|remove)$/i) {
-      delete $data->{VARS}->{$NAME};
+      main::SetVariable($NAME, undef, $data);
       print "  Deleted variable $NAME\n" if (1 < $main::verbose);
     }
     else { # postfix or suffix
-      $VALUE= $original . $VALUE;
-      $data->{VARS}->{$NAME} = $VALUE;
+      $VALUE = $original . $VALUE;
+      main::SetVariable($NAME, $VALUE, $data);
       print "  Suffixed variable $NAME=\"$VALUE\"\n" if (1 < $main::verbose);
     }
   }
