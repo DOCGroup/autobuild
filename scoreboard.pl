@@ -505,8 +505,7 @@ sub decode_timestamp ($)
 sub write_failed_tests_by_test
 {
     my $directory = shift;
-    my $failed_tests_by_test_ref = shift;
-    my %failed_tests_by_test = %$failed_tests_by_test_ref;
+    my %failed_tests_by_test = %{shift()};
 
     # Sort by test
     my @ks = (sort keys %failed_tests_by_test);
