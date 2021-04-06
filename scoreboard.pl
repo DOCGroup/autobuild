@@ -512,7 +512,7 @@ sub write_failed_tests_by_test
     my @ks = (sort keys %failed_tests_by_test);
     my $size = scalar @ks;
     if ($size > 0) {
-        my $fh = new FileHandle ("$directory/$log_prefix"."_Failed_Tests_By_Test.html", 'w');
+        my $fh = new FileHandle ("$directory/${log_prefix}_Failed_Tests_By_Test.html", 'w');
         print {$fh} "<h1>Failed Test Brief Log By Test</h1>\n";
         foreach my $k (@ks) {
             print {$fh} "<hr><h2>$k</h2>\n";
@@ -546,8 +546,7 @@ sub update_cache ($)
         return;
     }
 
-    my @buildnames = sort keys %builds;
-    foreach my $buildname (@buildnames) {
+    foreach my $buildname (sort keys %builds) {
         ### Check to see if we had problems.  If there is no basename,
         ### we had problems downloading.
         if (!defined $builds{$buildname}{BASENAME}) {
@@ -619,8 +618,7 @@ sub local_update_cache ($)
         unlink $failed_tests;
     }
 
-    my @buildnames = sort keys %builds;
-    foreach my $buildname (@buildnames) {
+    foreach my $buildname (sort keys %builds) {
         my $keep = $keep_default;
         my @existing;
 
