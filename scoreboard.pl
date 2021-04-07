@@ -90,6 +90,173 @@ own scoreboard are
 <A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
 here</A>.\n";
 
+
+sub check_post
+{
+    my $build_dir = shift;
+    my $post = "$build_dir/post";
+    if ( -e $post ) {
+        unlink $post;
+        return 1;
+    }
+    return 0;
+}
+
+sub list_logs
+{
+    my $list_ref = shift;
+    my $dir = shift;
+    my $dh = new DirHandle($dir);
+    if (defined $dh) {
+        while (defined($_ = $dh->read)) {
+            if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
+                push @$list_ref, "$dir/$1";
+            }
+        }
+        undef $dh;
+        return 1;
+    } else {
+        print STDERR "Error: Could not read $dir\n";
+        return 0;
+    }
+}
+
+sub delete_old_logs
+{
+    my $logs_ref = shift;
+    my $keep = shift;
+    my $n = scalar @$logs_ref;
+    print "        keep=$keep, logs=$n\n" if ($verbose);
+
+    @$logs_ref = sort @$logs_ref;
+    for (my $i = $keep; $i < $n; ++$i) {
+        my $fb = shift(@$logs_ref);
+        print "        Removing $fb files\n" if ($verbose);
+        unlink($fb.".txt", $fb."_JUnit.xml", $fb."_Full.html", $fb."_Brief.html", $fb."_Totals.html", $fb."_Config.html");
+    }
+    return ($keep < $n);
+}
+
+sub get_latest
+{
+    my $build_dir = shift;
+    my $file_name = "$build_dir/latest.txt";
+    my $latest = "";
+    my $fh = new FileHandle($file_name, 'r');
+    if (defined $fh) {
+        print "        Loading latest from $file_name\n" if ($verbose);
+        while (<$fh>) {
+            if ($_ =~ m/(...._.._.._.._..) /) {
+                $latest = "$build_dir/$1";
+            }
+        }
+        undef $fh;
+    } else {
+        print STDERR "        Error: Could not find $file_name\n";
+    }
+    return $latest;
+}
+
+sub set_latest_build_info
+{
+    my $latest = shift;
+    my $buildname = shift;
+
+    if ($latest =~ m/Config: (\d+)/) {
+        $builds{$buildname}{CONFIG_SECTION} = $1;
+    }
+    if ($latest =~ m/Setup: (\d+)-(\d+)-(\d+)/) {
+        $builds{$buildname}{SETUP_SECTION} = $1;
+        $builds{$buildname}{SETUP_ERRORS} = $2;
+        $builds{$buildname}{SETUP_WARNINGS} = $3;
+    }
+    if ($latest =~ m/Compile: (\d+)-(\d+)-(\d+)/) {
+        $builds{$buildname}{COMPILE_SECTION} = $1;
+        $builds{$buildname}{COMPILE_ERRORS} = $2;
+        $builds{$buildname}{COMPILE_WARNINGS} = $3;
+    }
+    if ($latest =~ m/Test: (\d+)-(\d+)-(\d+)/) {
+        $builds{$buildname}{TEST_SECTION} = $1;
+        $builds{$buildname}{TEST_ERRORS} = $2;
+        $builds{$buildname}{TEST_WARNINGS} = $3;
+    }
+    if ($latest =~ m/Failures: (\d+)/) {
+        $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
+    }
+    if ($latest =~ m/ACE: ([^ ]+)/) {
+        $builds{$buildname}{SUBVERSION_CHECKEDOUT_ACE} = $1;
+    }
+    if ($latest =~ m/MPC: ([^ ]+)/) {
+        $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
+    }
+    if ($latest =~ m/OpenDDS: ([^ ]+)/) {
+        $builds{$buildname}{SUBVERSION_CHECKEDOUT_OPENDDS} = $1;
+    }
+    if ($latest =~ m/CVS: \"([^\"]+)\"/) {
+        $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
+    }
+}
+
+sub update_latest_build_info
+{
+    my $dir = shift;
+    my $buildname = shift;
+    my $file_name = "$dir/$buildname/latest.txt";
+    my $latest;
+    my $fh = new FileHandle($file_name, 'r');
+    if (defined $fh) {
+        print "        Loading latest from $file_name\n" if ($verbose);
+        while (<$fh>) {
+            if ($_ =~ m/(...._.._.._.._..) /) {
+                $builds{$buildname}{BASENAME} = $1;
+                $latest = $_;
+            }
+        }
+        undef $fh;
+    } else {
+        print STDERR "        Error: Could not find $file_name\n";
+        return 0;
+    }
+    if (!defined $latest) {
+        print STDERR "        Error: Could not read latest build info for $buildname\n";
+        return 0;
+    }
+    set_latest_build_info($latest, $buildname);
+    return 1;
+}
+
+sub write_failed_tests_by_test
+{
+    my $directory = shift;
+    my %failed_tests_by_test = %{shift()};
+
+    # Sort by test
+    my @ks = (sort keys %failed_tests_by_test);
+    my $size = scalar @ks;
+    if ($size > 0) {
+        my $fh = new FileHandle ("$directory/${log_prefix}_Failed_Tests_By_Test.html", 'w');
+        print {$fh} "<h1>Failed Test Brief Log By Test</h1>\n";
+        foreach my $k (@ks) {
+            print {$fh} "<hr><h2>$k</h2>\n";
+            print {$fh} "$failed_tests_by_test{$k}<br>\n";
+        }
+    }
+}
+
+sub pull ($$$;$)
+{
+    my $build_url = shift;
+    my $build_dir = shift;
+    my $file = shift;
+    my $timeout = shift;
+    print "        Download $build_url/$file\n" if ($verbose);
+    my $ua = LWP::UserAgent->new;
+    $ua->timeout($timeout) if (defined $timeout);
+    my $request = HTTP::Request->new('GET', "$build_url/$file");
+    my $response = $ua->request($request, "$build_dir/$file");
+    return $response->is_success();
+}
+
 ###############################################################################
 #
 # load_build_list
@@ -202,46 +369,6 @@ sub build_group_hash ()
         else {
             push @nogroup, $buildname;
         }
-    }
-}
-
-sub set_latest_build_info
-{
-    my $latest = shift;
-    my $buildname = shift;
-
-    if ($latest =~ m/Config: (\d+)/) {
-        $builds{$buildname}{CONFIG_SECTION} = $1;
-    }
-    if ($latest =~ m/Setup: (\d+)-(\d+)-(\d+)/) {
-        $builds{$buildname}{SETUP_SECTION} = $1;
-        $builds{$buildname}{SETUP_ERRORS} = $2;
-        $builds{$buildname}{SETUP_WARNINGS} = $3;
-    }
-    if ($latest =~ m/Compile: (\d+)-(\d+)-(\d+)/) {
-        $builds{$buildname}{COMPILE_SECTION} = $1;
-        $builds{$buildname}{COMPILE_ERRORS} = $2;
-        $builds{$buildname}{COMPILE_WARNINGS} = $3;
-    }
-    if ($latest =~ m/Test: (\d+)-(\d+)-(\d+)/) {
-        $builds{$buildname}{TEST_SECTION} = $1;
-        $builds{$buildname}{TEST_ERRORS} = $2;
-        $builds{$buildname}{TEST_WARNINGS} = $3;
-    }
-    if ($latest =~ m/Failures: (\d+)/) {
-        $builds{$buildname}{SECTION_ERROR_SUBSECTIONS} = $1;
-    }
-    if ($latest =~ m/ACE: ([^ ]+)/) {
-        $builds{$buildname}{SUBVERSION_CHECKEDOUT_ACE} = $1;
-    }
-    if ($latest =~ m/MPC: ([^ ]+)/) {
-        $builds{$buildname}{SUBVERSION_CHECKEDOUT_MPC} = $1;
-    }
-    if ($latest =~ m/OpenDDS: ([^ ]+)/) {
-        $builds{$buildname}{SUBVERSION_CHECKEDOUT_OPENDDS} = $1;
-    }
-    if ($latest =~ m/CVS: \"([^\"]+)\"/) {
-        $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
     }
 }
 
@@ -419,8 +546,6 @@ sub query_history ()
     }
 }
 
-
-
 ###############################################################################
 #
 # load_web_latest
@@ -448,7 +573,6 @@ sub load_web_latest ($)
         return '';
     }
 
-
     ### Request the web dir page
 
     my $ua = LWP::UserAgent->new;
@@ -469,7 +593,6 @@ sub load_web_latest ($)
 
     return $response->content ();
 }
-
 
 ###############################################################################
 #
@@ -500,133 +623,6 @@ sub decode_timestamp ($)
     return $description;
 }
 
-sub check_post
-{
-    my $build_dir = shift;
-    my $post = "$build_dir/post";
-    if ( -e $post ) {
-        unlink $post;
-        return 1;
-    }
-    return 0;
-}
-
-sub list_logs
-{
-    my $list_ref = shift;
-    my $dir = shift;
-    my $dh = new DirHandle($dir);
-    if (defined $dh) {
-        while (defined($_ = $dh->read)) {
-            if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
-                push @$list_ref, "$dir/$1";
-            }
-        }
-        undef $dh;
-        return 1;
-    } else {
-        print STDERR "Error: Could not read $dir\n";
-        return 0;
-    }
-}
-
-sub delete_old_logs
-{
-    my $logs_ref = shift;
-    my $keep = shift;
-    my $n = scalar @$logs_ref;
-    print "        keep=$keep, logs=$n\n" if ($verbose);
-
-    @$logs_ref = sort @$logs_ref;
-    for (my $i = $keep; $i < $n; ++$i) {
-        my $fb = shift(@$logs_ref);
-        print "        Removing $fb files\n" if ($verbose);
-        unlink($fb.".txt", $fb."_JUnit.xml", $fb."_Full.html", $fb."_Brief.html", $fb."_Totals.html", $fb."_Config.html");
-    }
-    return ($keep < $n);
-}
-
-sub get_latest
-{
-    my $build_dir = shift;
-    my $file_name = "$build_dir/latest.txt";
-    my $latest = "";
-    my $fh = new FileHandle($file_name, 'r');
-    if (defined $fh) {
-        print "        Loading latest from $file_name\n" if ($verbose);
-        while (<$fh>) {
-            if ($_ =~ m/(...._.._.._.._..) /) {
-                $latest = "$build_dir/$1";
-            }
-        }
-        undef $fh;
-    } else {
-        print STDERR "        Error: Could not find $file_name\n";
-    }
-    return $latest;
-}
-
-sub update_latest_build_info
-{
-    my $dir = shift;
-    my $buildname = shift;
-    my $file_name = "$dir/$buildname/latest.txt";
-    my $latest;
-    my $fh = new FileHandle($file_name, 'r');
-    if (defined $fh) {
-        print "        Loading latest from $file_name\n" if ($verbose);
-        while (<$fh>) {
-            if ($_ =~ m/(...._.._.._.._..) /) {
-                $builds{$buildname}{BASENAME} = $1;
-                $latest = $_;
-            }
-        }
-        undef $fh;
-    } else {
-        print STDERR "        Error: Could not find $file_name\n";
-        return 0;
-    }
-    if (!defined $latest) {
-        print STDERR "        Error: Could not read latest build info for $buildname\n";
-        return 0;
-    }
-    set_latest_build_info($latest, $buildname);
-    return 1;
-}
-
-sub write_failed_tests_by_test
-{
-    my $directory = shift;
-    my $failed_tests_by_test_ref = shift;
-    my %failed_tests_by_test = %$failed_tests_by_test_ref;
-
-    # Sort by test
-    my @ks = (sort keys %failed_tests_by_test);
-    my $size = scalar @ks;
-    if ($size > 0) {
-        my $fh = new FileHandle ("$directory/$log_prefix"."_Failed_Tests_By_Test.html", 'w');
-        print {$fh} "<h1>Failed Test Brief Log By Test</h1>\n";
-        foreach my $k (@ks) {
-            print {$fh} "<hr><h2>$k</h2>\n";
-            print {$fh} "$failed_tests_by_test{$k}<br>\n";
-        }
-    }
-}
-
-sub pull ($$$;$)
-{
-    my $build_url = shift;
-    my $build_dir = shift;
-    my $file = shift;
-    my $timeout = shift;
-    print "        Download $build_url/$file\n" if ($verbose);
-    my $ua = LWP::UserAgent->new;
-    $ua->timeout($timeout) if (defined $timeout);
-    my $request = HTTP::Request->new('GET', "$build_url/$file");
-    my $response = $ua->request($request, "$build_dir/$file");
-    return $response->is_success();
-}
-
 ###############################################################################
 #
 # update_cache
@@ -651,7 +647,7 @@ sub update_cache ($)
         return;
     }
 
-    foreach my $buildname (keys %builds) {
+    foreach my $buildname (sort keys %builds) {
         ### Check to see if we had problems.  If there is no basename,
         ### we had problems downloading.
         if (!defined $builds{$buildname}{BASENAME}) {
@@ -715,8 +711,7 @@ sub local_update_cache ($)
         unlink $failed_tests;
     }
 
-    my @buildnames = sort keys %builds;
-    foreach my $buildname (@buildnames) {
+    foreach my $buildname (sort keys %builds) {
         print "    Looking at $buildname\n" if ($verbose);
         my $build_dir = "$directory/$buildname";
 
@@ -770,11 +765,10 @@ sub local_update_cache ($)
         my $latest = get_latest($build_dir);
         foreach my $file (@existing) {
             my $totals_exist = (-e $file . "_Totals.html") && !(-z _);
-            if ($post || !$use_build_logs || !$totals_exist || ($latest eq $file)) {
+            if (($post && !$totals_exist) || ($totals_exist && !$use_build_logs && ($latest eq $file))) {
                 # process only the latest text file if logs already exist
                 print "        Prettifying $file.txt\n" if($verbose);
-              # Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", $totals_exist);
-                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
+                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", $totals_exist);
                 $updated++;
             }
         }
@@ -1071,7 +1065,6 @@ sub timestamp_color ($$$$)
     return 'gray';
 }
 
-
 ###############################################################################
 #
 # found_section
@@ -1110,8 +1103,6 @@ sub found_section ($$)
 
     return $found;
 }
-
-
 
 ###############################################################################
 #
@@ -1203,7 +1194,6 @@ sub update_html ($$$)
 
     $indexhtml->close ();
 }
-
 
 ###############################################################################
 #
@@ -1606,7 +1596,6 @@ sub GetVariable ($)
    my %a=();
    return $a{'UNDEFINED'};
 }
-
 
 ###############################################################################
 #
