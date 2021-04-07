@@ -79,7 +79,6 @@ sub Run ($)
             $build_args = $value;
         }
         elsif (!$self->{simple} && $name =~ $arg_cmake_var_re) {
-            $name =~ $arg_cmake_var_re;
             $name = $1;
             # Override existing value
             @cmake_vars = grep {$_->[0] ne $name} @cmake_vars;
@@ -125,20 +124,18 @@ sub Run ($)
         return 0;
     }
 
-    {
-        # Change to Build Directory
-        my $build_cd = ChangeDir->new({dir => $build_dir});
-        return 0 unless ($build_cd);
+    # Change to Build Directory
+    my $build_cd = ChangeDir->new({dir => $build_dir});
+    return 0 unless ($build_cd);
 
-        # Run Configure CMake Command
-        if (!utility::run_command ("$cmake_command $config_args")) {
-            return 0;
-        }
+    # Run Configure CMake Command
+    if (!utility::run_command ("$cmake_command $config_args")) {
+        return 0;
+    }
 
-        # Run Build CMake Command
-        if (!utility::run_command ("$cmake_command $build_args")) {
-            return 0;
-        }
+    # Run Build CMake Command
+    if (!utility::run_command ("$cmake_command $build_args")) {
+        return 0;
     }
 
     return 1;
