@@ -6,9 +6,12 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
 ##############################################################################
 
 use diagnostics;
+use strict;
+
 use Time::Local;
 use File::Basename;
 use Cwd;
+use B qw(perlstring);
 
 if ( $^O eq 'VMS' ) {
   require VMS::Filespec;
@@ -37,6 +40,7 @@ my %command_table = ();
 my $cvs_tag;
 my $starting_dir = getcwd ();
 my $warn_nonfatal;
+my $status = 0;
 
 ##############################################################################
 # Load the commands allowed here
@@ -105,6 +109,8 @@ require command::setup_lvrt;
 require command::eval;
 require command::setenv;
 require command::setvariable;
+require command::cmake;
+require command::print_cmake_version;
 
 ##############################################################################
 # Parse the arguments supplied when executed
@@ -232,14 +238,47 @@ sub GetVariable ($)
   return $value;
 }
 
+sub GetVariablesMatching ($)
+{
+  my $re = shift;
+  my @vars = ();
+  my %already_found = ();
+
+  # First the variables for which we know the order in which they were set.
+  for my $var (@{$data{vars_order}}) {
+    if ($var =~ m/$re/ && exists ($data{VARS}->{$var})) {
+      $already_found{$var} = 1;
+      push(@vars, [$var, GetVariable ($var)])
+    }
+  }
+
+  # Then comes variables with undefined order
+  for my $var (keys (%{$data{VARS}})) {
+    if ($var =~ m/$re/ && !exists ($already_found{$var})) {
+      push(@vars, [$var, GetVariable ($var)])
+    }
+  }
+
+  return \@vars;
+}
+
 ##############################################################################
 #
-sub SetVariable ($$)
+sub SetVariable ($$;$)
 {
-  my $variable = shift;
-  my $option = shift;
+  my $name = shift;
+  my $value = shift;
+  my $our_data = shift // \%data;
 
-  $data{VARS}->{$variable} = $option;
+  my @new_vars_order = grep {$_ ne $name} @{$our_data->{vars_order}};
+  if (defined ($value)) {
+    push(@new_vars_order, $name);
+    $our_data->{VARS}->{$name} = $value;
+  }
+  else {
+    delete ($our_data->{VARS}->{$name});
+  }
+  $our_data->{vars_order} = \@new_vars_order;
 }
 
 ##############################################################################
@@ -432,6 +471,7 @@ INPFILE: foreach my $file (@files) {
   undef (@{$data{COMMANDS}});
   undef (%{$data{GROUPS}});
   undef (@{$data{UNUSED_GROUPS}});
+  $data{vars_order} = [];
 
   # We save a copy of the initial environment values which is stored under
   # the name "default", any other group names encountered by the parsing will
@@ -736,7 +776,7 @@ INPFILE: foreach my $file (@files) {
     my $FILE      = $command->{FILE};
     my $LINE_FROM = $command->{LINE_FROM};
     my $LINE_TO   = $command->{LINE_FROM};
-    my $CONTENTS  = $command->{CONTENTS};
+    my $args = $command->{ARGS};
 
     my $CMD = "Executing \"$NAME\" line";
     if (!defined $LINE_TO || $LINE_FROM == $LINE_TO) {
@@ -746,7 +786,9 @@ INPFILE: foreach my $file (@files) {
       $CMD .= "s $LINE_FROM-$LINE_TO";
     }
     $CMD .= " of \"$FILE\"";
-    my $CMD2 = "with options: $OPTIONS";
+    my $arg_count = scalar (@{$args});
+    my $CMD2 = "with $arg_count argument" . ($arg_count == 1 ? "" : "s") .
+      " and options: " . perlstring ($OPTIONS);
 
     print "\n",'=' x 79,"\n===== $CMD\n" if (1 < $verbose);
 
@@ -762,7 +804,13 @@ INPFILE: foreach my $file (@files) {
       ChangeENV (%{$data{GROUPS}->{$GROUP}});
     }
 
-    print "===== $CMD2\n" if (1 < $verbose);
+    if ($verbose >= 2) {
+      print "===== $CMD2\n";
+      for my $i (@{$args}) {
+        my ($name, $value) = @{$i};
+        print ("=====   arg \"$name\": ", perlstring ($value), "\n");
+      }
+    }
 
     # Work out if we are going to execute this command.
     #
@@ -805,9 +853,10 @@ INPFILE: foreach my $file (@files) {
         }
       }
 
-      if ($command_table{$NAME}->Run ($OPTIONS, $CONTENTS) == 0) {
+      if ($command_table{$NAME}->Run ($OPTIONS, $args) == 0) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
+        $status = 1;
         if (!$keep_going) {
           print STDERR ", exiting.\n";
           chdir ($starting_dir);
@@ -830,3 +879,5 @@ INPFILE: foreach my $file (@files) {
   chdir ($starting_dir);
   ChangeENV (%originalENV);
 } ## next input file
+
+exit $status;
