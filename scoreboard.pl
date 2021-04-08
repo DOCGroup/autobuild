@@ -764,7 +764,7 @@ sub local_update_cache ($)
 
         my $latest = get_latest($build_dir);
         foreach my $file (@existing) {
-            my $totals_exist = (-e $file . "_Totals.html") && !(-z _);
+            my $totals_exist = (-e "${file}_Totals.html") && !(-z _);
             if (($post && !$totals_exist) || ($totals_exist && !$use_build_logs && ($latest eq $file))) {
                 # process only the latest text file if logs already exist
                 print "        Prettifying $file.txt\n" if($verbose);
