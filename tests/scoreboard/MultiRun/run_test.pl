@@ -16,32 +16,41 @@ use common::test_utils;
 
 use File::Path qw(make_path remove_tree);
 
+sub run_cmd {
+  my $cmd = shift;
+  print "$cmd\n";
+  return system($cmd);
+}
+
 sub copy_dir {
   my $src_dir = shift;
   my $des_dir = shift;
-  print "cp -R $src_dir $des_dir\n";
-  system("cp -R $src_dir $des_dir");
+  run_cmd("cp -R $src_dir $des_dir");
 }
 
 sub run_scoreboard {
-  system("../../../scoreboard.pl -c -f ./test.xml -o test.html -d runs/run");
+  run_cmd("../../../scoreboard.pl -c -f ./test.xml -o test.html -d runs/run");
 }
 
 sub diff {
-  my $d1 = shift;
-  my $d2 = shift;
-  print "compare $d1 with $d2\n";
-  my $diff_index = "diff runs/$d1/build1/index.html runs/$d2/build1/index.html";
-  my $r = system($diff_index);
+  my $run_a = shift;
+  my $run_b = shift;
+  my $o = shift;
+  my $r = run_cmd("diff runs/$run_a/$o runs/$run_b/$o");
   if ($r) {
-    print "$r = $diff_index\n";
-    return $r;
+    print "$r\n";
+    return 1;
   }
   return 0;
 }
 
 sub compare_runs {
-  return diff("run1", "run2") + diff("run1", "run");
+  my $r = 0;
+  $r += diff("run1", "run2", "build1/index.html");
+  $r += diff("run1", "run" , "build1/index.html");
+  $r += diff("run1", "run2", "build3/2021_03_09_17_33_Totals.html");
+  $r += diff("run1", "run" , "build3/2021_03_09_17_33_Totals.html");
+  return $r;
 }
 
 make_path("runs");

@@ -1,3 +1,3 @@
-# 'three_runs' Test
+# 'MultiRun' Test
 
-Runs 'scoreboard.pl' three times with the build_logs data, and checks the results for consistency.
+Runs 'scoreboard.pl' multiple times with the build_logs data, and checks the results for consistency.
