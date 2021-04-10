@@ -1,0 +1,14 @@
+<scoreboard>
+  <group>
+    <name>Group 1</name>
+    <build>
+      <name>build1</name>
+    </build>
+    <build>
+      <name>build2</name>
+    </build>
+    <build>
+      <name>build3</name>
+    </build>
+  </group>
+</scoreboard>
