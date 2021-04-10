@@ -1175,7 +1175,9 @@ sub new ($$$$$$$$)
                 'setup'     => \&Setup_Handler,
                 'config'    => \&Config_Handler,
                 'configure' => \&Autoconf_Handler,
+                'compile'   => \&Compile_Handler,
                 'test'      => \&Test_Handler,
+                'end'       => \&Normal_Handler
             );
             push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix);
         }

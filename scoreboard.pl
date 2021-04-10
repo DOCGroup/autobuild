@@ -243,6 +243,19 @@ sub write_failed_tests_by_test
     }
 }
 
+sub delete_failed_tests
+{
+    my $prefix = shift;
+    my $failed_tests = "${prefix}_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+    $failed_tests = "${prefix}_Failed_Tests_By_Test.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+}
+
 sub pull ($$$;$)
 {
     my $build_url = shift;
@@ -692,7 +705,7 @@ sub local_update_cache ($)
 {
     my $directory = shift;
     my %failed_tests_by_test;
-    my $failed_tests_by_test_ref = \%failed_tests_by_test;
+    my $prefix = "$directory/$log_prefix";
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -701,15 +714,7 @@ sub local_update_cache ($)
         return;
     }
 
-    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
-    if (-e $failed_tests) {
-        unlink $failed_tests;
-    }
-
-    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
-    if (-e $failed_tests) {
-        unlink $failed_tests;
-    }
+    delete_failed_tests($prefix);
 
     foreach my $buildname (sort keys %builds) {
         print "    Looking at $buildname\n" if ($verbose);
@@ -768,7 +773,7 @@ sub local_update_cache ($)
             if (($post && !$totals_exist) || ($totals_exist && !$use_build_logs && ($latest eq $file))) {
                 # process only the latest text file if logs already exist
                 print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", $totals_exist);
+                Prettify::Process("$file.txt", $buildname, \%failed_tests_by_test, $use_build_logs, $builds{$buildname}->{DIFFROOT}, $prefix, $totals_exist);
                 $updated++;
             }
         }
@@ -777,11 +782,11 @@ sub local_update_cache ($)
         if ($updated || $post) {
             print "        Creating new index\n" if ($verbose);
             my $diffRoot = $builds{$buildname}->{DIFFROOT};
-            utility::index_logs ($build_dir, $buildname, $diffRoot);
+            utility::index_logs($build_dir, $buildname, $diffRoot);
         }
         update_latest_build_info($directory, $buildname);
     }
-    write_failed_tests_by_test($directory, $failed_tests_by_test_ref);
+    write_failed_tests_by_test($directory, \%failed_tests_by_test);
 }
 
 ###############################################################################
@@ -806,15 +811,7 @@ sub clean_cache ($)
         return;
     }
 
-    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
-    if (-e $failed_tests) {
-        unlink $failed_tests;
-    }
-
-    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
-    if (-e $failed_tests) {
-        unlink $failed_tests;
-    }
+    delete_failed_tests("$directory/$log_prefix");
 
     foreach my $buildname (keys %builds) {
         ### Do we use the local cache or do we work
