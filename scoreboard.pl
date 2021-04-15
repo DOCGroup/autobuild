@@ -83,6 +83,8 @@ our $use_build_logs = 0;
 
 our $custom_css = "";
 
+our $log_prefix = "";
+
 my $build_instructions = "<br><p>Instructions for setting up your
 own scoreboard are
 <A HREF=\"https://github.com/DOCGroup/autobuild/blob/master/README.md\">
@@ -138,16 +140,30 @@ sub build_index_page ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE html>\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard</title>\n";
+    print $indexhtml "<html>\n<head>\n<title>Welcome to DOCGroup Distributed Scoreboard</title>\n";
     print $indexhtml "</head>\n";
 
     ### Start body
 
-    print $indexhtml "<body bgcolor=white><center><h1>Welcome to ACE+TAO+CIAO+DAnCE's Distributed Scoreboard\n</h1></center>\n<hr>\n";
+    print $indexhtml "<body bgcolor=white><center><h1>Welcome to DOCGroup Distributed Scoreboard\n</h1></center>\n<hr>\n";
     my $parser = new IndexParser;
     $parser->Parse ($index, \%builds);
     print $indexhtml "$preamble\n";
     print $indexhtml "\n<hr>\n";
+
+    ### Failed Test Reports
+
+    if (!$use_build_logs) {
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
+    }
 
     ### Print timestamp
 
@@ -500,6 +516,9 @@ sub decode_timestamp ($)
 sub update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
+
 
     print "Updating Local Cache\n" if ($verbose);
 
@@ -539,9 +558,19 @@ sub update_cache ($)
                 }
 
                 print "        Prettifying\n" if($verbose);
-                Prettify::Process ("$directory/$buildname/$filename");
+                Prettify::Process ("$directory/$buildname/$filename", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix");
             }
         }
+    }
+
+    my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+    my $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+    my $title = "Failed Test Brief Log By Test";
+    print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2><hr>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
     }
 }
 
@@ -559,12 +588,24 @@ sub update_cache ($)
 sub local_update_cache ($)
 {
     my $directory = shift;
+    my %failed_tests_by_test;
+    my $failed_tests_by_test_ref = \%failed_tests_by_test;
 
     print "Updating Local Cache\n" if ($verbose);
 
     if (!-w $directory) {
         warn "Cannot write to $directory";
         return;
+    }
+
+    my $failed_tests = $directory  . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
     }
 
     foreach my $buildname (keys %builds) {
@@ -649,12 +690,29 @@ sub local_update_cache ($)
         }
         print "        in local_update_cache, post=$post\n" if $verbose;
 
+        # Get info from the latest build
+        my $file_name1 = "$directory/$buildname/latest.txt";
+        my $file_handle1 = new FileHandle ($file_name1, 'r');
+        my $latest_basename = "";
+        if (defined $file_handle1) {
+            while (<$file_handle1>) {
+                if ($_ =~ m/(...._.._.._.._..) /) {
+                     $latest_basename = $1;
+                }
+            }
+        }
+        undef $file_handle1;
+
         foreach my $file (@existing) {
-            if ( -e $file . "_Totals.html" ) {next;}
-            if ( $post == 1 ) {
-                print "        Prettifying $file.txt\n" if($verbose);
-                Prettify::Process ("$file.txt");
-                $updated++;
+            if ( -e $file . "_Totals.html" || $post == 1 ) {
+                # skip scenario when Failed Test Log is not needed, and all other logs already exist
+                if (!($use_build_logs && (-e $file . "_Totals.html"))) {
+                    # process only the latest text file if logs already exist
+                    next if ((-e $file . "_Totals.html") && !($latest_basename eq substr($file, -length($latest_basename))));
+                    print "        Prettifying $file.txt\n" if($verbose);                
+                    Prettify::Process ("$file.txt", $buildname, $failed_tests_by_test_ref, $use_build_logs, $builds{$buildname}->{DIFFROOT}, "$directory/$log_prefix", (-e $file . "_Totals.html"));
+                    $updated++;
+                }
             } else {
                 # Create the triggerfile for the next time we run
                 open(FH, ">$triggerfile");
@@ -754,6 +812,20 @@ sub local_update_cache ($)
             $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
         }
     }
+
+    my $size = keys %failed_tests_by_test;
+    my $failed_tests_by_test_file;
+    if ($size > 0) {
+        my $failed_tests_by_test_file_name = $directory  . "/" . $log_prefix .  "_Failed_Tests_By_Test.html";
+        $failed_tests_by_test_file = new FileHandle ($failed_tests_by_test_file_name, 'w');
+        my $title = "Failed Test Brief Log By Test";
+        print {$failed_tests_by_test_file} "<h1>$title</h1>\n";
+    }
+
+    while (my ($k, $v) = each %failed_tests_by_test) {
+        print {$failed_tests_by_test_file} "<hr><h2>$k</h2>\n";
+        print {$failed_tests_by_test_file} "$v<br>\n";
+    }
 }
 
 
@@ -777,6 +849,16 @@ sub clean_cache ($)
     if (!-w $directory) {
         warn "Cannot write to $directory";
         return;
+    }
+
+    my $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
+    }
+
+    $failed_tests = $directory . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+    if (-e $failed_tests) {
+        unlink $failed_tests;
     }
 
     foreach my $buildname (keys %builds) {
@@ -1136,6 +1218,20 @@ sub update_html ($$$)
         update_html_table ($dir, $indexhtml, $group);
     }
 
+    ### Failed Test Reports
+
+    if (!$use_build_logs) {
+        my $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Build.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Build.html\">Failed Test Brief Log By Build</a><br>\n";
+        }
+
+        $failed_tests = $dir . "/" . $log_prefix . "_Failed_Tests_By_Test.html";
+        if (-e $failed_tests) {
+            print $indexhtml "<br><a href=\"" . $log_prefix . "_Failed_Tests_By_Test.html\">Failed Test Brief Log By Test</a><br>\n";
+        }
+    }
+
     ### Print timestamp
 
     print $indexhtml '<br>Last updated at ' . get_time_str() . "<br>\n";
@@ -1439,7 +1535,7 @@ sub update_html_table ($$@)
             print $indexhtml "<td align=center>";
             if (defined $builds{$buildname}->{MANUAL_LINK}) {
                 print $indexhtml "<input type=\"button\" value=\"Start\" ";
-                print $indexhtml "onclikc=\"window.location.href='";
+                print $indexhtml "onclick=\"window.location.href='";
                 print $indexhtml $builds{$buildname}->{MANUAL_LINK};
                 print $indexhtml "'\">";
             }
@@ -1787,6 +1883,7 @@ $inp_file = $opt_f;
 
 if (defined $opt_o) {
     $out_file = $opt_o;
+    ($log_prefix = $out_file) =~ s/\.[^.]+$//;
 }
 
 if (defined $opt_r) {
