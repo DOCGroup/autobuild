@@ -1,0 +1,35 @@
+<autobuild>
+  <configuration>
+    <variable name="root" value="."/>
+    <variable name="project_root" value="."/>
+    <variable name="log_root" value="."/>
+    <variable name="log_file" value="log.txt"/>
+    <variable name="cmake_command" value="fake_cmake.pl"/>
+    <variable name="cmake_generator" value="Fake Generator"/>
+    <variable name="cmake_var_CMAKE_C_COMPILER" value="fake-cc"/>
+  </configuration>
+
+  <command name="log" options="on"/>
+  <command name="print_cmake_version"/>
+  <command name="log" options="off"/>
+
+  <!-- All Defaults -->
+  <command name="cmake"/>
+
+  <!-- Override a cmake_var_ -->
+  <command name="cmake" dir="subdir1">
+    <arg name="var_CMAKE_C_COMPILER">super-fake-cc</arg>
+    <arg name="var_CMAKE_CXX_COMPILER">super-fake-c++</arg>
+  </command>
+
+  <!-- All Explicit Values -->
+  <command name="cmake" dir="subdir2">
+    <arg name="build_dir">the_build_dir</arg>
+    <!-- Make sure config_args Overrides cmake_var_* and var_* -->
+    <arg name="var_CMAKE_CXX_COMPILER">wrong-c++</arg>
+    <arg name="config_args">.. --extra-config-opt -G "Extra Fake Generator" -D CMAKE_C_COMPILER=extra-fake-cc -D CMAKE_CXX_COMPILER=extra-fake-c++</arg>
+    <arg name="build_args">--build . --extra-build-opt</arg>
+  </command>
+
+  <command name="cmake_cmd" options="--cmake-cmd"/>
+</autobuild>

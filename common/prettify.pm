@@ -975,7 +975,6 @@ sub Footer ()
         $totals .= " Setup: $self->{SETUP_SECTION}-$self->{SETUP_ERRORS}-$self->{SETUP_WARNINGS}";
     }
 
-
     if (defined $self->{COMPILE_SECTION}) {
         $totals .= " Compile: $self->{COMPILE_SECTION}-$self->{COMPILE_ERRORS}-$self->{COMPILE_WARNINGS}";
     }
@@ -1136,20 +1135,14 @@ sub new ($$$$$$$$)
     my $failed_tests_only = shift;
 
     # Initialize some variables
-
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
     $self->{FAILED_TESTS} = $failed_tests_ref;
     $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
 
-    if ($failed_tests_only) {
-        $self->{TOTALS} = new Prettify::Totals_HTML ($basename);
-    }
-
     if (!$failed_tests_only) {
         # Initialize the hash table of handlers for each section
-
         %{$self->{HANDLERS}} =
             (
                 'begin'     => \&Normal_Handler,
@@ -1162,7 +1155,6 @@ sub new ($$$$$$$$)
             );
 
         # Initialize the list of output classes
-
         @{$self->{OUTPUT}} =
             (
                 new Prettify::Full_HTML ($basename),   #Must be at 0
@@ -1172,22 +1164,24 @@ sub new ($$$$$$$$)
             );
 
         if (!$skip_failed_test_logs) {
-            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
+            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
         }
-    }
-    elsif (!$skip_failed_test_logs) {
-        %{$self->{HANDLERS}} =
-            (
+    } else { # $failed_tests_only
+        my $total_html = new Prettify::Totals_HTML($basename);
+        $self->{TOTALS} = $total_html;
+        @{$self->{OUTPUT}} = ($total_html);
+        if (!$skip_failed_test_logs) {
+            %{$self->{HANDLERS}} = (
                 'begin'     => \&Normal_Handler,
                 'setup'     => \&Setup_Handler,
                 'config'    => \&Config_Handler,
+                'configure' => \&Autoconf_Handler,
+                'compile'   => \&Compile_Handler,
                 'test'      => \&Test_Handler,
+                'end'       => \&Normal_Handler
             );
-
-        @{$self->{OUTPUT}} =
-            (
-                new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix),
-            );
+            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix);
+        }
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1203,7 +1197,6 @@ sub new ($$$$$$$$)
     }
 
     # Output the header for the files
-
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Header ();
     }
@@ -1832,13 +1825,11 @@ sub Process ($;$$$$$$)
     # if we detect any BUILD ERROR messages, send an e-mail
     # notification if MAIL_ADMIN was specified in the XML config
     # file.
-
     if (!$failed_tests_only) {
         my @errors = $processor->BuildErrors();
         my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
         my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
-        if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
-        {
+        if ((scalar(@errors) > 0) && ((defined $mail_admin) || (defined $mail_admin_file))) {
             $processor->SendEmailNotification();
         }
     }
