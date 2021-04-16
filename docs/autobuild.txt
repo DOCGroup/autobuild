@@ -40,7 +40,7 @@ cmake - Configure and build a CMake project.
     cmake_var_*: Autobuild variables that start with "cmake_var_" are passed to
       the configure CMake command using -D. For example:
         <variable name="cmake_var_CMAKE_CXX_COMPILER" value="clang++-11"/>
-      will result in `-D "CMAKE_CXX_COMPILER=clang++-11"`.
+      will result in `"-DCMAKE_CXX_COMPILER=clang++-11"`.
       A variable will not be inserted if it's already in config_args.
   Usage:
     Simplest example is:
@@ -57,11 +57,13 @@ cmake - Configure and build a CMake project.
       </command>
     The optional arg tags allow fine tuning what the build directory is called
     and the arguments to the two CMake commands.
+    "config_args" and "build_args" will override the arguments, while
+    "add_config_args" and "add_build_args" will append.
     "var_*" arguments will be passed to the CMake configure command using -D.
     These will override any "cmake_var_*" autobuild variables.
     For example:
       <arg name="var_CMAKE_CXX_COMPILER">clang++-11</arg>
-    will result in `-D "CMAKE_CXX_COMPILER=clang++-11"`.
+    will result in `"-DCMAKE_CXX_COMPILER=clang++-11"`.
     A variable will not be inserted if it's already in config_args.
 cmake_cmd - Invoke CMake directly. Uses the same cmake_command variable as the
     cmake and print_cmake_version commands. This can be used to manually run

@@ -75,8 +75,14 @@ sub Run ($)
         elsif (!$self->{simple} && $name eq 'config_args') {
             $config_args = $value;
         }
+        elsif (!$self->{simple} && $name eq 'add_config_args') {
+            $config_args .= " $value";
+        }
         elsif (!$self->{simple} && $name eq 'build_args') {
             $build_args = $value;
+        }
+        elsif (!$self->{simple} && $name eq 'add_build_args') {
+            $build_args .= " $value";
         }
         elsif (!$self->{simple} && $name =~ $arg_cmake_var_re) {
             $name = $1;
@@ -92,6 +98,7 @@ sub Run ($)
     }
 
     my $cmake_command = main::GetVariable ('cmake_command');
+    $cmake_command = "\"$cmake_command\"";
     my $cmake_generator = main::GetVariable ('cmake_generator');
     if (defined $cmake_generator && $config_args !~ /\W-G\W/) {
         $config_args .= " -G \"$cmake_generator\"";
@@ -110,8 +117,8 @@ sub Run ($)
     # Insert cmake_var_* Autobuild Variables and var_* Arguments
     for my $i (@cmake_vars) {
         my ($name, $value) = @{$i};
-        if ($config_args !~ /-D\W*$name/) {
-            $config_args .= " -D \"$name=$value\"";
+        if ($config_args !~ /-D$name/) {
+            $config_args .= " \"-D$name=$value\"";
         }
     }
 
