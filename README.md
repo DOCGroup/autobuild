@@ -1,3 +1,5 @@
+[![tests](https://github.com/DOCGroup/autobuild/actions/workflows/tests.yml/badge.svg)](https://github.com/DOCGroup/autobuild/actions/workflows/tests.yml)
+
 # Autobuild and scoreboard tools
 
 ## Autobuild Introduction
