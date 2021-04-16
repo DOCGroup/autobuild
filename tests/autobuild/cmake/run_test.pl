@@ -45,21 +45,21 @@ expect_file_contents (
 
 expect_file_contents (
     "<<..>> <<-G>> <<Fake Generator>> " .
-      "<<-D>> <<CMAKE_C_COMPILER=fake-cc>>\n" .
+      "<<-DCMAKE_C_COMPILER=fake-cc>>\n" .
     "<<--build>> <<.>>\n",
     "build/cmake_runs.txt");
 
 expect_file_contents (
     "<<..>> <<-G>> <<Fake Generator>> " .
-      "<<-D>> <<CMAKE_C_COMPILER=super-fake-cc>> " .
-      "<<-D>> <<CMAKE_CXX_COMPILER=super-fake-c++>>\n" .
+      "<<-DCMAKE_C_COMPILER=super-fake-cc>> " .
+      "<<-DCMAKE_CXX_COMPILER=super-fake-c++>>\n" .
     "<<--build>> <<.>>\n",
     "subdir1/build/cmake_runs.txt");
 
 expect_file_contents (
     "<<..>> <<--extra-config-opt>> <<-G>> <<Extra Fake Generator>> " .
-      "<<-D>> <<CMAKE_C_COMPILER=extra-fake-cc>> " .
-      "<<-D>> <<CMAKE_CXX_COMPILER=extra-fake-c++>>\n" .
+      "<<-DCMAKE_C_COMPILER=extra-fake-cc>> " .
+      "<<-DCMAKE_CXX_COMPILER=extra-fake-c++>>\n" .
     "<<--build>> <<.>> <<--extra-build-opt>>\n",
     "subdir2/the_build_dir/cmake_runs.txt");
 
