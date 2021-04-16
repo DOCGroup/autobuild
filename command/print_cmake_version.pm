@@ -44,7 +44,7 @@ sub Run ($)
     my $self = shift;
 
     my $cmake_command = main::GetVariable ('cmake_command');
-    $cmake_command .= " --version";
+    $cmake_command = "\"$cmake_command\" --version";
 
     main::PrintStatus ('Config', "print CMake Version");
 
