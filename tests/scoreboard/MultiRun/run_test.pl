@@ -16,60 +16,60 @@ use common::test_utils;
 
 use File::Path qw(make_path remove_tree);
 
+my $runs = "runs";
+my $run = "$runs/run";
+my $run1 = "$runs/run1";
+my $run2 = "$runs/run2";
+
 sub run_cmd {
   my $cmd = shift;
   print "$cmd\n";
   return system($cmd);
 }
 
-sub copy_dir {
-  my $src_dir = shift;
+sub copy_to ($;$) {
   my $des_dir = shift;
+  my $src_dir = shift // $run;
   run_cmd("cp -R $src_dir $des_dir");
 }
 
 sub run_scoreboard {
-  run_cmd("../../../scoreboard.pl -c -f ./test.xml -o test.html -d runs/run");
-}
-
-sub diff {
-  my $run_a = shift;
-  my $run_b = shift;
-  my $o = shift;
-  my $r = run_cmd("diff runs/$run_a/$o runs/$run_b/$o");
-  if ($r) {
-    print "$r\n";
-    return 1;
-  }
-  return 0;
+  run_cmd("scoreboard.pl -c -f ./test.xml -o test.html -d $run");
 }
 
 sub compare_runs {
   my $r = 0;
-  $r += diff("run1", "run2", "build1/index.html");
-  $r += diff("run1", "run" , "build1/index.html");
-  $r += diff("run1", "run2", "build3/2021_03_09_17_33_Totals.html");
-  $r += diff("run1", "run" , "build3/2021_03_09_17_33_Totals.html");
+  my $index = "build1/index.html";
+  my $total = "build3/2021_03_09_17_33_Totals.html";
+  $r += compare_files("$run1/$index", "$run2/$index");
+  $r += compare_files("$run1/$index", "$run/$index");
+  $r += compare_files("$run1/$total", "$run2/$total");
+  $r += compare_files("$run1/$total", "$run/$total");
   return $r;
 }
 
-make_path("runs");
-copy_dir("../build_logs", "runs/run");
+remove_tree($runs);
+if (-e $runs) {
+    print "failed to delete $runs";
+    exit(1);
+}
+
+make_path($runs);
+copy_to($run, "../build_logs");
 
 run_scoreboard();
-copy_dir("runs/run", "runs/run1");
+copy_to($run1);
 
 run_scoreboard();
-copy_dir("runs/run", "runs/run2");
+copy_to($run2);
 
 run_scoreboard();
 my $exit_status = compare_runs();
 
-remove_tree("runs");
-
 if ($exit_status) {
   print("Test Failed\n");
-} else {
+}
+else {
   print("Test Passed\n");
 }
 exit ($exit_status);
