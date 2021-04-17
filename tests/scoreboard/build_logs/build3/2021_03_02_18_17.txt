@@ -1,0 +1,476 @@
+
+#################### Begin [Tue Mar  2 16:31:55 2021 UTC]
+
+#################### Setup (GIT) [Tue Mar  2 16:31:55 2021 UTC]
+Running: git  log -1
+commit 0b41552a784279f1d63c1703e04acf82cf75b530
+Merge: 12cae66 ae932a1
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Tue Mar 2 10:15:18 2021 -0600
+
+    Merge pull request #2453 from iguessthislldo/igtd/gitignore
+
+    Improve Root .gitignore and build_and_test.yml
+
+#################### Config (print OS Version) [Tue Mar  2 16:31:55 2021 UTC]
+<h3>Hostname</h3>
+tick
+<h3>OS version (uname -a)</h3>
+Linux tick 4.8.10-200.fc24.x86_64 #1 SMP Mon Nov 21 17:55:46 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+<h3>RedHat Linux Version (/etc/redhat-release)</h3>
+Fedora release 24 (Twenty Four)
+<h3>Linux Version (/etc/os-release)</h3>
+NAME=Fedora
+VERSION="24 (Workstation Edition)"
+ID=fedora
+VERSION_ID=24
+PRETTY_NAME="Fedora 24 (Workstation Edition)"
+ANSI_COLOR="0;34"
+CPE_NAME="cpe:/o:fedoraproject:fedora:24"
+HOME_URL="https://fedoraproject.org/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+REDHAT_BUGZILLA_PRODUCT="Fedora"
+REDHAT_BUGZILLA_PRODUCT_VERSION=24
+REDHAT_SUPPORT_PRODUCT="Fedora"
+REDHAT_SUPPORT_PRODUCT_VERSION=24
+PRIVACY_POLICY_URL=https://fedoraproject.org/wiki/Legal:PrivacyPolicy
+VARIANT="Workstation Edition"
+VARIANT_ID=workstation
+<h3>Linux Kernel Version (/proc/version)</h3>
+Linux version 4.8.10-200.fc24.x86_64 (mockbuild@bkernel01.phx2.fedoraproject.org) (gcc version 6.2.1 20160916 (Red Hat 6.2.1-2) (GCC) ) #1 SMP Mon Nov 21 17:55:46 UTC 2016
+<h3>IP network address information (ip addr show)</h3>
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens32: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:58:42:c3 brd ff:ff:ff:ff:ff:ff
+    inet 10.201.200.118/24 brd 10.201.200.255 scope global ens32
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:fe58:42c3/64 scope link
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 52:54:00:ab:5c:ff brd ff:ff:ff:ff:ff:ff
+<h3>Disk space information (df -k)</h3>
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs            2023476     4568   2018908   1% /tmp
+/dev/sdb1       77277192 49076636  24514276  67% /tao_builds
+<h3>Processor info</h3>
+model name	: Intel(R) Xeon(R) CPU           X5550  @ 2.67GHz
+model name	: Intel(R) Xeon(R) CPU           X5550  @ 2.67GHz
+<h3>Memory info</h3>
+MemTotal:        4046956 kB
+<h3>Approximate BogoMIPS (larger means faster)</h3>
+21197.8233247916
+
+#################### Config (print Environment Variables) [Tue Mar  2 16:31:56 2021 UTC]
+<h3>Environment:</h3>
+ACE_ROOT=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE
+ACE_WORKSPACE=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0
+AUTOBUILD_ROOT=/distcomp/nightly/autobuild
+BUILD_CAUSE=UPSTREAMTRIGGER
+BUILD_CAUSE_UPSTREAMTRIGGER=true
+BUILD_DISPLAY_NAME=#120
+BUILD_ID=120
+BUILD_NUMBER=120
+BUILD_TAG=jenkins-dds_doc_ace6tao2_tick_linux_gcc_d1o0-120
+BUILD_URL=http://jenkins.ociweb.com:8080/job/dds_doc_ace6tao2_tick_linux_gcc_d1o0/120/
+CMAKE_CMD=/tao_builds/taoadmin/cmake/bin/cmake
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/9994/bus
+DDS_ROOT=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS
+EXECUTOR_NUMBER=0
+GIT_BRANCH=origin/master
+GIT_BRANCH_1=origin/master
+GIT_COMMIT=0b41552a784279f1d63c1703e04acf82cf75b530
+GIT_COMMIT_1=0b41552a784279f1d63c1703e04acf82cf75b530
+GIT_PREVIOUS_COMMIT=7561732ba6d9edfa81485460962714c7ced29a4e
+GIT_PREVIOUS_COMMIT_1=7561732ba6d9edfa81485460962714c7ced29a4e
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=3ba834db7c690c4b07717d3cdf84b5f9737b9f5a
+GIT_PREVIOUS_SUCCESSFUL_COMMIT_1=3ba834db7c690c4b07717d3cdf84b5f9737b9f5a
+GIT_URL=git://git.ociweb.com/git/opendds/OpenDDS.git
+GIT_URL_1=git://git.ociweb.com/git/opendds/OpenDDS.git
+HOME=/home/jenkins
+HUDSON_COOKIE=331434b8-f041-4746-bb69-61449cf670fe
+HUDSON_HOME=/tao_builds/jenkins
+HUDSON_SERVER_COOKIE=d5d63b175c08171a
+HUDSON_URL=http://jenkins.ociweb.com:8080/
+JENKINS_HOME=/tao_builds/jenkins
+JENKINS_SERVER_COOKIE=d5d63b175c08171a
+JENKINS_URL=http://jenkins.ociweb.com:8080/
+JOB_BASE_NAME=dds_doc_ace6tao2_tick_linux_gcc_d1o0
+JOB_DISPLAY_URL=http://jenkins.ociweb.com:8080/job/dds_doc_ace6tao2_tick_linux_gcc_d1o0/display/redirect
+JOB_NAME=dds_doc_ace6tao2_tick_linux_gcc_d1o0
+JOB_URL=http://jenkins.ociweb.com:8080/job/dds_doc_ace6tao2_tick_linux_gcc_d1o0/
+LD_LIBRARY_PATH=/usr/sfw/lib:/usr/local/lib:/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/lib:/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE/lib:
+LOGNAME=jenkins
+MAIL=/var/mail/jenkins
+MPC_ROOT=/tao_builds/jenkins/workspace/mpc_tick
+NIGHTLY_ROOT=/distcomp/nightly
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+NODE_LABELS=linux tick x64
+NODE_NAME=tick
+OPENDDS_RTPS_DEFAULT_D0=144
+PATH=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/bin:/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:
+PWD=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0
+QTDIR=/usr/lib64/qt4
+ROOT_BUILD_CAUSE=SCMTRIGGER
+ROOT_BUILD_CAUSE_SCMTRIGGER=true
+RUN_CHANGES_DISPLAY_URL=http://jenkins.ociweb.com:8080/job/dds_doc_ace6tao2_tick_linux_gcc_d1o0/120/display/redirect?page=changes
+RUN_DISPLAY_URL=http://jenkins.ociweb.com:8080/job/dds_doc_ace6tao2_tick_linux_gcc_d1o0/120/display/redirect
+SHELL=/bin/bash
+SHLVL=1
+SSH_CLIENT=10.201.200.26 53934 22
+SSH_CONNECTION=10.201.200.26 53934 10.201.200.118 22
+TAO_ROOT=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/TAO
+USER=jenkins
+WORKSPACE=/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0
+XDG_RUNTIME_DIR=/run/user/9994
+XDG_SESSION_ID=85
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+
+
+#################### Config (print OpenSSL version) [Tue Mar  2 16:31:56 2021 UTC]
+<h3>OpenSSL version (openssl version)</h3>
+OpenSSL 1.0.2j-fips  26 Sep 2016
+
+#################### Config (PrintACEConfig) [Tue Mar  2 16:31:56 2021 UTC]
+XML Config file: <a href="https://github.com/DOCGroup/autobuild/blob/master//tmp/np5LjbOpHQ.xml">/tmp/np5LjbOpHQ.xml</a>
+================ <a href="https://github.com/DOCGroup/autobuild/commits/master">Autobuild ChangeLog</a> ================
+================ <a href="https://github.com/DOCGroup/MPC/commits/master/">MPC ChangeLog</a> ================
+Tue Jan  7 01:55:14 UTC 2020  Chad Elliott  <elliottc@objectcomputing.com>
+================ config.h ================
+#include "ace/config-linux.h"
+================ default.features ================
+xerces3=1
+ssl=1
+zlib=1
+qt4=1
+qt=0
+bzip2=1
+dds_suppress_anys=0
+================ platform_macros.GNU ================
+debug=1
+optimize=0
+ssl=1
+fl=1
+tk=1
+xt=1
+zlib=1
+qt4=1
+bzip2=1
+
+INSTALL_PREFIX=/tao_builds/jenkins/workspace/notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed
+
+include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+
+#################### Config (print make Version) [Tue Mar  2 16:31:56 2021 UTC]
+<h3>Make version (make -v)</h3>
+GNU Make 4.1
+Built for x86_64-redhat-linux-gnu
+Copyright (C) 1988-2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+#################### Config (check compiler gcc) [Tue Mar  2 16:31:56 2021 UTC]
+================ Compiler version ================
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.2.1/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,objc,obj-c++,fortran,ada,go,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --disable-libgcj --with-isl --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 6.2.1 20160916 (Red Hat 6.2.1-2) (GCC)
+GNU ld version 2.26.1-1.fc24
+
+#################### Config (PrintAutobuildConfig) [Tue Mar  2 16:31:56 2021 UTC]
+================ Autobuild file /tmp/np5LjbOpHQ.xml ================
+<autobuild>
+  <!-- Modified for use with Jenkins -->
+  <!-- The command used to create this file (on tick) was -->
+  <!-- /distcomp/nightly/BuildXML/buildxml.pl -base /tao_builds/taoadmin/DDS -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler gcc -creator mitza -dds 1 -docbuild 1 -docrepo 1 -environment QTDIR=/usr/lib64/qt4 -hostname tick -outdir . -piggyback /tao_builds/taoadmin/doc/ACE_wrappers/build/gcc_d1o0 -environment OPENDDS_RTPS_DEFAULT_D0=144 -testopt "-Config RTPS" -->
+  <!-- Added installation -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE"/>
+    <environment name="DDS_ROOT"        value="/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS"/>
+    <environment name="LD_LIBRARY_PATH" value="/usr/sfw/lib:/usr/local/lib:/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/lib:/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE/lib:"/>
+    <environment name="OPENDDS_RTPS_DEFAULT_D0" value="144"/>
+    <environment name="PATH"            value="/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/bin:/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"/>
+    <environment name="QTDIR"           value="/usr/lib64/qt4"/>
+    <environment name="TAO_ROOT"        value="/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/TAO"/>
+    <environment name="CMAKE_CMD"       value="/tao_builds/taoadmin/cmake/bin/cmake"/>
+    <variable    name="base"            value="DDS"/>
+    <variable    name="build_name"      value="gcc_d1o0"/>
+    <variable    name="creator"         value="mitza"/>
+    <variable    name="log_file"        value="gcc_d1o0.log"/>
+    <variable    name="log_root"        value="/www-docs/autobuild_logs/dds_doc_ace6tao2_tick_linux_gcc_d1o0"/>
+    <variable    name="project_root"    value="/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS"/>
+    <variable    name="root"            value="/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0"/>
+    <variable    name="junit_xml_output" value="Tests"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="git"                options="dir=OpenDDS log -1"/>
+  <command name="rem_sems"/>
+  <command name="file_manipulation"  options="type=create file=OpenDDS/user_macros.GNU">
+no_opendds_security=0
+no_cxx11=0
+no_rapidjson=0
+  </command>
+  <command name="file_manipulation"  options="type=create file=setenv.sh">
+export ACE_ROOT="${ACE_WORKSPACE}/ATCD/ACE"
+export DDS_ROOT="${WORKSPACE}/OpenDDS"
+export LD_LIBRARY_PATH="/usr/sfw/lib:/usr/local/lib:${WORKSPACE}/OpenDDS/lib:${ACE_WORKSPACE}/ATCD/ACE/lib:"
+export MPC_ROOT="/home/taoadmin/MPC"
+export PATH="${WORKSPACE}/OpenDDS/bin:${ACE_WORKSPACE}/ATCD/ACE/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:"
+export QTDIR="/usr/lib64/qt4"
+export TAO_ROOT="${ACE_WORKSPACE}/ATCD/TAO"
+export OPENDDS_RTPS_DEFAULT_D0=144
+  </command>
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_openssl_version"/>
+  <command name="print_ace_config"/>
+  <command name="print_make_version"/>
+  <command name="check_compiler"     options="gcc"/>
+  <command name="print_autobuild_config" />
+  <command name="generate_workspace" options="-type gnuace -features no_cxx11=0,no_rapidjson=0,no_opendds_security=0 DDS.mwc"/>
+  <command name="anonymous_shell"    options="mkdir -p OpenDDS/tests/googletest/build/install"/>
+  <command name="anonymous_shell"    options="cd OpenDDS/tests/googletest/build; $CMAKE_CMD -DCMAKE_INSTALL_PREFIX=install -DCMAKE_INSTALL_LIBDIR=lib .."/>
+  <command name="file_manipulation" options="type=create file=OpenDDS/cmake/config.cmake">
+set(OPENDDS_MPC $ENV{MPC_ROOT})
+set(OPENDDS_ACE $ENV{ACE_ROOT})
+set(OPENDDS_TAO $ENV{TAO_ROOT})
+set(OPENDDS_BUILT_IN_TOPICS ON)
+set(OPENDDS_CONTENT_FILTERED_TOPIC ON)
+set(OPENDDS_CONTENT_SUBSCRIPTION ON)
+set(OPENDDS_MACROS "")
+set(OPENDDS_MULTI_TOPIC ON)
+set(OPENDDS_OBJECT_MODEL_PROFILE ON)
+set(OPENDDS_OWNERSHIP_KIND_EXCLUSIVE ON)
+set(OPENDDS_OWNERSHIP_PROFILE ON)
+set(OPENDDS_PERSISTENCE_PROFILE ON)
+set(OPENDDS_QUERY_CONDITION ON)
+set(OPENDDS_SECURITY ON)
+set(OPENDDS_INLINE ON)
+  </command>
+
+  <!-- Build dependencies -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=. depend"/>
+  <command name="make" options="-s -k -j2 dir=tests/googletest/build install"/>
+
+  <!-- Build targets -->
+  <command name="make" options="-s -k -j2 find=*akefile dir=."/>
+
+  <!-- Installation -->
+  <command name="anonymous_shell" options="chmod -R ug+w /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed"/>
+  <command name="make" options="-k find=*akefile install"/>
+  <command name="anonymous_shell" options="chmod -R ug-w /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed"/>
+
+  <!-- CMake Tests with Source -->
+  <command name="anonymous_shell" options="cd OpenDDS/tests/cmake_integration/Messenger/Messenger_1; $CMAKE_CMD ."/>
+  <command name="anonymous_shell" options="cd OpenDDS/tests/cmake_integration/Messenger/Messenger_2; $CMAKE_CMD ."/>
+  <command name="anonymous_shell" options="cd OpenDDS/tests/cmake_integration/Messenger/Messenger_1; $CMAKE_CMD --build ."/>
+  <command name="anonymous_shell" options="cd OpenDDS/tests/cmake_integration/Messenger/Messenger_2; $CMAKE_CMD --build ."/>
+
+  <!-- Post build -->
+  <command name="auto_run_tests"  options="script_path=tests dir=. -Config Linux -Config RTPS -Config XERCES3 -Config CXX11 -Config RAPIDJSON -a -l tests/security/security_tests.lst -Config OPENDDS_SECURITY"/>
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy=1 prettify=1"/>
+  <command name="status"          options="off"/>
+</autobuild>
+
+#################### Setup (Generate Workspaces) [Tue Mar  2 16:31:56 2021 UTC]
+Running: perl "/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/ATCD/ACE/bin/mwc.pl" -type gnuace -features no_cxx11=0,no_rapidjson=0,no_opendds_security=0 DDS.mwc
+MPC_ROOT was set to /tao_builds/jenkins/workspace/mpc_tick.
+Using .../ATCD/ACE/bin/MakeProjectCreator/config/MPC.cfg
+Generation Time: 2m 11s
+Running: mkdir -p OpenDDS/tests/googletest/build/install
+Running: cd OpenDDS/tests/googletest/build; $CMAKE_CMD -DCMAKE_INSTALL_PREFIX=install -DCMAKE_INSTALL_LIBDIR=lib ..
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tests/googletest/build
+
+#################### Compile (make) [Tue Mar  2 16:34:09 2021 UTC]
+Pattern: *akefile
+Running: make -f GNUmakefile -s -k -j2   depend
+
+#################### Compile (make) [Tue Mar  2 16:36:02 2021 UTC]
+Running: make -s -k -j2  install
+[ 25%] Built target gtest
+[ 50%] Built target gtest_main
+[ 75%] Built target gmock
+[100%] Built target gmock_main
+Install the project...
+
+#################### Compile (make) [Tue Mar  2 16:36:02 2021 UTC]
+Pattern: *akefile
+Running: make -f GNUmakefile -s -k -j2
+
+GNUmakefile: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/dds/InfoRepo/GNUmakefile.DCPSInfoRepo_Main MAKEFLAGS=ks -j --jobserver-fds=3,4
+
+Running: chmod -R ug+w /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed
+
+#################### Compile (make) [Tue Mar  2 16:36:44 2021 UTC]
+Pattern: *akefile
+Running: make -f GNUmakefile -k  install
+make[1]: Entering directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/dds/DCPS'
+
+GNUmakefile: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/dds/DCPS/GNUmakefile.OpenDDS_Util MAKEFLAGS=kw
+
+perl -ne'if (/^#END MPC-Generated Install Info/) {exit 0}' \
+  -e'elsif (/^#BEGIN MPC-Generated Install Info/) {$ok=1}' \
+  -e'elsif ($ok && s/^#//) {print}' GNUmakefile.OpenDDS_Util | \
+/tao_builds/jenkins/workspace/mpc_tick/prj_install.pl -i -s lib_output,header_files,template_files,inline_files \
+  -b header_files=include/DCPS -b template_files=include/DCPS -b inline_files=include/DCPS -o lib_output=lib    \
+  /tao_builds/jenkins/workspace/notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed
+make[1]: Leaving directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/dds/DCPS'
+make[1]: Entering directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/dds/idl'
+
+GNUmakefile: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/DevGuideExamples/DCPS/Messenger.minimal/GNUmakefile.MessengerMinimal_Idl MAKEFLAGS=kw
+
+make[1]: Leaving directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/DevGuideExamples/DCPS/Messenger.minimal'
+make[1]: Entering directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tools/modeling/codegen/model'
+
+GNUmakefile: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tools/rtpsrelay/lib/GNUmakefile.RtpsRelayLib MAKEFLAGS=kw
+
+perl -ne'if (/^#END MPC-Generated Install Info/) {exit 0}' \
+  -e'elsif (/^#BEGIN MPC-Generated Install Info/) {$ok=1}' \
+  -e'elsif ($ok && s/^#//) {print}' GNUmakefile.RtpsRelayLib | \
+/tao_builds/jenkins/workspace/mpc_tick/prj_install.pl -i -s lib_output \
+   -o lib_output=lib    \
+  /tao_builds/jenkins/workspace/notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed
+make[1]: Leaving directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tools/rtpsrelay/lib'
+make[1]: Entering directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tests/DCPS/RtpsRelay/Unit'
+
+GNUmakefile: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tests/security/TopicWithoutPermissions/GNUmakefile.Security_TopicWithoutPermissions_Idl MAKEFLAGS=kw
+
+make[1]: Leaving directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tests/security/TopicWithoutPermissions'
+make[1]: Entering directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tests/security/TopicWithoutPermissions'
+
+GNUmakefile: /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tools/rtpsrelay/GNUmakefile.RtpsRelay MAKEFLAGS=kw
+
+make[1]: Leaving directory '/tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/OpenDDS/tools/rtpsrelay'
+Running: chmod -R ug-w /tao_builds/jenkins/workspace/dds_doc_ace6tao2_tick_linux_gcc_d1o0/../notests_doc_ace6tao2_tick_linux_gcc_d1o0/installed
+Running: cd OpenDDS/tests/cmake_integration/Messenger/Messenger_1; $CMAKE_CMD .
+
+#################### Test (auto_run_tests) [Tue Mar  2 16:37:50 2021 UTC]
+Running: perl tests/auto_run_tests.pl   -Config Linux -Config RTPS -Config XERCES3 -Config CXX11 -Config RAPIDJSON -a -l tests/security/security_tests.lst -Config OPENDDS_SECURITY in .
+auto_run_tests: tests/DCPS/unit/run_test.pl
+start tests/DCPS/unit/run_test.pl at Tue Mar  2 10:38:13 2021
+test PASSED.
+stop tests/DCPS/unit/run_test.pl at Tue Mar  2 10:38:19 2021
+
+auto_run_tests_finished: tests/DCPS/unit/run_test.pl Time:6s Result:0
+auto_run_tests: tests/DCPS/Dispose/run_test.pl
+start tests/DCPS/Dispose/run_test.pl at Tue Mar  2 10:38:30 2021
+test PASSED.
+stop tests/DCPS/Dispose/run_test.pl at Tue Mar  2 10:38:35 2021
+
+auto_run_tests_finished: tests/DCPS/Dispose/run_test.pl Time:5s Result:0
+auto_run_tests: tests/DCPS/Thrasher/run_test.pl aggressive rtps
+start tests/DCPS/Thrasher/run_test.pl aggressive rtps at Tue Mar  2 11:18:09 2021
+(29139|29356) RtpsUdpSendStrategy::send_rtps_control() - failed to send RTPS control message
+(29139:29147) ERROR: svc() - timed out waiting for acks!
+(29139:29164) ERROR: svc() - timed out waiting for acks!
+ERROR: publisher timedout
+2021-03-02 11:23:10: ERROR: pub returned -1 (started at 2021-03-02 11:18:09)
+ERROR: subscriber timedout
+2021-03-02 11:23:36: ERROR: sub returned -1 (started at 2021-03-02 11:23:10)
+test FAILED.
+Error: tests/DCPS/Thrasher/run_test.pl aggressive rtps returned with status 256
+stop tests/DCPS/Thrasher/run_test.pl aggressive rtps at Tue Mar  2 11:23:36 2021
+
+auto_run_tests_finished: tests/DCPS/Thrasher/run_test.pl aggressive rtps Time:327s Result:256
+auto_run_tests: tests/DCPS/Thrasher/run_test.pl aggressive rtps durable
+start tests/DCPS/Thrasher/run_test.pl aggressive rtps durable at Tue Mar  2 11:24:50 2021
+(30188:30239) ERROR: svc() - timed out waiting for acks!
+(30187|30187) <- ERROR: MISSING ALL SAMPLES FROM PUBLISHER 10
+(30187|30187) ERROR: subscriber - received 368 of expected 1024 samples.
+ERROR: publisher timedout
+2021-03-02 11:29:51: ERROR: pub returned -1 (started at 2021-03-02 11:24:50)
+2021-03-02 11:29:51: ERROR: sub returned 10 (started at 2021-03-02 11:29:51)
+test FAILED.
+Error: tests/DCPS/Thrasher/run_test.pl aggressive rtps durable returned with status 256
+stop tests/DCPS/Thrasher/run_test.pl aggressive rtps durable at Tue Mar  2 11:29:51 2021
+
+auto_run_tests_finished: tests/DCPS/Thrasher/run_test.pl aggressive rtps durable Time:301s Result:256
+auto_run_tests: tests/DCPS/StaticDiscovery/run_test.pl mpmrmw
+start tests/DCPS/StaticDiscovery/run_test.pl mpmrmw at Tue Mar  2 11:44:29 2021
+ERROR: StaticDiscoveryTest timedout
+2021-03-02 11:45:04: ERROR: alpha3 returned -1 (started at 2021-03-02 11:44:38)
+ERROR: StaticDiscoveryTest timedout
+2021-03-02 11:45:29: ERROR: alpha1 returned -1 (started at 2021-03-02 11:45:04)
+ERROR: StaticDiscoveryTest timedout
+2021-03-02 11:45:55: ERROR: alpha0 returned -1 (started at 2021-03-02 11:45:29)
+test FAILED.
+ERROR: test returned 1
+Error: tests/DCPS/StaticDiscovery/run_test.pl mpmrmw returned with status 256
+stop tests/DCPS/StaticDiscovery/run_test.pl mpmrmw at Tue Mar  2 11:45:55 2021
+
+auto_run_tests_finished: tests/DCPS/StaticDiscovery/run_test.pl mpmrmw Time:86s Result:256
+auto_run_tests: performance-tests/bench/run_test.pl mixed show-logs
+start performance-tests/bench/run_test.pl mixed show-logs at Tue Mar  2 12:03:10 2021
+Started at 2021-03-02T18:03:14Z
+Error: Timedout waiting for the scenario to complete
+Exiting
+2021-03-02 12:04:14: ERROR: test_controller returned 1 (started at 2021-03-02 12:03:10)
+Scenario Timedout, Killing Workers...
+Writing report for node 'test_nc_2799', id: 0103000c.295842c3.0af071eb.000001c1
+All reports written and acknowledged.
+test FAILED.
+Error: performance-tests/bench/run_test.pl mixed show-logs returned with status 256
+stop performance-tests/bench/run_test.pl mixed show-logs at Tue Mar  2 12:04:17 2021
+
+auto_run_tests_finished: performance-tests/bench/run_test.pl mixed show-logs Time:67s Result:256
+auto_run_tests: performance-tests/bench/run_test.pl sm10
+start performance-tests/bench/run_test.pl sm10 at Tue Mar  2 12:04:17 2021
+Started at 2021-03-02T18:04:21Z
+ERROR: test_controller/test_controller timedout
+2021-03-02 12:07:18: ERROR: test_controller returned -1 (started at 2021-03-02 12:04:17)
+Scenario Timedout, Killing Workers...
+Writing report for node 'test_nc_3003', id: 0103000c.295842c3.0bbcd25d.000001c1
+ERROR: node_controller/node_controller timedout
+2021-03-02 12:07:43: ERROR: node_controller returned -1 (started at 2021-03-02 12:07:18)
+test FAILED.
+Error: performance-tests/bench/run_test.pl sm10 returned with status 256
+stop performance-tests/bench/run_test.pl sm10 at Tue Mar  2 12:07:43 2021
+
+auto_run_tests_finished: performance-tests/bench/run_test.pl sm10 Time:206s Result:256
+auto_run_tests: tests/DCPS/DataRepresentation/run_test.pl rtps_disc
+start tests/DCPS/DataRepresentation/run_test.pl rtps_disc at Tue Mar  2 12:07:44 2021
+INFO: 98 of 98 cases passed
+test PASSED.
+stop tests/DCPS/DataRepresentation/run_test.pl rtps_disc at Tue Mar  2 12:07:45 2021
+
+auto_run_tests_finished: tests/DCPS/DataRepresentation/run_test.pl rtps_disc Time:1s Result:0
+auto_run_tests: tests/DCPS/RtpsRelay/Unit/run_test.pl
+start tests/DCPS/RtpsRelay/Unit/run_test.pl at Tue Mar  2 12:12:35 2021
+SUCCESS
+test PASSED.
+stop tests/DCPS/RtpsRelay/Unit/run_test.pl at Tue Mar  2 12:12:35 2021
+
+auto_run_tests_finished: tests/DCPS/RtpsRelay/Unit/run_test.pl Time:0s Result:0
+auto_run_tests: tests/DCPS/LargeSample/run_test.pl rtps_disc_sec
+start tests/DCPS/LargeSample/run_test.pl rtps_disc_sec at Tue Mar  2 12:16:37 2021
+data loss == 0% (40/40 received)
+test PASSED.
+stop tests/DCPS/LargeSample/run_test.pl rtps_disc_sec at Tue Mar  2 12:16:41 2021
+
+auto_run_tests_finished: tests/DCPS/LargeSample/run_test.pl rtps_disc_sec Time:4s Result:0
+auto_run_tests: tests/DCPS/XTypes/run_test.pl --secure
+start tests/DCPS/XTypes/run_test.pl --secure at Tue Mar  2 12:16:41 2021
+test PASSED.
+stop tests/DCPS/XTypes/run_test.pl --secure at Tue Mar  2 12:17:13 2021
+
+auto_run_tests_finished: tests/DCPS/XTypes/run_test.pl --secure Time:32s Result:0
+
+#################### End [Tue Mar  2 18:17:13 2021 UTC]
