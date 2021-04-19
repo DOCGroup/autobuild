@@ -80,6 +80,7 @@ our $scoreboard_title = 'Scoreboard';
 our $use_local = 0;
 
 our $use_build_logs = 0;
+our $junit_xml_output = 0;
 
 our $custom_css = "";
 
@@ -1590,8 +1591,13 @@ sub update_html_table ($$@)
 ## for now, implement it as a no-op which returns something which is undefined.
 sub GetVariable ($)
 {
-   my %a=();
-   return $a{'UNDEFINED'};
+    my $v = shift;
+    if ($v eq 'junit_xml_output') {
+        return $junit_xml_output;
+    } else {
+        my %a=();
+        return $a{'UNDEFINED'};
+    }
 }
 
 ###############################################################################
@@ -1748,14 +1754,14 @@ sub get_time_str
 #                          be saved by this name and placed in the
 #                          directory pointed by -d].
 
-use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y $opt_n/;
+use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y $opt_n $opt_u/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n:u')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
           "              [-t title] [-z] [-l] [-r file] [-s file] [-c] [-x]\n",
-          "              [-k num_logs] [-b] [-j filelist] [-y file] [-n]\n";
+          "              [-k num_logs] [-b] [-j filelist] [-y file] [-n] [-u]\n";
     print "\n";
     print "    -h         display this help\n";
     print "    -d         directory where the output files are placed \n";
@@ -1775,6 +1781,7 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n')
     print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
     print "    -y         specify name of file with custom CSS styling";
     print "    -n         generate build links that open in new tab/window";
+    print "    -u         generate *_JUnit.xml files";
     print "    All other options will be ignored  \n";
     exit (1);
 }
@@ -1813,6 +1820,10 @@ exit (1);
 
 if (defined $opt_b) {
     $use_build_logs = 1;
+}
+
+if (defined $opt_u) {
+    $junit_xml_output = 1;
 }
 
 if (defined $opt_y) {

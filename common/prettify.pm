@@ -10,6 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
+our $path = "";
 
 ###############################################################################
 
@@ -20,6 +21,8 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . "_Full.html";
+    my $log_root = main::GetVariable('log_root');
+    $path = ((defined $log_root) ? ($log_root . '/' . $filename) : $filename);
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
@@ -620,7 +623,6 @@ sub Footer ()
 {
     my $self = shift;
     my $out = $self->{FH};
-
     my $indent = '  ';
     print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
     if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
@@ -629,32 +631,30 @@ sub Footer ()
     }
 
     my $numtests = @{$self->{TESTS}};
-
-    if ($numtests == 0)
-    {
-        # Need to insert a dummy testcase to jenkins doesn't think there is
-        # a failure.
-        print $out 'tests="1">', "\n", $indent x 2,
-          '<testcase name="dummy_test"/>', "\n";
+    if ($numtests > 0) {
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
     }
-    else
-    {
-        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\">\n";
+    else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
+        print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
     }
 
-    foreach my $test (@{$self->{TESTS}})
-    {
+    print $out $indent x 2, "<properties>\n";
+    foreach my $k (keys %Prettify::commits) {
+        print $out $indent x 3, "<property name=\"$k\" value=\"$Prettify::commits{$k}\"/>\n";
+    }
+    print $out $indent x 3, "<property name=\"log_file\" value=\"$Prettify::Full_HTML::path\"/>\n";
+    print $out $indent x 2, "</properties>\n";
+
+    foreach my $test (@{$self->{TESTS}}) {
         my $error = $test->{ERROR} || '';
-
         print $out $indent x 2,
-          "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
-          "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
+            "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
+            "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
 
-        if ($error ne "")
-        {
-            print $out "<failure>\n", $indent x 3,
-              "<![CDATA[$error]]></failure><system-out>\n", $indent x 3,
-              "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+        if ($error ne "") {
+          print $out "<failure>\n",
+              $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
+              $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
         }
     }
 
@@ -1117,6 +1117,7 @@ use base qw(common::parse_compiler_output);
 use Data::Dumper;
 use File::Basename;
 use FileHandle;
+our %commits = ();
 
 ###############################################################################
 
@@ -1385,7 +1386,6 @@ sub Normal_Handler ($)
 
 sub Setup_Handler ($)
 {
-
     my $self = shift;
     my $s = shift;
     if (!defined $s)
@@ -1655,13 +1655,15 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
+            $commits{'GIT_COMMIT_ACE'} = $revision;
         }
-        elsif ($url =~ m/(git|https):\/\/.*\/OpenDDS\.git/i)
+        elsif ($url =~ m/(git@|(git|https):\/\/).*\/OpenDDS\.git/i)
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+            $commits{'GIT_COMMIT_OPENDDS'} = $revision;
             if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
             {
                 (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
@@ -1929,6 +1931,8 @@ use strict;
 use warnings;
 
 use FileHandle;
+our $host = 'localhost';
+my $host_next = 0;
 
 sub new ($)
 {
@@ -1976,10 +1980,17 @@ sub Normal ($)
     my $s = shift;
     my $state = shift;
     if (defined $state) {
-      $state = lc($state);
+        $state = lc($state);
     }
-
     if (defined $state && $state eq 'config') {
+        if ($host eq 'localhost') {
+            if ($host_next == 1) {
+                $host = $s;
+            }
+            elsif ($s eq "<h3>Hostname</h3>") {
+                $host_next = 1;
+            }
+        }
         $s =~ s/</&lt;/g;
         $s =~ s/>/&gt;/g;
         $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
