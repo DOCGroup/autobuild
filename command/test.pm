@@ -62,20 +62,15 @@ sub Run ($)
 
     main::PrintStatus ('Test', 'Shell');
 
-    my $current_dir = getcwd ();
-
-    if (!chdir $project_root) {
-        print STDERR __FILE__, ": Cannot change to $project_root\n";
-        return 0;
-    }
+    my $cd = ChangeDir->new({dir => $project_root});
+    return {'failure' => 'fatal'} unless ($cd);
 
     print "Running: ${options}\n";
 
-    my $status = utility::run_command ($options);
+    my $result = {};
+    my $status = utility::run_command ($options, $result);
 
-    chdir $current_dir;
-
-    return $status;
+    return $result;
 }
 
 ##############################################################################

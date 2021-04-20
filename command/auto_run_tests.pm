@@ -21,7 +21,6 @@ sub new
     my $self = {'internal_options' => {'-envmod' => \&Handle_Envmod,
                                       },
                 'substitute_vars_in_options' => 1,
-                'required_by_default' => 1,
                };
 
     bless ($self, $class);
@@ -181,9 +180,10 @@ sub Run ($)
         print "Running: $command\n";
     }
 
-    my $success = utility::run_command ($command);
+    my $result = {};
+    utility::run_command ($command, $result);
     chdir $current_dir;
-    return $success;
+    return $result;
 }
 
 ##############################################################################

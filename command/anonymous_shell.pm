@@ -56,20 +56,15 @@ sub Run ($)
         $root = $1;
     }
 
-    my $current_dir = getcwd ();
-
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
-    }
+    my $cd = ChangeDir->new({dir => $root});
+    return {'failure' => 'fatal'} unless ($cd);
 
     print "Running: ${options}\n";
 
-    my $status = utility::run_command ($options);
+    my $result = {};
+    utility::run_command ($options, $result);
 
-    chdir $current_dir;
-
-    return $status;
+    return $result;
 }
 
 ##############################################################################

@@ -123,7 +123,7 @@ sub Run ($)
     {
         if(!chdir $dir) {
           print STDERR __FILE__, ": Cannot change to $dir\n";
-          return 1;
+          return 0;
         }
     }
 
@@ -136,7 +136,8 @@ sub Run ($)
 
     my $command;
     my $pattern;
-    my $ret;
+    my $success = 0;
+    my $result = {};
 
     if ($options =~ s/find=([^\s]*)//) {
         $pattern = $1;
@@ -148,17 +149,17 @@ sub Run ($)
             next unless -f $makefile; # skip directories
             $command = "$make_program -f $makefile $options";
             print "Running: $command\n";
-            $ret = utility::run_command ($command);
+            $success = utility::run_command ($command, $result);
         }
     }
     else {
         $options =~ s/'/"/g;
         $command = "$make_program $options";
         print "Running: $command\n";
-        $ret = utility::run_command ($command);
+        $success = utility::run_command ($command, $result);
     }
 
-    if (!$ret) {
+    if (!$success) {
         my $working_dir = getcwd();
 
         ## If we used 'make -C' to change the directory, let's
@@ -177,7 +178,7 @@ sub Run ($)
     ## Return PWD to the correct setting
     $ENV{PWD} = getcwd();
 
-    return $ret;
+    return $result;
 }
 
 ##############################################################################

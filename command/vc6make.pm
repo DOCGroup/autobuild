@@ -82,30 +82,26 @@ sub Run ($)
 
     my $workspace = undef;
     if ($options =~ /"([^"]+\.dsw)"/) {
-      $workspace = $1;
+        $workspace = $1;
     }
     elsif ($options =~ /([\w\-\\\/\.]+\.dsw)/) {
-      $workspace = $1;
+        $workspace = $1;
     }
 
-    my $ret = 1;
+    my $result = {};
     if (defined $workspace && ! -r $workspace) {
-      print "Skipping: $workspace not found\n";
+        print "Skipping: $workspace not found\n";
     }
     else {
-      print "Running: $command\n";
-
-      $ret = utility::run_command ($command);
-
-      if (!$ret)
-      {
-        print STDERR "[BUILD ERROR detected in ", getcwd(), "]\n";
-      }
+        print "Running: $command\n";
+        if (!utility::run_command ($command, $result)) {
+            print STDERR "[BUILD ERROR detected in ", getcwd(), "]\n";
+        }
     }
 
     chdir $current_dir;
 
-    return $ret;
+    return $result;
 }
 
 ##############################################################################
