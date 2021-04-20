@@ -50,6 +50,10 @@ expect_file_contents (
     "build/cmake_runs.txt");
 
 expect_file_contents (
+    "<<..>> <<-G>> <<Fake Generator>> <<-DCMAKE_C_COMPILER=fake-cc>>\n",
+    "failed_build/cmake_runs.txt");
+
+expect_file_contents (
     "<<..>> <<-G>> <<Fake Generator>> " .
       "<<-DCMAKE_C_COMPILER=super-fake-cc>> " .
       "<<-DCMAKE_CXX_COMPILER=super-fake-c++>>\n" .

@@ -10,6 +10,10 @@ if ($args eq "<<--version>>") {
     print ("fake_cmake.pl version 123.456.789\n");
 }
 
+if ($args =~ "<<--fail-on-purpose>>") {
+    exit (1);
+}
+
 my $file = "cmake_runs.txt";
 open (my $fd, ">>$file") or die ("Couldn't open $file: $!");
 print $fd "$args\n";
