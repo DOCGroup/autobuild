@@ -11,10 +11,15 @@
 
   <command name="log" options="on"/>
   <command name="print_cmake_version"/>
-  <command name="log" options="off"/>
 
   <!-- All Defaults -->
   <command name="cmake"/>
+
+  <!-- CMake command can fail without bringing down autobuild -->
+  <command name="cmake">
+    <arg name="build_dir">failed_build</arg>
+    <arg name="add_build_args">--fail-on-purpose</arg>
+  </command>
 
   <!-- Override a cmake_var_ -->
   <command name="cmake" dir="subdir1">
@@ -32,4 +37,5 @@
   </command>
 
   <command name="cmake_cmd" options="--cmake-cmd"/>
+  <command name="log" options="off"/>
 </autobuild>

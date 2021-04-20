@@ -52,6 +52,10 @@ sub Run ($)
 
     my $command_name = $self->{simple} ? "cmake_cmd" : "cmake";
 
+    main::PrintStatus (
+      ($self->{simple} && $options !~ /\W--build\W/) ? 'Configure' : 'Compile',
+      $command_name);
+
     # Get cmake_var_* Autobuild Variables
     my @cmake_vars = ();
     my $autobuild_var_cmake_var_re = qr/^cmake_var_(\w+)$/;
@@ -93,7 +97,7 @@ sub Run ($)
         else {
             print STDERR __FILE__,
                 ": unexpected arg name \"$name\" in $command_name command\n";
-            return 0;
+            return {failure => 'fatal'};
         }
     }
 
@@ -104,14 +108,17 @@ sub Run ($)
         $config_args .= " -G \"$cmake_generator\"";
     }
 
+    my $result = {};
+
     # cmake_cmd commmand
     if ($self->{simple}) {
-        return utility::run_command ("$cmake_command $options");
+        utility::run_command ("$cmake_command $options", $result);
+        return $result;
     }
     elsif (length ($options)) {
         print STDERR __FILE__,
             ": options attribute not allowed for the cmake command\n";
-        return 0;
+        return {failure => 'fatal'};
     }
 
     # Insert cmake_var_* Autobuild Variables and var_* Arguments
@@ -124,28 +131,28 @@ sub Run ($)
 
     # Recreate Build Directory
     if (!utility::remove_tree ($build_dir)) {
-        return 0;
+        return {failure => 'fatal'};
     }
     if (!mkdir ($build_dir)) {
         print STDERR __FILE__, ": failed to make build directory \"$build_dir\": $!\n";
-        return 0;
+        return {failure => 'fatal'};
     }
 
     # Change to Build Directory
     my $build_cd = ChangeDir->new({dir => $build_dir});
-    return 0 unless ($build_cd);
+    return {failure => 'fatal'} unless ($build_cd);
 
     # Run Configure CMake Command
-    if (!utility::run_command ("$cmake_command $config_args")) {
-        return 0;
+    if (!utility::run_command ("$cmake_command $config_args", $result)) {
+        return $result;
     }
 
     # Run Build CMake Command
-    if (!utility::run_command ("$cmake_command $build_args")) {
-        return 0;
+    if (!utility::run_command ("$cmake_command $build_args", $result)) {
+        return $result;
     }
 
-    return 1;
+    return $result;
 }
 
 ##############################################################################

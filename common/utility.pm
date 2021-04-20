@@ -6,14 +6,13 @@ package utility;
 use File::Path qw(rmtree);
 
 # Run command, returns 0 if there was an error. If the second argument is
-# passed and is true, then it always returns 1.
+# passed, it's assumed to be an autobuild command result hashref and "failure"
+# will be set to "fatal" if it is a total failure is fatal and "non-fatal" if
+# the exit status result is just non-zero.
 sub run_command ($;$)
 {
     my $command = shift;
-    my $ignore_failure = shift;
-    if (!defined $ignore_failure) {
-        $ignore_failure = 0;
-    }
+    my $ab_command_result = shift;
 
     if ($main::verbose) {
         print ("===== Running Command: $command\n");
@@ -24,16 +23,25 @@ sub run_command ($;$)
         my $error_message;
         if ($? == -1) {
             $error_message = "Failed to Run: $!";
+            if (defined ($ab_command_result)) {
+                $ab_command_result->{failure} = 'fatal';
+            }
         }
         elsif ($signal) {
             $error_message = sprintf ("Exited on Signal %d, %s coredump",
                 $signal, ($? & 128) ? 'with' : 'without');
+            if (defined ($ab_command_result)) {
+                $ab_command_result->{failure} = 'non-fatal';
+            }
         }
         else {
             $error_message = sprintf ("Returned %d", $? >> 8);
+            if (defined ($ab_command_result)) {
+                $ab_command_result->{failure} = 'non-fatal';
+            }
         }
         print STDERR "Command \"$command\" $error_message\n";
-        return $ignore_failure;
+        return 0;
     }
     return 1;
 }

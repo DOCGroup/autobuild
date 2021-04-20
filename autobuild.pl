@@ -853,15 +853,44 @@ INPFILE: foreach my $file (@files) {
         }
       }
 
-      if ($command_table{$NAME}->Run ($OPTIONS, $args) == 0) {
+      my $result = $command_table{$NAME}->Run ($OPTIONS, $args);
+      my $result_type = ref ($result);
+      my $failure = undef;
+      if ($result_type eq '') {
+        # This is the traditional command return mechanism. 0 is a fatal error
+        # and other values (usually 1) are a success.
+        $failure = 'fatal' if $result == 0;
+      }
+      elsif ($result_type eq 'HASH') {
+        # Newer command return mechanism:
+        #   {} is success
+        #   {failure => 'fatal'} is a fatal error intended for when something
+        #     is probably fundamentally wrong with autobuild xml file and/or
+        #     the command couldn't function correctly.
+        #   {failure => 'non-fatal'} is a non-fatal error intended for when the
+        #     command failed, but in a "normal" or at least possibly expected
+        #     way, like if a test failed.
+        # (and others?) are a success.
+        if (exists ($result->{failure})) {
+          $failure = $result->{failure};
+          if ($failure ne 'fatal' && $failure ne 'non-fatal') {
+            print STDERR "ERROR: $CMD $CMD2 " .
+              "set \"fail\" to unexpected value \"$failure\"\n";
+            $failure = 'fatal';
+          }
+        }
+      }
+      if (defined ($failure)) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
-        $status = 1;
-        if (!$keep_going) {
-          print STDERR ", exiting.\n";
-          chdir ($starting_dir);
-          ChangeENV (%originalENV);
-          next INPFILE;
+        if ($failure eq 'fatal') {
+          $status = 1;
+          if (!$keep_going) {
+            print STDERR ", exiting.\n";
+            chdir ($starting_dir);
+            ChangeENV (%originalENV);
+            next INPFILE;
+          }
         }
         print STDERR "!\n";
       }
