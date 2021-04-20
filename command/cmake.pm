@@ -52,6 +52,10 @@ sub Run ($)
 
     my $command_name = $self->{simple} ? "cmake_cmd" : "cmake";
 
+    main::PrintStatus (
+      ($self->{simple} && $options !~ /\W--build\W/) ? 'Configure' : 'Compile',
+      $command_name);
+
     # Get cmake_var_* Autobuild Variables
     my @cmake_vars = ();
     my $autobuild_var_cmake_var_re = qr/^cmake_var_(\w+)$/;
