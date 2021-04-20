@@ -140,7 +140,7 @@ sub Run ($)
 
     # Change to Build Directory
     my $build_cd = ChangeDir->new({dir => $build_dir});
-    return {'failure' => 'fatal'} unless ($build_cd);
+    return {failure => 'fatal'} unless ($build_cd);
 
     # Run Configure CMake Command
     if (!utility::run_command ("$cmake_command $config_args", $result)) {
