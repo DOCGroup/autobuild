@@ -10,7 +10,7 @@ use warnings;
 
 use FileHandle;
 use Cwd;
-use Time::Piece;
+our $path = "";
 
 ###############################################################################
 
@@ -21,6 +21,8 @@ sub new ($)
     my $self = {};
     my $basename = shift;
     my $filename = $basename . "_Full.html";
+    my $log_root = main::GetVariable('log_root');
+    $path = ((defined $log_root) ? ($log_root . '/' . $filename) : $filename);
     $self->{ERROR_COUNTER} = 0;
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
@@ -621,37 +623,38 @@ sub Footer ()
 {
     my $self = shift;
     my $out = $self->{FH};
-
     my $indent = '  ';
-    print $out $indent, "<testsuite name=\"Autobuild_Tests\" timestamp=\"$self->{TIMESTAMP}\" ";
+    print $out $indent, "<testsuite name=\"Autobuild_Tests\" ";
+    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+    {
+        print $out "timestamp=\"$self->{TIMESTAMP}\" ";
+    }
 
     my $numtests = @{$self->{TESTS}};
-
-    if ($numtests == 0)
-    {
-        # Need to insert a dummy testcase to jenkins doesn't think there is
-        # a failure.
-        print $out 'tests="1">', "\n", $indent x 2,
-          '<testcase name="dummy_test"/>', "\n";
+    if ($numtests > 0) {
+        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\" hostname=\"$Prettify::Config_HTML::host\">\n";
     }
-    else
-    {
-        print $out "tests=\"$numtests\" failures=\"$self->{FAILED}\">\n";
+    else { # Insert a dummy testcase so jenkins doesn't think there is a failure.
+        print $out 'tests="1">', "\n", $indent x 2, '<testcase name="dummy_test"/>', "\n";
     }
 
-    foreach my $test (@{$self->{TESTS}})
-    {
+    print $out $indent x 2, "<properties>\n";
+    foreach my $k (keys %Prettify::commits) {
+        print $out $indent x 3, "<property name=\"$k\" value=\"$Prettify::commits{$k}\"/>\n";
+    }
+    print $out $indent x 3, "<property name=\"log_file\" value=\"$Prettify::Full_HTML::path\"/>\n";
+    print $out $indent x 2, "</properties>\n";
+
+    foreach my $test (@{$self->{TESTS}}) {
         my $error = $test->{ERROR} || '';
-
         print $out $indent x 2,
-          "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
-          "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
+            "<testcase name=\"$test->{NAME}\" status=\"$test->{RESULT}\" ",
+            "time=\"$test->{TIME}\"", ($error eq "" ? "/>\n" : '>');
 
-        if ($error ne "")
-        {
-            print $out "<failure>\n", $indent x 3,
-              "<![CDATA[$error]]></failure><system-out>\n", $indent x 3,
-              "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+        if ($error ne "") {
+          print $out "<failure>\n",
+              $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
+              $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
         }
     }
 
@@ -669,30 +672,36 @@ sub Description ($)
 {
 }
 
-sub Timestamp
+sub Timestamp ($)
 {
     my $self = shift;
     my $ts = shift;
 
-    # Grab the first valid timestamp from a test section and use that for our test suite
+    eval {
+        require Time::Piece;
 
-    unless (defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i)
-    {
-        return;
+        # Grab the first valid timestamp from a test section and use that for our test suite
+
+        if (!(defined $self->{CURRENT_SECTION} and length $self->{CURRENT_SECTION} and $self->{CURRENT_SECTION} =~ /test/i))
+        {
+            return;
+        }
+
+        if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
+        {
+            return;
+        }
+
+        # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
+        $ts =~ s/ UTC$//;
+
+        if (Time::Piece->can('use_locale')) {
+            Time::Piece->use_locale();
+        }
+        my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
+
+        $self->{TIMESTAMP} = $tp->datetime;
     }
-
-    if (defined $self->{TIMESTAMP} and length $self->{TIMESTAMP})
-    {
-        return;
-    }
-
-    # Unfortunately it looks like Time::Piece's strptime's %Z can't handle UTC as a timezone name
-    $ts =~ s/ UTC$//;
-
-    Time::Piece->use_locale();
-    my $tp = Time::Piece->strptime($ts, '%a %b %e %T %Y');
-
-    $self->{TIMESTAMP} = $tp->datetime;
 }
 
 sub Subsection ($)
@@ -966,7 +975,6 @@ sub Footer ()
         $totals .= " Setup: $self->{SETUP_SECTION}-$self->{SETUP_ERRORS}-$self->{SETUP_WARNINGS}";
     }
 
-
     if (defined $self->{COMPILE_SECTION}) {
         $totals .= " Compile: $self->{COMPILE_SECTION}-$self->{COMPILE_ERRORS}-$self->{COMPILE_WARNINGS}";
     }
@@ -1109,6 +1117,7 @@ use base qw(common::parse_compiler_output);
 use Data::Dumper;
 use File::Basename;
 use FileHandle;
+our %commits = ();
 
 ###############################################################################
 
@@ -1126,20 +1135,14 @@ sub new ($$$$$$$$)
     my $failed_tests_only = shift;
 
     # Initialize some variables
-
     $self->{STATE} = '';
     $self->{LAST_SECTION} = '';
     $self->{LAST_DESCRIPTION} = '';
     $self->{FAILED_TESTS} = $failed_tests_ref;
     $self->{FAILED_TESTS_ONLY} = $failed_tests_only;
 
-    if ($failed_tests_only) {
-        $self->{TOTALS} = new Prettify::Totals_HTML ($basename);
-    }
-
     if (!$failed_tests_only) {
         # Initialize the hash table of handlers for each section
-
         %{$self->{HANDLERS}} =
             (
                 'begin'     => \&Normal_Handler,
@@ -1152,7 +1155,6 @@ sub new ($$$$$$$$)
             );
 
         # Initialize the list of output classes
-
         @{$self->{OUTPUT}} =
             (
                 new Prettify::Full_HTML ($basename),   #Must be at 0
@@ -1162,22 +1164,24 @@ sub new ($$$$$$$$)
             );
 
         if (!$skip_failed_test_logs) {
-            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
+            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix); #Must be at 4, if used with other reports
         }
-    }
-    elsif (!$skip_failed_test_logs) {
-        %{$self->{HANDLERS}} =
-            (
+    } else { # $failed_tests_only
+        my $total_html = new Prettify::Totals_HTML($basename);
+        $self->{TOTALS} = $total_html;
+        @{$self->{OUTPUT}} = ($total_html);
+        if (!$skip_failed_test_logs) {
+            %{$self->{HANDLERS}} = (
                 'begin'     => \&Normal_Handler,
                 'setup'     => \&Setup_Handler,
                 'config'    => \&Config_Handler,
+                'configure' => \&Autoconf_Handler,
+                'compile'   => \&Compile_Handler,
                 'test'      => \&Test_Handler,
+                'end'       => \&Normal_Handler
             );
-
-        @{$self->{OUTPUT}} =
-            (
-                new Prettify::Failed_Tests_HTML ($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix),
-            );
+            push @{$self->{OUTPUT}}, new Prettify::Failed_Tests_HTML($basename, $buildname, $self->{FAILED_TESTS}, $rev_link, $log_prefix);
+        }
     }
 
     my $junit = main::GetVariable ('junit_xml_output');
@@ -1193,7 +1197,6 @@ sub new ($$$$$$$$)
     }
 
     # Output the header for the files
-
     foreach my $output (@{$self->{OUTPUT}}) {
         $output->Header ();
     }
@@ -1383,7 +1386,6 @@ sub Normal_Handler ($)
 
 sub Setup_Handler ($)
 {
-
     my $self = shift;
     my $s = shift;
     if (!defined $s)
@@ -1653,13 +1655,15 @@ sub Config_Handler ($)
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_ACE} = $revision;
+            $commits{'GIT_COMMIT_ACE'} = $revision;
         }
-        elsif ($url =~ m/(git|https):\/\/.*\/OpenDDS\.git/i)
+        elsif ($url =~ m/(git@|(git|https):\/\/).*\/OpenDDS\.git/i)
         {
             print "Matched GIT url $url\n";
             my $revision = $totals->{GIT_REVISIONS}[0];
             print "Matched GIT url to revision $revision\n";
             $totals->{GIT_CHECKEDOUT_OPENDDS} = $revision;
+            $commits{'GIT_COMMIT_OPENDDS'} = $revision;
             if (exists ($self->{OUTPUT}[$self->{FAILED_TESTS_ONLY} ? 0 : 4]))
             {
                 (@{$self->{OUTPUT}})[$self->{FAILED_TESTS_ONLY} ? 0 : 4]->{GIT_CHECKEDOUT_OPENDDS} = $revision;
@@ -1812,7 +1816,6 @@ sub Process ($;$$$$$$)
     my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix, $failed_tests_only);
 
     my $input = new FileHandle ($filename, 'r');
-
     while (<$input>) {
         chomp;
         $processor->Process_Line ($_);
@@ -1822,13 +1825,11 @@ sub Process ($;$$$$$$)
     # if we detect any BUILD ERROR messages, send an e-mail
     # notification if MAIL_ADMIN was specified in the XML config
     # file.
-
     if (!$failed_tests_only) {
         my @errors = $processor->BuildErrors();
         my $mail_admin = main::GetVariable ( 'MAIL_ADMIN' );
         my $mail_admin_file = main::GetVariable ( 'MAIL_ADMIN_FILE' );
-        if ( (scalar( @errors ) > 0) && ((defined $mail_admin) || (defined $mail_admin_file)) )
-        {
+        if ((scalar(@errors) > 0) && ((defined $mail_admin) || (defined $mail_admin_file))) {
             $processor->SendEmailNotification();
         }
     }
@@ -1930,6 +1931,8 @@ use strict;
 use warnings;
 
 use FileHandle;
+our $host = 'localhost';
+my $host_next = 0;
 
 sub new ($)
 {
@@ -1977,10 +1980,17 @@ sub Normal ($)
     my $s = shift;
     my $state = shift;
     if (defined $state) {
-      $state = lc($state);
+        $state = lc($state);
     }
-
     if (defined $state && $state eq 'config') {
+        if ($host eq 'localhost') {
+            if ($host_next == 1) {
+                $host = $s;
+            }
+            elsif ($s eq "<h3>Hostname</h3>") {
+                $host_next = 1;
+            }
+        }
         $s =~ s/</&lt;/g;
         $s =~ s/>/&gt;/g;
         $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;

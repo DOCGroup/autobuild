@@ -31,6 +31,45 @@ check_linker - Output information about the linker, specified in the
 clone_build_tree - Clones the source tree structure of the "root" directory
   into a directory specified by the "build_name" under a 'build' directory
   directly in the "root" directory.
+cmake - Configure and build a CMake project.
+  Variables:
+    cmake_command: CMake command to use. Shared by the print_cmake_version and
+      cmake_cmd commands.
+    cmake_generator: CMake generator to use. Passed to the CMake configure
+      command using the -G option. Default is not to pass -G.
+    cmake_var_*: Autobuild variables that start with "cmake_var_" are passed to
+      the configure CMake command using -D. For example:
+        <variable name="cmake_var_CMAKE_CXX_COMPILER" value="clang++-11"/>
+      will result in `"-DCMAKE_CXX_COMPILER=clang++-11"`.
+      A variable will not be inserted if it's already in config_args.
+  Usage:
+    Simplest example is:
+      <command name="cmake" dir="the_project"/>
+    This creates a directory called "build" (deleting it first if one already
+    exists) in the "the_project" directory, then configures and builds the
+    CMake project from "the_project/CMakeLists.txt" in "the_project/build".
+    "dir=..." is optional if the CMakeLists.txt file is the root directory.
+    The explicit equivalent of the previous example is:
+      <command name="cmake" dir="the_project">
+        <arg name="build_dir">build</arg>
+        <arg name="config_args">..</arg>
+        <arg name="build_args">--build .</arg>
+      </command>
+    The optional arg tags allow fine tuning what the build directory is called
+    and the arguments to the two CMake commands.
+    "config_args" and "build_args" will override the arguments, while
+    "add_config_args" and "add_build_args" will append.
+    "var_*" arguments will be passed to the CMake configure command using -D.
+    These will override any "cmake_var_*" autobuild variables.
+    For example:
+      <arg name="var_CMAKE_CXX_COMPILER">clang++-11</arg>
+    will result in `"-DCMAKE_CXX_COMPILER=clang++-11"`.
+    A variable will not be inserted if it's already in config_args.
+cmake_cmd - Invoke CMake directly. Uses the same cmake_command variable as the
+    cmake and print_cmake_version commands. This can be used to manually run
+    the configure and build commands if desired or for something like using the
+    "cmake -E" tools. For example:
+      <command name="cmake_cmd" options="-E capabilities"/>
 configure - Run the 'configure' command in the "project_root" directory.
 cvsgrab - Run cvsgrab sub-commands.
 cvs - Run cvs sub-commands.
@@ -38,10 +77,26 @@ file_manipulation - This command provides the ability to append, create,
   update, delete, and copy files.  It also allows the recursive removal of
   directories (rmtree) and can be used to ensure that a particular file not
   exist (mustnotexist).
-   - If the tag isn't self closing, all WHOLE lines between the `<command>`
-     and `</command>` tags will be treated as an almost raw `output` option.
-     It's almost raw because like in standard XML and HTML, you should replace
-     `>` with `&gt;`, `<` with `&lt;`, and `&` with `&amp;`.
+  For append, create, and update, the contents of the files can be specified in
+  three different ways:
+   - The "output" option. This requires everything to be on line, C newlines,
+     and escaping quote characters. For example:
+       <command name="file_manipulation" options="type=create file=file.txt output='if (x > 5)\n  print(\x22Greater than 5\x22);\n'"/>
+   - File contents between arg tags. This is allows putting the file contents
+     directly in the XML file, except for replacing `>` with `&gt;`, `<` with
+     `&lt;`, and `&` with `&amp;` like in standard XML and HTML. For example:
+       <command name="file_manipulation" options="type=create file=file.txt">
+         <arg name="output">
+       if (x &gt; 5)
+         print("Greater than 5");
+         </arg>
+       </command>
+   - File contents between command tags. This is a shortcut for the method
+     above. For example:
+       <command name="file_manipulation" options="type=create file=file.txt">
+       if (x &gt; 5)
+         print("Greater than 5");
+       </command>
 generate_workspace - Runs MPC in the "project_root" directory with the
   options provided.  It attempts to run bin/mwc.pl from the "project_root"
   directory.  If that fails, it uses $MPC_ROOT/mwc.pl.
@@ -77,7 +132,9 @@ print_ace_config - Puts ACE, TAO, CIAO, DDS, MPC and autobuild information
 print_autotools_version - Puts version information about automake, autoconf,
   and libtool into the log file.
 print_cidlc_version - Puts cidlc version information into the log file.
-print_make_verison - Puts make version information into the log file.
+print_cmake_version - Uses the same cmake_command variable as the cmake
+  command. Puts the result of cmake_command --version into the log file.
+print_make_version - Puts make version information into the log file.
 print_os_version - Puts the hostname, operating system information,
   approximate BogoMIPS, and all environment variables into the log file.
 print_perl_version - Puts perl version information into the log file.
