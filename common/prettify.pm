@@ -1294,7 +1294,7 @@ sub Process_Line ($)
             $section = $1;
             $timestamp = $2;
         }
-        if ($section =~ m/(.*) \((.*)\)/) {
+        if ($section =~ m/([^(]*) \((.*)\)/) {
             $section = $1;
             $description = $2;
         }
