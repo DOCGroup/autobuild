@@ -1756,7 +1756,7 @@ sub get_time_str
 
 use vars qw/$opt_b $opt_c $opt_d $opt_f $opt_h $opt_i $opt_o $opt_v $opt_t $opt_z $opt_l $opt_r $opt_s $opt_k $opt_x $opt_j $opt_y $opt_n $opt_u/;
 
-if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n:u')
+if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:nu')
     || !defined $opt_d
     || defined $opt_h) {
     print "scoreboard.pl [-h] -d dir [-v] [-f file] [-i file] [-o file]\n",
