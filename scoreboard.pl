@@ -1779,10 +1779,10 @@ if (!getopts ('bcd:f:hi:o:t:vzlr:s:k:xj:y:n:u')
     print "    -x         'history' links generated\n";
     print "    -b         use the build URL for logfile refs; no local cache unless specified\n";
     print "    -j         comma separated list of input files which for an integrated page has to be generated\n";
-    print "    -y         specify name of file with custom CSS styling";
-    print "    -n         generate build links that open in new tab/window";
-    print "    -u         generate *_JUnit.xml files";
-    print "    All other options will be ignored  \n";
+    print "    -y         specify name of file with custom CSS styling\n";
+    print "    -n         generate build links that open in new tab/window\n";
+    print "    -u         generate *_JUnit.xml files\n";
+    print "    All other options will be ignored\n";
     exit (1);
 }
 
