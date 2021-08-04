@@ -17,9 +17,10 @@ our $path = "";
 sub new ($)
 {
     my $proto = shift;
+    my $basename = shift;
+
     my $class = ref ($proto) || $proto;
     my $self = {};
-    my $basename = shift;
     my $filename = $basename . "_Full.html";
     my $log_root = main::GetVariable('log_root');
     $path = ((defined $log_root) ? ($log_root . '/' . $filename) : $filename);
@@ -39,7 +40,7 @@ sub new ($)
     return $self;
 }
 
-sub Header ()
+sub Header ($)
 {
     my $self = shift;
     print {$self->{FH}} "<html>\n";
@@ -48,7 +49,7 @@ sub Header ()
     print {$self->{FH}} "<h1>Daily Build Log</h1>\n";
 }
 
-sub Footer ()
+sub Footer ($)
 {
     my $self = shift;
     print {$self->{FH}} "</body>\n";
@@ -206,9 +207,10 @@ use FileHandle;
 sub new ($)
 {
     my $proto = shift;
+    my $basename = shift;
+
     my $class = ref ($proto) || $proto;
     my $self = {};
-    my $basename = shift;
     my $filename = $basename . "_Brief.html";
 
     $basename =~ s/^.*\///;
@@ -225,7 +227,7 @@ sub new ($)
     return $self;
 }
 
-sub Header ()
+sub Header ($)
 {
     my $self = shift;
     print {$self->{FH}} "<html>\n";
@@ -234,7 +236,7 @@ sub Header ()
     print {$self->{FH}} "<h1>Daily Build Log (Brief)</h1>\n";
 }
 
-sub Footer ()
+sub Footer ($)
 {
     my $self = shift;
 
@@ -368,13 +370,14 @@ use FileHandle;
 sub new ($)
 {
     my $proto = shift;
-    my $class = ref ($proto) || $proto;
-    my $self = {};
     my $basename = shift;
     my $buildname = shift;
     my $failed_tests = shift;
     my $rev_link = shift;
     my $log_prefix = shift;
+
+    my $class = ref ($proto) || $proto;
+    my $self = {};
 
     my $filename = $log_prefix . "_Failed_Tests_By_Build.html";
 
@@ -595,10 +598,11 @@ use FileHandle;
 sub new ($)
 {
     my $proto = shift;
+    my $basename = shift;
+
     my $class = ref ($proto) || $proto;
     my $self = {};
 
-    my $basename = shift;
     my $filename = $basename . '_JUnit.xml';
     $self->{FH} = new FileHandle ($filename, 'w');
     $self->{FILENAME} = $filename;
@@ -610,7 +614,7 @@ sub new ($)
     return $self;
 }
 
-sub Header ()
+sub Header ($)
 {
     my $self = shift;
     my $out = $self->{FH};
@@ -619,7 +623,7 @@ sub Header ()
       '            xsi:noNamespaceSchemaLocation="JUnit.xsd">', "\n";
 }
 
-sub Footer ()
+sub Footer ($)
 {
     my $self = shift;
     my $out = $self->{FH};
@@ -732,7 +736,9 @@ sub CleanCData
 sub Error ($)
 {
     my $self = shift;
-    my $line = (shift) . "\n";
+    my $line = shift;
+
+    $line = $line .  "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
 
@@ -745,7 +751,9 @@ sub Error ($)
 sub Warning ($)
 {
     my $self = shift;
-    my $line = (shift) . "\n";
+    my $line = shift;
+
+    $line = $line .  "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
     CleanCData (\$line);
@@ -755,7 +763,9 @@ sub Warning ($)
 sub Normal ($)
 {
     my $self = shift;
-    my $line = (shift) . "\n";
+    my $line = shift;
+
+    $line = $line .  "\n";
     my $test = $self->CurrentTest ();
     return unless defined $test;
     my $separator = '=' x 78 . "\n";
@@ -789,8 +799,8 @@ use FileHandle;
 sub new ($)
 {
     my $proto = shift;
-    my $class = ref ($proto) || $proto;
     my $basename = shift;
+    my $class = ref ($proto) || $proto;
     my $filename = $basename . '_Totals.html';
     my $self = {};
 
@@ -1937,9 +1947,9 @@ my $host_next = 0;
 sub new ($)
 {
     my $proto = shift;
+    my $basename = shift;
     my $class = ref ($proto) || $proto;
     my $self = {};
-    my $basename = shift;
     my $filename = $basename . "_Config.html";
 
     $basename =~ s/^.*\///;
@@ -1956,7 +1966,7 @@ sub new ($)
     return $self;
 }
 
-sub Header ()
+sub Header ($)
 {
     my $self = shift;
     print {$self->{FH}} "<html>\n";
@@ -1966,7 +1976,7 @@ sub Header ()
     print {$self->{FH}} "<pre>\n";
 }
 
-sub Footer ()
+sub Footer ($)
 {
     my $self = shift;
     print {$self->{FH}} "</pre>\n";
