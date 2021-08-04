@@ -26,6 +26,7 @@
     <command name="print_ace_config" />
     <command name="print_make_version" />
     <command name="print_perl_version" />
+    <command name="print_openssl_version" />
 
     <command name="shell" options="ps -ef | grep <root> | grep -v grep" />
     <command name="shell" options="ps -ef | grep <root> | grep -v grep | awk '{print $2}' | xargs kill" />
