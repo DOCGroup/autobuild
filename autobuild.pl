@@ -264,11 +264,13 @@ sub GetVariablesMatching ($)
 
 ##############################################################################
 #
-sub SetVariable ($$;$)
+sub SetVariable
 {
   my $name = shift;
   my $value = shift;
-  my $our_data = shift // \%data;
+  my $our_data = shift;
+
+  $our_data = \%data if ! defined $our_data;
 
   my @new_vars_order = grep {$_ ne $name} @{$our_data->{vars_order}};
   if (defined ($value)) {
