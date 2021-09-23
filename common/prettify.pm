@@ -1746,7 +1746,7 @@ sub Test_Handler ($)
         || $s =~ m/Don't know how to make check/
         || $s =~ m/Could not open/
         || $s =~ m/Errno::ENOENT/
-        || $s =~ m/No such file or directory/
+        || ($s =~ m/No such file or directory/ && not ($s =~ m/LLVMSymbolizer: error reading file: No such file or directory/))
         || $s =~ m/C interp: unable to open/
         || $s =~ m/glibc detected/
         || $s =~ m/holds reference to undefined symbol/
@@ -1755,7 +1755,8 @@ sub Test_Handler ($)
         || $s =~ m/is not recognized as an internal or external command/
         || $s =~ m/can't open input/
         || $s =~ m/ACE_SSL .+ error code\: [0-9]+ - error\:[0-9]+\:SSL routines\:SSL3_READ_BYTES\:sslv3 alert certificate expired/
-        || $s =~ m/memPartFree: invalid block/ )
+        || $s =~ m/memPartFree: invalid block/
+        || $s =~ m/WARNING: ThreadSanitizer: /)
     {
         $self->Output_Error ($s);
     }
