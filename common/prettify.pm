@@ -1756,7 +1756,7 @@ sub Test_Handler ($)
         || $s =~ m/can't open input/
         || $s =~ m/ACE_SSL .+ error code\: [0-9]+ - error\:[0-9]+\:SSL routines\:SSL3_READ_BYTES\:sslv3 alert certificate expired/
         || $s =~ m/memPartFree: invalid block/
-        || $s =~ m/WARNING: ThreadSanitizer: /)
+        || $s =~ m/: ThreadSanitizer: /)
     {
         $self->Output_Error ($s);
     }
