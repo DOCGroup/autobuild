@@ -655,6 +655,14 @@ sub Footer ()
           print $out "<failure>\n",
               $indent x 3, "<![CDATA[$error]]></failure><system-out>\n",
               $indent x 3, "<![CDATA[$test->{OUT}]]></system-out></testcase>\n";
+
+          my $github_actions = main::GetVariable ('GITHUB_ACTIONS');
+          if (defined $github_actions) {
+            my $test_file = (split / /, $test->{NAME})[0];
+            my $error_str = $error;
+            $error_str =~ s/([%\r\n])/ sprintf "%%%02X", ord $1 /eg;
+            print "::error title=$test->{NAME},file=$test_file,line=0,col=0::$error_str";
+          }
         }
     }
 
