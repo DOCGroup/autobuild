@@ -138,7 +138,7 @@ sub index_logs ($;$$)
                         }
 
                         if ($2 == 0 && $3 == 0) {
-                            print $fh '&nbsp';
+                            print $fh '&nbsp;';
                         }
 
                         print $fh '</td>';
@@ -159,7 +159,7 @@ sub index_logs ($;$$)
                         }
 
                         if ($2 == 0 && $3 == 0) {
-                            print $fh '&nbsp';
+                            print $fh '&nbsp;';
                         }
 
                         print $fh '</td>';
@@ -180,7 +180,7 @@ sub index_logs ($;$$)
                         }
 
                         if ($2 == 0 && $3 == 0) {
-                            print $fh '&nbsp';
+                            print $fh '&nbsp;';
                         }
 
                         print $fh '</td>';
