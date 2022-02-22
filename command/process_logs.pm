@@ -277,7 +277,7 @@ sub prettify_log ($)
     }
 
     my $process = Prettify::Process ($log_file);
-    if ($keep_logs) {
+    if ($process && $keep_logs) {
         # if keeping prettified logs, then identify each prettified log file,
         # copy it to the save_root (same as copy_log), and then keep at most
         # $keep_logs

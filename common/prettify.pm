@@ -27,7 +27,13 @@ sub new ($)
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
+
     $self->{FH} = new FileHandle ($filename, 'w');
+    unless ($self->{FH}) {
+        print STDERR __FILE__, ": ERROR: Could not create file $filename $!\n";
+        return undef;
+    }
+
     $self->{FILENAME} = $filename;
     $self->{BUFFER_NON_ERRORS} = 0;
 
@@ -218,7 +224,13 @@ sub new ($)
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
+
     $self->{FH} = new FileHandle ($filename, 'w');
+    unless ($self->{FH}) {
+        print STDERR __FILE__, ": ERROR: Could not create file $filename $!\n";
+        return undef;
+    }
+
     $self->{FILENAME} = $filename;
 
     bless ($self, $class);
@@ -392,10 +404,19 @@ sub new ($)
 
     unless (-e $filename) {
         my $file_handle = new FileHandle ($filename, 'w');
+        unless ($file_handle) {
+            print STDERR __FILE__, ": ERROR: Could not create file $filename $!\n";
+            return undef;
+        }
         print {$file_handle} "<h1>$self->{TITLE}</h1>\n";
     }
 
     $self->{FH} = new FileHandle ($filename, '>>');
+    unless ($self->{FH}) {
+        print STDERR __FILE__, ": ERROR: Could not append to file $filename $!\n";
+        return undef;
+    }
+
     $self->{FILENAME} = $filename;
     $self->{BUILDNAME} = $buildname;
     $self->{USE_BUILDNAME} = '';
@@ -601,6 +622,11 @@ sub new ($)
     my $basename = shift;
     my $filename = $basename . '_JUnit.xml';
     $self->{FH} = new FileHandle ($filename, 'w');
+    unless ($self->{FH}) {
+        print STDERR __FILE__, ": ERROR: Could not create file $filename $!\n";
+        return undef;
+    }
+
     $self->{FILENAME} = $filename;
     $self->{CURRENT_SECTION} = '';
     $self->{FAILED} = 0;
@@ -816,7 +842,13 @@ sub new ($)
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
+
     $self->{FH} = new FileHandle ($filename, 'w');
+    unless ($self->{FH}) {
+        print STDERR __FILE__, ": ERROR: Could not create file $filename $!\n";
+        return undef;
+    }
+
     $self->{FILENAME} = $filename;
     $self->{LAST_SECTION} = "";
 
@@ -1206,6 +1238,10 @@ sub new ($$$$$$$$)
 
     # Output the header for the files
     foreach my $output (@{$self->{OUTPUT}}) {
+        unless ($output) {
+            print STDERR __FILE__, ": ERROR: Output failed initialization\n";
+            return undef;
+        }
         $output->Header ();
     }
 
@@ -1831,6 +1867,9 @@ sub Process
     $basename =~ s/\.txt$//;
 
     my $processor = new Prettify ($basename, $buildname, $failed_tests_ref, $skip_failed_test_logs, $rev_link, $log_prefix, $failed_tests_only);
+    unless ($processor) {
+        return undef; # error reported in Prettify::new
+    }
 
     my $input = new FileHandle ($filename, 'r');
     while (<$input>) {
@@ -1966,7 +2005,13 @@ sub new ($)
     $self->{WARNING_COUNTER} = 0;
     $self->{SECTION_COUNTER} = 0;
     $self->{SUBSECTION_COUNTER} = 0;
+
     $self->{FH} = new FileHandle ($filename, 'w');
+    unless ($self->{FH}) {
+        print STDERR __FILE__, ": ERROR: Could not create file $filename $!\n";
+        return undef;
+    }
+
     $self->{FILENAME} = $filename;
 
     bless ($self, $class);
