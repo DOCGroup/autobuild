@@ -38,106 +38,186 @@ sub new ($)
     $self->{BUFFER_NON_ERRORS} = 0;
 
     @{ $self->{BUFFERED_NON_ERRORS} } = ();
-    @{ $self->{ERROR_TEXT} }= ();
-    @{ $self->{BUILD_ERROR_COUNTER} }= ();
+    @{ $self->{ERROR_TEXT} } = ();
+    @{ $self->{BUILD_ERROR_COUNTER} } = ();
+
+    $self->{PRINTING_NORMAL} = 0;
+    $self->{PRINTED_START_OF_NORMAL} = 0;
+    $self->{NORMAL_LINE_COUNT} = 0;
 
     bless ($self, $class);
     return $self;
 }
 
+sub print_normal_or_warning
+{
+    my $self = shift;
+
+    if ($self->{BUFFER_NON_ERRORS})
+    {
+        push( @{$self->{BUFFERED_NON_ERRORS}}, @_ );
+    }
+    else
+    {
+        print {$self->{FH}} @_;
+    }
+}
+
+sub encountered_not_normal
+{
+    my $self = shift;
+
+    if ($self->{PRINTING_NORMAL})
+    {
+        if ($self->{PRINTED_START_OF_NORMAL})
+        {
+            $self->print_normal_or_warning ("</code></pre>\n");
+            $self->{PRINTED_START_OF_NORMAL} = 0;
+        }
+        $self->{PRINTING_NORMAL} = 0;
+        $self->{NORMAL_LINE_COUNT} = 0;
+    }
+}
+
+# This is for everthing except normal and warning
+sub print_to_file
+{
+    my $self = shift;
+
+    $self->encountered_not_normal ();
+
+    print {$self->{FH}} @_;
+}
+
 sub Header ()
 {
     my $self = shift;
-    print {$self->{FH}} "<html>\n";
-    print {$self->{FH}} "<head>\n<title>Daily Build Log</title>\n</head>\n";
-    print {$self->{FH}} "<body bgcolor=\"white\">\n";
-    print {$self->{FH}} "<h1>Daily Build Log</h1>\n";
+    my $header = <<END_OF_HTML;
+<html>
+<head>
+<title>Daily Build Log</title>
+<style>
+.link-to-anchored {
+  opacity: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.anchored:hover .link-to-anchored {
+  opacity: 1;
+}
+.error {
+  color: #ff0000
+}
+.warning {
+  color: #ff7700
+}
+</style>
+</head>
+<body bgcolor=\"white\">
+<h1>Daily Build Log</h1>
+END_OF_HTML
+    $self->print_to_file ($header);
 }
 
 sub Footer ()
 {
     my $self = shift;
-    print {$self->{FH}} "</body>\n";
-    print {$self->{FH}} "</html>\n";
+    $self->print_to_file (
+        "</body>\n",
+        "</html>\n");
+}
+
+sub encountered_section
+{
+    my $self = shift;
+
+    @{ $self->{BUFFERED_NON_ERRORS} } = ();
+    if (defined $ENV{"VALGRIND_ERRORS_ONLY"})
+    {
+       $self->{BUFFER_NON_ERRORS} = 1;
+    }
+}
+
+sub escape_html_entities
+{
+    my $s = shift;
+
+    $s =~ s/&/&amp;/g;
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    return $s;
+}
+
+sub get_anchored
+{
+    my $name = shift;
+    my $before = shift;
+    my $contents = shift;
+    my $after = shift;
+
+    return <<END_OF_HTML;
+<a name="$name"></a>
+$before
+<div class="anchored">$contents
+<a class="link-to-anchored" href="#$name"> #</a></div>
+$after
+END_OF_HTML
 }
 
 sub Section ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = escape_html_entities (shift);
 
     my $counter = ++$self->{SECTION_COUNTER};
+    my $name = "section_$counter";
 
-    print {$self->{FH}} "<a name=\"section_$counter\"></a>\n";
-    print {$self->{FH}} "<hr><h2>$s</h2>\n";
+    $self->print_to_file (get_anchored ($name, '<hr><h2>', $s, '</h2>'));
 
-    @{ $self->{BUFFERED_NON_ERRORS} } = ();
-    if (defined $ENV{"VALGRIND_ERRORS_ONLY"})
-    {
-       $self->{BUFFER_NON_ERRORS} = 1;
-    }
+    $self->encountered_section ();
 }
 
 sub Description ($)
 {
     my $self = shift;
-    my $s = shift || '';
+    my $s = escape_html_entities (shift || '');
 
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
-
-    print {$self->{FH}} "<h3>$s</h3>\n";
+    $self->print_to_file ("<h3>$s</h3>\n");
 }
 
 sub Timestamp ($)
 {
     my $self = shift;
-    my $s = shift;
+    my $s = escape_html_entities (shift);
 
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
-
-    print {$self->{FH}} "<b>$s</b><br><br>\n";
+    $self->print_to_file ("<b>$s</b><br><br>\n");
 }
 
 sub Subsection ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = escape_html_entities (shift);
 
     my $counter = ++$self->{SUBSECTION_COUNTER};
+    my $name = "subsection_$counter";
 
-    print {$self->{FH}} "<a name=\"subsection_$counter\"></a>\n";
+    $self->print_to_file (get_anchored ($name, '<h3>', $s, '</h3>'));
 
-    print {$self->{FH}} "<br><b>$s</b><br><br><br>\n";
-
-    @{ $self->{BUFFERED_NON_ERRORS} } = ();
-    if (defined $ENV{"VALGRIND_ERRORS_ONLY"})
-    {
-       $self->{BUFFER_NON_ERRORS} = 1;
-    }
+    $self->encountered_section ();
 }
 
 sub Error ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = escape_html_entities (shift);
 
     my $counter = ++$self->{ERROR_COUNTER};
+    my $name = "error_$counter";
     push( @{$self->{ERROR_TEXT}}, $s );
 
     if ($self->{BUFFER_NON_ERRORS})
@@ -149,51 +229,55 @@ sub Error ($)
        @{ $self->{BUFFERED_NON_ERRORS} } = ();
     }
 
-    print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
-    print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    $self->print_to_file (get_anchored ($name, '', "<tt class=\"error\">$s</tt>", ''));
 }
 
 sub Warning ($)
 {
     my $self = shift;
-    my $s = shift;
+    my $s = escape_html_entities (shift);
 
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    $self->encountered_not_normal ();
 
     my $counter = ++$self->{WARNING_COUNTER};
+    my $name = "warning_$counter";
 
-    if ($self->{BUFFER_NON_ERRORS})
-    {
-        push( @{$self->{BUFFERED_NON_ERRORS}}, "<a name=\"warning_$counter\"></a>\n" );
-        push( @{$self->{BUFFERED_NON_ERRORS}}, "<font color=\"FF7700\"><tt>$s</tt></font><br>\n" );
-    }
-    else
-    {
-        print {$self->{FH}} "<a name=\"warning_$counter\"></a>\n";
-        print {$self->{FH}} "<font color=\"FF7700\"><tt>$s</tt></font><br>\n";
-    }
+    $self->print_normal_or_warning (
+        get_anchored ($name, '', "<tt class=\"warning\">$s</tt>", ''));
 }
 
 sub Normal ($)
 {
     my $self = shift;
-    my $s = shift;
+    my $s = escape_html_entities (shift);
 
     # Escape any '<' or '>' signs that are not html heading and referances
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
     $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
 
-    if ($self->{BUFFER_NON_ERRORS})
+    if (!$self->{PRINTING_NORMAL})
     {
-        push( @{$self->{BUFFERED_NON_ERRORS}}, "<tt>$s</tt><br>\n" );
+        $self->{PRINTING_NORMAL} = 1;
     }
-    else
+
+    if (!$self->{PRINTED_START_OF_NORMAL} && length ($s) > 0)
     {
-        print {$self->{FH}} "<tt>$s</tt><br>\n";
+      # Don't insert anything until we have a non empty line so there aren't a
+      # bunch of empty elements.
+      $self->print_normal_or_warning ("<pre><code>");
+      $self->{PRINTED_START_OF_NORMAL} = 1;
     }
+
+    if ($self->{PRINTED_START_OF_NORMAL})
+    {
+      if ($self->{NORMAL_LINE_COUNT} > 0)
+      {
+          # The first non empty line should be on the same line as <pre><code>
+          $s = "\n$s";
+      }
+      $self->print_normal_or_warning ($s);
+      ++$self->{NORMAL_LINE_COUNT};
+    }
+
 }
 
 
