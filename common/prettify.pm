@@ -1787,7 +1787,6 @@ sub Test_Handler ($)
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Use of uninitialised value of size/
         || $s =~ m/compilation aborted at/
-        || $s =~ m/compilation aborted at/
         || $s =~ m/RbX-ERR:/
         || $s =~ m/RILL-ERR:/
         || $s =~ m/memPartAlloc: block too big/
