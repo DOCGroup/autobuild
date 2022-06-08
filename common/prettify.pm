@@ -333,10 +333,19 @@ sub Error ($)
 
     $self->Print_Sections ();
 
-    print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
-    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
-                        . "\">Details</a>] </tt>";
-    print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    if (!$Prettify::stack_trace_report)
+    {
+        print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
+        print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
+          . "\">Details</a>] </tt>";
+        print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    }
+    else
+    {
+        # A stack trace report can have a line that contains "Segmentation fault".
+        # Print as normal text in that case.
+        print {$self->{FH}} "<tt>$s</tt><br>\n";
+    }
 }
 
 sub Warning ($)
