@@ -1817,7 +1817,7 @@ sub Test_Handler ($)
     {
         $self->Output_Error ($s);
     }
-    elsif ($s =~ m/ThreadSanitizer:/)
+    elsif ($s =~ m/: ThreadSanitizer:/)
     {
         if (!$tsan_report)
         {

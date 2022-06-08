@@ -36,7 +36,7 @@ def parse_test_line (line)
         line =~ /service name too long/ ||
         line =~ /Can't open perl script/ ||
         line =~ /Don't know how to make check/ ||
-        line =~ /ThreadSanitizer:/ ||
+        line =~ /: ThreadSanitizer:/ ||
         line =~ /AddressSanitizer:/ ||
         line =~ /pure virtual /i )
         return false
