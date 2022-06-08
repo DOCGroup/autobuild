@@ -1862,6 +1862,16 @@ sub Test_Handler ($)
         $self->Output_Normal ($s);
         $asan_report = 0;
     }
+    elsif ($s =~ m/Begin stack trace/)
+    {
+        $stack_trace_report = 1;
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ /End stack trace/)
+    {
+        $self->Output_Normal ($s);
+        $stack_trace_report = 0;
+    }
     elsif (!defined $ENV{"VALGRIND_ERRORS_ONLY"} &&
             ## We want to catch things like "Error:", "WSAGetLastError",
             ## "Errors Detected" and "Error ", but not things like
