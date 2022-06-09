@@ -333,10 +333,19 @@ sub Error ($)
 
     $self->Print_Sections ();
 
-    print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
-    print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
-                        . "\">Details</a>] </tt>";
-    print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    if (!$Prettify::stack_trace_report)
+    {
+        print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
+        print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
+          . "\">Details</a>] </tt>";
+        print {$self->{FH}} "<font color=\"FF0000\"><tt>$s</tt></font><br>\n";
+    }
+    else
+    {
+        # A stack trace report can have a line that contains "Segmentation fault".
+        # Print as normal text in that case.
+        print {$self->{FH}} "<tt>$s</tt><br>\n";
+    }
 }
 
 sub Warning ($)
@@ -361,8 +370,19 @@ sub Warning ($)
 sub Normal ($)
 {
     my $self = shift;
+    my $s = shift;
 
-    # Ignore
+    if ($Prettify::tsan_report ||
+        $Prettify::asan_report ||
+        $Prettify::leak_report ||
+        $Prettify::stack_trace_report)
+    {
+        # Escape any '<' or '>' signs
+        $s =~ s/</&lt;/g;
+        $s =~ s/>/&gt;/g;
+
+        print {$self->{FH}} "<tt>$s</tt><br>\n";
+    }
 }
 
 ###############################################################################
@@ -1158,6 +1178,10 @@ use Data::Dumper;
 use File::Basename;
 use FileHandle;
 our %commits = ();
+our $tsan_report = 0;
+our $asan_report = 0;
+our $leak_report = 0;
+our $stack_trace_report = 0;
 
 ###############################################################################
 
@@ -1266,7 +1290,7 @@ sub new ($$$$$$$$)
     if (defined $ENV{CIAO_ROOT}) {
         push @files, "$ENV{CIAO_ROOT}/bin/ciao_tests.lst";
     }
-    if (defined $ENV{DACE_ROOT}) {
+    if (defined $ENV{DANCE_ROOT}) {
         push @files, "$ENV{DANCE_ROOT}/bin/dance_tests.lst";
     }
     foreach my $file (@files) {
@@ -1772,7 +1796,6 @@ sub Test_Handler ($)
         || $s =~ m/free\(\): invalid pointer:/
         || $s =~ m/Use of uninitialised value of size/
         || $s =~ m/compilation aborted at/
-        || $s =~ m/compilation aborted at/
         || $s =~ m/RbX-ERR:/
         || $s =~ m/RILL-ERR:/
         || $s =~ m/memPartAlloc: block too big/
@@ -1799,10 +1822,63 @@ sub Test_Handler ($)
         || $s =~ m/is not recognized as an internal or external command/
         || $s =~ m/can't open input/
         || $s =~ m/ACE_SSL .+ error code\: [0-9]+ - error\:[0-9]+\:SSL routines\:SSL3_READ_BYTES\:sslv3 alert certificate expired/
-        || $s =~ m/: ThreadSanitizer: /
         || $s =~ m/memPartFree: invalid block/ )
     {
         $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/: ThreadSanitizer:/)
+    {
+        if (!$tsan_report)
+        {
+            $tsan_report = 1;
+            $self->Output_Error ($s);
+        }
+        else
+        {
+            $self->Output_Normal ($s);
+            $tsan_report = 0;
+        }
+    }
+    elsif ($s =~ m/LeakSanitizer:/)
+    {
+        # Indicating the beginning of a memory leak sanitizer report.
+        $leak_report = 1;
+        $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/AddressSanitizer:/)
+    {
+        # Can appear at the end of a leak report or before memory contents are laid out
+        # in the other types of address sanitizer report.
+        if ($leak_report)
+        {
+            $self->Output_Normal ($s);
+            $leak_report = 0;
+        }
+        elsif (!$asan_report)
+        {
+            $asan_report = 1;
+            $self->Output_Error ($s);
+        }
+        else
+        {
+            $self->Output_Normal ($s);
+        }
+    }
+    elsif ($s =~ m/==\d+==ABORTING/)
+    {
+        # End of an address sanitizer report that is not a leak report.
+        $self->Output_Normal ($s);
+        $asan_report = 0;
+    }
+    elsif ($s =~ m/Begin stack trace/)
+    {
+        $stack_trace_report = 1;
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ /End stack trace/)
+    {
+        $self->Output_Normal ($s);
+        $stack_trace_report = 0;
     }
     elsif (!defined $ENV{"VALGRIND_ERRORS_ONLY"} &&
             ## We want to catch things like "Error:", "WSAGetLastError",
