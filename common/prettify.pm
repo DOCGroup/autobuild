@@ -1,4 +1,27 @@
-#
+package Prettify;
+
+use strict;
+use warnings;
+
+sub escape_html_entities
+{
+    my $s = shift;
+
+    $s =~ s/&/&amp;/g;
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+
+    return $s;
+}
+
+sub escape_html_entities_keep_headers_and_links
+{
+    my $s = escape_html_entities (shift);
+
+    $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
+
+    return $s;
+}
 
 ###############################################################################
 ###############################################################################
@@ -109,6 +132,9 @@ sub Header ()
 .anchored:hover .link-to-anchored {
   opacity: 1;
 }
+pre {
+  margin: 0;
+}
 .error {
   color: #ff0000
 }
@@ -142,17 +168,6 @@ sub encountered_section
     }
 }
 
-sub escape_html_entities
-{
-    my $s = shift;
-
-    $s =~ s/&/&amp;/g;
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
-
-    return $s;
-}
-
 sub get_anchored
 {
     my $name = shift;
@@ -172,7 +187,7 @@ END_OF_HTML
 sub Section ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift);
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SECTION_COUNTER};
     my $name = "section_$counter";
@@ -185,7 +200,7 @@ sub Section ($)
 sub Description ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift || '');
+    my $s = Prettify::escape_html_entities (shift || '');
 
     $self->print_to_file ("<h3>$s</h3>\n");
 }
@@ -193,7 +208,7 @@ sub Description ($)
 sub Timestamp ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift);
+    my $s = Prettify::escape_html_entities (shift);
 
     $self->print_to_file ("<b>$s</b><br><br>\n");
 }
@@ -201,7 +216,7 @@ sub Timestamp ($)
 sub Subsection ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift);
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SUBSECTION_COUNTER};
     my $name = "subsection_$counter";
@@ -214,7 +229,7 @@ sub Subsection ($)
 sub Error ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift);
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{ERROR_COUNTER};
     my $name = "error_$counter";
@@ -235,7 +250,7 @@ sub Error ($)
 sub Warning ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift);
+    my $s = Prettify::escape_html_entities (shift);
 
     $self->encountered_not_normal ();
 
@@ -249,10 +264,7 @@ sub Warning ($)
 sub Normal ($)
 {
     my $self = shift;
-    my $s = escape_html_entities (shift);
-
-    # Escape any '<' or '>' signs that are not html heading and referances
-    $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
+    my $s = Prettify::escape_html_entities_keep_headers_and_links (shift);
 
     if (!$self->{PRINTING_NORMAL})
     {
@@ -346,11 +358,7 @@ sub Footer ()
 sub Section ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SECTION_COUNTER};
 
@@ -375,11 +383,7 @@ sub Timestamp ($)
 sub Subsection ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SUBSECTION_COUNTER};
 
@@ -407,11 +411,7 @@ sub Print_Sections ()
 sub Error ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{ERROR_COUNTER};
 
@@ -436,11 +436,7 @@ sub Error ($)
 sub Warning ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{WARNING_COUNTER};
 
@@ -463,9 +459,7 @@ sub Normal ($)
         $Prettify::stack_trace_report ||
         $Prettify::stuck_stacks_report)
     {
-        # Escape any '<' or '>' signs
-        $s =~ s/</&lt;/g;
-        $s =~ s/>/&gt;/g;
+        $s = Prettify::escape_html_entities ($s);
 
         print {$self->{FH}} "<tt>$s</tt><br>\n";
     }
@@ -559,11 +553,7 @@ sub Footer ()
 sub Section ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SECTION_COUNTER};
 
@@ -588,11 +578,7 @@ sub Timestamp ($)
 sub Subsection ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SUBSECTION_COUNTER};
 
@@ -650,9 +636,7 @@ sub Error ($)
     my $s = shift;
 
     if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
-        # Escape any '<' or '>' signs
-        $s =~ s/</&lt;/g;
-        $s =~ s/>/&gt;/g;
+        $s = Prettify::escape_html_entities ($s);
 
         my $counter = ++$self->{ERROR_COUNTER};
 
@@ -678,9 +662,7 @@ sub Warning ($)
     my $s = shift;
 
     if (defined $self->{LAST_SECTION} && $self->{LAST_SECTION} eq 'Test') {
-        # Escape any '<' or '>' signs
-        $s =~ s/</&lt;/g;
-        $s =~ s/>/&gt;/g;
+        $s = Prettify::escape_html_entities ($s);
 
         my $counter = ++$self->{WARNING_COUNTER};
 
@@ -1164,11 +1146,7 @@ sub Footer ()
 sub Section ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     $self->Section_Totals ();
 
@@ -1195,11 +1173,7 @@ sub Timestamp ($)
 sub Subsection ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     ++$self->{SUBSECTION_COUNTER};
     ++$self->{SECTION_SUBSECTIONS};
@@ -1225,11 +1199,7 @@ sub Error ($)
 sub Warning ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     ++$self->{WARNING_COUNTER};
     ++$self->{SECTION_WARNINGS};
@@ -2226,9 +2196,7 @@ sub Normal ($)
                 $host_next = 1;
             }
         }
-        $s =~ s/</&lt;/g;
-        $s =~ s/>/&gt;/g;
-        $s =~ s/&lt;\s*(\/?\s*h\d|\/a|a\s*href\s*=\s*\s*"[^"]*")\s*&gt;/<$1>/g;
+        $s = Prettify::escape_html_entities_keep_headers_and_links ($s);
         print {$self->{FH}} "$s\n";
     }
 }
@@ -2236,11 +2204,7 @@ sub Normal ($)
 sub Section ($)
 {
     my $self = shift;
-    my $s = shift;
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
+    my $s = Prettify::escape_html_entities (shift);
 
     my $counter = ++$self->{SECTION_COUNTER};
 
@@ -2263,13 +2227,9 @@ sub Subsection ($)
 sub Description ($)
 {
     my $self = shift;
-    my $s = shift || '';
+    my $s = Prettify::escape_html_entities (shift);
     my $state = shift;
     $state = lc ($state);
-
-    # Escape any '<' or '>' signs
-    $s =~ s/</&lt;/g;
-    $s =~ s/>/&gt;/g;
 
     if(defined $state && $state eq "config") {
       print {$self->{FH}} "<h3>$s</h3>\n";
