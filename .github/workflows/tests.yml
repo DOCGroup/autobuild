@@ -14,6 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      - name: Install Perl dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install libwww-perl
       - name: Run Tests
         run: perl run_tests.pl
