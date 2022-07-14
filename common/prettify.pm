@@ -417,7 +417,7 @@ sub Error ($)
 
     $self->Print_Sections ();
 
-    if (!$Prettify::stack_trace_report)
+    if (!$Prettify::stack_trace_report && !$Prettify::stuck_stacks_report)
     {
         print {$self->{FH}} "<a name=\"error_$counter\"></a>\n";
         print {$self->{FH}} "<tt>[<a href=\"$self->{FULLHTML}#error_$counter"
@@ -426,7 +426,8 @@ sub Error ($)
     }
     else
     {
-        # A stack trace report can have a line that contains "Segmentation fault".
+        # A stack trace report may have a line that contains "Segmentation fault",
+        # and a stuck stacks report may contain "No such file or directory".
         # Print as normal text in that case.
         print {$self->{FH}} "<tt>$s</tt><br>\n";
     }
@@ -459,7 +460,8 @@ sub Normal ($)
     if ($Prettify::tsan_report ||
         $Prettify::asan_report ||
         $Prettify::leak_report ||
-        $Prettify::stack_trace_report)
+        $Prettify::stack_trace_report ||
+        $Prettify::stuck_stacks_report)
     {
         # Escape any '<' or '>' signs
         $s =~ s/</&lt;/g;
@@ -1266,6 +1268,7 @@ our $tsan_report = 0;
 our $asan_report = 0;
 our $leak_report = 0;
 our $stack_trace_report = 0;
+our $stuck_stacks_report = 0;
 
 ###############################################################################
 
@@ -1867,7 +1870,7 @@ sub Test_Handler ($)
     if ($s =~ m/gethostbyname: getaddrinfo returned ERROR/
      || $s =~ m/==\d+==.*XML::XML_Error_Handler/) # valgrind stack trace
     {
-      $self->Output_Normal ($s);
+        $self->Output_Normal ($s);
     }
     elsif ($s =~ m/Mismatched free/
         || $s =~ m/are definitely lost in loss record/
@@ -1963,6 +1966,16 @@ sub Test_Handler ($)
     {
         $self->Output_Normal ($s);
         $stack_trace_report = 0;
+    }
+    elsif ($s =~ m/Begin stuck stacks/)
+    {
+        $stuck_stacks_report = 1;
+        $self->Output_Normal ($s);
+    }
+    elsif ($s =~ m/End stuck stacks/)
+    {
+        $self->Output_Normal ($s);
+        $stuck_stacks_report = 0;
     }
     elsif (!defined $ENV{"VALGRIND_ERRORS_ONLY"} &&
             ## We want to catch things like "Error:", "WSAGetLastError",
