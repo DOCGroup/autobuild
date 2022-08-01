@@ -453,7 +453,8 @@ sub Normal ($)
     my $self = shift;
     my $s = shift;
 
-    if ($Prettify::tsan_report ||
+    if ($Prettify::ubsan_report ||
+        $Prettify::tsan_report ||
         $Prettify::asan_report ||
         $Prettify::leak_report ||
         $Prettify::stack_trace_report ||
@@ -1234,6 +1235,7 @@ use Data::Dumper;
 use File::Basename;
 use FileHandle;
 our %commits = ();
+our $ubsan_report = 0;
 our $tsan_report = 0;
 our $asan_report = 0;
 our $leak_report = 0;
@@ -1882,6 +1884,27 @@ sub Test_Handler ($)
         || $s =~ m/memPartFree: invalid block/ )
     {
         $self->Output_Error ($s);
+    }
+    elsif ($s =~ m/:\d+:\d+: runtime error:/)
+    {
+        if (!$ubsan_report)
+        {
+            $ubsan_report = 1;
+            $self->Output_Error ($s);
+        }
+    }
+    elsif ($s =~ m/: UndefinedBehaviorSanitizer:/)
+    {
+        if (!$ubsan_report)
+        {
+            # Assume single-line reporting if no stack trace appears first (i.e. runtime error)
+            $self->Output_Error ($s);
+        }
+        else
+        {
+            $self->Output_Normal ($s);
+            $tsan_report = 0;
+        }
     }
     elsif ($s =~ m/: ThreadSanitizer:/)
     {
