@@ -1887,24 +1887,13 @@ sub Test_Handler ($)
     }
     elsif ($s =~ m/:\d+:\d+: runtime error:/)
     {
-        if (!$ubsan_report)
-        {
-            $ubsan_report = 1;
-            $self->Output_Error ($s);
-        }
+        $ubsan_report = 1;
+        $self->Output_Error ($s);
     }
     elsif ($s =~ m/: UndefinedBehaviorSanitizer:/)
     {
-        if (!$ubsan_report)
-        {
-            # Assume single-line reporting if no stack trace appears first (i.e. runtime error)
-            $self->Output_Error ($s);
-        }
-        else
-        {
-            $self->Output_Normal ($s);
-            $tsan_report = 0;
-        }
+        $self->Output_Normal ($s);
+        $tsan_report = 0;
     }
     elsif ($s =~ m/: ThreadSanitizer:/)
     {
