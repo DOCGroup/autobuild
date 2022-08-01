@@ -1893,7 +1893,7 @@ sub Test_Handler ($)
     elsif ($s =~ m/: UndefinedBehaviorSanitizer:/)
     {
         $self->Output_Normal ($s);
-        $tsan_report = 0;
+        $ubsan_report = 0;
     }
     elsif ($s =~ m/: ThreadSanitizer:/)
     {
