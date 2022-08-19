@@ -33,6 +33,6 @@
     <command name="shell" options="rm -rf MPC" />
     <command name="shell" options="rm -rf ATCD" />
 
-    <command name="git" options="clone --depth 1 git@github.com:DOCGroup/MPC.git" />
-    <command name="git" options="clone --depth 1 --branch ace6tao2 git@github.com:DOCGroup/ATCD.git" />
+    <command name="git" options="clone --depth 1 https://github.com/DOCGroup/MPC.git" />
+    <command name="git" options="clone --depth 1 --branch ace6tao2 https://github.com/DOCGroup/ATCD.git" />
 </autobuild>
