@@ -1243,6 +1243,7 @@ sub DealWithCommandTag ($$$$$\%)
   my $JOIN = ' ';
   my $SUBVARS = 2; ## use default, if 0 don't substitute, if 1 substitute.
   my $GROUP;
+  my $required;
 
   while (scalar @$PAIRS) {
     my $thisPAIR = shift (@$PAIRS);
@@ -1309,6 +1310,21 @@ sub DealWithCommandTag ($$$$$\%)
             "IGNORING",
             "Undefined environment group <$tag $thisAttrib=\"$thisValue\">" );
         }
+      }
+    }
+    #-------------------------------------------------------------------------
+    elsif ($thisAttrib =~ m/^required$/i) {
+      if ($thisValue =~ m/^true$/i) {
+        $required = 1;
+      } elsif ($thisValue =~ m/^false$/i) {
+        $required = 0;
+      } else {
+        DisplayProblem(
+          $file,
+          $lineStart,
+          $lineEnd,
+          "IGNORING",
+          "Invalid value for \"required\" attribute <$tag $thisAttrib=\"$thisValue\">");
       }
     }
     #-------------------------------------------------------------------------
@@ -1439,6 +1455,7 @@ sub DealWithCommandTag ($$$$$\%)
                  LINE_FROM => $lineStart,
                  LINE_TO   => $lineEnd,
                  ARGS => [],
+                 REQUIRED => $required,
                 );
     push @{$data->{COMMANDS}}, \%value;
   }
