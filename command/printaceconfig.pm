@@ -254,6 +254,12 @@ sub Run ($)
         print_file ("$dir/VERSION", 0);
         last;
       }
+      if (defined $dir && -r "$dir/dds/OpenDDSConfig.h") {
+        print "================ OpenDDSConfig.h ================\n";
+
+        print_file ("$dir/dds/OpenDDSConfig.h", 0);
+        last;
+      }
     }
 
     chdir $current_dir;
