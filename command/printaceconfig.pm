@@ -46,7 +46,7 @@ sub Run ($)
     my $root = main::GetVariable ('root');
     my $project_root = main::GetVariable ('project_root');
     my $config_file = main::GetVariable ('CVS_CONFIG_FILE');
-    my $opendds_url = 'https://github.com/objectcomputing/OpenDDS';
+    my $opendds_url = 'https://github.com/OpenDDS/OpenDDS';
     my $atcd_url = 'https://github.com/DOCGroup/ACE_TAO';
     my $ciao_url = 'https://github.com/DOCGroup/CIAO';
     my $dance_url = 'https://github.com/DOCGroup/DAnCE';
@@ -193,10 +193,10 @@ sub Run ($)
           print_file ("$ENV{ACE_ROOT}/include/makeinclude/platform_macros.GNU", 1);
       }
 
-      if ( -r "$ENV{ACE_ROOT}/VERSION" ) {
+      if ( -r "$ENV{ACE_ROOT}/VERSION.txt" ) {
           print "================ ACE VERSION ================\n";
 
-          print_file ("$ENV{ACE_ROOT}/VERSION", 0);
+          print_file ("$ENV{ACE_ROOT}/VERSION.txt", 0);
       }
     }
 
@@ -206,10 +206,10 @@ sub Run ($)
     }
     push (@dirs, 'TAO');
     foreach my $dir (@dirs) {
-      if (defined $dir && -r "$dir/VERSION") {
+      if (defined $dir && -r "$dir/VERSION.txt") {
         print "================ TAO VERSION ================\n";
 
-        print_file ("$dir/VERSION", 0);
+        print_file ("$dir/VERSION.txt", 0);
         last;
       }
     }
@@ -248,10 +248,10 @@ sub Run ($)
     }
     push (@dirs, 'TAO/DDS');
     foreach my $dir (@dirs) {
-      if (defined $dir && -r "$dir/VERSION") {
+      if (defined $dir && -r "$dir/VERSION.txt") {
         print "================ DDS VERSION ================\n";
 
-        print_file ("$dir/VERSION", 0);
+        print_file ("$dir/VERSION.txt", 0);
         last;
       }
       if (defined $dir && -r "$dir/dds/OpenDDSConfig.h") {
