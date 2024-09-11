@@ -1,6 +1,7 @@
-#!/usr/bin/python2.1
+#!/usr/bin/env python3
 
 from TestDB import *
 
-testdb = TestDB(sys.argv[1])
-testdb.GetRecentBuildInstance()
+if __name__ == '__main__':
+    testdb = TestDB(sys.argv[1])
+    testdb.GetRecentBuildInstance()
