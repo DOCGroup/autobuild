@@ -1,58 +1,38 @@
 body {background-color: white;}
 
 table {
-	background-color: #D3D3D3; 
-	color: black; 
-	border: 4px solid black;
-	margin: 5px 0; 
-	border-collapse: collapse;
-	table-layout: fixed;
-	font: 10pt arial; 
+    background-color: #d9d9d9;
+    border: 4px solid black;
+    margin: 5px 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font: 10pt arial;
 }
 
 tr {overflow: hidden; }
-tr.odd {background-color: #D3D3D3;  color: black; }
+tr.odd {background-color: #c0c0c0;}
 
-tr.oddlnk {background-color: gray; color: white; cursor: pointer; }
+tr.oddlnk {background-color: #c0c0c0; cursor: pointer;}
 
 th.head {
-	background-color: #A9A9A9;
-	font: bold 12pt verdana, arial; 
-	cursor: arrow;
+    background-color: #a9a9a9;
+    font: bold 12pt verdana, arial;
+    cursor: arrow;
 }
 th {
-	background-color: #A9A9A9; 
-	border: 2px solid white; 
-	padding:2px 2px; 
-	cursor: default;
-	font: bold 10pt verdana, arial; 
+    background-color: #a9a9a9;
+    border: 2px solid white;
+    padding:2px 2px;
+    cursor: default;
+    font: bold 10pt verdana, arial;
 }
-td {border: 2px solid white; padding:0 2px; overflow: hidden; text-align: right;} 
+td {
+    border: 2px solid white;
+    padding:0 2px;
+    overflow: hidden;
+    text-align: right;
+}
 td.txt {text-align: left;}
-
-table.matrix tr td {
-  border: 1px solid white;
-}
-
-table.matrix tr th.head {
-	background-color: #A9A9A9;
-	font: bold 12pt verdana, arial; 
-	cursor: default;
-}
-
-table.matrix tr th {
-  border: 1px solid white;
-  cursor: default;
-  background-color: #D3D3D3;
-  color: black;
-}
-
-table.matrix tr th.colhead {
-  font: 8pt sans-serif;
-  background-color: steelblue;
-  color: black;
-}
-
 
 .p {background-color:green}
 .f,.fail {background-color:red; color: white;}

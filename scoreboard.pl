@@ -163,6 +163,8 @@ sub set_latest_build_info
     my $latest = shift;
     my $buildname = shift;
 
+    $latest =~ s/^\s+|\s+$//g;
+
     if ($latest =~ m/Config: (\d+)/) {
         $builds{$buildname}{CONFIG_SECTION} = $1;
     }
@@ -1594,10 +1596,8 @@ sub GetVariable ($)
     my $v = shift;
     if ($v eq 'junit_xml_output') {
         return $junit_xml_output;
-    } else {
-        my %a=();
-        return $a{'UNDEFINED'};
     }
+    return undef;
 }
 
 ###############################################################################
@@ -1714,6 +1714,29 @@ sub get_time_str
 }
 
 ###############################################################################
+
+sub write_builds_json
+{
+    my $dir = shift ();
+    my $builds_hash = shift ();
+    my $ordered_names = shift ();
+
+    my @builds = ();
+    for my $name (@{$ordered_names}) {
+        my $orig = $builds_hash->{$name};
+        my $new = {name => $name};
+        for my $key (keys(%{$orig})) {
+            $new->{lc($key)} = $orig->{$key};
+        }
+        push(@builds, $new);
+    }
+
+    utility::write_obj_to_json ("$dir/builds.json", {
+        builds => \@builds,
+    });
+}
+
+###############################################################################
 #
 # Callbacks for commands
 #
@@ -1812,10 +1835,10 @@ if (defined $opt_l) {
 }
 
 if (defined $opt_i){
-$index = $opt_i;
-print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_index_page ($dir, $index);
-exit (1);
+    $index = $opt_i;
+    print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
+    build_index_page ($dir, $index);
+    exit (1);
 }
 
 if (defined $opt_b) {
@@ -1832,9 +1855,9 @@ if (defined $opt_y) {
 }
 
 if (defined $opt_z) {
-print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_integrated_page ($dir, $opt_j);
-exit (1);
+    print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
+    build_integrated_page ($dir, $opt_j);
+    exit (1);
 }
 
 $inp_file = $opt_f;
@@ -1872,6 +1895,7 @@ if (defined $opt_c) {
     query_history ();
   }
 }
+write_builds_json ($dir, \%builds, \@ordered);
 update_html ($dir,"$dir/$out_file",$rss_file);
 
 print 'Finished Scoreboard Update at ' . get_time_str() . "\n" if ($verbose);

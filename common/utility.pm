@@ -5,6 +5,23 @@ package utility;
 
 use File::Path qw(rmtree);
 
+use JSON::PP;
+
+sub obj_to_json
+{
+    return JSON::PP->new->pretty(1)->utf8->encode(shift());
+}
+
+sub write_obj_to_json
+{
+    my $path = shift();
+    my $obj = shift();
+
+    open(my $f, '>', $path) or die("Failed to open $path: $!");
+    print $f (obj_to_json($obj));
+    close($f);
+}
+
 # Run command, returns 0 if there was an error. If the second argument is
 # passed, it's assumed to be an autobuild command result hashref and "failure"
 # will be set to "fatal" if it is a total failure is fatal and "non-fatal" if

@@ -10,31 +10,117 @@ import re
 import os
 import time
 from pathlib import Path
+from io import StringIO
 
-matrix_database = str(Path(__file__).resolve().parent.parent / 'matrix_database')
-if matrix_database not in sys.path:
-    sys.path.append(matrix_database)
-
-from utils import *
+from .matrix import Status
 
 
-class HTMLTestMatrix2:
-    def __init__(self, title, directory):
+this_dir = Path(__file__).resolve().parent
+indent = '  '
+
+
+class Html:
+    def __init__(self, indent_by=0):
+        self.f = StringIO()
+        self.indent_by = indent_by
+
+    def print(self, *args, end='', **kw):
+        print(*args, end=end, file=self.f, **kw)
+
+    def print_indent(self):
+        self.print(indent * self.indent_by)
+
+    def println(self, *args, **kw):
+        self.print_indent()
+        self.print(*args, end='\n', **kw)
+
+    def println_push(self, *args, **kw):
+        self.println(*args, **kw)
+        self.indent_by += 1
+
+    def pop_println(self, *args, **kw):
+        assert self.indent_by > 0
+        self.indent_by -= 1
+        self.println(*args, **kw)
+
+    def __str__(self):
+        return self.f.getvalue()
+
+
+def tag(name, classes=None, attrs=None):
+    t = '<' + name
+    if attrs is None:
+        attrs = {}
+    if classes is None:
+        classes = []
+    if classes:
+        attrs['class'] = ' '.join(classes)
+    if attrs:
+        t += ' ' + ' '.join([f'{k}="{v}"' for k, v in attrs.items()])
+    return t + '>'
+
+
+def full_tag(name, text, classes=None, attrs=None):
+    if attrs is None:
+        attrs = {}
+    if classes is None:
+        classes = []
+    return tag(name, classes, attrs) + f'{text}</{name}>'
+
+
+class HtmlTable:
+    def __init__(self, name, cols, classes=[], attrs={}):
+        self.name = name
+        self.cols = cols
+        self.header = (None, [], {})
+        self.rows = [self.header]
+        self.classes = classes
+        self.attrs = attrs
+
+    def row(self, cells, classes=[], attrs=None):
+        if len(cells) != len(self.cols):
+            raise ValueError(f'Got {len(cells)} cells, but we have {len(self.cols)} columns!')
+        if attrs is None:
+            attrs = {}
+        self.rows.append(([c if type(c) is tuple else (c, [], {}) for c in cells], classes, attrs))
+
+    def extra_header(self):
+        self.rows.append(self.header)
+
+    def done(self, html):
+        html.println_push(tag('table', self.classes, self.attrs))
+        for row, row_classes, row_attrs in self.rows:
+            html.println_push(tag('tr', row_classes, row_attrs))
+            html.print_indent()
+            if row is None:  # Header
+                for col in self.cols:
+                    html.print(full_tag('th', col))
+            else:  # Normal row
+                for cell, cell_classes, cell_attrs in row:
+                    html.print(full_tag('td', cell, cell_classes, cell_attrs))
+            html.println('')
+            html.pop_println('</tr>')
+        html.pop_println('</table>')
+
+
+class HTMLTestMatrix:
+    def __init__(self, matrix, title):
+        self.matrix = matrix
         self.title = title
-        self.directory = directory
-        self.matrix_html = None
+        self.directory = matrix.builds.dir
+        self.matrix_html_table = None
         self.matrix_header = None
         self.build_summary_html = None
         self.main_summary_html = None
-        self.tao_summary_html = None
-        self.ace_summary_html = None
 
         self.matrix_row = 0
         self.passed = 0
         self.failed = 0
 
+        # TODO: Remove
         self.highlight_html = "onmouseover=\"this.style.backgroundColor='hotpink';\" onmouseout=\"this.style.backgroundColor='';\""
 
+        # TODO: Remove JQuery
         self.html_start = """
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
 <html>
@@ -102,67 +188,30 @@ $(function() {
 </table>
 """
 
-    def getTestDataHeader(self, name, results, builds):
-        """Adds another header row to the test results table."""
-        html = """
-<tr>
-    <th># Pass</th>
-    <th># Fail</th>
-    <th># Skip</th>
-    <th>% Pass</th>
-"""
-        for n in range(0, len(results)):
-            number = str(n + 1)
-            # Insert spaces between two digit numbers, so that they will wrap
-            if len(number) == 2:
-                number = number[0] + ' ' + number[1]
-            if builds:
-                bldname = builds[n].name
-                html += '<th  class="colhead" title="' + bldname + '">' + number + '</th>'
-            else:
-                html += '<th>' + number + '</th>'
+    def addTestData(self, name, results):
+        if self.matrix_html_table is None:
+            cols = ['# Pass', '# Fail', '# Skip', '% Pass']
+            cols += [str(n + 1) for n in range(len(self.matrix.builds))]
+            cols += ['Test Name']
+            self.matrix_html_table = HtmlTable('Test Results', cols)
 
-        # Add the final <th> and end the header row
-        return html + '<th>Test Name</th></tr>\n'
-
-    def addTestData(self, name, results, linkfile, builds=None):
-
-        if not self.matrix_html:
-            width = 160 + (10 * len(results)) + 500
-            # Mozilla ignores the table-layout css attribute unless you specify
-            # <table width="...
-            html = '<table width="%d" class="matrix">' % width
-            html += """<col width="40"><col width="40"><col width="40"><col width="40">"""
-            # Add <col> specifiers for each build
-            for n in range(0, len(results)):
-                html += '<col width="10">'
-            # Add the final <col>
-            html += '<col width="500">\n'
-
-            # Add a caption
-            html += '<tr><th class="head" colspan="%d">Test Results</th></tr>\n' % (
-                len(results) + 5)
-
-            html += self.getTestDataHeader(name, results, builds)
-
-            self.matrix_html = html
-
-        if not self.matrix_header:
-            self.matrix_header = self.getTestDataHeader(name, results, builds)
+        tb = self.matrix_html_table
 
         self.matrix_row += 1
 
-        html = self.matrix_html
-
         # Repeat the header row every now and then
         if self.matrix_row % 20 == 0:
-            html += self.matrix_header
+            tb.extra_header()
 
-        npass = results.count(PASS)
-        nfail = results.count(FAIL)
-        nskip = results.count(SKIP)
-        perc = ComputePercentage(npass, npass + nfail)
-        sperc = "%.0f" % perc
+        row_classes = []
+
+        # Alternate row color
+        if self.matrix_row & 1:
+            row_classes.append('odd')
+
+        npass = results.stats.passed
+        nfail = results.stats.failed
+        nskip = results.stats.skipped
 
         # If any failed
         if nfail > 0:
@@ -170,47 +219,27 @@ $(function() {
         elif npass > 0:
             self.passed += 1
 
-        if self.matrix_row & 1:
-            html += '<tr class="odd"'
-        else:
-            html += '<tr class="even"'
-        html += self.highlight_html + ">"
 
-        html += "<td>%d</td>" % npass
         if nfail == 0:
-            html += "<td>%d</td>" % nfail
+            status_classes = []
         elif nfail == 1:
-            html += "<td class='warn'>%d</td>" % nfail
+            status_classes = ['warn']
         else:
-            html += "<td class='fail'>%d</td>" % nfail
+            status_classes = ['fail']
 
-        html += "<td>%d</td>" % nskip
-        html += '<td>' + sperc + "</td>"
+        row = [
+            npass,
+            (nfail, status_classes, {}),
+            nskip,
+            results.stats.perc_passed,
+        ]
+        for status in self.matrix.statuses_for_test(results):
+            row.append(('', [status.name[0].lower()], {}))
+        row.append((results.name, status_classes, {}))
+        tb.row(row, row_classes)
 
-        # now write out the <td>s for test results
-        for res in results:
-            if res == PASS:
-                html += '<td class="p"></td>'
-            elif res == FAIL:
-                html += '<td class="f"></td>'
-            else:
-                html += '<td class="s"></td>'
-
-        # now write out the name of the test
-        # fname = str(linkfile) + '.html'
-        if nfail == 0:
-            html += '<td>' + name + '</td>'
-        elif nfail == 1:
-            html += '<td class="warn">' + name + '</td>'
-        else:
-            html += '<td class="fail">' + name + '</td>'
-
-        self.matrix_html = html + "</tr>\n"
-
-    def getSummaryHTML(self, name, npass, nfail, nskip):
-        total = npass + nfail
-        pperc = ComputePercentage(npass, total)
-        fperc = ComputePercentage(nfail, total)
+    def getSummaryHTML(self, name, stats):
+        # TODO: Use HtmlTable
         html = """
 <table width="360">
     <col width="60"><col width="60"><col width="60"><col width="60"><col width="60"><col width="60">
@@ -231,51 +260,32 @@ Summary</th>
 <tr class="odd">
 """
 
-        html += '<td>%d</td>' % total
-        html += '<td>%d</td>' % npass
-        html += '<td>%d</td>' % nfail
-        if nskip == -1:
+        html += '<td>%d</td>' % stats.total
+        html += '<td>%d</td>' % stats.passed
+        html += '<td>%d</td>' % stats.failed
+        if stats.skipped == 0:
             html += '<td>-</td>'
         else:
-            html += '<td>%d</td>' % nskip
-        html += '<td>%.2f</td>' % pperc
-        html += '<td>%.2f</td>' % fperc
+            html += '<td>%d</td>' % stats.skipped
+        html += f'<td>{stats.perc_passed}</td>'
+        html += f'<td>{stats.perc_failed}</td>'
         html += '</tr>\n'
         html += '</table>\n'
         html += '<p>%d tests passed, ' % self.passed
         html += '%d failed</p>\n' % self.failed
         return html
 
-    def writeBriefs(self, npass, nfail, nskip):
-        self.main_summary_html = self.getSummaryHTML("", npass, nfail, nskip)
-
-    def writeSummary(
-            self,
-            ACEpass,
-            ACEtotal,
-            ACEperc,
-            TAOpass,
-            TAOtotal,
-            TAOperc):
-        if TAOtotal > 0:
-            self.ace_summary_html = self.getSummaryHTML(
-                "ACE ", ACEpass, (ACEtotal - ACEpass), -1)
-            self.tao_summary_html = self.getSummaryHTML(
-                "TAO ", TAOpass, (TAOtotal - TAOpass), -1)
-        else:
-            self.ace_summary_html = ""
-            self.tao_summary_html = ""
+    def writeBriefs(self):
+        self.main_summary_html = self.getSummaryHTML("", self.matrix.all_stats)
 
     def writeBuildSummary(self, num, build):
         num += 1
+        # TODO: Use HtmlTable
         if not self.build_summary_html:
             self.build_summary_html = """
-<table width="800">
+<table>
     <col width="25">
     <col width="451">
-    <col width="40">
-    <col width="40">
-    <col width="42">
     <col width="40">
     <col width="40">
     <col width="42">
@@ -285,17 +295,8 @@ Summary</th>
         <th class="head" colspan="10">Build Summary</th>
     </tr>
     <tr>
-        <th colspan="2"></th>
-        <th colspan="3">ACE</th>
-        <th colspan="3">TAO</th>
-        <th colspan="2"></th>
-    </tr>
-    <tr>
         <th>#</th>
         <th>Name</th>
-        <th>#</th>
-        <th># Fail</th>
-        <th>% Pass</th>
         <th>#</th>
         <th># Fail</th>
         <th>% Pass</th>
@@ -307,110 +308,86 @@ Summary</th>
         html = self.build_summary_html
 
         # now we have to write out the key to the build numbers
-        ace = tao = 0.0
+        # TODO: Rename and cleanup
+        ace = 0.0
         acecls = None
-        taocls = None
 
-        if build.ACEtotal > 0:
-            npass = build.ACEtotal - build.ACEfail
-            ace = ComputePercentage(npass, build.ACEtotal)
+        if build.stats.ran:
+            ace = (build.stats.passed / build.stats.ran) * 100
             if ace < 50.0:
                 acecls = "f"
             elif ace < 90.0:
                 acecls = "w"
 
-        if build.TAOtotal > 0:
-            npass = build.TAOtotal - build.TAOfail
-            tao = ComputePercentage(npass, build.TAOtotal)
-            if tao < 50.0:
-                taocls = "f"
-            elif tao < 90.0:
-                taocls = "w"
-
-        if build.compile == FAIL:
+        # TODO?
+        # if build.compile == FAIL:
+        if False:
             html += '<tr class="faillnk" '
         elif num & 1:
             html += '<tr class="oddlnk" '
         else:
             html += '<tr class="lnk" '
 
+        # TODO: Remove
         # Set up the ability for each row to act as a link (Easier to click)
         # Mozilla allows us to use the :hover tag in cvs with the tr, but this
         # doesn't work in IE. So we use onmouseover/out.
         fname = build.name + '_j.html'
         html += self.highlight_html
-        html += "onmousedown=\"window.location ='%s';\">\n" % fname
+        html += " onmousedown=\"window.location ='%s';\">\n" % fname
 
         html += "<td>%d</td>" % num
         html += '<td class="txt">' + build.name + "</td>"
-        html += "<td>%d</td>" % build.ACEtotal
-        html += "<td>%d</td>" % build.ACEfail
+        html += "<td>%d</td>" % build.stats.total
+        html += "<td>%d</td>" % build.stats.failed
         sperc = "%.1f" % ace
         if acecls:
             html += '<td class="' + acecls + '">'
         else:
             html += '<td>'
         html += sperc + "</td>"
-        html += "<td>%d</td>" % build.TAOtotal
-        html += "<td>%d</td>" % build.TAOfail
-        sperc = "%.1f" % tao
-        if taocls:
-            html += '<td class="' + taocls + '">'
-        else:
-            html += '<td>'
-        html += sperc + "</td>"
-        time = float(build.timeTotal) / 60.0
+        time = float(build.time) / 60.0
         timestr = "%.0f" % time
-        html += "<td>%d</td>" % build.nskip
+        html += "<td>%d</td>" % build.stats.skipped
         html += "<td>" + timestr + "</td>"
 
         self.build_summary_html = html
 
     def writeHTML(self):
-        fname = self.directory + "/" + self.title + ".html"
-        fname = os.path.normpath(fname)
-        print("Writing html to '" + fname + "'")
+        path = (self.directory / (self.title + ".html")).resolve()
+        print(f'Writing html to {path}')
 
         if not self.build_summary_html:
             self.build_summary_html = ""
-        if not self.matrix_html:
-            self.matrix_html = ""
+        if self.matrix_html_table is None:
+            matrix_html = ''
+        else:
+            self.matrix_html_table.extra_header()
+            matrix_html = Html()
+            self.matrix_html_table.done(matrix_html)
         if not self.matrix_header:
             self.matrix_header = ""
 
-        f = open(fname, "w", 1)
-        try:
+        with path.open('w') as f:
             f.write(self.html_start)
             f.write(self.main_summary_html)
-            f.write(self.ace_summary_html)
-            f.write(self.tao_summary_html)
             f.write(self.key_html)
             f.write(self.build_summary_html)
             f.write("</table>")
-            f.write(self.matrix_html)
-            f.write(self.matrix_header)
-            f.write("</table>")
+            f.write(str(matrix_html))
             f.write("<br>Last updated at ")
             f.write(time.asctime(time.localtime()))
             f.write("<br>")
             f.write(self.html_end)
-        finally:
-            f.close()
 
     def writeHTMLsummary(self):
-        fname = self.directory + "/" + self.title + "-summary.html"
-        fname = os.path.normpath(fname)
-        print("Writing html summary to '" + fname + "'")
+        path = (self.directory / (self.title + "-summary.html")).resolve()
+        print(f'Writing html summary to {path}')
 
-        f = open(fname, "w", 1)
-        try:
+        with path.open('w') as f:
             f.write(self.html_start)
             f.write(self.main_summary_html)
-            f.write(self.ace_summary_html)
-            f.write(self.tao_summary_html)
             f.write(self.html_end)
-        finally:
-            f.close()
 
 
 class HTMLPlatformTestTable:
@@ -437,6 +414,7 @@ class HTMLPlatformTestTable:
 """
 
     def addData2(self, num, flag, time, name):
+        # TODO: Use HtmlTable
         if not self.test_table_html:
             self.test_table_html = """
 <table width="600">
@@ -500,13 +478,16 @@ class HTMLPlatformTestTable:
             f.close()
 
 
-class HTMLTestFile:
-    def __init__(self, title, dir):
-        self.title = title
-        self.directory = dir
+def write_html_matrix(matrix, prefix):
+    html_tm = HTMLTestMatrix(matrix, prefix)
+    for name, test in matrix.tests.items():
+        html_tm.addTestData(name, test)
 
-    def addData2(self, flag, name):
-        pass
+    html_tm.writeBriefs()
+    for n, build in enumerate(matrix.builds):
+        html_tm.writeBuildSummary(n, build)
+    html_tm.writeHTML()
+    html_tm.writeHTMLsummary()
 
-    def writeHTML(self):
-        print("HTMLTestFile not supported.")
+    css = 'matrix.css'
+    (matrix.builds.dir / css).write_text((this_dir / css).read_text())
