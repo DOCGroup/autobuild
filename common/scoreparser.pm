@@ -6,6 +6,8 @@ use warnings;
 
 use FileHandle;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -28,9 +30,10 @@ sub Parse ($\@)
     my $file = shift;
     my $data = shift;
     my $order = shift;
+    my $props = shift ();
 
     my $group_name;
-    my %build_info;
+    my %build_info = (props=>{});
 
     my $file_handle = new FileHandle ($file, 'r');
 
@@ -80,6 +83,8 @@ sub Parse ($\@)
             if (m/^\s*<\/scoreboard>\s*$/i) {
                 $state = 'none';
             }
+            elsif (utility::parse_prop ($_, $props)) {
+            }
             elsif (m/^\s*<group>\s*$/i) {
                 $state = 'group';
             }
@@ -116,7 +121,7 @@ sub Parse ($\@)
                 $build_info{GROUP} = $group_name;
 
                 %{$data->{$build_info{NAME}}} = %build_info;
-                %build_info = ();
+                %build_info = (props=>{});
 
                 $state = 'group';
             }
@@ -170,6 +175,8 @@ sub Parse ($\@)
             }
             elsif (m/^\s*<cache\/>\s*$/i) {
                 $build_info{CACHE} = 1;
+            }
+            elsif (parse_prop ($_, $build_info{props})) {
             }
             else {
                 print STDERR "Error: $lineno: Unexpected in state <$state>: $_\n";

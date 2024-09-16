@@ -927,6 +927,7 @@ sub new ($)
         in_test => undef,
         in_tests => 0,
         data => {
+            subsection_count => 0,
             buildname => $buildname,
             basename => $basename,
             tests => [],
@@ -967,6 +968,8 @@ sub Subsection ($)
     my $self = shift ();
     my $name = shift ();
 
+    my $subsec = $self->{data}->{subsection_count} += 1;
+
     $self->{in_test} = undef;
     if ($self->{in_tests}) {
         my $test = {
@@ -974,6 +977,7 @@ sub Subsection ($)
             extra_name => undef,
             result => undef,
             time => undef,
+            subsection => $subsec,
         };
         $self->{in_test} = $test;
         push(@{$self->{data}->{tests}}, $test);
