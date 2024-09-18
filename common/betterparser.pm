@@ -11,7 +11,7 @@ use File::Basename;
 use POSIX qw(strftime);
 use B qw(perlstring);
 
-use utility::common;
+use common::utility;
 
 ##############################################################################
 # Constructor

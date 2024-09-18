@@ -974,7 +974,6 @@ sub Subsection ($)
     if ($self->{in_tests}) {
         my $test = {
             name => $name,
-            extra_name => undef,
             result => undef,
             time => undef,
             subsection => $subsec,
@@ -1007,9 +1006,6 @@ sub Normal ($)
         if ($finished) {
             $test->{time} = $finished->[1];
             $test->{result} = $finished->[2];
-        }
-        elsif ($line =~ /^The CMake name of this test is "(.*)"/) {
-            $test->{extra_name} = $1;
         }
     }
 }

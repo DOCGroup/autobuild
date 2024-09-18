@@ -135,9 +135,6 @@ class TestRun:
         if misc is None:
             misc = {}
         self.name = name
-        extra_name = misc.get('extra_name', None)
-        if extra_name:
-            self.name += ' ' + misc['extra_name']
         self.subsection = misc['subsection']
         self.result = result
         assert type(time) is timedelta

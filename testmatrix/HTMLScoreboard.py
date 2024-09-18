@@ -10,6 +10,7 @@ import re
 import os
 import time
 import json
+import html
 from pathlib import Path
 from io import StringIO
 from contextlib import contextmanager
@@ -114,8 +115,9 @@ class Tag:
         attrs = self._attrs.copy()
         if self._classes:
             attrs['class'] = ' '.join(self._classes)
-        if attrs:
-            rv += ' ' + ' '.join([f'{k}="{v}"' for k, v in attrs.items()])
+        for k, v in attrs.items():
+            v = html.escape(str(v))
+            rv += f' {k}="{html.escape(v)}"'
         return rv + '>'
 
     def end(self):
@@ -124,7 +126,8 @@ class Tag:
     def __str__(self):
         rv = self.begin()
         if self.text is not None:
-            rv += str(self.text) + self.end()
+            text = str(self.text) if type(self.text) is Tag else html.escape(str(self.text))
+            rv += text + self.end()
         return rv
 
 

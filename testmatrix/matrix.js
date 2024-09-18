@@ -2,7 +2,6 @@ window.addEventListener('load', (event) => {
     document.querySelectorAll('.test_results td').forEach((td) => {
         var buildn = td.getAttribute('build');
         var build = build_info[buildn];
-        console.log(build);
         if (build) {
             // Put build name in tooltip
             td.setAttribute('title', `#${buildn} ${build.name}`);
@@ -18,7 +17,6 @@ window.addEventListener('load', (event) => {
                     url += 'Full';
                 }
                 a.href = `${url}.html#subsection_${test_subsec}`;
-                // a.textContent = td.textContent;
                 td.replaceChildren(a);
             }
         }
