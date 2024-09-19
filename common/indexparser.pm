@@ -1,10 +1,11 @@
-
 package IndexParser;
 
 use strict;
 use warnings;
 
 use FileHandle;
+
+use common::utility;
 
 ###############################################################################
 # Constructor
@@ -26,7 +27,8 @@ sub Parse ($)
 {
     my $self = shift;
     my $file = shift;
-    my $group_name;
+    my $preamble = shift;
+    my $props = shift;
 
     my $file_handle = new FileHandle ($file, 'r');
 
@@ -54,7 +56,7 @@ sub Parse ($)
         next if (m/^\s*$/);
 
         if(m/<preamble>/) {
-            $main::preamble = $self->parse_preamble($file_handle);
+            ${$preamble} = $self->parse_preamble($file_handle);
             next;
         }
 
@@ -73,6 +75,8 @@ sub Parse ($)
         elsif ($state eq 'intropage') {
             if (m/^\s*<\/intropage>\s*$/i) {
                 $state = 'none';
+            }
+            elsif (utility::parse_prop($_, $props)) {
             }
             else {
                 print STDERR "Error: Unexpected in state <$state>: $_\n";
@@ -111,7 +115,7 @@ sub parse_comment($\@)
    while(1){
      $ch = $result->getc();
 
-     # determine if we have hit an EOF or not    
+     # determine if we have hit an EOF or not
      if( ! defined $ch) {
         last; # break out of the whlie loop
      }
@@ -128,7 +132,7 @@ sub parse_comment($\@)
         if($tag eq "-->") {
           last;  # break out of the while loop
         }
-      
+
         # Pop off the first element of the array and shift everything up
         shift(@c);
         $i=1;
@@ -160,7 +164,7 @@ sub parse_preamble($\@)
    while(1){
      $ch = $result->getc();
 
-     # determine if we have hit an EOF or not    
+     # determine if we have hit an EOF or not
      if( ! defined $ch) {
         last; # break out of the whlie loop
      }

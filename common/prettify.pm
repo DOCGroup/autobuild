@@ -23,6 +23,15 @@ sub escape_html_entities_keep_headers_and_links
     return $s;
 }
 
+sub parse_art_finished
+{
+    if (shift() =~ /^auto_run_tests_finished: (.*) Time:(\d+)s\s+Result:([-\d]+)/)
+    {
+        return [$1, $2 + 0, $3 + 0];
+    }
+    return undef;
+}
+
 ###############################################################################
 ###############################################################################
 
@@ -883,10 +892,11 @@ sub Normal ($)
     return unless defined $test;
     my $separator = '=' x 78 . "\n";
 
-    if ($line =~ /^auto_run_tests_finished: .*Time:(\d+)s\s+Result:([-\d]+)/)
+    my $finished = Prettify::parse_art_finished($line);
+    if ($finished)
     {
-        $test->{TIME} = $1;
-        $test->{RESULT} = $2;
+        $test->{TIME} = $finished->[1];
+        $test->{RESULT} = $finished->[2];
     }
     elsif ($line ne $separator)
     {
@@ -895,6 +905,110 @@ sub Normal ($)
     }
 }
 
+
+###############################################################################
+###############################################################################
+
+package Prettify::BuildJson;
+
+use strict;
+use warnings;
+
+###############################################################################
+
+sub new ($)
+{
+    my $proto = shift ();
+    my $class = ref ($proto) || $proto;
+    my $buildname = shift ();
+    my $basename = shift ();
+
+    return bless ({
+        in_test => undef,
+        in_tests => 0,
+        data => {
+            subsection_count => 0,
+            buildname => $buildname,
+            basename => $basename,
+            tests => [],
+        },
+    }, $class);
+}
+
+sub Header ()
+{
+}
+
+sub Footer ()
+{
+    my $self = shift ();
+
+    utility::write_obj_to_json ("$self->{data}->{basename}.build.json", $self->{data});
+}
+
+sub Section ($)
+{
+    my $self = shift ();
+    my $name = shift ();
+
+    $self->{in_tests} = $name eq 'Test';
+    $self->{in_test} = undef;
+}
+
+sub Description ($)
+{
+}
+
+sub Timestamp ($)
+{
+}
+
+sub Subsection ($)
+{
+    my $self = shift ();
+    my $name = shift ();
+
+    my $subsec = $self->{data}->{subsection_count} += 1;
+
+    $self->{in_test} = undef;
+    if ($self->{in_tests}) {
+        my $test = {
+            name => $name,
+            result => undef,
+            time => undef,
+            subsection => $subsec,
+        };
+        $self->{in_test} = $test;
+        push(@{$self->{data}->{tests}}, $test);
+    }
+}
+
+sub Error ($)
+{
+    my $self = shift ();
+    my $line = shift ();
+}
+
+sub Warning ($)
+{
+    my $self = shift ();
+    my $line = shift ();
+}
+
+sub Normal ($)
+{
+    my $self = shift ();
+    my $line = shift ();
+
+    my $test = $self->{in_test};
+    if ($test) {
+        my $finished = Prettify::parse_art_finished($line);
+        if ($finished) {
+            $test->{time} = $finished->[1];
+            $test->{result} = $finished->[2];
+        }
+    }
+}
 
 ###############################################################################
 ###############################################################################
@@ -1318,6 +1432,8 @@ sub new ($$$$$$$$)
         }
         push @{$self->{OUTPUT}}, new Prettify::JUnit ($junit);
     }
+
+    push @{$self->{OUTPUT}}, new Prettify::BuildJson ($buildname, $basename);
 
     # Output the header for the files
     foreach my $output (@{$self->{OUTPUT}}) {

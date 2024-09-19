@@ -11,6 +11,8 @@ use File::Basename;
 use POSIX qw(strftime);
 use B qw(perlstring);
 
+use common::utility;
+
 ##############################################################################
 # Constructor
 #
@@ -1456,15 +1458,6 @@ sub DealWithCommandTag ($$$$$\%)
   }
 }
 
-# Replace XML Entity References
-sub replace_entities ($) {
-  my $str = shift;
-  $str =~ s/&lt;/</g;
-  $str =~ s/&gt;/>/g;
-  $str =~ s/&amp;/&/g;
-  return $str;
-}
-
 ###############################################################################
 # Parse
 # This attempts to find each of the XML tags within the file and process them.
@@ -1518,7 +1511,7 @@ sub Parse ($$\%)
         $preMode = 0;
       }
       else {
-        $preModeText .= replace_entities($_);
+        $preModeText .= utility::replace_entities($_);
         next;
       }
     }
@@ -1631,7 +1624,7 @@ sub Parse ($$\%)
         if ($inputFromFile =~
             s/^<\s*(?:[^>"]*(?:"(?:[^"\\]*(?:\\(?:0?[xX][[:xdigit:]]{0,2}|0[0-2]?[0-7]{0,2}|.))*)*")*)*>//) {
           if ($tag =~ /<[^<>]+>(.*)<[^<>]+>/) {
-            $same_line_tag_contents = replace_entities($1);
+            $same_line_tag_contents = utility::replace_entities($1);
           }
 
           # OK, we have found a valid closing tag (the >) character. We need to

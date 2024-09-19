@@ -17,6 +17,6 @@ jobs:
       - name: Install Perl dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install libwww-perl
+          sudo apt-get install libwww-perl libfile-copy-recursive-perl
       - name: Run Tests
         run: perl run_tests.pl

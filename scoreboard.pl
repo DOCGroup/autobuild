@@ -53,6 +53,7 @@ use Time::Local;
 #                 ->{CVS_TIMESTAMP}    <- The time AFTER the last cvs operation (PRISMTECH still use some cvs, please leave)
 
 my %builds;
+my %props;
 
 # %groups->{$name} <- list of builds for $name
 
@@ -162,6 +163,8 @@ sub set_latest_build_info
 {
     my $latest = shift;
     my $buildname = shift;
+
+    $latest =~ s/^\s+|\s+$//g;
 
     if ($latest =~ m/Config: (\d+)/) {
         $builds{$buildname}{CONFIG_SECTION} = $1;
@@ -289,7 +292,7 @@ sub load_build_list ($)
     print "Loading Build List\n" if ($verbose);
 
     my $parser = new ScoreboardParser;
-    $parser->Parse ($file, \%builds, \@ordered);
+    $parser->Parse ($file, \%builds, \@ordered, \%props);
 }
 
 ###############################################################################
@@ -310,6 +313,12 @@ sub build_index_page ($$)
     my $index = shift;
     my $filename = "$dir/index.html";
 
+    my $parser = new IndexParser;
+    my $index_preamble;
+    my %index_props = ();
+    $parser->Parse ($index, \$index_preamble, \%index_props);
+    my $index_title = $index_props{title} // 'Welcome to DOCGroup Distributed Scoreboard';
+
     my $indexhtml = new FileHandle;
 
     print "Generating index page\n" if ($verbose);
@@ -321,15 +330,13 @@ sub build_index_page ($$)
 
     ### Print Header
     print $indexhtml "<!DOCTYPE html>\n";
-    print $indexhtml "<html>\n<head>\n<title>Welcome to DOCGroup Distributed Scoreboard</title>\n";
+    print $indexhtml "<html>\n<head>\n<title>$index_title</title>\n";
     print $indexhtml "</head>\n";
 
     ### Start body
 
-    print $indexhtml "<body bgcolor=white><center><h1>Welcome to DOCGroup Distributed Scoreboard\n</h1></center>\n<hr>\n";
-    my $parser = new IndexParser;
-    $parser->Parse ($index, \%builds);
-    print $indexhtml "$preamble\n";
+    print $indexhtml "<body bgcolor=white><center><h1>$index_title</h1></center>\n<hr>\n";
+    print $indexhtml "$index_preamble\n";
     print $indexhtml "\n<hr>\n";
 
     ### Failed Test Reports
@@ -355,10 +362,6 @@ sub build_index_page ($$)
     print $indexhtml "</body>\n</html>\n";
 
     $indexhtml->close ();
-
-    my $file = shift;
-
-    print "Creating index page\n" if ($verbose);
 }
 
 ###############################################################################
@@ -625,9 +628,8 @@ sub decode_timestamp ($)
     my $description = '';
 
     if ($timestamp =~ m/(\d\d\d\d)_(\d\d)_(\d\d)_(\d\d)_(\d\d)/) {
-
-  my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
-  $description = format_time($buildtime);
+        my $buildtime = timegm (0, $5, $4, $3, $2 - 1, $1);
+        $description = format_time($buildtime);
     }
     else {
         warn 'Unable to decode time';
@@ -1594,10 +1596,8 @@ sub GetVariable ($)
     my $v = shift;
     if ($v eq 'junit_xml_output') {
         return $junit_xml_output;
-    } else {
-        my %a=();
-        return $a{'UNDEFINED'};
     }
+    return undef;
 }
 
 ###############################################################################
@@ -1678,24 +1678,24 @@ sub format_time
     my $use_long_format = shift;
 
     if ($use_local) {
-      my @tmp = localtime($time_in_secs);
+        my @tmp = localtime($time_in_secs);
         my $hour = int($tmp[2]);
         my $ampm = ($hour >= 12 ? 'pm' : 'am');
         if ($hour > 12) {
-          $hour -= 12;
-    }
-    elsif ($hour == 0) {
-      $hour = 12;
-    }
+            $hour -= 12;
+        }
+        elsif ($hour == 0) {
+            $hour = 12;
+        }
         my $year = int($tmp[5]) + 1900;
-  if (defined $use_long_format && $use_long_format) {
-      return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
-         int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
-  } else {
-      return sprintf("%02d/%02d %02d:%02d %s",
-         int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
+        if (defined $use_long_format && $use_long_format) {
+            return sprintf("%d/%02d/%s %02d:%02d:%02d %s",
+                int($tmp[4]) + 1, int($tmp[3]), $year, $hour, $tmp[1], $tmp[0], $ampm);
+        } else {
+            return sprintf("%02d/%02d %02d:%02d %s",
+                int($tmp[4]) + 1, int($tmp[3]), $hour, $tmp[1], $ampm);
 
-  }
+        }
     }
     return scalar(gmtime($time_in_secs));
 }
@@ -1711,6 +1711,30 @@ sub format_time
 sub get_time_str
 {
     return format_time(timegm(gmtime()), 1);
+}
+
+###############################################################################
+
+sub write_builds_json
+{
+    my $dir = shift ();
+    my $builds_hash = shift ();
+    my $ordered_names = shift ();
+
+    my @builds = ();
+    for my $name (@{$ordered_names}) {
+        my $orig = $builds_hash->{$name};
+        my $new = {name => $name};
+        for my $key (keys(%{$orig})) {
+            $new->{lc($key)} = $orig->{$key};
+        }
+        push(@builds, $new);
+    }
+
+    utility::write_obj_to_json ("$dir/builds.json", {
+        builds => \@builds,
+        props => \%props,
+    });
 }
 
 ###############################################################################
@@ -1812,10 +1836,11 @@ if (defined $opt_l) {
 }
 
 if (defined $opt_i){
-$index = $opt_i;
-print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_index_page ($dir, $index);
-exit (1);
+    $index = $opt_i;
+    load_build_list ($inp_file);
+    print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
+    build_index_page ($dir, $index);
+    exit (0);
 }
 
 if (defined $opt_b) {
@@ -1832,9 +1857,9 @@ if (defined $opt_y) {
 }
 
 if (defined $opt_z) {
-print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
-build_integrated_page ($dir, $opt_j);
-exit (1);
+    print 'Running Integrated Page Update at ' . get_time_str() . "\n" if ($verbose);
+    build_integrated_page ($dir, $opt_j);
+    exit (0);
 }
 
 $inp_file = $opt_f;
@@ -1872,6 +1897,7 @@ if (defined $opt_c) {
     query_history ();
   }
 }
+write_builds_json ($dir, \%builds, \@ordered);
 update_html ($dir,"$dir/$out_file",$rss_file);
 
 print 'Finished Scoreboard Update at ' . get_time_str() . "\n" if ($verbose);

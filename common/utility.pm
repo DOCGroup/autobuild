@@ -4,6 +4,22 @@ use warnings;
 package utility;
 
 use File::Path qw(rmtree);
+use JSON::PP;
+
+sub obj_to_json
+{
+    return JSON::PP->new->pretty(1)->utf8->encode(shift());
+}
+
+sub write_obj_to_json
+{
+    my $path = shift();
+    my $obj = shift();
+
+    open(my $f, '>', $path) or die("Failed to open $path: $!");
+    print $f (obj_to_json($obj));
+    close($f);
+}
 
 # Run command, returns 0 if there was an error. If the second argument is
 # passed, it's assumed to be an autobuild command result hashref and "failure"
@@ -219,6 +235,35 @@ sub remove_tree ($)
         }
     }
     return 1;
+}
+
+sub replace_entities
+{
+  my $str = shift ();
+
+  $str =~ s/&quot;/"/g;
+  $str =~ s/&apos;/'/g;
+  $str =~ s/&lt;/</g;
+  $str =~ s/&gt;/>/g;
+  $str =~ s/&amp;/&/g;
+
+  return $str;
+}
+
+sub parse_prop
+{
+    my $line = shift ();
+    my $props = shift ();
+
+    if ($line =~ m/^\s*<prop\s+(\w+)="([^"]*)"\s*\/>\s*$/i) {
+        if (defined ($props)) {
+            my $name = $1;
+            my $value = replace_entities ($2);
+            $props->{$name} = $value
+        }
+        return 1;
+    }
+    return 0;
 }
 
 1;

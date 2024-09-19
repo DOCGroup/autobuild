@@ -1,4 +1,8 @@
 <scoreboard>
+  <prop matrix_title="This title has &lt;HTML&gt; entities &quot;&lt;"/>
+  <prop matrix_basename="test"/>
+  <prop source_link="https://github.com/OpenDDS/OpenDDS/blob/master/"/>
+
   <group>
     <name>Group 1</name>
     <build>

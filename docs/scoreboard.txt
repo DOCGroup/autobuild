@@ -12,3 +12,14 @@ Within each group, there can be an unlimited number of builds.  Each build
 is defined with the <build> element which contains a <name>, a <url>, and an
 optional <build_sponsor> and <build_sponsor_url>.  The <url> specifies where
 the log files, from the autobuild.pl script, are located.
+
+<prop NAME="VALUE"/> elements can be used to provide additonal optional
+properties in XML files:
+- Index XML file
+    - <intropage>
+        - title: Override the default header
+- Scoreboard XML file
+    - <scoreboard>
+        - matrix_title: Title of Matrix
+        - matrix_basename: Prefix for all matrix files
+        - source_link: URL to view source code
