@@ -779,6 +779,16 @@ INPFILE: foreach my $file (@files) {
     my $LINE_FROM = $command->{LINE_FROM};
     my $LINE_TO   = $command->{LINE_FROM};
     my $args = $command->{ARGS};
+    my $required = $command->{REQUIRED};
+
+    if (!defined($required)) {
+      if (exists($command_table{$NAME}->{required_by_default})) {
+        $required = $command_table{$NAME}->{required_by_default};
+      }
+      else {
+        $required = 0;
+      }
+    }
 
     my $CMD = "Executing \"$NAME\" line";
     if (!defined $LINE_TO || $LINE_FROM == $LINE_TO) {
@@ -885,7 +895,7 @@ INPFILE: foreach my $file (@files) {
       if (defined ($failure)) {
         print STDERR "ERROR: While $CMD $CMD2:\n" if ($verbose <= 1);
         print STDERR "  The command failed";
-        if ($failure eq 'fatal') {
+        if ($required || $failure eq 'fatal') {
           $status = 1;
           if (!$keep_going) {
             print STDERR ", exiting.\n";
