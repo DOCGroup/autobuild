@@ -178,6 +178,7 @@ class HtmlTable:
 
 
 def get_build_details_path(build, basename):
+    build.dir.mkdir(parents=True, exist_ok=True)
     return build.dir / f'{basename}-build-details.html'
 
 

@@ -59,7 +59,6 @@ table.test_results td[test] a {
 td.test_name {
     font-family: monospace;
     text-align: left;
-    overflow-x: scroll;
     white-space: nowrap;
 }
 td.txt {text-align: left;}

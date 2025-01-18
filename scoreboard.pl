@@ -324,7 +324,7 @@ sub build_index_page ($$)
     print "Generating index page\n" if ($verbose);
 
     unless ($indexhtml->open (">$filename")) {
-        warn 'Could not create file: '.$filename." ".$_;
+        warn "Could not create index page file $filename: $!";
         return;
     }
 
@@ -858,6 +858,7 @@ sub clean_cache ($)
             foreach my $file (@existing) {
                 print "        Removing $file files\n" if ($verbose);
                 unlink $file . ".txt";
+                unlink $file . ".build.json";
                 unlink $file . "_Full.html";
                 unlink $file . "_Brief.html";
                 unlink $file . "_Totals.html";
@@ -1837,7 +1838,6 @@ if (defined $opt_l) {
 
 if (defined $opt_i){
     $index = $opt_i;
-    load_build_list ($inp_file);
     print 'Running Index Page Update at ' . get_time_str() . "\n" if ($verbose);
     build_index_page ($dir, $index);
     exit (0);
