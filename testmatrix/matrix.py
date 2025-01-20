@@ -4,6 +4,7 @@ import json
 import enum
 from datetime import timedelta
 from pathlib import Path
+from urllib.request import urlopen
 
 
 use_ansi = os.name != 'nt' and sys.stdout.isatty()
@@ -30,6 +31,9 @@ class Status(enum.Enum):
 def timedelta_str(td):
     # str(td) would work, but it returns a string that's longer than it
     # needs to be.
+    if td is None:
+        return 'N/A'
+
     days, rem_hours = divmod(round(td.total_seconds()), 24 * 60 * 60)
     hours, rem_mins = divmod(rem_hours, 60 * 60)
     mins, secs = divmod(rem_mins, 60)
@@ -166,9 +170,19 @@ class Build:
         self.basename = misc['basename']
         self.props = misc.get('props', {})
 
-        build_json = self.dir / (self.basename + '.build.json')
-        with build_json.open('r') as f:
-            data = json.load(f)
+        # Get build.json. It should either exist locally or can be downloaded.
+        build_json_name = self.basename + '.build.json'
+        build_json = self.dir / build_json_name
+        if build_json.is_file():
+            with build_json.open('r') as f:
+                data = json.load(f)
+        elif 'url' in misc:
+            url = misc['url'] + '/' + build_json_name
+            print(f'{build_json} not found, downloading {url}...')
+            with urlopen(url) as f:
+                data = json.load(f)
+        else:
+            raise ValueError(f'Can not get {build_json_name} for {name}')
 
         self.tests = {}
         for t in data['tests']:
@@ -228,7 +242,11 @@ class Matrix:
         self.builds = {}
         for b in data['builds']:
             name = b['name']
-            build = Build(name, builds_dir, b)
+            try:
+                build = Build(name, builds_dir, b)
+            except BaseException as e:
+                e.add_note(f'The build that caused an error was {name}')
+                raise
             self.builds[name] = build
 
         # Collect all the tests
