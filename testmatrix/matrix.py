@@ -5,6 +5,7 @@ import enum
 from datetime import timedelta
 from pathlib import Path
 from urllib.request import urlopen
+from traceback import print_exception
 
 
 use_ansi = os.name != 'nt' and sys.stdout.isatty()
@@ -159,16 +160,26 @@ class TestRun:
         return f'{self.name}: time={self.time_str()} result={self.result}'
 
 
+def print_error(exc, context):
+    exc.add_note(context)
+    print_exception(exc)
+
+
 class Build:
     def __init__(self, name, builds_dir, misc=None):
-        if misc is None:
-            misc = {}
         self.name = name
         self.dir = builds_dir / name
-        self.misc = misc
+        self.misc = misc or {}
+        self.basename = self.misc.get('basename')
+        self.props = self.misc.get('props', {})
+        self.tests = {}
         self.stats = TestStats()
-        self.basename = misc['basename']
-        self.props = misc.get('props', {})
+
+        if misc is None:
+            return
+
+        if self.basename is None:
+            raise ValueError(f'Build {name!r} is missing a basename, probably a missing latest.txt')
 
         # Get build.json. It should either exist locally or can be downloaded.
         build_json_name = self.basename + '.build.json'
@@ -182,15 +193,20 @@ class Build:
             with urlopen(url) as f:
                 data = json.load(f)
         else:
-            raise ValueError(f'Can not get {build_json_name} for {name}')
+            raise ValueError(f'Can not get {build_json_name!r} for {name!r}')
 
-        self.tests = {}
         for t in data['tests']:
-            test_run = TestRun(t['name'], int(t['result']), timedelta(seconds=int(t['time'])), t)
-            self.stats.add(test_run.status, test_run.time)
-            if test_run.name in self.tests:
-                raise ValueError(f'Multiple {repr(test_run.name)} in {self.name}!')
-            self.tests[test_run.name] = test_run
+            try:
+                self.add_test_run(t)
+            except BaseException as e:
+                print_error(e, f'Test {name!r} in build {name!r} caused this error')
+
+    def add_test_run(self, t):
+        test_run = TestRun(t['name'], int(t['result']), timedelta(seconds=int(t['time'])), t)
+        self.stats.add(test_run.status, test_run.time)
+        if test_run.name in self.tests:
+            raise ValueError(f'Multiple {repr(test_run.name)} in {self.name}!')
+        self.tests[test_run.name] = test_run
 
     def __iter__(self):
         return iter(self.tests.values())
@@ -245,8 +261,8 @@ class Matrix:
             try:
                 build = Build(name, builds_dir, b)
             except BaseException as e:
-                e.add_note(f'The build that caused an error was {name}')
-                raise
+                print_error(e, f'The build that caused this error was {name!r}')
+                build = Build(name, builds_dir)
             self.builds[name] = build
 
         # Collect all the tests
