@@ -6,6 +6,8 @@ use warnings;
 
 use FileHandle;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -95,6 +97,8 @@ sub Parse ($\@)
                 # Make the global name null
                 $global_build_name = '';
             }
+            elsif (utility::parse_prop ($_, {})) { # NOP, just parse it
+            }
             elsif (m/^\s*<group>\s*$/i) {
                 $state = 'group';
             }
@@ -180,6 +184,8 @@ sub Parse ($\@)
             }
             elsif (m/^\s*<html>(.*)<\/html>\s*$/i) {
                 $build_info{HTML} = $1;
+            }
+            elsif (utility::parse_prop ($_, {})) { # NOP, just parse it
             }
             else {
                 print STDERR "Error: Unexpected in state <$state>: $_\n";
