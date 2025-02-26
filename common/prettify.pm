@@ -32,6 +32,16 @@ sub parse_art_finished
     return undef;
 }
 
+sub delete_prettify_output
+{
+    my $prefix = shift();
+
+    for my $suffix (".txt", "_JUnit.xml", "_Full.html", "_Brief.html", "_Totals.html", "_Config.html", ".build.json") {
+        unlink($prefix . $suffix);
+    }
+
+}
+
 ###############################################################################
 ###############################################################################
 

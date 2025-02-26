@@ -195,15 +195,10 @@ sub clean_logs ($)
     }
 
     # Delete anything left in the list
-
     foreach my $file (@existing) {
-        unlink $file . ".txt";
-        unlink $file . "_JUnit.xml";
-        unlink $file . "_Full.html";
-        unlink $file . "_Brief.html";
-        unlink $file . "_Totals.html";
-        unlink $file . "_Config.html";
+        delete_prettify_output($file);
     }
+
     return 1;
 }
 
