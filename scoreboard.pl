@@ -104,23 +104,26 @@ sub check_post
     return 0;
 }
 
+my $timestamp_re = qr/...._.._.._.._../;
+
 sub list_logs
 {
     my $list_ref = shift;
     my $dir = shift;
+
     my $dh = new DirHandle($dir);
-    if (defined $dh) {
-        while (defined($_ = $dh->read)) {
-            if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
-                push @$list_ref, "$dir/$1";
-            }
-        }
-        undef $dh;
-        return 1;
-    } else {
-        print STDERR "Error: Could not read $dir\n";
+    if (!defined($dh)) {
+        print STDERR ("ERROR: Could not read $dir\n");
         return 0;
     }
+
+    while (defined($_ = $dh->read)) {
+        if ($_ =~ m/^($timestamp_re)\.txt/) {
+            push(@$list_ref, "$dir/$1");
+        }
+    }
+
+    return 1;
 }
 
 sub delete_old_logs
@@ -134,7 +137,7 @@ sub delete_old_logs
     for (my $i = $keep; $i < $n; ++$i) {
         my $fb = shift(@$logs_ref);
         print "        Removing $fb files\n" if ($verbose);
-        unlink($fb.".txt", $fb."_JUnit.xml", $fb."_Full.html", $fb."_Brief.html", $fb."_Totals.html", $fb."_Config.html");
+        Prettify::delete_prettify_output($fb);
     }
     return ($keep < $n);
 }
@@ -143,20 +146,22 @@ sub get_latest
 {
     my $build_dir = shift;
     my $file_name = "$build_dir/latest.txt";
-    my $latest = "";
+    my $timestamp = undef;
+    my $text = undef;
     my $fh = new FileHandle($file_name, 'r');
     if (defined $fh) {
         print "        Loading latest from $file_name\n" if ($verbose);
         while (<$fh>) {
-            if ($_ =~ m/(...._.._.._.._..) /) {
-                $latest = "$build_dir/$1";
+            if ($_ =~ m/($timestamp_re) /) {
+                $timestamp = "$build_dir/$1";
+                $text = $_;
             }
         }
         undef $fh;
     } else {
         print STDERR "        Error: Could not find $file_name\n";
     }
-    return $latest;
+    return $timestamp, $text;
 }
 
 sub set_latest_build_info
@@ -199,34 +204,6 @@ sub set_latest_build_info
     if ($latest =~ m/CVS: \"([^\"]+)\"/) {
         $builds{$buildname}{CVS_TIMESTAMP} = $1; ## PRISMTECH still use some cvs, please leave
     }
-}
-
-sub update_latest_build_info
-{
-    my $dir = shift;
-    my $buildname = shift;
-    my $file_name = "$dir/$buildname/latest.txt";
-    my $latest;
-    my $fh = new FileHandle($file_name, 'r');
-    if (defined $fh) {
-        print "        Loading latest from $file_name\n" if ($verbose);
-        while (<$fh>) {
-            if ($_ =~ m/(...._.._.._.._..) /) {
-                $builds{$buildname}{BASENAME} = $1;
-                $latest = $_;
-            }
-        }
-        undef $fh;
-    } else {
-        print STDERR "        Error: Could not find $file_name\n";
-        return 0;
-    }
-    if (!defined $latest) {
-        print STDERR "        Error: Could not read latest build info for $buildname\n";
-        return 0;
-    }
-    set_latest_build_info($latest, $buildname);
-    return 1;
 }
 
 sub write_failed_tests_by_test
@@ -407,7 +384,7 @@ sub query_latest ()
 
     foreach my $buildname (keys %builds) {
         my $latest = load_web_latest ($builds{$buildname}{URL});
-        if (defined $latest && $latest =~ m/(...._.._.._.._..) /) {
+        if (defined $latest && $latest =~ m/($timestamp_re) /) {
             $builds{$buildname}{BASENAME} = $1;
             set_latest_build_info($latest, $buildname);
         } else {
@@ -734,7 +711,7 @@ sub local_update_cache ($)
                 print "        No status for $buildname\n" if ($verbose);
             }
             my $latest = load_web_latest($build_url);
-            if (defined $latest && $latest =~ /^(...._.._.._.._..) /) {
+            if (defined $latest && $latest =~ /^($timestamp_re) /) {
                 my $basename = $1;
                 my $fn = "$build_dir/$basename.txt";
                 if (! -r $fn) {
@@ -770,10 +747,10 @@ sub local_update_cache ($)
         my $post = check_post($build_dir);
         print "        post=$post, use_build_logs=$use_build_logs\n" if ($verbose);
 
-        my $latest = get_latest($build_dir);
+        my ($latest_timestamp, $latest_text) = get_latest($build_dir);
         foreach my $file (@existing) {
             my $totals_exist = (-e "${file}_Totals.html") && !(-z _);
-            if (($post && !$totals_exist) || ($totals_exist && !$use_build_logs && ($latest eq $file))) {
+            if (($post && !$totals_exist) || ($totals_exist && !$use_build_logs && ($latest_timestamp eq $file))) {
                 # process only the latest text file if logs already exist
                 print "        Prettifying $file.txt\n" if($verbose);
                 Prettify::Process("$file.txt", $buildname, \%failed_tests_by_test, $use_build_logs, $builds{$buildname}->{DIFFROOT}, $prefix, $totals_exist);
@@ -787,7 +764,11 @@ sub local_update_cache ($)
             my $diffRoot = $builds{$buildname}->{DIFFROOT};
             utility::index_logs($build_dir, $buildname, $diffRoot);
         }
-        update_latest_build_info($directory, $buildname);
+        if (!defined $latest_text) {
+            print STDERR "        Error: Could not read latest build info for $buildname\n";
+            return 0;
+        }
+        set_latest_build_info($latest_text, $buildname);
     }
     write_failed_tests_by_test($directory, \%failed_tests_by_test);
 }
@@ -836,7 +817,7 @@ sub clean_cache ($)
             }
 
             while (defined($_ = $dh->read)) {
-                if ($_ =~ m/^(...._.._.._.._..)\.txt/) {
+                if ($_ =~ m/^($timestamp_re)\.txt/) {
                     push @existing, "$cache_dir/$1";
                 }
             }
@@ -854,15 +835,9 @@ sub clean_cache ($)
             }
 
             # Delete anything left in the list
-
             foreach my $file (@existing) {
                 print "        Removing $file files\n" if ($verbose);
-                unlink $file . ".txt";
-                unlink $file . ".build.json";
-                unlink $file . "_Full.html";
-                unlink $file . "_Brief.html";
-                unlink $file . "_Totals.html";
-                unlink $file . "_Config.html";
+                Prettify::delete_prettify_output($file);
             }
         }
     }
