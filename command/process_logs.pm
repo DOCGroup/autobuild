@@ -196,7 +196,7 @@ sub clean_logs ($)
 
     # Delete anything left in the list
     foreach my $file (@existing) {
-        delete_prettify_output($file);
+        Prettify::delete_prettify_output($file);
     }
 
     return 1;
