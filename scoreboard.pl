@@ -206,6 +206,34 @@ sub set_latest_build_info
     }
 }
 
+sub update_latest_build_info
+{
+    my $dir = shift;
+    my $buildname = shift;
+    my $file_name = "$dir/$buildname/latest.txt";
+    my $latest;
+    my $fh = new FileHandle($file_name, 'r');
+    if (defined $fh) {
+        print "        Loading latest from $file_name\n" if ($verbose);
+        while (<$fh>) {
+            if ($_ =~ m/($timestamp_re) /) {
+                $builds{$buildname}{BASENAME} = $1;
+                $latest = $_;
+            }
+        }
+        undef $fh;
+    } else {
+        print STDERR "        Error: Could not find $file_name\n";
+        return 0;
+    }
+    if (!defined $latest) {
+        print STDERR "        Error: Could not read latest build info for $buildname\n";
+        return 0;
+    }
+    set_latest_build_info($latest, $buildname);
+    return 1;
+}
+
 sub write_failed_tests_by_test
 {
     my $directory = shift;
@@ -764,11 +792,7 @@ sub local_update_cache ($)
             my $diffRoot = $builds{$buildname}->{DIFFROOT};
             utility::index_logs($build_dir, $buildname, $diffRoot);
         }
-        if (!defined $latest_text) {
-            print STDERR "        Error: Could not read latest build info for $buildname\n";
-            return 0;
-        }
-        set_latest_build_info($latest_text, $buildname);
+        update_latest_build_info($directory, $buildname);
     }
     write_failed_tests_by_test($directory, \%failed_tests_by_test);
 }
