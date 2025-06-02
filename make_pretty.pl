@@ -235,6 +235,9 @@ sub is_error ()
     # have the word 'error' in the symbol name - ignore those.
     return 0 if (m/^ld: \d+\-\d+ WARNING: Duplicate symbol:/);
 
+    # Given by Visual Studio 2022
+    return 0 if (m/Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy./);
+
     # Look for lines that also should be color coded, but not counted
     # as errors.
     return 2 if (/Types pointed to are unrelated/
