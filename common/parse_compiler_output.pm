@@ -155,6 +155,12 @@ sub handle_compiler_output_line($) {
     return;
   }
 
+  if ($s =~ m/Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy./) {
+    # Given by Visual Studio 2022
+    $self->Output_Normal ($s);
+    return;
+  }
+
   if ($s =~ m/possibly used unsafely, use/) {
     # Similar warnings on NetBSD
     $self->Output_Normal ($s);
