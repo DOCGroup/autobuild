@@ -9,6 +9,8 @@ use Cwd;
 use FileHandle;
 use File::Path;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -54,20 +56,15 @@ sub Run ($)
         $root = $1;
     }
 
-    my $current_dir = getcwd ();
-
-    if (!chdir $root) {
-        print STDERR __FILE__, ": Cannot change to $root\n";
-        return 0;
-    }
+    my $cd = ChangeDir->new({dir => $root});
+    return {'failure' => 'fatal'} unless ($cd);
 
     print "Running: ${options}\n";
 
-    system ($options);
+    my $result = {};
+    utility::run_command ($options, $result);
 
-    chdir $current_dir;
-
-    return 1;
+    return $result;
 }
 
 ##############################################################################
