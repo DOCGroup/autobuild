@@ -528,8 +528,8 @@ sub query_history ()
     print "Getting history information\n" if ($verbose);
 
     foreach my $buildname (keys %builds) {
-        my $full_link = 'http://teststat.remedy.nl/teststat/builds/' . $buildname . '.html';
-        my $clean_link = 'http://teststat.remedy.nl/teststat/builds/clean_' . $buildname . '.html';
+        my $full_link = 'http://logs.remedy.nl/teststat/builds/' . $buildname . '.html';
+        my $clean_link = 'http://logs.remedy.nl/teststat/builds/clean_' . $buildname . '.html';
         if (defined $clean_link) {
             print "    Clean history [$buildname] from $full_link\n" if ($verbose);
 
