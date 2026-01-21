@@ -8,6 +8,8 @@ use warnings;
 use Cwd;
 use File::Path;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -121,7 +123,7 @@ sub Run ($)
     {
         if(!chdir $dir) {
           print STDERR __FILE__, ": Cannot change to $dir\n";
-          return 1;
+          return 0;
         }
     }
 
@@ -134,7 +136,8 @@ sub Run ($)
 
     my $command;
     my $pattern;
-    my $ret = 0;
+    my $success = 0;
+    my $result = {};
 
     if ($options =~ s/find=([^\s]*)//) {
         $pattern = $1;
@@ -146,18 +149,17 @@ sub Run ($)
             next unless -f $makefile; # skip directories
             $command = "$make_program -f $makefile $options";
             print "Running: $command\n";
-            $ret = system ($command);
+            $success = utility::run_command ($command, $result);
         }
     }
     else {
         $options =~ s/'/"/g;
         $command = "$make_program $options";
         print "Running: $command\n";
-        $ret = system ($command);
+        $success = utility::run_command ($command, $result);
     }
 
-    if( $ret != 0  )
-    {
+    if (!$success) {
         my $working_dir = getcwd();
 
         ## If we used 'make -C' to change the directory, let's
@@ -168,7 +170,7 @@ sub Run ($)
             $working_dir = "$working_dir/$1";
         }
 
-        print "[BUILD ERROR detected in $working_dir]\n ";
+        print STDERR "[BUILD ERROR detected in $working_dir]\n ";
     }
 
     chdir $current_dir;
@@ -176,7 +178,7 @@ sub Run ($)
     ## Return PWD to the correct setting
     $ENV{PWD} = getcwd();
 
-    return 1;
+    return $result;
 }
 
 ##############################################################################

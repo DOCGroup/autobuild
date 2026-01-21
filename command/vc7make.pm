@@ -8,6 +8,8 @@ use warnings;
 use Cwd;
 use File::Path;
 
+use common::utility;
+
 ###############################################################################
 # Constructor
 
@@ -99,28 +101,26 @@ sub Run ($)
 
     my $workspace = undef;
     if ($options =~ /"([^"]+\.sln)"/) {
-      $workspace = $1;
+        $workspace = $1;
     }
     elsif ($options =~ /([\w\.\-\\\/]+\.sln)/) {
-      $workspace = $1;
+        $workspace = $1;
     }
 
+    my $result = {};
     if (defined $workspace && ! -r $workspace) {
-      print "Skipping: $workspace not found\n";
+        print "Skipping: $workspace not found\n";
     }
     else {
-      print "Running: $command\n";
-
-      my $ret = system ($command);
-
-      if ($ret != 0) {
-        print "[BUILD ERROR detected in ", getcwd(), "]\n";
-      }
+        print "Running: $command\n";
+        if (!utility::run_command ($command, $result)) {
+            print STDERR "[BUILD ERROR detected in ", getcwd(), "]\n";
+        }
     }
 
     chdir $current_dir;
 
-    return 1;
+    return $result;
 }
 
 ##############################################################################
